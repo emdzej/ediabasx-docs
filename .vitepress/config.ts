@@ -1,7 +1,7 @@
 export default {
   title: "EdiabasX",
   description: "Cross platform, eXtended Ediabas implementation",
-  base: "/",  
+  base: "/ediabasx-docs/",
   markdown: {
     html: false,
   },
@@ -10,7 +10,7 @@ export default {
       { text: "Guide", link: "/guide/getting-started" },
       { text: "Reference", link: "/reference/cli" },
       { text: "SGBD Reference", link: "/ecu/summary" },
-      { text: "GitHub", link: "https://github.com/emdzej/ediabas" },
+      { text: "GitHub", link: "https://github.com/emdzej/ediabasx" },
     ],
     sidebar: {
       "/guide/": [

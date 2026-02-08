@@ -1,6 +1,6 @@
 # Interfaces
 
-ediabas supports multiple communication interfaces. Choose the one that matches your vehicle and hardware.
+ediabasx supports multiple communication interfaces. Choose the one that matches your vehicle and hardware.
 
 ## Interface Overview
 
@@ -42,12 +42,12 @@ ediabas supports multiple communication interfaces. Choose the one that matches 
 
 ### Simulation
 ```bash
-ediabas run path/to/file.prg IDENT --interface simulation
+ediabasx run path/to/file.prg IDENT --interface simulation
 ```
 
 ### Serial (K-Line)
 ```bash
-ediabas run path/to/file.prg IDENT \
+ediabasx run path/to/file.prg IDENT \
   --interface serial \
   --serial-port /dev/ttyUSB0 \
   --serial-baud 9600 \
@@ -56,7 +56,7 @@ ediabas run path/to/file.prg IDENT \
 
 ### K+DCAN (ISO-TP)
 ```bash
-ediabas run path/to/file.prg IDENT \
+ediabasx run path/to/file.prg IDENT \
   --interface kdcan \
   --serial-port /dev/ttyUSB0 \
   --serial-protocol isotp \
@@ -66,7 +66,7 @@ ediabas run path/to/file.prg IDENT \
 
 ### ENET
 ```bash
-ediabas run path/to/file.prg IDENT \
+ediabasx run path/to/file.prg IDENT \
   --interface enet \
   --enet-host 169.254.0.1 \
   --enet-port 6801
@@ -76,7 +76,7 @@ ediabas run path/to/file.prg IDENT \
 Start a gateway on another machine:
 
 ```bash
-ediabas gateway \
+ediabasx gateway \
   --interface serial \
   --serial-port /dev/ttyUSB0 \
   --serial-baud 9600
@@ -85,7 +85,7 @@ ediabas gateway \
 Connect to it remotely:
 
 ```bash
-ediabas run path/to/file.prg IDENT \
+ediabasx run path/to/file.prg IDENT \
   --interface gateway \
   --gateway-host 192.168.1.50 \
   --gateway-port 6801

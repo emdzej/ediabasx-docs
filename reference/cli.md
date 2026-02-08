@@ -1,24 +1,24 @@
 # CLI
 
-The CLI binary is `ediabas` (package: `@ediabas/cli`).
+The CLI binary is `ediabasx` (package: `@ediabasx/cli`).
 
 ## Commands
 
-### `ediabas interfaces`
+### `ediabasx interfaces`
 List available communication interfaces.
 
 ```bash
-ediabas interfaces
-ediabas interfaces --json
-ediabas interfaces --table
+ediabasx interfaces
+ediabasx interfaces --json
+ediabasx interfaces --table
 ```
 
-### `ediabas gateway`
+### `ediabasx gateway`
 Start the JSON-RPC gateway server and expose an interface.
 
 ```bash
-ediabas gateway --interface serial --serial-port /dev/ttyUSB0 --serial-baud 9600
-ediabas gateway --interface enet --enet-host 192.168.0.1
+ediabasx gateway --interface serial --serial-port /dev/ttyUSB0 --serial-baud 9600
+ediabasx gateway --interface enet --enet-host 192.168.0.1
 ```
 
 Options:
@@ -26,60 +26,60 @@ Options:
 - `--port <port>` (default: 6801)
 - plus all interface options below
 
-### `ediabas parse <file>`
+### `ediabasx parse <file>`
 Parse a PRG/GRP file.
 
 ```bash
-ediabas parse d_motor.prg --json
-ediabas parse d_motor.prg --table
+ediabasx parse d_motor.prg --json
+ediabasx parse d_motor.prg --table
 ```
 
-### `ediabas info <file>`
+### `ediabasx info <file>`
 Show summary information for a PRG/GRP file.
 
 ```bash
-ediabas info d_motor.prg
-ediabas info d_motor.prg --json
+ediabasx info d_motor.prg
+ediabasx info d_motor.prg --json
 ```
 
-### `ediabas jobs <file>`
+### `ediabasx jobs <file>`
 List all jobs with their arguments and results.
 
 ```bash
-ediabas jobs d_motor.prg
-ediabas jobs d_motor.prg --table
+ediabasx jobs d_motor.prg
+ediabasx jobs d_motor.prg --table
 ```
 
-### `ediabas table <file> <name>`
+### `ediabasx table <file> <name>`
 Show a specific table (human, JSON, or CSV).
 
 ```bash
-ediabas table d_motor.prg TABNAME
-ediabas table d_motor.prg TABNAME --json
-ediabas table d_motor.prg TABNAME --csv
+ediabasx table d_motor.prg TABNAME
+ediabasx table d_motor.prg TABNAME --json
+ediabasx table d_motor.prg TABNAME --csv
 ```
 
-### `ediabas tables <file>`
+### `ediabasx tables <file>`
 List tables with row/column counts.
 
 ```bash
-ediabas tables d_motor.prg
-ediabas tables d_motor.prg --json
+ediabasx tables d_motor.prg
+ediabasx tables d_motor.prg --json
 ```
 
-### `ediabas explore <file>`
+### `ediabasx explore <file>`
 Interactive TUI for exploring PRG/GRP files.
 
 ```bash
-ediabas explore d_motor.prg
+ediabasx explore d_motor.prg
 ```
 
-### `ediabas simulator`
+### `ediabasx simulator`
 Start the interactive simulator (TUI + JSON-RPC server).
 
 ```bash
-ediabas simulator --host 127.0.0.1 --port 6802
-ediabas simulator --mode hex --line-ending lf
+ediabasx simulator --host 127.0.0.1 --port 6802
+ediabasx simulator --mode hex --line-ending lf
 ```
 
 Options:
@@ -88,32 +88,32 @@ Options:
 - `--mode <text|hex>` (default: text)
 - `--line-ending <crlf|lf|raw>` (default: crlf)
 
-### `ediabas disasm <file> [job]`
+### `ediabasx disasm <file> [job]`
 Disassemble bytecode into readable assembly.
 
 ```bash
-ediabas disasm d_motor.prg
-ediabas disasm d_motor.prg INFO
+ediabasx disasm d_motor.prg
+ediabasx disasm d_motor.prg INFO
 ```
 
-### `ediabas run <file> [job] [params...]`
+### `ediabasx run <file> [job] [params...]`
 Execute a job from a PRG/GRP file. If `job` is omitted, an interactive TUI runner opens.
 
 ```bash
 # simulation (default)
-ediabas run d_motor.prg INFO
+ediabasx run d_motor.prg INFO
 
 # serial K-Line
-ediabas run d_motor.prg IDENT --interface serial --serial-port /dev/ttyUSB0 --serial-baud 9600 --serial-protocol kwp
+ediabasx run d_motor.prg IDENT --interface serial --serial-port /dev/ttyUSB0 --serial-baud 9600 --serial-protocol kwp
 
 # K+DCAN (ISO-TP)
-ediabas run d_motor.prg IDENT --interface kdcan --serial-port /dev/ttyUSB0 --serial-protocol isotp --serial-tester-can-id 0x7e0 --serial-ecu-can-id 0x7e8
+ediabasx run d_motor.prg IDENT --interface kdcan --serial-port /dev/ttyUSB0 --serial-protocol isotp --serial-tester-can-id 0x7e0 --serial-ecu-can-id 0x7e8
 
 # ENET
-ediabas run d_motor.prg IDENT --interface enet --enet-host 192.168.0.1 --enet-port 6801
+ediabasx run d_motor.prg IDENT --interface enet --enet-host 192.168.0.1 --enet-port 6801
 
 # Run via remote gateway
-ediabas run d_motor.prg IDENT --interface gateway --gateway-host 192.168.1.50 --gateway-port 6801
+ediabasx run d_motor.prg IDENT --interface gateway --gateway-host 192.168.1.50 --gateway-port 6801
 ```
 
 Common options:
@@ -124,12 +124,12 @@ Common options:
 - `--results <names>` — comma-separated results filter
 - `--info` — show job info instead of executing
 
-### `ediabas docs <source-dir> <output-dir>`
+### `ediabasx docs <source-dir> <output-dir>`
 Generate Markdown documentation for PRG/GRP files.
 
 ```bash
-ediabas docs ./sgbd ./docs/ecu
-ediabas docs ./sgbd ./docs/ecu --subdir sgbd
+ediabasx docs ./sgbd ./docs/ecu
+ediabasx docs ./sgbd ./docs/ecu --subdir sgbd
 ```
 
 Options:

@@ -1,7 +1,7 @@
 # Getting Started
 
-## What is ediabas?
-**ediabas** is a TypeScript implementation of BMW’s EDIABAS (Electronic Diagnostic Basic System). It focuses on parsing and running BMW diagnostic PRG/GRP files and provides a CLI for inspecting files and executing jobs.
+## What is EdiabasX?
+**EdiabasX** is a TypeScript implementation of BMW’s EDIABAS (Electronic Diagnostic Basic System). It focuses on parsing and running BMW diagnostic PRG/GRP files and provides a CLI for inspecting files and executing jobs.
 
 ## Requirements
 - **Node.js** (current LTS recommended)
@@ -13,8 +13,8 @@
 This project is a monorepo and the CLI is built from source.
 
 ```bash
-git clone https://github.com/emdzej/ediabas.git
-cd ediabas
+git clone https://github.com/emdzej/ediabasx.git
+cd ediabasx
 
 # install dependencies
 pnpm install
