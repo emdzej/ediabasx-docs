@@ -31,13 +31,13 @@
 **Symptoms:** Job is missing or ECU rejects the command.
 
 **Fixes:**
-- Use `ediabas jobs <file>` to list supported jobs.
+- Use `ediabasx jobs <file>` to list supported jobs.
 - Ensure you are using the correct PRG/GRP for the ECU.
-- Some ECUs require specific job arguments; verify with `ediabas jobs` output.
+- Some ECUs require specific job arguments; verify with `ediabasx jobs` output.
 
 ### File parsing errors
 **Symptoms:** Invalid PRG/GRP file or parse failures.
 
 **Fixes:**
 - Verify the file is a valid BMW PRG/GRP file.
-- Use `ediabas info <file>` or `ediabas parse <file>` to inspect the file.
+- Use `ediabasx info <file>` or `ediabasx parse <file>` to inspect the file.

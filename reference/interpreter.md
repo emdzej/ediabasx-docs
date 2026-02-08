@@ -996,10 +996,10 @@ External code can poll `progressText`, `progressRange`, and `progressPos` from t
 
 ## Appendix C: Disassembler
 
-The `@ediabas/best-parser` package includes a **disassembler** that converts bytecode to human-readable assembly:
+The `@ediabasx/best-parser` package includes a **disassembler** that converts bytecode to human-readable assembly:
 
 ```typescript
-import { disassemble } from "@ediabas/best-parser";
+import { disassemble } from "@ediabasx/best-parser";
 
 const instructions = disassemble(code, offset);
 for (const instr of instructions) {
@@ -1027,4 +1027,4 @@ c: jtsr #$0100
 - **Register types**: 6 (B, A, I, L, S, F)
 - **Addressing modes**: 16 (0x0–0xF)
 
-For implementation details, refer to the source code in the [emdzej/ediabas](https://github.com/emdzej/ediabas) repository.
+For implementation details, refer to the source code in the [emdzej/ediabasx](https://github.com/emdzej/ediabasx) repository.

@@ -6,10 +6,10 @@ The simulator is an interactive tool for testing EDIABAS communication without r
 ## Start the Simulator
 
 ```bash
-ediabas simulator
+ediabasx simulator
 ```
 
-Options (from `ediabas simulator --help`):
+Options (from `ediabasx simulator --help`):
 - `--host <host>` (default: `127.0.0.1`)
 - `--port <port>` (default: `6802`)
 - `--mode <mode>` (default: `text`, options: `text|hex`)
@@ -18,7 +18,7 @@ Options (from `ediabas simulator --help`):
 Example:
 
 ```bash
-ediabas simulator --host 0.0.0.0 --port 6802 --mode hex
+ediabasx simulator --host 0.0.0.0 --port 6802 --mode hex
 ```
 
 ## Human-in-the-Loop Testing

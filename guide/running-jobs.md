@@ -6,26 +6,26 @@ In EDIABAS, **jobs** are diagnostic procedures defined inside PRG/GRP files. A P
 You can inspect available jobs using:
 
 ```bash
-ediabas jobs path/to/file.prg
+ediabasx jobs path/to/file.prg
 ```
 
 ## Run a Job from the CLI
 Basic syntax:
 
 ```bash
-ediabas run <file> <job> [params...]
+ediabasx run <file> <job> [params...]
 ```
 
 Example (simulation):
 
 ```bash
-ediabas run path/to/file.prg IDENT --interface simulation
+ediabasx run path/to/file.prg IDENT --interface simulation
 ```
 
 Example (serial K-Line):
 
 ```bash
-ediabas run path/to/file.prg STATUS_LESEN \
+ediabasx run path/to/file.prg STATUS_LESEN \
   --interface serial \
   --serial-port /dev/ttyUSB0 \
   --serial-baud 9600 \
@@ -39,19 +39,19 @@ Helpful options:
 - `--timeout <ms>` — communication timeout
 
 ## Using the TUI Runner
-If you run the command **without a job**, ediabas opens an interactive TUI runner:
+If you run the command **without a job**, ediabasx opens an interactive TUI runner:
 
 ```bash
-ediabas run path/to/file.prg
+ediabasx run path/to/file.prg
 ```
 
 Use the TUI to browse jobs and execute them interactively.
 
 ## Understanding Results
-Job results are returned as named values, often with ECU-specific meanings. Use `ediabas jobs <file>` to see expected arguments and result types. You can also request JSON output for easier parsing:
+Job results are returned as named values, often with ECU-specific meanings. Use `ediabasx jobs <file>` to see expected arguments and result types. You can also request JSON output for easier parsing:
 
 ```bash
-ediabas run path/to/file.prg IDENT --json
+ediabasx run path/to/file.prg IDENT --json
 ```
 
 ## Common Jobs
@@ -61,4 +61,4 @@ Commonly available jobs (names vary by ECU):
 - `INFO` — ECU information
 - `STATUS_UBATT` — battery/voltage status
 
-Use `ediabas jobs <file>` to see what your ECU supports.
+Use `ediabasx jobs <file>` to see what your ECU supports.
