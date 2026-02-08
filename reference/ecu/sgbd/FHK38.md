@@ -45,7 +45,6 @@
 - [STEUERN_MOTOR_KLAPPENPOSITION](#job-steuern-motor-klappenposition) - Ansteuern der Schrittmotoren in Prozent 0-100 % Es ist moeglich auch nur einzelne Argumente zu schreiben. Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
 - [STEUERN_GEBLAESE](#job-steuern-geblaese) - Ansteuern des Geblaeses Das Geblaese kann von 0-100 % angesteuert werden. Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -63,7 +62,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -76,7 +74,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation fuer FHK E38
@@ -100,7 +97,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -131,7 +127,6 @@ _No arguments._
 | F_ART6_TEXT | string | 'sporadischer Fehler' oder '--' |
 | F_HEX_CODE | binary | Fehlerspeicherdaten |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -144,7 +139,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten Vorbereitungsbefehl fuer Ansteuerbefehle
@@ -157,7 +151,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden Beenden von Ansteuerbefehlen
@@ -170,7 +163,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Power-Down-Mode versetzen
@@ -183,7 +175,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -200,7 +191,6 @@ _No arguments._
 | BYTE3 | int | 0-255 bzw. 0x00-0xFF |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -219,7 +209,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-status-analogeingaenge"></a>
 ### STATUS_ANALOGEINGAENGE
 
 Status lesen
@@ -243,7 +232,6 @@ _No arguments._
 | STAT_KLEMME30_EINH | string | Volt |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-reglergroessen"></a>
 ### STATUS_REGLERGROESSEN
 
 Status lesen
@@ -285,7 +273,6 @@ _No arguments._
 | STAT_BELUEFTUNG_RE_EINH | string | % |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-bedienteil"></a>
 ### STATUS_BEDIENTEIL
 
 Status lesen
@@ -327,7 +314,6 @@ _No arguments._
 | STAT_AUTO_RE_EIN | int | Taste Automatik rechts |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Status lesen
@@ -346,7 +332,6 @@ _No arguments._
 | STAT_WASSERABSPERRVENTIL_EIN | int | Wasserabsperrventil |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-motor-klappenposition"></a>
 ### STATUS_MOTOR_KLAPPENPOSITION
 
 Status lesen
@@ -365,7 +350,6 @@ _No arguments._
 | STAT_BELUEFTUNG_RE_WERT | int | Belueftungsmotor rechts |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes uebergeben.
@@ -384,7 +368,6 @@ Lesen des internen Speichers Als Argumente werden die Adresse, die Anzahl der Da
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-ram-schreiben"></a>
 ### RAM_SCHREIBEN
 
 Beschreiben des internen Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes und das Datenfeld uebergeben. Die Daten werden als String uebergeben und durch ein Komma getrennt.
@@ -403,7 +386,6 @@ Beschreiben des internen Speichers Als Argumente werden die Adresse, die Anzahl 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-eeprom-schreiben"></a>
 ### EEPROM_SCHREIBEN
 
 Beschreiben des internen EEPROM-Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes und das Datenfeld uebergeben. Die Daten werden als String uebergeben und durch ein Komma getrennt.
@@ -422,7 +404,6 @@ Beschreiben des internen EEPROM-Speichers Als Argumente werden die Adresse, die 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-display"></a>
 ### STEUERN_DISPLAY
 
 Einschalten eines Testmusters in den Displays Es muss der Displaytest immer ausgeschalten werden Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -439,7 +420,6 @@ Einschalten eines Testmusters in den Displays Es muss der Displaytest immer ausg
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-eichlauf"></a>
 ### STEUERN_EICHLAUF
 
 Anstossen der internen Eichlaufroutine
@@ -452,7 +432,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-absperrventil-front"></a>
 ### STEUERN_ABSPERRVENTIL_FRONT
 
 Ansteuern des Absperrventil Front Der Ausgang kann ein- bzw. ausgeschaltet werden. Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -469,7 +448,6 @@ Ansteuern des Absperrventil Front Der Ausgang kann ein- bzw. ausgeschaltet werde
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-absperrventil-fond"></a>
 ### STEUERN_ABSPERRVENTIL_FOND
 
 Ansteuern des Absperrventil Fond Der Ausgang kann ein- bzw. ausgeschaltet werden. Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -486,7 +464,6 @@ Ansteuern des Absperrventil Fond Der Ausgang kann ein- bzw. ausgeschaltet werden
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-wasserabsperrventil"></a>
 ### STEUERN_WASSERABSPERRVENTIL
 
 Ansteuern des Wasserabsperrventils Der Ausgang kann ein- bzw. ausgeschaltet werden. Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -503,7 +480,6 @@ Ansteuern des Wasserabsperrventils Der Ausgang kann ein- bzw. ausgeschaltet werd
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-motor-klappenposition"></a>
 ### STEUERN_MOTOR_KLAPPENPOSITION
 
 Ansteuern der Schrittmotoren in Prozent 0-100 % Es ist moeglich auch nur einzelne Argumente zu schreiben. Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -523,7 +499,6 @@ Ansteuern der Schrittmotoren in Prozent 0-100 % Es ist moeglich auch nur einzeln
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-geblaese"></a>
 ### STEUERN_GEBLAESE
 
 Ansteuern des Geblaeses Das Geblaese kann von 0-100 % angesteuert werden. Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -549,7 +524,6 @@ Ansteuern des Geblaeses Das Geblaese kann von 0-100 % angesteuert werden. Vor de
 - [FORTTEXTE](#table-forttexte) (22 × 2)
 - [FARTTEXTE](#table-farttexte) (8 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -565,7 +539,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 31 rows × 2 columns
@@ -604,7 +577,6 @@ Dimensions: 31 rows × 2 columns
 | 0x30 | NEC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 22 rows × 2 columns
@@ -634,7 +606,6 @@ Dimensions: 22 rows × 2 columns
 | 0x15 | Stellgroesse Y rechts |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns

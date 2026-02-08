@@ -32,7 +32,6 @@
 - [DIAGNOSE_WEITER](#job-diagnose-weiter) - Diagnose aufrechterhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer PDC
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer PDC
@@ -86,7 +83,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen High-Konzept nach Lastenheft Codierung/Diagnose
@@ -120,7 +116,6 @@ _No arguments._
 | F_ART8_NR | int | Index der 8. Fehlerart |
 | F_ART8_TEXT | string | 8. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -133,7 +128,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Status der I/O Ports lesen
@@ -150,7 +144,6 @@ _No arguments._
 | STAT_UBATT_12V | int | 1: U_Batt liegt an |
 | STAT_ANHAENGER_JA | int | 1: Anhaenger vorhanden |
 
-<a id="job-steuern-io-status"></a>
 ### STEUERN_IO_STATUS
 
 Ansteuern von den I/O Stati
@@ -167,7 +160,6 @@ Ansteuern von den I/O Stati
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-weg-v-mode-lesen"></a>
 ### STATUS_WEG_V_MODE_LESEN
 
 Status des Steuergeraets lesen
@@ -199,7 +191,6 @@ _No arguments._
 | STAT_I_BUS_SG | int | 1: I-BUS Steuergeraet anstatt D-BUS |
 | STAT_PARKHILFE_AKTIV | int | 1: Parkhilfe aktiv |
 
-<a id="job-status-ausschwingzeit-lesen"></a>
 ### STATUS_AUSSCHWINGZEIT_LESEN
 
 AUSSCHWINGZEIT lesen
@@ -221,7 +212,6 @@ _No arguments._
 | STAT_AUSSCHWING_T_VML_WERT | int | Ausschwingzeit vorne mitte links |
 | STAT_AUSSCHWING_T_VMR_WERT | int | Ausschwingzeit vorne mitte rechts |
 
-<a id="job-steuern-weg-v"></a>
 ### STEUERN_WEG_V
 
 Ansteuern der Abstaende und der Geschwindigkeit
@@ -246,7 +236,6 @@ Ansteuern der Abstaende und der Geschwindigkeit
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrechterhalten
@@ -259,7 +248,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -284,7 +272,6 @@ _No arguments._
 - [IO_STATUS](#table-io-status) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 5 rows × 2 columns
@@ -297,7 +284,6 @@ Dimensions: 5 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-sg-status"></a>
 ### SG_STATUS
 
 Dimensions: 9 rows × 2 columns
@@ -314,7 +300,6 @@ Dimensions: 9 rows × 2 columns
 | 0x80 | Parkhilfe aktiv |
 | 0x00 | unbekannter Status |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -336,7 +321,6 @@ Dimensions: 14 rows × 2 columns
 | 0x16 | Kontrollsignal |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -358,7 +342,6 @@ Dimensions: 14 rows × 2 columns
 | 0x80 | sporadischer Fehler |
 | 0xFF | -- |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 13 rows × 17 columns
@@ -379,7 +362,6 @@ Dimensions: 13 rows × 17 columns
 | 0x05 | 0x00 | 0x10 | 0x00 | 0x20 | 0x00 | 0x30 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0x00 | 0x70 | 0x00 | 0x80 |
 | 0x13 | 0x00 | 0x10 | 0x00 | 0x20 | 0x00 | 0x30 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0x00 | 0x70 | 0x00 | 0x80 |
 
-<a id="table-io-status"></a>
 ### IO_STATUS
 
 Dimensions: 8 rows × 2 columns
@@ -395,7 +377,6 @@ Dimensions: 8 rows × 2 columns
 | SAUS | 0x40 |
 | SEIN | 0x80 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

@@ -52,7 +52,6 @@
 - [STEUERN_ROE_PERSISTENT_START](#job-steuern-roe-persistent-start) - Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
 - [CALID_CVN_LESEN](#job-calid-cvn-lesen) - OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -71,7 +70,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -84,7 +82,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -101,7 +98,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -133,7 +129,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -186,7 +181,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -205,7 +199,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -223,7 +216,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -244,7 +236,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -273,7 +264,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -293,7 +283,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -314,7 +303,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -330,7 +318,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -352,7 +339,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -374,7 +360,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -393,7 +378,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-permanent"></a>
 ### FS_LESEN_PERMANENT
 
 permanente Fehler aus Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $15 ReportDTCWithPermanentStatus Modus: Default
@@ -419,7 +403,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -446,7 +429,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -499,7 +481,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -514,7 +495,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -534,7 +514,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -553,7 +532,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -572,7 +550,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -587,7 +564,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -606,7 +582,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -626,7 +601,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -643,7 +617,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -662,7 +635,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -677,7 +649,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -694,7 +665,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -709,7 +679,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -724,7 +693,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen"></a>
 ### CALID_CVN_LESEN
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -860,7 +828,6 @@ _No arguments._
 - [VERBRAUCHER_KLASSE_FEPM](#table-verbraucher-klasse-fepm) (5 × 2)
 - [VERBRENNUNGSMOTOR](#table-verbrennungsmotor) (13 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -944,7 +911,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 149 rows × 2 columns
@@ -1101,7 +1067,6 @@ Dimensions: 149 rows × 2 columns
 | 0x0000CA | SEG Automotive Germany GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1144,7 +1109,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1169,7 +1133,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1203,7 +1166,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1276,7 +1238,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1289,7 +1250,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 9 rows × 9 columns
@@ -1306,7 +1266,6 @@ Dimensions: 9 rows × 9 columns
 | 0x1769 | ABS_ZEIT_SUP | 0-n | - | 0xFFFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-tab-zeit-syncmethod"></a>
 ### TAB_ZEIT_SYNCMETHOD
 
 Dimensions: 4 rows × 2 columns
@@ -1318,7 +1277,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | IEEE802.1AS |
 | 0x03 | invalid |
 
-<a id="table-tab-zeit-user-info"></a>
 ### TAB_ZEIT_USER_INFO
 
 Dimensions: 8 rows × 2 columns
@@ -1334,7 +1292,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | invalid |
 | 0x07 | invalid |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1347,7 +1304,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -1369,7 +1325,6 @@ Dimensions: 14 rows × 3 columns
 | 0x61 | ECUSUPSPEC | ECUSupplierSpecificSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1412,7 +1367,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1423,7 +1377,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-anforderung-mil-diagnose-obd-scr"></a>
 ### ANFORDERUNG_MIL_DIAGNOSE_OBD_SCR
 
 Dimensions: 3 rows × 2 columns
@@ -1434,7 +1387,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0001 | Anforderung MIL ein |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-arg-0xae64-r"></a>
 ### ARG_0XAE64_R
 
 Dimensions: 2 rows × 14 columns
@@ -1444,7 +1396,6 @@ Dimensions: 2 rows × 14 columns
 | DOSIERMASSE | + | - | mg | high | unsigned int | - | - | 1.0 | 8.0 | 0.0 | 0.0 | 524280.0 | Dosiermasse in mg |
 | MASSENSTROM | + | - | mg/s | high | unsigned int | - | - | 1.0 | 0.015625 | 0.0 | 0.0 | 1023.98437 | Massenstrom in mg/s |
 
-<a id="table-arg-0xae68-r"></a>
 ### ARG_0XAE68_R
 
 Dimensions: 1 rows × 14 columns
@@ -1453,7 +1404,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BITMASKE_PARAMETER | + | - | 0-n | high | unsigned int | - | AR_TESTAUSWAHL | - | - | - | - | - | Übergabeparameter für Inbetriebnahme Routine. |
 
-<a id="table-arg-0xae6b-r"></a>
 ### ARG_0XAE6B_R
 
 Dimensions: 1 rows × 14 columns
@@ -1462,7 +1412,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | UMPUMPMENGE | + | - | l | high | unsigned int | - | - | 1024.0 | 1.0 | 0.0 | 0.0 | 63.999 | tbd |
 
-<a id="table-arg-0xd280-d"></a>
 ### ARG_0XD280_D
 
 Dimensions: 1 rows × 12 columns
@@ -1471,7 +1420,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_FOERDERPUMPE | % | high | signed int | - | - | 163.84 | 1.0 | 0.0 | 0.0 | 33.0 | Test der Förderpumpe |
 
-<a id="table-arg-0xd281-d"></a>
 ### ARG_0XD281_D
 
 Dimensions: 1 rows × 12 columns
@@ -1480,7 +1428,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_RUECKFOERDERPUMPE | % | high | signed int | - | - | 163.84 | 1.0 | 0.0 | 0.0 | 33.0 | tbd |
 
-<a id="table-arg-0xd282-d"></a>
 ### ARG_0XD282_D
 
 Dimensions: 1 rows × 12 columns
@@ -1489,7 +1436,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_AKTIVTANKHEIZUNG | % | high | signed int | - | - | 163.84 | 1.0 | 0.0 | 0.0 | 100.0 | Test zum Steuern der Aktivtankheizung |
 
-<a id="table-arg-0xd283-d"></a>
 ### ARG_0XD283_D
 
 Dimensions: 1 rows × 12 columns
@@ -1498,7 +1444,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_DOSIERLEITUNGSHEIZUNG | % | high | signed int | - | - | 163.84 | 1.0 | 0.0 | 0.0 | 100.0 | Test zum Steuern der Dosierleitungsheizung |
 
-<a id="table-arg-0xd284-d"></a>
 ### ARG_0XD284_D
 
 Dimensions: 1 rows × 12 columns
@@ -1507,7 +1452,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_DOSIERVENTIL | % | high | signed int | - | - | 163.84 | 1.0 | 0.0 | 0.0 | 80.0 | Test zum Steuern des Dosierventils |
 
-<a id="table-arg-0xd285-d"></a>
 ### ARG_0XD285_D
 
 Dimensions: 1 rows × 12 columns
@@ -1516,7 +1460,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_TRANSFERPUMPE | % | high | signed int | - | - | 163.84 | 1.0 | 0.0 | 0.0 | 100.0 | Test zum Steuern der Transferpumpe. |
 
-<a id="table-arg-0xd286-d"></a>
 ### ARG_0XD286_D
 
 Dimensions: 1 rows × 12 columns
@@ -1525,7 +1468,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LANGZEITERFASSUNG_DOSIERMENGE | g | high | unsigned long | - | - | 1000.0 | 1.0 | 0.0 | 0.0 | 2147483.64 | Langzeiterfassung der Dosiermenge. |
 
-<a id="table-arg-0xd287-d"></a>
 ### ARG_0XD287_D
 
 Dimensions: 1 rows × 12 columns
@@ -1534,7 +1476,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LANGZEITERFASSUNG_UMPUMPMENGE | l | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | 0.0 | 6553.5 | Langzeiterfassung der Umpumpmenge |
 
-<a id="table-arg-0xd290-d"></a>
 ### ARG_0XD290_D
 
 Dimensions: 1 rows × 12 columns
@@ -1543,7 +1484,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_ERSTBEFUELLUNGSSTATUS | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Manuelles Setzen des Erstbefüllungsstatus. Neues TFM - Setzen auf 0. Neues SG - Setzen auf1. |
 
-<a id="table-arg-0xd291-d"></a>
 ### ARG_0XD291_D
 
 Dimensions: 1 rows × 12 columns
@@ -1552,7 +1492,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_ZEITDAUER_SPULENHEIZEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Manuelles Rücksetzen der Zeitdauer für das Heizen der Spule des Dosierventils auf 0. |
 
-<a id="table-arg-0xd292-d"></a>
 ### ARG_0XD292_D
 
 Dimensions: 1 rows × 12 columns
@@ -1561,7 +1500,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_ZEITDAUER_UEBERTEMPERATUR_DOSIERVENTIL | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Manuelles Rücksetzen der Zeitdauer für die Übertemperatur des Dosierventils |
 
-<a id="table-arg-0xd293-d"></a>
 ### ARG_0XD293_D
 
 Dimensions: 1 rows × 12 columns
@@ -1570,7 +1508,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_INITIALISIERUNG_LERNWERT_FOERDERPUMPE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Manuelles Neuinitialisieren des Lernwerts der Förderpumpe. |
 
-<a id="table-arg-0xd294-d"></a>
 ### ARG_0XD294_D
 
 Dimensions: 1 rows × 12 columns
@@ -1579,7 +1516,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_INITIALISIERUNG_LERNWERT_DOSIERVENTIL | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Manuelles Neuinitialisieren des Lernwerts der Förderpumpe. |
 
-<a id="table-arg-0xd29a-d"></a>
 ### ARG_0XD29A_D
 
 Dimensions: 1 rows × 12 columns
@@ -1588,7 +1524,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_INITIALISIERUNG_FUELLMENGE_AKTIVTANK | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Manuelles Neuinitialisieren der Füllmenge des Aktivtanks. |
 
-<a id="table-arg-0xd29b-d"></a>
 ### ARG_0XD29B_D
 
 Dimensions: 1 rows × 12 columns
@@ -1597,7 +1532,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_INITIALISIERUNG_FUELLMENGE_PASSIVTANK | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Manuelles Neuinitialisieren der Füllmenge des Passivtanks. |
 
-<a id="table-arg-0xd29c-d"></a>
 ### ARG_0XD29C_D
 
 Dimensions: 1 rows × 12 columns
@@ -1606,7 +1540,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_INITIALISIERUNG_RAM | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Manuelles Neuinitialisieren zahlreicher nicht OBD-relevanter Systemgrößen. |
 
-<a id="table-ar-testauswahl"></a>
 ### AR_TESTAUSWAHL
 
 Dimensions: 15 rows × 2 columns
@@ -1629,7 +1562,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0355 | Tests Trockentaktung, Heizung, Druckaufbau, Leckage, Teilrücksaugen |
 | 0x0755 | Systemgutprüfung |
 
-<a id="table-bf-act-init-tests"></a>
 ### BF_ACT_INIT_TESTS
 
 Dimensions: 9 rows × 10 columns
@@ -1646,7 +1578,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_ACT_DOSIERLEITUNGSHEIZUNG | 0/1 | high | unsigned int | 0x0200 | - | - | - | - | Wenn 1: Teilschritt Test der Dosierleitungsheizung läuft gerade. |
 | STAT_ACT_DOSIERMENGE | 0/1 | high | unsigned int | 0x0400 | - | - | - | - | Wenn 1: Teilschritt Dosiermengentest läuft gerade. |
 
-<a id="table-bf-dwis-anforderung-gruppe"></a>
 ### BF_DWIS_ANFORDERUNG_GRUPPE
 
 Dimensions: 8 rows × 10 columns
@@ -1662,7 +1593,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_GRUPPE_6 | 0/1 | high | unsigned int | 0x0040 | - | - | - | - | DWIS-Request Gruppe 6 aktiv |
 | STAT_GRUPPE_7 | 0/1 | high | unsigned int | 0x0080 | - | - | - | - | DWIS-Request Gruppe 7 aktiv |
 
-<a id="table-bf-dwis-anforderung-tampering"></a>
 ### BF_DWIS_ANFORDERUNG_TAMPERING
 
 Dimensions: 5 rows × 10 columns
@@ -1675,7 +1605,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_SLOW | 0/1 | high | unsigned int | 0x0008 | - | - | - | - | langsam |
 | STAT_VERY_SLOW | 0/1 | high | unsigned int | 0x0010 | - | - | - | - | sehr langsam |
 
-<a id="table-bf-foerderpumpe-fehler-high-byte"></a>
 ### BF_FOERDERPUMPE_FEHLER_HIGH_BYTE
 
 Dimensions: 6 rows × 10 columns
@@ -1689,7 +1618,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ELECTRIC_MOTOR_LOW_CURRENT_CONSUMPTION | 0/1 | high | unsigned int | 0x0010 | - | - | - | - | Elektrischer Motor: niedriger Stromverbrauch |
 | STAT_INTERMITTENT_OPEN_LOAD_DIAGNOSIS | 0/1 | high | unsigned int | 0x0020 | - | - | - | - | Diagnose Wackelkontakt  |
 
-<a id="table-bf-foerderpumpe-fehler-low-byte"></a>
 ### BF_FOERDERPUMPE_FEHLER_LOW_BYTE
 
 Dimensions: 16 rows × 10 columns
@@ -1713,7 +1641,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_WRONG_COMMAND_OF_BRUSHLESS_MOTOR | 0/1 | high | unsigned int | 0x4000 | - | - | - | - | falscher Befehl des bürstenlosen Motors: - alle HALLx Eingänge bleiben auf 0 oder auf 1 hängen - der Kommutationsschritt (HALLx Kombination) ist nicht mit vorhergehendem Schritt konsistent |
 | STAT_CURRENT_LIMITATION_FLAG | 0/1 | high | unsigned int | 0x8000 | - | - | - | - | Strombegrenzung |
 
-<a id="table-bf-freigabemaske-fuer-fuellstandsfunktion-aktivtank"></a>
 ### BF_FREIGABEMASKE_FUER_FUELLSTANDSFUNKTION_AKTIVTANK
 
 Dimensions: 16 rows × 10 columns
@@ -1737,7 +1664,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_COMBI_STANDMESSUNG_STATISCHE_BEDINGUNG | 0/1 | high | unsigned int | 0x4000 | - | - | - | - | Combi-Stand-Messung gueltig (Statische Bedingungen) |
 | STAT_COMBI_STAND_HOHE_AENDERUNGSPRUEFUNG | 0/1 | high | unsigned int | 0x8000 | - | - | - | - | Combi Stand: hohe Aenderungspruefung ok |
 
-<a id="table-bf-freigabemaske-fuer-fuellstandsfunktion-passivtank"></a>
 ### BF_FREIGABEMASKE_FUER_FUELLSTANDSFUNKTION_PASSIVTANK
 
 Dimensions: 7 rows × 10 columns
@@ -1752,7 +1678,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_BESCHLEUNIGUNGSSIGNALE | 0/1 | high | unsigned int | 0x20 | - | - | - | - | Beschleunigungssignale sind gültig |
 | STAT_INITIALSIERUNG_CAN | 0/1 | high | unsigned int | 0x40 | - | - | - | - | Initialisierung CAN abgeschlossen  |
 
-<a id="table-bf-freigabe-routine"></a>
 ### BF_FREIGABE_ROUTINE
 
 Dimensions: 7 rows × 10 columns
@@ -1767,7 +1692,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_ABGASTEMPERATUR_OK | 0/1 | high | unsigned char | 0x20 | - | - | - | - | Wenn 1: Abgastemperatur ok. |
 | STAT_QUERVERRIEGELUNG_OK | 0/1 | high | unsigned char | 0x40 | - | - | - | - | Wenn 1: Querverriegelungen in der Software ok. |
 
-<a id="table-bf-levelsensor-aktivtank-fehler"></a>
 ### BF_LEVELSENSOR_AKTIVTANK_FEHLER
 
 Dimensions: 10 rows × 10 columns
@@ -1785,7 +1709,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_MEASUREMENT_STATUS | 0-n | high | unsigned int | 0x7000 | MESSAUFZEICHNUNG | - | - | - | Status Messaufzeichnung |
 | STAT_MEASUREMENT_UPDATE | 0/1 | high | unsigned int | 0x8000 | - | - | - | - | Anzeige zur Aktualisierung der Messung (0: Messung läuft, 1: Messwerte werden aktualisiert) |
 
-<a id="table-bf-levelsensor-passivtank-fehler"></a>
 ### BF_LEVELSENSOR_PASSIVTANK_FEHLER
 
 Dimensions: 1 rows × 10 columns
@@ -1794,7 +1717,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MESSUNGEN | 0-n | high | unsigned int | 0x07 | MESSUNGEN | - | - | - | Der STATE kann als höchsten Wert 5 annehmen (5 gültige Messungen). |
 
-<a id="table-bf-scr-init"></a>
 ### BF_SCR_INIT
 
 Dimensions: 9 rows × 10 columns
@@ -1811,7 +1733,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_DOSIERLEITUNGSHEIZUNG | 0/1 | high | unsigned int | 0x0200 | - | - | - | - | Wenn 1: Test der Dosierleitungsheizung erfolgreich beendet. |
 | STAT_DOSIERMENGE | 0/1 | high | unsigned int | 0x0400 | - | - | - | - | Wenn 1: Dosiermengentest erfolgreich beendet. |
 
-<a id="table-bf-status-antrieb-fahrzeug"></a>
 ### BF_STATUS_ANTRIEB_FAHRZEUG
 
 Dimensions: 3 rows × 10 columns
@@ -1822,7 +1743,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_E_MASCHINE | 0/1 | high | unsigned char | 0x80 | - | - | - | - | E-Maschine ist nach Anforderung Fahrbereitschaft von CAS/FEM elektrisch fahrbereit oder bereits aktiv: 0x0--- ---- Keine E-Maschine vorhanden: 0x1--- ---- |
 | STAT_INIT | 0/1 | high | unsigned char | 0x83 | - | - | - | - | Initialisierung: 1000 0011 |
 
-<a id="table-bf-status-bereitstellung-scr-additiv"></a>
 ### BF_STATUS_BEREITSTELLUNG_SCR_ADDITIV
 
 Dimensions: 1 rows × 10 columns
@@ -1831,7 +1751,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SCR_DOSIERFREIGABE | 0/1 | high | unsigned int | 0x01 | - | - | - | - | SCR-Dosierfreigabe |
 
-<a id="table-bf-status-obd-zyklus"></a>
 ### BF_STATUS_OBD_ZYKLUS
 
 Dimensions: 5 rows × 10 columns
@@ -1844,7 +1763,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RBM_CYCLE | 0-n | high | unsigned char | 0x24 | RBM_CYCLE | - | - | - | RBM-Zyklus nicht aktiv/aktiv/nicht erfuellbar |
 | STAT_SIGNAL_UNGUELTIG | 0/1 | high | unsigned char | 0x3F | - | - | - | - | Signal ungültig |
 
-<a id="table-bf-status-sperre-scr-system"></a>
 ### BF_STATUS_SPERRE_SCR_SYSTEM
 
 Dimensions: 5 rows × 10 columns
@@ -1857,7 +1775,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_VERRIEGELUNGSINFORMATION_3 | 0/1 | high | unsigned int | 0x08 | - | - | - | - | Verriegelungsinformation 3 |
 | STAT_VERRIEGELUNGSINFORMATION_4 | 0/1 | high | unsigned int | 0x10 | - | - | - | - | Verriegelungsinformation 4 |
 
-<a id="table-bf-status-system-fehler-obd-scr"></a>
 ### BF_STATUS_SYSTEM_FEHLER_OBD_SCR
 
 Dimensions: 5 rows × 10 columns
@@ -1870,7 +1787,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_OBD_FEHLER_4 | 0/1 | high | unsigned int | 0x08 | - | - | - | - | OBD Fehler 4 |
 | STAT_OBD_FEHLER_5 | 0/1 | high | unsigned int | 0x10 | - | - | - | - | OBD Fehler 5 |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1884,7 +1800,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1898,7 +1813,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | ja |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 206 rows × 4 columns
@@ -2112,7 +2026,6 @@ Dimensions: 206 rows × 4 columns
 | 0xCBD449 | Signalfehler: Status_Motor_Aus_Zeit (ST_ENG_OFF_T), Sender DME1. | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 181 rows × 9 columns
@@ -2301,7 +2214,6 @@ Dimensions: 181 rows × 9 columns
 | 0xE38D | UWB_DOSIERLEITUNGSHEIZUNG_LEISTUNG_SETPOINT | W | High | unsigned int | - | 0.1 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2314,7 +2226,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 9 rows × 4 columns
@@ -2331,7 +2242,6 @@ Dimensions: 9 rows × 4 columns
 | 0x80537E | Motorabstellzeit, unplausibel zu Motorabstellzeit der DDE. | 0 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 178 rows × 9 columns
@@ -2517,7 +2427,6 @@ Dimensions: 178 rows × 9 columns
 | 0xD8FC | UWB_CDM1_VOLUMEN_FOERDERPUMPE_LERNWERT_REFERENZ_2 | µl | High | unsigned int | - | 0.1 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2526,7 +2435,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-messaufzeichnung"></a>
 ### MESSAUFZEICHNUNG
 
 Dimensions: 9 rows × 2 columns
@@ -2543,7 +2451,6 @@ Dimensions: 9 rows × 2 columns
 | 0x7000 | Messung nicht durchgeführt |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-messungen"></a>
 ### MESSUNGEN
 
 Dimensions: 7 rows × 2 columns
@@ -2558,7 +2465,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | 5/5 plausible Messungen |
 | 0xFF | Wert ungültig |
 
-<a id="table-ntc-error"></a>
 ### NTC_ERROR
 
 Dimensions: 4 rows × 2 columns
@@ -2570,7 +2476,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0008 | Kurzschluss |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-passivtank-verbaut"></a>
 ### PASSIVTANK_VERBAUT
 
 Dimensions: 3 rows × 2 columns
@@ -2581,7 +2486,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Passivtank verbaut. |
 | 0xFF | Wert ungültig |
 
-<a id="table-qualifier-geschwindigkeit-fahrzeug-schwerpunkt"></a>
 ### QUALIFIER_GESCHWINDIGKEIT_FAHRZEUG_SCHWERPUNKT
 
 Dimensions: 14 rows × 2 columns
@@ -2603,7 +2507,6 @@ Dimensions: 14 rows × 2 columns
 | 0xF | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-qualifier-ist-drehzahl-motor-kurbelwelle"></a>
 ### QUALIFIER_IST_DREHZAHL_MOTOR_KURBELWELLE
 
 Dimensions: 14 rows × 2 columns
@@ -2625,7 +2528,6 @@ Dimensions: 14 rows × 2 columns
 | 0xF | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-qualifier-laengsbeschleunigung-schwerpunkt"></a>
 ### QUALIFIER_LAENGSBESCHLEUNIGUNG_SCHWERPUNKT
 
 Dimensions: 14 rows × 2 columns
@@ -2647,7 +2549,6 @@ Dimensions: 14 rows × 2 columns
 | 0xF | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-qualifier-querbeschleunigung-schwerpunkt"></a>
 ### QUALIFIER_QUERBESCHLEUNIGUNG_SCHWERPUNKT
 
 Dimensions: 14 rows × 2 columns
@@ -2669,7 +2570,6 @@ Dimensions: 14 rows × 2 columns
 | 0xF | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-rbm-cycle"></a>
 ### RBM_CYCLE
 
 Dimensions: 4 rows × 2 columns
@@ -2681,7 +2581,6 @@ Dimensions: 4 rows × 2 columns
 | 0x24 | RBM Zyklus nicht erfüllbar |
 | 0xFF | Wert ungültig |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -2699,7 +2598,6 @@ Dimensions: 10 rows × 2 columns
 | 0x43 | HDDUpdateSession |
 | 0xff | ungültig |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -2711,7 +2609,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | ECU nicht mehr programmierbar |
 | 0xff | ungültig |
 
-<a id="table-res-0x1061-r"></a>
 ### RES_0X1061_R
 
 Dimensions: 1 rows × 13 columns
@@ -2720,7 +2617,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_ENDE_WABL | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 0: Verriegelt (loeschen von Einzelfehlern und PDTCs wird unterbunden) 1: Entriegelt (loeschen von Einzelfehlern und PDTCs wird nicht unterbunden) |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -2731,7 +2627,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -2745,7 +2640,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4006-r"></a>
 ### RES_0X4006_R
 
 Dimensions: 1 rows × 13 columns
@@ -2754,7 +2648,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RAM_DATEN_SCHREIBEN | - | - | + | 0-n | high | unsigned char | - | STATUS_RAM_DATEN_SCHREIBEN_TAB | - | - | - | Status RAM_DATEN_SCHREIBEN |
 
-<a id="table-res-0xae60-r"></a>
 ### RES_0XAE60_R
 
 Dimensions: 3 rows × 13 columns
@@ -2765,7 +2658,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_KOMPLETTRUECKSAUGEN_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_RUECKSAUGEN_DETAIL | - | - | - | Detaillierter Status der Routine Komplettrücksaugen. |
 
-<a id="table-res-0xae61-r"></a>
 ### RES_0XAE61_R
 
 Dimensions: 3 rows × 13 columns
@@ -2776,7 +2668,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_TEILRUECKSAUGEN_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_RUECKSAUGEN_DETAIL | - | - | - | Detaillierter Status der Routine Teilrücksaugen. |
 
-<a id="table-res-0xae62-r"></a>
 ### RES_0XAE62_R
 
 Dimensions: 3 rows × 13 columns
@@ -2787,7 +2678,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_LECKAGEERKENNUNG_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_LECKAGEERKENNUNG_DETAIL | - | - | - | Detaillierter Status der Routine Leckageerkennung. |
 
-<a id="table-res-0xae63-r"></a>
 ### RES_0XAE63_R
 
 Dimensions: 3 rows × 13 columns
@@ -2798,7 +2688,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_DRUCKAUFBAU_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_DRUCKAUFBAU_DETAIL | - | - | - | Detaillierter Status der Routine Druckaufbau. |
 
-<a id="table-res-0xae64-r"></a>
 ### RES_0XAE64_R
 
 Dimensions: 3 rows × 13 columns
@@ -2809,7 +2698,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_DOSIERMENGENTEST_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_DOSIERMENGENTEST_DETAIL | - | - | - | Detaillierter Status für die Routine Dosiermengentest. |
 
-<a id="table-res-0xae68-r"></a>
 ### RES_0XAE68_R
 
 Dimensions: 4 rows × 13 columns
@@ -2821,7 +2709,6 @@ Dimensions: 4 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_ACT_INIT_TESTS | - | - | - | Aktuell laufender Teilschritt. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_INIT | - | - | - | Status Inbetriebnahmesquenz. |
 
-<a id="table-res-0xae6a-r"></a>
 ### RES_0XAE6A_R
 
 Dimensions: 3 rows × 13 columns
@@ -2832,7 +2719,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_TROCKENTAKTUNG_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_TROCKENTAKTUNG_DETAIL | - | - | - | Detaillierter Status der Routine Trockentaktung. |
 
-<a id="table-res-0xae6b-r"></a>
 ### RES_0XAE6B_R
 
 Dimensions: 3 rows × 13 columns
@@ -2843,7 +2729,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_TRANSFERPUMPE_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_TRANSFERPUMPE_DETAIL | - | - | - | Detaillierter Status der Routine Test Transferpumpe. |
 
-<a id="table-res-0xae6c-r"></a>
 ### RES_0XAE6C_R
 
 Dimensions: 3 rows × 13 columns
@@ -2854,7 +2739,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_AKTIVTANKHEIZUNG_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_HEIZUNG_DETAIL | - | - | - | Deatillierter Status der Routine Test Aktivtankheizung. |
 
-<a id="table-res-0xae6d-r"></a>
 ### RES_0XAE6D_R
 
 Dimensions: 3 rows × 13 columns
@@ -2865,7 +2749,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_FREIGABE_ROUTINE | - | - | - | Status der Start- und Freigabebedingungen für die Routine. |
 | STAT_DOSIERLEITUNGSHEIZUNG_DETAIL | - | - | + | 0-n | high | unsigned char | - | TAB_HEIZUNG_DETAIL | - | - | - | Detaillierter Zustand der Routine Test Dosierleitungsheizung. |
 
-<a id="table-res-0xae6e-r"></a>
 ### RES_0XAE6E_R
 
 Dimensions: 2 rows × 13 columns
@@ -2875,7 +2758,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | STAT_SCR_DEAKTIVIERUNG_SCHUTZDOSIERUNG | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_DEAKTIVIERUNG_SCHUTZDOSIERUNG | - | - | - | Status der Deaktivierung der Schutzdosierung. |
 
-<a id="table-res-0xae6f-r"></a>
 ### RES_0XAE6F_R
 
 Dimensions: 2 rows × 13 columns
@@ -2885,7 +2767,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | STAT_SCR_MONTAGEMODUS | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_MONTAGEMODUS | - | - | - | Zustand des Montagemodus. 0 = Montagemodus inaktiv. 1 = Montagemodus aktiv. |
 
-<a id="table-scr-system-zustand"></a>
 ### SCR_SYSTEM_ZUSTAND
 
 Dimensions: 8 rows × 2 columns
@@ -2901,7 +2782,6 @@ Dimensions: 8 rows × 2 columns
 | 0x0006 | DEAC - SG geht in den Ruhezustand |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 274 rows × 16 columns
@@ -3183,7 +3063,6 @@ Dimensions: 274 rows × 16 columns
 | DOSIERLEITUNGSHEIZUNG_LEISTUNG_SETPOINT | 0xE38D | STAT_DOSIERLEITUNGSHEIZUNG_LEISTUNG_SETPOINT_WERT | POW_RAG_HEAT_TUBE_SEL_SP | W | POW_RAG_HEAT_TUBE_SEL_SP | High | unsigned int | - | 0.1 | 1.0 | 0.0 | - | 22 | - | - |
 | ACTIVE_DIAGNOSTIC_SESSION | 0xF186 | STAT_ACTIVE_DIAGNOSTIC_SESSION | activeDiagnosticSession | 0-n | - | High | unsigned char | RDBI_ADS_DOP | - | - | - | - | 22 | - | - |
 
-<a id="table-status-fuellstand-geber-scr-additiv"></a>
 ### STATUS_FUELLSTAND_GEBER_SCR_ADDITIV
 
 Dimensions: 3 rows × 2 columns
@@ -3194,7 +3073,6 @@ Dimensions: 3 rows × 2 columns
 | 0x1 | über Restriction Level |
 | 0x3 | Signal ungültig |
 
-<a id="table-status-fuellstand-niveau-scr-additiv"></a>
 ### STATUS_FUELLSTAND_NIVEAU_SCR_ADDITIV
 
 Dimensions: 7 rows × 2 columns
@@ -3209,7 +3087,6 @@ Dimensions: 7 rows × 2 columns
 | 0x7 | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-status-initialisierung-filter-wert-dme"></a>
 ### STATUS_INITIALISIERUNG_FILTER_WERT_DME
 
 Dimensions: 4 rows × 2 columns
@@ -3221,7 +3098,6 @@ Dimensions: 4 rows × 2 columns
 | 0x3 | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-status-initialisierung-filter-wert-scr-additiv"></a>
 ### STATUS_INITIALISIERUNG_FILTER_WERT_SCR_ADDITIV
 
 Dimensions: 3 rows × 2 columns
@@ -3232,7 +3108,6 @@ Dimensions: 3 rows × 2 columns
 | 0x1 | CT1 Filterwert wurde initialisiert |
 | 0x3 | Signal ungültig |
 
-<a id="table-status-klemme"></a>
 ### STATUS_KLEMME
 
 Dimensions: 3 rows × 2 columns
@@ -3243,7 +3118,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Klemme 15 an |
 | 0xFF | Wert ungültig |
 
-<a id="table-status-nachtanken-scr-additiv"></a>
 ### STATUS_NACHTANKEN_SCR_ADDITIV
 
 Dimensions: 3 rows × 2 columns
@@ -3254,7 +3128,6 @@ Dimensions: 3 rows × 2 columns
 | 0x1 | Nachbetankung erkannt |
 | 0x3 | Signal ungültig |
 
-<a id="table-status-ram-daten-schreiben-tab"></a>
 ### STATUS_RAM_DATEN_SCHREIBEN_TAB
 
 Dimensions: 4 rows × 2 columns
@@ -3266,7 +3139,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Schreiben läuft |
 | 0x03 | Schreiben noch nicht angestoßen (Routine nicht gestartet) |
 
-<a id="table-status-sperre-fehlerspeicher-fzm"></a>
 ### STATUS_SPERRE_FEHLERSPEICHER_FZM
 
 Dimensions: 3 rows × 2 columns
@@ -3277,7 +3149,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0001 | Fehlerspeichersperre nicht aktiv |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-status-versorgungsspannung"></a>
 ### STATUS_VERSORGUNGSSPANNUNG
 
 Dimensions: 5 rows × 2 columns
@@ -3290,7 +3161,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C00 | Signal nicht erkannt |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-status-zustand-fahrzeug"></a>
 ### STATUS_ZUSTAND_FAHRZEUG
 
 Dimensions: 17 rows × 2 columns
@@ -3315,7 +3185,6 @@ Dimensions: 17 rows × 2 columns
 | 0xF | Signal_unbefuellt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-can-rx-status-motor-aus-zeit"></a>
 ### TAB_CAN_RX_STATUS_MOTOR_AUS_ZEIT
 
 Dimensions: 4 rows × 2 columns
@@ -3327,7 +3196,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Abstellzeit nicht verfügbar |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-can-tx-status-ist-qualitaet-scr-additiv"></a>
 ### TAB_CAN_TX_STATUS_IST_QUALITAET_SCR_ADDITIV
 
 Dimensions: 4 rows × 2 columns
@@ -3339,7 +3207,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0002 | Sensorfehler und Ersatzwert |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-dosiermengentest-detail"></a>
 ### TAB_DOSIERMENGENTEST_DETAIL
 
 Dimensions: 26 rows × 2 columns
@@ -3373,7 +3240,6 @@ Dimensions: 26 rows × 2 columns
 | 0xFE | Verbrennungsmotor läuft |
 | 0xFF | Verbrennungsmotor läuft nicht |
 
-<a id="table-tab-druckaufbau-detail"></a>
 ### TAB_DRUCKAUFBAU_DETAIL
 
 Dimensions: 26 rows × 2 columns
@@ -3407,7 +3273,6 @@ Dimensions: 26 rows × 2 columns
 | 0xFE | Verbrennungsmotor läuft |
 | 0xFF | Verbrennungsmotor läuft nicht |
 
-<a id="table-tab-heizung-detail"></a>
 ### TAB_HEIZUNG_DETAIL
 
 Dimensions: 26 rows × 2 columns
@@ -3441,7 +3306,6 @@ Dimensions: 26 rows × 2 columns
 | 0xFE | Verbrennungsmotor läuft |
 | 0xFF | Verbrennungsmotor läuft nicht |
 
-<a id="table-tab-leckageerkennung-detail"></a>
 ### TAB_LECKAGEERKENNUNG_DETAIL
 
 Dimensions: 26 rows × 2 columns
@@ -3475,7 +3339,6 @@ Dimensions: 26 rows × 2 columns
 | 0xFE | Verbrennungsmotor läuft |
 | 0xFF | Verbrennungsmotor läuft nicht |
 
-<a id="table-tab-ruecksaugen-detail"></a>
 ### TAB_RUECKSAUGEN_DETAIL
 
 Dimensions: 26 rows × 2 columns
@@ -3509,7 +3372,6 @@ Dimensions: 26 rows × 2 columns
 | 0xFE | Verbrennungsmotor läuft |
 | 0xFF | Verbrennungsmotor läuft nicht |
 
-<a id="table-tab-state-deaktivierung-schutzdosierung"></a>
 ### TAB_STATE_DEAKTIVIERUNG_SCHUTZDOSIERUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3520,7 +3382,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Schutzdosierung deaktiviert |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-state-montagemodus"></a>
 ### TAB_STATE_MONTAGEMODUS
 
 Dimensions: 3 rows × 2 columns
@@ -3531,7 +3392,6 @@ Dimensions: 3 rows × 2 columns
 | 0x1 | Montagemodus aktiv |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-state-routine"></a>
 ### TAB_STATE_ROUTINE
 
 Dimensions: 9 rows × 2 columns
@@ -3548,7 +3408,6 @@ Dimensions: 9 rows × 2 columns
 | 0x9 | Routine vollständig durchlaufen und Fehler erkannt. |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-transferpumpe-detail"></a>
 ### TAB_TRANSFERPUMPE_DETAIL
 
 Dimensions: 26 rows × 2 columns
@@ -3582,7 +3441,6 @@ Dimensions: 26 rows × 2 columns
 | 0xFE | Verbrennungsmotor läuft |
 | 0xFF | Verbrennungsmotor läuft nicht |
 
-<a id="table-tab-trockentaktung-detail"></a>
 ### TAB_TROCKENTAKTUNG_DETAIL
 
 Dimensions: 26 rows × 2 columns
@@ -3616,7 +3474,6 @@ Dimensions: 26 rows × 2 columns
 | 0xFE | Verbrennungsmotor läuft |
 | 0xFF | Verbrennungsmotor läuft nicht |
 
-<a id="table-temperaturbereich"></a>
 ### TEMPERATURBEREICH
 
 Dimensions: 5 rows × 2 columns
@@ -3629,7 +3486,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0300 | Signal nicht erkannt |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-verbraucher-klasse-fepm"></a>
 ### VERBRAUCHER_KLASSE_FEPM
 
 Dimensions: 5 rows × 2 columns
@@ -3642,7 +3498,6 @@ Dimensions: 5 rows × 2 columns
 | 0x4 | Klasse 4 |
 | 0x7 | Signal ungültig |
 
-<a id="table-verbrennungsmotor"></a>
 ### VERBRENNUNGSMOTOR
 
 Dimensions: 13 rows × 2 columns

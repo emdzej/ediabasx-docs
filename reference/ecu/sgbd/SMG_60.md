@@ -68,7 +68,6 @@
 - [STEUERN_TESTPRG_STARTEN](#job-steuern-testprg-starten) - Testprogramm starten Hinweis: Zuvor STEUERN_TESTPRG_STOP schicken! Weitere Istzustaende mittels STEUERN_TESTPRG_ISTZUSTAND auslesen!
 - [STATUS_TESTPRG_ISTZUSTAND](#job-status-testprg-istzustand) - Istzustand eines STEUERN_TESTPRG_STARTEN abfragen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -81,7 +80,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -100,7 +98,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -116,7 +113,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -133,7 +129,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -166,7 +161,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -193,7 +187,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -235,7 +228,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -254,7 +246,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -272,7 +263,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -293,7 +283,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -314,7 +303,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -334,7 +322,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers KWP2000: $85 ControlDTCSetting Modus  : Default
@@ -355,7 +342,6 @@ Sperren bzw. Freigeben des Fehlerspeichers KWP2000: $85 ControlDTCSetting Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-lesen"></a>
 ### HS_LESEN
 
 Historyspeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2100 HistoryMemory Modus  : Default
@@ -382,7 +368,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-lesen-detail"></a>
 ### HS_LESEN_DETAIL
 
 Historypeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2101 - $21FF HistoryMemoryEntry Modus: Default
@@ -425,7 +410,6 @@ Historypeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDat
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-loeschen"></a>
 ### HS_LOESCHEN
 
 Historyspeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $03 ClearHistoryMemory Modus  : Default
@@ -440,7 +424,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -455,7 +438,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -476,7 +458,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C ControlEnergySavingMode Modus  : Default
@@ -497,7 +478,6 @@ Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C C
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -519,7 +499,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speicherse
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -537,7 +516,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -562,7 +540,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -585,7 +562,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -603,7 +579,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -624,7 +599,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -645,7 +619,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -664,7 +637,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -681,7 +653,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -698,7 +669,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -735,7 +705,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-status-istwerte"></a>
 ### STATUS_ISTWERTE
 
 mit dem SGBD-Generator erzeugt
@@ -921,7 +890,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrzeugtester"></a>
 ### STATUS_FAHRZEUGTESTER
 
 mit dem SGBD-Generator erzeugt
@@ -1077,7 +1045,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-programmerstellung"></a>
 ### PROGRAMMERSTELLUNG
 
 Datum der Programmerstellung (speziell fuer GETRAG) (Service ID 0x30, Identifier 0xA4)
@@ -1095,7 +1062,6 @@ _No arguments._
 | PRG_DATUM_TAG | int | Programmerstelldatum (TAG) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-rbm-ratio"></a>
 ### RBM_RATIO
 
 Dient zum Auslesen der OBD fehlerbezogenen RBM - Ratios (speziell fuer GETRAG) (Service ID 0x22, Identifier 0x53, 0x00)
@@ -1152,7 +1118,6 @@ _No arguments._
 | DENOMINATOR_DIAGNOSE_20 | unsigned int | Wert= 0..65534 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes ---zusätzlich für VS: -------------------------- KWP2000: $30 A2 ADAPTIONSWERTE_GETRIEBE KWP2000: $22 10 VERSCHLEISSDATEN_LESEN KWP2000: $30 A0 ADAPTIONSWERTE_KUPPLUNG KWP2000: $30 A1 ADAPTIONSWERTE_KUPPLUNGSKENNLINIE KWP2000: $30 A3 ADAPTIONSWERTE_EINKUPPELZEITEN Modus  : Default
@@ -1166,7 +1131,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-adaptionswerte-kupplung"></a>
 ### ADAPTIONSWERTE_KUPPLUNG
 
 Adaptionswerte lesen (Service ID 0x30, Identifier 0xA0)
@@ -1220,7 +1184,6 @@ _No arguments._
 | NULLPUNKT_KUPPL_POS_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-adaptionswerte-kupplungskennlinie"></a>
 ### ADAPTIONSWERTE_KUPPLUNGSKENNLINIE
 
 Adaptionswerte lesen (Service ID 0x30, Identifier 0xA1)
@@ -1246,7 +1209,6 @@ _No arguments._
 | ADAPT_K_EINH | string | Einheit aller K*-Kennlinien |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-adaptionswerte-getriebe"></a>
 ### ADAPTIONSWERTE_GETRIEBE
 
 Adaptionswerte lesen (Service ID 0x30, Identifier 0xA2)
@@ -1347,7 +1309,6 @@ _No arguments._
 | KORR_SCHALTZYLINDER_6_7_GANG_7_EINH | string | Korrekturwert Position Schaltzylinder 6/7 7. Gang, Wert: unsigned 8 Bit Einheit: Ink (Inkremente) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-adaptionswerte-einkuppelzeiten"></a>
 ### ADAPTIONSWERTE_EINKUPPELZEITEN
 
 Adaptionswerte lesen (Service ID 0x30, Identifier 0xA3)
@@ -1390,7 +1351,6 @@ _No arguments._
 | T_KL12_EK_ADAPT_7_EINH | string | Einheit: -- |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-adaptionswerte-zuruecksetzen"></a>
 ### ADAPTIONSWERTE_ZURUECKSETZEN
 
 Adaptionswerte auf Defaultwerte zuruecksetzen von: Kupplungskennlinie (Service ID 0x30)  ACHTUNG: Im Anschluss Zuendung aus, um Defaultwerte abzuspeichern. Steuergeraete Abfall abwarten Ganganzeige im Kombi bleibt ca. 5s erhalten und faellt dann ab. oder Speichern per Diagnose
@@ -1408,7 +1368,6 @@ Adaptionswerte auf Defaultwerte zuruecksetzen von: Kupplungskennlinie (Service I
 | JOB_STATUS | string | OKAY, FEHLER |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-verschleissdaten-lesen"></a>
 ### VERSCHLEISSDATEN_LESEN
 
 Verschleissdaten lesen (Service ID 0x22)
@@ -1445,7 +1404,6 @@ _No arguments._
 | KUPPLUNGSVERSCHLEISS_EINH | string | Kupplunsverschleiss in 1/100 mm |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-verschleissdaten-loeschen"></a>
 ### VERSCHLEISSDATEN_LOESCHEN
 
 Verschleissdaten loeschen (Service ID 0x2E)
@@ -1463,7 +1421,6 @@ Verschleissdaten loeschen (Service ID 0x2E)
 | JOB_STATUS | string | OKAY, FEHLER |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Codierdaten lesen (Service ID 0x22)
@@ -1480,7 +1437,6 @@ _No arguments._
 | STAT_AUSW_MOTORHAUBENK_AKTIV | int | Auswertung Motorhaubenkontakte aktiv Für C2-Steuergeräte und ab I-Stand 4.10, muss das Bit auf 1 stehen, für  C-Steuergeräte und ab I-Stand 4.10, muss das Bit auf 0 stehen, damit das Fahrzeug anfahren kann.  C-Steuergeräte unterstüzen hardwareseitg die Auswertung der Motorhaubenkontakte nicht, daher muß die Auswertung deaktiviert werden. C2-Steuergeräte reagieren nicht auf den Job CODIERDATEN_SCHREIBEN  ------- Codierung bleibt auch nach Zündungswechsel erhalten! -------  0=inaktiv, 1=aktiv |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-schreiben"></a>
 ### CODIERDATEN_SCHREIBEN
 
 Codierung schreiben (Service ID 0x2E)
@@ -1500,7 +1456,6 @@ Codierung schreiben (Service ID 0x2E)
 | _TEL_AUFTRAG | binary | Hex-Auftrag an das SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-stellglied"></a>
 ### STEUERN_STELLGLIED
 
 Ansteuern der Stellglieder  Argumente durch Semikolon trennen.
@@ -1525,7 +1480,6 @@ Ansteuern der Stellglieder  Argumente durch Semikolon trennen.
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-testprg-stop"></a>
 ### STEUERN_TESTPRG_STOP
 
 Beenden eines laufenden Testprogrammes (Sowie Zuruecksetzen des Zaehlers.) Muss VOR STEUERN_TESTPRG_STARTEN geschickt werden!
@@ -1539,7 +1493,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-testprg-starten"></a>
 ### STEUERN_TESTPRG_STARTEN
 
 Testprogramm starten Hinweis: Zuvor STEUERN_TESTPRG_STOP schicken! Weitere Istzustaende mittels STEUERN_TESTPRG_ISTZUSTAND auslesen!
@@ -1562,7 +1515,6 @@ Testprogramm starten Hinweis: Zuvor STEUERN_TESTPRG_STOP schicken! Weitere Istzu
 | STAT_STATUS_TESTPRG_TEXT | string | Status Testprogramm als Text kann Wert 0, 1, 2, 3 oder 4 annehmen siehe table StatTestTexte  STB TEST_STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-testprg-istzustand"></a>
 ### STATUS_TESTPRG_ISTZUSTAND
 
 Istzustand eines STEUERN_TESTPRG_STARTEN abfragen
@@ -1771,7 +1723,6 @@ Istzustand eines STEUERN_TESTPRG_STARTEN abfragen
 - [FUMWELTTEXTE50](#table-fumwelttexte50) (8 × 2)
 - [FUMWELTTEXTE51](#table-fumwelttexte51) (13 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -1783,7 +1734,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -1886,7 +1836,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -1970,7 +1919,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -1992,7 +1940,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2017,7 +1964,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2029,7 +1975,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -2051,7 +1996,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -2066,7 +2010,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-harttexte"></a>
 ### HARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2088,7 +2031,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -2115,7 +2057,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns
@@ -2135,7 +2076,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2144,7 +2084,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -2156,7 +2095,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 128 rows × 2 columns
@@ -2292,7 +2230,6 @@ Dimensions: 128 rows × 2 columns
 | 0xCF38 | Botschaft Rohdaten Laengsbeschleunigung |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2307,7 +2244,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 127 rows × 5 columns
@@ -2442,7 +2378,6 @@ Dimensions: 127 rows × 5 columns
 | 0xCF37 | FehlerstatusCANBus | - | - | - |
 | 0xCF38 | FehlerstatusCANBus | - | - | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 385 rows × 9 columns
@@ -2835,7 +2770,6 @@ Dimensions: 385 rows × 9 columns
 | 0x0182 | Fehlerstatus Ventil: | 0-n | - | 0xFF | FUmweltTexte50 | - | - | - |
 | 0x0183 | Fehlervariable Siemens NVRAM | - | high | unsigned char | - | - | - | - |
 
-<a id="table-farttyp"></a>
 ### FARTTYP
 
 Dimensions: 124 rows × 5 columns
@@ -2967,7 +2901,6 @@ Dimensions: 124 rows × 5 columns
 | 0x4FA1 | 0xF5 | 0x00 | 0x00 | 0x00 |
 | default | 0x08 | 0x04 | 0x02 | 0x01 |
 
-<a id="table-farttexteindividuell"></a>
 ### FARTTEXTEINDIVIDUELL
 
 Dimensions: 243 rows × 2 columns
@@ -3218,7 +3151,6 @@ Dimensions: 243 rows × 2 columns
 | 0x010B | Kupplungsschleifpunkt: Einlern- und Ansteuerfunktion fehlerhaft |
 | 0xFFFF | Fehlersymptom nicht definiert |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 128 rows × 2 columns
@@ -3354,7 +3286,6 @@ Dimensions: 128 rows × 2 columns
 | 0xCF38 | Botschaft Rohdaten Laengsbeschleunigung |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -3369,7 +3300,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-humweltmatrix"></a>
 ### HUMWELTMATRIX
 
 Dimensions: 127 rows × 5 columns
@@ -3504,7 +3434,6 @@ Dimensions: 127 rows × 5 columns
 | 0xCF37 | FehlerstatusCANBus | - | - | - |
 | 0xCF38 | FehlerstatusCANBus | - | - | - |
 
-<a id="table-humwelttexte"></a>
 ### HUMWELTTEXTE
 
 Dimensions: 384 rows × 9 columns
@@ -3896,7 +3825,6 @@ Dimensions: 384 rows × 9 columns
 | 0x0181 | PWM Wert der LED Ansteuerung | - | high | unsigned int | - | - | - | - |
 | 0x0182 | Fehlerstatus Ventil: | 0-n | - | 0xFF | FUmweltTexte50 | - | - | - |
 
-<a id="table-harttyp"></a>
 ### HARTTYP
 
 Dimensions: 124 rows × 5 columns
@@ -4028,7 +3956,6 @@ Dimensions: 124 rows × 5 columns
 | 0x4FA1 | 0xF5 | 0x00 | 0x00 | 0x00 |
 | default | 0x08 | 0x04 | 0x02 | 0x01 |
 
-<a id="table-harttexteindividuell"></a>
 ### HARTTEXTEINDIVIDUELL
 
 Dimensions: 243 rows × 2 columns
@@ -4279,7 +4206,6 @@ Dimensions: 243 rows × 2 columns
 | 0x010B | Kupplungsschleifpunkt: Einlern- und Ansteuerfunktion fehlerhaft |
 | 0xFFFF | Fehlersymptom nicht definiert |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -4288,7 +4214,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fumwelttexte1"></a>
 ### FUMWELTTEXTE1
 
 Dimensions: 10 rows × 2 columns
@@ -4306,7 +4231,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Rueckwaertsgang |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte2"></a>
 ### FUMWELTTEXTE2
 
 Dimensions: 5 rows × 2 columns
@@ -4319,7 +4243,6 @@ Dimensions: 5 rows × 2 columns
 | 0xFF | ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte3"></a>
 ### FUMWELTTEXTE3
 
 Dimensions: 12 rows × 2 columns
@@ -4339,7 +4262,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A | vor Synchronisation |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte4"></a>
 ### FUMWELTTEXTE4
 
 Dimensions: 6 rows × 2 columns
@@ -4353,7 +4275,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Zwischenkuppeln aktiv |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte5"></a>
 ### FUMWELTTEXTE5
 
 Dimensions: 8 rows × 2 columns
@@ -4369,7 +4290,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | Waehlhebel in - (Gang runter) |
 | 0xFF | Waehlhebelposition nicht definiert |
 
-<a id="table-fumwelttexte6"></a>
 ### FUMWELTTEXTE6
 
 Dimensions: 6 rows × 2 columns
@@ -4383,7 +4303,6 @@ Dimensions: 6 rows × 2 columns
 | 0x07 | Signal unguelitg |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte16"></a>
 ### FUMWELTTEXTE16
 
 Dimensions: 4 rows × 2 columns
@@ -4395,7 +4314,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte17"></a>
 ### FUMWELTTEXTE17
 
 Dimensions: 5 rows × 2 columns
@@ -4408,7 +4326,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Fahrzeug faehrt (Richtungserkennung nicht moeglich) |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte18"></a>
 ### FUMWELTTEXTE18
 
 Dimensions: 4 rows × 2 columns
@@ -4420,7 +4337,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte19"></a>
 ### FUMWELTTEXTE19
 
 Dimensions: 5 rows × 2 columns
@@ -4433,7 +4349,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Fussbremse und Handbremse betaetigt |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte20"></a>
 ### FUMWELTTEXTE20
 
 Dimensions: 5 rows × 2 columns
@@ -4446,7 +4361,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Hohe Belastung |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte21"></a>
 ### FUMWELTTEXTE21
 
 Dimensions: 13 rows × 2 columns
@@ -4467,7 +4381,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0F | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte22"></a>
 ### FUMWELTTEXTE22
 
 Dimensions: 9 rows × 2 columns
@@ -4484,7 +4397,6 @@ Dimensions: 9 rows × 2 columns
 | 0x80 | ASC DSC ausgeschaltet |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte23"></a>
 ### FUMWELTTEXTE23
 
 Dimensions: 8 rows × 2 columns
@@ -4500,7 +4412,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte24"></a>
 ### FUMWELTTEXTE24
 
 Dimensions: 5 rows × 2 columns
@@ -4513,7 +4424,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte25"></a>
 ### FUMWELTTEXTE25
 
 Dimensions: 6 rows × 2 columns
@@ -4527,7 +4437,6 @@ Dimensions: 6 rows × 2 columns
 | 0x08 | Tempomat Setze Verzoegern |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte26"></a>
 ### FUMWELTTEXTE26
 
 Dimensions: 10 rows × 2 columns
@@ -4545,7 +4454,6 @@ Dimensions: 10 rows × 2 columns
 | 0x0F | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte27"></a>
 ### FUMWELTTEXTE27
 
 Dimensions: 5 rows × 2 columns
@@ -4558,7 +4466,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte28"></a>
 ### FUMWELTTEXTE28
 
 Dimensions: 5 rows × 2 columns
@@ -4571,7 +4478,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Anlassen |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte29"></a>
 ### FUMWELTTEXTE29
 
 Dimensions: 3 rows × 2 columns
@@ -4582,7 +4488,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte30"></a>
 ### FUMWELTTEXTE30
 
 Dimensions: 17 rows × 2 columns
@@ -4607,7 +4512,6 @@ Dimensions: 17 rows × 2 columns
 | 0x8000 | Motorhaubenkontakt 1 |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte31"></a>
 ### FUMWELTTEXTE31
 
 Dimensions: 4 rows × 2 columns
@@ -4619,7 +4523,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Bus Off local PT CAN |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte32"></a>
 ### FUMWELTTEXTE32
 
 Dimensions: 5 rows × 2 columns
@@ -4632,7 +4535,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Leitungsunterbrechung |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte33"></a>
 ### FUMWELTTEXTE33
 
 Dimensions: 3 rows × 2 columns
@@ -4643,7 +4545,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | CAN Signal |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte34"></a>
 ### FUMWELTTEXTE34
 
 Dimensions: 4 rows × 2 columns
@@ -4655,7 +4556,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Redundanter Sensor |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte35"></a>
 ### FUMWELTTEXTE35
 
 Dimensions: 5 rows × 2 columns
@@ -4668,7 +4568,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte36"></a>
 ### FUMWELTTEXTE36
 
 Dimensions: 8 rows × 2 columns
@@ -4684,7 +4583,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Unterspannung DSC |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte37"></a>
 ### FUMWELTTEXTE37
 
 Dimensions: 4 rows × 2 columns
@@ -4696,7 +4594,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte38"></a>
 ### FUMWELTTEXTE38
 
 Dimensions: 4 rows × 2 columns
@@ -4708,7 +4605,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte39"></a>
 ### FUMWELTTEXTE39
 
 Dimensions: 4 rows × 2 columns
@@ -4720,7 +4616,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte40"></a>
 ### FUMWELTTEXTE40
 
 Dimensions: 5 rows × 2 columns
@@ -4733,7 +4628,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte41"></a>
 ### FUMWELTTEXTE41
 
 Dimensions: 6 rows × 2 columns
@@ -4747,7 +4641,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0F | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte42"></a>
 ### FUMWELTTEXTE42
 
 Dimensions: 5 rows × 2 columns
@@ -4760,7 +4653,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte43"></a>
 ### FUMWELTTEXTE43
 
 Dimensions: 12 rows × 2 columns
@@ -4780,7 +4672,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0F | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte44"></a>
 ### FUMWELTTEXTE44
 
 Dimensions: 4 rows × 2 columns
@@ -4792,7 +4683,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Zu schnelles Schliessen der Kupplung nach Radabriss |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte45"></a>
 ### FUMWELTTEXTE45
 
 Dimensions: 5 rows × 2 columns
@@ -4805,7 +4695,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte46"></a>
 ### FUMWELTTEXTE46
 
 Dimensions: 5 rows × 2 columns
@@ -4818,7 +4707,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Beschleunigung aber Bremssignal |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte47"></a>
 ### FUMWELTTEXTE47
 
 Dimensions: 5 rows × 2 columns
@@ -4831,7 +4719,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte48"></a>
 ### FUMWELTTEXTE48
 
 Dimensions: 3 rows × 2 columns
@@ -4842,7 +4729,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Initialisierung ist beendet |
 | 0xXY | nicht definiert |
 
-<a id="table-stellglieder"></a>
 ### STELLGLIEDER
 
 Dimensions: 19 rows × 5 columns
@@ -4869,7 +4755,6 @@ Dimensions: 19 rows × 5 columns
 | GETRIEBEOELPUMPE | AKTIV, INAKTIV |  | 0x84 | 0x00 |
 | RUECKGABE_AN_SG |  |  | 0xFE | 0x00 |
 
-<a id="table-testprg"></a>
 ### TESTPRG
 
 Dimensions: 13 rows × 4 columns
@@ -4890,7 +4775,6 @@ Dimensions: 13 rows × 4 columns
 | 0x37 | Offset Laengsbeschleunigungssensor einlernen | 5,6 sek | 20 sek |
 | 0x38 | Adaptionswerte in NVRAM speichern | ? sek | ? sek |
 
-<a id="table-stattesttexte"></a>
 ### STATTESTTEXTE
 
 Dimensions: 6 rows × 2 columns
@@ -4904,7 +4788,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Testprogramm durch Bediener abgebrochen |
 | 0xFF | Unbekannter Status |
 
-<a id="table-infotexte0x20a"></a>
 ### INFOTEXTE0X20A
 
 Dimensions: 5 rows × 2 columns
@@ -4917,7 +4800,6 @@ Dimensions: 5 rows × 2 columns
 | 0x18 | Vorspanndruckermittlung beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x20f"></a>
 ### INFOTEXTE0X20F
 
 Dimensions: 7 rows × 2 columns
@@ -4932,7 +4814,6 @@ Dimensions: 7 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x21a"></a>
 ### INFOTEXTE0X21A
 
 Dimensions: 6 rows × 2 columns
@@ -4946,7 +4827,6 @@ Dimensions: 6 rows × 2 columns
 | 0x40 | Beliebigen Gang einlegen ist beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x21f"></a>
 ### INFOTEXTE0X21F
 
 Dimensions: 5 rows × 2 columns
@@ -4959,7 +4839,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x22a"></a>
 ### INFOTEXTE0X22A
 
 Dimensions: 5 rows × 2 columns
@@ -4972,7 +4851,6 @@ Dimensions: 5 rows × 2 columns
 | 0x29 | Schaltwegmittellage einlegen beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x22f"></a>
 ### INFOTEXTE0X22F
 
 Dimensions: 4 rows × 2 columns
@@ -4984,7 +4862,6 @@ Dimensions: 4 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x23a"></a>
 ### INFOTEXTE0X23A
 
 Dimensions: 4 rows × 2 columns
@@ -4996,7 +4873,6 @@ Dimensions: 4 rows × 2 columns
 | 0x7F | Adaption Kupplungskennwerte beendet, Startbedingung fuer Motor hergestellt |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x23f"></a>
 ### INFOTEXTE0X23F
 
 Dimensions: 8 rows × 2 columns
@@ -5012,7 +4888,6 @@ Dimensions: 8 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x30a"></a>
 ### INFOTEXTE0X30A
 
 Dimensions: 4 rows × 2 columns
@@ -5024,7 +4899,6 @@ Dimensions: 4 rows × 2 columns
 | 0x7F | Entlueftung beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x30f"></a>
 ### INFOTEXTE0X30F
 
 Dimensions: 5 rows × 2 columns
@@ -5037,7 +4911,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft, oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x31a"></a>
 ### INFOTEXTE0X31A
 
 Dimensions: 5 rows × 2 columns
@@ -5050,7 +4923,6 @@ Dimensions: 5 rows × 2 columns
 | 0x1D | Entlueftung beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x31f"></a>
 ### INFOTEXTE0X31F
 
 Dimensions: 8 rows × 2 columns
@@ -5066,7 +4938,6 @@ Dimensions: 8 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x32a"></a>
 ### INFOTEXTE0X32A
 
 Dimensions: 5 rows × 2 columns
@@ -5079,7 +4950,6 @@ Dimensions: 5 rows × 2 columns
 | 0x7F | Adaption Kupplungskennwerte beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x32f"></a>
 ### INFOTEXTE0X32F
 
 Dimensions: 9 rows × 2 columns
@@ -5096,7 +4966,6 @@ Dimensions: 9 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x33a"></a>
 ### INFOTEXTE0X33A
 
 Dimensions: 4 rows × 2 columns
@@ -5108,7 +4977,6 @@ Dimensions: 4 rows × 2 columns
 | 0x7F | Schleifpunktadaption beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x33f"></a>
 ### INFOTEXTE0X33F
 
 Dimensions: 9 rows × 2 columns
@@ -5125,7 +4993,6 @@ Dimensions: 9 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor ist aus, N nicht eingelegt, Eingangsdrehz. <> 0, Gaspedal betaetigt) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x34a"></a>
 ### INFOTEXTE0X34A
 
 Dimensions: 4 rows × 2 columns
@@ -5137,7 +5004,6 @@ Dimensions: 4 rows × 2 columns
 | 0x28 | Schaltwegmittellage einregeln |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x34f"></a>
 ### INFOTEXTE0X34F
 
 Dimensions: 5 rows × 2 columns
@@ -5150,7 +5016,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x35a"></a>
 ### INFOTEXTE0X35A
 
 Dimensions: 5 rows × 2 columns
@@ -5163,7 +5028,6 @@ Dimensions: 5 rows × 2 columns
 | 0x1A | Druckabbau beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x35f"></a>
 ### INFOTEXTE0X35F
 
 Dimensions: 5 rows × 2 columns
@@ -5176,7 +5040,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x36a"></a>
 ### INFOTEXTE0X36A
 
 Dimensions: 19 rows × 2 columns
@@ -5203,7 +5066,6 @@ Dimensions: 19 rows × 2 columns
 | 0x29 | Schaltwegmittellage einlegen beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x36f"></a>
 ### INFOTEXTE0X36F
 
 Dimensions: 36 rows × 2 columns
@@ -5247,7 +5109,6 @@ Dimensions: 36 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Fuss betaetigt) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x37a"></a>
 ### INFOTEXTE0X37A
 
 Dimensions: 8 rows × 2 columns
@@ -5263,7 +5124,6 @@ Dimensions: 8 rows × 2 columns
 | 0x4B | Offsetermittlung beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x37f"></a>
 ### INFOTEXTE0X37F
 
 Dimensions: 5 rows × 2 columns
@@ -5276,7 +5136,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Raddrehzahlen <> 0 ) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x38a"></a>
 ### INFOTEXTE0X38A
 
 Dimensions: 4 rows × 2 columns
@@ -5288,7 +5147,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Adaptionswerte wurden gespeichert |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte0x38f"></a>
 ### INFOTEXTE0X38F
 
 Dimensions: 3 rows × 2 columns
@@ -5299,7 +5157,6 @@ Dimensions: 3 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (N nicht eingelegt, Motordrehzahl <> 0) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-motorhaubenkontakteroh"></a>
 ### MOTORHAUBENKONTAKTEROH
 
 Dimensions: 1 rows × 3 columns
@@ -5308,7 +5165,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x00B8 | 0x00B9 |
 
-<a id="table-motorhaubenkontakteist"></a>
 ### MOTORHAUBENKONTAKTEIST
 
 Dimensions: 1 rows × 3 columns
@@ -5317,7 +5173,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x002D | 0x002E |
 
-<a id="table-wahlhebelsignaleroh"></a>
 ### WAHLHEBELSIGNALEROH
 
 Dimensions: 1 rows × 9 columns
@@ -5326,7 +5181,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x00BA | 0x00BB | 0x00BC | 0x00BD | 0x00BE | 0x00BF | 0x00C0 | 0x00C1 |
 
-<a id="table-wahlhebelsignaleist"></a>
 ### WAHLHEBELSIGNALEIST
 
 Dimensions: 1 rows × 9 columns
@@ -5335,7 +5189,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x002F | 0x0030 | 0x0031 | 0x0032 | 0x0033 | 0x0034 | 0x0035 | 0x0036 |
 
-<a id="table-laengsbeschleunigung"></a>
 ### LAENGSBESCHLEUNIGUNG
 
 Dimensions: 1 rows × 4 columns
@@ -5344,7 +5197,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x00F0 | 0x0026 | 0x00E5 |
 
-<a id="table-sensorspannung"></a>
 ### SENSORSPANNUNG
 
 Dimensions: 1 rows × 4 columns
@@ -5353,7 +5205,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x0046 | 0x00EB | 0x00EC |
 
-<a id="table-getriebedrehzahl"></a>
 ### GETRIEBEDREHZAHL
 
 Dimensions: 1 rows × 3 columns
@@ -5362,7 +5213,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x0043 | 0x0044 |
 
-<a id="table-kupplungsposition0x510d-e"></a>
 ### KUPPLUNGSPOSITION0X510D_E
 
 Dimensions: 1 rows × 9 columns
@@ -5371,7 +5221,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x00EB | 0x0086 | 0x0087 | 0x0043 | 0x0046 | 0x0049 | 0x0085 | 0x0088 |
 
-<a id="table-radgeschwvorneistwert"></a>
 ### RADGESCHWVORNEISTWERT
 
 Dimensions: 1 rows × 3 columns
@@ -5380,7 +5229,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x0058 | 0x0059 |
 
-<a id="table-laengsbeschl0x520c"></a>
 ### LAENGSBESCHL0X520C
 
 Dimensions: 1 rows × 5 columns
@@ -5389,7 +5237,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x00F0 | 0x0001 | 0x0026 | 0x0025 |
 
-<a id="table-drehzahltemp10x5218"></a>
 ### DREHZAHLTEMP10X5218
 
 Dimensions: 1 rows × 5 columns
@@ -5398,7 +5245,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x006D | 0x0047 | 0x0046 | 0x0043 |
 
-<a id="table-drehzahltemp20x5219"></a>
 ### DREHZAHLTEMP20X5219
 
 Dimensions: 1 rows × 6 columns
@@ -5407,7 +5253,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x006E | 0x0048 | 0x0047 | 0x0046 | 0x0043 |
 
-<a id="table-begrenzerdrehzahl0x521a"></a>
 ### BEGRENZERDREHZAHL0X521A
 
 Dimensions: 1 rows × 5 columns
@@ -5416,7 +5261,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x0068 | 0x0042 | 0x0046 | 0x0043 |
 
-<a id="table-getriebeventildrv10x5500"></a>
 ### GETRIEBEVENTILDRV10X5500
 
 Dimensions: 1 rows × 11 columns
@@ -5425,7 +5269,6 @@ Dimensions: 1 rows × 11 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10 | 0x00F0 | 0x0017 | 0x001D | 0x001F | 0x0020 | 0x0049 | 0x0084 | 0x0082 | 0x007A | 0x0078 |
 
-<a id="table-getriebeventildrv20x5501"></a>
 ### GETRIEBEVENTILDRV20X5501
 
 Dimensions: 1 rows × 11 columns
@@ -5434,7 +5277,6 @@ Dimensions: 1 rows × 11 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10 | 0x00F0 | 0x0018 | 0x001E | 0x0021 | 0x0022 | 0x0049 | 0x0081 | 0x0083 | 0x0077 | 0x0079 |
 
-<a id="table-getriebeventilr-10x5502"></a>
 ### GETRIEBEVENTILR_10X5502
 
 Dimensions: 1 rows × 8 columns
@@ -5443,7 +5285,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x00F0 | 0x0019 | 0x001F | 0x001D | 0x0049 | 0x0084 | 0x007A |
 
-<a id="table-getriebeventil5-30x5503"></a>
 ### GETRIEBEVENTIL5_30X5503
 
 Dimensions: 1 rows × 8 columns
@@ -5452,7 +5293,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x00F0 | 0x001A | 0x0020 | 0x001D | 0x0049 | 0x0082 | 0x0078 |
 
-<a id="table-getriebeventil6-70x5504"></a>
 ### GETRIEBEVENTIL6_70X5504
 
 Dimensions: 1 rows × 8 columns
@@ -5461,7 +5301,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x00F0 | 0x001B | 0x0021 | 0x001E | 0x0049 | 0x0081 | 0x0077 |
 
-<a id="table-getriebeventil2-40x5505"></a>
 ### GETRIEBEVENTIL2_40X5505
 
 Dimensions: 1 rows × 8 columns
@@ -5470,7 +5309,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x00F0 | 0x001C | 0x0022 | 0x001E | 0x0049 | 0x0083 | 0x0079 |
 
-<a id="table-kupplungsventil0x5506"></a>
 ### KUPPLUNGSVENTIL0X5506
 
 Dimensions: 1 rows × 9 columns
@@ -5479,7 +5317,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x00F0 | 0x0023 | 0x0024 | 0x0049 | 0x0088 | 0x0085 | 0x000A | 0x00A2 |
 
-<a id="table-magnetventile0x5507"></a>
 ### MAGNETVENTILE0X5507
 
 Dimensions: 1 rows × 11 columns
@@ -5488,7 +5325,6 @@ Dimensions: 1 rows × 11 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10 | 0x0019 | 0x001B | 0x001C | 0x001F | 0x0021 | 0x0022 | 0x007A | 0x0077 | 0x0079 | 0x0049 |
 
-<a id="table-magnetventiledrv1-20x5508"></a>
 ### MAGNETVENTILEDRV1_20X5508
 
 Dimensions: 1 rows × 8 columns
@@ -5497,7 +5333,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x00F0 | 0x0017 | 0x0018 | 0x001D | 0x001E | 0x0014 | 0x0049 |
 
-<a id="table-radgeschwcan0xcf07"></a>
 ### RADGESCHWCAN0XCF07
 
 Dimensions: 1 rows × 5 columns
@@ -5506,7 +5341,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x00E7 | 0x00E8 | 0x00EE | 0x00EF |
 
-<a id="table-ebene2kupplung0x4f03"></a>
 ### EBENE2KUPPLUNG0X4F03
 
 Dimensions: 1 rows × 10 columns
@@ -5515,7 +5349,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 9 | 0x0094 | 0x0095 | 0x0014 | 0x0093 | 0x0092 | 0x0088 | 0x0085 | 0x00DC | 0x00F3 |
 
-<a id="table-ebene30x4f04"></a>
 ### EBENE30X4F04
 
 Dimensions: 1 rows × 6 columns
@@ -5524,7 +5357,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x008D | 0x0096 | 0x0097 | 0x0012 | 0x0011 |
 
-<a id="table-hydraulik0x4f40bis42"></a>
 ### HYDRAULIK0X4F40BIS42
 
 Dimensions: 1 rows × 7 columns
@@ -5533,7 +5365,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x00F0 | 0x0023 | 0x0050 | 0x0051 | 0x00EA | 0x0046 |
 
-<a id="table-kupplung0x4fa0-a1"></a>
 ### KUPPLUNG0X4FA0_A1
 
 Dimensions: 1 rows × 8 columns
@@ -5542,7 +5373,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x00F0 | 0x0023 | 0x0050 | 0x0046 | 0x00EA | 0x0085 | 0x0088 |
 
-<a id="table-fgr"></a>
 ### FGR
 
 Dimensions: 9 rows × 2 columns
@@ -5559,7 +5389,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | FGR aktiv, Verzoegern |
 | 0xXY | nicht definiert |
 
-<a id="table-freeze-frame-referenz"></a>
 ### FREEZE_FRAME_REFERENZ
 
 Dimensions: 6 rows × 2 columns
@@ -5573,7 +5402,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Freeze Frame wird verwaltet fuer DME links |
 | 0xXY | nicht definiert |
 
-<a id="table-programminfo"></a>
 ### PROGRAMMINFO
 
 Dimensions: 7 rows × 2 columns
@@ -5588,7 +5416,6 @@ Dimensions: 7 rows × 2 columns
 | 0x06 | 6. Programm |
 | 0xXY | nicht definiert |
 
-<a id="table-komfortindex"></a>
 ### KOMFORTINDEX
 
 Dimensions: 14 rows × 2 columns
@@ -5610,7 +5437,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0C | sportiv |
 | 0xXY | nicht definiert |
 
-<a id="table-ganganzeige"></a>
 ### GANGANZEIGE
 
 Dimensions: 11 rows × 2 columns
@@ -5629,7 +5455,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Anzeige dunkel |
 | 0xFF | nicht definiert |
 
-<a id="table-waehlhebelanzeige"></a>
 ### WAEHLHEBELANZEIGE
 
 Dimensions: 5 rows × 2 columns
@@ -5642,7 +5467,6 @@ Dimensions: 5 rows × 2 columns
 | 0x08 | D |
 | 0xFF | nicht definiert |
 
-<a id="table-led"></a>
 ### LED
 
 Dimensions: 4 rows × 2 columns
@@ -5654,7 +5478,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | 1. und 2. LED |
 | 0xXY | nicht definiert |
 
-<a id="table-infotextefahrzeugzustand"></a>
 ### INFOTEXTEFAHRZEUGZUSTAND
 
 Dimensions: 48 rows × 2 columns
@@ -5710,7 +5533,6 @@ Dimensions: 48 rows × 2 columns
 | 0xA1 | KKL Einlernen beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-ebene20x4f00bis02"></a>
 ### EBENE20X4F00BIS02
 
 Dimensions: 1 rows × 7 columns
@@ -5719,7 +5541,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x0094 | 0x008D | 0x0095 | 0x0014 | 0x0092 | 0x009B |
 
-<a id="table-nvramladen0x4f20"></a>
 ### NVRAMLADEN0X4F20
 
 Dimensions: 1 rows × 6 columns
@@ -5728,7 +5549,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x0096 | 0x0097 | 0x0012 | 0x0011 | 0x0183 |
 
-<a id="table-estate0x4f21"></a>
 ### ESTATE0X4F21
 
 Dimensions: 1 rows × 8 columns
@@ -5737,7 +5557,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x008D | 0x0095 | 0x0014 | 0x0092 | 0x009B | 0x009C | 0x0141 |
 
-<a id="table-getriebeproblem0x4f80"></a>
 ### GETRIEBEPROBLEM0X4F80
 
 Dimensions: 1 rows × 10 columns
@@ -5746,7 +5565,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 9 | 0x0050 | 0x007A | 0x0078 | 0x0077 | 0x0079 | 0x0084 | 0x0082 | 0x0081 | 0x0083 |
 
-<a id="table-uebersetzungsp0x4f81"></a>
 ### UEBERSETZUNGSP0X4F81
 
 Dimensions: 1 rows × 12 columns
@@ -5755,7 +5573,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 11 | 0x00F0 | 0x0014 | 0x0085 | 0x0043 | 0x0046 | 0x00E6 | 0x00F1 | 0x017E | 0x017F | 0x007F | 0x0080 |
 
-<a id="table-wahlhebel0x5002"></a>
 ### WAHLHEBEL0X5002
 
 Dimensions: 1 rows × 3 columns
@@ -5764,7 +5581,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x00F0 | 0x00F1 |
 
-<a id="table-fahrtrichtwahlhebel"></a>
 ### FAHRTRICHTWAHLHEBEL
 
 Dimensions: 1 rows × 12 columns
@@ -5773,7 +5589,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 11 | 0x00F4 | 0x00F5 | 0x00F6 | 0x00F7 | 0x00F8 | 0x00F9 | 0x00FA | 0x00FB | 0x00FC | 0x00FD | 0x00FE |
 
-<a id="table-lenkrad10x5006-07"></a>
 ### LENKRAD10X5006_07
 
 Dimensions: 1 rows × 3 columns
@@ -5782,7 +5597,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x00C3 | 0x00C4 |
 
-<a id="table-lenkrad20x5006-07"></a>
 ### LENKRAD20X5006_07
 
 Dimensions: 1 rows × 3 columns
@@ -5791,7 +5605,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x003A | 0x003B |
 
-<a id="table-laengsbeschl0x5008"></a>
 ### LAENGSBESCHL0X5008
 
 Dimensions: 1 rows × 3 columns
@@ -5800,7 +5613,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x00F0 | 0x0026 |
 
-<a id="table-handbremse0x5008"></a>
 ### HANDBREMSE0X5008
 
 Dimensions: 1 rows × 4 columns
@@ -5809,7 +5621,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x0100 | 0x0101 | 0x0102 |
 
-<a id="table-hydraulikdrucksens0x5101"></a>
 ### HYDRAULIKDRUCKSENS0X5101
 
 Dimensions: 1 rows × 9 columns
@@ -5818,7 +5629,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x00F0 | 0x0023 | 0x0050 | 0x00EA | 0x0049 | 0x00EB | 0x0053 | 0x0075 |
 
-<a id="table-sensorposition0x5108bis0a"></a>
 ### SENSORPOSITION0X5108BIS0A
 
 Dimensions: 1 rows × 9 columns
@@ -5827,7 +5637,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x0043 | 0x0044 | 0x0014 | 0x00EC | 0x007F | 0x007D | 0x007C | 0x007E |
 
-<a id="table-getriebeeingang0x510b"></a>
 ### GETRIEBEEINGANG0X510B
 
 Dimensions: 1 rows × 9 columns
@@ -5836,7 +5645,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x00F0 | 0x006A | 0x0044 | 0x0046 | 0x0014 | 0x00E6 | 0x0103 | 0x0104 |
 
-<a id="table-schaltstanger10x5106-07"></a>
 ### SCHALTSTANGER10X5106_07
 
 Dimensions: 1 rows × 12 columns
@@ -5845,7 +5653,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 11 | 0x0043 | 0x0044 | 0x008B | 0x00EB | 0x00EC | 0x007F | 0x0080 | 0x007A | 0x007B | 0x007D | 0x0098 |
 
-<a id="table-motordrehz0x510c-5200"></a>
 ### MOTORDREHZ0X510C_5200
 
 Dimensions: 1 rows × 10 columns
@@ -5854,7 +5661,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 9 | 0x00F0 | 0x0103 | 0x0104 | 0x0043 | 0x0046 | 0x0069 | 0x006C | 0x0014 | 0x0044 |
 
-<a id="table-radgeschwhl0x5201"></a>
 ### RADGESCHWHL0X5201
 
 Dimensions: 1 rows × 11 columns
@@ -5863,7 +5669,6 @@ Dimensions: 1 rows × 11 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10 | 0x00F0 | 0x0103 | 0x0104 | 0x008B | 0x0043 | 0x00E7 | 0x00E8 | 0x00EE | 0x00EF | 0x0056 |
 
-<a id="table-radgeschwhr0x5202"></a>
 ### RADGESCHWHR0X5202
 
 Dimensions: 1 rows × 11 columns
@@ -5872,7 +5677,6 @@ Dimensions: 1 rows × 11 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10 | 0x00F0 | 0x0103 | 0x0104 | 0x008B | 0x0043 | 0x00E7 | 0x00E8 | 0x00EE | 0x00EF | 0x0057 |
 
-<a id="table-radgeschwvl0x5203"></a>
 ### RADGESCHWVL0X5203
 
 Dimensions: 1 rows × 10 columns
@@ -5881,7 +5685,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 9 | 0x00F0 | 0x00B3 | 0x008B | 0x0043 | 0x00E7 | 0x00E8 | 0x00EE | 0x00EF | 0x0058 |
 
-<a id="table-radgeschwvr0x5204"></a>
 ### RADGESCHWVR0X5204
 
 Dimensions: 1 rows × 10 columns
@@ -5890,7 +5693,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 9 | 0x00F0 | 0x00B4 | 0x008B | 0x0043 | 0x00E7 | 0x00E8 | 0x00EE | 0x00EF | 0x0059 |
 
-<a id="table-betriebsbremssig0x5206"></a>
 ### BETRIEBSBREMSSIG0X5206
 
 Dimensions: 1 rows × 6 columns
@@ -5899,7 +5701,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x00F0 | 0x0026 | 0x003D | 0x0055 | 0x0142 |
 
-<a id="table-bremszuendsig0x5206"></a>
 ### BREMSZUENDSIG0X5206
 
 Dimensions: 1 rows × 7 columns
@@ -5908,7 +5709,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x0132 | 0x0133 | 0x012E | 0x012F | 0x0130 | 0x0131 |
 
-<a id="table-getriebekuppfussstatus"></a>
 ### GETRIEBEKUPPFUSSSTATUS
 
 Dimensions: 1 rows × 17 columns
@@ -5917,7 +5717,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 16 | 0x0105 | 0x0106 | 0x0107 | 0x0108 | 0x0109 | 0x010A | 0x010B | 0x010C | 0x010D | 0x010E | 0x010F | 0x0110 | 0x0111 | 0x0112 | 0x0113 | 0x0114 |
 
-<a id="table-lenkwinkel0x520a"></a>
 ### LENKWINKEL0X520A
 
 Dimensions: 1 rows × 5 columns
@@ -5926,7 +5725,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x00F0 | 0x005D | 0x003F | 0x00D3 |
 
-<a id="table-drehmoment0x5208"></a>
 ### DREHMOMENT0X5208
 
 Dimensions: 1 rows × 5 columns
@@ -5935,7 +5733,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x00F0 | 0x0067 | 0x0040 | 0x00D4 |
 
-<a id="table-klemmer-15-500x5210"></a>
 ### KLEMMER_15_500X5210
 
 Dimensions: 1 rows × 12 columns
@@ -5944,7 +5741,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10 | 0x00F0 | 0x0046 | 0x0116 | 0x0117 | 0x0118 | 0x0119 | 0x011A | 0x011B | 0x011C | 0x011D | 0x011E |
 
-<a id="table-statusdigitaleausgaenge"></a>
 ### STATUSDIGITALEAUSGAENGE
 
 Dimensions: 1 rows × 16 columns
@@ -5953,7 +5749,6 @@ Dimensions: 1 rows × 16 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 15 | 0x011F | 0x0120 | 0x0121 | 0x0122 | 0x0123 | 0x0124 | 0x0125 | 0x0126 | 0x0127 | 0x0128 | 0x0129 | 0x012A | 0x012B | 0x012C | 0x012D |
 
-<a id="table-shiftlock0x5400"></a>
 ### SHIFTLOCK0X5400
 
 Dimensions: 1 rows × 4 columns
@@ -5962,7 +5757,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x0134 | 0x0135 | 0x0136 |
 
-<a id="table-spg-mdrehz0x5400-01"></a>
 ### SPG_MDREHZ0X5400_01
 
 Dimensions: 1 rows × 3 columns
@@ -5971,7 +5765,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x0F0 | 0x0046 |
 
-<a id="table-anlasserfreigabe0x5401"></a>
 ### ANLASSERFREIGABE0X5401
 
 Dimensions: 1 rows × 4 columns
@@ -5980,7 +5773,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x0137 | 0x0138 | 0x0139 |
 
-<a id="table-hydpumpe0x5402"></a>
 ### HYDPUMPE0X5402
 
 Dimensions: 1 rows × 6 columns
@@ -5989,7 +5781,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x00F0 | 0x0023 | 0x0050 | 0x0049 | 0x0046 |
 
-<a id="table-magnetventil5-30x5509"></a>
 ### MAGNETVENTIL5_30X5509
 
 Dimensions: 1 rows × 11 columns
@@ -5998,7 +5789,6 @@ Dimensions: 1 rows × 11 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 10 | 0x00F0 | 0x001A | 0x0023 | 0x0020 | 0x0024 | 0x0088 | 0x0085 | 0x0078 | 0x0049 | 0x0061 |
 
-<a id="table-digeinresetfest"></a>
 ### DIGEINRESETFEST
 
 Dimensions: 1 rows × 15 columns
@@ -6007,7 +5797,6 @@ Dimensions: 1 rows × 15 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 14 | 0x0144 | 0x0146 | 0x0147 | 0x0148 | 0x0149 | 0x014A | 0x014B | 0x014C | 0x014D | 0x014E | 0x014F | 0x0150 | 0x0152 | 0x0153 |
 
-<a id="table-fehlerstatuscanbus"></a>
 ### FEHLERSTATUSCANBUS
 
 Dimensions: 1 rows × 4 columns
@@ -6016,7 +5805,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x00F0 | 0x0069 | 0x00A1 |
 
-<a id="table-getriebetemp0x4f44"></a>
 ### GETRIEBETEMP0X4F44
 
 Dimensions: 1 rows × 8 columns
@@ -6025,7 +5813,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x00F0 | 0x0050 | 0x0176 | 0x0051 | 0x00EA | 0x0046 | 0x0076 |
 
-<a id="table-relaisgetroelp0x5406-1"></a>
 ### RELAISGETROELP0X5406_1
 
 Dimensions: 1 rows × 4 columns
@@ -6034,7 +5821,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x00F0 | 0x0176 | 0x0046 |
 
-<a id="table-relaisgetroelp0x5406-2"></a>
 ### RELAISGETROELP0X5406_2
 
 Dimensions: 1 rows × 4 columns
@@ -6043,7 +5829,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x00C6 | 0x0076 | 0x017D |
 
-<a id="table-getriebetemp0x4f45"></a>
 ### GETRIEBETEMP0X4F45
 
 Dimensions: 1 rows × 5 columns
@@ -6052,7 +5837,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x00F0 | 0x0050 | 0x0176 | 0x0051 |
 
-<a id="table-hydraulik0x4f44"></a>
 ### HYDRAULIK0X4F44
 
 Dimensions: 1 rows × 10 columns
@@ -6061,7 +5845,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 9 | 0x00F0 | 0x0023 | 0x0050 | 0x0051 | 0x00EA | 0x0046 | 0x017A | 0x017B | 0x017C |
 
-<a id="table-hydraulik0x4f43"></a>
 ### HYDRAULIK0X4F43
 
 Dimensions: 1 rows × 10 columns
@@ -6070,7 +5853,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 9 | 0x00F0 | 0x0023 | 0x0050 | 0x0051 | 0x00EA | 0x0046 | 0x0177 | 0x0178 | 0x0179 |
 
-<a id="table-prgwahl0x5004-05-1"></a>
 ### PRGWAHL0X5004_05_1
 
 Dimensions: 1 rows × 3 columns
@@ -6079,7 +5861,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x00B6 | 0x00B7 |
 
-<a id="table-prgwahl0x5004-05-2"></a>
 ### PRGWAHL0X5004_05_2
 
 Dimensions: 1 rows × 3 columns
@@ -6088,7 +5869,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x002B | 0x002C |
 
-<a id="table-fumwelttexte49"></a>
 ### FUMWELTTEXTE49
 
 Dimensions: 14 rows × 2 columns
@@ -6110,7 +5890,6 @@ Dimensions: 14 rows × 2 columns
 | 0x12 | Diagnoseprotokollreset |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte52"></a>
 ### FUMWELTTEXTE52
 
 Dimensions: 61 rows × 2 columns
@@ -6179,7 +5958,6 @@ Dimensions: 61 rows × 2 columns
 | 0x62 | Offsetstromermittlung des Kupplungsventils fehlgeschlagen |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte53"></a>
 ### FUMWELTTEXTE53
 
 Dimensions: 43 rows × 2 columns
@@ -6230,7 +6008,6 @@ Dimensions: 43 rows × 2 columns
 | 0x53 | Kupplungstest beendet |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte50"></a>
 ### FUMWELTTEXTE50
 
 Dimensions: 8 rows × 2 columns
@@ -6246,7 +6023,6 @@ Dimensions: 8 rows × 2 columns
 | 0x20 | Falsche Verfahrrichtung |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte51"></a>
 ### FUMWELTTEXTE51
 
 Dimensions: 13 rows × 2 columns

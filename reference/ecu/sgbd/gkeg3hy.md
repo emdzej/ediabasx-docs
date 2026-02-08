@@ -64,7 +64,6 @@
 - [STATUS_EGS_DIAGNOSE_TESTJOB](#job-status-egs-diagnose-testjob) - Job fuer EGS Diagnosetest UDS
 - [STATUS_EWS](#job-status-ews) - Zurücklesen verschiedener interner Stati für EWS UDS   : $22   ReadDataByIdentifier UDS   : $C000 Sub-Parameter
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -83,7 +82,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -96,7 +94,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -113,7 +110,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -144,7 +140,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -189,7 +184,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -208,7 +202,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -226,7 +219,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -247,7 +239,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -276,7 +267,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -296,7 +286,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -317,7 +306,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -333,7 +321,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -355,7 +342,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -374,7 +360,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-permanent"></a>
 ### FS_LESEN_PERMANENT
 
 permanente Fehler aus Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $15 ReportDTCWithPermanentStatus Modus: Default
@@ -400,7 +385,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -427,7 +411,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -472,7 +455,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -487,7 +469,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -507,7 +488,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -526,7 +506,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -545,7 +524,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -560,7 +538,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -579,7 +556,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -599,7 +575,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -616,7 +591,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -631,7 +605,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -646,7 +619,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -663,7 +635,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -678,7 +649,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -693,7 +663,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -708,7 +677,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen"></a>
 ### CALID_CVN_LESEN
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -726,7 +694,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -742,7 +709,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -761,7 +727,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -781,7 +746,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -799,7 +763,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -815,7 +778,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bk-lesen"></a>
 ### _BK_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $5000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -841,7 +803,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-azg-kennung"></a>
 ### STATUS_AZG_KENNUNG
 
 Status Substrattemperatur UDS: $22 ReadDataByCommonIdentifier UDS: $4630 Modus  : Default
@@ -859,7 +820,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-iumpr-num-den-pckg-1"></a>
 ### STATUS_RBM_IUMPR_NUM_DEN_PCKG_1
 
 Dient zum Aulesen der OBD fehlerbezogenen RBM Ratios Dabei wird die Häufigkeit des Durchlaufens von abgasrelevanten Diagnosefunktionen gezählt ( Service ID 0x22, Identifier 0x42, 0x10 )
@@ -994,7 +954,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-iumpr-num-den-pckg-2"></a>
 ### STATUS_RBM_IUMPR_NUM_DEN_PCKG_2
 
 Dient zum Aulesen der OBD fehlerbezogenen RBM Ratios Dabei wird die Häufigkeit des Durchlaufens von abgasrelevanten Diagnosefunktionen gezählt ( Service ID 0x22, Identifier 0x42, 0x11 )
@@ -1129,7 +1088,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-iumpr-num-den-pckg-3"></a>
 ### STATUS_RBM_IUMPR_NUM_DEN_PCKG_3
 
 Dient zum Aulesen der OBD fehlerbezogenen RBM Ratios Dabei wird die Häufigkeit des Durchlaufens von abgasrelevanten Diagnosefunktionen gezählt ( Service ID 0x22, Identifier 0x42, 0x12 )
@@ -1264,7 +1222,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-egs-diagnose-testjob"></a>
 ### STATUS_EGS_DIAGNOSE_TESTJOB
 
 Job fuer EGS Diagnosetest UDS
@@ -1294,7 +1251,6 @@ Job fuer EGS Diagnosetest UDS
 | STAT_EGS_OUT | binary | Antwort von EGS  |
 | JOB_STATUS | string | "OKAY","FEHLER",wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-ews"></a>
 ### STATUS_EWS
 
 Zurücklesen verschiedener interner Stati für EWS UDS   : $22   ReadDataByIdentifier UDS   : $C000 Sub-Parameter
@@ -1587,7 +1543,6 @@ _No arguments._
 - [T_LEVER](#table-t-lever) (12 × 2)
 - [T_SUBTRAT](#table-t-subtrat) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1671,7 +1626,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -1820,7 +1774,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1863,7 +1816,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1888,7 +1840,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1922,7 +1873,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1995,7 +1945,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -2008,7 +1957,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -2023,7 +1971,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -2036,7 +1983,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -2056,7 +2002,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2099,7 +2044,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2110,7 +2054,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x4010"></a>
 ### ARG_0X4010
 
 Dimensions: 1 rows × 12 columns
@@ -2119,7 +2062,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | low | char | - | - | - | - | - | - | - | Übergabewert nur 0 |
 
-<a id="table-arg-0x4011"></a>
 ### ARG_0X4011
 
 Dimensions: 1 rows × 12 columns
@@ -2128,7 +2070,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | char | - | - | - | - | - | - | - | Übergabewert wird nicht ausgewertet |
 
-<a id="table-arg-0x4150"></a>
 ### ARG_0X4150
 
 Dimensions: 1 rows × 12 columns
@@ -2137,7 +2078,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | low | char | - | - | - | - | - | - | - | Uebergabewert nur 0 |
 
-<a id="table-arg-0x4151"></a>
 ### ARG_0X4151
 
 Dimensions: 1 rows × 12 columns
@@ -2146,7 +2086,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMYWERT_NULL | - | low | char | - | - | - | - | - | - | - | Übergabewert nur 0 |
 
-<a id="table-arg-0x4152"></a>
 ### ARG_0X4152
 
 Dimensions: 1 rows × 12 columns
@@ -2155,7 +2094,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMYWERT_NULL | - | low | char | - | - | - | - | - | - | - | Übergabewert nur 0 |
 
-<a id="table-arg-0x4645"></a>
 ### ARG_0X4645
 
 Dimensions: 1 rows × 12 columns
@@ -2164,7 +2102,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | char | - | - | - | - | - | - | - | Übergabewert nur 0 |
 
-<a id="table-arg-0x4886"></a>
 ### ARG_0X4886
 
 Dimensions: 1 rows × 12 columns
@@ -2173,7 +2110,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | char | - | - | - | - | - | - | - | Übergabewert nur 0 |
 
-<a id="table-arg-0x4887"></a>
 ### ARG_0X4887
 
 Dimensions: 1 rows × 12 columns
@@ -2182,7 +2118,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | char | - | - | - | - | - | - | - | Übergabewert nur 0 |
 
-<a id="table-arg-0x4888"></a>
 ### ARG_0X4888
 
 Dimensions: 1 rows × 12 columns
@@ -2191,7 +2126,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | char | - | - | - | - | - | - | - | Übergabewert nur 0 |
 
-<a id="table-arg-0x4889"></a>
 ### ARG_0X4889
 
 Dimensions: 1 rows × 12 columns
@@ -2200,7 +2134,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | char | - | - | - | - | - | - | - | Übergabewert nur 0 |
 
-<a id="table-arg-0xda15"></a>
 ### ARG_0XDA15
 
 Dimensions: 1 rows × 12 columns
@@ -2209,7 +2142,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | 0-n | - | char | - | TAB_STEUERN_LERNFKT_RUECKSETZEN | - | - | - | - | - | - |
 
-<a id="table-bf-22-f152-supplierinfo"></a>
 ### BF_22_F152_SUPPLIERINFO
 
 Dimensions: 2 rows × 10 columns
@@ -2219,7 +2151,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HWMODEL | 0-n | high | unsigned char | 0xC0 | HW_MODEL | - | - | - | hardware model |
 | STAT_SUPPLIERINFOFIELD | 0-n | high | unsigned char | 0x3F | TAB_SUPPLIERINFO_FIELD | - | - | - | supplierInfo |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -2229,7 +2160,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2243,7 +2173,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 357 rows × 3 columns
@@ -2608,7 +2537,6 @@ Dimensions: 357 rows × 3 columns
 | 0xCF3841 | Hybridablaufsteuerung (HAS): Sammelfehler | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 303 rows × 9 columns
@@ -2919,7 +2847,6 @@ Dimensions: 303 rows × 9 columns
 | 0xFFFF | ohne Bedeutung | - | - | unsigned char | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-hw-model"></a>
 ### HW_MODEL
 
 Dimensions: 5 rows × 2 columns
@@ -2932,7 +2859,6 @@ Dimensions: 5 rows × 2 columns
 | 0xC0 | D-Muster |
 | 0xFF | Wert ungültig |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2944,7 +2870,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 50 rows × 3 columns
@@ -3002,7 +2927,6 @@ Dimensions: 50 rows × 3 columns
 | 0xCF3002 | SysFunktion: keine gültige Zeitbotschaft RELATIVZEIT (328h) vom Systime-Master auf dem FA-CAN empfangen | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 303 rows × 9 columns
@@ -3313,7 +3237,6 @@ Dimensions: 303 rows × 9 columns
 | 0xFFFF | ohne Bedeutung | - | - | unsigned char | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -3322,7 +3245,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x1061-r"></a>
 ### RES_0X1061_R
 
 Dimensions: 1 rows × 13 columns
@@ -3331,7 +3253,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_ENDE_WABL | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 0: Verriegelt (loeschen von Einzelfehlern und PDTCs wird unterbunden) 1: Entriegelt (loeschen von Einzelfehlern und PDTCs wird nicht unterbunden) |
 
-<a id="table-res-0x2541-d"></a>
 ### RES_0X2541_D
 
 Dimensions: 2 rows × 10 columns
@@ -3341,7 +3262,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_CALID_TEXT | TEXT | high | string[16] | - | - | 1.0 | 1.0 | 0.0 | Cal-ID auslesen (hier muss die Cal-ID wie bei Mode $09 (PID $04) ausgegeben werden). |
 | STAT_CVN_WERT | HEX | high | unsigned long | - | - | - | - | - | CVN auslesen (hier muss die CVN wie bei Mode $09 (PID $06) ausgegeben werden) |
 
-<a id="table-res-0x4006"></a>
 ### RES_0X4006
 
 Dimensions: 2 rows × 10 columns
@@ -3351,7 +3271,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_CAN_LEARN_FIRST_BITS | BIT | - | BITFIELD | - | RES_LEARN1 | - | - | - | Gibt für die ersten 32 CAN-Botschaften an, ob Sie gelernt wurden |
 | STAT_CAN_LEARN_SECOND_BITS | BIT | - | BITFIELD | - | RES_LEARN2 | - | - | - | Gibt für die zweiten 32 CAN-Botschaften an, ob Sie gelernt wurden |
 
-<a id="table-res-0x4007"></a>
 ### RES_0X4007
 
 Dimensions: 3 rows × 10 columns
@@ -3362,7 +3281,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_CAN_LEARN_FIRST_BITS | BIT | - | BITFIELD | - | RES_LEARN1 | - | - | - | Gibt für die ersten 32 CAN-Botschaften an, ob Sie als zu lernend parametrisiert wurden |
 | STAT_CAN_LEARN_SECOND_BITS | BIT | - | BITFIELD | - | RES_LEARN2 | - | - | - | Gibt für die zweiten 32 CAN-Botschaften an, ob Sie als zu lernend parametrisiert wurden |
 
-<a id="table-res-0x4008"></a>
 ### RES_0X4008
 
 Dimensions: 12 rows × 10 columns
@@ -3382,7 +3300,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_LESEN_STELLGLIED_OUT13_WERT | mA | high | unsigned int | - | - | - | 10 | - | Ausgabe des Stromwertes im Aktuator im Bereich 0 bis 6553,5 mA |
 | STAT_LESEN_STELLGLIED_OUT14_WERT | mA | high | unsigned int | - | - | - | 10 | - | Ausgabe des Stromwertes im Aktuator im Bereich 0 bis 6553,5 mA |
 
-<a id="table-res-0x4110"></a>
 ### RES_0X4110
 
 Dimensions: 64 rows × 10 columns
@@ -3454,7 +3371,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_1_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 1-2 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_1_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 1-2 |
 
-<a id="table-res-0x4111"></a>
 ### RES_0X4111
 
 Dimensions: 64 rows × 10 columns
@@ -3526,7 +3442,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_2_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 2-3 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_2_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 2-3 |
 
-<a id="table-res-0x4112"></a>
 ### RES_0X4112
 
 Dimensions: 64 rows × 10 columns
@@ -3598,7 +3513,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_3_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 3-4 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_3_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 3-4 |
 
-<a id="table-res-0x4113"></a>
 ### RES_0X4113
 
 Dimensions: 64 rows × 10 columns
@@ -3670,7 +3584,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_4_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 4-5 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_4_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 4-5 |
 
-<a id="table-res-0x4114"></a>
 ### RES_0X4114
 
 Dimensions: 64 rows × 10 columns
@@ -3742,7 +3655,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_5_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 5-6 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_5_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 5-6 |
 
-<a id="table-res-0x4115"></a>
 ### RES_0X4115
 
 Dimensions: 64 rows × 10 columns
@@ -3814,7 +3726,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_6_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 6-7 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_6_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 6-7 |
 
-<a id="table-res-0x4116"></a>
 ### RES_0X4116
 
 Dimensions: 64 rows × 10 columns
@@ -3886,7 +3797,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_7_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 7-8 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_7_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 7-8 |
 
-<a id="table-res-0x4117"></a>
 ### RES_0X4117
 
 Dimensions: 24 rows × 10 columns
@@ -3918,7 +3828,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_1_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 1-3 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_1_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 1-3 |
 
-<a id="table-res-0x4118"></a>
 ### RES_0X4118
 
 Dimensions: 24 rows × 10 columns
@@ -3950,7 +3859,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_2_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 2-4 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_2_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 2-4 |
 
-<a id="table-res-0x4119"></a>
 ### RES_0X4119
 
 Dimensions: 24 rows × 10 columns
@@ -3982,7 +3890,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_3_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 3-5 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_3_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 3-5 |
 
-<a id="table-res-0x411a"></a>
 ### RES_0X411A
 
 Dimensions: 24 rows × 10 columns
@@ -4014,7 +3921,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_4_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 4-6 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_4_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 4-6 |
 
-<a id="table-res-0x411b"></a>
 ### RES_0X411B
 
 Dimensions: 24 rows × 10 columns
@@ -4046,7 +3952,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_5_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 5-7 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_5_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 5-7 |
 
-<a id="table-res-0x411c"></a>
 ### RES_0X411C
 
 Dimensions: 24 rows × 10 columns
@@ -4078,7 +3983,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_6_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 6-8 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_6_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 6-8 |
 
-<a id="table-res-0x411d"></a>
 ### RES_0X411D
 
 Dimensions: 64 rows × 10 columns
@@ -4150,7 +4054,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_2_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 2-1 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_2_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 2-1 |
 
-<a id="table-res-0x411e"></a>
 ### RES_0X411E
 
 Dimensions: 64 rows × 10 columns
@@ -4222,7 +4125,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_3_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 3-2 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_3_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 3-2 |
 
-<a id="table-res-0x411f"></a>
 ### RES_0X411F
 
 Dimensions: 64 rows × 10 columns
@@ -4294,7 +4196,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_4_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 4-3 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_4_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 4-3 |
 
-<a id="table-res-0x4120"></a>
 ### RES_0X4120
 
 Dimensions: 64 rows × 10 columns
@@ -4366,7 +4267,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_5_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 5-4 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_5_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 5-4 |
 
-<a id="table-res-0x4121"></a>
 ### RES_0X4121
 
 Dimensions: 64 rows × 10 columns
@@ -4438,7 +4338,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_6_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 6-5 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_6_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 6-5 |
 
-<a id="table-res-0x4122"></a>
 ### RES_0X4122
 
 Dimensions: 64 rows × 10 columns
@@ -4510,7 +4409,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_7_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 7-6 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_7_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 7-6 |
 
-<a id="table-res-0x4123"></a>
 ### RES_0X4123
 
 Dimensions: 64 rows × 10 columns
@@ -4582,7 +4480,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_8_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 8-7 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_8_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 8-7 |
 
-<a id="table-res-0x4124"></a>
 ### RES_0X4124
 
 Dimensions: 64 rows × 10 columns
@@ -4654,7 +4551,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_3_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 3-1 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_3_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 3-1 |
 
-<a id="table-res-0x4125"></a>
 ### RES_0X4125
 
 Dimensions: 64 rows × 10 columns
@@ -4726,7 +4622,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_4_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 4-2 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_4_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 4-2 |
 
-<a id="table-res-0x4126"></a>
 ### RES_0X4126
 
 Dimensions: 64 rows × 10 columns
@@ -4798,7 +4693,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_5_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 5-3 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_5_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 5-3 |
 
-<a id="table-res-0x4127"></a>
 ### RES_0X4127
 
 Dimensions: 64 rows × 10 columns
@@ -4870,7 +4764,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_6_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 6-4 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_6_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 6-4 |
 
-<a id="table-res-0x4128"></a>
 ### RES_0X4128
 
 Dimensions: 64 rows × 10 columns
@@ -4942,7 +4835,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_7_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 7-5 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_7_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 7-5 |
 
-<a id="table-res-0x4129"></a>
 ### RES_0X4129
 
 Dimensions: 64 rows × 10 columns
@@ -5014,7 +4906,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF1_8_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 8-6 |
 | STAT_ADAPTIONSWERT64_GLS_KF1_8_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelrückschaltung 8-6 |
 
-<a id="table-res-0x412a"></a>
 ### RES_0X412A
 
 Dimensions: 24 rows × 10 columns
@@ -5046,7 +4937,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_5_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 5-1 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_5_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 5-1 |
 
-<a id="table-res-0x412b"></a>
 ### RES_0X412B
 
 Dimensions: 24 rows × 10 columns
@@ -5078,7 +4968,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_6_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 6-3 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_6_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 6-3 |
 
-<a id="table-res-0x412c"></a>
 ### RES_0X412C
 
 Dimensions: 24 rows × 10 columns
@@ -5110,7 +4999,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_7_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 7-1 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_7_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 7-1 |
 
-<a id="table-res-0x412d"></a>
 ### RES_0X412D
 
 Dimensions: 24 rows × 10 columns
@@ -5142,7 +5030,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_8_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 8-2 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_8_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 8-2 |
 
-<a id="table-res-0x412e"></a>
 ### RES_0X412E
 
 Dimensions: 24 rows × 10 columns
@@ -5174,7 +5061,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF1_8_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 8-4 |
 | STAT_ADAPTIONSWERT24_GLS_KF1_8_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Mehrfachrückschaltung 8-4 |
 
-<a id="table-res-0x4130"></a>
 ### RES_0X4130
 
 Dimensions: 5 rows × 10 columns
@@ -5187,7 +5073,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_ADAPTIONSWERTE_KSFCTR_KUPPLUNG_D_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der kupplungsbezogenen Schnellfüllungsadaption von Kupplung D |
 | STAT_ADAPTIONSWERTE_KSFCTR_KUPPLUNG_E_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der kupplungsbezogenen Schnellfüllungsadaption von Kupplung E |
 
-<a id="table-res-0x4131"></a>
 ### RES_0X4131
 
 Dimensions: 5 rows × 10 columns
@@ -5200,7 +5085,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_ADAPTIONSWERTE_KPFCTR_KUPPLUNG_D_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der kupplungsbezogenen Fülldruckadaption von Kupplung D |
 | STAT_ADAPTIONSWERTE_KPFCTR_KUPPLUNG_E_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der kupplungsbezogenen Fülldruckadaption von Kupplung E |
 
-<a id="table-res-0x4133"></a>
 ### RES_0X4133
 
 Dimensions: 13 rows × 10 columns
@@ -5221,7 +5105,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_ADAPTIONSWERTE_GLSHSCTRKF1_5_7_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der Hochschaltung 5-7 in der GLS-Adaption |
 | STAT_ADAPTIONSWERTE_GLSHSCTRKF1_6_8_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der Hochschaltung 6-8 in der GLS-Adaption |
 
-<a id="table-res-0x4134"></a>
 ### RES_0X4134
 
 Dimensions: 18 rows × 10 columns
@@ -5247,7 +5130,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_ADAPTIONSWERTE_GLSRSCTRKF1_8_2_WERT | mbar | high | unsigned int | - | - | - | - | - | Zähler der Rückschaltung 8-2 in der GLS-Adaption |
 | STAT_ADAPTIONSWERTE_GLSRSCTRKF1_8_4_WERT | mbar | high | unsigned int | - | - | - | - | - | Zähler der Rückschaltung 8-4 in der GLS-Adaption |
 
-<a id="table-res-0x4136"></a>
 ### RES_0X4136
 
 Dimensions: 13 rows × 10 columns
@@ -5268,7 +5150,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_ADAPTIONSWERTE_GLSHSCTRKF2_5_7_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der Hochschaltung 5-7 in der GLS-Adaption |
 | STAT_ADAPTIONSWERTE_GLSHSCTRKF2_6_8_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der Hochschaltung 6-8 in der GLS-Adaption |
 
-<a id="table-res-0x4137"></a>
 ### RES_0X4137
 
 Dimensions: 18 rows × 10 columns
@@ -5294,7 +5175,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_ADAPTIONSWERTE_GLSRSCTRKF2_8_2_WERT | mbar | high | unsigned int | - | - | - | - | - | Zähler der Rückschaltung 8-2 in der GLS-Adaption |
 | STAT_ADAPTIONSWERTE_GLSRSCTRKF2_8_4_WERT | mbar | high | unsigned int | - | - | - | - | - | Zähler der Rückschaltung 8-4 in der GLS-Adaption |
 
-<a id="table-res-0x413a"></a>
 ### RES_0X413A
 
 Dimensions: 5 rows × 10 columns
@@ -5307,7 +5187,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_ADAPTIONSWERTE_KPF_KUPPLUNG_D_WERT | mbar | high | int | - | - | - | - | - | Adaption Kupplung D |
 | STAT_ADAPTIONSWERTE_KPF_KUPPLUNG_E_WERT | mbar | high | int | - | - | - | - | - | Adaption Kupplung E |
 
-<a id="table-res-0x4140"></a>
 ### RES_0X4140
 
 Dimensions: 5 rows × 10 columns
@@ -5320,7 +5199,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_ADAPTIONSWERTE_KSF_KUPPLUNG_D_WERT | ms | high | int | - | - | - | - | - | Schnellfüllzeit Adaption Kupplung D |
 | STAT_ADAPTIONSWERTE_KSF_KUPPLUNG_E_WERT | ms | high | int | - | - | - | - | - | Schnellfüllzeit Adaption Kupplung E |
 
-<a id="table-res-0x4143"></a>
 ### RES_0X4143
 
 Dimensions: 31 rows × 10 columns
@@ -5359,7 +5237,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_ADAPTIONSWERTE_BFLGLSHS_5_7_WERT | mbar | high | int | - | - | - | - | - | Beeinflussungsadaption der GLS Hochschaltung 5-7 |
 | STAT_ADAPTIONSWERTE_BFLGLSHS_6_8_WERT | mbar | high | int | - | - | - | - | - | Beeinflussungsadaption der GLS Hochschaltung 6-8 |
 
-<a id="table-res-0x4144"></a>
 ### RES_0X4144
 
 Dimensions: 31 rows × 10 columns
@@ -5398,7 +5275,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_ADAPTIONSWERTE_BFLGLSHS_5_7_WERT | mbar | high | int | - | - | - | - | - | Beeinflussungsadaption der GLS Hochschaltung 5-7 |
 | STAT_ADAPTIONSWERTE_BFLGLSHS_6_8_WERT | mbar | high | int | - | - | - | - | - | Beeinflussungsadaption der GLS Hochschaltung 6-8 |
 
-<a id="table-res-0x415f-d"></a>
 ### RES_0X415F_D
 
 Dimensions: 3 rows × 10 columns
@@ -5409,7 +5285,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_GANG_EINLEGE_ADAPTION_CTR_2_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Zähler für 2. Gang |
 | STAT_GANG_EINLEGE_ADAPTION_CTR_R_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Zähler für R- Gang |
 
-<a id="table-res-0x4160"></a>
 ### RES_0X4160
 
 Dimensions: 64 rows × 10 columns
@@ -5481,7 +5356,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_1_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 1-2 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_1_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 1-2 |
 
-<a id="table-res-0x4161"></a>
 ### RES_0X4161
 
 Dimensions: 64 rows × 10 columns
@@ -5553,7 +5427,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_2_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 2-3 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_2_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 2-3 |
 
-<a id="table-res-0x4162"></a>
 ### RES_0X4162
 
 Dimensions: 64 rows × 10 columns
@@ -5625,7 +5498,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_3_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 3-4 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_3_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 3-4 |
 
-<a id="table-res-0x4163"></a>
 ### RES_0X4163
 
 Dimensions: 64 rows × 10 columns
@@ -5697,7 +5569,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_4_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 4-5 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_4_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 4-5 |
 
-<a id="table-res-0x4164"></a>
 ### RES_0X4164
 
 Dimensions: 64 rows × 10 columns
@@ -5769,7 +5640,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_5_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 5-6 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_5_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 5-6 |
 
-<a id="table-res-0x4165"></a>
 ### RES_0X4165
 
 Dimensions: 64 rows × 10 columns
@@ -5841,7 +5711,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_6_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 6-7 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_6_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 6-7 |
 
-<a id="table-res-0x4166"></a>
 ### RES_0X4166
 
 Dimensions: 64 rows × 10 columns
@@ -5913,7 +5782,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_7_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 7-8 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_7_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Hochschaltung 7-8 |
 
-<a id="table-res-0x4167"></a>
 ### RES_0X4167
 
 Dimensions: 24 rows × 10 columns
@@ -5945,7 +5813,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF2_1_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 1-3 |
 | STAT_ADAPTIONSWERT24_GLS_KF2_1_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 1-3 |
 
-<a id="table-res-0x4168"></a>
 ### RES_0X4168
 
 Dimensions: 24 rows × 10 columns
@@ -5977,7 +5844,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF2_2_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 2-4 |
 | STAT_ADAPTIONSWERT24_GLS_KF2_2_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 2-4 |
 
-<a id="table-res-0x4169"></a>
 ### RES_0X4169
 
 Dimensions: 24 rows × 10 columns
@@ -6009,7 +5875,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF2_3_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 3-5 |
 | STAT_ADAPTIONSWERT24_GLS_KF2_3_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 3-5 |
 
-<a id="table-res-0x416a"></a>
 ### RES_0X416A
 
 Dimensions: 24 rows × 10 columns
@@ -6041,7 +5906,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF2_4_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 4-6 |
 | STAT_ADAPTIONSWERT24_GLS_KF2_4_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 4-6 |
 
-<a id="table-res-0x416b"></a>
 ### RES_0X416B
 
 Dimensions: 24 rows × 10 columns
@@ -6073,7 +5937,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF2_5_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 5-7 |
 | STAT_ADAPTIONSWERT24_GLS_KF2_5_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 5-7 |
 
-<a id="table-res-0x416c"></a>
 ### RES_0X416C
 
 Dimensions: 24 rows × 10 columns
@@ -6105,7 +5968,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ADAPTIONSWERT23_GLS_KF2_6_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 6-8 |
 | STAT_ADAPTIONSWERT24_GLS_KF2_6_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Doppelhochschaltung 6-8 |
 
-<a id="table-res-0x416d"></a>
 ### RES_0X416D
 
 Dimensions: 64 rows × 10 columns
@@ -6177,7 +6039,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_2_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 2-1 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_2_1_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 2-1 |
 
-<a id="table-res-0x416e"></a>
 ### RES_0X416E
 
 Dimensions: 64 rows × 10 columns
@@ -6249,7 +6110,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_3_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 3-2 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_3_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 3-2 |
 
-<a id="table-res-0x416f"></a>
 ### RES_0X416F
 
 Dimensions: 64 rows × 10 columns
@@ -6321,7 +6181,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_4_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 4-3 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_4_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 4-3 |
 
-<a id="table-res-0x4170"></a>
 ### RES_0X4170
 
 Dimensions: 64 rows × 10 columns
@@ -6393,7 +6252,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_5_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 5-4 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_5_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 5-4 |
 
-<a id="table-res-0x4171"></a>
 ### RES_0X4171
 
 Dimensions: 64 rows × 10 columns
@@ -6465,7 +6323,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_6_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 6-5 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_6_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 6-5 |
 
-<a id="table-res-0x4172"></a>
 ### RES_0X4172
 
 Dimensions: 64 rows × 10 columns
@@ -6537,7 +6394,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_7_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 7-6 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_7_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 7-6 |
 
-<a id="table-res-0x4173"></a>
 ### RES_0X4173
 
 Dimensions: 64 rows × 10 columns
@@ -6609,7 +6465,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_ADAPTIONSWERT63_GLS_KF2_8_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 8-7 |
 | STAT_ADAPTIONSWERT64_GLS_KF2_8_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption der Rückschaltung 8-7 |
 
-<a id="table-res-0x4180"></a>
 ### RES_0X4180
 
 Dimensions: 16 rows × 10 columns
@@ -6633,7 +6488,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ADAPTIONSWERT15_GLS_KF3_1_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 1-2 |
 | STAT_ADAPTIONSWERT16_GLS_KF3_1_2_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 1-2 |
 
-<a id="table-res-0x4181"></a>
 ### RES_0X4181
 
 Dimensions: 16 rows × 10 columns
@@ -6657,7 +6511,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ADAPTIONSWERT15_GLS_KF3_2_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption K3 der Hochschaltung 2-3 |
 | STAT_ADAPTIONSWERT16_GLS_KF3_2_3_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption K3 der Hochschaltung 2-3 |
 
-<a id="table-res-0x4182"></a>
 ### RES_0X4182
 
 Dimensions: 16 rows × 10 columns
@@ -6681,7 +6534,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ADAPTIONSWERT15_GLS_KF3_3_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 3-4 |
 | STAT_ADAPTIONSWERT16_GLS_KF3_3_4_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 3-4 |
 
-<a id="table-res-0x4183"></a>
 ### RES_0X4183
 
 Dimensions: 16 rows × 10 columns
@@ -6705,7 +6557,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ADAPTIONSWERT15_GLS_KF3_4_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 4-5 |
 | STAT_ADAPTIONSWERT16_GLS_KF3_4_5_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 4-5 |
 
-<a id="table-res-0x4184"></a>
 ### RES_0X4184
 
 Dimensions: 16 rows × 10 columns
@@ -6729,7 +6580,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ADAPTIONSWERT15_GLS_KF3_5_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 5-6 |
 | STAT_ADAPTIONSWERT16_GLS_KF3_5_6_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 5-6 |
 
-<a id="table-res-0x4185"></a>
 ### RES_0X4185
 
 Dimensions: 16 rows × 10 columns
@@ -6753,7 +6603,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ADAPTIONSWERT15_GLS_KF3_6_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 6-7 |
 | STAT_ADAPTIONSWERT16_GLS_KF3_6_7_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 6-7 |
 
-<a id="table-res-0x4186"></a>
 ### RES_0X4186
 
 Dimensions: 16 rows × 10 columns
@@ -6777,7 +6626,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ADAPTIONSWERT15_GLS_KF3_7_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 7-8 |
 | STAT_ADAPTIONSWERT16_GLS_KF3_7_8_WERT | bar | high | char | - | - | - | 100 | - | Auslesen der GLS-Adaption KF3 der Hochschaltung 7-8 |
 
-<a id="table-res-0x4190"></a>
 ### RES_0X4190
 
 Dimensions: 7 rows × 10 columns
@@ -6792,7 +6640,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_ADAPTIONSWERTE_GLSHSCTRKF3_6_7_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der Hochschaltung 6-7 in der GLS-Adaption |
 | STAT_ADAPTIONSWERTE_GLSHSCTRKF3_7_8_WERT | - | high | unsigned int | - | - | - | - | - | Zähler der Hochschaltung 7-8 in der GLS-Adaption |
 
-<a id="table-res-0x41b6-d"></a>
 ### RES_0X41B6_D
 
 Dimensions: 448 rows × 10 columns
@@ -7248,7 +7095,6 @@ Dimensions: 448 rows × 10 columns
 | STAT_GLS_ADAP_KF1_SC78_NT8_MT7_WERT | mbar | - | char | - | - | 10.0 | 1.0 | 0.0 | Auslesen Werte Schaltung 7-8,Turbinendrehzahl, Moment |
 | STAT_GLS_ADAP_KF1_SC78_NT8_MT8_WERT | mbar | - | char | - | - | 10.0 | 1.0 | 0.0 | Auslesen Werte Schaltung 7-8,Turbinendrehzahl, Moment |
 
-<a id="table-res-0x41b7-d"></a>
 ### RES_0X41B7_D
 
 Dimensions: 448 rows × 10 columns
@@ -7704,7 +7550,6 @@ Dimensions: 448 rows × 10 columns
 | STAT_GLS_ADAP_KF2_SC78_NT8_MT7_WERT | mbar | - | char | - | - | 10.0 | 1.0 | 0.0 | Auslesen Werte Schaltung 7-8,Turbinendrehzahl, Moment |
 | STAT_GLS_ADAP_KF2_SC78_NT8_MT8_WERT | mbar | - | char | - | - | 10.0 | 1.0 | 0.0 | Auslesen Werte Schaltung 7-8,Turbinendrehzahl, Moment |
 
-<a id="table-res-0x41b8-d"></a>
 ### RES_0X41B8_D
 
 Dimensions: 144 rows × 10 columns
@@ -7856,7 +7701,6 @@ Dimensions: 144 rows × 10 columns
 | STAT_GLS_ADAP_DHS_KF1_SC68_NT6_MT3_WERT | mbar | - | char | - | - | 10.0 | 1.0 | 0.0 | Auslesen Werte Schaltung 6-8,Turbinendrehzahl, Moment |
 | STAT_GLS_ADAP_DHS_KF1_SC68_NT6_MT4_WERT | mbar | - | char | - | - | 10.0 | 1.0 | 0.0 | Auslesen Werte Schaltung 6-8,Turbinendrehzahl, Moment |
 
-<a id="table-res-0x41b9-d"></a>
 ### RES_0X41B9_D
 
 Dimensions: 7 rows × 10 columns
@@ -7871,7 +7715,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_GLS_ADAP_EHS_KF1_KALT_CTR_6_7_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Status GLS Adaption Einzel-Hoch-Schaltung Kennfeld 1 Kalt Bewertungszähler für Schaltung 6 nach 7 |
 | STAT_GLS_ADAP_EHS_KF1_KALT_CTR_7_8_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Status GLS Adaption Einzel-Hoch-Schaltung Kennfeld 1 Kalt Bewertungszähler für Schaltung 7 nach 8 |
 
-<a id="table-res-0x41ba-d"></a>
 ### RES_0X41BA_D
 
 Dimensions: 7 rows × 10 columns
@@ -7886,7 +7729,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_GLS_ADAP_EHS_KF2_KALT_CTR_6_7_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Status GLS Adaption Einzel-Hoch-Schaltungen Kennfeld 2 Kalt Bewertungszähler für Schaltung 6 nach 7 |
 | STAT_GLS_ADAP_EHS_KF2_KALT_CTR_7_8_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Status GLS Adaption Einzel-Hoch-Schaltungen Kennfeld 2 Kalt Bewertungszähler für Schaltung 7 nach 8 |
 
-<a id="table-res-0x41bb-d"></a>
 ### RES_0X41BB_D
 
 Dimensions: 6 rows × 10 columns
@@ -7900,7 +7742,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_GLS_ADAP_DHS_KF1_KALT_CTR_SC57_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Auslesen Wert Bewertungszähler für Schaltung 5-7 von GLS Adaption Doppel-Hoch-Schaltungen Kennfeld 1 Kalt  |
 | STAT_GLS_ADAP_DHS_KF1_KALT_CTR_SC68_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Auslesen Wert Bewertungszähler für Schaltung 6-8 von GLS Adaption Doppel-Hoch-Schaltungen Kennfeld 1 Kalt  |
 
-<a id="table-res-0x41bc-d"></a>
 ### RES_0X41BC_D
 
 Dimensions: 112 rows × 10 columns
@@ -8020,7 +7861,6 @@ Dimensions: 112 rows × 10 columns
 | STAT_GLS_ADAP_EHS_KF3_SC78_NT4_MT3_WERT | mbar | - | char | - | - | 10.0 | 1.0 | 0.0 | Auslesen Werte Schaltung 7-8,Turbinendrehzahl, Moment |
 | STAT_GLS_ADAP_EHS_KF3_SC78_NT4_MT4_WERT | mbar | - | char | - | - | 10.0 | 1.0 | 0.0 | Auslesen Werte Schaltung 7-8,Turbinendrehzahl, Moment |
 
-<a id="table-res-0x41bd-d"></a>
 ### RES_0X41BD_D
 
 Dimensions: 7 rows × 10 columns
@@ -8035,7 +7875,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_GLS_ADAP_EHS_KF3_KALT_CTR_SC67_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Auslesen Werte Bewertungszähler von Schaltung 6-7 der GLS Adaption Einzel-Hoch-Schaltungen Kennfeld 3 Kalt |
 | STAT_GLS_ADAP_EHS_KF3_KALT_CTR_SC78_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Auslesen Werte Bewertungszähler von Schaltung 7-8 der GLS Adaption Einzel-Hoch-Schaltungen Kennfeld 3 Kalt |
 
-<a id="table-res-0x4307"></a>
 ### RES_0X4307
 
 Dimensions: 11 rows × 10 columns
@@ -8054,7 +7893,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_BRAKE | 0/1 | high | int | 0x4000 | - | - | - | - | -- |
 | STAT_FREE | 0/1 | high | int | 0x8000 | - | - | - | - | -- |
 
-<a id="table-res-0x431e"></a>
 ### RES_0X431E
 
 Dimensions: 9 rows × 10 columns
@@ -8071,7 +7909,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_N_HALTE_SYSTIME_DATENSATZ_3_WERT | sec | - | long | - | - | - | - | - | - |
 | STAT_N_HALTE_DISTANZE_DATENSATZ_3_WERT | km | - | int | - | - | 10 | - | - | - |
 
-<a id="table-res-0x4400"></a>
 ### RES_0X4400
 
 Dimensions: 3 rows × 10 columns
@@ -8082,7 +7919,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_MAGNETVENTIL_MSA | 0-n | low | char | - | TAB_MAGNETVENTILE | - | - | - | - |
 | STAT_MAGNETVENTIL_PS | 0-n | low | char | - | TAB_MAGNETVENTILE | - | - | - | - |
 
-<a id="table-res-0x4403"></a>
 ### RES_0X4403
 
 Dimensions: 4 rows × 13 columns
@@ -8094,7 +7930,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_PEGEL_L3_LEITUNG | - | - | - | 0-n | low | char | - | l_leitung | - | - | - | 0: Pegel low 1: Pegel high |
 | STAT_PEGEL_L4_LEITUNG | - | - | - | 0-n | low | char | - | l_leitung | - | - | - | 0: Pegel low 1: Pegel high |
 
-<a id="table-res-0x4425"></a>
 ### RES_0X4425
 
 Dimensions: 2 rows × 10 columns
@@ -8104,7 +7939,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ERSATZPROGRAMM_1 | BIT | high | BITFIELD | - | TAB_ERSATZMASSNAHMEN1 | - | - | - | Zeigt den Status der ersten 32 Ersatzmaßnahmen (von 64) |
 | STAT_ERSATZPROGRAMM_2 | BIT | high | BITFIELD | - | TAB_ERSATZMASSNAHMEN2 | - | - | - | Zeigt den Status der letzten 32 Ersatzmaßnahmen (von 64) |
 
-<a id="table-res-0x4440"></a>
 ### RES_0X4440
 
 Dimensions: 13 rows × 10 columns
@@ -8125,7 +7959,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_TEMPERATURBEREICH_12_WERT | s | - | unsigned long | - | - | - | - | - | Temperaturbereich 12 von 155° bis 170° |
 | STAT_TEMPERATURBEREICH_13_WERT | s | - | unsigned long | - | - | - | - | - | Temperaturbereich konnte nicht sicher festgestellt werden |
 
-<a id="table-res-0x4441"></a>
 ### RES_0X4441
 
 Dimensions: 13 rows × 10 columns
@@ -8146,7 +7979,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_TEMPERATURBEREICH_12_WERT | s | - | unsigned long | - | - | - | - | - | Temperaturbereich 12 von 140° bis 170° |
 | STAT_TEMPERATURBEREICH_13_WERT | s | - | unsigned long | - | - | - | - | - | Temperaturbereich konnte nicht sicher festgestellt werden |
 
-<a id="table-res-0x4500-d"></a>
 ### RES_0X4500_D
 
 Dimensions: 5 rows × 10 columns
@@ -8159,7 +7991,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_CODIERUNG_SCANTOOL | 0-n | low | char | - | scantool | - | - | - | 0: Kommunikation aus; 1: Kommunikation ein |
 | STAT_CODIERUNG_MIL_CYCLES_WERT | - | low | char | - | - | - | - | - | Wert bestimmt nach wie vielen Zyklen das MIL aktiviert wird (0 = US = 2 Zyklen, 1= ECE = 3 Zyklen) |
 
-<a id="table-res-0x4501"></a>
 ### RES_0X4501
 
 Dimensions: 2 rows × 10 columns
@@ -8169,7 +8000,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_CODIERUNG_3000_DATA | DATA | - | data[2] | - | - | - | - | - | Codierung 0x3000, siehe _DATA nicht _WERT |
 | STAT_CODIERUNG_3001_DATA | DATA | - | data[2] | - | - | - | - | - | Codierung 0x3001, siehe _DATA nicht _WERT |
 
-<a id="table-res-0x4502"></a>
 ### RES_0X4502
 
 Dimensions: 2 rows × 10 columns
@@ -8179,7 +8009,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_CODIERUNG_MOD_3000_DATA | DATA | - | data[2] | - | - | - | - | - | Codierung 0x3000, siehe _DATA nicht _WERT |
 | STAT_CODIERUNG_MOD_3001_DATA | DATA | - | data[2] | - | - | - | - | - | Codierung 0x3001, siehe _DATA nicht _WERT |
 
-<a id="table-res-0x4840"></a>
 ### RES_0X4840
 
 Dimensions: 2 rows × 10 columns
@@ -8189,7 +8018,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_STATUS_IEP | 0-n | high | char | 0x0F | TAB_IEP_STATUS | - | - | - | Zusatzoelpumpe Status |
 | STAT_STATUS_IEP_ERROR | 0-n | high | char | 0xF0 | TAB_IEP_ERROR_STATUS | - | - | - | Zusatzoelpumpe Error Status |
 
-<a id="table-res-0x4870"></a>
 ### RES_0X4870
 
 Dimensions: 2 rows × 10 columns
@@ -8199,7 +8027,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_CNT_RST_SUCCESS_SUM_DATA | DATA | - | data[2] | - | - | - | - | - | Erfolgszähler RZN |
 | STAT_CNT_RST_FAIL_SUM_DATA | DATA | - | data[2] | - | - | - | - | - | Mißerfolgszähler RZN |
 
-<a id="table-res-0xda1d"></a>
 ### RES_0XDA1D
 
 Dimensions: 4 rows × 10 columns
@@ -8211,7 +8038,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_RADGESCHWINDIGKEIT_VL_WERT | rad/s | - | unsigned int | - | - | 1 | 64 | -512 | Radgeschwindigkeit vorne links M-Fahrzeug: Bereich von -512 [rad/s] bis 512 [rad/s] |
 | STAT_RADGESCHWINDIGKEIT_VR_WERT | rad/s | - | unsigned int | - | - | 1 | 64 | -512 | Radgeschwindigkeit vorne rechts M-Fahrzeug: Bereich von -512 [rad/s] bis 512 [rad/s] |
 
-<a id="table-res-0xda24"></a>
 ### RES_0XDA24
 
 Dimensions: 2 rows × 10 columns
@@ -8221,7 +8047,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TASTER_LENKRAD_SCHALTWIPPE_MINUS | 0-n | - | int | - | TAB_SCHALTWIPPE | - | - | - | 0: Schaltwippe minus nicht betätigt 1: Schaltwippe minus betätigt |
 | STAT_TASTER_LENKRAD_SCHALTWIPPE_PLUS | 0-n | - | int | - | TAB_SCHALTWIPPE | - | - | - | 0: Schaltwippe plus nicht betätigt 1: Schaltwippe plus betätigt |
 
-<a id="table-res-0xda27"></a>
 ### RES_0XDA27
 
 Dimensions: 3 rows × 10 columns
@@ -8232,7 +8057,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_WAEHLHEBELSTELLUNG | 0-n | - | int | - | TAB_WAEHLHEBELSTELLUNG | - | - | - | Waehlhebelstellung: R,0,A,S,+,-,n.def. als Wert, siehe table TAB_WAEHLHEBELSTELLUNG |
 | STAT_WAEHLHEBELSTELLUNG_P_TASTER | 0-n | - | int | - | TAB_P_TASTER | - | - | - | Hier muss die Wählhebelposition aus dem A-CAN-Signal Bedienung_Gangwahlschalter_Taster_Parken als Wert ausgegeben.TAB_P_TASTER |
 
-<a id="table-res-0xda28"></a>
 ### RES_0XDA28
 
 Dimensions: 2 rows × 10 columns
@@ -8242,7 +8066,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BREMSLICHTSCHALTER_EIN | 0-n | - | int | - | TAB_STATUS_BLS | - | - | - | 1 = Bremslichtschalter betätigt |
 | STAT_BREMSLICHTTESTSCHALTER_EIN | 0-n | - | int | - | TAB_STATUS_BLS | - | - | - | 1 = Bremslichttestschalter betätigt |
 
-<a id="table-res-0xda2a"></a>
 ### RES_0XDA2A
 
 Dimensions: 2 rows × 10 columns
@@ -8252,7 +8075,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EINGANGSDREHZAHL_WERT | 1/min | - | int | - | - | - | - | - | Getriebeeingangsdrehzahl der ersten Welle Bereich von 0 [1/min] bis 10000 [1/min] |
 | STAT_AUSGANGSDREHZAHL_WERT | 1/min | - | int | - | - | - | - | - | Getriebeausgangsdrehzahl Bereich von 0 [1/min] bis 10000 [1/min] |
 
-<a id="table-res-0xda37"></a>
 ### RES_0XDA37
 
 Dimensions: 3 rows × 10 columns
@@ -8263,7 +8085,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_S_ZAEHLER_WERT | sec | - | unsigned long | - | - | - | - | - | Die Zeit, die der Fahrer in Position S gefahren ist |
 | STAT_M_ZAEHLER_WERT | sec | - | unsigned long | - | - | - | - | - | Die Zeit, die der Fahrer im Manuellen Modus gefahren ist |
 
-<a id="table-res-0xda40"></a>
 ### RES_0XDA40
 
 Dimensions: 17 rows × 10 columns
@@ -8288,7 +8109,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_HA_10_MESS_WERT | - | - | int | - | - | - | 1000 | - | Rückgabe der Messwerte. Die Anzahl der Messwerte ist durch ANZAHL_HA_LERN_WERTE festgelegt |
 | STAT_HA_11_MESS_WERT | - | - | int | - | - | - | 1000 | - | Rückgabe der Messwerte. Die Anzahl der Messwerte ist durch ANZAHL_HA_LERN_WERTE festgelegt |
 
-<a id="table-res-0xf152-d"></a>
 ### RES_0XF152_D
 
 Dimensions: 2 rows × 10 columns
@@ -8298,7 +8118,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HW_MODIFICATION_INDEX_WERT | HEX | high | unsigned char | - | - | - | - | - | Index of hardware modification:  FF: Not supported index |
 | - | Bit | high | BITFIELD | - | BF_22_F152_SUPPLIERINFO | - | - | - | Tab Supplierinfo |
 
-<a id="table-res-learn1"></a>
 ### RES_LEARN1
 
 Dimensions: 32 rows × 13 columns
@@ -8338,7 +8157,6 @@ Dimensions: 32 rows × 13 columns
 | STAT_LEARN_DATEN_ANTRIEBSSTRANG_1_A | - | - | - | 0/1 | high | long | 0x40000000 | - | - | - | - | -- |
 | STAT_LEARN_DATEN_ANTRIEBSSTRANG_2_A | - | - | - | 0/1 | high | long | 0x80000000 | - | - | - | - | -- |
 
-<a id="table-res-learn2"></a>
 ### RES_LEARN2
 
 Dimensions: 18 rows × 13 columns
@@ -8364,7 +8182,6 @@ Dimensions: 18 rows × 13 columns
 | STAT_LEARN_NAVIGATION_SYSTEM_INFORMATION | - | - | - | 0/1 | high | long | 0x00010000 | - | - | - | - | -- |
 | STAT_LEARN_UEBEREINSTIMMUNG_NAVIGATIONSGRAPH | - | - | - | 0/1 | high | long | 0x00020000 | - | - | - | - | -- |
 
-<a id="table-res-step"></a>
 ### RES_STEP
 
 Dimensions: 8 rows × 13 columns
@@ -8380,7 +8197,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_N_C_ | - | - | - | 0/1 | - | char | 0x40 | - | - | - | - | -- |
 | STAT_RL | - | - | - | 0/1 | - | char | 0x80 | - | - | - | - | -- |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 229 rows × 16 columns
@@ -8617,7 +8433,6 @@ Dimensions: 229 rows × 16 columns
 | STAT_STEUERN_EE_UPDATE | 0xF4BC | - | Starten des Service mit ID;ADR;STR Stoppen mit ID;ADR;STPR | - | - | - | - | - | - | - | - | - | 31 | - | - |
 | STAT_STEUERN_IEP_FLASHEN | 0xF4BD | - | Starten des Service mit ID;ADR;STR Stoppen mit ID;ADR;STPR | - | - | - | - | - | - | - | - | - | 31 | - | - |
 
-<a id="table-statclientauthtxt"></a>
 ### STATCLIENTAUTHTXT
 
 Dimensions: 4 rows × 2 columns
@@ -8629,7 +8444,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Freigabe abgelehnt (Challenge-Response fehlgeschlagen, falsche Response, Kommunikation i.O.) |
 | 0x03 | nicht definiert |
 
-<a id="table-statewsvertxt"></a>
 ### STATEWSVERTXT
 
 Dimensions: 3 rows × 2 columns
@@ -8640,7 +8454,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Direktschreiben des SecretKey und DH-Abgleich |
 | 0xXY | unbekannt |
 
-<a id="table-statfreesktxt"></a>
 ### STATFREESKTXT
 
 Dimensions: 3 rows × 2 columns
@@ -8651,7 +8464,6 @@ Dimensions: 3 rows × 2 columns
 | 0xFF | ungültig |
 | 0xXY | freie Ablagen |
 
-<a id="table-tab-0x001c"></a>
 ### TAB_0X001C
 
 Dimensions: 1 rows × 9 columns
@@ -8660,7 +8472,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF0A7 | 0xF0A8 | 0xF0A9 | 0xF0AA | 0xF0AB | 0xF0AC | 0xF0AD | 0xF0AE |
 
-<a id="table-tab-0x001d"></a>
 ### TAB_0X001D
 
 Dimensions: 1 rows × 8 columns
@@ -8669,7 +8480,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x07 | 0xF0B7 | 0xF0B8 | 0xF0B9 | 0xF0BA | 0xF0BB | 0xF0BC | 0xF0BD |
 
-<a id="table-tab-0x001f"></a>
 ### TAB_0X001F
 
 Dimensions: 1 rows × 9 columns
@@ -8678,7 +8488,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF0AF | 0xF0B0 | 0xF0B1 | 0xF0B2 | 0xF0B3 | 0xF0B4 | 0xF0B5 | 0xF0B6 |
 
-<a id="table-tab-0x0021"></a>
 ### TAB_0X0021
 
 Dimensions: 1 rows × 10 columns
@@ -8687,7 +8496,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x09 | 0xF09E | 0xF09F | 0xF0A0 | 0xF0A1 | 0xF0A2 | 0xF0A3 | 0xF0A4 | 0xF0A5 | 0xF0A6 |
 
-<a id="table-tab-0x0022"></a>
 ### TAB_0X0022
 
 Dimensions: 1 rows × 7 columns
@@ -8696,7 +8504,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 0x06 | 0xF09F | 0xF0A0 | 0xF0A3 | 0xF0A4 | 0xF0A5 | 0xF0A6 |
 
-<a id="table-tab-0x0023"></a>
 ### TAB_0X0023
 
 Dimensions: 1 rows × 8 columns
@@ -8705,7 +8512,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x07 | 0xF09F | 0xF0A0 | 0xF0A1 | 0xF0A2 | 0xF0A3 | 0xF0A4 | 0xF0A6 |
 
-<a id="table-tab-0x0051"></a>
 ### TAB_0X0051
 
 Dimensions: 1 rows × 6 columns
@@ -8714,7 +8520,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 0x05 | 0xF067 | 0xF068 | 0xF069 | 0xF06A | 0xF06B |
 
-<a id="table-tab-0x0053"></a>
 ### TAB_0X0053
 
 Dimensions: 1 rows × 3 columns
@@ -8723,7 +8528,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0x02 | 0xF001 | 0xF002 |
 
-<a id="table-tab-0x005b"></a>
 ### TAB_0X005B
 
 Dimensions: 1 rows × 3 columns
@@ -8732,7 +8536,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0x02 | 0xF076 | 0xF077 |
 
-<a id="table-tab-0x005e"></a>
 ### TAB_0X005E
 
 Dimensions: 1 rows × 4 columns
@@ -8741,7 +8544,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 0x03 | 0xF078 | 0xF079 | 0xF080 |
 
-<a id="table-tab-0x0070"></a>
 ### TAB_0X0070
 
 Dimensions: 1 rows × 9 columns
@@ -8750,7 +8552,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF003 | 0xF004 | 0xF005 | 0xF006 | 0xF007 | 0xF008 | 0xF009 | 0xF010 |
 
-<a id="table-tab-0x0072"></a>
 ### TAB_0X0072
 
 Dimensions: 1 rows × 9 columns
@@ -8759,7 +8560,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF011 | 0xF012 | 0xF013 | 0xF014 | 0xF015 | 0xF016 | 0xF017 | 0xF018 |
 
-<a id="table-tab-0x0074"></a>
 ### TAB_0X0074
 
 Dimensions: 1 rows × 9 columns
@@ -8768,7 +8568,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF019 | 0xF020 | 0xF021 | 0xF022 | 0xF023 | 0xF024 | 0xF025 | 0xF026 |
 
-<a id="table-tab-0x0075"></a>
 ### TAB_0X0075
 
 Dimensions: 1 rows × 9 columns
@@ -8777,7 +8576,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF027 | 0xF028 | 0xF029 | 0xF030 | 0xF031 | 0xF032 | 0xF033 | 0xF034 |
 
-<a id="table-tab-0x0076"></a>
 ### TAB_0X0076
 
 Dimensions: 1 rows × 9 columns
@@ -8786,7 +8584,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF035 | 0xF036 | 0xF037 | 0xF038 | 0xF039 | 0xF040 | 0xF041 | 0xF042 |
 
-<a id="table-tab-0x0077"></a>
 ### TAB_0X0077
 
 Dimensions: 1 rows × 9 columns
@@ -8795,7 +8592,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF043 | 0xF044 | 0xF045 | 0xF046 | 0xF047 | 0xF048 | 0xF049 | 0xF050 |
 
-<a id="table-tab-0x0078"></a>
 ### TAB_0X0078
 
 Dimensions: 1 rows × 9 columns
@@ -8804,7 +8600,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF051 | 0xF052 | 0xF053 | 0xF054 | 0xF055 | 0xF056 | 0xF057 | 0xF058 |
 
-<a id="table-tab-0x0079"></a>
 ### TAB_0X0079
 
 Dimensions: 1 rows × 9 columns
@@ -8813,7 +8608,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x08 | 0xF059 | 0xF060 | 0xF061 | 0xF062 | 0xF063 | 0xF064 | 0xF065 | 0xF066 |
 
-<a id="table-tab-0x007d"></a>
 ### TAB_0X007D
 
 Dimensions: 1 rows × 17 columns
@@ -8822,7 +8616,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 16 | 0xF081 | 0xF082 | 0xF083 | 0xF084 | 0xF085 | 0xF086 | 0xF087 | 0xF088 | 0xF089 | 0xF08D | 0xF08E | 0xF08F | 0xF090 | 0xF091 | 0xF092 | 0xF093 |
 
-<a id="table-tab-0x0084"></a>
 ### TAB_0X0084
 
 Dimensions: 1 rows × 10 columns
@@ -8831,7 +8624,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x09 | 0xF095 | 0xF096 | 0xF097 | 0xF098 | 0xF099 | 0xF09A | 0xF0BE | 0xF0BF | 0xF0C0 |
 
-<a id="table-tab-0x0088"></a>
 ### TAB_0X0088
 
 Dimensions: 1 rows × 4 columns
@@ -8840,7 +8632,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 0x03 | 0xF09B | 0xF09C | 0xF09D |
 
-<a id="table-tab-0x0bc9"></a>
 ### TAB_0X0BC9
 
 Dimensions: 1 rows × 6 columns
@@ -8849,7 +8640,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 0x05 | 0xF06C | 0xF06D | 0xF06E | 0xF06F | 0xF070 |
 
-<a id="table-tab-0x0bca"></a>
 ### TAB_0X0BCA
 
 Dimensions: 1 rows × 6 columns
@@ -8858,7 +8648,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 0x05 | 0xF071 | 0xF072 | 0xF073 | 0xF074 | 0xF075 |
 
-<a id="table-tab-ablauf-has"></a>
 ### TAB_ABLAUF_HAS
 
 Dimensions: 17 rows × 2 columns
@@ -8883,7 +8672,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Signal ungültig |
 | 0xFF | undefiniert |
 
-<a id="table-tab-ags"></a>
 ### TAB_AGS
 
 Dimensions: 17 rows × 2 columns
@@ -8908,7 +8696,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | ACC |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-anfahrkupplung"></a>
 ### TAB_ANFAHRKUPPLUNG
 
 Dimensions: 6 rows × 2 columns
@@ -8922,7 +8709,6 @@ Dimensions: 6 rows × 2 columns
 | 0x07 | Signal ungültig |
 | 0xFF | undefiniert |
 
-<a id="table-tab-anhaengerbetrieb"></a>
 ### TAB_ANHAENGERBETRIEB
 
 Dimensions: 3 rows × 2 columns
@@ -8933,7 +8719,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0001 | Anhängerbetrieb aktiv |
 | 0xFFFF | Signal ungültig |
 
-<a id="table-tab-ee-update"></a>
 ### TAB_EE_UPDATE
 
 Dimensions: 3 rows × 2 columns
@@ -8944,7 +8729,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | pending / update running |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-ersatzmassnahmen1"></a>
 ### TAB_ERSATZMASSNAHMEN1
 
 Dimensions: 32 rows × 13 columns
@@ -8984,7 +8768,6 @@ Dimensions: 32 rows × 13 columns
 | STAT_KMN_ENPG5 | - | - | - | 0/1 | high | long | 0x40000000 | - | - | - | - | Schalten in 5. Gang ueber Neutral |
 | STAT_KMN_ENPG6 | - | - | - | 0/1 | high | long | 0x80000000 | - | - | - | - | Schalten in 6. Gang ueber Neutral |
 
-<a id="table-tab-ersatzmassnahmen2"></a>
 ### TAB_ERSATZMASSNAHMEN2
 
 Dimensions: 32 rows × 13 columns
@@ -9024,7 +8807,6 @@ Dimensions: 32 rows × 13 columns
 | STAT_KMN_SHLOCKOFF | - | - | - | 0/1 | high | long | 0x40000000 | - | - | - | - | Shiftlock-Funktion deaktivieren (Erhaltung Verfuegbarkeit) |
 | STAT_KMN_AUTOMODE | - | - | - | 0/1 | high | long | 0x80000000 | - | - | - | - | Tippen und Sportprogramm verbieten |
 
-<a id="table-tab-feststellbremse"></a>
 ### TAB_FESTSTELLBREMSE
 
 Dimensions: 3 rows × 2 columns
@@ -9035,7 +8817,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0001 | Feststellbremse aktiv |
 | 0xFFFF | Signal ungültig |
 
-<a id="table-tab-ganganzeige"></a>
 ### TAB_GANGANZEIGE
 
 Dimensions: 12 rows × 2 columns
@@ -9055,7 +8836,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A | Rückwärtsgang |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-getriebevorada-status"></a>
 ### TAB_GETRIEBEVORADA_STATUS
 
 Dimensions: 7 rows × 2 columns
@@ -9070,7 +8850,6 @@ Dimensions: 7 rows × 2 columns
 | 0xC0 | Stillstandsadaption läuft |
 | 0xFF | undefiniert |
 
-<a id="table-tab-getriebevorada-zustand"></a>
 ### TAB_GETRIEBEVORADA_ZUSTAND
 
 Dimensions: 17 rows × 2 columns
@@ -9095,7 +8874,6 @@ Dimensions: 17 rows × 2 columns
 | 0x66 | K0 nicht geschlossen |
 | 0xFF | Notgang oder andere nicht definierte Zustände |
 
-<a id="table-tab-ha"></a>
 ### TAB_HA
 
 Dimensions: 3 rows × 2 columns
@@ -9106,7 +8884,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | eingelernt |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-has-ablaufvariante"></a>
 ### TAB_HAS_ABLAUFVARIANTE
 
 Dimensions: 7 rows × 2 columns
@@ -9121,7 +8898,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0F | Signal ungültig |
 | 0xFF | undefiniert |
 
-<a id="table-tab-has-betriebeszustand-ziel"></a>
 ### TAB_HAS_BETRIEBESZUSTAND_ZIEL
 
 Dimensions: 12 rows × 2 columns
@@ -9141,7 +8917,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0F | Fehler |
 | 0xFF | undefiniert |
 
-<a id="table-tab-has-betriebsart-trennkupplung"></a>
 ### TAB_HAS_BETRIEBSART_TRENNKUPPLUNG
 
 Dimensions: 3 rows × 2 columns
@@ -9152,7 +8927,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Kraftschluss |
 | 0xFF | undefiniert |
 
-<a id="table-tab-has-betriebsart-verbrennungsmotor"></a>
 ### TAB_HAS_BETRIEBSART_VERBRENNUNGSMOTOR
 
 Dimensions: 3 rows × 2 columns
@@ -9163,7 +8937,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Sollzustand Verbrenner ein |
 | 0xFF | undefiniert |
 
-<a id="table-tab-iep-error-status"></a>
 ### TAB_IEP_ERROR_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -9176,7 +8949,6 @@ Dimensions: 5 rows × 2 columns
 | 0x30 | Pumpe Signalausfall |
 | 0xF0 | undefiniert |
 
-<a id="table-tab-iep-flashen"></a>
 ### TAB_IEP_FLASHEN
 
 Dimensions: 7 rows × 2 columns
@@ -9191,7 +8963,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Stop IEP Flashen durch Fehler |
 | 0xFF | undefiniert |
 
-<a id="table-tab-iep-status"></a>
 ### TAB_IEP_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -9205,7 +8976,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Pumpe läuft Stufe 3 |
 | 0x0F | undefiniert |
 
-<a id="table-tab-iep-testerservice"></a>
 ### TAB_IEP_TESTERSERVICE
 
 Dimensions: 10 rows × 2 columns
@@ -9223,7 +8993,6 @@ Dimensions: 10 rows × 2 columns
 | 0xFE | Abbruch durch Fehlermeldung von IEP sv_epumperr (elektrischer Fehler IEP) |
 | 0xFF | Abbruch aus unbekanntem Grund |
 
-<a id="table-tab-istgang"></a>
 ### TAB_ISTGANG
 
 Dimensions: 11 rows × 2 columns
@@ -9242,7 +9011,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0A | Rückwärtsgang |
 | 0xFF | ungültig |
 
-<a id="table-tab-magnetventile"></a>
 ### TAB_MAGNETVENTILE
 
 Dimensions: 10 rows × 2 columns
@@ -9260,7 +9028,6 @@ Dimensions: 10 rows × 2 columns
 | 0x40 | Strom zu hoch |
 | 0xFF | ungültig |
 
-<a id="table-tab-pos-fw"></a>
 ### TAB_POS_FW
 
 Dimensions: 5 rows × 2 columns
@@ -9273,7 +9040,6 @@ Dimensions: 5 rows × 2 columns
 | 0x07 | R |
 | 0x08 | nicht definiert |
 
-<a id="table-tab-pos-sbw"></a>
 ### TAB_POS_SBW
 
 Dimensions: 5 rows × 2 columns
@@ -9286,7 +9052,6 @@ Dimensions: 5 rows × 2 columns
 | 0x80 | P |
 | 0xFF | ungültig |
 
-<a id="table-tab-p-taster"></a>
 ### TAB_P_TASTER
 
 Dimensions: 4 rows × 2 columns
@@ -9298,7 +9063,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Einfachfehler |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-schaltwippe"></a>
 ### TAB_SCHALTWIPPE
 
 Dimensions: 3 rows × 2 columns
@@ -9309,7 +9073,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Schaltwippe betätigt |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-status-bls"></a>
 ### TAB_STATUS_BLS
 
 Dimensions: 3 rows × 2 columns
@@ -9320,7 +9083,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0001 | Bremslichtschalter betätigt |
 | 0xFFFF | Ungültiger Wert |
 
-<a id="table-tab-steuern-lernfkt-ruecksetzen"></a>
 ### TAB_STEUERN_LERNFKT_RUECKSETZEN
 
 Dimensions: 4 rows × 2 columns
@@ -9332,7 +9094,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Hinterachse  und  gelernte  CAN Botschaften  zurücksetzen |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-supplierinfo-field"></a>
 ### TAB_SUPPLIERINFO_FIELD
 
 Dimensions: 64 rows × 2 columns
@@ -9404,7 +9165,6 @@ Dimensions: 64 rows × 2 columns
 | 0x3E | Wert 62 |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-trennkupplung"></a>
 ### TAB_TRENNKUPPLUNG
 
 Dimensions: 28 rows × 2 columns
@@ -9440,7 +9200,6 @@ Dimensions: 28 rows × 2 columns
 | 0x3F | Signal ungültig |
 | 0xFF | undefiniert |
 
-<a id="table-tab-uwb-6210-kupplung"></a>
 ### TAB_UWB_6210_KUPPLUNG
 
 Dimensions: 9 rows × 2 columns
@@ -9457,7 +9216,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Trennkupplung K0 |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-uwb-6210-temperatur"></a>
 ### TAB_UWB_6210_TEMPERATUR
 
 Dimensions: 33 rows × 2 columns
@@ -9498,7 +9256,6 @@ Dimensions: 33 rows × 2 columns
 | 0xF8 | 496 °C |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-waehlhebelanzeige"></a>
 ### TAB_WAEHLHEBELANZEIGE
 
 Dimensions: 6 rows × 2 columns
@@ -9512,7 +9269,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | D |
 | 0xFF | Signal ungülti |
 
-<a id="table-tab-waehlhebelstellung"></a>
 ### TAB_WAEHLHEBELSTELLUNG
 
 Dimensions: 13 rows × 2 columns
@@ -9533,7 +9289,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0E | HH |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-wandlerkupplung"></a>
 ### TAB_WANDLERKUPPLUNG
 
 Dimensions: 11 rows × 2 columns
@@ -9552,7 +9307,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0C | Wandlerkupplung Übergang nach zu high |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-0x008f"></a>
 ### TAB_0X008F
 
 Dimensions: 1 rows × 3 columns
@@ -9561,7 +9315,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0xF100 | 0xF101 |
 
-<a id="table-uw-tab-0044"></a>
 ### UW_TAB_0044
 
 Dimensions: 17 rows × 2 columns
@@ -9586,7 +9339,6 @@ Dimensions: 17 rows × 2 columns
 | 0x000F | Schlüssel n.i.o. Fahrertür n.i.o. Fahrersitz n.i.o. Fahrergurt n.i.o. |
 | 0x00FF | ungültig |
 
-<a id="table-uw-tab-0052"></a>
 ### UW_TAB_0052
 
 Dimensions: 17 rows × 2 columns
@@ -9611,7 +9363,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Ablaufvariante 15 |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-0053-ist"></a>
 ### UW_TAB_0053_IST
 
 Dimensions: 11 rows × 2 columns
@@ -9630,7 +9381,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0E | Betriebszustand HAS-Ist Init |
 | 0x0F | Betriebszustand HAS-Ist Fehler |
 
-<a id="table-uw-tab-0053-soll"></a>
 ### UW_TAB_0053_SOLL
 
 Dimensions: 11 rows × 2 columns
@@ -9649,7 +9399,6 @@ Dimensions: 11 rows × 2 columns
 | 0xE0 | Betriebszustand HAS-Ziel Init |
 | 0xF0 | Betriebszustand HAS-Ziel Fehler |
 
-<a id="table-uw-tab-0058"></a>
 ### UW_TAB_0058
 
 Dimensions: 7 rows × 2 columns
@@ -9664,7 +9413,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | geschlossen |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-0059"></a>
 ### UW_TAB_0059
 
 Dimensions: 10 rows × 2 columns
@@ -9682,7 +9430,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | öffnen |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-005a"></a>
 ### UW_TAB_005A
 
 Dimensions: 6 rows × 2 columns
@@ -9696,7 +9443,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | IEP LP3 |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-007e"></a>
 ### UW_TAB_007E
 
 Dimensions: 5 rows × 2 columns
@@ -9709,7 +9455,6 @@ Dimensions: 5 rows × 2 columns
 | 0xCC | BP2 |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-0141"></a>
 ### UW_TAB_0141
 
 Dimensions: 10 rows × 2 columns
@@ -9727,7 +9472,6 @@ Dimensions: 10 rows × 2 columns
 | 0x80 | positive Motoreingriff zu groß entgegen Getriebeanforderung während Hochschaltung |
 | 0xFF | ungültig |
 
-<a id="table-uw-tab-0142"></a>
 ### UW_TAB_0142
 
 Dimensions: 10 rows × 2 columns
@@ -9745,7 +9489,6 @@ Dimensions: 10 rows × 2 columns
 | 0x80 | positive Motoreingriff zu groß entgegen Getriebeanforderung während Hochschaltung |
 | 0xFF | ungültig |
 
-<a id="table-uw-tab-03eb"></a>
 ### UW_TAB_03EB
 
 Dimensions: 17 rows × 2 columns
@@ -9770,7 +9513,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Status Substrattemperatur: LM71=undefiniert CG130=undefiniert |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-03ee"></a>
 ### UW_TAB_03EE
 
 Dimensions: 33 rows × 2 columns
@@ -9811,7 +9553,6 @@ Dimensions: 33 rows × 2 columns
 | 0x001F | Checksumme  Volcano configuration  n.i.o Checksumme  ZF adjustment data  n.i.o. Checksumme  OEM-Boot data  n.i.o. Checksumme  Drive data  n.i.o. Checksumme  Drive program  n.i.o. |
 | 0xFFFF | undefiniert |
 
-<a id="table-uw-tab-03f0"></a>
 ### UW_TAB_03F0
 
 Dimensions: 17 rows × 2 columns
@@ -9836,7 +9577,6 @@ Dimensions: 17 rows × 2 columns
 | 0x000F | Synchronisationsfehler in IWD - CPU Kommunikation Ungültige SPI Daten, Fehler in IWD - CPU Kommunikation keine SPI Daten, Fehler in IWD - CPU Kommunikation IPT - Timeout, WD Modul erreicht nicht gewünschten IWD Target Level |
 | 0xFFFF | undefiniert |
 
-<a id="table-uw-tab-03f1"></a>
 ### UW_TAB_03F1
 
 Dimensions: 897 rows × 2 columns
@@ -10741,7 +10481,6 @@ Dimensions: 897 rows × 2 columns
 | 0x037F | Konfigurations Register fehlerhaft erkannt MISR fehlerhaft erkannt ECC fehlerhaft erkannt Rechnerkerntest hat einen Fehler erkannt Taskliste der Fehler verursachenden PFC = Taskliste G OMM Mode der Fehler verursachenden PFC = LPH PFC Fehler erkannt |
 | 0xFFFF | ungültig |
 
-<a id="table-uw-tab-03f2"></a>
 ### UW_TAB_03F2
 
 Dimensions: 5 rows × 2 columns
@@ -10754,7 +10493,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | SPI Fehler detektiert=1 ADC Fehler detektiert=1 |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-0bbe"></a>
 ### UW_TAB_0BBE
 
 Dimensions: 33 rows × 2 columns
@@ -10795,7 +10533,6 @@ Dimensions: 33 rows × 2 columns
 | 0x001F | Gradientenfehler POSME aktiv;Fehlerflag negative Intensität aktiv;Fehlerflag positive Intensität aktiv;Signalplausibilisierungsfehler NEGME aktiv;Signalplausibilisierungsfehler POSME aktiv |
 | 0x00FF | ungültig |
 
-<a id="table-uw-tab-1389"></a>
 ### UW_TAB_1389
 
 Dimensions: 5 rows × 2 columns
@@ -10808,7 +10545,6 @@ Dimensions: 5 rows × 2 columns
 | 0x08 | P |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-138b"></a>
 ### UW_TAB_138B
 
 Dimensions: 4 rows × 2 columns
@@ -10820,7 +10556,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | rückwärts |
 | 0xFF | ungültig |
 
-<a id="table-uw-tab-138e"></a>
 ### UW_TAB_138E
 
 Dimensions: 3 rows × 2 columns
@@ -10831,7 +10566,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | mech. Notlauf aktiv |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-138f"></a>
 ### UW_TAB_138F
 
 Dimensions: 5 rows × 2 columns
@@ -10844,7 +10578,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Zustand der Parksperre unbekannt |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-1390"></a>
 ### UW_TAB_1390
 
 Dimensions: 6 rows × 2 columns
@@ -10858,7 +10591,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Parksperre eingerastet |
 | 0xFF | ungültig |
 
-<a id="table-uw-tab-1391"></a>
 ### UW_TAB_1391
 
 Dimensions: 3 rows × 2 columns
@@ -10869,7 +10601,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Parksperre eingelegt |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-1392"></a>
 ### UW_TAB_1392
 
 Dimensions: 4 rows × 2 columns
@@ -10881,7 +10612,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Hotmode2 aktiv |
 | 0xFF | undefiniert |
 
-<a id="table-uw-tab-1398"></a>
 ### UW_TAB_1398
 
 Dimensions: 17 rows × 2 columns
@@ -10906,7 +10636,6 @@ Dimensions: 17 rows × 2 columns
 | 0x000F | E-Label Zustand entspricht Serie Nicht authorisierte DMW-Antwort empfangen EWS auf redundantem Pfad aktiv Schlüssel gültig erkannt |
 | 0xFFFF | undefiniert |
 
-<a id="table-uw-tab-1399"></a>
 ### UW_TAB_1399
 
 Dimensions: 33 rows × 2 columns
@@ -10947,7 +10676,6 @@ Dimensions: 33 rows × 2 columns
 | 0x001F | Fahrersitz belegt Fahrertür offen Fahrergurt geschlossen Bremspedal betätigt Fahrpedal betätigt |
 | 0xFFFF | undefiniert |
 
-<a id="table-uw-tab-istgang"></a>
 ### UW_TAB_ISTGANG
 
 Dimensions: 12 rows × 2 columns
@@ -10967,7 +10695,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A | kein Gang |
 | 0x0F | undefiniert |
 
-<a id="table-uw-tab-kl15"></a>
 ### UW_TAB_KL15
 
 Dimensions: 16 rows × 2 columns
@@ -10991,7 +10718,6 @@ Dimensions: 16 rows × 2 columns
 | 0x000E | Fehler |
 | 0x000F | undefiniert |
 
-<a id="table-uw-tab-kl15-div"></a>
 ### UW_TAB_KL15_DIV
 
 Dimensions: 4 rows × 2 columns
@@ -11003,7 +10729,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0400 | Signal ungültig |
 | 0x0600 | alle anderen Werte |
 
-<a id="table-uw-tab-kl15-plausi"></a>
 ### UW_TAB_KL15_PLAUSI
 
 Dimensions: 3 rows × 2 columns
@@ -11014,7 +10739,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0080 | KL15 plausibel |
 | 0x0100 | KL15 unplausibel |
 
-<a id="table-uw-tab-kl15-status"></a>
 ### UW_TAB_KL15_STATUS
 
 Dimensions: 3 rows × 2 columns
@@ -11025,7 +10749,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0010 | Signal fehlerhaft, dynamisch geeigneter Ersatzwert (PIN-Signal alleine) |
 | 0x0020 | Signal fehlerhaft |
 
-<a id="table-uw-tab-kraftschluss"></a>
 ### UW_TAB_KRAFTSCHLUSS
 
 Dimensions: 8 rows × 2 columns
@@ -11041,7 +10764,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | schlupfendes Schaltelement (8HP/8P: Bremse B) rückwärts (SAB) |
 | 0x0F | undefiniert |
 
-<a id="table-uw-tab-nab-drehrichtung"></a>
 ### UW_TAB_NAB_DREHRICHTUNG
 
 Dimensions: 4 rows × 2 columns
@@ -11053,7 +10775,6 @@ Dimensions: 4 rows × 2 columns
 | 0x20 | Drehrichtung rückwärts |
 | 0xF0 | undefiniert |
 
-<a id="table-uw-tab-ntu-drehrichtung"></a>
 ### UW_TAB_NTU_DREHRICHTUNG
 
 Dimensions: 4 rows × 2 columns
@@ -11065,7 +10786,6 @@ Dimensions: 4 rows × 2 columns
 | 0x80 | Drehrichtung Motor und Turbine ungleichsinnig |
 | 0xF0 | undefiniert |
 
-<a id="table-uw-tab-zielgang"></a>
 ### UW_TAB_ZIELGANG
 
 Dimensions: 12 rows × 2 columns
@@ -11085,7 +10805,6 @@ Dimensions: 12 rows × 2 columns
 | 0xA0 | kein Gang |
 | 0xF0 | undefiniert |
 
-<a id="table-drosselklappenstatus"></a>
 ### DROSSELKLAPPENSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -11096,7 +10815,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Signal Ersatzwert |
 | 0x02 | Signal ungültig |
 
-<a id="table-istgang"></a>
 ### ISTGANG
 
 Dimensions: 10 rows × 2 columns
@@ -11114,7 +10832,6 @@ Dimensions: 10 rows × 2 columns
 | 0x09 | Rückwärtsgang |
 | 0xFF | ungültig |
 
-<a id="table-l-leitung"></a>
 ### L_LEITUNG
 
 Dimensions: 2 rows × 2 columns
@@ -11124,7 +10841,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Pegel low |
 | 0x01 | Pegel high |
 
-<a id="table-mil"></a>
 ### MIL
 
 Dimensions: 3 rows × 2 columns
@@ -11135,7 +10851,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | MIL ein |
 | 0xFF | ungültig |
 
-<a id="table-motordrehzahlstatus"></a>
 ### MOTORDREHZAHLSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -11146,7 +10861,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Signal Ersatzwert |
 | 0x02 | Signal ungültig |
 
-<a id="table-nic"></a>
 ### NIC
 
 Dimensions: 4 rows × 2 columns
@@ -11158,7 +10872,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | NIC applikativ eingeschaltet |
 | 0xFF | ungültig |
 
-<a id="table-pos"></a>
 ### POS
 
 Dimensions: 5 rows × 2 columns
@@ -11171,7 +10884,6 @@ Dimensions: 5 rows × 2 columns
 | 0x08 | P |
 | 0xFF | ungültig |
 
-<a id="table-scantool"></a>
 ### SCANTOOL
 
 Dimensions: 3 rows × 2 columns
@@ -11182,7 +10894,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Kommunikation ein |
 | 0xFF | ungültig |
 
-<a id="table-sck-error"></a>
 ### SCK_ERROR
 
 Dimensions: 4 rows × 2 columns
@@ -11194,7 +10905,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Prüfung noch nicht abgeschlossen(sendet nur ATSYS) |
 | 0xFF | undefiniert |
 
-<a id="table-sgt-gear0"></a>
 ### SGT_GEAR0
 
 Dimensions: 193 rows × 2 columns
@@ -11395,7 +11105,6 @@ Dimensions: 193 rows × 2 columns
 | 0xBF | nicht definiert |
 | 0xFF | ungültig |
 
-<a id="table-sgt-inp0"></a>
 ### SGT_INP0
 
 Dimensions: 16 rows × 2 columns
@@ -11419,7 +11128,6 @@ Dimensions: 16 rows × 2 columns
 | 0xF0 | Pegel an L1, L2, L3 und L4 Pin high=1 |
 | 0xFF | ungültig |
 
-<a id="table-sgt-sig1"></a>
 ### SGT_SIG1
 
 Dimensions: 9 rows × 2 columns
@@ -11436,7 +11144,6 @@ Dimensions: 9 rows × 2 columns
 | 0xE0 | Status Momentensignale n.i.O. und Status Drosselklappe n.i.O. und Status Motordrehzahl n.i.O. |
 | 0xFF | ungültig |
 
-<a id="table-sporttaster"></a>
 ### SPORTTASTER
 
 Dimensions: 3 rows × 2 columns
@@ -11447,7 +11154,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Sporttaster eingeschaltet |
 | 0xFF | ungültig |
 
-<a id="table-st-kl15"></a>
 ### ST_KL15
 
 Dimensions: 6 rows × 2 columns
@@ -11461,7 +11167,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | aus |
 | 0xFF | ungültig |
 
-<a id="table-stat-nab"></a>
 ### STAT_NAB
 
 Dimensions: 3 rows × 2 columns
@@ -11472,7 +11177,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Dynamischer Ersatzwert (Raddrehzahl) |
 | 0x02 | Statischer Ersatzwert |
 
-<a id="table-stat-ntu"></a>
 ### STAT_NTU
 
 Dimensions: 3 rows × 2 columns
@@ -11483,7 +11187,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Eingangsdrehzahlsignal Kurzschluss nach Plus |
 | 0x05 | Eingangsdrehzahlsignal Kurzschluss nach Masse / Unterbrechung |
 
-<a id="table-t-dreh"></a>
 ### T_DREH
 
 Dimensions: 4 rows × 2 columns
@@ -11495,7 +11198,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Drehrichtung rückwaerts |
 | 0xFF | Signal ungültig |
 
-<a id="table-t-fs"></a>
 ### T_FS
 
 Dimensions: 3 rows × 2 columns
@@ -11506,7 +11208,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fahrersitz belegt |
 | 0xFF | Signal ungültig |
 
-<a id="table-t-ft"></a>
 ### T_FT
 
 Dimensions: 3 rows × 2 columns
@@ -11517,7 +11218,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fahrertuer offen |
 | 0xFF | Signal ungültig |
 
-<a id="table-t-lever"></a>
 ### T_LEVER
 
 Dimensions: 12 rows × 2 columns
@@ -11537,7 +11237,6 @@ Dimensions: 12 rows × 2 columns
 | 0x21 | M+ |
 | 0x80 | undefiniert |
 
-<a id="table-t-subtrat"></a>
 ### T_SUBTRAT
 
 Dimensions: 6 rows × 2 columns

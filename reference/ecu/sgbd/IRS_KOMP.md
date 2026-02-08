@@ -39,7 +39,6 @@
 - [ZUSTAND_LESEN](#job-zustand-lesen) - Auslesen von Initialisierungs- und Funktionssperre
 - [SIEMENS_FEHLER_BEHEBEN](#job-siemens-fehler-beheben) - Beheben eines Fehlers der Fa. Siemens
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -57,7 +56,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -70,7 +68,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -89,7 +86,6 @@ _No arguments._
 | ID_DATUM_KW | string | Herstelldatum KW |
 | ID_DATUM_JAHR | string | Herstelldatum Jahr |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -115,7 +111,6 @@ _No arguments._
 | F_HFK | int | Haeufigkeit des Einzelfehler |
 | F_HEX_CODE | binary | HEX-Werte des Einzelfehler |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -128,7 +123,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Auslesen der IO-Ports
@@ -150,7 +144,6 @@ _No arguments._
 | STAT_RxD_EIN | int | Status von RxD, 0 oder 1 |
 | STAT_EMPFAENGERDATEN_EIN | int | Status der Empfaengerdaten, 0 oder 1 |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -163,7 +156,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-test-ir-strecke"></a>
 ### TEST_IR_STRECKE
 
 Status des letzten, vor Kl.R ein empfangenen Telegramms
@@ -177,7 +169,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | STAT_IR_STRECKE | string | Liefert: IN_ORDNUNG, FALSCHE_DATEN, NICHT_EMPFANGEN, UNBEKANNT |
 
-<a id="job-laendercodierung-lesen"></a>
 ### LAENDERCODIERUNG_LESEN
 
 Codierdaten
@@ -191,7 +182,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | KOMFORT_OEFFNEN_UND_SCHLIESSEN_AKTIV | int | Liefert: 0 oder 1 |
 
-<a id="job-batterie-meldung-lesen"></a>
 ### BATTERIE_MELDUNG_LESEN
 
 Status der Batteriemeldung
@@ -208,7 +198,6 @@ _No arguments._
 | BATTERIE_SCHLUESSEL_3 | string | Liefert: IO, NICHT_IO, UNBEKANNT |
 | BATTERIE_SCHLUESSEL_4 | string | Liefert: IO, NICHT_IO, UNBEKANNT |
 
-<a id="job-batterie-meldung-loeschen"></a>
 ### BATTERIE_MELDUNG_LOESCHEN
 
 Loeschen der Batteriemeldung
@@ -221,7 +210,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Auslesen des RAM-Bereiches
@@ -240,7 +228,6 @@ Auslesen des RAM-Bereiches
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | DATENBEREICH | binary | Liefert: Hexdump |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 Auslesen des EEPROM-Bereiches
@@ -259,7 +246,6 @@ Auslesen des EEPROM-Bereiches
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK, ERROR_ARGUMENT |
 | DATENBEREICH | binary | Liefert: Hexdump |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Ansteuern der IO-Ports
@@ -276,7 +262,6 @@ Ansteuern der IO-Ports
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK, ERROR_ARGUMENT |
 
-<a id="job-init-sperre-schreiben"></a>
 ### INIT_SPERRE_SCHREIBEN
 
 Aufheben der Initialisiersperre
@@ -290,7 +275,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK |
 | INITSPERRE | string | Liefert: aktiv, inaktiv, nicht moeglich |
 
-<a id="job-funktionssperre-schreiben"></a>
 ### FUNKTIONSSPERRE_SCHREIBEN
 
 Setzen der Funktionssperre
@@ -304,7 +288,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK |
 | FUNKTIONSSPERRE | string | Liefert: aktiv, inaktiv, nicht moeglich |
 
-<a id="job-funktionssperre-aufheben"></a>
 ### FUNKTIONSSPERRE_AUFHEBEN
 
 Aufheben der Funktionssperre
@@ -318,7 +301,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK |
 | FUNKTIONSSPERRE | string | Liefert: aufgehoben, nicht aufgehoben, nicht moeglich |
 
-<a id="job-zustand-lesen"></a>
 ### ZUSTAND_LESEN
 
 Auslesen von Initialisierungs- und Funktionssperre
@@ -333,7 +315,6 @@ _No arguments._
 | STAT_INIT_SPERRE_EIN | int | 0 oder 1 |
 | STAT_FUNKTIONSSPERRE_EIN | int | 0 oder 1 |
 
-<a id="job-siemens-fehler-beheben"></a>
 ### SIEMENS_FEHLER_BEHEBEN
 
 Beheben eines Fehlers der Fa. Siemens
@@ -357,7 +338,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (9 × 2)
 - [STEUERN](#table-steuern) (7 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -370,7 +350,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Tuergriffkontakt TGK |
 | 0x05 | EEPROM |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 9 rows × 2 columns
@@ -387,7 +366,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 7 rows × 2 columns

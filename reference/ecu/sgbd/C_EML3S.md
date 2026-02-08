@@ -26,7 +26,6 @@
 - [C_S_AUFTRAG](#job-c-s-auftrag) - Codierdaten schreiben und verifizieren
 - [C_S_LESEN](#job-c-s-lesen) - Codierdaten lesen
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -44,7 +43,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -57,7 +55,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -81,7 +78,6 @@ _No arguments._
 | ID_AI_NR | string | Aenderungsindex |
 | ID_PROD_NR | string | Produktionsnummer |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -95,7 +91,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -112,7 +107,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten lesen
@@ -137,7 +131,6 @@ Codierdaten lesen
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -153,7 +146,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

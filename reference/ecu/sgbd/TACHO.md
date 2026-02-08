@@ -39,7 +39,6 @@
 - [CODIEREN_MIT_VERBR](#job-codieren-mit-verbr) - (Manipulation Block 3105h) HINWEIS: Entwicklerjob - Verwendung auf eigene Gefahr! Nur fuer E8x!
 - [SG_RESET_OHNE_UHR_DATUM](#job-sg-reset-ohne-uhr-datum) - Steuergeraete Reset ausloesen Uhrzeit und Datum bleibt dabei im Kombi erhalten KWP2000: $11, $FA
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -58,7 +57,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -71,7 +69,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -100,7 +97,6 @@ _No arguments._
 | ID_SW_NR_RES | string | Softwarenummer (reserved - currently unused) |
 | ID_SG_ADR | int | Steuergeraeteadresse |
 
-<a id="job-steuern-tacho"></a>
 ### STEUERN_TACHO
 
 Tacho auf beliebige Geschwindigkeit (0..300) setzen KWP2000: $30 InputOutputControlByLocalIdentifier
@@ -119,7 +115,6 @@ Tacho auf beliebige Geschwindigkeit (0..300) setzen KWP2000: $30 InputOutputCont
 | TACHOGRENZE | unsigned int | aus Kombi ermittelte maximaler Tachowert in km/h |
 | _TEL_ANTWORT | binary | Antwort von SG |
 
-<a id="job-steuern-tacho-aus"></a>
 ### STEUERN_TACHO_AUS
 
 Schaltet den Tacho-Vorgabemodus wieder aus KWP2000: $30, $20, $00
@@ -133,7 +128,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-drehzahl"></a>
 ### STEUERN_DREHZAHL
 
 DrehZahlMesser in 1/min vorgeben KWP2000: $30 InputOutputControlByLocalIdentifier
@@ -152,7 +146,6 @@ DrehZahlMesser in 1/min vorgeben KWP2000: $30 InputOutputControlByLocalIdentifie
 | DREHZAHLGRENZE | unsigned int | aus Kombi ermittelte maximale Drehzahl in 1/min |
 | _TEL_ANTWORT | binary | Antwort von SG |
 
-<a id="job-steuern-drehzahl-aus"></a>
 ### STEUERN_DREHZAHL_AUS
 
 Schaltet den DZM-Vorgabemodus wieder aus KWP2000: $30, $21, $00
@@ -166,7 +159,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-kva"></a>
 ### STEUERN_KVA
 
 Momentanverbrauch in L/100km vorgeben KWP2000: $30 InputOutputControlByLocalIdentifier
@@ -185,7 +177,6 @@ Momentanverbrauch in L/100km vorgeben KWP2000: $30 InputOutputControlByLocalIden
 | KVAGRENZE | real | aus Kombi ermittelte maximale KVA-Wert in l/100km |
 | _TEL_ANTWORT | binary | Antwort von SG |
 
-<a id="job-steuern-oel"></a>
 ### STEUERN_OEL
 
 Oeltemperaturanzeige in 0 - 100 % vorgeben KWP2000: $30 InputOutputControlByLocalIdentifier
@@ -202,7 +193,6 @@ Oeltemperaturanzeige in 0 - 100 % vorgeben KWP2000: $30 InputOutputControlByLoca
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-aus"></a>
 ### STEUERN_AUS
 
 Schaltet den KVA-OEL-Vorgabemodus wieder aus KWP2000: $30, $23, $00
@@ -216,7 +206,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zeigerzahl"></a>
 ### ZEIGERZAHL
 
 Ermittelt aus den Codierdaten die Anzahl der im Kombi verbauten Zeiger.
@@ -235,7 +224,6 @@ _No arguments._
 | KVA_ZEIGER_BELEGUNG | char | KVA oder Oeltemperaturanzeige |
 | KOMBI_BEZ | string | Kombi Bezeichnung |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 #### Arguments
@@ -251,7 +239,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | CODIERDATENBLOCK | binary | Enthaelt den Codierdatenblock |
 
-<a id="job-codieren-tacho-260"></a>
 ### CODIEREN_TACHO_260
 
 (Manipulation Block 3105h) HINWEIS: Entwicklerjob - Verwendung auf eigene Gefahr! Nur fuer E8x!
@@ -268,7 +255,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Antwort von SG (Block 3105 schreiben) |
 | _TEL_ANTWORT3 | binary | Antwort von SG (Reset) |
 
-<a id="job-codieren-tacho-260-basis"></a>
 ### CODIEREN_TACHO_260_BASIS
 
 (Manipulation Block 3105h) HINWEIS: Entwicklerjob - Verwendung auf eigene Gefahr! Nur fuer E8x!
@@ -285,7 +271,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Antwort von SG (Block 3105 schreiben) |
 | _TEL_ANTWORT3 | binary | Antwort von SG (Reset) |
 
-<a id="job-codieren-tacho-280"></a>
 ### CODIEREN_TACHO_280
 
 (Manipulation Block 3105h) HINWEIS: Entwicklerjob - Verwendung auf eigene Gefahr! Nur fuer E8x!
@@ -302,7 +287,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Antwort von SG (Block 3105 schreiben) |
 | _TEL_ANTWORT3 | binary | Antwort von SG (Reset) |
 
-<a id="job-codieren-tacho-300"></a>
 ### CODIEREN_TACHO_300
 
 (Manipulation Block 3105h) HINWEIS: Entwicklerjob - Verwendung auf eigene Gefahr! Nur fuer E8x!
@@ -319,7 +303,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Antwort von SG (Block 3105 schreiben) |
 | _TEL_ANTWORT3 | binary | Antwort von SG (Reset) |
 
-<a id="job-codieren-mit-oel"></a>
 ### CODIEREN_MIT_OEL
 
 Aendern der Voreilung des Tacho (Manipulation Block 3105h) HINWEIS: Entwicklerjob - Verwendung auf eigene Gefahr! Nur fuer E8x!
@@ -336,7 +319,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Antwort von SG (Block 3105 schreiben) |
 | _TEL_ANTWORT3 | binary | Antwort von SG (Reset) |
 
-<a id="job-codieren-mit-verbr"></a>
 ### CODIEREN_MIT_VERBR
 
 (Manipulation Block 3105h) HINWEIS: Entwicklerjob - Verwendung auf eigene Gefahr! Nur fuer E8x!
@@ -353,7 +335,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Antwort von SG (Block 3105 schreiben) |
 | _TEL_ANTWORT3 | binary | Antwort von SG (Reset) |
 
-<a id="job-sg-reset-ohne-uhr-datum"></a>
 ### SG_RESET_OHNE_UHR_DATUM
 
 Steuergeraete Reset ausloesen Uhrzeit und Datum bleibt dabei im Kombi erhalten KWP2000: $11, $FA
@@ -375,7 +356,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (59 × 2)
 - [JOBRESULT](#table-jobresult) (86 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -385,7 +365,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 59 rows × 2 columns
@@ -452,7 +431,6 @@ Dimensions: 59 rows × 2 columns
 | 0x58 | Autoliv |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 86 rows × 2 columns

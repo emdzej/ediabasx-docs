@@ -27,7 +27,6 @@
 - [C_S_LESEN](#job-c-s-lesen) - Codierdaten schreiben und verifizieren
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -45,7 +44,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -58,7 +56,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer SM38
@@ -82,7 +79,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -99,7 +95,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-schreiben"></a>
 ### C_S_SCHREIBEN
 
 Codierdaten schreiben
@@ -116,7 +111,6 @@ Codierdaten schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -134,7 +128,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -155,7 +148,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (7 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -170,7 +162,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

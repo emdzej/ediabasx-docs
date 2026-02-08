@@ -44,7 +44,6 @@
 - [I_STUFE_LESEN](#job-i-stufe-lesen) - Auslesen der I-Stufe aus ZGW und CAS UDS:    $22   ReadDataByIdentifier UDS:    $100B DataIdentifier I-Level Byte     |0|1|2|3| 4| 5| 6| 7| | ASCII |    Byte   | IStufe   |F|0|0|1|09|08| 4 00|
 - [GRP2SGADR](#job-grp2sgadr) - Ermittlung der SG-Adresse aus ZuordnungsTabelle
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -57,7 +56,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -76,7 +74,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -92,7 +89,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -109,7 +105,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident-funktional"></a>
 ### IDENT_FUNKTIONAL
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -151,7 +146,6 @@ Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-funktional"></a>
 ### FS_LESEN_FUNKTIONAL
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -175,7 +169,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTrou
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-funktional"></a>
 ### IS_LESEN_FUNKTIONAL
 
 Sekundärer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID $2000 DataIdentifier sekundaerer Fehlerspeicher
@@ -198,7 +191,6 @@ Sekundärer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDa
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen-funktional"></a>
 ### FS_LOESCHEN_FUNKTIONAL
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -221,7 +213,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen-funktional"></a>
 ### IS_LOESCHEN_FUNKTIONAL
 
 Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCShadowMemory Modus  : Default
@@ -243,7 +234,6 @@ Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCSha
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-loeschen-funktional"></a>
 ### HS_LOESCHEN_FUNKTIONAL
 
 Historyspeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $03 ClearHistoryMemory Modus  : Default
@@ -265,7 +255,6 @@ Historyspeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $03 ClearHis
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode-funktional"></a>
 ### SLEEP_MODE_FUNKTIONAL
 
 SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier $05 PowerDown Modus  : Default
@@ -288,7 +277,6 @@ SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier $05 PowerD
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen-funktional"></a>
 ### AIF_LESEN_FUNKTIONAL
 
 Auslesen des Anwender Informations Feldes KWP2000: $1A ReadECUIdentification $86 CurrentUIFDataTable Modus  : Default
@@ -316,7 +304,6 @@ Auslesen des Anwender Informations Feldes KWP2000: $1A ReadECUIdentification $86
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen-funktional"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN_FUNKTIONAL
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -340,7 +327,6 @@ Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A Ch
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen-funktional"></a>
 ### SERIENNUMMER_LESEN_FUNKTIONAL
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber Modus  : Default
@@ -365,7 +351,6 @@ Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSuppl
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen-funktional"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN_FUNKTIONAL
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) Modus  : Default
@@ -390,7 +375,6 @@ Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $8
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen-funktional"></a>
 ### C_FG_LESEN_FUNKTIONAL
 
 Fahrgestellnummer lesen KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -413,7 +397,6 @@ Fahrgestellnummer lesen KWP2000: $1A ReadECUIdentification $90 Vehicle Identific
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-lesen-funktional"></a>
 ### C_AEI_LESEN_FUNKTIONAL
 
 Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -436,7 +419,6 @@ Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadData
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode-funktional"></a>
 ### ENERGIESPARMODE_FUNKTIONAL
 
 Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C ControlEnergySavingMode Modus  : Default
@@ -461,7 +443,6 @@ Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C C
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen-funktional"></a>
 ### SENSOREN_ANZAHL_LESEN_FUNKTIONAL
 
 Anzahl der intelligenten Subbussensoren lesen KWP2000: $22 ReadDataByCommonIdentifier $1600 IdentifyNumberofSubbusMembers Modus  : Default
@@ -484,7 +465,6 @@ Anzahl der intelligenten Subbussensoren lesen KWP2000: $22 ReadDataByCommonIdent
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen-funktional"></a>
 ### SENSOREN_IDENT_LESEN_FUNKTIONAL
 
 Identifikation der intelligenten Subbussensoren lesen KWP2000: $22 ReadDataByCommonIdentifier $1600 IdentifyNumberofSubbusMembers $16xx SubbusMemberSerialNumber Modus  : Default
@@ -511,7 +491,6 @@ Identifikation der intelligenten Subbussensoren lesen KWP2000: $22 ReadDataByCom
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-most-can-gateway-disable"></a>
 ### MOST_CAN_GATEWAY_DISABLE
 
 Stoppen der Kommunikation über das Gateway KWP2000: $31 StartRoutineByLocalIdentifier $0F disableMCGW Modus  : Default
@@ -530,7 +509,6 @@ Stoppen der Kommunikation über das Gateway KWP2000: $31 StartRoutineByLocalIden
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-most-can-gateway-enable"></a>
 ### MOST_CAN_GATEWAY_ENABLE
 
 Restart der Kommunikation über das Gateway KWP2000: $32 StopRoutineByLocalIdentifier $0F disableMCGW Modus  : Default
@@ -549,7 +527,6 @@ Restart der Kommunikation über das Gateway KWP2000: $32 StopRoutineByLocalIdent
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-i-stufe-lesen"></a>
 ### I_STUFE_LESEN
 
 Auslesen der I-Stufe aus ZGW und CAS UDS:    $22   ReadDataByIdentifier UDS:    $100B DataIdentifier I-Level Byte     |0|1|2|3| 4| 5| 6| 7| | ASCII |    Byte   | IStufe   |F|0|0|1|09|08| 4 00|
@@ -568,7 +545,6 @@ _No arguments._
 | _RESPONSE_ZGW | binary | Hex-Antwort von ZGW |
 | _RESPONSE_CAS | binary | Hex-Antwort von CAS |
 
-<a id="job-grp2sgadr"></a>
 ### GRP2SGADR
 
 Ermittlung der SG-Adresse aus ZuordnungsTabelle
@@ -602,7 +578,6 @@ Ermittlung der SG-Adresse aus ZuordnungsTabelle
 - [GROBNAME](#table-grobname) (85 × 2)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (5 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -612,7 +587,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -715,7 +689,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 118 rows × 2 columns
@@ -841,7 +814,6 @@ Dimensions: 118 rows × 2 columns
 | 0xAB | Kongsberg Automotive GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -866,7 +838,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -893,7 +864,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-funktionaleadresse"></a>
 ### FUNKTIONALEADRESSE
 
 Dimensions: 11 rows × 3 columns
@@ -912,7 +882,6 @@ Dimensions: 11 rows × 3 columns
 | 0xEE | PERSONAL | Personalisierung |
 | 0xEF | ALL | alle Steuergeräte |
 
-<a id="table-funktionalerfehlergruppe"></a>
 ### FUNKTIONALERFEHLERGRUPPE
 
 Dimensions: 5 rows × 3 columns
@@ -925,7 +894,6 @@ Dimensions: 5 rows × 3 columns
 | 0xFFFE | NG | Netzwerk Kommunikation Gruppe |
 | 0xFFFF | AG | alle Gruppen |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 132 rows × 3 columns
@@ -1065,7 +1033,6 @@ Dimensions: 132 rows × 3 columns
 | 0x5900 | Audio-Bedienteil | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1074,7 +1041,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-grobname"></a>
 ### GROBNAME
 
 Dimensions: 85 rows × 2 columns
@@ -1167,7 +1133,6 @@ Dimensions: 85 rows × 2 columns
 | 0xAB | MMCDSP |
 | 0xXY | ???? |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 5 rows × 2 columns

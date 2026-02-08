@@ -34,7 +34,6 @@
 - [LESE_TEILENUMMER_AI](#job-lese-teilenummer-ai)
 - [MATTE_FREIGEBEN](#job-matte-freigeben)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -53,7 +52,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -66,7 +64,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn okay |
 
-<a id="job-ident-oc3"></a>
 ### IDENT_OC3
 
 Lesen Sachnummer und Codierindex
@@ -82,7 +79,6 @@ _No arguments._
 | CODIERINDEX | string | Codierindex des Steuergeraetes BCD-codiert |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -95,7 +91,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Read error memory
@@ -127,7 +122,6 @@ _No arguments._
 | F_UW2_WERT | long | Wert der 2. Umweltbedingung |
 | F_UW2_EINH | string | Einheit der 2. Umweltbedingung (hier: immer Min.) |
 
-<a id="job-flash-start"></a>
 ### FLASH_START
 
 Flasht OC3-Matte, wenn Teilenummer der OC3 in Tabelle TEILENUMMERN enthalten ist
@@ -141,7 +135,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | letztes Antworttelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-flash-1"></a>
 ### FLASH_1
 
 Flasht OC3-Matte, wenn Teilenummer der OC3 in Tabelle TEILENUMMERN enthalten ist
@@ -155,7 +148,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | letztes Antworttelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-flash-2"></a>
 ### FLASH_2
 
 Flasht OC3-Matte, wenn Teilenummer der OC3 in Tabelle TEILENUMMERN enthalten ist
@@ -169,7 +161,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | letztes Antworttelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-flash-3"></a>
 ### FLASH_3
 
 Flasht OC3-Matte, wenn Teilenummer der OC3 in Tabelle TEILENUMMERN enthalten ist
@@ -183,7 +174,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | letztes Antworttelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-flash-4"></a>
 ### FLASH_4
 
 Flasht OC3-Matte, wenn Teilenummer der OC3 in Tabelle TEILENUMMERN enthalten ist
@@ -197,7 +187,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | letztes Antworttelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-flash-ende"></a>
 ### FLASH_ENDE
 
 Flasht OC3-Matte, wenn Teilenummer der OC3 in Tabelle TEILENUMMERN enthalten ist
@@ -211,7 +200,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | letztes Antworttelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-kodieren"></a>
 ### KODIEREN
 
 #### Arguments
@@ -227,7 +215,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | letztes Antworttelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-lese-teilenummer-ai"></a>
 ### LESE_TEILENUMMER_AI
 
 _No arguments._
@@ -243,7 +230,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | letztes Antworttelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-matte-freigeben"></a>
 ### MATTE_FREIGEBEN
 
 _No arguments._
@@ -290,7 +276,6 @@ _No arguments._
 - [CODIERDATEN_15](#table-codierdaten-15) (26 × 2)
 - [HARDWAREPARAM_1](#table-hardwareparam-1) (3 × 2)
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -299,7 +284,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -342,7 +326,6 @@ Dimensions: 35 rows × 2 columns
 | 0x27 | FRAM Fehler |
 | 0xFF | Unbekannter Fehler |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -351,7 +334,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 0xFF | 0x01 | 0x02 | 0x08 | 0x09 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -364,7 +346,6 @@ Dimensions: 5 rows × 2 columns
 | 0x09 | Fehler sporadisch |
 | 0xFF | -- |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -373,7 +354,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | default | 0x02 | 0x01 | 0x01 | 0x02 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -383,7 +363,6 @@ Dimensions: 2 rows × 9 columns
 | 0x01 | Fehlerbeginn_std | Std. | -- | long | -- | -- | -- | -- |
 | 0x02 | Fehlerbeginn_min | Min. | -- | long | -- | -- | -- | -- |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -404,7 +383,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -484,7 +462,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -509,7 +486,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-bloecke"></a>
 ### BLOECKE
 
 Dimensions: 2 rows × 2 columns
@@ -519,7 +495,6 @@ Dimensions: 2 rows × 2 columns
 | 2 | BLOCK_1 |
 | 3 | BLOCK_2 |
 
-<a id="table-flashdaten-1"></a>
 ### FLASHDATEN_1
 
 Dimensions: 966 rows × 2 columns
@@ -1493,7 +1468,6 @@ Dimensions: 966 rows × 2 columns
 | 965 | FDC0FE08F8F781838383838383838383838383838383838383838383838383838383838383838383838383838383838383838383830114042865925350277F71C1E4B7 |
 | 966 | FFCCC5F0C5F0C5F0C5F0C5F0DB01C5F0C5F0C5F0C5F0C5F0C5F0C5F0C754C5F0C5F0C726C5F0C5F0C5F0C5F0C63DC5F0C5F0C5E90E000D |
 
-<a id="table-teilenummern-ai"></a>
 ### TEILENUMMERN_AI
 
 Dimensions: 57 rows × 10 columns
@@ -1558,7 +1532,6 @@ Dimensions: 57 rows × 10 columns
 | 8697384402 | E90 Basis | FLASHDATEN_1 | 966 | CODIERDATEN_12 | 26 | 89362879 | 01 | HARDWAREPARAM_1 | 3 |
 | 8697384403 | E90 Basis | FLASHDATEN_1 | 966 | CODIERDATEN_12 | 26 | 89362879 | 01 | HARDWAREPARAM_1 | 3 |
 
-<a id="table-codierdaten-1"></a>
 ### CODIERDATEN_1
 
 Dimensions: 26 rows × 2 columns
@@ -1592,7 +1565,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 30303030303030303030303030303030 |
 | 26 | 30303030000000000000B3EC |
 
-<a id="table-codierdaten-2"></a>
 ### CODIERDATEN_2
 
 Dimensions: 26 rows × 2 columns
@@ -1626,7 +1598,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 82308310843093059691961297083030 |
 | 26 | 30303030C7FF0F0000007DEB |
 
-<a id="table-codierdaten-3"></a>
 ### CODIERDATEN_3
 
 Dimensions: 26 rows × 2 columns
@@ -1660,7 +1631,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 82308310843093059691961297083030 |
 | 26 | 30303030C7FF0F0000008E28 |
 
-<a id="table-codierdaten-4"></a>
 ### CODIERDATEN_4
 
 Dimensions: 26 rows × 2 columns
@@ -1694,7 +1664,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | A0308D06571887305A1B8B308C1E5127 |
 | 26 | A830AB2CFFFFFF010000D114 |
 
-<a id="table-codierdaten-5"></a>
 ### CODIERDATEN_5
 
 Dimensions: 26 rows × 2 columns
@@ -1728,7 +1697,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | A0308D06571887305A1B8B308C1E5127 |
 | 26 | A830AB2CFFFFFF010000C26C |
 
-<a id="table-codierdaten-6"></a>
 ### CODIERDATEN_6
 
 Dimensions: 26 rows × 2 columns
@@ -1762,7 +1730,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 96019802841A99059B0B88289D07A122 |
 | 26 | AC6B3030FF7FEF000000C8F5 |
 
-<a id="table-codierdaten-7"></a>
 ### CODIERDATEN_7
 
 Dimensions: 26 rows × 2 columns
@@ -1796,7 +1763,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 96019802841A99059B0B88289D07A122 |
 | 26 | AC6B3030FF7FEF0000003B36 |
 
-<a id="table-codierdaten-8"></a>
 ### CODIERDATEN_8
 
 Dimensions: 26 rows × 2 columns
@@ -1830,7 +1796,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 4E288B30A21091239230931495273030 |
 | 26 | 30303030FFFF3F0000006C9F |
 
-<a id="table-codierdaten-9"></a>
 ### CODIERDATEN_9
 
 Dimensions: 26 rows × 2 columns
@@ -1864,7 +1829,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 4E288B30A21091239230931495273030 |
 | 26 | 30303030FFFF3F000000B9AC |
 
-<a id="table-codierdaten-10"></a>
 ### CODIERDATEN_10
 
 Dimensions: 26 rows × 2 columns
@@ -1898,7 +1862,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 92308D254D00A6308102930E8314871B |
 | 26 | 9C9D890AF1FFEF010000F805 |
 
-<a id="table-codierdaten-11"></a>
 ### CODIERDATEN_11
 
 Dimensions: 26 rows × 2 columns
@@ -1932,7 +1895,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 92308D254D00A6308102930E8314871B |
 | 26 | 9C9D890AF1FFEF0100002D36 |
 
-<a id="table-codierdaten-12"></a>
 ### CODIERDATEN_12
 
 Dimensions: 26 rows × 2 columns
@@ -1966,7 +1928,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 8F0063478130821A92A48A16980B5219 |
 | 26 | 85703030FFE7FF0000002EFF |
 
-<a id="table-codierdaten-13"></a>
 ### CODIERDATEN_13
 
 Dimensions: 26 rows × 2 columns
@@ -2000,7 +1961,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 831884109F13852588178A809A0BA7F0 |
 | 26 | A1303030FFFFEF0000000FE3 |
 
-<a id="table-codierdaten-14"></a>
 ### CODIERDATEN_14
 
 Dimensions: 26 rows × 2 columns
@@ -2034,7 +1994,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 821398276A269400831C85256C1D8D00 |
 | 26 | 620C8B23FFFFFF010000DF52 |
 
-<a id="table-codierdaten-15"></a>
 ### CODIERDATEN_15
 
 Dimensions: 26 rows × 2 columns
@@ -2068,7 +2027,6 @@ Dimensions: 26 rows × 2 columns
 | 25 | 8405862887298830891D8A194B8CA315 |
 | 26 | 43188E30FFFFFF0100004FBE |
 
-<a id="table-hardwareparam-1"></a>
 ### HARDWAREPARAM_1
 
 Dimensions: 3 rows × 2 columns

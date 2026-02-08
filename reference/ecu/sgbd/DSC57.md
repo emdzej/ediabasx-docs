@@ -75,7 +75,6 @@
 - [FS_LESEN_SAR](#job-fs-lesen-sar) - Fehlerspeicher lesen: je 3x (F_ORT_NR/F_ORT_TEXT)
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -94,7 +93,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer ABS_DSC57
@@ -107,7 +105,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer ABS_DSC57
@@ -136,7 +133,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-login"></a>
 ### LOGIN
 
 Erweiterter Diagnosebereich
@@ -151,7 +147,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen fuer ABS_DSC57 High-Konzept nach Lastenheft Codierung/Diagnose
@@ -191,7 +186,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen fuer ABS_DSC57
@@ -206,7 +200,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Codierbytes DSC57
@@ -226,7 +219,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-cod-schreiben"></a>
 ### COD_SCHREIBEN
 
 Codierdaten schreiben Es muessen 2 Codierbytes als ein Hex_String uebergeben werden Argument: z.B.: 01,13 die CS wird automatisch berechnet
@@ -245,7 +237,6 @@ Codierdaten schreiben Es muessen 2 Codierbytes als ein Hex_String uebergeben wer
 | _AUFTRAG1 | binary | Hex-Antwort von SG |
 | _ANTWORT1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-io-lesen-geschw"></a>
 ### STATUS_IO_LESEN_GESCHW
 
 Status Eingaenge ABS_DSC57
@@ -269,7 +260,6 @@ Status Eingaenge ABS_DSC57
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-io-lesen-analog"></a>
 ### STATUS_IO_LESEN_ANALOG
 
 Status Eingaenge ABS_DSC57
@@ -304,7 +294,6 @@ Status Eingaenge ABS_DSC57
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-io-lesen-digital"></a>
 ### STATUS_IO_LESEN_DIGITAL
 
 Status Eingaenge ABS_DSC57
@@ -343,7 +332,6 @@ Status Eingaenge ABS_DSC57
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-4-druckwerte"></a>
 ### STATUS_4_DRUCKWERTE
 
 4 aufeinanderfolgende Druckwerte
@@ -364,7 +352,6 @@ Status Eingaenge ABS_DSC57
 | STAT_DRUCK_WERT_3 | real | Druck in bar, kann + u.- Wert haben |
 | STAT_DRUCK_WERT_4 | real | Druck in bar, kann + u.- Wert haben |
 
-<a id="job-status-io-lesen-can"></a>
 ### STATUS_IO_LESEN_CAN
 
 Status CAN ABS_DSC57
@@ -388,7 +375,6 @@ Status CAN ABS_DSC57
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-drehrate-empfindlichkeit"></a>
 ### STATUS_DREHRATE_EMPFINDLICHKEIT
 
 Lesen EEPROM
@@ -408,7 +394,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-download-stellglied"></a>
 ### DOWNLOAD_STELLGLIED
 
 Stellglied ansteuern ABS_DSC57
@@ -423,7 +408,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-download-d4-stellglied"></a>
 ### DOWNLOAD_D4_STELLGLIED
 
 Stellglied ansteuern ABS_DSC57
@@ -438,7 +422,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-download-fuehler-einzeln"></a>
 ### DOWNLOAD_FUEHLER_EINZELN
 
 Ansprechschwelle u. Impulsrad ABS_DSC57
@@ -453,7 +436,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-download-statisch"></a>
 ### DOWNLOAD_STATISCH
 
 Statischer Test der Komponenten ABS_DSC57
@@ -468,7 +450,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-download-fuehler-alle"></a>
 ### DOWNLOAD_FUEHLER_ALLE
 
 Alle Ansprechschwellen u. Impulsraeder ABS_DSC57
@@ -483,7 +464,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-download-eeprom"></a>
 ### DOWNLOAD_EEPROM
 
 Kopiert von Aktuatorik Test ABS_DSC3, DSC3.b2s
@@ -498,7 +478,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-download-eceepr"></a>
 ### DOWNLOAD_ECEEPR
 
 _No arguments._
@@ -511,7 +490,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-download-fs-reset"></a>
 ### DOWNLOAD_FS_RESET
 
 Fehlerspeicher zuruecksetzen ABS_ASC5
@@ -526,7 +504,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-test-d-stellglied"></a>
 ### TEST_D_STELLGLIED
 
 Digitale Stellglieder ansteuern ABS_DSC57
@@ -556,7 +533,6 @@ Digitale Stellglieder ansteuern ABS_DSC57
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-d4-stellglied"></a>
 ### TEST_D4_STELLGLIED
 
 Digitale Stellglieder ansteuern ABS_DSC57
@@ -594,7 +570,6 @@ Digitale Stellglieder ansteuern ABS_DSC57
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-zuendwinkel"></a>
 ### TEST_ZUENDWINKEL
 
 Digitale Stellglieder ansteuern ABS_DSC57
@@ -626,7 +601,6 @@ Digitale Stellglieder ansteuern ABS_DSC57
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-pumpenleistung-vorne"></a>
 ### TEST_PUMPENLEISTUNG_VORNE
 
 Test der Pumpenfoerderleistung ABS_DSC57
@@ -643,7 +617,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-pumpenleistung-hinten"></a>
 ### TEST_PUMPENLEISTUNG_HINTEN
 
 Test der Pumpenfoerderleistung ABS_DSC57
@@ -660,7 +633,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-a-stellglied"></a>
 ### TEST_A_STELLGLIED
 
 Fuellung ABS_DSC57
@@ -684,7 +656,6 @@ Fuellung ABS_DSC57
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-fuehler-einzeln"></a>
 ### TEST_FUEHLER_EINZELN
 
 Ansprechschwelle ABS_DSC57
@@ -709,7 +680,6 @@ Ansprechschwelle ABS_DSC57
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-fuehler-impuls"></a>
 ### TEST_FUEHLER_IMPULS
 
 Test Fuehler u. Impulsrad
@@ -734,7 +704,6 @@ Test Fuehler u. Impulsrad
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-statisch"></a>
 ### TEST_STATISCH
 
 Statischer Test der Komponenten ABS_DSC57
@@ -751,7 +720,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-fuehler-alle"></a>
 ### TEST_FUEHLER_ALLE
 
 Alle Ansprechschwellen u. Impulsraeder ABS_DSC57
@@ -781,7 +749,6 @@ Alle Ansprechschwellen u. Impulsraeder ABS_DSC57
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-lenkwinkel"></a>
 ### TEST_LENKWINKEL
 
 Lenkwinkel Initialisierung DSC57
@@ -809,7 +776,6 @@ Lenkwinkel Initialisierung DSC57
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | ABGL_LWS_ID | int | Abgleichswert LWS ID |
 
-<a id="job-test-querbeschleunigung"></a>
 ### TEST_QUERBESCHLEUNIGUNG
 
 wird nur beim Sensorwechsel angewandt setzt die gelernten Werte (Offset) wieder auf 0
@@ -827,7 +793,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-drehrate"></a>
 ### TEST_DREHRATE
 
 wird nur beim Sensorwechsel angewandt setzt den Verstaerkungsfaktor auf den Wert 1, dies entspricht 0%
@@ -845,7 +810,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-druck"></a>
 ### TEST_DRUCK
 
 wird nur beim Sensorwechsel angewandt setzt die gelernten Werte (Offset) wieder auf 0
@@ -863,7 +827,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-eeprom-lesen"></a>
 ### TEST_EEPROM_LESEN
 
 Schreiben, Lesesn EEPROM
@@ -887,7 +850,6 @@ Schreiben, Lesesn EEPROM
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-eeprom-schreiben"></a>
 ### TEST_EEPROM_SCHREIBEN
 
 Schreiben, EEPROM
@@ -909,7 +871,6 @@ Schreiben, EEPROM
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-fs-schreiben"></a>
 ### TEST_FS_SCHREIBEN
 
 Fehlerspeicher zuruecksetzen
@@ -927,7 +888,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-abs-simulation-4-kanal"></a>
 ### ABS_SIMULATION_4_KANAL
 
 Simulation ABS5
@@ -942,7 +902,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-vakuum-pumpe"></a>
 ### VAKUUM_PUMPE
 
 Simulation ABS5
@@ -959,7 +918,6 @@ Simulation ABS5
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-vakuum"></a>
 ### VAKUUM
 
 Simulation ABS5
@@ -976,7 +934,6 @@ Simulation ABS5
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose beenden
@@ -991,7 +948,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-test-drosselklappe"></a>
 ### TEST_DROSSELKLAPPE
 
 Drosselklappen-Reduzierung ABS_ASC5
@@ -1008,7 +964,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-download-aktuatorik"></a>
 ### DOWNLOAD_AKTUATORIK
 
 Aktuatorik Test ABS_DSC57
@@ -1023,7 +978,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-bandende-test-passiv"></a>
 ### BANDENDE_TEST_PASSIV
 
 Schreiben, EEPROM
@@ -1041,7 +995,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-bandende-test-aktiv"></a>
 ### BANDENDE_TEST_AKTIV
 
 Schreiben, EEPROM
@@ -1059,7 +1012,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-aktuatorik"></a>
 ### TEST_AKTUATORIK
 
 Statischer Test der Komponenten ABS_DSC57
@@ -1078,7 +1030,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-fs-lesen-eeprom"></a>
 ### FS_LESEN_EEPROM
 
 EEPROM
@@ -1099,7 +1050,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-test-eceepr-lesen"></a>
 ### TEST_ECEEPR_LESEN
 
 Schreiben, Lesesn EEPROM
@@ -1120,7 +1070,6 @@ Schreiben, Lesesn EEPROM
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-test-eceepr-schreiben"></a>
 ### TEST_ECEEPR_SCHREIBEN
 
 Schreiben, EEPROM
@@ -1140,7 +1089,6 @@ Schreiben, EEPROM
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es koennen nur 2 Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -1162,7 +1110,6 @@ Beschreiben des Pruefstempels Es koennen nur 2 Argumente im Bereich von 0-255 bz
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -1181,7 +1128,6 @@ _No arguments._
 | _AUFTRAG2 | binary | Anforderungstelegramm |
 | _ANTWORT2 | binary | Antworttelegramm |
 
-<a id="job-fs-lesen-sar"></a>
 ### FS_LESEN_SAR
 
 Fehlerspeicher lesen: je 3x (F_ORT_NR/F_ORT_TEXT)
@@ -1198,7 +1144,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -1230,7 +1175,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 - [CODWERT](#table-codwert) (22 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -1245,7 +1189,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 78 rows × 2 columns
@@ -1331,7 +1274,6 @@ Dimensions: 78 rows × 2 columns
 | 0x8B | TXU Gelaendeuntersetzungsgetriebe CAN Botschaftsfehler |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 17 rows × 2 columns
@@ -1356,7 +1298,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | HDC passiv |
 | 0xFF | nicht belegt |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 72 rows × 17 columns
@@ -1436,7 +1377,6 @@ Dimensions: 72 rows × 17 columns
 | 0x8A | 0x01 | 0x00 | 0x03 | 0x02 | 0x05 | 0x04 | 0x07 | 0x06 | 0x09 | 0x08 | 0x0B | 0x0A | 0x0D | 0x0C | 0x0F | 0x0E |
 | 0x8B | 0x01 | 0x00 | 0x03 | 0x02 | 0x05 | 0x04 | 0x07 | 0x06 | 0x09 | 0x08 | 0x0B | 0x0A | 0x0D | 0x0C | 0x0F | 0x0E |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 80 rows × 5 columns
@@ -1524,7 +1464,6 @@ Dimensions: 80 rows × 5 columns
 | 0x8A | 0x01 | 0x00 | 256 | 1 |
 | 0x8B | 0x01 | 0x00 | 256 | 1 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 3 columns
@@ -1534,7 +1473,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | Fahrzeuggeschwindigkeit | km/h |
 | 0xXY | unbekannte Umweltnummer | XY |
 
-<a id="table-stg-tabelle"></a>
 ### STG_TABELLE
 
 Dimensions: 20 rows × 2 columns
@@ -1562,7 +1500,6 @@ Dimensions: 20 rows × 2 columns
 | VLIM | 0x68 |
 | NF-ASC | 0x78 |
 
-<a id="table-a-ventil-tabelle"></a>
 ### A_VENTIL_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -1574,7 +1511,6 @@ Dimensions: 4 rows × 2 columns
 | AVHR | 0x3A |
 | AVHL | 0x3E |
 
-<a id="table-e-a-status"></a>
 ### E_A_STATUS
 
 Dimensions: 2 rows × 2 columns
@@ -1584,7 +1520,6 @@ Dimensions: 2 rows × 2 columns
 | EIN | 0xFF |
 | AUS | 0x00 |
 
-<a id="table-rad-nr-tabelle"></a>
 ### RAD_NR_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -1596,7 +1531,6 @@ Dimensions: 4 rows × 2 columns
 | H_RECHTS | 0xA4 |
 | H_LINKS | 0xA6 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -1631,7 +1565,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-codwert"></a>
 ### CODWERT
 
 Dimensions: 22 rows × 2 columns

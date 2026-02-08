@@ -41,7 +41,6 @@
 - [SETZE_TEL_ANZ_BIS_ER](#job-setze-tel-anz-bis-er) - Anzahl der RE-Telegramme bis Eigenradstatus auf den Wert ANZ_TEL setzen. Die neuen Daten werden gegenge- lesen und bei Nichtuebereinstimmung erneut geschreiben
 - [SLEEP_MODE](#job-sleep-mode) - SG in Sleep-Mode versetzen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -60,7 +59,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer Reifendruck-Control automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -73,7 +71,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer RDC
@@ -98,7 +95,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -126,7 +122,6 @@ _No arguments._
 | F_UW1_EINH | string | Einheit der 1. (einzigen) Umweltbedingung |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -140,7 +135,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -153,7 +147,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -167,7 +160,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -187,7 +179,6 @@ Lesen des internen Speichers
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 | DATEN | binary | ausgelesene Hex-Daten |
 
-<a id="job-status-rad-io"></a>
 ### STATUS_RAD_IO
 
 Auslesen der Raddaten wenn alle Raeder zugeordnet
@@ -219,7 +210,6 @@ Auslesen der Raddaten wenn alle Raeder zugeordnet
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Auslesen der Statusbytes
@@ -323,7 +313,6 @@ _No arguments._
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern einiger Signale
@@ -355,7 +344,6 @@ Ansteuern einiger Signale
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -373,7 +361,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -394,7 +381,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -412,7 +398,6 @@ _No arguments._
 | BYTE4 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -433,7 +418,6 @@ _No arguments._
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-abgleichwert-lesen"></a>
 ### ABGLEICHWERT_LESEN
 
 Auslesen der Rad-Daten
@@ -466,7 +450,6 @@ Auslesen der Rad-Daten
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-abgleichwert-schreiben"></a>
 ### ABGLEICHWERT_SCHREIBEN
 
 Beschreiben der Rad-Kennung
@@ -486,7 +469,6 @@ Beschreiben der Rad-Kennung
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-re-telegramm-lesen"></a>
 ### RE_TELEGRAMM_LESEN
 
 Auslesen des letzten Rad-Telegramms
@@ -517,7 +499,6 @@ Auslesen des letzten Rad-Telegramms
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-re-telegramm-clear"></a>
 ### RE_TELEGRAMM_CLEAR
 
 Loeschen des RE-Telegramm-Zwischenspeichers
@@ -532,7 +513,6 @@ _No arguments._
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-setze-tel-anz-bis-er"></a>
 ### SETZE_TEL_ANZ_BIS_ER
 
 Anzahl der RE-Telegramme bis Eigenradstatus auf den Wert ANZ_TEL setzen. Die neuen Daten werden gegenge- lesen und bei Nichtuebereinstimmung erneut geschreiben
@@ -549,7 +529,6 @@ Anzahl der RE-Telegramme bis Eigenradstatus auf den Wert ANZ_TEL setzen. Die neu
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -579,7 +558,6 @@ SG in Sleep-Mode versetzen
 - [FUMWELTMATRIX](#table-fumweltmatrix) (1 × 4)
 - [FUMWELTTEXTE](#table-fumwelttexte) (2 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -600,7 +578,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 33 rows × 2 columns
@@ -641,7 +618,6 @@ Dimensions: 33 rows × 2 columns
 | 0x32 | Pioneer |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 47 rows × 2 columns
@@ -696,7 +672,6 @@ Dimensions: 47 rows × 2 columns
 | 0x0E | defektes 5-Radsystem |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -707,7 +682,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 4 columns
@@ -716,7 +690,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 0xFF | 0x01 | 0x01 | 0x01 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 3 columns

@@ -25,7 +25,6 @@
 - [DIAGNOSE_WEITER](#job-diagnose-weiter) - Diagnose aufrechterhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -44,7 +43,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer DSP-Booster R50
@@ -57,7 +55,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DSP
@@ -80,7 +77,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrechterhalten
@@ -93,7 +89,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -113,7 +108,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -129,7 +123,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

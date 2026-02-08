@@ -33,7 +33,6 @@
 - [C_FG_LESEN](#job-c-fg-lesen) - Auslesen der Fahrgestellnummer
 - [C_ZCS_LESEN](#job-c-zcs-lesen) - Anwenderinfofeld Block 4 auslesen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Kombi
@@ -46,7 +45,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -64,7 +62,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -89,7 +86,6 @@ _No arguments._
 | ID_CAN_INDEX | string | CAN-Index |
 | ID_AENDERUNGSINDEX | int | Aenderungsindex |
 
-<a id="job-mileage-reset"></a>
 ### MILEAGE_RESET
 
 Diagnose beenden
@@ -105,7 +101,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | OFFSET | int | previous kilometer offset |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -118,7 +113,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-software-reset"></a>
 ### SOFTWARE_RESET
 
 Kombi loest selbststaendig einen Reset aus
@@ -131,7 +125,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-c-zeit-reset"></a>
 ### C_ZEIT_RESET
 
 Ruecksetzen des Zeitinspektionsintervall
@@ -144,7 +137,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -161,7 +153,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-schreiben"></a>
 ### C_S_SCHREIBEN
 
 Codierdaten schreiben
@@ -178,7 +169,6 @@ Codierdaten schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -196,7 +186,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Speicherung der Checksumme
@@ -214,7 +203,6 @@ Berechnung und Speicherung der Checksumme
 | CHECKSUM | binary | berechnete Checksumme |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -229,7 +217,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Anwenderinfofeld Block 4 auslesen
@@ -254,7 +241,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 - [ROVERPARTNUMPREFIX](#table-roverpartnumprefix) (21 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 9 rows × 2 columns
@@ -271,7 +257,6 @@ Dimensions: 9 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns
@@ -308,7 +293,6 @@ Dimensions: 29 rows × 2 columns
 | 0x28 | DODUCO |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns

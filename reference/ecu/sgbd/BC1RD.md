@@ -66,7 +66,6 @@
 - [DIAGNOSE_AUFRECHT](#job-diagnose-aufrecht) - Ping message
 - [SG_RESET](#job-sg-reset) - Reset the ECU
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -85,7 +84,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -106,7 +104,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -125,7 +122,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung Dieser Job wird vom EDIABAS automatisch beim erstem Zugriff auf eine SGBD aufgerufen. Bei weiteren Zugriffen auf die selbe SGBD wird dieser Job nicht mehr aufgerufen. in der INITIALISIERUNG werden alle Funktionen aufgerufen, die nur einmal, vor der Kommunikation mit einem SG notwendig sind. Hier : 1. Verbindung zum Interface aufbauen 2. Setzen des Wiederholungszaehlers fuer Fehler (gleich 2) 3. Setzen der SG-Kommunikationsparameter 4. Platz der Antworttelegrammlaenge
@@ -138,7 +134,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | Werte: 0 = Fehler bei der Initialisierung Werte: 1 = Initialisierung erfolgreich durchgefuehrt |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identification data
@@ -163,7 +158,6 @@ _No arguments._
 | ID_AIF_VORHANDEN | int | Ist ein AIF vorhanden (0 (nein)/ 1 (ja)) 1, If AIF data is available |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-read-sia-data"></a>
 ### READ_SIA_DATA
 
 Read Service information
@@ -184,7 +178,6 @@ _No arguments._
 | TIME_SINCE_INSPECTION_SERVICE_EINH | string | Einheit = Tage, days |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren Write and verify the coding data
@@ -204,7 +197,6 @@ Codierdaten schreiben und verifizieren Write and verify the coding data
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read coding data response cod_lesen antwort |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -223,7 +215,6 @@ Codierdaten lesen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben der FG-Nummer Write the VIN
@@ -243,7 +234,6 @@ Beschreiben der FG-Nummer Write the VIN
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG Write VIN response |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read VIN response |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen FG-Nummer Read the VIN
@@ -258,7 +248,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer Last digits of the VIN |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-write-plip-codes"></a>
 ### WRITE_PLIP_CODES
 
 Write the codes and status for a specified plip location
@@ -282,7 +271,6 @@ Write the codes and status for a specified plip location
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG Write PLIP response packet |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read PLIP response packet |
 
-<a id="job-read-plip-codes"></a>
 ### READ_PLIP_CODES
 
 Read the codes and status for a specified plip location
@@ -304,7 +292,6 @@ Read the codes and status for a specified plip location
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen Sonderfall: Loeschdatum (KW/Jahr) integriert !
@@ -323,7 +310,6 @@ Fehlerspeicher loeschen Sonderfall: Loeschdatum (KW/Jahr) integriert !
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose Sonderfall: Loeschdatum (KW/Jahr) integriert !
@@ -348,7 +334,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary | 0. Hex-Antwort von SG |
 | _TEL_ANTWORT1 | binary | 1. Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen Info-Speicher ist im Aufbau analog zum Fehlerspeicher Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -370,7 +355,6 @@ _No arguments._
 | F_ART1_TEXT | string | 1. (einzige) Infoart als Text table IArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-zv"></a>
 ### IS_LESEN_ZV
 
 Infospeicher lesen / Sonderfall: ZV-Ringspeicher Analog zu FS_LESEN gibt es mehrere (15+1) Ergebnis-Saetze Im Satz  1 steht die Information zum letzten ZV-Befehl. Im Satz 15 steht die aelteste Information. Im Satz 16 steht das Ergebnis JOB_STATUS.
@@ -396,7 +380,6 @@ _No arguments._
 | I_EWS | int | Elektronische Wegfahrsperre Bereich: 0, wenn FALSE / 1, wenn TRUE |
 | I_FB_2MIN | int | 2 Minuten nach Fernbedienung entriegeln Bereich: 0, wenn FALSE / 1, wenn TRUE |
 
-<a id="job-dwa-diagnose"></a>
 ### DWA_DIAGNOSE
 
 Force DWA Diagnose
@@ -447,7 +430,6 @@ Force DWA Diagnose
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-digital-inputs"></a>
 ### STATUS_DIGITAL_INPUTS
 
 Read Digital Input States
@@ -738,7 +720,6 @@ _No arguments._
 | STAT_DIP_KEY_IN_SW_ON | int | Switch input to detect key in ignition 1 wenn einschalten / 0 wenn ausschalten |
 | STAT_DIP_WWA | int | Input from level switch 1 wenn einschalten / 0 wenn ausschalten |
 
-<a id="job-status-digital-outputs"></a>
 ### STATUS_DIGITAL_OUTPUTS
 
 Read Digital outputs
@@ -781,7 +762,6 @@ _No arguments._
 | STAT_DOP_ALARM_LED_ON | int | Alarm LED output 1 wenn einschalten / 0 wenn ausschalten |
 | STAT_DOP_WWA_LED | int | WWA LED output 1 wenn eingeschaltet / 0 wenn ausgeschaltet |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Status der Analogsignale des BC1RD
@@ -876,7 +856,6 @@ _No arguments._
 | STAT_AIP_INDICATOR_SW_STATE | string | Indicator position |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-fzv"></a>
 ### STATUS_FZV
 
 Auslesen FZV-Status Read the FZV State
@@ -897,7 +876,6 @@ _No arguments._
 | STAT_CURKEY_NUMBER | int | Aktuelle Schluessel Nr (1..4) Current key Number (1..4) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-rf"></a>
 ### STATUS_RF
 
 Read the RF status
@@ -916,7 +894,6 @@ _No arguments._
 | STAT_RF_REMOTE_INCORRECT | int | Remote (Base) code status 1 = Incorrect remote (Incorrect base code), 0 = OK |
 | STAT_RF_REMOTE_BATTERY_DEAD | int | Battery status 1 = Flat battery detected, 0 = OK |
 
-<a id="job-status-tilt-sensor"></a>
 ### STATUS_TILT_SENSOR
 
 Read the Tilt sensor status
@@ -931,7 +908,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | STAT_TILT_SENSOR_PULSE_RECEIVED | int | Tilt sensor Pulse status 1 = Tilt sensor check pulse received, 0 = not received |
 
-<a id="job-status-light-outputs"></a>
 ### STATUS_LIGHT_OUTPUTS
 
 Read lighting Digital outputs
@@ -953,7 +929,6 @@ _No arguments._
 | STAT_DOP_FT_FOG_LGT_RLY_ON | int | Front fog relay coil 1 wenn einschalten / 0 wenn ausschalten |
 | STAT_DOP_NO_PLATE_LGT_ON | int | Number plate light 1 wenn einschalten / 0 wenn ausschalten |
 
-<a id="job-status-light-inputs"></a>
 ### STATUS_LIGHT_INPUTS
 
 Read Lighting Digital Input States
@@ -980,7 +955,6 @@ _No arguments._
 | STAT_DIP_RH_DIR_IND_STATUS_ON | int | Monitor the right hand indicator 1 wenn einschalten / 0 wenn ausschalten |
 | STAT_DIP_BRAKE_LAMP_STATUS_ON | int | Monitor the brake lamps 1 wenn einschalten / 0 wenn ausschalten |
 
-<a id="job-steuern-iostates"></a>
 ### STEUERN_IOSTATES
 
 Ansteuern eines digitalen Ein- oder Ausgangs v. BC1RD ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! Aufruf 'XTRACT [-F] BC1RD.prg'
@@ -1000,7 +974,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs v. BC1RD ! erlaubte Namen des Argum
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-analog"></a>
 ### STEUERN_ANALOG
 
 Ansteuern eines ANALOGEN Ein- oder Ausgangs ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! Aufruf 'XTRACT [-F] BC1RD.prg'
@@ -1020,7 +993,6 @@ Ansteuern eines ANALOGEN Ein- oder Ausgangs ! erlaubte Namen des Arguments 'ORT'
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pwm-outputs"></a>
 ### STEUERN_PWM_OUTPUTS
 
 Force Digital Output States
@@ -1042,7 +1014,6 @@ Force Digital Output States
 | _TEL_SENDE2 | binary | Sendetelegramm anzeigen Force PWM outputs telegram to ECU |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Force PWM outputs response |
 
-<a id="job-steuern-tilt-sensor"></a>
 ### STEUERN_TILT_SENSOR
 
 Force Tilt Sensor state
@@ -1061,7 +1032,6 @@ Force Tilt Sensor state
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-steuern-hss"></a>
 ### STEUERN_HSS
 
 Force Tilt Sensor state
@@ -1083,7 +1053,6 @@ Force Tilt Sensor state
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-steuern-poti-lwr"></a>
 ### STEUERN_POTI_LWR
 
 Force POTILWR state
@@ -1102,7 +1071,6 @@ Force POTILWR state
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-lwr-on"></a>
 ### LWR_ON
 
 Switch on LWR2A
@@ -1117,7 +1085,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Force outputs telegram to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-lwr-off"></a>
 ### LWR_OFF
 
 Switch on LWR2A
@@ -1132,7 +1099,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Force outputs telegram to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-read-manufacturer-data"></a>
 ### READ_MANUFACTURER_DATA
 
 Auslesen der Herstelldaten
@@ -1156,7 +1122,6 @@ _No arguments._
 | BYTE10 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers des BC1rd Als Argumente wird die Speicherart (Gruppe) und die Adresse der Datenbytes uebergeben.
@@ -1175,7 +1140,6 @@ Lesen des internen Speichers des BC1rd Als Argumente wird die Speicherart (Grupp
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Speicherinhalt schreiben
@@ -1194,7 +1158,6 @@ Speicherinhalt schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-write-ident"></a>
 ### WRITE_IDENT
 
 Identification data
@@ -1219,7 +1182,6 @@ Identification data
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden
@@ -1233,7 +1195,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-clear-rf-buffers"></a>
 ### CLEAR_RF_BUFFERS
 
 Clear the RF receive and status buffers
@@ -1247,7 +1208,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-start-diagnostics"></a>
 ### START_DIAGNOSTICS
 
 Obtain diagnostic seed and send key to begin diagnostics The ecu will lock if no diagnostic messages have been sent to it for 30 seconds
@@ -1263,7 +1223,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Send key telegram to ECU |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Send key response |
 
-<a id="job-read-alarm-mislock"></a>
 ### READ_ALARM_MISLOCK
 
 Read Alarm mislocks
@@ -1322,7 +1281,6 @@ _No arguments._
 | MISLOCK_AGE_15 | int | Mislock Fault age |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-read-alarm-trigger"></a>
 ### READ_ALARM_TRIGGER
 
 Read alarm triggers
@@ -1381,7 +1339,6 @@ _No arguments._
 | ALARM_AGE_15 | int | Alarm Fault age |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-steuern-stepper-motor"></a>
 ### STEUERN_STEPPER_MOTOR
 
 Force Stepper motor Output State
@@ -1400,7 +1357,6 @@ Force Stepper motor Output State
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-flash-rom-test"></a>
 ### FLASH_ROM_TEST
 
 Self test. Forces a fast Flash-ROM check Wait 2 seconds and read the result from error memory (Stops all ECU tasks for approx 2 seconds)
@@ -1414,7 +1370,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Ping message
@@ -1428,7 +1383,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Reset the ECU
@@ -1458,7 +1412,6 @@ _No arguments._
 - [IARTTEXTE](#table-iarttexte) (3 × 2)
 - [BC1_DWA_BITS](#table-bc1-dwa-bits) (28 × 5)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1479,7 +1432,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -1559,7 +1511,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1588,7 +1539,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1613,7 +1563,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-bc1bits"></a>
 ### BC1BITS
 
 Dimensions: 272 rows × 5 columns
@@ -1893,7 +1842,6 @@ Dimensions: 272 rows × 5 columns
 | SW_LWR12V | 29 | 0x01 | 0x01 | LWR 12Volt: Current Supply to LWR ECU |
 | XY | XY | 0xXY | 0xXY | Unknown Item |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 509 rows × 6 columns
@@ -2410,7 +2358,6 @@ Dimensions: 509 rows × 6 columns
 | 256 | 53 | 0x80 | 0x80 | EwsActKeyNumBit7 | -- |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 171 rows × 2 columns
@@ -2589,7 +2536,6 @@ Dimensions: 171 rows × 2 columns
 | 0xEB | 58K+KRB: mehrdeutige Fehlerkombination |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -2600,7 +2546,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 46 rows × 2 columns
@@ -2654,7 +2599,6 @@ Dimensions: 46 rows × 2 columns
 | 0xD3 | Alarmspeicher: MuW Master (vorn links) |
 | 0xXY | unbekannter Info-Ort |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -2665,7 +2609,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-bc1-dwa-bits"></a>
 ### BC1_DWA_BITS
 
 Dimensions: 28 rows × 5 columns

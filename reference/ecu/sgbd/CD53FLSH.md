@@ -56,7 +56,6 @@
 - [STEUERN_RESET](#job-steuern-reset) - Fuehrt einen Reset im Radio aus
 - [FLASH_SCHREIBEN](#job-flash-schreiben) - Beliebige Flash Zellen beschreiben
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -75,7 +74,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer das Radio
@@ -88,7 +86,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -118,7 +115,6 @@ _No arguments._
 | ID_VF_DIAG | string | auslesen des VF-Status moeglich |
 | ID_AN_AUS_DIAG | string | auslesen ob Radio ein aus moeglich |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -139,7 +135,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -152,7 +147,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 alle Stati des RADIO lesen
@@ -175,7 +169,6 @@ _No arguments._
 | STAT_FELDSTAERKE_WERT | int | FELDSTAERKE des empf. Senders (relativ, 0-15) ! mit "Radio aus" nur Dummyergebnis |
 | STAT_RADIO_EIN | int | 1: Radio ist eingeschaltet 0: Radio ist ausgeschaltet bei ausgeschaltetem Radio ist keine DSP-Diagnose moeglich |
 
-<a id="job-steuern-default-sound"></a>
 ### STEUERN_DEFAULT_SOUND
 
 Balance, Fader und Volume Defaulteinstellung
@@ -188,7 +181,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-lv"></a>
 ### STEUERN_FADER_LV
 
 Ansteuerung des Kanals links vorne
@@ -201,7 +193,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-rv"></a>
 ### STEUERN_FADER_RV
 
 Ansteuerung des Kanals rechts vorne
@@ -214,7 +205,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-rh"></a>
 ### STEUERN_FADER_RH
 
 Ansteuerung des Kanals rechts hinten
@@ -227,7 +217,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-lh"></a>
 ### STEUERN_FADER_LH
 
 Ansteuerung des Kanals links hinten
@@ -240,7 +229,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vol-up"></a>
 ### STEUERN_VOL_UP
 
 Lautstaerkeerhoehung um 11dB/s
@@ -257,7 +245,6 @@ Lautstaerkeerhoehung um 11dB/s
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vol-down"></a>
 ### STEUERN_VOL_DOWN
 
 Lautstaerkenabsenkung um 11dB/s
@@ -274,7 +261,6 @@ Lautstaerkenabsenkung um 11dB/s
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-seek-up"></a>
 ### STEUERN_SEEK_UP
 
 Suchlauf aufwaerts
@@ -287,7 +273,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-seek-down"></a>
 ### STEUERN_SEEK_DOWN
 
 Suchlauf abwaerts
@@ -300,7 +285,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-audio-key"></a>
 ### STEUERN_AUDIO_KEY
 
 Audio-Taste betaetigen
@@ -313,7 +297,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-gal-dek"></a>
 ### STEUERN_GAL_DEK
 
 GAL-WERT dekrementieren
@@ -326,7 +309,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-gal-ink"></a>
 ### STEUERN_GAL_INK
 
 GAL-WERT inkrementieren
@@ -339,7 +321,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vf-dek"></a>
 ### STEUERN_VF_DEK
 
 VF-Mindestlautstaerke dekrementieren
@@ -352,7 +333,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vf-ink"></a>
 ### STEUERN_VF_INK
 
 VF-Mindestlautstaerke inkrementieren
@@ -365,7 +345,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-frequenz"></a>
 ### STEUERN_FREQUENZ
 
 einstellen der Radiofrequenz
@@ -382,7 +361,6 @@ einstellen der Radiofrequenz
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-radio-power"></a>
 ### STEUERN_RADIO_POWER
 
 Ein-/Ausschalten des Radios
@@ -399,7 +377,6 @@ Ein-/Ausschalten des Radios
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -420,7 +397,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -439,7 +415,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-serialnumber"></a>
 ### SERIALNUMBER
 
 Herstelldaten lesen
@@ -453,7 +428,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | SERIEN_NR | string | Seriennummer vom Hersteller |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -466,7 +440,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Ergebnis ist immer OKAY, da nur Dummy |
 
-<a id="job-fg-lesen"></a>
 ### FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -481,7 +454,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierung Radio
@@ -496,7 +468,6 @@ _No arguments._
 | COD_DATEN | string | die 4 Codierbytes |
 | COD_LAENDERVARIANTE | string | Laendervariante des Radios table LandVar LAND_TEXT |
 
-<a id="job-set-prog-mode"></a>
 ### SET_PROG_MODE
 
 Setzen des Programmiermodus
@@ -509,7 +480,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-speicher-loeschen"></a>
 ### STEUERN_SPEICHER_LOESCHEN
 
 Loescht den Speicher
@@ -522,7 +492,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-speicher-adresse"></a>
 ### STEUERN_SPEICHER_ADRESSE
 
 Setzt Speicheradresse bei aktuellem Schritt
@@ -542,7 +511,6 @@ Setzt Speicheradresse bei aktuellem Schritt
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-programmieren-start"></a>
 ### STEUERN_PROGRAMMIEREN_START
 
 Startet den Programmiervorgang
@@ -555,7 +523,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-uebertragen-programm"></a>
 ### STEUERN_UEBERTRAGEN_PROGRAMM
 
 Uebertraegt Speicherdaten bei aktuellem Schritt
@@ -609,7 +576,6 @@ Uebertraegt Speicherdaten bei aktuellem Schritt
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-verify-checksum"></a>
 ### VERIFY_CHECKSUM
 
 Setzt Speicheradresse bei aktuellem Schritt
@@ -627,7 +593,6 @@ Setzt Speicheradresse bei aktuellem Schritt
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-reset"></a>
 ### STEUERN_RESET
 
 Fuehrt einen Reset im Radio aus
@@ -640,7 +605,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Beliebige Flash Zellen beschreiben
@@ -670,7 +634,6 @@ Beliebige Flash Zellen beschreiben
 - [LANDVAR](#table-landvar) (6 × 2)
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -691,7 +654,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 56 rows × 2 columns
@@ -755,7 +717,6 @@ Dimensions: 56 rows × 2 columns
 | 0x55 | BHTC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -784,7 +745,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -796,7 +756,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Fehler an der Antennenstromversorgung |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -807,7 +766,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-diagindex"></a>
 ### DIAGINDEX
 
 Dimensions: 68 rows × 7 columns
@@ -883,7 +841,6 @@ Dimensions: 68 rows × 7 columns
 | 0x44 | MD53 CID | MD53_CID | 1 | 1 | 1 | 1 |
 | 0xFF | unbekannte Radioart | unbekannte Radioart | 0 | 0 | 0 | 0 |
 
-<a id="table-landvar"></a>
 ### LANDVAR
 
 Dimensions: 6 rows × 2 columns
@@ -897,7 +854,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | KANADA |
 | 0xXY | UNBEKANNT |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns

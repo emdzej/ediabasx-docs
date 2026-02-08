@@ -111,7 +111,6 @@
 - [STEUERN_NEIGUNG_X_ZERO](#job-steuern-neigung-x-zero) - Set the zero for the ADXL tilt sensor X axis KWP2000: $31 StartRoutineByLocalIdentifier $41 $0E
 - [STEUERN_NEIGUNG_Y_ZERO](#job-steuern-neigung-y-zero) - Set the zero for the ADXL tilt sensor Y axis KWP2000: $31 StartRoutineByLocalIdentifier $41 $0F Modus  : Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -124,7 +123,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -143,7 +141,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -159,7 +156,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -176,7 +172,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -209,7 +204,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -236,7 +230,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -278,7 +271,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -297,7 +289,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -315,7 +306,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -336,7 +326,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -357,7 +346,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -377,7 +365,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2000 dtcShadowMemory
@@ -404,7 +391,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2001 - $20FF dtcShadowMemoryEntry Modus: Default
@@ -447,7 +433,6 @@ Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCShadowMemory Modus  : Default
@@ -462,7 +447,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-lesen"></a>
 ### HS_LESEN
 
 Historyspeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2100 HistoryMemory Modus  : Default
@@ -489,7 +473,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-lesen-detail"></a>
 ### HS_LESEN_DETAIL
 
 Historypeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2101 - $21FF HistoryMemoryEntry Modus: Default
@@ -532,7 +515,6 @@ Historypeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDat
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-loeschen"></a>
 ### HS_LOESCHEN
 
 Historyspeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $03 ClearHistoryMemory Modus  : Default
@@ -547,7 +529,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -562,7 +543,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -583,7 +563,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $0E Time controlled PowerDown oder b)       $05 PowerDown $00 all ECU Modus  : Default
@@ -602,7 +581,6 @@ SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C ControlEnergySavingMode Modus  : Default
@@ -623,7 +601,6 @@ Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C C
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -645,7 +622,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speicherse
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes und Datenbytes (Datenbytes durch Komma getrennt) KWP2000: $3D WriteMemoryByAddress Modus  : Default
@@ -667,7 +643,6 @@ Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speiche
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus  : Default
@@ -681,7 +656,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $9B Vehicle Manufacturer Coding Index oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -699,7 +673,6 @@ _No arguments._
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -715,7 +688,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number Modus  : Default
@@ -734,7 +706,6 @@ Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIden
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -755,7 +726,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B Write
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-lesen"></a>
 ### C_AEI_LESEN
 
 Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -771,7 +741,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-schreiben"></a>
 ### C_AEI_SCHREIBEN
 
 Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -790,7 +759,6 @@ Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   Writ
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-auftrag"></a>
 ### C_AEI_AUFTRAG
 
 Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -811,7 +779,6 @@ Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -831,7 +798,6 @@ Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -850,7 +816,6 @@ Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -871,7 +836,6 @@ Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteData
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -889,7 +853,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -914,7 +877,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -937,7 +899,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -955,7 +916,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -976,7 +936,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -997,7 +956,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -1016,7 +974,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -1033,7 +990,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-zufallszahl-lesen"></a>
 ### AUTHENTISIERUNG_ZUFALLSZAHL_LESEN
 
 Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $07 RequestForAuthentication Modus  : Default
@@ -1055,7 +1011,6 @@ Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-start"></a>
 ### AUTHENTISIERUNG_START
 
 Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAuthentication Modus  : Default
@@ -1074,7 +1029,6 @@ Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -1091,7 +1045,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-signatur-pruefen"></a>
 ### FLASH_SIGNATUR_PRUEFEN
 
 Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSignature Modus  : Default
@@ -1111,7 +1064,6 @@ Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSigna
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -1126,7 +1078,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 ClearMemory Modus  : Default
@@ -1146,7 +1097,6 @@ Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload Modus  : Default
@@ -1166,7 +1116,6 @@ Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -1187,7 +1136,6 @@ Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Defau
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferExit Modus  : Default
@@ -1206,7 +1154,6 @@ Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -1243,7 +1190,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D WriteMemoryByAddress Modus   : Default
@@ -1274,7 +1220,6 @@ Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D Write
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG AIF schreiben |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG AIF schreiben |
 
-<a id="job-gemel-revision-index-ident-id"></a>
 ### _GEMEL_REVISION_INDEX_IDENT_ID
 
 Readout of the Gemel revision index of the part. This ID is written in EEPROM KWP2000: $21 ReadDataByLocalIdentifier $B8 identifier of the Gemel Rev Ind
@@ -1289,7 +1234,6 @@ _No arguments._
 | GEMEL_REVISION_INDEX | unsigned char | identifier of the Gemel Software |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-gemel-appl-sw-ident-id"></a>
 ### _GEMEL_APPL_SW_IDENT_ID
 
 Readout of the Gemel application software identifier which is written in the ROM KWP2000: $21 ReadDataByLocalIdentifier $A9 identifier of the Gemel Software
@@ -1304,7 +1248,6 @@ _No arguments._
 | GEMEL_APPL_SOFTWARE_ID | string | identifier of the Gemel Software |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-gemel-bootloader-sw-ident-id"></a>
 ### _GEMEL_BOOTLOADER_SW_IDENT_ID
 
 Readout of the bootloader software identifier which is written in the ROM KWP2000: $21 ReadDataByLocalIdentifier $AA identifier of the Gemel Software
@@ -1319,7 +1262,6 @@ _No arguments._
 | BOOTLOADER_SOFTWARE_ID | string | identifier of the SC version Bootloader Software |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-gemel-muw-seriennummer-lesen"></a>
 ### _GEMEL_MUW_SERIENNUMMER_LESEN
 
 Reads the SERIAL NUMBER of the addressed MUW (vr,hr,hl,vl,hi,alle) in EEPROM. The S.N. has 9 ASCII characters bytes: - the last two digits of year (2 bytes) - one char for month id: '1','2','3','4','5' '6','7','8','9','A','B','C' (1 byte) - two digits for the day (2 bytes) - the progressive nr. in hex (4 bytes) If JOB_STATUS is OK: The Serial Number (S.N.) is displayed. In case an internal error occurred, the S.N. is not valid, and the following error codes appear: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $21 ReadDataByLocalIdentifier $B2 identifier of the S.N. of MUW's $MUWID identifier of the MUW's
@@ -1342,7 +1284,6 @@ Reads the SERIAL NUMBER of the addressed MUW (vr,hr,hl,vl,hi,alle) in EEPROM. Th
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-gemel-muw-codierung-lesen"></a>
 ### _GEMEL_MUW_CODIERUNG_LESEN
 
 Reads the CODIERUNG values of all the MUW's In case an internal error occurred, the CODIERUNG values are not valid. KWP2000: $21 ReadDataByLocalIdentifier $B7 identifier of the of MUW's COD.
@@ -1361,7 +1302,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-gemel-steuern-muw-diag-init"></a>
 ### _GEMEL_STEUERN_MUW_DIAG_INIT
 
 Init the MUW/s (vr, hr, hl, vl, hi, alle) to the normal (Off) status (from any status). This job can be used during development for removing a MUW deadlock situation (i.e.: MUW not responding) If JOB_STATUS is OK: The MUW/s status is displayed: the datum XX_MUW_STAT has value '0' if the MUW is in status Off (ready). It has values 1,2,3 in case the MUW is responding but is in other status than Off (On, Sleep, Alarm) In case an internal error occurred, the following error codes are indicated by XX_MUW_STAT: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $31 StartRoutineByLocalIdentifier $39 Muw status to Off
@@ -1384,7 +1324,6 @@ Init the MUW/s (vr, hr, hl, vl, hi, alle) to the normal (Off) status (from any s
 | HI_MUW_STAT | int | muw ready - muw not ready |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident-muw"></a>
 ### IDENT_MUW
 
 Reads the identification data of the addressed MUW (vr,hr,hl,vl,hi,alle) The MUW identification data are: - Developer ID - MUW Message Catalogue Version - MUW Functional SW Version - MUW Hardware Index - MUW Part Number - MUW Address If JOB_STATUS is OK: All the above data are displayed. The datum XX_MUW_FEHLER_STATUS has value '0' in case no internal error occurred. In case an internal error occurred, the data are not valid, and the following error codes are indicated by XX_MUW_FEHLER_STATUS: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $22 ReadDataByCommonIdentifier $40 ident MuW (project specific)
@@ -1443,7 +1382,6 @@ Reads the identification data of the addressed MUW (vr,hr,hl,vl,hi,alle) The MUW
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-car-key-memory"></a>
 ### STATUS_CAR_KEY_MEMORY
 
 Readout of the CKM parameters from RAM (currently used by the DWA Cansine) KWP2000: $21 ReadDataByLocalIdentifier $B0
@@ -1463,7 +1401,6 @@ _No arguments._
 | STAT_QUIT_AKUSTIC_SCHAERFEN_KLAPPE | int | 0: inaktiv 1: aktiv |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-klemme-30"></a>
 ### STATUS_DWA_KLEMME_30
 
 Readout of the external battery supply voltage KWP2000: $30 InputOutputControlByLocalIdentifier $02 ReportIOconditions $02 external supply voltage
@@ -1479,7 +1416,6 @@ _No arguments._
 | STAT_DWA_KLEMME_30_EINH | string | Einheit Volt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-muw-klemme-30"></a>
 ### STATUS_MUW_KLEMME_30
 
 Readout of the supply voltage of the addressed MUW (vr,hr,hl,vl,hi,alle). The MUW supply voltage has a resolution of 1 Volt If JOB_STATUS is OK: The MUW/s voltage is displayed. The datum STAT_XX_MUW_KLEMME_30_FEHL has value '0' in case no internal error occurred. In case an internal error occurred, the data are not valid, and the following error codes are indicated by STAT_XX_MUW_KLEMME_30_FEHL: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $30 InputOutputControlByLocalIdentifier $01 ReportCurrentState
@@ -1513,7 +1449,6 @@ Readout of the supply voltage of the addressed MUW (vr,hr,hl,vl,hi,alle). The MU
 | STAT_EINHEIT_MUW_KLEMME_30 | string | Einheit Volt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-temperatur"></a>
 ### STATUS_DWA_TEMPERATUR
 
 Readout of the internal temperature on the DWA PCB of the Cansine - wait ca. 30 seconds after Cansine power on KWP2000: $30 InputOutputControlByLocalIdentifier $02 ReportIOconditions $08 parameter DWA temperature
@@ -1529,7 +1464,6 @@ _No arguments._
 | STAT_DWA_INTERN_TEMP_EINH | string | Einheit Grad C |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-muw-temperatur"></a>
 ### STATUS_MUW_TEMPERATUR
 
 Readout of the MUW internal temperature of the addressed MUW (vr,hr,hl,vl,hi,alle). Wait at least 2 seconds after Power ON before executing this job. If JOB_STATUS is OK: The MUW/s voltage is displayed. The datum STAT_XX_MUW_TEMP_FEHL has value '0' in case no internal error occurred. In case an internal error occurred, the data are not valid, and the following error codes are indicated by STAT_XX_MUW_TEMP_FEHL: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $30 InputOutputControlByLocalIdentifier $0A MUW_TEMPERATUR $02 ReportIOconditions $xx identifiers of MUW
@@ -1563,7 +1497,6 @@ Readout of the MUW internal temperature of the addressed MUW (vr,hr,hl,vl,hi,all
 | STAT_HI_MUW_TEMP_FEHL_TEXT | string | Error text |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-led"></a>
 ### STATUS_DWA_LED
 
 Readout of the DWA LED status (on=1, off=0) KWP2000: $30 InputOutputControlByLocalIdentifier $02 ReportIOconditions $01 status of the DWA LED
@@ -1578,7 +1511,6 @@ _No arguments._
 | STAT_DWA_LED | int | ein - aus |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-alarmtrigger"></a>
 ### STATUS_DWA_ALARMTRIGGER
 
 Readout of the alarm trigger status of the DWA For the MUW related alarm trigger, the system must be armed, for other alarm triggers, the system can be armed or disarmed KWP2000: $21 ReadDataByLocalIdentifier $A0 identifier of the ALARM_TRIGGER
@@ -1602,7 +1534,6 @@ _No arguments._
 | STAT_DISTRIBUTION_AUSGEL | int | distribution alarm |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-intern"></a>
 ### STATUS_DWA_INTERN
 
 Readout of the application status of the CANSINE. The following statuses are possible: -  0: dwa disarmed -  1: dwa arming -  2: dwa armed -  3: dwa disarming -  4: dwa alarm -  5: dwa dwa pause after alarm -  6: dwa transport mode -  7: dwa werkstatt mode -  9: dwa armed - MUW & Tilt Sensor deactivated by User - 10: dwa armed - distribution mode - 11: dwa ending energiesparmode - 12: dwa powerdown mode - 13: dwa panik alarm mode - 14: dwa armed - hotelstellung active - 15: dwa armed- MUW & Tilt Sensor not active - 16: dwa armed - MUW not active - 17: dwa armed - Tilt Sensor not active - 18: dwa schnelltest active - 19: dwa armed - MUW & Tilt Sensor referencing - 20: dwa armed - MUW referencing - 21: dwa armed - Tilt Sensor referencing KWP2000: $21 ReadDataByLocalIdentifier $A1 identifier of the DWA_STS
@@ -1618,7 +1549,6 @@ _No arguments._
 | STAT_DWA_INTERN_TEXT | string | dwa application status |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-muw-intern"></a>
 ### STATUS_MUW_INTERN
 
 Readout of the MUW status of the addressed MUW (vr, hr, hl, vl, hi, alle). The following statuses are shown: - MUW communication error status - MUW internal error code - Number of intrusions recorded The Number of Intrusions detected is reset after this job is executed. If JOB_STATUS is OK: The MUW/s voltage is displayed. The datum STAT_XX_MUW_KOMM_FEHLER has value '0' in case no internal error occurred. In case an internal error occurred, the data are not valid, and the following error codes are indicated by STAT_XX_MUW_KOMM_FEHLER: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $21 ReadDataByLocalIdentifier $A3 identifier of the MUW status
@@ -1656,7 +1586,6 @@ Readout of the MUW status of the addressed MUW (vr, hr, hl, vl, hi, alle). The f
 | STAT_HI_MUW_KOMM_FEHLER_TEXT | string | Error text |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-muw-alarm-levels"></a>
 ### STATUS_MUW_ALARM_LEVELS
 
 Readout of the last ten alarms voltage levels of the addressed MUW/s (vr,hr,hl,vl,hi,alle) The MUW alarm level value has a resolution of 5mV for parts with FSV550 or lower, and of 20mV for FSV higher or equal than FSV560 If JOB_STATUS is OK: The 10 MUW/s alarms levels are displayed. The value '0' means 'no alarm stored in this location. STAT_XX_MUW_ALARM_LEVELS_FEHL has value '0' in case no internal error occurred. In case an internal error occurred, the data are not valid, and the following error code is shown by STAT_XX_MUW_ALARM_LEVELS_FEHL: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $30 InputOutputControlByLocalIdentifier $02 ReportIOconditions $11 status of the MUW alarm levels $xx MUW id
@@ -1730,7 +1659,6 @@ Readout of the last ten alarms voltage levels of the addressed MUW/s (vr,hr,hl,v
 | STAT_EINHEIT_MUW_ALARM_LEVELS | string | Einheit milliVolts |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-muw-false-wakeup-levels"></a>
 ### STATUS_MUW_FALSE_WAKEUP_LEVELS
 
 Readout of the last ten false wakeup levels (wakeup not leading to alarm) of the addressed MUW/s (vr,hr,hl,vl,hi,alle). The MUW alarm level value has a resolution of 5mV for parts with FSV550 or lower, and of 20mV for FSV higher or equal than FSV560 If JOB_STATUS is OK: The 10 MUW/s false wakeup levels are displayed. The value '0' means 'no alarm stored in this location. STAT_XX_MUW_F_WAKEUP_LEVELS_FEHL has value '0' in case no internal error occurred. In case an internal error occurred, the data are not valid, and the following error code is shown by STAT_XX_MUW_F_WAKEUP_LEVELS_FEHL: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $30 InputOutputControlByLocalIdentifier $02 ReportIOconditions $12 status of the MUW F wakeup level $xx MUW id
@@ -1804,7 +1732,6 @@ Readout of the last ten false wakeup levels (wakeup not leading to alarm) of the
 | STAT_EINHEIT_MUW_F_WAKEUP_LEVELS | string | Einheit milliVolts |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-muw-noise"></a>
 ### STATUS_MUW_NOISE
 
 Readout of the MUW noise level of the addressed MUW (vr, hr, hl, vl, hi). The local noise measurement takes approx 5s for each MUW. If JOB_STATUS is OK: The MUW/s noise level is displayed in mV. Each MUW returns a value from 0 to 255, in in multiples of 5mV or 20mV The MUW noise level value has a resolution of 5mV for parts with FSV550 or lower, and of 20mV for FSV higher or equal than FSV560 This value is then converted and displayed in mV. STAT_XX_MUW_KOMM_FEHLER has value '0' in case no internal error occurred. In case an internal error occurred, the data are not valid, and the following error codes are indicated by STAT_XX_MUW_KOMM_FEHLER: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $30 InputOutputControlByLocalIdentifier $01 ReportCurrentState
@@ -1833,7 +1760,6 @@ Readout of the MUW noise level of the addressed MUW (vr, hr, hl, vl, hi). The lo
 | STAT_EINH_MUW_NOISE_LEVEL | string | Einheit milliVolts (peak to peak) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-neigung-x-achse"></a>
 ### STATUS_NEIGUNG_X_ACHSE
 
 Readout of the current angle value in degrees, given by the inclination sensor of the DWA KWP2000: $30 InputOutputControlByLocalIdentifier $02 ReportIOconditions $0E id. of the ADXL X angle
@@ -1849,7 +1775,6 @@ _No arguments._
 | STAT_NEIGUNG_X_ACHSE_EINH | string | degree of angle |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-neigung-y-achse"></a>
 ### STATUS_NEIGUNG_Y_ACHSE
 
 Readout of the current angle value in degrees, given by the inclination sensor of the DWA KWP2000: $30 InputOutputControlByLocalIdentifier $02 ReportIOconditions $0F id. of the ADXL Y angle
@@ -1865,7 +1790,6 @@ _No arguments._
 | STAT_NEIGUNG_Y_ACHSE_EINH | string | degree |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-interner-batterie-level"></a>
 ### STATUS_INTERNER_BATTERIE_LEVEL
 
 Readout of the current residual level of the internal battery. The possible levels are: - 1: empty - 2: good - 3: new KWP2000: $21 ReadDataByLocalIdentifier $A8 identifier of the internal battery level of charge
@@ -1882,7 +1806,6 @@ _No arguments._
 | STAT_N_OF_SELF_SUPPLIED_CYCLES | int | number of self supplied alarms |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-interner-batterie-wechsel"></a>
 ### INTERNER_BATTERIE_WECHSEL
 
 Set the current consumption status of the internal battery to '3:New'. This operation has to be done with new batteries KWP2000: $3B WriteDataByLocalIdentifier $A8 identifier of the internal battery level of charge
@@ -1898,7 +1821,6 @@ _No arguments._
 | STAT_INT_BATTERY_LEVEL_TEXT | string | Level Text |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-led"></a>
 ### STEUERN_DWA_LED
 
 Set the status of the DWA LED to 'ein', 'aus' KWP2000: $30 InputOutputControlByLocalIdentifier $07 ShortTermAdjustment
@@ -1916,7 +1838,6 @@ Set the status of the DWA LED to 'ein', 'aus' KWP2000: $30 InputOutputControlByL
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-schaerfen"></a>
 ### STEUERN_DWA_SCHAERFEN
 
 Set the DWA to the armed ('ein') or disarmed ('aus') status KWP2000: $31 StartRoutineByLocalIdentifier $43 id for Schaerfen/Entschaerfen
@@ -1934,7 +1855,6 @@ Set the DWA to the armed ('ein') or disarmed ('aus') status KWP2000: $31 StartRo
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-sirene-ein-aus"></a>
 ### STEUERN_SIRENE_EIN_AUS
 
 Start ('ein') the siren sound, timeout ca. 30s Stop ('aus') the current sound before timeout KWP2000: $31 StartRoutineByLocalIdentifier $44 Sirene identifier
@@ -1952,7 +1872,6 @@ Start ('ein') the siren sound, timeout ca. 30s Stop ('aus') the current sound be
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-selftest"></a>
 ### STEUERN_DWA_SELFTEST
 
 Perform an hardware selftest of the DWA and report the results, for each test performed: - Status DWA Selftest General: -  0: dwa ok (all the following tests ok) -  1: dwa not ok (at least one test not ok) - Status DWA External Voltage Level: -  0: dwa ext V level ok - 15: External Battery voltage < 9V - 19: External Battery voltage > 16V - Status DWA LED: -  0: dwa LED ok - 13: dwa LED failure - Status DWA EEPROM: -  0: dwa EEPROM ok - 60: EEPROM addressing failure - 61: EEPROM access timeout - 62: EEPROM write failure - 63: EEPROM test failure - 64: EEPROM read failure - Status DWA RAM: -  0: dwa RAM ok -  7: dwa RAM hardware failure - Status DWA Internal Battery: -  0: dwa Internal Battery ok - 11: dwa Internal Battery failure - Status DWA Protection Circuit: -  0: dwa Protection Circuit ok - 16: dwa Protection Circuit VS Filter defect - 17: dwa Protection Circuit Sense defect - 18: dwa Protection Circuit external battery_switch off defect - Status DWA ROM: -  0: dwa ROM ok -  6: dwa ROM checksum error - Status DWA Sound Circuit: -  0: dwa Sound Circuit ok -  8: dwa Sound Short Circuit failure -  9: dwa Sound Open Circuit failure - 10: dwa Sound Circuit failure - Status DWA ADXL Circuit: -  0: dwa ADXL ok - 14: dwa ADXL tilt sensor failure - Status DWA Wake Up Circuit: -  0: dwa Wake Up Circuit ok - 20: dwa Wake Up Circuit failure KWP2000: $31 StartRoutineByLocalIdentifier $04 Selftest $09 Cansine
@@ -1988,7 +1907,6 @@ _No arguments._
 | STAT_DWA_WAKEUP_CIRCUIT_TEXT | string | dwa Wake Up Circuit ok - dwa Wake Up Circuit failure |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-schnelltest"></a>
 ### STEUERN_DWA_SCHNELLTEST
 
 Activates the 'dwa armed - schnelltest' mode: activates the MUW & ADXL alarm triggers. When the alarm trigger is detected the CANSINE make a siren sound lasting 2s (with normal sound level), then returns to 'dwa disarmed' status The Tilt sensor monitoring starts 5 seconds after sending this command The MUW sensor alarm detectable 10 seconds after sending this command KWP2000: $31 StartRoutineByLocalIdentifier $48 Fast Test $01 normal volume
@@ -2002,7 +1920,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-schnelltest-leise"></a>
 ### STEUERN_DWA_SCHNELLTEST_LEISE
 
 Activates the 'dwa armed - schnelltest' mode: activates the MUW & ADXL alarm triggers. When the alarm trigger is detected the CANSINE make a siren sound lasting 2s (with lower sound level), then returns to 'dwa disarmed' status The Tilt sensor monitoring starts 5 seconds after sending this command The MUW sensor alarm detectable 10 seconds after sending this command KWP2000: $31 StartRoutineByLocalIdentifier $48 Fast Test $00 low volume
@@ -2016,7 +1933,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-muw-alarm-levels-reset"></a>
 ### STEUERN_MUW_ALARM_LEVELS_RESET
 
 Reset of the last ten alarms voltage levels recorded by the addressed MUW/s (vr,hr,hl,vl,hi,alle). If JOB_STATUS is OK: The 10 MUW/s alarms levels are set to zero. The value '0' means 'no alarm stored in this location. STAT_XX_MUW_ALARM_LEVELS_RESET_FEHL has value '0' in case no internal error occurred. In case an internal error occurred, the data are not deleted, and the following error code is shown by STAT_XX_MUW_ALARM_LEVELS_RESET_FEHL - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $31 StartRoutineByLocalIdentifier $49 reset of the MUW alarm levels $xx MUW id
@@ -2039,7 +1955,6 @@ Reset of the last ten alarms voltage levels recorded by the addressed MUW/s (vr,
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-muw-false-wakeup-levels-reset"></a>
 ### STEUERN_MUW_FALSE_WAKEUP_LEVELS_RESET
 
 Reset of the last ten false wakeup levels recorded by the addressed MUW/s (vr,hr,hl,vl,hi,alle). If JOB_STATUS is OK: The 10 MUW/s false wakeup levels are set to 0 The value '0' means 'no level stored in this location. STAT_XX_MUW_F_WK_LEVELS_RESET_FEHL has value '0' in case no internal error occurred. In case an internal error occurred, the data are not deleted, and the following error code is shown by STAT_XX_MUW_F_WK_LEVELS_RESET_FEHL - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $31 StartRoutineByLocalIdentifier $50 reset of MUW false wakeup levels $xx MUW id
@@ -2062,7 +1977,6 @@ Reset of the last ten false wakeup levels recorded by the addressed MUW/s (vr,hr
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-muw-funktionstest-start"></a>
 ### STEUERN_MUW_FUNKTIONSTEST_START
 
 Set all the configured MUWs into 'Function Test Status' (FTS). When in this status, the MUW will return 'Movement'/'No Movement' detected when queried with job: - STEUERN_MUW_FUNKTIONSTEST After usign this job, wait 15 seconds before using the job STEUERN_MUW_FUNKTIONSTEST MUWs exit this status, upon receipt of any other not related jobs If JOB_STATUS is OK: The MUW/s resulting status is displayed XX_MUW_STAT has value '0' in case no internal error occurred and the MUW is in 'FTS' In case an internal error occurred, the data are not valid, and the following error codes are indicated by XX_MUW_STAT: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $31 StartRoutineByLocalIdentifier $45 MUW funktion test id
@@ -2086,7 +2000,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-muw-funktionstest"></a>
 ### STEUERN_MUW_FUNKTIONSTEST
 
 Queries the addressed (vr, hr, hl, vl, hi, alle) the latched motion detection status. Pre-condition: MUWs has been set to 'Function Test Status' (FTS) with job STEUERN_MUW_FUNKTIONSTEST_START. When in this status, the MUW will return 'Movement'/ 'No Movement'. When the MUW replies, the latched motion is deleted. A warning will advise the user if this job is called for a MUW which is not in FTS If JOB_STATUS is OK: If STAT_MUW has value 0, the MUW's are in FTS and the results are valid. If STAT_MUW has value 1, the MUW's are not in FTS, and the results are not valid: the user must use the job STEUERN_MUW_FUNKTIONSTEST_START The MUW/s resulting status is displayed XX_MUW_STAT has value '0' in case no internal error occurred In case an internal error occurred, the data are not valid, and the following error codes are indicated by XX_MUW_STAT: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $31 StartRoutineByLocalIdentifier $46 MUW funktionstest (project specific $(MUWID)
@@ -2115,7 +2028,6 @@ Queries the addressed (vr, hr, hl, vl, hi, alle) the latched motion detection st
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-muw-selftest"></a>
 ### STEUERN_MUW_SELFTEST
 
 Activates a selftest inside the addressed MUW (vr, hr, hl, vl, hi, alle) and report the result. One has to wait at least 10 seconds after MUW Power ON before performing this job. Checked MUW hw: ROM, RAM, EEPROM, RF drive circuit, Address Manager, RF lines. If JOB_STATUS is OK: The MUW/s selftest results  are displayed in XX_MUW_SELFTEST_STAT. The following errors can appear: - 1: ROM check failure - 2: RAM check failure - 3: EEPROM check failure - 4: RF drive failure - 5: Address Manager failure - 6: RF Signal line failure - 7: RF Interference line failure In case an internal error occurred, the data are not valid, and the following error codes are indicated by XX_MUW_SELFTEST_STAT: - 30: "error DWA BUS PERMANENTLY LOW", i.e.: no connection to any of the MUW - 31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - 32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - 33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - 36: "MUW not configured",i.e.: this MUW is not coded on this type of car KWP2000: $31 StartRoutineByLocalIdentifier $04 Selftest $(MUWID)
@@ -2143,7 +2055,6 @@ Activates a selftest inside the addressed MUW (vr, hr, hl, vl, hi, alle) and rep
 | STAT_HI_MUW_SELFTEST_TEXT | string | Error text |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-k-bus-test"></a>
 ### STEUERN_K_BUS_TEST
 
 Send a test telegram and check the reply from any of the MUW/s (vr, hr, hl, vl, hi, alle) in order to perform a test on the local Dwabus (K-BUS), from the point of view of the connection. If JOB_STATUS is OK: The MUW/s status is displayed: the datum DWABUS_TEST_RESULT has value '0' if no error is present on the local bus. In case an internal error occurred, the following error codes are indicated by DWABUS_TEST_RESULT: - x30: "error DWA BUS PERMANENTLY LOW", i.e. no connection to any of the MUW - x31: "error MUW TIMEOUT", i.e.: the target MUW/s does not reply - x32: "error REPLY FROM WRONG MUW", i.e. an internal protocol error has occurred - x33: "error WRONG MUW REPLY CHECKSUM",i.e.: an internal comm. error has occurred - x36: "MUW not configured",i.e.: this MUW is not coded on this type of car where x = 1...5 is the ID of the MUW: - 1: VR - 2: HR - 3: HL - 4: VL - 5: HI KWP2000: $31 StartRoutineByLocalIdentifier $40 dwabus id
@@ -2162,7 +2073,6 @@ Send a test telegram and check the reply from any of the MUW/s (vr, hr, hl, vl, 
 | DWABUS_TEST_RESULT | int | dwabus ok - dwabus nicht i.O. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-neigung-x-zero"></a>
 ### STEUERN_NEIGUNG_X_ZERO
 
 Set the zero for the ADXL tilt sensor X axis KWP2000: $31 StartRoutineByLocalIdentifier $41 $0E
@@ -2176,7 +2086,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-neigung-y-zero"></a>
 ### STEUERN_NEIGUNG_Y_ZERO
 
 Set the zero for the ADXL tilt sensor Y axis KWP2000: $31 StartRoutineByLocalIdentifier $41 $0F Modus  : Default
@@ -2231,7 +2140,6 @@ _No arguments._
 - [DATUM](#table-datum) (1 × 5)
 - [ENVPARS1](#table-envpars1) (1 × 4)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -2243,7 +2151,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -2346,7 +2253,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -2430,7 +2336,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2452,7 +2357,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2477,7 +2381,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2489,7 +2392,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -2511,7 +2413,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -2526,7 +2427,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-harttexte"></a>
 ### HARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2548,7 +2448,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2570,7 +2469,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -2597,7 +2495,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns
@@ -2617,7 +2514,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2626,7 +2522,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -2638,7 +2533,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 22 rows × 2 columns
@@ -2668,7 +2562,6 @@ Dimensions: 22 rows × 2 columns
 | 0x9D1D | MUW default data use |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2683,7 +2576,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 17 rows × 5 columns
@@ -2708,7 +2600,6 @@ Dimensions: 17 rows × 5 columns
 | 0x9D1D | 0x01 | - | - | - |
 | default | 0x01 | - | - | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 7 rows × 9 columns
@@ -2723,7 +2614,6 @@ Dimensions: 7 rows × 9 columns
 | 0x06 | Year | 2002... | - | unsigned short | - | 1 | 1 | 0 |
 | 0x07 | Special Error Code | 0...n | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 25 rows × 2 columns
@@ -2756,7 +2646,6 @@ Dimensions: 25 rows × 2 columns
 | 0x931D | Alarm MUW HI Intrusion |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2771,7 +2660,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-humweltmatrix"></a>
 ### HUMWELTMATRIX
 
 Dimensions: 14 rows × 5 columns
@@ -2793,7 +2681,6 @@ Dimensions: 14 rows × 5 columns
 | 0x932B | DATUM | ENVPARS1 | - | - |
 | default | DATUM | ENVPARS1 | - | - |
 
-<a id="table-humwelttexte"></a>
 ### HUMWELTTEXTE
 
 Dimensions: 7 rows × 9 columns
@@ -2808,7 +2695,6 @@ Dimensions: 7 rows × 9 columns
 | 0x06 | CAR APERTURE STS | 0 or 1 | - | unsigned char | - | 1 | 1 | 0 |
 | 0x07 | KLIMA STS | 0 or 1 | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -2821,7 +2707,6 @@ Dimensions: 5 rows × 2 columns
 | 0x9D13 | External battery voltage out of range |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2836,7 +2721,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-iumweltmatrix"></a>
 ### IUMWELTMATRIX
 
 Dimensions: 4 rows × 5 columns
@@ -2848,7 +2732,6 @@ Dimensions: 4 rows × 5 columns
 | 0x9339 | 0x08 | 0x09 | 0x0A | 0x0B |
 | default | 0x05 | 0x04 | 0x03 | 0x02 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 12 rows × 9 columns
@@ -2868,7 +2751,6 @@ Dimensions: 12 rows × 9 columns
 | 0x0B | Time at less than -3V | seconds | - | unsigned char | - | 1 | 1 | 0 |
 | 0x0C | Time at less than 4V | seconds | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-muwinputpars"></a>
 ### MUWINPUTPARS
 
 Dimensions: 6 rows × 2 columns
@@ -2882,7 +2764,6 @@ Dimensions: 6 rows × 2 columns
 | vl | 6 |
 | hi | 7 |
 
-<a id="table-envdatasetcond"></a>
 ### ENVDATASETCOND
 
 Dimensions: 1 rows × 6 columns
@@ -2891,7 +2772,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x06 | 0x07 | 0x05 | 0x04 | 0x03 |
 
-<a id="table-months"></a>
 ### MONTHS
 
 Dimensions: 13 rows × 2 columns
@@ -2912,7 +2792,6 @@ Dimensions: 13 rows × 2 columns
 | 0x3000 | 12 |
 | default | Invalid |
 
-<a id="table-days"></a>
 ### DAYS
 
 Dimensions: 32 rows × 2 columns
@@ -2952,7 +2831,6 @@ Dimensions: 32 rows × 2 columns
 | 0x03E0 | 31 |
 | default | Invalid |
 
-<a id="table-hours"></a>
 ### HOURS
 
 Dimensions: 25 rows × 2 columns
@@ -2985,7 +2863,6 @@ Dimensions: 25 rows × 2 columns
 | 0x0018 | 0 |
 | default | Invalid |
 
-<a id="table-window"></a>
 ### WINDOW
 
 Dimensions: 2 rows × 2 columns
@@ -2995,7 +2872,6 @@ Dimensions: 2 rows × 2 columns
 | 0x8000 | Open |
 | default | Closed |
 
-<a id="table-klima"></a>
 ### KLIMA
 
 Dimensions: 2 rows × 2 columns
@@ -3005,7 +2881,6 @@ Dimensions: 2 rows × 2 columns
 | 0x4000 | On |
 | default | Off |
 
-<a id="table-minutes"></a>
 ### MINUTES
 
 Dimensions: 60 rows × 2 columns
@@ -3073,7 +2948,6 @@ Dimensions: 60 rows × 2 columns
 | 0x3A | 58 |
 | default | Invalid |
 
-<a id="table-datum"></a>
 ### DATUM
 
 Dimensions: 1 rows × 5 columns
@@ -3082,7 +2956,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x05 | 0x04 | 0x03 | 0x02 |
 
-<a id="table-envpars1"></a>
 ### ENVPARS1
 
 Dimensions: 1 rows × 4 columns

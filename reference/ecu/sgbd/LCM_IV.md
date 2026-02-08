@@ -50,7 +50,6 @@
 - [STATUS_BFD](#job-status-bfd) - Status der zusätzl. Brake-Force-Display - Lampen
 - [STEUERN_BFD](#job-steuern-bfd) - Steuern der zusätzl. Brake-Force-Display - Lampen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +68,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -82,7 +80,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -106,7 +103,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -127,7 +123,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -146,7 +141,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -159,7 +153,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -172,7 +165,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -186,7 +178,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 infospeicherlesen job
@@ -215,7 +206,6 @@ _No arguments._
 | F_ZAHL_BLOCK_11 | int | Anzahl der Fehler im Block 11 |
 | F_ZAHL_BLOCK_12 | int | Anzahl der Fehler im Block 12 |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -241,7 +231,6 @@ _No arguments._
 | F_ZAHL_BLOCK_4 | int | Anzahl der Fehler im Block 4 |
 | F_ZAHL | int | Anzahl der Gesamtfehler der Bloecke 1 bis 4 (schwere Fehler) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -254,7 +243,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 STATUS_LESEN job
@@ -394,7 +382,6 @@ _No arguments._
 | STAT_SPANNUNG_AL_DEFEKT_EINH | string |  |
 | ANTW_CODIERINDEX | binary | Antworttelegramm |
 
-<a id="job-status-lesen-lss"></a>
 ### STATUS_LESEN_LSS
 
 Default ident job
@@ -413,7 +400,6 @@ _No arguments._
 | STAT_SPANNUNG_DIMMER_POTI_BEI_PU_LTG_HIGH_WERT | real | 0 bis 5 Volt |
 | STAT_SPANNUNG_DIMMER_POTI_BEI_PU_LTG_LOW_WERT | real | 0 bis 5 Volt |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
@@ -444,7 +430,6 @@ Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-vorgeben"></a>
 ### STATUS_VORGEBEN
 
 Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
@@ -475,7 +460,6 @@ Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-dimmer"></a>
 ### STEUERN_DIMMER
 
 STATUS_VORGEBEN_DIMMER job
@@ -492,7 +476,6 @@ STATUS_VORGEBEN_DIMMER job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-lwr-poti"></a>
 ### STEUERN_LWR_POTI
 
 STATUS_VORGEBEN_LWR_POTI job
@@ -509,7 +492,6 @@ STATUS_VORGEBEN_LWR_POTI job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-licht-ein"></a>
 ### STEUERN_LICHT_EIN
 
 _No arguments._
@@ -520,7 +502,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 STATUS_VORGEBEN_SELBSTTEST job
@@ -533,7 +514,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-hersteller-lesen"></a>
 ### HERSTELLER_LESEN
 
 Default ident job
@@ -547,7 +527,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | HERSTELLERDATEN | binary | Herstellerdaten Byte 1 bis 4 (oder 10?) |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -566,7 +545,6 @@ Auslesen des Speicherinhaltes
 | JOB_STATUS | string |  |
 | DATEN | binary | angeforderter Datenblock (32 Bytes!) |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Schreiben des Speicherinhaltes
@@ -585,7 +563,6 @@ Schreiben des Speicherinhaltes
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-sia-lesen"></a>
 ### SIA_LESEN
 
 Default SIA_LESEN job
@@ -607,7 +584,6 @@ _No arguments._
 | SI_ZEITINSPEKTIONSZAEHLER_WERT | long |  |
 | SI_ZEITINSPEKTIONSZAEHLER_EINH | string | Tage |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer aus der LCM
@@ -621,7 +597,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | FG_NR | string | Fahrgestellnummer |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Schreiben der 7-stelligen Fahrgestellnummer
@@ -638,7 +613,6 @@ Schreiben der 7-stelligen Fahrgestellnummer
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -656,7 +630,6 @@ Codierdaten lesen
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CODIER_DATEN | binary | Codierdaten |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -673,7 +646,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-codierung-lesen-alles"></a>
 ### CODIERUNG_LESEN_ALLES
 
 Default CODIERUNG_LESEN_ALLES job
@@ -692,7 +664,6 @@ Default CODIERUNG_LESEN_ALLES job
 | BLOCK | int | angeforderte Blocknummer von 0 bis 28 |
 | CODIERDATEN | binary | CODIERDATENFELD |
 
-<a id="job-status-bfd"></a>
 ### STATUS_BFD
 
 Status der zusätzl. Brake-Force-Display - Lampen
@@ -710,7 +681,6 @@ _No arguments._
 | STAT_BFD_RECHTS_DEFEKT | int |  |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-steuern-bfd"></a>
 ### STEUERN_BFD
 
 Steuern der zusätzl. Brake-Force-Display - Lampen
@@ -742,7 +712,6 @@ Steuern der zusätzl. Brake-Force-Display - Lampen
 - [ROVERPARTNUMPREFIX](#table-roverpartnumprefix) (21 × 2)
 - [DIGITALARGUMENT](#table-digitalargument) (17 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 26 rows × 2 columns
@@ -776,7 +745,6 @@ Dimensions: 26 rows × 2 columns
 | 0x2A | Reserve Block 4 |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 70 rows × 2 columns
@@ -854,7 +822,6 @@ Dimensions: 70 rows × 2 columns
 | 0x99 | Kennzeichenlicht defekt |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 64 rows × 3 columns
@@ -926,7 +893,6 @@ Dimensions: 64 rows × 3 columns
 | SLEEPMODE | 8 | 0x40 |
 | XXX | Y | Z |
 
-<a id="table-steuern-e52"></a>
 ### STEUERN_E52
 
 Dimensions: 61 rows × 3 columns
@@ -995,7 +961,6 @@ Dimensions: 61 rows × 3 columns
 | SLEEPMODE | 8 | 0x40 |
 | XXX | Y | Z |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1016,7 +981,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 77 rows × 2 columns
@@ -1101,7 +1065,6 @@ Dimensions: 77 rows × 2 columns
 | 0x76 | CEL |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1130,7 +1093,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns

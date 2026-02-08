@@ -50,7 +50,6 @@
 - [WECHSELCODE_SYNC_DME](#job-wechselcode-sync-dme) - Wechselcodesynchronisation EWS 3 - DME anstossen
 - [STATUS_SYNC_MODE](#job-status-sync-mode)
 
-<a id="job-set-baudrate"></a>
 ### SET_BAUDRATE
 
 Setzen der Baudrate
@@ -68,7 +67,6 @@ Setzen der Baudrate
 | JOB_STATUS | string | Ergebnis |
 | JOB_ANTWORT | string | Ergebnis |
 
-<a id="job-set-communicationpars"></a>
 ### SET_COMMUNICATIONPARS
 
 Setzen der Kommunicationsparameter fuer FlashPro
@@ -86,7 +84,6 @@ Setzen der Kommunicationsparameter fuer FlashPro
 | --- | --- | --- |
 | JOB_STATUS | string | Ergebnis |
 
-<a id="job-edic-reset"></a>
 ### EDIC_RESET
 
 EDIC-Reset
@@ -99,7 +96,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -112,7 +108,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -130,7 +125,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-blocklaenge-max"></a>
 ### BLOCKLAENGE_MAX
 
 maximale Blocklaenge
@@ -144,7 +138,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | BLOCKLAENGE_MAX_WERT | int | Blocklaenge fuer Telegramm |
 
-<a id="job-daten-referenz"></a>
 ### DATEN_REFERENZ
 
 Job DATEN-Referenz
@@ -162,7 +155,6 @@ _No arguments._
 | DATEN_REF_DATENSATZ | string | Datensatzkennung |
 | DATEN_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-hw-referenz"></a>
 ### HW_REFERENZ
 
 Job HW-Referenz
@@ -178,7 +170,6 @@ _No arguments._
 | HW_REF_PROJEKT | string | Projektkennzeichnung |
 | HW_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-zif"></a>
 ### ZIF
 
 Job ZIF
@@ -197,7 +188,6 @@ _No arguments._
 | ZIF_BMW_PST | string | BMW Programmstand |
 | ZIF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-zif-backup"></a>
 ### ZIF_BACKUP
 
 Job ZIF_BACKUP
@@ -216,7 +206,6 @@ _No arguments._
 | ZIF_BACKUP_BMW_PST | string | BMW Programmstand |
 | ZIF_BACKUP_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -236,7 +225,6 @@ _No arguments._
 | AIF_ZB_NR | long | Zusbaunummer |
 | AIF_ANZAHL_PROG | int | Anzahl Programmiervorgaenge |
 
-<a id="job-get-curraifadr"></a>
 ### GET_CURRAIFADR
 
 ermittelt die Adresse des Momentan gültigen AIF-Eintrags
@@ -250,7 +238,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | AIF_ADRESSE | long | AIF Basisadresse |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 ermittelt die Adresse des Momentan gültigen AIF-Eintrags
@@ -276,7 +263,6 @@ ermittelt die Adresse des Momentan gültigen AIF-Eintrags
 | JOB_STATUS | string |  |
 | VERIFYBYTE | int |  |
 
-<a id="job-flash-lesen"></a>
 ### FLASH_LESEN
 
 Beliebige FLASH - Zellen auslesen
@@ -295,7 +281,6 @@ Beliebige FLASH - Zellen auslesen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | FLASH_LESEN_WERT | binary | nichts |
 
-<a id="job-start-diagnostic-session"></a>
 ### START_DIAGNOSTIC_SESSION
 
 Status
@@ -309,7 +294,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | START_DIAGNOSTIC_SESSION_MODE | int | nichts |
 
-<a id="job-flash-prog-status"></a>
 ### FLASH_PROG_STATUS
 
 Status
@@ -323,7 +307,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | FLASH_PROG_STATUS | int | nichts |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash  - Zellen loeschen
@@ -341,7 +324,6 @@ Flash  - Zellen loeschen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | FLASH_LOESCHEN_STATUS | int | nichts |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Beliebige Flash Zellen mit 02 beschreiben
@@ -360,7 +342,6 @@ Beliebige Flash Zellen mit 02 beschreiben
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | FLASH_SCHREIBEN_STATUS | int | nichts |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Beliebige Flash Zellen  beschreiben
@@ -379,7 +360,6 @@ Beliebige Flash Zellen  beschreiben
 | FLASH_SCHREIBEN_STATUS | int | nichts |
 | FLASH_SCHREIBEN_ANZAHL | int | nichts |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 _No arguments._
@@ -390,7 +370,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -405,7 +384,6 @@ _No arguments._
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -429,7 +407,6 @@ _No arguments._
 | ID_AI_NR | string | Aenderungsindex |
 | ID_PROD_NR | string | Produktionsnummer |
 
-<a id="job-fs-lesen-status"></a>
 ### FS_LESEN_STATUS
 
 Auslesen des Fehlerspeichers
@@ -443,7 +420,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_CODEHEX | binary | alle Fehlerbyte |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -457,7 +433,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_CODEHEX | binary | alle Fehlerbyte |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -470,7 +445,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-codier-checksumme"></a>
 ### STATUS_CODIER_CHECKSUMME
 
 Codier - Checksumme abfragen
@@ -484,7 +458,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STATUS_CHECKSUMME_WERT | int | Ergebnis |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -497,7 +470,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-sync-mode"></a>
 ### STEUERN_SYNC_MODE
 
 #### Arguments
@@ -514,7 +486,6 @@ _No arguments._
 | STEUERN_SYNC_MODE_STATUS | int | Statusflag |
 | STEUERN_SYNC_MODE_TEXT | string | Statustext |
 
-<a id="job-wechselcode-sync-dme"></a>
 ### WECHSELCODE_SYNC_DME
 
 Wechselcodesynchronisation EWS 3 - DME anstossen
@@ -528,7 +499,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sync-mode"></a>
 ### STATUS_SYNC_MODE
 
 _No arguments._
@@ -547,7 +517,6 @@ _No arguments._
 
 - [JOBRESULT](#table-jobresult) (33 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 33 rows × 2 columns

@@ -45,7 +45,6 @@
 - [C_FG_AUFTRAG](#job-c-fg-auftrag) - Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 - [SET_NULL_CODIERUNG](#job-set-null-codierung) - Codierung in den Auslieferungszustand (ID=0)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -64,7 +63,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -77,7 +75,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -101,7 +98,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -114,7 +110,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -132,7 +127,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -151,7 +145,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete Reset ausloesen
@@ -165,7 +158,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -178,7 +170,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob
@@ -193,7 +184,6 @@ _No arguments._
 | ID_COD_INDEX | int | Codier-Index |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -208,7 +198,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob
@@ -226,7 +215,6 @@ Fahrgestellnummer schreiben Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-messwerte"></a>
 ### STATUS_MESSWERTE
 
 es werden die Messwerte des AD-Umsetzers ausgelesen
@@ -251,7 +239,6 @@ _No arguments._
 | STAT_SPANNUNG_KL15_EINH | string |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-regelungswerte"></a>
 ### STATUS_REGELUNGSWERTE
 
 es werden die Regelungsdaten gelesen
@@ -271,7 +258,6 @@ _No arguments._
 | STAT_PWM_REGISTER_WERT | int | Wert des SFR-Registers in der CPU zur PWM-Vorgabe |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-foerdermenge"></a>
 ### STEUERN_FOERDERMENGE
 
 #### Arguments
@@ -286,7 +272,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-pwm-vorgeben"></a>
 ### STEUERN_PWM_VORGEBEN
 
 #### Arguments
@@ -301,7 +286,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-soll-ist"></a>
 ### STATUS_SOLL_IST
 
 #### Arguments
@@ -324,7 +308,6 @@ _No arguments._
 | STAT_DELTA_DREHZAHL_EINH | string |  |
 | JOB_STATUS | string |  |
 
-<a id="job-status-einregelzeit"></a>
 ### STATUS_EINREGELZEIT
 
 die Einregelzeit wird gelesen
@@ -339,7 +322,6 @@ _No arguments._
 | STAT_EINREGELZEIT_EINH | string |  |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -353,7 +335,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -411,7 +392,6 @@ _No arguments._
 | F_UW9_EINH | string | Einheit 1/min |
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 fs_lesen job
@@ -469,7 +449,6 @@ _No arguments._
 | F_UW9_EINH | string | Einheit 1/min |
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Lesezugriff auf die einzelnen Codierdatenbloecke Als Argument wird die Nummer des zu lesenden Codierdatenblockes uebergeben
@@ -487,7 +466,6 @@ Lesezugriff auf die einzelnen Codierdatenbloecke Als Argument wird die Nummer de
 | DATEN | binary | Es werden jeweils die 16 Byte des angesprochenen Codierdatenblockes ausgegeben |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -505,7 +483,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -522,7 +499,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -540,7 +516,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-set-null-codierung"></a>
 ### SET_NULL_CODIERUNG
 
 Codierung in den Auslieferungszustand (ID=0)
@@ -570,7 +545,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (11 × 3)
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -591,7 +565,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 93 rows × 2 columns
@@ -692,7 +665,6 @@ Dimensions: 93 rows × 2 columns
 | 0x92 | CRH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -721,7 +693,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -730,7 +701,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -741,7 +711,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | nein |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -756,7 +725,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -771,7 +739,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -797,7 +764,6 @@ Dimensions: 18 rows × 2 columns
 | 0xC7 | Externer Fehler: CAN-Bus-Off |
 | 0xFF | unbekannter Fehlecode |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -806,7 +772,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -822,7 +787,6 @@ Dimensions: 8 rows × 2 columns
 | 0xA7 | ASIC: Warnung |
 | 0xFF | unbekannter Infocode |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 11 rows × 3 columns
@@ -841,7 +805,6 @@ Dimensions: 11 rows × 3 columns
 | 0x09 | EKP Motordrehzahl | 1/min |
 | 0xXY | unbekannte Umweltbedingung | --- |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns

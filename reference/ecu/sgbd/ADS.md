@@ -26,7 +26,6 @@
 - [POWER_ON](#job-power-on) - Einschalten des ADS (Klemme 15 muss EIN sein!)
 - [LOOPTEST](#job-looptest) - Testschleife fuer RxD und TxD Vorher RxD mit TxD verbinden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -44,7 +43,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -57,7 +55,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-power-break"></a>
 ### POWER_BREAK
 
 Abschalten des ADS fuer Ruhestrommessung ECOS
@@ -70,7 +67,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-power-off"></a>
 ### POWER_OFF
 
 Abschalten des ADS
@@ -83,7 +79,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-power-on"></a>
 ### POWER_ON
 
 Einschalten des ADS (Klemme 15 muss EIN sein!)
@@ -96,7 +91,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-looptest"></a>
 ### LOOPTEST
 
 Testschleife fuer RxD und TxD Vorher RxD mit TxD verbinden

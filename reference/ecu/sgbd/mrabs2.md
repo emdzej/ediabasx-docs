@@ -70,7 +70,6 @@
 - [STEUERN_VARIANTE_K15](#job-steuern-variante-k15) - Codierung Variante K15 KWP2000: $2E   WriteDataByCommonIdentifier $3000 CodingDataSet
 - [STEUERN_VARIANTE_R13](#job-steuern-variante-r13) - Codierung Variante R13 KWP2000: $2E   WriteDataByCommonIdentifier $3000 CodingDataSet
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -89,7 +88,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -102,7 +100,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -135,7 +132,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -162,7 +158,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -204,7 +199,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -223,7 +217,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -241,7 +234,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -262,7 +254,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -282,7 +273,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -297,7 +287,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -318,7 +307,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -340,7 +328,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speicherse
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes und Datenbytes (Datenbytes durch Komma getrennt) KWP2000: $3D WriteMemoryByAddress Modus  : Default
@@ -362,7 +349,6 @@ Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speiche
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus  : Default
@@ -376,7 +362,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -392,7 +377,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number Modus  : Default
@@ -411,7 +395,6 @@ Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIden
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -432,7 +415,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B Write
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -447,7 +429,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-fg"></a>
 ### STEUERN_FG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -468,7 +449,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B Write
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-supplier-sw-number"></a>
 ### SUPPLIER_SW_NUMBER
 
 Reads the system supplier ECU software number KWP2000: $1A Ecu Identification $94 SystemSupplierECUSoftwareNumber Modus: Default
@@ -485,7 +465,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-supplier-hw-number"></a>
 ### SUPPLIER_HW_NUMBER
 
 Reads the system supplier ECU hardware number KWP2000: $1A Ecu Identification $92 SystemSupplierECUHardwareNumber Modus: Default
@@ -501,7 +480,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-supplier-sw-version-number"></a>
 ### SUPPLIER_SW_VERSION_NUMBER
 
 Reads the supplier software version number KWP2000: $1A Ecu Identification $95 Robert Bosch ECU software version number Modus: Default
@@ -518,7 +496,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-wheel-speed"></a>
 ### STATUS_WHEEL_SPEED
 
 Reads front and rear wheel speed KWP2000: $21 ReadDataByLocalIdentifier $01 Wheel Speed Modus: Default
@@ -536,7 +513,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog-input"></a>
 ### STATUS_ANALOG_INPUT
 
 Read analog input signals KWP2000: $21 ReadDataByLocalIdentifier $02 Analog input signals Modus: Default
@@ -557,7 +533,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-evac-and-fill"></a>
 ### STEUERN_EVAC_AND_FILL
 
 Note: The valve protection for the AVs is switched off during this test Therefore the test should not be repeated too often in case of a long control duration KWP2000: $30 InputOutputControlByLocalId $01 Local ID EvacAndFill $07 InputOutputControlParameter Modus:        Default
@@ -577,7 +552,6 @@ Note: The valve protection for the AVs is switched off during this test Therefor
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-evac-and-fill"></a>
 ### STATUS_EVAC_AND_FILL
 
 Read status Evac and Fill KWP2000:      $33 RequestRoutingResultsByLocalId $01 EvacAndFill Modus:        Default
@@ -594,7 +568,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-repair-bleeding"></a>
 ### STEUERN_REPAIR_BLEEDING
 
 Note: The phase must always begin with the 1.phase and be processed in ascending order It is permitted to repeat the same phase. However no phase may be skipped. If it is disregarded, the pump can be damaged by dry running. KWP2000: $30 InputOutputControlByLocalId $02 Local ID Repair Bleeding $07 InputOutputControlParameter Modus:        Default
@@ -614,7 +587,6 @@ Note: The phase must always begin with the 1.phase and be processed in ascending
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-repair-bleeding"></a>
 ### STATUS_REPAIR_BLEEDING
 
 Read status Repair Bleeding KWP2000:      $33 RequestRoutingResultsByLocalId $02 RepairBleeding Modus:        Default
@@ -631,7 +603,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-speed-sensor-test"></a>
 ### STEUERN_SPEED_SENSOR_TEST
 
 Activating of the speed sensor test KWP2000: $30 InputOutputControlByLocalId $03 Local ID speed sensor test $07 InputOutputControlParameter Modus:        Default
@@ -650,7 +621,6 @@ Activating of the speed sensor test KWP2000: $30 InputOutputControlByLocalId $03
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-speed-sensor-test"></a>
 ### STATUS_SPEED_SENSOR_TEST
 
 Read status SpeedSensorTest KWP2000:      $33 RequestRoutingResultsByLocalId $03 SpeedSensorTest Modus:        Default
@@ -670,7 +640,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-actuator-test"></a>
 ### STEUERN_ACTUATOR_TEST
 
 Activating of the acutator test KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuator test $07 InputOutputControlParameter Modus:        Default
@@ -689,7 +658,6 @@ Activating of the acutator test KWP2000: $30 InputOutputControlByLocalId $04 Loc
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-actuator-test"></a>
 ### STATUS_ACTUATOR_TEST
 
 Read status ActuatorTest KWP2000:      $33 RequestRoutineResultsByLocalId $04 ActuatorTest Modus:        Default
@@ -708,7 +676,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dynamic-test"></a>
 ### STEUERN_DYNAMIC_TEST
 
 Activating of the dynamic test KWP2000: $30 InputOutputControlByLocalId $04 Local ID dynamic test $07 InputOutputControlParameter Modus:        Default
@@ -727,7 +694,6 @@ Activating of the dynamic test KWP2000: $30 InputOutputControlByLocalId $04 Loca
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dynamic-test"></a>
 ### STATUS_DYNAMIC_TEST
 
 Read status DynamicTest KWP2000:      $33 RequestRoutineResultsByLocalId $05 DynamicTest Modus:        Default
@@ -745,7 +711,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-wss-front-missing-teeth-test"></a>
 ### STEUERN_WSS_FRONT_MISSING_TEETH_TEST
 
 Activating front missing teeth test KWP2000: $30 InputOutputControlByLocalId $06 Front missing teeth test $07 InputOutputControlParameter Modus:        Default
@@ -760,7 +725,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-wss-front-missing-teeth-test"></a>
 ### STATUS_WSS_FRONT_MISSING_TEETH_TEST
 
 Status Missing teeth test KWP2000:      $33 RequestRoutingResultsByLocalId $06 WSSFrontMissingTeethTest Modus:        Default
@@ -777,7 +741,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-wss-rear-missing-teeth-test"></a>
 ### STEUERN_WSS_REAR_MISSING_TEETH_TEST
 
 Activating rear missing teeth test KWP2000: $30 InputOutputControlByLocalId $06 Rear missing teeth test $07 InputOutputControlParameter Modus:        Default
@@ -792,7 +755,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-wss-rear-missing-teeth-test"></a>
 ### STATUS_WSS_REAR_MISSING_TEETH_TEST
 
 Status Missing teeth test KWP2000:      $33 RequestRoutingResultsByLocalId $07 WSSRearMissingTeethTest Modus:        Default
@@ -809,7 +771,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-stop-actuation"></a>
 ### STEUERN_STOP_ACTUATION
 
 KWP2000: $30 InputOutputControlByLocalId $10 Local ID StopActuation $07 InputOutputControlParameter Modus:        Default
@@ -824,7 +785,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-return-pump"></a>
 ### STEUERN_RETURN_PUMP
 
 Activating the return pump KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuator test $07 InputOutputControlParameter Implementation see Appendix B: Acutator Table Modus:        Default
@@ -843,7 +803,6 @@ Activating the return pump KWP2000: $30 InputOutputControlByLocalId $04 Local ID
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-all-valves"></a>
 ### STEUERN_ALL_VALVES
 
 Activating all valves KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuator test $07 InputOutputControlParameter Implementation see Appendix B: Acutator Table Modus:        Default
@@ -862,7 +821,6 @@ Activating all valves KWP2000: $30 InputOutputControlByLocalId $04 Local ID actu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ev-front"></a>
 ### STEUERN_EV_FRONT
 
 Activating EV front KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuator test $07 InputOutputControlParameter Implementation see Appendix B: Acutator Table Modus:        Default
@@ -881,7 +839,6 @@ Activating EV front KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuat
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ev-rear"></a>
 ### STEUERN_EV_REAR
 
 Activating EV rear KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuator test $07 InputOutputControlParameter Implementation see Appendix B: Acutator Table Modus:        Default
@@ -900,7 +857,6 @@ Activating EV rear KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuato
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-av-front"></a>
 ### STEUERN_AV_FRONT
 
 Activating AV front KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuator test $07 InputOutputControlParameter Implementation see Appendix B: Acutator Table Modus:        Default
@@ -919,7 +875,6 @@ Activating AV front KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuat
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-av-rear"></a>
 ### STEUERN_AV_REAR
 
 Activating AV rear KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuator test $07 InputOutputControlParameter Implementation see Appendix B: Acutator Table Modus:        Default
@@ -938,7 +893,6 @@ Activating AV rear KWP2000: $30 InputOutputControlByLocalId $04 Local ID actuato
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-telegramm-test"></a>
 ### _STEUERN_TELEGRAMM_TEST
 
 Activating of the acutator test KWP2000: $30 InputOutputControlByLocalId $XX $07 InputOutputControlParameter Modus:        Default
@@ -957,7 +911,6 @@ Activating of the acutator test KWP2000: $30 InputOutputControlByLocalId $XX $07
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-variant"></a>
 ### STATUS_VARIANT
 
 Lesen der angelernten Variante KWP2000: $22   ReadDataByCommonIdentifier $3000 CodingDataSet Modus:        Default
@@ -974,7 +927,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital-input"></a>
 ### STATUS_DIGITAL_INPUT
 
 Read digital input signals KWP2000: $21 ReadDataByLocalIdentifier $03 digital input Modus: Default
@@ -1002,7 +954,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-variante-k15"></a>
 ### STEUERN_VARIANTE_K15
 
 Codierung Variante K15 KWP2000: $2E   WriteDataByCommonIdentifier $3000 CodingDataSet
@@ -1021,7 +972,6 @@ Codierung Variante K15 KWP2000: $2E   WriteDataByCommonIdentifier $3000 CodingDa
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-variante-r13"></a>
 ### STEUERN_VARIANTE_R13
 
 Codierung Variante R13 KWP2000: $2E   WriteDataByCommonIdentifier $3000 CodingDataSet
@@ -1070,7 +1020,6 @@ Codierung Variante R13 KWP2000: $2E   WriteDataByCommonIdentifier $3000 CodingDa
 - [STATUS_WSS_MISS_TEETH](#table-status-wss-miss-teeth) (4 × 2)
 - [VARIANTE_DATENSATZ](#table-variante-datensatz) (8 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -1083,7 +1032,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -1186,7 +1134,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 118 rows × 2 columns
@@ -1312,7 +1259,6 @@ Dimensions: 118 rows × 2 columns
 | 0xAB | Kongsberg Automotive GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -1334,7 +1280,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1359,7 +1304,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -1371,7 +1315,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -1393,7 +1336,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -1408,7 +1350,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns
@@ -1428,7 +1369,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1437,7 +1377,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -1449,7 +1388,6 @@ Dimensions: 4 rows × 2 columns
 | 1 | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 21 rows × 2 columns
@@ -1478,7 +1416,6 @@ Dimensions: 21 rows × 2 columns
 | 0x63C2 | ABS Taster |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1493,7 +1430,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -1502,7 +1438,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | default | 0x01 | 0x02 | DIGITAL_1 | DIGITAL_2 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 10 rows × 9 columns
@@ -1520,7 +1455,6 @@ Dimensions: 10 rows × 9 columns
 | 0x0C | AV vorne | 0/1 | - | 0x40 | - | 1 | 1 | 0 |
 | 0x0D | AV hinten | 0/1 | - | 0x80 | - | 1 | 1 | 0 |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1529,7 +1463,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1544,7 +1477,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1553,7 +1485,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1568,7 +1499,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-digital-2"></a>
 ### DIGITAL_2
 
 Dimensions: 1 rows × 9 columns
@@ -1577,7 +1507,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0A | 0x0B | 0x0C | 0x0D |
 
-<a id="table-digital-1"></a>
 ### DIGITAL_1
 
 Dimensions: 1 rows × 4 columns
@@ -1586,7 +1515,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x03 | 0x04 | 0x05 |
 
-<a id="table-bls-status"></a>
 ### BLS_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -1599,7 +1527,6 @@ Dimensions: 5 rows × 2 columns
 | 0x07 | Signal ungültig |
 | 0xXY | ungültig |
 
-<a id="table-status-evacfill-and-repairbleeding"></a>
 ### STATUS_EVACFILL_AND_REPAIRBLEEDING
 
 Dimensions: 7 rows × 2 columns
@@ -1614,7 +1541,6 @@ Dimensions: 7 rows × 2 columns
 | 0x10 | Initialisierung während Funktion |
 | 0xXY | ungültig |
 
-<a id="table-status-wss-miss-teeth"></a>
 ### STATUS_WSS_MISS_TEETH
 
 Dimensions: 4 rows × 2 columns
@@ -1626,7 +1552,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Ergebnis fehlerhaft |
 | 0xXY | ungültig |
 
-<a id="table-variante-datensatz"></a>
 ### VARIANTE_DATENSATZ
 
 Dimensions: 8 rows × 2 columns

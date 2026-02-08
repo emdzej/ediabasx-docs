@@ -10,7 +10,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung Dieser Job wird vom EDIABAS automatisch beim erstem Zugriff auf eine SGBD aufgerufen. Bei weiteren Zugriffen auf die selbe SGBD wird dieser Job nicht mehr aufgerufen. in der INITIALISIERUNG werden alle Funktionen aufgerufen, die nur einmal, vor der Kommunikation mit einem SG notwendig sind.
 - [LESEN_GRUPPE](#job-lesen-gruppe)
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung Dieser Job wird vom EDIABAS automatisch beim erstem Zugriff auf eine SGBD aufgerufen. Bei weiteren Zugriffen auf die selbe SGBD wird dieser Job nicht mehr aufgerufen. in der INITIALISIERUNG werden alle Funktionen aufgerufen, die nur einmal, vor der Kommunikation mit einem SG notwendig sind.
@@ -23,7 +22,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | Werte: 0 = Fehler bei der Initialisierung Werte: 1 = Initialisierung erfolgreich durchgefuehrt |
 
-<a id="job-lesen-gruppe"></a>
 ### LESEN_GRUPPE
 
 #### Arguments
@@ -45,7 +43,6 @@ _No arguments._
 
 - [GRU_LISTE](#table-gru-liste) (241 × 2)
 
-<a id="table-gru-liste"></a>
 ### GRU_LISTE
 
 Dimensions: 241 rows × 2 columns

@@ -53,7 +53,6 @@
 - [STEUERN_ROE_PERSISTENT_START](#job-steuern-roe-persistent-start) - Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
 - [CPS_LESEN](#job-cps-lesen) - Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -72,7 +71,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -85,7 +83,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -102,7 +99,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -134,7 +130,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -187,7 +182,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -206,7 +200,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -224,7 +217,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -245,7 +237,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -274,7 +265,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -294,7 +284,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -315,7 +304,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -331,7 +319,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -353,7 +340,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -375,7 +361,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -394,7 +379,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -421,7 +405,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -474,7 +457,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -489,7 +471,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -509,7 +490,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -528,7 +508,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -547,7 +526,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -562,7 +540,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -581,7 +558,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -601,7 +577,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -618,7 +593,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -637,7 +611,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -653,7 +626,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -687,7 +659,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -702,7 +673,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -719,7 +689,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -734,7 +703,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -749,7 +717,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -936,7 +903,6 @@ _No arguments._
 - [TAB_SONNENROLLO_CONFIG](#table-tab-sonnenrollo-config) (4 × 2)
 - [TAB_0X4300](#table-tab-0x4300) (1 × 17)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1020,7 +986,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 149 rows × 2 columns
@@ -1177,7 +1142,6 @@ Dimensions: 149 rows × 2 columns
 | 0x0000CA | SEG Automotive Germany GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1220,7 +1184,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1245,7 +1208,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1279,7 +1241,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1352,7 +1313,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1365,7 +1325,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 9 rows × 9 columns
@@ -1382,7 +1341,6 @@ Dimensions: 9 rows × 9 columns
 | 0x1769 | ABS_ZEIT_SUP | 0-n | - | 0xFFFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-tab-zeit-syncmethod"></a>
 ### TAB_ZEIT_SYNCMETHOD
 
 Dimensions: 4 rows × 2 columns
@@ -1394,7 +1352,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | IEEE802.1AS |
 | 0x03 | invalid |
 
-<a id="table-tab-zeit-user-info"></a>
 ### TAB_ZEIT_USER_INFO
 
 Dimensions: 8 rows × 2 columns
@@ -1410,7 +1367,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | ms ECU overall, comparable |
 | 0x07 | invalid |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1423,7 +1379,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -1445,7 +1400,6 @@ Dimensions: 14 rows × 3 columns
 | 0x61 | ECUSUPSPEC | ECUSupplierSpecificSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 377 rows × 3 columns
@@ -1830,7 +1784,6 @@ Dimensions: 377 rows × 3 columns
 | 0xF090 | Motorrad Kombischalter links | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1839,7 +1792,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 225 rows × 2 columns
@@ -2072,7 +2024,6 @@ Dimensions: 225 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2115,7 +2066,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2126,7 +2076,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x3080-d"></a>
 ### ARG_0X3080_D
 
 Dimensions: 1 rows × 12 columns
@@ -2135,7 +2084,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT__DATA | DATA | high | data[47] | - | - | 1.0 | 1.0 | 0.0 | - | - | Coding block ARSG_PARAM |
 
-<a id="table-arg-0x4100-d"></a>
 ### ARG_0X4100_D
 
 Dimensions: 3 rows × 12 columns
@@ -2146,7 +2094,6 @@ Dimensions: 3 rows × 12 columns
 | DIRECTION | 0-n | high | unsigned char | - | TAB_MOTOR_RICHTUNG | - | - | - | - | - | 0=Stop, 1=im Uhrzeigersinn, 2=gegen den Uhrzeigersinn, 3=Öffnen, 4=Schließen |
 | TIME | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0-254=angesteuerte Zeit, 255=unendlich |
 
-<a id="table-arg-0x4101-d"></a>
 ### ARG_0X4101_D
 
 Dimensions: 3 rows × 12 columns
@@ -2157,7 +2104,6 @@ Dimensions: 3 rows × 12 columns
 | DIRECTION | 0-n | high | unsigned char | - | TAB_MOTOR_RICHTUNG | - | - | - | - | - | 0=Stop, 1=im Uhrzeigersinn, 2=gegen den Uhrzeigersinn, 3=Öffnen, 4=Schließen |
 | TIME | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0-254=angesteuerte Zeit, 255=unendlich |
 
-<a id="table-arg-0x4102-d"></a>
 ### ARG_0X4102_D
 
 Dimensions: 3 rows × 12 columns
@@ -2168,7 +2114,6 @@ Dimensions: 3 rows × 12 columns
 | DIRECTION | 0-n | high | unsigned char | - | TAB_MOTOR_RICHTUNG | - | - | - | - | - | 0=Stop, 1=im Uhrzeigersinn, 2=gegen den Uhrzeigersinn, 3=Öffnen, 4=Schließen |
 | TIME | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0-254=angesteuerte Zeit, 255=unendlich |
 
-<a id="table-arg-0x4104-d"></a>
 ### ARG_0X4104_D
 
 Dimensions: 3 rows × 12 columns
@@ -2179,7 +2124,6 @@ Dimensions: 3 rows × 12 columns
 | DIRECTION | 0-n | high | unsigned char | - | TAB_MOTOR_RICHTUNG | - | - | - | - | - | 0=Stop, 1=im Uhrzeigersinn, 2=gegen den Uhrzeigersinn, 3=Öffnen, 4=Schließen |
 | TIME | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0-254=angesteuerte Zeit, 255=unendlich |
 
-<a id="table-arg-0xd221-d"></a>
 ### ARG_0XD221_D
 
 Dimensions: 1 rows × 12 columns
@@ -2188,7 +2132,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Akustikgeber ansteuern: 0 = ausschalten 1 = einschalten |
 
-<a id="table-arg-0xd225-d"></a>
 ### ARG_0XD225_D
 
 Dimensions: 4 rows × 12 columns
@@ -2200,7 +2143,6 @@ Dimensions: 4 rows × 12 columns
 | PWM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Angabe PWM-Wert (0-100%) |
 | TIMEOUT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe Timeout für die Ansteuerung (0-5s) |
 
-<a id="table-arg-0xd23c-d"></a>
 ### ARG_0XD23C_D
 
 Dimensions: 1 rows × 12 columns
@@ -2209,7 +2151,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ANSTEUERUNGSZEIT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Wert für die Dauer der Ansteuerung in eine Zwischenposition (Wert 1 = Ansteuerung für 100 ms, Wert 2 = Ansteuerung für 200 ms ... Wert 60 = Ansteuerung für 6000 ms) |
 
-<a id="table-arg-0xd23d-d"></a>
 ### ARG_0XD23D_D
 
 Dimensions: 1 rows × 12 columns
@@ -2218,7 +2159,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | LED: 0x00 = aus 0x01 = ein |
 
-<a id="table-arg-0xd23e-d"></a>
 ### ARG_0XD23E_D
 
 Dimensions: 1 rows × 12 columns
@@ -2227,7 +2167,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Taster für Spoiler: 0x00 = nicht gedrückt 0x01 = gedrückt |
 
-<a id="table-arg-0xd23f-d"></a>
 ### ARG_0XD23F_D
 
 Dimensions: 2 rows × 12 columns
@@ -2237,7 +2176,6 @@ Dimensions: 2 rows × 12 columns
 | KONTAKT | 0-n | - | signed int | - | TAB_HKL_KONTAKTE | 1.0 | 1.0 | 0.0 | - | - | 1 = HKK = Heckklappenkontakt;  2 = HKKU = Heckklappenkontakt unten (nur E70) |
 | AKTION | 0/1 | - | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | 0= Kontakt geöffnet; 1= Kontakt geschlossen |
 
-<a id="table-arg-0xd247-d"></a>
 ### ARG_0XD247_D
 
 Dimensions: 2 rows × 12 columns
@@ -2247,7 +2185,6 @@ Dimensions: 2 rows × 12 columns
 | TASTER | 0-n | - | signed int | - | TAB_HKL_TASTER | 1.0 | 1.0 | 0.0 | 0.0 | 4.0 | 1 = TOEHK = Taster Heckklappe aussen; 2 = TOEHKK = Taster Heckklappe innen; 3 = TOEHKI = Innenraumtaster Heckklappe; 4 = TOEHKCL = Innenraumtaster Centerlock |
 | AKTION | 0/1 | - | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | 0= Taster nicht gedrückt; 1= Taster gedrückt |
 
-<a id="table-arg-0xd248-d"></a>
 ### ARG_0XD248_D
 
 Dimensions: 1 rows × 12 columns
@@ -2256,7 +2193,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RICHTUNG | 0-n | - | signed int | - | TAB_BEWEGUNG | 1.0 | 1.0 | 0.0 | - | - | Bewegungsrichtung:  0 = STOPP; 1 = OEFFNEN; 2 = SCHLIESSEN siehe Tabelle: TAB_BEWEGUNG |
 
-<a id="table-arg-0xd24b-d"></a>
 ### ARG_0XD24B_D
 
 Dimensions: 1 rows × 12 columns
@@ -2265,7 +2201,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | signed int | - | - | - | - | - | - | - | Setzen des Anlieferungs-Zustandes 1 = SETZEN; 0 = keine Aktion |
 
-<a id="table-arg-0xd24d-d"></a>
 ### ARG_0XD24D_D
 
 Dimensions: 1 rows × 12 columns
@@ -2274,7 +2209,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTE_WEITERFAHRT | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Taste für Weiterfahrt Heckklappe: 0 = nicht gedrückt 1 = gedrückt |
 
-<a id="table-arg-0xd24f-d"></a>
 ### ARG_0XD24F_D
 
 Dimensions: 1 rows × 12 columns
@@ -2283,7 +2217,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RICHTUNG | 0-n | high | unsigned char | - | TAB_ASP_BEWEGUNG | - | - | - | - | - | Richtung der Bewegung des aktiver Heckspoiler: Siehe Tabelle TAB_ASP_BEWEGUNG |
 
-<a id="table-arg-0xd302-d"></a>
 ### ARG_0XD302_D
 
 Dimensions: 1 rows × 12 columns
@@ -2292,7 +2225,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1 = Initialisierungslauf starten; 0 = keine Aktion |
 
-<a id="table-arg-0xd30c-d"></a>
 ### ARG_0XD30C_D
 
 Dimensions: 1 rows × 12 columns
@@ -2301,7 +2233,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | unsigned char | - | - | - | - | - | - | - | Steuert die Laderaumabdeckung an: 0 = untere Postition 1 = obere Position |
 
-<a id="table-arg-0xd30d-d"></a>
 ### ARG_0XD30D_D
 
 Dimensions: 1 rows × 12 columns
@@ -2310,7 +2241,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | Reversier-Zähler löschen 1 = löschen |
 
-<a id="table-arg-0xd30e-d"></a>
 ### ARG_0XD30E_D
 
 Dimensions: 1 rows × 12 columns
@@ -2319,7 +2249,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | unsigned char | - | - | - | - | - | - | - | 1 = Anlieferzustand setzen; 0 = keine Aktion |
 
-<a id="table-arg-0xd325-d"></a>
 ### ARG_0XD325_D
 
 Dimensions: 1 rows × 12 columns
@@ -2328,7 +2257,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RICHTUNG | 0-n | high | unsigned char | - | TAB_ROLLO_ANST_RICHTUNG | - | - | - | - | - | Richtung der Ansteuerung (siehe TAB_ROLLO_ANST_RICHTUNG) |
 
-<a id="table-arg-0xd326-d"></a>
 ### ARG_0XD326_D
 
 Dimensions: 3 rows × 12 columns
@@ -2339,7 +2267,6 @@ Dimensions: 3 rows × 12 columns
 | PWM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Angabe PWM-Wert (0-100%) |
 | TIMEOUT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe Timeout für die Ansteuerung (0-15 Sekunden) |
 
-<a id="table-arg-0xd33b-d"></a>
 ### ARG_0XD33B_D
 
 Dimensions: 2 rows × 12 columns
@@ -2349,7 +2276,6 @@ Dimensions: 2 rows × 12 columns
 | TASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Argument Taster:  0 = Taster links  1 = Taster rechts  |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Argument Aktion:  0 = Taster nicht betätigt  1 = Taster betätigt |
 
-<a id="table-arg-0xd377-d"></a>
 ### ARG_0XD377_D
 
 Dimensions: 1 rows × 12 columns
@@ -2358,7 +2284,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_MODE | 0-n | high | unsigned char | - | TAB_HKL_MAX_POS_ARG | - | - | - | - | - | Vorgabe für die Bestimmung der oberen HKL-Position: 0=maximale Position wird bei der Initialisierung angelernt / 1=maximale Position wird durch CAF-Wert (Codierwert) vorgegeben |
 
-<a id="table-arg-0xd3e5-d"></a>
 ### ARG_0XD3E5_D
 
 Dimensions: 1 rows × 12 columns
@@ -2367,7 +2292,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_START | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0 = keine Aktion / 1 = Initialisierung starten |
 
-<a id="table-arg-0xd3e6-d"></a>
 ### ARG_0XD3E6_D
 
 Dimensions: 1 rows × 12 columns
@@ -2376,7 +2300,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_RICHTUNG | 0-n | high | unsigned char | - | TAB_ARSG_ANST_PLANE | - | - | - | - | - | Richtung der Ansteuerung |
 
-<a id="table-arg-0xd3e7-d"></a>
 ### ARG_0XD3E7_D
 
 Dimensions: 1 rows × 12 columns
@@ -2385,7 +2308,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_RICHTUNG | 0-n | high | unsigned char | - | TAB_ARSG_ANST_KASSETTE | - | - | - | - | - | Richtung der Ansteuerung |
 
-<a id="table-arg-0xd3e8-d"></a>
 ### ARG_0XD3E8_D
 
 Dimensions: 1 rows × 12 columns
@@ -2394,7 +2316,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_RICHTUNG | 0-n | high | unsigned char | - | TAB_ARSG_ANST_STAUFACHKLAPPE | - | - | - | - | - | Richtung der Ansteuerung |
 
-<a id="table-arg-0xd3f5-d"></a>
 ### ARG_0XD3F5_D
 
 Dimensions: 1 rows × 12 columns
@@ -2403,7 +2324,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_RESET | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0 = keine Aktion / 1 = Reset durchführen |
 
-<a id="table-arg-0xd3f8-d"></a>
 ### ARG_0XD3F8_D
 
 Dimensions: 1 rows × 12 columns
@@ -2412,7 +2332,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_RICHTUNG | 0-n | high | unsigned char | - | TAB_HKFM_CONTROL_SCA_ANTRIEB | - | - | - | - | - | Richtung der Ansteuerung |
 
-<a id="table-arg-0xd6b3-d"></a>
 ### ARG_0XD6B3_D
 
 Dimensions: 3 rows × 12 columns
@@ -2423,7 +2342,6 @@ Dimensions: 3 rows × 12 columns
 | RICHTUNG | 0-n | high | unsigned char | - | TAB_ARSG_CONTROL_RICHTUNG | - | - | - | - | - | Richtung der Ansteuerung (siehe TAB) |
 | TIMEOUT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe Timeout für die Ansteuerung (in Sekunden) |
 
-<a id="table-arg-0xd6b4-d"></a>
 ### ARG_0XD6B4_D
 
 Dimensions: 1 rows × 12 columns
@@ -2432,7 +2350,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_START | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0 = keine Aktion / 1 = Parametrierung starten |
 
-<a id="table-arg-0xd850-d"></a>
 ### ARG_0XD850_D
 
 Dimensions: 1 rows × 12 columns
@@ -2441,7 +2358,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | unsigned char | - | - | - | - | - | - | - | 0 = keine Aktion / 1 = Anlieferungszustand setzen |
 
-<a id="table-arg-0xd852-d"></a>
 ### ARG_0XD852_D
 
 Dimensions: 1 rows × 12 columns
@@ -2450,7 +2366,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RICHTUNG | 0-n | - | unsigned char | - | TAB_EHKU_BEWEGUNG | - | - | - | - | - | Bewegungsrichtung |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2464,7 +2379,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2478,7 +2392,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 155 rows × 4 columns
@@ -2641,7 +2554,6 @@ Dimensions: 155 rows × 4 columns
 | 0xCC4C13 | LIN-Bus: Kommunikationsfehler durch Bedieneinheit Sitze/Abdeckrollo im Gepäckraum (LIN) erkannt | 0 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 20 rows × 9 columns
@@ -2669,7 +2581,6 @@ Dimensions: 20 rows × 9 columns
 | 0x4300 | Sub-Tabelle | 0-n | - | 0xFFFF | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2682,7 +2593,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 66 rows × 4 columns
@@ -2756,7 +2666,6 @@ Dimensions: 66 rows × 4 columns
 | 0x80177D | HKL: Blockierung der unteren Heckklappe (uHKL) erkannt | 0 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 20 rows × 9 columns
@@ -2784,7 +2693,6 @@ Dimensions: 20 rows × 9 columns
 | 0x4300 | Sub-Tabelle | 0-n | - | 0xFFFF | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2793,7 +2701,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -2809,7 +2716,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -2820,7 +2726,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ECUMindestensEinmalVollstaendigProgrammierbar |
 | 2 | ECUNichtMehrProgrammierbar |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -2831,7 +2736,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -2845,7 +2749,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4000-d"></a>
 ### RES_0X4000_D
 
 Dimensions: 9 rows × 10 columns
@@ -2862,7 +2765,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_SOFTWARE_ID | 0-n | high | unsigned char | - | - | - | - | - | Software ID |
 | STAT_VERSION_INDEX | 0-n | high | unsigned char | - | - | - | - | - | Version - Index |
 
-<a id="table-res-0x4006-r"></a>
 ### RES_0X4006_R
 
 Dimensions: 1 rows × 13 columns
@@ -2871,7 +2773,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RAM_DATEN_SCHREIBEN | - | - | + | 0-n | high | unsigned char | - | STATUS_RAM_DATEN_SCHREIBEN_TAB | - | - | - | Status RAM_DATEN_SCHREIBEN |
 
-<a id="table-res-0x4100-d"></a>
 ### RES_0X4100_D
 
 Dimensions: 1 rows × 10 columns
@@ -2880,7 +2781,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MOT_PARAM_REFLECTION_DATA | DATA | high | data[5] | - | - | 1.0 | 1.0 | 0.0 | Dummy-Bytes (Reflektion der Motoransteuerungsparameter) |
 
-<a id="table-res-0x4101-d"></a>
 ### RES_0X4101_D
 
 Dimensions: 1 rows × 10 columns
@@ -2889,7 +2789,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MOT_PARAM_REFLECTION_DATA | DATA | high | data[5] | - | - | 1.0 | 1.0 | 0.0 | Dummy-Bytes (Reflektion der Motoransteuerungsparameter) |
 
-<a id="table-res-0x4102-d"></a>
 ### RES_0X4102_D
 
 Dimensions: 1 rows × 10 columns
@@ -2898,7 +2797,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MOT_PARAM_REFLECTION_DATA | DATA | high | data[5] | - | - | 1.0 | 1.0 | 0.0 | Dummy-Bytes (Reflektion der Motoransteuerungsparameter) |
 
-<a id="table-res-0x4104-d"></a>
 ### RES_0X4104_D
 
 Dimensions: 1 rows × 10 columns
@@ -2907,7 +2805,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MOT_PARAM_REFLECTION_DATA | DATA | high | data[5] | - | - | 1.0 | 1.0 | 0.0 | Dummy-Bytes (Reflektion der Motoransteuerungsparameter) |
 
-<a id="table-res-0x4200-d"></a>
 ### RES_0X4200_D
 
 Dimensions: 27 rows × 10 columns
@@ -2942,7 +2839,6 @@ Dimensions: 27 rows × 10 columns
 | STAT_UNALLOCATED_ANALOG_IN_4_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | UNALLOCATED_ANALOG_IN_4 |
 | STAT_UNALLOCATED_DIGITAL_IN_1_WERT | HEX | high | unsigned char | - | - | - | - | - | UNALLOCATED_DIGITAL_IN_1 |
 
-<a id="table-res-0x4201-d"></a>
 ### RES_0X4201_D
 
 Dimensions: 28 rows × 10 columns
@@ -2978,7 +2874,6 @@ Dimensions: 28 rows × 10 columns
 | STAT_AIN_M3_OPEN_VOLT_WERT | Digits | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Spannungswert an der DSL/AHS Motor Spannungsmessung |
 | STAT_AIN_M6M7_CUR_WERT | Digits | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Stromwert an der eLFE Strommessung |
 
-<a id="table-res-0xa171-r"></a>
 ### RES_0XA171_R
 
 Dimensions: 3 rows × 13 columns
@@ -2989,7 +2884,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_NORMIERLAUF_AKTIV | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | Aktueller Status des Normierlaufs: 0 = nicht aktiv / 1 = aktiv |
 | STAT_NORMIERLAUF_FEHLER | - | - | + | 0-n | high | unsigned char | - | TAB_ARSG_STAT_INIT_ERROR | - | - | - | Status Normierlauf beendet |
 
-<a id="table-res-0xd221-d"></a>
 ### RES_0XD221_D
 
 Dimensions: 1 rows × 10 columns
@@ -2998,7 +2892,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_VORHANDEN_BUZZER | 0/1 | high | signed int | - | - | - | - | - | Akustikgeber (Buzzer) codiert und vorhanden: 0 = nicht vorhanden 1 = vorhanden |
 
-<a id="table-res-0xd223-d"></a>
 ### RES_0XD223_D
 
 Dimensions: 3 rows × 10 columns
@@ -3009,7 +2902,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SPERRE_LARA | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktionssperre für LARA: 0 = Sperre nicht aktiv 1 = Sperre aktiv |
 | STAT_SPERRE_EHKU | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktionssperre für elektrische Heckklappe unten: 0 = Sperre nicht aktiv 1 = Sperre aktiv |
 
-<a id="table-res-0xd229-d"></a>
 ### RES_0XD229_D
 
 Dimensions: 9 rows × 10 columns
@@ -3026,7 +2918,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_RESERVE_3_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve für zukünftige Erweiterungen |
 | STAT_RESERVE_4_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve für zukünftige Erweiterungen |
 
-<a id="table-res-0xd22a-d"></a>
 ### RES_0XD22A_D
 
 Dimensions: 30 rows × 10 columns
@@ -3064,7 +2955,6 @@ Dimensions: 30 rows × 10 columns
 | STAT_RESERVE_6_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve für zukünftige Erweiterungen |
 | STAT_RESERVE_7_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve für zukünftige Erweiterungen |
 
-<a id="table-res-0xd22b-d"></a>
 ### RES_0XD22B_D
 
 Dimensions: 6 rows × 10 columns
@@ -3078,7 +2968,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ABBRUCHGRUND_4 | 0-n | high | unsigned char | - | TAB_HKL_ABBRUCH_BEW | - | - | - | viertletzter Abbruchgrund (siehe TAB_HKL_ABBRUCH_BEW) |
 | STAT_ABBRUCHGRUND_5 | 0-n | high | unsigned char | - | TAB_HKL_ABBRUCH_BEW | - | - | - | fünftletzter Abbruchgrund (siehe TAB_HKL_ABBRUCH_BEW) |
 
-<a id="table-res-0xd22c-d"></a>
 ### RES_0XD22C_D
 
 Dimensions: 5 rows × 10 columns
@@ -3091,7 +2980,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_INIT_EINTRAG_4 | 0-n | high | unsigned char | - | TAB_HKL_ABBRUCH_INIT | - | - | - | Status viertletzte Initialisierung HKL (siehe TAB_HKL_ABBRUCH_INIT) |
 | STAT_INIT_EINTRAG_5 | 0-n | high | unsigned char | - | TAB_HKL_ABBRUCH_INIT | - | - | - | Status fünftletzte Initialisierung HKL (siehe TAB_HKL_ABBRUCH_INIT) |
 
-<a id="table-res-0xd22f-d"></a>
 ### RES_0XD22F_D
 
 Dimensions: 3 rows × 10 columns
@@ -3102,7 +2990,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_HALLSENSOR_MOTOR | 0-n | high | unsigned char | - | TAB_ASP_HALLSENSOREN | - | - | - | Hallsensor für Motordrehung. Siehe Tabelle TAB_ASP_HALLSENSOREN |
 | STAT_MICROSCHALTER_UNTEN | 0/1 | high | unsigned char | - | - | - | - | - | Microschalter unten (eingefahren) 0x00 = nicht betätigt 0x01 = betätigt |
 
-<a id="table-res-0xd230-d"></a>
 ### RES_0XD230_D
 
 Dimensions: 4 rows × 10 columns
@@ -3114,7 +3001,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_OEFF_WINKEL_WERT | % | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Oeffnungswinkel der Heckklappe (in Prozent des max. Winkels) |
 | STAT_MAX_POS_WERT | Inkremente | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Liefert die maximale obere Position in Inkrementen (angelernt oder über Codierparameter vorgegeben) |
 
-<a id="table-res-0xd236-d"></a>
 ### RES_0XD236_D
 
 Dimensions: 6 rows × 10 columns
@@ -3128,7 +3014,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_PWM_HKL_LINKS_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert für Antrieb links in %, Wert 255 = ungültig oder Antrieb nicht verbaut |
 | STAT_PWM_HKL_RECHTS_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert für Antrieb rechts in %, Wert 255 = ungültig oder Antrieb nicht verbaut |
 
-<a id="table-res-0xd23e-d"></a>
 ### RES_0XD23E_D
 
 Dimensions: 1 rows × 10 columns
@@ -3137,7 +3022,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTER_ASP | 0/1 | high | unsigned char | - | - | - | - | - | Taster für Spoiler: 0x00 = nicht gedrückt 0x01 = gedrückt |
 
-<a id="table-res-0xd24d-d"></a>
 ### RES_0XD24D_D
 
 Dimensions: 1 rows × 10 columns
@@ -3146,7 +3030,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTE_WEITERFAHRT_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Taste für Weiterfahrt Heckklappe: 0 = nicht gedrückt 1 = gedrückt |
 
-<a id="table-res-0xd24f-d"></a>
 ### RES_0XD24F_D
 
 Dimensions: 4 rows × 10 columns
@@ -3158,7 +3041,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ASP_MODUS | 0-n | high | unsigned char | - | TAB_ASP_MODUS | - | - | - | Modus von Heckspoiler: Siehe Tabelle TAB_ASP_MODUS |
 | STAT_ASP_FEHLER | 0/1 | high | unsigned char | - | - | - | - | - | Fehler beim aktiven Heckspoiler: 0 = keine Fehler vorhanden 1 = Fehler vorhanden |
 
-<a id="table-res-0xd301-d"></a>
 ### RES_0XD301_D
 
 Dimensions: 2 rows × 10 columns
@@ -3168,7 +3050,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_LARA_POSITION_NR | 0-n | - | unsigned char | - | TAB_LARA_POSITION_G | - | - | - | Position der Laderaumabdeckung (siehe TAB_LARA_POSITION_G) |
 | STAT_LARA_PROZENT_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Verfahrweg LARA in Prozent 0% = unterer Anschlag 100% = oberer Anschlag |
 
-<a id="table-res-0xd302-d"></a>
 ### RES_0XD302_D
 
 Dimensions: 1 rows × 10 columns
@@ -3177,7 +3058,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LARA_ROLLO_INIT | 0-n | - | unsigned char | - | TAB_LARA_INIT | - | - | - | Status Initialisierung der Laderaumabdeckung (siehe TAB_LARA_INIT) |
 
-<a id="table-res-0xd30d-d"></a>
 ### RES_0XD30D_D
 
 Dimensions: 1 rows × 10 columns
@@ -3186,7 +3066,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LARA_REV_ZAEHLER_WERT | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Zähler für Reversierung LARA |
 
-<a id="table-res-0xd313-d"></a>
 ### RES_0XD313_D
 
 Dimensions: 6 rows × 10 columns
@@ -3200,7 +3079,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ABBRUCHGRUND_4 | 0-n | high | unsigned char | - | TAB_LARA_ABBRUCH_BEW | - | - | - | viertletzter Abbruchgrund (siehe TAB_LARA_ABBRUCH_BEW) |
 | STAT_ABBRUCHGRUND_5 | 0-n | high | unsigned char | - | TAB_LARA_ABBRUCH_BEW | - | - | - | fünftletzter Abbruchgrund (siehe TAB_LARA_ABBRUCH_BEW) |
 
-<a id="table-res-0xd316-d"></a>
 ### RES_0XD316_D
 
 Dimensions: 5 rows × 10 columns
@@ -3213,7 +3091,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_INIT_EINTRAG_4 | 0-n | high | unsigned char | - | TAB_LARA_ABBRUCH_INIT | - | - | - | Status viertletzte Initialisierung LARA (siehe TAB_LARA_ABBRUCH_INIT) |
 | STAT_INIT_EINTRAG_5 | 0-n | high | unsigned char | - | TAB_LARA_ABBRUCH_INIT | - | - | - | Status fünftletzte Initialisierung LARA (siehe TAB_LARA_ABBRUCH_INIT) |
 
-<a id="table-res-0xd31a-d"></a>
 ### RES_0XD31A_D
 
 Dimensions: 6 rows × 10 columns
@@ -3227,7 +3104,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_PWM_LARA_ANTRIEB_1_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert für Antrieb 1 in %, Wert 255 = ungültig oder Antrieb nicht verbaut |
 | STAT_PWM_LARA_ANTRIEB_2_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert für Antrieb 2 in %, Wert 255 = ungültig oder Antrieb nicht verbaut |
 
-<a id="table-res-0xd31c-d"></a>
 ### RES_0XD31C_D
 
 Dimensions: 7 rows × 10 columns
@@ -3242,7 +3118,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_VERSION_DATE_MONTH | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Monat |
 | STAT_VERSION_DATE_DAY | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Tag |
 
-<a id="table-res-0xd31d-d"></a>
 ### RES_0XD31D_D
 
 Dimensions: 7 rows × 10 columns
@@ -3257,7 +3132,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_VERSION_DATE_MONTH | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Monat |
 | STAT_VERSION_DATE_DAY | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Tag |
 
-<a id="table-res-0xd31e-d"></a>
 ### RES_0XD31E_D
 
 Dimensions: 7 rows × 10 columns
@@ -3272,7 +3146,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_VERSION_DATE_MONTH | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Monat |
 | STAT_VERSION_DATE_DAY | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Tag |
 
-<a id="table-res-0xd32c-d"></a>
 ### RES_0XD32C_D
 
 Dimensions: 2 rows × 10 columns
@@ -3282,7 +3155,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ROLLO_ANSTEUERUNG | 0-n | high | unsigned char | - | TAB_ROLLO_BEWEGUNG | - | - | - | Status der Ansteuerung des Sonnenrollos (siehe TAB_ROLLO_BEWEGUNG) |
 | STAT_ROLLO_POSITION | 0-n | high | unsigned char | - | TAB_ROLLO_POSITION | - | - | - | Position des Sonnenrollos (siehe TAB_ROLLO_POSITION) |
 
-<a id="table-res-0xd339-d"></a>
 ### RES_0XD339_D
 
 Dimensions: 2 rows × 10 columns
@@ -3292,7 +3164,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ELFE_TASTER_LINKS | 0/1 | high | unsigned char | - | - | - | - | - | Status Taster links: 0 = nicht betätigt / 1 = betätigt |
 | STAT_ELFE_TASTER_RECHTS | 0/1 | high | unsigned char | - | - | - | - | - | Status Taster rechts: 0 = nicht betätigt / 1 = betätigt |
 
-<a id="table-res-0xd33f-d"></a>
 ### RES_0XD33F_D
 
 Dimensions: 7 rows × 10 columns
@@ -3307,7 +3178,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_VERSION_DATE_MONTH | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Monat |
 | STAT_VERSION_DATE_DAY | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Tag |
 
-<a id="table-res-0xd34e-d"></a>
 ### RES_0XD34E_D
 
 Dimensions: 16 rows × 10 columns
@@ -3331,7 +3201,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_RESERVE_4_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve für zukünftige Erweiterungen |
 | STAT_RESERVE_5_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve für zukünftige Erweiterungen |
 
-<a id="table-res-0xd377-d"></a>
 ### RES_0XD377_D
 
 Dimensions: 5 rows × 10 columns
@@ -3344,7 +3213,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RESERVE_2_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Reserve für eventuelle Änderungen in der Zukunft |
 | STAT_RESERVE_3_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Reserve für eventuelle Änderungen in der Zukunft |
 
-<a id="table-res-0xd3e5-d"></a>
 ### RES_0XD3E5_D
 
 Dimensions: 5 rows × 10 columns
@@ -3357,7 +3225,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_NORMIERUNG | 0-n | high | unsigned char | - | TAB_ARSG_STATUS_INIT | - | - | - | Status Normierung (Abdeckrollo, Abdeckrollokassette und Staufachklappe) |
 | STAT_FEHLER_FUNKTION | 0-n | high | unsigned char | - | TAB_ARSG_STAT_ERROR_FUNCTION | - | - | - | Status der Funktion Abdeckrollo |
 
-<a id="table-res-0xd3ee-d"></a>
 ### RES_0XD3EE_D
 
 Dimensions: 22 rows × 10 columns
@@ -3387,7 +3254,6 @@ Dimensions: 22 rows × 10 columns
 | STAT_SCHALTER_RESERVE_5 | 0-n | high | unsigned char | - | TAB_HKFM_SCHALTER_LEHNE_INT | - | - | - | Reserveergebnis |
 | STAT_SCHALTER_RESERVE_6 | 0-n | high | unsigned char | - | TAB_HKFM_SCHALTER_LEHNE_INT | - | - | - | Reserveergebnis |
 
-<a id="table-res-0xd3f7-d"></a>
 ### RES_0XD3F7_D
 
 Dimensions: 6 rows × 10 columns
@@ -3401,7 +3267,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESERVE_1 | 0-n | high | unsigned char | - | TAB_HKFM_STAT_SCA_SCHLOSS | - | - | - | Reserve-Ergebnis |
 | STAT_RESERVE_2 | 0-n | high | unsigned char | - | TAB_HKFM_STAT_SCA_SCHLOSS | - | - | - | Reserve-Ergebnis |
 
-<a id="table-res-0xd3f8-d"></a>
 ### RES_0XD3F8_D
 
 Dimensions: 5 rows × 10 columns
@@ -3414,7 +3279,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RESERVE_1 | 0-n | high | unsigned char | - | TAB_HKFM_STAT_SCA_ANTRIEB | - | - | - | Reserve-Ergebnis |
 | STAT_RESERVE_2 | 0-n | high | unsigned char | - | TAB_HKFM_STAT_SCA_ANTRIEB | - | - | - | Reserve-Ergebnis |
 
-<a id="table-res-0xd692-d"></a>
 ### RES_0XD692_D
 
 Dimensions: 10 rows × 10 columns
@@ -3432,7 +3296,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_SOFTSTOPP_STAUFACHKLAPPE_AUF_WERT | Inkremente | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der gezählten Inkremente bei Softstopp Staufachklappe öffnen |
 | STAT_BETRIEBSSTUNDEN_WERT | min | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Betriebsstunden in Minuten |
 
-<a id="table-res-0xd84a-d"></a>
 ### RES_0XD84A_D
 
 Dimensions: 2 rows × 10 columns
@@ -3442,7 +3305,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EHKU_VORHANDEN | 0/1 | high | unsigned char | - | - | - | - | - | Konfiguration elektrische Heckklappe unten: 0 = eHKU nicht vorhanden / 1 = eHKU vorhanden |
 | STAT_RESERVE | 0/1 | high | unsigned char | - | - | - | - | - | Reserveergebnis |
 
-<a id="table-res-0xd84b-d"></a>
 ### RES_0XD84B_D
 
 Dimensions: 6 rows × 10 columns
@@ -3456,7 +3318,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ABBRUCHGRUND_4 | 0-n | high | unsigned char | - | TAB_HKL_ABBRUCH_BEW | - | - | - | viertletzter Abbruchgrund (siehe TAB_HKL_ABBRUCH_BEW) |
 | STAT_ABBRUCHGRUND_5 | 0-n | high | unsigned char | - | TAB_HKL_ABBRUCH_BEW | - | - | - | fünftletzter Abbruchgrund (siehe TAB_HKL_ABBRUCH_BEW) |
 
-<a id="table-res-0xd84c-d"></a>
 ### RES_0XD84C_D
 
 Dimensions: 5 rows × 10 columns
@@ -3469,7 +3330,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_INIT_EINTRAG_4 | 0-n | high | unsigned char | - | TAB_HKL_ABBRUCH_INIT | - | - | - | Status viertletzte Initialisierung (siehe TAB_HKL_ABBRUCH_INIT) |
 | STAT_INIT_EINTRAG_5 | 0-n | high | unsigned char | - | TAB_HKL_ABBRUCH_INIT | - | - | - | Status fünftletzte Initialisierung (siehe TAB_HKL_ABBRUCH_INIT) |
 
-<a id="table-res-0xd84d-d"></a>
 ### RES_0XD84D_D
 
 Dimensions: 7 rows × 10 columns
@@ -3484,7 +3344,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_VERSION_DATE_MONTH | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Monat |
 | STAT_VERSION_DATE_DAY | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Tag |
 
-<a id="table-res-0xd850-d"></a>
 ### RES_0XD850_D
 
 Dimensions: 1 rows × 10 columns
@@ -3493,7 +3352,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_EHKU_INIT | 0-n | - | unsigned char | - | TAB_EHKU_INIT | - | - | - | Status der Initialisierung (siehe TAB) |
 
-<a id="table-res-0xd851-d"></a>
 ### RES_0XD851_D
 
 Dimensions: 4 rows × 10 columns
@@ -3505,7 +3363,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_MAX_POS_WERT | Inkremente | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Liefert die maximale obere Position in Inkrementen (angelernt oder über Codierparameter vorgegeben) |
 | STAT_RESERVE_WERT | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Reserveergebnis |
 
-<a id="table-res-0xd852-d"></a>
 ### RES_0XD852_D
 
 Dimensions: 3 rows × 10 columns
@@ -3516,7 +3373,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_MOTORSTROM_ANTRIEB_WERT | A | high | signed int | - | - | 1.0 | 1000.0 | 0.0 | Wert des Motorstroms |
 | STAT_PWM_ANTRIEB_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert für den Antrieb (Wert 255 = ungültig oder Antrieb nicht verbaut) |
 
-<a id="table-res-0xd853-d"></a>
 ### RES_0XD853_D
 
 Dimensions: 2 rows × 10 columns
@@ -3526,7 +3382,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EHKU_TASTER | 0/1 | high | unsigned char | - | - | - | - | - | 0 = nicht betätigt / 1 = betätigt |
 | STAT_RESERVE | 0/1 | high | unsigned char | - | - | - | - | - | Reserveergebnis |
 
-<a id="table-res-0xdae4-d"></a>
 ### RES_0XDAE4_D
 
 Dimensions: 30 rows × 10 columns
@@ -3564,7 +3419,6 @@ Dimensions: 30 rows × 10 columns
 | STAT_RESERVE_9_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve für zukünftige Erweiterungen |
 | STAT_RESERVE_10_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve für zukünftige Erweiterungen |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 98 rows × 16 columns
@@ -3670,7 +3524,6 @@ Dimensions: 98 rows × 16 columns
 | EHKU_FASTA_DATEN | 0xDAE4 | - | FASTA-Daten für untere Heckklappe | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xDAE4_D |
 | ACTIVE_DIAGNOSTIC_SESSION | 0xF186 | STAT_ACTIVE_DIAGNOSTIC_SESSION | activeDiagnosticSession | 0-n | - | High | unsigned char | RDBI_ADS_DOP | - | - | - | - | 22 | - | - |
 
-<a id="table-status-ram-daten-schreiben-tab"></a>
 ### STATUS_RAM_DATEN_SCHREIBEN_TAB
 
 Dimensions: 4 rows × 2 columns
@@ -3682,7 +3535,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Schreiben läuft |
 | 0x03 | Schreiben noch nicht angestoßen (Routine nicht gestartet) |
 
-<a id="table-tab-arsg-anst-kassette"></a>
 ### TAB_ARSG_ANST_KASSETTE
 
 Dimensions: 3 rows × 2 columns
@@ -3693,7 +3545,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | KASSETTE_NACH_OBEN |
 | 0x02 | KASSETTE_NACH_UNTEN |
 
-<a id="table-tab-arsg-anst-plane"></a>
 ### TAB_ARSG_ANST_PLANE
 
 Dimensions: 3 rows × 2 columns
@@ -3704,7 +3555,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | PLANE_AUSFAHREN |
 | 0x02 | PLANE_EINFAHREN |
 
-<a id="table-tab-arsg-anst-staufachklappe"></a>
 ### TAB_ARSG_ANST_STAUFACHKLAPPE
 
 Dimensions: 3 rows × 2 columns
@@ -3715,7 +3565,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | KLAPPE_OEFFNEN |
 | 0x02 | KLAPPE_SCHLIESSEN |
 
-<a id="table-tab-arsg-control-antriebe"></a>
 ### TAB_ARSG_CONTROL_ANTRIEBE
 
 Dimensions: 2 rows × 2 columns
@@ -3725,7 +3574,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | ANTRIEB_STAUFACHKLAPPE |
 | 0x01 | ANTRIEB_ABDECKROLLOKASSETTE |
 
-<a id="table-tab-arsg-control-richtung"></a>
 ### TAB_ARSG_CONTROL_RICHTUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3736,7 +3584,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | NACH_OBEN |
 | 0x02 | NACH_UNTEN |
 
-<a id="table-tab-arsg-status-init"></a>
 ### TAB_ARSG_STATUS_INIT
 
 Dimensions: 3 rows × 2 columns
@@ -3747,7 +3594,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Abdeckrollo ist normiert |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-arsg-stat-abdeckrollokassette"></a>
 ### TAB_ARSG_STAT_ABDECKROLLOKASSETTE
 
 Dimensions: 17 rows × 2 columns
@@ -3772,7 +3618,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Status unbekannt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-arsg-stat-error-function"></a>
 ### TAB_ARSG_STAT_ERROR_FUNCTION
 
 Dimensions: 3 rows × 2 columns
@@ -3783,7 +3628,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler vorhanden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-arsg-stat-init-error"></a>
 ### TAB_ARSG_STAT_INIT_ERROR
 
 Dimensions: 9 rows × 2 columns
@@ -3800,7 +3644,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | abgebrochen durch Tasterbetätigung (Panikabbruch) |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-arsg-stat-staufachklappe"></a>
 ### TAB_ARSG_STAT_STAUFACHKLAPPE
 
 Dimensions: 9 rows × 2 columns
@@ -3817,7 +3660,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0F | Initialisierungslauf wird durchgeführt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-asp-bewegung"></a>
 ### TAB_ASP_BEWEGUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3829,7 +3671,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Faehrt ein, Spoiler einfahren |
 | 0xFF | ungültiger Status |
 
-<a id="table-tab-asp-hallsensoren"></a>
 ### TAB_ASP_HALLSENSOREN
 
 Dimensions: 4 rows × 2 columns
@@ -3841,7 +3682,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Sensorsignal ungültig |
 | 0xFF | Ungültig |
 
-<a id="table-tab-asp-modus"></a>
 ### TAB_ASP_MODUS
 
 Dimensions: 3 rows × 2 columns
@@ -3852,7 +3692,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Manueller Modus |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-asp-position"></a>
 ### TAB_ASP_POSITION
 
 Dimensions: 5 rows × 2 columns
@@ -3865,7 +3704,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Unbekannt |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-bewegung"></a>
 ### TAB_BEWEGUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3876,7 +3714,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Oeffnen |
 | 0x02 | Schliessen |
 
-<a id="table-tab-ehku-bewegung"></a>
 ### TAB_EHKU_BEWEGUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3887,7 +3724,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | OEFFNEN |
 | 0x02 | SCHLIESSEN |
 
-<a id="table-tab-ehku-init"></a>
 ### TAB_EHKU_INIT
 
 Dimensions: 3 rows × 2 columns
@@ -3898,7 +3734,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Initialisierung ist in Ordnung |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkfm-control-sca-antrieb"></a>
 ### TAB_HKFM_CONTROL_SCA_ANTRIEB
 
 Dimensions: 3 rows × 2 columns
@@ -3909,7 +3744,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | SCA_ANZIEHEN |
 | 0x02 | SCA_REVERSIEREN |
 
-<a id="table-tab-hkfm-init"></a>
 ### TAB_HKFM_INIT
 
 Dimensions: 3 rows × 2 columns
@@ -3920,7 +3754,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Initialisierung ist in Ordnung |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-hkfm-schalter-lehne-ext"></a>
 ### TAB_HKFM_SCHALTER_LEHNE_EXT
 
 Dimensions: 6 rows × 2 columns
@@ -3934,7 +3767,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | im Fahrzeug nicht vorhanden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkfm-schalter-lehne-int"></a>
 ### TAB_HKFM_SCHALTER_LEHNE_INT
 
 Dimensions: 5 rows × 2 columns
@@ -3947,7 +3779,6 @@ Dimensions: 5 rows × 2 columns
 | 0x05 | im Fahrzeug nicht vorhanden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkfm-stat-sca-antrieb"></a>
 ### TAB_HKFM_STAT_SCA_ANTRIEB
 
 Dimensions: 4 rows × 2 columns
@@ -3959,7 +3790,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | SCA-Antrieb reversiert |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkfm-stat-sca-schloss"></a>
 ### TAB_HKFM_STAT_SCA_SCHLOSS
 
 Dimensions: 3 rows × 2 columns
@@ -3970,7 +3800,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | betätigt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkfm-taster-ar"></a>
 ### TAB_HKFM_TASTER_AR
 
 Dimensions: 4 rows × 2 columns
@@ -3982,7 +3811,6 @@ Dimensions: 4 rows × 2 columns
 | 0x05 | im Fahrzeug nicht vorhanden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkfm-taster-ext-shd"></a>
 ### TAB_HKFM_TASTER_EXT_SHD
 
 Dimensions: 5 rows × 2 columns
@@ -3995,7 +3823,6 @@ Dimensions: 5 rows × 2 columns
 | 0x05 | im Fahrzeug nicht vorhanden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkfm-taster-sv-max"></a>
 ### TAB_HKFM_TASTER_SV_MAX
 
 Dimensions: 4 rows × 2 columns
@@ -4007,7 +3834,6 @@ Dimensions: 4 rows × 2 columns
 | 0x05 | im Fahrzeug nicht vorhanden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkl-abbruch-bew"></a>
 ### TAB_HKL_ABBRUCH_BEW
 
 Dimensions: 17 rows × 2 columns
@@ -4032,7 +3858,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Reserve |
 | 0xFF | ungültig |
 
-<a id="table-tab-hkl-abbruch-init"></a>
 ### TAB_HKL_ABBRUCH_INIT
 
 Dimensions: 17 rows × 2 columns
@@ -4057,7 +3882,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Abbruch wegen Timeout |
 | 0xFF | ungültig |
 
-<a id="table-tab-hkl-antrieb"></a>
 ### TAB_HKL_ANTRIEB
 
 Dimensions: 4 rows × 2 columns
@@ -4069,7 +3893,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | HKL-Antrieb rechts |
 | 0x03 | Antrieb Heckklappe unten |
 
-<a id="table-tab-hkl-config"></a>
 ### TAB_HKL_CONFIG
 
 Dimensions: 5 rows × 2 columns
@@ -4082,7 +3905,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Konfiguration unbekannt |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-hkl-kontakte"></a>
 ### TAB_HKL_KONTAKTE
 
 Dimensions: 2 rows × 2 columns
@@ -4092,7 +3914,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | HKK |
 | 0x02 | HKKU |
 
-<a id="table-tab-hkl-max-pos-arg"></a>
 ### TAB_HKL_MAX_POS_ARG
 
 Dimensions: 2 rows × 2 columns
@@ -4102,7 +3923,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | INITIALIZATION_RUN |
 | 0x01 | CODING_PARAMETER |
 
-<a id="table-tab-hkl-max-pos-stat"></a>
 ### TAB_HKL_MAX_POS_STAT
 
 Dimensions: 3 rows × 2 columns
@@ -4113,7 +3933,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | max. obere Position wird durch CAF-Wert (Codierwert) vorgegeben |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-hkl-richtung"></a>
 ### TAB_HKL_RICHTUNG
 
 Dimensions: 3 rows × 2 columns
@@ -4124,7 +3943,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Richtung öffnen |
 | 0x02 | Richtung schließen |
 
-<a id="table-tab-hkl-taster"></a>
 ### TAB_HKL_TASTER
 
 Dimensions: 4 rows × 2 columns
@@ -4136,7 +3954,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | TOEHKI, Innenraumtaster Heckklappe |
 | 0x04 | TOEHKCL, Innenraumtaster Centerlock |
 
-<a id="table-tab-lara-abbruch-bew"></a>
 ### TAB_LARA_ABBRUCH_BEW
 
 Dimensions: 17 rows × 2 columns
@@ -4161,7 +3978,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Temperatur |
 | 0xFF | ungültig |
 
-<a id="table-tab-lara-abbruch-init"></a>
 ### TAB_LARA_ABBRUCH_INIT
 
 Dimensions: 17 rows × 2 columns
@@ -4186,7 +4002,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Reserve |
 | 0xFF | ungültig |
 
-<a id="table-tab-lara-bewegung"></a>
 ### TAB_LARA_BEWEGUNG
 
 Dimensions: 5 rows × 2 columns
@@ -4199,7 +4014,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | nicht verbaut |
 | 0xFF | ungültig |
 
-<a id="table-tab-lara-config"></a>
 ### TAB_LARA_CONFIG
 
 Dimensions: 5 rows × 2 columns
@@ -4212,7 +4026,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Konfiguration unbekannt |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-lara-init"></a>
 ### TAB_LARA_INIT
 
 Dimensions: 3 rows × 2 columns
@@ -4223,7 +4036,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Initialisierung ist in Ordnung |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-lara-plausibel"></a>
 ### TAB_LARA_PLAUSIBEL
 
 Dimensions: 11 rows × 2 columns
@@ -4242,7 +4054,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | automatischer Kalibrierlauf gestartet |
 | 0xFF | ungültig |
 
-<a id="table-tab-lara-position-g"></a>
 ### TAB_LARA_POSITION_G
 
 Dimensions: 5 rows × 2 columns
@@ -4255,7 +4066,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Position unbekannt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-motor-richtung"></a>
 ### TAB_MOTOR_RICHTUNG
 
 Dimensions: 5 rows × 2 columns
@@ -4268,7 +4078,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Öffnen |
 | 0x04 | Schließen |
 
-<a id="table-tab-rollo-anst-richtung"></a>
 ### TAB_ROLLO_ANST_RICHTUNG
 
 Dimensions: 3 rows × 2 columns
@@ -4279,7 +4088,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Ansteuerung nach oben |
 | 0x02 | Ansteuerung nach unten |
 
-<a id="table-tab-rollo-bewegung"></a>
 ### TAB_ROLLO_BEWEGUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4291,7 +4099,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | verfährt nach unten |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-rollo-position"></a>
 ### TAB_ROLLO_POSITION
 
 Dimensions: 6 rows × 2 columns
@@ -4305,7 +4112,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Blockierung erkannt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-sonnenrollo-config"></a>
 ### TAB_SONNENROLLO_CONFIG
 
 Dimensions: 4 rows × 2 columns
@@ -4317,7 +4123,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Konfiguration unbekannt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-0x4300"></a>
 ### TAB_0X4300
 
 Dimensions: 1 rows × 17 columns

@@ -51,7 +51,6 @@
 - [C_FG_SCHREIBEN](#job-c-fg-schreiben) - Fahrgestellnummer schreiben Standard Codierjob
 - [C_FG_AUFTRAG](#job-c-fg-auftrag) - Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -64,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -83,7 +81,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -107,7 +104,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -128,7 +124,6 @@ _No arguments._
 | F_ART1_TEXT | string | table FArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -141,7 +136,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -154,7 +148,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -167,7 +160,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-io-lines"></a>
 ### STATUS_IO_LINES
 
 Auslesen einiger interner Statusleitungen
@@ -183,7 +175,6 @@ _No arguments._
 | STAT_TEMP1 | int | 1-> Temperaturschwelle 1 ueberschritten (Subwoofer abgeschaltet), sonst 0 |
 | STAT_TEMP2 | int | 1-> Temperaturschwelle 2 ueberschritten (normale Endstufen aus), sonst 0 |
 
-<a id="job-status-dsp-on"></a>
 ### STATUS_DSP_ON
 
 Auslesen DS on/off
@@ -197,7 +188,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_DSP_ON | int | 0:DSP aus, 1:DSP an |
 
-<a id="job-status-dsp-volume"></a>
 ### STATUS_DSP_VOLUME
 
 Auslesen Lautstaerke
@@ -211,7 +201,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_VOLUME | int | Volume in dB (0 = maximum) |
 
-<a id="job-status-quelle"></a>
 ### STATUS_QUELLE
 
 Auslesen DSP Tonquelle
@@ -226,7 +215,6 @@ _No arguments._
 | STAT_QUELLE | int | Tonquelle |
 | STAT_QUELLE_TEXT | string | Tonquelle table QUELLE ORT |
 
-<a id="job-status-loudness"></a>
 ### STATUS_LOUDNESS
 
 Auslesen loudness on / off
@@ -240,7 +228,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_LOUDNESS_ON | int | 0: loudness off, 1: loudness on |
 
-<a id="job-status-balance"></a>
 ### STATUS_BALANCE
 
 Auslesen Einstellung Balance
@@ -254,7 +241,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_BALANCE | int | Einstellung der Balance (-16 rechts...links +16) |
 
-<a id="job-status-fader"></a>
 ### STATUS_FADER
 
 Auslesen Einstellung Fader
@@ -268,7 +254,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_FADER | int | Einstellung des Faders (-16 hinten...vorne +16) |
 
-<a id="job-status-bass"></a>
 ### STATUS_BASS
 
 Auslesen Einstellung Bass
@@ -282,7 +267,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_BASS | int | Einstellung des Basses (-16 ... +16) |
 
-<a id="job-status-treble"></a>
 ### STATUS_TREBLE
 
 Auslesen Einstellung Bass
@@ -296,7 +280,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_TREBLE | int | Einstellung der Hoehen (-16 ... +16) |
 
-<a id="job-status-gal"></a>
 ### STATUS_GAL
 
 Auslesen der GAL-Einstellung
@@ -310,7 +293,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_GAL | int | Einstellung der GAL (1 ... 6) |
 
-<a id="job-status-int-versionen"></a>
 ### STATUS_INT_VERSIONEN
 
 Auslesen interner Versionen
@@ -327,7 +309,6 @@ _No arguments._
 | DSP_VERSION | string |  |
 | TOOL_VERSION | string |  |
 
-<a id="job-reset"></a>
 ### RESET
 
 Loest einen Reset des Verstaerkers aus
@@ -340,7 +321,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-dsp"></a>
 ### STEUERN_DSP
 
 DSP Einstellungen veraendern
@@ -358,7 +338,6 @@ DSP Einstellungen veraendern
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-dsp-selbsttest"></a>
 ### DSP_SELBSTTEST
 
 startet den Digitalteil selbsttest (!anschliessend FS-lesen notwendig)
@@ -371,7 +350,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-lautsprecher-test-start"></a>
 ### LAUTSPRECHER_TEST_START
 
 startet die Lautsprecher-Testsequenz mit verschiedenen Frequenzen
@@ -384,7 +362,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-lautsprecher-test-ende"></a>
 ### LAUTSPRECHER_TEST_ENDE
 
 beendet die Lautsprecher-Testsequenz
@@ -397,7 +374,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -415,7 +391,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -432,7 +407,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben
@@ -449,7 +423,6 @@ Codierdaten schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -468,7 +441,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -486,7 +458,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -501,7 +472,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob
@@ -519,7 +489,6 @@ Fahrgestellnummer schreiben Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -550,7 +519,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 - [STEUERN](#table-steuern) (9 × 2)
 - [QUELLE](#table-quelle) (8 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -571,7 +539,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 63 rows × 2 columns
@@ -642,7 +609,6 @@ Dimensions: 63 rows × 2 columns
 | 0x62 | AB-Elektronik |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -671,7 +637,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -695,7 +660,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -717,7 +681,6 @@ Dimensions: 14 rows × 2 columns
 | 0x013 | Unterspannung Radio ein bei Selbsttest erkannt |
 | 0x0XY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -728,7 +691,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 9 rows × 2 columns
@@ -745,7 +707,6 @@ Dimensions: 9 rows × 2 columns
 | TREBLE | 0x07 |
 | GAL | 0x08 |
 
-<a id="table-quelle"></a>
 ### QUELLE
 
 Dimensions: 8 rows × 2 columns

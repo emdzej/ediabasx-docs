@@ -40,7 +40,6 @@
 - [_TEST_UNKNOWN_SERVICE](#job-test-unknown-service) - Test des Diagnoseservers: soll $7F $11 provozieren
 - [_TEST_UNIMPLEMENTED_ROUTINE](#job-test-unimplemented-routine) - Test des Diagnoseservers: soll Request Out Of Range ($7F $31 $31) provozieren
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 _No arguments._
@@ -51,7 +50,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-steuern-restart-hsfz-str"></a>
 ### STEUERN_RESTART_HSFZ_STR
 
 Restart HSFZ Start Routine
@@ -71,7 +69,6 @@ Restart HSFZ Start Routine
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-restart-hsfz-str-imloif"></a>
 ### _TEST_STEUERN_RESTART_HSFZ_STR_IMLOIF
 
 Restart HSFZ Start Routine Test mit fehlenden Parametern -> IMLOIF muss kommen
@@ -86,7 +83,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-restart-hsfz-stp"></a>
 ### _TEST_STEUERN_RESTART_HSFZ_STP
 
 Restart HSFZ Stop Routine Test Stop Routine, soll Fehlermeldung SFNS provozieren
@@ -101,7 +97,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei es sollte aber SFNS - Subfunction Not Supported kommen |
 
-<a id="job-steuern-restart-hsfz-rrr"></a>
 ### STEUERN_RESTART_HSFZ_RRR
 
 Restart HSFZ Request Routine Results
@@ -121,7 +116,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-create-ecu-routes-str"></a>
 ### STEUERN_CREATE_ECU_ROUTES_STR
 
 CreateEcuRoutes Start Routine Anlegen der Routen für ein Steuergerät
@@ -145,7 +139,6 @@ CreateEcuRoutes Start Routine Anlegen der Routen für ein Steuergerät
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-create-ecu-routes-str-imloif"></a>
 ### _TEST_STEUERN_CREATE_ECU_ROUTES_STR_IMLOIF
 
 Restart HSFZ Start Routine Test mit fehlenden Parametern -> IMLOIF muss kommen
@@ -160,7 +153,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-create-ecu-routes-stp"></a>
 ### _TEST_CREATE_ECU_ROUTES_STP
 
 Restart HSFZ Stop Routine Test Stop Routine, soll Fehlermeldung SFNS provozieren
@@ -175,7 +167,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei es sollte aber SFNS - Subfunction Not Supported kommen |
 
-<a id="job-steuern-create-ecu-routes-rrr"></a>
 ### STEUERN_CREATE_ECU_ROUTES_RRR
 
 Restart HSFZ Request Routine Results
@@ -194,7 +185,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-act-line-str"></a>
 ### STEUERN_SWITCH_ACT_LINE_STR
 
 SwitchActLine Start Routine Ethernet Aktivierungsleitung schalten
@@ -214,7 +204,6 @@ SwitchActLine Start Routine Ethernet Aktivierungsleitung schalten
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-switch-act-line-str-imloif"></a>
 ### _TEST_STEUERN_SWITCH_ACT_LINE_STR_IMLOIF
 
 SwitchActLine Start Routine Test mit fehlenden Parametern -> IMLOIF muss kommen
@@ -229,7 +218,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-act-line-stp"></a>
 ### STEUERN_SWITCH_ACT_LINE_STP
 
 SwitchActLine Stop Routine
@@ -244,7 +232,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-act-line-rrr"></a>
 ### STEUERN_SWITCH_ACT_LINE_RRR
 
 SwitchActLine Request Routine Results
@@ -260,7 +247,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-link-str"></a>
 ### STEUERN_SWITCH_LINK_STR
 
 SwitchActLine Start Routine Ethernet Aktivierungsleitung schalten
@@ -280,7 +266,6 @@ SwitchActLine Start Routine Ethernet Aktivierungsleitung schalten
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-switch-link-str-imloif"></a>
 ### _TEST_STEUERN_SWITCH_LINK_STR_IMLOIF
 
 SwitchActLine Start Routine Test mit fehlenden Parametern -> IMLOIF muss kommen
@@ -295,7 +280,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-link-stp"></a>
 ### STEUERN_SWITCH_LINK_STP
 
 SwitchActLine Stop Routine
@@ -310,7 +294,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-link-rrr"></a>
 ### STEUERN_SWITCH_LINK_RRR
 
 SwitchActLine Request Routine Results
@@ -327,7 +310,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-active-diagnostic-session"></a>
 ### ACTIVE_DIAGNOSTIC_SESSION
 
 active diagnostic session
@@ -342,7 +324,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-inq-hsfz-gw-str"></a>
 ### STEUERN_INQ_HSFZ_GW_STR
 
 Inquire HSFZ GatewayStart Routine
@@ -362,7 +343,6 @@ Inquire HSFZ GatewayStart Routine
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-inq-hsfz-gw-str-imloif"></a>
 ### _TEST_STEUERN_INQ_HSFZ_GW_STR_IMLOIF
 
 Inquire HSFZ GatewayStart Routine Test mit fehlenden Parametern -> IMLOIF muss kommen
@@ -377,7 +357,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-inq-hsfz-gw-stp"></a>
 ### STEUERN_INQ_HSFZ_GW_STP
 
 Inquire HSFZ Gateway Stop Routine
@@ -392,7 +371,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-inq-hsfz-gw-rrr"></a>
 ### STEUERN_INQ_HSFZ_GW_RRR
 
 Inquire HSFZ Gateway Request Routine Results
@@ -412,7 +390,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-check-url-str"></a>
 ### STEUERN_CHECK_URL_STR
 
 Inquire HSFZ GatewayStart Routine
@@ -434,7 +411,6 @@ Inquire HSFZ GatewayStart Routine
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-check-url-str-imloif"></a>
 ### _TEST_STEUERN_CHECK_URL_STR_IMLOIF
 
 Inquire HSFZ GatewayStart Routine Test mit fehlenden Parametern -> IMLOIF muss kommen
@@ -449,7 +425,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-check-url-stp"></a>
 ### STEUERN_CHECK_URL_STP
 
 Inquire HSFZ Gateway Stop Routine
@@ -464,7 +439,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-check-url-rrr"></a>
 ### STEUERN_CHECK_URL_RRR
 
 Inquire HSFZ Gateway Request Routine Results
@@ -482,7 +456,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-pin-control-str"></a>
 ### STEUERN_PIN_CONTROL_STR
 
 PinControl Start Routine Einstellen der gewünschten Pullup-Werte
@@ -502,7 +475,6 @@ PinControl Start Routine Einstellen der gewünschten Pullup-Werte
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-pin-control-str-imloif"></a>
 ### _TEST_STEUERN_PIN_CONTROL_STR_IMLOIF
 
 Test Routine for PIN Control Test mit fehlenden Parametern -> IMLOIF muss kommen
@@ -517,7 +489,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-test-steuern-pin-control-stop-routine-sfns"></a>
 ### _TEST_STEUERN_PIN_CONTROL_STOP_ROUTINE_SFNS
 
 Pin Control Stop Routine
@@ -532,7 +503,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei es sollte aber SFNS - Subfunction Not Supported kommen |
 
-<a id="job-steuern-pin-control-rrr"></a>
 ### STEUERN_PIN_CONTROL_RRR
 
 Pin Control Request Results Routine
@@ -557,7 +527,6 @@ _No arguments._
 | CanCl15 | string | 0x01 = Klemme 15 in Botschaft 130h Ein, 0x00 sonst |
 | CanPWF | string | Signal ST_CON_VEH( Bit 0 .. Bit 3) aus Byte 6 der Fahrzeugzustands-Botschaft (3Ch) |
 
-<a id="job-test-unknown-service"></a>
 ### _TEST_UNKNOWN_SERVICE
 
 Test des Diagnoseservers: soll $7F $11 provozieren
@@ -572,7 +541,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY sollte nicht kommen |
 
-<a id="job-test-unimplemented-routine"></a>
 ### _TEST_UNIMPLEMENTED_ROUTINE
 
 Test des Diagnoseservers: soll Request Out Of Range ($7F $31 $31) provozieren
@@ -594,7 +562,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (76 × 2)
 - [CU_ERR_TEXT](#table-cu-err-text) (7 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -678,7 +645,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-cu-err-text"></a>
 ### CU_ERR_TEXT
 
 Dimensions: 7 rows × 2 columns

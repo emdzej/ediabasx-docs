@@ -54,7 +54,6 @@
 - [STEUERN_JMCTEST](#job-steuern-jmctest) - MirrorCam-Test des Videomoduls Uebergabe eines Arguments Abfrage der Ergebnisse mit STATUS_JMCTEST Job nur fuer VM5IBUS (VM5_IBUS_CAM) ab SW16
 - [STATUS_JMCTEST](#job-status-jmctest) - Job nur fuer VM5IBUS (VM5_IBUS_CAM) ab SW 16 Ergebnisse des MirrorCam-Tests STEUERN_JMCTEST oder STEUERN_SELBSTTEST muss vorher gesendet werden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -73,7 +72,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -94,7 +92,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-powerdown-mode"></a>
 ### POWERDOWN_MODE
 
 SG in PowerDown-Mode versetzen
@@ -113,7 +110,6 @@ SG in PowerDown-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Videomodul TV-Teil
@@ -126,7 +122,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Videomodul TV-Teil
@@ -150,7 +145,6 @@ _No arguments._
 | ID_SW_NR | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low Konzept ohne Umweltbedingung
@@ -169,7 +163,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingen, hier 0 |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Shadowspeicher lesen
@@ -188,7 +181,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingen, hier 0 |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-pruefstempel-lesen"></a>
 ### Pruefstempel_lesen
 
 Auslesen des Pruefstempels
@@ -206,7 +198,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Daten in den Pruefstempel schreiben
@@ -226,7 +217,6 @@ Daten in den Pruefstempel schreiben
 | JOB_STATUS | string | normalerweise "OKAY" |
 | _TEL_SENDE | binary |  |
 
-<a id="job-speicher-lesen"></a>
 ### Speicher_lesen
 
 Lesen, welche Parameter geladen sind
@@ -252,7 +242,6 @@ Lesen, welche Parameter geladen sind
 | EINGABEFEHLER | string | Fehlertextausgabe bei Eingabe >27 Byte |
 | _TEL_SENDE | binary | gesendetes Telegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen im Videomodul TV-Teil
@@ -265,7 +254,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Selbsttest des Videomoduls Uebergabe eines Arguments nur bei VM5IBus ab SW12 und VM_HYBRID_IBUS Bei VM_HYBRID_IBUS und bei VM5IBUS ab SW16 (VM5_IBUS_CAM) sind waehrend diesen Tests weitere Diagnosefunktionen moeglich.
@@ -284,7 +272,6 @@ Selbsttest des Videomoduls Uebergabe eines Arguments nur bei VM5IBus ab SW12 und
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-sg-status-lesen"></a>
 ### SG_STATUS_LESEN
 
 Stati lesen am Videomodul TV-Teil
@@ -334,7 +321,6 @@ _No arguments._
 | STAT_ANTENNE2_WERT | int | nur VM_HYBRID_IBUS |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-einzeltest-antennen"></a>
 ### STEUERN_EINZELTEST_ANTENNEN
 
 Job nur fuer VM_HYBRID_IBUS Pruefung der Fernspeisung des Videomoduls Pruefung des Antennenstroms  des Videomoduls
@@ -353,7 +339,6 @@ Job nur fuer VM_HYBRID_IBUS Pruefung der Fernspeisung des Videomoduls Pruefung d
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-sg-status-einzeltest-antennen"></a>
 ### SG_STATUS_EINZELTEST_ANTENNEN
 
 Job nur fuer VM_HYBRID_IBUS Ergebnis des Antennentests
@@ -373,7 +358,6 @@ _No arguments._
 | STAT_ANTENNE2_WERT | int | nur VM_HYBRID_IBUS |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sg-st-messwerte-lesen"></a>
 ### SG_ST_MESSWERTE_LESEN
 
 SG Lesen der aktuellen Messwerte nach Selbsttest
@@ -392,7 +376,6 @@ SG Lesen der aktuellen Messwerte nach Selbsttest
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sg-vorgabe-analog-tv-kanal"></a>
 ### SG_VORGABE_ANALOG_TV_KANAL
 
 Umschalten eines analogen Kanals und dessen Norm Job fuer VM5Ibus ab SW 11 und VM_HYBRID_IBUS Argument_1 Kanal (Bereich von 1 bis 99) Argument_2 Norm  (Bereich von 2 bis 21)  Wird Argument 2 (Norm) nicht uebergeben, dann ist automatisch PAL BG eingestellt. Es muss vor Aufruf des Jobs auf TV umgeschaltet werden. Jetzt darf das VM_Hybrid_IBus nicht auf einem digitalen Kanal stehen, da mit diesem Job nur analoge Kanaele umgeschaltet werden koennen.  Argument 1  Kanal 1..99 Argument 2  TV-Norm 2     NTSC_M 3     NTSC JAPAN 4     PAL_BG 5     PAL_BG (default) 6     PAL_I 7     PAL_M 8     PAL_N 9     PAL_DK 10    PAL AUSTRALIA 11    PAL ITALIA 12    PAL MOROCCO 13    PAL_DK OIRT 14    PAL NEWZEALAND 15    PAL CHINA 16    SECAM_BG 17    SECAM_DK 18    SECAM_K1 19    SECAM_L FRANCE 20    SECAM MOROCCO 21    PAL_BG OIRT 
@@ -412,7 +395,6 @@ Umschalten eines analogen Kanals und dessen Norm Job fuer VM5Ibus ab SW 11 und V
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-steuern-channel-set"></a>
 ### STEUERN_CHANNEL_SET
 
 Aufschalten eines analogen oder digitalen Kanals Job nur fuer VM_HYBRID_IBUS ab SW 18 Kanal (Bereich von 1 bis 99)  Hinweis: kann bis zu mehreren Sekunden andauern mit STATUS_CHANNEL_SET abfragen ob Abstimmung fertig Argument Kanal 1..99
@@ -431,7 +413,6 @@ Aufschalten eines analogen oder digitalen Kanals Job nur fuer VM_HYBRID_IBUS ab 
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | _TEL_SENDE | binary | Sendetelegramm |
 
-<a id="job-status-channel-set"></a>
 ### STATUS_CHANNEL_SET
 
 Abfrage Tunerabstimmung Job nur fuer VM_HYBRID_IBUS ab SW 18
@@ -450,7 +431,6 @@ _No arguments._
 | STAT_ANALOG_DIGITAL_TXT | string | Analog oder Digital |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-biterror-rate"></a>
 ### STATUS_BITERROR_RATE
 
 Abfrage BER nach Viterbi Job nur fuer VM_HYBRID_IBUS ab SW 18 Die Ausgabe erfolgt in 4 Empfangsstufen VM muss auf einen digitalem Kanal eingestellt werden BER-Werte nur für Digitalempfang
@@ -465,7 +445,6 @@ _No arguments._
 | STAT_VBER_TXT | string | Info |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-testbild"></a>
 ### STEUERN_TESTBILD
 
 Job fuer VM_HYBRID_IBUS ab SW18 und fuer VM5IBUS (VM5_IBUS_CAM) ab SW 16 Starten des Testbilds fuer 1..30 Sekunden Valid Time Argument: Argument: 0 = Testbild aus Argument: 1...30  = Testbild 1...30 Sekunden
@@ -484,7 +463,6 @@ Job fuer VM_HYBRID_IBUS ab SW18 und fuer VM5IBUS (VM5_IBUS_CAM) ab SW 16 Starten
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_SENDE | binary | Sendetelegramm |
 
-<a id="job-codierung-laendervariante-lesen"></a>
 ### CODIERUNG_LAENDERVARIANTE_LESEN
 
 Speicher lesen EEPROM
@@ -501,7 +479,6 @@ _No arguments._
 | ID_COD_INDEX | int | aus Id-lesen |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -514,7 +491,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY" |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -531,7 +507,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten lesen
@@ -549,7 +524,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-cs-bilden"></a>
 ### CS_BILDEN
 
 _No arguments._
@@ -560,7 +534,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -575,7 +548,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -593,7 +565,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-modul-info"></a>
 ### MODUL_INFO
 
 MODUL-Info-Daten fuer Videomodul TV-Teil
@@ -614,7 +585,6 @@ _No arguments._
 | VM_EEPROM_INDEX | string | EE-Layout-Index |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-nec-monitor-typ-basisbetrieb"></a>
 ### NEC_MONITOR_TYP_BASISBETRIEB
 
 NEC-Monitor-Typ Umschaltung (4:3 Monitor). Job nur bei Anzeigeproblemen mit GT-BASIS-Konfiguration. Bei Problemen wg. Helligkeitspumpen und Ruecklauflinien im Hauptmenue
@@ -632,7 +602,6 @@ NEC-Monitor-Typ Umschaltung (4:3 Monitor). Job nur bei Anzeigeproblemen mit GT-B
 | JOB_STATUS | string | normalerweise "OKAY" |
 | _TEL_SENDE | binary |  |
 
-<a id="job-steuern-jmc-blanking"></a>
 ### STEUERN_JMC_BLANKING
 
 Schwarzes Fenster links oder rechts des Bildes Kamera muss zugeschaltet sein Job nur fuer VM5IBUS (VM5_IBUS_CAM) ab SW 16  Argument1: schwarzer Balken links erhoehen    = 1 Argument1: schwarzer Balken links verringern  = 2 Argument1: schwarzer Balken rechts erhoehen   = 3 Argument1: schwarzer Balken rechts verringern = 4 Argument1: Normalstellung links               = 5 Argument1: Normalstellung rechts              = 6
@@ -650,7 +619,6 @@ Schwarzes Fenster links oder rechts des Bildes Kamera muss zugeschaltet sein Job
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-steuern-jmc-settings"></a>
 ### STEUERN_JMC_SETTINGS
 
 Aendern von Kontrast, Helligkeit, Farbe oder Tint Job nur fuer VM5IBUS (VM5_IBUS_CAM) ab SW 16 JMC muss eingeschaltet sein Argument1: Kontrast           = 1 Argument1: Helligkeit         = 2 Argument1: Farbe              = 3 Argument1: Tint (bei NTSC)    = 4 Argument1: Werte lesen        = 5 ( Kein Argument2 notwendig) Argument1: Grundeinstellung   = 6 ( Kein Argument2 notwendig) Argument2: Bereich von 1 bis 100 Prozent
@@ -674,7 +642,6 @@ Aendern von Kontrast, Helligkeit, Farbe oder Tint Job nur fuer VM5IBUS (VM5_IBUS
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | _TEL_SENDE | binary | Sendetelegramm |
 
-<a id="job-steuern-jmctest"></a>
 ### STEUERN_JMCTEST
 
 MirrorCam-Test des Videomoduls Uebergabe eines Arguments Abfrage der Ergebnisse mit STATUS_JMCTEST Job nur fuer VM5IBUS (VM5_IBUS_CAM) ab SW16
@@ -693,7 +660,6 @@ MirrorCam-Test des Videomoduls Uebergabe eines Arguments Abfrage der Ergebnisse 
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-status-jmctest"></a>
 ### STATUS_JMCTEST
 
 Job nur fuer VM5IBUS (VM5_IBUS_CAM) ab SW 16 Ergebnisse des MirrorCam-Tests STEUERN_JMCTEST oder STEUERN_SELBSTTEST muss vorher gesendet werden
@@ -730,7 +696,6 @@ _No arguments._
 - [IORTTEXTE](#table-iorttexte) (14 × 2)
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -751,7 +716,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -776,7 +740,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -860,7 +823,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-segmentauswahl"></a>
 ### SEGMENTAUSWAHL
 
 Dimensions: 6 rows × 2 columns
@@ -874,7 +836,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0B | internes RAM IDATA |
 | 0xXY | Unbekanntes Segment |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -886,7 +847,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | FeTraWe aktiviert |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -908,7 +868,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0D | TV-Tunerinitialisierungs-Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns

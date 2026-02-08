@@ -10,7 +10,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Kommunikationsparameter
 - [IDENTIFIKATION](#job-identifikation) - !!! nur in Gruppendatei !!!
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Kommunikationsparameter
@@ -23,7 +22,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-identifikation"></a>
 ### IDENTIFIKATION
 
 !!! nur in Gruppendatei !!!

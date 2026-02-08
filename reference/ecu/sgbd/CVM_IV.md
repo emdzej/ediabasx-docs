@@ -48,7 +48,6 @@
 - [RESET](#job-reset) - Steuergeraet in RESET-Zustand versetzen
 - [LOGIN](#job-login) - Login job
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -67,7 +66,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -80,7 +78,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -104,7 +101,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -122,7 +118,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -141,7 +136,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -160,7 +154,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -173,7 +166,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -186,7 +178,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob
@@ -201,7 +192,6 @@ _No arguments._
 | ID_COD_INDEX | int | Codier-Index |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -216,7 +206,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob
@@ -234,7 +223,6 @@ Fahrgestellnummer schreiben Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -252,7 +240,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes FE-TRA-MODE Es muss immer das Argument "0" uebergeben werden
@@ -269,7 +256,6 @@ Einstellen des Energiesparmodes FE-TRA-MODE Es muss immer das Argument "0" ueber
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers des CVM Als Argumente werden die Anzahl und die Adresse der Datenbytes uebergeben.
@@ -288,7 +274,6 @@ Lesen des internen Speichers des CVM Als Argumente werden die Anzahl und die Adr
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Schreibzugriff auf einzelne RAM-Zellen Als Argumente wird die Adresse der zu aendernden Zelle sowie deren Soll-Inhalt uebergeben.
@@ -306,7 +291,6 @@ Schreibzugriff auf einzelne RAM-Zellen Als Argumente wird die Adresse der zu aen
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Lesezugriff auf die einzelnen Codierdatenbloecke Als Argument wird die Nummer des zu lesenden Codierdatenblockes uebergeben
@@ -324,7 +308,6 @@ Lesezugriff auf die einzelnen Codierdatenbloecke Als Argument wird die Nummer de
 | DATEN | binary | Es werden jeweils die 16 Byte des angesprochenen Codierdatenblockes ausgegeben |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 es werden die Eingangs- und Ausgangsstati aus dem Steuergeraet gelesen Die Auflistung der Statusbits erfolgt von LSB nach MSB
@@ -362,7 +345,6 @@ _No arguments._
 | STAT_VERDECKZAEHLER_AUF_NR | int | gibt Anzahl der Verdecklaeufe in Richtung auf an |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-steuern-verdeck"></a>
 ### STEUERN_VERDECK
 
 Default ident job
@@ -380,7 +362,6 @@ Default ident job
 | JOB_STATUS | string |  |
 | TEL | binary |  |
 
-<a id="job-hersteller-schreiben"></a>
 ### HERSTELLER_SCHREIBEN
 
 Default ident job
@@ -400,7 +381,6 @@ Default ident job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-hersteller-lesen"></a>
 ### HERSTELLER_LESEN
 
 Default ident job
@@ -417,7 +397,6 @@ _No arguments._
 | BYTE3 | int | Herstellerdaten Byte 3: 0x00...0xFF |
 | BYTE4 | int | Herstellerdaten Byte 4: 0x00...0xFF |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -430,7 +409,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -444,7 +422,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -473,7 +450,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 is_lesen job
@@ -496,7 +472,6 @@ _No arguments._
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 | TEL | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -514,7 +489,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -531,7 +505,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-reset"></a>
 ### RESET
 
 Steuergeraet in RESET-Zustand versetzen
@@ -544,7 +517,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-login"></a>
 ### LOGIN
 
 Login job
@@ -575,7 +547,6 @@ Login job
 - [FUMWELTTEXTE](#table-fumwelttexte) (3 × 3)
 - [STEUERN](#table-steuern) (3 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -596,7 +567,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 69 rows × 2 columns
@@ -673,7 +643,6 @@ Dimensions: 69 rows × 2 columns
 | 0x68 | Atena GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -702,7 +671,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 53 rows × 2 columns
@@ -763,7 +731,6 @@ Dimensions: 53 rows × 2 columns
 | 0x6E | reserviert |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -774,7 +741,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -796,7 +762,6 @@ Dimensions: 14 rows × 2 columns
 | 0x7B | Fehler bei Aktivierung HHS |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 3 rows × 3 columns
@@ -807,7 +772,6 @@ Dimensions: 3 rows × 3 columns
 | 0x01 | Aussentemperatur | Grad C |
 | 0xXY | unbekannte Umweltbedingung | -- |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 3 rows × 3 columns

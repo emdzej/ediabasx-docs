@@ -23,7 +23,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung
 - [IDENT](#job-ident) - Fakeantwort notwendig wegen ISTA zur Steuerung SG-Baum
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -42,7 +41,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -55,7 +53,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Fakeantwort notwendig wegen ISTA zur Steuerung SG-Baum

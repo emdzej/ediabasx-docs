@@ -51,7 +51,6 @@
 - [STATUS_EWS_KF](#job-status-ews-kf) - Auslesen des KF aus dem SG. Weitere Details zum Telegramm-Aufbau siehe EWS6-LH.  0xC003 STATUS_EWS_KF
 - [STEUERN_EWS](#job-steuern-ews) - Der Job dient zum Ansteuern von EWS-Aktionen. Weitere Details zum Telegramm-Aufbau siehe EWS6-LH.  0xC001 STEUERN_EWS_SK
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -70,7 +69,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -83,7 +81,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -100,7 +97,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -131,7 +127,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -176,7 +171,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -195,7 +189,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -213,7 +206,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -234,7 +226,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -263,7 +254,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -283,7 +273,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -304,7 +293,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -320,7 +308,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -342,7 +329,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -361,7 +347,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -388,7 +373,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -433,7 +417,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -448,7 +431,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -468,7 +450,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -487,7 +468,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -506,7 +486,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -525,7 +504,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -545,7 +523,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -562,7 +539,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -581,7 +557,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -596,7 +571,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -613,7 +587,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -628,7 +601,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -643,7 +615,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews"></a>
 ### STATUS_EWS
 
 Der Job liefert den SG-internen Zustand der EWS-Funktion. Weitere Details zum Telegramm-Aufbau siehe EWS6-LH.  0xC000 STATUS_EWS
@@ -666,7 +637,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews-kf"></a>
 ### STATUS_EWS_KF
 
 Auslesen des KF aus dem SG. Weitere Details zum Telegramm-Aufbau siehe EWS6-LH.  0xC003 STATUS_EWS_KF
@@ -683,7 +653,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews"></a>
 ### STEUERN_EWS
 
 Der Job dient zum Ansteuern von EWS-Aktionen. Weitere Details zum Telegramm-Aufbau siehe EWS6-LH.  0xC001 STEUERN_EWS_SK
@@ -826,7 +795,6 @@ Der Job dient zum Ansteuern von EWS-Aktionen. Weitere Details zum Telegramm-Aufb
 - [TAB_0X5063](#table-tab-0x5063) (1 × 5)
 - [TAB_0X5064](#table-tab-0x5064) (1 × 8)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -910,7 +878,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -1059,7 +1026,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1102,7 +1068,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1127,7 +1092,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1161,7 +1125,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1234,7 +1197,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1247,7 +1209,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1262,7 +1223,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1275,7 +1235,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1295,7 +1254,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1338,7 +1296,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1349,7 +1306,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x102f-r"></a>
 ### ARG_0X102F_R
 
 Dimensions: 1 rows × 14 columns
@@ -1358,7 +1314,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MESSEMODUS | + | - | 0-n | high | unsigned char | - | PWF_MESSEMODUS | - | - | - | - | - | Das Argument gibt an in welchen Fahrzeugzustand  geschaltet werden soll. |
 
-<a id="table-arg-0xa205-r"></a>
 ### ARG_0XA205_R
 
 Dimensions: 1 rows × 14 columns
@@ -1367,7 +1322,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ELV_ANSTEUERN | + | - | 0-n | high | unsigned char | - | TAB_STEUERN_ELV_ARG | - | - | - | - | - | Das Argument enthält die durchzuführende ELV-Aktion |
 
-<a id="table-arg-0xf785-r"></a>
 ### ARG_0XF785_R
 
 Dimensions: 3 rows × 14 columns
@@ -1378,7 +1332,6 @@ Dimensions: 3 rows × 14 columns
 | SENSOR_EEPROM_KEY | + | - | HEX | high | unsigned int | - | - | - | - | - | - | - | nötiger Key zum auslesen eines bestimmten Speicherbereiches |
 | SENSOR_EEPROM_DATA | + | - | HEX | high | unsigned int | - | - | - | - | - | - | - | zu schreibende Daten  |
 
-<a id="table-arg-0xf788-r"></a>
 ### ARG_0XF788_R
 
 Dimensions: 2 rows × 14 columns
@@ -1388,7 +1341,6 @@ Dimensions: 2 rows × 14 columns
 | SENSOR_MOMORY_ADDRESS_1 | + | - | HEX | high | unsigned int | - | - | - | - | - | - | - | erster Teil der Speicheradresen zum Auslesen des Sensorspeichers |
 | SENSOR_MOMORY_ADDRESS_2 | + | - | HEX | high | unsigned int | - | - | - | - | - | - | - | zweiter Teil der Speicheradresen zum Auslesen des Sensorspeichers |
 
-<a id="table-arg-0xf789-r"></a>
 ### ARG_0XF789_R
 
 Dimensions: 1 rows × 14 columns
@@ -1397,7 +1349,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_INIT_MEM_WERT | + | - | 0-n | high | unsigned char | - | TAB_ELV_MEM_INIT | - | - | - | - | - | Startet die Initialisierung des Speichers |
 
-<a id="table-arg-0xf78a-r"></a>
 ### ARG_0XF78A_R
 
 Dimensions: 4 rows × 14 columns
@@ -1409,7 +1360,6 @@ Dimensions: 4 rows × 14 columns
 | STAT_ELV_TGS_DATA | + | - | DATA | high | data[3] | - | - | 1.0 | 1.0 | 0.0 | - | - | Teilegenerationsstand bei UShin |
 | STAT_ELV_BMW_SACHNUMMER_DATA | + | - | DATA | high | data[9] | - | - | 1.0 | 1.0 | 0.0 | - | - | BMW Sachnummer |
 
-<a id="table-arg-0xf78b-r"></a>
 ### ARG_0XF78B_R
 
 Dimensions: 1 rows × 14 columns
@@ -1418,7 +1368,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ELV_CLEAR_HISTORYSTORAGE | + | - | 0-n | high | unsigned char | - | TAB_ELV_CLEAR_HISTORY | - | - | - | - | - | Löschen des Inhaltes des Historienspeichers in abhängigkeit des Übergabeparameters |
 
-<a id="table-arg-0xfd01-d"></a>
 ### ARG_0XFD01_D
 
 Dimensions: 1 rows × 12 columns
@@ -1427,7 +1376,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | USHIN_PROCESS_STEP | 0-n | high | unsigned char | - | TAB_PROC_STEP | - | - | - | - | - | Die Herstellung der ELV und der EOL Test wurden positiv durchlaufen und abgeschlossen. |
 
-<a id="table-arg-0xfd02-d"></a>
 ### ARG_0XFD02_D
 
 Dimensions: 1 rows × 12 columns
@@ -1436,7 +1384,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PCBA_PROCESS_STEP_DATA | 0-n | high | unsigned char | - | TAB_PROD_STEP | - | - | - | - | - | Durchlaufende Prozess-Schritte als iO geprüft bestätigen. ICT,AOI,FCT,Coating etc. |
 
-<a id="table-arg-0xfd03-d"></a>
 ### ARG_0XFD03_D
 
 Dimensions: 3 rows × 12 columns
@@ -1447,7 +1394,6 @@ Dimensions: 3 rows × 12 columns
 | STAT_PCBA_PN_VALUE_DATA | DATA | high | data[4] | - | - | 1.0 | 1.0 | 0.0 | - | - | interne Produktidentifizierung der PCBA bei IMI - BCD codiert |
 | STAT_PCBA_CONSECUTIVE_NUMBER_DATA | DATA | high | data[4] | - | - | 1.0 | 1.0 | 0.0 | - | - | Seriennummer der PCBA bei IMI, 8 digits, fortlaufende nummer |
 
-<a id="table-arg-0xfd05-d"></a>
 ### ARG_0XFD05_D
 
 Dimensions: 1 rows × 12 columns
@@ -1456,7 +1402,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ELV_TGS_DATA | DATA | high | data[3] | - | - | 1.0 | 1.0 | 0.0 | - | - | Teilegenerationsstand (ASCII-Coded) |
 
-<a id="table-arg-0xfd06-d"></a>
 ### ARG_0XFD06_D
 
 Dimensions: 1 rows × 12 columns
@@ -1465,7 +1410,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ELV_SERIAL_NUMBER_DATA | DATA | high | data[12] | - | - | 1.0 | 1.0 | 0.0 | - | - | UShin Seriennummer der ELV |
 
-<a id="table-arg-0xfd16-d"></a>
 ### ARG_0XFD16_D
 
 Dimensions: 1 rows × 12 columns
@@ -1474,7 +1418,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ELV_RESET_DATA | 0-n | high | unsigned char | - | TAB_STAT_ELV_MEM_RESET_VAL | - | - | - | - | - | Definitione der Daten die Rückgesetzt werden sollen. |
 
-<a id="table-arg-0xfd19-d"></a>
 ### ARG_0XFD19_D
 
 Dimensions: 1 rows × 12 columns
@@ -1483,7 +1426,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ELV_BMW_SACHNUMMER | DATA | high | data[9] | - | - | 1.0 | 1.0 | 0.0 | - | - | BMW Sachnummer der ELV |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1497,7 +1439,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1511,7 +1452,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 54 rows × 3 columns
@@ -1573,7 +1513,6 @@ Dimensions: 54 rows × 3 columns
 | 0xE25CB1 | Botschaftsfehler (Daten_EWS_7, ID: DT_EWS_7) Timeout | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 58 rows × 9 columns
@@ -1639,7 +1578,6 @@ Dimensions: 58 rows × 9 columns
 | 0x5064 | Sub-Tabelle | 0-n | - | 0xFF | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -1652,7 +1590,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 55 rows × 3 columns
@@ -1715,7 +1652,6 @@ Dimensions: 55 rows × 3 columns
 | 0x48387F | Dummy DTC für Kompatibilitaet der SGBD (alte Umweltdaten) | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 63 rows × 9 columns
@@ -1786,7 +1722,6 @@ Dimensions: 63 rows × 9 columns
 | 0x5064 | Sub-Tabelle | 0-n | - | 0xFF | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1795,7 +1730,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-process-class-dop"></a>
 ### PROCESS_CLASS_DOP
 
 Dimensions: 20 rows × 2 columns
@@ -1823,7 +1757,6 @@ Dimensions: 20 rows × 2 columns
 | 162 | FreischaltecodeFunktion |
 | 255 | reserved |
 
-<a id="table-pwf-messemodus"></a>
 ### PWF_MESSEMODUS
 
 Dimensions: 3 rows × 2 columns
@@ -1834,7 +1767,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | MESSEMODUS_AKTIV |
 | 0xFF | Wert ungültig |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -1852,7 +1784,6 @@ Dimensions: 10 rows × 2 columns
 | 0x43 | HDDUpdateSession |
 | 0xff | ungültig |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -1864,7 +1795,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | ECU nicht mehr programmierbar |
 | 0xff | ungültig |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -1875,7 +1805,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -1889,7 +1818,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0xa205-r"></a>
 ### RES_0XA205_R
 
 Dimensions: 2 rows × 13 columns
@@ -1899,7 +1827,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ELV_AUSFUEHRUNGSSTATUS | + | - | - | 0-n | high | unsigned char | - | TAB_ELV_AUSFUEHRUNGSSTATUS | - | - | - | Das Ergebnis liefert bei der  Ausführung der angeforderten Aktion u.U. aufgetretene Fehler. Hinweis:  Es wird nur der erste aufgetretene Fehler zurückgeliefert  |
 | STAT_AUSFUERUNGSSTATUS | - | - | + | 0-n | high | unsigned char | - | TAB_ELV_AUSFUEHRUNGSSTATUS | - | - | - | Ausführungsstatus laut Tabelle TAB_ELV_AUSFUERUNGSSTATUS |
 
-<a id="table-res-0xf781-r"></a>
 ### RES_0XF781_R
 
 Dimensions: 1 rows × 13 columns
@@ -1908,7 +1835,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CALIBRATION_RESULT | - | - | + | 0-n | high | unsigned char | - | TAB_STATUS_ELV_KALIBRIERUNG | - | - | - | Gibt es Status der Kalibrierroutine zurück |
 
-<a id="table-res-0xf782-r"></a>
 ### RES_0XF782_R
 
 Dimensions: 1 rows × 13 columns
@@ -1917,7 +1843,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SENSOR_EEPROM_READ | - | - | + | 0-n | high | unsigned char | - | STAT_TAB_SENSOR_READ_MEMORY | - | - | - | Status der Routine des Auslesevorganges der ELV aus dem EEPROM |
 
-<a id="table-res-0xf785-r"></a>
 ### RES_0XF785_R
 
 Dimensions: 1 rows × 13 columns
@@ -1926,7 +1851,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SENSOR_EEPROM_READ | - | - | + | 0-n | high | unsigned char | - | STAT_TAB_SENSOR_READ_MEMORY | - | - | - | Status der Routine des Auslesevorganges der ELV aus dem EEPROM |
 
-<a id="table-res-0xf788-r"></a>
 ### RES_0XF788_R
 
 Dimensions: 1 rows × 13 columns
@@ -1935,7 +1859,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SENSOR_READ_RESULT | - | - | + | 0-n | high | unsigned char | - | STAT_TAB_SENSOR_READ | - | - | - | Ergebnis des Leseprozesses der ELV aus dem Sensorspeicher |
 
-<a id="table-res-0xf789-r"></a>
 ### RES_0XF789_R
 
 Dimensions: 1 rows × 13 columns
@@ -1944,7 +1867,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MEM_INIT_RESULT | - | - | + | 0-n | high | unsigned char | - | TAB_MEM_INIT_RESULT | - | - | - | Gibt das ergebniss der Routine der Initialisierung des Speichers zurück. |
 
-<a id="table-res-0xf78a-r"></a>
 ### RES_0XF78A_R
 
 Dimensions: 1 rows × 13 columns
@@ -1953,7 +1875,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PROD_DATA_WRITE_RESULT | - | - | + | 0-n | high | unsigned char | - | TAB_PROD_DATA_WRITE_PROCESS | - | - | - | Ergebnis der Schreibrouting der Produktionsdaten der ELV |
 
-<a id="table-res-0xf78b-r"></a>
 ### RES_0XF78B_R
 
 Dimensions: 1 rows × 13 columns
@@ -1962,7 +1883,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_HISTORYSTORAGE_CLEAR_PROCESS | - | - | + | 0-n | high | unsigned char | - | TAB_ELV_CLEAR_HISTORY_PROCESS | - | - | - | Gibt den Status des Löschprozesses des Historienspeichers der ELV zurück |
 
-<a id="table-res-0xfd01-d"></a>
 ### RES_0XFD01_D
 
 Dimensions: 1 rows × 10 columns
@@ -1971,7 +1891,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PROCESS_STEP_ELV | 0-n | high | unsigned char | - | TAB_ELV_PROC_STEP | - | - | - | Prüfschritte bei UShin erfolgreich abgeschlossen |
 
-<a id="table-res-0xfd02-d"></a>
 ### RES_0XFD02_D
 
 Dimensions: 1 rows × 10 columns
@@ -1980,7 +1899,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PCBA_PROCESS_STEP | 0-n | high | unsigned char | - | TAB_PCBA_PROD_STEP | - | - | - | Prüfschritte beim Leiterplatten-Lieferant erfolgreich abgeschlossen ( ICT,AOI,FCT, flashing, coting etc. ) |
 
-<a id="table-res-0xfd04-d"></a>
 ### RES_0XFD04_D
 
 Dimensions: 4 rows × 10 columns
@@ -1992,7 +1910,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_PCBA_CONSECUTIVE_NUMBER_DATA | DATA | high | data[4] | - | - | 1.0 | 1.0 | 0.0 | Seriennummer der PCBA bei IMI, 8 digits, fortlaufende nummer |
 | STAT_BMW_HW_SGBM_ID_DATA | DATA | high | data[8] | - | - | 1.0 | 1.0 | 0.0 | Hardware Index der PCBA |
 
-<a id="table-res-0xfd05-d"></a>
 ### RES_0XFD05_D
 
 Dimensions: 1 rows × 10 columns
@@ -2001,7 +1918,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ELV_TGS_DATA | DATA | high | data[3] | - | - | 1.0 | 1.0 | 0.0 | Teilegenerationsstand der ELV |
 
-<a id="table-res-0xfd06-d"></a>
 ### RES_0XFD06_D
 
 Dimensions: 1 rows × 10 columns
@@ -2010,7 +1926,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ELV_SERIAL_NUMBER_DATA | DATA | high | data[12] | - | - | 1.0 | 1.0 | 0.0 | UShin Seriennummer der ELV |
 
-<a id="table-res-0xfd07-d"></a>
 ### RES_0XFD07_D
 
 Dimensions: 3 rows × 10 columns
@@ -2021,7 +1936,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SENSOR_MEMORY_1_WERT | HEX | high | unsigned int | - | - | - | - | - | Daten aus dem Speicher des Hall Sensors Teil 1 |
 | STAT_SENSOR_MEMORY_2_WERT | HEX | high | unsigned int | - | - | - | - | - | Daten aus dem Speicher des Hall Sensors Teil 2 |
 
-<a id="table-res-0xfd08-d"></a>
 ### RES_0XFD08_D
 
 Dimensions: 3 rows × 10 columns
@@ -2032,7 +1946,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SENSOR_EEPROM_LENGH_WERT | HEX | high | unsigned int | - | - | - | - | - | Länge der ausgelesenen Daten |
 | STAT_SENSOR_EEPROM_DATA | DATA | high | data[128] | - | - | 1.0 | 1.0 | 0.0 | Ausgelesene Daten aus dem EEPROM des Hall Sensors |
 
-<a id="table-res-0xfd09-d"></a>
 ### RES_0XFD09_D
 
 Dimensions: 2 rows × 10 columns
@@ -2042,7 +1955,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SENSOR_RAW_ANGLE_WERT | HEX | high | unsigned long | - | - | - | - | - | 14 Bits RAW Wert des Sensors |
 | STAT_SENSOR_CAL_ANGLE_WERT | HEX | high | unsigned long | - | - | - | - | - | kalibrierter 32 Bit Sensorwert inkl. Korrektur |
 
-<a id="table-res-0xfd0a-d"></a>
 ### RES_0XFD0A_D
 
 Dimensions: 4 rows × 10 columns
@@ -2054,7 +1966,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_UNL_BRAKE_COEF_WERT | HEX | high | unsigned char | - | - | - | - | - | Coeffizient für die Gewichtung der Geschwindigkeit für die Bremspunktbestimmung in Entriegelungsrichtung. (ms) |
 | STAT_UNL_BREAK_POS_WERT | HEX | high | unsigned long | - | - | - | - | - | Konstante zur Ermittlung des Bremspunkts in Entriegelungssrichtung. Referenzwinkel für die Bremsposition (LSB=360*2^-16) (° Grad) |
 
-<a id="table-res-0xfd0f-d"></a>
 ### RES_0XFD0F_D
 
 Dimensions: 4 rows × 10 columns
@@ -2066,7 +1977,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ELV_TGS_DATA | DATA | high | data[3] | - | - | 1.0 | 1.0 | 0.0 | Teilegenerationsstand bei UShin |
 | STAT_ELV_BMW_SACHNUMMER_DATA | DATA | high | data[9] | - | - | 1.0 | 1.0 | 0.0 | BMW Sachnummer |
 
-<a id="table-res-0xfd10-d"></a>
 ### RES_0XFD10_D
 
 Dimensions: 2 rows × 10 columns
@@ -2076,7 +1986,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_INV_CALIBRATION_WERT | HEX | high | unsigned int | - | - | - | - | - | Invertierter Wert zur Korrektur der Sensorwerte |
 | STAT_ELV_CALIBRATION_WERT | HEX | high | unsigned int | - | - | - | - | - | Wert zur Korrektur der Sensorwerte |
 
-<a id="table-res-0xfd11-d"></a>
 ### RES_0XFD11_D
 
 Dimensions: 7 rows × 10 columns
@@ -2091,7 +2000,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_PCBA_CONSECUTIVE_NUMBER_DATA | DATA | high | data[4] | - | - | 1.0 | 1.0 | 0.0 | Seriennummer der PCBA bei IMI, 8 digits, fortlaufende nummer |
 | STAT_PCBA_PROCESS_STEP_DATA | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | Prüfschritte beim Leiterplatten-Lieferant erfolgreich abgeschlossen ( ICT,AOI,FCT, flashing, coting etc. ) |
 
-<a id="table-res-0xfd13-d"></a>
 ### RES_0XFD13_D
 
 Dimensions: 11 rows × 10 columns
@@ -2110,7 +2018,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_SENSOR_FAIL_SAFE_REPORT_WERT | HEX | high | unsigned char | - | - | - | - | - | Fail Save Report des Sensors |
 | STAT_SENSOR_INTERNAL_FAULT_WERT | HEX | high | unsigned long | - | - | - | - | - | Internal Fault Information |
 
-<a id="table-res-0xfd19-d"></a>
 ### RES_0XFD19_D
 
 Dimensions: 1 rows × 10 columns
@@ -2119,7 +2026,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ELV_BMW_SACHNUMMER_DATA | DATA | high | data[9] | - | - | 1.0 | 1.0 | 0.0 | BMW Sachnummer |
 
-<a id="table-res-0xfd1b-d"></a>
 ### RES_0XFD1B_D
 
 Dimensions: 37 rows × 10 columns
@@ -2164,7 +2070,6 @@ Dimensions: 37 rows × 10 columns
 | STAT_RINGBUFFER_FAILED_ACTIVATION_18_DATA | DATA | high | data[23] | - | - | 1.0 | 1.0 | 0.0 | Die letzten 19/20 fehlgeschlagenen Verfahrversuche inkl. Retry (LOCK & UNLOCK) |
 | STAT_RINGBUFFER_FAILED_ACTIVATION_19_DATA | DATA | high | data[23] | - | - | 1.0 | 1.0 | 0.0 | Die letzten 20/20 fehlgeschlagenen Verfahrversuche inkl. Retry (LOCK & UNLOCK) |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 39 rows × 16 columns
@@ -2211,7 +2116,6 @@ Dimensions: 39 rows × 16 columns
 | _ELV_LOCK_CYCLE_COUNT | 0xFD1A | STAT_CYCLE_COUNT_WERT | Rückgabe der Anzahl ausgeführter Verriegelungszyklen seid Produktion | HEX | ELV_LockCycleCount | High | unsigned int | - | - | - | - | - | 22 | - | - |
 | _USHIN_HISTORYSTORAGE_READ_RESULT | 0xFD1B | - | Liest den gesamten Speicherbereich der Historiendaten aus. | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xFD1B_D |
 
-<a id="table-states-of-job"></a>
 ### STATES_OF_JOB
 
 Dimensions: 3 rows × 2 columns
@@ -2222,7 +2126,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | NOK (bei nicht kalibriertem Sensor) |
 | 0xFF | Wert ungültig |
 
-<a id="table-stat-table-calibration"></a>
 ### STAT_TABLE_CALIBRATION
 
 Dimensions: 14 rows × 2 columns
@@ -2244,7 +2147,6 @@ Dimensions: 14 rows × 2 columns
 | 0xEE | Es ist ein unbekannter Fehler aufgetreten. Kalibrierung abgebrochen. Bitte wiederholen. |
 | 0xFF | Wert ungültig |
 
-<a id="table-stat-tab-sensor-read"></a>
 ### STAT_TAB_SENSOR_READ
 
 Dimensions: 8 rows × 2 columns
@@ -2260,7 +2162,6 @@ Dimensions: 8 rows × 2 columns
 | 0x40 | falsche Bytelaenge der Adresse erkannt |
 | 0xFF | Wert ungültig |
 
-<a id="table-stat-tab-sensor-read-memory"></a>
 ### STAT_TAB_SENSOR_READ_MEMORY
 
 Dimensions: 9 rows × 2 columns
@@ -2277,7 +2178,6 @@ Dimensions: 9 rows × 2 columns
 | 0x08 | Sensorfehler, ungerade Adresse erkannt |
 | 0xFF | Wert ungültig |
 
-<a id="table-stat-tab-sensor-write"></a>
 ### STAT_TAB_SENSOR_WRITE
 
 Dimensions: 6 rows × 2 columns
@@ -2291,7 +2191,6 @@ Dimensions: 6 rows × 2 columns
 | 0x10 | Main uC meldet Fehler, niO |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-calibration-stauts"></a>
 ### TAB_CALIBRATION_STAUTS
 
 Dimensions: 3 rows × 2 columns
@@ -2302,7 +2201,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0E | Unbekannter Fehler |
 | 0xFF | Wert nicht gültig |
 
-<a id="table-tab-elv-ausfuehrungsstatus"></a>
 ### TAB_ELV_AUSFUEHRUNGSSTATUS
 
 Dimensions: 12 rows × 2 columns
@@ -2322,7 +2220,6 @@ Dimensions: 12 rows × 2 columns
 | 10 | Unbekannter ELV-Fehler |
 | 255 | Wert ungültig |
 
-<a id="table-tab-elv-calibrationstatus"></a>
 ### TAB_ELV_CALIBRATIONSTATUS
 
 Dimensions: 1 rows × 2 columns
@@ -2331,7 +2228,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0 | Calibration successful |
 
-<a id="table-tab-elv-clear-history"></a>
 ### TAB_ELV_CLEAR_HISTORY
 
 Dimensions: 2 rows × 2 columns
@@ -2341,7 +2237,6 @@ Dimensions: 2 rows × 2 columns
 | 0x95 | Löscht den Inhalt des Historienspeichers. Löscht nicht den Löschzähler sonder inkrementiert diesen. |
 | 0x6A | Setzt den Löschzähler des Historienspeichers zurück |
 
-<a id="table-tab-elv-clear-history-process"></a>
 ### TAB_ELV_CLEAR_HISTORY_PROCESS
 
 Dimensions: 4 rows × 2 columns
@@ -2353,7 +2248,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | Es ist ein Timeout beim Löschen des Historienspeichers aufgetreten. Bitte wiederholen Sie den Vorgang |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-elv-mem-init"></a>
 ### TAB_ELV_MEM_INIT
 
 Dimensions: 1 rows × 2 columns
@@ -2362,7 +2256,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0x69 | Starten der Initialisieung |
 
-<a id="table-tab-elv-proc-step"></a>
 ### TAB_ELV_PROC_STEP
 
 Dimensions: 4 rows × 2 columns
@@ -2374,7 +2267,6 @@ Dimensions: 4 rows × 2 columns
 | 0x66 | EOL & SCR passed |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-elv-prod-step"></a>
 ### TAB_ELV_PROD_STEP
 
 Dimensions: 2 rows × 2 columns
@@ -2384,7 +2276,6 @@ Dimensions: 2 rows × 2 columns
 | 0x22 | EOL passed, OK |
 | 0x44 | Screening passed, OK |
 
-<a id="table-tab-elv-reset-stat"></a>
 ### TAB_ELV_RESET_STAT
 
 Dimensions: 4 rows × 2 columns
@@ -2396,7 +2287,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | Fehler beim Speichern. Der Wert konnte nicht geändert werden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-elv-serialnumber-write"></a>
 ### TAB_ELV_SERIALNUMBER_WRITE
 
 Dimensions: 2 rows × 2 columns
@@ -2406,7 +2296,6 @@ Dimensions: 2 rows × 2 columns
 | 0x5A | JA |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-elv-zustand"></a>
 ### TAB_ELV_ZUSTAND
 
 Dimensions: 8 rows × 2 columns
@@ -2422,7 +2311,6 @@ Dimensions: 8 rows × 2 columns
 | 15 | Initialisierungs-Zustand beim Hochstarten |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-endzustand"></a>
 ### TAB_ENDZUSTAND
 
 Dimensions: 3 rows × 2 columns
@@ -2433,7 +2321,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | ELV entriegelt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-entlastung-generator"></a>
 ### TAB_ENTLASTUNG_GENERATOR
 
 Dimensions: 16 rows × 2 columns
@@ -2457,7 +2344,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Vorhalt |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-escape-counter"></a>
 ### TAB_ESCAPE_COUNTER
 
 Dimensions: 10 rows × 2 columns
@@ -2475,7 +2361,6 @@ Dimensions: 10 rows × 2 columns
 | 0x78 | Zähler = 8, ELV legt Fahrzeug still |
 | 0xFF | Ungültig |
 
-<a id="table-tab-ews-client-auth"></a>
 ### TAB_EWS_CLIENT_AUTH
 
 Dimensions: 4 rows × 2 columns
@@ -2487,7 +2372,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Freigabe abgelehnt (Authentisierung fehlgeschlagen) |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-ews-client-locked"></a>
 ### TAB_EWS_CLIENT_LOCKED
 
 Dimensions: 3 rows × 2 columns
@@ -2498,7 +2382,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | angelernt und verriegelt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-ews-dh-status"></a>
 ### TAB_EWS_DH_STATUS
 
 Dimensions: 3 rows × 2 columns
@@ -2509,7 +2392,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | DH-Abgleich läuft gerade |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-ews-mode-arg"></a>
 ### TAB_EWS_MODE_ARG
 
 Dimensions: 1 rows × 2 columns
@@ -2518,7 +2400,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 17 | UNLOCK_CLIENT |
 
-<a id="table-tab-ews-version"></a>
 ### TAB_EWS_VERSION
 
 Dimensions: 3 rows × 2 columns
@@ -2529,7 +2410,6 @@ Dimensions: 3 rows × 2 columns
 | 0x24 | EWS6 mit DH-E |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-mem-init-result"></a>
 ### TAB_MEM_INIT_RESULT
 
 Dimensions: 4 rows × 2 columns
@@ -2541,7 +2421,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | Fehler bei der Initialisierung, niO |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-pcba-prod-step"></a>
 ### TAB_PCBA_PROD_STEP
 
 Dimensions: 3 rows × 2 columns
@@ -2552,7 +2431,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | No Tests passed |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-proc-step"></a>
 ### TAB_PROC_STEP
 
 Dimensions: 2 rows × 2 columns
@@ -2562,7 +2440,6 @@ Dimensions: 2 rows × 2 columns
 | 0x22 | EOL passed |
 | 0x44 | SCR passed |
 
-<a id="table-tab-prod-data-write-process"></a>
 ### TAB_PROD_DATA_WRITE_PROCESS
 
 Dimensions: 3 rows × 2 columns
@@ -2573,7 +2450,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Prozess nicht erfolgreich beendet. FEHLER. Daten wurden nicht geschrieben. |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-prod-step"></a>
 ### TAB_PROD_STEP
 
 Dimensions: 1 rows × 2 columns
@@ -2582,7 +2458,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0x11 | alle Tests bestanden |
 
-<a id="table-tab-prozessschritt"></a>
 ### TAB_PROZESSSCHRITT
 
 Dimensions: 3 rows × 2 columns
@@ -2593,7 +2468,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Prozesschritt 2 durchgeführt (U-SHIN) |
 | 0x03 | Prozesschritt 2 durchgeführt (ZF) |
 
-<a id="table-tab-pwf-zustand"></a>
 ### TAB_PWF_ZUSTAND
 
 Dimensions: 10 rows × 2 columns
@@ -2611,7 +2485,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Fahrbereitschaft beenden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-serial-number-and-ai"></a>
 ### TAB_SERIAL_NUMBER_AND_AI
 
 Dimensions: 3 rows × 2 columns
@@ -2622,7 +2495,6 @@ Dimensions: 3 rows × 2 columns
 | 32 | AI number |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-status-elv-kalibrierung"></a>
 ### TAB_STATUS_ELV_KALIBRIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2634,7 +2506,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Kalibrierung in Progress |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-laden-hochspannung-powermanagement"></a>
 ### TAB_STATUS_LADEN_HOCHSPANNUNG_POWERMANAGEMENT
 
 Dimensions: 8 rows × 2 columns
@@ -2650,7 +2521,6 @@ Dimensions: 8 rows × 2 columns
 | 0x30 | nächster zyklischer Ladevorgang nicht mehr möglich |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-spannungseinbruch"></a>
 ### TAB_STATUS_SPANNUNGSEINBRUCH
 
 Dimensions: 7 rows × 2 columns
@@ -2665,7 +2535,6 @@ Dimensions: 7 rows × 2 columns
 | 15 | Signal unbefuellt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-verbrennungsmotor-antrieb"></a>
 ### TAB_STATUS_VERBRENNUNGSMOTOR_ANTRIEB
 
 Dimensions: 7 rows × 2 columns
@@ -2680,7 +2549,6 @@ Dimensions: 7 rows × 2 columns
 | 15 | Signal_unbefuellt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-elv-mem-reset-val"></a>
 ### TAB_STAT_ELV_MEM_RESET_VAL
 
 Dimensions: 3 rows × 2 columns
@@ -2691,7 +2559,6 @@ Dimensions: 3 rows × 2 columns
 | 0x22 | IMI_Process_Step_Value |
 | 0xCC | Calibration_Vaule_Invalid |
 
-<a id="table-tab-stat-sensors-read"></a>
 ### TAB_STAT_SENSORS_READ
 
 Dimensions: 5 rows × 2 columns
@@ -2704,7 +2571,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Sensor, Speicherzugriff Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-sensor-read-val"></a>
 ### TAB_STAT_SENSOR_READ_VAL
 
 Dimensions: 4 rows × 2 columns
@@ -2716,7 +2582,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | Es ist ein Fehler beim Lesen aufgetreten. Wert steht nicht zur Verfügung |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-write-data"></a>
 ### TAB_STAT_WRITE_DATA
 
 Dimensions: 3 rows × 2 columns
@@ -2727,7 +2592,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | in Bearbeitung |
 | 3 | Fehler beim Schreiben, Wert nicht rückgesetzt |
 
-<a id="table-tab-steuern-elv-arg"></a>
 ### TAB_STEUERN_ELV_ARG
 
 Dimensions: 2 rows × 2 columns
@@ -2737,7 +2601,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | UNLOCK |
 | 1 | LOCK |
 
-<a id="table-tab-verfahrart"></a>
 ### TAB_VERFAHRART
 
 Dimensions: 3 rows × 2 columns
@@ -2748,7 +2611,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | ELV soll  entriegeln |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-verfahr-fehler"></a>
 ### TAB_VERFAHR_FEHLER
 
 Dimensions: 5 rows × 2 columns
@@ -2761,7 +2623,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Entriegellungsbedingung nicht gegeben (Bei triggerung durch Diagnosejob) |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-verfahr-trigger"></a>
 ### TAB_VERFAHR_TRIGGER
 
 Dimensions: 6 rows × 2 columns
@@ -2775,7 +2636,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Schlüssel im Innenraum gefunden |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-write-eeprom-sta"></a>
 ### TAB_WRITE_EEPROM_STA
 
 Dimensions: 4 rows × 2 columns
@@ -2787,7 +2647,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | PENDING |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-0x2951"></a>
 ### TAB_0X2951
 
 Dimensions: 1 rows × 2 columns
@@ -2796,7 +2655,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x0001 |
 
-<a id="table-tab-0x505a"></a>
 ### TAB_0X505A
 
 Dimensions: 1 rows × 5 columns
@@ -2805,7 +2663,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x0024 | 0x0025 | 0x0026 | 0x0027 |
 
-<a id="table-tab-0x505b"></a>
 ### TAB_0X505B
 
 Dimensions: 1 rows × 5 columns
@@ -2814,7 +2671,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x0020 | 0x0021 | 0x0022 | 0x0023 |
 
-<a id="table-tab-0x505c"></a>
 ### TAB_0X505C
 
 Dimensions: 1 rows × 3 columns
@@ -2823,7 +2679,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x0029 | 0x002A |
 
-<a id="table-tab-0x5060"></a>
 ### TAB_0X5060
 
 Dimensions: 1 rows × 14 columns
@@ -2832,7 +2687,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 13 | 0x0002 | 0x0003 | 0x0004 | 0x0005 | 0x0006 | 0x0007 | 0x0008 | 0x0009 | 0x000A | 0x000B | 0x000C | 0x000D | 0x000E |
 
-<a id="table-tab-0x5061"></a>
 ### TAB_0X5061
 
 Dimensions: 1 rows × 7 columns
@@ -2841,7 +2695,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x000F | 0x0010 | 0x0011 | 0x0012 | 0x0013 | 0x0014 |
 
-<a id="table-tab-0x5062"></a>
 ### TAB_0X5062
 
 Dimensions: 1 rows × 2 columns
@@ -2850,7 +2703,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x0028 |
 
-<a id="table-tab-0x5063"></a>
 ### TAB_0X5063
 
 Dimensions: 1 rows × 5 columns
@@ -2859,7 +2711,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x0015 | 0x0016 | 0x0017 | 0x0018 |
 
-<a id="table-tab-0x5064"></a>
 ### TAB_0X5064
 
 Dimensions: 1 rows × 8 columns

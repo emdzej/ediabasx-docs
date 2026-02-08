@@ -33,7 +33,6 @@
 - [C_ZCS_AUFTRAG](#job-c-zcs-auftrag) - Schreiben des Zentralen Codierschluessels in die KD-Daten
 - [ENDE](#job-ende) - Called automatically when closing C_SGBD
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -51,7 +50,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Grundmodul V automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-set-kwp-mode"></a>
 ### SET_KWP_MODE
 
 Sets the communication mode
@@ -81,7 +78,6 @@ Sets the communication mode
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, if sucessful |
 
-<a id="job-read-kwp-mode"></a>
 ### READ_KWP_MODE
 
 _No arguments._
@@ -94,7 +90,6 @@ _No arguments._
 | MODE | int | KWP mode (1 - Keyword 2000*, 2- Keyword 2000) |
 | MODE_STRING | string | KWP mode |
 
-<a id="job-get-keybytes"></a>
 ### GET_KEYBYTES
 
 _No arguments._
@@ -106,7 +101,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 PARTIAL Ident Data for MEMS3
@@ -130,7 +124,6 @@ _No arguments._
 | _TEL_ANTWORT4 | binary |  |
 | _TEL_ANTWORT5 | binary |  |
 
-<a id="job-security-access"></a>
 ### SECURITY_ACCESS
 
 Wake-up and security-access for MEMS3
@@ -150,7 +143,6 @@ Wake-up and security-access for MEMS3
 | _TEL_ANTWORT2 | binary |  |
 | _TEL_ANTWORT3 | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -164,7 +156,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-ecu-reset"></a>
 ### ECU_RESET
 
 ECU will reset AFTER +ve response Needed to exit boot code after SECURITY_ACCESS(0x85)
@@ -178,7 +169,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation ECU will reset AFTER +ve response |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -193,7 +183,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Auslesen des Zentralen Codierschluessels aus Flash
@@ -210,7 +199,6 @@ _No arguments._
 | VN | string | Zentralcode C3 - Versionsmerkmal (10 ASCII nos + 1 ASCII c/sum) |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zcs-auftrag"></a>
 ### C_ZCS_AUFTRAG
 
 Schreiben des Zentralen Codierschluessels in die KD-Daten
@@ -231,7 +219,6 @@ Schreiben des Zentralen Codierschluessels in die KD-Daten
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Called automatically when closing C_SGBD
@@ -248,7 +235,6 @@ _No results._
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 - [ROVERPARTNUMPREFIX](#table-roverpartnumprefix) (21 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 63 rows × 2 columns
@@ -319,7 +305,6 @@ Dimensions: 63 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -354,7 +339,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns

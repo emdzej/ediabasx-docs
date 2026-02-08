@@ -88,7 +88,6 @@
 - [STEUERN_USB_TEST_TEL](#job-steuern-usb-test-tel) - Stores VendorID and ProductID for diagnosis of USB mass storage recognition for USB Interface (KDZ = Kundenzugang in der Mittelkonsole) or and Telephone Snap In Adapter (SIA)
 - [STATUS_POWERMANAGEMENT_SH4](#job-status-powermanagement-sh4) - Auslesen der gespeicherten internen Powermanagement Transitionen 
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -107,7 +106,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -120,7 +118,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -137,7 +134,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -163,7 +159,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -205,7 +200,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -224,7 +218,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -242,7 +235,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -263,7 +255,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -292,7 +283,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -312,7 +302,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -333,7 +322,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -349,7 +337,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -371,7 +358,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -393,7 +379,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -412,7 +397,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -438,7 +422,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -480,7 +463,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -495,7 +477,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -521,7 +502,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -541,7 +521,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -560,7 +539,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -579,7 +557,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -594,7 +571,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -613,7 +589,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -633,7 +608,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -650,7 +624,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -669,7 +642,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -684,7 +656,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ability-to-wake"></a>
 ### STATUS_ABILITY_TO_WAKE
 
 Gibt an ob SG Most Ring wecken darf
@@ -701,7 +672,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-average-message-reception-rate"></a>
 ### STATUS_AVERAGE_MESSAGE_RECEPTION_RATE
 
 Liest die mittlere Nachrichtenabnahmerate des SGs während dieses Gerät geflasht wird, also in der ProgramminSession Auslesbar muss der Status jederzeit sein
@@ -718,7 +688,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fot-temperatur"></a>
 ### STATUS_FOT_TEMPERATUR
 
 Gibt an ob SG Most Ring wecken darf
@@ -735,7 +704,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-routing-engine"></a>
 ### STATUS_ROUTING_ENGINE
 
 Inhalt der Routing Engine
@@ -758,7 +726,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-version-most-controller"></a>
 ### STATUS_VERSION_MOST_CONTROLLER
 
 Return Version of MOST Controller
@@ -776,7 +743,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-versorgungsspannung"></a>
 ### STATUS_VERSORGUNGSSPANNUNG
 
 Betriebsspannung am SG. Darstellung mit Millivolt-Auflösung.
@@ -793,7 +759,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-wakeup-status"></a>
 ### STATUS_WAKEUP_STATUS
 
 Gibt an, ob das SG den MOST-Ring geweckt hat oder geweckt wurde.
@@ -810,7 +775,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ability-to-wake"></a>
 ### STEUERN_ABILITY_TO_WAKE
 
 Gibt an, ob das SG den MOST-Ring wecken darf.
@@ -829,7 +793,6 @@ Gibt an, ob das SG den MOST-Ring wecken darf.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-sensor-temp"></a>
 ### STATUS_SENSOR_TEMP
 
 Returns the temperature of the desired sensor (no matter if the temperature is currently being simulated or not).
@@ -850,7 +813,6 @@ Returns the temperature of the desired sensor (no matter if the temperature is c
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-sensor-temp"></a>
 ### STEUERN_SENSOR_TEMP
 
 Simulates the temperature of a definite sensor.
@@ -871,7 +833,6 @@ Simulates the temperature of a definite sensor.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-watchdog-trigger-stop"></a>
 ### STEUERN_WATCHDOG_TRIGGER_STOP
 
 Unterbindet das regelmäßige Rücksetzen des Applikations-Watchdogs nach ARG_TIME_WATCHDOG Sekunden. Wenn ARG_TIME_WATCHDOG nicht angegeben wird, wird der Wert 0 benutzt.
@@ -890,7 +851,6 @@ Unterbindet das regelmäßige Rücksetzen des Applikations-Watchdogs nach ARG_TI
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-info"></a>
 ### CBS_INFO
 
 Ausgabe der CBS-Version
@@ -906,7 +866,6 @@ _No arguments._
 | CBS_VERSION_TEXT | string | CBS Version im Klartext |
 | CBS_VERSION_HEX | string | CBS Version als Wert |
 
-<a id="job-cbs-daten-lesen"></a>
 ### CBS_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 5) UDS: $22 ReadDataByIdentifier Modus  : Default
@@ -965,7 +924,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset"></a>
 ### CBS_RESET
 
 CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modus  : Default Musterparametersatz fuer Bremsbelagverschleiss Vorder/Hinterachse br_v,100,1,0,0,0,1,0,0 br_h,100,1,0,0,0,1,0,0 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!)
@@ -996,7 +954,6 @@ CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modu
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -1011,7 +968,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -1028,7 +984,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -1043,7 +998,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -1058,7 +1012,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -1073,7 +1026,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -1089,7 +1041,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -1108,7 +1059,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -1128,7 +1078,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -1146,7 +1095,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -1162,7 +1110,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-swup-installed"></a>
 ### STATUS_SWUP_INSTALLED
 
 UDS:     $22   ReadDataByIdentifier $4013 Status_Swup_Installed
@@ -1189,7 +1136,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-lesen-das"></a>
 ### LESEN_DAS
 
 UDS:     $31   RoutineControl $03   StatusRoutine $F010 LESEN_DAS
@@ -1212,7 +1158,6 @@ UDS:     $31   RoutineControl $03   StatusRoutine $F010 LESEN_DAS
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 | STAT_LESEN_DAS | binary | DAS daten |
 
-<a id="job-lesen-config-init-values"></a>
 ### LESEN_CONFIG_INIT_VALUES
 
 UDS:     $31   RoutineControl $03   StatusRoutine $F011 LESEN_CONFIG_INIT_VALUES
@@ -1228,7 +1173,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 | STAT_LESEN_CONFIG_INIT_VALUES | binary | Init config Values |
 
-<a id="job-lesen-dasvp"></a>
 ### LESEN_DASVP
 
 UDS:     $31   RoutineControl $03   StatusRoutine $F012 LESEN_DASVP
@@ -1244,7 +1188,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 | STAT_LESEN_DASVP | binary | DASVP daten |
 
-<a id="job-lesen-control-list-mainboard"></a>
 ### LESEN_CONTROL_LIST_MAINBOARD
 
 UDS:     $31   RoutineControl $03   StatusRoutine $F014 LESEN_CONTROL_LIST_MAINBOARD
@@ -1260,7 +1203,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 | STAT_LESEN_CONTROL_LIST_MAINBOARD | binary | LESEN_CONTROL_LIST_MAINBOARD daten |
 
-<a id="job-lesen-ota"></a>
 ### LESEN_OTA
 
 UDS:     $31   RoutineControl $03   StatusRoutine $F005 LESEN_OTA
@@ -1276,7 +1218,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 | STAT_LESEN_OTA | binary | LESEN_OTA daten |
 
-<a id="job-lesen-dpas"></a>
 ### LESEN_DPAS
 
 UDS:     $31   RoutineControl $03   StatusRoutine $F013 LESEN_DPAS
@@ -1292,7 +1233,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 | STAT_LESEN_DPAS | string | LESEN_DPAS daten |
 
-<a id="job-schreiben-ota"></a>
 ### SCHREIBEN_OTA
 
 UDS:     $31   RoutineControl $01   StatusRoutine $F005 SCHREIBEN_OTA
@@ -1311,7 +1251,6 @@ UDS:     $31   RoutineControl $01   StatusRoutine $F005 SCHREIBEN_OTA
 | _TEL_AUFTRAG | binary | Hex-request to ECU |
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 
-<a id="job-schreiben-bmw-zertifikate"></a>
 ### SCHREIBEN_BMW_ZERTIFIKATE
 
 UDS:     $31   RoutineControl $01   StatusRoutine $F00C SCHREIBEN_BMW_ZERTIFIKATE
@@ -1330,7 +1269,6 @@ UDS:     $31   RoutineControl $01   StatusRoutine $F00C SCHREIBEN_BMW_ZERTIFIKAT
 | _TEL_AUFTRAG | binary | Hex-request to ECU |
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 
-<a id="job-schreiben-browser-zertifikate"></a>
 ### SCHREIBEN_BROWSER_ZERTIFIKATE
 
 UDS:     $31   RoutineControl $01   StatusRoutine $F00D SCHREIBEN_BROWSER_ZERTIFIKATE
@@ -1349,7 +1287,6 @@ UDS:     $31   RoutineControl $01   StatusRoutine $F00D SCHREIBEN_BROWSER_ZERTIF
 | _TEL_AUFTRAG | binary | Hex-request to ECU |
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 
-<a id="job-watchdog-trigger-stop"></a>
 ### WATCHDOG_TRIGGER_STOP
 
 UDS:     $31   RoutineControl $01   StartRoutine $0209 WATCHDOG_TRIGGER_STOP
@@ -1368,7 +1305,6 @@ UDS:     $31   RoutineControl $01   StartRoutine $0209 WATCHDOG_TRIGGER_STOP
 | _TEL_AUFTRAG | binary | Hex-request to ECU |
 | _TEL_ANTWORT | binary | Hex-respone from ECU |
 
-<a id="job-status-bt-read-phone-id"></a>
 ### STATUS_BT_READ_PHONE_ID
 
 Returns information about the phone selected as argument
@@ -1391,7 +1327,6 @@ Returns information about the phone selected as argument
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-usb-stack-info-for-device"></a>
 ### STATUS_USB_STACK_INFO_FOR_DEVICE
 
 Reads out logistical information about the four last connected USB devices four last connected IPOD Players, four last connected MTP Players and four last unrecognized USB devices
@@ -1458,7 +1393,6 @@ Reads out logistical information about the four last connected USB devices four 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-usb-test-tel"></a>
 ### STATUS_USB_TEST_TEL
 
 KWP2000: $31   StartRoutineByLocalIdentifier $03   Layer03 $A06A Status USB Test
@@ -1485,7 +1419,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-usb-test-tel"></a>
 ### STEUERN_USB_TEST_TEL
 
 Stores VendorID and ProductID for diagnosis of USB mass storage recognition for USB Interface (KDZ = Kundenzugang in der Mittelkonsole) or and Telephone Snap In Adapter (SIA)
@@ -1507,7 +1440,6 @@ Stores VendorID and ProductID for diagnosis of USB mass storage recognition for 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-powermanagement-sh4"></a>
 ### STATUS_POWERMANAGEMENT_SH4
 
 Auslesen der gespeicherten internen Powermanagement Transitionen 
@@ -1620,7 +1552,6 @@ Auslesen der gespeicherten internen Powermanagement Transitionen
 - [TPOWERSTATE](#table-tpowerstate) (7 × 2)
 - [TPOWEREVENT](#table-tpowerevent) (23 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -1694,7 +1625,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 121 rows × 2 columns
@@ -1823,7 +1753,6 @@ Dimensions: 121 rows × 2 columns
 | 0x0000AE | MTA |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -1850,7 +1779,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1875,7 +1803,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -1907,7 +1834,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1980,7 +1906,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1993,7 +1918,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -2006,7 +1930,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -2019,7 +1942,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -2038,7 +1960,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -2064,7 +1985,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2075,7 +1995,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-tfblockidtexte"></a>
 ### TFBLOCKIDTEXTE
 
 Dimensions: 37 rows × 2 columns
@@ -2120,7 +2039,6 @@ Dimensions: 37 rows × 2 columns
 | 0xE1 | HUDInterface=0xE1 |
 | 0xFD | Sahara=0xFD |
 
-<a id="table-tmostlight"></a>
 ### TMOSTLIGHT
 
 Dimensions: 2 rows × 2 columns
@@ -2130,7 +2048,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Lichtleistung abgesenkt |
 | 1 | Volle Lichtleistung |
 
-<a id="table-twakeupstatus"></a>
 ### TWAKEUPSTATUS
 
 Dimensions: 3 rows × 3 columns
@@ -2141,7 +2058,6 @@ Dimensions: 3 rows × 3 columns
 | 1 | SG will be waked up | on |
 | 2 | SG are waked up | critical |
 
-<a id="table-cbskennung"></a>
 ### CBSKENNUNG
 
 Dimensions: 11 rows × 3 columns
@@ -2160,7 +2076,6 @@ Dimensions: 11 rows × 3 columns
 | 0x0D | NOx_a | NOx-Additiv |
 | 0x64 | Sic_v | Sichtpruefung/Fahrzeug-Check verknuepft |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2169,7 +2084,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -2179,7 +2093,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 42 rows × 3 columns
@@ -2229,7 +2142,6 @@ Dimensions: 42 rows × 3 columns
 | 0xD68BFF | Dummy-Fehlerspeichereintrag im Netzwerkfehlerbereich nur fuer Testzwecke | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2243,7 +2155,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 3 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 10 rows × 9 columns
@@ -2261,7 +2172,6 @@ Dimensions: 10 rows × 9 columns
 | 0xF001 | FZGS_Fehlercode | Hex | - | unsigned char | - | - | - | - |
 | 0xF003 | Spannung am Eingang des Mikrophons | mV | high | unsigned int | - | - | - | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 62 rows × 3 columns
@@ -2331,7 +2241,6 @@ Dimensions: 62 rows × 3 columns
 | 0xB7F2FF | KISU unspezifizierter Fehler | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2343,7 +2252,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 12 rows × 9 columns
@@ -2363,7 +2271,6 @@ Dimensions: 12 rows × 9 columns
 | 0xF003 | Spannung am Eingang des Mikrophons | mV | high | unsigned int | - | - | - | - |
 | 0x4100 | BT Adresse | text | - | 6 | - | - | - | - |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 23 rows × 16 columns
@@ -2394,7 +2301,6 @@ Dimensions: 23 rows × 16 columns
 | TEST_AUXVERBINDUNG | 0xA019 | - | Testet, ob die Aux-Anschlüsse verbaut sind. | - | - | - | - | - | - | - | - | - | 31 | ARG_0xA019 | RES_0xA019 |
 | TEST_VERBAU_TEL | 0xA050 | - | Test Antenne Telefon | - | - | - | - | - | - | - | - | - | 31 | ARG_0xA050 | RES_0xA050 |
 
-<a id="table-tab-typeusbdevice"></a>
 ### TAB_TYPEUSBDEVICE
 
 Dimensions: 5 rows × 2 columns
@@ -2407,7 +2313,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | UNKNOWN |
 | 0xFF | nicht definiert |
 
-<a id="table-tusbconnectionstate"></a>
 ### TUSBCONNECTIONSTATE
 
 Dimensions: 3 rows × 2 columns
@@ -2418,7 +2323,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | angeschlossen |
 | 0xFF | nicht definiert |
 
-<a id="table-tusbinterface"></a>
 ### TUSBINTERFACE
 
 Dimensions: 3 rows × 2 columns
@@ -2429,7 +2333,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Snap In Adapter |
 | 0xFF | nicht definiert |
 
-<a id="table-tusbteststatus"></a>
 ### TUSBTESTSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -2443,7 +2346,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFE | Gerät angeschlossen aber kein Massenspeicher |
 | 0xFF | Nicht definiert |
 
-<a id="table-res-0xd00b"></a>
 ### RES_0XD00B
 
 Dimensions: 4 rows × 10 columns
@@ -2455,7 +2357,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SOFTWARE_LIEFERUNG_WERT | - | - | string | - | - | - | - | - | SOLI: Software Lieferung ID |
 | STAT_ECU_SW_VID_WERT | - | - | string | - | - | - | - | - | ECU_SW_VID siehe Software Version ID Version 2.2. Beispiel: SD-B71200;TE-0A12B7-B712;MP-0A12C3-B712;PI-0A1001-B712 |
 
-<a id="table-res-0xd01a"></a>
 ### RES_0XD01A
 
 Dimensions: 1 rows × 10 columns
@@ -2464,7 +2365,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BT_GERAETEADRESSE_WERT | - | - | data[6] | - | - | - | - | - | Liefert die Adresse des Bluetooth Gerätes |
 
-<a id="table-arg-0xd01a"></a>
 ### ARG_0XD01A
 
 Dimensions: 1 rows × 12 columns
@@ -2473,7 +2373,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_BT_GERAETEADRESSE | - | - | data[6] | - | - | - | - | - | - | - | Schreibt die Adresse des Bluetooth Gerätes |
 
-<a id="table-res-0xd01b"></a>
 ### RES_0XD01B
 
 Dimensions: 1 rows × 10 columns
@@ -2482,7 +2381,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BT_PASSKEY_WERT | - | - | string | - | - | - | - | - | BT Passkey lesen |
 
-<a id="table-arg-0xd01b"></a>
 ### ARG_0XD01B
 
 Dimensions: 1 rows × 12 columns
@@ -2491,7 +2389,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_BT_PASSKEY_WERT | - | - | string | - | - | - | - | - | - | - | BT Passkey schreiben |
 
-<a id="table-res-0xd01c"></a>
 ### RES_0XD01C
 
 Dimensions: 1 rows × 10 columns
@@ -2500,7 +2397,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BT_GERAETENAME_WERT | - | - | string | - | - | - | - | - | Liest den Bluetooth Gerätenamen |
 
-<a id="table-arg-0xd01c"></a>
 ### ARG_0XD01C
 
 Dimensions: 1 rows × 12 columns
@@ -2509,7 +2405,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_BT_GERAETENAME | - | - | string | - | - | - | - | - | - | - | Schreibt den Bluetooth Gerätenamen |
 
-<a id="table-res-0xd01d"></a>
 ### RES_0XD01D
 
 Dimensions: 4 rows × 10 columns
@@ -2521,7 +2416,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BT_ADR_DEV_3_WERT | - | - | data[6] | - | - | - | - | - | Geräteadresse von Gerät 3 |
 | STAT_BT_ADR_DEV_4_WERT | - | - | data[6] | - | - | - | - | - | Geräteadresse von Gerät 4 |
 
-<a id="table-res-0xd01e"></a>
 ### RES_0XD01E
 
 Dimensions: 64 rows × 10 columns
@@ -2593,7 +2487,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_HISTORY_8_FLASHSPEICHER_WERT | kBytes | - | string | - | - | - | - | - | Freier Flashspeicher, der für Updates nach dem Update zur Verfügung steht (0xff ff ff ff wenn unbekannt) 8. Historyeintrag |
 | STAT_HISTORY_8_ERROR_CODE | 0-n | - | unsigned char | - | TSoftwareUpdateErrorCode | - | - | - | Software Update Fehlercode 8. Historyeintrag |
 
-<a id="table-tsoftwareupdatetyp"></a>
 ### TSOFTWAREUPDATETYP
 
 Dimensions: 6 rows × 2 columns
@@ -2607,7 +2500,6 @@ Dimensions: 6 rows × 2 columns
 | 0x06 | Entfernen aller Benutzerupdates per Diagnose |
 | 0xFF | undefiniert |
 
-<a id="table-tsoftwareupdateerrorcode"></a>
 ### TSOFTWAREUPDATEERRORCODE
 
 Dimensions: 44 rows × 2 columns
@@ -2659,7 +2551,6 @@ Dimensions: 44 rows × 2 columns
 | 0xEF | Unspezifierter Systemdefekt oder inkonsistenter Systemstatus |
 | 0xFF | Unspezifizierter Fehler |
 
-<a id="table-res-0xd035"></a>
 ### RES_0XD035
 
 Dimensions: 2 rows × 10 columns
@@ -2669,7 +2560,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SIM_STATUS | 0-n | high | unsigned int | - | TSimStatus | - | - | - | Status der SIM-Karte |
 | STAT_IP_ADRESSE_WERT | - | high | string | - | - | - | - | - | IP-Adresse z.B. 192.168.0.1 |
 
-<a id="table-arg-0xd035"></a>
 ### ARG_0XD035
 
 Dimensions: 1 rows × 12 columns
@@ -2678,7 +2568,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DEVICE | 0-n | - | int | - | TLastConnectionTel | - | - | - | - | - | Argument beschreibt welches Gerät für das die letze Verbindung abgefragt wird. 1: Bluetooth Telefon 2: internes NAD Modul |
 
-<a id="table-tlastconnectiontel"></a>
 ### TLASTCONNECTIONTEL
 
 Dimensions: 2 rows × 2 columns
@@ -2688,7 +2577,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | Bluetooth |
 | 0x02 | NAD |
 
-<a id="table-tsimstatus"></a>
 ### TSIMSTATUS
 
 Dimensions: 8 rows × 2 columns
@@ -2704,7 +2592,6 @@ Dimensions: 8 rows × 2 columns
 | 0x05 | eingebucht und roaming off-net |
 | 0x10 | Emergency Call bereit |
 
-<a id="table-res-0xd047"></a>
 ### RES_0XD047
 
 Dimensions: 65 rows × 10 columns
@@ -2777,7 +2664,6 @@ Dimensions: 65 rows × 10 columns
 | STAT_SRVC_EXEC_TIME_16_WERT | - | - | string | - | - | - | - | - | Wann hat die Applikation Remote Services die Nachricht auf den MST gelegt, TT/mm/jjjj hh:mm:ss |
 | STAT_SRVC_DOORS_STATUS_16 | 0-n | - | char | - | TDoorsStatus | - | - | - | 0x00 wenn mind. 1 Tür nicht verschlossen ist, 0x01 wenn alle Türen UND die Heckklappe verschlossen sind |
 
-<a id="table-tremoteservices"></a>
 ### TREMOTESERVICES
 
 Dimensions: 4 rows × 2 columns
@@ -2789,7 +2675,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Vehicle Finder (incl. Flash Light and / or Horn Blow)  |
 | 0xFF | undefinierter Zustand |
 
-<a id="table-tdoorsstatus"></a>
 ### TDOORSSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -2800,7 +2685,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | alle Türen UND Heckklappe verschlossen |
 | 0xFF | undefinierter Zustand |
 
-<a id="table-res-0xd057"></a>
 ### RES_0XD057
 
 Dimensions: 2 rows × 10 columns
@@ -2810,7 +2694,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_USB_HUB_TEST_PORT_1 | 0-n | - | unsigned char | - | THubConnectionState | - | - | - | Status HUB Verbindung Port 1 |
 | STAT_USB_HUB_TEST_PORT_2 | 0-n | - | unsigned char | - | THubConnectionState | - | - | - | Status HUB Verbindung Port 2 |
 
-<a id="table-thubconnectionstate"></a>
 ### THUBCONNECTIONSTATE
 
 Dimensions: 4 rows × 2 columns
@@ -2822,7 +2705,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | HUB nicht codiert |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-tdaactivationstate"></a>
 ### TAB_TDAACTIVATIONSTATE
 
 Dimensions: 5 rows × 2 columns
@@ -2835,7 +2717,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Aktivierung erfolgreich |
 | 0xFF | nicht definiert |
 
-<a id="table-res-0xd099"></a>
 ### RES_0XD099
 
 Dimensions: 2 rows × 10 columns
@@ -2845,7 +2726,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_USB_KDZ | 0-n | high | unsigned long | - | - | - | - | - | Anzahl der Steckzyklen am USB Interface |
 | STAT_USB_SIA | 0-n | high | unsigned long | - | - | - | - | - | Anzahl der Steckzyklen am SIA Interface |
 
-<a id="table-res-0xa019"></a>
 ### RES_0XA019
 
 Dimensions: 35 rows × 13 columns
@@ -2888,7 +2768,6 @@ Dimensions: 35 rows × 13 columns
 | STAT_FEHLER_16_VERBINDUNG | - | - | + | 0-n | - | unsigned int | - | TAuxVerbindung | - | - | - | Gibt den Anschluss wieder, bei dem der Fehler X auftrat. Dieses Result wird mit 65535 belegt, wenn STAT_TEST_AUXVERBINDUNG nicht den Wert 3 (Fehler) meldet oder die Auxverbindung nicht existiert. |
 | STAT_FEHLER_16_FEHLERART_VERBINDUNG | - | - | + | 0-n | - | unsigned char | - | TVerbindungFehlerArt | - | - | - | Dieses Result wird mit 255 belegt, wenn STAT_TEST_VIDEOEINGANG nicht den Wert 3 (Fehler) meldet. Wert Text:  0 Kurzschluss nach Plus,  1 Kurzschluss nach Masse,  2 Leitungsunterbrechung,  255 Nicht definiert.  Dieses Result wird mit 255 belegt, wenn STAT_TEST_AUXVERBINDUNG nicht den Wert 3 (Fehler) meldet oder die Auxverbindung nicht existiert. |
 
-<a id="table-arg-0xa019"></a>
 ### ARG_0XA019
 
 Dimensions: 1 rows × 14 columns
@@ -2897,7 +2776,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_VERBINDUNG | + | - | - | - | unsigned int | - | - | - | - | - | - | - | legt den externen Anschluss fest, der getestet werden soll. Bei Angabe des Wertes 0 werden alle vorhandenen und schaltbaren Anschlüsse nacheinander getestet. Alle steuerbaren Anschlüsse des Steuergerätes müssen einzeln und kombiniert testbar sein. Tabelle TAuxVerbindung |
 
-<a id="table-tauxverbindung"></a>
 ### TAUXVERBINDUNG
 
 Dimensions: 6 rows × 2 columns
@@ -2911,7 +2789,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0400 | Aux In RSE BMW Individual |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-tverbindungfehlerart"></a>
 ### TVERBINDUNGFEHLERART
 
 Dimensions: 4 rows × 2 columns
@@ -2923,7 +2800,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Leitungsunterbrechung |
 | 0xFF | Nicht definiert |
 
-<a id="table-res-0xa022"></a>
 ### RES_0XA022
 
 Dimensions: 2 rows × 13 columns
@@ -2933,7 +2809,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_SELBSTTEST_ROUTINE | - | - | + | 0-n | - | unsigned long | - | TSelbsttestRoutine | - | - | - | Routine(n), die getestet wurde(n). Tabelle  TSelbsttestRoutine |
 | STAT_SELBSTTEST | - | - | + | 0-n | - | unsigned char | - | TTestStatus | - | - | - | Gibt den Status des Tests wieder. |
 
-<a id="table-arg-0xa022"></a>
 ### ARG_0XA022
 
 Dimensions: 1 rows × 14 columns
@@ -2942,7 +2817,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SELBSTTEST_ROUTINE | + | - | - | - | unsigned long | - | - | - | - | - | - | - | Routinen, die getestet werden sollen. Die Tabelle TSelbsttestRoutine wird in der SGBD von der Entwicklung bzw. vom Zulieferer befüllt und gepflegt. |
 
-<a id="table-tselbsttestroutine"></a>
 ### TSELBSTTESTROUTINE
 
 Dimensions: 2 rows × 2 columns
@@ -2952,7 +2826,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00000000 | Alle Routinen |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-res-0xa046"></a>
 ### RES_0XA046
 
 Dimensions: 3 rows × 13 columns
@@ -2963,7 +2836,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_MB_OTA_ID_WERT | - | - | + | - | - | string | - | - | - | - | - | Version von den aktuellen OTA Daten |
 | STAT_MB_DAS_ID_WERT | - | - | + | - | - | string | - | - | - | - | - | Version von den aktuellen DAS Daten |
 
-<a id="table-tprovisioningstatustel"></a>
 ### TPROVISIONINGSTATUSTEL
 
 Dimensions: 6 rows × 2 columns
@@ -2977,7 +2849,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | wurde nicht gestartet |
 | 0xFF | nicht definiert |
 
-<a id="table-res-0xa048"></a>
 ### RES_0XA048
 
 Dimensions: 1 rows × 13 columns
@@ -2986,7 +2857,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BT | - | - | + | 0-n | - | unsigned char | - | TBluetoothStatus | - | - | - | Liest den Bluetooth Status aus |
 
-<a id="table-arg-0xa048"></a>
 ### ARG_0XA048
 
 Dimensions: 1 rows × 14 columns
@@ -2995,7 +2865,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_BT | + | - | 0-n | - | unsigned char | - | TBluetoothStatus | - | - | - | - | - | Setzt den Bluetooth Status |
 
-<a id="table-tbluetoothstatus"></a>
 ### TBLUETOOTHSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3006,7 +2875,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Bluetooth aktiviert |
 | 0xFF | nicht definiert |
 
-<a id="table-res-0xa049"></a>
 ### RES_0XA049
 
 Dimensions: 1 rows × 13 columns
@@ -3015,7 +2883,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BT_ERKENNUNGSMODUS | - | - | + | 0-n | - | unsigned char | - | TBluetoothDiscoveryModeStatus | - | - | - | Liest den Status des Bluetooth Erkennungsmodus |
 
-<a id="table-arg-0xa049"></a>
 ### ARG_0XA049
 
 Dimensions: 1 rows × 14 columns
@@ -3024,7 +2891,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_BT_ERKENNUNGSMODUS | + | - | 0-n | - | unsigned char | - | TBluetoothDiscoveryModeStatus | - | - | - | - | - | Steuert den Bluetooth Erkennungsmodus |
 
-<a id="table-tbluetoothdiscoverymodestatus"></a>
 ### TBLUETOOTHDISCOVERYMODESTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3035,7 +2901,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | BT Erkennungsmodus ein |
 | 0xFF | nicht definiert |
 
-<a id="table-res-0xa04c"></a>
 ### RES_0XA04C
 
 Dimensions: 6 rows × 13 columns
@@ -3049,7 +2914,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_MUSIC_LIST_DELETED | - | - | + | 0-n | - | unsigned char | - | TBluetoothReset | - | - | - | Status Löschen Music List |
 | STAT_PIM_DELETED | - | - | + | 0-n | - | unsigned char | - | TBluetoothReset | - | - | - | Status Löschen PIM |
 
-<a id="table-arg-0xa04c"></a>
 ### ARG_0XA04C
 
 Dimensions: 1 rows × 14 columns
@@ -3058,7 +2922,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA_TO_RESET | + | - | 0-n | - | unsigned long | - | TBluetoothResetBasicState | - | - | - | - | - | Löschen persönlicher Informationen  Liste der gekoppelten Geräte beinhaltet auch Gespächslisten und Sprachaufnahmen |
 
-<a id="table-tbluetoothreset"></a>
 ### TBLUETOOTHRESET
 
 Dimensions: 5 rows × 2 columns
@@ -3071,7 +2934,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | läuft gerade |
 | 0xFF | nicht definiert |
 
-<a id="table-tbluetoothresetbasicstate"></a>
 ### TBLUETOOTHRESETBASICSTATE
 
 Dimensions: 9 rows × 2 columns
@@ -3088,7 +2950,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0040 | Musiksammlung |
 | 0x0080 | Musiksammlung administrative Datenbanken |
 
-<a id="table-res-0xa04f"></a>
 ### RES_0XA04F
 
 Dimensions: 51 rows × 13 columns
@@ -3147,7 +3008,6 @@ Dimensions: 51 rows × 13 columns
 | STAT_FEHLER_16_FEHLERART_ANTENNE | - | - | + | 0-n | - | unsigned char | - | TAntenneFehlerArt | - | - | - | Dieses Result wird mit 255 belegt, wenn STAT_TEST_ANTENNE nicht den Wert 3 (Fehler) meldet. |
 | STAT_FEHLER_16_MESSWERT_WIDERSTAND_WERT | - | - | + | 0,1kOhm | - | unsigned int | - | - | - | - | - | der auf der fehlerhaften Antenne X gemessene Widerstand in 0.1 kOhm. |
 
-<a id="table-arg-0xa04f"></a>
 ### ARG_0XA04F
 
 Dimensions: 1 rows × 14 columns
@@ -3156,7 +3016,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_ANTENNE | + | - | 0-n | - | unsigned long | - | TAntenneCMEDIA | - | - | - | 0.0 | - | Antenne(n) die getestet werden sollen. Tabelle TAntenneCMEDIA |
 
-<a id="table-tantennecmedia"></a>
 ### TANTENNECMEDIA
 
 Dimensions: 3 rows × 2 columns
@@ -3167,7 +3026,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00000001 | Bluetooth |
 | 0xFFFFFFFF | nicht definiert |
 
-<a id="table-tantennefehlerart"></a>
 ### TANTENNEFEHLERART
 
 Dimensions: 5 rows × 2 columns
@@ -3180,7 +3038,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Falscher Antennfuß oder Diversity |
 | 0xFF | Nicht definiert |
 
-<a id="table-res-0xa050"></a>
 ### RES_0XA050
 
 Dimensions: 2 rows × 13 columns
@@ -3190,7 +3047,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_VERBAU_ROUTINE | - | - | + | 0-n | - | unsigned long | - | TVerbauCMEDIA | - | - | - | Ausgeführte Testroutine(n). |
 | STAT_TEST_VERBAU | - | - | + | 0-n | - | unsigned char | - | TTestStatus | - | - | - | Gibt den Status des Verbautests wieder. Nach dem Herunterfahren oder Neustart des Steuergerätes wird der Status automatisch auf 0 zurückgesetzt. |
 
-<a id="table-arg-0xa050"></a>
 ### ARG_0XA050
 
 Dimensions: 1 rows × 14 columns
@@ -3199,7 +3055,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_VERBAU_ROUTINE | + | - | - | - | unsigned long | - | - | - | - | - | - | - | Routinen, die getestet werden sollen. Tabelle TVerbauCMEDIA |
 
-<a id="table-tverbaucmedia"></a>
 ### TVERBAUCMEDIA
 
 Dimensions: 7 rows × 2 columns
@@ -3214,7 +3069,6 @@ Dimensions: 7 rows × 2 columns
 | 0x00000040 | Mikrophon2 |
 | 0xFFFFFFFF | nicht definiert |
 
-<a id="table-tteststatus"></a>
 ### TTESTSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3228,7 +3082,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Test unterbrochen |
 | 0xFF | Nicht definiert |
 
-<a id="table-res-0xa05a"></a>
 ### RES_0XA05A
 
 Dimensions: 1 rows × 13 columns
@@ -3237,7 +3090,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_REMOVE_CUSTOMER_UPDATES | - | - | + | 0/1 | - | char | - | - | - | - | - | Entfernen aller Benutzer Updates; 0: nicht erfolgreich 1: erfolgreich |
 
-<a id="table-res-0xa079"></a>
 ### RES_0XA079
 
 Dimensions: 1 rows × 13 columns
@@ -3246,7 +3098,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RESET_TO_DEFAULT_CONFIG | - | - | + | 0-n | - | unsigned char | - | TResetStatus | - | - | - | Status Reset Werte gemäß Tabelle TResetStatus 0 UNKNOWN - unbekannt 1 ACTIVE - läuft noch 2 SUCCESS - alles OK 3 FAILED - mit Fehler beendet 4 IDLE - wurde nicht gestartet |
 
-<a id="table-tresetstatus"></a>
 ### TRESETSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3260,7 +3111,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | wurde nicht gestartet |
 | 0xFF | undefinierter Zustand |
 
-<a id="table-res-0xf015"></a>
 ### RES_0XF015
 
 Dimensions: 1 rows × 13 columns
@@ -3269,7 +3119,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TEST | - | - | + | 0-n | high | unsigned char | - | TA4ASTRINGSTATUS | - | - | - | Status of the string is present or not |
 
-<a id="table-ta4astringstatus"></a>
 ### TA4ASTRINGSTATUS
 
 Dimensions: 2 rows × 2 columns
@@ -3279,7 +3128,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | String present |
 | 0x01 | String not present |
 
-<a id="table-tsoftwareupdateprozessklasse"></a>
 ### TSOFTWAREUPDATEPROZESSKLASSE
 
 Dimensions: 22 rows × 2 columns
@@ -3309,7 +3157,6 @@ Dimensions: 22 rows × 2 columns
 | 0xC1 | SWUP Index Package (SWIP) |
 | 0xFF | Ungültige SGBM-ID |
 
-<a id="table-tpowerstate"></a>
 ### TPOWERSTATE
 
 Dimensions: 7 rows × 2 columns
@@ -3324,7 +3171,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Start-Up |
 | 0xFF | Nicht definiert |
 
-<a id="table-tpowerevent"></a>
 ### TPOWEREVENT
 
 Dimensions: 23 rows × 2 columns

@@ -41,7 +41,6 @@
 - [STATUS_ANALOG_UNGEFILTERT_LESEN](#job-status-analog-ungefiltert-lesen) - ungefilterte Analogwerte lesen
 - [TACHO_A](#job-tacho-a) - liefert geschwindigkeitsproportionales Signal
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -59,7 +58,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -72,7 +70,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -91,7 +88,6 @@ _No arguments._
 | ID_DATUM_KW | string | Herstelldatum KW |
 | ID_DATUM_JAHR | string | Herstelldatum Jahr |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -109,7 +105,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -122,7 +117,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -135,7 +129,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 Ruecksetzen des Gesamtwegstreckenzaehlers
@@ -148,7 +141,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -167,7 +159,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-status-motor"></a>
 ### STATUS_MOTOR
 
 Pruefung ob Motor ein oder aus Wenn die Motordrehzahl groesser 360 U/min ist wird auf "Motor ist ein" erkannt
@@ -181,7 +172,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK |
 | STAT_MOTOR_EIN | int | wenn Motor ein, dann 1, sonst 0 |
 
-<a id="job-status-diagnose-lesen"></a>
 ### STATUS_DIAGNOSE_LESEN
 
 Abfrage der aktuellen Diagnose-Stati
@@ -212,7 +202,6 @@ _No arguments._
 | STAT_REST_TACHO_ZEIT_EINH | string | Einheit restliche Tachosimulationszeit |
 | STAT_KL | string | Klemmenstatus (KL30, KLR, KL15, KL50) |
 
-<a id="job-status-digital-gefiltert-lesen"></a>
 ### STATUS_DIGITAL_GEFILTERT_LESEN
 
 Lesen der gefilterten Digitalwerte
@@ -261,7 +250,6 @@ _No arguments._
 | STAT_AKUSTIK2_OFF | int | Akustik-Ausgang2 ist nicht aktiv |
 | STAT_AKUSTIK3_OFF | int | Akustik-Ausgang3 ist nicht aktiv |
 
-<a id="job-status-digital-ungefiltert-lesen"></a>
 ### STATUS_DIGITAL_UNGEFILTERT_LESEN
 
 Lesen der ungefilterten Digitalwerte
@@ -310,7 +298,6 @@ _No arguments._
 | STAT_AKUSTIK2_OFF | int | Akustik-Ausgang2 ist nicht aktiv |
 | STAT_AKUSTIK3_OFF | int | Akustik-Ausgang3 ist nicht aktiv |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Codierdaten lesen
@@ -329,7 +316,6 @@ Codierdaten lesen
 | JOB_STATUS | string |  |
 | COD_DATA | binary | Hexdump |
 
-<a id="job-sia-daten-lesen"></a>
 ### SIA_DATEN_LESEN
 
 SIA-Daten lesen und interpretieren
@@ -363,7 +349,6 @@ _No arguments._
 | ANZAHL_MOTORSTARTS | real | Anzahl Motorstarts [Stueck] |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Codier-Daten lesen und interpretieren
@@ -535,7 +520,6 @@ _No arguments._
 | COD_GEBRAUCHTBIT_KOMBI2 | int | Gebrauchtbit 2 Kombi |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher auslesen
@@ -554,7 +538,6 @@ Speicher auslesen
 | JOB_STATUS | string |  |
 | SPEICH_DATA | binary | Hexdump |
 
-<a id="job-speicher-lesen-io-proz"></a>
 ### SPEICHER_LESEN_IO_PROZ
 
 Speicher auslesen
@@ -573,7 +556,6 @@ Speicher auslesen
 | JOB_STATUS | string |  |
 | SPEICH_DATA | binary | Hexdump |
 
-<a id="job-status-ausgaenge-lesen"></a>
 ### STATUS_AUSGAENGE_LESEN
 
 Stati der Ausgaenge lesen
@@ -600,7 +582,6 @@ _No arguments._
 | STAT_NORM_STANDLFTG_AUS | int | normaler Wert Standlueftung |
 | STAT_NORM_DWA_ALARM_AUS | int | normaler Wert Standlueftung |
 
-<a id="job-status-analog-gefiltert-lesen"></a>
 ### STATUS_ANALOG_GEFILTERT_LESEN
 
 gefilterte Analogwerte lesen
@@ -629,7 +610,6 @@ _No arguments._
 | STAT_LEHNENVERR_RECHTS_WERT | int | Analogwert Lehnenverriegelung rechts |
 | STAT_LEHNENVERR_RECHTS_EINH | string | Einheit Lehnenverriegelung rechts ?? |
 
-<a id="job-status-analog-ungefiltert-lesen"></a>
 ### STATUS_ANALOG_UNGEFILTERT_LESEN
 
 ungefilterte Analogwerte lesen
@@ -658,7 +638,6 @@ _No arguments._
 | STAT_LEHNENVERR_RECHTS_WERT | int | Analogwert Lehnenverriegelung rechts |
 | STAT_LEHNENVERR_RECHTS_EINH | string | Einheit Lehnenverriegelung rechts ?? |
 
-<a id="job-tacho-a"></a>
 ### TACHO_A
 
 liefert geschwindigkeitsproportionales Signal
@@ -683,7 +662,6 @@ liefert geschwindigkeitsproportionales Signal
 - [SIARESET](#table-siareset) (3 × 2)
 - [STATDIAKL](#table-statdiakl) (5 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 61 rows × 2 columns
@@ -752,7 +730,6 @@ Dimensions: 61 rows × 2 columns
 | 0x3b | Interner Fehler |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 3 rows × 2 columns
@@ -763,7 +740,6 @@ Dimensions: 3 rows × 2 columns
 | WEG_RESET | 0x04 |
 | ZEIT_RESET | 0x08 |
 
-<a id="table-statdiakl"></a>
 ### STATDIAKL
 
 Dimensions: 5 rows × 2 columns

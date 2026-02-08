@@ -28,7 +28,6 @@
 - [SLEEP_MODE](#job-sleep-mode) - SG in Sleep-Mode versetzen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Beenden der Diagnose
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -46,7 +45,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -78,7 +75,6 @@ _No arguments._
 | ID_DATUM_KW | int | Herstelldatum KW |
 | ID_DATUM_JAHR | int | Herstelldatum Jahr |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -100,7 +96,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -113,7 +108,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -134,7 +128,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -153,7 +146,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -175,7 +167,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (3 × 3)
 - [FARTTEXTE](#table-farttexte) (7 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -193,7 +184,6 @@ Dimensions: 10 rows × 2 columns
 | ?20? | ERROR_FEHLERANZAHL |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -217,7 +207,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 3 rows × 3 columns
@@ -228,7 +217,6 @@ Dimensions: 3 rows × 3 columns
 | 0x49 | 2 | I-Bus |
 | 0xFF | 3 | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 7 rows × 2 columns

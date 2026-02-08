@@ -30,7 +30,6 @@
 - [STATUS_SCHAERFEN_LESEN](#job-status-schaerfen-lesen) - Default Status_schaerfen_lesen job
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Default Diagnose_ende job
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -48,7 +47,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -81,7 +78,6 @@ _No arguments._
 | ID_DATUM_KW | int |  |
 | ID_DATUM_JAHR | int |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Default FS_LESEN job
@@ -99,7 +95,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl Fehlerarten (immer 0) |
 | F_UW_ANZ | int | Anzahl Umweltbedingungen (immer 0) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -112,7 +107,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Default SPEICHER_LESEN job
@@ -132,7 +126,6 @@ Default SPEICHER_LESEN job
 | JOB_STATUS | string |  |
 | DATENFELD | binary | angeforderter Datenblock |
 
-<a id="job-status-eingaenge-lesen"></a>
 ### STATUS_EINGAENGE_LESEN
 
 Default Status_eingaenge lesen job
@@ -174,7 +167,6 @@ _No arguments._
 | STAT_SCHEIBE_TUER_HINTEN_RECHTS_EIN | int |  |
 | STAT_NEIGUNGSGEBER_EIN | int |  |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Default Codierunglesen job
@@ -276,7 +268,6 @@ _No arguments._
 | PRUEFSTROM_SCHEIBE_HINTEN_RECHTS_WERT | int | 1 oder 10 mA |
 | PRUEFSTROM_SCHEIBE_HINTEN_RECHTS_EINH | string | mA |
 
-<a id="job-status-schaerfen-lesen"></a>
 ### STATUS_SCHAERFEN_LESEN
 
 Default Status_schaerfen_lesen job
@@ -296,7 +287,6 @@ _No arguments._
 | STAT_HORN_EIN | int |  |
 | STAT_LED_EIN | int |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Default Diagnose_ende job
@@ -316,7 +306,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (40 × 3)
 - [JOBRESULT](#table-jobresult) (12 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 40 rows × 3 columns
@@ -364,7 +353,6 @@ Dimensions: 40 rows × 3 columns
 | 0x27 | 0x27 | Ultraschallsensor rechts defekt |
 | 0xFF | 0xFF | unbekannter Fehlerort |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 12 rows × 2 columns

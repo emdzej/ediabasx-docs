@@ -31,7 +31,6 @@
 - [ADU_WERTE_LESEN](#job-adu-werte-lesen) - es werden die Messwerte des AD-Umsetzers ausgelesen
 - [EKP_DATEN_LESEN](#job-ekp-daten-lesen) - es werden die Messwerte des AD-Umsetzers ausgelesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -49,7 +48,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -62,7 +60,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -86,7 +83,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Lesezugriff auf die einzelnen Codierdatenbloecke Als Argument wird die Nummer des zu lesenden Codierdatenblockes uebergeben
@@ -104,7 +100,6 @@ Lesezugriff auf die einzelnen Codierdatenbloecke Als Argument wird die Nummer de
 | DATEN | binary | Es werden jeweils die 16 Byte des angesprochenen Codierdatenblockes ausgegeben |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-codierung-schreiben"></a>
 ### CODIERUNG_SCHREIBEN
 
 Codierdaten schreiben und verifizieren
@@ -122,7 +117,6 @@ Codierdaten schreiben und verifizieren
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | TELEGRAMM | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -135,7 +129,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -149,7 +142,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -183,7 +175,6 @@ _No arguments._
 | F_UW3_EINH | string | Einheit km |
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 is_lesen job
@@ -217,7 +208,6 @@ _No arguments._
 | F_UW3_EINH | string | Einheit km |
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 
-<a id="job-adu-werte-lesen"></a>
 ### ADU_WERTE_LESEN
 
 es werden die Messwerte des AD-Umsetzers ausgelesen
@@ -242,7 +232,6 @@ _No arguments._
 | SPANNUNG_KL15_EINH | string |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-ekp-daten-lesen"></a>
 ### EKP_DATEN_LESEN
 
 es werden die Messwerte des AD-Umsetzers ausgelesen
@@ -274,7 +263,6 @@ _No arguments._
 - [IORTTEXTE](#table-iorttexte) (5 × 2)
 - [FUMWELTTEXTE](#table-fumwelttexte) (5 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -292,7 +280,6 @@ Dimensions: 10 rows × 2 columns
 | ?20? | ERROR_FEHLERANZAHL |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 55 rows × 2 columns
@@ -355,7 +342,6 @@ Dimensions: 55 rows × 2 columns
 | 0x54 | GETRAG |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -384,7 +370,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -405,7 +390,6 @@ Dimensions: 13 rows × 2 columns
 | 0xCC | MOTORSPANNUNG_ZU_NIEDRIG 0xCC |
 | 0xFF | unbekannter Fehlecode |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -416,7 +400,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -429,7 +412,6 @@ Dimensions: 5 rows × 2 columns
 | 0xD4 | DREHZAL_ZU_NIEDRIG_UNTERSP 0xD4 |
 | 0xFF | unbekannter Infocode |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 5 rows × 3 columns

@@ -51,7 +51,6 @@
 - [STATUS_LED_STATISTIK_PWM_LUEFTER](#job-status-led-statistik-pwm-luefter) - Liest die PWM Statistik des Lüfters aus dem LED-SW Steuergerät $22 ReadDataByIdentifier 0xE0F8 LED_STATISTIK_PWM_LUEFTER
 - [STATUS_LED_STATISTIK_EINSCHALTDAUER](#job-status-led-statistik-einschaltdauer) - Liest die Statistik der Einschaltdauer LED-Strang 1-8 aus dem LED-SW Steuergerät $22 ReadDataByIdentifier 0xE0FB LED_STATISTIK_EINSCHALTDAUER
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -70,7 +69,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -83,7 +81,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -100,7 +97,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -131,7 +127,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -176,7 +171,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -195,7 +189,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -213,7 +206,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -234,7 +226,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -263,7 +254,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -283,7 +273,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -304,7 +293,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -320,7 +308,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -342,7 +329,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -364,7 +350,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -391,7 +376,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -436,7 +420,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -451,7 +434,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -471,7 +453,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -490,7 +471,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -509,7 +489,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -524,7 +503,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -540,7 +518,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -559,7 +536,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -579,7 +555,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -597,7 +572,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -613,7 +587,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-led-herstelldaten"></a>
 ### STATUS_LED_HERSTELLDATEN
 
 Liest die Herstelldaten aus dem LED-SW Steuergerät $22 ReadDataByIdentifier 0xE08B LED_EVG_HERSTELLDATEN
@@ -648,7 +621,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-led-statistik-pcb-temp"></a>
 ### STATUS_LED_STATISTIK_PCB_TEMP
 
 Liest die Temperatur Statistik der Platine aus dem LED-SW Steuergerät $22 ReadDataByIdentifier 0xE0F7 LED_STATISTIK_PCB_TEMP
@@ -683,7 +655,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-led-statistik-ntc-temp"></a>
 ### STATUS_LED_STATISTIK_NTC_TEMP
 
 Liest die Temperatur Statistik des NTC-Fühlers aus dem LED-SW Steuergerät $22 ReadDataByIdentifier 0xE0F9 LED_STATISTIK_NTC_TEMP
@@ -718,7 +689,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-led-statistik-pwm-luefter"></a>
 ### STATUS_LED_STATISTIK_PWM_LUEFTER
 
 Liest die PWM Statistik des Lüfters aus dem LED-SW Steuergerät $22 ReadDataByIdentifier 0xE0F8 LED_STATISTIK_PWM_LUEFTER
@@ -739,7 +709,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-led-statistik-einschaltdauer"></a>
 ### STATUS_LED_STATISTIK_EINSCHALTDAUER
 
 Liest die Statistik der Einschaltdauer LED-Strang 1-8 aus dem LED-SW Steuergerät $22 ReadDataByIdentifier 0xE0FB LED_STATISTIK_EINSCHALTDAUER
@@ -939,7 +908,6 @@ _No arguments._
 - [TAB_SEITENCODIERUNG](#table-tab-seitencodierung) (4 × 2)
 - [TAB_STECKDOSE_LAST_TYP](#table-tab-steckdose-last-typ) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1023,7 +991,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -1172,7 +1139,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1215,7 +1181,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1240,7 +1205,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1274,7 +1238,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1347,7 +1310,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1360,7 +1322,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1375,7 +1336,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1388,7 +1348,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1408,7 +1367,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1451,7 +1409,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-arg-0xe010-d"></a>
 ### ARG_0XE010_D
 
 Dimensions: 1 rows × 12 columns
@@ -1460,7 +1417,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HUPE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Horn; 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe011-d"></a>
 ### ARG_0XE011_D
 
 Dimensions: 1 rows × 12 columns
@@ -1469,7 +1425,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BREMSLICHT_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem das Bremslicht KL_54 betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-arg-0xe086-d"></a>
 ### ARG_0XE086_D
 
 Dimensions: 3 rows × 12 columns
@@ -1480,7 +1435,6 @@ Dimensions: 3 rows × 12 columns
 | ZSW2 | % | high | unsigned char | - | - | 254.0 | 100.0 | 0.0 | 0.0 | 100.0 | PWM Wert Zusatzscheinwerfer 2 |
 | BEL_TASTER_ZSW | % | high | unsigned char | - | - | 254.0 | 100.0 | 0.0 | 0.0 | 100.0 | PWM Wert Beleuchtung Taster Zusatzscheinwerfer |
 
-<a id="table-arg-0xe088-d"></a>
 ### ARG_0XE088_D
 
 Dimensions: 3 rows × 12 columns
@@ -1491,7 +1445,6 @@ Dimensions: 3 rows × 12 columns
 | TFL2 | % | high | unsigned char | - | - | 254.0 | 100.0 | 0.0 | 0.0 | 100.0 | PWM Wert Tagfahrlicht 2 |
 | BEL_TASTER_TFL | % | high | unsigned char | - | - | 254.0 | 100.0 | 0.0 | 0.0 | 100.0 | PWM Wert Beleuchtung Taster Tagfahrlicht |
 
-<a id="table-arg-0xe090-d"></a>
 ### ARG_0XE090_D
 
 Dimensions: 4 rows × 12 columns
@@ -1503,7 +1456,6 @@ Dimensions: 4 rows × 12 columns
 | BLINKER_HR_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Blinker hinten rechts 1=EIN, 0=AUS |
 | BLINKER_HL_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Blinker hinten links 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe091-d"></a>
 ### ARG_0XE091_D
 
 Dimensions: 1 rows × 12 columns
@@ -1512,7 +1464,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ABBLENDLICHT_PWM | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem der Ausgang Abblendlicht angesteuert werden soll -> 0% bis 100% -> Wobei 0%  aus  bedeutet bei Codierung XENON: nur 0 oder 100% zulässig |
 
-<a id="table-arg-0xe092-d"></a>
 ### ARG_0XE092_D
 
 Dimensions: 1 rows × 12 columns
@@ -1521,7 +1472,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FERNLICHT_PWM | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert, mit dem der Ausgang Fernlicht angesteuert werden soll -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-arg-0xe093-d"></a>
 ### ARG_0XE093_D
 
 Dimensions: 2 rows × 12 columns
@@ -1531,7 +1481,6 @@ Dimensions: 2 rows × 12 columns
 | STANDLICHT_VORN_1_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Standlicht vorne 1; 1=EIN, 0=AUS |
 | STANDLICHT_VORN_2_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Standlicht vorne 2; 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe094-d"></a>
 ### ARG_0XE094_D
 
 Dimensions: 1 rows × 12 columns
@@ -1540,7 +1489,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TAGFAHRLICHT_PWM | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem das Tagfahrlicht angesteuert werden soll -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-arg-0xe095-d"></a>
 ### ARG_0XE095_D
 
 Dimensions: 1 rows × 12 columns
@@ -1549,7 +1497,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RUECKLICHT_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem das Rücklicht (Kl_58R) angesteuert werden soll -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-arg-0xe096-d"></a>
 ### ARG_0XE096_D
 
 Dimensions: 1 rows × 12 columns
@@ -1558,7 +1505,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KENNZEICHENLEUCHTE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Kennzeichenleuchte |
 
-<a id="table-arg-0xe097-d"></a>
 ### ARG_0XE097_D
 
 Dimensions: 2 rows × 12 columns
@@ -1568,7 +1514,6 @@ Dimensions: 2 rows × 12 columns
 | GRIFFHEIZUNG_LINKS_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem der linke Heizgriff betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 | GRIFFHEIZUNG_RECHTS_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem der rechte Heizgriff betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-arg-0xe099-d"></a>
 ### ARG_0XE099_D
 
 Dimensions: 1 rows × 12 columns
@@ -1577,7 +1522,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STECKDOSE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Steckdose 0 ==> aus; 1 ==> ein |
 
-<a id="table-arg-0xe09c-d"></a>
 ### ARG_0XE09C_D
 
 Dimensions: 1 rows × 12 columns
@@ -1586,7 +1530,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SZ_STECKER_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Sonderzubehör Stecker |
 
-<a id="table-arg-0xe0a1-d"></a>
 ### ARG_0XE0A1_D
 
 Dimensions: 1 rows × 12 columns
@@ -1595,7 +1538,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FERNLICHT_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Fernlicht Eingang 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe0a2-d"></a>
 ### ARG_0XE0A2_D
 
 Dimensions: 1 rows × 12 columns
@@ -1604,7 +1546,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BLINKER_EINGANG | 0-n | - | unsigned char | - | TAB_MR_BLINKER_EINGANG_ARG | 1.0 | 1.0 | 0.0 | - | - | Blinker Eingang |
 
-<a id="table-arg-0xe0a3-d"></a>
 ### ARG_0XE0A3_D
 
 Dimensions: 1 rows × 12 columns
@@ -1613,7 +1554,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HUPE_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Hupe Eingang 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe0a4-d"></a>
 ### ARG_0XE0A4_D
 
 Dimensions: 2 rows × 12 columns
@@ -1623,7 +1563,6 @@ Dimensions: 2 rows × 12 columns
 | BREMSSCHALTER_HAND_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bremsschalter Hand Eingang 1 ==> betätigt 0 ==> nicht betätigt |
 | BREMSSCHALTER_FUSS_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bremsschalter Fuß Eingang 1 ==> betätigt 0 ==> nicht betätigt |
 
-<a id="table-arg-0xe0a5-d"></a>
 ### ARG_0XE0A5_D
 
 Dimensions: 1 rows × 12 columns
@@ -1632,7 +1571,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GRIFFHEIZUNG_EINGANG_MR | 0-n | - | unsigned char | - | TAB_MR_GRIFFHEIZUNG_EINGANG_FKT_ARG | 1.0 | 1.0 | 0.0 | - | - | Griffheizung Eingang |
 
-<a id="table-arg-0xe0a8-d"></a>
 ### ARG_0XE0A8_D
 
 Dimensions: 1 rows × 12 columns
@@ -1641,7 +1579,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TANKGEBER_VERSORGUNG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Tankgeber Versorgung; 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe0b4-d"></a>
 ### ARG_0XE0B4_D
 
 Dimensions: 1 rows × 12 columns
@@ -1650,7 +1587,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LED_SCHEINWERFER_FERNLICHT_1 | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | LED Scheinwerfer EVG Fernlicht_1; 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe0b6-d"></a>
 ### ARG_0XE0B6_D
 
 Dimensions: 1 rows × 12 columns
@@ -1659,7 +1595,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LED_SCHEINWERFER_FERNLICHT_2 | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | LED Scheinwerfer EVG Fernlicht_2; 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe0b7-d"></a>
 ### ARG_0XE0B7_D
 
 Dimensions: 1 rows × 12 columns
@@ -1668,7 +1603,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LED_SCHEINWERFER_ABBLENDLICHT_EIN | 0-n | high | unsigned char | - | TAB_MR_LED_SCHEINWERFER_ABBLENDLICHT_EIN_ARG | - | - | - | - | - | LED_SCHEINWERFER_ABBLENDLICHT_EIN |
 
-<a id="table-arg-0xe181-d"></a>
 ### ARG_0XE181_D
 
 Dimensions: 1 rows × 12 columns
@@ -1677,7 +1611,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GBL_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Gefahrenbremslicht: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe195-d"></a>
 ### ARG_0XE195_D
 
 Dimensions: 1 rows × 12 columns
@@ -1686,7 +1619,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MODUS_AKTIV | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Präsentationsmodus: 1 = aktiv, 0 = nicht aktiv |
 
-<a id="table-arg-0xe1cb-d"></a>
 ### ARG_0XE1CB_D
 
 Dimensions: 1 rows × 12 columns
@@ -1695,7 +1627,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER | 0-n | high | unsigned char | - | TAB_MR_ARG_TASTER_LIN | - | - | - | - | - | LIN Taster (IN_SWCL_EXTS_BOT_MOTBK_2010) |
 
-<a id="table-arg-0xf005-r"></a>
 ### ARG_0XF005_R
 
 Dimensions: 1 rows × 14 columns
@@ -1704,7 +1635,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ZAEHLER | + | - | 0-n | high | unsigned char | - | TAB_MR_ZAEHLER_BCO | - | - | - | - | - | Zähler der zurückgesetzt werden soll |
 
-<a id="table-arg-0xfd02-d"></a>
 ### ARG_0XFD02_D
 
 Dimensions: 11 rows × 12 columns
@@ -1723,7 +1653,6 @@ Dimensions: 11 rows × 12 columns
 | STAT_LIGHT_STATE_1_WERT | HEX | high | unsigned char | - | - | - | - | - | - | - | 0x01 LastValidHblState    0x02 LastValidBrlState    0x04 LastValidLEDPOLState |
 | STAT_UNUSED_1_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Unused_e25_01 |
 
-<a id="table-arg-0xfd06-d"></a>
 ### ARG_0XFD06_D
 
 Dimensions: 20 rows × 12 columns
@@ -1751,7 +1680,6 @@ Dimensions: 20 rows × 12 columns
 | STAT_MANUFACTURING_DATA_19_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | End Of Line  Manufacutering data |
 | STAT_MANUFACTURING_DATA_20_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | End Of Line  Manufacutering data |
 
-<a id="table-arg-0xfd0a-d"></a>
 ### ARG_0XFD0A_D
 
 Dimensions: 1 rows × 12 columns
@@ -1760,7 +1688,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HBG_VOL_WRITE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | It provides the details as 1  write default value  0 No change |
 
-<a id="table-arg-0xfd0b-d"></a>
 ### ARG_0XFD0B_D
 
 Dimensions: 1 rows × 12 columns
@@ -1769,7 +1696,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HBG_STATE_FLAG_WRITE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | It provides the details as 1  write default value  0 No change |
 
-<a id="table-arg-0xfd20-d"></a>
 ### ARG_0XFD20_D
 
 Dimensions: 4 rows × 12 columns
@@ -1781,7 +1707,6 @@ Dimensions: 4 rows × 12 columns
 | STAT_CONTROL_DATA3_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0x01    SocketHolding 0x02    PowerRST 0x08    B_CANStrobe 0x10    STFETDriversDisable 0x20    OutputBatteryCharge 0x40    ExtraEquipConn 0x80    Horn |
 | STAT_CONTROL_DATA4_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0x01    EnableLIN1 0x02    TxD_LIN1 |
 
-<a id="table-arg-0xfd21-d"></a>
 ### ARG_0XFD21_D
 
 Dimensions: 7 rows × 12 columns
@@ -1796,7 +1721,6 @@ Dimensions: 7 rows × 12 columns
 | HANDLER_HEATER_LEFT_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Handler Heater Left Duty |
 | HANDLER_HEATER_RIGHT_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Handler Heater Right Duty |
 
-<a id="table-bf-led-evg-herstellerdaten-struct"></a>
 ### BF_LED_EVG_HERSTELLERDATEN_STRUCT
 
 Dimensions: 7 rows × 10 columns
@@ -1811,7 +1735,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_SW_MA | 0-n | high | unsigned long | 0x00700000 | - | - | - | - | Software Major Version |
 | STAT_SW_MI | 0-n | high | unsigned long | 0x38000000 | - | - | - | - | Software Minor Version |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -1821,7 +1744,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-ddlonhblofforlblon"></a>
 ### DDLONHBLOFFORLBLON
 
 Dimensions: 3 rows × 2 columns
@@ -1832,7 +1754,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | DDL_LHB_HBL_OFF |
 | 2 | DDL_LHB_LBL_ON |
 
-<a id="table-energiesparmode-dop"></a>
 ### ENERGIESPARMODE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -1844,7 +1765,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Transportmode |
 | 3 | Flashmode |
 
-<a id="table-extended-energy-mode-dop"></a>
 ### EXTENDED_ENERGY_MODE_DOP
 
 Dimensions: 16 rows × 2 columns
@@ -1868,7 +1788,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Erweiterter Betriebsmodus 14 |
 | 15 | Erweiterter Betriebsmodus 15 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1882,7 +1801,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fehlerklasse-dop"></a>
 ### FEHLERKLASSE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -1894,7 +1812,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Ueberpruefung beim naechsten Halt |
 | 4 | Ueberpruefung sofort erforderlich |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 150 rows × 3 columns
@@ -2052,7 +1969,6 @@ Dimensions: 150 rows × 3 columns
 | 0xE59485 | CAN BCA Nachricht Steuerung_Sonderfunktion_Motorrad_2010: Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-func-ddl-auto"></a>
 ### FUNC_DDL_AUTO
 
 Dimensions: 4 rows × 2 columns
@@ -2064,7 +1980,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | DDL_AUTO_WAY_DEPENDENCE |
 | 3 | DDL_AUTO_TIME_AND_WAY_DEPENDENCE |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 7 rows × 9 columns
@@ -2079,7 +1994,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1608 | the actual temperature of the the NTC number 2. | °C | High | unsigned char | - | 1.0 | 1.0 | -40.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2092,7 +2006,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 17 rows × 3 columns
@@ -2117,7 +2030,6 @@ Dimensions: 17 rows × 3 columns
 | 0xE59443 | SEK_CAN ABS-BCO Nachricht Wegstrecke_Relativ_Motorrad_2010 - Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 3 rows × 9 columns
@@ -2128,7 +2040,6 @@ Dimensions: 3 rows × 9 columns
 | 0x1604 | KL15 STATUS | 0/1 | High | 0x01 | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2137,7 +2048,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-mr-digitalstatus"></a>
 ### MR_DIGITALSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -2149,7 +2059,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | nicht lesbar |
 | 0xFF | undefiniert |
 
-<a id="table-mr-digital-out-steuern"></a>
 ### MR_DIGITAL_OUT_STEUERN
 
 Dimensions: 4 rows × 2 columns
@@ -2161,7 +2070,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | intern ansteuern |
 | 0xFF | nicht ansteuern |
 
-<a id="table-mr-stat-led-scheinwerfer"></a>
 ### MR_STAT_LED_SCHEINWERFER
 
 Dimensions: 5 rows × 2 columns
@@ -2174,7 +2082,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | ein |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-mr-tab-bco-calibration"></a>
 ### MR_TAB_BCO_CALIBRATION
 
 Dimensions: 5 rows × 2 columns
@@ -2187,7 +2094,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | FINISHED_NOK |
 | 0xFF | NOT_DEFINED |
 
-<a id="table-mr-tab-led-scheinwerfer-leistungsbegrenzung"></a>
 ### MR_TAB_LED_SCHEINWERFER_LEISTUNGSBEGRENZUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2199,7 +2105,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Leistungsreduzierung Stand |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-prog-dep-dop"></a>
 ### PROG_DEP_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -2213,7 +2118,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | incorrectResult error SWE - SWE |
 | 255 | reserved |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -2229,7 +2133,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -2240,7 +2143,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ECUMindestensEinmalVollstaendigProgrammierbar |
 | 2 | ECUNichtMehrProgrammierbar |
 
-<a id="table-rdtci-lev-dop"></a>
 ### RDTCI_LEV_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -2257,7 +2159,6 @@ Dimensions: 9 rows × 2 columns
 | 18 | reportNumberOfEmissionsRelatedOBDDTCByStatusMask |
 | 19 | reportEmissionsRelatedOBDDTCByStatusMask |
 
-<a id="table-res-0x1602-d"></a>
 ### RES_0X1602_D
 
 Dimensions: 3 rows × 10 columns
@@ -2268,7 +2169,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PRG_VERSION_PAST_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Past Point Part of corresponding SGBD Version |
 | STAT_PRG_VERSION_PATCH_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | prg patch version file |
 
-<a id="table-res-0x2300-d"></a>
 ### RES_0X2300_D
 
 Dimensions: 21 rows × 10 columns
@@ -2297,7 +2197,6 @@ Dimensions: 21 rows × 10 columns
 | STAT_TAGFAHRLICHT_AUTO_EIN_MIN_WERT | min | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Tagfahrlicht auto ein - Zähler Minuten |
 | STAT_TAGFAHRLICHT_AUTO_EIN_TAGE_WERT | d | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Tagfahrlicht auto ein - Zähler Tage |
 
-<a id="table-res-0xe010-d"></a>
 ### RES_0XE010_D
 
 Dimensions: 1 rows × 10 columns
@@ -2306,7 +2205,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_HUPE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Horn; 1=EIN, 0=AUS |
 
-<a id="table-res-0xe011-d"></a>
 ### RES_0XE011_D
 
 Dimensions: 1 rows × 10 columns
@@ -2315,7 +2213,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BREMSLICHT_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem das Bremslicht KL_54 betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-res-0xe086-d"></a>
 ### RES_0XE086_D
 
 Dimensions: 3 rows × 10 columns
@@ -2326,7 +2223,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ZSW2_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | PWM Wert Zusatzscheinwerfer 2 |
 | STAT_BEL_TASTER_ZSW_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | PWM Wert Beleuchtung Taster Zusatzscheinwerfer |
 
-<a id="table-res-0xe088-d"></a>
 ### RES_0XE088_D
 
 Dimensions: 3 rows × 10 columns
@@ -2337,7 +2233,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_TFL2_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | PWM Wert Tagfahrlicht 2 |
 | STAT_BEL_TASTER_TFL_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | PWM Wert Beleuchtung Taster Tagfahrlicht |
 
-<a id="table-res-0xe090-d"></a>
 ### RES_0XE090_D
 
 Dimensions: 4 rows × 10 columns
@@ -2349,7 +2244,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BLINKER_HR_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Blinker hinten rechts 1=EIN, 0=AUS |
 | STAT_BLINKER_HL_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Blinker hinten links 1=EIN, 0=AUS |
 
-<a id="table-res-0xe091-d"></a>
 ### RES_0XE091_D
 
 Dimensions: 1 rows × 10 columns
@@ -2358,7 +2252,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ABBLENDLICHT_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem das Abblendlicht betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-res-0xe092-d"></a>
 ### RES_0XE092_D
 
 Dimensions: 1 rows × 10 columns
@@ -2367,7 +2260,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FERNLICHT_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem das Fernlicht betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-res-0xe093-d"></a>
 ### RES_0XE093_D
 
 Dimensions: 2 rows × 10 columns
@@ -2377,7 +2269,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_STANDLICHT_VORN_1_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Standlicht vorne 1; 1=EIN, 0=AUS |
 | STAT_STANDLICHT_VORN_2_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Standlicht vorne 2; 1=EIN, 0=AUS |
 
-<a id="table-res-0xe094-d"></a>
 ### RES_0XE094_D
 
 Dimensions: 1 rows × 10 columns
@@ -2386,7 +2277,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TAGFAHRLICHT_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem das Tagfahrlicht betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-res-0xe095-d"></a>
 ### RES_0XE095_D
 
 Dimensions: 1 rows × 10 columns
@@ -2395,7 +2285,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RUECKLICHT_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem das Rücklicht (Kl_58R)  betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-res-0xe096-d"></a>
 ### RES_0XE096_D
 
 Dimensions: 1 rows × 10 columns
@@ -2404,7 +2293,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KENNZEICHENLEUCHTE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Kennzeichenleuchte |
 
-<a id="table-res-0xe097-d"></a>
 ### RES_0XE097_D
 
 Dimensions: 2 rows × 10 columns
@@ -2414,7 +2302,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_GRIFFHEIZUNG_LINKS_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem der linke Heizgriff betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 | STAT_GRIFFHEIZUNG_RECHTS_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem der rechte Heizgriff betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-res-0xe098-d"></a>
 ### RES_0XE098_D
 
 Dimensions: 2 rows × 10 columns
@@ -2424,7 +2311,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TANKGEBER_ROH_WERT | mV | - | unsigned char | - | - | 19.6 | 1.0 | 0.0 | Auslesen des Tankgeber Rohwertes; Spannungsfall am Hebelgeber |
 | STAT_FUELLSTAND_TANK_WERT | l | - | unsigned int | - | - | 0.05 | 1.0 | 0.0 | Tankinhalt in Liter |
 
-<a id="table-res-0xe099-d"></a>
 ### RES_0XE099_D
 
 Dimensions: 3 rows × 10 columns
@@ -2435,7 +2321,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_STECKDOSE_STROM_WERT | mA | - | int | - | - | 1.0 | 1.0 | 0.0 | Strom Steckdose; Bereich von -10000 bis 10000 mA |
 | STAT_STECKDOSE_SPANNUNG_WERT | V | - | unsigned char | - | - | 0.1 | 1.0 | 0.0 | Spannung Steckdose; Bereich von 0 bis 25,4V |
 
-<a id="table-res-0xe09b-d"></a>
 ### RES_0XE09B_D
 
 Dimensions: 2 rows × 10 columns
@@ -2445,7 +2330,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_IMPULSE_WERT | 1/s | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Sensorimpulse pro Sekunde (Raddrehzehlsensor Hinterrad) Geschwindigkeit [km/h] = Radumfang[m]/Zähnezahl*3.6*STAT_IMPULSE_WERT MR mit ABS => Ergebnis BCO 65535 1/s |
 | STAT_GESCHWINDIGKEIT_WERT | km/h | - | unsigned int | - | - | 0.125 | 1.0 | 0.0 | Geschwindigkeit Hinterrad in km/h MR mit ABS: Ergebnis BCO 511,75 km/h |
 
-<a id="table-res-0xe09c-d"></a>
 ### RES_0XE09C_D
 
 Dimensions: 2 rows × 10 columns
@@ -2455,7 +2339,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SZ_STECKER_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Sonderzubehör Stecker |
 | STAT_SZ_STECKER_STROM_WERT | mA | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Laststrom Sonderzubehör Stecker; Bereich von 0 bis 2000 mA |
 
-<a id="table-res-0xe09d-d"></a>
 ### RES_0XE09D_D
 
 Dimensions: 4 rows × 10 columns
@@ -2467,7 +2350,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BREMSS_HAND_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Bremsschalter Hand; 0 ==> nicht betätigt 1==> betätigt |
 | STAT_BREMSS_FUSS_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Bremsschalter Fuss; 0 ==> nicht betätigt 1==> betätigt |
 
-<a id="table-res-0xe09e-d"></a>
 ### RES_0XE09E_D
 
 Dimensions: 2 rows × 10 columns
@@ -2477,7 +2359,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KL_61_WERT | V | - | unsigned char | - | - | 0.1 | 1.0 | 0.0 | analoger Generator Spannungswert (Kl. D+), der am BCO an der Kl. 61 anliegt: Kontrollleuchte geht AUS: Klemme D+ > Spannung_D+_max (12 V, Wert codierbar) Kontrollleuchte geht EIN: Klemme D+ < Spannung_D+_min (5 V, Wert codierbar) |
 | STAT_LADEKONTROLLLEUCHTE | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Ladekontrollleuchte 0 = aus 1 = ein |
 
-<a id="table-res-0xe0a0-d"></a>
 ### RES_0XE0A0_D
 
 Dimensions: 2 rows × 10 columns
@@ -2487,7 +2368,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AUSSENTEMP_ROH_WERT | mV | - | unsigned char | - | - | 19.6 | 1.0 | 0.0 | Auslesen des Rohwertes Spannung Aussentemperaturfühler |
 | STAT_AUSSENTEMP_WERT | °C | - | unsigned char | - | - | 0.5 | 1.0 | -40.0 | Außentemperatursensor in Grad Celsius |
 
-<a id="table-res-0xe0a1-d"></a>
 ### RES_0XE0A1_D
 
 Dimensions: 1 rows × 10 columns
@@ -2496,7 +2376,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FERNLICHT_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Fernlicht Eingang 1=EIN, 0=AUS |
 
-<a id="table-res-0xe0a2-d"></a>
 ### RES_0XE0A2_D
 
 Dimensions: 4 rows × 10 columns
@@ -2508,7 +2387,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BLINKER_EINGANG_RUECKSTELLUNG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Blinker Eingang Rueckstellung  1 ==> aktiv 0 ==> nicht aktiv |
 | STAT_BLINKER_EINGANG_WARNBLINKEN_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Blinker Eingang Warnblinken  1 ==> aktiv 0 ==> nicht aktiv |
 
-<a id="table-res-0xe0a3-d"></a>
 ### RES_0XE0A3_D
 
 Dimensions: 1 rows × 10 columns
@@ -2517,7 +2395,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_HUPE_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Hupe Eingang 1=EIN, 0=AUS |
 
-<a id="table-res-0xe0a4-d"></a>
 ### RES_0XE0A4_D
 
 Dimensions: 2 rows × 10 columns
@@ -2527,7 +2404,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BREMSSCHALTER_HAND_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Bremsschalter Hand Eingang 1 ==> betätigt 0 ==> nicht betätigt |
 | STAT_BREMSSCHALTER_FUSS_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Bremsschalter Fuß Eingang 1 ==> betätigt 0 ==> nicht betätigt |
 
-<a id="table-res-0xe0a5-d"></a>
 ### RES_0XE0A5_D
 
 Dimensions: 1 rows × 10 columns
@@ -2536,7 +2412,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GRIFFHEIZUNG_EINGANG_MR | 0-n | - | unsigned char | - | TAB_MR_GRIFFHEIZUNG_EINGANG_FKT | 1.0 | 1.0 | 0.0 | Griffheizung Eingang |
 
-<a id="table-res-0xe0a8-d"></a>
 ### RES_0XE0A8_D
 
 Dimensions: 1 rows × 10 columns
@@ -2545,7 +2420,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TANKGEBER_VERSORGUNG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Tankgeber Versorgung; 1=EIN, 0=AUS |
 
-<a id="table-res-0xe0b4-d"></a>
 ### RES_0XE0B4_D
 
 Dimensions: 1 rows × 10 columns
@@ -2554,7 +2428,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LED_SCHEINWERFER_1_MR | 0-n | high | unsigned char | - | TAB_MR_LED_SCHEINWERFER | 1.0 | 1.0 | 0.0 | LED Scheinwerfer EVG Fernlicht_1 |
 
-<a id="table-res-0xe0b6-d"></a>
 ### RES_0XE0B6_D
 
 Dimensions: 1 rows × 10 columns
@@ -2563,7 +2436,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LED_SCHEINWERFER_2_MR | 0-n | high | unsigned char | - | TAB_MR_LED_SCHEINWERFER | 1.0 | 1.0 | 0.0 | LED Scheinwerfer EVG Fernlicht_2 |
 
-<a id="table-res-0xe0b7-d"></a>
 ### RES_0XE0B7_D
 
 Dimensions: 1 rows × 10 columns
@@ -2572,7 +2444,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LED_SCHEINWERFER_ABBLENDLICHT_EIN_1 | 0-n | high | unsigned char | - | TAB_MR_LED_SCHEINWERFER_ABBLENDLICHT_EIN | - | - | - | Status LED_SCHEINWERFER_ABBLENDLICHT_EIN |
 
-<a id="table-res-0xe0f0"></a>
 ### RES_0XE0F0
 
 Dimensions: 1 rows × 10 columns
@@ -2581,7 +2452,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LED_TEMP_NTC1_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -55.0 | aktuelle Temperatur des NTC im Scheinwerfer |
 
-<a id="table-res-0xe0f3"></a>
 ### RES_0XE0F3
 
 Dimensions: 1 rows × 10 columns
@@ -2590,7 +2460,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_EVG_LUEFTER_WERT | - | high | unsigned char | - | - | 100.0 | 255.0 | 0.0 | aktuelle Lüfteransteuerung 0% - 100% wobei 0% bedeutet 0V und 100% bedeutet 5V |
 
-<a id="table-res-0xe0f5-d"></a>
 ### RES_0XE0F5_D
 
 Dimensions: 8 rows × 10 columns
@@ -2606,7 +2475,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_PWM_LED_7_WERT | % | high | unsigned char | - | - | 100.0 | 255.0 | 0.0 | aktuelles PWM Verhältnis 0% bis 100% mit dem der LED-Strang 7 betrieben wird, wobei 0% bedeutet aus |
 | STAT_PWM_LED_8_WERT | % | high | unsigned char | - | - | 100.0 | 255.0 | 0.0 | aktuelles PWM Verhältnis 0% bis 100% mit dem der LED-Strang 8 betrieben wird, wobei 0% bedeutet aus |
 
-<a id="table-res-0xe0f6-d"></a>
 ### RES_0XE0F6_D
 
 Dimensions: 8 rows × 10 columns
@@ -2622,7 +2490,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_STROM_LED7_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | aktueller Strom (Effektivwert) mit dem der LED-Strang 7 betrieben wird |
 | STAT_STROM_LED8_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | aktueller Strom (Effektivwert) mit dem der LED-Strang 8 betrieben wird |
 
-<a id="table-res-0xe181-d"></a>
 ### RES_0XE181_D
 
 Dimensions: 1 rows × 10 columns
@@ -2631,7 +2498,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GBL_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Status Gefahrenbremslicht: 0 = aus, 1 = ein |
 
-<a id="table-res-0xe1cb-d"></a>
 ### RES_0XE1CB_D
 
 Dimensions: 1 rows × 10 columns
@@ -2640,7 +2506,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTER | 0-n | high | unsigned char | - | TAB_MR_RES_TASTER_LIN | - | - | - | Status LIN Taster (IN_SWCL_EXTS_BOT_MOTBK_2010) |
 
-<a id="table-res-0xf001-r"></a>
 ### RES_0XF001_R
 
 Dimensions: 3 rows × 13 columns
@@ -2651,7 +2516,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_K1_CALIBRATION_WERT | - | - | + | Stufen | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | calibrated value of K0 |
 | STAT_ROUTINE_RESULT | - | - | + | 0-n | - | unsigned char | - | MR_TAB_BCO_CALIBRATION | 1.0 | 1.0 | 0.0 | gives the result of the routine: NOT_STARTED (0) RUNNING (1) FINISHED_OK (2) FINISHED_NOK (3) |
 
-<a id="table-res-0xfd01-d"></a>
 ### RES_0XFD01_D
 
 Dimensions: 174 rows × 10 columns
@@ -2833,7 +2697,6 @@ Dimensions: 174 rows × 10 columns
 | STAT_CFG_LEDDTCS_SET4_WERT | HEX | high | unsigned char | - | - | - | - | - | 0x01 cfg_LED_VtgStatusTimeout 0x02 cfg_LED_AuxInfoStatusTimeout 0x04 cfg_LEDFL_DayDriveLightChannel8_OC 0x08 cfg_LEDFL_DayDriveLightChannel8_SC 0x10 cfg_LEDFL_PositionLightChannel8_OC 0x20 cfg_LEDFL_PositionLightChannel8_SC 0x40 cfg_LIN_Ddl1_Error 0x80 cfg_LIN_Ddl2_Error |
 | STAT_CFG_LEDDTCS_SET5_WERT | HEX | high | unsigned char | - | - | - | - | - | 0x01 cfg_LIN_ADL_Error 0x02 cfg_LIN_InSwitchClusterTimeout |
 
-<a id="table-res-0xfd02-d"></a>
 ### RES_0XFD02_D
 
 Dimensions: 11 rows × 10 columns
@@ -2852,7 +2715,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_LIGHT_STATE_1_WERT | HEX | high | unsigned char | - | - | - | - | - | 0x01 LastValidHblState    0x02 LastValidBrlState    0x04 LastValidLEDPOLState |
 | STAT_UNUSED_1_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Unused_e25_01 |
 
-<a id="table-res-0xfd03-d"></a>
 ### RES_0XFD03_D
 
 Dimensions: 40 rows × 10 columns
@@ -2900,7 +2762,6 @@ Dimensions: 40 rows × 10 columns
 | STAT_HANDLER_HEAT_RIGHT_DIAG_1_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Handler Heater Right diag feedeback from E switch. 0x01    OC_Diag 0x02    SC_Diag 0x04    OT_Diag 0x08    OS_Diag 0x10    OLOFF_Diag 0x20    OLON_Diag 0x40    OV_Diag 0x80    UV_Diag |
 | STAT_HANDLER_HEAT_RIGHT_DIAG_2_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Handler Heater Rightt diag feedeback from E switch. 0x01    POR_Diag 0x02    NM_Diag 0x04    SOA0_Diag 0x08    SOA1_Diag 0x10    SOA2_Diag 0x20    SOA3_Diag 0x40    SOA4_Diag |
 
-<a id="table-res-0xfd04-d"></a>
 ### RES_0XFD04_D
 
 Dimensions: 11 rows × 10 columns
@@ -2919,7 +2780,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_HANDLER_HEATER_RIGHT_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Handler Heater Right Duty |
 | STAT_DATA4_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0x01    EnableLIN1 0x02    TxD_LIN1 |
 
-<a id="table-res-0xfd05-d"></a>
 ### RES_0XFD05_D
 
 Dimensions: 3 rows × 10 columns
@@ -2930,7 +2790,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_LEAR_SW_VERSION_MINOR_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Lear Software Version minor |
 | STAT_LEAR_SW_VERSION_PATCH_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Lear Software Version Patch |
 
-<a id="table-res-0xfd06-d"></a>
 ### RES_0XFD06_D
 
 Dimensions: 22 rows × 10 columns
@@ -2960,7 +2819,6 @@ Dimensions: 22 rows × 10 columns
 | STAT_K0_SOCKET_CALIB_PARAM_WERT | Stufe | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | K0 Socket Calib Parameter |
 | STAT_K1_SOCKET_CALIB_PARAM_WERT | Stufe | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | K1 Socket Calib Parameter |
 
-<a id="table-res-0xfd07-d"></a>
 ### RES_0XFD07_D
 
 Dimensions: 2 rows × 10 columns
@@ -2970,7 +2828,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AVERAGE_CPU_LOAD_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Average CPU load |
 | STAT_MAX_CPU_LOAD_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Maximum CPU load |
 
-<a id="table-res-0xfd08-d"></a>
 ### RES_0XFD08_D
 
 Dimensions: 14 rows × 10 columns
@@ -2992,7 +2849,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_TEMPERATURESENSOR_WERT | HEX | high | unsigned int | - | - | - | - | - | - |
 | STAT_HANDHEATSWITCHOFF | 0/1 | high | unsigned char | - | - | - | - | - | - |
 
-<a id="table-res-0xfd09-d"></a>
 ### RES_0XFD09_D
 
 Dimensions: 147 rows × 10 columns
@@ -3147,7 +3003,6 @@ Dimensions: 147 rows × 10 columns
 | STAT_CFG_WHTIMEATWSWITCHONDELAY_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Time ATW SwitchOn Delay. DOORS ID6744 |
 | STAT_CFG_WHTIMESHUTDOWNKL15ON_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Time ShutDown KL15 on. DOORS ID 6777 |
 
-<a id="table-res-0xfd20-d"></a>
 ### RES_0XFD20_D
 
 Dimensions: 4 rows × 10 columns
@@ -3159,7 +3014,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_DATA3_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0x01    SocketHolding 0x02    PowerRST 0x08    B_CANStrobe 0x10    STFETDriversDisable 0x20    OutputBatteryCharge 0x40    ExtraEquipConn 0x80    Horn |
 | STAT_DATA4_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0x01    EnableLIN1 0x02    TxD_LIN1 |
 
-<a id="table-res-0xfd21-d"></a>
 ### RES_0XFD21_D
 
 Dimensions: 7 rows × 10 columns
@@ -3174,7 +3028,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_HANDLER_HEATER_LEFT_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Handler Heater Left Duty |
 | STAT_HANDLER_HEATER_RIGHT_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Handler Heater Right Duty |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 81 rows × 16 columns
@@ -3263,7 +3116,6 @@ Dimensions: 81 rows × 16 columns
 | DIGITAL_OUTPUT_CONTROL | 0xFD20 | - | Digital Output Control | - | - | - | - | - | - | - | - | - | 2F | ARG_0xFD20_D | RES_0xFD20_D |
 | PWM_OUTPUT_CONTROL | 0xFD21 | - | Output PWM Duty Control | - | - | - | - | - | - | - | - | - | 2F | ARG_0xFD21_D | RES_0xFD21_D |
 
-<a id="table-svk-version-dop"></a>
 ### SVK_VERSION_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -3273,7 +3125,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | reserved |
 | 1 | SVKVersion_01 |
 
-<a id="table-tab-fzg-var"></a>
 ### TAB_FZG_VAR
 
 Dimensions: 16 rows × 2 columns
@@ -3297,7 +3148,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | undefiniert |
 | 0x0F | undefiniert |
 
-<a id="table-tab-led-proddatum"></a>
 ### TAB_LED_PRODDATUM
 
 Dimensions: 32 rows × 2 columns
@@ -3337,7 +3187,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | 30 |
 | 0x1F | 31 |
 
-<a id="table-tab-led-prodmonat"></a>
 ### TAB_LED_PRODMONAT
 
 Dimensions: 13 rows × 2 columns
@@ -3358,7 +3207,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | 11 |
 | 0x0C | 12 |
 
-<a id="table-tab-led-versionnr"></a>
 ### TAB_LED_VERSIONNR
 
 Dimensions: 8 rows × 2 columns
@@ -3374,7 +3222,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | 6 |
 | 0x07 | 7 |
 
-<a id="table-tab-led-zulieferer"></a>
 ### TAB_LED_ZULIEFERER
 
 Dimensions: 4 rows × 2 columns
@@ -3386,7 +3233,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Hersteller 2 |
 | 0x03 | Hersteller 3 |
 
-<a id="table-tab-mr-abblendlicht"></a>
 ### TAB_MR_ABBLENDLICHT
 
 Dimensions: 5 rows × 2 columns
@@ -3399,7 +3245,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Signal ungueltig |
 | 0xFF | undefiniert |
 
-<a id="table-tab-mr-arg-taster-lin"></a>
 ### TAB_MR_ARG_TASTER_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -3411,7 +3256,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-blinker-eingang"></a>
 ### TAB_MR_BLINKER_EINGANG
 
 Dimensions: 6 rows × 2 columns
@@ -3425,7 +3269,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Eingang Warnblinktaster aktiv |
 | 0xFF | ungültig |
 
-<a id="table-tab-mr-blinker-eingang-arg"></a>
 ### TAB_MR_BLINKER_EINGANG_ARG
 
 Dimensions: 5 rows × 2 columns
@@ -3438,7 +3281,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Eingang Blinkerrücksteller aktiv |
 | 4 | Eingang Warnblinktaster aktiv |
 
-<a id="table-tab-mr-fehler"></a>
 ### TAB_MR_FEHLER
 
 Dimensions: 3 rows × 2 columns
@@ -3449,7 +3291,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler |
 | 0xFF | unbekannter Eintrag |
 
-<a id="table-tab-mr-griffheizung-eingang-fkt"></a>
 ### TAB_MR_GRIFFHEIZUNG_EINGANG_FKT
 
 Dimensions: 8 rows × 2 columns
@@ -3465,7 +3306,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Heizung Stufe 6 |
 | 0x07 | Signal ungueltig |
 
-<a id="table-tab-mr-griffheizung-eingang-fkt-arg"></a>
 ### TAB_MR_GRIFFHEIZUNG_EINGANG_FKT_ARG
 
 Dimensions: 7 rows × 2 columns
@@ -3480,7 +3320,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Heizung Stufe 5 |
 | 0x06 | Heizung Stufe 6 |
 
-<a id="table-tab-mr-hersteller"></a>
 ### TAB_MR_HERSTELLER
 
 Dimensions: 4 rows × 2 columns
@@ -3492,7 +3331,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Hersteller 2 |
 | 0x03 | Hersteller 3 |
 
-<a id="table-tab-mr-led-luefteranforderung"></a>
 ### TAB_MR_LED_LUEFTERANFORDERUNG
 
 Dimensions: 5 rows × 2 columns
@@ -3505,7 +3343,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Signal ungueltig |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tab-mr-led-scheinwerfer"></a>
 ### TAB_MR_LED_SCHEINWERFER
 
 Dimensions: 4 rows × 2 columns
@@ -3517,7 +3354,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | reserviert |
 | 3 | Signal ungueltig |
 
-<a id="table-tab-mr-led-scheinwerfer-abblendlicht-ein"></a>
 ### TAB_MR_LED_SCHEINWERFER_ABBLENDLICHT_EIN
 
 Dimensions: 7 rows × 2 columns
@@ -3532,7 +3368,6 @@ Dimensions: 7 rows × 2 columns
 | 0x08 | Positionslicht |
 | 0xFF | Signal ungueltig |
 
-<a id="table-tab-mr-led-scheinwerfer-abblendlicht-ein-arg"></a>
 ### TAB_MR_LED_SCHEINWERFER_ABBLENDLICHT_EIN_ARG
 
 Dimensions: 6 rows × 2 columns
@@ -3546,7 +3381,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Reserviert |
 | 0x08 | Positionslicht |
 
-<a id="table-tab-mr-led-scheinwerfer-licht"></a>
 ### TAB_MR_LED_SCHEINWERFER_LICHT
 
 Dimensions: 7 rows × 2 columns
@@ -3561,7 +3395,6 @@ Dimensions: 7 rows × 2 columns
 | 0x20 | Abblendlicht ein |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tab-mr-led-thermomanagement"></a>
 ### TAB_MR_LED_THERMOMANAGEMENT
 
 Dimensions: 4 rows × 2 columns
@@ -3573,7 +3406,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Übertemperatur EVG |
 | 0x03 | Übertemperatur EVG und Scheinwerfer |
 
-<a id="table-tab-mr-led-touristenmode"></a>
 ### TAB_MR_LED_TOURISTENMODE
 
 Dimensions: 5 rows × 2 columns
@@ -3586,7 +3418,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Signal ungueltig |
 | 0xFF | ungueltige Eingabe |
 
-<a id="table-tab-mr-res-taster-lin"></a>
 ### TAB_MR_RES_TASTER_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -3598,7 +3429,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-seite"></a>
 ### TAB_MR_SEITE
 
 Dimensions: 4 rows × 2 columns
@@ -3610,7 +3440,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | rechts |
 | 0x03 | ungueltig |
 
-<a id="table-tab-mr-stat-led-scheinwerfer-fehlermeldung"></a>
 ### TAB_MR_STAT_LED_SCHEINWERFER_FEHLERMELDUNG
 
 Dimensions: 7 rows × 2 columns
@@ -3625,7 +3454,6 @@ Dimensions: 7 rows × 2 columns
 | 0x20 | Fehler Steuergeraeteintern |
 | 0xFF | unbekannter Fehler |
 
-<a id="table-tab-mr-variante"></a>
 ### TAB_MR_VARIANTE
 
 Dimensions: 4 rows × 2 columns
@@ -3637,7 +3465,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | K50 |
 | 0x03 | ungueltig |
 
-<a id="table-tab-mr-zaehler-bco"></a>
 ### TAB_MR_ZAEHLER_BCO
 
 Dimensions: 10 rows × 2 columns
@@ -3655,7 +3482,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Alle Zähler |
 | 0x09 | Zähler für Batterieschutz |
 
-<a id="table-tab-seitencodierung"></a>
 ### TAB_SEITENCODIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3667,7 +3493,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | links |
 | 0x03 | ungültig |
 
-<a id="table-tab-steckdose-last-typ"></a>
 ### TAB_STECKDOSE_LAST_TYP
 
 Dimensions: 4 rows × 2 columns

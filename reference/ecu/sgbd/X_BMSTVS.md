@@ -40,7 +40,6 @@
 - [STATUS_GEMISCHADAPTION_WARM](#job-status-gemischadaption-warm) - Reading of warm fuel adaption table UDS   : $22   ReadDataByIdentifier UDS   : $668E Sub-Parameter
 - [STATUS_GEMISCHADAPTION_KALT](#job-status-gemischadaption-kalt) - Reading of cold fuel adaption table UDS   : $22   ReadDataByIdentifier UDS   : $668F Sub-Parameter
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -59,7 +58,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -72,7 +70,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -89,7 +86,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -120,7 +116,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -165,7 +160,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -184,7 +178,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -202,7 +195,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -223,7 +215,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -243,7 +234,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -264,7 +254,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -286,7 +275,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -308,7 +296,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -327,7 +314,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -346,7 +332,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -361,7 +346,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -376,7 +360,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -395,7 +378,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-power-down"></a>
 ### POWER_DOWN
 
 SG im Nachlauf abschalten UDS  : $11 ECUReset UDS  : $41 PowerDownInErrorCase Modus: Default
@@ -410,7 +392,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-gemischadaption-warm"></a>
 ### STATUS_GEMISCHADAPTION_WARM
 
 Reading of warm fuel adaption table UDS   : $22   ReadDataByIdentifier UDS   : $668E Sub-Parameter
@@ -429,7 +410,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-gemischadaption-kalt"></a>
 ### STATUS_GEMISCHADAPTION_KALT
 
 Reading of cold fuel adaption table UDS   : $22   ReadDataByIdentifier UDS   : $668F Sub-Parameter
@@ -496,7 +476,6 @@ _No arguments._
 - [TAB_MR_MM_GANG](#table-tab-mr-mm-gang) (9 × 2)
 - [TAB_MR_MM_MODUS_FAHRZEUG](#table-tab-mr-mm-modus-fahrzeug) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -580,7 +559,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -729,7 +707,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -772,7 +749,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -797,7 +773,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -831,7 +806,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -904,7 +878,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -917,7 +890,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -932,7 +904,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -945,7 +916,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -965,7 +935,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-arg-0x66c9-d"></a>
 ### ARG_0X66C9_D
 
 Dimensions: 1 rows × 12 columns
@@ -974,7 +943,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FAHRGESTELLNUMMER | TEXT | high | string[17] | - | - | 1.0 | 1.0 | 0.0 | - | - | EWS-Fahrgestellnummer |
 
-<a id="table-arg-0x66ca-d"></a>
 ### ARG_0X66CA_D
 
 Dimensions: 1 rows × 12 columns
@@ -983,7 +951,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STATUS_STARTUNTERDRUECKUNG | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Aktiviert oder Deaktiviert die Start-Unterdrückung: 0x01 = Aktiv, 0x00 = Nicht aktiv |
 
-<a id="table-arg-0x66f0-d"></a>
 ### ARG_0X66F0_D
 
 Dimensions: 1 rows × 12 columns
@@ -992,7 +959,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EKP_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für die Elektrokraftstoffpumpe in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 
-<a id="table-arg-0x66f1-d"></a>
 ### ARG_0X66F1_D
 
 Dimensions: 1 rows × 12 columns
@@ -1001,7 +967,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LR_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für das Last-Relais in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 
-<a id="table-arg-0x66f2-d"></a>
 ### ARG_0X66F2_D
 
 Dimensions: 1 rows × 12 columns
@@ -1010,7 +975,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ELUE_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für den Motor-Lüfter in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 
-<a id="table-arg-0x66f3-d"></a>
 ### ARG_0X66F3_D
 
 Dimensions: 2 rows × 12 columns
@@ -1020,7 +984,6 @@ Dimensions: 2 rows × 12 columns
 | EV_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für die Einspritzventile in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 | EV_ANSTEUERN_NUMMER | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Bitcodierte Angabe der anzusteuernden Einspritzventile in Zündreihenfolge, zB. 9 = 00001001b: Ansteuerung des 1. und 4. Ventils |
 
-<a id="table-arg-0x66f4-d"></a>
 ### ARG_0X66F4_D
 
 Dimensions: 2 rows × 12 columns
@@ -1030,7 +993,6 @@ Dimensions: 2 rows × 12 columns
 | TEV_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für das Tank-Entlüftungs-Ventils in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 | TEV_ANSTEUERN_TV | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Tastverhältnis der Ansteuerung des Tank-Entlüftungs-Ventils in Prozent |
 
-<a id="table-arg-0x66f5-d"></a>
 ### ARG_0X66F5_D
 
 Dimensions: 2 rows × 12 columns
@@ -1040,7 +1002,6 @@ Dimensions: 2 rows × 12 columns
 | SLV_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für das Sekundär-Luft-Ventil in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 | SLV_ANSTEUERN_TV | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Tastverhältnis der Ansteuerung des Sekundär-Luft-Ventils in Prozent |
 
-<a id="table-arg-0x66f6-d"></a>
 ### ARG_0X66F6_D
 
 Dimensions: 2 rows × 12 columns
@@ -1050,7 +1011,6 @@ Dimensions: 2 rows × 12 columns
 | LH_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für die Lambda-Sonden-Heizung in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 | LH_ANSTEUERN_TV | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Tastverhältnis der Ansteuerung der Lambda-Sonden-Heizung in Prozent |
 
-<a id="table-arg-0x66f7-d"></a>
 ### ARG_0X66F7_D
 
 Dimensions: 4 rows × 12 columns
@@ -1062,7 +1022,6 @@ Dimensions: 4 rows × 12 columns
 | STP_ANSTEUERN_END_POSITION | % | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Endposition des Steppers in Prozent |
 | STP_ANSTEUERN_GESCHWINDIGKEIT | %/s | high | unsigned long | - | - | 10000.0 | 1.0 | 0.0 | - | - | Geschwindigkeit mit der von Start-Position zu End-Position gewechselt werden soll |
 
-<a id="table-arg-0x66f8-d"></a>
 ### ARG_0X66F8_D
 
 Dimensions: 1 rows × 12 columns
@@ -1071,7 +1030,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MWL_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für die Motor-Warnleuchte in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 
-<a id="table-arg-0x66f9-d"></a>
 ### ARG_0X66F9_D
 
 Dimensions: 1 rows × 12 columns
@@ -1080,7 +1038,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OTWL_ANSTEUERN_DAUER | s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung für die Übertemperatur-Warnleuchte in Sekunden; Bei Ansteuerdauer == 0 verwendet das SG den applizierten Defaultwert. |
 
-<a id="table-arg-0xe119-d"></a>
 ### ARG_0XE119_D
 
 Dimensions: 1 rows × 12 columns
@@ -1089,7 +1046,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GWSZ_SCHREIBEN | km | - | signed long | - | - | 1.0 | 1.0 | 0.0 | 0.0 | - | GWSZ im Kombi auf neuen Wert setzen |
 
-<a id="table-arg-0xe12c-d"></a>
 ### ARG_0XE12C_D
 
 Dimensions: 3 rows × 12 columns
@@ -1100,7 +1056,6 @@ Dimensions: 3 rows × 12 columns
 | SERVICE_MONAT | - | - | signed char | - | - | 1.0 | 1.0 | 0.0 | - | - | Monat, an dem der nächste Service fällig ist |
 | SERVICE_JAHR | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | Jahr, an dem der nächste Service fällig ist |
 
-<a id="table-arg-0xe12d-d"></a>
 ### ARG_0XE12D_D
 
 Dimensions: 1 rows × 12 columns
@@ -1109,7 +1064,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RESTWEG | km | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Setzen des Wegstreckenintervalles bis zur nächsten Seviceanzeige |
 
-<a id="table-bf-mr-mm-automatische-gang-adaption"></a>
 ### BF_MR_MM_AUTOMATISCHE_GANG_ADAPTION
 
 Dimensions: 7 rows × 10 columns
@@ -1124,7 +1078,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_BIT5_GANG_5 | 0/1 | high | unsigned char | 0x20 | - | - | - | - | Gang 5 (Bit 5): 0 = nicht adaptiert, 1 = adaptiert |
 | STAT_BIT6_GANG_6 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | Gang 6 (Bit 6): 0 = nicht adaptiert, 1 = adaptiert |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1138,7 +1091,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1152,7 +1104,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 57 rows × 3 columns
@@ -1217,7 +1168,6 @@ Dimensions: 57 rows × 3 columns
 | 0xCD9455 | CAN ABSBCO Nachricht Geschwindigkeit_Motorrad_2010: Alive Fehler | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 5 rows × 9 columns
@@ -1230,7 +1180,6 @@ Dimensions: 5 rows × 9 columns
 | 0x66D3 | UWB_MM_BATTERIESPANNUNG_MR | V | High | unsigned char | - | 1.0 | 10.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1242,7 +1191,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -1251,7 +1199,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -1260,7 +1207,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1269,7 +1215,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -1283,7 +1228,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x6603-d"></a>
 ### RES_0X6603_D
 
 Dimensions: 3 rows × 10 columns
@@ -1294,7 +1238,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_DIGITAL_SST_KANAL1 | 0/1 | high | unsigned char | - | - | - | - | - | Status SST-Kanal 1: 0 = offen, 1 = geschlossen |
 | STAT_DIGITAL_SST_KANAL2 | 0/1 | high | unsigned char | - | - | - | - | - | Status SST-Kanal 2: 0 = offen, 1 = geschlossen |
 
-<a id="table-res-0x66c9-d"></a>
 ### RES_0X66C9_D
 
 Dimensions: 1 rows × 10 columns
@@ -1303,7 +1246,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FAHRGESTELLNUMMER_TEXT | TEXT | high | string[17] | - | - | 1.0 | 1.0 | 0.0 | EWS-Fahrgestellnummer |
 
-<a id="table-res-0xe119-d"></a>
 ### RES_0XE119_D
 
 Dimensions: 1 rows × 10 columns
@@ -1312,7 +1254,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GWSZ_WERT | km | - | signed long | - | - | 1.0 | 1.0 | 0.0 | aktueller GWSZ-Wert |
 
-<a id="table-res-0xe12c-d"></a>
 ### RES_0XE12C_D
 
 Dimensions: 3 rows × 10 columns
@@ -1323,7 +1264,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SERVICE_MONAT_WERT | - | - | signed char | - | - | 1.0 | 1.0 | 0.0 | Monat, an dem der nächste Service fällig ist |
 | STAT_SERVICE_JAHR_WERT | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Jahr, an dem der nächste Service fällig ist |
 
-<a id="table-res-0xe12d-d"></a>
 ### RES_0XE12D_D
 
 Dimensions: 1 rows × 10 columns
@@ -1332,7 +1272,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RESTWEG_WERT | km | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | verbleibendes Wegstreckenintervall bis wegabhängiger Service als überfällig angezeigt wird |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 61 rows × 16 columns
@@ -1401,7 +1340,6 @@ Dimensions: 61 rows × 16 columns
 | MM_STEPPERMOTOR_ADAPTION_MR | 0xF652 | - | Steuern Adaption Steppermotor | - | - | - | - | - | - | - | - | - | 31 | - | - |
 | MM_NEUTRALGANG_ADAPTION_MR | 0xF653 | - | Steuern Adaption Neutralgang-Position | - | - | - | - | - | - | - | - | - | 31 | - | - |
 
-<a id="table-tab-mr-mm-gang"></a>
 ### TAB_MR_MM_GANG
 
 Dimensions: 9 rows × 2 columns
@@ -1418,7 +1356,6 @@ Dimensions: 9 rows × 2 columns
 | 0x40 | Gang = Undefiniert |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-mr-mm-modus-fahrzeug"></a>
 ### TAB_MR_MM_MODUS_FAHRZEUG
 
 Dimensions: 3 rows × 2 columns

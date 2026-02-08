@@ -55,7 +55,6 @@
 - [_FS_LOESCHEN_FUNKTIONAL](#job-fs-loeschen-funktional) - Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
 - [STATUS_IDR_EGS_EXTENDED](#job-status-idr-egs-extended) - Lesen der IDR Daten für EGS UDS  : $22 ReadDataByIdentifier Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -74,7 +73,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -87,7 +85,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -104,7 +101,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -136,7 +132,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -189,7 +184,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -208,7 +202,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -226,7 +219,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -247,7 +239,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -276,7 +267,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -296,7 +286,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -317,7 +306,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -333,7 +321,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -355,7 +342,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -377,7 +363,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -396,7 +381,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-permanent"></a>
 ### FS_LESEN_PERMANENT
 
 permanente Fehler aus Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $15 ReportDTCWithPermanentStatus Modus: Default
@@ -422,7 +406,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -449,7 +432,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -502,7 +484,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -517,7 +498,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -537,7 +517,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -556,7 +535,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -575,7 +553,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -590,7 +567,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -609,7 +585,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -629,7 +604,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -646,7 +620,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -665,7 +638,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -680,7 +652,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -697,7 +668,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -712,7 +682,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -727,7 +696,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen"></a>
 ### CALID_CVN_LESEN
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -745,7 +713,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -765,7 +732,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen-funktional"></a>
 ### _FS_LOESCHEN_FUNKTIONAL
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -784,7 +750,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-idr-egs-extended"></a>
 ### STATUS_IDR_EGS_EXTENDED
 
 Lesen der IDR Daten für EGS UDS  : $22 ReadDataByIdentifier Modus: Default
@@ -1542,7 +1507,6 @@ _No arguments._
 - [VERSION](#table-version) (9 × 2)
 - [WDBYI_RESET_FLAG_TABLE](#table-wdbyi-reset-flag-table) (1 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1626,7 +1590,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 149 rows × 2 columns
@@ -1783,7 +1746,6 @@ Dimensions: 149 rows × 2 columns
 | 0x0000CA | SEG Automotive Germany GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1826,7 +1788,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1851,7 +1812,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1885,7 +1845,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1958,7 +1917,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1971,7 +1929,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 9 rows × 9 columns
@@ -1988,7 +1945,6 @@ Dimensions: 9 rows × 9 columns
 | 0x1769 | ABS_ZEIT_SUP | 0-n | - | 0xFFFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-tab-zeit-syncmethod"></a>
 ### TAB_ZEIT_SYNCMETHOD
 
 Dimensions: 4 rows × 2 columns
@@ -2000,7 +1956,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | IEEE802.1AS |
 | 0x03 | invalid |
 
-<a id="table-tab-zeit-user-info"></a>
 ### TAB_ZEIT_USER_INFO
 
 Dimensions: 8 rows × 2 columns
@@ -2016,7 +1971,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | invalid |
 | 0x07 | invalid |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -2029,7 +1983,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -2051,7 +2004,6 @@ Dimensions: 14 rows × 3 columns
 | 0x61 | ECUSUPSPEC | ECUSupplierSpecificSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2094,7 +2046,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2105,7 +2056,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x400a-d"></a>
 ### ARG_0X400A_D
 
 Dimensions: 1 rows × 12 columns
@@ -2114,7 +2064,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RESET_DATA_ARG | 0-n | - | unsigned char | - | WDBYI_RESET_FLAG_TABLE | - | - | - | - | - | Reset Flag zum Zurücksetzen der Daten |
 
-<a id="table-arg-0x4142-d"></a>
 ### ARG_0X4142_D
 
 Dimensions: 1 rows × 12 columns
@@ -2123,7 +2072,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TSL_GEAR_CNT_TBL | 0-n | - | unsigned char | - | TSL_GEAR_CNT_TABLE | - | - | - | - | - | Reset Flag zum Zurücksetzen der Daten |
 
-<a id="table-arg-0x4143-d"></a>
 ### ARG_0X4143_D
 
 Dimensions: 1 rows × 12 columns
@@ -2132,7 +2080,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RESET_FLAG | 0-n | - | unsigned char | - | WDBYI_RESET_FLAG_TABLE | - | - | - | - | - | Reset Flag zum Zurücksetzen der Daten |
 
-<a id="table-arg-0x4148-d"></a>
 ### ARG_0X4148_D
 
 Dimensions: 1 rows × 12 columns
@@ -2141,7 +2088,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RESET_FLAG | 0-n | - | unsigned char | - | WDBYI_RESET_FLAG_TABLE | - | - | - | - | - | Reset Flag zum Zurücksetzen der Daten |
 
-<a id="table-arg-0x4310-d"></a>
 ### ARG_0X4310_D
 
 Dimensions: 1 rows × 12 columns
@@ -2150,7 +2096,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OILSCHADENSMODEL_RESET_FLAG | 0-n | high | unsigned char | - | OIL_CLUTCH_CHANGED | - | - | - | - | - | Reset flag zum Zurücksetzen des Öl-Schadensmodel |
 
-<a id="table-arg-0x4312-d"></a>
 ### ARG_0X4312_D
 
 Dimensions: 1 rows × 12 columns
@@ -2159,7 +2104,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | IDR_EGS_DATA | DATA | high | data[240] | - | - | 1.0 | 1.0 | 0.0 | - | - | Daten der IDR für EGS |
 
-<a id="table-arg-0x4313-d"></a>
 ### ARG_0X4313_D
 
 Dimensions: 1 rows × 12 columns
@@ -2168,7 +2112,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CLUTCH_RUN_IN_STATE | 0-n | - | unsigned char | - | CLUTCH_RUN_IN_STATE | - | - | - | - | - | Einlaufstatus der Kupplung |
 
-<a id="table-arg-0x4314-d"></a>
 ### ARG_0X4314_D
 
 Dimensions: 1 rows × 12 columns
@@ -2177,7 +2120,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RESET_DATA_ARG | 0-n | - | unsigned char | - | WDBYI_RESET_FLAG_TABLE | - | - | - | - | - | Reset Flag zum Zurücksetzen der Daten |
 
-<a id="table-arg-0xc001-d"></a>
 ### ARG_0XC001_D
 
 Dimensions: 2 rows × 12 columns
@@ -2187,7 +2129,6 @@ Dimensions: 2 rows × 12 columns
 | MODE | 0-n | - | unsigned char | - | TAB_EWS_MODE_ARG | - | - | - | - | - | Der Parameter MODE legt die durchzuführende Aktion fest. |
 | DATA | DATA | - | data[16] | - | - | 1.0 | 1.0 | 0.0 | - | - | Legt die Daten für die durchzuführende Aktion fest. Folgende Formate müssen unterstützt werden: 01 23 45 67 89 AB CD EF 01 23 45 67 89 AB CD EF und 0x01,0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF,0x01,0x23,0x45,0x67,0x89,0xAB,0xCD,0xEF. |
 
-<a id="table-arg-0xd9ca-d"></a>
 ### ARG_0XD9CA_D
 
 Dimensions: 1 rows × 12 columns
@@ -2196,7 +2137,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SEGELN_ROLLE | 0-n | high | unsigned char | - | TAB_STEUERN_SEGELN_ROLLE | - | - | - | - | - | 0x00: Segeln deaktivieren; 0x01: Segeln aktivieren; |
 
-<a id="table-arg-0xda15-d"></a>
 ### ARG_0XDA15_D
 
 Dimensions: 1 rows × 12 columns
@@ -2205,7 +2145,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LERNFKT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Alle Lernfunktionen zurücksetzen = 0 |
 
-<a id="table-arg-0xda66-d"></a>
 ### ARG_0XDA66_D
 
 Dimensions: 1 rows × 12 columns
@@ -2214,7 +2153,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUTOP_DEACTIVATE | 0-n | high | unsigned char | - | TAB_AUTOP_DEACTIVATION | - | - | - | - | - | Deaktivieren von AUTO-P. Siehe Tabelle TAB_AUTOP_DEACTIVATION |
 
-<a id="table-arg-0xda68-d"></a>
 ### ARG_0XDA68_D
 
 Dimensions: 1 rows × 12 columns
@@ -2223,7 +2161,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SHIFT_GEAR_P | 0-n | high | unsigned char | - | TAB_SHIFT_GEAR_P | - | - | - | - | - | Gang P ein- und auslegen. Siehe Tabelle TAB_SHIFT_GEAR_P |
 
-<a id="table-arg-0xf100-r"></a>
 ### ARG_0XF100_R
 
 Dimensions: 3 rows × 14 columns
@@ -2234,7 +2171,6 @@ Dimensions: 3 rows × 14 columns
 | RC_EWS_SW_ID | + | - | HEX | - | unsigned long | - | - | - | - | - | - | - | 4 Byte der SWID für die der Freischaltcode eingespielt werden soll (Big Endian) |
 | RC_EWS_DATA | + | - | DATA | - | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Routine Control Data |
 
-<a id="table-arg-0xf402-r"></a>
 ### ARG_0XF402_R
 
 Dimensions: 4 rows × 14 columns
@@ -2246,7 +2182,6 @@ Dimensions: 4 rows × 14 columns
 | STAT_STEUERN_SHFT_GEARS_DRB_IDX_SD1_ARG_WERT | + | - | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 3.0 | Fahr-Index von Schaltwalze 1 |
 | STAT_STEUERN_SHFT_GEARS_DRB_IDX_SD2_ARG_WERT | + | - | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 3.0 | Fahr-Index von Schaltwalze 2 |
 
-<a id="table-arg-0xf410-r"></a>
 ### ARG_0XF410_R
 
 Dimensions: 1 rows × 14 columns
@@ -2255,7 +2190,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_CLU_TP_ADA_START_CLU_NR_ARG | + | - | 0-n | - | signed int | - | TAB_STEUERN_CLU_TP_ADA_START_CLU_NR_ARG | - | - | - | - | - | Kupplungsnummer |
 
-<a id="table-arg-0xf411-r"></a>
 ### ARG_0XF411_R
 
 Dimensions: 7 rows × 14 columns
@@ -2270,7 +2204,6 @@ Dimensions: 7 rows × 14 columns
 | STEUERN_CLU_SELF_OPEN_TST_TRG_VOLT_ARG | + | - | mV | - | signed int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 32000.0 | absolute aktive Öffnung-Sollspannung |
 | STEUERN_CLU_SELF_OPEN_TST_OPEN_DUR_ARG | + | - | ms | - | signed int | - | - | 1.0 | 1.0 | 0.0 | 1.0 | 32000.0 | aktive Öffnung-Dauer |
 
-<a id="table-arg-0xf413-r"></a>
 ### ARG_0XF413_R
 
 Dimensions: 7 rows × 14 columns
@@ -2285,7 +2218,6 @@ Dimensions: 7 rows × 14 columns
 | STEUERN_CLU_PRS_CNTRL_PRS_CAP_2_ARG | + | - | mbar | - | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | Kupplungsaktuatordruck 2 (CAP 2) |
 | STEUERN_CLU_PRS_CNTRL_FLW_CCP_ARG | + | - | l/h | - | signed int | - | - | 1000.0 | 60.0 | 0.0 | - | - | Fluß von Kupplungskühlung-Druck |
 
-<a id="table-arg-0xf415-r"></a>
 ### ARG_0XF415_R
 
 Dimensions: 2 rows × 14 columns
@@ -2295,7 +2227,6 @@ Dimensions: 2 rows × 14 columns
 | STEUERN_CLU_SIM_PRS_CNTRL_PRS_1_ARG | + | - | mbar | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Druck 1 |
 | STEUERN_CLU_SIM_PRS_CNTRL_PRS_2_ARG | + | - | mbar | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Druck 2 |
 
-<a id="table-arg-0xf416-r"></a>
 ### ARG_0XF416_R
 
 Dimensions: 7 rows × 14 columns
@@ -2310,7 +2241,6 @@ Dimensions: 7 rows × 14 columns
 | STEUERN_CLU_ACTU_PWM_CNTRL_CAP_2_ARG | + | - | % | - | signed int | - | - | 1.0 | 1.0 | 0.0 | -100.0 | 100.0 | PWM Kupplungsbetätigungspumpe 2 |
 | STEUERN_CLU_ACTU_PWM_CNTRL_CCP_ARG | + | - | % | - | signed int | - | - | 1.0 | 1.0 | 0.0 | -100.0 | 100.0 | PWM Kupplung-Kühlpumpe |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-0"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_0
 
 Dimensions: 2 rows × 10 columns
@@ -2320,7 +2250,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_0 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_0 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-1"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_1
 
 Dimensions: 2 rows × 10 columns
@@ -2330,7 +2259,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_1 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_1 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-10"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_10
 
 Dimensions: 2 rows × 10 columns
@@ -2340,7 +2268,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_10 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_10 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-100"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_100
 
 Dimensions: 2 rows × 10 columns
@@ -2350,7 +2277,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_100 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_100 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-101"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_101
 
 Dimensions: 2 rows × 10 columns
@@ -2360,7 +2286,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_101 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_101 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-102"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_102
 
 Dimensions: 2 rows × 10 columns
@@ -2370,7 +2295,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_102 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_102 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-103"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_103
 
 Dimensions: 2 rows × 10 columns
@@ -2380,7 +2304,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_103 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_103 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-104"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_104
 
 Dimensions: 2 rows × 10 columns
@@ -2390,7 +2313,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_104 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_104 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-105"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_105
 
 Dimensions: 2 rows × 10 columns
@@ -2400,7 +2322,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_105 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_105 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-106"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_106
 
 Dimensions: 2 rows × 10 columns
@@ -2410,7 +2331,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_106 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_106 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-107"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_107
 
 Dimensions: 2 rows × 10 columns
@@ -2420,7 +2340,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_107 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_107 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-108"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_108
 
 Dimensions: 2 rows × 10 columns
@@ -2430,7 +2349,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_108 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_108 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-109"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_109
 
 Dimensions: 2 rows × 10 columns
@@ -2440,7 +2358,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_109 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_109 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-11"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_11
 
 Dimensions: 2 rows × 10 columns
@@ -2450,7 +2367,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_11 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_11 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-110"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_110
 
 Dimensions: 2 rows × 10 columns
@@ -2460,7 +2376,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_110 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_110 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-111"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_111
 
 Dimensions: 2 rows × 10 columns
@@ -2470,7 +2385,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_111 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_111 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-112"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_112
 
 Dimensions: 2 rows × 10 columns
@@ -2480,7 +2394,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_112 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_112 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-113"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_113
 
 Dimensions: 2 rows × 10 columns
@@ -2490,7 +2403,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_113 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_113 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-114"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_114
 
 Dimensions: 2 rows × 10 columns
@@ -2500,7 +2412,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_114 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_114 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-115"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_115
 
 Dimensions: 2 rows × 10 columns
@@ -2510,7 +2421,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_115 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_115 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-116"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_116
 
 Dimensions: 2 rows × 10 columns
@@ -2520,7 +2430,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_116 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_116 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-117"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_117
 
 Dimensions: 2 rows × 10 columns
@@ -2530,7 +2439,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_117 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_117 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-118"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_118
 
 Dimensions: 2 rows × 10 columns
@@ -2540,7 +2448,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_118 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_118 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-119"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_119
 
 Dimensions: 2 rows × 10 columns
@@ -2550,7 +2457,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_119 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_119 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-12"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_12
 
 Dimensions: 2 rows × 10 columns
@@ -2560,7 +2466,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_12 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_12 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-120"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_120
 
 Dimensions: 2 rows × 10 columns
@@ -2570,7 +2475,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_120 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_120 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-121"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_121
 
 Dimensions: 2 rows × 10 columns
@@ -2580,7 +2484,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_121 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_121 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-122"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_122
 
 Dimensions: 2 rows × 10 columns
@@ -2590,7 +2493,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_122 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_122 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-123"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_123
 
 Dimensions: 2 rows × 10 columns
@@ -2600,7 +2502,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_123 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_123 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-124"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_124
 
 Dimensions: 2 rows × 10 columns
@@ -2610,7 +2511,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_124 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_124 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-125"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_125
 
 Dimensions: 2 rows × 10 columns
@@ -2620,7 +2520,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_125 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_125 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-126"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_126
 
 Dimensions: 2 rows × 10 columns
@@ -2630,7 +2529,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_126 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_126 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-127"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_127
 
 Dimensions: 2 rows × 10 columns
@@ -2640,7 +2538,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_127 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_127 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-128"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_128
 
 Dimensions: 2 rows × 10 columns
@@ -2650,7 +2547,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_128 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_128 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-129"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_129
 
 Dimensions: 2 rows × 10 columns
@@ -2660,7 +2556,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_129 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_129 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-13"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_13
 
 Dimensions: 2 rows × 10 columns
@@ -2670,7 +2565,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_13 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_13 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-130"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_130
 
 Dimensions: 2 rows × 10 columns
@@ -2680,7 +2574,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_130 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_130 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-131"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_131
 
 Dimensions: 2 rows × 10 columns
@@ -2690,7 +2583,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_131 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_131 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-132"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_132
 
 Dimensions: 2 rows × 10 columns
@@ -2700,7 +2592,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_132 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_132 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-133"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_133
 
 Dimensions: 2 rows × 10 columns
@@ -2710,7 +2601,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_133 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_133 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-134"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_134
 
 Dimensions: 2 rows × 10 columns
@@ -2720,7 +2610,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_134 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_134 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-135"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_135
 
 Dimensions: 2 rows × 10 columns
@@ -2730,7 +2619,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_135 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_135 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-136"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_136
 
 Dimensions: 2 rows × 10 columns
@@ -2740,7 +2628,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_136 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_136 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-137"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_137
 
 Dimensions: 2 rows × 10 columns
@@ -2750,7 +2637,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_137 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_137 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-138"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_138
 
 Dimensions: 2 rows × 10 columns
@@ -2760,7 +2646,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_138 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_138 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-139"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_139
 
 Dimensions: 2 rows × 10 columns
@@ -2770,7 +2655,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_139 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_139 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-14"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_14
 
 Dimensions: 2 rows × 10 columns
@@ -2780,7 +2664,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_14 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_14 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-140"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_140
 
 Dimensions: 2 rows × 10 columns
@@ -2790,7 +2673,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_140 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_140 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-141"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_141
 
 Dimensions: 2 rows × 10 columns
@@ -2800,7 +2682,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_141 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_141 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-142"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_142
 
 Dimensions: 2 rows × 10 columns
@@ -2810,7 +2691,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_142 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_142 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-143"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_143
 
 Dimensions: 2 rows × 10 columns
@@ -2820,7 +2700,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_143 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_143 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-144"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_144
 
 Dimensions: 2 rows × 10 columns
@@ -2830,7 +2709,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_144 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_144 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-145"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_145
 
 Dimensions: 2 rows × 10 columns
@@ -2840,7 +2718,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_145 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_145 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-146"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_146
 
 Dimensions: 2 rows × 10 columns
@@ -2850,7 +2727,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_146 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_146 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-147"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_147
 
 Dimensions: 2 rows × 10 columns
@@ -2860,7 +2736,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_147 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_147 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-148"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_148
 
 Dimensions: 2 rows × 10 columns
@@ -2870,7 +2745,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_148 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_148 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-149"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_149
 
 Dimensions: 2 rows × 10 columns
@@ -2880,7 +2754,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_149 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_149 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-15"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_15
 
 Dimensions: 2 rows × 10 columns
@@ -2890,7 +2763,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_15 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_15 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-150"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_150
 
 Dimensions: 2 rows × 10 columns
@@ -2900,7 +2772,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_150 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_150 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-151"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_151
 
 Dimensions: 2 rows × 10 columns
@@ -2910,7 +2781,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_151 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_151 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-152"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_152
 
 Dimensions: 2 rows × 10 columns
@@ -2920,7 +2790,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_152 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_152 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-153"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_153
 
 Dimensions: 2 rows × 10 columns
@@ -2930,7 +2799,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_153 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_153 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-154"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_154
 
 Dimensions: 2 rows × 10 columns
@@ -2940,7 +2808,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_154 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_154 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-155"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_155
 
 Dimensions: 2 rows × 10 columns
@@ -2950,7 +2817,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_155 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_155 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-156"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_156
 
 Dimensions: 2 rows × 10 columns
@@ -2960,7 +2826,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_156 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_156 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-157"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_157
 
 Dimensions: 2 rows × 10 columns
@@ -2970,7 +2835,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_157 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_157 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-158"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_158
 
 Dimensions: 2 rows × 10 columns
@@ -2980,7 +2844,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_158 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_158 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-159"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_159
 
 Dimensions: 2 rows × 10 columns
@@ -2990,7 +2853,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_159 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_159 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-16"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_16
 
 Dimensions: 2 rows × 10 columns
@@ -3000,7 +2862,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_16 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_16 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-160"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_160
 
 Dimensions: 2 rows × 10 columns
@@ -3010,7 +2871,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_160 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_160 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-161"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_161
 
 Dimensions: 2 rows × 10 columns
@@ -3020,7 +2880,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_161 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_161 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-162"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_162
 
 Dimensions: 2 rows × 10 columns
@@ -3030,7 +2889,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_162 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_162 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-163"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_163
 
 Dimensions: 2 rows × 10 columns
@@ -3040,7 +2898,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_163 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_163 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-164"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_164
 
 Dimensions: 2 rows × 10 columns
@@ -3050,7 +2907,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_164 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_164 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-165"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_165
 
 Dimensions: 2 rows × 10 columns
@@ -3060,7 +2916,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_165 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_165 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-166"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_166
 
 Dimensions: 2 rows × 10 columns
@@ -3070,7 +2925,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_166 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_166 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-167"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_167
 
 Dimensions: 2 rows × 10 columns
@@ -3080,7 +2934,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_167 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_167 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-168"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_168
 
 Dimensions: 2 rows × 10 columns
@@ -3090,7 +2943,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_168 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_168 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-169"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_169
 
 Dimensions: 2 rows × 10 columns
@@ -3100,7 +2952,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_169 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_169 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-17"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_17
 
 Dimensions: 2 rows × 10 columns
@@ -3110,7 +2961,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_17 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_17 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-170"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_170
 
 Dimensions: 2 rows × 10 columns
@@ -3120,7 +2970,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_170 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_170 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-171"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_171
 
 Dimensions: 2 rows × 10 columns
@@ -3130,7 +2979,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_171 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_171 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-172"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_172
 
 Dimensions: 2 rows × 10 columns
@@ -3140,7 +2988,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_172 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_172 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-173"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_173
 
 Dimensions: 2 rows × 10 columns
@@ -3150,7 +2997,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_173 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_173 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-174"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_174
 
 Dimensions: 2 rows × 10 columns
@@ -3160,7 +3006,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_174 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_174 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-175"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_175
 
 Dimensions: 2 rows × 10 columns
@@ -3170,7 +3015,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_175 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_175 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-176"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_176
 
 Dimensions: 2 rows × 10 columns
@@ -3180,7 +3024,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_176 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_176 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-177"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_177
 
 Dimensions: 2 rows × 10 columns
@@ -3190,7 +3033,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_177 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_177 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-178"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_178
 
 Dimensions: 2 rows × 10 columns
@@ -3200,7 +3042,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_178 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_178 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-179"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_179
 
 Dimensions: 2 rows × 10 columns
@@ -3210,7 +3051,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_179 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_179 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-18"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_18
 
 Dimensions: 2 rows × 10 columns
@@ -3220,7 +3060,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_18 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_18 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-180"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_180
 
 Dimensions: 2 rows × 10 columns
@@ -3230,7 +3069,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_180 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_180 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-181"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_181
 
 Dimensions: 2 rows × 10 columns
@@ -3240,7 +3078,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_181 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_181 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-182"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_182
 
 Dimensions: 2 rows × 10 columns
@@ -3250,7 +3087,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_182 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_182 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-183"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_183
 
 Dimensions: 2 rows × 10 columns
@@ -3260,7 +3096,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_183 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_183 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-184"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_184
 
 Dimensions: 2 rows × 10 columns
@@ -3270,7 +3105,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_184 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_184 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-185"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_185
 
 Dimensions: 2 rows × 10 columns
@@ -3280,7 +3114,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_185 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_185 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-186"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_186
 
 Dimensions: 2 rows × 10 columns
@@ -3290,7 +3123,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_186 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_186 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-187"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_187
 
 Dimensions: 2 rows × 10 columns
@@ -3300,7 +3132,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_187 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_187 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-188"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_188
 
 Dimensions: 2 rows × 10 columns
@@ -3310,7 +3141,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_188 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_188 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-189"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_189
 
 Dimensions: 2 rows × 10 columns
@@ -3320,7 +3150,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_189 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_189 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-19"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_19
 
 Dimensions: 2 rows × 10 columns
@@ -3330,7 +3159,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_19 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_19 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-190"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_190
 
 Dimensions: 2 rows × 10 columns
@@ -3340,7 +3168,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_190 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_190 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-191"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_191
 
 Dimensions: 2 rows × 10 columns
@@ -3350,7 +3177,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_191 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_191 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-192"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_192
 
 Dimensions: 2 rows × 10 columns
@@ -3360,7 +3186,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_192 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_192 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-193"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_193
 
 Dimensions: 2 rows × 10 columns
@@ -3370,7 +3195,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_193 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_193 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-194"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_194
 
 Dimensions: 2 rows × 10 columns
@@ -3380,7 +3204,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_194 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_194 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-195"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_195
 
 Dimensions: 2 rows × 10 columns
@@ -3390,7 +3213,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_195 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_195 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-196"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_196
 
 Dimensions: 2 rows × 10 columns
@@ -3400,7 +3222,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_196 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_196 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-197"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_197
 
 Dimensions: 2 rows × 10 columns
@@ -3410,7 +3231,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_197 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_197 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-198"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_198
 
 Dimensions: 2 rows × 10 columns
@@ -3420,7 +3240,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_198 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_198 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-199"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_199
 
 Dimensions: 2 rows × 10 columns
@@ -3430,7 +3249,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_199 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_199 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-2"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_2
 
 Dimensions: 2 rows × 10 columns
@@ -3440,7 +3258,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_2 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_2 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-20"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_20
 
 Dimensions: 2 rows × 10 columns
@@ -3450,7 +3267,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_20 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_20 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-200"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_200
 
 Dimensions: 2 rows × 10 columns
@@ -3460,7 +3276,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_200 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_200 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-201"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_201
 
 Dimensions: 2 rows × 10 columns
@@ -3470,7 +3285,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_201 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_201 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-202"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_202
 
 Dimensions: 2 rows × 10 columns
@@ -3480,7 +3294,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_202 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_202 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-203"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_203
 
 Dimensions: 2 rows × 10 columns
@@ -3490,7 +3303,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_203 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_203 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-204"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_204
 
 Dimensions: 2 rows × 10 columns
@@ -3500,7 +3312,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_204 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_204 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-205"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_205
 
 Dimensions: 2 rows × 10 columns
@@ -3510,7 +3321,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_205 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_205 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-206"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_206
 
 Dimensions: 2 rows × 10 columns
@@ -3520,7 +3330,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_206 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_206 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-207"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_207
 
 Dimensions: 2 rows × 10 columns
@@ -3530,7 +3339,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_207 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_207 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-208"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_208
 
 Dimensions: 2 rows × 10 columns
@@ -3540,7 +3348,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_208 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_208 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-209"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_209
 
 Dimensions: 2 rows × 10 columns
@@ -3550,7 +3357,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_209 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_209 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-21"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_21
 
 Dimensions: 2 rows × 10 columns
@@ -3560,7 +3366,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_21 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_21 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-210"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_210
 
 Dimensions: 2 rows × 10 columns
@@ -3570,7 +3375,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_210 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_210 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-211"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_211
 
 Dimensions: 2 rows × 10 columns
@@ -3580,7 +3384,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_211 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_211 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-212"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_212
 
 Dimensions: 2 rows × 10 columns
@@ -3590,7 +3393,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_212 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_212 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-213"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_213
 
 Dimensions: 2 rows × 10 columns
@@ -3600,7 +3402,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_213 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_213 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-214"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_214
 
 Dimensions: 2 rows × 10 columns
@@ -3610,7 +3411,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_214 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_214 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-215"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_215
 
 Dimensions: 2 rows × 10 columns
@@ -3620,7 +3420,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_215 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_215 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-216"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_216
 
 Dimensions: 2 rows × 10 columns
@@ -3630,7 +3429,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_216 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_216 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-217"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_217
 
 Dimensions: 2 rows × 10 columns
@@ -3640,7 +3438,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_217 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_217 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-218"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_218
 
 Dimensions: 2 rows × 10 columns
@@ -3650,7 +3447,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_218 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_218 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-219"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_219
 
 Dimensions: 2 rows × 10 columns
@@ -3660,7 +3456,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_219 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_219 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-22"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_22
 
 Dimensions: 2 rows × 10 columns
@@ -3670,7 +3465,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_22 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_22 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-220"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_220
 
 Dimensions: 2 rows × 10 columns
@@ -3680,7 +3474,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_220 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_220 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-221"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_221
 
 Dimensions: 2 rows × 10 columns
@@ -3690,7 +3483,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_221 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_221 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-222"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_222
 
 Dimensions: 2 rows × 10 columns
@@ -3700,7 +3492,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_222 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_222 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-223"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_223
 
 Dimensions: 2 rows × 10 columns
@@ -3710,7 +3501,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_223 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_223 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-224"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_224
 
 Dimensions: 2 rows × 10 columns
@@ -3720,7 +3510,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_224 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_224 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-225"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_225
 
 Dimensions: 2 rows × 10 columns
@@ -3730,7 +3519,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_225 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_225 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-226"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_226
 
 Dimensions: 2 rows × 10 columns
@@ -3740,7 +3528,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_226 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_226 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-227"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_227
 
 Dimensions: 2 rows × 10 columns
@@ -3750,7 +3537,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_227 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_227 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-228"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_228
 
 Dimensions: 2 rows × 10 columns
@@ -3760,7 +3546,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_228 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_228 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-229"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_229
 
 Dimensions: 2 rows × 10 columns
@@ -3770,7 +3555,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_229 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_229 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-23"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_23
 
 Dimensions: 2 rows × 10 columns
@@ -3780,7 +3564,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_23 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_23 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-230"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_230
 
 Dimensions: 2 rows × 10 columns
@@ -3790,7 +3573,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_230 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_230 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-231"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_231
 
 Dimensions: 2 rows × 10 columns
@@ -3800,7 +3582,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_231 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_231 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-232"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_232
 
 Dimensions: 2 rows × 10 columns
@@ -3810,7 +3591,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_232 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_232 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-233"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_233
 
 Dimensions: 2 rows × 10 columns
@@ -3820,7 +3600,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_233 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_233 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-234"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_234
 
 Dimensions: 2 rows × 10 columns
@@ -3830,7 +3609,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_234 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_234 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-235"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_235
 
 Dimensions: 2 rows × 10 columns
@@ -3840,7 +3618,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_235 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_235 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-236"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_236
 
 Dimensions: 2 rows × 10 columns
@@ -3850,7 +3627,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_236 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_236 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-237"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_237
 
 Dimensions: 2 rows × 10 columns
@@ -3860,7 +3636,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_237 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_237 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-238"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_238
 
 Dimensions: 2 rows × 10 columns
@@ -3870,7 +3645,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_238 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_238 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-239"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_239
 
 Dimensions: 2 rows × 10 columns
@@ -3880,7 +3654,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_239 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_239 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-24"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_24
 
 Dimensions: 2 rows × 10 columns
@@ -3890,7 +3663,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_24 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_24 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-240"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_240
 
 Dimensions: 2 rows × 10 columns
@@ -3900,7 +3672,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_240 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_240 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-241"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_241
 
 Dimensions: 2 rows × 10 columns
@@ -3910,7 +3681,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_241 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_241 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-242"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_242
 
 Dimensions: 2 rows × 10 columns
@@ -3920,7 +3690,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_242 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_242 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-243"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_243
 
 Dimensions: 2 rows × 10 columns
@@ -3930,7 +3699,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_243 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_243 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-244"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_244
 
 Dimensions: 2 rows × 10 columns
@@ -3940,7 +3708,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_244 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_244 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-245"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_245
 
 Dimensions: 2 rows × 10 columns
@@ -3950,7 +3717,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_245 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_245 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-246"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_246
 
 Dimensions: 2 rows × 10 columns
@@ -3960,7 +3726,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_246 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_246 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-247"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_247
 
 Dimensions: 2 rows × 10 columns
@@ -3970,7 +3735,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_247 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_247 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-248"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_248
 
 Dimensions: 2 rows × 10 columns
@@ -3980,7 +3744,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_248 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_248 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-249"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_249
 
 Dimensions: 2 rows × 10 columns
@@ -3990,7 +3753,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_249 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_249 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-25"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_25
 
 Dimensions: 2 rows × 10 columns
@@ -4000,7 +3762,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_25 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_25 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-250"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_250
 
 Dimensions: 2 rows × 10 columns
@@ -4010,7 +3771,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_250 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_250 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-251"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_251
 
 Dimensions: 2 rows × 10 columns
@@ -4020,7 +3780,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_251 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_251 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-252"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_252
 
 Dimensions: 2 rows × 10 columns
@@ -4030,7 +3789,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_252 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_252 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-253"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_253
 
 Dimensions: 2 rows × 10 columns
@@ -4040,7 +3798,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_253 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_253 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-254"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_254
 
 Dimensions: 2 rows × 10 columns
@@ -4050,7 +3807,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_254 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_254 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-255"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_255
 
 Dimensions: 2 rows × 10 columns
@@ -4060,7 +3816,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_255 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_255 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-256"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_256
 
 Dimensions: 2 rows × 10 columns
@@ -4070,7 +3825,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_256 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_256 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-257"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_257
 
 Dimensions: 2 rows × 10 columns
@@ -4080,7 +3834,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_257 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_257 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-258"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_258
 
 Dimensions: 2 rows × 10 columns
@@ -4090,7 +3843,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_258 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_258 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-259"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_259
 
 Dimensions: 2 rows × 10 columns
@@ -4100,7 +3852,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_259 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_259 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-26"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_26
 
 Dimensions: 2 rows × 10 columns
@@ -4110,7 +3861,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_26 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_26 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-260"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_260
 
 Dimensions: 2 rows × 10 columns
@@ -4120,7 +3870,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_260 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_260 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-261"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_261
 
 Dimensions: 2 rows × 10 columns
@@ -4130,7 +3879,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_261 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_261 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-262"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_262
 
 Dimensions: 2 rows × 10 columns
@@ -4140,7 +3888,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_262 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_262 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-263"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_263
 
 Dimensions: 2 rows × 10 columns
@@ -4150,7 +3897,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_263 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_263 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-264"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_264
 
 Dimensions: 2 rows × 10 columns
@@ -4160,7 +3906,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_264 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_264 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-265"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_265
 
 Dimensions: 2 rows × 10 columns
@@ -4170,7 +3915,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_265 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_265 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-266"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_266
 
 Dimensions: 2 rows × 10 columns
@@ -4180,7 +3924,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_266 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_266 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-267"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_267
 
 Dimensions: 2 rows × 10 columns
@@ -4190,7 +3933,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_267 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_267 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-268"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_268
 
 Dimensions: 2 rows × 10 columns
@@ -4200,7 +3942,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_268 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_268 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-269"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_269
 
 Dimensions: 2 rows × 10 columns
@@ -4210,7 +3951,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_269 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_269 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-27"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_27
 
 Dimensions: 2 rows × 10 columns
@@ -4220,7 +3960,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_27 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_27 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-270"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_270
 
 Dimensions: 2 rows × 10 columns
@@ -4230,7 +3969,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_270 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_270 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-271"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_271
 
 Dimensions: 2 rows × 10 columns
@@ -4240,7 +3978,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_271 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_271 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-272"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_272
 
 Dimensions: 2 rows × 10 columns
@@ -4250,7 +3987,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_272 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_272 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-273"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_273
 
 Dimensions: 2 rows × 10 columns
@@ -4260,7 +3996,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_273 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_273 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-274"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_274
 
 Dimensions: 2 rows × 10 columns
@@ -4270,7 +4005,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_274 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_274 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-275"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_275
 
 Dimensions: 2 rows × 10 columns
@@ -4280,7 +4014,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_275 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_275 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-276"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_276
 
 Dimensions: 2 rows × 10 columns
@@ -4290,7 +4023,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_276 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_276 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-277"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_277
 
 Dimensions: 2 rows × 10 columns
@@ -4300,7 +4032,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_277 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_277 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-278"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_278
 
 Dimensions: 2 rows × 10 columns
@@ -4310,7 +4041,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_278 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_278 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-279"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_279
 
 Dimensions: 2 rows × 10 columns
@@ -4320,7 +4050,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_279 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_279 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-28"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_28
 
 Dimensions: 2 rows × 10 columns
@@ -4330,7 +4059,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_28 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_28 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-280"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_280
 
 Dimensions: 2 rows × 10 columns
@@ -4340,7 +4068,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_280 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_280 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-281"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_281
 
 Dimensions: 2 rows × 10 columns
@@ -4350,7 +4077,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_281 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_281 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-282"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_282
 
 Dimensions: 2 rows × 10 columns
@@ -4360,7 +4086,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_282 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_282 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-283"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_283
 
 Dimensions: 2 rows × 10 columns
@@ -4370,7 +4095,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_283 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_283 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-284"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_284
 
 Dimensions: 2 rows × 10 columns
@@ -4380,7 +4104,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_284 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_284 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-285"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_285
 
 Dimensions: 2 rows × 10 columns
@@ -4390,7 +4113,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_285 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_285 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-286"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_286
 
 Dimensions: 2 rows × 10 columns
@@ -4400,7 +4122,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_286 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_286 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-287"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_287
 
 Dimensions: 2 rows × 10 columns
@@ -4410,7 +4131,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_287 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_287 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-288"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_288
 
 Dimensions: 2 rows × 10 columns
@@ -4420,7 +4140,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_288 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_288 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-289"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_289
 
 Dimensions: 2 rows × 10 columns
@@ -4430,7 +4149,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_289 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_289 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-29"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_29
 
 Dimensions: 2 rows × 10 columns
@@ -4440,7 +4158,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_29 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_29 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-290"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_290
 
 Dimensions: 2 rows × 10 columns
@@ -4450,7 +4167,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_290 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_290 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-291"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_291
 
 Dimensions: 2 rows × 10 columns
@@ -4460,7 +4176,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_291 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_291 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-292"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_292
 
 Dimensions: 2 rows × 10 columns
@@ -4470,7 +4185,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_292 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_292 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-293"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_293
 
 Dimensions: 2 rows × 10 columns
@@ -4480,7 +4194,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_293 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_293 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-294"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_294
 
 Dimensions: 2 rows × 10 columns
@@ -4490,7 +4203,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_294 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_294 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-295"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_295
 
 Dimensions: 2 rows × 10 columns
@@ -4500,7 +4212,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_295 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_295 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-296"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_296
 
 Dimensions: 2 rows × 10 columns
@@ -4510,7 +4221,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_296 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_296 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-297"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_297
 
 Dimensions: 2 rows × 10 columns
@@ -4520,7 +4230,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_297 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_297 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-298"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_298
 
 Dimensions: 2 rows × 10 columns
@@ -4530,7 +4239,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_298 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_298 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-299"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_299
 
 Dimensions: 2 rows × 10 columns
@@ -4540,7 +4248,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_299 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_299 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-3"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_3
 
 Dimensions: 2 rows × 10 columns
@@ -4550,7 +4257,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_3 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_3 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-30"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_30
 
 Dimensions: 2 rows × 10 columns
@@ -4560,7 +4266,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_30 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_30 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-300"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_300
 
 Dimensions: 2 rows × 10 columns
@@ -4570,7 +4275,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_300 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_300 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-301"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_301
 
 Dimensions: 2 rows × 10 columns
@@ -4580,7 +4284,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_301 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_301 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-302"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_302
 
 Dimensions: 2 rows × 10 columns
@@ -4590,7 +4293,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_302 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_302 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-303"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_303
 
 Dimensions: 2 rows × 10 columns
@@ -4600,7 +4302,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_303 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_303 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-304"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_304
 
 Dimensions: 2 rows × 10 columns
@@ -4610,7 +4311,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_304 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_304 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-305"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_305
 
 Dimensions: 2 rows × 10 columns
@@ -4620,7 +4320,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_305 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_305 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-306"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_306
 
 Dimensions: 2 rows × 10 columns
@@ -4630,7 +4329,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_306 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_306 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-307"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_307
 
 Dimensions: 2 rows × 10 columns
@@ -4640,7 +4338,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_307 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_307 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-308"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_308
 
 Dimensions: 2 rows × 10 columns
@@ -4650,7 +4347,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_308 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_308 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-309"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_309
 
 Dimensions: 2 rows × 10 columns
@@ -4660,7 +4356,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_309 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_309 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-31"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_31
 
 Dimensions: 2 rows × 10 columns
@@ -4670,7 +4365,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_31 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_31 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-310"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_310
 
 Dimensions: 2 rows × 10 columns
@@ -4680,7 +4374,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_310 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_310 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-311"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_311
 
 Dimensions: 2 rows × 10 columns
@@ -4690,7 +4383,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_311 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_311 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-312"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_312
 
 Dimensions: 2 rows × 10 columns
@@ -4700,7 +4392,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_312 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_312 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-313"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_313
 
 Dimensions: 2 rows × 10 columns
@@ -4710,7 +4401,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_313 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_313 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-314"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_314
 
 Dimensions: 2 rows × 10 columns
@@ -4720,7 +4410,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_314 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_314 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-315"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_315
 
 Dimensions: 2 rows × 10 columns
@@ -4730,7 +4419,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_315 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_315 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-316"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_316
 
 Dimensions: 2 rows × 10 columns
@@ -4740,7 +4428,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_316 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_316 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-317"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_317
 
 Dimensions: 2 rows × 10 columns
@@ -4750,7 +4437,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_317 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_317 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-318"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_318
 
 Dimensions: 2 rows × 10 columns
@@ -4760,7 +4446,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_318 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_318 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-319"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_319
 
 Dimensions: 2 rows × 10 columns
@@ -4770,7 +4455,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_319 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_319 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-32"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_32
 
 Dimensions: 2 rows × 10 columns
@@ -4780,7 +4464,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_32 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_32 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-320"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_320
 
 Dimensions: 2 rows × 10 columns
@@ -4790,7 +4473,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_320 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_320 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-321"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_321
 
 Dimensions: 2 rows × 10 columns
@@ -4800,7 +4482,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_321 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_321 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-322"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_322
 
 Dimensions: 2 rows × 10 columns
@@ -4810,7 +4491,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_322 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_322 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-323"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_323
 
 Dimensions: 2 rows × 10 columns
@@ -4820,7 +4500,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_323 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_323 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-324"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_324
 
 Dimensions: 2 rows × 10 columns
@@ -4830,7 +4509,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_324 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_324 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-325"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_325
 
 Dimensions: 2 rows × 10 columns
@@ -4840,7 +4518,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_325 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_325 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-326"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_326
 
 Dimensions: 2 rows × 10 columns
@@ -4850,7 +4527,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_326 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_326 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-327"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_327
 
 Dimensions: 2 rows × 10 columns
@@ -4860,7 +4536,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_327 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_327 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-328"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_328
 
 Dimensions: 2 rows × 10 columns
@@ -4870,7 +4545,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_328 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_328 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-329"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_329
 
 Dimensions: 2 rows × 10 columns
@@ -4880,7 +4554,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_329 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_329 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-33"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_33
 
 Dimensions: 2 rows × 10 columns
@@ -4890,7 +4563,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_33 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_33 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-330"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_330
 
 Dimensions: 2 rows × 10 columns
@@ -4900,7 +4572,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_330 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_330 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-331"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_331
 
 Dimensions: 2 rows × 10 columns
@@ -4910,7 +4581,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_331 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_331 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-332"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_332
 
 Dimensions: 2 rows × 10 columns
@@ -4920,7 +4590,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_332 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_332 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-333"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_333
 
 Dimensions: 2 rows × 10 columns
@@ -4930,7 +4599,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_333 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_333 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-334"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_334
 
 Dimensions: 2 rows × 10 columns
@@ -4940,7 +4608,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_334 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_334 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-335"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_335
 
 Dimensions: 2 rows × 10 columns
@@ -4950,7 +4617,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_335 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_335 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-336"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_336
 
 Dimensions: 2 rows × 10 columns
@@ -4960,7 +4626,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_336 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_336 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-337"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_337
 
 Dimensions: 2 rows × 10 columns
@@ -4970,7 +4635,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_337 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_337 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-338"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_338
 
 Dimensions: 2 rows × 10 columns
@@ -4980,7 +4644,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_338 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_338 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-339"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_339
 
 Dimensions: 2 rows × 10 columns
@@ -4990,7 +4653,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_339 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_339 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-34"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_34
 
 Dimensions: 2 rows × 10 columns
@@ -5000,7 +4662,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_34 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_34 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-340"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_340
 
 Dimensions: 2 rows × 10 columns
@@ -5010,7 +4671,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_340 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_340 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-341"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_341
 
 Dimensions: 2 rows × 10 columns
@@ -5020,7 +4680,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_341 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_341 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-342"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_342
 
 Dimensions: 2 rows × 10 columns
@@ -5030,7 +4689,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_342 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_342 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-343"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_343
 
 Dimensions: 2 rows × 10 columns
@@ -5040,7 +4698,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_343 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_343 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-344"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_344
 
 Dimensions: 2 rows × 10 columns
@@ -5050,7 +4707,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_344 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_344 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-345"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_345
 
 Dimensions: 2 rows × 10 columns
@@ -5060,7 +4716,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_345 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_345 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-346"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_346
 
 Dimensions: 2 rows × 10 columns
@@ -5070,7 +4725,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_346 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_346 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-347"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_347
 
 Dimensions: 2 rows × 10 columns
@@ -5080,7 +4734,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_347 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_347 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-348"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_348
 
 Dimensions: 2 rows × 10 columns
@@ -5090,7 +4743,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_348 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_348 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-349"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_349
 
 Dimensions: 2 rows × 10 columns
@@ -5100,7 +4752,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_349 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_349 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-35"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_35
 
 Dimensions: 2 rows × 10 columns
@@ -5110,7 +4761,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_35 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_35 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-350"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_350
 
 Dimensions: 2 rows × 10 columns
@@ -5120,7 +4770,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_350 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_350 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-351"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_351
 
 Dimensions: 2 rows × 10 columns
@@ -5130,7 +4779,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_351 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_351 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-352"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_352
 
 Dimensions: 2 rows × 10 columns
@@ -5140,7 +4788,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_352 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_352 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-353"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_353
 
 Dimensions: 2 rows × 10 columns
@@ -5150,7 +4797,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_353 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_353 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-354"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_354
 
 Dimensions: 2 rows × 10 columns
@@ -5160,7 +4806,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_354 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_354 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-355"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_355
 
 Dimensions: 2 rows × 10 columns
@@ -5170,7 +4815,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_355 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_355 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-356"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_356
 
 Dimensions: 2 rows × 10 columns
@@ -5180,7 +4824,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_356 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_356 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-357"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_357
 
 Dimensions: 2 rows × 10 columns
@@ -5190,7 +4833,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_357 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_357 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-358"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_358
 
 Dimensions: 2 rows × 10 columns
@@ -5200,7 +4842,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_358 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_358 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-359"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_359
 
 Dimensions: 2 rows × 10 columns
@@ -5210,7 +4851,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_359 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_359 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-36"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_36
 
 Dimensions: 2 rows × 10 columns
@@ -5220,7 +4860,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_36 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_36 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-360"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_360
 
 Dimensions: 2 rows × 10 columns
@@ -5230,7 +4869,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_360 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_360 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-361"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_361
 
 Dimensions: 2 rows × 10 columns
@@ -5240,7 +4878,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_361 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_361 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-362"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_362
 
 Dimensions: 2 rows × 10 columns
@@ -5250,7 +4887,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_362 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_362 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-363"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_363
 
 Dimensions: 2 rows × 10 columns
@@ -5260,7 +4896,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_363 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_363 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-364"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_364
 
 Dimensions: 2 rows × 10 columns
@@ -5270,7 +4905,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_364 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_364 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-365"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_365
 
 Dimensions: 2 rows × 10 columns
@@ -5280,7 +4914,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_365 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_365 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-366"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_366
 
 Dimensions: 2 rows × 10 columns
@@ -5290,7 +4923,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_366 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_366 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-367"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_367
 
 Dimensions: 2 rows × 10 columns
@@ -5300,7 +4932,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_367 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_367 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-368"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_368
 
 Dimensions: 2 rows × 10 columns
@@ -5310,7 +4941,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_368 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_368 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-369"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_369
 
 Dimensions: 2 rows × 10 columns
@@ -5320,7 +4950,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_369 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_369 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-37"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_37
 
 Dimensions: 2 rows × 10 columns
@@ -5330,7 +4959,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_37 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_37 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-370"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_370
 
 Dimensions: 2 rows × 10 columns
@@ -5340,7 +4968,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_370 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_370 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-371"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_371
 
 Dimensions: 2 rows × 10 columns
@@ -5350,7 +4977,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_371 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_371 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-372"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_372
 
 Dimensions: 2 rows × 10 columns
@@ -5360,7 +4986,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_372 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_372 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-373"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_373
 
 Dimensions: 2 rows × 10 columns
@@ -5370,7 +4995,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_373 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_373 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-374"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_374
 
 Dimensions: 2 rows × 10 columns
@@ -5380,7 +5004,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_374 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_374 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-375"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_375
 
 Dimensions: 2 rows × 10 columns
@@ -5390,7 +5013,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_375 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_375 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-376"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_376
 
 Dimensions: 2 rows × 10 columns
@@ -5400,7 +5022,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_376 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_376 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-377"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_377
 
 Dimensions: 2 rows × 10 columns
@@ -5410,7 +5031,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_377 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_377 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-378"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_378
 
 Dimensions: 2 rows × 10 columns
@@ -5420,7 +5040,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_378 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_378 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-379"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_379
 
 Dimensions: 2 rows × 10 columns
@@ -5430,7 +5049,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_379 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_379 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-38"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_38
 
 Dimensions: 2 rows × 10 columns
@@ -5440,7 +5058,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_38 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_38 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-380"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_380
 
 Dimensions: 2 rows × 10 columns
@@ -5450,7 +5067,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_380 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_380 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-381"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_381
 
 Dimensions: 2 rows × 10 columns
@@ -5460,7 +5076,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_381 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_381 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-382"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_382
 
 Dimensions: 2 rows × 10 columns
@@ -5470,7 +5085,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_382 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_382 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-383"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_383
 
 Dimensions: 2 rows × 10 columns
@@ -5480,7 +5094,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_383 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_383 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-384"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_384
 
 Dimensions: 2 rows × 10 columns
@@ -5490,7 +5103,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_384 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_384 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-385"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_385
 
 Dimensions: 2 rows × 10 columns
@@ -5500,7 +5112,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_385 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_385 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-386"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_386
 
 Dimensions: 2 rows × 10 columns
@@ -5510,7 +5121,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_386 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_386 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-387"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_387
 
 Dimensions: 2 rows × 10 columns
@@ -5520,7 +5130,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_387 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_387 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-388"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_388
 
 Dimensions: 2 rows × 10 columns
@@ -5530,7 +5139,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_388 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_388 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-389"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_389
 
 Dimensions: 2 rows × 10 columns
@@ -5540,7 +5148,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_389 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_389 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-39"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_39
 
 Dimensions: 2 rows × 10 columns
@@ -5550,7 +5157,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_39 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_39 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-390"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_390
 
 Dimensions: 2 rows × 10 columns
@@ -5560,7 +5166,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_390 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_390 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-391"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_391
 
 Dimensions: 2 rows × 10 columns
@@ -5570,7 +5175,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_391 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_391 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-392"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_392
 
 Dimensions: 2 rows × 10 columns
@@ -5580,7 +5184,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_392 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_392 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-393"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_393
 
 Dimensions: 2 rows × 10 columns
@@ -5590,7 +5193,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_393 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_393 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-394"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_394
 
 Dimensions: 2 rows × 10 columns
@@ -5600,7 +5202,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_394 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_394 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-395"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_395
 
 Dimensions: 2 rows × 10 columns
@@ -5610,7 +5211,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_395 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_395 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-396"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_396
 
 Dimensions: 2 rows × 10 columns
@@ -5620,7 +5220,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_396 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_396 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-397"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_397
 
 Dimensions: 2 rows × 10 columns
@@ -5630,7 +5229,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_397 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_397 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-398"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_398
 
 Dimensions: 2 rows × 10 columns
@@ -5640,7 +5238,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_398 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_398 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-399"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_399
 
 Dimensions: 2 rows × 10 columns
@@ -5650,7 +5247,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_399 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_399 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-4"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_4
 
 Dimensions: 2 rows × 10 columns
@@ -5660,7 +5256,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_4 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_4 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-40"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_40
 
 Dimensions: 2 rows × 10 columns
@@ -5670,7 +5265,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_40 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_40 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-400"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_400
 
 Dimensions: 2 rows × 10 columns
@@ -5680,7 +5274,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_400 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_400 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-401"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_401
 
 Dimensions: 2 rows × 10 columns
@@ -5690,7 +5283,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_401 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_401 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-402"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_402
 
 Dimensions: 2 rows × 10 columns
@@ -5700,7 +5292,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_402 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_402 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-403"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_403
 
 Dimensions: 2 rows × 10 columns
@@ -5710,7 +5301,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_403 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_403 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-404"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_404
 
 Dimensions: 2 rows × 10 columns
@@ -5720,7 +5310,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_404 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_404 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-405"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_405
 
 Dimensions: 2 rows × 10 columns
@@ -5730,7 +5319,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_405 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_405 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-406"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_406
 
 Dimensions: 2 rows × 10 columns
@@ -5740,7 +5328,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_406 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_406 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-407"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_407
 
 Dimensions: 2 rows × 10 columns
@@ -5750,7 +5337,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_407 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_407 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-408"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_408
 
 Dimensions: 2 rows × 10 columns
@@ -5760,7 +5346,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_408 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_408 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-409"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_409
 
 Dimensions: 2 rows × 10 columns
@@ -5770,7 +5355,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_409 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_409 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-41"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_41
 
 Dimensions: 2 rows × 10 columns
@@ -5780,7 +5364,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_41 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_41 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-410"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_410
 
 Dimensions: 2 rows × 10 columns
@@ -5790,7 +5373,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_410 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_410 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-411"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_411
 
 Dimensions: 2 rows × 10 columns
@@ -5800,7 +5382,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_411 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_411 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-412"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_412
 
 Dimensions: 2 rows × 10 columns
@@ -5810,7 +5391,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_412 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_412 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-413"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_413
 
 Dimensions: 2 rows × 10 columns
@@ -5820,7 +5400,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_413 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_413 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-414"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_414
 
 Dimensions: 2 rows × 10 columns
@@ -5830,7 +5409,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_414 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_414 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-415"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_415
 
 Dimensions: 2 rows × 10 columns
@@ -5840,7 +5418,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_415 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_415 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-42"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_42
 
 Dimensions: 2 rows × 10 columns
@@ -5850,7 +5427,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_42 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_42 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-43"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_43
 
 Dimensions: 2 rows × 10 columns
@@ -5860,7 +5436,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_43 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_43 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-44"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_44
 
 Dimensions: 2 rows × 10 columns
@@ -5870,7 +5445,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_44 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_44 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-45"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_45
 
 Dimensions: 2 rows × 10 columns
@@ -5880,7 +5454,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_45 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_45 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-46"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_46
 
 Dimensions: 2 rows × 10 columns
@@ -5890,7 +5463,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_46 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_46 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-47"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_47
 
 Dimensions: 2 rows × 10 columns
@@ -5900,7 +5472,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_47 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_47 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-48"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_48
 
 Dimensions: 2 rows × 10 columns
@@ -5910,7 +5481,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_48 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_48 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-49"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_49
 
 Dimensions: 2 rows × 10 columns
@@ -5920,7 +5490,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_49 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_49 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-5"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_5
 
 Dimensions: 2 rows × 10 columns
@@ -5930,7 +5499,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_5 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_5 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-50"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_50
 
 Dimensions: 2 rows × 10 columns
@@ -5940,7 +5508,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_50 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_50 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-51"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_51
 
 Dimensions: 2 rows × 10 columns
@@ -5950,7 +5517,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_51 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_51 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-52"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_52
 
 Dimensions: 2 rows × 10 columns
@@ -5960,7 +5526,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_52 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_52 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-53"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_53
 
 Dimensions: 2 rows × 10 columns
@@ -5970,7 +5535,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_53 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_53 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-54"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_54
 
 Dimensions: 2 rows × 10 columns
@@ -5980,7 +5544,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_54 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_54 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-55"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_55
 
 Dimensions: 2 rows × 10 columns
@@ -5990,7 +5553,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_55 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_55 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-56"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_56
 
 Dimensions: 2 rows × 10 columns
@@ -6000,7 +5562,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_56 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_56 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-57"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_57
 
 Dimensions: 2 rows × 10 columns
@@ -6010,7 +5571,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_57 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_57 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-58"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_58
 
 Dimensions: 2 rows × 10 columns
@@ -6020,7 +5580,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_58 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_58 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-59"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_59
 
 Dimensions: 2 rows × 10 columns
@@ -6030,7 +5589,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_59 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_59 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-6"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_6
 
 Dimensions: 2 rows × 10 columns
@@ -6040,7 +5598,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_6 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_6 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-60"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_60
 
 Dimensions: 2 rows × 10 columns
@@ -6050,7 +5607,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_60 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_60 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-61"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_61
 
 Dimensions: 2 rows × 10 columns
@@ -6060,7 +5616,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_61 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_61 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-62"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_62
 
 Dimensions: 2 rows × 10 columns
@@ -6070,7 +5625,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_62 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_62 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-63"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_63
 
 Dimensions: 2 rows × 10 columns
@@ -6080,7 +5634,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_63 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_63 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-64"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_64
 
 Dimensions: 2 rows × 10 columns
@@ -6090,7 +5643,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_64 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_64 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-65"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_65
 
 Dimensions: 2 rows × 10 columns
@@ -6100,7 +5652,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_65 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_65 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-66"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_66
 
 Dimensions: 2 rows × 10 columns
@@ -6110,7 +5661,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_66 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_66 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-67"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_67
 
 Dimensions: 2 rows × 10 columns
@@ -6120,7 +5670,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_67 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_67 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-68"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_68
 
 Dimensions: 2 rows × 10 columns
@@ -6130,7 +5679,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_68 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_68 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-69"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_69
 
 Dimensions: 2 rows × 10 columns
@@ -6140,7 +5688,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_69 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_69 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-7"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_7
 
 Dimensions: 2 rows × 10 columns
@@ -6150,7 +5697,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_7 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_7 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-70"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_70
 
 Dimensions: 2 rows × 10 columns
@@ -6160,7 +5706,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_70 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_70 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-71"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_71
 
 Dimensions: 2 rows × 10 columns
@@ -6170,7 +5715,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_71 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_71 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-72"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_72
 
 Dimensions: 2 rows × 10 columns
@@ -6180,7 +5724,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_72 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_72 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-73"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_73
 
 Dimensions: 2 rows × 10 columns
@@ -6190,7 +5733,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_73 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_73 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-74"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_74
 
 Dimensions: 2 rows × 10 columns
@@ -6200,7 +5742,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_74 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_74 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-75"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_75
 
 Dimensions: 2 rows × 10 columns
@@ -6210,7 +5751,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_75 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_75 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-76"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_76
 
 Dimensions: 2 rows × 10 columns
@@ -6220,7 +5760,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_76 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_76 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-77"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_77
 
 Dimensions: 2 rows × 10 columns
@@ -6230,7 +5769,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_77 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_77 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-78"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_78
 
 Dimensions: 2 rows × 10 columns
@@ -6240,7 +5778,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_78 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_78 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-79"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_79
 
 Dimensions: 2 rows × 10 columns
@@ -6250,7 +5787,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_79 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_79 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-8"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_8
 
 Dimensions: 2 rows × 10 columns
@@ -6260,7 +5796,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_8 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_8 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-80"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_80
 
 Dimensions: 2 rows × 10 columns
@@ -6270,7 +5805,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_80 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_80 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-81"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_81
 
 Dimensions: 2 rows × 10 columns
@@ -6280,7 +5814,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_81 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_81 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-82"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_82
 
 Dimensions: 2 rows × 10 columns
@@ -6290,7 +5823,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_82 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_82 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-83"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_83
 
 Dimensions: 2 rows × 10 columns
@@ -6300,7 +5832,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_83 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_83 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-84"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_84
 
 Dimensions: 2 rows × 10 columns
@@ -6310,7 +5841,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_84 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_84 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-85"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_85
 
 Dimensions: 2 rows × 10 columns
@@ -6320,7 +5850,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_85 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_85 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-86"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_86
 
 Dimensions: 2 rows × 10 columns
@@ -6330,7 +5859,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_86 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_86 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-87"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_87
 
 Dimensions: 2 rows × 10 columns
@@ -6340,7 +5868,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_87 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_87 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-88"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_88
 
 Dimensions: 2 rows × 10 columns
@@ -6350,7 +5877,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_88 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_88 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-89"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_89
 
 Dimensions: 2 rows × 10 columns
@@ -6360,7 +5886,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_89 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_89 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-9"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_9
 
 Dimensions: 2 rows × 10 columns
@@ -6370,7 +5895,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_9 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_9 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-90"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_90
 
 Dimensions: 2 rows × 10 columns
@@ -6380,7 +5904,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_90 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_90 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-91"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_91
 
 Dimensions: 2 rows × 10 columns
@@ -6390,7 +5913,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_91 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_91 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-92"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_92
 
 Dimensions: 2 rows × 10 columns
@@ -6400,7 +5922,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_92 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_92 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-93"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_93
 
 Dimensions: 2 rows × 10 columns
@@ -6410,7 +5931,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_93 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_93 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-94"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_94
 
 Dimensions: 2 rows × 10 columns
@@ -6420,7 +5940,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_94 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_94 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-95"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_95
 
 Dimensions: 2 rows × 10 columns
@@ -6430,7 +5949,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_FSP_ID_95 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT_FSP_ID_95 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-96"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_96
 
 Dimensions: 2 rows × 10 columns
@@ -6440,7 +5958,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_96 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_96 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-97"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_97
 
 Dimensions: 2 rows × 10 columns
@@ -6450,7 +5967,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_97 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_97 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-98"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_98
 
 Dimensions: 2 rows × 10 columns
@@ -6460,7 +5976,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_98 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_98 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-drag-ind-bit-mapping-fsp-id-99"></a>
 ### BF_DRAG_IND_BIT_MAPPING_FSP_ID_99
 
 Dimensions: 2 rows × 10 columns
@@ -6470,7 +5985,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AMOUNT_FSP_ID_99 | 0/1 | high | unsigned char | 0x1F | - | - | - | - | 0x248 Amount of counts of threshold |
 | STAT_MAX_FSP_ID_99 | 0/1 | high | unsigned char | 0xE0 | - | - | - | - | 0x07 max-Value |
 
-<a id="table-bf-esp-state-struct"></a>
 ### BF_ESP_STATE_STRUCT
 
 Dimensions: 3 rows × 10 columns
@@ -6481,7 +5995,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_AYC_FUNCTION_ACTIVE | 0/1 | high | unsigned char | 0x02 | - | - | - | - | Status AYC Funktion vom BSC System  |
 | STAT_ASR_FUNCTION_ACTIVE | 0/1 | high | unsigned char | 0x01 | - | - | - | - | ASR Funktion vom BSC System |
 
-<a id="table-bf-fsp-id-0-drag-ind"></a>
 ### BF_FSP_ID_0_DRAG_IND
 
 Dimensions: 2 rows × 10 columns
@@ -6491,7 +6004,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX | 0/1 | high | unsigned char | 0x07 | - | - | - | - | 0x07 max-Value |
 | STAT_AMOUNT | 0/1 | high | unsigned char | 0xF8 | - | - | - | - | 0x248 Amount of counts of threshold  |
 
-<a id="table-bf-hnd-brk-state-bit-struct"></a>
 ### BF_HND_BRK_STATE_BIT_STRUCT
 
 Dimensions: 2 rows × 10 columns
@@ -6501,7 +6013,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HND_BRK_STATE_BIT1 | 0-n | high | unsigned char | 0x02 | HND_BRK_STATE_BIT1_TABLE | - | - | - | Handbremse Status |
 | STAT_BRK_STATE_BIT0 | 0-n | high | unsigned char | 0x01 | BRK_STATE_BIT0_TABLE | - | - | - | Brems Status |
 
-<a id="table-bf-launch-state"></a>
 ### BF_LAUNCH_STATE
 
 Dimensions: 3 rows × 10 columns
@@ -6512,7 +6023,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_LAUNCH_POSSIBLE_CLUTCHES | 0/1 | high | unsigned char | 0x02 | - | - | - | - | 0x02: Anfahren ist möglich bei den Kupplungen |
 | STAT_LAUNCH_POSSIBLE_OIL_COOLING | 0/1 | high | unsigned char | 0x04 | - | - | - | - | 0x04: Anfahren ist möglich für Ölkühlung |
 
-<a id="table-bf-lhm1-struct"></a>
 ### BF_LHM1_STRUCT
 
 Dimensions: 8 rows × 10 columns
@@ -6528,7 +6038,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_LHM_2 | 0/1 | high | unsigned char | 0x02 | - | - | - | - | LHM 2 aktiv |
 | STAT_LHM_1 | 0/1 | high | unsigned char | 0x01 | - | - | - | - | LHM 1 aktiv |
 
-<a id="table-bf-lhm2-struct"></a>
 ### BF_LHM2_STRUCT
 
 Dimensions: 8 rows × 10 columns
@@ -6544,7 +6053,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_LHM_10 | 0/1 | high | unsigned char | 0x02 | - | - | - | - | LHM 10 aktiv |
 | STAT_LHM_9 | 0/1 | high | unsigned char | 0x01 | - | - | - | - | LHM 9 aktiv |
 
-<a id="table-bf-lhm3-struct"></a>
 ### BF_LHM3_STRUCT
 
 Dimensions: 8 rows × 10 columns
@@ -6560,7 +6068,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_LHM_18 | 0/1 | high | unsigned char | 0x02 | - | - | - | - | LHM 18 aktiv |
 | STAT_LHM_17 | 0/1 | high | unsigned char | 0x01 | - | - | - | - | LHM 17 aktiv |
 
-<a id="table-bf-lhm4-struct"></a>
 ### BF_LHM4_STRUCT
 
 Dimensions: 8 rows × 10 columns
@@ -6576,7 +6083,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_LHM_26 | 0/1 | high | unsigned char | 0x02 | - | - | - | - | LHM 26 aktiv |
 | STAT_LHM_25 | 0/1 | high | unsigned char | 0x01 | - | - | - | - | LHM 25 aktiv |
 
-<a id="table-bf-lhm5-struct"></a>
 ### BF_LHM5_STRUCT
 
 Dimensions: 8 rows × 10 columns
@@ -6592,7 +6098,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_LHM_34 | 0/1 | high | unsigned char | 0x02 | - | - | - | - | LHM 34 aktiv |
 | STAT_LHM_33 | 0/1 | high | unsigned char | 0x01 | - | - | - | - | LHM 33 aktiv |
 
-<a id="table-bf-lhm6-struct"></a>
 ### BF_LHM6_STRUCT
 
 Dimensions: 8 rows × 10 columns
@@ -6608,7 +6113,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_LHM_42 | 0/1 | high | unsigned char | 0x02 | - | - | - | - | LHM 42 aktiv |
 | STAT_LHM_41 | 0/1 | high | unsigned char | 0x01 | - | - | - | - | LHM 41 aktiv |
 
-<a id="table-bf-lhm7-struct"></a>
 ### BF_LHM7_STRUCT
 
 Dimensions: 4 rows × 10 columns
@@ -6620,7 +6124,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_LHM_50 | 0/1 | high | unsigned char | 0x02 | - | - | - | - | LHM 50 aktiv |
 | STAT_LHM_49 | 0/1 | high | unsigned char | 0x01 | - | - | - | - | LHM 49 aktiv |
 
-<a id="table-bf-msa-locking-function-struct"></a>
 ### BF_MSA_LOCKING_FUNCTION_STRUCT
 
 Dimensions: 10 rows × 10 columns
@@ -6638,7 +6141,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_FROM_P_MSA_ACTIV | 0/1 | high | unsigned int | 0xA | - | - | - | - | Einschalt Aufforderer Verlassen P Position |
 | STAT_R_POS_MSA_ACTIV | 0/1 | high | unsigned int | 0xB | - | - | - | - | Einschalt Aufforderer Einlegen Position R |
 
-<a id="table-bf-sailings-tatus-struct"></a>
 ### BF_SAILINGS_TATUS_STRUCT
 
 Dimensions: 32 rows × 10 columns
@@ -6678,7 +6180,6 @@ Dimensions: 32 rows × 10 columns
 | STAT_BIT30 | 0/1 | high | unsigned long | 0x40000000 | - | - | - | - | Ausstieg - Getriebetemperatur |
 | STAT_BIT31 | 0/1 | high | unsigned long | 0x80000000 | - | - | - | - | Ausstieg - Diagnosesteuerung |
 
-<a id="table-brk-state-bit0-table"></a>
 ### BRK_STATE_BIT0_TABLE
 
 Dimensions: 3 rows × 2 columns
@@ -6689,7 +6190,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Bremspedal betätigt |
 | 0xFF | Wert ungültig |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -6703,7 +6203,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-clutch-run-in-state"></a>
 ### CLUTCH_RUN_IN_STATE
 
 Dimensions: 3 rows × 2 columns
@@ -6714,7 +6213,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | HALF_RUN_IN_CLUTCH |
 | 0x04 | RUN_IN_CLUTCH |
 
-<a id="table-clu-mot-cool-spd-conversion"></a>
 ### CLU_MOT_COOL_SPD_CONVERSION
 
 Dimensions: 15 rows × 2 columns
@@ -6737,7 +6235,6 @@ Dimensions: 15 rows × 2 columns
 | 0x11 | Gang N24 |
 | 0x12 | Gang N46 |
 
-<a id="table-clu-prs-cntrl-shft-gear-1-tab"></a>
 ### CLU_PRS_CNTRL_SHFT_GEAR_1_TAB
 
 Dimensions: 8 rows × 2 columns
@@ -6753,7 +6250,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | Gang 7 |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-dhclientstate"></a>
 ### DHCLIENTSTATE
 
 Dimensions: 9 rows × 2 columns
@@ -6770,7 +6266,6 @@ Dimensions: 9 rows × 2 columns
 | 0x80 | Reserviert |
 | 0xFF | Wert ungültig |
 
-<a id="table-ecu-device-state-table"></a>
 ### ECU_DEVICE_STATE_TABLE
 
 Dimensions: 5 rows × 2 columns
@@ -6783,7 +6278,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Wiederhergestellt |
 | 0xFF | Wert ungültig |
 
-<a id="table-eng-crnk-ena-table"></a>
 ### ENG_CRNK_ENA_TABLE
 
 Dimensions: 5 rows × 2 columns
@@ -6796,7 +6290,6 @@ Dimensions: 5 rows × 2 columns
 | 0x02 | Motorstart erlaubt, Motor Stop erlaubt, Getriebe in Position P |
 | 0xFF | Wert ungültig |
 
-<a id="table-ews4state"></a>
 ### EWS4STATE
 
 Dimensions: 9 rows × 2 columns
@@ -6813,7 +6306,6 @@ Dimensions: 9 rows × 2 columns
 | 0x80 | SK verriegelt |
 | 0xFF | Wert ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -6827,7 +6319,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 4 |
 | F_HLZ_VIEW | ja |
 
-<a id="table-foot-brk-state-table"></a>
 ### FOOT_BRK_STATE_TABLE
 
 Dimensions: 3 rows × 2 columns
@@ -6838,7 +6329,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Bremspedal betätigt |
 | 0xFF | Wert ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 350 rows × 4 columns
@@ -7196,7 +6686,6 @@ Dimensions: 350 rows × 4 columns
 | 0xCF2C24 | Signal (Konfiguration Stellhebel Antrieb Fahrerlebnis, 0x324) ungültig Status Verhinderung Gangwahl, Sender DME | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 238 rows × 9 columns
@@ -7442,7 +6931,6 @@ Dimensions: 238 rows × 9 columns
 | 0xF442 | Control module voltage | V | High | unsigned int | - | 1.0 | 1000.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-gear-info"></a>
 ### GEAR_INFO
 
 Dimensions: 20 rows × 2 columns
@@ -7470,7 +6958,6 @@ Dimensions: 20 rows × 2 columns
 | 0x13 | GEN_GEAR_N_68 |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-hnd-brk-state-bit1-table"></a>
 ### HND_BRK_STATE_BIT1_TABLE
 
 Dimensions: 3 rows × 2 columns
@@ -7481,7 +6968,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | Handbremse nicht aktiv |
 | 0xFF | Wert ungültig |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -7494,7 +6980,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 4 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 13 rows × 4 columns
@@ -7515,7 +7000,6 @@ Dimensions: 13 rows × 4 columns
 | 0x421612 | Parksperre: Reinigungsvorgang aktiviert | 0 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 238 rows × 9 columns
@@ -7761,7 +7245,6 @@ Dimensions: 238 rows × 9 columns
 | 0xF442 | Control module voltage | V | High | unsigned int | - | 1.0 | 1000.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -7770,7 +7253,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-oil-clutch-changed"></a>
 ### OIL_CLUTCH_CHANGED
 
 Dimensions: 5 rows × 2 columns
@@ -7783,7 +7265,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | OIL_DUMMY_1 |
 | 0x05 | OIL_DUMMY_2 |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -7799,7 +7280,6 @@ Dimensions: 8 rows × 2 columns
 | 0x41 | codingSession |
 | 0x42 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -7811,7 +7291,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | ECU nicht mehr programmierbar |
 | 0xff | ungültig |
 
-<a id="table-reserve"></a>
 ### RESERVE
 
 Dimensions: 1 rows × 2 columns
@@ -7820,7 +7299,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFF | Reserve |
 
-<a id="table-res-0x1061-r"></a>
 ### RES_0X1061_R
 
 Dimensions: 1 rows × 13 columns
@@ -7829,7 +7307,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_ENDE_WABL | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 0: Verriegelt (loeschen von Einzelfehlern und PDTCs wird unterbunden) 1: Entriegelt (loeschen von Einzelfehlern und PDTCs wird nicht unterbunden) |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -7840,7 +7317,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -7854,7 +7330,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4005-d"></a>
 ### RES_0X4005_D
 
 Dimensions: 31 rows × 10 columns
@@ -7893,7 +7368,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_M_MODE_DURATION_WERT | s | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Betriebszeit in M-Mode |
 | STAT_S_MODE_DURATION_WERT | s | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Betriebszeit in S-Mode |
 
-<a id="table-res-0x4006-d"></a>
 ### RES_0X4006_D
 
 Dimensions: 9 rows × 10 columns
@@ -7910,7 +7384,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_SHIFT_LOGIC_DIAGNOSTIC | 0-n | - | unsigned int | - | TABLE_SHIFT_LOGIC_DIAGNOSTIC | - | - | - | shift-logic-information for diagnostic systems |
 | - | Bit | - | BITFIELD | - | BF_SAILINGS_TATUS_STRUCT | - | - | - | 32 Bit-Maske Segel-Betriebsstrategie zur Analyse der AGS-internen Fahrer- und Fahrverhaltens-Segelverhinderer |
 
-<a id="table-res-0x4006-r"></a>
 ### RES_0X4006_R
 
 Dimensions: 1 rows × 13 columns
@@ -7919,7 +7392,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RAM_DATEN_SCHREIBEN | - | - | + | 0-n | high | unsigned char | - | STATUS_RAM_DATEN_SCHREIBEN_TAB | - | - | - | Status RAM_DATEN_SCHREIBEN |
 
-<a id="table-res-0x4007-d"></a>
 ### RES_0X4007_D
 
 Dimensions: 325 rows × 10 columns
@@ -8252,7 +7724,6 @@ Dimensions: 325 rows × 10 columns
 | STAT_IUMPR_81_DENOMINATOR_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Wert des Denominators |
 | STAT_IUMPR_81_NUMERATOR_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Wert des Numerators |
 
-<a id="table-res-0x4008-d"></a>
 ### RES_0X4008_D
 
 Dimensions: 38 rows × 10 columns
@@ -8298,7 +7769,6 @@ Dimensions: 38 rows × 10 columns
 | STAT_CLUTCH1_ENERGIE_WERT | J | - | unsigned long | - | - | 4.0 | 1.0 | 0.0 | Energie Verbrauch in Kupplung 1 im gesamten Lebenszyklus |
 | STAT_CLUTCH2_ENERGIE_WERT | J | - | unsigned long | - | - | 4.0 | 1.0 | 0.0 | Energie Verbrauch in Kupplung 2 im gesamten Lebenszyklus |
 
-<a id="table-res-0x4009-d"></a>
 ### RES_0X4009_D
 
 Dimensions: 25 rows × 10 columns
@@ -8331,7 +7801,6 @@ Dimensions: 25 rows × 10 columns
 | STAT_KISSPOINT_ADAPTATION_COUNTER_CLU2_WERT | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Adaptionszähler des Kupplung2-Kisspoints |
 | STAT_BLOCK_J_EEPROM_VERSION_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | EEPROM version |
 
-<a id="table-res-0x413c-d"></a>
 ### RES_0X413C_D
 
 Dimensions: 2 rows × 10 columns
@@ -8341,7 +7810,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_RC_STRT_ODO_DATA | DATA | - | data[2] | - | - | 1.0 | 1.0 | 0.0 | Rennstart - Odometer |
 | STAT__DATA | DATA | - | data[38] | - | - | 1.0 | 1.0 | 0.0 | reserviert |
 
-<a id="table-res-0x4141-d"></a>
 ### RES_0X4141_D
 
 Dimensions: 18 rows × 10 columns
@@ -8367,7 +7835,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_TSL_MIN_ACTU_POS_TP_CLU2_DAT_WERT | - | - | unsigned char | - | - | 1.0 | 1024.0 | 0.0 | Minimaler normalisierter Aktorwert für den Berührungspunkt für Kupplung 2 über die gesamte Lebensdauer |
 | STAT_DSM_NR_RESETS_DAT_WERT | Counts | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Zurücksetzungen |
 
-<a id="table-res-0x4142-d"></a>
 ### RES_0X4142_D
 
 Dimensions: 13 rows × 10 columns
@@ -8388,7 +7855,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_VALUE12_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | counter for change of active gear with wrong passive gear decision |
 | STAT_VALUE13_WERT | - | - | unsigned int | - | - | 4.0 | 1.0 | 0.0 | counter for change of passive gear without change of active gear |
 
-<a id="table-res-0x4143-d"></a>
 ### RES_0X4143_D
 
 Dimensions: 24 rows × 10 columns
@@ -8420,7 +7886,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_VALUE23_WERT | Counts | - | unsigned int | - | - | 4.0 | 1.0 | 0.0 | Gang 7- Counter für Einlegeaktionen vor der Synchronisierung |
 | STAT_VALUE24_WERT | Counts | - | unsigned int | - | - | 4.0 | 1.0 | 0.0 | Gang R- Counter für Einlegeaktionen vor der Synchronisierung |
 
-<a id="table-res-0x4144-d"></a>
 ### RES_0X4144_D
 
 Dimensions: 17 rows × 10 columns
@@ -8445,7 +7910,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_EEP_SDIF_SYNCGEAR6_WERT | ° | - | signed char | - | - | 1.0 | 16.0 | 0.0 | Offset Synchron-Position Gear 6 |
 | STAT_EEP_SDIF_SYNCGEAR7_WERT | ° | - | signed char | - | - | 1.0 | 16.0 | 0.0 | Offset Synchron-Position Gear 7 |
 
-<a id="table-res-0x4145-d"></a>
 ### RES_0X4145_D
 
 Dimensions: 20 rows × 10 columns
@@ -8473,7 +7937,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_BROKEN_FORK_SD2_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gebrochene Gabel auf Schaltwalze 2 ist bestätigt |
 | STAT_BROKEN_FORK_SD1_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gebrochene Gabel auf Schaltwalze 1 ist bestätigt |
 
-<a id="table-res-0x4146-d"></a>
 ### RES_0X4146_D
 
 Dimensions: 10 rows × 10 columns
@@ -8491,7 +7954,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_SDS_INS_SPD_FRM_STATUS_1 | 0-n | - | unsigned char | - | TAB_STAT_SDS_INS_SPD_FRM_STATUS_1 | - | - | - | Eingangswelle 1 -  Geschwindigkeitsfehlerstatus für Fehlerspeicher |
 | STAT_SDS_INS_SPD_FRM_STATUS_2 | 0-n | - | unsigned char | - | TAB_STAT_SDS_INS_SPD_FRM_STATUS_2 | - | - | - | Eingangswelle 2 -  Geschwindigkeitsfehlerstatus für Fehlerspeicher |
 
-<a id="table-res-0x4148-d"></a>
 ### RES_0X4148_D
 
 Dimensions: 81 rows × 10 columns
@@ -8580,7 +8042,6 @@ Dimensions: 81 rows × 10 columns
 | STAT_HURT_CNT_VAL_SG_SB06_WERT | count | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler-Zielverletzung von Sicherheitsziel sb06 |
 | STAT_MIN_CNT_VAL_SG_SB06_WERT | ms | - | unsigned char | - | - | 2.0 | 1.0 | 0.0 | Zähler-Mindestwert von Sicherheitsziel sb06 |
 
-<a id="table-res-0x4149-d"></a>
 ### RES_0X4149_D
 
 Dimensions: 2 rows × 10 columns
@@ -8590,7 +8051,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ISS_DATA_WERT | 1/min | - | signed int | - | - | 1.0 | 2.0 | 0.0 | Geschwindigkeit Eingangswelle 1 |
 | STAT_ISS_DATA_2_WERT | 1/min | - | signed int | - | - | 1.0 | 2.0 | 0.0 | Geschwindigkeit Eingangswelle 2 |
 
-<a id="table-res-0x4300-d"></a>
 ### RES_0X4300_D
 
 Dimensions: 2 rows × 10 columns
@@ -8600,7 +8060,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ECU_DEVICE_STATE | 0-n | - | unsigned char | - | ECU_DEVICE_STATE_TABLE | - | - | - | Ecu device state |
 | STAT_ECU_SAMPLE_LEVEL_TEXT | TEXT | - | string[8] | - | - | 1.0 | 1.0 | 0.0 | ECU Sample Level |
 
-<a id="table-res-0x4312-d"></a>
 ### RES_0X4312_D
 
 Dimensions: 1 rows × 10 columns
@@ -8609,7 +8068,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_IDR_EGS_DATA | DATA | - | data[240] | - | - | 1.0 | 1.0 | 0.0 | Daten der IDR für EGS |
 
-<a id="table-res-0x4314-d"></a>
 ### RES_0X4314_D
 
 Dimensions: 416 rows × 10 columns
@@ -9033,7 +8491,6 @@ Dimensions: 416 rows × 10 columns
 | - | Bit | high | BITFIELD | - | BF_DRAG_IND_BIT_MAPPING_FSP_ID_414 | - | - | - | Max and Amount of threshold reached counters for FSP_ID 414 |
 | - | Bit | high | BITFIELD | - | BF_DRAG_IND_BIT_MAPPING_FSP_ID_415 | - | - | - | Max and Amount of threshold reached counters for FSP_ID 415 |
 
-<a id="table-res-0xc000-d"></a>
 ### RES_0XC000_D
 
 Dimensions: 16 rows × 10 columns
@@ -9057,7 +8514,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_RESERVE_7 | 0-n | high | unsigned char | - | RESERVE | - | - | - | Reserve |
 | STAT_VERSION | 0-n | high | unsigned char | - | VERSION | - | - | - | Version |
 
-<a id="table-res-0xd9c9-d"></a>
 ### RES_0XD9C9_D
 
 Dimensions: 7 rows × 10 columns
@@ -9072,7 +8528,6 @@ Dimensions: 7 rows × 10 columns
 | - | Bit | high | BITFIELD | - | BF_LHM2_STRUCT | - | - | - | Aktive Limp Home Modes (9-16) |
 | - | Bit | high | BITFIELD | - | BF_LHM1_STRUCT | - | - | - | Aktive Limp Home Modes (1-8) |
 
-<a id="table-res-0xda2e-d"></a>
 ### RES_0XDA2E_D
 
 Dimensions: 2 rows × 10 columns
@@ -9082,7 +8537,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ISTGANG | 0-n | high | unsigned char | - | TAB_ISTGANG | - | - | - | Eingelegter Gang im Getriebe: P, R, N, 0-8 |
 | STAT_FAHRSTUFE | 0-n | high | unsigned char | - | TAB_FAHRSTUFE | - | - | - | Eingelegte Fahrstufe: P, R, N, D, M |
 
-<a id="table-res-0xda65-d"></a>
 ### RES_0XDA65_D
 
 Dimensions: 26 rows × 10 columns
@@ -9116,7 +8570,6 @@ Dimensions: 26 rows × 10 columns
 | STAT_SBW_CTR_REJSHFTRQ_N_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Rücknahme Positionswunsch nach N |
 | STAT_SBW_CTR_REJSHFTRQ_P_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Rücknahme Positionswunsch nach P |
 
-<a id="table-res-0xf100-r"></a>
 ### RES_0XF100_R
 
 Dimensions: 2 rows × 13 columns
@@ -9126,7 +8579,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_OPT_WERT | + | - | - | HEX | - | unsigned char | - | - | - | - | - | Routine Control Option |
 | STAT_CODE_WERT | + | - | - | HEX | - | unsigned char | - | - | - | - | - | Routine Control Status |
 
-<a id="table-res-0xf401-r"></a>
 ### RES_0XF401_R
 
 Dimensions: 7 rows × 13 columns
@@ -9141,7 +8593,6 @@ Dimensions: 7 rows × 13 columns
 | STAT_SD1_ENCOD_ERROR | - | - | + | 0-n | - | signed int | - | TAB_ENCOD_ERROR | - | - | - | Inkrementalgeber Fehler - Schalzwalze 1 |
 | STAT_SD2_ENCOD_ERROR | - | - | + | 0-n | - | signed int | - | TAB_ENCOD_ERROR | - | - | - | Inkrementalgeber Fehler - Schalzwalze 2 |
 
-<a id="table-res-0xf402-r"></a>
 ### RES_0XF402_R
 
 Dimensions: 5 rows × 13 columns
@@ -9154,7 +8605,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_STEUERN_SHFT_GEARS_DRB_IDX_SD1_ARG_WERT | - | - | + | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Fahr-Index von Schaltwalze 1 |
 | STAT_STEUERN_SHFT_GEARS_DRB_IDX_SD2_ARG_WERT | - | - | + | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Fahr-Index von Schaltwalze 2 |
 
-<a id="table-res-0xf410-r"></a>
 ### RES_0XF410_R
 
 Dimensions: 3 rows × 13 columns
@@ -9165,7 +8615,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_CLU_TP_ADA_CLU1_WERT | - | - | + | mbar | - | signed int | - | - | 1000.0 | 512.0 | 0.0 | Berührungspunkt-Kupplung 1 |
 | STAT_CLU_TP_ADA_CLU2_WERT | - | - | + | mbar | - | signed int | - | - | 1000.0 | 512.0 | 0.0 | Berührungspunkt-Kupplung 2 |
 
-<a id="table-res-0xf411-r"></a>
 ### RES_0XF411_R
 
 Dimensions: 3 rows × 13 columns
@@ -9176,7 +8625,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_CLU_SELF_OPEN_TST_REAL_DUR_WERT | - | - | + | ms | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Echtöffnungsdauer |
 | STAT_CLU_SELF_OPEN_TST_MAX_PRS_WERT | - | - | + | mbar | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Clutch Selbst offenen Test; max.  Druck erreicht |
 
-<a id="table-res-0xf413-r"></a>
 ### RES_0XF413_R
 
 Dimensions: 8 rows × 13 columns
@@ -9192,7 +8640,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_CLU_PRS_CNTRL_PRS_CAP_2_WERT | - | - | + | mbar | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Kupplungsaktuatordruck 2 |
 | STAT_CLU_PRS_CNTRL_FLW_CCP_WERT | - | - | + | l/h | - | signed int | - | - | 60.0 | 1000.0 | 0.0 | flow Kupplungskühlung-Druck(CCP) |
 
-<a id="table-res-0xf415-r"></a>
 ### RES_0XF415_R
 
 Dimensions: 1 rows × 13 columns
@@ -9201,7 +8648,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CLU_SIM_PRS_CNTRL | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_CLU_SIM_PRS_CNTRL | - | - | - | Status Kupplung gleichzeitigen Druckregelung |
 
-<a id="table-res-0xf416-r"></a>
 ### RES_0XF416_R
 
 Dimensions: 8 rows × 13 columns
@@ -9217,7 +8663,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_CLU_ACTU_PWM_CNTRL_CAP_2_WERT | - | - | + | % | - | signed int | - | - | 1.0 | 1.0 | 0.0 | PWM kupplungsaktuator-pumpe2 |
 | STAT_CLU_ACTU_PWM_CNTRL_CCP_WERT | - | - | + | % | - | signed int | - | - | 1.0 | 1.0 | 0.0 | PWM Kupplung-Kühlpumpe |
 
-<a id="table-res-0xf417-r"></a>
 ### RES_0XF417_R
 
 Dimensions: 2 rows × 13 columns
@@ -9227,7 +8672,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_CHECK_ISS_SENS | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_CHECK_ISS_SENS | - | - | - | Statusprüfung Eingangswellendrehzahlsensoren |
 | STAT_CHECK_ISS_SENS_STATUS | - | - | + | 0-n | - | signed int | - | TAB_CHECK_ISS_SENS_STATUS | - | - | - | Drehzahlsensor-Status |
 
-<a id="table-res-0xf422-r"></a>
 ### RES_0XF422_R
 
 Dimensions: 1 rows × 13 columns
@@ -9236,7 +8680,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CLU_GAIN_ADA_RST_VALUES | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_CLU_GAIN_ADA_RST_VALUES | - | - | - | Status der Routine zum Zurücksetzen der Kupplungs-Gain-Adaptionswerte |
 
-<a id="table-res-0xf432-r"></a>
 ### RES_0XF432_R
 
 Dimensions: 1 rows × 13 columns
@@ -9245,7 +8688,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CAP_SPD_2_PRS_ADA | - | - | + | 0-n | - | unsigned char | - | TAB_CAP_SPD_2_PRS_ADA | - | - | - | Kupplungsaktuator Speed2Pressure Adaption / Status |
 
-<a id="table-sailing-mode"></a>
 ### SAILING_MODE
 
 Dimensions: 9 rows × 2 columns
@@ -9262,7 +8704,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0F | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 115 rows × 16 columns
@@ -9385,7 +8826,6 @@ Dimensions: 115 rows × 16 columns
 | CLU_GAIN_ADA_RST_VALUES | 0xF422 | - | Kupplung-Gain-Adaptionswerte zurücksetzen | - | - | - | - | - | - | - | - | - | 31 | - | RES_0xF422_R |
 | CAP_SPD_2_PRS_ADA | 0xF432 | - | Kupplungsaktuator Speed2Pressure-Adaption | - | - | - | - | - | - | - | - | - | 31 | - | RES_0xF432_R |
 
-<a id="table-shft-lev-dspl-val-table"></a>
 ### SHFT_LEV_DSPL_VAL_TABLE
 
 Dimensions: 8 rows × 2 columns
@@ -9401,7 +8841,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Position L |
 | 0xFF | Wert ungültig |
 
-<a id="table-shft-lev-pos-table"></a>
 ### SHFT_LEV_POS_TABLE
 
 Dimensions: 14 rows × 2 columns
@@ -9423,7 +8862,6 @@ Dimensions: 14 rows × 2 columns
 | 0x13 | Übergang ND |
 | 0x14 | Übergang DL |
 
-<a id="table-status-clu-prs-cntrl-tab"></a>
 ### STATUS_CLU_PRS_CNTRL_TAB
 
 Dimensions: 7 rows × 2 columns
@@ -9438,7 +8876,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-status-ram-daten-schreiben-tab"></a>
 ### STATUS_RAM_DATEN_SCHREIBEN_TAB
 
 Dimensions: 4 rows × 2 columns
@@ -9450,7 +8887,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Schreiben läuft |
 | 0x03 | Schreiben noch nicht angestoßen (Routine nicht gestartet) |
 
-<a id="table-stat-clu-prs-cntrl-shft-gear-2-tab"></a>
 ### STAT_CLU_PRS_CNTRL_SHFT_GEAR_2_TAB
 
 Dimensions: 9 rows × 2 columns
@@ -9467,7 +8903,6 @@ Dimensions: 9 rows × 2 columns
 | 0x06 | Gang 6 |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-steuern-clu-prs-cntrl-shft-gear-1-arg-tab"></a>
 ### STEUERN_CLU_PRS_CNTRL_SHFT_GEAR_1_ARG_TAB
 
 Dimensions: 7 rows × 2 columns
@@ -9482,7 +8917,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0F | Leerlauf: Neutral 5-7 |
 | 0x07 | Gang7 |
 
-<a id="table-steuern-clu-prs-cntrl-shft-gear-2-arg-tab"></a>
 ### STEUERN_CLU_PRS_CNTRL_SHFT_GEAR_2_ARG_TAB
 
 Dimensions: 8 rows × 2 columns
@@ -9498,7 +8932,6 @@ Dimensions: 8 rows × 2 columns
 | 0x12 | N4-6 |
 | 0x06 | G6 |
 
-<a id="table-table-cc-state"></a>
 ### TABLE_CC_STATE
 
 Dimensions: 4 rows × 2 columns
@@ -9510,7 +8943,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | aktiv |
 | 0xFF | Wert ungültig |
 
-<a id="table-table-msa-state"></a>
 ### TABLE_MSA_STATE
 
 Dimensions: 4 rows × 2 columns
@@ -9522,7 +8954,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-table-request-msa-shutoff"></a>
 ### TABLE_REQUEST_MSA_SHUTOFF
 
 Dimensions: 3 rows × 2 columns
@@ -9533,7 +8964,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | MSA verhindert Abschaltung Motor |
 | 0xFF | Wert ungültig |
 
-<a id="table-table-shift-logic-diagnostic"></a>
 ### TABLE_SHIFT_LOGIC_DIAGNOSTIC
 
 Dimensions: 19 rows × 2 columns
@@ -9560,7 +8990,6 @@ Dimensions: 19 rows × 2 columns
 | 0xFFFF | Wert ungültig |
 | 0x11 | DS2_TMS |
 
-<a id="table-tab-autop-deactivation"></a>
 ### TAB_AUTOP_DEACTIVATION
 
 Dimensions: 3 rows × 2 columns
@@ -9571,7 +9000,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Auto-P deaktivieren |
 | 0x02 | Auto-P aktivieren |
 
-<a id="table-tab-autop-deactivation-stat"></a>
 ### TAB_AUTOP_DEACTIVATION_STAT
 
 Dimensions: 3 rows × 2 columns
@@ -9582,7 +9010,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Auto-P inaktiv |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-cap-spd-2-prs-ada"></a>
 ### TAB_CAP_SPD_2_PRS_ADA
 
 Dimensions: 7 rows × 2 columns
@@ -9597,7 +9024,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-check-iss-sens-status"></a>
 ### TAB_CHECK_ISS_SENS_STATUS
 
 Dimensions: 8 rows × 2 columns
@@ -9613,7 +9039,6 @@ Dimensions: 8 rows × 2 columns
 | 0x0B | Geschwindigkeitssensor 1 und 2 Fehler |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-clu-actu-pwm-cntrl-shft-gear-1-arg"></a>
 ### TAB_CLU_ACTU_PWM_CNTRL_SHFT_GEAR_1_ARG
 
 Dimensions: 7 rows × 2 columns
@@ -9628,7 +9053,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0F | Leerlauf 5-7 (N5-7) |
 | 0x07 | Gang-7 |
 
-<a id="table-tab-clu-actu-pwm-cntrl-shft-gear-2-arg"></a>
 ### TAB_CLU_ACTU_PWM_CNTRL_SHFT_GEAR_2_ARG
 
 Dimensions: 8 rows × 2 columns
@@ -9644,7 +9068,6 @@ Dimensions: 8 rows × 2 columns
 | 0x12 | Leerlauf 4-6(N4-6) |
 | 0x06 | Gang-6 |
 
-<a id="table-tab-dez-values"></a>
 ### TAB_DEZ_VALUES
 
 Dimensions: 256 rows × 2 columns
@@ -9908,7 +9331,6 @@ Dimensions: 256 rows × 2 columns
 | 0xFE | 254 |
 | 0xFF | 255 |
 
-<a id="table-tab-drm-info-state"></a>
 ### TAB_DRM_INFO_STATE
 
 Dimensions: 17 rows × 2 columns
@@ -9933,7 +9355,6 @@ Dimensions: 17 rows × 2 columns
 | 0xF | DRM_INFO_DIAG |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-eeprom-status"></a>
 ### TAB_EEPROM_STATUS
 
 Dimensions: 8 rows × 2 columns
@@ -9949,7 +9370,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | L2S_CTR_TEST_FAILED |
 | 0x08 | L2S_VALID_EOL_DATA |
 
-<a id="table-tab-encod-error"></a>
 ### TAB_ENCOD_ERROR
 
 Dimensions: 9 rows × 2 columns
@@ -9966,7 +9386,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Inkrementalgeber Hardware-Fehler |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-eng-state"></a>
 ### TAB_ENG_STATE
 
 Dimensions: 5 rows × 2 columns
@@ -9979,7 +9398,6 @@ Dimensions: 5 rows × 2 columns
 | 0x05 | ENGINE_UNDEFINED |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-ews-mode-arg"></a>
 ### TAB_EWS_MODE_ARG
 
 Dimensions: 2 rows × 2 columns
@@ -9989,7 +9407,6 @@ Dimensions: 2 rows × 2 columns
 | 0x07 | M7: Unlock & delete Client-SK mit SK |
 | 0x11 | M17: Unlock & delete Client-SK mit Hash (SK |
 
-<a id="table-tab-fahrstufe"></a>
 ### TAB_FAHRSTUFE
 
 Dimensions: 6 rows × 2 columns
@@ -10003,7 +9420,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | M - manuelle Schaltgasse |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-gen-status"></a>
 ### TAB_GEN_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -10017,7 +9433,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | GEN_SIG_ERROR |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-imo-key-cond"></a>
 ### TAB_IMO_KEY_COND
 
 Dimensions: 17 rows × 2 columns
@@ -10042,7 +9457,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-istgang"></a>
 ### TAB_ISTGANG
 
 Dimensions: 12 rows × 2 columns
@@ -10062,7 +9476,6 @@ Dimensions: 12 rows × 2 columns
 | 0x10 | Gang 8 |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-phys-prnd"></a>
 ### TAB_PHYS_PRND
 
 Dimensions: 9 rows × 2 columns
@@ -10079,7 +9492,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | MAIN_ERR |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-prdnl-pos-ena"></a>
 ### TAB_PRDNL_POS_ENA
 
 Dimensions: 6 rows × 2 columns
@@ -10093,7 +9505,6 @@ Dimensions: 6 rows × 2 columns
 | 0x08 | POS_ENA_D |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-ref-drive-error-status"></a>
 ### TAB_REF_DRIVE_ERROR_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -10106,7 +9517,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Fehler beim Einlegen Neutral |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-sd-error-status"></a>
 ### TAB_SD_ERROR_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -10120,7 +9530,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Position falsch  eingestellt |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-secret-key"></a>
 ### TAB_SECRET_KEY
 
 Dimensions: 6 rows × 2 columns
@@ -10134,7 +9543,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Secret Key gespeichert und gesperrt |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-secret-number"></a>
 ### TAB_SECRET_NUMBER
 
 Dimensions: 4 rows × 2 columns
@@ -10146,7 +9554,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Secret Number gespeichert |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-shftlck-state"></a>
 ### TAB_SHFTLCK_STATE
 
 Dimensions: 7 rows × 2 columns
@@ -10161,7 +9568,6 @@ Dimensions: 7 rows × 2 columns
 | 0x10 | SLCK_PARKLOCK |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-shift-gear-p"></a>
 ### TAB_SHIFT_GEAR_P
 
 Dimensions: 3 rows × 2 columns
@@ -10172,7 +9578,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | P einlegen |
 | 0x02 | P auslegen |
 
-<a id="table-tab-status-check-iss-sens"></a>
 ### TAB_STATUS_CHECK_ISS_SENS
 
 Dimensions: 7 rows × 2 columns
@@ -10187,7 +9592,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-clu-actu-pwm-cntrl"></a>
 ### TAB_STATUS_CLU_ACTU_PWM_CNTRL
 
 Dimensions: 7 rows × 2 columns
@@ -10202,7 +9606,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-clu-gain-ada-rst-values"></a>
 ### TAB_STATUS_CLU_GAIN_ADA_RST_VALUES
 
 Dimensions: 7 rows × 2 columns
@@ -10217,7 +9620,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-clu-self-open-tst"></a>
 ### TAB_STATUS_CLU_SELF_OPEN_TST
 
 Dimensions: 7 rows × 2 columns
@@ -10232,7 +9634,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-clu-sim-prs-cntrl"></a>
 ### TAB_STATUS_CLU_SIM_PRS_CNTRL
 
 Dimensions: 7 rows × 2 columns
@@ -10247,7 +9648,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-clu-tp-ada"></a>
 ### TAB_STATUS_CLU_TP_ADA
 
 Dimensions: 7 rows × 2 columns
@@ -10262,7 +9662,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Felher |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-ref-sd-pos"></a>
 ### TAB_STATUS_REF_SD_POS
 
 Dimensions: 7 rows × 2 columns
@@ -10277,7 +9676,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | interner Felher |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-status-segeln-rolle"></a>
 ### TAB_STATUS_SEGELN_ROLLE
 
 Dimensions: 4 rows × 2 columns
@@ -10289,7 +9687,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Segeln aktiv bei größer 40 km/h |
 | 0xFF | Ungültig |
 
-<a id="table-tab-status-shft-gears"></a>
 ### TAB_STATUS_SHFT_GEARS
 
 Dimensions: 7 rows × 2 columns
@@ -10304,7 +9701,6 @@ Dimensions: 7 rows × 2 columns
 | 0x12 | intener Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-clu-actu-pwm-cntrl-shft-gear-1"></a>
 ### TAB_STAT_CLU_ACTU_PWM_CNTRL_SHFT_GEAR_1
 
 Dimensions: 8 rows × 2 columns
@@ -10320,7 +9716,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | Gang 7 |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-stat-clu-actu-pwm-cntrl-shft-gear-2"></a>
 ### TAB_STAT_CLU_ACTU_PWM_CNTRL_SHFT_GEAR_2
 
 Dimensions: 9 rows × 2 columns
@@ -10337,7 +9732,6 @@ Dimensions: 9 rows × 2 columns
 | 0x06 | Gang-6 |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-stat-gti-req-info-sd1"></a>
 ### TAB_STAT_GTI_REQ_INFO_SD1
 
 Dimensions: 25 rows × 2 columns
@@ -10370,7 +9764,6 @@ Dimensions: 25 rows × 2 columns
 | 0x17 | unerwarteter Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-gti-req-info-sd2"></a>
 ### TAB_STAT_GTI_REQ_INFO_SD2
 
 Dimensions: 25 rows × 2 columns
@@ -10403,7 +9796,6 @@ Dimensions: 25 rows × 2 columns
 | 0x17 | unerwarteter Fehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-sds-ins-spd-frm-status-1"></a>
 ### TAB_STAT_SDS_INS_SPD_FRM_STATUS_1
 
 Dimensions: 6 rows × 2 columns
@@ -10417,7 +9809,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | GEN_SIG_ERROR |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-sds-ins-spd-frm-status-2"></a>
 ### TAB_STAT_SDS_INS_SPD_FRM_STATUS_2
 
 Dimensions: 6 rows × 2 columns
@@ -10431,7 +9822,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | GEN_SIG_ERROR |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-steuern-clu-self-open-tst-clu-nr"></a>
 ### TAB_STEUERN_CLU_SELF_OPEN_TST_CLU_NR
 
 Dimensions: 2 rows × 2 columns
@@ -10441,7 +9831,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | Kupplung 1 |
 | 0x02 | Kupplung 2 |
 
-<a id="table-tab-steuern-clu-self-open-tst-cntrl-strat"></a>
 ### TAB_STEUERN_CLU_SELF_OPEN_TST_CNTRL_STRAT
 
 Dimensions: 3 rows × 2 columns
@@ -10452,7 +9841,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | aktiv : active |
 | 0x03 | aktiv geschlossen-offen : active close-open |
 
-<a id="table-tab-steuern-clu-tp-ada-start-clu-nr-arg"></a>
 ### TAB_STEUERN_CLU_TP_ADA_START_CLU_NR_ARG
 
 Dimensions: 3 rows × 2 columns
@@ -10463,7 +9851,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Kupplung 2 |
 | 0x03 | Kupplung 1 und 2 |
 
-<a id="table-tab-steuern-ews-fsc-ews-opt"></a>
 ### TAB_STEUERN_EWS_FSC_EWS_OPT
 
 Dimensions: 2 rows × 2 columns
@@ -10473,7 +9860,6 @@ Dimensions: 2 rows × 2 columns
 | 0x07 | FREISCHALTCODE_SCHREIBEN |
 | 0x09 | FREISCHALTCODE_PRÜFEN |
 
-<a id="table-tab-steuern-segeln-rolle"></a>
 ### TAB_STEUERN_SEGELN_ROLLE
 
 Dimensions: 4 rows × 2 columns
@@ -10485,7 +9871,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Segeln aktiv bei größer 40 km/h |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-target-gear-sd1"></a>
 ### TAB_TARGET_GEAR_SD1
 
 Dimensions: 7 rows × 2 columns
@@ -10500,7 +9885,6 @@ Dimensions: 7 rows × 2 columns
 | 0xE | gear Neutral-Position 3 to 5; N3-5 |
 | 0xF | gear Neutral-Position 5 to 7; N5-7 |
 
-<a id="table-tab-target-gear-sd2"></a>
 ### TAB_TARGET_GEAR_SD2
 
 Dimensions: 8 rows × 2 columns
@@ -10516,7 +9900,6 @@ Dimensions: 8 rows × 2 columns
 | 0x12 | gear Neutral-Position 4 to 6; N4-6 |
 | 0x63 | park position |
 
-<a id="table-tsl-gear-cnt-table"></a>
 ### TSL_GEAR_CNT_TABLE
 
 Dimensions: 1 rows × 2 columns
@@ -10525,7 +9908,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0x01 | Daten zurücksetzten |
 
-<a id="table-version"></a>
 ### VERSION
 
 Dimensions: 9 rows × 2 columns
@@ -10542,7 +9924,6 @@ Dimensions: 9 rows × 2 columns
 | 0x24 | DH-Abgleich +EWS6 +ECC |
 | 0xFF | Wert ungültig |
 
-<a id="table-wdbyi-reset-flag-table"></a>
 ### WDBYI_RESET_FLAG_TABLE
 
 Dimensions: 1 rows × 2 columns

@@ -34,7 +34,6 @@
 - [SG_UNLOCK_0](#job-sg-unlock-0) - Security Access 'Third Party'
 - [SG_UNLOCK_1](#job-sg-unlock-1) - Security Access 'Dealer'
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -52,7 +51,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer FGR_KW
@@ -65,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-diagnose-start"></a>
 ### DIAGNOSE_START
 
 Starten der Diagnose FGR_KW
@@ -79,7 +76,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose FGR_KW
@@ -93,7 +89,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Erhalten der Diagnose FGR_KW
@@ -107,7 +102,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten FGR_KW
@@ -133,7 +127,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_BUS_INDEX | int | Bus-Index |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Auslesen Status FGR_KW mit ReadDataByLocalIdentifier 0x01
@@ -156,7 +149,6 @@ _No arguments._
 | STAT_BESCHLEUNIGUNG_GRADIENT | int |  |
 | STAT_FEHLERZAEHLER_E2 | int |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Lesen Fehlerspeicher FGR_KW mit ReadDataByLocalIdentifier 0x04
@@ -201,7 +193,6 @@ _No arguments._
 | F_UW5_WERT | int | Wert der 5. Umweltbedingung |
 | F_UW5_EINH | string | Einheit der 5. Umweltbedingung |
 
-<a id="job-status-lesen-eingang"></a>
 ### STATUS_LESEN_EINGANG
 
 Auslesen Eingangsstatus FGR_KW mit ReadDataByLocalIdentifier 0x05
@@ -223,7 +214,6 @@ _No arguments._
 | STAT_GESCHWINDIGKEIT_WERT | real | Geschwindigkeit |
 | STAT_GESCHWINDIGKEIT_EINH | string | Einheit der Geschwindigkeit, hier: km/h |
 
-<a id="job-status-lesen-ausgang"></a>
 ### STATUS_LESEN_AUSGANG
 
 Auslesen Ausgangsstatus FGR_KW mit ReadDataByLocalIdentifier 0x06
@@ -239,7 +229,6 @@ _No arguments._
 | STAT_AUSGANG_GETESTET | int | 0 = Tests nicht abgeschlossen, 1 = abgeschlossen |
 | STAT_CRUISE_AKTIV | int | 0 = Nein, 1 = Ja |
 
-<a id="job-status-lesen-geschwindigkeit"></a>
 ### STATUS_LESEN_GESCHWINDIGKEIT
 
 Auslesen Geschwindigkeitsinformationen FGR_KW mit ReadDataByLocalIdentifier 0x07
@@ -258,7 +247,6 @@ _No arguments._
 | STAT_GESCHWINDIGKEIT_SOLL_EINH | real | Einheit der Ist-Geschwindigkeit, hier: km/h |
 | STAT_CRUISE_AKTIV | int | 0 = Nein, 1 = Ja |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers FGR_KW
@@ -272,7 +260,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sg-unlock-0"></a>
 ### SG_UNLOCK_0
 
 Security Access 'Third Party'
@@ -285,7 +272,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-sg-unlock-1"></a>
 ### SG_UNLOCK_1
 
 Security Access 'Dealer'
@@ -310,7 +296,6 @@ _No arguments._
 - [FUMWELTMATRIX](#table-fumweltmatrix) (1 × 8)
 - [FUMWELTTEXTE](#table-fumwelttexte) (30 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 63 rows × 2 columns
@@ -381,7 +366,6 @@ Dimensions: 63 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns
@@ -436,7 +420,6 @@ Dimensions: 47 rows × 2 columns
 | 0x46 | Gemel |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -454,7 +437,6 @@ Dimensions: 10 rows × 2 columns
 | 0x09 | Fehlerspeicher: Lesefehler |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 3 rows × 5 columns
@@ -465,7 +447,6 @@ Dimensions: 3 rows × 5 columns
 | 0x09 | 0xFF | 0xFF | 0xFF | 0xFF |
 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -476,7 +457,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Sporadischer Fehler |
 | 0xFF | -- |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 8 columns
@@ -485,7 +465,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x00 | 0x05 | 0x01 | 0x01 | 0x02 | 0x03 | 0x04 | 0x05 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 30 rows × 3 columns

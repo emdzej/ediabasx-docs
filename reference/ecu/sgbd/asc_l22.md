@@ -36,7 +36,6 @@
 - [NA_ENTLUEFTUNG_LI](#job-na-entlueftung-li) - Steuern_Digital ansteueren u. ruecksetzen
 - [NA_ENTLUEFTUNG_RE](#job-na-entlueftung-re) - Steuern_Digital ansteueren u. ruecksetzen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter KWP
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-start-communication"></a>
 ### START_COMMUNICATION
 
 Kap. 5.1
@@ -84,7 +81,6 @@ _No arguments._
 | _TEL_REQUEST | binary | Anforderung ans SG |
 | KEY_BYTE | string | Key-Byte SG |
 
-<a id="job-stop-communication"></a>
 ### STOP_COMMUNICATION
 
 Kommunikation beenden, Kap. 5.2 Modus: Default
@@ -99,7 +95,6 @@ _No arguments._
 | _TEL_REQUEST | binary | Anforderung ans SG |
 | _TEL_ANSWER | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 Starten eines Diagnose-Modus
@@ -119,7 +114,6 @@ Starten eines Diagnose-Modus
 | _TEL_REQUEST | binary | Anforderungstelegramm |
 | _TEL_ANSWER | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Stop des aktuellen Diagnose-Modus
@@ -134,7 +128,6 @@ _No arguments._
 | _TEL_REQUEST | binary | Anforderungstelegramm |
 | _TEL_ANSWER | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 _No arguments._
@@ -147,7 +140,6 @@ _No arguments._
 | _TEL_REQUEST | binary | Anforderungstelegramm |
 | _TEL_ANSWER | binary | Hex-Antwort von SG |
 
-<a id="job-seed"></a>
 ### SEED
 
 Status Eingaenge ASC_MK20
@@ -169,7 +161,6 @@ Status Eingaenge ASC_MK20
 | _TEL_ANSWER_2 | binary | Antworttelegramm |
 | JOB_STATUS | string | OKAY, oder FEHLER |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten des SG ... Modus: Default
@@ -194,7 +185,6 @@ _No arguments._
 | _TEL_REQUEST | binary | Anforderungstelegramm |
 | _TEL_ANSWER | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -209,7 +199,6 @@ _No arguments._
 | _TEL_REQUEST | binary | Anforderungstelegramm |
 | _TEL_ANSWER | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -234,7 +223,6 @@ _No arguments._
 | _TEL_REQUEST | binary | Anforderungstelegramm |
 | _TEL_ANSWER | binary | Antworttelegramm |
 
-<a id="job-status-radgeschwindigkeit"></a>
 ### STATUS_RADGESCHWINDIGKEIT
 
 _No arguments._
@@ -252,7 +240,6 @@ _No arguments._
 | _TEL_REQUEST | binary | Anforderungstelegramm |
 | _TEL_ANSWER | binary | Antworttelegramm |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Parameterliste:EVVL,AVVL,EVVR,AVVR,EVHL,AVHL,EVHR,AVHR,Pumpe,SV1,SV2,EUV1,EUV2
@@ -283,7 +270,6 @@ Parameterliste:EVVL,AVVL,EVVR,AVVR,EVHL,AVHL,EVHR,AVHR,Pumpe,SV1,SV2,EUV1,EUV2
 | _TEL_REQUEST | binary | Anforderungstelegramm |
 | _TEL_ANSWER | binary | Antworttelegramm |
 
-<a id="job-diag-mode-seed"></a>
 ### DIAG_MODE_SEED
 
 Status Eingaenge ASC_MK20
@@ -312,7 +298,6 @@ Status Eingaenge ASC_MK20
 | JOB_STATUS_3 | string | OKAY, oder FEHLER |
 | JOB_STATUS_4 | string | OKAY, oder FEHLER |
 
-<a id="job-na-entlueftung-li"></a>
 ### NA_ENTLUEFTUNG_LI
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -325,7 +310,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-na-entlueftung-re"></a>
 ### NA_ENTLUEFTUNG_RE
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -349,7 +333,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (9 × 2)
 - [STEUERN](#table-steuern) (15 × 3)
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 5 rows × 4 columns
@@ -362,7 +345,6 @@ Dimensions: 5 rows × 4 columns
 | 0x86 | 9 | DEV | Rover_Development |
 | 0xXY | - | --- | unknown Diagnostic-Mode |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 33 rows × 2 columns
@@ -403,7 +385,6 @@ Dimensions: 33 rows × 2 columns
 | 0xFF | ERROR_ECU_RESERVED_BY_DOCUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 33 rows × 2 columns
@@ -444,7 +425,6 @@ Dimensions: 33 rows × 2 columns
 | 0x32 | Pioneer |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 50 rows × 2 columns
@@ -502,7 +482,6 @@ Dimensions: 50 rows × 2 columns
 | 0x5E36 | gear plausibility gear |
 | 0xXYXY | Unknown error location |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 9 rows × 2 columns
@@ -519,7 +498,6 @@ Dimensions: 9 rows × 2 columns
 | 0x80 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 15 rows × 3 columns

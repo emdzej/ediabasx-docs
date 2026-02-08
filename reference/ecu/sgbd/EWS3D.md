@@ -54,7 +54,6 @@
 - [STEUERN_SELBSTTEST](#job-steuern-selbsttest) - Schreibzugriff auf den Transponder via EWS-SG
 - [STATUS_SW_VERSION](#job-status-sw-version) - Ermittlung der internen SG-SW
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -72,7 +71,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer EWS3 automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -85,7 +83,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EWS3D
@@ -109,7 +106,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -132,7 +128,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary |  |
 | _TEL_ANTWORT1 | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -146,7 +141,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -160,7 +154,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-fortsetzen"></a>
 ### DIAGNOSE_FORTSETZEN
 
 Diagnose mit EWS3D aufrecht erhalten
@@ -174,7 +167,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierdaten der EWS3D
@@ -195,7 +187,6 @@ _No arguments._
 | COD_WEITERSCHALTSCHWELLE | string | 0 bis 255 (Dummyergebnis bei DME-Schnittstelle 2) |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten EWS3D in hex (4Bytes)
@@ -213,7 +204,6 @@ _No arguments._
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-schreiben"></a>
 ### HERSTELLDATEN_SCHREIBEN
 
 Beschreiben der Herstellerdaten
@@ -235,7 +225,6 @@ Beschreiben der Herstellerdaten
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -252,7 +241,6 @@ _No arguments._
 | BYTE3 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -273,7 +261,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Stati der EWS
@@ -316,7 +303,6 @@ _No arguments._
 | STAT_VORGABE_UNLOCK_AUSFUEHREN | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern / Vorgeben digitaler Stati der EWS3D
@@ -338,7 +324,6 @@ Ansteuern / Vorgeben digitaler Stati der EWS3D
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-isn-lesen"></a>
 ### ISN_LESEN
 
 Auslesen der ISN-Nummer aus der EWS
@@ -353,7 +338,6 @@ _No arguments._
 | ISN | string | 16 Bit |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-isn-schreiben"></a>
 ### ISN_SCHREIBEN
 
 Schreiben der ISN-Nummer in die EWS
@@ -372,7 +356,6 @@ Schreiben der ISN-Nummer in die EWS
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-wechselcode-sync-dme"></a>
 ### WECHSELCODE_SYNC_DME
 
 Wechselcodesynchronisation EWS 3 - DME anstossen
@@ -386,7 +369,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-schl-sperren-freigeben"></a>
 ### SCHL_SPERREN_FREIGEBEN
 
 Schluessel freischalten und sperren
@@ -406,7 +388,6 @@ Schluessel freischalten und sperren
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-passwort-lesen"></a>
 ### PASSWORT_LESEN
 
 Auslesen des Passworts aus der EWS
@@ -422,7 +403,6 @@ _No arguments._
 | PASSWORT_TEXT | string | 6 Byte |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-passwort-schreiben"></a>
 ### PASSWORT_SCHREIBEN
 
 Schreiben des Passworts in die EWS
@@ -441,7 +421,6 @@ Schreiben des Passworts in die EWS
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-schl-daten-lesen"></a>
 ### SCHL_DATEN_LESEN
 
 Auslesen der Schluesseldaten aus der EWS
@@ -467,7 +446,6 @@ Auslesen der Schluesseldaten aus der EWS
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-schl-daten-schreiben"></a>
 ### SCHL_DATEN_SCHREIBEN
 
 Schreiben der Schluesseldaten in die EWS
@@ -488,7 +466,6 @@ Schreiben der Schluesseldaten in die EWS
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-kd-daten-lesen"></a>
 ### KD_DATEN_LESEN
 
 Auslesen der Kundendienstdaten aus der EWS
@@ -510,7 +487,6 @@ Auslesen der Kundendienstdaten aus der EWS
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-kd-daten-schreiben"></a>
 ### KD_DATEN_SCHREIBEN
 
 Schreiben der Kundendienst in die EWS
@@ -530,7 +506,6 @@ Schreiben der Kundendienst in die EWS
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-kd-init"></a>
 ### KD_INIT
 
 Schreiben der VK-Daten in das EWS
@@ -547,7 +522,6 @@ Schreiben der VK-Daten in das EWS
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-fgnr-lesen"></a>
 ### FGNR_LESEN
 
 Auslesen der Fahrgestellnummer aus der EWS
@@ -563,7 +537,6 @@ _No arguments._
 | FG_PZ | string | Pruefziffer der Fahrgestellnummer inkl. FP nach Modulo 36 berechnet |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fgnr-schreiben"></a>
 ### FGNR_SCHREIBEN
 
 Schreiben der 17-stelligen Fahrgestellnummer inkl. PZ
@@ -581,7 +554,6 @@ Schreiben der 17-stelligen Fahrgestellnummer inkl. PZ
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fgnr-k-schreiben"></a>
 ### FGNR_K_SCHREIBEN
 
 Schreiben der 7-stelligen Fahrgestellnummer
@@ -599,7 +571,6 @@ Schreiben der 7-stelligen Fahrgestellnummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-zcs-lesen"></a>
 ### ZCS_LESEN
 
 Auslesen des Zentralen Codierschluessels aus KD-Daten
@@ -618,7 +589,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-schluessel-daten-0-bis-3-lesen"></a>
 ### SCHLUESSEL_DATEN_0_BIS_3_LESEN
 
 Auslesen der Schluesseldaten aus der EWS
@@ -639,7 +609,6 @@ _No arguments._
 | SCHL3_FREIGABE | int | 0 - 3 |
 | SCHL3_FREIGABE_TEXT | string | gesperrt oder freigeschaltet |
 
-<a id="job-cod-zeit-ws-schreiben"></a>
 ### COD_ZEIT_WS_SCHREIBEN
 
 Schreiben der Schaerfzeit der WS
@@ -658,7 +627,6 @@ Schreiben der Schaerfzeit der WS
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-ews-dme3-schreiben"></a>
 ### COD_EWS_DME3_SCHREIBEN
 
 Schreiben der Schaerfzeit der WS
@@ -673,7 +641,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Schreibzugriff auf den Transponder via EWS-SG
@@ -696,7 +663,6 @@ Schreibzugriff auf den Transponder via EWS-SG
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sw-version"></a>
 ### STATUS_SW_VERSION
 
 Ermittlung der internen SG-SW
@@ -721,7 +687,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (2 × 2)
 - [BITS](#table-bits) (9 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -736,7 +701,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -771,7 +735,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 49 rows × 2 columns
@@ -828,7 +791,6 @@ Dimensions: 49 rows × 2 columns
 | 0x1E | DME-Wechselcode verloren |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -838,7 +800,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | sporadischer Fehler |
 | 0x01 | statischer Fehler |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 9 rows × 3 columns

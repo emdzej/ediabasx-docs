@@ -90,7 +90,6 @@
 - [STATUS_LAMBDA_MUL_1](#job-status-lambda-mul-1) - Adaption Gemisch multiplikativ auslesen
 - [ECU_CONFIG](#job-ecu-config) - Ident-Daten fuer DME
 
-<a id="job-isn-lesen"></a>
 ### ISN_LESEN
 
 _No arguments._
@@ -102,7 +101,6 @@ _No arguments._
 | ISN_LESEN_WERT | string | ISN als  WERT |
 | JOB_STATUS | string |  |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Beliebige RAM - Zellen auslesen
@@ -122,7 +120,6 @@ Beliebige RAM - Zellen auslesen
 | RAM_LESEN_WERT | binary | nichts |
 | RAM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 Beliebige EPROM - Zellen auslesen
@@ -142,7 +139,6 @@ Beliebige EPROM - Zellen auslesen
 | ROM_LESEN_WERT | binary | nichts |
 | ROM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -174,7 +170,6 @@ _No arguments._
 | ID_SG_HERSTELLER | int | Parameter fuer MoTest 0=Bosch, 1=Siemens-Fahrzeug |
 | ID_EWS_SS | int | Identifikation EWS-Schnittstelle |
 
-<a id="job-adapt-loeschen"></a>
 ### ADAPT_LOESCHEN
 
 Adaptionen loeschen
@@ -187,7 +182,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-edic-reset"></a>
 ### EDIC_RESET
 
 EDIC-Reset
@@ -200,7 +194,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -213,7 +206,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -231,7 +223,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-status-codier-checksumme"></a>
 ### STATUS_CODIER_CHECKSUMME
 
 Codier - Checksumme abfragen
@@ -245,7 +236,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STATUS_CHECKSUMME_WERT | int | Ergebnis |
 
-<a id="job-abgas-variante-lesen"></a>
 ### ABGAS_VARIANTE_LESEN
 
 Auslesen der Abgasvariante
@@ -259,7 +249,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | ABGAS_VARIANTE_WERT | int | Abgasvariante 0=KAT-V , 1= KAT |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Motordrehzahl auslesen
@@ -275,7 +264,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | long | Ergebnis Motordrehzahl |
 | STATUS_MOTORDREHZAHL_EINH | string | Einheit Motordrehzahl |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 Motortemperatur auslesen
@@ -291,7 +279,6 @@ _No arguments._
 | STAT_MOTORTEMPERATUR_WERT | real | Ergebnis Motortemperatur |
 | STATUS_MOTORTEMPERATUR_EINH | string | Einheit Motortemperatur |
 
-<a id="job-status-an-lufttemperatur"></a>
 ### STATUS_AN_LUFTTEMPERATUR
 
 Ansauglufttemperatur auslesen
@@ -307,7 +294,6 @@ _No arguments._
 | STAT_AN_LUFTTEMPERATUR_WERT | real | Ergebnis Ansauglufttemperatur |
 | STATUS_AN_LUFTTEMPERATUR_EINH | string | Einheit Ansauglufttemperatur |
 
-<a id="job-status-last"></a>
 ### STATUS_LAST
 
 Lastsignal auslesen
@@ -323,7 +309,6 @@ _No arguments._
 | STAT_LAST_WERT | real | Ergebnis Lastsignal TL |
 | STATUS_LAST_EINH | string | Einheit Lastsignal TL |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Batteriespannung auslesen
@@ -339,7 +324,6 @@ _No arguments._
 | STAT_UBATT_WERT | real | Ergebnis Batteriespannungr |
 | STATUS_UBATT_EINH | string | Einheit Batteriespannung |
 
-<a id="job-status-geschwindigkeit"></a>
 ### STATUS_GESCHWINDIGKEIT
 
 Geschwindigkeit auslesen
@@ -354,7 +338,6 @@ _No arguments._
 | STATUS_GESCHWINDIGKEIT_WERT | real | Ergebnis Geschwindigkeit |
 | STATUS_GESCHWINDIGKEIT_EINH | string | Einheit Geschwindigkeit |
 
-<a id="job-status-dkp-volt"></a>
 ### STATUS_DKP_VOLT
 
 Drosselklappenwinkel auslesen
@@ -369,7 +352,6 @@ _No arguments._
 | STATUS_DKP_VOLT_WERT | real | Ergebnis Drosselklappenwinkel |
 | STATUS_DKP_VOLT_EINH | string | Einheit DKWinkel |
 
-<a id="job-status-lastsignal-rslt4"></a>
 ### STATUS_LASTSIGNAL_RSLT4
 
 Lastsignal RSLT4 auslesen
@@ -384,7 +366,6 @@ _No arguments._
 | STATUS_LASTSIGNAL_RSLT4_WERT | real | Ergebnis Lastsignal RSLT4 |
 | STATUS_LASTSIGNAL_RSLT4_EINH | string | Einheit Lastsignal |
 
-<a id="job-status-zuendwinkel"></a>
 ### STATUS_ZUENDWINKEL
 
 Zuendwinkel auslesen
@@ -400,7 +381,6 @@ _No arguments._
 | STAT_ZUENDWINKEL_WERT | real | Ergebnis Zuendwinkel |
 | STATUS_ZUENDWINKEL_EINH | string | Einheit Zuendwinkel |
 
-<a id="job-status-int"></a>
 ### STATUS_INT
 
 Lambdaregelfaktor auslesen
@@ -415,7 +395,6 @@ _No arguments._
 | STATUS_INT_WERT | real | Ergebnis Lambdaregelfaktor |
 | STATUS_INT_EINH | string | Einheit Lambdaregelfaktor |
 
-<a id="job-status-te-tastverhaeltnis"></a>
 ### STATUS_TE_TASTVERHAELTNIS
 
 TE Tastverhaeltnis auslesen
@@ -430,7 +409,6 @@ _No arguments._
 | STATUS_TE_TASTVERHAELTNIS_WERT | long | Ergebnis TE Tastverhaeltnis |
 | STATUS_TE_TASTVERHAELTNIS_EINH | string | Einheit TE_Tastverhaeltnis |
 
-<a id="job-status-einspritzzeit-p-u"></a>
 ### STATUS_EINSPRITZZEIT_P_U
 
 Auslesen der Einspritzzeit pro Umdrehung
@@ -445,7 +423,6 @@ _No arguments._
 | STATUS_EINSPRITZZEIT_P_U_WERT | real | Ergebnis Einspritzzeit |
 | STATUS_EINSPRITZZEIT_P_U_EINH | string | Einheit Einspritzzeit |
 
-<a id="job-status-lmm"></a>
 ### STATUS_LMM
 
 Luftmenge lesen
@@ -460,7 +437,6 @@ _No arguments._
 | STATUS_LMM_WERT | real | Ergebnis Luftmenge |
 | STATUS_LMM_EINH | string | Einheit Luftmenge |
 
-<a id="job-status-leerlaufintegrator"></a>
 ### STATUS_LEERLAUFINTEGRATOR
 
 Auslesen des Leerlaufintegrators
@@ -475,7 +451,6 @@ _No arguments._
 | STATUS_LEERLAUFINTEGRATOR_WERT | long | Ergebnis Leerlaufintegrator |
 | STATUS_LEERLAUFINTEGRATOR_EINH | string | Einheit Leerlaufintegrator |
 
-<a id="job-status-ll-luftbedarf"></a>
 ### STATUS_LL_LUFTBEDARF
 
 LL Soll LM auslesen
@@ -490,7 +465,6 @@ _No arguments._
 | STATUS_LL_LUFTBEDARF_WERT | long | Ergebnis LL Soll LM auslesen |
 | STATUS_LL_LUFTBEDARF_EINH | string | Einheit LL Soll LM |
 
-<a id="job-status-adap-leerlaufluft-u"></a>
 ### STATUS_ADAP_LEERLAUFLUFT_U
 
 Adaption Leerlaufluft lesen
@@ -505,7 +479,6 @@ _No arguments._
 | STATUS_ADAP_LEERLAUFLUFT_WERT | real | Ergebnis Ergebnis Adaption Leerlaufluft |
 | STATUS_ADAP_LEERLAUFLUFT_EINH | string | Einheit Adaption Leerlaufluft |
 
-<a id="job-status-mul"></a>
 ### STATUS_MUL
 
 Adaption Gemisch multiplikativ auslesen
@@ -520,7 +493,6 @@ _No arguments._
 | STATUS_MUL_WERT | real | Ergebnis Adaption Gemisch multiplikativ |
 | STATUS_MUL_EINH | string | Einheit Adaption Gemisch multiplikativ |
 
-<a id="job-status-add"></a>
 ### STATUS_ADD
 
 Adaption Gemisch additiv auslesen
@@ -535,7 +507,6 @@ _No arguments._
 | STATUS_ADD_WERT | real | Ergebnis Adaption Gemisch additiv |
 | STATUS_ADD_EINH | string | Einheit Adaption Gemisch additiv |
 
-<a id="job-status-l-sonde"></a>
 ### STATUS_L_SONDE
 
 Lambdasondendifferenzspannung 1
@@ -550,7 +521,6 @@ _No arguments._
 | STATUS_L_SONDE_WERT | real |  |
 | STATUS_L_SONDE_EINH | string | Einheit V |
 
-<a id="job-status-solldrehzahl-llr"></a>
 ### STATUS_SOLLDREHZAHL_LLR
 
 Solldrehzahl Leerlaufregler auslesen
@@ -565,7 +535,6 @@ _No arguments._
 | STATUS_SOLLDREHZAHL_LLR_WERT | real | Ergebnis Solldrehzahl |
 | STATUS_SOLLDREHZAHL_LLR_EINH | string | Einheit Solldrehzahl |
 
-<a id="job-status-adap-dkp-u"></a>
 ### STATUS_ADAP_DKP_U
 
 Adaption Drosselklappenpotentiometer auslesen
@@ -580,7 +549,6 @@ _No arguments._
 | STATUS_ADAP_DKP_WERT | real | Ergebnis Adaption DKP |
 | STATUS_ADAP_DKP_EINH | string | Einheit Adaption DKP |
 
-<a id="job-status-bsz"></a>
 ### STATUS_BSZ
 
 Betriebsstundenzaehlers auslesen
@@ -595,7 +563,6 @@ _No arguments._
 | STATUS_BSZ_WERT | real | Ergebnis Batteriespannungr |
 | STATUS_BSZ_EINH | string | Einheit Batteriespannung |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status Schalteingaenge
@@ -635,7 +602,6 @@ _No arguments._
 | STATUS_PORT_ADB_BIT_0 | int | Status EKP softwaremaessig angesteuert 0=Aus / 1=Ein |
 | STATUS_PORT_ADB_BIT_3 | int | Status DISA auf langem Saugrohr 0=Aus / 1=Ein |
 
-<a id="job-steuern-ev-1"></a>
 ### STEUERN_EV_1
 
 EV 1 ansteuern
@@ -648,7 +614,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-2"></a>
 ### STEUERN_EV_2
 
 EV 2 ansteuern
@@ -661,7 +626,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-3"></a>
 ### STEUERN_EV_3
 
 EV 3 ansteuern
@@ -674,7 +638,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-4"></a>
 ### STEUERN_EV_4
 
 EV 4 ansteuern
@@ -687,7 +650,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-1-aus"></a>
 ### STEUERN_EV_1_AUS
 
 EV 1 ausschalten
@@ -700,7 +662,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-2-aus"></a>
 ### STEUERN_EV_2_AUS
 
 EV 2 ausschalten
@@ -713,7 +674,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-3-aus"></a>
 ### STEUERN_EV_3_AUS
 
 EV 3 ausschalten
@@ -726,7 +686,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-4-aus"></a>
 ### STEUERN_EV_4_AUS
 
 EV 4 ausschalten
@@ -739,7 +698,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-disa"></a>
 ### STEUERN_DISA
 
 Differenziertere Saugrohranlage ansteuern
@@ -752,7 +710,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-e-luefter"></a>
 ### STEUERN_E_LUEFTER
 
 Elektroluefter ansteuern
@@ -765,7 +722,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-lsh"></a>
 ### STEUERN_LSH
 
 Lambdasondenheizungsrelais ansteuern
@@ -778,7 +734,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-tev"></a>
 ### STEUERN_TEV
 
 Tankentlueftungsventil  ansteuern
@@ -791,7 +746,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ko"></a>
 ### STEUERN_KO
 
 Klimakompressor ansteuern
@@ -804,7 +758,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ll-steller"></a>
 ### STEUERN_LL_STELLER
 
 Einwegdrehsteller ansteuern
@@ -817,7 +770,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Auslesen des QUICK Fehlerspeichers
@@ -833,7 +785,6 @@ _No arguments._
 | F_BSZ_AKT | real | Betriebsstundenzahler aktuell |
 | F_BSZ_ALT | real | Betriebsstundenzaehler beim letzten Loeschen |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -920,7 +871,6 @@ _No arguments._
 | F_UW12_WERT | real | Satz 3 Umweltbedingung 4  Wert |
 | F_HEX_CODE | binary | Hexdump des Fehlersatzes |
 
-<a id="job-fs-shadow-lesen"></a>
 ### FS_SHADOW_LESEN
 
 Auslesen des Fehlerspeichers
@@ -1025,7 +975,6 @@ _No arguments._
 | F_UW4_3_WERT | real | Satz 3 Umweltbedingung 4  Wert |
 | F_HEX | binary | Hex-Dump |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -1038,7 +987,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Erhalten der Diagnose
@@ -1051,7 +999,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Ende der Diagnose
@@ -1064,7 +1011,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-system-adressen-lesen"></a>
 ### SYSTEM_ADRESSEN_LESEN
 
 Auslesen der System-Adressen
@@ -1087,7 +1033,6 @@ _No arguments._
 | ADRESSE_HERST_FERT_DATUM | string | Adresse des Hersteller Fertigungsdatum |
 | ADRESSE_EEPROM_SUBSTITUT | string | Adresse des EEPROM-Substituts |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -1107,7 +1052,6 @@ _No arguments._
 | AIF_ZB_NR | long | Zusbaunummer |
 | AIF_ANZAHL_PROG | int | Anzahl Programmiervorgaenge |
 
-<a id="job-datensatznummer-lesen"></a>
 ### DATENSATZNUMMER_LESEN
 
 Auslesen der Datensatznummer
@@ -1121,7 +1065,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | DS_NR | string | Datensatznummer |
 
-<a id="job-max-block-lesen"></a>
 ### MAX_BLOCK_LESEN
 
 Auslesen der maximalen Blocklaenge
@@ -1135,7 +1078,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | MAX_BLOCK_WERT | int | Blocklaenge in Byte |
 
-<a id="job-uprog-ein"></a>
 ### UPROG_EIN
 
 Programmierspannung einschalten
@@ -1150,7 +1092,6 @@ _No arguments._
 | STATUS_UPROG_WERT | real | Programmierspannung als Info zurueck |
 | STATUS_UPROG_EINH | string | Einheit V |
 
-<a id="job-uprog-aus"></a>
 ### UPROG_AUS
 
 Programmierspannung ausschalten
@@ -1163,7 +1104,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-co-abgleich-lesen"></a>
 ### CO_ABGLEICH_LESEN
 
 CO-Abgleich lesen
@@ -1177,7 +1117,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | STATUS_CO_ABGLEICH_WERT | int | Aktuellen Abgleichwert |
 
-<a id="job-co-abgleich-verstellen"></a>
 ### CO_ABGLEICH_VERSTELLEN
 
 CO-Abgleich lesen
@@ -1194,7 +1133,6 @@ CO-Abgleich lesen
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-co-abgleich-programmieren"></a>
 ### CO_ABGLEICH_PROGRAMMIEREN
 
 CO-Abgleich programmieren
@@ -1208,7 +1146,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | STATUS_CO_PROGRAMMIEREN_WERT | int | Aktuellen Abgleichwert |
 
-<a id="job-adap-selektiv-zurueck"></a>
 ### ADAP_SELEKTIV_ZURUECK
 
 Adaptionen loeschen
@@ -1225,7 +1162,6 @@ Adaptionen loeschen
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-lmm-masse"></a>
 ### STATUS_LMM_MASSE
 
 Luftmenge lesen
@@ -1240,7 +1176,6 @@ _No arguments._
 | STAT_LMM_MASSE_WERT | real | Ergebnis Luftmenge |
 | STAT_LMM_MASSE_EINH | string | Einheit Luftmenge |
 
-<a id="job-status-einspritzzeit"></a>
 ### STATUS_EINSPRITZZEIT
 
 Auslesen der Einspritzzeit pro Umdrehung
@@ -1255,7 +1190,6 @@ _No arguments._
 | STAT_EINSPRITZZEIT_WERT | real | Ergebnis Einspritzzeit |
 | STAT_EINSPRITZZEIT_EINH | string | Einheit Einspritzzeit |
 
-<a id="job-status-ls-vkat-signal-1"></a>
 ### STATUS_LS_VKAT_SIGNAL_1
 
 Lambdasondendifferenzspannung 1
@@ -1270,7 +1204,6 @@ _No arguments._
 | STAT_LS_VKAT_SIGNAL_1_WERT | real |  |
 | STAT_LS_VKAT_SIGNAL_1_EINH | string | Einheit V |
 
-<a id="job-status-lambda-integrator-1"></a>
 ### STATUS_LAMBDA_INTEGRATOR_1
 
 Lambdaregelfaktor auslesen
@@ -1285,7 +1218,6 @@ _No arguments._
 | STAT_LAMBDA_INTEGRATOR_1_WERT | real | Ergebnis Lambdaregelfaktor |
 | STAT_LAMBDA_INTEGRATOR_1_EINH | string | Einheit Lambdaregelfaktor |
 
-<a id="job-status-lambda-add-1"></a>
 ### STATUS_LAMBDA_ADD_1
 
 Adaption Gemisch additiv auslesen
@@ -1300,7 +1232,6 @@ _No arguments._
 | STAT_LAMBDA_ADD_1_WERT | real | Ergebnis Adaption Gemisch additiv |
 | STAT_LAMBDA_ADD_1_EINH | string | Einheit Adaption Gemisch additiv |
 
-<a id="job-status-lambda-mul-1"></a>
 ### STATUS_LAMBDA_MUL_1
 
 Adaption Gemisch multiplikativ auslesen
@@ -1315,7 +1246,6 @@ _No arguments._
 | STAT_LAMBDA_MUL_1_WERT | real | Ergebnis Adaption Gemisch multiplikativ |
 | STAT_LAMBDA_MUL_1_EINH | string | Einheit Adaption Gemisch multiplikativ |
 
-<a id="job-ecu-config"></a>
 ### ECU_CONFIG
 
 Ident-Daten fuer DME
@@ -1340,7 +1270,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (11 × 6)
 - [JOBRESULT](#table-jobresult) (8 × 2)
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 25 rows × 4 columns
@@ -1373,7 +1302,6 @@ Dimensions: 25 rows × 4 columns
 | STATUS_EKP | 2 | 0x80 | 0x80 |
 | STATUS_DISA | 3 | 0x01 | 0x01 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 40 rows × 5 columns
@@ -1421,7 +1349,6 @@ Dimensions: 40 rows × 5 columns
 | 0xDC | EWS-Funktion | 0x01 | 0x02 | 0x05 |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 38 rows × 17 columns
@@ -1467,7 +1394,6 @@ Dimensions: 38 rows × 17 columns
 | 0xDC | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x05 | 0x00 | 0x06 | 0x00 | 0x07 | 0x00 | 0x08 |
 | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -1485,7 +1411,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | sporadischer Fehler |
 | 0xXY | -- |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 11 rows × 6 columns
@@ -1504,7 +1429,6 @@ Dimensions: 11 rows × 6 columns
 | 0x09 | Reset-Status-Register | 1 | 1 | 0 | 1 |
 | 0xXY | unbekannte Umweltbedingung | -- |  |  |  |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns

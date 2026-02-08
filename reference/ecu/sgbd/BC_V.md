@@ -32,7 +32,6 @@
 - [STEUERN_IO_STATUS](#job-steuern-io-status) - Ansteuern von den I/O Stati
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer BCV
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -82,7 +79,6 @@ _No arguments._
 | ID_DATUM_KW | int | Herstelldatum KW |
 | ID_DATUM_JAHR | int | Herstelldatum Jahr |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der BC-Codierung
@@ -108,7 +104,6 @@ _No arguments._
 | VERBRAUCHSBASIS | string | l/100km MPG km/l |
 | MAX_TANKINHALT | long | maximaler Tankinhalt in Liter |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -134,7 +129,6 @@ _No arguments._
 | F_ART4_NR | int | Index der 4. Fehlerart |
 | F_ART4_TEXT | string | 4. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -147,7 +141,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-displaytest"></a>
 ### DISPLAYTEST
 
 Ausloesen des Displaytests
@@ -160,7 +153,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Ergebnis des Jobs |
 
-<a id="job-status-digital-lesen"></a>
 ### STATUS_DIGITAL_LESEN
 
 alle digitalen Stati des BC 5 lesen
@@ -191,7 +183,6 @@ _No arguments._
 | STAT_LSS_BETAETIGT | int | 0 -> LSS nicht gedrueckt, 1 -> LSS gedrueckt (Lenkstockschalter) |
 | STAT_HAUBE_RADIO_KONTAKT_EIN | int | 0 -> aus, 1 -> ein |
 
-<a id="job-status-tasten-lesen"></a>
 ### STATUS_TASTEN_LESEN
 
 alle Tastatur Stati des BC 5 lesen
@@ -222,7 +213,6 @@ _No arguments._
 | STAT_TASTE_MEMO_EIN | int | 0 -> Taste MEMO gedrueckt, 1 -> Taste MEMO gedrueckt |
 | STAT_TASTE_SET_RES_EIN | int | 0 -> Taste SET/RES gedrueckt, 1 -> Taste SET/RES gedrueckt |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 alle analogen Stati des BC 5 lesen
@@ -245,7 +235,6 @@ _No arguments._
 | STAT_REICHWEITE | int | Anzeigewert der Reichweite 0..???? in km |
 | STAT_TANKINHALT | long | Tankgeberwert 0.0-99.9 in Liter |
 
-<a id="job-steuern-io-status"></a>
 ### STEUERN_IO_STATUS
 
 Ansteuern von den I/O Stati
@@ -262,7 +251,6 @@ Ansteuern von den I/O Stati
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode beenden
@@ -284,7 +272,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (22 × 2)
 - [IO_STATUS](#table-io-status) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 4 rows × 2 columns
@@ -296,7 +283,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0A | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-sprach-tab"></a>
 ### SPRACH_TAB
 
 Dimensions: 10 rows × 2 columns
@@ -314,7 +300,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Australien/Golf/ZA |
 | 0xXY | unbekannte Sprache |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 22 rows × 2 columns
@@ -344,7 +329,6 @@ Dimensions: 22 rows × 2 columns
 | 0x15 | BLTS - Bremslichttestschalter |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-io-status"></a>
 ### IO_STATUS
 
 Dimensions: 6 rows × 2 columns

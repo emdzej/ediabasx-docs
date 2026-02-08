@@ -48,7 +48,6 @@
 - [UPROG_LESEN](#job-uprog-lesen) - Programmierspannung auslesen
 - [BAUDRATEN_LESEN](#job-baudraten-lesen) - Baudratentabelle auslesen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -61,7 +60,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -79,7 +77,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EMS2000
@@ -113,7 +110,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -144,7 +140,6 @@ Auslesen des Anwender-Info-Feldes
 | AIF_PROG_NR | string | Programmstandsnummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-start-diagnostic-session"></a>
 ### START_DIAGNOSTIC_SESSION
 
 Begins a diagnostic session
@@ -158,7 +153,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-start-diagnostic-session-highbaud"></a>
 ### START_DIAGNOSTIC_SESSION_HIGHBAUD
 
 Begins a diagnostic session with fast baudrate
@@ -172,7 +166,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-start-diagnostic-session-lowbaud"></a>
 ### START_DIAGNOSTIC_SESSION_LOWBAUD
 
 Begins a diagnostic session with low baudrate
@@ -186,7 +179,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-stop-diagnostic-session"></a>
 ### STOP_DIAGNOSTIC_SESSION
 
 Ends a diagnostic session
@@ -200,7 +192,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Reset the ECU
@@ -214,7 +205,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Obtain security access to the ECU
@@ -229,7 +219,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-access-timing-parameters"></a>
 ### ACCESS_TIMING_PARAMETERS
 
 Diagnosemode des SG beenden
@@ -248,7 +237,6 @@ _No arguments._
 | P4_MIN | unsigned int | Minimum inter byte time for tester request |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Request download
@@ -266,7 +254,6 @@ Request download
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Transfer data to the ECU
@@ -284,7 +271,6 @@ Transfer data to the ECU
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Exit data transfer
@@ -298,7 +284,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Beschreiben des Anwender-Info-Feldes
@@ -325,7 +310,6 @@ Beschreiben des Anwender-Info-Feldes
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-hwnr-schreiben"></a>
 ### HWNR_SCHREIBEN
 
 Write the current HwNr
@@ -342,7 +326,6 @@ Write the current HwNr
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status
@@ -356,7 +339,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | SG_STATUS | int | nichts |
 
-<a id="job-status-codier-checksumme"></a>
 ### STATUS_CODIER_CHECKSUMME
 
 Status
@@ -370,7 +352,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | STATUS_CHECKSUMME_WERT | int | nichts |
 
-<a id="job-check-reprog-depending"></a>
 ### CHECK_REPROG_DEPENDING
 
 Status
@@ -384,7 +365,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash  - Zellen loeschen
@@ -403,7 +383,6 @@ Flash  - Zellen loeschen
 | FLASH_LOESCHEN_STATUS | int | nichts |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-blocklaenge-max"></a>
 ### BLOCKLAENGE_MAX
 
 maximale Blocklaenge
@@ -422,7 +401,6 @@ maximale Blocklaenge
 | BLOCKLAENGE_MAX_WERT | int | Blocklaenge fuer Telegramm |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Clears All Faults
@@ -436,7 +414,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-daten-referenz"></a>
 ### DATEN_REFERENZ
 
 Job DATEN-Referenz
@@ -454,7 +431,6 @@ _No arguments._
 | DATEN_REF_DATENSATZ | string | Datensatzkennung |
 | DATEN_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-hw-referenz"></a>
 ### HW_REFERENZ
 
 Job HW-Referenz
@@ -470,7 +446,6 @@ _No arguments._
 | HW_REF_PROJEKT | string | Projektkennzeichnung |
 | HW_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-zif"></a>
 ### ZIF
 
 Job ZIF
@@ -490,7 +465,6 @@ _No arguments._
 | ZIF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-zif-backup"></a>
 ### ZIF_BACKUP
 
 Job ZIF_BACKUP
@@ -510,7 +484,6 @@ _No arguments._
 | ZIF_BACKUP_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-uprog-lesen"></a>
 ### UPROG_LESEN
 
 Programmierspannung auslesen
@@ -525,7 +498,6 @@ _No arguments._
 | STATUS_UPROG_WERT | string | Programmierspannung als Info zurueck |
 | STATUS_UPROG_EINH | string | Einheit V |
 
-<a id="job-baudraten-lesen"></a>
 ### BAUDRATEN_LESEN
 
 Baudratentabelle auslesen
@@ -550,7 +522,6 @@ Baudratentabelle auslesen
 - [JOBRESULT](#table-jobresult) (23 × 2)
 - [LIEFERANTEN](#table-lieferanten) (45 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 23 rows × 2 columns
@@ -581,7 +552,6 @@ Dimensions: 23 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 45 rows × 2 columns

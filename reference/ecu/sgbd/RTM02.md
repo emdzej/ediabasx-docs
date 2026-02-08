@@ -24,7 +24,6 @@
 - [STATUS_LESEN](#job-status-lesen) - Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 - [STEUERN](#job-steuern) - Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -43,7 +42,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -56,7 +54,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -76,7 +73,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -125,7 +121,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 - [SG_FUNKTIONEN](#table-sg-funktionen) (4 × 16)
 - [TAB_PROD_MODE](#table-tab-prod-mode) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -209,7 +204,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -358,7 +352,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -401,7 +394,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -426,7 +418,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -460,7 +451,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -533,7 +523,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -546,7 +535,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -561,7 +549,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -574,7 +561,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-arg-0xfd00-d"></a>
 ### ARG_0XFD00_D
 
 Dimensions: 1 rows × 12 columns
@@ -583,7 +569,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RTM_MODE | 0-n | - | unsigned char | - | TAB_PROD_MODE | - | - | - | - | - | - |
 
-<a id="table-bf-diagnos"></a>
 ### BF_DIAGNOS
 
 Dimensions: 6 rows × 10 columns
@@ -597,7 +582,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_BACKUP_BATTERY | 0/1 | - | unsigned char | 0x40 | - | - | - | - | 0- Backup battery connected, 1- disconnected |
 | STAT_ERROR | 0/1 | - | unsigned char | 0x80 | - | - | - | - | 0- no error, 1- error |
 
-<a id="table-bf-internal-err"></a>
 ### BF_INTERNAL_ERR
 
 Dimensions: 5 rows × 10 columns
@@ -610,7 +594,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_INTERNAL_ERROR | 0/1 | - | unsigned char | 0x08 | - | - | - | - | 0- no internal error, 1- internal error |
 | STAT_SD_CARD | 0/1 | - | unsigned char | 0x80 | - | - | - | - | 0- SD Card no error, 1- error |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -624,7 +607,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -638,7 +620,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -647,7 +628,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -656,7 +636,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -668,7 +647,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -677,7 +655,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -686,7 +663,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -695,7 +671,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0xfd01-d"></a>
 ### RES_0XFD01_D
 
 Dimensions: 3 rows × 10 columns
@@ -706,7 +681,6 @@ Dimensions: 3 rows × 10 columns
 | - | BIT | - | BITFIELD | - | BF_INTERNAL_ERR | - | - | - | - |
 | DUMMY_RESULT | DATA | - | data[1] | - | - | - | - | - | not used |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 4 rows × 16 columns
@@ -718,7 +692,6 @@ Dimensions: 4 rows × 16 columns
 | RTM_HW_VERSION_READ | 0xFD02 | STAT_HW_VERSION_DATA | HW-Version | DATA | - | - | data[3] | - | - | - | - | - | 22 | - | - |
 | RTM_SW_VERSION_READ | 0xFD03 | STAT_SW_VERSION_DATA | SW-Version | DATA | - | - | data[3] | - | - | - | - | - | 22 | - | - |
 
-<a id="table-tab-prod-mode"></a>
 ### TAB_PROD_MODE
 
 Dimensions: 4 rows × 2 columns

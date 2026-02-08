@@ -133,7 +133,6 @@
 - [_STATUS_SOCR_USECASE](#job-status-socr-usecase) - Rückgabe des aktuellen Betriebszustandes der HV-Speicherladestrategie
 - [_STATUS_RESET_URSACHE](#job-status-reset-ursache) - Auslesen der Reset Ursache Es werden 6 Pakete zurückgeliefert  1 Paket: Reset der nicht durch einen PowerUp Reset verursacht wurde. 5 Pakete: Alle zuletzt aufgetretenen Resets Inhalt eines Pakets: - SOC der HV-Batterie - Spannung RunCrank - Background-LoopMax Wert - PLD Feedback-Wert - Sammelfehler für Processorhardware - E-MotorA Temperatur - E-MotorA-Inverter Temperatur - km-Stand - ResetSourceAddress - ResetSource - Program/Datenstand  Beschreibung der Results wird hier nur an Hand des 1.Paket gemacht. Die anderen Pakete sind analog zu betrachten.
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -152,7 +151,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -165,7 +163,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -191,7 +188,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -210,7 +206,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -228,7 +223,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -249,7 +243,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -268,7 +261,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -287,7 +279,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -302,7 +293,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen(einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $06 reportDTCExtendedDataRecordByDTCNumber Modus: Default
@@ -348,7 +338,6 @@ Fehlerspeicher lesen(einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformati
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten auslesen UDS  : $22   ReadDataByIdentifier UDS  : $3F51 Sub-Parameter SGBD-Index UDS  : $3F3C Sub-Parameter SGBD-Index UDS  : $3F36 Sub-Parameter SGBD-Index UDS  : $3F38 Sub-Parameter SGBD-Index UDS  : $3F3A Sub-Parameter SGBD-Index UDS  : $3F30 Sub-Parameter SGBD-Index Modus: Default
@@ -389,7 +378,6 @@ _No arguments._
 | _REQUEST6 | binary | Hex-Auftrag an SG |
 | _RESPONSE6 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob Modus: Default
@@ -420,7 +408,6 @@ _No arguments._
 | _REQUEST03 | binary | Hex-Auftrag an SG |
 | _RESPONSE03 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -441,7 +428,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus: Default
@@ -465,7 +451,6 @@ _No arguments._
 | _REQUEST02 | binary | Hex-Auftrag an SG |
 | _RESPONSE02 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -481,7 +466,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-abschaltverhinderer"></a>
 ### STATUS_ABSCHALTVERHINDERER
 
 Lese den aktuellen Aussschaltverhinderer $22     SID ReadDataByIdentifier $02 $00 DID Messwert Modus: Default
@@ -576,7 +560,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-momentenaufteilung-beschleunigen"></a>
 ### STATUS_MOMENTENAUFTEILUNG_BESCHLEUNIGEN
 
 Anteil des verbrennungsmotorischen Momentes am gesamten Antriebsmoment $22     SID ReadDataByIdentifier $02 $01 DID Messwert Modus: Default
@@ -593,7 +576,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-aktivierung-laden-hv-batterie"></a>
 ### STATUS_AKTIVIERUNG_LADEN_HV_BATTERIE
 
 Status des Ladevorgangs $22   SID ReadDataByIdentifier $02 $02 DID Messwert Modus: Default
@@ -609,7 +591,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-apm-jumpassist"></a>
 ### STATUS_APM_JUMPASSIST
 
 Zustände des Jump Assist $22     SID ReadDataByIdentifier $02 $03 DID Messwert Modus: Default
@@ -628,7 +609,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ekk-abschaltbedingung"></a>
 ### STATUS_EKK_ABSCHALTBEDINGUNG
 
 Grund fuer die Abschaltung des Klimakompressors $22     SID ReadDataByIdentifier $02 $07 DID Messwert Modus: Default
@@ -646,7 +626,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ekk-leistungslimitierung-boost"></a>
 ### STATUS_EKK_LEISTUNGSLIMITIERUNG_BOOST
 
 Leistungslimitierung als Grund fuer die Abschaltung des Klimakompressor $22     SID ReadDataByIdentifier $02 $08 DID Messwert Modus: Default
@@ -663,7 +642,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ekk-leistungslimitierung-revgrade"></a>
 ### STATUS_EKK_LEISTUNGSLIMITIERUNG_REVGRADE
 
 Rueckwaertssteigfaehigkeit als Grund fuer die Abschaltung des Klimakompressor $22     SID ReadDataByIdentifier $02 $09 DID Messwert Modus: Default
@@ -680,7 +658,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-momentenaufteilung-bremsen"></a>
 ### STATUS_MOMENTENAUFTEILUNG_BREMSEN
 
 TO-Anteil der Mechanischen Bremse Reku-Anteil wäre der Kehrwert $22     SID ReadDataByIdentifier $02 $05 DID Messwert Modus: Default
@@ -697,7 +674,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-empi"></a>
 ### STATUS_EMPI
 
 EMPI HV Stromwert, EMPI Mode, Drehzahl absolut/relativ $22     SID ReadDataByIdentifier $02 $0A DID HV Stromwert $02 $0B DID EMPI Mode Modus: Default
@@ -724,7 +700,6 @@ _No arguments._
 | _REQUEST04 | binary | Hex-Auftrag an SG |
 | _RESPONSE04 | binary | Hex-Antwort von SG |
 
-<a id="job-status-hcp-antriebsart"></a>
 ### STATUS_HCP_ANTRIEBSART
 
 Rückmeldung der aktuell anliegenden Antriebsart z.B.: E-Fahren, Rekuperation, Boost etc. $22     SID ReadDataByIdentifier $02 $13 DID Messwert Modus: Default
@@ -741,7 +716,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hpmr-state"></a>
 ### STATUS_HPMR_STATE
 
 Status des HPMR auslesen $22 SID ReadDataByIdentifier $02 $13 DID Messwert Modus: Default
@@ -758,7 +732,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-recuperationsmoment"></a>
 ### STATUS_RECUPERATIONSMOMENT
 
 Ist-Wert Reku-Moment $22     SID ReadDataByIdentifier $02 $21 DID Messwert Ist-Wert zusätzliches Schubmoment $22     SID ReadDataByIdentifier $02 $0C DID Messwert Modus: Default
@@ -779,7 +752,6 @@ _No arguments._
 | _REQUEST_02 | binary | Hex-Auftrag an SG |
 | _RESPONSE_02 | binary | Hex-Antwort von SG |
 
-<a id="job-status-wake-up"></a>
 ### STATUS_WAKE_UP
 
 Gibt den Status der WakeUp-Leitung aus $22     SID ReadDataByIdentifier $02 $12 DID Messwert Modus: Default
@@ -796,7 +768,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hv-isolation"></a>
 ### STATUS_HV_ISOLATION
 
 Liest Isolationsstatus Batterie aus $22     SID ReadDataByIdentifier $02 $16 DID Messwert Liest Isolationsstatus des MCP A aus $22     SID ReadDataByIdentifier $02 $17 DID Messwert Liest Isolationsstatus des MCP B aus $22     SID ReadDataByIdentifier $02 $18 DID Messwert Modus: Default
@@ -821,7 +792,6 @@ _No arguments._
 | _REQUEST03 | binary | Hex-Auftrag an SG |
 | _RESPONSE03 | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvil"></a>
 ### STATUS_HVIL
 
 Auslesen des HVIL-Zustandes (falls HVIL unterbrochen, dann n.i.O.) $22     SID ReadDataByIdentifier $02 $19 DID Messwert Auslesen des HVIL-Zustandes aus Sicht der PEB fuer MCP A $22     SID ReadDataByIdentifier $02 $1B DID Messwert Auslesen des HVIL-Zustandes aus Sicht der PEB fuer MCP B $22     SID ReadDataByIdentifier $02 $1C DID Messwert Auslesen des HVIL-Zustandes aus Sicht der Batterie $22     SID ReadDataByIdentifier $02 $1A DID Messwert Modus: Default
@@ -848,7 +818,6 @@ _No arguments._
 | _REQUEST04 | binary | Hex-Auftrag an SG |
 | _RESPONSE04 | binary | Hex-Antwort von SG |
 
-<a id="job-status-kl-15"></a>
 ### STATUS_KL_15
 
 Gibt den Status der Klemme 15 aus $22     SID ReadDataByIdentifier $02 $23 DID Messwert Gibt den Spannungswert der Klemme 15 aus $22     SID ReadDataByIdentifier $02 $24 DID Messwert Modus: Default
@@ -868,7 +837,6 @@ _No arguments._
 | _REQUEST02 | binary | Hex-Auftrag an SG |
 | _RESPONSE02 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-antriebsart"></a>
 ### STEUERN_ANTRIEBSART
 
 Auswahl: Forciertes E-Fahren, explizites Nicht E-Fahren, normal $2E     SID ReadDataByIdentifier $F2 $2  DID Messwert Modus: Default
@@ -887,7 +855,6 @@ Auswahl: Forciertes E-Fahren, explizites Nicht E-Fahren, normal $2E     SID Read
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-apm"></a>
 ### STEUERN_APM
 
 Setzen das APM in einen bestimmten Betriebsmodus HV-Sicherheitskonzept wird nicht überstimmt!! Eingangsbedingungen werden über CCM im Kombi angezeigt $2E       SID ReadDataByIdentifier $F2 $0  DID Messwert Steuern der LV-Output-Spannung der APM. Eingabe der Spannung in Volt. $2E       SID ReadDataByIdentifier $F2 $4  DID Messwert Modus: Default
@@ -908,7 +875,6 @@ Setzen das APM in einen bestimmten Betriebsmodus HV-Sicherheitskonzept wird nich
 | _REQUEST02 | binary | Hex-Auftrag an SG |
 | _RESPONSE02 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-apm-limit"></a>
 ### STEUERN_APM_LIMIT
 
 Aktivierung/Deaktivieren der Limitierung $2E     SID ReadDataByIdentifier $F2 $3  DID Messwert Modus: Default
@@ -927,7 +893,6 @@ Aktivierung/Deaktivieren der Limitierung $2E     SID ReadDataByIdentifier $F2 $3
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-energiesparmode"></a>
 ### STEUERN_ENERGIESPARMODE
 
 Steuern der des Energiesparmodes (FETRAWE) Ist Klemmensicher und mit DTC-Eintrag verbunden $2E     SID ReadDataByIdentifier $F2 $5  DID Messwert Modus: Default
@@ -946,7 +911,6 @@ Steuern der des Energiesparmodes (FETRAWE) Ist Klemmensicher und mit DTC-Eintrag
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-engdsrd"></a>
 ### STEUERN_ENGDSRD
 
 Externe Steuerung des Motorstatus Hinweis: ENERGIESPARMODE muss aktiviert sein und STEUERN_COMPLETECONTROL_SCHALTER ausgeführt werden. $2E     SID ReadDataByIdentifier $F2 $6  DID Messwert Modus: Default
@@ -965,7 +929,6 @@ Externe Steuerung des Motorstatus Hinweis: ENERGIESPARMODE muss aktiviert sein u
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-laden-hv-batterie"></a>
 ### STEUERN_LADEN_HV_BATTERIE
 
 Einschalten/Ausschalten der Ladefunktion $2E     SID ReadDataByIdentifier $F2 $1  DID Messwert Modus: Default
@@ -984,7 +947,6 @@ Einschalten/Ausschalten der Ladefunktion $2E     SID ReadDataByIdentifier $F2 $1
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ll-drehzahl"></a>
 ### STEUERN_LL_DREHZAHL
 
 Sollvorgabe Verbrennungsmotor-Drehzahl in Neutral $2E     SID ReadDataByIdentifier $F2 $8  DID Messwert Modus: Default
@@ -1003,7 +965,6 @@ Sollvorgabe Verbrennungsmotor-Drehzahl in Neutral $2E     SID ReadDataByIdentifi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | ex-Antwort von SG |
 
-<a id="job-steuern-ni-mode-1"></a>
 ### STEUERN_NI_MODE_1
 
 Sollvorgabe Verbrennungsmotor-Drehzahl in Mode 1 Hinweis: ENERGIESPARMODE muss aktiviert sein und STEUERN_COMPLETECONTROL_SCHALTER ausgeführt werden. $2E     SID ReadDataByIdentifier $F2 $0A DID Messwert Modus: Default
@@ -1022,7 +983,6 @@ Sollvorgabe Verbrennungsmotor-Drehzahl in Mode 1 Hinweis: ENERGIESPARMODE muss a
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ni-mode-2"></a>
 ### STEUERN_NI_MODE_2
 
 Sollvorgabe Verbrennungsmotor-Drehzahl in Mode 2 Hinweis: ENERGIESPARMODE muss aktiviert sein und STEUERN_COMPLETECONTROL_SCHALTER ausgeführt werden. $2E     SID ReadDataByIdentifier $F2 $0B ADID Messwert Modus: Default
@@ -1041,7 +1001,6 @@ Sollvorgabe Verbrennungsmotor-Drehzahl in Mode 2 Hinweis: ENERGIESPARMODE muss a
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-rngdsrd"></a>
 ### STEUERN_RNGDSRD
 
 Vorgabe Gang für OHSR-Schnittstelle Hinweis: ENERGIESPARMODE muss aktiviert sein und STEUERN_COMPLETECONTROL_SCHALTER ausgeführt werden. $2E     SID ReadDataByIdentifier $F2 $0D DID Messwert Modus: Default
@@ -1060,7 +1019,6 @@ Vorgabe Gang für OHSR-Schnittstelle Hinweis: ENERGIESPARMODE muss aktiviert sei
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-antriebsart-zugriff"></a>
 ### STATUS_ANTRIEBSART_ZUGRIFF
 
 Gibt den Status der aktuell anliegenden extern eingesteuerten Antriebsart an. $22     SID ReadDataByIdentifier $02 $31 DID Messwert Modus: Default
@@ -1077,7 +1035,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-batt-conn"></a>
 ### STATUS_BATT_CONN
 
 Gibt an ob das Batterie-Schütz /Relais betätigt ist. $22     SID ReadDataByIdentifier $02 $29 DID Messwert Modus: Default
@@ -1094,7 +1051,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-e-motor-control-check"></a>
 ### STATUS_E_MOTOR_CONTROL_CHECK
 
 Liest die erzielte E-Maschinen Drehzahl nach E-Motor Control Check aus. $22   SID ReadDataByIdentifier $02 $30 DID Messwert Modus: Default
@@ -1113,7 +1069,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Rückgabe des aktuell anliegenenden FETRAWE-Status. Hinweis: Nur in Verbindung mit Energiesparmode Werkstatt. Fehlereintrag wird beim Setzen angelegt. $22     SID ReadDataByIdentifier $02 $XX DID Messwert Modus: Default
@@ -1130,7 +1085,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Rückgabe des aktuellen Ist- Ganges. $22     SID ReadDataByIdentifier $02 $2C DID Messwert Modus: Default
@@ -1151,7 +1105,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen-pwrlnch-counter"></a>
 ### STATUS_LESEN_PWRLNCH_COUNTER
 
 Job liest die Anzahl der durchgeführten PowerLunches und die Anzahl der PowerLaunches nach dem letzten Reset aus. $22     SID ReadDataByIdentifier $02 $3F DID Messwert Modus: Default
@@ -1170,7 +1123,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ll-regelung"></a>
 ### STATUS_LL_REGELUNG
 
 Rückmeldung ob Leerlaufregelung i.O. ist $22     SID ReadDataByIdentifier $02 $35 DID Messwert Modus: Default
@@ -1191,7 +1143,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-parksensoren"></a>
 ### STATUS_PARKSENSOREN
 
 Liest den plausibilitierten Zustand der Parksensoren (TCM und DSM) aus. $22     SID ReadDataByIdentifier $02 $27 DID Messwert Modus: Default
@@ -1208,7 +1159,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-soc-acc-lesen"></a>
 ### STATUS_SOC_ACC_LESEN
 
 Rückgabe der Güte des SOC-Wertes. $22     SID ReadDataByIdentifier $02 $2D DID Messwert Modus: Default
@@ -1229,7 +1179,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-completecontrol-schalter"></a>
 ### STEUERN_COMPLETECONTROL_SCHALTER
 
 Schalter für Completecontrol Darf nicht im Service ausgeführt werden $2E     SID WriteDataByIdentifier $F2 $18 DID Messwert Modus: Default
@@ -1248,7 +1197,6 @@ Schalter für Completecontrol Darf nicht im Service ausgeführt werden $2E     S
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-erzwungene-schubabschaltung"></a>
 ### STEUERN_ERZWUNGENE_SCHUBABSCHALTUNG
 
 Kann die Schubabschaltung erzwingen. FETRAWE-Mode muss gesetzt sein $2E     SID WriteDataByIdentifier $F2 $19 DID Messwert Modus: Default
@@ -1267,7 +1215,6 @@ Kann die Schubabschaltung erzwingen. FETRAWE-Mode muss gesetzt sein $2E     SID 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-kompressionstest"></a>
 ### STATUS_KOMPRESSIONSTEST
 
 Liest die Variablen zum Kompressionstest aus. $22   SID ReadDataByIdentifier $02 $52 DID Messwert Modus: Default
@@ -1292,7 +1239,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-kompressionstest"></a>
 ### STEUERN_KOMPRESSIONSTEST
 
 Schaltet Kompressionstest VM an ENERGIEPARMODE muss an sein $2E       SID WriteDataByIdentifier $F2 $1D   DID Messwert Modus: Default
@@ -1311,7 +1257,6 @@ Schaltet Kompressionstest VM an ENERGIEPARMODE muss an sein $2E       SID WriteD
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pwrlnch-cnt-reset"></a>
 ### STEUERN_PWRLNCH_CNT_RESET
 
 Job zum Resettieren/Zurücksetzen des PowerLaunch Zählers. Hinweis: Nur in Verbindung mit Energiesparmode Werkstatt Keine Übergabeparameter $2E     SID WriteDataByIdentifier $F2 $15 DID Messwert Modus: Default
@@ -1326,7 +1271,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-soc-soll"></a>
 ### STEUERN_SOC_SOLL
 
 Schaltet SOC Vorgabe an ENERGIEPARMODE muss an sein Aus nach 300s $2E      SID WriteDataByIdentifier $F2 $1C  DID Messwert Modus: Default
@@ -1345,7 +1289,6 @@ Schaltet SOC Vorgabe an ENERGIEPARMODE muss an sein Aus nach 300s $2E      SID W
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-soc-soll-wert"></a>
 ### STEUERN_SOC_SOLL_WERT
 
 Sollvorgabe SOC, nur innerhalb der i.O. Grenzen, nur in Verbindung mit FETRAWE Vorher muss der Job STEUERN_SOC_SOLL ausgeführt werden 0=AUS oder nach 1200s $22     SID ReadDataByIdentifier $02 $1B DID Messwert Modus: Default
@@ -1364,7 +1307,6 @@ Sollvorgabe SOC, nur innerhalb der i.O. Grenzen, nur in Verbindung mit FETRAWE V
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-degradation-source"></a>
 ### STATUS_DEGRADATION_SOURCE
 
 Rückmeldung Ursache der aktuellen Degradation im Fzg
@@ -1507,7 +1449,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-strstp-zaehler"></a>
 ### STATUS_STRSTP_ZAEHLER
 
 Liest den Historienspeicher der HCP hinsichtlich der Anzahl der absolvierten Starts aus.
@@ -1550,7 +1491,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hisr-hos"></a>
 ### STATUS_HISR_HOS
 
 Der Job gibt die Energieanteile und die Zeitanteile der verschieden Usecases /Modies an. Zusätzlich werden die Gesamtenergiemenge und die Gesamtzeit ausgegeben. Die Gesamtwerte können nicht zurückgesetzt werden.
@@ -1619,7 +1559,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hisr-ring"></a>
 ### STATUS_HISR_RING
 
 Ließt den Historyspeicher der HCP Betriebsstatisitik aus. Es werden maximal 40 Einträge zurückgeliefert. Es werden immer alle Results zurückgegeben, auch wenn weniger als 40 Fehler gespeichert sind.
@@ -2034,7 +1973,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hisr-auslesen-01"></a>
 ### STATUS_HISR_AUSLESEN_01
 
 HISR Werte01 auslesen (Übersicht)
@@ -2123,7 +2061,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hisr-auslesen-02"></a>
 ### STATUS_HISR_AUSLESEN_02
 
 HISR Werte02 auslesen (Zeitangaben)
@@ -2300,7 +2237,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hisr-auslesen-03"></a>
 ### STATUS_HISR_AUSLESEN_03
 
 HISR Werte03 auslesen (Counter)
@@ -2347,7 +2283,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hisr-auslesen-04"></a>
 ### STATUS_HISR_AUSLESEN_04
 
 HISR Werte04 auslesen
@@ -2438,7 +2373,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hisr-av-reset-haeufigkeit"></a>
 ### STEUERN_HISR_AV_RESET_HAEUFIGKEIT
 
 Löscht die Häufigkeit des Ausschaltverhinderer (AV) Historienspeicher
@@ -2453,7 +2387,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hisr-av-reset-km-und-aktiv"></a>
 ### STEUERN_HISR_AV_RESET_KM_UND_AKTIV
 
 Löscht beide Kilometerstände und Aktiv-Status des Ausschaltverhinderer (AV) Historienspeicher
@@ -2468,7 +2401,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-soc-stimul"></a>
 ### STEUERN_SOC_STIMUL
 
 Job schaltet die SOC Stimmulierung ein. Batterie wird entladen und gelanden um den SOC-Wert zu bestimmen. AUS nach 1200s $2E     SID WriteDataByIdentifier $F2 $14 DID Messwert Modus: Default
@@ -2487,7 +2419,6 @@ Job schaltet die SOC Stimmulierung ein. Batterie wird entladen und gelanden um d
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-adaptionswerte-lesen"></a>
 ### STATUS_ADAPTIONSWERTE_LESEN
 
 Liest die Adaptionswerte von PyroFuse(integriert in der SBK - SicherheitsBatterieKlemme), Batterie, CC-Meldung aus. Siehe Argumente. $22      SID WriteDataByIdentifier $02 $32  DID Messwert Modus: Default
@@ -2524,7 +2455,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-adaptionswerte-loeschen"></a>
 ### STEUERN_ADAPTIONSWERTE_LOESCHEN
 
 Löscht die Adaptionswerte. Siehe Argumente. $2E     SID WriteDataByIdentifier $F2 $1A DID Messwert Modus: Default
@@ -2543,7 +2473,6 @@ Löscht die Adaptionswerte. Siehe Argumente. $2E     SID WriteDataByIdentifier $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-batterie-adaptionswerte-loeschen"></a>
 ### STEUERN_BATTERIE_ADAPTIONSWERTE_LOESCHEN
 
 Löscht die Adaptionswerte in der HV-Batterie. Ausschließlich im Werkstattmode möglich. $2E     SID WriteDataByIdentifier $F2 $27 DID Messwert Modus: Default
@@ -2562,7 +2491,6 @@ Löscht die Adaptionswerte in der HV-Batterie. Ausschließlich im Werkstattmode 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-completecontrol-pin"></a>
 ### STEUERN_COMPLETECONTROL_PIN
 
 Freigabe Code für Steuern Antriebsart Complete Control Es muss der entsprechenden Freigabecode übergeben werden, damit keine Beschädigungen im Getriebe auftreten können. $2E     SID WriteDataByIdentifier $F2 $17 DID Messwert Modus: Default
@@ -2581,7 +2509,6 @@ Freigabe Code für Steuern Antriebsart Complete Control Es muss der entsprechend
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-e-motor-control-check"></a>
 ### STEUERN_E_MOTOR_CONTROL_CHECK
 
 Anstossen des E-Motor Control Check Zur Überprüfung der E-Maschinen. Die E-Maschinen werden für max. 60s gedreht Service Hinweise: Nur in Verbindung mit Energiesparmode Werkstatt. WÄHREND TEST KEINESFALLS START-STOP-TASTER DRÜCKEN!!! BAUTEILSCHÄDIGUNG.  $2E       SID WriteDataByIdentifier $F2 $16   DID Messwert Modus: Default
@@ -2600,7 +2527,6 @@ Anstossen des E-Motor Control Check Zur Überprüfung der E-Maschinen. Die E-Mas
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-crash-detection-signal"></a>
 ### STATUS_CRASH_DETECTION_SIGNAL
 
 Gibt den Status der Crash Detection Leitung aus $22     SID ReadDataByIdentifier $02 $26 DID Messwert Modus: Default
@@ -2616,7 +2542,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-gesamtfzg-degradation"></a>
 ### STATUS_GESAMTFZG_DEGRADATION
 
 Auslesen der strategischen EM-A Degradation $22     SID ReadDataByIdentifier $02 $0F DID Messwert Auslesen der strategischen EM-B Degradation $22     SID ReadDataByIdentifier $02 $10 DID Messwert Auslesen der strategischen Verbrennungsmotordegradation $22     SID ReadDataByIdentifier $02 $11 DID Messwert Auslesen der strategischen Batterieladedegradation $22     SID ReadDataByIdentifier $02 $0E DID Messwert Auslesen der strategischen Batterieentladedegradation $22     SID ReadDataByIdentifier $02 $0D DID Messwert Modus: Default
@@ -2677,7 +2602,6 @@ _No arguments._
 | _REQUEST08 | binary | Hex-Auftrag an SG |
 | _RESPONSE08 | binary | Hex-Antwort von SG |
 
-<a id="job-status-aktuelle-getriebeposition"></a>
 ### STATUS_AKTUELLE_GETRIEBEPOSITION
 
 Status der Getriebeposition P / R / N / D $22     SID ReadDataByIdentifier $02 $28 DID Messwert Modus: Default
@@ -2694,7 +2618,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-emf-hilferuf"></a>
 ### STATUS_EMF_HILFERUF
 
 Lese Anzahl der EMF Hilferufe in D/S/M/R/N
@@ -2713,7 +2636,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-voltage-hcp-hv-side"></a>
 ### STATUS_VOLTAGE_HCP_HV_SIDE
 
 Auslesen der Hochvolt-Spannung und des Interlock Status ACHTUNG: Die Spannungsfreiheit wird nicht durch diesen Aufruf garantiert! Bitte Hochvolt-Sicherheits-Maßnahmen beachten. $22     SID ReadDataByIdentifier $02 $25 DID Messwert Modus: Default
@@ -2732,7 +2654,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hcp-teleservice-monitoring"></a>
 ### STATUS_HCP_TELESERVICE_MONITORING
 
 Results folgender Jobs hintereinander: STATUS_LESEN_PWRLNCH_COUNTER STATUS_ABSCHALTVERHINDERER STATUS_DEGRATIONS_SOURCE STATUS_EMF_HILFERUF STATUS_HCP_RBM_RATIO
@@ -3033,7 +2954,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-batterie-kuehlung"></a>
 ### STATUS_BATTERIE_KUEHLUNG
 
 Job ließt die Daten der Batteriekühlung aus.
@@ -3092,7 +3012,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-batterie-kuehlung"></a>
 ### STEUERN_BATTERIE_KUEHLUNG
 
 Job zum Ansteuern der Kühlsystemkonfiguration
@@ -3111,7 +3030,6 @@ Job zum Ansteuern der Kühlsystemkonfiguration
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hcp-rbm-ratios"></a>
 ### STATUS_HCP_RBM_RATIOS
 
 Auslesen der Ratios vom HCP
@@ -3210,7 +3128,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-batterie-equilibrierung"></a>
 ### STATUS_BATTERIE_EQUILIBRIERUNG
 
 Zustand Batterie-Equilibrierung
@@ -3251,7 +3168,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-batterie-equilibrierung"></a>
 ### STEUERN_BATTERIE_EQUILIBRIERUNG
 
 Steuern der Batterie-Equilibrierung.
@@ -3270,7 +3186,6 @@ Steuern der Batterie-Equilibrierung.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-batterie-nutzung"></a>
 ### STATUS_BATTERIE_NUTZUNG
 
 Liest die Variablen der Batterienutzung aus.
@@ -3293,7 +3208,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-kurzschluss-uvw-emp"></a>
 ### STEUERN_KURZSCHLUSS_UVW_EMP
 
 Steuert aktiven Kurzschluss an EMP
@@ -3312,7 +3226,6 @@ Steuert aktiven Kurzschluss an EMP
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-timer-batterie-kuehlung"></a>
 ### STEUERN_TIMER_BATTERIE_KUEHLUNG
 
 Job zum Vorgeben der maximalen Laufzeit des JOBS STEUERN_BATTERIE_KUEHLUNG
@@ -3331,7 +3244,6 @@ Job zum Vorgeben der maximalen Laufzeit des JOBS STEUERN_BATTERIE_KUEHLUNG
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-batterie-adaptionswerte-lesen"></a>
 ### STATUS_BATTERIE_ADAPTIONSWERTE_LESEN
 
 Batterie Adaptionswert lesen Daten muessen vor dem Flashen gesichert werden.
@@ -3354,7 +3266,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-batterie-adaptionswerte-geschrieben"></a>
 ### STATUS_BATTERIE_ADAPTIONSWERTE_GESCHRIEBEN
 
 Ließt den Status nach dem Adaptionswerte schreiben aus.
@@ -3371,7 +3282,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-batterie-adaptionswerte-schreiben"></a>
 ### STEUERN_BATTERIE_ADAPTIONSWERTE_SCHREIBEN
 
 Daten muessen nach dem Flashen geschrieben werden. SG muss vorher in Werkstattmode gesetzt werden
@@ -3395,7 +3305,6 @@ Daten muessen nach dem Flashen geschrieben werden. SG muss vorher in Werkstattmo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vm-leistungsmessung"></a>
 ### STATUS_VM_LEISTUNGSMESSUNG
 
 Rückmeldung des Status Motorleistungstest
@@ -3412,7 +3321,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vm-leistung-lesen"></a>
 ### STATUS_VM_LEISTUNG_LESEN
 
 Rückgabe der VM-Werte
@@ -3431,7 +3339,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-vm-leistungsmessung"></a>
 ### STEUERN_VM_LEISTUNGSMESSUNG
 
 Für Motorleistungstest müssen elektrische Antriebskomponenten neutralisiert werden. Fzg. fährt rein verbrennungsmotorisch. 1= nur Verbrennungsmotor 0= VM und E-Motor ENERGIEPARMODE muss an sein Job ist 10 Minuten aktiv und kann nicht ausgeschalten werden!
@@ -3450,7 +3357,6 @@ Für Motorleistungstest müssen elektrische Antriebskomponenten neutralisiert we
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-batterie-equil-historie"></a>
 ### STATUS_BATTERIE_EQUIL_HISTORIE
 
 Historie der Batterie Equilibrierung
@@ -3470,7 +3376,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hisr-hos-reset"></a>
 ### STEUERN_HISR_HOS_RESET
 
 Erwirkt einen Reset der Betriebsstrategieanalyse ENERGIEPARMODE muss an sein
@@ -3489,7 +3394,6 @@ Erwirkt einen Reset der Betriebsstrategieanalyse ENERGIEPARMODE muss an sein
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vital-variables-drehzahlen"></a>
 ### STATUS_VITAL_VARIABLES_DREHZAHLEN
 
 Liest die Werte von charakteristischen Drehzahlen und Geschwindigkeiten aus
@@ -3516,7 +3420,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vital-variables-leistungen"></a>
 ### STATUS_VITAL_VARIABLES_LEISTUNGEN
 
 Liest die Werte von charakteristischen Leistungen, Spannungen, Stroemen und Ladezustaenden aus
@@ -3551,7 +3454,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vital-variables-momente"></a>
 ### STATUS_VITAL_VARIABLES_MOMENTE
 
 Liest die Werte von charakteristischen Momenten aus
@@ -3582,7 +3484,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vital-variables-status"></a>
 ### STATUS_VITAL_VARIABLES_STATUS
 
 Liest die Werte von charakteristischen Status aus
@@ -3615,7 +3516,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vital-variables-temperaturen"></a>
 ### STATUS_VITAL_VARIABLES_TEMPERATUREN
 
 Liest die Werte von charakteristischen Temperaturen aus
@@ -3642,7 +3542,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-lesen-individualdata-liste"></a>
 ### LESEN_INDIVIDUALDATA_LISTE
 
 Lesen eines Listeneintrags der Individualisierungsdaten KWP2000: $21 ReadDataByLocalIdentifier (not used) $01 recordLocalIdentifier (not used)
@@ -3664,7 +3563,6 @@ Lesen eines Listeneintrags der Individualisierungsdaten KWP2000: $21 ReadDataByL
 | RET_COMMENT | string | Kommentarspalte des Entries |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-lese-individualdata"></a>
 ### LESE_INDIVIDUALDATA
 
 Lesen von Individualisierungsdaten Modus   : Default
@@ -3692,7 +3590,6 @@ Lesen von Individualisierungsdaten Modus   : Default
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-schreiben-individualdata"></a>
 ### SCHREIBEN_INDIVIDUALDATA
 
 Schreiben von Individualisierungsdaten Modus   : Default
@@ -3720,7 +3617,6 @@ Schreiben von Individualisierungsdaten Modus   : Default
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-flashprog-precondition-lesen"></a>
 ### _STATUS_FLASHPROG_PRECONDITION_LESEN
 
 Status der Vorbedingungen fuer das Flashen ueber WinKFP $22     SID ReadDataByIdentifier $03 $01 DID Messwert Modus: Default
@@ -3743,7 +3639,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-prozessor-lesen-jobs"></a>
 ### _STATUS_PROZESSOR_LESEN_JOBS
 
 Reset-Statistik, Resetursachen, Resetadressen Status der Level 3-Tests, NVM-Status/Checksummen Hoechste erreichte Anzahl von(Running-)Resets zwischen 2 PowerUp-Resets PowerUp-Reset setzt Wert zurueck Wert wird bei Klemme15- und Batteriewechsel nicht zurueckgesetzt $22     SID ReadDataByIdentifier $20 $4B DID Messwert Anzahl der Resets seit der letzten Neuprogrammierung Powerup-Resets(Watchdog) werden nicht erfasst Klemme15- und Batteriewechsel haben auf den Wert keinen Einfluss $22     SID ReadDataByIdentifier $20 $4A DID Messwert Ursache des letzten Resets $22     SID ReadDataByIdentifier $12 $DE DID Messwert Adresse, an der der letzte Resets aufgetreten  ist $22     SID ReadDataByIdentifier $12 $E7 DID Messwert Adresse, an der vom RAM-Test eine Fehler festgestellt wurde $22     SID ReadDataByIdentifier $20 $34 DID Messwert Status der Processorueberwachung FUSI-Level 3 $22     SID ReadDataByIdentifier $20 $39 DID Messwert Status der Checksummen- und Lesepruefung aller NVM-RAM Bereiche $22     SID ReadDataByIdentifier $20 $33 DID Messwert Modus: Default
@@ -3784,7 +3679,6 @@ _No arguments._
 | _REQUEST07 | binary | Hex-Auftrag an SG |
 | _RESPONSE07 | binary | Hex-Antwort von SG |
 
-<a id="job-status-remedial-action-history"></a>
 ### _STATUS_REMEDIAL_ACTION_HISTORY
 
 Gibt den Fehler bitkodiert zurück
@@ -3801,7 +3695,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-remedial-action"></a>
 ### _STATUS_REMEDIAL_ACTION
 
 Gibt die letzten Fehler bitcodiert zurueck $22     SID ReadDataByIdentifier $03 $02 DID Messwert Modus: Default
@@ -3824,7 +3717,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-remedial-action-reset"></a>
 ### _STEUERN_REMEDIAL_ACTION_RESET
 
 Löschen des Historienspeichers RA Energiesparmode Werkstatt muss gesetzt sein
@@ -3839,7 +3731,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-build-ident-lesen"></a>
 ### _BUILD_IDENT_LESEN
 
 Auslesen der Build Informations Felder Standard Flashjob Modus   : Default
@@ -3863,7 +3754,6 @@ _No arguments._
 | _REQUEST03 | binary | Hex-Auftrag an SG |
 | _RESPONSE03 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-standload-verfuegbar"></a>
 ### _STEUERN_STANDLOAD_VERFUEGBAR
 
 Entwicklerjob zur Bereitstellung der Standloadfunktion mit Gas&Bremspedal
@@ -3882,7 +3772,6 @@ Entwicklerjob zur Bereitstellung der Standloadfunktion mit Gas&Bremspedal
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-batterie-aktive-leistung"></a>
 ### _STATUS_BATTERIE_AKTIVE_LEISTUNG
 
 Liest Status der Batterieleistung aus. Gibt an von welchem Kriterium die Leistung im Moment begrenzt ist.
@@ -3929,7 +3818,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-socr-usecase"></a>
 ### _STATUS_SOCR_USECASE
 
 Rückgabe des aktuellen Betriebszustandes der HV-Speicherladestrategie
@@ -3946,7 +3834,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-reset-ursache"></a>
 ### _STATUS_RESET_URSACHE
 
 Auslesen der Reset Ursache Es werden 6 Pakete zurückgeliefert  1 Paket: Reset der nicht durch einen PowerUp Reset verursacht wurde. 5 Pakete: Alle zuletzt aufgetretenen Resets Inhalt eines Pakets: - SOC der HV-Batterie - Spannung RunCrank - Background-LoopMax Wert - PLD Feedback-Wert - Sammelfehler für Processorhardware - E-MotorA Temperatur - E-MotorA-Inverter Temperatur - km-Stand - ResetSourceAddress - ResetSource - Program/Datenstand  Beschreibung der Results wird hier nur an Hand des 1.Paket gemacht. Die anderen Pakete sind analog zu betrachten.
@@ -4193,7 +4080,6 @@ _No arguments._
 - [HYBRID_LIEF](#table-hybrid-lief) (6 × 2)
 - [DATUM_MONAT](#table-datum-monat) (53 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -4267,7 +4153,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 118 rows × 2 columns
@@ -4393,7 +4278,6 @@ Dimensions: 118 rows × 2 columns
 | 0x0000AB | Kongsberg Automotive GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -4420,7 +4304,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -4445,7 +4328,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -4477,7 +4359,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -4550,7 +4431,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -4563,7 +4443,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -4576,7 +4455,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -4589,7 +4467,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -4608,7 +4485,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -4617,7 +4493,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -4627,7 +4502,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 456 rows × 3 columns
@@ -5091,7 +4965,6 @@ Dimensions: 456 rows × 3 columns
 | 0x01D89C | MCPA: Botschaft vom Steuergerät TCM (Hybrid-Getriebesteuerung) über CAN-Bus fehlt   | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -5105,7 +4978,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 24 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -5114,7 +4986,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -5126,7 +4997,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-t-supplierlist-3-8"></a>
 ### T_SUPPLIERLIST_3_8
 
 Dimensions: 140 rows × 2 columns
@@ -5274,7 +5144,6 @@ Dimensions: 140 rows × 2 columns
 | 254 | Nachrüstungs Lieferant |
 | 255 | Unidentifiziert |
 
-<a id="table-t-nein-ja-1bit"></a>
 ### T_NEIN_JA_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -5284,7 +5153,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nein |
 | 1 | ja |
 
-<a id="table-t-nicht-aktiv-aktiv-1byte"></a>
 ### T_NICHT_AKTIV_AKTIV_1BYTE
 
 Dimensions: 2 rows × 2 columns
@@ -5294,7 +5162,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nicht aktiv |
 | 1 | aktiv |
 
-<a id="table-t-jump-assist-state"></a>
 ### T_JUMP_ASSIST_STATE
 
 Dimensions: 6 rows × 2 columns
@@ -5308,7 +5175,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Ladung abgeschlossen |
 | 5 | Abgebrochen weil Netztteil zu klein/ Klemmenzustand geändert |
 
-<a id="table-t-apm-lademodus-text"></a>
 ### T_APM_LADEMODUS_TEXT
 
 Dimensions: 6 rows × 2 columns
@@ -5322,7 +5188,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Buckmode (Laden von 300V nach 12V) |
 | 5 | Boostmode (Laden von 12V nach 300V) |
 
-<a id="table-t-degradation-text"></a>
 ### T_DEGRADATION_TEXT
 
 Dimensions: 11 rows × 2 columns
@@ -5341,7 +5206,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | HV_high   (HV-Überspannung) |
 | 10 | SOH_high  (SOH-HV-Speicher überaltert) |
 
-<a id="table-t-hcp-antriebsart-text"></a>
 ### T_HCP_ANTRIEBSART_TEXT
 
 Dimensions: 9 rows × 2 columns
@@ -5358,7 +5222,6 @@ Dimensions: 9 rows × 2 columns
 | 8 | Batteriestandladen |
 | 9 | Regeneratives Bremsen |
 
-<a id="table-t-hpmr-state-text"></a>
 ### T_HPMR_STATE_TEXT
 
 Dimensions: 15 rows × 2 columns
@@ -5381,7 +5244,6 @@ Dimensions: 15 rows × 2 columns
 | 13 | SHUTDOWN |
 | 14 | JUMP_ASSIST |
 
-<a id="table-t-hvil-gesamt"></a>
 ### T_HVIL_GESAMT
 
 Dimensions: 3 rows × 2 columns
@@ -5392,7 +5254,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | HVIL ist geschlossen (HV kann aktiv sein) |
 | 2 | HVIL ist offen (Service kann an HV Arbeiten wenn Service Disconnect entfernt und gegen Widereinschalten gesichert ist |
 
-<a id="table-t-hvil-mcpa-b"></a>
 ### T_HVIL_MCPA_B
 
 Dimensions: 2 rows × 2 columns
@@ -5402,7 +5263,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | HVIL ist aus Sicht PEB geschlossen |
 | 1 | HVIL ist aus Sicht PEB offen |
 
-<a id="table-t-hvil-batterie"></a>
 ### T_HVIL_BATTERIE
 
 Dimensions: 3 rows × 2 columns
@@ -5413,7 +5273,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | HVIL ist aus Sicht der Batterie geschlossen (HV kann aktiv sein) |
 | 2 | HVIL ist aus Sicht der Batterie offen (Service kann an HV Arbeiten wenn Service Disconnect entfernt und gegen widereinschalten gesichert ist |
 
-<a id="table-t-status-isol-batterie"></a>
 ### T_STATUS_ISOL_BATTERIE
 
 Dimensions: 4 rows × 2 columns
@@ -5425,7 +5284,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Isolationsfehler aus Sicht der Batterie |
 | 255 | Undefinierter Wert |
 
-<a id="table-t-laden-hv-batterie"></a>
 ### T_LADEN_HV_BATTERIE
 
 Dimensions: 5 rows × 2 columns
@@ -5438,7 +5296,6 @@ Dimensions: 5 rows × 2 columns
 | 8 | P |
 | 15 | init |
 
-<a id="table-t-status-isol-peb"></a>
 ### T_STATUS_ISOL_PEB
 
 Dimensions: 3 rows × 2 columns
@@ -5449,7 +5306,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Kein Isolationsfehler aus Sicht der PEB  |
 | 2 | Isolationsfehler aus Sicht der PEB |
 
-<a id="table-t-steuern-antriebsart-text"></a>
 ### T_STEUERN_ANTRIEBSART_TEXT
 
 Dimensions: 3 rows × 2 columns
@@ -5460,7 +5316,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Nur elektrisches Fahren |
 | 2 | Nur mit Verbrennungsmotor fahren |
 
-<a id="table-t-inaktiv-aktiv-1byte"></a>
 ### T_INAKTIV_AKTIV_1BYTE
 
 Dimensions: 2 rows × 2 columns
@@ -5470,7 +5325,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | inaktiv |
 | 1 | aktiv |
 
-<a id="table-t-empi-mode-text"></a>
 ### T_EMPI_MODE_TEXT
 
 Dimensions: 8 rows × 2 columns
@@ -5486,7 +5340,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Not Used |
 | 7 | Signal Not Available |
 
-<a id="table-t-voltage-hv-side-text"></a>
 ### T_VOLTAGE_HV_SIDE_TEXT
 
 Dimensions: 2 rows × 2 columns
@@ -5496,7 +5349,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Spannungsfreiheit nicht diagnostizierbar (Spannungsfreiheit ist vom Fachmann zu prüfen oder Diagnosefähigkeit ist herzustellen) |
 | 1 | Spannungsfreiheit |
 
-<a id="table-t-reset-source"></a>
 ### T_RESET_SOURCE
 
 Dimensions: 6 rows × 2 columns
@@ -5510,7 +5362,6 @@ Dimensions: 6 rows × 2 columns
 | 5 | Secondary forced a main running reset |
 | 6 | Controller Specific Exceptions |
 
-<a id="table-t-pass-fail-indeterminate"></a>
 ### T_PASS_FAIL_INDETERMINATE
 
 Dimensions: 3 rows × 2 columns
@@ -5521,7 +5372,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Unbestimmt |
 | 3 | Durchgeführt |
 
-<a id="table-t-textaktuellegetriebeposition"></a>
 ### T_TEXTAKTUELLEGETRIEBEPOSITION
 
 Dimensions: 5 rows × 2 columns
@@ -5534,7 +5384,6 @@ Dimensions: 5 rows × 2 columns
 | 8 | P |
 | 15 | init |
 
-<a id="table-t-textantriebsartzugriff"></a>
 ### T_TEXTANTRIEBSARTZUGRIFF
 
 Dimensions: 4 rows × 2 columns
@@ -5546,7 +5395,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Vollzugriff |
 | 3 | exclusiv E-Fahren bzw. Verbrennen |
 
-<a id="table-t-textbattconn"></a>
 ### T_TEXTBATTCONN
 
 Dimensions: 7 rows × 2 columns
@@ -5561,7 +5409,6 @@ Dimensions: 7 rows × 2 columns
 | 7 | Signal nicht vorhanden |
 | 255 | Ungültig |
 
-<a id="table-t-textcrashdetectionsignal"></a>
 ### T_TEXTCRASHDETECTIONSIGNAL
 
 Dimensions: 2 rows × 2 columns
@@ -5571,7 +5418,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Crash detektiert (AUS) |
 | 1 | Crash detektiert (EIN) |
 
-<a id="table-t-textenergiesparmode"></a>
 ### T_TEXTENERGIESPARMODE
 
 Dimensions: 9 rows × 2 columns
@@ -5588,7 +5434,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | FE+TRA+W |
 | 255 | Ungültig |
 
-<a id="table-t-textllregelung"></a>
 ### T_TEXTLLREGELUNG
 
 Dimensions: 4 rows × 2 columns
@@ -5600,7 +5445,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | LL-Drehzahl zu niedrig |
 | 3 | Diagnose i.O. abgeschlossen |
 
-<a id="table-t-textparksensoren"></a>
 ### T_TEXTPARKSENSOREN
 
 Dimensions: 4 rows × 2 columns
@@ -5612,7 +5456,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Park ausgelegt |
 | 3 | Ungültig |
 
-<a id="table-t-textremedialactionhistroy"></a>
 ### T_TEXTREMEDIALACTIONHISTROY
 
 Dimensions: 10 rows × 2 columns
@@ -5630,7 +5473,6 @@ Dimensions: 10 rows × 2 columns
 | 256 | System Shutdown mit HV-Schütze auf |
 | 65535 | undefinierter Wert |
 
-<a id="table-t-textdegradationsource2"></a>
 ### T_TEXTDEGRADATIONSOURCE2
 
 Dimensions: 33 rows × 2 columns
@@ -5671,7 +5513,6 @@ Dimensions: 33 rows × 2 columns
 | 2147483648 | STAT_DEGR_REKU_TEMP_APM_AKTIV |
 | 4294967295 | ungültiger Wert |
 
-<a id="table-t-textdegradationsource1"></a>
 ### T_TEXTDEGRADATIONSOURCE1
 
 Dimensions: 33 rows × 2 columns
@@ -5712,7 +5553,6 @@ Dimensions: 33 rows × 2 columns
 | 2147483648 | STAT_DEGR_EKK_TEMP_HV_SPEICHER_AKTIV |
 | 4294967295 | ungültiger Wert |
 
-<a id="table-t-degradation-akt-text"></a>
 ### T_DEGRADATION_AKT_TEXT
 
 Dimensions: 2 rows × 2 columns
@@ -5722,7 +5562,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Degradation nicht aktiv |
 | 1 | Degradation aktiv |
 
-<a id="table-t-textsocstimul"></a>
 ### T_TEXTSOCSTIMUL
 
 Dimensions: 2 rows × 2 columns
@@ -5732,7 +5571,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Stimmulierung AUS |
 | 1 | Stimmulierung EIN |
 
-<a id="table-t-not-aktiv-aktiv"></a>
 ### T_NOT_AKTIV_AKTIV
 
 Dimensions: 2 rows × 2 columns
@@ -5742,7 +5580,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nicht aktiv |
 | 1 | aktiv |
 
-<a id="table-t-true-false"></a>
 ### T_TRUE_FALSE
 
 Dimensions: 2 rows × 2 columns
@@ -5752,7 +5589,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | False |
 | 1 | True |
 
-<a id="table-t-textadaptionswertelesenpyro"></a>
 ### T_TEXTADAPTIONSWERTELESENPYRO
 
 Dimensions: 2 rows × 2 columns
@@ -5762,7 +5598,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Kein HV Shutdown |
 | 1 | HV Shutdown |
 
-<a id="table-t-textlaststarttype"></a>
 ### T_TEXTLASTSTARTTYPE
 
 Dimensions: 11 rows × 2 columns
@@ -5781,7 +5616,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Autostart vorhalt |
 | 10 | Motorstart Kompressionstest |
 
-<a id="table-t-textlaststoptype"></a>
 ### T_TEXTLASTSTOPTYPE
 
 Dimensions: 3 rows × 2 columns
@@ -5792,7 +5626,6 @@ Dimensions: 3 rows × 2 columns
 | 11 | Geregelter Stop |
 | 12 | Schlüssel- oder Notstop |
 
-<a id="table-t-textsteuernkurzschluvwemp"></a>
 ### T_TEXTSTEUERNKURZSCHLUVWEMP
 
 Dimensions: 3 rows × 2 columns
@@ -5803,7 +5636,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | aktiv |
 | 2 | beendet |
 
-<a id="table-t-textdegradationbit"></a>
 ### T_TEXTDEGRADATIONBIT
 
 Dimensions: 2 rows × 2 columns
@@ -5813,7 +5645,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Degradation nicht aktiv |
 | 1 | Degradation aktiv |
 
-<a id="table-t-luefterstufen-1-15"></a>
 ### T_LUEFTERSTUFEN_1_15
 
 Dimensions: 16 rows × 2 columns
@@ -5837,7 +5668,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Stufe 14 |
 | 15 | ungültig |
 
-<a id="table-t-ein-ausschaltanforderung"></a>
 ### T_EIN_AUSSCHALTANFORDERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -5849,7 +5679,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Ausschaltaufforderung |
 | 3 | ungültig |
 
-<a id="table-t-fehlervorhanden-keinfehlervorhanden"></a>
 ### T_FEHLERVORHANDEN_KEINFEHLERVORHANDEN
 
 Dimensions: 2 rows × 2 columns
@@ -5859,7 +5688,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Fehler vorhanden |
 | 1 | Fehler vorhanden |
 
-<a id="table-t-ok-nichtok"></a>
 ### T_OK_NICHTOK
 
 Dimensions: 2 rows × 2 columns
@@ -5869,7 +5697,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | OK |
 | 1 | nicht OK |
 
-<a id="table-t-geschlossen-offen"></a>
 ### T_GESCHLOSSEN_OFFEN
 
 Dimensions: 2 rows × 2 columns
@@ -5879,7 +5706,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | geschlossen |
 | 1 | offen |
 
-<a id="table-t-freigabe"></a>
 ### T_FREIGABE
 
 Dimensions: 4 rows × 2 columns
@@ -5891,7 +5717,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Systemfehler erkannt |
 | 3 | ungültig |
 
-<a id="table-t-gueltig-ungueltig"></a>
 ### T_GUELTIG_UNGUELTIG
 
 Dimensions: 2 rows × 2 columns
@@ -5901,7 +5726,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ungültig |
 | 1 | gültig |
 
-<a id="table-t-textsteuernbattkuehl"></a>
 ### T_TEXTSTEUERNBATTKUEHL
 
 Dimensions: 8 rows × 2 columns
@@ -5917,7 +5741,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Vorgabe Befüllung beide Kreise |
 | 7 | Vorgabe Kühlung aus |
 
-<a id="table-t-aus-active-beendet"></a>
 ### T_AUS_ACTIVE_BEENDET
 
 Dimensions: 3 rows × 2 columns
@@ -5928,7 +5751,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | AKTIV |
 | 2 | beendet |
 
-<a id="table-t-textbattladeleistbe"></a>
 ### T_TEXTBATTLADELEISTBE
 
 Dimensions: 6 rows × 2 columns
@@ -5942,7 +5764,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Leistung wird von mismatch begrenzt |
 | 5 | Leistung wird vom Applikationswert vorgegeben |
 
-<a id="table-t-textbattentlleistst"></a>
 ### T_TEXTBATTENTLLEISTST
 
 Dimensions: 12 rows × 2 columns
@@ -5962,7 +5783,6 @@ Dimensions: 12 rows × 2 columns
 | 10 | Leistung wird von Rev Grade begrenzt |
 | 11 | Leistung wird von Power Launch begrenzt |
 
-<a id="table-t-textbattladeleistlt"></a>
 ### T_TEXTBATTLADELEISTLT
 
 Dimensions: 10 rows × 2 columns
@@ -5980,7 +5800,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Leistung wird von Short Term Leistung begrenzt |
 | 9 | Leistung wird vom Applikationswert vorgegeben |
 
-<a id="table-t-textbattladeleistbp"></a>
 ### T_TEXTBATTLADELEISTBP
 
 Dimensions: 9 rows × 2 columns
@@ -5997,7 +5816,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | Leistung wird von Long Term Leistung begrenzt |
 | 8 | Leistung wird vom Applikationswert vorgegeben |
 
-<a id="table-t-textbattentlleistbp"></a>
 ### T_TEXTBATTENTLLEISTBP
 
 Dimensions: 9 rows × 2 columns
@@ -6014,7 +5832,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | Leistung wird von Long Term Leistung begrenzt |
 | 8 | Leistung wird vom Applikationswert vorgegeben |
 
-<a id="table-t-textbattladeleistst"></a>
 ### T_TEXTBATTLADELEISTST
 
 Dimensions: 10 rows × 2 columns
@@ -6032,7 +5849,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Leistung wird von Battery Estimated Leistung begrenzt |
 | 9 | Leistung wird vom Applikationswert vorgegeben |
 
-<a id="table-t-textbattentlleistbe"></a>
 ### T_TEXTBATTENTLLEISTBE
 
 Dimensions: 7 rows × 2 columns
@@ -6047,7 +5863,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | Leistung wird vom Applikationswert vorgegeben |
 | 6 | Leistung wird vom Powerlaunch vorgegeben |
 
-<a id="table-t-textbattentlleistlt"></a>
 ### T_TEXTBATTENTLLEISTLT
 
 Dimensions: 12 rows × 2 columns
@@ -6067,7 +5882,6 @@ Dimensions: 12 rows × 2 columns
 | 10 | Leistung wird von Rev Grade begrenzt |
 | 11 | Leistung wird von Power Launch begrenzt |
 
-<a id="table-t-textflashprecondition"></a>
 ### T_TEXTFLASHPRECONDITION
 
 Dimensions: 2 rows × 2 columns
@@ -6077,7 +5891,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Keine Sperrung |
 | 1 | Sperre aktiv |
 
-<a id="table-fortumweltnr"></a>
 ### FORTUMWELTNR
 
 Dimensions: 447 rows × 36 columns
@@ -6532,7 +6345,6 @@ Dimensions: 447 rows × 36 columns
 | 0x01D89C | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 |
 | 0xFFFFFF | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 |
 
-<a id="table-fortumwelttexte"></a>
 ### FORTUMWELTTEXTE
 
 Dimensions: 35 rows × 7 columns
@@ -6575,7 +6387,6 @@ Dimensions: 35 rows × 7 columns
 | 34 | Nm | 1 | 1 | -32767 | Getriebeausgangsmoment | 2 |
 | 35 | % | 1 | 2 | 0 | Aktuelle Gaspedalposition | 1 |
 
-<a id="table-t-textistrange"></a>
 ### T_TEXTISTRANGE
 
 Dimensions: 38 rows × 2 columns
@@ -6621,7 +6432,6 @@ Dimensions: 38 rows × 2 columns
 | 36 | G3 Abbruch |
 | 37 | G4 Abbruch |
 
-<a id="table-t-textremedialactioninput2"></a>
 ### T_TEXTREMEDIALACTIONINPUT2
 
 Dimensions: 32 rows × 2 columns
@@ -6661,7 +6471,6 @@ Dimensions: 32 rows × 2 columns
 | 1073741824 | VeSRAR_b_EMPI_CommFltSum |
 | 2147483648 | VeSRAR_b_EngineRAModeFlt |
 
-<a id="table-t-textremedialaction"></a>
 ### T_TEXTREMEDIALACTION
 
 Dimensions: 10 rows × 2 columns
@@ -6679,7 +6488,6 @@ Dimensions: 10 rows × 2 columns
 | 128 | System Shutdown mit HV-Schütze zu |
 | 256 | System Shutdown mit HV-Schütze auf |
 
-<a id="table-t-textremedialactioninput1"></a>
 ### T_TEXTREMEDIALACTIONINPUT1
 
 Dimensions: 32 rows × 2 columns
@@ -6719,7 +6527,6 @@ Dimensions: 32 rows × 2 columns
 | 1073741824 | VeMTQR_b_MtrB_TorqAchievedFA |
 | 2147483648 | VeSTMR_b_RngStValidationFlt |
 
-<a id="table-t-textrueckschreibenio"></a>
 ### T_TEXTRUECKSCHREIBENIO
 
 Dimensions: 2 rows × 2 columns
@@ -6729,7 +6536,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Rueckschreiben nicht erlaubt |
 | 1 | Rueckschreiben erlaubt |
 
-<a id="table-t-nichtok-ok"></a>
 ### T_NICHTOK_OK
 
 Dimensions: 2 rows × 2 columns
@@ -6739,7 +6545,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nicht OK |
 | 1 | OK |
 
-<a id="table-t-textmotorleistungsmessung"></a>
 ### T_TEXTMOTORLEISTUNGSMESSUNG
 
 Dimensions: 5 rows × 2 columns
@@ -6752,7 +6557,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Testzeitraum abgelaufen |
 | 4 | kein Wert |
 
-<a id="table-t-ein-aus"></a>
 ### T_EIN_AUS
 
 Dimensions: 2 rows × 2 columns
@@ -6762,7 +6566,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | AUS |
 | 1 | EIN |
 
-<a id="table-t-textstatuskupplung"></a>
 ### T_TEXTSTATUSKUPPLUNG
 
 Dimensions: 6 rows × 2 columns
@@ -6776,7 +6579,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Synchronisiert |
 | 5 | Gesperrt |
 
-<a id="table-t-text-gefordertnichtgefordert"></a>
 ### T_TEXT_GEFORDERTNICHTGEFORDERT
 
 Dimensions: 2 rows × 2 columns
@@ -6786,7 +6588,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Nicht gefordert |
 | 1 | Gefordert |
 
-<a id="table-t-textrangestate"></a>
 ### T_TEXTRANGESTATE
 
 Dimensions: 38 rows × 2 columns
@@ -6832,7 +6633,6 @@ Dimensions: 38 rows × 2 columns
 | 36 | G3 Abbruch |
 | 37 | G4 Abbruch |
 
-<a id="table-t-textusecases"></a>
 ### T_TEXTUSECASES
 
 Dimensions: 22 rows × 2 columns
@@ -6862,7 +6662,6 @@ Dimensions: 22 rows × 2 columns
 | 20 | SOC SFA |
 | 21 | Default |
 
-<a id="table-t-textgetrieberange"></a>
 ### T_TEXTGETRIEBERANGE
 
 Dimensions: 15 rows × 2 columns
@@ -6885,7 +6684,6 @@ Dimensions: 15 rows × 2 columns
 | 13 | SHUTDOWN |
 | 14 | JUMP_ASSIST |
 
-<a id="table-t-textresetursache"></a>
 ### T_TEXTRESETURSACHE
 
 Dimensions: 7 rows × 2 columns
@@ -6900,7 +6698,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | CeHWIO_e_RstBattConnect |
 | 6 | CeHWIO_e_RstUnident |
 
-<a id="table-t-ok-nicht-ok"></a>
 ### T_OK_NICHT_OK
 
 Dimensions: 2 rows × 2 columns
@@ -6910,7 +6707,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nicht OK |
 | 1 | OK |
 
-<a id="table-t-textstatequroutineaktiv"></a>
 ### T_TEXTSTATEQUROUTINEAKTIV
 
 Dimensions: 2 rows × 2 columns
@@ -6920,7 +6716,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | EQU-Routine nicht aktiv |
 | 1 | EQU-Routine aktiv |
 
-<a id="table-t-textstatequroutineabbruch"></a>
 ### T_TEXTSTATEQUROUTINEABBRUCH
 
 Dimensions: 2 rows × 2 columns
@@ -6930,7 +6725,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | EQU-Routine nicht abgebrochen |
 | 1 | EQU-Routine abgebrochen |
 
-<a id="table-t-textstatsperrbed"></a>
 ### T_TEXTSTATSPERRBED
 
 Dimensions: 2 rows × 2 columns
@@ -6940,7 +6734,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Sperrbed.liegt nicht an |
 | 1 | Sperrbed.liegt an |
 
-<a id="table-t-textstatbattequil"></a>
 ### T_TEXTSTATBATTEQUIL
 
 Dimensions: 10 rows × 2 columns
@@ -6958,7 +6751,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Ladephase SOC <30% |
 | 9 | Equilibrierung beendet |
 
-<a id="table-t-textsocrusecase"></a>
 ### T_TEXTSOCRUSECASE
 
 Dimensions: 22 rows × 2 columns
@@ -6988,7 +6780,6 @@ Dimensions: 22 rows × 2 columns
 | 20 | SOC SFA |
 | 21 | Default |
 
-<a id="table-t-textadaptionswerteloeschen"></a>
 ### T_TEXTADAPTIONSWERTELOESCHEN
 
 Dimensions: 4 rows × 2 columns
@@ -7000,7 +6791,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | CC-Meldung |
 | 4 | HISR- Betriebsstrategie-Analyse wir zurückgesetzt |
 
-<a id="table-t-textbattloeschen"></a>
 ### T_TEXTBATTLOESCHEN
 
 Dimensions: 2 rows × 2 columns
@@ -7010,7 +6800,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Aktion |
 | 7 | Adaptionswerte der Batterie löschen |
 
-<a id="table-t-gear"></a>
 ### T_GEAR
 
 Dimensions: 12 rows × 2 columns
@@ -7030,7 +6819,6 @@ Dimensions: 12 rows × 2 columns
 | 80 | Park |
 | 255 | unbekannter Gang |
 
-<a id="table-t-aus-reset"></a>
 ### T_AUS_RESET
 
 Dimensions: 2 rows × 2 columns
@@ -7040,7 +6828,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | AUS |
 | 1 | RESET |
 
-<a id="table-t-textav"></a>
 ### T_TEXTAV
 
 Dimensions: 40 rows × 2 columns
@@ -7088,7 +6875,6 @@ Dimensions: 40 rows × 2 columns
 | 39 | VM läuft systembedingt |
 | 40 | VM läuft wg.Steigung/Gefälle |
 
-<a id="table-t-ungueltig1-gueltig0"></a>
 ### T_UNGUELTIG1_GUELTIG0
 
 Dimensions: 2 rows × 2 columns
@@ -7098,7 +6884,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | gültig |
 | 1 | ungültig |
 
-<a id="table-t-textbattkuehlbetriebsmodus"></a>
 ### T_TEXTBATTKUEHLBETRIEBSMODUS
 
 Dimensions: 26 rows × 2 columns
@@ -7132,7 +6917,6 @@ Dimensions: 26 rows × 2 columns
 | 30 | Ventil Radiator defekt, keine Kühlung über Chiller möglich |
 | 31 | Ventil Radiator defekt, Kühlung über Chiller |
 
-<a id="table-t-textdrrmode"></a>
 ### T_TEXTDRRMODE
 
 Dimensions: 10 rows × 2 columns
@@ -7150,7 +6934,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | CITY |
 | 15 | INVALID |
 
-<a id="table-tindividualdataliste"></a>
 ### TINDIVIDUALDATALISTE
 
 Dimensions: 1 rows × 17 columns
@@ -7159,7 +6942,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x0000 | 0xFF | 01 | 1A | 02 | 000F | 01 | 00 | 00 | - | 00 | - | 00 | - | 00 | - | Batterie.Recovery |
 
-<a id="table-t-textionio"></a>
 ### T_TEXTIONIO
 
 Dimensions: 3 rows × 2 columns
@@ -7170,7 +6952,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | i.O |
 | 2 | n.i.O |
 
-<a id="table-hybrid-lief"></a>
 ### HYBRID_LIEF
 
 Dimensions: 6 rows × 2 columns
@@ -7184,7 +6965,6 @@ Dimensions: 6 rows × 2 columns
 | 0008 | Siemens |
 | FFFF | undefinierter Lieferant |
 
-<a id="table-datum-monat"></a>
 ### DATUM_MONAT
 
 Dimensions: 53 rows × 2 columns

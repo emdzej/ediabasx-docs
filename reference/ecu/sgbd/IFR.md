@@ -85,7 +85,6 @@
 - [CLR_ERROR_COUNT](#job-clr-error-count) - Rücksetzen des Fehlerspreichers
 - [_SET_MASTER_COM_MODE](#job-set-master-com-mode) - Einstellen Kommunikationsmode Master-to-Slave
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -104,7 +103,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -117,7 +115,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-init-ifr"></a>
 ### INIT_IFR
 
 Initialisierung mit Zuordnung Adresse
@@ -137,7 +134,6 @@ Initialisierung mit Zuordnung Adresse
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY oder ERROR_NAK |
 
-<a id="job-start-pruefung"></a>
 ### START_PRUEFUNG
 
 Start mit FZS
@@ -154,7 +150,6 @@ Start mit FZS
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-ende-pruefung"></a>
 ### ENDE_PRUEFUNG
 
 Trennt logische Verbindung zum Slave-MDA Ab V3.07: 3s Wartezeit wenn Antwort nicht OK (0x00) war gewaehrleistet Umschaltung des Slave in Koordinierungskanal bei entsprechender Slave-Konfiguration
@@ -168,7 +163,6 @@ _No arguments._
 | JOB_STATUS | string | die derzeitige Implementierung liefert immer OKAY |
 | JOB_STATUS_WERT | int | tatsaechlicher Zahlenwert des Jobstatus vom Master |
 
-<a id="job-set-communication-para"></a>
 ### SET_COMMUNICATION_PARA
 
 Setzen Kommunikationsparameter AUTOMATIK und CAN_EIN aus INIT_IFR
@@ -186,7 +180,6 @@ Setzen Kommunikationsparameter AUTOMATIK und CAN_EIN aus INIT_IFR
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-get-communication-para"></a>
 ### GET_COMMUNICATION_PARA
 
 Auslesen Kommunikationsparameter AUTOMATIK und CAN_EIN aus INIT_IFR
@@ -201,7 +194,6 @@ _No arguments._
 | CAN_EIN | int | 0 = K-Line 1 = CAN |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-set-confirmed-com"></a>
 ### SET_CONFIRMED_COM
 
 Setzt den MDA in Kommunikationsmodus ConfirmedCom
@@ -218,7 +210,6 @@ Setzt den MDA in Kommunikationsmodus ConfirmedCom
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-k1-ein"></a>
 ### CPU_PORT_K1_EIN
 
 Einschalten des Relais K1 im Funk-Mobilteil
@@ -231,7 +222,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-k1-aus"></a>
 ### CPU_PORT_K1_AUS
 
 Ausschalten des Relais K1 im Funk-Mobilteil
@@ -244,7 +234,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-k1-lesen"></a>
 ### CPU_PORT_K1_LESEN
 
 Lesen ob das Relais K1 im Funk-Mobilteil aktiv ist
@@ -258,7 +247,6 @@ _No arguments._
 | CPU_PORT_K1 | long | OKAY, wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-k2-ein"></a>
 ### CPU_PORT_K2_EIN
 
 Einschalten des Relais K2 im Funk-Mobilteil
@@ -271,7 +259,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-k2-aus"></a>
 ### CPU_PORT_K2_AUS
 
 Ausschalten des Relais K2 im Funk-Mobilteil
@@ -284,7 +271,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-k2-lesen"></a>
 ### CPU_PORT_K2_LESEN
 
 Lesen ob das Relais K2 im Funk-Mobilteil aktiv ist
@@ -298,7 +284,6 @@ _No arguments._
 | CPU_PORT_K2 | long | OKAY, wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-can-ein"></a>
 ### CPU_CAN_EIN
 
 Einschalten des CAN Relais im Funk-Mobilteil
@@ -311,7 +296,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-can-aus"></a>
 ### CPU_CAN_AUS
 
 Ausschalten des CAN Relais im Funk-Mobilteil
@@ -324,7 +308,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-can-lesen"></a>
 ### CPU_CAN_LESEN
 
 Lesen ob das CAN Relais im Funk-Mobilteil aktiv ist
@@ -338,7 +321,6 @@ _No arguments._
 | CPU_CAN | long | OKAY, wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-cpu-k1-k2-can"></a>
 ### STATUS_CPU_K1_K2_CAN
 
 Lesen ob das CAN Relais im Funk-Mobilteil aktiv ist
@@ -354,7 +336,6 @@ _No arguments._
 | CPU_K2 | long | OKAY, wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-stromregelung-ein"></a>
 ### CPU_PORT_STROMREGELUNG_EIN
 
 Einschalten des Stromregelung im Funk-Mobilteil
@@ -367,7 +348,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-stromregelung-aus"></a>
 ### CPU_PORT_STROMREGELUNG_AUS
 
 Einschalten des Stromregelung im Funk-Mobilteil
@@ -380,7 +360,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-cpu-port-stromregelung-lesen"></a>
 ### CPU_PORT_STROMREGELUNG_LESEN
 
 Lesen ob die Stromregelung im Funk-Mobilteil aktiv ist
@@ -394,7 +373,6 @@ _No arguments._
 | CPU_PORT_STROMREGELUNG | long | OKAY, wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-adresse-lesen"></a>
 ### ADRESSE_LESEN
 
 Abfrage Adresse des Mobiladapters (Slave-MDA) HINWEIS: wird nur noch aus Kompatibilaetsgruenden unterstuetzt HINWEIS: neuer Job ADRESSEN_LESEN_SLAVE
@@ -408,7 +386,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | NUMMER | int | Slave-Adresse als Integer |
 
-<a id="job-adresse-lesen-master"></a>
 ### ADRESSE_LESEN_MASTER
 
 Abfrage der Adresse des Master-MDA HINWEIS: schnelle Ausfuehrung, da keine Funk-Kommunikation
@@ -422,7 +399,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY wenn Job erfolgreich ausgefuehrt |
 | ADRESSE_MASTER | int | Adresse des Master-MDA |
 
-<a id="job-adresse-lesen-slave"></a>
 ### ADRESSE_LESEN_SLAVE
 
 Abfrage der Adresse des Slave-MDA
@@ -436,7 +412,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY wenn Job erfolgreich ausgefuehrt |
 | ADRESSE_SLAVE | int | Adresse des Slave-MDA |
 
-<a id="job-adressen-lesen"></a>
 ### ADRESSEN_LESEN
 
 Abfrage der Adressen des Master- und des Slave-MDA HINWEIS: Verbindung zum Slave-MDA erforderlich
@@ -451,7 +426,6 @@ _No arguments._
 | ADRESSE_MASTER | int | Adresse des Masters-MDA |
 | ADRESSE_SLAVE | int | Adresse des Slave-MDA |
 
-<a id="job-sleep-ifr"></a>
 ### SLEEP_IFR
 
 Abbruch der Infrarot-Verbindung (IFR-ADS -> SLEEP-Mode) Es kommt keine Antwort zurueck !
@@ -464,7 +438,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-version-lesen"></a>
 ### VERSION_LESEN
 
 Abfrage der Version des Masters und des Mobiladapters Abfrage der Adresse des Masters und des Mobiladapters
@@ -481,7 +454,6 @@ _No arguments._
 | VERSION_SLAVE | string | Version des Mobilteils |
 | ADRESSE_SLAVE | int | Adresse des Mobilteils |
 
-<a id="job-check-sleep"></a>
 ### CHECK_SLEEP
 
 Test ob MDA in den Sleepmodus geschaltet hat bei Sleep Modus Adresse = 0 und Softwareversion = 0000
@@ -496,7 +468,6 @@ _No arguments._
 | VERSION_SLAVE | string | Version des Mobilteils, "0000" im Sleepmodus |
 | ADRESSE_SLAVE | int | Adresse des Mobilteils, "0" im Sleepmodus |
 
-<a id="job-status-klemmen"></a>
 ### STATUS_KLEMMEN
 
 Abfrage der Klemmenstati des Mobiladapters
@@ -514,7 +485,6 @@ _No arguments._
 | STAT_K30 | int | Status K30 als Integer |
 | STAT_KONSTANTSTROM | int | Status Konstantstrom als Integer |
 
-<a id="job-status-slave-zielnummer"></a>
 ### STATUS_SLAVE_ZIELNUMMER
 
 Abfrage der Slave Zielnummer
@@ -528,7 +498,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_SLAVE_ZIELNUMMER | int | Rückgabe Zielnummer Master bei P2P |
 
-<a id="job-status-statistik-master"></a>
 ### STATUS_STATISTIK_MASTER
 
 Statistik aus dem Master lesen
@@ -546,7 +515,6 @@ _No arguments._
 | JOB_STATUS | string | die derzeitige Implementierung liefert immer OKAY |
 | JOB_STATUS_WERT | int | tatsaechlicher Zahlenwert des Jobstatus vom Master |
 
-<a id="job-status-statistik-slave"></a>
 ### STATUS_STATISTIK_SLAVE
 
 Statistik aus dem Slave lesen
@@ -564,7 +532,6 @@ _No arguments._
 | JOB_STATUS | string | die derzeitige Implementierung liefert immer OKAY |
 | JOB_STATUS_WERT | int | tatsaechlicher Zahlenwert des Jobstatus vom Master |
 
-<a id="job-loeschen-statistik-master"></a>
 ### LOESCHEN_STATISTIK_MASTER
 
 Statistik im Master loeschen
@@ -577,7 +544,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-loeschen-statistik-slave"></a>
 ### LOESCHEN_STATISTIK_SLAVE
 
 Statistik im Slave loeschen
@@ -590,7 +556,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-ziel-master-lesen"></a>
 ### ZIEL_MASTER_LESEN
 
 Zieladresse des Masters lesen (Auto-Update) Erweiteter ADS-Befehl: 0x01
@@ -604,7 +569,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | ZIEL_ADRESSE | int | Zieladresse (Slave-Nummer bei P2P) aus Konfigurationdaten |
 
-<a id="job-bin-download-start"></a>
 ### BIN_DOWNLOAD_START
 
 Download Start, binären Datentransfer vom PC in den SDA-RAM starten (Auto-Update) Erweiteter ADS-Befehl: 0x10
@@ -621,7 +585,6 @@ Download Start, binären Datentransfer vom PC in den SDA-RAM starten (Auto-Updat
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-bin-file-download"></a>
 ### BIN_FILE_DOWNLOAD
 
 Download, binaeren Datentransfer vom PC in den SDA-RAM (Auto-Update) Erweiteter ADS-Befehl: 0x11
@@ -638,7 +601,6 @@ Download, binaeren Datentransfer vom PC in den SDA-RAM (Auto-Update) Erweiteter 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-bin-download-ende"></a>
 ### BIN_DOWNLOAD_ENDE
 
 Download Ende, binaeren Datentransfer vom PC in den SDA-RAM beenden (Auto-Update) Erweiteter ADS-Befehl: 0x12
@@ -655,7 +617,6 @@ Download Ende, binaeren Datentransfer vom PC in den SDA-RAM beenden (Auto-Update
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei, Dateilänge OK |
 
-<a id="job-start-flashen"></a>
 ### START_FLASHEN
 
 Start des Flashens vom SDA-RAM in den MDA oder in den SDA Erweiteter ADS-Befehl: 0x19
@@ -672,7 +633,6 @@ Start des Flashens vom SDA-RAM in den MDA oder in den SDA Erweiteter ADS-Befehl:
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-check-firmware"></a>
 ### CHECK_FIRMWARE
 
 Versions- und Checksummenprüfung der mit 0x10-0x12 in den SDA-RAM geladenen Firmware Erweiteter ADS-Befehl: 0x18
@@ -693,7 +653,6 @@ Versions- und Checksummenprüfung der mit 0x10-0x12 in den SDA-RAM geladenen Fir
 | FW_VER_LOADED | long | FW-Version der im SDA-RAM vorhandenen FW Rueckgabe als [HIGH-byte] [LOW-byte] |
 | CHECK_SUM_LOADED | long | Check-Summe der im SDA-RAM vorhandenen FW Rueckgabe als [HIGH-byte] [LOW-byte] |
 
-<a id="job-fortschritt-flashen"></a>
 ### FORTSCHRITT_FLASHEN
 
 Fortschrittsabfrage des Flashens Erweiteter ADS-Befehl: 0x1A
@@ -707,7 +666,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | FORTSCHRITT | long | Fortschrittsanzeige des Flashens |
 
-<a id="job-ruecklesen-fw-aus-mda"></a>
 ### RUECKLESEN_FW_AUS_MDA
 
 Start des Rücklesens vom MDA in den SDA-RAM Erweiteter ADS-Befehl: 0x1B
@@ -720,7 +678,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fortschritt-ruecklesen"></a>
 ### FORTSCHRITT_RUECKLESEN
 
 Fortschrittsabfrage des Ruecklesens der FW aus MDA Erweiteter ADS-Befehl: 0x1C
@@ -734,7 +691,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | FORTSCHRITT | long | Fortschrittsanzeige des Ruecklesens |
 
-<a id="job-konfig-lesen"></a>
 ### KONFIG_LESEN
 
 Konfiguration lesen Erweiteter ADS-Befehl: 0x20
@@ -752,7 +708,6 @@ Konfiguration lesen Erweiteter ADS-Befehl: 0x20
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | KONFIG | string | OKAY |
 
-<a id="job-konfig-schreiben"></a>
 ### KONFIG_SCHREIBEN
 
 Konfiguration schreiben Erweiteter ADS-Befehl: 0x21
@@ -770,7 +725,6 @@ Konfiguration schreiben Erweiteter ADS-Befehl: 0x21
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-reset"></a>
 ### RESET
 
 Reset MDA/SDA Erweiteter ADS-Befehl: 0x30
@@ -787,7 +741,6 @@ Reset MDA/SDA Erweiteter ADS-Befehl: 0x30
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-kl15-ver-lesen"></a>
 ### KL15_VER_LESEN
 
 KL15 FW-Version lesen (incl. Checksum) Erweiteter ADS-Befehl: 0x40
@@ -802,7 +755,6 @@ _No arguments._
 | KL15_FW_VER | string | KL15-FW-Version Rueckgabe als [HIGH-byte] [LOW-byte] |
 | KL15_CHECK_SUM | long | Check-Summe KL15-FW Rueckgabe als [HIGH-byte] [LOW-byte] |
 
-<a id="job-kl15-reset"></a>
 ### KL15_RESET
 
 Reset Klemme-15-Simulator Erweiteter ADS-Befehl: 0x41
@@ -815,7 +767,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-kl15-start-flash"></a>
 ### KL15_START_FLASH
 
 Start des Flashens KL15 vom MDA-RAM in die KL15 Erweiteter ADS-Befehl: 0x42
@@ -828,7 +779,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-kl15-status-flash"></a>
 ### KL15_STATUS_FLASH
 
 Fortschrittsabfrage des Ruecklesens der FW aus MDA Erweiteter ADS-Befehl: 0x1C
@@ -842,7 +792,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | FLASH_RESULT | string | "0" = Flashen i.O, "Fehlernummer" = n.i.O. |
 
-<a id="job-kl15-start-download"></a>
 ### KL15_START_DOWNLOAD
 
 Download Start, binären Datentransfer KL15-FW vom PC in den MDA-RAM starten Erweiteter ADS-Befehl: 0x44
@@ -859,7 +808,6 @@ Download Start, binären Datentransfer KL15-FW vom PC in den MDA-RAM starten Erw
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-kl15-download-pcmda"></a>
 ### KL15_DOWNLOAD_PCMDA
 
 Download, binaeren Datentransfer KL15 FW vom PC in den MDA-RAM Erweiteter ADS-Befehl: 0x45
@@ -876,7 +824,6 @@ Download, binaeren Datentransfer KL15 FW vom PC in den MDA-RAM Erweiteter ADS-Be
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-kl15-ende-download"></a>
 ### KL15_ENDE_DOWNLOAD
 
 Download Ende, binaeren Datentransfer KL15 Firmware beendet Erweiteter ADS-Befehl: 0x46
@@ -893,7 +840,6 @@ Download Ende, binaeren Datentransfer KL15 Firmware beendet Erweiteter ADS-Befeh
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei, Dateilänge OK |
 
-<a id="job-kl15-check-firmware"></a>
 ### KL15_CHECK_FIRMWARE
 
 Versions- und Checksummenprüfung der mit 0x44-0x46 in das MDA-RAM geladenen KL15-Firmware Erweiteter ADS-Befehl: 0x47
@@ -914,7 +860,6 @@ Versions- und Checksummenprüfung der mit 0x44-0x46 in das MDA-RAM geladenen KL1
 | FW_VER_LOADED | long | KL15-FW-Version der im MDA-RAM vorhandenen FW Rueckgabe als [HIGH-byte] [LOW-byte] |
 | CHECK_SUM_LOADED | long | Check-Summe der im MDA-RAM vorhandenen KL15-FW Rueckgabe als [HIGH-byte] [LOW-byte] |
 
-<a id="job-set-can-accept-filter"></a>
 ### SET_CAN_ACCEPT_FILTER
 
 Set CAN Acceptance Filter (11 Bit ID) ID A und ID B geben den gültigen ID Bereich an Wird A = B = 0 übergeben, ist das Acceptance Filter nicht aktiv
@@ -932,7 +877,6 @@ Set CAN Acceptance Filter (11 Bit ID) ID A und ID B geben den gültigen ID Berei
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-get-can-message"></a>
 ### GET_CAN_MESSAGE
 
 Emfangen von CAN-Botschaften Die erwartete ID muss sich im Bereich der mit "Set CAN Acceptance Filter" gesetzten Werte A und B befinden
@@ -948,7 +892,6 @@ _No arguments._
 | DATALEN | unsigned int |  |
 | DATA | binary |  |
 
-<a id="job-send-can-message"></a>
 ### SEND_CAN_MESSAGE
 
 Send CAN Message (11 Bit ID) Sendet 0 bis 8 Datenbytes (0 = nur Frame)
@@ -975,7 +918,6 @@ Send CAN Message (11 Bit ID) Sendet 0 bis 8 Datenbytes (0 = nur Frame)
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | IN | binary |  |
 
-<a id="job-set-auto-assign"></a>
 ### SET_AUTO_ASSIGN
 
 Aktivieren der Automatischen Taufe 0 == "OFF" 1 == "ON"
@@ -992,7 +934,6 @@ Aktivieren der Automatischen Taufe 0 == "OFF" 1 == "ON"
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-write-auto-assign-data"></a>
 ### WRITE_AUTO_ASSIGN_DATA
 
 Schreiben der Daten die für die automaische Taufe im MDA abgelegt werden sollen
@@ -1009,7 +950,6 @@ Schreiben der Daten die für die automaische Taufe im MDA abgelegt werden sollen
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-read-auto-assign-data"></a>
 ### READ_AUTO_ASSIGN_DATA
 
 Auslesen der Daten die für die automatische Taufe im MDA abgelegt sind
@@ -1023,7 +963,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | AUTO_ASSIGN_DATA | string | Rückgabe-Bsp: 000200021A900208100322F1900D13 zu lesen wie --> 0x00,0x02,0x00,0x02,0x1A,0x90,.... |
 
-<a id="job-read-auto-assign-status"></a>
 ### READ_AUTO_ASSIGN_STATUS
 
 Auslesen des aktuellen Status der automatischen Taufe
@@ -1039,7 +978,6 @@ _No arguments._
 | MDA_VIN_CONF | string | Status VIN confirmed/unconfirmed 0x00 == unconfirmed 0x01 == confirmed 0xFF == AUTO_ASSIGN_STATE "OFF" |
 | ECU_NR | string | Nummer des SGs mit dem die Auto-Taufe zuletzt erfolgreich war 0xFF: keine erfolgreiche Auto-Taufe durchgeführt |
 
-<a id="job-get-running-time"></a>
 ### GET_RUNNING_TIME
 
 Liefert Systemzeit nach dem Einschalten
@@ -1057,7 +995,6 @@ Liefert Systemzeit nach dem Einschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | RUNNING_TIME | long | Systemzeit nach dem Einschalten in 100ms (z.B. 1011 --> 101,1sec Rueckgabe als [HIGH-byte] [LOW-byte] |
 
-<a id="job-get-error-count"></a>
 ### GET_ERROR_COUNT
 
 Liefert Fehlerspeicherausgaben
@@ -1081,7 +1018,6 @@ Liefert Fehlerspeicherausgaben
 | PAR_ERROR_STARTUP | long | Rueckgabe als [HIGH-byte] [LOW-byte] |
 | PAR_ERROR_RUNNING | long | Rueckgabe als [HIGH-byte] [LOW-byte] |
 
-<a id="job-clr-error-count"></a>
 ### CLR_ERROR_COUNT
 
 Rücksetzen des Fehlerspreichers
@@ -1098,7 +1034,6 @@ Rücksetzen des Fehlerspreichers
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-set-master-com-mode"></a>
 ### _SET_MASTER_COM_MODE
 
 Einstellen Kommunikationsmode Master-to-Slave
@@ -1121,7 +1056,6 @@ Einstellen Kommunikationsmode Master-to-Slave
 
 - [BITS](#table-bits) (5 × 4)
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 5 rows × 4 columns

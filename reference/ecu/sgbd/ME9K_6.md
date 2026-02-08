@@ -131,7 +131,6 @@
 - [AIF_LESEN](#job-aif-lesen) - Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
 - [C_FG_LESEN](#job-c-fg-lesen) - Auslesen des Pruefstempels und Interpretation als FG-Nummer
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -149,7 +148,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -162,7 +160,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten fuer DME auslesen
@@ -193,7 +190,6 @@ _No arguments._
 | RESP_CODE | string | Fehlercode bei NEG_RESPONSE |
 | ID_EWS_SS | int | Identifikation EWS-Schnittstelle |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher auslesen
@@ -244,7 +240,6 @@ Fehlerspeicher auslesen
 | F_HEX_CODE | binary | Hexdump des Fehlers |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-lesen-lang"></a>
 ### FS_LESEN_LANG
 
 Fehlerspeicher auslesen
@@ -374,7 +369,6 @@ Fehlerspeicher auslesen
 | F_HEX_CODE | binary | Hexdump des Fehlers |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher auslesen
@@ -400,7 +394,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 _No arguments._
@@ -412,7 +405,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-hex-lesen"></a>
 ### FS_HEX_LESEN
 
 Fehlerspeicher auslesen als Hex Dump
@@ -437,7 +429,6 @@ Fehlerspeicher auslesen als Hex Dump
 | FS_ZEILE5 | string | naechsten 10 Byte aus FS |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-vvt-anschlag"></a>
 ### STEUERN_VVT_ANSCHLAG
 
 Lernen der VVT-Anschlaege
@@ -451,7 +442,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-vvt-anschlag"></a>
 ### STATUS_VVT_ANSCHLAG
 
 Status Lernen VVT-Anschlaege
@@ -467,7 +457,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ende-vvt-anschlag"></a>
 ### ENDE_VVT_ANSCHLAG
 
 Ende von Lernen der VVT-Anschlaege
@@ -482,7 +471,6 @@ _No arguments._
 | RESULT_TEXT | string | gibt den EndeCode der Diagnose zurueck |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -496,7 +484,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation |
 | RESP_CODE | string | ResponseCode bei NEG_RESPONSE |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -512,7 +499,6 @@ _No arguments._
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-ews-startwert"></a>
 ### EWS_STARTWERT
 
 EWS-Startwertinitialisierung
@@ -531,7 +517,6 @@ EWS-Startwertinitialisierung
 | EWS_STATUS | string | Rueckgabestatus bei der Startwertinitialisierung |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ews-empfang"></a>
 ### EWS_EMPFANG
 
 EWS-Empfangsstatus auslesen
@@ -547,7 +532,6 @@ _No arguments._
 | EWS_STATUS_VALUE | int | Rueckgabestatus bei der Startwertinitialisierung |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-wechselcode-sync-dme"></a>
 ### WECHSELCODE_SYNC_DME
 
 EWS zuruecksetzen
@@ -560,7 +544,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "ACKNOWLEDGE", wenn fehlerfrei |
 
-<a id="job-steuern-ev-1"></a>
 ### STEUERN_EV_1
 
 Stellgliedansteuerung Einspritzventile
@@ -574,7 +557,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-2"></a>
 ### STEUERN_EV_2
 
 Stellgliedansteuerung Einspritzventile
@@ -588,7 +570,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-3"></a>
 ### STEUERN_EV_3
 
 Stellgliedansteuerung Einspritzventile
@@ -602,7 +583,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-4"></a>
 ### STEUERN_EV_4
 
 Stellgliedansteuerung Einspritzventile
@@ -616,7 +596,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-5"></a>
 ### STEUERN_EV_5
 
 Stellgliedansteuerung Einspritzventile
@@ -630,7 +609,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-6"></a>
 ### STEUERN_EV_6
 
 Stellgliedansteuerung Einspritzventile
@@ -644,7 +622,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-7"></a>
 ### STEUERN_EV_7
 
 Stellgliedansteuerung Einspritzventile
@@ -658,7 +635,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-8"></a>
 ### STEUERN_EV_8
 
 Stellgliedansteuerung Einspritzventile
@@ -672,7 +648,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-1-aus"></a>
 ### STEUERN_EV_1_AUS
 
 Stellgliedansteuerung Einspritzventile
@@ -686,7 +661,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-2-aus"></a>
 ### STEUERN_EV_2_AUS
 
 Stellgliedansteuerung Einspritzventile
@@ -700,7 +674,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-3-aus"></a>
 ### STEUERN_EV_3_AUS
 
 Stellgliedansteuerung Einspritzventile
@@ -714,7 +687,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-4-aus"></a>
 ### STEUERN_EV_4_AUS
 
 Stellgliedansteuerung Einspritzventile
@@ -728,7 +700,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-5-aus"></a>
 ### STEUERN_EV_5_AUS
 
 Stellgliedansteuerung Einspritzventile
@@ -742,7 +713,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-6-aus"></a>
 ### STEUERN_EV_6_AUS
 
 Stellgliedansteuerung Einspritzventile
@@ -756,7 +726,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-7-aus"></a>
 ### STEUERN_EV_7_AUS
 
 Stellgliedansteuerung Einspritzventile
@@ -770,7 +739,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ev-8-aus"></a>
 ### STEUERN_EV_8_AUS
 
 Stellgliedansteuerung Einspritzventile
@@ -784,7 +752,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-e-luefter"></a>
 ### STEUERN_E_LUEFTER
 
 Stellgliedansteuerung E-Luefter
@@ -802,7 +769,6 @@ Stellgliedansteuerung E-Luefter
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-e-luefter-aus"></a>
 ### STEUERN_E_LUEFTER_AUS
 
 Stellgliedansteuerung E-Luefter
@@ -816,7 +782,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-slp"></a>
 ### STEUERN_SLP
 
 Stellgliedansteuerung SLP
@@ -830,7 +795,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-slp-aus"></a>
 ### STEUERN_SLP_AUS
 
 Stellgliedansteuerung SLP
@@ -844,7 +808,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-tev"></a>
 ### STEUERN_TEV
 
 Stellgliedansteuerung TEV
@@ -858,7 +821,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-tev-aus"></a>
 ### STEUERN_TEV_AUS
 
 Stellgliedansteuerung TEV
@@ -872,7 +834,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-kfk"></a>
 ### STEUERN_KFK
 
 Stellgliedansteuerung KFK
@@ -886,7 +847,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-kfk-aus"></a>
 ### STEUERN_KFK_AUS
 
 Stellgliedansteuerung KFK
@@ -900,7 +860,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-slv"></a>
 ### STEUERN_SLV
 
 Stellgliedansteuerung SLV
@@ -914,7 +873,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-slv-aus"></a>
 ### STEUERN_SLV_AUS
 
 Stellgliedansteuerung SLV
@@ -928,7 +886,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ekp"></a>
 ### STEUERN_EKP
 
 Stellgliedansteuerung EKP
@@ -942,7 +899,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ekp-aus"></a>
 ### STEUERN_EKP_AUS
 
 Stellgliedansteuerung EKP
@@ -956,7 +912,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-hls1"></a>
 ### STEUERN_HLS1
 
 Stellgliedansteuerung Lambdasondenheizung1
@@ -970,7 +925,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-hls1-aus"></a>
 ### STEUERN_HLS1_AUS
 
 Stellgliedansteuerung Lambdasondeheizung 1 aus
@@ -984,7 +938,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-hls2"></a>
 ### STEUERN_HLS2
 
 Stellgliedansteuerung Lambdasondenheizung 2
@@ -998,7 +951,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-hls2-aus"></a>
 ### STEUERN_HLS2_AUS
 
 Stellgliedansteuerung Lambdasondeheizung 2 aus
@@ -1012,7 +964,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-hls3"></a>
 ### STEUERN_HLS3
 
 Stellgliedansteuerung Lambdasondenheizung3
@@ -1026,7 +977,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-hls3-aus"></a>
 ### STEUERN_HLS3_AUS
 
 Stellgliedansteuerung Lambdasondeheizung 3 aus
@@ -1040,7 +990,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-hls4"></a>
 ### STEUERN_HLS4
 
 Stellgliedansteuerung Lambdasondenheizung 4
@@ -1054,7 +1003,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-hls4-aus"></a>
 ### STEUERN_HLS4_AUS
 
 Stellgliedansteuerung Lambdasondeheizung 4 aus
@@ -1068,7 +1016,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-sta"></a>
 ### STEUERN_STA
 
 Stellgliedansteuerung Startrelais
@@ -1082,7 +1029,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-sta-aus"></a>
 ### STEUERN_STA_AUS
 
 Stellgliedansteuerung Startrelais aus
@@ -1096,7 +1042,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-koe"></a>
 ### STEUERN_KOE
 
 Stellgliedansteuerung KOREL
@@ -1110,7 +1055,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-koe-aus"></a>
 ### STEUERN_KOE_AUS
 
 Stellgliedansteuerung KOREL aus
@@ -1124,7 +1068,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ebl"></a>
 ### STEUERN_EBL
 
 Stellgliedansteuerung E-Box-Luefter
@@ -1138,7 +1081,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-ebl-aus"></a>
 ### STEUERN_EBL_AUS
 
 Stellgliedansteuerung E-Box-Luefter aus
@@ -1152,7 +1094,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-agk"></a>
 ### STEUERN_AGK
 
 Stellgliedansteuerung Abgasklappe
@@ -1166,7 +1107,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-agk-aus"></a>
 ### STEUERN_AGK_AUS
 
 Stellgliedansteuerung Abgasklappe aus
@@ -1180,7 +1120,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-dmtlp"></a>
 ### STEUERN_DMTLP
 
 Stellgliedansteuerung DM-TL Pumpe
@@ -1194,7 +1133,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-dmtlp-aus"></a>
 ### STEUERN_DMTLP_AUS
 
 Stellgliedansteuerung DM-TL Pumpe aus
@@ -1208,7 +1146,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-dmtlv"></a>
 ### STEUERN_DMTLV
 
 Stellgliedansteuerung DM-TL Ventil
@@ -1222,7 +1159,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-dmtlv-aus"></a>
 ### STEUERN_DMTLV_AUS
 
 Stellgliedansteuerung DM-TL Ventil aus
@@ -1236,7 +1172,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-vanos-einlass"></a>
 ### STEUERN_VANOS_EINLASS
 
 Stellgliedansteuerung Einlass-VANOS
@@ -1254,7 +1189,6 @@ Stellgliedansteuerung Einlass-VANOS
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-vanos-einlass-aus"></a>
 ### STEUERN_VANOS_EINLASS_AUS
 
 Stellgliedansteuerung Einlass-VANOS freigeben
@@ -1268,7 +1202,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-vanos-auslass"></a>
 ### STEUERN_VANOS_AUSLASS
 
 Stellgliedansteuerung Auslass-VANOS
@@ -1286,7 +1219,6 @@ Stellgliedansteuerung Auslass-VANOS
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-vanos-auslass-aus"></a>
 ### STEUERN_VANOS_AUSLASS_AUS
 
 Stellgliedansteuerung Auslass-VANOS freigeben
@@ -1300,7 +1232,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-disa"></a>
 ### STEUERN_DISA
 
 Stellgliedansteuerung DISA
@@ -1318,7 +1249,6 @@ Stellgliedansteuerung DISA
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-disa-aus"></a>
 ### STEUERN_DISA_AUS
 
 Stellgliedansteuerung DISA freigeben
@@ -1332,7 +1262,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Beliebige RAM - Zellen auslesen
@@ -1353,7 +1282,6 @@ Beliebige RAM - Zellen auslesen
 | RAM_LESEN_EINH | string | Einheit HEX |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-data-id-lesen"></a>
 ### DATA_ID_LESEN
 
 Data-ID des SG auslesen
@@ -1368,7 +1296,6 @@ _No arguments._
 | DATA_ID | string | ASCII-String fuer Data-ID |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-stop-comm"></a>
 ### STOP_COMM
 
 Ende von Comm
@@ -1382,7 +1309,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ram-backup"></a>
 ### RAM_BACKUP
 
 Loeschen der RAM-Backup-Werte
@@ -1396,7 +1322,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-start-systemcheck-llerh"></a>
 ### START_SYSTEMCHECK_LLERH
 
 Diagnosefunktion LL-Erhoehung
@@ -1414,7 +1339,6 @@ Diagnosefunktion LL-Erhoehung
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-lesen-systemcheck-llerh"></a>
 ### LESEN_SYSTEMCHECK_LLERH
 
 Diagnosefunktion LL-Erhoehung Status lesen
@@ -1429,7 +1353,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ende-systemcheck-llerh"></a>
 ### ENDE_SYSTEMCHECK_LLERH
 
 Diagnosefunktion LL-Erhoehung Status lesen
@@ -1443,7 +1366,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-start-systemcheck-sls"></a>
 ### START_SYSTEMCHECK_SLS
 
 Systemdiagnose SLS
@@ -1457,7 +1379,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-lesen-systemcheck-sls"></a>
 ### LESEN_SYSTEMCHECK_SLS
 
 Status Systemdiagnose SLS
@@ -1472,7 +1393,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ende-systemcheck-sls"></a>
 ### ENDE_SYSTEMCHECK_SLS
 
 Ende Systemdiagnose SLS
@@ -1487,7 +1407,6 @@ _No arguments._
 | RESULT_TEXT | string | gibt den EndeCode der Diagnose zurueck |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-start-systemcheck-tevsys"></a>
 ### START_SYSTEMCHECK_TEVSYS
 
 Systemtest von TEV
@@ -1501,7 +1420,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-lesen-systemcheck-tevsys"></a>
 ### LESEN_SYSTEMCHECK_TEVSYS
 
 Status Systemtest TEV
@@ -1516,7 +1434,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ende-systemcheck-tevsys"></a>
 ### ENDE_SYSTEMCHECK_TEVSYS
 
 Beenden von TEV-Systemtest
@@ -1531,7 +1448,6 @@ _No arguments._
 | RESULT_TEXT | string | gibt den EndeCode der Diagnose zurueck |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-start-systemcheck-dmtl"></a>
 ### START_SYSTEMCHECK_DMTL
 
 Start Systemtest DMTL
@@ -1545,7 +1461,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-lesen-systemcheck-dmtl"></a>
 ### LESEN_SYSTEMCHECK_DMTL
 
 Status Systemtest DMTL
@@ -1570,7 +1485,6 @@ _No arguments._
 | JOB_STATUS | string | "POS_RESPONSE", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ende-systemcheck-dmtl"></a>
 ### ENDE_SYSTEMCHECK_DMTL
 
 Ende Systemtest DM-TL
@@ -1585,7 +1499,6 @@ _No arguments._
 | RESULT_TEXT | string | gibt den EndeCode der Diagnose zurueck |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-evausbl"></a>
 ### STEUERN_EVAUSBL
 
 Systemdiagnose Einspritzventile ausblenden
@@ -1603,7 +1516,6 @@ Systemdiagnose Einspritzventile ausblenden
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-evausbl-aus"></a>
 ### STEUERN_EVAUSBL_AUS
 
 Ende Systemtest DM-TL
@@ -1621,7 +1533,6 @@ Ende Systemtest DM-TL
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-messwerte"></a>
 ### STATUS_MESSWERTE
 
 Auslesen von Messwerten
@@ -1685,7 +1596,6 @@ _No arguments._
 | STAT_RKRN7_EINH | string | Einheit von RKRN_W_7 |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-batterieintegrator"></a>
 ### STATUS_BATTERIEINTEGRATOR
 
 Auslesen von Messwertenund Statusflags
@@ -1706,7 +1616,6 @@ _No arguments._
 | STAT_NAC_EIN | int | Bedingung Drehzahlanhebung wegen Klimaanlage ein |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-schalterstati"></a>
 ### STATUS_SCHALTERSTATI
 
 Auslesen von SchalterStatusflags
@@ -1727,7 +1636,6 @@ _No arguments._
 | STAT_KO_EIN | int | Bedingung Klimakompressor ein |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-funktionsstati"></a>
 ### STATUS_FUNKTIONSSTATI
 
 Auslesen von SchalterStatusflags
@@ -1755,7 +1663,6 @@ _No arguments._
 | STAT_UMAERF_EIN | int | Bedingung UMA Lernerfolg |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-laufunruhe"></a>
 ### STATUS_LAUFUNRUHE
 
 Auslesen von Laufunruhewerten
@@ -1791,7 +1698,6 @@ _No arguments._
 | STAT_USVK2_EINH | string | Einheit von USVK2_W |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-dkhfm"></a>
 ### STATUS_DKHFM
 
 Auslesen von DK/HFM-Abgleichswerten
@@ -1811,7 +1717,6 @@ _No arguments._
 | STAT_FKMSDK_EINH | string | Einheit von FKMSDK |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-vvt"></a>
 ### STEUERN_VVT
 
 Stellgliedansteuerung VVT
@@ -1830,7 +1735,6 @@ Stellgliedansteuerung VVT
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-vvt-aus"></a>
 ### STEUERN_VVT_AUS
 
 beenden Stellgliedansteuerung VVT
@@ -1844,7 +1748,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-co"></a>
 ### STATUS_CO
 
 Auslesen des LL-CO-Wertes
@@ -1860,7 +1763,6 @@ _No arguments._
 | STAT_CO_POT_EINH | string | Einheit des LL CO-Abgleichswertes |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-co"></a>
 ### STEUERN_CO
 
 LL-CO-Wert vorgeben
@@ -1878,7 +1780,6 @@ LL-CO-Wert vorgeben
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-co-programm"></a>
 ### STEUERN_CO_PROGRAMM
 
 LL-CO-WERT programmieren
@@ -1896,7 +1797,6 @@ LL-CO-WERT programmieren
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus  : Default
@@ -1911,7 +1811,6 @@ _No arguments._
 | PRUEFCODE | binary | Pruefcode Daten |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-sync-mode"></a>
 ### STEUERN_SYNC_MODE
 
 EWS-Startwertinitialisierung
@@ -1931,7 +1830,6 @@ EWS-Startwertinitialisierung
 | STEUERN_SYNC_MODE_STATUS | int | Statusflag |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-sync-mode"></a>
 ### STATUS_SYNC_MODE
 
 EWS-Empfangsstatus auslesen
@@ -1947,7 +1845,6 @@ _No arguments._
 | STATUS_SYNC_MODE_STATUS | int | Rueckgabestatus bei der Startwertinitialisierung |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 Auslesen der Motortemperatur
@@ -1963,7 +1860,6 @@ _No arguments._
 | STAT_MOTORTEMPERATUR_EINH | string | Einheit von TI_W |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Auslesen der Motordrehzahl
@@ -1979,7 +1875,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_EINH | string | Einheit von Motordrehzahl |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-an-lufttemperatur"></a>
 ### STATUS_AN_LUFTTEMPERATUR
 
 Auslesen der Lufttemperatur
@@ -1995,7 +1890,6 @@ _No arguments._
 | STAT_AN_LUFTTEMPERATUR_EINH | string | Einheit von Lufttemperatur |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-lmm-masse"></a>
 ### STATUS_LMM_MASSE
 
 Auslesen der Luftmasse
@@ -2011,7 +1905,6 @@ _No arguments._
 | STAT_LMM_MASSE_EINH | string | Einheit von Luftmasse |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-l-sonde"></a>
 ### STATUS_L_SONDE
 
 Auslesen der Lambdasonden Spg.
@@ -2027,7 +1920,6 @@ _No arguments._
 | STAT_L_SONDE_EINH | string | Einheit der Lambdasonden Spg. |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-l-sonde-2"></a>
 ### STATUS_L_SONDE_2
 
 Auslesen der Lambdasonden Spg. 2
@@ -2043,7 +1935,6 @@ _No arguments._
 | STAT_L_SONDE_2_EINH | string | Einheit der Lambdasonden Spg. |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Auslesen der Batteriespg.
@@ -2059,7 +1950,6 @@ _No arguments._
 | STAT_UBATT_EINH | string | Einheit der Batterie-Spg. |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -2093,7 +1983,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -2135,7 +2024,6 @@ _No arguments._
 - [BETRIEBSWTAB](#table-betriebswtab) (41 × 13)
 - [BITS](#table-bits) (26 × 4)
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 54 rows × 2 columns
@@ -2197,7 +2085,6 @@ Dimensions: 54 rows × 2 columns
 | 0x53 | Borg Instruments |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2206,7 +2093,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 317 rows × 2 columns
@@ -2531,7 +2417,6 @@ Dimensions: 317 rows × 2 columns
 | 0x28DC | CDKDPL -   |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2543,7 +2428,6 @@ Dimensions: 4 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-farttexteerweitert"></a>
 ### FARTTEXTEERWEITERT
 
 Dimensions: 12 rows × 3 columns
@@ -2563,7 +2447,6 @@ Dimensions: 12 rows × 3 columns
 | xx0xxxxx | 60 | --                                                                    |
 | xx1xxxxx | 61 | Fehler in Entprellphase   |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 317 rows × 5 columns
@@ -2888,7 +2771,6 @@ Dimensions: 317 rows × 5 columns
 | 0x28DC | - | - | - | - |
 | default | - | - | - | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 153 rows × 9 columns
@@ -3049,7 +2931,6 @@ Dimensions: 153 rows × 9 columns
 | 0xB9 | gef. LSU-Spannung vKat Bank2 (uulsuf2_u) | V | - | unsigned char | - | 0.01953 | 1 | 0 |
 | 0xXY | unbekannte Umweltbedingung | 1 | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-vvtstatusbg2-2"></a>
 ### VVTSTATUSBG2_2
 
 Dimensions: 8 rows × 2 columns
@@ -3065,7 +2946,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Signal ungueltig |
 | 0xXY | Fehlerhafter Status |
 
-<a id="table-ewsstart"></a>
 ### EWSSTART
 
 Dimensions: 5 rows × 2 columns
@@ -3078,7 +2958,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Startwert nicht plausibel (wie im DS2-LH definiert) |
 | 0xXY | Fehlerhafter Status |
 
-<a id="table-ewsempfangsstatus"></a>
 ### EWSEMPFANGSSTATUS
 
 Dimensions: 15 rows × 2 columns
@@ -3101,7 +2980,6 @@ Dimensions: 15 rows × 2 columns
 | 0x22 | Ablage im EEPROM-Spiegel nicht in Ordnung |
 | 0xXY | Fehlerhafter Status |
 
-<a id="table-regel"></a>
 ### REGEL
 
 Dimensions: 7 rows × 2 columns
@@ -3116,7 +2994,6 @@ Dimensions: 7 rows × 2 columns
 | 0x10 | Regelung EIN mit Einschraenkung |
 | 0xXY | ??                          |
 
-<a id="table-slsstatus"></a>
 ### SLSSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3130,7 +3007,6 @@ Dimensions: 6 rows × 2 columns
 | 0x06 | Systemtest SLS ist beendet |
 | 0xXY | Status Systemtest SLS kann nicht ausgegeben werden |
 
-<a id="table-tevstatus"></a>
 ### TEVSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -3143,7 +3019,6 @@ Dimensions: 5 rows × 2 columns
 | 0x06 | Systemtest TEV ist beendet |
 | 0xXY | Status Systemtest TEV kann nicht ausgegeben werden |
 
-<a id="table-stagedmtl"></a>
 ### STAGEDMTL
 
 Dimensions: 18 rows × 2 columns
@@ -3169,7 +3044,6 @@ Dimensions: 18 rows × 2 columns
 | 0x18 | Abbruch  -->  Bedingung Kl.15 AUS/EIN erkannt |
 | 0xXY | Stagepointer unbekannt |
 
-<a id="table-stagedmtlfreeze"></a>
 ### STAGEDMTLFREEZE
 
 Dimensions: 24 rows × 2 columns
@@ -3201,7 +3075,6 @@ Dimensions: 24 rows × 2 columns
 | 0x22 | Funktion beendet, kein Grobleck erkannt |
 | 0xXY | Stagepointer unbekannt |
 
-<a id="table-farttyp"></a>
 ### FARTTYP
 
 Dimensions: 15 rows × 5 columns
@@ -3224,7 +3097,6 @@ Dimensions: 15 rows × 5 columns
 | 0x28D7 | 0x0F | 0x10 | 0x02 | 0x01 |
 | 0xFFFF | 0x04 | 0x03 | 0x02 | 0x01 |
 
-<a id="table-farttxt-erw"></a>
 ### FARTTXT_ERW
 
 Dimensions: 35 rows × 2 columns
@@ -3267,7 +3139,6 @@ Dimensions: 35 rows × 2 columns
 | 0x21 | Lesefehler EEPROM (3 Fehlversuche beim Lesen aus EEPROM) |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -3289,7 +3160,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 71 rows × 2 columns
@@ -3368,7 +3238,6 @@ Dimensions: 71 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-fehlercodes"></a>
 ### FEHLERCODES
 
 Dimensions: 30 rows × 2 columns
@@ -3406,7 +3275,6 @@ Dimensions: 30 rows × 2 columns
 | 0x80 | serviceNotSupportedInActiveDiagnosticMode    |
 | 0xXY | unbekannter Rueckgabewert (ResponseCode)      |
 
-<a id="table-betriebswtab"></a>
 ### BETRIEBSWTAB
 
 Dimensions: 41 rows × 13 columns
@@ -3455,7 +3323,6 @@ Dimensions: 41 rows × 13 columns
 | FKMSDK | B812F103224008 | 0 | 0 | 0x00 | 11 | 5 | -- | 0.00006103 | 0 | 0 | 0 |   |
 | ENDE |  |  |  |  | 1 | 1 | -- | 1 | 0 | 0 | 0 |   |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 26 rows × 4 columns

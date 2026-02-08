@@ -37,7 +37,6 @@
 - [POSITIONEN_LESEN](#job-positionen-lesen) - 3 Speicher- und aktuelle Position aus EEPROM auslesen
 - [STEUERN_IO](#job-steuern-io) - Ansteuern eines digitalen Einganges
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +55,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -75,7 +73,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -88,7 +85,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -112,7 +108,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -125,7 +120,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -143,7 +137,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -162,7 +155,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -175,7 +167,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -188,7 +179,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -210,7 +200,6 @@ _No arguments._
 | F_UW_ANZ | int | immer 0 |
 | F_HEX_CODE | binary | Hexdaten des Fehlers (2 Bytes) |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -231,7 +220,6 @@ Lesen des internen Speichers
 | DATENFELD | binary | Ergebnisfeld mit 1 bis 16 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des internen Speichers
@@ -250,7 +238,6 @@ Beschreiben des internen Speichers
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-1-lesen"></a>
 ### STATUS_1_LESEN
 
 Stati des SM46_C
@@ -296,7 +283,6 @@ _No arguments._
 | STAT_SCHALTER_KOPFSTUETZE | int | 0=aus,1=auf,2=ab |
 | STAT_MEMORYSCHALTER | int | bitcodiert, Werte zwischen 0 und 15! bit 0=MEM-Taste bit 1=Taste 1 bit 2=Taste 2 bit 3=Taste 3 |
 
-<a id="job-status-2-lesen"></a>
 ### STATUS_2_LESEN
 
 Stati des SM46
@@ -317,7 +303,6 @@ _No arguments._
 | STAT_SPANNUNG_KL30_WERT | real | Batterie-Spannung am SG |
 | STAT_SPANNUNGEN_EINH | string | Einheit der Spannung |
 
-<a id="job-variante-lesen"></a>
 ### VARIANTE_LESEN
 
 SG-Variante aus Zelle 0x0124 auslesen
@@ -332,7 +317,6 @@ _No arguments._
 | SG_VARIANTE | string | Variante im Klartext |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-positionen-lesen"></a>
 ### POSITIONEN_LESEN
 
 3 Speicher- und aktuelle Position aus EEPROM auslesen
@@ -361,7 +345,6 @@ _No arguments._
 | POS_3_LEHNENNEIGUNG_WERT | long | gespeicherte Lehnenneigungsposition 3 |
 | POS_AKTUELL_LEHNENNEIGUNG_WERT | long | gespeicherte aktuelle Lehnenneigungsposition |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Ansteuern eines digitalen Einganges
@@ -389,7 +372,6 @@ Ansteuern eines digitalen Einganges
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 - [STEUERN](#table-steuern) (20 × 4)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -410,7 +392,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 56 rows × 2 columns
@@ -474,7 +455,6 @@ Dimensions: 56 rows × 2 columns
 | 0x55 | BHTC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -503,7 +483,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 23 rows × 2 columns
@@ -534,7 +513,6 @@ Dimensions: 23 rows × 2 columns
 | 0x15 | Sitzbedienschalter, Kurzschluss nach Masse |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -545,7 +523,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 20 rows × 4 columns

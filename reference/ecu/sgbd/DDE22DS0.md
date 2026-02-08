@@ -93,7 +93,6 @@
 - [EEPROM_BYTE_AENDERN](#job-eeprom-byte-aendern) - Beliebige EPROM - Zellen aendern
 - [EEPROM_BYTE_ABFRAGE](#job-eeprom-byte-abfrage) - Beliebige EPROM - Zellen abfragen
 
-<a id="job-edic-reset"></a>
 ### EDIC_RESET
 
 EDIC-Reset
@@ -106,7 +105,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -119,7 +117,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -137,7 +134,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-isn-lesen"></a>
 ### ISN_LESEN
 
 _No arguments._
@@ -149,7 +145,6 @@ _No arguments._
 | ISN_LESEN_WERT | string | ISN als  WERT |
 | JOB_STATUS | string |  |
 
-<a id="job-isn-lesen-roh"></a>
 ### ISN_LESEN_ROH
 
 _No arguments._
@@ -161,7 +156,6 @@ _No arguments._
 | ISN_LESEN_WERT | string | ISN als  WERT |
 | JOB_STATUS | string |  |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Beliebige RAM - Zellen auslesen
@@ -181,7 +175,6 @@ Beliebige RAM - Zellen auslesen
 | RAM_LESEN_WERT | binary | nichts |
 | RAM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 Beliebige EPROM - Zellen auslesen
@@ -201,7 +194,6 @@ Beliebige EPROM - Zellen auslesen
 | ROM_LESEN_WERT | binary | nichts |
 | ROM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 Beliebige EPROM - Zellen auslesen
@@ -221,7 +213,6 @@ Beliebige EPROM - Zellen auslesen
 | EEPROM_LESEN_WERT | binary | nichts |
 | EEPROM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-adc-lesen"></a>
 ### ADC_LESEN
 
 Beliebigen ADC Kanal auslesen
@@ -240,7 +231,6 @@ Beliebigen ADC Kanal auslesen
 | ADC_LESEN_WERT | int | nichts |
 | ADC_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-eeprom-schreiben"></a>
 ### EEPROM_SCHREIBEN
 
 Beliebige EEPROM Zellen mit 02 beschreiben
@@ -260,7 +250,6 @@ Beliebige EEPROM Zellen mit 02 beschreiben
 | EEPROM_SCHREIBEN_STATUS | int | nichts |
 | EEPROM_SCHREIBEN_ANZAHL | int | nichts |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -288,7 +277,6 @@ _No arguments._
 | ID_SG_HERSTELLER | int | Parameter fuer MoTest 0=Bosch, 1=Siemens-Fahrzeug |
 | ID_EWS_SS | int | Identifikation EWS-Schnittstelle |
 
-<a id="job-ecu-config"></a>
 ### ECU_CONFIG
 
 Ident-Daten fuer DME
@@ -302,7 +290,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | EGS_VORHANDEN | int | EGS vorhanden 1=ja ,  0=nein , 0xff=nicht unterstuetzt |
 
-<a id="job-codier-variante-lesen"></a>
 ### CODIER_VARIANTE_LESEN
 
 Auslesen des Varianten - Steuerwort
@@ -316,7 +303,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | CODIER_VARIANTE | string | Varianten - Steuerwort |
 
-<a id="job-abgas-variante-lesen"></a>
 ### ABGAS_VARIANTE_LESEN
 
 Auslesen der Abgasvariante
@@ -330,7 +316,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | ABGAS_VARIANTE_WERT | int | Abgasvariante 0=KAT-V , 1= KAT |
 
-<a id="job-status-codier-checksumme"></a>
 ### STATUS_CODIER_CHECKSUMME
 
 Codier - Checksumme abfragen
@@ -344,7 +329,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STATUS_CHECKSUMME_WERT | int | Ergebnis |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Auslesen des QUICK Fehlerspeichers
@@ -360,7 +344,6 @@ _No arguments._
 | F_BSZ_AKT | real | Betriebsstundenzahler aktuell |
 | F_BSZ_ALT | real | Betriebsstundenzaehler beim letzten Loeschen |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -408,7 +391,6 @@ _No arguments._
 | F_UW3_WERT | real | Umweltbedingung 3 Wert |
 | F_CODEHEX | binary | 5 Fehlerbyte |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -421,7 +403,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-shadow-lesen"></a>
 ### FS_SHADOW_LESEN
 
 Auslesen des SCHADOW Fehlerspeichers
@@ -469,7 +450,6 @@ _No arguments._
 | F_UW3_WERT | real | Umweltbedingung 3 Wert |
 | F_CODEHEX | binary | 5 Fehlerbyte |
 
-<a id="job-status-spritzbeginn-soll"></a>
 ### STATUS_SPRITZBEGINN_SOLL
 
 Job Spritzbeginn Soll
@@ -484,7 +464,6 @@ _No arguments._
 | STATUS_SPRITZBEGINN_SOLL_WERT | real | Wert |
 | STATUS_SPRITZBEGINN_SOLL_EINH | string | Einheit |
 
-<a id="job-status-spritzbeginn-ist"></a>
 ### STATUS_SPRITZBEGINN_IST
 
 Job Spritzbeginn IST
@@ -499,7 +478,6 @@ _No arguments._
 | STATUS_SPRITZBEGINN_IST_WERT | real | Wert |
 | STATUS_SPRITZBEGINN_IST_EINH | string | Einheit |
 
-<a id="job-status-menge-aktuell"></a>
 ### STATUS_MENGE_AKTUELL
 
 Menge Aktuell
@@ -514,7 +492,6 @@ _No arguments._
 | STATUS_MENGE_AKTUELL_WERT | real | Batteriespannung Wert |
 | STATUS_MENGE_AKTUELL_EINH | string | Einheit |
 
-<a id="job-status-pwg"></a>
 ### STATUS_PWG
 
 PWG
@@ -529,7 +506,6 @@ _No arguments._
 | STATUS_PWG_WERT | real | PWG Wert |
 | STATUS_PWG_EINH | string | Einheit |
 
-<a id="job-status-pwg-poti-spannung"></a>
 ### STATUS_PWG_POTI_SPANNUNG
 
 PWG
@@ -544,7 +520,6 @@ _No arguments._
 | STAT_PWG_POTI_SPANNUNG_1_WERT | real | PWG Wert |
 | STAT_PWG_POTI_SPANNUNG_EINH | string | Einheit |
 
-<a id="job-status-fgr"></a>
 ### STATUS_FGR
 
 PWG
@@ -559,7 +534,6 @@ _No arguments._
 | STATUS_FGR_WERT | real | FGR Bedienteil  Wert in mV |
 | STATUS_FGR_EINH | string | Einheit |
 
-<a id="job-status-ladedruck"></a>
 ### STATUS_LADEDRUCK
 
 Ladedruck
@@ -574,7 +548,6 @@ _No arguments._
 | STATUS_LADEDRUCK_WERT | real | Ladedruck Wert |
 | STATUS_LADEDRUCK_EINH | string | Einheit |
 
-<a id="job-status-schieberweg-ist"></a>
 ### STATUS_SCHIEBERWEG_IST
 
 Schieberweg IST
@@ -589,7 +562,6 @@ _No arguments._
 | STATUS_SCHIEBERWEG_IST_WERT | real | Schieberweg IST Wert |
 | STATUS_SCHIEBERWEG_IST_EINH | string | Einheit |
 
-<a id="job-status-schieberweg-soll"></a>
 ### STATUS_SCHIEBERWEG_SOLL
 
 Schieberweg SOLL
@@ -604,7 +576,6 @@ _No arguments._
 | STATUS_SCHIEBERWEG_SOLL_WERT | real | Schieb.weg Soll Wert |
 | STATUS_SCHIEBERWEG_SOLL_EINH | string | Einheit |
 
-<a id="job-status-luftmasse"></a>
 ### STATUS_LUFTMASSE
 
 LUFTMASSE
@@ -619,7 +590,6 @@ _No arguments._
 | STATUS_LUFTMASSE_WERT | real | LUFTMASSE Wert |
 | STATUS_LUFTMASSE_EINH | string | Einheit |
 
-<a id="job-status-ll-abgleich"></a>
 ### STATUS_LL_ABGLEICH
 
 LL_Abgleich
@@ -634,7 +604,6 @@ _No arguments._
 | STATUS_LL_ABGLEICH_WERT | real | LL-Abgleich Wert |
 | STATUS_LL_ABGLEICH_EINH | string | Einheit |
 
-<a id="job-status-gm-abgleich"></a>
 ### STATUS_GM_ABGLEICH
 
 Grundmengenabgleich
@@ -649,7 +618,6 @@ _No arguments._
 | STATUS_GM_ABGLEICH_WERT | real | GM - Abgleich Wert |
 | STATUS_GM_ABGLEICH_EINH | string | Einheit |
 
-<a id="job-status-sm-abgleich"></a>
 ### STATUS_SM_ABGLEICH
 
 Startmengenabgleich
@@ -664,7 +632,6 @@ _No arguments._
 | STATUS_SM_ABGLEICH_WERT | real | Startmengenabgleich Wert |
 | STATUS_SM_ABGLEICH_EINH | string | Einheit |
 
-<a id="job-status-kuehlmitteltemperatur"></a>
 ### STATUS_KUEHLMITTELTEMPERATUR
 
 Job Kuehlmitteltemperatur
@@ -679,7 +646,6 @@ _No arguments._
 | STATUS_KUEHLMITTELTEMPERATUR_WERT | real | Wert |
 | STATUS_KUEHLMITTELTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 Job Kuehlmitteltemperatur
@@ -695,7 +661,6 @@ _No arguments._
 | STAT_MOTORTEMPERATUR_WERT | real | Wert |
 | STATUS_MOTORTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Motordrehzahl auslesen
@@ -711,7 +676,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | real | Motordrehzahl |
 | STATUS_MOTORDREHZAHL_EINH | string | Einheit 1/min |
 
-<a id="job-status-oeltemperatur"></a>
 ### STATUS_OELTEMPERATUR
 
 LADELUFTtemperatur
@@ -726,7 +690,6 @@ _No arguments._
 | STATUS_OELTEMPERATUR_WERT | real | Ladelufttemperatur Wert |
 | STATUS_OELTEMPERATUR_EINH | string | Einheit Grad C |
 
-<a id="job-status-kraftstofftemperatur"></a>
 ### STATUS_KRAFTSTOFFTEMPERATUR
 
 Ansauglufttemperatur
@@ -741,7 +704,6 @@ _No arguments._
 | STATUS_KRAFTSTOFFTEMPERATUR_WERT | real | Kraftstofftemperatur Wert |
 | STATUS_KRAFTSTOFFTEMPERATUR_EINH | string | Einheit Grad C |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Batteriespannung
@@ -756,7 +718,6 @@ _No arguments._
 | STATUS_UBATT_WERT | real | Batteriespannung Wert |
 | STATUS_UBATT_EINH | string | Einheit V |
 
-<a id="job-status-geschwindigkeit"></a>
 ### STATUS_GESCHWINDIGKEIT
 
 Fahrzeuggeschwindigkeit
@@ -771,7 +732,6 @@ _No arguments._
 | STATUS_GESCHWINDIGKEIT_WERT | real | Geschwindigkeit Wert |
 | STATUS_GESCHWINDIGKEIT_EINH | string | Einheit kmh |
 
-<a id="job-status-agr-abgleich"></a>
 ### STATUS_AGR_ABGLEICH
 
 AGR - Abgleich
@@ -786,7 +746,6 @@ _No arguments._
 | STATUS_AGR_ABGLEICH_WERT | real | AGR - Abgleich Wert |
 | STATUS_AGR_ABGLEICH_EINH | string | Einheit |
 
-<a id="job-status-fahrver-menge"></a>
 ### STATUS_FAHRVER_MENGE
 
 Fahrverhalten Menge
@@ -801,7 +760,6 @@ _No arguments._
 | STATUS_FAHRVER_MENGE_WERT | real | Fahrverhalten Menge Wert |
 | STATUS_FAHRVER_MENGE_EINH | string | Einheit |
 
-<a id="job-status-begrenz-menge"></a>
 ### STATUS_BEGRENZ_MENGE
 
 Begrenzungsmenge
@@ -816,7 +774,6 @@ _No arguments._
 | STATUS_BEGRENZ_MENGE_WERT | real | Begrenzungsmenge Wert |
 | STATUS_BEGRENZ_MENGE_EINH | string | Einheit |
 
-<a id="job-status-soll-ll-drehz"></a>
 ### STATUS_SOLL_LL_DREHZ
 
 Soll LL-Drehzahl
@@ -831,7 +788,6 @@ _No arguments._
 | STATUS_SOLL_LL_DREHZ_WERT | real | Soll LL-Drehzahl Wert |
 | STATUS_SOLL_LL_DREHZ_EINH | string | Einheit |
 
-<a id="job-status-atmos-druck"></a>
 ### STATUS_ATMOS_DRUCK
 
 Atmosphaerendruck
@@ -846,7 +802,6 @@ _No arguments._
 | STATUS_ATMOS_DRUCK_WERT | real | Atmosphaerendruck Wert |
 | STATUS_ATMOS_DRUCK_EINH | string | Einheit |
 
-<a id="job-status-mw1"></a>
 ### STATUS_MW1
 
 Messwert BLock 1 auslesen
@@ -862,7 +817,6 @@ _No arguments._
 | STATUS_MW1_EINH | string | Einheit |
 | STATUS_MW1_TEXT | string | Text |
 
-<a id="job-status-mw2"></a>
 ### STATUS_MW2
 
 Messwerte (einzelne RAM - Zellen) auslesen
@@ -878,7 +832,6 @@ _No arguments._
 | STATUS_MW2_EINH | string | Einheit |
 | STATUS_MW2_TEXT | string | Text |
 
-<a id="job-status-mw3"></a>
 ### STATUS_MW3
 
 Messwerte (einzelne RAM - Zellen) auslesen
@@ -894,7 +847,6 @@ _No arguments._
 | STATUS_MW3_EINH | string | Einheit |
 | STATUS_MW3_TEXT | string | Text |
 
-<a id="job-status-mw4"></a>
 ### STATUS_MW4
 
 Messwerte (einzelne RAM - Zellen) auslesen
@@ -910,7 +862,6 @@ _No arguments._
 | STATUS_MW4_EINH | string | Einheit |
 | STATUS_MW4_TEXT | string | Text |
 
-<a id="job-status-mw5"></a>
 ### STATUS_MW5
 
 Messwerte (einzelne RAM - Zellen) auslesen
@@ -926,7 +877,6 @@ _No arguments._
 | STATUS_MW5_EINH | string | Einheit |
 | STATUS_MW5_TEXT | string | Text |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status Schalteingaenge
@@ -955,7 +905,6 @@ _No arguments._
 | STATUS_TEMPOMAT_AUS_EIN | int | Status Tempomat Aus  0=Aus / 1=Ein |
 | STATUS_TEMPOMAT_WIEDERAUF_EIN | int | Status Tempomat Wiederaufnahme  0=Aus / 1=Ein |
 
-<a id="job-status-digital1"></a>
 ### STATUS_DIGITAL1
 
 Status Schalteingaenge
@@ -970,7 +919,6 @@ _No arguments._
 | STATUS_DIGITAL1_TEXT | string | Beschreibung Eingang |
 | STATUS_DIGITAL1_STATUS | string | Status Eingang |
 
-<a id="job-steuern-elab"></a>
 ### STEUERN_ELAB
 
 ELAB  ansteuern
@@ -983,7 +931,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-sb-ventil"></a>
 ### STEUERN_SB_VENTIL
 
 Magnetventil fuer Spritzbeginn ansteuern
@@ -996,7 +943,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-agr-steller"></a>
 ### STEUERN_AGR_STELLER
 
 AGR Steller ansteuern
@@ -1009,7 +955,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-glueh-relais"></a>
 ### STEUERN_GLUEH_RELAIS
 
 Glueg Relais ansteuern
@@ -1022,7 +967,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-diagnose-anzeige"></a>
 ### STEUERN_DIAGNOSE_ANZEIGE
 
 Diagnoseanzeige ansteuern
@@ -1035,7 +979,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-klima-komp"></a>
 ### STEUERN_KLIMA_KOMP
 
 Klimakompressor ansteuern
@@ -1048,7 +991,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-vorgluehlampe"></a>
 ### STEUERN_VORGLUEHLAMPE
 
 Vorgluehlampe ansteuern
@@ -1061,7 +1003,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-fgr-lampe"></a>
 ### STEUERN_FGR_LAMPE
 
 FGR - Lampe ansteuern
@@ -1074,7 +1015,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-lader"></a>
 ### STEUERN_LADER
 
 Lader ansteuern
@@ -1087,7 +1027,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-motorlager"></a>
 ### STEUERN_MOTORLAGER
 
 FGR - Lampe ansteuern
@@ -1100,7 +1039,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-vorfoerderpumpe"></a>
 ### STEUERN_VORFOERDERPUMPE
 
 Vorfoerderpumpe ansteuern
@@ -1113,7 +1051,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ekp"></a>
 ### STEUERN_EKP
 
 Vorfoerderpumpe ansteuern
@@ -1126,7 +1063,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Loeschen des Fehlerspeichers
@@ -1139,7 +1075,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-login-request"></a>
 ### LOGIN_REQUEST
 
 Freigabe fuer EEP-Funktionen
@@ -1152,7 +1087,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-abgleichwerte-schreiben"></a>
 ### ABGLEICHWERTE_SCHREIBEN
 
 Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten
@@ -1172,7 +1106,6 @@ Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten
 | ABGLEICHWERTE_SCHREIBEN_ABGLEICHDATEN | string | Abgleichdaten zum Steuergeraet |
 | ABGLEICHWERTE_SCHREIBEN_PRUEFZEICHEN | string | das im Job berechnete Pruefzeichen |
 
-<a id="job-abgleichwerte-lesen"></a>
 ### ABGLEICHWERTE_LESEN
 
 Lesen des EEPROM-Speichers ab Adresse 0x8022
@@ -1190,7 +1123,6 @@ Lesen des EEPROM-Speichers ab Adresse 0x8022
 | ABGLEICHWERTE_LESEN_DATEN | string | aus dem Steuergeraet ausgelesene Daten im Format z.B.: "01 A5 FE" |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_..., wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-abgleichflag-schreiben"></a>
 ### ABGLEICHFLAG_SCHREIBEN
 
 Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten
@@ -1207,7 +1139,6 @@ Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_..., wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-abgleichflag-lesen"></a>
 ### ABGLEICHFLAG_LESEN
 
 Lesen des EEPROM-Speichers ab Adresse 0x0032
@@ -1221,7 +1152,6 @@ _No arguments._
 | ABGLEICHFLAG_LESEN_WERT | string | 0x01 --> ABGLEICH_IO 0xFF --> ABGLEICH_NIO |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_..., wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-abgleich-ll-drehzahl-770"></a>
 ### ABGLEICH_LL_DREHZAHL_770
 
 _No arguments._
@@ -1232,7 +1162,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-ll-drehzahl-770"></a>
 ### STATUS_LL_DREHZAHL_770
 
 _No arguments._
@@ -1244,7 +1173,6 @@ _No arguments._
 | STATUS_LL_DREHZAHL_770 | string | Abgleich durchgefuehrt = TRUE, Abgleich fehlerhaft = FALSE |
 | JOB_STATUS | string |  |
 
-<a id="job-eeprom-byte-aendern"></a>
 ### EEPROM_BYTE_AENDERN
 
 Beliebige EPROM - Zellen aendern
@@ -1266,7 +1194,6 @@ Beliebige EPROM - Zellen aendern
 | EEPROM_LESEN_WERT | int | nichts |
 | EEPROM_SCHREIBEN_WERT | int | nichts |
 
-<a id="job-eeprom-byte-abfrage"></a>
 ### EEPROM_BYTE_ABFRAGE
 
 Beliebige EPROM - Zellen abfragen
@@ -1305,7 +1232,6 @@ Beliebige EPROM - Zellen abfragen
 - [NULLEINSTEXTE](#table-nulleinstexte) (4 × 3)
 - [JOBRESULT](#table-jobresult) (8 × 2)
 
-<a id="table-betriebswmatrix"></a>
 ### BETRIEBSWMATRIX
 
 Dimensions: 24 rows × 8 columns
@@ -1337,7 +1263,6 @@ Dimensions: 24 rows × 8 columns
 | Soll_ll_drehz | RAM1E | 0x2FB80 | -- | 1 | 22.745 | 0 | 1/min |
 | Atm_druck | RAM1E | 0x2FB77 | -- | 1 | 9.8039 | 125 | hPa |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 16 rows × 4 columns
@@ -1361,7 +1286,6 @@ Dimensions: 16 rows × 4 columns
 | S_T_BRE | 2 | 0x20 | 0x20 |
 | A_T_KUP | 2 | 0x40 | 0x40 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 37 rows × 4 columns
@@ -1406,7 +1330,6 @@ Dimensions: 37 rows × 4 columns
 | 0x72 | CAN-Botschaft INSTR3 | 0x01 | 0x09 |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 35 rows × 17 columns
@@ -1449,7 +1372,6 @@ Dimensions: 35 rows × 17 columns
 | 0x71 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x05 | 0x00 | 0x06 | 0x08 | 0x07 | 0x00 | 0x09 |
 | 0x72 | 0x00 | 0x00 | 0x00 | 0x49 | 0x00 | 0x50 | 0x00 | 0x51 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 48 rows × 2 columns
@@ -1505,7 +1427,6 @@ Dimensions: 48 rows × 2 columns
 | 0x51 | CAN Baustein ausgefallen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 11 rows × 5 columns
@@ -1524,7 +1445,6 @@ Dimensions: 11 rows × 5 columns
 | 0x09 | Batteriespannung | V |  |  |
 | 0xXY | unbekannte Umweltbedingung | -- | 1 | 0 |
 
-<a id="table-nulleinstexte"></a>
 ### NULLEINSTEXTE
 
 Dimensions: 4 rows × 3 columns
@@ -1536,7 +1456,6 @@ Dimensions: 4 rows × 3 columns
 | AA | AUS | AKTIV |
 | XY | kein Text gefunden | kein Text gefunden |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns

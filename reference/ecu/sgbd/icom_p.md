@@ -102,7 +102,6 @@
 - [STEUERN_WAKE_ON_EX_TRIGGER_FREQ](#job-steuern-wake-on-ex-trigger-freq) - gültig nur bei ICOMP Next mit Funkmodul Benutzte Frequenz des Funkmoduls
 - [STEUERN_SEND_EX_TRIGGER](#job-steuern-send-ex-trigger) - gültig nur bei ICOMP Next mit Funkmodul Senden eines Aufweckkommandos
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -121,7 +120,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -134,7 +132,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-status-batt-ignition"></a>
 ### STATUS_BATT_IGNITION
 
 Ubatt(Kl. 30) ignition (Kl. 15) Werte
@@ -149,7 +146,6 @@ _No arguments._
 | STAT_IGNITION | long | Spannung in mV |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-typ-ver"></a>
 ### STATUS_TYP_VER
 
 Ubatt(Kl. 30) ignition (Kl. 15) Werte
@@ -164,7 +160,6 @@ _No arguments._
 | STAT_VERSION | int | Versionsnummer |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-can-kl-15"></a>
 ### STATUS_CAN_KL_15
 
 Prüft ob Klemmenstatus Botschaft auf CAN empfangen wird
@@ -182,7 +177,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-trigger-autoassign-broadcast"></a>
 ### STEUERN_TRIGGER_AUTOASSIGN_BROADCAST
 
 Erzwingt das neu Senden der Autoassign Statusbotschaft via HTTP
@@ -196,7 +190,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn erfolgreich |
 | _TEL_ANTWORT | binary | STEUERN_TRIGGER_AUTOASSIGN_BROADCAST erfolgreich |
 
-<a id="job-steuern-beep"></a>
 ### STEUERN_BEEP
 
 Steuert den Summer mit der angegebenen Frequenz und Dauer an gültig nur bei ICOMP Next
@@ -215,7 +208,6 @@ Steuert den Summer mit der angegebenen Frequenz und Dauer an gültig nur bei ICO
 | JOB_STATUS | string | OKAY, wenn erfolgreich |
 | _TEL_ANTWORT | binary | STEUERN_BEEP erfolgreich |
 
-<a id="job-steuern-melody"></a>
 ### STEUERN_MELODY
 
 Spilet eine Melody mithilfe des Summers gültig nur bei ICOMP Next
@@ -233,7 +225,6 @@ Spilet eine Melody mithilfe des Summers gültig nur bei ICOMP Next
 | JOB_STATUS | string | OKAY, wenn erfolgreich |
 | _TEL_ANTWORT | binary | STEUERN_BEEP erfolgreich |
 
-<a id="job-steuern-hsfz-enable"></a>
 ### STEUERN_HSFZ_ENABLE
 
 Einschalten des HSFZ
@@ -247,7 +238,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | OKAY ist gestartet |
 
-<a id="job-steuern-hsfz-disable"></a>
 ### STEUERN_HSFZ_DISABLE
 
 Ausschalten des HSFZ
@@ -261,7 +251,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | OKAY, HSFZ gestoppt |
 
-<a id="job-status-hsfz-get-status"></a>
 ### STATUS_HSFZ_GET_STATUS
 
 STATUS des HSFZ
@@ -276,7 +265,6 @@ _No arguments._
 | STAT_HSFZ_STATUS | string | ENABLED  -> HSFZ ist aktiv DISABLED -> HSFZ ist deaktiviert |
 | _TEL_ANTWORT | binary | ENABLED                      -> HSFZ ist aktiv DISABLED                     -> HSFZ ist deaktiviert BUSY                         -> HSFZ ist belegt ERROR_INVALID_RESPONSE HSFZ  -> ungültige Antwort ERROR_NO_HSFZ                -> kein Link zum Fahrzeug ERROR_ZGW_NOT_FOUND          -> kein ZGW gefunden ERROR_BROKEN_LINK            -> Nicht alle Ethernetleitungen verbunden |
 
-<a id="job-status-hsfz-get-status-neu"></a>
 ### STATUS_HSFZ_GET_STATUS_NEU
 
 STATUS des HSFZ
@@ -295,7 +283,6 @@ STATUS des HSFZ
 | STAT_HSFZ_STATUS | string | ENABLED                       -> HSFZ ist aktiv DISABLED                      -> HSFZ ist deaktiviert BUSY                          -> HSFZ ist belegt ERROR_INVALID_RESPONSE HSFZ   -> ungültige Antwort ERROR_NO_HSFZ                 -> kein Link zum Fahrzeug ERROR_ZGW_NOT_FOUND           -> kein ZGW gefunden ERROR_BROKEN_LINK             -> Nicht alle Ethernetleitungen verbunden |
 | _TEL_ANTWORT | binary | Antwortelegramm vom ICOMP |
 
-<a id="job-status-hsfz-get-status-detail"></a>
 ### STATUS_HSFZ_GET_STATUS_DETAIL
 
 erweiterter STATUS des HSFZ
@@ -315,7 +302,6 @@ _No arguments._
 | STAT_DISTANCE_TO_FAULT | int | Distanz zur Problemquelle in dm, Genauigkeit +- 20 dm |
 | _TEL_ANTWORT | binary | Antwortelegramm vom ICOMP |
 
-<a id="job-status-get-canbridge-status"></a>
 ### STATUS_GET_CANBRIDGE_STATUS
 
 Abfragen des HSFZ-CANBridge Status
@@ -331,7 +317,6 @@ _No arguments._
 | STAT_ENABLED_ON_STARTUP | string | enabled = HSFZ-CANBridge wird nach reboot automatisch gestartet disabled = iHSFZ-CANBridge wird nach reboot nicht gestartet |
 | _TEL_ANTWORT | binary | Antwortelegramm vom ICOMP |
 
-<a id="job-steuern-set-canbridge-status"></a>
 ### STEUERN_SET_CANBRIDGE_STATUS
 
 HsfzCanBridge  einschalten/ausschalten
@@ -350,7 +335,6 @@ HsfzCanBridge  einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwortelegramm vom ICOMP |
 
-<a id="job-steuern-restart-hsfz-str"></a>
 ### STEUERN_RESTART_HSFZ_STR
 
 Restart HSFZ Start Routine
@@ -370,7 +354,6 @@ Restart HSFZ Start Routine
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-restart-hsfz-rrr"></a>
 ### STEUERN_RESTART_HSFZ_RRR
 
 Restart HSFZ Request Routine Results
@@ -390,7 +373,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-create-ecu-routes-str"></a>
 ### STEUERN_CREATE_ECU_ROUTES_STR
 
 CreateEcuRoutes Start Routine Anlegen der Routen für ein Steuergerät
@@ -414,7 +396,6 @@ CreateEcuRoutes Start Routine Anlegen der Routen für ein Steuergerät
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-create-ecu-routes-rrr"></a>
 ### STEUERN_CREATE_ECU_ROUTES_RRR
 
 Restart HSFZ Request Routine Results
@@ -433,7 +414,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-act-line-str"></a>
 ### STEUERN_SWITCH_ACT_LINE_STR
 
 SwitchActLine Start Routine Ethernet Aktivierungsleitung schalten
@@ -453,7 +433,6 @@ SwitchActLine Start Routine Ethernet Aktivierungsleitung schalten
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-act-line-stp"></a>
 ### STEUERN_SWITCH_ACT_LINE_STP
 
 SwitchActLine Stop Routine
@@ -468,7 +447,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-act-line-rrr"></a>
 ### STEUERN_SWITCH_ACT_LINE_RRR
 
 SwitchActLine Request Routine Results
@@ -484,7 +462,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-link-str"></a>
 ### STEUERN_SWITCH_LINK_STR
 
 SwitchActLine Start Routine Ethernet Aktivierungsleitung schalten
@@ -504,7 +481,6 @@ SwitchActLine Start Routine Ethernet Aktivierungsleitung schalten
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-link-stp"></a>
 ### STEUERN_SWITCH_LINK_STP
 
 SwitchActLine Stop Routine
@@ -519,7 +495,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-switch-link-rrr"></a>
 ### STEUERN_SWITCH_LINK_RRR
 
 SwitchActLine Request Routine Results
@@ -536,7 +511,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-inq-hsfz-gw-str"></a>
 ### STEUERN_INQ_HSFZ_GW_STR
 
 Inquire HSFZ GatewayStart Routine
@@ -556,7 +530,6 @@ Inquire HSFZ GatewayStart Routine
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-inq-hsfz-gw-stp"></a>
 ### STEUERN_INQ_HSFZ_GW_STP
 
 Inquire HSFZ Gateway Stop Routine
@@ -571,7 +544,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-inq-hsfz-gw-rrr"></a>
 ### STEUERN_INQ_HSFZ_GW_RRR
 
 Inquire HSFZ Gateway Request Routine Results
@@ -591,7 +563,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-check-url-str"></a>
 ### STEUERN_CHECK_URL_STR
 
 Inquire HSFZ GatewayStart Routine
@@ -613,7 +584,6 @@ Inquire HSFZ GatewayStart Routine
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-check-url-stp"></a>
 ### STEUERN_CHECK_URL_STP
 
 Inquire HSFZ Gateway Stop Routine
@@ -628,7 +598,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-check-url-rrr"></a>
 ### STEUERN_CHECK_URL_RRR
 
 Inquire HSFZ Gateway Request Routine Results
@@ -646,7 +615,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-pin-control-str"></a>
 ### STEUERN_PIN_CONTROL_STR
 
 PinControl Start Routine Einstellen der gewünschten Pullup-Werte
@@ -666,7 +634,6 @@ PinControl Start Routine Einstellen der gewünschten Pullup-Werte
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-pin-control-rrr"></a>
 ### STEUERN_PIN_CONTROL_RRR
 
 Pin Control Request Results Routine
@@ -691,7 +658,6 @@ _No arguments._
 | CanCl15 | string | 0x01 = Klemme 15 in Botschaft 130h Ein, 0x00 sonst |
 | CanPWF | string | Signal ST_CON_VEH( Bit 0 .. Bit 3) aus Byte 6 der Fahrzeugzustands-Botschaft (3Ch) |
 
-<a id="job-status-get-vin"></a>
 ### STATUS_GET_VIN
 
 Auslesen der im ICOM gesetzten VIN
@@ -706,7 +672,6 @@ _No arguments._
 | STAT_VIN | string | VIN aus dem ICOM |
 | _TEL_ANTWORT | binary | STATUS_GET_VIN erfolgreich |
 
-<a id="job-steuern-set-vin"></a>
 ### STEUERN_SET_VIN
 
 Setzen der VIN im ICOM
@@ -725,7 +690,6 @@ Setzen der VIN im ICOM
 | SERVER_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_SET_VIN erfolgreich |
 
-<a id="job-steuern-verify-vin"></a>
 ### STEUERN_VERIFY_VIN
 
 Verifizieren einer VIN mit der im ICOM gesetzten
@@ -744,7 +708,6 @@ Verifizieren einer VIN mit der im ICOM gesetzten
 | JOB_STATUS | string | OKAY, wenn VINs gleich NO_VIN, wenn keine VIN im ICOM gesetzt VIN_DIFFERENT, wenn VINs unterschiedlich |
 | _TEL_ANTWORT | binary | STEUERN_VERIFY_VIN erfolgreich |
 
-<a id="job-steuern-vin-xml-erase"></a>
 ### STEUERN_VIN_XML_ERASE
 
 Löschen der vom Autoassign generierten VIN-XML Files auf den Servern
@@ -762,7 +725,6 @@ Löschen der vom Autoassign generierten VIN-XML Files auf den Servern
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_SET_VIN erfolgreich |
 
-<a id="job-status-get-versions"></a>
 ### STATUS_GET_VERSIONS
 
 Auslesen der Image Versionen des ICOM
@@ -780,7 +742,6 @@ _No arguments._
 | STAT_SERIALNUMBER | string | Seriennummer des ICOM |
 | _TEL_ANTWORT | binary | ICOMP_GET_VERSIONS erfolgreich |
 
-<a id="job-status-get-config"></a>
 ### STATUS_GET_CONFIG
 
 Auslesen der Konfiguration des ICOM, erzeugt eine variable Liste von Ergebnissen
@@ -794,7 +755,6 @@ _No arguments._
 | STAT_WPACERTIFICATE | binary | WPA-Zertifikat |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-get-config-detail"></a>
 ### STATUS_GET_CONFIG_DETAIL
 
 Auslesen eines bestimmten Konfiguartionsparameters
@@ -813,7 +773,6 @@ Auslesen eines bestimmten Konfiguartionsparameters
 | JOB_STATUS | string | OKAY, wenn der Wert gelesen werden konnte NOT_FOUND, wenn der Wert nicht gefunden wurde |
 | _TEL_ANTWORT | binary | STATUS_GET_CONFIG_DETAIL erfolgreich |
 
-<a id="job-steuern-start-net-config"></a>
 ### STEUERN_START_NET_CONFIG
 
 Einlesen der Konfiguration über das Netzwerk
@@ -832,7 +791,6 @@ Einlesen der Konfiguration über das Netzwerk
 | STAT_CONFIG_ERROR | string | Fehlerinfo bei ICOMP_START_NET_CONFIG |
 | _TEL_ANTWORT | binary | ICOMP_START_NET_CONFIG erfolgreich |
 
-<a id="job-steuern-update"></a>
 ### STEUERN_UPDATE
 
 Softwareupdate des ICOM-P über das Netzwerk
@@ -851,7 +809,6 @@ Softwareupdate des ICOM-P über das Netzwerk
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | ICOMP_UPDATE erfolgreich |
 
-<a id="job-status-get-iwconfig"></a>
 ### STATUS_GET_IWCONFIG
 
 Führt ein iwconfig auf dem ICOM aus und liefert dessen Ergebnisse. Es wird eine variable Liste von Ergebnissen erzeugt.
@@ -864,7 +821,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ICOMP_WIRELESS_NOT_ACTIVE, WLAN nicht activiert" ERROR_ICOMP_IWCONFIG_FAILED, Fehler beim Ausführen von iwconfig" |
 
-<a id="job-steuern-manual-roaming"></a>
 ### STEUERN_MANUAL_ROAMING
 
 Erzwingen eines WLAN-Roaming vorganges
@@ -878,7 +834,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_MANUAL_ROAMING erfolgreich |
 
-<a id="job-steuern-traceon"></a>
 ### STEUERN_TRACEON
 
 ICOM CAN/HSFZ Trace einschalten
@@ -892,7 +847,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | TraceOn erfolgreich |
 
-<a id="job-steuern-traceoff"></a>
 ### STEUERN_TRACEOFF
 
 Abschalten CAN/HSFZ Trace
@@ -906,7 +860,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | TraceOff erfolgreich |
 
-<a id="job-status-trace-state"></a>
 ### STATUS_TRACE_STATE
 
 Lesen von Trace Informationen
@@ -925,7 +878,6 @@ _No arguments._
 | STAT_TRACE_MEMORY_ETH | unsigned long | Freier ETH Trace-Speicher in kB |
 | STAT_USED_MEMORY_ETH | unsigned long | Momentan verwendeter ETH Trace-Speicher in kB |
 
-<a id="job-steuern-trace-boot-enable"></a>
 ### STEUERN_TRACE_BOOT_ENABLE
 
 Automatisches tracen nach Neustart des ICOMs
@@ -943,7 +895,6 @@ Automatisches tracen nach Neustart des ICOMs
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Trace On/Off |
 
-<a id="job-status-trace-get-config"></a>
 ### STATUS_TRACE_GET_CONFIG
 
 Lesen der Trace-Konfiguration
@@ -971,7 +922,6 @@ _No arguments._
 | STAT_DCAN_SIZE | string | Größe des Buffers für den D-CAN Trace |
 | STAT_ENET_SIZE | string | Größe des Buffers für den ETHERNET Trace |
 
-<a id="job-steuern-dcan-trace"></a>
 ### STEUERN_DCAN_TRACE
 
 D-CAN Trace einschalten/ausschalten
@@ -990,7 +940,6 @@ D-CAN Trace einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | DCAN Trace On/Off |
 
-<a id="job-steuern-kl15-trace"></a>
 ### STEUERN_KL15_TRACE
 
 KL15 (0x130) Trace einschalten/ausschalten
@@ -1009,7 +958,6 @@ KL15 (0x130) Trace einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | KL15 Trace On/Off |
 
-<a id="job-steuern-ethernet-trace"></a>
 ### STEUERN_ETHERNET_TRACE
 
 ETHERNET Trace einschalten/ausschalten
@@ -1028,7 +976,6 @@ ETHERNET Trace einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | ETHERNET Trace On/Off |
 
-<a id="job-steuern-udp-trace"></a>
 ### STEUERN_UDP_TRACE
 
 UDP Logging einschalten/ausschalten
@@ -1047,7 +994,6 @@ UDP Logging einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | UDP Logging On/Off |
 
-<a id="job-steuern-arp-trace"></a>
 ### STEUERN_ARP_TRACE
 
 ARP Logging einschalten/ausschalten
@@ -1066,7 +1012,6 @@ ARP Logging einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | ARP Logging On/Off |
 
-<a id="job-steuern-ls-trace"></a>
 ### STEUERN_LS_TRACE
 
 Link Status Logging einschalten/ausschalten
@@ -1085,7 +1030,6 @@ Link Status Logging einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Link Status Logging On/Off |
 
-<a id="job-steuern-wlanping-trace"></a>
 ### STEUERN_WLANPING_TRACE
 
 Link Status Logging einschalten/ausschalten
@@ -1104,7 +1048,6 @@ Link Status Logging einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Link Status Logging On/Off |
 
-<a id="job-steuern-ifhenet-trace"></a>
 ### STEUERN_IFHENET_TRACE
 
 IFH ETHERNET Logging einschalten/ausschalten
@@ -1123,7 +1066,6 @@ IFH ETHERNET Logging einschalten/ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | IFHENET Logging On/Off |
 
-<a id="job-steuern-trace-target"></a>
 ### STEUERN_TRACE_TARGET
 
 Ablageziel der Tracedateien festlegen
@@ -1142,7 +1084,6 @@ Ablageziel der Tracedateien festlegen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Ablageziel gesetzt |
 
-<a id="job-steuern-trace-filenamebase"></a>
 ### STEUERN_TRACE_FILENAMEBASE
 
 Variable Basis des Dateinames der Tracedateien setzen
@@ -1161,7 +1102,6 @@ Variable Basis des Dateinames der Tracedateien setzen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Filenamebase gesetzt |
 
-<a id="job-steuern-trace-remoteurl"></a>
 ### STEUERN_TRACE_REMOTEURL
 
 URL-Freigabe für die Ablage der Tracedaten (remote/offline)
@@ -1180,7 +1120,6 @@ URL-Freigabe für die Ablage der Tracedaten (remote/offline)
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | RemoteURL gesetzt |
 
-<a id="job-steuern-trace-dcansize"></a>
 ### STEUERN_TRACE_DCANSIZE
 
 Maximale Grösse der D-CAN Tracedateien auf dem ICOM setzen
@@ -1199,7 +1138,6 @@ Maximale Grösse der D-CAN Tracedateien auf dem ICOM setzen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | D-CAN Tracegrösse gesetzt |
 
-<a id="job-steuern-trace-ethernetsize"></a>
 ### STEUERN_TRACE_ETHERNETSIZE
 
 Maximale Grösse der ETHERNET Tracedateien auf dem ICOM setzen
@@ -1218,7 +1156,6 @@ Maximale Grösse der ETHERNET Tracedateien auf dem ICOM setzen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | ETHERNET Tracegrösse gesetzt |
 
-<a id="job-steuern-trace-retrieve"></a>
 ### STEUERN_TRACE_RETRIEVE
 
 Tracedatei vom ICOM auf REMOTEURL übertragen
@@ -1240,7 +1177,6 @@ Tracedatei vom ICOM auf REMOTEURL übertragen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Abholen des Trace gestartet |
 
-<a id="job-steuern-trace-retrieve-all"></a>
 ### STEUERN_TRACE_RETRIEVE_ALL
 
 gesamte Tracedaten vom ICOM auf REMOTEURL übertragen
@@ -1261,7 +1197,6 @@ gesamte Tracedaten vom ICOM auf REMOTEURL übertragen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Abholen des Trace gestartet |
 
-<a id="job-steuern-trace-erase"></a>
 ### STEUERN_TRACE_ERASE
 
 Löschen aller Tracefiles auf dem ICOM
@@ -1279,7 +1214,6 @@ Löschen aller Tracefiles auf dem ICOM
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort vom ICOM |
 
-<a id="job-steuern-debugmode"></a>
 ### STEUERN_DEBUGMODE
 
 ICOM DEBUGMODE einschalten
@@ -1298,7 +1232,6 @@ ICOM DEBUGMODE einschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_DEBUGMODE erfolgreich |
 
-<a id="job-steuern-debugmode-getfiles"></a>
 ### STEUERN_DEBUGMODE_GETFILES
 
 Auslesen der Debugmode Dateien über das Netzwerk
@@ -1317,7 +1250,6 @@ Auslesen der Debugmode Dateien über das Netzwerk
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_DEBUGMODE_GETFILES erfolgreich |
 
-<a id="job-steuern-debugmode-erasefiles"></a>
 ### STEUERN_DEBUGMODE_ERASEFILES
 
 Löschen der Debugmode Dateien auf der SD Karte
@@ -1331,7 +1263,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_DEBUGMODE_ERASEFILES erfolgreich |
 
-<a id="job-steuern-reboot"></a>
 ### STEUERN_REBOOT
 
 Neustart des ICOM_P
@@ -1345,7 +1276,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_REBOOT erfolgreich |
 
-<a id="job-steuern-switch-off"></a>
 ### STEUERN_SWITCH_OFF
 
 Ausschalten des ICOM_P
@@ -1363,7 +1293,6 @@ Ausschalten des ICOM_P
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_SWITCH_OFF erfolgreich |
 
-<a id="job-steuern-constant-current"></a>
 ### STEUERN_CONSTANT_CURRENT
 
 Ein/Ausschalten des Konstantstrommodus
@@ -1381,7 +1310,6 @@ Ein/Ausschalten des Konstantstrommodus
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | ICOMP_CONSTANT_CURRENT_SET erfolgreich |
 
-<a id="job-status-constant-current"></a>
 ### STATUS_CONSTANT_CURRENT
 
 Zustand des Konstantstrommodus
@@ -1396,7 +1324,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | ICOMP_CONSTANT_CURRENT_GET erfolgreich |
 
-<a id="job-steuern-send-wake-up"></a>
 ### STEUERN_SEND_WAKE_UP
 
 Senden eine WakeUp-Pulses auf OBD Pin 8 (HSFZ-Aktivierungsleitung) Unterstützung des Fahrzeuges vorausgesetzt
@@ -1415,7 +1342,6 @@ Senden eine WakeUp-Pulses auf OBD Pin 8 (HSFZ-Aktivierungsleitung) Unterstützun
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | OKAY |
 
-<a id="job-steuern-on-set-can-id"></a>
 ### STEUERN_ON_SET_CAN_ID
 
 Einschalten des ICOM_P durch ein bestimmtes CAN Telegramm
@@ -1437,7 +1363,6 @@ Einschalten des ICOM_P durch ein bestimmtes CAN Telegramm
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_ON_SET_CAN_ID erfolgreich |
 
-<a id="job-steuern-set-can-idle-time"></a>
 ### STEUERN_SET_CAN_IDLE_TIME
 
 Ausschalten des ICOM_P wenn keine CAN Kommunikation vorhanden ist
@@ -1462,7 +1387,6 @@ Ausschalten des ICOM_P wenn keine CAN Kommunikation vorhanden ist
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_SET_CAN_IDLE_TIME erfolgreich |
 
-<a id="job-steuern-enable-acc-wakeup"></a>
 ### STEUERN_ENABLE_ACC_WAKEUP
 
 Einschalten des ICOM_P durch den Bewegungssensor
@@ -1481,7 +1405,6 @@ Einschalten des ICOM_P durch den Bewegungssensor
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_ENABLE_ACC_WAKEUP erfolgreich |
 
-<a id="job-steuern-wakeup-timer"></a>
 ### STEUERN_WAKEUP_TIMER
 
 Setzt die Zeit nach der das ICOMP Next wieder erwacht
@@ -1500,7 +1423,6 @@ Setzt die Zeit nach der das ICOMP Next wieder erwacht
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | OKAY |
 
-<a id="job-steuern-fehlerspeicher-lesen"></a>
 ### STEUERN_FEHLERSPEICHER_LESEN
 
 Auslesen des Fehlerspeichers des ICOMs
@@ -1525,7 +1447,6 @@ Auslesen des Fehlerspeichers des ICOMs
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_FEHLERSPEICHER_LESEN erfolgreich |
 
-<a id="job-steuern-fehlerspeicher-loeschen"></a>
 ### STEUERN_FEHLERSPEICHER_LOESCHEN
 
 Löscht den Fehlerspeichers des ICOMs
@@ -1539,7 +1460,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_FEHLERSPEICHER_LOESCHEN erfolgreich |
 
-<a id="job-steuern-wake-on-ex-trigger"></a>
 ### STEUERN_WAKE_ON_EX_TRIGGER
 
 gültig nur bei ICOMP Next mit Funkmodul Wakeup über Funkmodul Ein- Ausschalten
@@ -1559,7 +1479,6 @@ gültig nur bei ICOMP Next mit Funkmodul Wakeup über Funkmodul Ein- Ausschalten
 | JOB_STATUS | string | OKAY,          Werte konnten gesetzt werden ERROR_FAILED,  Werte konnten nicht gesetzt werden NO_RADIO,      Kein Funkmodul verbaut |
 | _TEL_ANTWORT | binary | OKAY |
 
-<a id="job-steuern-wake-on-ex-trigger-freq"></a>
 ### STEUERN_WAKE_ON_EX_TRIGGER_FREQ
 
 gültig nur bei ICOMP Next mit Funkmodul Benutzte Frequenz des Funkmoduls
@@ -1577,7 +1496,6 @@ gültig nur bei ICOMP Next mit Funkmodul Benutzte Frequenz des Funkmoduls
 | JOB_STATUS | string | OKAY,          Werte konnten gesetzt werden ERROR_FAILED,  Werte konnten nicht gesetzt werden NO_RADIO,      Kein Funkmodul verbaut |
 | _TEL_ANTWORT | binary | OKAY |
 
-<a id="job-steuern-send-ex-trigger"></a>
 ### STEUERN_SEND_EX_TRIGGER
 
 gültig nur bei ICOMP Next mit Funkmodul Senden eines Aufweckkommandos
@@ -1624,7 +1542,6 @@ gültig nur bei ICOMP Next mit Funkmodul Senden eines Aufweckkommandos
 - [IUMWELTTEXTE](#table-iumwelttexte) (1 × 9)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (1 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1708,7 +1625,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 149 rows × 2 columns
@@ -1865,7 +1781,6 @@ Dimensions: 149 rows × 2 columns
 | 0x0000CA | SEG Automotive Germany GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1908,7 +1823,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1933,7 +1847,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1967,7 +1880,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -2040,7 +1952,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -2053,7 +1964,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 9 rows × 9 columns
@@ -2070,7 +1980,6 @@ Dimensions: 9 rows × 9 columns
 | 0x1769 | ABS_ZEIT_SUP | 0-n | - | 0xFFFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-tab-zeit-syncmethod"></a>
 ### TAB_ZEIT_SYNCMETHOD
 
 Dimensions: 4 rows × 2 columns
@@ -2082,7 +1991,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | IEEE802.1AS |
 | 0x03 | invalid |
 
-<a id="table-tab-zeit-user-info"></a>
 ### TAB_ZEIT_USER_INFO
 
 Dimensions: 8 rows × 2 columns
@@ -2098,7 +2006,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | invalid |
 | 0x07 | invalid |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -2111,7 +2018,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2125,7 +2031,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-cu-err-text"></a>
 ### CU_ERR_TEXT
 
 Dimensions: 7 rows × 2 columns
@@ -2140,7 +2045,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | CUE_TIMEOUT |
 | 0xFF | CUE_UNKNOWN |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2154,7 +2058,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 4 columns
@@ -2163,7 +2066,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -2172,7 +2074,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2185,7 +2086,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 4 columns
@@ -2194,7 +2094,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -2203,7 +2102,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns

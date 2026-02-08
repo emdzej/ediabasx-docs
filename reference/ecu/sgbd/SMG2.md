@@ -66,7 +66,6 @@
 - [STATUS_IO_STATI_LESEN](#job-status-io-stati-lesen) - Status Eingaenge SMG
 - [STATUS_FAHRZEUGTESTER_LESEN](#job-status-fahrzeugtester-lesen) - I/O Status lesen (Kontrollbyte 0x0B) Fahrzeugtester   (Auswahlbyte  0x05) Status der Ein- u. Ausgaenge GETRAG und VS21 spezifischer Job (Nicht fuer INPA gedacht.)
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer EGS
@@ -79,7 +78,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -98,7 +96,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EGS
@@ -122,7 +119,6 @@ _No arguments._
 | ID_SN_NR | string | Seriennummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Auslesen des QUICK Fehlerspeichers
@@ -138,7 +134,6 @@ _No arguments._
 | F_KM_AKT | real | km-Stand aktuell |
 | F_KM_ALT | real | km-Stand beim letzten Loeschen |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen High-Konzept nach Lastenheft Codierung/Diagnose E39 Ausgabe 05
@@ -300,7 +295,6 @@ _No arguments._
 | F_VORHANDEN | int | Fehler momentan vorhanden (Fehlerart) |
 | _TEL_ANTWORT | binary | Beinhaltet immer nur den zuletzt gelesenen Fehler! |
 
-<a id="job-fs-shadow-lesen"></a>
 ### FS_SHADOW_LESEN
 
 Shadowspeicher lesen High-Konzept nach Lastenheft Codierung/Diagnose E39 Ausgabe 05
@@ -462,7 +456,6 @@ _No arguments._
 | F_VORHANDEN | int | Fehler momentan vorhanden (Fehlerart) |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen fuer EGS
@@ -477,7 +470,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -495,7 +487,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -514,7 +505,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -527,7 +517,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -542,7 +531,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Beliebige EPROM - Zellen auslesen
@@ -556,7 +544,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | SG_STATUS | int |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher Lesen
@@ -578,7 +565,6 @@ Speicher Lesen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben von beliebigen Speicherzellen
@@ -596,7 +582,6 @@ Beschreiben von beliebigen Speicherzellen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | SPEICHER_SCHREIBEN_ANZAHL | int | Anzahl geschriebener Speicherzellen |
 
-<a id="job-zif"></a>
 ### ZIF
 
 Job ZIF
@@ -615,7 +600,6 @@ _No arguments._
 | ZIF_BMW_PST | string | BMW Programmstand |
 | ZIF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-zif-backup"></a>
 ### ZIF_BACKUP
 
 Job ZIF_BACKUP
@@ -634,7 +618,6 @@ _No arguments._
 | ZIF_BACKUP_BMW_PST | string | BMW Programmstand |
 | ZIF_BACKUP_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-hersteller-daten-lesen"></a>
 ### HERSTELLER_DATEN_LESEN
 
 Herstellerdaten lesen (Kontrollbyte 53)
@@ -661,7 +644,6 @@ _No arguments._
 | PROGRAMMIERSPANNUNG | binary | Direkt, keine Adresse |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Zuruecksetzen des SG Nur nach einer Neuprogrammierung durchführbar!
@@ -676,7 +658,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-flash-lesen"></a>
 ### FLASH_LESEN
 
 Beliebige FLASH - Zellen auslesen
@@ -695,7 +676,6 @@ Beliebige FLASH - Zellen auslesen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | FLASH_LESEN_WERT | binary | nichts |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash - Zellen loeschen
@@ -715,7 +695,6 @@ Flash - Zellen loeschen
 | FLASH_LOESCHEN_STATUS | int |  |
 | FLASH_LOESCHEN_ANZAHL | int |  |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Beliebige Flash Zellen mit 02 beschreiben
@@ -735,7 +714,6 @@ Beliebige Flash Zellen mit 02 beschreiben
 | FLASH_SCHREIBEN_STATUS | int |  |
 | FLASH_SCHREIBEN_ANZAHL | int |  |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Beliebige EPROM - Zellen auslesen
@@ -755,7 +733,6 @@ Beliebige EPROM - Zellen auslesen
 | FLASH_SCHREIBEN_ENDE_STATUS | int |  |
 | FLASH_SCHREIBEN_ENDE_ANZAHL | int |  |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -785,7 +762,6 @@ Auslesen des Anwender-Info-Feldes
 | AIF_KM | string | Kilometerstand |
 | AIF_PROG_NR | string | Programmstandsnummer |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Beschreiben des Anwender-Info-Feldes
@@ -815,7 +791,6 @@ Beschreiben des Anwender-Info-Feldes
 | AIF_SCHREIBEN_STATUS | int |  |
 | AIF_SCHREIBEN_ANZAHL | int |  |
 
-<a id="job-status-codier-checksumme"></a>
 ### STATUS_CODIER_CHECKSUMME
 
 Codier - Checksumme abfragen
@@ -829,7 +804,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STATUS_CHECKSUMME_WERT | int | Ergebnis |
 
-<a id="job-baudraten-lesen"></a>
 ### BAUDRATEN_LESEN
 
 Baudratentabelle auslesen
@@ -847,7 +821,6 @@ Baudratentabelle auslesen
 | BAUDRATE | string | Baudrate 0....125000 "" heisst Tabellenende gelesen |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-baudraten-umstellung"></a>
 ### BAUDRATEN_UMSTELLUNG
 
 Baudrate veraendern
@@ -865,7 +838,6 @@ Baudrate veraendern
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-edic-reset"></a>
 ### EDIC_RESET
 
 EDIC-Reset
@@ -878,7 +850,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-set-edic-baudrate"></a>
 ### SET_EDIC_BAUDRATE
 
 EDIC-Parameter auf 125 KBd oder 9600Bd
@@ -895,7 +866,6 @@ EDIC-Parameter auf 125 KBd oder 9600Bd
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-blocklaenge-max"></a>
 ### BLOCKLAENGE_MAX
 
 maximale Blocklaenge
@@ -909,7 +879,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | BLOCKLAENGE_MAX_WERT | int | Blocklaenge fuer Telegramm |
 
-<a id="job-daten-referenz"></a>
 ### DATEN_REFERENZ
 
 Job DATEN-Referenz
@@ -927,7 +896,6 @@ _No arguments._
 | DATEN_REF_DATENSATZ | string | Datensatzkennung |
 | DATEN_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-hw-referenz"></a>
 ### HW_REFERENZ
 
 Job HW-Referenz
@@ -943,7 +911,6 @@ _No arguments._
 | HW_REF_PROJEKT | string | Projektkennzeichnung |
 | HW_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -958,7 +925,6 @@ _No arguments._
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-ansteuerung-vorbereiten"></a>
 ### ANSTEUERUNG_VORBEREITEN
 
 Vorbereiten STEUERN_STELLGLIED, (Zeit-Zaehler auf null setzen) Achtung: Fuer Anlasserfreigabe, Hydropumpe, Stoeranzeige und Shiftlock muss dieser Job vorab gesendet werden! (Steuergeraete-Timeout: 10s!) Wird die Diagnose zum nachtriggern des SG-Timeouts aufrechterhalten, so bleibt die Ansteuerung max. 60s erhalten. Diese Groessen werden ueber INAKTIV ausgeschaltet. Fuer ansteuerbare Groessen siehe immer aktuelles Lastenheft!
@@ -971,7 +937,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-steuern-stellglied"></a>
 ### STEUERN_STELLGLIED
 
 Ansteuern der Stellglieder
@@ -994,7 +959,6 @@ Ansteuern der Stellglieder
 | STAT_INFO_STATUS_WERT | real | Messwert des Infobyte (mit Quantisierung falls notwendig) bei Magnetventil: Kupplung, Gasse (Waehlwinkel), Gang (Schaltwegvor) Gang rueck (Schaltweg rueck) und Hydropumpe Bei allen anderen Ansteuerungen erfolgt kein Ausgabe |
 | STAT_INFO_STATUS_EINH | string | Einheit des Infobyte, falls vorhanden Bei Magnetventil erfolgt Einheit abhaengig von gewaehlter Ansteuerung (mA oder Ink) |
 
-<a id="job-testprg-stop"></a>
 ### TESTPRG_STOP
 
 Beenden eines laufenden Testprogrammes Muss VOR TESTPRG_STARTEN geschickt werden! (Steuergeraete-Timeout: 10s!)
@@ -1007,7 +971,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-testprg-starten"></a>
 ### TESTPRG_STARTEN
 
 Testprogramm starten Hinweis: Zuvor TESTPRG_STOP schicken!
@@ -1033,7 +996,6 @@ Testprogramm starten Hinweis: Zuvor TESTPRG_STOP schicken!
 | STAT_INFO_STATUS2_EINH | string | Einheit des Infobyte 2, falls vorhanden Z.Z. nur Speichervorspanndruck |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Codierdaten lesen Kontrollbyte (0x08)
@@ -1054,7 +1016,6 @@ _No arguments._
 | TELEGRAMM_ANF1 | binary | Anforderungstelegramm Hinterachsuebersetzung |
 | TELEGRAMM_ANT1 | binary | Antworttelegramm Hinterachsuebersetzung |
 
-<a id="job-codierdaten-schreiben"></a>
 ### CODIERDATEN_SCHREIBEN
 
 Codierung schreiben
@@ -1073,7 +1034,6 @@ Codierung schreiben
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 
-<a id="job-getriebedaten-lesen"></a>
 ### GETRIEBEDATEN_LESEN
 
 Abgleichwerte lesen (Kontrollbyte 0x40)  Getriebedaten lesen ohne Argument fuer VS-21 (vgl. ADAPTIONSWERTE_LESEN)
@@ -1089,7 +1049,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-adaptionswerte-lesen"></a>
 ### ADAPTIONSWERTE_LESEN
 
 Adaptionswerte lesen Abgleichwerte lesen (Kontrollbyte 0x40)
@@ -1321,7 +1280,6 @@ Adaptionswerte lesen Abgleichwerte lesen (Kontrollbyte 0x40)
 | ANZ_SCHALT_FMAX_5_EINH | string | Einheit |
 | ANZ_SCHALT_FMAX_6_EINH | string | Einheit |
 
-<a id="job-adaptionswerte-loeschen"></a>
 ### ADAPTIONSWERTE_LOESCHEN
 
 Adaptionswerte loeschen (Kontrollbyte 0x43)
@@ -1340,7 +1298,6 @@ Adaptionswerte loeschen (Kontrollbyte 0x43)
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-hardware-stati-lesen"></a>
 ### STATUS_HARDWARE_STATI_LESEN
 
 Hardwarestati SMG
@@ -1361,7 +1318,6 @@ _No arguments._
 | STAT_TREIBER2_NOTANSTEUERUNG_EIN | int | Trouble Shot Down Driver 2 (kommt lowaktiv vom SG, in SGBD invertiert) 0 = aus, 1= ein |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Status Eingaenge SMG
@@ -1475,7 +1431,6 @@ _No arguments._
 | STAT_PHYD_ROH_EINH | string | Hydraulikdruck-Rohwert, Inkrement |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-io-stati-lesen"></a>
 ### STATUS_IO_STATI_LESEN
 
 Status Eingaenge SMG
@@ -1565,7 +1520,6 @@ _No arguments._
 | STAT_LED_TEXT | string | keine, 1.LED, 1. und 2. LED siehe table LED  WERT ANZEIGE_TEXT |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-fahrzeugtester-lesen"></a>
 ### STATUS_FAHRZEUGTESTER_LESEN
 
 I/O Status lesen (Kontrollbyte 0x0B) Fahrzeugtester   (Auswahlbyte  0x05) Status der Ein- u. Ausgaenge GETRAG und VS21 spezifischer Job (Nicht fuer INPA gedacht.)
@@ -1820,7 +1774,6 @@ _No arguments._
 - [WAEHLHEBELANZEIGE](#table-waehlhebelanzeige) (15 × 2)
 - [LED](#table-led) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1841,7 +1794,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 69 rows × 2 columns
@@ -1918,7 +1870,6 @@ Dimensions: 69 rows × 2 columns
 | 0x58 | Adaptionswerte Getriebe |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 15 columns
@@ -1927,7 +1878,6 @@ Dimensions: 1 rows × 15 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXY | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x05 | 0x00 | 0x07 | 0x00 | 0x08 |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 69 rows × 13 columns
@@ -2004,7 +1954,6 @@ Dimensions: 69 rows × 13 columns
 | 0x58 | 10 | 3 | 0x17 | 0x1C | 0x36 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 |
 | 0xXY | 10 | 3 | 0x17 | 0x1C | 0x36 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 120 rows × 9 columns
@@ -2132,7 +2081,6 @@ Dimensions: 120 rows × 9 columns
 | 0x89 | Byte - Digitaleingang 2 | ushort | - | -- | -- | 1 | 1 | 0 |
 | 0xXY | unbekannte Umweltbedingung | - | XY | -- | -- | 1 | 1 | 0 |
 
-<a id="table-fumwelttexte1"></a>
 ### FUMWELTTEXTE1
 
 Dimensions: 9 rows × 2 columns
@@ -2149,7 +2097,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Rueckwaertsgang |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte2"></a>
 ### FUMWELTTEXTE2
 
 Dimensions: 5 rows × 2 columns
@@ -2162,7 +2109,6 @@ Dimensions: 5 rows × 2 columns
 | 0xFF | ungueltig |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte3"></a>
 ### FUMWELTTEXTE3
 
 Dimensions: 12 rows × 2 columns
@@ -2182,7 +2128,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A | vor Synchronisation |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte4"></a>
 ### FUMWELTTEXTE4
 
 Dimensions: 6 rows × 2 columns
@@ -2196,7 +2141,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Zwischenkuppeln aktiv |
 | 0xXY | nicht definiert |
 
-<a id="table-fumwelttexte5"></a>
 ### FUMWELTTEXTE5
 
 Dimensions: 8 rows × 2 columns
@@ -2212,7 +2156,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | Waehlhebel in - (Gang runter) |
 | 0xFF | Waehlhebelposition nicht definiert |
 
-<a id="table-fumwelttexte6"></a>
 ### FUMWELTTEXTE6
 
 Dimensions: 5 rows × 2 columns
@@ -2225,7 +2168,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Bremslicht- und -test-schalter |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte7"></a>
 ### FUMWELTTEXTE7
 
 Dimensions: 17 rows × 2 columns
@@ -2250,7 +2192,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | nicht belegt |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte8"></a>
 ### FUMWELTTEXTE8
 
 Dimensions: 17 rows × 2 columns
@@ -2275,7 +2216,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | nicht belegt |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte9"></a>
 ### FUMWELTTEXTE9
 
 Dimensions: 5 rows × 2 columns
@@ -2288,7 +2228,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Anlassen |
 | 0xFF | nicht definiert |
 
-<a id="table-fumwelttexte15"></a>
 ### FUMWELTTEXTE15
 
 Dimensions: 5 rows × 2 columns
@@ -2301,7 +2240,6 @@ Dimensions: 5 rows × 2 columns
 | 0xC000 | (1+2) links + rechts offen |
 | 0xFFFF | nicht definiert |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -2319,7 +2257,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-speicher"></a>
 ### SPEICHER
 
 Dimensions: 4 rows × 2 columns
@@ -2331,7 +2268,6 @@ Dimensions: 4 rows × 2 columns
 | ROM | 0x00 |
 | E2PROM | 0x00 |
 
-<a id="table-stellglieder"></a>
 ### STELLGLIEDER
 
 Dimensions: 10 rows × 2 columns
@@ -2349,7 +2285,6 @@ Dimensions: 10 rows × 2 columns
 | GANG_WAHLHEBEL_ANZEIGE | 0x42 |
 | KOMBIANZEIGE_KOMFORTINDEX | 0x43 |
 
-<a id="table-testprg"></a>
 ### TESTPRG
 
 Dimensions: 14 rows × 4 columns
@@ -2371,7 +2306,6 @@ Dimensions: 14 rows × 4 columns
 | 0x0D | Gangerkennung Waehlwinkel einlernen |  |  |
 | 0x15 | Startbedingungen fuer Motor herstellen |  |  |
 
-<a id="table-stattesttexte"></a>
 ### STATTESTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -2384,7 +2318,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Testprogramm nicht ordnungsgemaess beendet |
 | 0xFF | Unbekannter Status |
 
-<a id="table-infotexte1a"></a>
 ### INFOTEXTE1A
 
 Dimensions: 4 rows × 2 columns
@@ -2396,7 +2329,6 @@ Dimensions: 4 rows × 2 columns
 | 0x7F | Entlueftung beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte1f"></a>
 ### INFOTEXTE1F
 
 Dimensions: 5 rows × 2 columns
@@ -2409,7 +2341,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft, oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte2a"></a>
 ### INFOTEXTE2A
 
 Dimensions: 4 rows × 2 columns
@@ -2421,7 +2352,6 @@ Dimensions: 4 rows × 2 columns
 | 0x7F | Schleifpunktadaption beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte2f"></a>
 ### INFOTEXTE2F
 
 Dimensions: 8 rows × 2 columns
@@ -2437,7 +2367,6 @@ Dimensions: 8 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor ist aus, Gang eingelegt oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte3a"></a>
 ### INFOTEXTE3A
 
 Dimensions: 5 rows × 2 columns
@@ -2450,7 +2379,6 @@ Dimensions: 5 rows × 2 columns
 | 0x7F | Adaption Kupplungskennwerte beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte3f"></a>
 ### INFOTEXTE3F
 
 Dimensions: 9 rows × 2 columns
@@ -2467,7 +2395,6 @@ Dimensions: 9 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte4a"></a>
 ### INFOTEXTE4A
 
 Dimensions: 7 rows × 2 columns
@@ -2482,7 +2409,6 @@ Dimensions: 7 rows × 2 columns
 | 0x7F | Vorspanndruchermittlung beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte4f"></a>
 ### INFOTEXTE4F
 
 Dimensions: 7 rows × 2 columns
@@ -2497,7 +2423,6 @@ Dimensions: 7 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte5a"></a>
 ### INFOTEXTE5A
 
 Dimensions: 14 rows × 2 columns
@@ -2519,7 +2444,6 @@ Dimensions: 14 rows × 2 columns
 | 0x21 | Entlueftung beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte5f"></a>
 ### INFOTEXTE5F
 
 Dimensions: 8 rows × 2 columns
@@ -2535,7 +2459,6 @@ Dimensions: 8 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte6a"></a>
 ### INFOTEXTE6A
 
 Dimensions: 7 rows × 2 columns
@@ -2550,7 +2473,6 @@ Dimensions: 7 rows × 2 columns
 | 0x02 | Waehlwinkeloffsetstromadaption |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte6f"></a>
 ### INFOTEXTE6F
 
 Dimensions: 11 rows × 2 columns
@@ -2569,7 +2491,6 @@ Dimensions: 11 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte7a"></a>
 ### INFOTEXTE7A
 
 Dimensions: 21 rows × 2 columns
@@ -2598,7 +2519,6 @@ Dimensions: 21 rows × 2 columns
 | 0x10 | Gangerkennungssensor adaptieren |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte7f"></a>
 ### INFOTEXTE7F
 
 Dimensions: 38 rows × 2 columns
@@ -2644,7 +2564,6 @@ Dimensions: 38 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte8a"></a>
 ### INFOTEXTE8A
 
 Dimensions: 8 rows × 2 columns
@@ -2660,7 +2579,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Offsetermittlung beenden |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte8f"></a>
 ### INFOTEXTE8F
 
 Dimensions: 5 rows × 2 columns
@@ -2673,7 +2591,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte9a"></a>
 ### INFOTEXTE9A
 
 Dimensions: 6 rows × 2 columns
@@ -2687,7 +2604,6 @@ Dimensions: 6 rows × 2 columns
 | 0x2A | Schaltwegmittellage einlegen beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte9f"></a>
 ### INFOTEXTE9F
 
 Dimensions: 10 rows × 2 columns
@@ -2705,7 +2621,6 @@ Dimensions: 10 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte10a"></a>
 ### INFOTEXTE10A
 
 Dimensions: 6 rows × 2 columns
@@ -2719,7 +2634,6 @@ Dimensions: 6 rows × 2 columns
 | 0x40 | Beliebigen Gang einlegen ist beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte10f"></a>
 ### INFOTEXTE10F
 
 Dimensions: 5 rows × 2 columns
@@ -2732,7 +2646,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte11a"></a>
 ### INFOTEXTE11A
 
 Dimensions: 19 rows × 2 columns
@@ -2759,7 +2672,6 @@ Dimensions: 19 rows × 2 columns
 | 0x10 | Gangerkennungssensor adaptieren |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte11f"></a>
 ### INFOTEXTE11F
 
 Dimensions: 38 rows × 2 columns
@@ -2805,7 +2717,6 @@ Dimensions: 38 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte12a"></a>
 ### INFOTEXTE12A
 
 Dimensions: 4 rows × 2 columns
@@ -2817,7 +2728,6 @@ Dimensions: 4 rows × 2 columns
 | 0x2A | Schaltwegmittellage ueberpruefen beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte12f"></a>
 ### INFOTEXTE12F
 
 Dimensions: 8 rows × 2 columns
@@ -2833,7 +2743,6 @@ Dimensions: 8 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte13a"></a>
 ### INFOTEXTE13A
 
 Dimensions: 8 rows × 2 columns
@@ -2849,7 +2758,6 @@ Dimensions: 8 rows × 2 columns
 | 0x11 | Gangerkennung Waehlwinkel einregeln Ende |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte13f"></a>
 ### INFOTEXTE13F
 
 Dimensions: 11 rows × 2 columns
@@ -2868,7 +2776,6 @@ Dimensions: 11 rows × 2 columns
 | 0x65 | Deltafehler zwischen den Waehlwinkelspuren |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte21a"></a>
 ### INFOTEXTE21A
 
 Dimensions: 4 rows × 2 columns
@@ -2880,7 +2787,6 @@ Dimensions: 4 rows × 2 columns
 | 0x7F | Adaption Kupplungskennwerte beendet, Startbedingung fuer Motor hergestellt |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte21f"></a>
 ### INFOTEXTE21F
 
 Dimensions: 8 rows × 2 columns
@@ -2896,7 +2802,6 @@ Dimensions: 8 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-hinterachsuebersetzung"></a>
 ### HINTERACHSUEBERSETZUNG
 
 Dimensions: 17 rows × 2 columns
@@ -2921,7 +2826,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Hinterachsuebersetzung 16 |
 | 0xXY | nicht definiert |
 
-<a id="table-infotextefahrzeugzustand"></a>
 ### INFOTEXTEFAHRZEUGZUSTAND
 
 Dimensions: 48 rows × 2 columns
@@ -2977,7 +2881,6 @@ Dimensions: 48 rows × 2 columns
 | 0xA1 | KKL Einlernen beendet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-fgr"></a>
 ### FGR
 
 Dimensions: 9 rows × 2 columns
@@ -2994,7 +2897,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | FGR aktiv, Verzoegern |
 | 0xXY | nicht definiert |
 
-<a id="table-freeze-frame-referenz"></a>
 ### FREEZE_FRAME_REFERENZ
 
 Dimensions: 6 rows × 2 columns
@@ -3008,7 +2910,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Freeze Frame wird verwaltet fuer DME links |
 | 0xXY | nicht definiert |
 
-<a id="table-programminfo"></a>
 ### PROGRAMMINFO
 
 Dimensions: 7 rows × 2 columns
@@ -3023,7 +2924,6 @@ Dimensions: 7 rows × 2 columns
 | 0x06 | 6. Programm |
 | 0xXY | nicht definiert |
 
-<a id="table-komfortindex"></a>
 ### KOMFORTINDEX
 
 Dimensions: 14 rows × 2 columns
@@ -3045,7 +2945,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0C | sportiv |
 | 0xXY | nicht definiert |
 
-<a id="table-ganganzeige"></a>
 ### GANGANZEIGE
 
 Dimensions: 12 rows × 2 columns
@@ -3065,7 +2964,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0F | Testfunktion (alle an) |
 | 0xFF | nicht definiert |
 
-<a id="table-waehlhebelanzeige"></a>
 ### WAEHLHEBELANZEIGE
 
 Dimensions: 15 rows × 2 columns
@@ -3088,7 +2986,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0F | Testfunktion (alle an) |
 | 0xFF | nicht definiert |
 
-<a id="table-led"></a>
 ### LED
 
 Dimensions: 4 rows × 2 columns

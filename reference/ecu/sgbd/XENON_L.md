@@ -31,7 +31,6 @@
 - [PRUEFSTEMPEL_SCHREIBEN](#job-pruefstempel-schreiben) - Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
 - [ADAPTIVWERT_LOESCHEN](#job-adaptivwert-loeschen) - loeschen eines Adaptivwerte Es muss immer ein Argument mit drei moeglichen Werten (WECHSEL_LAMPE, WECHSEL_ZUENDMODUL, WECHSEL_STEUERGERAET) uebergeben werden.
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -86,7 +83,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -107,7 +103,6 @@ _No arguments._
 | F_ART1_NR | int | momentan identisch Art-Bit |
 | F_ART1_TEXT | string | Fehlerart als Text table FArtTexte ARTTEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -120,7 +115,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 STATUS_LESEN job
@@ -147,7 +141,6 @@ _No arguments._
 | STAT_ANZAHL_LAMPENEINSCHALTUNGEN | long | Anzahl der Lampeneinschaltungen |
 | STAT_BRENNSPANNUNG_NEUE_LAMPE_WERT | int | Brennspannung der neuen Lampe [Volt] wird erst nach 3 Minuten ununterbrochenen Betriebs gespeichert |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 DIAGNOSE_WEITER job
@@ -160,7 +153,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 DIAGNOSE_ENDE job
@@ -173,7 +165,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -189,7 +180,6 @@ _No arguments._
 | BYTE2 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | BYTE3 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -208,7 +198,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-adaptivwert-loeschen"></a>
 ### ADAPTIVWERT_LOESCHEN
 
 loeschen eines Adaptivwerte Es muss immer ein Argument mit drei moeglichen Werten (WECHSEL_LAMPE, WECHSEL_ZUENDMODUL, WECHSEL_STEUERGERAET) uebergeben werden.
@@ -234,7 +223,6 @@ loeschen eines Adaptivwerte Es muss immer ein Argument mit drei moeglichen Werte
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [ADAPTIVWERTE](#table-adaptivwerte) (4 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -256,7 +244,6 @@ Dimensions: 14 rows × 2 columns
 | 0x2A | Klemme 15 < 7,5 Volt |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 34 rows × 2 columns
@@ -298,7 +285,6 @@ Dimensions: 34 rows × 2 columns
 | 0x33 | Melco/ZKW |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -314,7 +300,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-adaptivwerte"></a>
 ### ADAPTIVWERTE
 
 Dimensions: 4 rows × 2 columns

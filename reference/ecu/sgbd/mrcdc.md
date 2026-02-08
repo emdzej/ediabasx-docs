@@ -24,7 +24,6 @@
 - [FA_STREAM2STRUCT](#job-fa-stream2struct) - Decoding of 'Fahrzeugauftrag' Further fuctionality: extraction of files according to memory type Further results VERSION, BR and C_TYP will be created during run time Further results C_DATE, LACK and POLSTER will be created during run time Further results ZUSBAU_XXX (1 ... ZUSBAU_ANZ) will be created during run time 'ZUSBAU-Nummer' as a 4-digit string. The number of results depends on ZUSBAU_ANZ. X corresponds to the variable number. Further results E_WORT_XXX (1 ... E_WORT_ANZ) will be created during run time 'Ergaenzungswort' as a 4-digit string. The number of results depends on E_WORT_ANZ. X corresponds to the variable number. Further results SA_XXX (1 ... SA_ANZ) will be created during run time 'SA' as a 4-digit string. The number of results depends on SA_ANZ. X corresponds to the variable number. Further results HO_XXX (1 ... HO_ANZ) will be created during run time 'HO' as a 4-digit string. The number of results depends on HO_ANZ. X corresponds to the variable number. Further result COMPRESSED_STREAM will be created during run time depending on parameter 'VERSION'
 - [FA_STREAM_FOR_ECU](#job-fa-stream-for-ecu) - Conversion of 'Fahrzeugauftrag' from the application into Fahrzeugauftrag for the ECU. No identifiers will be provided by the application
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -37,7 +36,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-fa-stream2struct"></a>
 ### FA_STREAM2STRUCT
 
 Decoding of 'Fahrzeugauftrag' Further fuctionality: extraction of files according to memory type Further results VERSION, BR and C_TYP will be created during run time Further results C_DATE, LACK and POLSTER will be created during run time Further results ZUSBAU_XXX (1 ... ZUSBAU_ANZ) will be created during run time 'ZUSBAU-Nummer' as a 4-digit string. The number of results depends on ZUSBAU_ANZ. X corresponds to the variable number. Further results E_WORT_XXX (1 ... E_WORT_ANZ) will be created during run time 'Ergaenzungswort' as a 4-digit string. The number of results depends on E_WORT_ANZ. X corresponds to the variable number. Further results SA_XXX (1 ... SA_ANZ) will be created during run time 'SA' as a 4-digit string. The number of results depends on SA_ANZ. X corresponds to the variable number. Further results HO_XXX (1 ... HO_ANZ) will be created during run time 'HO' as a 4-digit string. The number of results depends on HO_ANZ. X corresponds to the variable number. Further result COMPRESSED_STREAM will be created during run time depending on parameter 'VERSION'
@@ -79,7 +76,6 @@ Decoding of 'Fahrzeugauftrag' Further fuctionality: extraction of files accordin
 | HO_WORT_ANZ | int | Number of saved 'HO-Worte' Particular results for the 'HO-Worte' (4 digits each) will be dynamicly generated during run time. |
 | ZUSBAU_ANZ | int | Number of saved 'ZusBau-Nummern' Particular results for the 'ZusBau-Nummern' (7 digits each) will be dynamicly generated during run time. |
 
-<a id="job-fa-stream-for-ecu"></a>
 ### FA_STREAM_FOR_ECU
 
 Conversion of 'Fahrzeugauftrag' from the application into Fahrzeugauftrag for the ECU. No identifiers will be provided by the application
@@ -109,7 +105,6 @@ Conversion of 'Fahrzeugauftrag' from the application into Fahrzeugauftrag for th
 - [KONZEPT_TABELLE](#table-konzept-tabelle) (2 × 2)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (30 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -119,7 +114,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 30 rows × 2 columns

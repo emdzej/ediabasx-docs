@@ -33,7 +33,6 @@
 - [CODIERUNG_LAENDERVARIANTE_LESEN](#job-codierung-laendervariante-lesen) - Speicher lesen EEPROM
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -52,7 +51,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Videomodul TV-Teil
@@ -65,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Videomodul TV-Teil
@@ -89,7 +86,6 @@ _No arguments._
 | ID_SW_NR | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### Pruefstempel_lesen
 
 Auslesen des Pruefstempels
@@ -107,7 +103,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Daten in den Pruefstempel schreiben
@@ -127,7 +122,6 @@ Daten in den Pruefstempel schreiben
 | JOB_STATUS | string | normalerweise "OKAY" |
 | _TEL_SENDE | binary |  |
 
-<a id="job-speicher-lesen"></a>
 ### Speicher_lesen
 
 Lesen, welche Parameter geladen sind
@@ -153,7 +147,6 @@ Lesen, welche Parameter geladen sind
 | EINGABEFEHLER | string | Fehlertextausgabe bei Eingabe >32 Byte |
 | _TEL_SENDE | binary | gesendetes Telegramm |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Selbsttest des Videomoduls
@@ -167,7 +160,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sg-status-lesen"></a>
 ### SG_STATUS_LESEN
 
 Stati lesen am Videomodul 3
@@ -209,7 +201,6 @@ _No arguments._
 | STAT_AF_KH_R_WERT | int | Kopfhoerer rechts |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen im Videomodul TV-Teil
@@ -222,7 +213,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-steuern-sleep-mode"></a>
 ### STEUERN_SLEEP_MODE
 
 Steuergeraet in Sleep-Mode versetzen
@@ -235,7 +225,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-mabiki-mode-schreiben"></a>
 ### MABIKI_MODE_SCHREIBEN
 
 Umschreiben eines Bytes
@@ -252,7 +241,6 @@ Umschreiben eines Bytes
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-codierung-laendervariante-lesen"></a>
 ### CODIERUNG_LAENDERVARIANTE_LESEN
 
 Speicher lesen EEPROM
@@ -269,7 +257,6 @@ _No arguments._
 | ID_COD_INDEX | int | aus Id-lesen |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -291,7 +278,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (59 × 2)
 - [SEGMENTAUSWAHL](#table-segmentauswahl) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -312,7 +298,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -336,7 +321,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 59 rows × 2 columns
@@ -403,7 +387,6 @@ Dimensions: 59 rows × 2 columns
 | 0x58 | Autoliv |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-segmentauswahl"></a>
 ### SEGMENTAUSWAHL
 
 Dimensions: 6 rows × 2 columns

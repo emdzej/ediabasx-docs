@@ -74,7 +74,6 @@
 - [ABGLEICH_LWS_AQ_SENSOREN](#job-abgleich-lws-aq-sensoren) - LWS direkt ansprechen und O-Abgleich durchfuehren
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -92,7 +91,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer DSC3
@@ -105,7 +103,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DSC3
@@ -131,7 +128,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen fuer DSC3
@@ -163,7 +159,6 @@ _No arguments._
 | _ANTWORT1 | binary | Antworttelegramm |
 | PRUEFCODE | binary | alle Pruefcodes, max. 1024 Byte |
 
-<a id="job-fs-lesen-kb90"></a>
 ### FS_LESEN_KB90
 
 Fehlerspeicher lesen fuer DSC3 mit KB90
@@ -180,7 +175,6 @@ _No arguments._
 | F_ZAHL | int | Fehlergesamtzahl |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen fuer DSC3
@@ -195,7 +189,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-init"></a>
 ### FS_INIT
 
 Fehlerspeicher initialisieren NVRAM-Loeschen
@@ -209,7 +202,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-offset-lesen"></a>
 ### STATUS_OFFSET_LESEN
 
 Status Offsetwerte DSC3
@@ -230,7 +222,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Status Eingaenge DSC3
@@ -254,7 +245,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-sensoren-lesen"></a>
 ### STATUS_SENSOREN_LESEN
 
 Status SENSOREN DSC_E46, Signalgruppe 02
@@ -285,7 +275,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-spannungswerte-lesen"></a>
 ### STATUS_SPANNUNGSWERTE_LESEN
 
 Status SPANNUNGSWERTE DSC_E46, Signalgruppe 01
@@ -308,7 +297,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-lws"></a>
 ### STATUS_LWS
 
 Status LWS SENSOREN DSC_E46, Signalgruppe 03
@@ -328,7 +316,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-dme-dde-1"></a>
 ### STATUS_DME_DDE_1
 
 Status DME_DDE_1 CAN-Botschaft, Signalgruppe 04
@@ -351,7 +338,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-trig-schreiben"></a>
 ### TRIG_SCHREIBEN
 
 TRIGGERSCHWELLEN SCHREIBEN DSC_E46
@@ -375,7 +361,6 @@ TRIGGERSCHWELLEN SCHREIBEN DSC_E46
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Parameterliste: E oder W,EVVL,AVVL,EVVR,AVVR,EVHL,AVHL,EVHR,AVHR,Pumpe,SV1,SV2,EUV1,EUV2,V_PUMPE
@@ -409,7 +394,6 @@ Parameterliste: E oder W,EVVL,AVVL,EVVR,AVVR,EVHL,AVHL,EVHR,AVHR,Pumpe,SV1,SV2,E
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-steuern-analog-asc-lm"></a>
 ### STEUERN_ANALOG_ASC_LM
 
 Ansteuern MD_ASC und MD_LM
@@ -430,7 +414,6 @@ Ansteuern MD_ASC und MD_LM
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-steuern-analog-msr"></a>
 ### STEUERN_ANALOG_MSR
 
 Ansteuern MD_MSR
@@ -450,7 +433,6 @@ Ansteuern MD_MSR
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-dsc-sim-va"></a>
 ### DSC_SIM_VA
 
 Steuern_Digital ansteueren u. halten
@@ -463,7 +445,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-dsc-sim-ha"></a>
 ### DSC_SIM_HA
 
 Steuern_Digital ansteueren u. halten
@@ -476,7 +457,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-dsc-sim-va1"></a>
 ### DSC_SIM_VA1
 
 Steuern_Digital ansteueren u. halten
@@ -489,7 +469,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-dsc-sim-ha1"></a>
 ### DSC_SIM_HA1
 
 Steuern_Digital ansteueren u. halten
@@ -502,7 +481,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-dsc-sim-va2"></a>
 ### DSC_SIM_VA2
 
 Steuern_Digital ansteueren u. halten
@@ -515,7 +493,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-dsc-sim-ha2"></a>
 ### DSC_SIM_HA2
 
 Steuern_Digital ansteueren u. halten
@@ -528,7 +505,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-dsc-sim-va3"></a>
 ### DSC_SIM_VA3
 
 Steuern_Digital ansteueren u. halten
@@ -541,7 +517,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-dsc-sim-ha3"></a>
 ### DSC_SIM_HA3
 
 Steuern_Digital ansteueren u. halten
@@ -554,7 +529,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckabbau-vl"></a>
 ### DRUCKABBAU_VL
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -567,7 +541,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckabbau-vr"></a>
 ### DRUCKABBAU_VR
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -580,7 +553,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckaufbau-vl"></a>
 ### DRUCKAUFBAU_VL
 
 Steuern_Digital ansteuern u. ruecksetzen
@@ -593,7 +565,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckhalten"></a>
 ### DRUCKHALTEN
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -606,7 +577,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-pumpenfoerderleistung-vo"></a>
 ### PUMPENFOERDERLEISTUNG_VO
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -619,7 +589,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckabbau-ha"></a>
 ### DRUCKABBAU_HA
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -632,7 +601,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckaufbau-ha"></a>
 ### DRUCKAUFBAU_HA
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -645,7 +613,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-pumpenfoerderleistung-ha"></a>
 ### PUMPENFOERDERLEISTUNG_HA
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -658,7 +625,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-abs-regelsimulation"></a>
 ### ABS_REGELSIMULATION
 
 Ansteuern mehrerer digitaler Ausgaenge
@@ -675,7 +641,6 @@ Ansteuern mehrerer digitaler Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-na-entlueftung-li"></a>
 ### NA_ENTLUEFTUNG_LI
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -688,7 +653,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-na-entlueftung-re"></a>
 ### NA_ENTLUEFTUNG_RE
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -701,7 +665,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-entlueftung-service"></a>
 ### ENTLUEFTUNG_SERVICE
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -714,7 +677,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 HERSTELL_Daten fuer DSC3
@@ -740,7 +702,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | DATENBYTES | binary | zusammengestoepselte Antwort |
 
-<a id="job-abgleichwerte-lesen"></a>
 ### ABGLEICHWERTE_LESEN
 
 Triggerschwellen der 4 Radsensoren
@@ -764,7 +725,6 @@ _No arguments._
 | _AUFTRAG | binary | anforderungstelegramm |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-sensoren-lesen-komp"></a>
 ### STATUS_SENSOREN_LESEN_KOMP
 
 Status SENSOREN DSC_E46, Signalgruppe 02
@@ -789,7 +749,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -807,7 +766,6 @@ _No arguments._
 | BYTE2 | int | 0-255 bzw. 0x00-0xFF |
 | BYTE3 | int | 0-255 bzw. 0x00-0xFF |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -828,7 +786,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_ANTWORT | binary |  |
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 
-<a id="job-id-schreiben"></a>
 ### ID_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muss ein Hex_String uebergeben werden: Adresse,Datenbyte: Bsp.: 0A,1B
@@ -847,7 +804,6 @@ Beschreiben des Pruefstempels Es muss ein Hex_String uebergeben werden: Adresse,
 | _TEL_ANTWORT | binary |  |
 | _TEL_AUFTRAG | binary | Anforderungstelegramm |
 
-<a id="job-login-dsc"></a>
 ### LOGIN_DSC
 
 Default init job
@@ -860,7 +816,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY oder NACK |
 
-<a id="job-drucksensor-dsc-abgleichen"></a>
 ### DRUCKSENSOR_DSC_ABGLEICHEN
 
 Default init job
@@ -873,7 +828,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY oder NACK |
 
-<a id="job-querbeschleunigungssensor-dsc-abgleichen"></a>
 ### QUERBESCHLEUNIGUNGSSENSOR_DSC_ABGLEICHEN
 
 Default init job
@@ -886,7 +840,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY oder NACK |
 
-<a id="job-lenkwinkelsensor-id-dsc-schreiben"></a>
 ### LENKWINKELSENSOR_ID_DSC_SCHREIBEN
 
 Default init job
@@ -901,7 +854,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANTWORT_1 | binary |  |
 
-<a id="job-status-lesen-dds"></a>
 ### STATUS_LESEN_DDS
 
 _No arguments._
@@ -943,7 +895,6 @@ _No arguments._
 | _AUFTRAG | binary | Anforderungstelegramm |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-dds-reset"></a>
 ### DDS_RESET
 
 _No arguments._
@@ -956,7 +907,6 @@ _No arguments._
 | _AUFTRAG | binary | Anforderungstelegramm |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-dds-eol-passiv"></a>
 ### DDS_EOL_PASSIV
 
 _No arguments._
@@ -969,7 +919,6 @@ _No arguments._
 | _AUFTRAG | binary | Anforderungstelegramm |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-cod-lesen-ci-5"></a>
 ### COD_LESEN_CI_5
 
 Codierdaten lesen DSC3 (120k Regler)
@@ -1016,7 +965,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-abgleich-dsc-sensoren"></a>
 ### ABGLEICH_DSC_SENSOREN
 
 LWS direkt ansprechen und O-Abgleich durchfuehren
@@ -1030,7 +978,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | FEHLER_URSACHE | string | OKAY, FEHLER |
 
-<a id="job-abgleich-lws-aq-sensoren"></a>
 ### ABGLEICH_LWS_AQ_SENSOREN
 
 LWS direkt ansprechen und O-Abgleich durchfuehren
@@ -1044,7 +991,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | FEHLER_URSACHE | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -1074,7 +1020,6 @@ _No arguments._
 - [TRIGGERSCHWELLE](#table-triggerschwelle) (16 × 3)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -1089,7 +1034,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 65 rows × 2 columns
@@ -1162,7 +1106,6 @@ Dimensions: 65 rows × 2 columns
 | 0xB8 | Lenkwinkel Sensor keine Winkelposition |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 62 rows × 6 columns
@@ -1232,7 +1175,6 @@ Dimensions: 62 rows × 6 columns
 | 0xB8 | 0x03 | 0x00 | 10 | 0x01 | 0x02 |
 | 0xXY | 0x03 | 0x00 | 10 | 0x01 | 0x02 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 4 rows × 3 columns
@@ -1244,7 +1186,6 @@ Dimensions: 4 rows × 3 columns
 | 0x02 | BLS | - |
 | 0xXY | unbekannte Umweltbedingung | XY |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 18 rows × 3 columns
@@ -1270,7 +1211,6 @@ Dimensions: 18 rows × 3 columns
 | V_Pumpe | 2 | 0x80 |
 | XYZ | 2 | 0x00 |
 
-<a id="table-spannungswerte"></a>
 ### SPANNUNGSWERTE
 
 Dimensions: 16 rows × 4 columns
@@ -1294,7 +1234,6 @@ Dimensions: 16 rows × 4 columns
 | 0x0E | 8.8-9.8 | 8.8-9.8 | 12.7-14.7 |
 | 0x0F | 9.5-10.3 | 9.5-10.3 | 13.7-14.8 |
 
-<a id="table-raeder"></a>
 ### RAEDER
 
 Dimensions: 4 rows × 2 columns
@@ -1306,7 +1245,6 @@ Dimensions: 4 rows × 2 columns
 | HL | 0x83 |
 | HR | 0x84 |
 
-<a id="table-fehlerursache"></a>
 ### FEHLERURSACHE
 
 Dimensions: 5 rows × 2 columns
@@ -1319,7 +1257,6 @@ Dimensions: 5 rows × 2 columns
 | Fehler_4 | 0-Abgleich Druck Sensor oder Querbeschleunigung Sensor nicht o.k. |
 | Fehler_5 | Abgleich Lenkwinkel_ECU / DSC3_ECU nicht o.k. |
 
-<a id="table-triggerschwelle"></a>
 ### TRIGGERSCHWELLE
 
 Dimensions: 16 rows × 3 columns
@@ -1343,7 +1280,6 @@ Dimensions: 16 rows × 3 columns
 | E | 0x0E | 2275 |
 | F | 0x0F | 2850 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

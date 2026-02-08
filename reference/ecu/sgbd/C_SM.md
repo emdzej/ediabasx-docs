@@ -28,7 +28,6 @@
 - [C_C_LESEN](#job-c-c-lesen) - Codierdaten lesen
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -46,7 +45,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Schiebehebedach E46 automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer SGD E46
@@ -83,7 +80,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -97,7 +93,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -112,7 +107,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -130,7 +124,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -148,7 +141,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -172,7 +164,6 @@ Codierdaten schreiben und verifizieren
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -188,7 +179,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

@@ -52,7 +52,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -71,7 +70,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -84,7 +82,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -101,7 +98,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -127,7 +123,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -169,7 +164,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -188,7 +182,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -206,7 +199,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -227,7 +219,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -256,7 +247,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -276,7 +266,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -297,7 +286,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -313,7 +301,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -335,7 +322,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -357,7 +343,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -376,7 +361,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -402,7 +386,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -444,7 +427,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -459,7 +441,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -479,7 +460,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -498,7 +478,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -513,7 +492,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -528,7 +506,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -543,7 +520,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -560,7 +536,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -575,7 +550,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -590,7 +564,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -605,7 +578,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -621,7 +593,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -640,7 +611,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -660,7 +630,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -678,7 +647,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -758,7 +726,6 @@ _No arguments._
 - [TAB_RDC_AKTIV_INAKTIV](#table-tab-rdc-aktiv-inaktiv) (3 × 2)
 - [RES_0XDCD0](#table-res-0xdcd0) (9 × 10)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -832,7 +799,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 116 rows × 2 columns
@@ -956,7 +922,6 @@ Dimensions: 116 rows × 2 columns
 | 0x0000A9 | Thyssen Krupp Presta |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -983,7 +948,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1008,7 +972,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -1040,7 +1003,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1113,7 +1075,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1126,7 +1087,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1139,7 +1099,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1152,7 +1111,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -1171,7 +1129,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1197,7 +1154,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1208,7 +1164,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1217,7 +1172,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -1227,7 +1181,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 55 rows × 3 columns
@@ -1290,7 +1243,6 @@ Dimensions: 55 rows × 3 columns
 | 0xD14302 | CAN Zeitueberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1304,7 +1256,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 7 rows × 9 columns
@@ -1319,7 +1270,6 @@ Dimensions: 7 rows × 9 columns
 | 0x0005 | SendeId | dez | high | unsigned int | - | 1 | 1 | 0 |
 | 0xFFFF | unbekannte Umweltbedingung | 1 | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 12 rows × 3 columns
@@ -1339,7 +1289,6 @@ Dimensions: 12 rows × 3 columns
 | 0x200016 | EEPROM-Fehler (Read All Failed) | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1351,7 +1300,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 7 rows × 9 columns
@@ -1366,7 +1314,6 @@ Dimensions: 7 rows × 9 columns
 | 0x0005 | SendeId | dez | high | unsigned int | - | 1 | 1 | 0 |
 | 0xFFFF | unbekannte Umweltbedingung | 1 | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 21 rows × 16 columns
@@ -1395,7 +1342,6 @@ Dimensions: 21 rows × 16 columns
 | TIME_10MS | 0x0E51 | - | - | - | - | - | - | - | - | - | - | 32 | 22 | - | RES_0x0E51 |
 | TIME_20MS | 0x0E52 | - | - | - | - | - | - | - | - | - | - | 32 | 22 | - | RES_0x0E52 |
 
-<a id="table-res-0x0e50"></a>
 ### RES_0X0E50
 
 Dimensions: 3 rows × 11 columns
@@ -1406,7 +1352,6 @@ Dimensions: 3 rows × 11 columns
 | STAT_TIME_MIN_WERT | ms | high | unsigned int | - | - | 0.00125 | - | - | liest die Minimale Zykluszeit der 2ms Task aus | minimale Zykluszeit der 2ms Task |
 | STAT_TIME_MAX_WERT | ms | high | unsigned int | - | - | 0.00125 | - | - | liest die maximale Zykluszeit der 2ms Task aus | maximale Zykluszeit der 2ms Task |
 
-<a id="table-res-0x0e51"></a>
 ### RES_0X0E51
 
 Dimensions: 3 rows × 11 columns
@@ -1417,7 +1362,6 @@ Dimensions: 3 rows × 11 columns
 | STAT_TIME_MIN_WERT | ms | high | unsigned int | - | - | 0.00125 | - | - | Liest die minimale Zykluszeit der 10ms Task aus | minimale Zykluszeit der 10ms Task |
 | STAT_TIME_MAX_WERT | ms | high | unsigned int | - | - | 0.00125 | - | - | Liest die maximale Zykluszeit der 10ms Task aus | maximale Zykluszeit der 10ms Task |
 
-<a id="table-res-0x0e52"></a>
 ### RES_0X0E52
 
 Dimensions: 3 rows × 11 columns
@@ -1428,7 +1372,6 @@ Dimensions: 3 rows × 11 columns
 | STAT_TIME_MIN_WERT | ms | high | unsigned int | - | - | 0.00125 | - | - | Liest die minimale Zykluszeit der 10ms Task aus | minimale Zykluszeit der 20ms Task |
 | STAT_TIME_MAX_WERT | ms | high | unsigned int | - | - | 0.00125 | - | - | Liest die maximale Zykluszeit der 10ms Task aus | maximale Zykluszeit der 20ms Task |
 
-<a id="table-res-0xdccf"></a>
 ### RES_0XDCCF
 
 Dimensions: 9 rows × 10 columns
@@ -1445,7 +1388,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_INTERNER_FEHLERCODE | 0-n | - | unsigned int | - | - | - | - | - | SG-interner Fehlercode |
 | STAT_AUSSENTEMPERATUR_WERT | °C | - | char | - | - | - | - | - | Aussentemperatur Bereich: -40 bis 127 Grad C (-99 °C => ungueltig) |
 
-<a id="table-res-0xdcca"></a>
 ### RES_0XDCCA
 
 Dimensions: 40 rows × 10 columns
@@ -1493,7 +1435,6 @@ Dimensions: 40 rows × 10 columns
 | STAT_SOLLTEMPERATURWERT_RE3_WERT | °C | - | char | - | - | - | - | - | Bezugstemperatur fuer Solldruckwert der RE3 Bereich: -40 bis 120 Grad C (-99 °C => ungueltig) |
 | STAT_RESTLEBENSDAUER_RE3 | 0-n | - | int | - | - | - | - | - | Restlebensdauer der Radelektronik RE3 in Monaten Bereich: 0 bis 120 Monate (-999 Monate => ungueltig) |
 
-<a id="table-res-0xdcd1"></a>
 ### RES_0XDCD1
 
 Dimensions: 9 rows × 10 columns
@@ -1510,7 +1451,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_INTERNER_FEHLERCODE | 0-n | - | unsigned int | - | - | - | - | - | SG-interner Fehlercode |
 | STAT_AUSSENTEMPERATUR_WERT | °C | - | char | - | - | - | - | - | Aussentemperatur Bereich: -40 bis 127 Grad C (-99 °C => ungueltig) |
 
-<a id="table-res-0xdccb"></a>
 ### RES_0XDCCB
 
 Dimensions: 40 rows × 10 columns
@@ -1558,7 +1498,6 @@ Dimensions: 40 rows × 10 columns
 | STAT_SOLLTEMPERATURWERT_RE3_WERT | °C | - | char | - | - | - | - | - | Bezugstemperatur fuer Solldruckwert der RE3 Bereich: -40 bis 120 Grad C (-99 °C => ungueltig) |
 | STAT_RESTLEBENSDAUER_RE3 | 0-n | - | int | - | - | - | - | - | Restlebensdauer der Radelektronik RE3 in Monaten Bereich: 0 bis 120 Monate (-999 Monate => ungueltig) |
 
-<a id="table-res-0xdcce"></a>
 ### RES_0XDCCE
 
 Dimensions: 32 rows × 10 columns
@@ -1598,7 +1537,6 @@ Dimensions: 32 rows × 10 columns
 | STAT_SOLLTEMPERATURWERT_RE3_WERT | °C | - | char | - | - | - | - | - | Bezugstemperatur fuer Solldruckwert der RE3 Bereich: -40 bis 120 Grad C (-99 °C => ungueltig) |
 | STAT_RESTLEBENSDAUER_RE3 | 0-n | - | int | - | - | - | - | - | Restlebensdauer der Radelektronik RE3 in Monaten Bereich: 0 bis 120 Monate (-999 Monate => ungueltig) |
 
-<a id="table-res-0xdcc4"></a>
 ### RES_0XDCC4
 
 Dimensions: 13 rows × 10 columns
@@ -1619,7 +1557,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_POS_CHANGED | 0-n | - | unsigned char | - | TAB_RDC_CHANGED | - | - | - | Radelektronik ID vom angewählten Rad hat sich geändert, 0 = nicht geändert, 1 = geändert, FF= Signal unbekannt |
 | STAT_RE_OVERHEAT_AKTIV | 0-n | - | unsigned char | - | TAB_RDC_AKTIV_INAKTIV | - | - | - | Überhitzungsmeldung der Radelektronik vom angewählten Rad , 0 = Inaktiv, 1 = aktiv, FF = Signal unbekannt |
 
-<a id="table-res-0xdccc"></a>
 ### RES_0XDCCC
 
 Dimensions: 32 rows × 10 columns
@@ -1659,7 +1596,6 @@ Dimensions: 32 rows × 10 columns
 | STAT_SOLLTEMPERATURWERT_RE3_WERT | °C | - | char | - | - | - | - | - | Bezugstemperatur fuer Solldruckwert der RE3 Bereich: -40 bis 120 Grad C (-99 °C => ungueltig) |
 | STAT_RESTLEBENSDAUER_RE3 | 0-n | - | int | - | - | - | - | - | Restlebensdauer der Radelektronik RE3 in Monaten Bereich: 0 bis 120 Monate (-999 Monate => ungueltig) |
 
-<a id="table-res-0xdcc2"></a>
 ### RES_0XDCC2
 
 Dimensions: 13 rows × 10 columns
@@ -1680,7 +1616,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_POS_CHANGED | 0-n | - | unsigned char | - | TAB_RDC_CHANGED | - | - | - | Radelektronik ID vom angewählten Rad hat sich geändert, 0 = nicht geändert, 1 = geändert, FF= Signal unbekannt |
 | STAT_RE_OVERHEAT_AKTIV | 0-n | - | unsigned char | - | TAB_RDC_AKTIV_INAKTIV | - | - | - | Überhitzungsmeldung der Radelektronik vom angewählten Rad , 0 = Inaktiv, 1 = aktiv, FF = Signal unbekannt |
 
-<a id="table-res-0xdcc8"></a>
 ### RES_0XDCC8
 
 Dimensions: 5 rows × 10 columns
@@ -1693,7 +1628,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_ZAEHLER_HARTE_WARNUNG_HR | 0-n | - | unsigned char | - | - | - | - | - | Zaehler der harten Warnungen hinten rechts |
 | STAT_ZAEHLER_HARTE_WARNUNG_XX | 0-n | - | unsigned char | - | - | - | - | - | Zaehler der harten Warnungen waehrend ER Verlust |
 
-<a id="table-arg-0xdcc0"></a>
 ### ARG_0XDCC0
 
 Dimensions: 2 rows × 12 columns
@@ -1703,7 +1637,6 @@ Dimensions: 2 rows × 12 columns
 | RE_ID | - | - | unsigned long | - | - | - | - | - | - | - | ID der Radelektronik |
 | RE_POS | 0-n | - | unsigned char | - | TAB_RDC_RAD_POSITION_NR | - | - | - | 0 | 9 | Position der Radelektronik: 0 = vorne links,  1 = vorne rechts, 2 = hinten links, 3 = hinten rechts, 4 = Reserverad(nur RDC Gen2), 5, 6, 7, 8, 9 = Radposition nicht bekannt |
 
-<a id="table-res-0xdcc1"></a>
 ### RES_0XDCC1
 
 Dimensions: 13 rows × 10 columns
@@ -1724,7 +1657,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_POS_CHANGED | 0-n | - | unsigned char | - | TAB_RDC_CHANGED | - | - | - | Radelektronik ID vom angewählten Rad hat sich geändert, 0 = nicht geändert, 1 = geändert, FF= Signal unbekannt |
 | STAT_RE_OVERHEAT_AKTIV | 0-n | - | unsigned char | - | TAB_RDC_AKTIV_INAKTIV | - | - | - | Überhitzungsmeldung der Radelektronik vom angewählten Rad, 0 = Inaktiv, 1 = aktiv, FF = Signal unbekannt |
 
-<a id="table-res-0xdcc3"></a>
 ### RES_0XDCC3
 
 Dimensions: 13 rows × 10 columns
@@ -1745,7 +1677,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_POS_CHANGED | 0-n | - | unsigned char | - | TAB_RDC_CHANGED | - | - | - | Radelektronik ID vom angewählten Rad hat sich geändert, 0 = nicht geändert, 1 = geändert, FF= Signal unbekannt |
 | STAT_RE_OVERHEAT_AKTIV | 0-n | - | unsigned char | - | TAB_RDC_AKTIV_INAKTIV | - | - | - | Überhitzungsmeldung der Radelektronik vom angewählten Rad , 0 = Inaktiv, 1 = aktiv, FF = Signal unbekannt |
 
-<a id="table-res-0xdccd"></a>
 ### RES_0XDCCD
 
 Dimensions: 32 rows × 10 columns
@@ -1785,7 +1716,6 @@ Dimensions: 32 rows × 10 columns
 | STAT_SOLLTEMPERATURWERT_RE3_WERT | °C | - | char | - | - | - | - | - | Bezugstemperatur fuer Solldruckwert der RE3 Bereich: -40 bis 120 Grad C (-99 °C => ungueltig) |
 | STAT_RESTLEBENSDAUER_RE3 | 0-n | - | int | - | - | - | - | - | Restlebensdauer der Radelektronik RE3 in Monaten Bereich: 0 bis 120 Monate (-999 Monate => ungueltig) |
 
-<a id="table-arg-0xdcc6"></a>
 ### ARG_0XDCC6
 
 Dimensions: 2 rows × 12 columns
@@ -1795,7 +1725,6 @@ Dimensions: 2 rows × 12 columns
 | FUNKTIONSNR | 0-n | - | unsigned char | - | TAB_RDC_STEUERFUNKTIONEN | - | - | - | - | - | 1 =  BANDMODE  -  Bandmode; 2 =  ER_FAHRT  - Eigenraderkennung bei Fahrt; 3 =  ER_STAND  - Eigenraderkennung im Stand (Gen2); 4 -  TEST_ER_FAHRT  - Empfang der Eigenraeder bei Fahrt pruefen; 5 -   TEST_ER_STAND  - Empfang der Eigenraeder im Stand pruefen (Gen2); 6 -  RDCBUS_DIAG - Stromdiagnose LIN-Teilnehmer (Gen2); 7 -  SOLLDRUCK_SCHREIBEN  - aktuelle Reifendruckwerte als Sollwert; 8 -  CAL_REQUEST  - Kalibrieranforderung; 9 -  ER_FAHRT_OHNE_TRIGGER  - Eigenraderkennung bei Fahrt ohne Auswertung Triggerbit (Gen3); 10 -  TEST_ER_FAHRT_OHNE_TRIGGER  - Empfang der Eigenraeder bei Fahrt pruefen ohne Auswertung Triggerbit (Gen3) |
 | AKTIONSNR | 0-n | - | unsigned char | - | TAB_RDC_SET_RESET | - | - | - | - | - | 1 - SET; 0 - RESET |
 
-<a id="table-tab-rdc-steuerfunktionen"></a>
 ### TAB_RDC_STEUERFUNKTIONEN
 
 Dimensions: 10 rows × 2 columns
@@ -1813,7 +1742,6 @@ Dimensions: 10 rows × 2 columns
 | 9 | ER_FAHRT_OHNE_TRIGGER (nur RDC Gen3) |
 | 10 | TEST_ER_FAHRT_OHNE_TRIGGER (nur RDC Gen3) |
 
-<a id="table-tab-rdc-set-reset"></a>
 ### TAB_RDC_SET_RESET
 
 Dimensions: 2 rows × 2 columns
@@ -1823,7 +1751,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Zurücksetzen |
 | 1 | Setzen |
 
-<a id="table-res-0xdcc5"></a>
 ### RES_0XDCC5
 
 Dimensions: 32 rows × 10 columns
@@ -1863,7 +1790,6 @@ Dimensions: 32 rows × 10 columns
 | STAT_ANT_UEBER_SPANNUNG_AKTIV | 0-n | - | unsigned char | - | TAB_RDC_AKTIV_INAKTIV | - | - | - | Ueberspannung an Empfangsantenne erkannt : 0 = inaktiv , 1 = aktiv |
 | STAT_FREQUENZ_WERT | MHz | - | unsigned int | - | - | - | - | - | Gibt die aktuelle RF-Frequenz zurück. Die Frequenz ist abhaengig von der Codierung. (315 oder 433). Angabe in MHz |
 
-<a id="table-tab-rdc-bekannt-nicht-bekannt"></a>
 ### TAB_RDC_BEKANNT_NICHT_BEKANNT
 
 Dimensions: 3 rows × 2 columns
@@ -1874,7 +1800,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | bekannt |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-confirmed"></a>
 ### TAB_RDC_CONFIRMED
 
 Dimensions: 3 rows × 2 columns
@@ -1885,7 +1810,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | bestätigt |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-dtc-active"></a>
 ### TAB_RDC_DTC_ACTIVE
 
 Dimensions: 3 rows × 2 columns
@@ -1896,7 +1820,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | DTC aktiv |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-cal-active"></a>
 ### TAB_RDC_CAL_ACTIVE
 
 Dimensions: 3 rows × 2 columns
@@ -1907,7 +1830,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Kalibrieranforderung aktiv |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-lin-status"></a>
 ### TAB_RDC_LIN_STATUS
 
 Dimensions: 3 rows × 2 columns
@@ -1918,7 +1840,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | LIN ein |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-timeout"></a>
 ### TAB_RDC_TIMEOUT
 
 Dimensions: 3 rows × 2 columns
@@ -1929,7 +1850,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Timeout |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-bandmode-active"></a>
 ### TAB_RDC_BANDMODE_ACTIVE
 
 Dimensions: 3 rows × 2 columns
@@ -1940,7 +1860,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Bandmode aktiv |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-started"></a>
 ### TAB_RDC_STARTED
 
 Dimensions: 3 rows × 2 columns
@@ -1951,7 +1870,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | gestartet |
 | 255 | nciht definiert |
 
-<a id="table-tab-rdc-on-off"></a>
 ### TAB_RDC_ON_OFF
 
 Dimensions: 3 rows × 2 columns
@@ -1962,7 +1880,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ein |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-vehicle-running"></a>
 ### TAB_RDC_VEHICLE_RUNNING
 
 Dimensions: 3 rows × 2 columns
@@ -1973,7 +1890,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Fahrzeug fährt |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-detected"></a>
 ### TAB_RDC_DETECTED
 
 Dimensions: 3 rows × 2 columns
@@ -1984,7 +1900,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | erkannt |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-key-pressed"></a>
 ### TAB_RDC_KEY_PRESSED
 
 Dimensions: 3 rows × 2 columns
@@ -1995,7 +1910,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Taster betätigt |
 | 255 | nicht definiert |
 
-<a id="table-res-0xdcc9"></a>
 ### RES_0XDCC9
 
 Dimensions: 40 rows × 10 columns
@@ -2043,7 +1957,6 @@ Dimensions: 40 rows × 10 columns
 | STAT_SOLLTEMPERATURWERT_RE3_WERT | °C | - | char | - | - | - | - | - | Bezugstemperatur fuer Solldruckwert der RE3 Bereich: -40 bis 120 Grad C (-99 °C => ungueltig) |
 | STAT_RESTLEBENSDAUER_RE3 | 0-n | - | int | - | - | - | - | - | Restlebensdauer der Radelektronik RE3 in Monaten Bereich: 0 bis 120 Monate (-999 Monate => ungueltig) |
 
-<a id="table-res-0xdcc7"></a>
 ### RES_0XDCC7
 
 Dimensions: 13 rows × 10 columns
@@ -2064,7 +1977,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_POS_CHANGED | 0-n | - | unsigned char | - | TAB_RDC_CHANGED | - | - | - | Radelektronik ID vom angewählten Rad hat sich geändert, 0 = nicht geändert, 1 = geändert, FF= Signal unbekannt |
 | STAT_RE_OVERHEAT_AKTIV | 0-n | - | unsigned char | - | TAB_RDC_AKTIV_INAKTIV | - | - | - | Überhitzungsmeldung der Radelektronik vom angewählten Rad, 0 = Inaktiv, 1 = aktiv, FF = Signal unbekannt |
 
-<a id="table-tab-rdc-rad-position-nr"></a>
 ### TAB_RDC_RAD_POSITION_NR
 
 Dimensions: 10 rows × 2 columns
@@ -2082,7 +1994,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | unbekannt 4 |
 | 9 | unbekannt 5 (nur RDC Gen2) |
 
-<a id="table-tab-rdc-changed"></a>
 ### TAB_RDC_CHANGED
 
 Dimensions: 3 rows × 2 columns
@@ -2093,7 +2004,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | geändert |
 | 255 | Signal unbekannt |
 
-<a id="table-tab-rdc-aktiv-inaktiv"></a>
 ### TAB_RDC_AKTIV_INAKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2104,7 +2014,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | aktiv |
 | 255 | Signal unbekannt |
 
-<a id="table-res-0xdcd0"></a>
 ### RES_0XDCD0
 
 Dimensions: 9 rows × 10 columns

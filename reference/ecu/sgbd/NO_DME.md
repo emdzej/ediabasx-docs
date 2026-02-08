@@ -27,7 +27,6 @@
 - [STEUERN_SYNC_MODE](#job-steuern-sync-mode)
 - [STATUS_SYNC_MODE](#job-status-sync-mode)
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Einstellen der Kommunikationsparameter
@@ -40,7 +39,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -58,7 +56,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -72,7 +69,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | ID_EWS_SS | int | Identifikation EWS-Schnittstelle (aus EWS-SG) |
 
-<a id="job-isn-lesen"></a>
 ### ISN_LESEN
 
 _No arguments._
@@ -84,7 +80,6 @@ _No arguments._
 | ISN_LESEN_WERT | string | ISN als  WERT |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 _No arguments._
@@ -95,7 +90,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-sync-mode"></a>
 ### STEUERN_SYNC_MODE
 
 #### Arguments
@@ -112,7 +106,6 @@ _No arguments._
 | STEUERN_SYNC_MODE_STATUS | int | Statusflag |
 | STEUERN_SYNC_MODE_TEXT | string | Statustext |
 
-<a id="job-status-sync-mode"></a>
 ### STATUS_SYNC_MODE
 
 _No arguments._
@@ -131,7 +124,6 @@ _No arguments._
 
 - [JOBRESULT](#table-jobresult) (7 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns

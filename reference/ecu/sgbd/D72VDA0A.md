@@ -168,7 +168,6 @@
 - [STEUERN_RUHESTROMMESSUNG](#job-steuern-ruhestrommessung) - 0x312C STEUERN_RUHESTROMMESSUNG Ansteuern Ruhestrompruefung mit IBS Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
 - [STATUS_RUHESTROMMESSUNG](#job-status-ruhestrommessung) - 0x332C STATUS_RUHESTROMMESSUNG Auslesen Ruhestromprüfung mit IBS Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -187,7 +186,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -200,7 +198,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -217,7 +214,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -243,7 +239,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -285,7 +280,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -304,7 +298,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -322,7 +315,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -343,7 +335,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -372,7 +363,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -392,7 +382,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -413,7 +402,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -429,7 +417,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -448,7 +435,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -474,7 +460,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -516,7 +501,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -531,7 +515,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -557,7 +540,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -577,7 +559,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -596,7 +577,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -615,7 +595,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -630,7 +609,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -649,7 +627,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -669,7 +646,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -686,7 +662,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -705,7 +680,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -720,7 +694,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-info"></a>
 ### CBS_INFO
 
 Ausgabe der CBS-Version
@@ -736,7 +709,6 @@ _No arguments._
 | CBS_VERSION_TEXT | string | CBS Version im Klartext |
 | CBS_VERSION_HEX | string | CBS Version als Wert |
 
-<a id="job-cbs-daten-lesen"></a>
 ### CBS_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 5) UDS: $22 ReadDataByIdentifier Modus  : Default
@@ -795,7 +767,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset"></a>
 ### CBS_RESET
 
 CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modus  : Default Musterparametersatz fuer Bremsbelagverschleiss Vorder/Hinterachse br_v,100,1,0,0,0,1,0,0 br_h,100,1,0,0,0,1,0,0 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!)
@@ -826,7 +797,6 @@ CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modu
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -841,7 +811,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -858,7 +827,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -873,7 +841,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -888,7 +855,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -903,7 +869,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -919,7 +884,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -938,7 +902,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -958,7 +921,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -976,7 +938,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -992,7 +953,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-tel-roh"></a>
 ### TEL_ROH
 
 Ausführen eines Telegramms nur mit Übergabe der Daten ignoriert Leerzeichen Format 001122 ....
@@ -1011,7 +971,6 @@ Ausführen eines Telegramms nur mit Übergabe der Daten ignoriert Leerzeichen Fo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-start-systemcheck-llerh"></a>
 ### START_SYSTEMCHECK_LLERH
 
 [$2E $5FF1]     Ansteuern Diagnosefunktion Leerlauf-Drehzahl-Absolutwertvorgabe
@@ -1030,7 +989,6 @@ Ausführen eines Telegramms nur mit Übergabe der Daten ignoriert Leerzeichen Fo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-stop-systemcheck-llerh"></a>
 ### STOP_SYSTEMCHECK_LLERH
 
 [$2E $5FF1] Beenden von "Ansteuern Diagnosefunktion Leerlauf-Erhöhung (absolut)"
@@ -1045,7 +1003,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-start-systemcheck-pm-messemode"></a>
 ### START_SYSTEMCHECK_PM_MESSEMODE
 
 $31 01 F0F6 Die Größe St_pmi_nv.B_fapmmess wird in der Layer-Schnittstelle (zurück)gesetzt.
@@ -1060,7 +1017,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-stop-systemcheck-pm-messemode"></a>
 ### STOP_SYSTEMCHECK_PM_MESSEMODE
 
 $32 F6 Systemdiagnose Batteriesensor reset beenden
@@ -1075,7 +1031,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-start-systemcheck-zyl"></a>
 ### START_SYSTEMCHECK_ZYL
 
 Starten der Drehungleichförmigkeitsmessung LLR_AUS Starten der Laufruhe - Mengen Messung
@@ -1094,7 +1049,6 @@ Starten der Drehungleichförmigkeitsmessung LLR_AUS Starten der Laufruhe - Menge
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-stop-systemcheck-zyl"></a>
 ### STOP_SYSTEMCHECK_ZYL
 
 Beenden der Drehungleichförmigkeitsmessung
@@ -1109,7 +1063,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-status-systemcheck-zyl"></a>
 ### STATUS_SYSTEMCHECK_ZYL
 
 Status der Drehungleichförmigleitsmessung LLR_AUS Ausgegeben wird der Status des FBC-Reglers FBC_stActive (0: Steuern, 1:Regeln)
@@ -1126,7 +1079,6 @@ _No arguments._
 | STAT_STATUS_SYSTEMCHECK_ZYL_TEXT | string | Status des FBC-Reglers FBC_stActive (Text) |
 | STAT_STATUS_SYSTEMCHECK_ZYL_WERT | int | Status des FBC-Reglers FBC_stActive (Wert) |
 
-<a id="job-status-systemcheck-pm-messemode"></a>
 ### STATUS_SYSTEMCHECK_PM_MESSEMODE
 
 $31 03 F0F6 Ausgabe der Größe St_pmi_nv.B_fapmmess
@@ -1142,7 +1094,6 @@ _No arguments._
 | _RESPONSE | binary | Hex-Auftrag an SG |
 | STATUS_SYSTEMCHECK_PM_MESSMODE_WERT | int | Ausgabe der Größe St_pmi_nv.B_fapmmess |
 
-<a id="job-steuern-hydrauliktest-dde"></a>
 ### STEUERN_HYDRAULIKTEST_DDE
 
 Starten der Hydrauliktestfunktionen der DDE StartRoutineByLocalIdentifier $31
@@ -1164,7 +1115,6 @@ Starten der Hydrauliktestfunktionen der DDE StartRoutineByLocalIdentifier $31
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-steuern-hydrauliktest-dde-ende"></a>
 ### STEUERN_HYDRAULIKTEST_DDE_ENDE
 
 Stoppen der DDE-Hydrauliktests StopRoutineByLocalIdentifier $32
@@ -1183,7 +1133,6 @@ Stoppen der DDE-Hydrauliktests StopRoutineByLocalIdentifier $32
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-steuern-offsetlernen"></a>
 ### STEUERN_OFFSETLERNEN
 
 Starten der Offsetlernfunktionen für AGR-Ventil und Drallklappe StartRoutineByLocalIdentifier $31 - 01 F0 56 + 10bytes
@@ -1208,7 +1157,6 @@ Starten der Offsetlernfunktionen für AGR-Ventil und Drallklappe StartRoutineByL
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-status-offsetlernen"></a>
 ### STATUS_OFFSETLERNEN
 
 Status der Offsetlernfunktionen für AGR-Ventil und Drallklappe auslesen InputOutputControlByLocalIdentifier $30
@@ -1233,7 +1181,6 @@ Status der Offsetlernfunktionen für AGR-Ventil und Drallklappe auslesen InputOu
 | STARTZAEHLER | int | Anzahl der Starts seit letztem Offset-Lernen |
 | STAT_LERNFUNKTION_WERT | int | Liefert als Ergebnis den Status der Lernfunktion |
 
-<a id="job-abgleichwerte-schreiben"></a>
 ### ABGLEICHWERTE_SCHREIBEN
 
 Beschreiben des internen Speichers mit den motorspezifischen Abgleichrequest
@@ -1254,7 +1201,6 @@ Beschreiben des internen Speichers mit den motorspezifischen Abgleichrequest
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-abgleichwerte-lesen"></a>
 ### ABGLEICHWERTE_LESEN
 
 Lesen der Motorabgleichwerte Letze Änderung: Funktion auf 7-stelligen IMA - Wert erweitert
@@ -1274,7 +1220,6 @@ Lesen der Motorabgleichwerte Letze Änderung: Funktion auf 7-stelligen IMA - Wer
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-lernwerte-ruecksetzen"></a>
 ### LERNWERTE_RUECKSETZEN
 
 RUECKSETZEN gelernter Werte vom EEPROM mit LABEL Verwendete Tabelle: LERNWERTE_RUECK UDS: $2E InputOutputControlByLocalIdentifier
@@ -1294,7 +1239,6 @@ RUECKSETZEN gelernter Werte vom EEPROM mit LABEL Verwendete Tabelle: LERNWERTE_R
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-selbsterkennung-ruecksetzen"></a>
 ### SELBSTERKENNUNG_RUECKSETZEN
 
 (De)aktivieren der Selbsterkennung Verwendete Tabellen: DIG_BLOCKx (1 bis 4) UDS: $2E InputOutputControlByLocalIdentifier
@@ -1314,7 +1258,6 @@ RUECKSETZEN gelernter Werte vom EEPROM mit LABEL Verwendete Tabelle: LERNWERTE_R
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-status-kilometerstand"></a>
 ### STATUS_KILOMETERSTAND
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1335,7 +1278,6 @@ _No arguments._
 | STAT_KILOMETERSTAND_WERT | real | Ergebnis |
 | STAT_KILOMETERSTAND_EINH | string | Einheit |
 
-<a id="job-status-betriebsstundenzaehler"></a>
 ### STATUS_BETRIEBSSTUNDENZAEHLER
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1356,7 +1298,6 @@ _No arguments._
 | STAT_BETRIEBSSTUNDENZAEHLER_WERT | real | Ergebnis |
 | STAT_BETRIEBSSTUNDENZAEHLER_EINH | string | Einheit |
 
-<a id="job-status-abgastemperatur-csf"></a>
 ### STATUS_ABGASTEMPERATUR_CSF
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1377,7 +1318,6 @@ _No arguments._
 | STAT_ABGASTEMPERATUR_CSF_WERT | real | Ergebnis |
 | STAT_ABGASTEMPERATUR_CSF_EINH | string | Einheit |
 
-<a id="job-status-abgastemperatur-kat"></a>
 ### STATUS_ABGASTEMPERATUR_KAT
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1398,7 +1338,6 @@ _No arguments._
 | STAT_ABGASTEMPERATUR_KAT_WERT | real | Ergebnis |
 | STAT_ABGASTEMPERATUR_KAT_EINH | string | Einheit |
 
-<a id="job-status-ansauglufttemperatur"></a>
 ### STATUS_ANSAUGLUFTTEMPERATUR
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1419,7 +1358,6 @@ _No arguments._
 | STAT_ANSAUGLUFTTEMPERATUR_WERT | real | Ergebnis |
 | STAT_ANSAUGLUFTTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-an-lufttemperatur"></a>
 ### STATUS_AN_LUFTTEMPERATUR
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1440,7 +1378,6 @@ _No arguments._
 | STAT_AN_LUFTTEMPERATUR_WERT | real | Ergebnis |
 | STAT_AN_LUFTTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-atmosphaerendruck"></a>
 ### STATUS_ATMOSPHAERENDRUCK
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1461,7 +1398,6 @@ _No arguments._
 | STAT_ATMOSPHAERENDRUCK_WERT | real | Ergebnis |
 | STAT_ATMOSPHAERENDRUCK_EINH | string | Einheit |
 
-<a id="job-status-differenzdruck-csf"></a>
 ### STATUS_DIFFERENZDRUCK_CSF
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1482,7 +1418,6 @@ _No arguments._
 | STAT_DIFFERENZDRUCK_CSF_WERT | real | Ergebnis |
 | STAT_DIFFERENZDRUCK_CSF_EINH | string | Einheit |
 
-<a id="job-status-kraftstofftemperatur"></a>
 ### STATUS_KRAFTSTOFFTEMPERATUR
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1503,7 +1438,6 @@ _No arguments._
 | STAT_KRAFTSTOFFTEMPERATUR_WERT | real | Ergebnis |
 | STAT_KRAFTSTOFFTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-kuehlmitteltemperatur"></a>
 ### STATUS_KUEHLMITTELTEMPERATUR
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1524,7 +1458,6 @@ _No arguments._
 | STAT_KUEHLMITTELTEMPERATUR_WERT | real | Ergebnis |
 | STAT_KUEHLMITTELTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-ladedruck-ist"></a>
 ### STATUS_LADEDRUCK_IST
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1545,7 +1478,6 @@ _No arguments._
 | STAT_LADEDRUCK_IST_WERT | real | Ergebnis |
 | STAT_LADEDRUCK_IST_EINH | string | Einheit |
 
-<a id="job-status-ladedruck-soll"></a>
 ### STATUS_LADEDRUCK_SOLL
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1566,7 +1498,6 @@ _No arguments._
 | STAT_LADEDRUCK_SOLL_WERT | real | Ergebnis |
 | STAT_LADEDRUCK_SOLL_EINH | string | Einheit |
 
-<a id="job-status-ladelufttemperatur"></a>
 ### STATUS_LADELUFTTEMPERATUR
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1587,7 +1518,6 @@ _No arguments._
 | STAT_LADELUFTTEMPERATUR_WERT | real | Ergebnis |
 | STAT_LADELUFTTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-lmm-masse"></a>
 ### STATUS_LMM_MASSE
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1608,7 +1538,6 @@ _No arguments._
 | STAT_LMM_MASSE_WERT | real | Ergebnis |
 | STAT_LMM_MASSE_EINH | string | Einheit |
 
-<a id="job-status-luftmasse-ist"></a>
 ### STATUS_LUFTMASSE_IST
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1629,7 +1558,6 @@ _No arguments._
 | STAT_LUFTMASSE_IST_WERT | real | Ergebnis |
 | STAT_LUFTMASSE_IST_EINH | string | Einheit |
 
-<a id="job-status-luftmasse-soll"></a>
 ### STATUS_LUFTMASSE_SOLL
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1650,7 +1578,6 @@ _No arguments._
 | STAT_LUFTMASSE_SOLL_WERT | real | Ergebnis |
 | STAT_LUFTMASSE_SOLL_EINH | string | Einheit |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1671,7 +1598,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | real | Ergebnis |
 | STAT_MOTORDREHZAHL_EINH | string | Einheit |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1692,7 +1618,6 @@ _No arguments._
 | STAT_MOTORTEMPERATUR_WERT | real | Ergebnis |
 | STAT_MOTORTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-pwg-poti-spannung"></a>
 ### STATUS_PWG_POTI_SPANNUNG
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1713,7 +1638,6 @@ _No arguments._
 | STAT_PWG_POTI_SPANNUNG_WERT | real | Ergebnis |
 | STAT_PWG_POTI_SPANNUNG_EINH | string | Einheit |
 
-<a id="job-status-raildruck-ist"></a>
 ### STATUS_RAILDRUCK_IST
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1734,7 +1658,6 @@ _No arguments._
 | STAT_RAILDRUCK_IST_WERT | real | Ergebnis |
 | STAT_RAILDRUCK_IST_EINH | string | Einheit |
 
-<a id="job-status-raildruck-soll"></a>
 ### STATUS_RAILDRUCK_SOLL
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1755,7 +1678,6 @@ _No arguments._
 | STAT_RAILDRUCK_SOLL_WERT | real | Ergebnis |
 | STAT_RAILDRUCK_SOLL_EINH | string | Einheit |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1776,7 +1698,6 @@ _No arguments._
 | STAT_UBATT_WERT | real | Ergebnis |
 | STAT_UBATT_EINH | string | Einheit |
 
-<a id="job-status-umgebungstemperatur"></a>
 ### STATUS_UMGEBUNGSTEMPERATUR
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1797,7 +1718,6 @@ _No arguments._
 | STAT_UMGEBUNGSTEMPERATUR_WERT | real | Ergebnis |
 | STAT_UMGEBUNGSTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-luftemperatur"></a>
 ### STATUS_LUFTEMPERATUR
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1818,7 +1738,6 @@ _No arguments._
 | STAT_LUFTEMPERATUR_WERT | real | Ergebnis |
 | STAT_LUFTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-pedalwertgeber-poti-1"></a>
 ### STATUS_PEDALWERTGEBER_POTI_1
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1841,7 +1760,6 @@ _No arguments._
 | STAT_PWG_POTI_SPANNUNG_1_WERT | real | Ergebnis |
 | STAT_PWG_POTI_SPANNUNG_1_EINH | string | Einheit |
 
-<a id="job-status-pedalwertgeber-poti-2"></a>
 ### STATUS_PEDALWERTGEBER_POTI_2
 
 Messwert selectiv lesen UDS: $2C DynamicallyDefineDataIdentifier 
@@ -1864,7 +1782,6 @@ _No arguments._
 | STAT_PWG_POTI_SPANNUNG_2_WERT | real | Ergebnis |
 | STAT_PWG_POTI_SPANNUNG_2_EINH | string | Einheit |
 
-<a id="job-status-injektortausch"></a>
 ### STATUS_INJEKTORTAUSCH
 
 Messwert selectiv lesen UDS: $22 InputOutputControlByLocalIdentifier 
@@ -1882,7 +1799,6 @@ _No arguments._
 | STAT_INJEKTORTAUSCH_EINH | string | Einheit |
 | STAT_INJEKTORTAUSCH_INFO | string | Ergebnis |
 
-<a id="job-status-messwerte-ibs"></a>
 ### STATUS_MESSWERTE_IBS
 
 0x22402B STATUS_MESSWERTE_IBS Messwerte IBS auslesen
@@ -1925,7 +1841,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-laufunruhe-drehzahl"></a>
 ### STATUS_LAUFUNRUHE_DREHZAHL
 
 Auslesen der zylinderspezifischen Drehzahlen
@@ -1949,7 +1864,6 @@ _No arguments._
 | STAT_LAUFUNRUHE_DREHZAHL_ZYL8_WERT | real | Zylinderspezifische Drehzahl für Zylinder 8 |
 | STAT_LAUFUNRUHE_DREHZAHL_EINH | string | Einheit der zylinderspezifische Drehzahl |
 
-<a id="job-status-laufunruhe-llr-menge"></a>
 ### STATUS_LAUFUNRUHE_LLR_MENGE
 
 Auslesen selektive Mengenkorrektur
@@ -1973,7 +1887,6 @@ _No arguments._
 | STAT_LAUFUNRUHE_LLR_MENGE_ZYL8_WERT | real | Zylinderselektive FBC-Mengenkorrektur für Zylinder 8 |
 | STAT_LAUFUNRUHE_LLR_MENGE_EINH | string | Einheit der zylinderselektiven FBC-Mengenkorrektur |
 
-<a id="job-datensatz-name"></a>
 ### DATENSATZ_NAME
 
 Auslesen des Datensatznamens aus dem Steuergerät UDS  : $22   ReadDataByIdentifier UDS  : $4034 Sub-Parameter
@@ -1989,7 +1902,6 @@ _No arguments._
 | _RESPONSE | binary | Hex-Antwort von SG |
 | DATENSATZNAME | string | Datensatzname |
 
-<a id="job-steuern-pm-histogram-reset"></a>
 ### STEUERN_PM_HISTOGRAM_RESET
 
 $2E 5F F5 04 Loeschen von pminfo1 index 23-30
@@ -2004,7 +1916,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-abgleich-ima-lesen"></a>
 ### ABGLEICH_IMA_LESEN
 
 Alle IMA Abgleichwerte im Injektor Beschriftungsformat auslesen UDS: $22 WriteDataByIdentifier request SID: 0x2E
@@ -2026,7 +1937,6 @@ _No arguments._
 | ABGLEICH_IMA_WERT_ZYL6 | string | Antwort von SG im Format wie auf Injektor 6 |
 | ANZAHL_ZEICHEN_IMA_WERTE | int | Anzahl der Stellen der IMA-Werte |
 
-<a id="job-abgleich-programmieren-ima"></a>
 ### ABGLEICH_PROGRAMMIEREN_IMA
 
 Programmieren der IMA Abgleichwerte  - alle Zylinder Eingabe im Injektor Beschriftungsformat ACHTUNG: Anzahl der Argumente ist Anzahl der Zylinder UDS: $22 ReadDataByIdentifier LID: 0x5F90
@@ -2050,7 +1960,6 @@ Programmieren der IMA Abgleichwerte  - alle Zylinder Eingabe im Injektor Beschri
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-abgleich-programmieren-ima-zyl"></a>
 ### ABGLEICH_PROGRAMMIEREN_IMA_ZYL
 
 IMA Abgleichwert Programmieren im am Injektor aufgedruckten Format Verstellen eines Injektors mit LID Verwendete Tabelle: ABGLEICH UDS: $2E WriteDataByIdentifier LID: IMA1 - IMA6
@@ -2070,7 +1979,6 @@ IMA Abgleichwert Programmieren im am Injektor aufgedruckten Format Verstellen ei
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-selectiv"></a>
 ### STEUERN_SELECTIV
 
 Verstellen eines Stellerwertes mit LABEL Verwendete Tabelle: STELLER UDS: $2F InputOutputControlByIdentifier
@@ -2090,7 +1998,6 @@ Verstellen eines Stellerwertes mit LABEL Verwendete Tabelle: STELLER UDS: $2F In
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-selectiv"></a>
 ### STEUERN_ENDE_SELECTIV
 
 Beenden von STELLER Stellen mit LABEL Verwendete Tabelle: STELLER UDS: $2F InputOutputControlByIdentifier request SID
@@ -2109,7 +2016,6 @@ Beenden von STELLER Stellen mit LABEL Verwendete Tabelle: STELLER UDS: $2F Input
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-wert-lesen"></a>
 ### STEUERN_WERT_LESEN
 
 Lesen von STELLER Stellen Wert mit LABEL Verwendete Tabelle: STELLER UDS: $22 ReadDataByIdentifier request SID
@@ -2129,7 +2035,6 @@ Lesen von STELLER Stellen Wert mit LABEL Verwendete Tabelle: STELLER UDS: $22 Re
 | _RESPONSE | binary | Hex-Antwort von SG |
 | STEUERN_LESEN_WERT | real | Verstellwert von SG |
 
-<a id="job-abgleich-csf-lesen"></a>
 ### ABGLEICH_CSF_LESEN
 
 Auslesen der CSF-Tabelle, Berechnung des Korrekturfaktors und Offset
@@ -2150,7 +2055,6 @@ Auslesen der CSF-Tabelle, Berechnung des Korrekturfaktors und Offset
 | WERT_ECU | real | Ergebnis aus Werte lesen |
 | ERGEBNISNAME_ECU | string | Bezeichnung des durch LABEL_ECU gewählten Ergebnisses |
 
-<a id="job-abgleich-csf-prog"></a>
 ### ABGLEICH_CSF_PROG
 
 Auslesen der CSF-Tabelle, Berechnung des Korrekturfaktrors und Offset
@@ -2172,7 +2076,6 @@ Auslesen der CSF-Tabelle, Berechnung des Korrekturfaktrors und Offset
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-abgleich-nmk-lesen"></a>
 ### ABGLEICH_NMK_LESEN
 
 Auslesen der NMK-Werte aus EEPROM InputOutputControlByLocalIdentifier $22 IOLI 0x57 mit IOCP 0x01 (reportCurrentState)
@@ -2188,7 +2091,6 @@ _No arguments._
 | _RESPONSE | binary | Hex-Auftrag an SG |
 | ABGLEICHDATEN_NMK | string | Datenstring |
 
-<a id="job-abgleich-nmk-schreiben"></a>
 ### ABGLEICH_NMK_SCHREIBEN
 
 Schreiben der NMK-Werte ins EEPROM InputOutputControlByLocalIdentifier $30 IOLI 0x57 mit IOCP 0x08 (longTermAdjustment)
@@ -2210,7 +2112,6 @@ Schreiben der NMK-Werte ins EEPROM InputOutputControlByLocalIdentifier $30 IOLI 
 | _RESPONSE | binary | Hex-Auftrag an SG |
 | NMK_PROGRAMMIER_STATUS | string | Klartextausgabe über Programmierumfang (Spalte TEXT aus Tabelle NMK_Switch) |
 
-<a id="job-abgleich-lesen-nvc"></a>
 ### ABGLEICH_LESEN_NVC
 
 Alle NVC Abgleichwerte auslesen (Nominal Voltage Calibration) UDS $22 InputOutputControlByLocalIdentifier LID: 0x5FB3 und 0x52
@@ -2237,7 +2138,6 @@ _No arguments._
 | ABGLEICH_NVCLERNZYKLUS_WERT_ZYL5 | int | Antwort von SG für NVC-Lernzykluszähler Injektor5 |
 | ABGLEICH_NVCLERNZYKLUS_WERT_ZYL6 | int | Antwort von SG für NVC-Lernzykluszähler Injektor6 |
 
-<a id="job-abgleich-programmieren-nvc"></a>
 ### ABGLEICH_PROGRAMMIEREN_NVC
 
 Programmieren der NVC Integratorwerte und Lernzykluszähler Behandlung von einem Einzelinjektor oder alle Injektoren UDS $30 InputOutputControlByLocalIdentifier LID: 0x51 und 0x52
@@ -2259,7 +2159,6 @@ Programmieren der NVC Integratorwerte und Lernzykluszähler Behandlung von einem
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-abgleich-verstellen"></a>
 ### ABGLEICH_VERSTELLEN
 
 Verstellen eines EEPROM Abgleichwertes mit LABEL Verwendete Tabelle: ABGLEICH UDS*: $22 lesen, $2E schreiben InputOutputControlByLocalIdentifier
@@ -2279,7 +2178,6 @@ Verstellen eines EEPROM Abgleichwertes mit LABEL Verwendete Tabelle: ABGLEICH UD
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-abgleich-lesen"></a>
 ### ABGLEICH_LESEN
 
 Lesen eines EEPROM Abgleichwertes mit LABEL Verwendete Tabelle: ABGLEICH UDS: $22 lesen, $2E schreiben InputOutputControlByLocalIdentifier
@@ -2299,7 +2197,6 @@ Lesen eines EEPROM Abgleichwertes mit LABEL Verwendete Tabelle: ABGLEICH UDS: $2
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 | ABGLEICH_LESEN_WERT | real | angeforderter Ergebniswert von SG |
 
-<a id="job-abgleich-prog"></a>
 ### ABGLEICH_PROG
 
 Programmieren eines EEPROM Abgleichwertes mit LABEL Verwendete Tabelle: ABGLEICH UDS: $22 lesen, $2E schreiben InputOutputControlByLocalIdentifier
@@ -2319,7 +2216,6 @@ Programmieren eines EEPROM Abgleichwertes mit LABEL Verwendete Tabelle: ABGLEICH
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-abgleich-lesen-kf48"></a>
 ### ABGLEICH_LESEN_KF48
 
 Lesen der EEPROM Abgleichwerte für MEN48 und CSMEN48 Verwendete Tabelle: ABGLEICH UDS: $22 ReadDataByIdentifier
@@ -2339,7 +2235,6 @@ _No arguments._
 | ABGLEICH_LESEN_WERT_CSSOLL_KF48 | int | Berechneter Ergebniswert aus Kennfeldwerten |
 | ABGLEICH_LESEN_WERT_CSIST_KF48 | int | Ausgeslener Ergebniswert von SG |
 
-<a id="job-abgleich-verstellen-kf48"></a>
 ### ABGLEICH_VERSTELLEN_KF48
 
 Verstellen des 48 Punkte Kennfeldes mit LABEL Verwendete Tabelle: ABGLEICH UDS: $2E WriteDataByIdentifier
@@ -2360,7 +2255,6 @@ Verstellen des 48 Punkte Kennfeldes mit LABEL Verwendete Tabelle: ABGLEICH UDS: 
 | _REQUEST_1 | binary | Hex-Auftrag an SG (CSMEN48) |
 | _RESPONSE_1 | binary | Hex-Auftrag an SG (CSMEN48) |
 
-<a id="job-abgleich-prog-kf48"></a>
 ### ABGLEICH_PROG_KF48
 
 Programmieren des 48 Punkte Kennfeldes mit LABEL Verwendete Tabelle: ABGLEICH UDS: $2E WriteDataByIdentifier
@@ -2381,7 +2275,6 @@ Programmieren des 48 Punkte Kennfeldes mit LABEL Verwendete Tabelle: ABGLEICH UD
 | _REQUEST_1 | binary | Hex-Auftrag an SG (CSMEN48) |
 | _RESPONSE_1 | binary | Hex-Auftrag an SG (CSMEN48) |
 
-<a id="job-ecu-config"></a>
 ### ECU_CONFIG
 
 Ausgabe der Erkennungsstati von verbauten Komponenten im Fzg. wenn kein Argument übergeben wird, werden alle Tabellen DIG_BLOCKx ausgegeben
@@ -2404,7 +2297,6 @@ Ausgabe der Erkennungsstati von verbauten Komponenten im Fzg. wenn kein Argument
 | STAT_BLOCK_2 | int | Status von Erkennungsblock 2 (8 Bit) |
 | STAT_BLOCK_3 | int | Status von Erkennungsblock 3 (8 Bit) |
 
-<a id="job-ecu-config-reset"></a>
 ### ECU_CONFIG_RESET
 
 Rücksetzen der Erkennungsstati von verbauten Komponenten im Fzg. es werden alle Selbsterkennungen resetiert !
@@ -2419,7 +2311,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-ecu-config-enable"></a>
 ### ECU_CONFIG_ENABLE
 
 Aktivieren/Deaktivieren der Selbsterkennung von verbauten Komponenten im Fzg. es werden alle Selbsterkennungen aktiviert/deaktiviert !
@@ -2438,7 +2329,6 @@ Aktivieren/Deaktivieren der Selbsterkennung von verbauten Komponenten im Fzg. es
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-ecu-config-komponentenreset"></a>
 ### ECU_CONFIG_KOMPONENTENRESET
 
 Rück-/Setzen des Erkennungsstatus einer verbauten Komponente im Fzg.
@@ -2458,7 +2348,6 @@ Rück-/Setzen des Erkennungsstatus einer verbauten Komponente im Fzg.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-e-luefter"></a>
 ### STEUERN_E_LUEFTER
 
 Vorgeben eines Stellerwertes fuer E - Lüfter UDS: $2F InputOutputControlByIdentifier Verstellwert 5 - 90 %
@@ -2477,7 +2366,6 @@ Vorgeben eines Stellerwertes fuer E - Lüfter UDS: $2F InputOutputControlByIdent
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-steuern-e-luefter-aus"></a>
 ### STEUERN_E_LUEFTER_AUS
 
 Beenden von Vorgeben von E-Lüfter ansteuern UDS: $2F InputOutputControlByLocalIdentifier
@@ -2492,7 +2380,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-steuern-systemcheck-lms"></a>
 ### STEUERN_SYSTEMCHECK_LMS
 
 Starten des Luftmassensystemtests RoutineControl $31 mit Subparameter 0x01
@@ -2511,7 +2398,6 @@ Starten des Luftmassensystemtests RoutineControl $31 mit Subparameter 0x01
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-lp-steuern-systemcheck-lms"></a>
 ### _LP_STEUERN_SYSTEMCHECK_LMS
 
 Starten des Luftmassensystemtests RoutineControl $31 mit Subparameter 0x01 Nur für den Leistungsprüfstand-Steyr zu verwenden!
@@ -2526,7 +2412,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-steuern-systemcheck-lms-ende"></a>
 ### STEUERN_SYSTEMCHECK_LMS_ENDE
 
 Stoppen des Luftmassensystemtests RoutineControl $31 mit Subparameter 0x02
@@ -2541,7 +2426,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-status-systemcheck-lms"></a>
 ### STATUS_SYSTEMCHECK_LMS
 
 Aktueller Status des Luftmassensystemtests RoutineControl $31 mit Subparameter 0x03
@@ -2562,7 +2446,6 @@ Aktueller Status des Luftmassensystemtests RoutineControl $31 mit Subparameter 0
 | STAT_DIGITAL_BEDINGUNG | string | Der Ort der Abschaltursache |
 | STAT_DIGITAL_ERGEBNIS | string | Text in Abhängigkeit vom Ergebnis |
 
-<a id="job-status-igrinfo-aep"></a>
 ### STATUS_IGRINFO_AEP
 
 0x224016 STATUS_IGRINFO_AEP Infospeicher Intelligente Generator Regelung (IGR) auslesen
@@ -2602,7 +2485,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-leminfo-aep"></a>
 ### STATUS_LEMINFO_AEP
 
 0x224017 STATUS_LEMINFO_AEP Infospeicher Leistungskoordination Elektrisch Mechanisch (LEM) auslesen
@@ -2657,7 +2539,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msainfo-aep"></a>
 ### _STATUS_MSAINFO_AEP
 
 0x224018 _STATUS_MSAINFO_AEP Infospeicher Motor-Start/Stop Automatik (MSA) auslesen
@@ -2765,7 +2646,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-verbredinfo"></a>
 ### STATUS_VERBREDINFO
 
 0x22401D STATUS_VERBREDINFO Verbraucherreduzierungsspeicher auslesen
@@ -2812,7 +2692,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-aep-info-1"></a>
 ### STATUS_SYSTEMCHECK_AEP_INFO_1
 
 0x224022 STATUS_SYSTEMCHECK_AEP_INFO_1 Intelligenter Batteriesensor Bitfeld Pminfo1 lesen
@@ -2945,7 +2824,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-aep-info-2"></a>
 ### STATUS_SYSTEMCHECK_AEP_INFO_2
 
 0x224023 STATUS_SYSTEMCHECK_AEP_INFO_2 Intelligenter Batteriesensor Bitfeld Pminfo2 lesen
@@ -3010,7 +2888,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-reset-runtime-stack"></a>
 ### RESET_RUNTIME_STACK
 
 SG-interne Resourcengrößen resetieren
@@ -3025,7 +2902,6 @@ _No arguments._
 | _RESPONSE | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-read-runtime-stack"></a>
 ### READ_RUNTIME_STACK
 
 SG-interne Resourcengrößen lesen
@@ -3056,7 +2932,6 @@ _No arguments._
 | STAT_MAXCSACONS_WERT | real | CSA über alle Fahrzyklen |
 | STAT_MAXCSACONS_EINHEIT | string | Einheit |
 
-<a id="job-status-regeneration-csf"></a>
 ### STATUS_REGENERATION_CSF
 
 Messwert selectiv lesen KWP2000: $2C DefineDataByLocalIdentifier 
@@ -3084,7 +2959,6 @@ _No arguments._
 | STAT_REGENERATION_GESPERRT_EINH | string | Einheit |
 | STAT_REGENERATION_GESPERRT_INFO | string | Labelname |
 
-<a id="job-status-fasta10"></a>
 ### STATUS_FASTA10
 
 0x224015 STATUS_FASTA10 FASTA-Messwertblock 10 lesen
@@ -3187,7 +3061,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-gluehkerzentausch"></a>
 ### STEUERN_GLUEHKERZENTAUSCH
 
 RÜCKSETZEN gelernter Werte der Glühkerzen im Glüh-SG UDS: $31 RoutineControl
@@ -3206,7 +3079,6 @@ RÜCKSETZEN gelernter Werte der Glühkerzen im Glüh-SG UDS: $31 RoutineControl
 | _RESPONSE | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-gluehkerzentausch"></a>
 ### STATUS_GLUEHKERZENTAUSCH
 
 Auslesen des Status rückgesetzter Glühkerzen im Glüh-SG UDS: $31 RoutineControl
@@ -3223,7 +3095,6 @@ _No arguments._
 | STAT_GLU_WERT | int | Einzelkerze: 1 ... 6 (... 8) alle Kerzen: 16 |
 | STAT_GLU_TEXT | string | Einzelkerze: GLU1 ... GLU6 (... GLU8) alle Kerzen: GLUALLE |
 
-<a id="job-status-ews"></a>
 ### STATUS_EWS
 
 Zurücklesen verschiedener interner Stati für EWS UDS   : $22   ReadDataByIdentifier UDS   : $C000 Sub-Parameter
@@ -3252,7 +3123,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews4-sk"></a>
 ### STATUS_EWS4_SK
 
 Lesen des SecretKey des Server sowie Client für EWS4 UDS   : $22   ReadDataByIdentifier UDS   : $C002 Sub-Parameter
@@ -3269,7 +3139,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews4-sk"></a>
 ### STEUERN_EWS4_SK
 
 17 "EWS4-data" schreiben UDS   : $2E   WriteDataByIdentifier UDS   : $C001 Sub-Parameter
@@ -3289,7 +3158,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-nullgang-erkennung"></a>
 ### STATUS_NULLGANG_ERKENNUNG
 
 0x22402E STATUS_NULLGANG_ERKENNUNG     Nullgang Erkennung auslesen
@@ -3313,7 +3181,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-nullgang-lernen"></a>
 ### STEUERN_NULLGANG_LERNEN
 
 0x3101F02E STEUERN_NULLGANG_LERNEN Ansteuern Nullgang lernen (Der Nullgang-Lernwert ist nichtflüchtig so abzulegen, dass er bei Reprogrammierung nicht überschrieben wird.)
@@ -3328,7 +3195,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-nullgang-schreiben"></a>
 ### STEUERN_NULLGANG_SCHREIBEN
 
 0x2E5F8A STEUERN_NULLGANG_SCHREIBEN Schreiben Nullgang Lernwert
@@ -3347,7 +3213,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-daten-lesen"></a>
 ### FLASH_DATEN_LESEN
 
 Alle Abgleichwerte lesen
@@ -3363,7 +3228,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-daten-schreiben"></a>
 ### FLASH_DATEN_SCHREIBEN
 
 Alle Abgleichwerte schreiben
@@ -3382,7 +3246,6 @@ Alle Abgleichwerte schreiben
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-igr-aus"></a>
 ### START_SYSTEMCHECK_IGR_AUS
 
 0x3101F0F7 START_SYSTEMCHECK_IGR_AUS Ansteuerung Intelligente Generatorregelung deaktivieren Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -3397,7 +3260,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-igr-aus"></a>
 ### STATUS_SYSTEMCHECK_IGR_AUS
 
 0x3103F0F7 STATUS_SYSTEMCHECK_IGR_AUS Auslesen Intelligente Generatorregelung deaktivieren Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -3414,7 +3276,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-igr-aus"></a>
 ### STOP_SYSTEMCHECK_IGR_AUS
 
 0x3102F0F7 STOP_SYSTEMCHECK_IGR_AUS Ende Intelligente Generatorregelung deaktivieren Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -3429,7 +3290,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fasta-messwertblock-lesen"></a>
 ### FASTA_MESSWERTBLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -3452,7 +3312,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrzeugzustand"></a>
 ### _STATUS_FAHRZEUGZUSTAND
 
 Messwert selectiv lesen VehV_v, Epm_nEng und T15_stRaw werden ausgelesen UDS: $2C DynamicallyDefineDataIdentifier
@@ -3477,7 +3336,6 @@ _No arguments._
 | STAT_KL15_WERT | real | Ergebnis |
 | STAT_KL15_EINH | string | Einheit |
 
-<a id="job-lesen-codierwerte"></a>
 ### LESEN_CODIERWERTE
 
 Ausgabe der Codierwerte mit und ohne Zeitlimit.
@@ -3494,7 +3352,6 @@ _No arguments._
 | _REQUEST2 | binary | Hex-Auftrag an SG für Codierwerte ohne Zeitlimit. |
 | _RESPONSE2 | binary | Hex-Antwort vom SG für Codierwerte ohne Zeitlimit. |
 
-<a id="job-status-bzediag"></a>
 ### STATUS_BZEDIAG
 
 0x22403B STATUS_BZEDIAG BZE Infospeicher
@@ -3620,7 +3477,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ident-ibs"></a>
 ### IDENT_IBS
 
 $22 40 21 BMW Nr, Seriennummer, SW/HW Index
@@ -3640,7 +3496,6 @@ _No arguments._
 | ZIF_STATUS | int | Programm Revision |
 | HW_REF | int | Hardware Referenz |
 
-<a id="job-adap-selektiv-loeschen"></a>
 ### ADAP_SELEKTIV_LOESCHEN
 
 Löschen von Adaptionen und gelernte Varianten UDS $31 01 F0 30 xx xx xx Löschen der Adaptionswerte
@@ -3661,7 +3516,6 @@ Löschen von Adaptionen und gelernte Varianten UDS $31 01 F0 30 xx xx xx Lösche
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-steuern-batterietausch-registrieren"></a>
 ### STEUERN_BATTERIETAUSCH_REGISTRIEREN
 
 UDS $31 01 F030 Batterietausch registrieren
@@ -3676,7 +3530,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-steuern-ruhestrommessung"></a>
 ### STEUERN_RUHESTROMMESSUNG
 
 0x312C STEUERN_RUHESTROMMESSUNG Ansteuern Ruhestrompruefung mit IBS Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -3698,7 +3551,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-status-ruhestrommessung"></a>
 ### STATUS_RUHESTROMMESSUNG
 
 0x332C STATUS_RUHESTROMMESSUNG Auslesen Ruhestromprüfung mit IBS Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -3784,7 +3636,6 @@ _No arguments._
 - [_MSD87_6_TABLE_STATUS_TIEFENTLADEN](#table-msd87-6-table-status-tiefentladen) (2 × 2)
 - [_MSD87_6_TABLE_STATUS_IBS_BZE](#table-msd87-6-table-status-ibs-bze) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 64 rows × 2 columns
@@ -3856,7 +3707,6 @@ Dimensions: 64 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 111 rows × 2 columns
@@ -3975,7 +3825,6 @@ Dimensions: 111 rows × 2 columns
 | 0x0000A4 | ADC Automotive Distance Control Systems GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -4001,7 +3850,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -4026,7 +3874,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -4058,7 +3905,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -4131,7 +3977,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -4144,7 +3989,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -4157,7 +4001,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -4170,7 +4013,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 9 rows × 3 columns
@@ -4187,7 +4029,6 @@ Dimensions: 9 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -4213,7 +4054,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -4224,7 +4064,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-cbskennung"></a>
 ### CBSKENNUNG
 
 Dimensions: 11 rows × 3 columns
@@ -4243,7 +4082,6 @@ Dimensions: 11 rows × 3 columns
 | 0x0D | NOx_a | NOx-Additiv |
 | 0x64 | Sic_v | Sichtpruefung/Fahrzeug-Check verknuepft |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -4252,7 +4090,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -4262,7 +4099,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1340 rows × 3 columns
@@ -5610,7 +5446,6 @@ Dimensions: 1340 rows × 3 columns
 | 0xCD9508 | CD9508 Botschaft (ST_RESO_SCRA, 0x8A, A): Botschaft von SCR-Steuergerät ausgefallen | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -5624,7 +5459,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -5636,7 +5470,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 1083 rows × 16 columns
@@ -6727,7 +6560,6 @@ Dimensions: 1083 rows × 16 columns
 | WaHt_stShutOff_mp | 0x4220 | STAT_WaHt_stShutOff_mp_WERT | unsigned int | - | - | - | 1.000000 | - | 0.000000 | WaHt_stShutOff_mp | Status Abschaltbedingungen für Zuheizer | 12 | 22,2C | - | - |
 | ZFC_st_mp | 0x4362 | STAT_ZFC_st_mp_WERT | unsigned char | - | - | - | 1.000000 | - | 0.000000 | ZFC_st_mp | Status der Nullmengenkalibrierung | 12 | 22,2C | - | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 221 rows × 9 columns
@@ -6956,7 +6788,6 @@ Dimensions: 221 rows × 9 columns
 | 0xXY | Unbekannte Umweltbedingung | - | - | unsigned char | - | 1 | 1 | 0 |
 | 0xFFFF | Unbenutzte Umweltbedingung | - | - | xxx | - | 1 | 1 | 0 |
 
-<a id="table-steller"></a>
 ### STELLER
 
 Dimensions: 28 rows × 15 columns
@@ -6992,7 +6823,6 @@ Dimensions: 28 rows × 15 columns
 | NSK | Nachschalldämpferklappe = nicht verbaut | 0x9999 | 1 | 1 | 0 | 0...AUS | 1...EIN | STEUERN_WERT_LESEN | STEUERN_SELECTIV | STEUERN_ENDE_SELECTIV | 13 | - | EGPpCD_stActrOut | Master |
 | -- | - | 0xFFFF | 0 | 1 | 0 | 0 | 0 | -- | -- | -- | 0 | -- | -- | -- |
 
-<a id="table-abgleich"></a>
 ### ABGLEICH
 
 Dimensions: 40 rows × 15 columns
@@ -7040,7 +6870,6 @@ Dimensions: 40 rows × 15 columns
 | LLO | Leerlaufdrehzahl - Offset | 0x5FF0 | 2 | 1 | 1 | - | - | ABGLEICH_LESEN | - | ABGLEICH_PROG | - | ??? | Leerlaufdrehzahl-Offsetwert auslesen | 1 |
 | -- | - | 0x00 | 0 | 1 | 0 | 0 | 0 | -- | -- | -- | 0 | -- | -- | -- |
 
-<a id="table-csf-werte"></a>
 ### CSF_WERTE
 
 Dimensions: 20 rows × 9 columns
@@ -7068,7 +6897,6 @@ Dimensions: 20 rows × 9 columns
 | TPRERGNMAX | Schleppzeiger für die Abgastemperatur vor CSF bei Regeneration | 66 | 2 | 1,00 | 0,0 | °C | STAT_TPRERGNMAX | 14 |
 | -- | - | 0 | 0 | 1,00 | 0,0 | - | STAT_ | - |
 
-<a id="table-csf-servicefall"></a>
 ### CSF_SERVICEFALL
 
 Dimensions: 6 rows × 3 columns
@@ -7082,7 +6910,6 @@ Dimensions: 6 rows × 3 columns
 | Initialisierung einzelner EEPROM-Werte | EEPROM | 6 |
 | -- | -- | - |
 
-<a id="table-nmk-switch"></a>
 ### NMK_SWITCH
 
 Dimensions: 5 rows × 3 columns
@@ -7095,7 +6922,6 @@ Dimensions: 5 rows × 3 columns
 | NMKALL | 0x06 | Kopieren aller Lernwerte |
 | NOK | 0xFF | Es wurde kein gültiges LABEL übergeben |
 
-<a id="table-ewsempfangsstatus"></a>
 ### EWSEMPFANGSSTATUS
 
 Dimensions: 12 rows × 2 columns
@@ -7115,7 +6941,6 @@ Dimensions: 12 rows × 2 columns
 | 0x21 | 2-aus-3-Startwertablage im Flash nicht in Ordnung |
 | 0xXY | Fehlerhafter Status |
 
-<a id="table-lernwerte-rueck"></a>
 ### LERNWERTE_RUECK
 
 Dimensions: 16 rows × 15 columns
@@ -7139,7 +6964,6 @@ Dimensions: 16 rows × 15 columns
 | PWRHISTRES | Powermangement Start Steuern Histogramm Reset | 0xF504 | - | - | - | - | - | - | - | LERNWERTE_RUECKSETZEN | - | - | - | - |
 | -- | - | 0x00 | 0 | 1,0 | 0,0 | 0,0 | 0,0 | -- | -- | -- | 0 | -- | -- | -- |
 
-<a id="table-hdtest"></a>
 ### HDTEST
 
 Dimensions: 14 rows × 7 columns
@@ -7161,7 +6985,6 @@ Dimensions: 14 rows × 7 columns
 | N_HD3 | Drehzahlvorgabe 3 für HD-Test | 29 | 2 | 1,0 | 0,0 | 1800 |
 | -- | -- | - | - | - | - | - |
 
-<a id="table-hltest"></a>
 ### HLTEST
 
 Dimensions: 19 rows × 7 columns
@@ -7188,7 +7011,6 @@ Dimensions: 19 rows × 7 columns
 | TV_DRA | Tastverhältnis für Drallklappe (ab CRS17.14) | 39 | 2 | 100,0 | 0,0 | 5 |
 | -- | -- | - | - | - | - | - |
 
-<a id="table-hltest-limits"></a>
 ### HLTEST_LIMITS
 
 Dimensions: 2 rows × 2 columns
@@ -7198,7 +7020,6 @@ Dimensions: 2 rows × 2 columns
 | MIN | -79 |
 | MAX | 49 |
 
-<a id="table-hdtest-limits"></a>
 ### HDTEST_LIMITS
 
 Dimensions: 20 rows × 2 columns
@@ -7226,7 +7047,6 @@ Dimensions: 20 rows × 2 columns
 | AB6MAX | 1 |
 | AB6MIN | 0 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1340 rows × 3 columns
@@ -8574,7 +8394,6 @@ Dimensions: 1340 rows × 3 columns
 | 0xCD9508 | CD9508 Botschaft (ST_RESO_SCRA, 0x8A, A): Botschaft von SCR-Steuergerät ausgefallen | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 221 rows × 9 columns
@@ -8803,7 +8622,6 @@ Dimensions: 221 rows × 9 columns
 | 0xXY | Unbekannte Umweltbedingung | - | - | unsigned char | - | 1 | 1 | 0 |
 | 0xFFFF | Unbenutzte Umweltbedingung | - | - | xxx | - | 1 | 1 | 0 |
 
-<a id="table-tab-systemcheck-lms"></a>
 ### TAB_SYSTEMCHECK_LMS
 
 Dimensions: 56 rows × 7 columns
@@ -8867,7 +8685,6 @@ Dimensions: 56 rows × 7 columns
 | RED13_MIN | RED13_MIN | 83 | 1 | 1,00 | 0,00 | -28,0 |
 | -- | -- | - | - | - | - | - |
 
-<a id="table-dig-block0"></a>
 ### DIG_BLOCK0
 
 Dimensions: 8 rows × 9 columns
@@ -8883,7 +8700,6 @@ Dimensions: 8 rows × 9 columns
 | STAT_ARS | 225FA0 | STAT_ARS | 3 | 0x40 | 0x40 | ARS-Status | erkannt | nicht erkannt |
 | STAT_EMF | 225FA0 | STAT_EMF | 3 | 0x80 | 0x80 | EMF-Status | erkannt | nicht erkannt |
 
-<a id="table-dig-block1"></a>
 ### DIG_BLOCK1
 
 Dimensions: 8 rows × 9 columns
@@ -8899,7 +8715,6 @@ Dimensions: 8 rows × 9 columns
 | STAT_KFH | 225FA1 | STAT_KFH | 3 | 0x40 | 0x40 | Kraftstofffilterheizung-Status | erkannt | nicht erkannt |
 | STAT_ZUH | 225FA1 | STAT_ZUH | 3 | 0x80 | 0x80 | Zuheizer-Status | erkannt | nicht erkannt |
 
-<a id="table-dig-block2"></a>
 ### DIG_BLOCK2
 
 Dimensions: 8 rows × 9 columns
@@ -8915,7 +8730,6 @@ Dimensions: 8 rows × 9 columns
 | STAT_GBXDAT3 | 225FA2 | STAT_GBXDAT3 | 3 | - | - | - | - | - |
 | STAT_DXC | 225FA2 | STAT_DXC | 3 | - | - | - | - | - |
 
-<a id="table-dig-block3"></a>
 ### DIG_BLOCK3
 
 Dimensions: 2 rows × 9 columns
@@ -8925,7 +8739,6 @@ Dimensions: 2 rows × 9 columns
 | STAT_MLA | 225FA3 | STAT_MLA | 3 | 0x01 | 0x01 | Motorlager - Status | erkannt | nicht erkannt |
 | STAT_BBHE | 225FA3 | STAT_BBHE | 3 | 0x20 | 0x20 | BlowBy-Heizelement Status | erkannt | nicht erkannt |
 
-<a id="table-dig-offset-lernfunktionen"></a>
 ### DIG_OFFSET_LERNFUNKTIONEN
 
 Dimensions: 10 rows × 7 columns
@@ -8943,7 +8756,6 @@ Dimensions: 10 rows × 7 columns
 | S_HWERR | STAT_KOMPONENTE_HARDWAREFEHLER | 0 | 0x01 | 0x01 | aktiv | nicht aktiv |
 | S_OPENLOAD | STAT_LEITUNG_UNTERBROCHEN | 0 | 0x02 | 0x02 | aktiv | nicht aktiv |
 
-<a id="table-tab-status-systemcheck-lms"></a>
 ### TAB_STATUS_SYSTEMCHECK_LMS
 
 Dimensions: 32 rows × 10 columns
@@ -8983,7 +8795,6 @@ Dimensions: 32 rows × 10 columns
 | LMS_TIME_OUT | 55 | LMS_TIME_OUT | STAT_LMS_TIME_OUT | 4 | 0x40 | 0x40 | LMS-Test Time-Out | aktiv | nicht aktiv |
 | LMS_TEST_ABGEBROCHEN | 55 | LMS_TEST_ABGEBROCHEN | STAT_LMS_TEST_ABGEBROCHEN | 4 | 0x80 | 0x80 | LMS-Test abgebrochen | aktiv | nicht aktiv |
 
-<a id="table-swtstatustab"></a>
 ### SWTSTATUSTAB
 
 Dimensions: 6 rows × 2 columns
@@ -8997,7 +8808,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | STORNIERT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUS_RESPONSE |
 
-<a id="table-swtfehler-tab"></a>
 ### SWTFEHLER_TAB
 
 Dimensions: 54 rows × 2 columns
@@ -9059,7 +8869,6 @@ Dimensions: 54 rows × 2 columns
 | 0xFF | UNBEKANNTER_FEHLER |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-statclientauthtxt"></a>
 ### STATCLIENTAUTHTXT
 
 Dimensions: 4 rows × 2 columns
@@ -9071,7 +8880,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Freigabe von Zuendung und Einspritzung abgelehnt (Challenge-Response fehlgeschlagen, falsche Response, Kommunikation i.O.) |
 | 0x03 | nicht definiert |
 
-<a id="table-statfreesktxt"></a>
 ### STATFREESKTXT
 
 Dimensions: 3 rows × 2 columns
@@ -9082,7 +8890,6 @@ Dimensions: 3 rows × 2 columns
 | 0xFF | ungültig |
 | 0xXY | freie Ablagen |
 
-<a id="table-statewsvertxt"></a>
 ### STATEWSVERTXT
 
 Dimensions: 3 rows × 2 columns
@@ -9093,7 +8900,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Direktschreiben des SecretKey und DH-Abgleich |
 | 0xXY | unbekannt |
 
-<a id="table-ibs-deak"></a>
 ### IBS_DEAK
 
 Dimensions: 10 rows × 2 columns
@@ -9111,7 +8917,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und kein Fehler erkannt |
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 
-<a id="table-stat-ruhestrom"></a>
 ### STAT_RUHESTROM
 
 Dimensions: 17 rows × 2 columns
@@ -9136,7 +8941,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | 15 Ruhestrom über 1000mA aktiv, Standverbraucher Sonstige aktiv |
 | 0xFF | 255 Status unbekannt |
 
-<a id="table-tindividualdataliste"></a>
 ### TINDIVIDUALDATALISTE
 
 Dimensions: 1 rows × 17 columns
@@ -9145,7 +8949,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x0000 | 0xFF | 01 | 12 | 02 | 000F | 01 | 00 | 00 | - | 00 | - | 00 | - | 00 | - | PM.Recovery |
 
-<a id="table-motorsg-table-fs"></a>
 ### _MOTORSG_TABLE_FS
 
 Dimensions: 11 rows × 2 columns
@@ -9164,7 +8967,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Funktion vollständig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 | 255 | ungültiger Wert |
 
-<a id="table-motoruds-table-msa-ursache-av"></a>
 ### _MOTORUDS_TABLE_MSA_URSACHE_AV
 
 Dimensions: 16 rows × 2 columns
@@ -9188,7 +8990,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Reserve-Prio 4 |
 | 15 | ungueltig |
 
-<a id="table-motoruds-table-msa-ursache-ea"></a>
 ### _MOTORUDS_TABLE_MSA_URSACHE_EA
 
 Dimensions: 4 rows × 2 columns
@@ -9200,7 +9001,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | EA infolge D_SoC |
 | 3 | nicht definiert |
 
-<a id="table-motorudscodierung-ruhestrom"></a>
 ### _MOTORUDSCODIERUNG_RUHESTROM
 
 Dimensions: 16 rows × 2 columns
@@ -9224,7 +9024,6 @@ Dimensions: 16 rows × 2 columns
 | 20 | Ruhestrom = 200...1000mA, erneuter Fehler bei Kl.30f aus (B_ierr3 = 1) |
 | 21 | Ruhestrom groesser 1000mA, erneuter Fehler bei Kl.30f aus (B_ierr3 = 1) |
 
-<a id="table-tab-offset"></a>
 ### TAB_OFFSET
 
 Dimensions: 4 rows × 4 columns
@@ -9236,7 +9035,6 @@ Dimensions: 4 rows × 4 columns
 | NDAGRO | Offset ND-AGR | 0x60 | 3101F06000000000000000000000 |
 | -- | -- | 0x00 | 0x00 |
 
-<a id="table-datenrettung"></a>
 ### DATENRETTUNG
 
 Dimensions: 14 rows × 6 columns
@@ -9258,7 +9056,6 @@ Dimensions: 14 rows × 6 columns
 | HDAGR | Gelernte Korrekturfaktoren HD-AGR-Kühlerüberwachung | 0x5F5C | 8 | - | 04 |
 | CSF | Partikelfilterwerte | 0x5FB4 | 96 | - | 04 |
 
-<a id="table-resultnamen"></a>
 ### RESULTNAMEN
 
 Dimensions: 21 rows × 5 columns
@@ -9287,7 +9084,6 @@ Dimensions: 21 rows × 5 columns
 | LASTKOLL | _REQUEST_LASTKOLL | _RESPONSE_LASTKOLL | _REQUEST_2_LASTKOLL | _RESPONSE_2_LASTKOLL |
 | LASTZEIT | _REQUEST_LASTZEIT | _RESPONSE_LASTZEIT | _REQUEST_2_LASTZEIT | _RESPONSE_2_LASTZEIT |
 
-<a id="table-msd85uds-cnv-s-2-def-bit-ub-741-cm"></a>
 ### _MSD85UDS_CNV_S_2_DEF_BIT_UB_741_CM
 
 Dimensions: 2 rows × 2 columns
@@ -9297,7 +9093,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Falsch |
 | 1 | Wahr |
 
-<a id="table-codierwerte"></a>
 ### CODIERWERTE
 
 Dimensions: 9 rows × 9 columns
@@ -9314,7 +9109,6 @@ Dimensions: 9 rows × 9 columns
 | MSA | MSA - Motor-Start-Stop-Automatik | 8 | 1 | 1,0 | 0,0 | - | STAT_COD_MSA | NEIN |
 | - | - | - | - | - | - | - | - | - |
 
-<a id="table-msd87-6-table-status-letzter-batteriewechsel"></a>
 ### _MSD87_6_TABLE_STATUS_LETZTER_BATTERIEWECHSEL
 
 Dimensions: 2 rows × 2 columns
@@ -9324,7 +9118,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wasserverbrauch i.O. |
 | 1 | Wasserverbrauch n.i.O. |
 
-<a id="table-msd87-6-table-status-batteriezustand"></a>
 ### _MSD87_6_TABLE_STATUS_BATTERIEZUSTAND
 
 Dimensions: 4 rows × 2 columns
@@ -9336,7 +9129,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Batterie nicht i.O. |
 | 3 | ungueltig |
 
-<a id="table-msd87-6-table-status-wasserverlust"></a>
 ### _MSD87_6_TABLE_STATUS_WASSERVERLUST
 
 Dimensions: 2 rows × 2 columns
@@ -9346,7 +9138,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wasserverbrauch i.O. |
 | 1 | Wasserverbrauch nicht i.O. |
 
-<a id="table-msd87-6-table-status-tiefentladen"></a>
 ### _MSD87_6_TABLE_STATUS_TIEFENTLADEN
 
 Dimensions: 2 rows × 2 columns
@@ -9356,7 +9147,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Batterie i.O. |
 | 1 | Batterie tiefentladen |
 
-<a id="table-msd87-6-table-status-ibs-bze"></a>
 ### _MSD87_6_TABLE_STATUS_IBS_BZE
 
 Dimensions: 2 rows × 2 columns

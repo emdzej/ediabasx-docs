@@ -23,7 +23,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Default init job
 - [NUMMERN_CHECK](#job-nummern-check) - Sachnummern Airbag-Ausloeseeinheit
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -41,7 +40,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -54,7 +52,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-nummern-check"></a>
 ### NUMMERN_CHECK
 
 Sachnummern Airbag-Ausloeseeinheit
@@ -90,7 +87,6 @@ Sachnummern Airbag-Ausloeseeinheit
 - [E34](#table-e34) (10 × 3)
 - [E36](#table-e36) (26 × 4)
 
-<a id="table-e38"></a>
 ### E38
 
 Dimensions: 9 rows × 3 columns
@@ -107,7 +103,6 @@ Dimensions: 9 rows × 3 columns
 | 1161830 | US | F |
 | XXXXXXX | unbekannt | Y |
 
-<a id="table-e39"></a>
 ### E39
 
 Dimensions: 3 rows × 3 columns
@@ -118,7 +113,6 @@ Dimensions: 3 rows × 3 columns
 | 1162892 | ECE | F |
 | XXXXXXX | unbekannt | Y |
 
-<a id="table-e31"></a>
 ### E31
 
 Dimensions: 10 rows × 3 columns
@@ -136,7 +130,6 @@ Dimensions: 10 rows × 3 columns
 | 1161758 | ECE_US | F |
 | XXXXXXX | unbekannt | Y |
 
-<a id="table-e34"></a>
 ### E34
 
 Dimensions: 10 rows × 3 columns
@@ -154,7 +147,6 @@ Dimensions: 10 rows × 3 columns
 | 2227755 | US | F |
 | XXXXXXX | unbekannt | Y |
 
-<a id="table-e36"></a>
 ### E36
 
 Dimensions: 26 rows × 4 columns

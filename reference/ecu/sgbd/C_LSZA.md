@@ -33,7 +33,6 @@
 - [C_FA_LOESCHEN](#job-c-fa-loeschen) - Fahrzeugauftrag Löschen mit Gegenverifikation Gueltiger Adressblockbereich: 0x00 - 0x11 (288 Bytes in total)
 - [SLEEPINSTRUCTION_IHKA](#job-sleepinstruction-ihka) - PD-Telegramm über K-Bus vom LSZ an IHKA
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -51,7 +50,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -87,7 +84,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 DIAGNOSE_ENDE job
@@ -100,7 +96,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-sia-lesen"></a>
 ### SIA_LESEN
 
 Default SIA_LESEN job
@@ -125,7 +120,6 @@ _No arguments._
 | SI_ZEITINSPEKTIONSZAEHLER_WERT | long |  |
 | SI_ZEITINSPEKTIONSZAEHLER_EINH | string | Tage |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der FG-Nummer
@@ -139,7 +133,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | FG_NR | string | Fahrgestellnummer |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben der red. Datenablage mit der FG-Nummer
@@ -157,7 +150,6 @@ Beschreiben der red. Datenablage mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -175,7 +167,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -192,7 +183,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fa-lesen"></a>
 ### C_FA_LESEN
 
 Fahrzeugauftrag lesen Gueltiger Adressblockbereich: 0x00 - 0x0D (219 Bytes in total)
@@ -207,7 +197,6 @@ _No arguments._
 | SPEICHER_STATUS | string | BELEGT bzw. UNBELEGT |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fa-auftrag"></a>
 ### C_FA_AUFTRAG
 
 Fahrzeugauftrag schreiben mit Gegenverifikation Gueltiger Adressblockbereich: 0x00 - 0x11 (288 Bytes in total)
@@ -224,7 +213,6 @@ Fahrzeugauftrag schreiben mit Gegenverifikation Gueltiger Adressblockbereich: 0x
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fa-loeschen"></a>
 ### C_FA_LOESCHEN
 
 Fahrzeugauftrag Löschen mit Gegenverifikation Gueltiger Adressblockbereich: 0x00 - 0x11 (288 Bytes in total)
@@ -237,7 +225,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-sleepinstruction-ihka"></a>
 ### SLEEPINSTRUCTION_IHKA
 
 PD-Telegramm über K-Bus vom LSZ an IHKA
@@ -260,7 +247,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 - [JOBRESULT](#table-jobresult) (8 × 3)
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns
@@ -297,7 +283,6 @@ Dimensions: 29 rows × 2 columns
 | 0x28 | DODUCO |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 3 columns

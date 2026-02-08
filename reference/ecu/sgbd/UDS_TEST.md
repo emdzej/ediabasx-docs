@@ -25,7 +25,6 @@
 - [UDS_TEL_ROH](#job-uds-tel-roh) - UDS Service senden
 - [UDS_TEL_ROH_BINAER_BUFFER](#job-uds-tel-roh-binaer-buffer) - UDS Service senden
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -38,7 +37,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -57,7 +55,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-set-kwp2000can-p2max"></a>
 ### SET_KWP2000CAN_P2MAX
 
 Überschreiben des P2max Timeout Parameters des Parametersatzes
@@ -74,7 +71,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-uds-tel-roh"></a>
 ### UDS_TEL_ROH
 
 UDS Service senden
@@ -102,7 +98,6 @@ UDS Service senden
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-uds-tel-roh-binaer-buffer"></a>
 ### UDS_TEL_ROH_BINAER_BUFFER
 
 UDS Service senden
@@ -133,7 +128,6 @@ UDS Service senden
 - [GROBNAME](#table-grobname) (115 × 2)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (1 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -217,7 +211,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-grobname"></a>
 ### GROBNAME
 
 Dimensions: 115 rows × 2 columns
@@ -340,7 +333,6 @@ Dimensions: 115 rows × 2 columns
 | 0xAB | MMCDSP |
 | 0xXY | ???? |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns

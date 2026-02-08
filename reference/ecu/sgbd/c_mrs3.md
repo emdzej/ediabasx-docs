@@ -33,7 +33,6 @@
 - [VERRIEGELUNG_LESEN](#job-verriegelung-lesen) - Auslesen der Verriegelung (= Pruefstempel)
 - [VERRIEGELUNG_SCHREIBEN](#job-verriegelung-schreiben) - Verriegelungsbytes setzen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -51,7 +50,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer AIRBAG MRS 3
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer AIRBAG MRS 3
@@ -87,7 +84,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferant |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -100,7 +96,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-c-fs-loeschen"></a>
 ### C_FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -113,7 +108,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-c-login"></a>
 ### C_LOGIN
 
 #### Arguments
@@ -129,7 +123,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY, wenn fehlerfrei" |
 | TELEGRAMM | binary | antworttelegramm |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -142,7 +135,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -160,7 +152,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -177,7 +168,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-pruefstempel-lesen"></a>
 ### C_PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -191,7 +181,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | PRUEFSTEMPEL | binary |  |
 
-<a id="job-c-pruefstempel-setzen"></a>
 ### C_PRUEFSTEMPEL_SETZEN
 
 Verriegeln des SGs
@@ -208,7 +197,6 @@ Verriegeln des SGs
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-verriegelung-lesen"></a>
 ### VERRIEGELUNG_LESEN
 
 Auslesen der Verriegelung (= Pruefstempel)
@@ -224,7 +212,6 @@ _No arguments._
 | BYTE2 | int | Datenbyte 2 |
 | BYTE3 | int | Datenbyte 3 |
 
-<a id="job-verriegelung-schreiben"></a>
 ### VERRIEGELUNG_SCHREIBEN
 
 Verriegelungsbytes setzen
@@ -245,7 +232,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -261,7 +247,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

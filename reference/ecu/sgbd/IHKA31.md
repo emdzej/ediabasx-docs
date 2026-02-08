@@ -31,7 +31,6 @@
 - [STATUS_BEDIENTEIL](#job-status-bedienteil) - Status lesen Bedienteileinstellungen
 - [SPEICHER_LESEN](#job-speicher-lesen) - Speicher lesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -49,7 +48,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Kommunikationsparameter fuer IHKA
@@ -62,7 +60,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Dieser Job bricht die Kommunikation ab
@@ -71,7 +68,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation
@@ -86,7 +82,6 @@ _No arguments._
 | ID_VERSION_NR | int | Versionsnummer |
 | ID_LENKER | string | Linkslenker oder Rechtslenker |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -112,7 +107,6 @@ _No arguments._
 | F_ART4_NR | int |  |
 | F_ART4_TEXT | string |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Diese Funktion ist ein Dummy
@@ -125,7 +119,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -138,7 +131,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-lesen-analog"></a>
 ### STATUS_LESEN_ANALOG
 
 Status lesen
@@ -183,7 +175,6 @@ _No arguments._
 | STAT_HSH_MODULATION | int |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-lesen-digital"></a>
 ### STATUS_LESEN_DIGITAL
 
 Status lesen
@@ -218,7 +209,6 @@ _No arguments._
 | STAT_STANDHEIZUNG_EIN | int |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-bedienteil"></a>
 ### STATUS_BEDIENTEIL
 
 Status lesen Bedienteileinstellungen
@@ -245,7 +235,6 @@ _No arguments._
 | STAT_RE_MAXIMAL_SCHALTER_EIN | int |  |
 | STAT_RE_NORMAL_SCHALTER_EIN | int |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher lesen
@@ -267,7 +256,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (33 × 3)
 - [FARTTEXTE](#table-farttexte) (8 × 2)
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 33 rows × 8 columns
@@ -308,7 +296,6 @@ Dimensions: 33 rows × 8 columns
 | 0x1f | 0 | 5 | 0 | 0 | 0 | 1 | 0x80000000 |
 | 0xFF | 0 | 0 | 0 | 0 | 0 | 0 | 0x00000000 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 33 rows × 3 columns
@@ -349,7 +336,6 @@ Dimensions: 33 rows × 3 columns
 | 0x1f | 0x4f | Belueftungsklappenmotor rechts |
 | 0xFF | 0x00 | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns

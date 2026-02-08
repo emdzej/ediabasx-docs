@@ -42,7 +42,6 @@
 - [STEUERN_STELLGLIED_GETAKTET](#job-steuern-stellglied-getaktet) - Getaktetes Ansteuern der Stellglieder mit variablen Tastverhaeltnis und variabler Periodendauer
 - [STATUS_KICKDOWN_SCHALTER](#job-status-kickdown-schalter) - Auslesen des KD-Schalters
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -60,7 +59,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -73,7 +71,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Abbruch der Kommunikation
@@ -82,7 +79,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -102,7 +98,6 @@ _No arguments._
 | ID_BMW_NR | string | BMW-Teilenummer |
 | ID_AIF_VORHANDEN | int | Ist ein AIF vorhanden (0 (nein)/ 1 (ja)) |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -146,7 +141,6 @@ _No arguments._
 | F_UW2_EINH | string | Umweltbedingung 2 des einzelnen Fehlers  Einheit |
 | F_CODEHEX | binary | 5 Fehlerbyte |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -159,7 +153,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -172,7 +165,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 RAM lesen
@@ -193,7 +185,6 @@ RAM lesen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 ROM lesen
@@ -214,7 +205,6 @@ ROM lesen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Auslesen der Motordrehzahl
@@ -229,7 +219,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | long | Motordrehzahl als Wert |
 | STAT_MOTORDREHZAHL_EINH | string | Einheit der Motordrehzahl [1/min] |
 
-<a id="job-status-drehzahlf-intern"></a>
 ### STATUS_DREHZAHLF_INTERN
 
 Auslesen des internen Drehzahlfuehlers
@@ -244,7 +233,6 @@ _No arguments._
 | STAT_DREHZAHLF_INTERN_WERT | long | Wert des internen Drehzahlfuehlers |
 | STAT_DREHZAHLF_INTERN_EINH | string | Einheit des internen Drehzahlfuehlers [km/h] |
 
-<a id="job-status-lastwsensor"></a>
 ### STATUS_LASTWSENSOR
 
 Auslesen des Lastwinkelsensors DKG
@@ -259,7 +247,6 @@ _No arguments._
 | STAT_LASTWSENSOR_WERT | long | Lastwinkelsensor DKG als Wert |
 | STAT_LASTWSENSOR_EINH | string | Einheit des Lastwinkelsensors DKG [ms] |
 
-<a id="job-status-batteriespannung"></a>
 ### STATUS_BATTERIESPANNUNG
 
 Auslesen der Batteriespannung
@@ -274,7 +261,6 @@ _No arguments._
 | STAT_BATTERIESPANNUNG_WERT | long | Batteriespannung als Wert |
 | STAT_BATTERIESPANNUNG_EINH | string | Einheit der Batteriespannung [Volt] |
 
-<a id="job-status-getriebetemp"></a>
 ### STATUS_GETRIEBETEMP
 
 Auslesen der Getriebeoeltemperatur
@@ -289,7 +275,6 @@ _No arguments._
 | STAT_GETRIEBETEMP_WERT | long | Getriebeoeltemperatur als Wert |
 | STAT_GETRIEBETEMP_EINH | string | Einheit der Getriebeoeltemperatur [Grad C] |
 
-<a id="job-status-drosselklappe"></a>
 ### STATUS_DROSSELKLAPPE
 
 Auslesen der Drosselklappenstellung
@@ -304,7 +289,6 @@ _No arguments._
 | STAT_DROSSELKLAPPE_WERT | long | Drosselklappenimpuls als Wert |
 | STAT_DROSSELKLAPPE_EINH | string | Einheit der Drosselklappenstellung [%] |
 
-<a id="job-status-tacho-a-signal"></a>
 ### STATUS_TACHO_A_SIGNAL
 
 Auslesen des Tacho-A-Signals
@@ -319,7 +303,6 @@ _No arguments._
 | STAT_TACHO_A_SIGNAL_WERT | long | Tacho-A-Signals als Wert |
 | STAT_TACHO_A_SIGNAL_EINH | string | Einheit des Tacho-A-Signals [km/h] |
 
-<a id="job-status-mv-hauptdruck"></a>
 ### STATUS_MV_HAUPTDRUCK
 
 Auslesen des MV-Hauptdruck
@@ -334,7 +317,6 @@ _No arguments._
 | STAT_MV_HAUPTDRUCK_WERT | long | MV-Hauptdruck als Wert 0 bedeutet dauerhaft aus 50000 bedeutet dauerhaft ein |
 | STAT_MV_HAUPTDRUCK_EINH | string | Einheit des MV-Hauptdruck [ms] |
 
-<a id="job-status-mv-wandlerueberbr"></a>
 ### STATUS_MV_WANDLERUEBERBR
 
 Auslesen der MV-Wanderueberbrueckung
@@ -349,7 +331,6 @@ _No arguments._
 | STAT_MV_WANDLERUEBERBR_WERT | long | MV-Wanderueberbrueckung als Wert 0 bedeutet dauerhaft aus 50000 bedeutet dauerhaft ein |
 | STAT_MV_WANDLERUEBERBR_EINH | string | Einheit der MV-Wanderueberbrueckung [ms] |
 
-<a id="job-status-digital-eingaenge"></a>
 ### STATUS_DIGITAL_EINGAENGE
 
 Auslesen der digitalen Eingangsstati
@@ -379,7 +360,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-digital-ausgaenge"></a>
 ### STATUS_DIGITAL_AUSGAENGE
 
 Auslesen der digitalen Eingangsstati
@@ -403,7 +383,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-steuern-stellglied-getaktet"></a>
 ### STEUERN_STELLGLIED_GETAKTET
 
 Getaktetes Ansteuern der Stellglieder mit variablen Tastverhaeltnis und variabler Periodendauer
@@ -423,7 +402,6 @@ Getaktetes Ansteuern der Stellglieder mit variablen Tastverhaeltnis und variable
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | STAT_ANSTEUERUNG | int | Ansteuerergebnis 0: Stellglied kann angesteuert werden 1: PIN-Nummer ist unbekannt 2: Positionshebel ist nicht in N oder P 3: Abtriebsdrehzahl ist zu hoch 4: Relais ist abgefallen, ein Fehler ist vorhanden |
 
-<a id="job-status-kickdown-schalter"></a>
 ### STATUS_KICKDOWN_SCHALTER
 
 Auslesen des KD-Schalters
@@ -448,7 +426,6 @@ _No arguments._
 - [STATUSAMATRIX](#table-statusamatrix) (9 × 5)
 - [STELLGLIEDER](#table-stellglieder) (13 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 24 rows × 4 columns
@@ -480,7 +457,6 @@ Dimensions: 24 rows × 4 columns
 | 0x35 | AD-Wandler | 0x04 | 0x0b |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -502,7 +478,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0c | statischer Fehler |
 | 0x0d | sporadischer Fehler |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 24 rows × 17 columns
@@ -534,7 +509,6 @@ Dimensions: 24 rows × 17 columns
 | 0x34 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0a | 0x0b | 0x0c | 0x0d |
 | 0x35 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0a | 0x0b | 0x0c | 0x0d |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 17 rows × 5 columns
@@ -559,7 +533,6 @@ Dimensions: 17 rows × 5 columns
 | 0x0f | Statusbyte 83 | -- | 1.0 | 0.0 |
 | 0xXY | unbekannte Umweltbedingung | -- | 1.0 | 0.0 |
 
-<a id="table-statusamatrix"></a>
 ### STATUSAMATRIX
 
 Dimensions: 9 rows × 5 columns
@@ -576,7 +549,6 @@ Dimensions: 9 rows × 5 columns
 | MVHauptd | 1 | 256 | 0 | ms |
 | MVWandlerue | 1 | 256 | 0 | ms |
 
-<a id="table-stellglieder"></a>
 ### STELLGLIEDER
 
 Dimensions: 13 rows × 2 columns

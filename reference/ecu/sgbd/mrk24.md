@@ -38,7 +38,6 @@
 - [NETTODATEN_LESEN_FUNKTIONAL](#job-nettodaten-lesen-funktional) - Nettodaten der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3xxx Codierdaten-Adressen Modus  : Default
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung und Kommunikationsparameter
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -57,7 +56,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -73,7 +71,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -90,7 +87,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident-funktional"></a>
 ### IDENT_FUNKTIONAL
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -132,7 +128,6 @@ Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-funktional"></a>
 ### FS_LESEN_FUNKTIONAL
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -156,7 +151,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTrou
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen-funktional"></a>
 ### FS_LOESCHEN_FUNKTIONAL
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -179,7 +173,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-lesen-funktional"></a>
 ### C_AEI_LESEN_FUNKTIONAL
 
 Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -202,7 +195,6 @@ Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadData
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen-funktional"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN_FUNKTIONAL
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -226,7 +218,6 @@ Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A Ch
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen-funktional"></a>
 ### SERIENNUMMER_LESEN_FUNKTIONAL
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber Modus  : Default
@@ -251,7 +242,6 @@ Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSuppl
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen-funktional"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN_FUNKTIONAL
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) Modus  : Default
@@ -276,7 +266,6 @@ Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $8
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode-funktional"></a>
 ### ENERGIESPARMODE_FUNKTIONAL
 
 Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C ControlEnergySavingMode Modus  : Default
@@ -301,7 +290,6 @@ Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C C
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen-funktional"></a>
 ### AIF_LESEN_FUNKTIONAL
 
 Auslesen des Anwender Informations Feldes KWP2000: $1A ReadECUIdentification $86 CurrentUIFDataTable Modus  : Default
@@ -329,7 +317,6 @@ Auslesen des Anwender Informations Feldes KWP2000: $1A ReadECUIdentification $86
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-i-stufe-lesen"></a>
 ### I_STUFE_LESEN
 
 Auslesen des Pruefstempels aus Kombi Wenn Kombi tot bzw. Daten nicht plausibel auch aus ZFE Wenn ZFE tot bzw. Daten nicht plausibel auch aus BMSKP KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -347,7 +334,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-i-stufe-schreiben"></a>
 ### I_STUFE_SCHREIBEN
 
 Beschreiben des Pruefstempels der ZFE und des Kombis und evtl BMSKP Es muessen immer alle drei Argumente uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -368,7 +354,6 @@ Beschreiben des Pruefstempels der ZFE und des Kombis und evtl BMSKP Es muessen i
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fa-lesen"></a>
 ### C_FA_LESEN
 
 Fahrzeugauftrag lesen zuerst aus Kombi, bei Timeout oder neuem Kombi aus ZFE, dann bei Timeout ZFE oder neue ZFE aus BMSKP bzw BMSE KWP2000: $22   ReadDataByCommonIdentifier $3F00 - $3F7F Fahrzeugauftrag Modus  : Default
@@ -385,7 +370,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrgestellnummer"></a>
 ### STATUS_FAHRGESTELLNUMMER
 
 17 ASCII Byte EWS-Fahrgestell-Nummer aus BMSK BMS-K(P): KWP 2000: $21 ReadDataByLocalIdentifier LocalIdentifier $30 BMS-M:    KWP 2000: $22 ReadDataByCommonIdentifier CommonIdentifier $64, $70 Falls keine Antwort von BMSKP bzw. BMS-M (weil BMS im Bootblock), wird auf die FGNR aus dem FA-Bereich ($22, $10, $10) zurueckgegriffen Modus   : Default
@@ -401,7 +385,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-nettodaten-lesen-funktional"></a>
 ### NETTODATEN_LESEN_FUNKTIONAL
 
 Nettodaten der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3xxx Codierdaten-Adressen Modus  : Default
@@ -444,7 +427,6 @@ Nettodaten der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCom
 | NETTODATEN_BLOCK_3012 | binary | Nettodaten der Codierung Block 3012 |
 | NETTODATEN_BLOCK_3320 | binary | Nettodaten der Codierung Block 3320 |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -480,7 +462,6 @@ _No arguments._
 - [FUNKTIONALERFEHLERGRUPPE](#table-funktionalerfehlergruppe) (5 × 3)
 - [I_STUFE_K24](#table-i-stufe-k24) (121 × 2)
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -495,7 +476,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -504,7 +484,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-grobname"></a>
 ### GROBNAME
 
 Dimensions: 10 rows × 2 columns
@@ -522,7 +501,6 @@ Dimensions: 10 rows × 2 columns
 | 0x73 | RBT |
 | 0xXY | ???? |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -537,7 +515,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -546,7 +523,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -561,7 +537,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -570,7 +545,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -579,7 +553,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 5 rows × 2 columns
@@ -592,7 +565,6 @@ Dimensions: 5 rows × 2 columns
 | - | DS2 |
 | 2 | D-CAN |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -604,7 +576,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -631,7 +602,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -656,7 +626,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -759,7 +728,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 140 rows × 2 columns
@@ -907,7 +875,6 @@ Dimensions: 140 rows × 2 columns
 | 0xC1 | Flextronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -920,7 +887,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-funktionaleadresse"></a>
 ### FUNKTIONALEADRESSE
 
 Dimensions: 11 rows × 3 columns
@@ -939,7 +905,6 @@ Dimensions: 11 rows × 3 columns
 | 0xEE | PERSONAL | Personalisierung |
 | 0xEF | ALL | alle Steuergeräte |
 
-<a id="table-funktionalerfehlergruppe"></a>
 ### FUNKTIONALERFEHLERGRUPPE
 
 Dimensions: 5 rows × 3 columns
@@ -952,7 +917,6 @@ Dimensions: 5 rows × 3 columns
 | 0xFFFE | NG | Netzwerk Kommunikation Gruppe |
 | 0xFFFF | AG | alle Gruppen |
 
-<a id="table-i-stufe-k24"></a>
 ### I_STUFE_K24
 
 Dimensions: 121 rows × 2 columns

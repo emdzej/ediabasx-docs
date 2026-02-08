@@ -52,7 +52,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -71,7 +70,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -84,7 +82,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -101,7 +98,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -132,7 +128,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -177,7 +172,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -196,7 +190,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -214,7 +207,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -235,7 +227,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -264,7 +255,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -284,7 +274,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -305,7 +294,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -321,7 +309,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -343,7 +330,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -365,7 +351,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -384,7 +369,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -411,7 +395,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -456,7 +439,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -471,7 +453,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -491,7 +472,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -510,7 +490,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -529,7 +508,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -544,7 +522,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -563,7 +540,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -583,7 +559,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -599,7 +574,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -633,7 +607,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -648,7 +621,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -664,7 +636,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -683,7 +654,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -703,7 +673,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -721,7 +690,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -972,7 +940,6 @@ _No arguments._
 - [TAB_MR_TSA_VOLUME](#table-tab-mr-tsa-volume) (16 × 2)
 - [TAB_MR_ZUSTAND_KENNLEUCHTE](#table-tab-mr-zustand-kennleuchte) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1056,7 +1023,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 140 rows × 2 columns
@@ -1204,7 +1170,6 @@ Dimensions: 140 rows × 2 columns
 | 0x0000C1 | Flextronics |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1247,7 +1212,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1272,7 +1236,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1306,7 +1269,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1379,7 +1341,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1392,7 +1353,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1407,7 +1367,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1420,7 +1379,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1440,7 +1398,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 248 rows × 3 columns
@@ -1696,7 +1653,6 @@ Dimensions: 248 rows × 3 columns
 | 0x7A18 | Beschleunigungssensor hinten rechts | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1705,7 +1661,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 206 rows × 2 columns
@@ -1919,7 +1874,6 @@ Dimensions: 206 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1962,7 +1916,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-arg-0x4001-d"></a>
 ### ARG_0X4001_D
 
 Dimensions: 1 rows × 12 columns
@@ -1971,7 +1924,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KL_50_ENTLASTUNG | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung der Funktion Entlastung bei KL_50: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-arg-0x4003-d"></a>
 ### ARG_0X4003_D
 
 Dimensions: 1 rows × 12 columns
@@ -1980,7 +1932,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTION_SPANNUNGSVERSORGUNG | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung der Funktion Spannungsversorgung Zusatzschaltereinheit: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-arg-0x4005-d"></a>
 ### ARG_0X4005_D
 
 Dimensions: 1 rows × 12 columns
@@ -1989,7 +1940,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTION_LICHT_AUS | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Licht aus: 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4007-d"></a>
 ### ARG_0X4007_D
 
 Dimensions: 1 rows × 12 columns
@@ -1998,7 +1948,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTION_NEBELSCHLUSSLEUCHTE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Nebelschlussleuchte: 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4009-d"></a>
 ### ARG_0X4009_D
 
 Dimensions: 5 rows × 12 columns
@@ -2011,7 +1960,6 @@ Dimensions: 5 rows × 12 columns
 | ZUSTAND_KENNLEUCHTE_HINTEN_LINKS | 0-n | high | unsigned char | - | TAB_MR_ZUSTAND_KENNLEUCHTE | - | - | - | - | - | Kennleuchtenzustand hinten links |
 | ZUSTAND_KENNLEUCHTE_HINTEN_RECHTS | 0-n | high | unsigned char | - | TAB_MR_ZUSTAND_KENNLEUCHTE | - | - | - | - | - | Kennleuchtenzustand hinten rechts |
 
-<a id="table-arg-0x400b-d"></a>
 ### ARG_0X400B_D
 
 Dimensions: 1 rows × 12 columns
@@ -2020,7 +1968,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_KENNLEUCHTE_VL | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion LED Blitzkennleuchte vorne links (Pin 3): 0 = aus, 1 = ein  |
 
-<a id="table-arg-0x400d-d"></a>
 ### ARG_0X400D_D
 
 Dimensions: 1 rows × 12 columns
@@ -2029,7 +1976,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_KENNLEUCHTE_VR | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion LED Blitzkennleuchte vorne rechts (Pin 2): 0 = aus, 1 = ein  |
 
-<a id="table-arg-0x400f-d"></a>
 ### ARG_0X400F_D
 
 Dimensions: 1 rows × 12 columns
@@ -2038,7 +1984,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Rundumkennleuchte hinten links (Pin 20): 0 = aus, 1 = ein  |
 
-<a id="table-arg-0x4011-d"></a>
 ### ARG_0X4011_D
 
 Dimensions: 1 rows × 12 columns
@@ -2047,7 +1992,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Rundumkennleuchte hinten rechts (Pin 7): 0 = aus, 1 = ein  |
 
-<a id="table-arg-0x4013-d"></a>
 ### ARG_0X4013_D
 
 Dimensions: 1 rows × 12 columns
@@ -2056,7 +2000,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_STOP_VORNE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Anhaltesignal vorne Stop (Pin 23) 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4015-d"></a>
 ### ARG_0X4015_D
 
 Dimensions: 1 rows × 12 columns
@@ -2065,7 +2008,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_STOP_HINTEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Anhaltesignal hinten Stop (Pin 36) 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4017-d"></a>
 ### ARG_0X4017_D
 
 Dimensions: 1 rows × 12 columns
@@ -2074,7 +2016,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_FOLGEN_HINTEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Anhaltesignal hinten Bitte folgen (Pin 35) 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4019-d"></a>
 ### ARG_0X4019_D
 
 Dimensions: 1 rows × 12 columns
@@ -2083,7 +2024,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTIONSTASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Activation Function Key: 0 = off, 1 = on |
 
-<a id="table-arg-0x401b-d"></a>
 ### ARG_0X401B_D
 
 Dimensions: 1 rows × 12 columns
@@ -2092,7 +2032,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTIONSTASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Activation Function Key: 0 = off, 1 = on |
 
-<a id="table-arg-0x401d-d"></a>
 ### ARG_0X401D_D
 
 Dimensions: 1 rows × 12 columns
@@ -2101,7 +2040,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTIONSTASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Activation Function Key: 0 = off, 1 = on |
 
-<a id="table-arg-0x401f-d"></a>
 ### ARG_0X401F_D
 
 Dimensions: 1 rows × 12 columns
@@ -2110,7 +2048,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTIONSTASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Activation Function Key: 0 = off, 1 = on |
 
-<a id="table-arg-0x4021-d"></a>
 ### ARG_0X4021_D
 
 Dimensions: 1 rows × 12 columns
@@ -2119,7 +2056,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_TONSIGNALANLAGE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Tonsignalanlage (Pin 1): 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4023-d"></a>
 ### ARG_0X4023_D
 
 Dimensions: 1 rows × 12 columns
@@ -2128,7 +2064,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKANLAGE_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Funkanlage (Pin 5): 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4025-d"></a>
 ### ARG_0X4025_D
 
 Dimensions: 1 rows × 12 columns
@@ -2137,7 +2072,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KL15_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion KL15 (Pin 33): 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4027-d"></a>
 ### ARG_0X4027_D
 
 Dimensions: 1 rows × 12 columns
@@ -2146,7 +2080,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KL30_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion KL30: 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4029-d"></a>
 ### ARG_0X4029_D
 
 Dimensions: 1 rows × 12 columns
@@ -2155,7 +2088,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BEHOERDENRELAIS_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Behördenrelais (Pin 37): 0 = aus, 1 = ein |
 
-<a id="table-arg-0x402b-d"></a>
 ### ARG_0X402B_D
 
 Dimensions: 1 rows × 12 columns
@@ -2164,7 +2096,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHUTZ_TIEFENTLADUNG_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Schutz vor Tiefentladung: 0 = aus, 1 = ein |
 
-<a id="table-arg-0x402d-d"></a>
 ### ARG_0X402D_D
 
 Dimensions: 1 rows × 12 columns
@@ -2173,7 +2104,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ABSCHALTUNG_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Überspannungsabschaltung: 0 = aus, 1 = ein |
 
-<a id="table-arg-0x402f-d"></a>
 ### ARG_0X402F_D
 
 Dimensions: 1 rows × 12 columns
@@ -2182,7 +2112,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ABSCHALTUNG_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Unterspannungsabschaltung: 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4031-d"></a>
 ### ARG_0X4031_D
 
 Dimensions: 1 rows × 12 columns
@@ -2191,7 +2120,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTION_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktion Alternierendes Frontlicht: 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4033-d"></a>
 ### ARG_0X4033_D
 
 Dimensions: 8 rows × 12 columns
@@ -2207,7 +2135,6 @@ Dimensions: 8 rows × 12 columns
 | PIN_33_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ausgang Pin 33 (Zubehör I) 0 = aus, 1 = ein |
 | PIN_21_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ausgang Pin 21 (PTT2) 0 = aus, 1 = ein |
 
-<a id="table-arg-0x4036-d"></a>
 ### ARG_0X4036_D
 
 Dimensions: 8 rows × 12 columns
@@ -2223,7 +2150,6 @@ Dimensions: 8 rows × 12 columns
 | PIN_8_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ausgang Pin 8 (P-Schalter) 0 = aus, 1 = ein |
 | PIN_7_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ausgang Pin 7 (Lautsprecher) 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe152-d"></a>
 ### ARG_0XE152_D
 
 Dimensions: 1 rows × 12 columns
@@ -2232,7 +2158,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | NEBELSCHLUSSLEUCHTE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ausgang Nebelschlussleuchte 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe156-d"></a>
 ### ARG_0XE156_D
 
 Dimensions: 9 rows × 12 columns
@@ -2249,7 +2174,6 @@ Dimensions: 9 rows × 12 columns
 | BLITZLEUCHTE_HL_VERBAUT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Blitzkennleuchte hinten links (LIN Signal ST_PHLI_AVLB_MOTBK_2010): 0 = nicht verbaut, 1 = verbaut |
 | BLITZLEUCHTE_HR_VERBAUT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Blitzkennleuchte hinten rechts (LIN Signal ST_PHLI_AVLB_MOTBK_2010): 0 = nicht verbaut, 1 = verbaut |
 
-<a id="table-arg-0xe158-d"></a>
 ### ARG_0XE158_D
 
 Dimensions: 9 rows × 12 columns
@@ -2266,7 +2190,6 @@ Dimensions: 9 rows × 12 columns
 | BLITZLEUCHTE_HL_VERBAUT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Blitzkennleuchte hinten links (LIN Signal ST_PHLI_AVLB_MOTBK_2010): 0 = nicht verbaut, 1 = verbaut |
 | BLITZLEUCHTE_HR_VERBAUT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Blitzkennleuchte hinten rechts (LIN Signal ST_PHLI_AVLB_MOTBK_2010): 0 = nicht verbaut, 1 = verbaut |
 
-<a id="table-arg-0xe15a-d"></a>
 ### ARG_0XE15A_D
 
 Dimensions: 9 rows × 12 columns
@@ -2283,7 +2206,6 @@ Dimensions: 9 rows × 12 columns
 | BLITZLEUCHTE_HL_VERBAUT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Blitzkennleuchte hinten links (LIN Signal ST_PHLI_AVLB_MOTBK_2010) 0 = nicht verbaut, 1 = verbaut |
 | BLITZLEUCHTE_HR_VERBAUT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Blitzkennleuchte hinten rechts (LIN Signal ST_PHLI_AVLB_MOTBK_2010) 0 = nicht verbaut, 1 = verbaut |
 
-<a id="table-arg-0xe15c-d"></a>
 ### ARG_0XE15C_D
 
 Dimensions: 9 rows × 12 columns
@@ -2300,7 +2222,6 @@ Dimensions: 9 rows × 12 columns
 | BLITZLEUCHTE_HL_VERBAUT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Blitzkennleuchte hinten links (LIN Signal ST_PHLI_AVLB_MOTBK_2010) 0 = nicht verbaut, 1 = verbaut |
 | BLITZLEUCHTE_HR_VERBAUT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Blitzkennleuchte hinten rechts (LIN Signal ST_PHLI_AVLB_MOTBK_2010) 0 = nicht verbaut, 1 = verbaut |
 
-<a id="table-arg-0xe15e-d"></a>
 ### ARG_0XE15E_D
 
 Dimensions: 1 rows × 12 columns
@@ -2309,7 +2230,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_STOP_VORNE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Anhaltesignal STOP vorne 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe160-d"></a>
 ### ARG_0XE160_D
 
 Dimensions: 1 rows × 12 columns
@@ -2318,7 +2238,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_STOP_HINTEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Anhaltesignal hinten STOP 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe162-d"></a>
 ### ARG_0XE162_D
 
 Dimensions: 1 rows × 12 columns
@@ -2327,7 +2246,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG_FOLGEN_HINTEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Status Anhaltesignal: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe165-d"></a>
 ### ARG_0XE165_D
 
 Dimensions: 5 rows × 12 columns
@@ -2340,7 +2258,6 @@ Dimensions: 5 rows × 12 columns
 | HUPE_AKTIV | 0-n | high | unsigned char | - | TAB_MR_ARG_HUPE_LIN | - | - | - | - | - | Hupe aktiv (LIN Signal CTR_HORN_TOSQ_MOTBK_2010) |
 | HUPENEMULATION_AKTIV | 0-n | high | unsigned char | - | TAB_MR_ARG_BEH_HORN_EMULATION | - | - | - | - | - | Hupenemulation aktiv (LIN Signal CTR_SUBST_HORN_TOSQ_MOTBK_2010) |
 
-<a id="table-arg-0xe167-d"></a>
 ### ARG_0XE167_D
 
 Dimensions: 1 rows × 12 columns
@@ -2349,7 +2266,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BEHOERDENRELAIS | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ausgang Behördenrelais 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe168-d"></a>
 ### ARG_0XE168_D
 
 Dimensions: 1 rows × 12 columns
@@ -2358,7 +2274,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTIONSTASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktionstaster: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe169-d"></a>
 ### ARG_0XE169_D
 
 Dimensions: 1 rows × 12 columns
@@ -2367,7 +2282,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | WERKSTATTMODUS_EIN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Aktivierung Werkstattmodus: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe16e-d"></a>
 ### ARG_0XE16E_D
 
 Dimensions: 1 rows × 12 columns
@@ -2376,7 +2290,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTIONSTASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktionstaster: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe16f-d"></a>
 ### ARG_0XE16F_D
 
 Dimensions: 1 rows × 12 columns
@@ -2385,7 +2298,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTIONSTASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktionstaster: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe170-d"></a>
 ### ARG_0XE170_D
 
 Dimensions: 1 rows × 12 columns
@@ -2394,7 +2306,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KL30_BEH | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ausgang KL30 Behörde: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe171-d"></a>
 ### ARG_0XE171_D
 
 Dimensions: 1 rows × 12 columns
@@ -2403,7 +2314,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KL15_BEH | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Klemme 15 Behörde: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe172-d"></a>
 ### ARG_0XE172_D
 
 Dimensions: 1 rows × 12 columns
@@ -2412,7 +2322,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUNKTIONSTASTER | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ansteuerung Funktionstaster: 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe175-d"></a>
 ### ARG_0XE175_D
 
 Dimensions: 7 rows × 12 columns
@@ -2427,7 +2336,6 @@ Dimensions: 7 rows × 12 columns
 | PWM_SSL_BOTTOM_UP_WERT | % | high | unsigned char | - | - | 254.0 | 100.0 | 0.0 | 0.0 | 100.0 | PWM Wert Beleuchtung der oberen Taste (E) der unteren Wippe am linken Schalterblock |
 | PWM_SSL_BOTTOM_DOWN_WERT | % | high | unsigned char | - | - | 254.0 | 100.0 | 0.0 | 0.0 | 100.0 | PWM Wert Beleuchtung der unteren Taste (F) der unteren Wippe am linken Schalterblock |
 
-<a id="table-arg-0xe176-d"></a>
 ### ARG_0XE176_D
 
 Dimensions: 7 rows × 12 columns
@@ -2442,7 +2350,6 @@ Dimensions: 7 rows × 12 columns
 | PWM_SSR_BOTTOM_UP_WERT | % | high | unsigned char | - | - | 254.0 | 100.0 | 0.0 | 0.0 | 100.0 | PWM Wert Beleuchtung der oberen Taste (M) der unteren Wippe am rechten Schalterblock |
 | PWM_SSR_BOTTOM_DOWN_WERT | % | high | unsigned char | - | - | 254.0 | 100.0 | 0.0 | 0.0 | 100.0 | PWM Wert Beleuchtung der unteren Taste (N) der unteren Wippe am rechten Schalterblock |
 
-<a id="table-arg-0xe177-d"></a>
 ### ARG_0XE177_D
 
 Dimensions: 10 rows × 12 columns
@@ -2460,7 +2367,6 @@ Dimensions: 10 rows × 12 columns
 | MMC_RECHTS_AKTIV | 0-n | high | unsigned char | - | TAB_MR_ARG_MMC_TASTER | - | - | - | - | - | Ansteuerung Taster MMC rechts im LIN Signal CTR_MMC_RH_MOTBK_2010 |
 | MMC_POSITION | Stufen | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 254.0 | Ansteuerung MMC Position im LIN Signal CTR_MMC_PO_MOTBK_2010 |
 
-<a id="table-arg-0xe1a3-d"></a>
 ### ARG_0XE1A3_D
 
 Dimensions: 8 rows × 12 columns
@@ -2476,7 +2382,6 @@ Dimensions: 8 rows × 12 columns
 | NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 | NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe1a4-d"></a>
 ### ARG_0XE1A4_D
 
 Dimensions: 8 rows × 12 columns
@@ -2492,7 +2397,6 @@ Dimensions: 8 rows × 12 columns
 | NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 | NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe1a5-d"></a>
 ### ARG_0XE1A5_D
 
 Dimensions: 8 rows × 12 columns
@@ -2508,7 +2412,6 @@ Dimensions: 8 rows × 12 columns
 | NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 | NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe1a6-d"></a>
 ### ARG_0XE1A6_D
 
 Dimensions: 8 rows × 12 columns
@@ -2524,7 +2427,6 @@ Dimensions: 8 rows × 12 columns
 | NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 | NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 
-<a id="table-arg-0xe1a7-d"></a>
 ### ARG_0XE1A7_D
 
 Dimensions: 7 rows × 12 columns
@@ -2539,7 +2441,6 @@ Dimensions: 7 rows × 12 columns
 | KENNLEUCHTENZWANG_AKTIV | 0-n | high | unsigned char | - | TAB_MR_ARG_KL_ZWANG | - | - | - | - | - | Ansteuerung des LIN Signals ST_IDEN_CONN_MOTBK_2010 |
 | KENNLEUCHTEN_AKTIV | 0-n | high | unsigned char | - | TAB_MR_ARG_AKTIV_LIN | - | - | - | - | - | Ansteuerung des LIN Signals ST_IDEN_LI_MOTBK_2010 |
 
-<a id="table-arg-0xfd06-d"></a>
 ### ARG_0XFD06_D
 
 Dimensions: 20 rows × 12 columns
@@ -2567,7 +2468,6 @@ Dimensions: 20 rows × 12 columns
 | STAT_MANUFACTURING_DATA_19_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | End Of Line  Manufacutering data |
 | STAT_MANUFACTURING_DATA_20_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | End Of Line  Manufacutering data |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2581,7 +2481,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-energiesparmode-dop"></a>
 ### ENERGIESPARMODE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -2593,7 +2492,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Transportmode |
 | 3 | Flashmode |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2607,7 +2505,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fehlerklasse-dop"></a>
 ### FEHLERKLASSE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -2619,7 +2516,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Ueberpruefung beim naechsten Halt |
 | 4 | Ueberpruefung sofort erforderlich |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 164 rows × 3 columns
@@ -2791,7 +2687,6 @@ Dimensions: 164 rows × 3 columns
 | 0xE01487 | CAN BCO Nachricht Zusatzinformation_Grund_Funktion_Motorrad_2010: Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -2800,7 +2695,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2812,7 +2706,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -2821,7 +2714,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -2830,7 +2722,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2839,7 +2730,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-mr-tab-bca-calibration"></a>
 ### MR_TAB_BCA_CALIBRATION
 
 Dimensions: 3 rows × 2 columns
@@ -2850,7 +2740,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | CALIBRATED |
 | 0xFF | UNKNOWN |
 
-<a id="table-mr-tab-bco-calibration"></a>
 ### MR_TAB_BCO_CALIBRATION
 
 Dimensions: 5 rows × 2 columns
@@ -2863,7 +2752,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | FINISHED_NOK |
 | 0xFF | NOT_DEFINED |
 
-<a id="table-prog-dep-dop"></a>
 ### PROG_DEP_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -2877,7 +2765,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | incorrectResult error SWE - SWE |
 | 255 | reserved |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -2893,7 +2780,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -2904,7 +2790,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ECUMindestensEinmalVollstaendigProgrammierbar |
 | 2 | ECUNichtMehrProgrammierbar |
 
-<a id="table-rdtci-lev-dop"></a>
 ### RDTCI_LEV_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -2921,7 +2806,6 @@ Dimensions: 9 rows × 2 columns
 | 18 | reportNumberOfEmissionsRelatedOBDDTCByStatusMask |
 | 19 | reportEmissionsRelatedOBDDTCByStatusMask |
 
-<a id="table-res-0x4001-d"></a>
 ### RES_0X4001_D
 
 Dimensions: 7 rows × 10 columns
@@ -2936,7 +2820,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FA_SPANNUNG_SCHALTER | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktionsabschaltung Spannungsversorgung Zusatzschaltereinheit bei KL_50 ein: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FA_US_FREMDVERSORGUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktionsabschaltung US Fremdversorgung bei KL_50 ein: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x4002-d"></a>
 ### RES_0X4002_D
 
 Dimensions: 8 rows × 10 columns
@@ -2952,7 +2835,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_ENTLASTUNG_KL50 | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Entlastung KL50: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x4003-d"></a>
 ### RES_0X4003_D
 
 Dimensions: 2 rows × 10 columns
@@ -2962,7 +2844,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FUNKTION_SPANNUNGSVERSORGUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Spannungsversorgung Zusatzschaltereinheit: 0 = nicht aktiv, 1 = aktiv |
 | STAT_AUSGANG_PIN_8 | 0/1 | high | unsigned char | - | - | - | - | - | Status Ausgang Pin 8: 0 = aus, 1 = ein |
 
-<a id="table-res-0x4004-d"></a>
 ### RES_0X4004_D
 
 Dimensions: 2 rows × 10 columns
@@ -2972,7 +2853,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_IN_SSR_TOP_DWN_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_TASTER_LIN | - | - | - | Wert vom LIN Signal IN_SSR_TOP_DWN_MOTBK_2010 |
 | STAT_ST_KL_15_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_KL_15_LIN | - | - | - | Wert vom CAN Signal ST_KL_15_MOTBK_2010 |
 
-<a id="table-res-0x4005-d"></a>
 ### RES_0X4005_D
 
 Dimensions: 5 rows × 10 columns
@@ -2985,7 +2865,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_CTR_ILUM_PWRD_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_LICHT_AUS | - | - | - | Wert vom CAN Signal CTR_ILUM_PWRD_MOTBK_2010 |
 | STAT_ABSCHALTUNG_ALTERNIERENDES_FRONTLICHT | 0/1 | high | unsigned char | - | - | - | - | - | - |
 
-<a id="table-res-0x4006-d"></a>
 ### RES_0X4006_D
 
 Dimensions: 7 rows × 10 columns
@@ -3000,7 +2879,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x4007-d"></a>
 ### RES_0X4007_D
 
 Dimensions: 3 rows × 10 columns
@@ -3011,7 +2889,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_AUSGANG_PIN_47 | 0/1 | high | unsigned char | - | - | - | - | - | Status Ausgang Pin 47: 0 = aus, 1 = ein |
 | STAT_CTR_SSR_TOP_UP_MOTBK_2010_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | Wert vom LIN Signal CTR_SSR_TOP_UP_MOTBK_2010 |
 
-<a id="table-res-0x4008-d"></a>
 ### RES_0X4008_D
 
 Dimensions: 12 rows × 10 columns
@@ -3031,7 +2908,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_ZUSTAND_KENNLEUCHTE_HINTEN_LINKS | 0-n | high | unsigned char | - | TAB_MR_RES_ZUSTAND_KENNLEUCHTEN | - | - | - | Kennleuchtenzustand hinten links |
 | STAT_ZUSTAND_KENNLEUCHTE_HINTEN_RECHTS | 0-n | high | unsigned char | - | TAB_MR_RES_ZUSTAND_KENNLEUCHTEN | - | - | - | Kennleuchtenzustand hinten rechts |
 
-<a id="table-res-0x4009-d"></a>
 ### RES_0X4009_D
 
 Dimensions: 19 rows × 10 columns
@@ -3058,7 +2934,6 @@ Dimensions: 19 rows × 10 columns
 | STAT_CTR_SSR_MID_DWN_MOTBK_2010_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | Wert vom LIN Signal CTR_SSR_MID_DWN_MOTBK_2010 |
 | STAT_CTR_PHLI_BRIG_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_HELLIGKEIT | - | - | - | Wert vom LIN Signal CTR_PHLI_BRIG_MOTBK_2010 |
 
-<a id="table-res-0x400b-d"></a>
 ### RES_0X400B_D
 
 Dimensions: 1 rows × 10 columns
@@ -3067,7 +2942,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUSGANG_KENNLEUCHTE_VL | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion LED Blitzkennleuchte vorne links (Pin 3): 0 = aus, 1 = ein  |
 
-<a id="table-res-0x400d-d"></a>
 ### RES_0X400D_D
 
 Dimensions: 1 rows × 10 columns
@@ -3076,7 +2950,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUSGANG_KENNLEUCHTE_VR | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion LED Blitzkennleuchte vorne rechts (Pin 2): 0 = aus, 1 = ein  |
 
-<a id="table-res-0x400f-d"></a>
 ### RES_0X400F_D
 
 Dimensions: 1 rows × 10 columns
@@ -3085,7 +2958,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUSGANG_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Rundumkennleuchte hinten links (Pin 20): 0 = aus, 1 = ein  |
 
-<a id="table-res-0x4011-d"></a>
 ### RES_0X4011_D
 
 Dimensions: 1 rows × 10 columns
@@ -3094,7 +2966,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUSGANG_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Rundumkennleuchte hinten rechts (Pin 7): 0 = aus, 1 = ein  |
 
-<a id="table-res-0x4012-d"></a>
 ### RES_0X4012_D
 
 Dimensions: 7 rows × 10 columns
@@ -3109,7 +2980,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x4013-d"></a>
 ### RES_0X4013_D
 
 Dimensions: 2 rows × 10 columns
@@ -3119,7 +2989,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AUSGANG_STOP_VORNE | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Anhaltesignal vorne Stop (Pin 23) 0 = aus, 1 = ein |
 | STAT_CTR_SSL_TOP_UP_MOTBK_2010_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | Wert vom LIN Signal CTR_SSL_TOP_UP_MOTBK_2010 |
 
-<a id="table-res-0x4014-d"></a>
 ### RES_0X4014_D
 
 Dimensions: 7 rows × 10 columns
@@ -3134,7 +3003,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x4015-d"></a>
 ### RES_0X4015_D
 
 Dimensions: 2 rows × 10 columns
@@ -3144,7 +3012,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AUSGANG_STOP_HINTEN | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Anhaltesignal hinten Stop (Pin 36) 0 = aus, 1 = ein |
 | STAT_CTR_SSR_BOT_UP_MOTBK_2010_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | Wert vom LIN Signal CTR_SSR_BOT_UP_MOTBK_2010 |
 
-<a id="table-res-0x4016-d"></a>
 ### RES_0X4016_D
 
 Dimensions: 7 rows × 10 columns
@@ -3159,7 +3026,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x4017-d"></a>
 ### RES_0X4017_D
 
 Dimensions: 2 rows × 10 columns
@@ -3169,7 +3035,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AUSGANG_FOLGEN_HINTEN | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Anhaltesignal hinten Bitte folgen (Pin 35) 0 = aus, 1 = ein |
 | STAT_CTR_SSR_BOT_DWN_MOTBK_2010_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | Wert vom LIN Signal CTR_SSR_BOT_DWN_MOTBK_2010 |
 
-<a id="table-res-0x4018-d"></a>
 ### RES_0X4018_D
 
 Dimensions: 18 rows × 10 columns
@@ -3195,7 +3060,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x4019-d"></a>
 ### RES_0X4019_D
 
 Dimensions: 31 rows × 10 columns
@@ -3234,7 +3098,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_CTR_PHLI_SPFN_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_SOFU | - | - | - | Wert vom LIN Signal CTR_PHLI_SPFN_MOTBK_2010 |
 | STAT_IN_SPDM_STOU_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_TASTER_CAN | - | - | - | Wert vom CAN Signal IN_SPDM_STOU_MOTBK_2010 |
 
-<a id="table-res-0x401a-d"></a>
 ### RES_0X401A_D
 
 Dimensions: 18 rows × 10 columns
@@ -3260,7 +3123,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x401b-d"></a>
 ### RES_0X401B_D
 
 Dimensions: 31 rows × 10 columns
@@ -3299,7 +3161,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_CTR_PHLI_SPFN_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_SOFU | - | - | - | Wert vom LIN Signal CTR_PHLI_SPFN_MOTBK_2010 |
 | STAT_IN_SPDM_STOU_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_TASTER_CAN | - | - | - | Wert vom CAN Signal IN_SPDM_STOU_MOTBK_2010 |
 
-<a id="table-res-0x401c-d"></a>
 ### RES_0X401C_D
 
 Dimensions: 18 rows × 10 columns
@@ -3325,7 +3186,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x401d-d"></a>
 ### RES_0X401D_D
 
 Dimensions: 31 rows × 10 columns
@@ -3364,7 +3224,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_CTR_PHLI_SPFN_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_SOFU | - | - | - | Wert vom LIN Signal CTR_PHLI_SPFN_MOTBK_2010 |
 | STAT_IN_SPDM_STOU_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_TASTER_CAN | - | - | - | Wert vom CAN Signal IN_SPDM_STOU_MOTBK_2010 |
 
-<a id="table-res-0x401e-d"></a>
 ### RES_0X401E_D
 
 Dimensions: 18 rows × 10 columns
@@ -3390,7 +3249,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x401f-d"></a>
 ### RES_0X401F_D
 
 Dimensions: 31 rows × 10 columns
@@ -3429,7 +3287,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_CTR_PHLI_SPFN_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_SOFU | - | - | - | Wert vom LIN Signal CTR_PHLI_SPFN_MOTBK_2010 |
 | STAT_IN_SPDM_STOU_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_TASTER_CAN | - | - | - | Wert vom CAN Signal IN_SPDM_STOU_MOTBK_2010 |
 
-<a id="table-res-0x4020-d"></a>
 ### RES_0X4020_D
 
 Dimensions: 19 rows × 10 columns
@@ -3456,7 +3313,6 @@ Dimensions: 19 rows × 10 columns
 | STAT_FUNKTION_SCHUTZ_TIEFENTLADUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Schutz vor Tiefentladung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_ST_HLD_SIG_MOTBK_2010 | 0-n | high | unsigned char | - | - | - | - | - | Wert vom LIN Signal ST_HLD_SIG_MOTBK_2010 |
 
-<a id="table-res-0x4021-d"></a>
 ### RES_0X4021_D
 
 Dimensions: 12 rows × 10 columns
@@ -3476,7 +3332,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_CTR_HORN_TOSQ_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_HORN | - | - | - | Wert vom LIN Signal CTR_HORN_TOSQ_MOTBK_2010 (Steuerung Hupe) |
 | STAT_ST_IDEN_LI_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_KL_ZWANG | - | - | - | Wert vom LIN Signal ST_IDEN_LI_MOTBK_2010 (Status Kennleuchtenzwang) |
 
-<a id="table-res-0x4022-d"></a>
 ### RES_0X4022_D
 
 Dimensions: 12 rows × 10 columns
@@ -3496,7 +3351,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_FUNKTION_UEBERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Überspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 | STAT_FUNKTION_UNTERSPANNUNG_ABSCHALTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Status der Funktion Unterspannungsabschaltung: 0 = nicht aktiv, 1 = aktiv |
 
-<a id="table-res-0x4023-d"></a>
 ### RES_0X4023_D
 
 Dimensions: 9 rows × 10 columns
@@ -3513,7 +3367,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_ST_OPUN_FUNK_ELA_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_ELA | - | - | - | Wert vom LIN Signal ST_OPUN_FUNK_ELA_MOTBK_2010 (Status ELA Leitung) |
 | STAT_ST_OPUN_FUNK_PRMTR_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_PARAMETERSTATUS | - | - | - | Wert vom LIN Signal ST_OPUN_FUNK_PRMTR_MOTBK_2010 (Parameterstatus) |
 
-<a id="table-res-0x4025-d"></a>
 ### RES_0X4025_D
 
 Dimensions: 1 rows × 10 columns
@@ -3522,7 +3375,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KL15_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion KL15 (Pin 33): 0 = aus, 1 = ein |
 
-<a id="table-res-0x4027-d"></a>
 ### RES_0X4027_D
 
 Dimensions: 1 rows × 10 columns
@@ -3531,7 +3383,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KL30_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Ausgang KL30 (Codierparameter kl30_TruthTable) 0 = aus, 1 = ein |
 
-<a id="table-res-0x4028-d"></a>
 ### RES_0X4028_D
 
 Dimensions: 3 rows × 10 columns
@@ -3542,7 +3393,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_RPM_ENG_MOTBK_2010_WERT | 1/min | high | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Wert vom CAN Signal RPM_ENG_MOTBK_2010 |
 | STAT_BATTERIESPANNUNG_PIN51_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Status Batteriespannung Behörde Pin 51 |
 
-<a id="table-res-0x4029-d"></a>
 ### RES_0X4029_D
 
 Dimensions: 1 rows × 10 columns
@@ -3551,7 +3401,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BEHOERDENRELAIS_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Behördenrelais (Pin 37): 0 = aus, 1 = ein |
 
-<a id="table-res-0x402b-d"></a>
 ### RES_0X402B_D
 
 Dimensions: 15 rows × 10 columns
@@ -3574,7 +3423,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_FUNKANLAGE | 0/1 | high | unsigned char | - | - | - | - | - | Ausgang Funkanlage (Pin 5): 0 = aus, 1 = ein |
 | STAT_SV_BEHOERDENSCHALTER | 0/1 | high | unsigned char | - | - | - | - | - | Ausgang Spannungsversorgung Behördenschalter (Pin 8): 0 = aus, 1 = ein |
 
-<a id="table-res-0x402d-d"></a>
 ### RES_0X402D_D
 
 Dimensions: 1 rows × 10 columns
@@ -3583,7 +3431,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ABSCHALTUNG_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Überspannungsabschaltung: 0 = aus, 1 = ein |
 
-<a id="table-res-0x402f-d"></a>
 ### RES_0X402F_D
 
 Dimensions: 1 rows × 10 columns
@@ -3592,7 +3439,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ABSCHALTUNG_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Unterspannungsabschaltung: 0 = aus, 1 = ein |
 
-<a id="table-res-0x4030-d"></a>
 ### RES_0X4030_D
 
 Dimensions: 12 rows × 10 columns
@@ -3612,7 +3458,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_IN_SSR_TOP_DWN | 0-n | high | unsigned char | - | - | - | - | - | - |
 | STAT_ABSCHALTUNG_ALTERNIERENDES_FRONTLICHT | 0/1 | high | unsigned char | - | - | - | - | - | - |
 
-<a id="table-res-0x4031-d"></a>
 ### RES_0X4031_D
 
 Dimensions: 2 rows × 10 columns
@@ -3622,7 +3467,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FUNKTION_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Status Funktion Alternierendes Frontlicht: 0 = aus, 1 = ein |
 | STAT_CTR_ILUM_SPFN_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_SONDERBLINKEN | - | - | - | Wert vom CAN Signal CTR_ILUM_SPFN_MOTBK_2010 |
 
-<a id="table-res-0x4032-d"></a>
 ### RES_0X4032_D
 
 Dimensions: 24 rows × 10 columns
@@ -3654,7 +3498,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_ZUSTAND_2_AUSGANG_35 | 0/1 | high | unsigned char | - | - | - | - | - | Wert vom Zustand 2 Ausgang 35: 0 = nicht aktiv, 1 = aktiv |
 | STAT_ST_KL_50_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_KL50 | - | - | - | Wert vom CAN Signal ST_KL_50_MOTBK_2010 |
 
-<a id="table-res-0x4033-d"></a>
 ### RES_0X4033_D
 
 Dimensions: 34 rows × 10 columns
@@ -3696,7 +3539,6 @@ Dimensions: 34 rows × 10 columns
 | STAT_CTR_FNI_SPFN_MOTBK_2010_RESERVIERT2 | 0/1 | high | unsigned char | - | - | - | - | - | Wert vom LIN Signal CTR_FNI_SPFN_MOTBK_2010 (Reserviert2) |
 | STAT_CTR_ILUM_SPFN_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_SONDERBLINKEN | - | - | - | Wert vom CAN Signal CTR_ILUM_SPFN_MOTBK_2010 (Beleuchtung Sonderfunktion) |
 
-<a id="table-res-0x4034-d"></a>
 ### RES_0X4034_D
 
 Dimensions: 30 rows × 10 columns
@@ -3734,7 +3576,6 @@ Dimensions: 30 rows × 10 columns
 | STAT_ST_EXT_LIDF_MOTBK_2010_RES | 0/1 | high | unsigned char | - | - | - | - | - | Wert vom CAN Signal ST_EXT_LIDF_MOTBK_2010: Reserviert |
 | STAT_V_WHL_RR_MOTBK_2010_WERT | km/h | high | unsigned int | - | - | 1.0 | 8.0 | 0.0 | Wert vom CAN Signal V_WHL_RR_MOTBK_2010 |
 
-<a id="table-res-0x4035-d"></a>
 ### RES_0X4035_D
 
 Dimensions: 30 rows × 10 columns
@@ -3772,7 +3613,6 @@ Dimensions: 30 rows × 10 columns
 | STAT_ST_EXT_LIDF_MOTBK_2010_RES | 0/1 | high | unsigned char | - | - | - | - | - | Wert vom LIN Signal ST_EXT_LIDF_MOTBK_2010: Reserviert |
 | STAT_V_WHL_RR_MOTBK_2010_WERT | km/h | high | unsigned int | - | - | 1.0 | 8.0 | 0.0 | Wert vom LIN Signal V_WHL_RR_MOTBK_2010 |
 
-<a id="table-res-0x4036-d"></a>
 ### RES_0X4036_D
 
 Dimensions: 34 rows × 10 columns
@@ -3814,7 +3654,6 @@ Dimensions: 34 rows × 10 columns
 | STAT_CTR_FNI_SPFN_MOTBK_2010_RESERVIERT2 | 0/1 | high | unsigned char | - | - | - | - | - | Wert vom LIN Signal CTR_FNI_SPFN_MOTBK_2010 (Reserviert2) |
 | STAT_CTR_ILUM_SPFN_MOTBK_2010 | 0-n | high | unsigned char | - | TAB_MR_RES_SONDERBLINKEN | - | - | - | Wert vom CAN Signal CTR_ILUM_SPFN_MOTBK_2010 (Beleuchtung Sonderfunktion) |
 
-<a id="table-res-0xb008-r"></a>
 ### RES_0XB008_R
 
 Dimensions: 3 rows × 13 columns
@@ -3825,7 +3664,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_K1_KALIBRIERUNG_WERT | - | - | + | Stufen | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Kalibrierter Wert K1 |
 | STAT_ROUTINE_RESULT | - | - | + | 0-n | high | unsigned char | - | TAB_MR_ROUTINE_BCA | - | - | - | Aktueller Routine Status |
 
-<a id="table-res-0xb009-r"></a>
 ### RES_0XB009_R
 
 Dimensions: 1 rows × 13 columns
@@ -3834,7 +3672,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_MR_ROUTINE_BCA | - | - | - | Status Routine Selbsttest |
 
-<a id="table-res-0xe152-d"></a>
 ### RES_0XE152_D
 
 Dimensions: 1 rows × 10 columns
@@ -3843,7 +3680,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_NEBELSCHLUSSLEUCHTE | 0/1 | high | unsigned char | - | - | - | - | - | Status Ausgang Nebelschlussleuchte 0 = aus, 1 = ein |
 
-<a id="table-res-0xe155-d"></a>
 ### RES_0XE155_D
 
 Dimensions: 5 rows × 10 columns
@@ -3856,7 +3692,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_TYP_BLITZLEUCHTE_VL | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_TYP | - | - | - | Typ der Blitzkennleuchte (LIN Signal ST_TYP_PHLI_FLH_MOTBK_2010) |
 | STAT_KOMM_FEHLER_BKL_VL | 0/1 | high | unsigned char | - | - | - | - | - | Status Kommunikationsfehler Blitzkennleuchte VL (LIN Signal COMM_ERR_BKL_FLH_MOTBK_2010): 0 = kein Fehler, 1 = Fehler aktiv |
 
-<a id="table-res-0xe156-d"></a>
 ### RES_0XE156_D
 
 Dimensions: 17 rows × 10 columns
@@ -3881,7 +3716,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010): 0 = aus, 1 = ein |
 | STAT_NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010): 0 = aus, 1 = ein |
 
-<a id="table-res-0xe157-d"></a>
 ### RES_0XE157_D
 
 Dimensions: 5 rows × 10 columns
@@ -3894,7 +3728,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_TYP_BLITZLEUCHTE_VR | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_TYP | - | - | - | Typ der Blitzkennleuchte (LIN Signal ST_TYP_PHLI_FRH_MOTBK_2010) |
 | STAT_KOMM_FEHLER_BKL_VR | 0/1 | high | unsigned char | - | - | - | - | - | Status Kommunikationsfehler Blitzkennleuchte VR (LIN Signal COMM_ERR_BKL_FRH_MOTBK_2010): 0 = kein Fehler, 1 = Fehler aktiv |
 
-<a id="table-res-0xe158-d"></a>
 ### RES_0XE158_D
 
 Dimensions: 17 rows × 10 columns
@@ -3919,7 +3752,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010): 0 = aus, 1 = ein |
 | STAT_NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010): 0 = aus, 1 = ein |
 
-<a id="table-res-0xe159-d"></a>
 ### RES_0XE159_D
 
 Dimensions: 5 rows × 10 columns
@@ -3932,7 +3764,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_TYP_BLITZLEUCHTE_HL | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_TYP | - | - | - | Typ der Blitzkennleuchte (LIN Signal ST_TYP_PHLI_RLH_MOTBK_2010) |
 | STAT_KOMM_FEHLER_BKL_HL | 0/1 | high | unsigned char | - | - | - | - | - | Status Kommunikationsfehler Blitzkennleuchte HL (LIN Signal COMM_ERR_BKL_RLH_MOTBK_2010): 0 = kein Fehler, 1 = Fehler aktiv |
 
-<a id="table-res-0xe15a-d"></a>
 ### RES_0XE15A_D
 
 Dimensions: 17 rows × 10 columns
@@ -3957,7 +3788,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 | STAT_NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 
-<a id="table-res-0xe15b-d"></a>
 ### RES_0XE15B_D
 
 Dimensions: 5 rows × 10 columns
@@ -3970,7 +3800,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_TYP_BLITZLEUCHTE_HR | 0-n | high | unsigned char | - | TAB_MR_RES_BKL_TYP | - | - | - | Typ der Blitzkennleuchte (LIN Signal ST_TYP_PHLI_RRH_MOTBK_2010) |
 | STAT_KOMM_FEHLER_BKL_HR | 0/1 | high | unsigned char | - | - | - | - | - | Status Kommunikationsfehler Blitzkennleuchte HR (LIN Signal COMM_ERR_BKL_RRH_MOTBK_2010): 0 = kein Fehler, 1 = Fehler aktiv |
 
-<a id="table-res-0xe15c-d"></a>
 ### RES_0XE15C_D
 
 Dimensions: 17 rows × 10 columns
@@ -3995,7 +3824,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 | STAT_NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 
-<a id="table-res-0xe15e-d"></a>
 ### RES_0XE15E_D
 
 Dimensions: 1 rows × 10 columns
@@ -4004,7 +3832,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUSGANG_STOP_VORNE | 0/1 | high | unsigned char | - | - | - | - | - | Status Anhaltesignal STOP vorne 0 = aus, 1 = ein |
 
-<a id="table-res-0xe160-d"></a>
 ### RES_0XE160_D
 
 Dimensions: 1 rows × 10 columns
@@ -4013,7 +3840,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUSGANG_STOP_HINTEN | 0/1 | high | unsigned char | - | - | - | - | - | Status Anhaltesignal hinten STOP 0 = aus, 1 = ein |
 
-<a id="table-res-0xe162-d"></a>
 ### RES_0XE162_D
 
 Dimensions: 1 rows × 10 columns
@@ -4022,7 +3848,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUSGANG_FOLGEN_HINTEN | 0/1 | high | unsigned char | - | - | - | - | - | Status Anhaltesignal: 0 = aus, 1 = ein |
 
-<a id="table-res-0xe164-d"></a>
 ### RES_0XE164_D
 
 Dimensions: 5 rows × 10 columns
@@ -4035,7 +3860,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_STROBOSKOPBLITZ_AKTIV | 0-n | high | unsigned char | - | TAB_MR_RES_LIN_AKTIVIERUNGSZUSTAND | - | - | - | Aktivierungszustand Stroboskopblitz (LIN Signal CTR_PHLI_SPFLS_MOTBK_2010) |
 | STAT_KOMM_FEHLER_TONSIGNALANLAGE | 0/1 | high | unsigned char | - | - | - | - | - | Status Kommunikationsfehler Tonsignalanlage (LIN Signal COMM_ERR_TSA_MOTBK_2010): 0 = kein Fehler, 1 = Fehler aktiv |
 
-<a id="table-res-0xe165-d"></a>
 ### RES_0XE165_D
 
 Dimensions: 12 rows × 10 columns
@@ -4055,7 +3879,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_KENNLEUCHTENZWANG_AKTIV | 0-n | high | unsigned char | - | TAB_MR_RES_KL_ZWANG | - | - | - | Status des LIN Signals ST_IDEN_CONN_MOTBK_2010 |
 | STAT_KENNLEUCHTEN_AKTIV | 0-n | high | unsigned char | - | TAB_MR_RES_AKTIV_LIN | - | - | - | Status des LIN Signals ST_IDEN_LI_MOTBK_2010 |
 
-<a id="table-res-0xe167-d"></a>
 ### RES_0XE167_D
 
 Dimensions: 1 rows × 10 columns
@@ -4064,7 +3887,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BEHOERDENRELAIS | 0/1 | high | unsigned char | - | - | - | - | - | Status Ausgang Behördenrelais 0 = aus, 1 = ein |
 
-<a id="table-res-0xe168-d"></a>
 ### RES_0XE168_D
 
 Dimensions: 18 rows × 10 columns
@@ -4090,7 +3912,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_FUNKTIONSTASTER_PIN_46 | 0-n | high | unsigned char | - | TAB_MR_PINZUORDNUNG | - | - | - | Status Zuordnung Funktionstaster zu Ausgangspin 46 |
 | STAT_FUNKTIONSTASTER_PIN_47 | 0-n | high | unsigned char | - | TAB_MR_PINZUORDNUNG | - | - | - | Status Zuordnung Funktionstaster zu Ausgangspin 47 |
 
-<a id="table-res-0xe169-d"></a>
 ### RES_0XE169_D
 
 Dimensions: 1 rows × 10 columns
@@ -4099,7 +3920,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WERKSTATTMODUS | 0/1 | high | unsigned char | - | - | - | - | - | Status Werkstattmodus: 0 = aus, 1 = ein |
 
-<a id="table-res-0xe16e-d"></a>
 ### RES_0XE16E_D
 
 Dimensions: 18 rows × 10 columns
@@ -4125,7 +3945,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_FUNKTIONSTASTER_PIN_46 | 0-n | high | unsigned char | - | TAB_MR_PINZUORDNUNG | - | - | - | Status Zuordnung Funktionstaster zu Ausgangspin 46 |
 | STAT_FUNKTIONSTASTER_PIN_47 | 0-n | high | unsigned char | - | TAB_MR_PINZUORDNUNG | - | - | - | Status Zuordnung Funktionstaster zu Ausgangspin 47 |
 
-<a id="table-res-0xe16f-d"></a>
 ### RES_0XE16F_D
 
 Dimensions: 18 rows × 10 columns
@@ -4151,7 +3970,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_FUNKTIONSTASTER_PIN_46 | 0-n | high | unsigned char | - | TAB_MR_PINZUORDNUNG | - | - | - | Status Zuordnung Funktionstaster zu Ausgangspin 46 |
 | STAT_FUNKTIONSTASTER_PIN_47 | 0-n | high | unsigned char | - | TAB_MR_PINZUORDNUNG | - | - | - | Status Zuordnung Funktionstaster zu Ausgangspin 47 |
 
-<a id="table-res-0xe170-d"></a>
 ### RES_0XE170_D
 
 Dimensions: 1 rows × 10 columns
@@ -4160,7 +3978,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KL30_BEH | 0/1 | high | unsigned char | - | - | - | - | - | Status Klemme 30 Behörde: 0 = aus, 1 = ein |
 
-<a id="table-res-0xe171-d"></a>
 ### RES_0XE171_D
 
 Dimensions: 1 rows × 10 columns
@@ -4169,7 +3986,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KL15_BEH | 0/1 | high | unsigned char | - | - | - | - | - | Status Klemme 15 Behörde: 0 = aus, 1 = ein |
 
-<a id="table-res-0xe172-d"></a>
 ### RES_0XE172_D
 
 Dimensions: 18 rows × 10 columns
@@ -4195,7 +4011,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_FUNKTIONSTASTER_PIN_46 | 0-n | high | unsigned char | - | TAB_MR_PINZUORDNUNG | - | - | - | Status Zuordnung Funktionstaster zu Ausgangspin 46 |
 | STAT_FUNKTIONSTASTER_PIN_47 | 0-n | high | unsigned char | - | TAB_MR_PINZUORDNUNG | - | - | - | Status Zuordnung Funktionstaster zu Ausgangspin 47 |
 
-<a id="table-res-0xe173-d"></a>
 ### RES_0XE173_D
 
 Dimensions: 9 rows × 10 columns
@@ -4212,7 +4027,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_SSL_ROCKER_SWITCH_RIGHT | 0-n | high | unsigned char | - | TAB_MR_RES_TASTER_LIN | - | - | - | Status des rechten Tasters/Schalters (H) der einzelnen Wippe am linken Schalterblock |
 | STAT_SSL_COMM_ERROR | 0/1 | high | unsigned char | - | - | - | - | - | Schalterblock Kommunikationsfehler: 0 = kein Fehler, 1 = Fehler vorhanden |
 
-<a id="table-res-0xe174-d"></a>
 ### RES_0XE174_D
 
 Dimensions: 9 rows × 10 columns
@@ -4229,7 +4043,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_SSR_ROCKER_SWITCH_RIGHT | 0-n | high | unsigned char | - | TAB_MR_RES_TASTER_LIN | - | - | - | Status des rechten Tasters/Schalters (P) der einzelnen Wippe am rechten Schalterblock |
 | STAT_SSR_COMM_ERROR | 0/1 | high | unsigned char | - | - | - | - | - | Schalterblock Kommunikationsfehler: 0 = kein Fehler, 1 = Fehler vorhanden |
 
-<a id="table-res-0xe175-d"></a>
 ### RES_0XE175_D
 
 Dimensions: 7 rows × 10 columns
@@ -4244,7 +4057,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_PWM_SSL_BOTTOM_UP_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | PWM Wert Beleuchtung der oberen Taste (E) der unteren Wippe am linken Schalterblock |
 | STAT_PWM_SSL_BOTTOM_DOWN_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | PWM Wert Beleuchtung der unteren Taste (F) der unteren Wippe am linken Schalterblock |
 
-<a id="table-res-0xe176-d"></a>
 ### RES_0XE176_D
 
 Dimensions: 7 rows × 10 columns
@@ -4259,7 +4071,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_PWM_SSR_BOTTOM_UP_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | PWM Wert Beleuchtung der oberen Taste (M) der unteren Wippe am rechten Schalterblock |
 | STAT_PWM_SSR_BOTTOM_DOWN_WERT | % | high | unsigned char | - | - | 100.0 | 254.0 | 0.0 | PWM Wert Beleuchtung der unteren Taste (N) der unteren Wippe am rechten Schalterblock |
 
-<a id="table-res-0xe177-d"></a>
 ### RES_0XE177_D
 
 Dimensions: 12 rows × 10 columns
@@ -4279,7 +4090,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_FUNKANLAGE_STROM_WERT | mA | high | int | - | - | 1.0 | 1.0 | 0.0 | Strom am Ausgang Funkanlage |
 | STAT_FUNKANLAGE_SPANNUNG_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Spannung am Ausgang Funkanlage |
 
-<a id="table-res-0xe1a3-d"></a>
 ### RES_0XE1A3_D
 
 Dimensions: 17 rows × 10 columns
@@ -4304,7 +4114,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010): 0 = aus, 1 = ein |
 | STAT_NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010): 0 = aus, 1 = ein |
 
-<a id="table-res-0xe1a4-d"></a>
 ### RES_0XE1A4_D
 
 Dimensions: 17 rows × 10 columns
@@ -4329,7 +4138,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010): 0 = aus, 1 = ein |
 | STAT_NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010): 0 = aus, 1 = ein |
 
-<a id="table-res-0xe1a5-d"></a>
 ### RES_0XE1A5_D
 
 Dimensions: 17 rows × 10 columns
@@ -4354,7 +4162,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 | STAT_NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 
-<a id="table-res-0xe1a6-d"></a>
 ### RES_0XE1A6_D
 
 Dimensions: 17 rows × 10 columns
@@ -4379,7 +4186,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_NEBENFARBE_KENNLEUCHTE_HL | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten links (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 | STAT_NEBENFARBE_KENNLEUCHTE_HR | 0/1 | high | unsigned char | - | - | - | - | - | Nebenfarbe Blitzkennleuchte hinten rechts (LIN Signal CTR_CL_AUFN_MOTBK_2010) 0 = aus, 1 = ein |
 
-<a id="table-res-0xe1a7-d"></a>
 ### RES_0XE1A7_D
 
 Dimensions: 12 rows × 10 columns
@@ -4399,7 +4205,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_KENNLEUCHTENZWANG_AKTIV | 0-n | high | unsigned char | - | TAB_MR_RES_KL_ZWANG | - | - | - | Status des LIN Signals ST_IDEN_CONN_MOTBK_2010 |
 | STAT_KENNLEUCHTEN_AKTIV | 0-n | high | unsigned char | - | TAB_MR_RES_AKTIV_LIN | - | - | - | Status des LIN Signals ST_IDEN_LI_MOTBK_2010 |
 
-<a id="table-res-0xfd06-d"></a>
 ### RES_0XFD06_D
 
 Dimensions: 23 rows × 10 columns
@@ -4430,7 +4235,6 @@ Dimensions: 23 rows × 10 columns
 | STAT_K1_SOCKET_CALIB_PARAM_WERT | Stufe | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | K1 Radio Equipment Calib Parameter |
 | STAT_RADIO_CALIBRATION | 0-n | high | unsigned char | - | MR_TAB_BCA_CALIBRATION | - | - | - | Radio equipment calibration status: NOT_CALIBREATED (0) CALIBRATED (1) UNKNOWN (255) |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 96 rows × 16 columns
@@ -4534,7 +4338,6 @@ Dimensions: 96 rows × 16 columns
 | _RADIO_EQUIPMENT_CALIBRATION | 0x4037 | STAT_RADIO_EQUIP_CALIBRATION | Status radio equipment calibration: NOT_CALIBRATED (0) CALIBRATED (1) UNKNOWN (2) | 0-n | - | high | unsigned char | MR_TAB_BCA_CALIBRATION | - | - | - | - | 22 | - | - |
 | END_OF_LINE_DATA | 0xFD06 | - | end of line data ( manufacturer specific) | - | - | - | - | - | - | - | - | - | 22;2E | ARG_0xFD06_D | RES_0xFD06_D |
 
-<a id="table-svk-version-dop"></a>
 ### SVK_VERSION_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -4544,7 +4347,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | reserved |
 | 1 | SVKVersion_01 |
 
-<a id="table-tab-mr-arg-aktiv-lin"></a>
 ### TAB_MR_ARG_AKTIV_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -4556,7 +4358,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-beh-horn-emulation"></a>
 ### TAB_MR_ARG_BEH_HORN_EMULATION
 
 Dimensions: 4 rows × 2 columns
@@ -4568,7 +4369,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-bereich-geschwindigkeit"></a>
 ### TAB_MR_ARG_BEREICH_GESCHWINDIGKEIT
 
 Dimensions: 4 rows × 2 columns
@@ -4580,7 +4380,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Geschwindigkeitsbereich schnell |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-bkl-helligkeit"></a>
 ### TAB_MR_ARG_BKL_HELLIGKEIT
 
 Dimensions: 4 rows × 2 columns
@@ -4592,7 +4391,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Tagmodus |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-bkl-sofu"></a>
 ### TAB_MR_ARG_BKL_SOFU
 
 Dimensions: 8 rows × 2 columns
@@ -4608,7 +4406,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Reserviert |
 | 0x07 | Signal ungültig |
 
-<a id="table-tab-mr-arg-bkl-sync"></a>
 ### TAB_MR_ARG_BKL_SYNC
 
 Dimensions: 4 rows × 2 columns
@@ -4620,7 +4417,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Alternierend |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-blitzmuster"></a>
 ### TAB_MR_ARG_BLITZMUSTER
 
 Dimensions: 8 rows × 2 columns
@@ -4636,7 +4432,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Reserviert |
 | 0x07 | Signal ungültig |
 
-<a id="table-tab-mr-arg-country-code"></a>
 ### TAB_MR_ARG_COUNTRY_CODE
 
 Dimensions: 15 rows × 2 columns
@@ -4659,7 +4454,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0E | Reserviert |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-mr-arg-hupe-lin"></a>
 ### TAB_MR_ARG_HUPE_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -4671,7 +4465,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-kl-15-lin"></a>
 ### TAB_MR_ARG_KL_15_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -4683,7 +4476,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-kl-zwang"></a>
 ### TAB_MR_ARG_KL_ZWANG
 
 Dimensions: 4 rows × 2 columns
@@ -4695,7 +4487,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-mmc-taster"></a>
 ### TAB_MR_ARG_MMC_TASTER
 
 Dimensions: 4 rows × 2 columns
@@ -4707,7 +4498,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Taster gedrückt |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-taster-lin"></a>
 ### TAB_MR_ARG_TASTER_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -4719,7 +4509,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-arg-tsa-volume"></a>
 ### TAB_MR_ARG_TSA_VOLUME
 
 Dimensions: 16 rows × 2 columns
@@ -4743,7 +4532,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Reserviert |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-mr-audio-menue"></a>
 ### TAB_MR_AUDIO_MENUE
 
 Dimensions: 4 rows × 2 columns
@@ -4755,7 +4543,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Audio Menü aktiv |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-beh-horn-emulation"></a>
 ### TAB_MR_BEH_HORN_EMULATION
 
 Dimensions: 4 rows × 2 columns
@@ -4767,7 +4554,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-design"></a>
 ### TAB_MR_DESIGN
 
 Dimensions: 4 rows × 2 columns
@@ -4779,7 +4565,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Nachteinstellung |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-hupe-lin"></a>
 ### TAB_MR_HUPE_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -4791,7 +4576,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-kl50"></a>
 ### TAB_MR_KL50
 
 Dimensions: 4 rows × 2 columns
@@ -4803,7 +4587,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-lin-fehler"></a>
 ### TAB_MR_LIN_FEHLER
 
 Dimensions: 4 rows × 2 columns
@@ -4815,7 +4598,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-lin-leuchten"></a>
 ### TAB_MR_LIN_LEUCHTEN
 
 Dimensions: 4 rows × 2 columns
@@ -4827,7 +4609,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Leuchte defekt |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-pinzuordnung"></a>
 ### TAB_MR_PINZUORDNUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4839,7 +4620,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Pin mit Taster verbunden und aktiv |
 | 0xFF | Nicht definiert |
 
-<a id="table-tab-mr-res-abl-status"></a>
 ### TAB_MR_RES_ABL_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -4851,7 +4631,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Abblendlicht ein |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-aktiv-lin"></a>
 ### TAB_MR_RES_AKTIV_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -4863,7 +4642,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-audio-menue-can"></a>
 ### TAB_MR_RES_AUDIO_MENUE_CAN
 
 Dimensions: 4 rows × 2 columns
@@ -4875,7 +4653,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Audio Menü aktiv |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-beh-horn-emulation"></a>
 ### TAB_MR_RES_BEH_HORN_EMULATION
 
 Dimensions: 4 rows × 2 columns
@@ -4887,7 +4664,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-bkl-farben"></a>
 ### TAB_MR_RES_BKL_FARBEN
 
 Dimensions: 4 rows × 2 columns
@@ -4899,7 +4675,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-bkl-helligkeit"></a>
 ### TAB_MR_RES_BKL_HELLIGKEIT
 
 Dimensions: 4 rows × 2 columns
@@ -4911,7 +4686,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Tagmodus |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-bkl-sofu"></a>
 ### TAB_MR_RES_BKL_SOFU
 
 Dimensions: 8 rows × 2 columns
@@ -4927,7 +4701,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Reserviert |
 | 0x07 | Signal ungültig |
 
-<a id="table-tab-mr-res-bkl-sync"></a>
 ### TAB_MR_RES_BKL_SYNC
 
 Dimensions: 4 rows × 2 columns
@@ -4939,7 +4712,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Alternierend |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-bkl-typ"></a>
 ### TAB_MR_RES_BKL_TYP
 
 Dimensions: 4 rows × 2 columns
@@ -4951,7 +4723,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Rundum |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-blinker-status"></a>
 ### TAB_MR_RES_BLINKER_STATUS
 
 Dimensions: 8 rows × 2 columns
@@ -4967,7 +4738,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Reserviert |
 | 0x07 | Signal ungültig |
 
-<a id="table-tab-mr-res-blitzmuster"></a>
 ### TAB_MR_RES_BLITZMUSTER
 
 Dimensions: 8 rows × 2 columns
@@ -4983,7 +4753,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Reserviert |
 | 0x07 | Signal ungültig |
 
-<a id="table-tab-mr-res-bremsl-status"></a>
 ### TAB_MR_RES_BREMSL_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -4995,7 +4764,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Gefahrenbremslicht aktiv |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-bu-alt-frontl"></a>
 ### TAB_MR_RES_BU_ALT_FRONTL
 
 Dimensions: 4 rows × 2 columns
@@ -5007,7 +4775,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-country-code"></a>
 ### TAB_MR_RES_COUNTRY_CODE
 
 Dimensions: 15 rows × 2 columns
@@ -5030,7 +4797,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0E | Reserviert |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-mr-res-design"></a>
 ### TAB_MR_RES_DESIGN
 
 Dimensions: 4 rows × 2 columns
@@ -5042,7 +4808,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Nachteinstellung |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-ela"></a>
 ### TAB_MR_RES_ELA
 
 Dimensions: 4 rows × 2 columns
@@ -5054,7 +4819,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-fl-status"></a>
 ### TAB_MR_RES_FL_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -5066,7 +4830,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Fernlicht ein |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-geschwindigkeit-bereich"></a>
 ### TAB_MR_RES_GESCHWINDIGKEIT_BEREICH
 
 Dimensions: 4 rows × 2 columns
@@ -5078,7 +4841,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Geschwindigkeitsbereich schnell |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-helmstatus"></a>
 ### TAB_MR_RES_HELMSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -5090,7 +4852,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-hold-sig"></a>
 ### TAB_MR_RES_HOLD_SIG
 
 Dimensions: 4 rows × 2 columns
@@ -5102,7 +4863,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungueltig |
 
-<a id="table-tab-mr-res-horn"></a>
 ### TAB_MR_RES_HORN
 
 Dimensions: 4 rows × 2 columns
@@ -5114,7 +4874,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-kl15-lin"></a>
 ### TAB_MR_RES_KL15_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -5126,7 +4885,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-kl50"></a>
 ### TAB_MR_RES_KL50
 
 Dimensions: 4 rows × 2 columns
@@ -5138,7 +4896,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-kl-15-lin"></a>
 ### TAB_MR_RES_KL_15_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -5150,7 +4907,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-kl-zwang"></a>
 ### TAB_MR_RES_KL_ZWANG
 
 Dimensions: 4 rows × 2 columns
@@ -5162,7 +4918,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-leuchten-fehler"></a>
 ### TAB_MR_RES_LEUCHTEN_FEHLER
 
 Dimensions: 4 rows × 2 columns
@@ -5174,7 +4929,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Leuchte defekt |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-licht-aus"></a>
 ### TAB_MR_RES_LICHT_AUS
 
 Dimensions: 4 rows × 2 columns
@@ -5186,7 +4940,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Licht aus nicht aktiv |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-lin-aktivierungszustand"></a>
 ### TAB_MR_RES_LIN_AKTIVIERUNGSZUSTAND
 
 Dimensions: 4 rows × 2 columns
@@ -5198,7 +4951,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-lin-fehler"></a>
 ### TAB_MR_RES_LIN_FEHLER
 
 Dimensions: 4 rows × 2 columns
@@ -5210,7 +4962,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-mmc-taster"></a>
 ### TAB_MR_RES_MMC_TASTER
 
 Dimensions: 4 rows × 2 columns
@@ -5222,7 +4973,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Taster gedrückt |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-parameterstatus"></a>
 ### TAB_MR_RES_PARAMETERSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -5234,7 +4984,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-pres-modus"></a>
 ### TAB_MR_RES_PRES_MODUS
 
 Dimensions: 4 rows × 2 columns
@@ -5246,7 +4995,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Präsentationsmodus aktiv |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-sonderblinken"></a>
 ### TAB_MR_RES_SONDERBLINKEN
 
 Dimensions: 8 rows × 2 columns
@@ -5262,7 +5010,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Reserviert |
 | 0x07 | Signal ungültig |
 
-<a id="table-tab-mr-res-taster-can"></a>
 ### TAB_MR_RES_TASTER_CAN
 
 Dimensions: 4 rows × 2 columns
@@ -5274,7 +5021,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Taster gedrückt |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-taster-lin"></a>
 ### TAB_MR_RES_TASTER_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -5286,7 +5032,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-tfl-status"></a>
 ### TAB_MR_RES_TFL_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -5298,7 +5043,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Tagfahrlicht ein |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-res-tsa-volume"></a>
 ### TAB_MR_RES_TSA_VOLUME
 
 Dimensions: 16 rows × 2 columns
@@ -5322,7 +5066,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Reserviert |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-mr-res-zustand-kennleuchten"></a>
 ### TAB_MR_RES_ZUSTAND_KENNLEUCHTEN
 
 Dimensions: 3 rows × 2 columns
@@ -5333,7 +5076,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Zustand 2: Hauptfarbe aktiv |
 | 0x02 | Zustand 3: Zweitfarbe aktiv |
 
-<a id="table-tab-mr-routine-bca"></a>
 ### TAB_MR_ROUTINE_BCA
 
 Dimensions: 5 rows × 2 columns
@@ -5346,7 +5088,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Routine beendet mit Fehler |
 | 0xFF | Nicht definiert |
 
-<a id="table-tab-mr-taster-lin"></a>
 ### TAB_MR_TASTER_LIN
 
 Dimensions: 4 rows × 2 columns
@@ -5358,7 +5099,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Reserviert |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-mr-tsa-code"></a>
 ### TAB_MR_TSA_CODE
 
 Dimensions: 15 rows × 2 columns
@@ -5381,7 +5121,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0E | Reserviert |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-mr-tsa-volume"></a>
 ### TAB_MR_TSA_VOLUME
 
 Dimensions: 16 rows × 2 columns
@@ -5405,7 +5144,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Reserviert |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-mr-zustand-kennleuchte"></a>
 ### TAB_MR_ZUSTAND_KENNLEUCHTE
 
 Dimensions: 3 rows × 2 columns

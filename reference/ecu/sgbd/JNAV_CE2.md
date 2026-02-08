@@ -50,7 +50,6 @@
 - [STATUS_FREISCHALTUNG](#job-status-freischaltung) - SWT Enable status of JNav DS2: 	   $1F SweepingTechnologies $F6 SWTGetStatus
 - [STATUS_FLASHING_FROM_PCMCIA](#job-status-flashing-from-pcmcia) - Status of the flashing procsess
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +68,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -82,7 +80,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -106,7 +103,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -119,7 +115,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete Reset ausloesen
@@ -133,7 +128,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -154,7 +148,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -173,7 +166,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -186,7 +178,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen low-Konzept (lower als Lastenheft Codierung/Diagnose)
@@ -205,7 +196,6 @@ _No arguments._
 | F_HFK | int | immer 1 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selftest"></a>
 ### SELFTEST
 
 Start of the selftest
@@ -219,7 +209,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selftest-2"></a>
 ### SELFTEST_2
 
 Start of Selftest 2
@@ -233,7 +222,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-map-version"></a>
 ### STATUS_MAP_VERSION
 
 Ident-Daten of the JNAV
@@ -248,7 +236,6 @@ _No arguments._
 | STAT_MAP_NR | string | Map-Software-Version |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sw-cns-ipl"></a>
 ### STATUS_SW_CNS_IPL
 
 SW Version of the CNS2 Bootloader
@@ -263,7 +250,6 @@ _No arguments._
 | STAT_SW | string | Softwarenumber |
 | _TEL_ANTWORT | binary | SW Version of the CNS2 Bootloader |
 
-<a id="job-status-sw-main-ipl"></a>
 ### STATUS_SW_MAIN_IPL
 
 SW Version of the NAVI IPLs
@@ -278,7 +264,6 @@ _No arguments._
 | STAT_SW | string | Softwarenumber |
 | _TEL_ANTWORT | binary | SW Version of the NAVI IPLs |
 
-<a id="job-status-sw-apl"></a>
 ### STATUS_SW_APL
 
 SW Version of the APL
@@ -293,7 +278,6 @@ _No arguments._
 | STAT_SW | string | Softwarenumber |
 | _TEL_ANTWORT | binary | SW Version of the APL |
 
-<a id="job-status-sw-navi"></a>
 ### STATUS_SW_NAVI
 
 SW Version of Navigation
@@ -308,7 +292,6 @@ _No arguments._
 | STAT_SW | string | Softwarenumber |
 | _TEL_ANTWORT | binary | SW version of navigation |
 
-<a id="job-status-sw-kernel"></a>
 ### STATUS_SW_KERNEL
 
 SW Version of Kernel
@@ -323,7 +306,6 @@ _No arguments._
 | STAT_SW | string | Softwarenumber |
 | _TEL_ANTWORT | binary | SW Version of Kernel |
 
-<a id="job-status-sw-cns2"></a>
 ### STATUS_SW_CNS2
 
 SW Version of the CNS
@@ -338,7 +320,6 @@ _No arguments._
 | STAT_SW | string | Softwarenumber |
 | _TEL_ANTWORT | binary | SW-Version of the CNS |
 
-<a id="job-status-sw-vics"></a>
 ### STATUS_SW_VICS
 
 SW Version of the VICS Receivers
@@ -353,7 +334,6 @@ _No arguments._
 | STAT_SW | string | Softwarenumber |
 | _TEL_ANTWORT | binary | SW Version of the CICS Receivers |
 
-<a id="job-status-gps-connection"></a>
 ### STATUS_GPS_CONNECTION
 
 Connection-status between GPS-Antenna and JNAV-CE Modus  : Default
@@ -369,7 +349,6 @@ _No arguments._
 | STAT_CONNECTION_STATUS_WERT | int | Information of status from GPS-connection 0 = GPS Antenne nicht angeschlossen (offen) 1 = GPS Antenne Kurzschluss 2 = GPS Antenne angeschlossen >2 = Unblausible Werte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-vics-fm-connection"></a>
 ### STATUS_VICS_FM_CONNECTION
 
 Connection-Status between internal VICS-Receiver and JNAV-CE Modus  : Default
@@ -390,7 +369,6 @@ Connection-Status between internal VICS-Receiver and JNAV-CE Modus  : Default
 | STAT_ANTENNE_STATUS_WERT | int | Information of status from FM-connection 0 = FM Antenne nicht gesteckt 1 = FM Antenne gesteckt >1 = Unblausible Werte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-etc"></a>
 ### STATUS_ETC
 
 ETC connection test Modus  : Default
@@ -406,7 +384,6 @@ _No arguments._
 | STAT_ETC_WERT | int | Information of status from GPS-connection 0 = Keine Verbindung zum ETC 1 = ETC Verbindung ok >1 = Unblausible Werte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-voice-test"></a>
 ### STEUERN_VOICE_TEST
 
 starten der Sprach-Ausgabe Modus  : Default
@@ -420,7 +397,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-speedpulse"></a>
 ### STATUS_SPEEDPULSE
 
 Geschwindigkeit vom SpeedPulse-Sensor Modus  : Default
@@ -435,7 +411,6 @@ _No arguments._
 | STAT_SPEEDPULSE_WERT | int | Geschwindigkeit vom SpeedPulse-Sensor |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-flashing-from-pcmcia"></a>
 ### STEUERN_FLASHING_FROM_PCMCIA
 
 starten des Flashvorgangs über PCMCIA-Interface Modus  : Default
@@ -449,7 +424,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-vin-write"></a>
 ### STEUERN_VIN_WRITE
 
 Write VIN into ECU DS2: 	   $1F SweepingTechnologies $E5 SWTSetFZG
@@ -469,7 +443,6 @@ Write VIN into ECU DS2: 	   $1F SweepingTechnologies $E5 SWTSetFZG
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-answer of ECU |
 
-<a id="job-status-vin"></a>
 ### STATUS_VIN
 
 Read VIN in ECU DS2: 	   $1F SweepingTechnologies $E6 SWTGetFZG
@@ -486,7 +459,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-serialnumber-read"></a>
 ### STATUS_SERIALNUMBER_READ
 
 Serial number of the JNAV
@@ -501,7 +473,6 @@ _No arguments._
 | STAT_SN | string | Serial number |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-freischaltung"></a>
 ### STATUS_FREISCHALTUNG
 
 SWT Enable status of JNav DS2: 	   $1F SweepingTechnologies $F6 SWTGetStatus
@@ -520,7 +491,6 @@ _No arguments._
 | STAT_FSCSHORT_TEXT | string | FSC-Status of SW-ID "0008xxxx" |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-flashing-from-pcmcia"></a>
 ### STATUS_FLASHING_FROM_PCMCIA
 
 Status of the flashing procsess
@@ -552,7 +522,6 @@ _No arguments._
 - [HORTTEXTE](#table-horttexte) (1 × 2)
 - [IORTTEXTE](#table-iorttexte) (1 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -573,7 +542,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 100 rows × 2 columns
@@ -681,7 +649,6 @@ Dimensions: 100 rows × 2 columns
 | 0x99 | Johnson Controls |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -710,7 +677,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -735,7 +701,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -744,7 +709,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -755,7 +719,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | nein |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -770,7 +733,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -785,7 +747,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 11 rows × 2 columns
@@ -804,7 +765,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0B | Werkstatt-Mode an |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -813,7 +773,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns

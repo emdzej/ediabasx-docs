@@ -36,7 +36,6 @@
 - [COD_LESEN](#job-cod-lesen) - Auslesen der Codierdaten des SHD E46
 - [SPEICHER_LESEN](#job-speicher-lesen) - Lesen des internen Speichers des SHD E46 Als Argumente werden die Adresse und die Anzahl der Datenbytes uebergeben.
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -76,7 +74,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer Schiebehebedach E46 automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -89,7 +86,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer SGD E46
@@ -113,7 +109,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose Sonderfall: Laenge das Antworttelegramms ist konstant !
@@ -135,7 +130,6 @@ _No arguments._
 | F_ART1_TEXT | string | 1. (einzige) Fehlerart als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -149,7 +143,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -163,7 +156,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -177,7 +169,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -195,7 +186,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -216,7 +206,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -234,7 +223,6 @@ _No arguments._
 | BYTE4 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 digitale Stati des SHD E46 Der Wertebereich ist bei allen Results: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -279,7 +267,6 @@ _No arguments._
 | STAT_HAND_TIPP_TEXT | string | Funktion manuell bzw. Tippbetrieb: moegliche Texte: manuell Heben        , Tipp Heben moegliche Werte: manuell Schieben Zu  , Tipp Schieben Zu moegliche Werte: manuell Schieben Auf , Tipp Schieben Auf moegliche Werte: manuell Senken       , Komfort-Funktion moegliche Werte: nicht aktiv          , undefiniert |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 analoge Stati des SHD E46
@@ -295,7 +282,6 @@ _No arguments._
 | STAT_SHD_POSITION_EINH | string | Einheit: Motorumdrehungen |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern SHD E46 ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! Aufruf 'XTRACT [-F] SHD46.prg'
@@ -315,7 +301,6 @@ Ansteuern SHD E46 ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! A
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierdaten des SHD E46
@@ -330,7 +315,6 @@ _No arguments._
 | COD_DATEN | binary | alle Codierdaten als reine Datenbytes |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers des SHD E46 Als Argumente werden die Adresse und die Anzahl der Datenbytes uebergeben.
@@ -363,7 +347,6 @@ Lesen des internen Speichers des SHD E46 Als Argumente werden die Adresse und di
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 - [BITS](#table-bits) (9 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -384,7 +367,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -464,7 +446,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -493,7 +474,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -518,7 +498,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 6 rows × 2 columns
@@ -532,7 +511,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | reserviert |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -543,7 +521,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 9 rows × 6 columns

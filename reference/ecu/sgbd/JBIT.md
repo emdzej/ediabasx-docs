@@ -33,7 +33,6 @@
 - [DIAGNOSE_WEITER](#job-diagnose-weiter) - Diagnose aufrecht erhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -52,7 +51,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer BMW-TELEFON
@@ -65,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer das JBIT
@@ -87,7 +84,6 @@ _No arguments._
 | ID_LIEF_NR | string | Lieferanten-Nummer |
 | ID_SW_NR | string | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -103,7 +99,6 @@ _No arguments._
 | F_TEXT | string | Fehlertext |
 | F_COUNTER | int | Fehlerhaeufigkeit des jeweiligen Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -117,7 +112,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -135,7 +129,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -156,7 +149,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 verschiedenen Status IO-Ports
@@ -179,7 +171,6 @@ _No arguments._
 | STAT_EBX_TEMP | int | eject-box temperature allows phone battery charing: no (0) or yes (1) |
 | STAT_DSP_TEL_ON | int | TEL_ON signal for DSP: off (0) or on (1) |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ports im JBIT setzen
@@ -202,7 +193,6 @@ Ports im JBIT setzen
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Durchfuehrung des Selbsttests (Ermittlung Checksum SW)
@@ -220,7 +210,6 @@ _No arguments._
 | EEPROM_CHECK | int | OK = 00h, Not OK = 01h |
 | COMM_WITH_PHONE_CHECK | int | communication with mobile phone check OK = 00h , Not OK = 01h |
 
-<a id="job-reset"></a>
 ### RESET
 
 Durchfuehrung eines resets ca. 2 Sek. nach senden von ACK erfolgt der Reset
@@ -233,7 +222,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrecht erhalten
@@ -246,7 +234,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode beenden
@@ -267,7 +254,6 @@ _No arguments._
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 - [FORTTEXTE](#table-forttexte) (5 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -288,7 +274,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -312,7 +297,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 5 rows × 2 columns

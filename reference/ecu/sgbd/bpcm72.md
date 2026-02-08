@@ -137,7 +137,6 @@
 - [_SERVICE_CAN_ENABLER](#job-service-can-enabler) - TO ENABLE OR DISABLE SERVICE CAN COMMUNICATION
 - [_STATUS_SERVICE_CAN_ENABLER](#job-status-service-can-enabler) - TO READ OUT THE LOAD CHECK AND SHORTED BUS DETECTION ENABLER BIT
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -156,7 +155,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -169,7 +167,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -187,7 +184,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -208,7 +204,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -227,7 +222,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -242,7 +236,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -255,7 +248,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -268,7 +260,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -283,7 +274,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $3F30 Sub-Parameter SGBD-Index Modus: Default
@@ -324,7 +314,6 @@ _No arguments._
 | _REQUEST6 | binary | Hex-Auftrag an SG |
 | _RESPONSE6 | binary | Hex-Antwort von SG |
 
-<a id="job-ident-dcx"></a>
 ### _IDENT_DCX
 
 DCX Ident only for development UDS $22 $F1 $xx
@@ -378,7 +367,6 @@ _No arguments._
 | _REQUEST9 | binary | Hex-Auftrag an SG |
 | _RESPONSE9 | binary | Hex-Antwort von SG |
 
-<a id="job-uds-test-e72"></a>
 ### _UDS_TEST_E72
 
 Test Services Modus: Default
@@ -413,7 +401,6 @@ _No arguments._
 | _TST_223F61_REQUEST | binary | Hex-Auftrag an SG |
 | _TST_223F61_RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bpcm-eng-sw-no"></a>
 ### _BPCM_ENG_SW_NO
 
 TO READ OUT THE SW NUMBER ASSIGNED DURING EACH I-STEP OF DEVELOPMENT THIS SERVICE IS ONLY FOR DEVELOPMENT AND MAY BE REMOVED AT START OF PRODUCTION THIS NUMBER REPRESENTS THE MAJOR, MINOR AND BUILD OF SW RELEASE AS WELL AS THE INDICATES IF THE SW PRESENT IN BPCM IS FOR BMW_SW OR DCX TO VERIFY THE VALIDITY
@@ -432,7 +419,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -448,7 +434,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob Modus   : Default
@@ -481,7 +466,6 @@ _No arguments._
 | _REQUEST04 | binary | Hex-Auftrag an SG |
 | _RESPONSE04 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -505,7 +489,6 @@ _No arguments._
 | _REQUEST02 | binary | Hex-Auftrag an SG |
 | _RESPONSE02 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -527,7 +510,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer UDS: $22,$3F Read Data Identifier BMW $41 Hardware Part Number
@@ -543,7 +525,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -562,7 +543,6 @@ _No arguments._
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-status-soc-lesen"></a>
 ### STATUS_SOC_LESEN
 
 HIGH VOLTAGE BATTERIE SOC WERT
@@ -580,7 +560,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-current-lesen"></a>
 ### STATUS_CURRENT_LESEN
 
 HIGH VOLT BATTERIE STROM SENSOR WERT negative Stromwerte bedeuten Laden der Batterie POSITIVE Stromwerte bedeuten Entladung der Batterie
@@ -598,7 +577,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-busvolt-calculate-lesen"></a>
 ### STATUS_BUSVOLT_CALCULATE_LESEN
 
 SUMME der 26 MODUL SPANNUNGEN ALS HV-BUS SPANNUNG LESEN
@@ -615,7 +593,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bus-volt-lesen"></a>
 ### STATUS_BUS_VOLT_LESEN
 
 HV BUS SPANNUNG Wert
@@ -632,7 +609,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-busvolt-source-lesen"></a>
 ### STATUS_BUSVOLT_SOURCE_LESEN
 
 QUELLE FUER HV BUS SPANNUNG Wert
@@ -649,7 +625,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pack-volt-lesen"></a>
 ### STATUS_PACK_VOLT_LESEN
 
 PACK SPANNUNG SENSOR Wert
@@ -666,7 +641,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pack-volt-source-lesen"></a>
 ### STATUS_PACK_VOLT_SOURCE_LESEN
 
 QUELLE FUER PACK SPANNUNG Wert
@@ -683,7 +657,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pwr-chrg-lt-lesen"></a>
 ### STATUS_PWR_CHRG_LT_LESEN
 
 Lang Zeit 10s LADELEISTUNGS LIMIT
@@ -701,7 +674,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pwr-chrg-st-lesen"></a>
 ### STATUS_PWR_CHRG_ST_LESEN
 
 Kurz Zeit 2s LADELEISTUNGS LIMIT
@@ -719,7 +691,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pwr-dischrg-lt-lesen"></a>
 ### STATUS_PWR_DISCHRG_LT_LESEN
 
 Lang Zeit 10s ENTLADELEISTUNGS LIMIT
@@ -737,7 +708,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pwr-dischrg-st-lesen"></a>
 ### STATUS_PWR_DISCHRG_ST_LESEN
 
 Kurz Zeit 2s ENTLADELEISTUNGS LIMIT
@@ -755,7 +725,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-max-modvolt-lesen"></a>
 ### STATUS_MAX_MODVOLT_LESEN
 
 MAXIMALE SPANNUNG ALLER 26 MODUL SPANNUNGSENSOREN
@@ -773,7 +742,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-min-modulspannung-lesen"></a>
 ### STATUS_MIN_MODULSPANNUNG_LESEN
 
 MINIMALE SPANNUNG ALLER 26 MODUL SPANNUNGSENSOREN
@@ -791,7 +759,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-12v-feed2controller-lesen"></a>
 ### STATUS_12V_FEED2CONTROLLER_LESEN
 
 WERT 12V Versorgungsspannung BPCM LESEN
@@ -809,7 +776,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-12v-feed2pump-lesen"></a>
 ### STATUS_12V_FEED2PUMP_LESEN
 
 WERT 12V Versorgungsspannung BATTERIE KUEHLMITTEL PUMPE
@@ -827,7 +793,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-12v-feed2cntcr-lesen"></a>
 ### STATUS_12V_FEED2CNTCR_LESEN
 
 WERT 12V Versorgungsspannung HIGH VOLTAGE BATTERIE PACK SCHUETZE ALLE SCHUETZE WERDEN AUS DER SELBEN QUELLE VERSORGT
@@ -845,7 +810,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-max-modtemp-lesen"></a>
 ### STATUS_MAX_MODTEMP_LESEN
 
 MAXIMALE TEMPERATUR DER 4 MODUL SENSOREN LESEN
@@ -863,7 +827,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-min-modtemp-lesen"></a>
 ### STATUS_MIN_MODTEMP_LESEN
 
 MINIMALE TEMPERATUR DER 4 MODUL SENSOREN LESEN
@@ -881,7 +844,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hv-bpcm-state-lesen"></a>
 ### STATUS_HV_BPCM_STATE_LESEN
 
 RESULT: TRUE->JA  FALSE->NEIN GRUND FUER VERHINDERUNG ODER ABBRUCH DER vORLADEPROZEDUR
@@ -906,7 +868,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvilcurr-return-lesen"></a>
 ### STATUS_HVILCURR_RETURN_LESEN
 
 WERT HVIL RUECKKEHRSTROM IN mA
@@ -924,7 +885,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-coolant-in-temp-lesen"></a>
 ### STATUS_COOLANT_IN_TEMP_LESEN
 
 KUEHLMITTEL INLET TEMPERATUR
@@ -942,7 +902,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-coolant-out-temp-lesen"></a>
 ### STATUS_COOLANT_OUT_TEMP_LESEN
 
 KUEHLMITTEL OUTLET TEMPERATUR
@@ -960,7 +919,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-isolation-resi-lesen"></a>
 ### STATUS_ISOLATION_RESI_LESEN
 
 ISOLATIONS WIDERSTANDSWERTE MIT OFFENEN UND GESCHLOSSENEN SCHUETZEN UND FUER POSITVEN UND NEGATIVEN HV_BUS
@@ -979,7 +937,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-isolation-state-lesen"></a>
 ### STATUS_ISOLATION_STATE_LESEN
 
 ISOLATION TEST RESULT
@@ -996,7 +953,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cnctr-pwm-cmd-lesen"></a>
 ### STATUS_CNCTR_PWM_CMD_LESEN
 
 PEB CONTACTOR COMMAND Wert IN %PWM
@@ -1014,7 +970,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cool-pump-speed-lesen"></a>
 ### STATUS_COOL_PUMP_SPEED_LESEN
 
 KUEHLMITTEL Pumpe Geschwindigkeit
@@ -1032,7 +987,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-precharge-inhibit-time-lesen"></a>
 ### STATUS_PRECHARGE_INHIBIT_TIME_LESEN
 
 Verbleibende Zeit in der die Vorladung verboten ist max. 30min
@@ -1050,7 +1004,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-4modules-temp-lesen"></a>
 ### STATUS_4MODULES_TEMP_LESEN
 
 Temperaturwerte ALLER 4 ODER EINZELNER MODULTEMPERATURSENSOREN
@@ -1077,7 +1030,6 @@ Temperaturwerte ALLER 4 ODER EINZELNER MODULTEMPERATURSENSOREN
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-26-modules-volt-lesen"></a>
 ### STATUS_26_MODULES_VOLT_LESEN
 
 Spannungswerte ALLER 26 ODER EINZELNER MODULSPANNUNGSSENSOREN
@@ -1123,7 +1075,6 @@ Spannungswerte ALLER 26 ODER EINZELNER MODULSPANNUNGSSENSOREN
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-service-disconnect-lesen"></a>
 ### STATUS_SERVICE_DISCONNECT_LESEN
 
 MELDET DEN AKTUELLEN ZUSTAND DES SERVICE SCHALTERS 0 -> GESCHLOSSEN ODER 1 -> OFFEN ODER 2 -> GESCHLOSSEN & SICHERUNG KAPUTT ODER 3 -> UNBEKANNT
@@ -1140,7 +1091,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvil-lesen"></a>
 ### STATUS_HVIL_LESEN
 
 MELDET DEN AKTUELLEN ZUSTAND DES HVIL, HOCHVOLTKONTAKTUEBERWACHUNG 0 -> NICHT AKTIV, 1 -> FEHLERFREI,2 -> FEHLER ODER 3 -> UNGUELTIG
@@ -1157,7 +1107,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-reason-cnctr-not-close-when-cmnd-lesen"></a>
 ### STATUS_REASON_CNCTR_NOT_CLOSE_WHEN_CMND_LESEN
 
 Gespeicherte & momentan anliegende Fehler die das Schliesen der Schuetze verhindern STORED: Gespeicherte Fehler sind aus vorangegangenen Zyklen PRESENT: momentan anliegende Fehler sind aus dem momentanen Zyklus
@@ -1188,7 +1137,6 @@ _No arguments._
 | _REQUEST1 | binary | Hex-Auftrag an SG |
 | _RESPONSE1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-reasons-cnctr-opened-lesen"></a>
 ### STATUS_REASONS_CNCTR_OPENED_LESEN
 
 Gespeicherte & momentan anliegende Gruende fuer das Oeffnen der Schuetze STORED: Gespeicherte Fehler sind aus vorangegangenen Zyklen PRESENT: momentan anliegende Fehler sind aus dem momentanen Zyklus
@@ -1221,7 +1169,6 @@ _No arguments._
 | _REQUEST1 | binary | Hex-Auftrag an SG |
 | _RESPONSE1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-active-discharge-lesen"></a>
 ### STATUS_ACTIVE_DISCHARGE_LESEN
 
 Status der der Aktiven Entladung beim letzen Abschalten des HV-BUS
@@ -1238,7 +1185,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-battery-resi-lesen"></a>
 ### STATUS_BATTERY_RESI_LESEN
 
 Wert HV Batterie Innenwiderstand
@@ -1255,7 +1201,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvbp-cntcr-state-lesen"></a>
 ### STATUS_HVBP_CNTCR_STATE_LESEN
 
 Zustand HIGH VOLTAGE Batterie Schuetze
@@ -1272,7 +1217,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-can-cntcr-cmnd-lesen"></a>
 ### STATUS_CAN_CNTCR_CMND_LESEN
 
 Zustand PEB CONTACTOR COMMAND von HCP VIA CAN BUS
@@ -1289,7 +1233,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-soc-histogram-lesen"></a>
 ### STATUS_UH_SOC_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer die Ladezustandwerte wandert in verschiedene Intervalle/Schlitze Waehrend der Schuetzen geschlossen sind, erfasst das BPCM ein Snapshot ueber der SOC-Historie. Am Ende aller 10 Sekunden-Interval (Waehrend der Schuetzen geschlossen sind), der richtige wird auf Basis der laufenden SOC inkrementiert. Die Absicht ist ein Snaptshot vom SOC aller 10 Sekunden aufzuzeichnen. SOC Intervalle: 1-> 0~15.9%, 2-> 16.0~30.9%, 3-> 31.0~40.9%, 4-> 41.0~51.9%, 5-> 52.0~60.9%, 6-> 61.0~68.9% SOC Intervalle: 7-> 69.0~80.9%, 8-> 81.0~90.9%, 9-> 91.0~100%
@@ -1314,7 +1257,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-high-volt-exceeded-lesen"></a>
 ### STATUS_UH_HIGH_VOLT_EXCEEDED_LESEN
 
 Nutzung-Historie fuer die gesamte Sekunden, wo die Pack- und Modulspannung die Min und MAX- Grenzwerte ueberschreitet das maximale Limit fuer Pack-Spannung ist 419V & das minimale Limit fuer Pack-Spannung ist 244V das maximale Limit fuer Modulspannung ist 16.5V & das minimale Limit fuer Modulspannung ist 9V
@@ -1337,7 +1279,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-mod-volt-diff-histogram-lesen"></a>
 ### STATUS_UH_MOD_VOLT_DIFF_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal die Differenz der Modulspannung in einem bestimmten Bereich oder Intervall geht
@@ -1364,7 +1305,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-max-mod-vlt-histogram-lesen"></a>
 ### STATUS_UH_MAX_MOD_VLT_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal das maximale Modulspannungswert in einem bestimmten Bereich geht Das BPCM erfasst waehrend seines Betriebes die Historie der maximale Modulspannung referenziert auf die "VLID". Das BPCM erfasst die maximale Modulspannung und Modeltemperatur im Zusammenhang zur Modulspannung über 10 Sekunden Intervall Am Ende der 10 Sekunden VLID wird berechnet und der richtige BIN wird auf Basis der maximale Modulespannung über 10 Sekunden-Intervall inkrementiert wenn MAXMODTEMP < 25°C, VLID = 16.25V / wenn MAXMODTEMP >= 25°C, VLID = 16.723 - 0.0137 * MAXMODTEMP - 0.00020833 * MAXMODTEMP * MAXMODTEMP wenn es ein Fehler in der Sensor-Temperatur gibt , VLID = 16.25V BIN Beschreibung: Intervall 1: < VLID, Intervall 2: VLID TO VLID+0.2, Intervall 3: > VLID+0.2 Z.B.: hier ist ein Liste von Werten über 10 Sekunden- Bereich: MAX MOD VOLT | MAX MOD TEMP 16.0V        |  20.5°C 16.1V        |  20°C 16.2V        |  20°C 16.3V        |  20°C Die von der VLID-Kalkualation benutzte Temperatur von 20°C wird mit 16.3V verglichen, um den Bereich zu bestimmen.
@@ -1385,7 +1325,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-min-mod-vlt-histogram-lesen"></a>
 ### STATUS_UH_MIN_MOD_VLT_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal das minimale Modulspannungswert in einem bestimmten Bereich geht MIN MOD Spannung Intervall: Intervall 1: 10.0~20.0V, Intervall 2: 9.0~9.999V, Intervall 3: 8.0~8.999V, Intervall 4: 0~7.999V
@@ -1408,7 +1347,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-hvbp-volts-histogram-lesen"></a>
 ### STATUS_UH_HVBP_VOLTS_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal das HVBP-spannung in einem verschiedenen Bereich geht Intervall 1: <200V, Intervall 2: 200~220V, Intervall 3: 220~240, Intervall 4: 240~260V, Intervall 5: 260~280V,  Intervall 6: 280~300A Intervall 7: 300~320V, Intervall 8: 320~340V,  Intervall 9: 340~360V,  Intervall 10: 360~380V,  Intervall 11: 380~400A,	 Intervall 12: > 400A
@@ -1447,7 +1385,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-current-histogram-lesen"></a>
 ### STATUS_UH_CURRENT_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal der Strom in einem verschiedenen Bereich geht Intervall 1: <-200A, Intervall 2: -200~-120A, Intervall 3: -120~-60A, Intervall 4: -60~-30A, Intervall 5: -30~-10A,  Intervall 6: -10~0A Intervall 7: 0~10A, Intervall 8: 10~30A,  Intervall 9: 30~60A,  Intervall 10: 60~120A,  Intervall 11: 120~200A,	 Intervall 12: > 200A
@@ -1486,7 +1423,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-temperature-histogram-lesen"></a>
 ### STATUS_UH_TEMPERATURE_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal die HVBP-Temperatur in einem verschiedenen Bereich geht Intervall 1: -40~-5 C, Intervall 2: -4.9~15 C, Intervall 3: 15.1~30 C, Intervall 4: 30.1~35 C, Intervall 5: 35.1~40 C Intervall 6: 40.1~45 C, Intervall 7: 45.1~50 C, Intervall 8: 50.1~60 C, Intervall 9: 60.1~65 C, Intervall 10: 65.1~75 C, Intervall 11: 75.1~85 C
@@ -1513,7 +1449,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-mod-temp-diff-histogram-lesen"></a>
 ### STATUS_UH_MOD_TEMP_DIFF_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal die HVBP-Temperatur in einem verschiedenen Bereich geht Modul-Temperatur-Differenz  = MAX MODULE TEMP - MIN MODULE TEMP Intervall 1: 0~3 C, Intervall 2: 3.1~6 C, Intervall 3: 6.1~10 C, Intervall 4: 10.1~125 C
@@ -1533,7 +1468,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-hvbp-coolant-in-temp-histogram-lesen"></a>
 ### STATUS_UH_HVBP_COOLANT_IN_TEMP_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal das HVBP-Kuehlmitteleinlass in einem verschiedenen Temperaturbereich geht Intervall 1: < 0 C, Intervall 2: 0.10~20 C, Intervall 3: 20.1~30 C, Intervall 4: 30.1~45 C, Intervall 5: > 45 C
@@ -1554,7 +1488,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-hvbp-coolant-out-temp-histogram-lesen"></a>
 ### STATUS_UH_HVBP_COOLANT_OUT_TEMP_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal das HVBP-Kuehlmittelauslass in einem verschiedenen Temperaturbereich geht Intervall 1: < 10 C, Intervall 2: 10.1~30 C, Intervall 3: 30.1~40 C, Intervall 4: 40.1~55.0 C, Intervall 5: > 55.0 C
@@ -1575,7 +1508,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-mod-coolant-temp-delta-histogram-lesen"></a>
 ### STATUS_UH_MOD_COOLANT_TEMP_DELTA_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal das HVBP-Modul und die Kuehlmittel-Einlasstemperaturdifferenz in einem verschiedenen Bereich geht Intervall 1: -40~-30 C, Intervall 2: -29.9~-25 C, Intervall 3: -24.9~20.0 C, Intervall 4: -19.90~-15 C, Intervall 5: -14.9~-0.1 C Intervall 6: 0~15 C, Intervall 7: 15.1~20 C, Intervall 8: 20.1~25 C, Intervall 9: 25.1~30 C, Intervall 10: 30.1~40 C, Intervall 11: > 40 C
@@ -1602,7 +1534,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-isolation-resi-histogram-lesen"></a>
 ### STATUS_UH_ISOLATION_RESI_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer den Isolationswiderstandwert, der in verschiedenen Widerstandsbereiche/Intervalle geht Intervall 1: < 250 kOHMS, Intervall 2: 250~499 kOHMS, Intervall 3: 500~749 kOHMS, Intervall 4: 750~999 kOHMS, Intervall 5: > 999 kOHMS
@@ -1623,7 +1554,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lifetime-cnctr-closes-lesen"></a>
 ### STATUS_LIFETIME_CNCTR_CLOSES_LESEN
 
 Nutzung-Historie fuer wieviel mal während der Lebensdauer der Hochvolt-Batterie, die Schuetzen geschlossen waren
@@ -1640,7 +1570,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lifetime-12v-loss-lesen"></a>
 ### STATUS_LIFETIME_12V_LOSS_LESEN
 
 Nutzung-Historie fuer wieviel mal ein Ausfall der 12v Spannung zum Kontroller waehrend der Lebensdauer geschah Die Bedeutung vom Zaehler ist zu bestimmen, wie oft während der Lebensdauer des FZGes Die 12 Volt Spannung mit geschlossenen Schuetzen oder ohne korrekten Auschaltmechanismus aus Grund eines zufaelligen 12v Ausfall verloren war
@@ -1657,7 +1586,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lifetime-min-ocv-lesen"></a>
 ### STATUS_LIFETIME_MIN_OCV_LESEN
 
 die minimael erfasste Leerlaufspannung der Batterie waehrend der Lebensdauer Das BPCM speichert die minimale Leerlaufpannung der Batterie-Pack. die Leerlaufspannung (OCV) wird beim Startup bevor die Schuetzen geschlossen sind ein mal erfasst. wenn dieser Wert kleiner als der gespeicherten Wert ist, wird er als neuen minimalen Leerlauf-Pack-Spannung ueberschrieben.
@@ -1674,7 +1602,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lifetime-cnctr-open-req-lesen"></a>
 ### STATUS_LIFETIME_CNCTR_OPEN_REQ_LESEN
 
 Nutzung-Historie fuer wie oft der "Open Request" für die Schuetzen waehrend der Lebensdauer vom BPCM gesetzt sind Jedes mal wenn das BPCM vom HCP verlangt, die Schuetzen zu oeffnen, diese Datenspeicherung wird inkrementiert. Z.B: das BPCM feststellt, dass das FZG. die Schuetzen oeffnen soll und daher wird das BIT auf CAN gesetzt für die "OPEN REquest" -Bedingung. diese Datenspeicherung wird nur einmal inkrementiert. Es ist kein wiederholtes Inkrement im CAN-Signal.
@@ -1691,7 +1618,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lifetime-precharge-fails-lesen"></a>
 ### STATUS_LIFETIME_PRECHARGE_FAILS_LESEN
 
 Nutzung-Historie fuer wie oft die Aufladuprozedur waehrend der Lebensdauer fehlgeschlagen war
@@ -1708,7 +1634,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-total-oepration-time-lesen"></a>
 ### STATUS_TOTAL_OEPRATION_TIME_LESEN
 
 Nutzung Historie fuer wieviele Operationen der Batterie Pack waehrend eines Klemmenwechsels akkumuliert waren Das BPCM speichert die gesammte akkumulierte Zeit, in der er im Betrieb war, ab der Zeit wo der Kontroller geweckt ist bis er einschlaeft
@@ -1725,7 +1650,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-total-cnctr-closing-time-lesen"></a>
 ### STATUS_TOTAL_CNCTR_CLOSING_TIME_LESEN
 
 Nutzung-Historie fuer wieviel mal während der Lebensdauer der Hochvolt-Batterie, die Schuetzen geschlossen waren
@@ -1742,7 +1666,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cumulative-charge-amp-hours-lesen"></a>
 ### STATUS_CUMULATIVE_CHARGE_AMP_HOURS_LESEN
 
 Total akkumulierter Wert der Batterieladung seit der ersten Nutzung RESOLUTION  1 Ampere/Stunde
@@ -1759,7 +1682,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cumulative-discharge-amp-hours-lesen"></a>
 ### STATUS_CUMULATIVE_DISCHARGE_AMP_HOURS_LESEN
 
 Total akkumulierter Wert der Batterieentladung seit der ersten Nutzung RESOLUTION 1 Ampere/Stunde
@@ -1776,7 +1698,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lifetime-cnctr-opens-lesen"></a>
 ### STATUS_LIFETIME_CNCTR_OPENS_LESEN
 
 Nutzung-Historie fuer wieviel mal während der Lebensdauer der Hochvolt-Batterie, die Schuetzen offen waren Auch die Nutzung-Historie für wieviel der Lebensdauer der Batterie, die Schuetzen offen waren unter "Impending-Open" Bedingung und Nutzung-Historie fuer wieviel mal waren die schuetzen offen unter hoehen Strombelastung waehrend Lebensdauer Jedes mal wenn die Schuetzen aus irgend ein Grund offen sind, wenn der absolute Wert (Plus oder minus) des Stroms grosser als 5 Ampere
@@ -1801,7 +1722,6 @@ _No arguments._
 | _REQUEST3 | binary | Hex-Auftrag an SG |
 | _RESPONSE3 | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-bat-resi-histogram-lesen"></a>
 ### STATUS_UH_BAT_RESI_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal der Batteriewiderstand in verschiedenen Widerstandbereiche/Intervalle geht Intervall 1: 0-100 mOhms, Intervall 2: 101-500 mOhms, Intervall 3: 501-1000 mOhms, Intervall 4: 1001-1500 mOhms, Intervall 5: 1501-2000 mOhms Intervall 6: 2001-2500 mOhms, Intervall 7: 2501-3000 mOhms, Intervall 8: 3001-3500 mOhms, Intervall 9: 3501-4000 mOhms Intervall 10: 4001-4500 mOhms, Intervall 11: 4501-5000 mOhms
@@ -1838,7 +1758,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-soc-5day-history"></a>
 ### STATUS_SOC_5DAY_HISTORY
 
 Ladezustand-Historie mit STAT_AMPRH_CHG_WERT Integrationswerte in der letzten 6 Tagen ab heute das Ziel dieser gespeicherten Daten und der Ladenzustand-Historie am Tag X, ist eine Hilfe für die Service, um festzustellen was am Batterie in den letzten 5 Betriebstagen geschah. die Ladezustandswerte und die Delta der Amp/Stunde (Ladung und Entladung) sind Snapschuesse an einem bestimmten Tag. Der Ladezustand bei Klemme 30, Ampere/Stunden (Ladung und Entladung) - Delta-Wert vom letzten Betriebstag
@@ -1884,7 +1803,6 @@ _No arguments._
 | _REQUEST4 | binary | Hex-Auftrag an SG |
 | _RESPONSE4 | binary | Hex-Antwort von SG |
 
-<a id="job-status-uh-hvbp-coolant-temp-delta-histogram-lesen"></a>
 ### STATUS_UH_HVBP_COOLANT_TEMP_DELTA_HISTOGRAM_LESEN
 
 Nutzung-Historie fuer wieviel mal die Temperaturdiffirenz für das HVBP-Kuehlmittel-Einlass und Auslass in einem verschiedenen Temperaturbereich geht Intervall 1: < 0 C, Intervall 2: 0~1 C, Intervall 3: 1~2 C, Intervall 4: 2~3 C, Intervall 5: 3~4 C Intervall 6: 4~5 C, Intervall 7: 5~6 C, Intervall 8: 6~7 C, Intervall 9: 7~9 C, Intervall 10: 9~11 C, Intervall 11: 11~13 C Intervall 12: 13~15 c, Intervall 13: > 15 C
@@ -1913,7 +1831,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-weld-check-lesen"></a>
 ### STATUS_WELD_CHECK_LESEN
 
 Ergebnisse vom Schweiss-Check -Ablauf für das Hochvolt Batterie Pack (HVBP) zeigt, ob eine oder beide Hochvoltleitungen der Schuetze(n) verschweisst ist (sind)
@@ -1938,7 +1855,6 @@ _No arguments._
 | _REQUEST2 | binary | Hex-Auftrag an SG |
 | _RESPONSE2 | binary | Hex-Antwort von SG |
 
-<a id="job-status-open-cable-lesen"></a>
 ### STATUS_OPEN_CABLE_LESEN
 
 TO READ OUT THE OPEN CABLE DETECTION TEST RESULT AND THE OPEN CABLE DETECTION CIRCUIT CHECK RESULT
@@ -1959,7 +1875,6 @@ _No arguments._
 | _REQUEST1 | binary | Hex-Auftrag an SG |
 | _RESPONSE1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-batt-change-odometer"></a>
 ### STATUS_BATT_CHANGE_ODOMETER
 
 Fzg.- ODOMETER-Wert vom letzten Batteriewechsel auslesen
@@ -1976,7 +1891,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fault-check-lesen"></a>
 ### _STATUS_FAULT_CHECK_LESEN
 
 SHOWS THE STATUS OF DIFFERENT FAULT CHECK AND REMEDIAL ACTION FUNCTIONALITIES THAT IF THE FUNCTIONALITIES IS ENABLED OR DISABLED
@@ -2009,7 +1923,6 @@ _No arguments._
 | _REQUEST4 | binary | Hex-request an SG |
 | _RESPONSE4 | binary | Hex-Antwort von SG |
 
-<a id="job-status-wake-up-signals-lesen"></a>
 ### _STATUS_WAKE_UP_SIGNALS_LESEN
 
 SHOWS THE STATUS OF WAKE UP SIGNALS FOR BPCM - HYBRID ACCESSORY AND HS COMMUNICATION ENABLE
@@ -2028,7 +1941,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-contactor-closure-enable-lesen"></a>
 ### STATUS_CONTACTOR_CLOSURE_ENABLE_LESEN
 
 Auslesen von Wert des Schuetze-Schliessen Aktivierungsbits geschrieben von "STEUERN_CONTACTOR_CLOSURE_ENABLE" JOB
@@ -2045,7 +1957,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-contactor-closure-enable"></a>
 ### STEUERN_CONTACTOR_CLOSURE_ENABLE
 
 Bit wird gesetzt oder nicht gesetzt, um die Schuetze-Schliessen zu aktivieren oder deaktivieren Bei Deaktivierung des Schutzen-Scliessens bewirkt, dass die Schuetzen sich nicht schliessen mit dem Befehl von HCP bis das Schutzen-Schliessen aktiviert wird Warnung -> Dieser Job sollte nicht von einer Person ohne ausreichende Systemkenntnisse durchgefuehrt werden
@@ -2064,7 +1975,6 @@ Bit wird gesetzt oder nicht gesetzt, um die Schuetze-Schliessen zu aktivieren od
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pump-enable-lesen"></a>
 ### STATUS_PUMP_ENABLE_LESEN
 
 Auslesen von Wert des Schuetze-Schliessen Aktivierungsbits geschrieben von "STEUERN_PUMP_ENABLE" JOB
@@ -2081,7 +1991,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pump-enable"></a>
 ### STEUERN_PUMP_ENABLE
 
 Bit wird gesetzt, um die Pumpe zu aktivieren bzw. deaktivieren Deaktivierung der Pumpen-Kontrolle bewirkt, dass die Pumpe nicht laufen wird Mit internen BPCM-Logik oder bei Ueberschreibung des Befehls vom HCP oder bei Pumpen-Ansteuerung SGBD JOB Dieser Job sollte nicht von einer Person ohne ausreichende Systemkenntnisse durchgefuehrt werden
@@ -2100,7 +2009,6 @@ Bit wird gesetzt, um die Pumpe zu aktivieren bzw. deaktivieren Deaktivierung der
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cool-pump"></a>
 ### STEUERN_COOL_PUMP
 
 Dieser Job dient den Betrieb von Hochvolt-Batterie Pack-Kuehlmittel PUMPE benutzt extern das das Diagnose-Tool WARNUNG -> Dieser Job sollte nicht von einer Person ohne ausreichende Systemkenntnisse durchgefuehrt werden
@@ -2120,7 +2028,6 @@ Dieser Job dient den Betrieb von Hochvolt-Batterie Pack-Kuehlmittel PUMPE benutz
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cool-pump-return-control"></a>
 ### STEUERN_COOL_PUMP_RETURN_CONTROL
 
 Die Kontrolle wiederzubekommen nach Durchfuehrung des	 "STEUERN_COOL_PUMP" JOB Warnung -> Dieser Job sollte nicht von einer Person ohne ausreichende Systemkenntnisse durchgefuehrt werden
@@ -2135,7 +2042,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cool-pump-lesen"></a>
 ### STATUS_COOL_PUMP_LESEN
 
 Das BPCM sendet diese Ergebnisse und jede FAULT CODES waehrend der Zeit der Durchfuehrung von "PUMP Control" falls angefordert durch STEUERN JOB
@@ -2154,7 +2060,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-batt-change-odometer"></a>
 ### STEUERN_BATT_CHANGE_ODOMETER
 
 TO ENTER THE VEHICLE ODOMETER VALUE AT EVERY BATTERY CHANGE
@@ -2173,7 +2078,6 @@ TO ENTER THE VEHICLE ODOMETER VALUE AT EVERY BATTERY CHANGE
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-isol-test"></a>
 ### STEUERN_ISOL_TEST
 
 Starten des Isolationstests durch das Service-Tool Warnung -> Dieser Job sollte nicht von einer Person ohne ausreichende Systemkenntnisse durchgefuehrt werden
@@ -2192,7 +2096,6 @@ Starten des Isolationstests durch das Service-Tool Warnung -> Dieser Job sollte 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-isol-test-return-control"></a>
 ### STEUERN_ISOL_TEST_RETURN_CONTROL
 
 Die Kontrolle wiederzubekommen nach Durchfuehrung von "STEUERN_ISOL_TEST" JOB Warnung -> Dieser Job sollte nicht von einer Person ohne ausreichende Systemkenntnisse durchgefuehrt werden
@@ -2207,7 +2110,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-isol-test-lesen"></a>
 ### STATUS_ISOL_TEST_LESEN
 
 BPCM sendet diese Resultate und Fault-CODES waehrend Ausfuehrung von ISOLATION TEST aufgefordert durch "STEUERN" JOB
@@ -2232,7 +2134,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-clear-pump-dryrun-off"></a>
 ### STEUERN_CLEAR_PUMP_DRYRUN_OFF
 
 RESET die Pumpen-Trockenlauf SWITCH OFF FLAG Warnung -> Dieser Job sollte nicht von einer Person ohne ausreichende Systemkenntnisse durchgefuehrt werden
@@ -2251,7 +2152,6 @@ RESET die Pumpen-Trockenlauf SWITCH OFF FLAG Warnung -> Dieser Job sollte nicht 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-clear-dryrun-off-return-control"></a>
 ### STEUERN_CLEAR_DRYRUN_OFF_RETURN_CONTROL
 
 Die Kontrolle wiederzubekommen nach Durchfuehrung von "STEUERN_CLEAR_DRYRUN_OFF" JOB Warnung -> Dieser Job sollte nicht von einer Person ohne ausreichende Systemkenntnisse durchgefuehrt werden
@@ -2266,7 +2166,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-clear-dryrun-off-lesen"></a>
 ### STATUS_CLEAR_DRYRUN_OFF_LESEN
 
 BPCM sendet diese Resultate und Fault-CODES waehrend Ausfuehrung von CLEAR PUMP Trockenlauf SWITCH OFF aufgefordert durch "STEUERN" JOB
@@ -2289,7 +2188,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-fault-check-disabler"></a>
 ### _STEUERN_FAULT_CHECK_DISABLER
 
 TO ENABLE OR DISABLE DIFFERENT FAULT CHECK TESTS THIS INCLUDES THE FAULT CHECK TESTS OF ISOLATION DETECTION WITH CLOSED CONTACTORS, OPEN CABLE DETECTION, OPEN CABLE DETECTION CIRCUIT CHECK AND WELD CHECK & ACTIVE DISCHARGE TEST
@@ -2318,7 +2216,6 @@ TO ENABLE OR DISABLE DIFFERENT FAULT CHECK TESTS THIS INCLUDES THE FAULT CHECK T
 | _REQUEST3 | binary | Hex-request an SG |
 | _RESPONSE3 | binary | Hex-Antwort von SG |
 
-<a id="job-bse-init-states"></a>
 ### _BSE_INIT_STATES
 
 BSE INITIALIZATION PARAMETERS
@@ -2348,7 +2245,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bse-bpcm-input"></a>
 ### _BSE_BPCM_INPUT
 
 BSE INPUTS FROM BPCM SW, MAINLY THE SENSOR VALUES
@@ -2373,7 +2269,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bse-bsec-data"></a>
 ### _BSE_BSEC_DATA
 
 None
@@ -2403,7 +2298,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bse-eeprom-data-01"></a>
 ### _BSE_EEPROM_DATA_01
 
 EEPROM DATA - INPUT TO BSE
@@ -2426,7 +2320,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bse-eeprom-data-02"></a>
 ### _BSE_EEPROM_DATA_02
 
 EEPROM DATA - INPUT TO BSE
@@ -2453,7 +2346,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bse-api-data-01"></a>
 ### _BSE_API_DATA_01
 
 BSE API OUTPUTS
@@ -2476,7 +2368,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bse-api-data-02"></a>
 ### _BSE_API_DATA_02
 
 BSE API OUTPUTS
@@ -2506,7 +2397,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-bse-api-data-03"></a>
 ### _BSE_API_DATA_03
 
 BSE API OUTPUTS
@@ -2536,7 +2426,6 @@ _No arguments._
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-write-soc-old"></a>
 ### _WRITE_SOC_OLD
 
 TO OVERWRITE THE OLD SOC VALUE STORED IN THE EEPROM
@@ -2555,7 +2444,6 @@ TO OVERWRITE THE OLD SOC VALUE STORED IN THE EEPROM
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-write-amphr-charge"></a>
 ### _WRITE_AMPHR_CHARGE
 
 TO OVERWRITE THE AMP-HR CHARGE VALUE STORED IN THE EEPROM
@@ -2574,7 +2462,6 @@ TO OVERWRITE THE AMP-HR CHARGE VALUE STORED IN THE EEPROM
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-write-amphr-discharge"></a>
 ### _WRITE_AMPHR_DISCHARGE
 
 TO OVERWRITE THE AMP-HR CHARGE VALUE STORED IN THE EEPROM
@@ -2593,7 +2480,6 @@ TO OVERWRITE THE AMP-HR CHARGE VALUE STORED IN THE EEPROM
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-load-check-enabler"></a>
 ### _STEUERN_LOAD_CHECK_ENABLER
 
 TO ENABLE OR DISABLE LOAD CHECK AND SHORTED BUS DETECTION FUNCTIONALITY
@@ -2612,7 +2498,6 @@ TO ENABLE OR DISABLE LOAD CHECK AND SHORTED BUS DETECTION FUNCTIONALITY
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-load-check-enabler"></a>
 ### _STATUS_LOAD_CHECK_ENABLER
 
 TO READ OUT THE LOAD CHECK AND SHORTED BUS DETECTION ENABLER BIT
@@ -2629,7 +2514,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-service-can-enabler"></a>
 ### _SERVICE_CAN_ENABLER
 
 TO ENABLE OR DISABLE SERVICE CAN COMMUNICATION
@@ -2648,7 +2532,6 @@ TO ENABLE OR DISABLE SERVICE CAN COMMUNICATION
 | _REQUEST | binary | Hex-request an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-service-can-enabler"></a>
 ### _STATUS_SERVICE_CAN_ENABLER
 
 TO READ OUT THE LOAD CHECK AND SHORTED BUS DETECTION ENABLER BIT
@@ -2725,7 +2608,6 @@ _No arguments._
 - [ISOLATION_TEST_STATUS](#table-isolation-test-status) (4 × 2)
 - [ROUTINE_RETURN_CODES](#table-routine-return-codes) (12 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -2799,7 +2681,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 115 rows × 2 columns
@@ -2922,7 +2803,6 @@ Dimensions: 115 rows × 2 columns
 | 0x0000A8 | Wanyu |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -2948,7 +2828,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2973,7 +2852,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -3005,7 +2883,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -3078,7 +2955,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -3091,7 +2967,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -3104,7 +2979,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -3117,7 +2991,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -3136,7 +3009,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -3145,7 +3017,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -3155,7 +3026,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -3169,7 +3039,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -3178,7 +3047,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -3190,7 +3058,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 2 rows × 3 columns
@@ -3200,7 +3067,6 @@ Dimensions: 2 rows × 3 columns
 | 0x000001 | ExampleErrorCode | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-t-true-or-false"></a>
 ### T_TRUE_OR_FALSE
 
 Dimensions: 2 rows × 2 columns
@@ -3210,7 +3076,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | False |
 | 1 | True |
 
-<a id="table-t-hv-isolation-diagnostic-status-table"></a>
 ### T_HV_ISOLATION_DIAGNOSTIC_STATUS_TABLE
 
 Dimensions: 4 rows × 2 columns
@@ -3222,7 +3087,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Diagnose beendet |
 | 3 | Diagnose beendet |
 
-<a id="table-t-status-of-isolation-fault-diagnositic-control"></a>
 ### T_STATUS_OF_ISOLATION_FAULT_DIAGNOSITIC_CONTROL
 
 Dimensions: 3 rows × 2 columns
@@ -3233,7 +3097,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Fehler momentan vorhanden: alle kritischen Fehler |
 | 2 | PEB verbunden |
 
-<a id="table-t-hybrid-battery-hv-isolation-fault-diagnostic-status-table"></a>
 ### T_HYBRID_BATTERY_HV_ISOLATION_FAULT_DIAGNOSTIC_STATUS_TABLE
 
 Dimensions: 4 rows × 2 columns
@@ -3245,7 +3108,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Diagnose fehlerfrei beendet |
 | 3 | Diagnose beendet Fehler vorhanden |
 
-<a id="table-t-contactor-enable-control-staus"></a>
 ### T_CONTACTOR_ENABLE_CONTROL_STAUS
 
 Dimensions: 4 rows × 2 columns
@@ -3257,7 +3119,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | HV Service Schalter muss gezogen sein |
 | 3 | Ausgangs Timer ist abgelaufen bitte warten - Test beendet |
 
-<a id="table-t-eeprom-reset-command-status"></a>
 ### T_EEPROM_RESET_COMMAND_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3269,7 +3130,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Fahrzeug Geschwindigkeit ungleich null |
 | 3 | HV Service Schalter nicht gezogen |
 
-<a id="table-t-reset-and-dont-reset"></a>
 ### T_RESET_AND_DONT_RESET
 
 Dimensions: 2 rows × 2 columns
@@ -3279,7 +3139,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Reset |
 | 1 | Reset |
 
-<a id="table-t-hybrid-battery-pack-voltage-source-table"></a>
 ### T_HYBRID_BATTERY_PACK_VOLTAGE_SOURCE_TABLE
 
 Dimensions: 6 rows × 2 columns
@@ -3293,7 +3152,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | reserviert |
 | 5 |  |
 
-<a id="table-t-hybrid-battery-bus-voltage-source-table"></a>
 ### T_HYBRID_BATTERY_BUS_VOLTAGE_SOURCE_TABLE
 
 Dimensions: 4 rows × 2 columns
@@ -3305,7 +3163,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Batterie HV Bus Spannung Sensor |
 | 3 | reserviert |
 
-<a id="table-t-invalidvalid-1bit"></a>
 ### T_INVALIDVALID_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -3315,7 +3172,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ungueltig |
 | 1 | gueltig |
 
-<a id="table-t-cooling-device-controlled-status"></a>
 ### T_COOLING_DEVICE_CONTROLLED_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3327,7 +3183,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Run/Crank Spannung zu niedrig |
 | 3 | Fehler momentan vorhanden: alle kritischen Fehler |
 
-<a id="table-t-eeprom-reset-enable"></a>
 ### T_EEPROM_RESET_ENABLE
 
 Dimensions: 2 rows × 2 columns
@@ -3337,7 +3192,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Kontrolle-deaktive |
 | 1 | Kontrolle-aktiv  |
 
-<a id="table-t-cooling-device-enable"></a>
 ### T_COOLING_DEVICE_ENABLE
 
 Dimensions: 2 rows × 2 columns
@@ -3347,7 +3201,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Kontrolle-deaktive |
 | 1 | Kontrolle-aktiv  |
 
-<a id="table-t-value-valid-or-invalid"></a>
 ### T_VALUE_VALID_OR_INVALID
 
 Dimensions: 2 rows × 2 columns
@@ -3357,7 +3210,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wert gueltig  |
 | 1 | Wert ungueltig |
 
-<a id="table-t-proper-shutdown"></a>
 ### T_PROPER_SHUTDOWN
 
 Dimensions: 2 rows × 2 columns
@@ -3367,7 +3219,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ECU fehlerhaft eingeschlafen |
 | 1 | ECU korrekt eingeschlafen |
 
-<a id="table-t-offon-1bit"></a>
 ### T_OFFON_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -3377,7 +3228,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | off |
 | 1 | on |
 
-<a id="table-weld-contactors"></a>
 ### WELD_CONTACTORS
 
 Dimensions: 2 rows × 2 columns
@@ -3387,7 +3237,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nicht verschweist |
 | 1 | verschweist |
 
-<a id="table-active-discharge"></a>
 ### ACTIVE_DISCHARGE
 
 Dimensions: 2 rows × 2 columns
@@ -3397,7 +3246,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ERFOLGREICH ENTLADEN |
 | 1 | nicht ERFOLGREICH ENTLADEN |
 
-<a id="table-t-hvbp-contactor-states"></a>
 ### T_HVBP_CONTACTOR_STATES
 
 Dimensions: 8 rows × 2 columns
@@ -3413,7 +3261,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | RESERVIERTER Zustand 2 |
 | 7 | RESERVIERTER Zustand 3 |
 
-<a id="table-t-hcp-contactor-cmnd"></a>
 ### T_HCP_CONTACTOR_CMND
 
 Dimensions: 8 rows × 2 columns
@@ -3429,7 +3276,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | RESERVIERTER Zustand 4 |
 | 7 | RESERVIERTER Zustand 5 |
 
-<a id="table-t-cntctrstat-type"></a>
 ### T_CNTCTRSTAT_TYPE
 
 Dimensions: 6 rows × 2 columns
@@ -3443,7 +3289,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | fehlgeschlagen |
 | 7 | Signal nicht verfuegbar |
 
-<a id="table-t-b-contactor-command-type"></a>
 ### T_B_CONTACTOR_COMMAND_TYPE
 
 Dimensions: 2 rows × 2 columns
@@ -3453,7 +3298,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Qualified Contactor Command = offen |
 | 1 | Qualified Contactor Command = geschlossen oder Oeffnung erwartet |
 
-<a id="table-service-disconnect"></a>
 ### SERVICE_DISCONNECT
 
 Dimensions: 4 rows × 2 columns
@@ -3465,7 +3309,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | GESCHLOSSEN & SICHERUNG Kaputt |
 | 3 | NICHT VERFUEGBAR |
 
-<a id="table-t-open-close-1bit"></a>
 ### T_OPEN_CLOSE_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -3475,7 +3318,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | OFFEN |
 | 1 | SCHLIESEN |
 
-<a id="table-t-hybrid-battery-contactor-device-control-enable-table-1"></a>
 ### T_HYBRID_BATTERY_CONTACTOR_DEVICE_CONTROL_ENABLE_TABLE_1
 
 Dimensions: 3 rows × 2 columns
@@ -3486,7 +3328,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | Vorlade Schuetz Kontrolle aktiv |
 | 3 | Negative Schuetz Kontrolle aktiv |
 
-<a id="table-t-select-or-disregard"></a>
 ### T_SELECT_OR_DISREGARD
 
 Dimensions: 2 rows × 2 columns
@@ -3496,7 +3337,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | abwaehlen |
 | 1 | auswaehlen |
 
-<a id="table-t-contactor-table"></a>
 ### T_CONTACTOR_TABLE
 
 Dimensions: 2 rows × 2 columns
@@ -3506,7 +3346,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Offen |
 | 1 | schliesen |
 
-<a id="table-t-hybrid-battery-contactor-device-control-enable-selection"></a>
 ### T_HYBRID_BATTERY_CONTACTOR_DEVICE_CONTROL_ENABLE_SELECTION
 
 Dimensions: 4 rows × 2 columns
@@ -3518,7 +3357,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Vorlade Schuetz Kontrolle aktiv |
 | 3 | Negative Schuetz Kontrolle aktiv |
 
-<a id="table-t-disable-enable-1bit"></a>
 ### T_DISABLE_ENABLE_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -3528,7 +3366,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Deaktivieren |
 | 1 | Aktivieren |
 
-<a id="table-hybrid-lief"></a>
 ### HYBRID_LIEF
 
 Dimensions: 6 rows × 2 columns
@@ -3542,7 +3379,6 @@ Dimensions: 6 rows × 2 columns
 | 0008 | Siemens |
 | FFFF | undefinierter Lieferant |
 
-<a id="table-datum-monat"></a>
 ### DATUM_MONAT
 
 Dimensions: 53 rows × 2 columns
@@ -3603,7 +3439,6 @@ Dimensions: 53 rows × 2 columns
 | 0x34 | 0x0C |
 | 0xFF | 0x00 |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -3630,7 +3465,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-hvil-status"></a>
 ### HVIL_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3642,7 +3476,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | fehlgeschlagen |
 | 3 | ungueltig |
 
-<a id="table-fault-check"></a>
 ### FAULT_CHECK
 
 Dimensions: 2 rows × 2 columns
@@ -3652,7 +3485,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | DEAKTIVIERT |
 | 1 | AKTIVIERT |
 
-<a id="table-fault-check-test"></a>
 ### FAULT_CHECK_TEST
 
 Dimensions: 2 rows × 2 columns
@@ -3662,7 +3494,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | DEAKTIVIERT |
 | 1 | AKTIVIERT |
 
-<a id="table-ocd-test-result"></a>
 ### OCD_TEST_RESULT
 
 Dimensions: 5 rows × 2 columns
@@ -3675,7 +3506,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | ABGEBROCHEN |
 | 4 | DEAKTIVIERT – KEIN ERGEBNIS VERFÜGBAR |
 
-<a id="table-isolation-command"></a>
 ### ISOLATION_COMMAND
 
 Dimensions: 2 rows × 2 columns
@@ -3685,7 +3515,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | STOP |
 | 1 | START |
 
-<a id="table-isolation-test-status"></a>
 ### ISOLATION_TEST_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3697,7 +3526,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | TEST BEENDET & fehlgeschlagen |
 | 3 | TEST BEENDET & bestanden |
 
-<a id="table-routine-return-codes"></a>
 ### ROUTINE_RETURN_CODES
 
 Dimensions: 12 rows × 2 columns

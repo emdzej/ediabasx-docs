@@ -26,7 +26,6 @@
 - [C_C_LESEN](#job-c-c-lesen) - Codierdaten schreiben und verifizieren
 - [C_CHECKSUM](#job-c-checksum) - Berechnung und Speicherung der Checksumme
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -44,7 +43,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -57,7 +55,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation
@@ -80,7 +77,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -97,7 +93,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -115,7 +110,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Speicherung der Checksumme
@@ -140,7 +134,6 @@ Berechnung und Speicherung der Checksumme
 - [JOBRESULT](#table-jobresult) (7 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -155,7 +148,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

@@ -26,7 +26,6 @@
 - [DISPLAYTEST](#job-displaytest) - Displaytest starten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -44,7 +43,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer DSP-BT
@@ -57,7 +55,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DSP-BT
@@ -80,7 +77,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-stat-tasten"></a>
 ### STAT_TASTEN
 
 Status aller Tasten am DSP Bedienteil abfragen
@@ -98,7 +94,6 @@ _No arguments._
 | STAT_RECHTS_TASTE_EIN | int | > Taste betaetigt ? |
 | STAT_LIN_TASTE_EIN | int | LIN Taste betaetigt ? |
 
-<a id="job-displaytest"></a>
 ### DISPLAYTEST
 
 Displaytest starten
@@ -111,7 +106,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -131,7 +125,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -147,7 +140,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

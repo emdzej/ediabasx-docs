@@ -63,7 +63,6 @@
 - [STEUERN_ECALL_LOGGING](#job-steuern-ecall-logging) - Auslesen der gespeicherten internen EU ecall Loggings 
 - [STEUERN_PROVISIONING_DATA](#job-steuern-provisioning-data) - Schreiben der Provisionierungsdaten
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -82,7 +81,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -95,7 +93,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -112,7 +109,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -143,7 +139,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -188,7 +183,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -207,7 +201,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -225,7 +218,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -246,7 +238,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -275,7 +266,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -295,7 +285,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -316,7 +305,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -332,7 +320,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -354,7 +341,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -373,7 +359,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -400,7 +385,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -445,7 +429,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -460,7 +443,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -480,7 +462,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -499,7 +480,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -518,7 +498,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -533,7 +512,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -552,7 +530,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -572,7 +549,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -589,7 +565,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -608,7 +583,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -623,7 +597,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -640,7 +613,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -655,7 +627,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -670,7 +641,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -690,7 +660,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-log-mask"></a>
 ### STEUERN_LOG_MASK
 
 Schreiben der Log Maske
@@ -708,7 +677,6 @@ Schreiben der Log Maske
 | RET_STATUS | unsigned char | Rückmeldungen, Fehlercodes z.B. OK 0x00 oder NOTOK 0x01 |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-sim-commandos"></a>
 ### STEUERN_SIM_COMMANDOS
 
 Schreiben der SIM Commandos
@@ -726,7 +694,6 @@ Schreiben der SIM Commandos
 | RET_STATUS | unsigned char | Rückmeldungen, Fehlercodes z.B. OK 0x00 oder NOTOK 0x01 |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-ip-configuration"></a>
 ### STATUS_IP_CONFIGURATION
 
 Reads out the actual ipconfig of the Ethernet interface of the HeadUnit.
@@ -745,7 +712,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eth-signal-quality"></a>
 ### STATUS_ETH_SIGNAL_QUALITY
 
 Returns the signal quality of all external ports of the ECU UDS   : $22 ReadDataByIdentifier $1801 ETH_SIGNAL_QUALITY
@@ -763,7 +729,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eth-learn-port-configuration"></a>
 ### STEUERN_ETH_LEARN_PORT_CONFIGURATION
 
 Stores the current link state (link up/link down) of all external ports of the ecu. The stored port configuration can then be used to detect missing, or additional ECUs during runtime. UDS   : $31 RoutineControl $01 StartRoutine $1040
@@ -780,7 +745,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eth-read-phy-register"></a>
 ### STATUS_ETH_READ_PHY_REGISTER
 
 Reads an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 StartRoutine $1041
@@ -801,7 +765,6 @@ Reads an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 S
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eth-arp-table"></a>
 ### STATUS_ETH_ARP_TABLE
 
 Shall return the ARP table of a given network interface. The interface shall be identified by its IP address. UDS   : $31 RoutineControl $01 StartRoutine $1043
@@ -822,7 +785,6 @@ Shall return the ARP table of a given network interface. The interface shall be 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eth-phy-switch-engine-reset"></a>
 ### STEUERN_ETH_PHY_SWITCH_ENGINE_RESET
 
 Requests the reset of a given PHY or of the ECUs switch(es). If supported by the ECU, the PHY/switch(es) may be held in reset for a given amount of time. If an ECU does not support holding the PHY/switch(es) in reset for a given duration but STOP_PHY_FOR_T is greater than 0, the job shall quit with return value STAT_PHY_RESET = 2 and without performing the reset. After the reset, the default configuration, i.e., the configuration that is used during runtime, shall be applied. UDS   : $31 RoutineControl $01 StartRoutine $1044
@@ -844,7 +806,6 @@ Requests the reset of a given PHY or of the ECUs switch(es). If supported by the
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eth-ip-configuration"></a>
 ### STATUS_ETH_IP_CONFIGURATION
 
 Shall return the ARP table of a given network interface. The interface shall be identified by its IP address. UDS   : $31 RoutineControl $01 StartRoutine $1045
@@ -874,7 +835,6 @@ Shall return the ARP table of a given network interface. The interface shall be 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eth-write-phy-register"></a>
 ### STEUERN_ETH_WRITE_PHY_REGISTER
 
 Writes an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 StartRoutine $104D
@@ -894,7 +854,6 @@ Writes an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-powermanagement-nad"></a>
 ### STEUERN_POWERMANAGEMENT_NAD
 
 Auslesen der gespeicherten internen Powermanagement Transitionen 
@@ -917,7 +876,6 @@ Auslesen der gespeicherten internen Powermanagement Transitionen
 | STAT_GUARD_VALUE_TEXT | string | Guard value as hex string |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-ecall-logging"></a>
 ### STEUERN_ECALL_LOGGING
 
 Auslesen der gespeicherten internen EU ecall Loggings 
@@ -937,7 +895,6 @@ Auslesen der gespeicherten internen EU ecall Loggings
 | STAT_TIMESTAMP | string | Timestamp as hex string |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-provisioning-data"></a>
 ### STEUERN_PROVISIONING_DATA
 
 Schreiben der Provisionierungsdaten
@@ -1108,7 +1065,6 @@ Schreiben der Provisionierungsdaten
 - [TABSTATUSOTDLSC](#table-tabstatusotdlsc) (5 × 2)
 - [UNEXPECTED_LINK_UP_STATUS_TAB](#table-unexpected-link-up-status-tab) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1192,7 +1148,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -1341,7 +1296,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1384,7 +1338,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1409,7 +1362,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1443,7 +1395,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1516,7 +1467,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1529,7 +1479,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1544,7 +1493,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1557,7 +1505,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1577,7 +1524,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1620,7 +1566,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1631,7 +1576,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x1046-r"></a>
 ### ARG_0X1046_R
 
 Dimensions: 1 rows × 14 columns
@@ -1640,7 +1584,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PORT_INDEX | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Portindex des zur diagnostizierenden Ports/PHYs (beginnend bei Port 0). Wertebereich: Port 0 - Port n-1 (bei insgesamt n Ports) |
 
-<a id="table-arg-0x1047-r"></a>
 ### ARG_0X1047_R
 
 Dimensions: 1 rows × 14 columns
@@ -1649,7 +1592,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PORT_INDEX | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Portindex Wertebereich: Port 0 - Port n-1 (bei insgesamt n Ports) |
 
-<a id="table-arg-0x1048-r"></a>
 ### ARG_0X1048_R
 
 Dimensions: 2 rows × 14 columns
@@ -1659,7 +1601,6 @@ Dimensions: 2 rows × 14 columns
 | PORT_INDEX | + | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Index des Ports, an dem der Test gestartet werden soll. Wertebereich: Port 0 - Port n-1 (bei insgesamt n Ports)  Wertebereich: Port 0 - Port n-1 (bei insgesamt n Ports) |
 | LOOPBACK_MODE | + | - | 0-n | high | unsigned char | - | ETH_LOOPBACK_MODE_TAB | - | - | - | - | - | 1 = internal Loopback-Mode, 2 = external Loopback-Mode, sonst = ungültig |
 
-<a id="table-arg-0x104c-r"></a>
 ### ARG_0X104C_R
 
 Dimensions: 3 rows × 14 columns
@@ -1670,7 +1611,6 @@ Dimensions: 3 rows × 14 columns
 | TEST_DURATION | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Zeit, für die der Testmodus geschaltet werden soll. Der Wert wird im SG mit 10 multipliziert, so dass die Testdauer von 0s bis 2550s variiert werden kann. |
 | TEST_MODE_ID | + | - | 0-n | high | unsigned char | - | ETH_TEST_MODE_TAB | - | - | - | - | - | ID des Testmodus, in den der PHY geschaltet werden soll |
 
-<a id="table-arg-0xa020-r"></a>
 ### ARG_0XA020_R
 
 Dimensions: 2 rows × 14 columns
@@ -1680,7 +1620,6 @@ Dimensions: 2 rows × 14 columns
 | ARG_TYPE | + | - | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | - | - | There can only have two Values for the argument: BMW or BROWSER ARG_TYPE =  BMW  or  BROWSER  |
 | ARG_PATH | + | - | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | - | - | path of the certificate |
 
-<a id="table-arg-0xa05e-r"></a>
 ### ARG_0XA05E_R
 
 Dimensions: 1 rows × 14 columns
@@ -1689,7 +1628,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_ANTENNE | + | - | 0-n | high | unsigned char | - | TAB_ANTENNE_ECALL | - | - | - | - | - | Antenne, die getestet werden sollen Tabelle TAB_ANTENNE_ECALL |
 
-<a id="table-arg-0xa05f-r"></a>
 ### ARG_0XA05F_R
 
 Dimensions: 1 rows × 14 columns
@@ -1698,7 +1636,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_VERBAU_ROUTINE | + | - | 0-n | - | unsigned long | - | TAB_VERBAU_CECALL | - | - | - | - | - | Routinen, die getestet werden sollen Tabelle TVerbauCECALL |
 
-<a id="table-arg-0xa086-r"></a>
 ### ARG_0XA086_R
 
 Dimensions: 3 rows × 14 columns
@@ -1709,7 +1646,6 @@ Dimensions: 3 rows × 14 columns
 | ARG_LAUTSTAERKE | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Lautstaerke von 0-15. Minimal- und Maximalbereich eincodiert. Bei ungueltigen Einganben kommt Request out of range |
 | ARG_DAUER | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 255.0 | Dauer des Tons. Wertebereich von 0 bis 255 |
 
-<a id="table-arg-0xa089-r"></a>
 ### ARG_0XA089_R
 
 Dimensions: 1 rows × 14 columns
@@ -1718,7 +1654,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SOS_DEAKTIVIERUNG | + | - | 0-n | high | unsigned char | - | TAB_SOS_DEAKTIVIERUNG | - | - | - | - | - | 0x00 aktiviert und 0x01 deaktiviert das Senden von SOS-Botschaften über CAN |
 
-<a id="table-arg-0xa0ee-r"></a>
 ### ARG_0XA0EE_R
 
 Dimensions: 1 rows × 14 columns
@@ -1727,7 +1662,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SIM_PROFILE_IDENTIFIER | + | - | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | - | - | Das Argument wird in der Download-Anforderung übergeben. Siehe Dokument Status_Update_Applet_Specifcation. |
 
-<a id="table-arg-0xa0ef-r"></a>
 ### ARG_0XA0EF_R
 
 Dimensions: 1 rows × 14 columns
@@ -1736,7 +1670,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SIM_PROFILE_IDENTIFIER | + | - | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | - | - | Das Argument wird in der Download-Anforderung übergeben. Siehe Dokument Status_Update_Applet_Specifcation. |
 
-<a id="table-arg-0xd20a-d"></a>
 ### ARG_0XD20A_D
 
 Dimensions: 1 rows × 12 columns
@@ -1745,7 +1678,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_WLAN_HS_LOCK | 0-n | high | unsigned char | - | TAB_EIN_AUS | - | - | - | - | - | Wert für Sperrung Werte aus der Tabelle TAB_EIN_AUS |
 
-<a id="table-arg-0xd20b-d"></a>
 ### ARG_0XD20B_D
 
 Dimensions: 1 rows × 12 columns
@@ -1754,7 +1686,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_WLAN_HS_PASSPRASE | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | - | - | WLAN passphrase (Pre-Shared-Key) Schlüssel als Welt. Der Schlüssel kann eine Länge von maximal 63 Zeichen haben. |
 
-<a id="table-arg-0xd25a-d"></a>
 ### ARG_0XD25A_D
 
 Dimensions: 1 rows × 12 columns
@@ -1763,7 +1694,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_WLAN_HS_ACTIVATION | 0-n | high | unsigned char | - | TAB_EIN_AUS | - | - | - | - | - | Aktivierungswert Werte aus der Tabelle TAB_EIN_AUS |
 
-<a id="table-arg-0xd274-d"></a>
 ### ARG_0XD274_D
 
 Dimensions: 1 rows × 12 columns
@@ -1772,7 +1702,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_ECALL_SIM_PROFILE_ACTIVE | 0-n | high | unsigned char | - | TAB_EIN_AUS | - | - | - | - | - | Aktiviert oder Deaktiviert das ECall Profil. |
 
-<a id="table-arg-0xd34d-d"></a>
 ### ARG_0XD34D_D
 
 Dimensions: 2 rows × 12 columns
@@ -1782,7 +1711,6 @@ Dimensions: 2 rows × 12 columns
 | TESTMODE | 0-n | high | unsigned char | - | TAB_EIN_AUS | - | - | - | - | - | Testmodus schalten |
 | TEST_NUMBER | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | - | - | Die Telefonnummer die der Testmodus verwenden soll. |
 
-<a id="table-arg-0xdb1a-d"></a>
 ### ARG_0XDB1A_D
 
 Dimensions: 1 rows × 12 columns
@@ -1791,7 +1719,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_F_STATUS | 0-n | high | unsigned int | - | TabStatusOtDLSC | - | - | - | - | - | F-Status für OTD Last State Call |
 
-<a id="table-arg-0xf002-r"></a>
 ### ARG_0XF002_R
 
 Dimensions: 2 rows × 14 columns
@@ -1801,7 +1728,6 @@ Dimensions: 2 rows × 14 columns
 | ARG_SIM_GET | + | - | 0-n | high | unsigned int | - | TAB_SIM_GET | - | - | - | - | - | Values from Table TAB_SIM_GET   |
 | ARG_SIM_INFO | + | - | HEX | high | signed char | - | - | - | - | - | - | - | 1 byte regarding which information shall be read |
 
-<a id="table-arg-0xf004-r"></a>
 ### ARG_0XF004_R
 
 Dimensions: 1 rows × 14 columns
@@ -1810,7 +1736,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GPS_EMPFAENGER | + | - | 0-n | high | unsigned char | - | GPS_EMPFAENGER | - | - | - | - | - | Mode_GPS_EMPFAENGER |
 
-<a id="table-bf-eth-ip-configuration-ecu-type"></a>
 ### BF_ETH_IP_CONFIGURATION_ECU_TYPE
 
 Dimensions: 8 rows × 10 columns
@@ -1826,7 +1751,6 @@ Dimensions: 8 rows × 10 columns
 | BIT_6 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | reserviert |
 | BIT_7 | 0/1 | high | unsigned char | 0x80 | - | - | - | - | reserviert |
 
-<a id="table-bf-eth-port-configuration"></a>
 ### BF_ETH_PORT_CONFIGURATION
 
 Dimensions: 16 rows × 10 columns
@@ -1850,7 +1774,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_PORT_14 | 0-n | high | unsigned int | 0x4000 | ETH_PORT_CONFIGURATION | - | - | - | Portstatus Port 14 |
 | STAT_PORT_15 | 0-n | high | unsigned int | 0x8000 | ETH_PORT_CONFIGURATION | - | - | - | Portstatus Port 15 |
 
-<a id="table-bf-gps-reliability-flags-1"></a>
 ### BF_GPS_RELIABILITY_FLAGS_1
 
 Dimensions: 20 rows × 10 columns
@@ -1878,7 +1801,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_GPS_RELIABILITY_FLAG_1_19 | 0/1 | high | unsigned long | 0x00040000 | - | - | - | - | GPS Reliability-Flag 19 |
 | STAT_GPS_RELIABILITY_FLAG_1_20 | 0/1 | high | unsigned long | 0x00080000 | - | - | - | - | GPS Reliability-Flag 20 |
 
-<a id="table-bf-gps-reliability-flags-2"></a>
 ### BF_GPS_RELIABILITY_FLAGS_2
 
 Dimensions: 20 rows × 10 columns
@@ -1906,7 +1828,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_GPS_RELIABILITY_FLAG_2_19 | 0/1 | high | unsigned long | 0x00040000 | - | - | - | - | GPS Reliability-Flag 19 |
 | STAT_GPS_RELIABILITY_FLAG_2_20 | 0/1 | high | unsigned long | 0x00080000 | - | - | - | - | GPS Reliability-Flag 20 |
 
-<a id="table-bf-gps-reliability-flags-3"></a>
 ### BF_GPS_RELIABILITY_FLAGS_3
 
 Dimensions: 20 rows × 10 columns
@@ -1934,7 +1855,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_GPS_RELIABILITY_FLAG_3_19 | 0/1 | high | unsigned long | 0x00040000 | - | - | - | - | GPS Reliability-Flag 19 |
 | STAT_GPS_RELIABILITY_FLAG_3_20 | 0/1 | high | unsigned long | 0x00080000 | - | - | - | - | GPS Reliability-Flag 20 |
 
-<a id="table-bf-gps-reliability-flags-4"></a>
 ### BF_GPS_RELIABILITY_FLAGS_4
 
 Dimensions: 20 rows × 10 columns
@@ -1962,7 +1882,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_GPS_RELIABILITY_FLAG_4_19 | 0/1 | high | unsigned long | 0x00040000 | - | - | - | - | GPS Reliability-Flag 19 |
 | STAT_GPS_RELIABILITY_FLAG_4_20 | 0/1 | high | unsigned long | 0x00080000 | - | - | - | - | GPS Reliability-Flag 20 |
 
-<a id="table-bf-phy-link-state-btfld"></a>
 ### BF_PHY_LINK_STATE_BTFLD
 
 Dimensions: 16 rows × 10 columns
@@ -1986,7 +1905,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_PHY_LINK_STATE_PORT_14 | 0-n | high | unsigned int | 0x4000 | PHY_LINK_STATE_TAB | - | - | - | Linkstatus für Port 14 |
 | STAT_PHY_LINK_STATE_PORT_15 | 0-n | high | unsigned int | 0x8000 | PHY_LINK_STATE_TAB | - | - | - | Linkstatus für Port 15 |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2000,7 +1918,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-cable-diag-state-tab"></a>
 ### CABLE_DIAG_STATE_TAB
 
 Dimensions: 8 rows × 2 columns
@@ -2016,7 +1933,6 @@ Dimensions: 8 rows × 2 columns
 | 0x10 | Diagnose läuft bereits (bei aufeinanderfolgenden Jobaufrufen |
 | 0xFF | Diagnose konnte nicht gestartet werden, PHY unterstützt Kabeldiagnose nicht oder Port nicht vorhanden |
 
-<a id="table-eth-learn-port-configuration"></a>
 ### ETH_LEARN_PORT_CONFIGURATION
 
 Dimensions: 2 rows × 2 columns
@@ -2026,7 +1942,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0 | Lernen erfolgreich |
 | 0x1 | Lernen nicht erfolgreich oder noch nicht gelernt |
 
-<a id="table-eth-loopback-mode-tab"></a>
 ### ETH_LOOPBACK_MODE_TAB
 
 Dimensions: 2 rows × 2 columns
@@ -2036,7 +1951,6 @@ Dimensions: 2 rows × 2 columns
 | 1 | internal Loopback-Mode |
 | 2 | external Loopback-Mode |
 
-<a id="table-eth-phy-loopback-test"></a>
 ### ETH_PHY_LOOPBACK_TEST
 
 Dimensions: 4 rows × 2 columns
@@ -2048,7 +1962,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Test nicht erfolgreich, TX- und RX-Zähler wurden durch Versendung des Testframes nicht inkrementiert |
 | 0xFF | Test läuft bereits |
 
-<a id="table-eth-phy-test-mode-state"></a>
 ### ETH_PHY_TEST_MODE_STATE
 
 Dimensions: 3 rows × 2 columns
@@ -2059,7 +1972,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | PHY kann nicht in den Testmodus geschaltet werden |
 | 0x02 | Gewünschter Testmodus für Port/Switch nicht verfügbar |
 
-<a id="table-eth-port-configuration"></a>
 ### ETH_PORT_CONFIGURATION
 
 Dimensions: 2 rows × 2 columns
@@ -2069,7 +1981,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0 | link-down |
 | 0x1 | link-up |
 
-<a id="table-eth-test-mode-tab"></a>
 ### ETH_TEST_MODE_TAB
 
 Dimensions: 5 rows × 2 columns
@@ -2082,7 +1993,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Transmit Distortion test |
 | 0x05 | Normal Operation at full power necessary for the PSD mask Test |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2096,7 +2006,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 75 rows × 3 columns
@@ -2179,7 +2088,6 @@ Dimensions: 75 rows × 3 columns
 | 0xE14BFF | Dummy-Fehlerspeichereintrag im Netzwerkfehlerbereich nur für Testzwecke | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 74 rows × 9 columns
@@ -2261,7 +2169,6 @@ Dimensions: 74 rows × 9 columns
 | 0xE383 | SIM SUA Status | 0-n | High | 0xFFFF | TAB_SIM_SUA_STATE | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-gps-empfaenger"></a>
 ### GPS_EMPFAENGER
 
 Dimensions: 4 rows × 2 columns
@@ -2273,7 +2180,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | GPS_EMPFAENGER in Hot Start |
 | 0xFF | Wert ungültig |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2286,7 +2192,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 20 rows × 3 columns
@@ -2314,7 +2219,6 @@ Dimensions: 20 rows × 3 columns
 | 0xE14601 | Ethernet: CRC Fehler | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 74 rows × 9 columns
@@ -2396,7 +2300,6 @@ Dimensions: 74 rows × 9 columns
 | 0xE383 | SIM SUA Status | 0-n | High | 0xFFFF | TAB_SIM_SUA_STATE | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2405,7 +2308,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-link-reset-status-tab"></a>
 ### LINK_RESET_STATUS_TAB
 
 Dimensions: 2 rows × 2 columns
@@ -2415,7 +2317,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0 | Linkverlust aufgrund SG-externen Ereignisses |
 | 0x1 | Linkverlust aufgrund SG-interen Ereignisses |
 
-<a id="table-phy-link-state-tab"></a>
 ### PHY_LINK_STATE_TAB
 
 Dimensions: 16 rows × 2 columns
@@ -2439,7 +2340,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Link up |
 | 0x0F | Link up |
 
-<a id="table-port-crc-error-count-1b-tab"></a>
 ### PORT_CRC_ERROR_COUNT_1B_TAB
 
 Dimensions: 16 rows × 2 columns
@@ -2463,7 +2363,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Port nicht verbunden |
 | 0x0F | Anzahl der verlorenen Frames konnte nicht bestimmt werden. |
 
-<a id="table-port-link-status-tab"></a>
 ### PORT_LINK_STATUS_TAB
 
 Dimensions: 2 rows × 2 columns
@@ -2473,7 +2372,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Link-off festgestellt |
 | 1 | Link-off festgestellt |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -2489,7 +2387,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -2500,7 +2397,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ECUMindestensEinmalVollstaendigProgrammierbar |
 | 2 | ECUNichtMehrProgrammierbar |
 
-<a id="table-res-0x1046-r"></a>
 ### RES_0X1046_R
 
 Dimensions: 1 rows × 13 columns
@@ -2509,7 +2405,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CABLE_DIAG_STATE | + | - | - | 0-n | high | unsigned char | - | CABLE_DIAG_STATE_TAB | - | - | - | Ergebnis der Kabeldiagnose. |
 
-<a id="table-res-0x1047-r"></a>
 ### RES_0X1047_R
 
 Dimensions: 3 rows × 13 columns
@@ -2520,7 +2415,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_MMN_WERT | + | - | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Die 6 Bit lange MMN des Phys. Die übrigen Bits sollen auf 0 gesetzt werden. |
 | STAT_REVISION_WERT | + | - | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 4 Bit lange Revisionsnummer des PHY. Die übrigen Bits sollen mit 0 belegt werden. |
 
-<a id="table-res-0x1048-r"></a>
 ### RES_0X1048_R
 
 Dimensions: 1 rows × 13 columns
@@ -2529,7 +2423,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PHY_LOOPBACK_TEST | + | - | - | 0-n | high | unsigned char | - | ETH_PHY_LOOPBACK_TEST | - | - | - | Ergebnis Loopback-Test |
 
-<a id="table-res-0x104c-r"></a>
 ### RES_0X104C_R
 
 Dimensions: 1 rows × 13 columns
@@ -2538,7 +2431,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PHY_TEST_MODE | + | - | - | 0-n | high | unsigned char | - | ETH_PHY_TEST_MODE_STATE | - | - | - | Gibt an, ob das Schalten des PHY in den gewünschten Modus erfolgreich war. |
 
-<a id="table-res-0x1802-d"></a>
 ### RES_0X1802_D
 
 Dimensions: 2 rows × 10 columns
@@ -2548,7 +2440,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_NUM_OF_PORTS_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Anzahl der physikalischen Ports.  |
 | - | Bit | high | BITFIELD | - | BF_PHY_LINK_STATE_BTFLD | - | - | - | Linkstatus aller Port. |
 
-<a id="table-res-0x1803-d"></a>
 ### RES_0X1803_D
 
 Dimensions: 2 rows × 10 columns
@@ -2558,7 +2449,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_LEARN_PORT_CONFIGURATION | 0-n | high | unsigned char | - | ETH_LEARN_PORT_CONFIGURATION | - | - | - | 0: Lernen erfolgreich 1: Lernen nicht erfolgreich oder noch nicht gelernt |
 | - | Bit | high | BITFIELD | - | BF_ETH_PORT_CONFIGURATION | - | - | - | Pro Port 1Bit, das angibt ob LinkUp(1) oder kein Link (0) vorliegt. |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -2569,7 +2459,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -2583,7 +2472,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4000-d"></a>
 ### RES_0X4000_D
 
 Dimensions: 3 rows × 10 columns
@@ -2594,7 +2482,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_IMPORT_MASK_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Default (=0) special mask already imported (=1) error (=2) |
 | STAT_LOG_MASK_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | LogMask XML in clear words (for example: 130528_QXDMlog5-3.xml) |
 
-<a id="table-res-0x4006-d"></a>
 ### RES_0X4006_D
 
 Dimensions: 3 rows × 10 columns
@@ -2605,7 +2492,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SIM_COMMAND_LINE_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Returns the number of the  line of the executed command that causes an error. Returns 0 if no error occured. |
 | STAT_SIM_COMMAND_RETURN_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Returns the line of the executed command that causes an error.  |
 
-<a id="table-res-0x4010-d"></a>
 ### RES_0X4010_D
 
 Dimensions: 20 rows × 10 columns
@@ -2633,7 +2519,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_HEADING_4_WERT | ° | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Richtung in Grad (Heading): Vorvorletzte Position n-3 |
 | - | Bit | high | BITFIELD | - | BF_GPS_RELIABILITY_FLAGS_4 | - | - | - | Reliability Flags: Vorvorletzte Position n-3 |
 
-<a id="table-res-0xa020-r"></a>
 ### RES_0XA020_R
 
 Dimensions: 1 rows × 13 columns
@@ -2642,7 +2527,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RET_STATUS | + | - | + | 0-n | high | unsigned char | - | TAB_RET_STATUS | - | - | - | Status message |
 
-<a id="table-res-0xa05e-r"></a>
 ### RES_0XA05E_R
 
 Dimensions: 4 rows × 13 columns
@@ -2654,7 +2538,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_FEHLERART_ANTENNE | - | - | + | 0-n | high | unsigned char | - | TAntenneFehlerArt | - | - | - | Dieses Result wird mit 255 belegt, wenn STAT_TEST_ANTENNE nicht den Wert 3 (Fehler) meldet |
 | STAT_SPANNUNG_WERT | - | - | + | mV | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Die auf der fehlerhaften Antenne gemessene Spannung in mV. |
 
-<a id="table-res-0xa05f-r"></a>
 ### RES_0XA05F_R
 
 Dimensions: 2 rows × 13 columns
@@ -2664,7 +2547,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_VERBAU_ROUTINE | - | - | + | 0-n | - | unsigned long | - | TAB_VERBAU_CECALL | - | - | - | Ausgeführte Testroutine(n) |
 | STAT_TEST_VERBAU | - | - | + | 0-n | - | unsigned char | - | TAB_TESTSTATUS | - | - | - | Gibt den Status des Verbautests wieder Nach dem Herunterfahren oder Neustart des Steuergerätes wird der Status automatisch auf 0 zurückgesetzt |
 
-<a id="table-res-0xa079-r"></a>
 ### RES_0XA079_R
 
 Dimensions: 1 rows × 13 columns
@@ -2673,7 +2555,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PROVISIONING_RESET | - | - | + | 0-n | - | unsigned char | - | TResetStatus | - | - | - | Status Reset Werte gemäß Tabelle TResetStatus 0 UNKNOWN - unbekannt 1 ACTIVE - läuft noch 2 SUCCESS - alles OK 3 FAILED - mit Fehler beendet 4 IDLE - wurde nicht gestartet |
 
-<a id="table-res-0xa07a-r"></a>
 ### RES_0XA07A_R
 
 Dimensions: 3 rows × 13 columns
@@ -2684,7 +2565,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_ECALL_OTA_ID_TEXT | - | - | + | TEXT | - | string | - | - | 1.0 | 1.0 | 0.0 | Version von den aktuellen OTA Daten |
 | STAT_ECALL_DAS_ID_TEXT | - | - | + | TEXT | - | string | - | - | 1.0 | 1.0 | 0.0 | Version von den aktuellen DAS Daten |
 
-<a id="table-res-0xa089-r"></a>
 ### RES_0XA089_R
 
 Dimensions: 1 rows × 13 columns
@@ -2693,7 +2573,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SOS_CAN_BOTSCHAFT | - | - | + | 0-n | high | unsigned char | - | TAB_SOS_CAN_BOTSCHAFT | 1.0 | 1.0 | 0.0 | Auslesen des aktuellen Status des Signalmodus (siehe Job STEUERN_SIGNAL_MODE) |
 
-<a id="table-res-0xa09a-r"></a>
 ### RES_0XA09A_R
 
 Dimensions: 1 rows × 13 columns
@@ -2702,7 +2581,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RESET_WLAN_HS_DATA | - | - | + | 0-n | high | unsigned char | - | TAB_PROCESS_STATUS | - | - | - | Ergebnis siehe Tabelle: TProcessStatus |
 
-<a id="table-res-0xa0b8-r"></a>
 ### RES_0XA0B8_R
 
 Dimensions: 1 rows × 13 columns
@@ -2711,7 +2589,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LAST_STATE_CALL | - | - | + | 0-n | high | unsigned char | - | TLSC_STATUS | - | - | - | Status des letzten LSC |
 
-<a id="table-res-0xa0ee-r"></a>
 ### RES_0XA0EE_R
 
 Dimensions: 2 rows × 13 columns
@@ -2721,7 +2598,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_SIM_PROFILE_IDENTIFIER_TEXT | - | - | + | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Identifikator des heruntergeledenen Profils. |
 | STAT_SIM_PROFILE_SWITCH | - | - | + | 0-n | high | unsigned char | - | TAB_STAT_SIM_PROFILE_SWITCH | - | - | - | Status des Umschaltens zwischen den Profilen. Werte aus der Tabelle TAB_STAT_SIM_PROFILE_SWITCH |
 
-<a id="table-res-0xa0ef-r"></a>
 ### RES_0XA0EF_R
 
 Dimensions: 2 rows × 13 columns
@@ -2731,7 +2607,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_SIM_PROFILE_IDENTIFIER_TEXT | - | - | + | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Identifikator des heruntergeledenen Profils. |
 | STAT_SIM_PROFILE_DOWNLOAD | - | - | + | 0-n | high | unsigned char | - | TAB_STAT_SIM_PROFILE_DOWLOAD | - | - | - | Status des Downloads. Werte aus der Tabelle TAB_STAT_SIM_PROFILE_DOWLOAD |
 
-<a id="table-res-0xd029-d"></a>
 ### RES_0XD029_D
 
 Dimensions: 8 rows × 10 columns
@@ -2747,7 +2622,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_BUB_TAG_HEALTH_MESSUNG_WERT | - | high | signed int | - | - | 1.0 | 1000.0 | 0.0 | Datum der Relative Health Messung der Backup-Batterie. Ergebnis Tag (Format: TT) |
 | STAT_BUB_LADUNG_ART | 0-n | high | unsigned char | - | TAB_BUB_LADUNG_ART | - | - | - | Gibt das aktuelle Ladungsverfahren an. |
 
-<a id="table-res-0xd035-d"></a>
 ### RES_0XD035_D
 
 Dimensions: 4 rows × 10 columns
@@ -2759,7 +2633,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_AKTUELLES_NETZ_TEXT | TEXT | high | string[6] | - | - | 1.0 | 1.0 | 0.0 | Status des aktuell verfügbaren Netzwerks 000 000 = NMCC NMNC Nmcc= network mobile country code (Land) Nmnc= network mobile network code (Network provider) |
 | STAT_SIGNAL_STAERKE_TEXT | TEXT | high | string[1] | - | - | 1.0 | 1.0 | 0.0 | Empfangsstärke des verfügbaren Netzwerks im Bereich von 0-5 0 = kein Signal 5 = volles Signal |
 
-<a id="table-res-0xd0ce-d"></a>
 ### RES_0XD0CE_D
 
 Dimensions: 13 rows × 10 columns
@@ -2780,7 +2653,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_IMEI_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | IMEI |
 | STAT_SERIAL_NUMBER_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Seriennummer des Steuergeräts |
 
-<a id="table-res-0xd0d3-d"></a>
 ### RES_0XD0D3_D
 
 Dimensions: 3 rows × 10 columns
@@ -2791,7 +2663,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_DOWNLOAD_ID_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Download ID |
 | STAT_PROVISIONING | 0-n | high | unsigned char | - | TProvisioningStatus | - | - | - | Status vom Schreibvorgang der Provisionierungsdaten. |
 
-<a id="table-res-0xd0e1-d"></a>
 ### RES_0XD0E1_D
 
 Dimensions: 9 rows × 10 columns
@@ -2808,7 +2679,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_GPS_DATE_TEXT | TEXT | high | string[8] | - | - | 1.0 | 1.0 | 0.0 | Datum TTMMJJJJ |
 | STAT_GPS_TIME_TEXT | TEXT | high | string[6] | - | - | 1.0 | 1.0 | 0.0 | Uhrzeit HHMMSS |
 
-<a id="table-res-0xd0e3-d"></a>
 ### RES_0XD0E3_D
 
 Dimensions: 3 rows × 10 columns
@@ -2819,7 +2689,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_GPS_DISTANCE_2_WERT | m | high | signed long | - | - | 1.0 | 1.0 | 0.0 | Gibt die zurückgelegte Strecke (GPS) seit dem zweitletzten Auslesen des Jobs aus. |
 | STAT_GPS_DISTANCE_3_WERT | m | high | signed long | - | - | 1.0 | 1.0 | 0.0 | Gibt die zurückgelegte Strecke (GPS) seit dem drittletzten Auslesen des Jobs aus. |
 
-<a id="table-res-0xd108-d"></a>
 ### RES_0XD108_D
 
 Dimensions: 4 rows × 10 columns
@@ -2831,7 +2700,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_NETZ_TECHNOLOGIE | 0-n | high | unsigned char | - | TAB_NETZ_TECHNOLOGIE | - | - | - | Gibt an welche Mobilfunk Netzwerk Technologie unterstützt wird. |
 | STAT_LAENDERVARIANTE | 0-n | high | unsigned char | - | TAB_LAENDERVARIANTE_TELEMATIK | - | - | - | Gibt die Laendervariante des Telematik Steuergeräts an. |
 
-<a id="table-res-0xd20a-d"></a>
 ### RES_0XD20A_D
 
 Dimensions: 1 rows × 10 columns
@@ -2840,7 +2708,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WLAN_HS_LOCK | 0-n | high | unsigned char | - | TAB_EIN_AUS | - | - | - | Wert für Sperre als Integer Werte aus der Tabelle TAB_EIN_AUS |
 
-<a id="table-res-0xd20b-d"></a>
 ### RES_0XD20B_D
 
 Dimensions: 1 rows × 10 columns
@@ -2849,7 +2716,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WLAN_HS_PASSPHRASE_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | WLAN passphrase (Pre-Shared-Key) Schlüssel als Welt. Der Schlüssel kann eine Länge von maximal 63 Zeichen haben. |
 
-<a id="table-res-0xd20c-d"></a>
 ### RES_0XD20C_D
 
 Dimensions: 32 rows × 10 columns
@@ -2889,7 +2755,6 @@ Dimensions: 32 rows × 10 columns
 | STAT_WLAN_ERRORRATE_DBM_8_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Leistung der letzten gesendeten/empfangenen Daten ;0 = 0 dBm; 255 = -255 dBm |
 | STAT_WLAN_8_CONNECTION_DATA | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | Status Kommunikation WLAN client 0 = nicht in Reichweite 1 = in Reichweite 2 = verbunden |
 
-<a id="table-res-0xd25a-d"></a>
 ### RES_0XD25A_D
 
 Dimensions: 1 rows × 10 columns
@@ -2898,7 +2763,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WLAN_HS_ACTIVATION | 0-n | high | unsigned char | - | TAB_EIN_AUS | - | - | - | Aktivierungswert als Integer Werte aus der Tabelle TAB_EIN_AUS |
 
-<a id="table-res-0xd26e-d"></a>
 ### RES_0XD26E_D
 
 Dimensions: 12 rows × 10 columns
@@ -2918,7 +2782,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_PROFILE_3_ICCID_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | ICCID des SIM Profils. |
 | STAT_PROFILE_3_IMSI_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | IMSI des SIM Profils. |
 
-<a id="table-res-0xd34d-d"></a>
 ### RES_0XD34D_D
 
 Dimensions: 1 rows × 10 columns
@@ -2927,7 +2790,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TESTMODE | 0-n | high | unsigned char | - | - | - | - | - | Gibt den aktuellen Zustand des Testmodus an. |
 
-<a id="table-res-0xdb1a-d"></a>
 ### RES_0XDB1A_D
 
 Dimensions: 3 rows × 10 columns
@@ -2938,7 +2800,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_OTD_LSC_ACTIVATION | 0-n | high | unsigned char | - | TabActivation | - | - | - | Status des OtD LSC |
 | STAT_OTD_LSC_ACTIVATION_ERROR | 0-n | high | unsigned char | - | TabErrorStatusOtDLSC | - | - | - | Fehlerstatus des OtD LSC |
 
-<a id="table-res-0xf001-r"></a>
 ### RES_0XF001_R
 
 Dimensions: 1 rows × 13 columns
@@ -2947,7 +2808,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RESET_LOG_MASK | - | - | + | 0-n | high | unsigned char | - | TAB_TESTSTATUS | - | - | - | status of reset |
 
-<a id="table-res-0xf002-r"></a>
 ### RES_0XF002_R
 
 Dimensions: 1 rows × 13 columns
@@ -2956,7 +2816,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SIM_INFO_TEXT | - | - | + | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | According to Document SubMan_Get_Information |
 
-<a id="table-res-0xf004-r"></a>
 ### RES_0XF004_R
 
 Dimensions: 1 rows × 13 columns
@@ -2965,7 +2824,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GPS_EMPFAENGER | - | - | + | 0-n | high | unsigned char | - | GPS_EMPFAENGER | - | - | - | Status GPS_EMPFAENGER |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 52 rows × 16 columns
@@ -3025,7 +2883,6 @@ Dimensions: 52 rows × 16 columns
 | SIM_INFO | 0xF002 | - | Returns SIM Data, see G&D Document  SubMan_Get_Information, table 2.3 und 2.7 | - | - | - | - | - | - | - | - | - | 31 | ARG_0xF002_R | RES_0xF002_R |
 | GPS_EMPFAENGER | 0xF004 | - | Switches GPS_EMPFAENGER to Kalt Start, Warm Start or Hot Start | - | - | - | - | - | - | - | - | - | 31 | ARG_0xF004_R | RES_0xF004_R |
 
-<a id="table-tab-0x1752"></a>
 ### TAB_0X1752
 
 Dimensions: 1 rows × 17 columns
@@ -3034,7 +2891,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 16 | 0x0001 | 0x0002 | 0x0003 | 0x0004 | 0x0005 | 0x0006 | 0x0007 | 0x0008 | 0x0009 | 0x000A | 0x000B | 0x000C | 0x000D | 0x000E | 0x000F | 0x0010 |
 
-<a id="table-tab-0x1753"></a>
 ### TAB_0X1753
 
 Dimensions: 1 rows × 2 columns
@@ -3043,7 +2899,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x0011 |
 
-<a id="table-tab-0x175a"></a>
 ### TAB_0X175A
 
 Dimensions: 1 rows × 17 columns
@@ -3052,7 +2907,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 16 | 0x0012 | 0x0013 | 0x0014 | 0x0015 | 0x0016 | 0x0017 | 0x0018 | 0x0019 | 0x001A | 0x001B | 0x001C | 0x001D | 0x001E | 0x001F | 0x0020 | 0x0021 |
 
-<a id="table-tab-0x175b"></a>
 ### TAB_0X175B
 
 Dimensions: 1 rows × 17 columns
@@ -3061,7 +2915,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 16 | 0x0022 | 0x0023 | 0x0024 | 0x0025 | 0x0026 | 0x0027 | 0x0028 | 0x0029 | 0x002A | 0x002B | 0x002C | 0x002D | 0x002E | 0x002F | 0x0030 | 0x0031 |
 
-<a id="table-tab-0x17f5"></a>
 ### TAB_0X17F5
 
 Dimensions: 1 rows × 3 columns
@@ -3070,7 +2923,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x0032 | 0x0033 |
 
-<a id="table-tab-antenne-ecall"></a>
 ### TAB_ANTENNE_ECALL
 
 Dimensions: 5 rows × 2 columns
@@ -3083,7 +2935,6 @@ Dimensions: 5 rows × 2 columns
 | 0x08 | WLAN-Antenne |
 | 0xFF | Ungültig |
 
-<a id="table-tab-bub-ladung-art"></a>
 ### TAB_BUB_LADUNG_ART
 
 Dimensions: 6 rows × 2 columns
@@ -3097,7 +2948,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Keine Ladung: Temperatur |
 | 0x05 | Keine Ladung: BUB Betrieb |
 
-<a id="table-tab-cd-environment-condition"></a>
 ### TAB_CD_ENVIRONMENT_CONDITION
 
 Dimensions: 15 rows × 2 columns
@@ -3120,7 +2970,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0D | Ausführung des Service nicht erlaubt/abgebrochen |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-cd-mobile-network-technology"></a>
 ### TAB_CD_MOBILE_NETWORK_TECHNOLOGY
 
 Dimensions: 10 rows × 2 columns
@@ -3138,7 +2987,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | E_UTRAN |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-cs-regstate"></a>
 ### TAB_CS_REGSTATE
 
 Dimensions: 8 rows × 2 columns
@@ -3154,7 +3002,6 @@ Dimensions: 8 rows × 2 columns
 | 0x70 | Notruf bereit |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-ein-aus"></a>
 ### TAB_EIN_AUS
 
 Dimensions: 3 rows × 2 columns
@@ -3165,7 +3012,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | EIN |
 | 0xFF | unbekannt |
 
-<a id="table-tab-ja-nein"></a>
 ### TAB_JA_NEIN
 
 Dimensions: 2 rows × 2 columns
@@ -3175,7 +3021,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nein |
 | 1 | ja |
 
-<a id="table-tab-laendervariante-telematik"></a>
 ### TAB_LAENDERVARIANTE_TELEMATIK
 
 Dimensions: 6 rows × 2 columns
@@ -3189,7 +3034,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Brasilien |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-netz-technologie"></a>
 ### TAB_NETZ_TECHNOLOGIE
 
 Dimensions: 4 rows × 2 columns
@@ -3201,7 +3045,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | 4 Generaton |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-no-yes"></a>
 ### TAB_NO_YES
 
 Dimensions: 3 rows × 2 columns
@@ -3212,7 +3055,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | yes |
 | 0xFF | not defined |
 
-<a id="table-tab-process-status"></a>
 ### TAB_PROCESS_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -3225,7 +3067,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Prozess beendet mit Fehler |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-ps-regstate"></a>
 ### TAB_PS_REGSTATE
 
 Dimensions: 8 rows × 2 columns
@@ -3241,7 +3082,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | Notruf bereit |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-ret-status"></a>
 ### TAB_RET_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -3254,7 +3094,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | ret_data exceeds 0xF000 bytes |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-sim-fallback-error-cause"></a>
 ### TAB_SIM_FALLBACK_ERROR_CAUSE
 
 Dimensions: 9 rows × 2 columns
@@ -3271,7 +3110,6 @@ Dimensions: 9 rows × 2 columns
 | 0x20 | Fallback ausgelöst durch Fallback App |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-sim-get"></a>
 ### TAB_SIM_GET
 
 Dimensions: 2 rows × 2 columns
@@ -3281,7 +3119,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Get_information |
 | 0x01 | Get_last_response |
 
-<a id="table-tab-sim-profile-status"></a>
 ### TAB_SIM_PROFILE_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3295,7 +3132,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | aktiviert |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-sim-sua-state"></a>
 ### TAB_SIM_SUA_STATE
 
 Dimensions: 19 rows × 2 columns
@@ -3322,7 +3158,6 @@ Dimensions: 19 rows × 2 columns
 | 0x1160 | Subscription Aktivierungstatus - Interne Fehler |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-sos-can-botschaft"></a>
 ### TAB_SOS_CAN_BOTSCHAFT
 
 Dimensions: 2 rows × 2 columns
@@ -3332,7 +3167,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | SOS-Botschaften werden gesendet |
 | 0x01 | SOS-Botschaften werden nicht gesendet |
 
-<a id="table-tab-sos-deaktivierung"></a>
 ### TAB_SOS_DEAKTIVIERUNG
 
 Dimensions: 2 rows × 2 columns
@@ -3342,7 +3176,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Senden von SOS-Nachrichten aktivieren |
 | 0x01 | Senden von SOS-Nachrichten deaktivieren |
 
-<a id="table-tab-stat-sim-profile-dowload"></a>
 ### TAB_STAT_SIM_PROFILE_DOWLOAD
 
 Dimensions: 6 rows × 2 columns
@@ -3356,7 +3189,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | nicht gestartet |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-sim-profile-switch"></a>
 ### TAB_STAT_SIM_PROFILE_SWITCH
 
 Dimensions: 8 rows × 2 columns
@@ -3372,7 +3204,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | läuft - warten auf Parkmodus |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-taster-status"></a>
 ### TAB_TASTER_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3384,7 +3215,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | nicht verbaut oder codiert |
 | 0xFF | Ungültig |
 
-<a id="table-tab-tdaactivationstate"></a>
 ### TAB_TDAACTIVATIONSTATE
 
 Dimensions: 5 rows × 2 columns
@@ -3397,7 +3227,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Aktivierung erfolgreich |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-teststatus"></a>
 ### TAB_TESTSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3411,7 +3240,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Test unterbrochen |
 | 0xFF | Nicht definiert |
 
-<a id="table-tab-verbauort-telematik-ecu"></a>
 ### TAB_VERBAUORT_TELEMATIK_ECU
 
 Dimensions: 4 rows × 2 columns
@@ -3423,7 +3251,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Instrumententafel |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-verbau-cecall"></a>
 ### TAB_VERBAU_CECALL
 
 Dimensions: 12 rows × 2 columns
@@ -3443,7 +3270,6 @@ Dimensions: 12 rows × 2 columns
 | 0x00000200 | Mikrophon1 |
 | 0xFFFFFFFF | nicht definiert |
 
-<a id="table-tantennefehlerart"></a>
 ### TANTENNEFEHLERART
 
 Dimensions: 5 rows × 2 columns
@@ -3456,7 +3282,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Falscher Antennfuß oder Diversity |
 | 0xFF | Nicht definiert |
 
-<a id="table-teventecalllog"></a>
 ### TEVENTECALLLOG
 
 Dimensions: 116 rows × 2 columns
@@ -3580,7 +3405,6 @@ Dimensions: 116 rows × 2 columns
 | 0x9D | MSD_OPTIONAL_ADDITIONAL_DATA |
 | 0xFF | Nicht definiert |
 
-<a id="table-tgpsstatus"></a>
 ### TGPSSTATUS
 
 Dimensions: 14 rows × 2 columns
@@ -3602,7 +3426,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0C | 3D Position |
 | 0xFF | Nicht definiert |
 
-<a id="table-tlsc-status"></a>
 ### TLSC_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3616,7 +3439,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | untebrochen |
 | 0xFF | nicht definiert |
 
-<a id="table-tpowerguardnad"></a>
 ### TPOWERGUARDNAD
 
 Dimensions: 26 rows × 2 columns
@@ -3650,7 +3472,6 @@ Dimensions: 26 rows × 2 columns
 | 0x02FF | N/A |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-tpowerstatenad"></a>
 ### TPOWERSTATENAD
 
 Dimensions: 105 rows × 2 columns
@@ -3763,7 +3584,6 @@ Dimensions: 105 rows × 2 columns
 | 0x020A | TRANSITION |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-tpowerstmnad"></a>
 ### TPOWERSTMNAD
 
 Dimensions: 4 rows × 2 columns
@@ -3775,7 +3595,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | CAN MCU |
 | 0xFF | Nicht definiert |
 
-<a id="table-tpowertriggernad"></a>
 ### TPOWERTRIGGERNAD
 
 Dimensions: 160 rows × 2 columns
@@ -3943,7 +3762,6 @@ Dimensions: 160 rows × 2 columns
 | 0x02FF | N/A |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-tprovisioningstatus"></a>
 ### TPROVISIONINGSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -3956,7 +3774,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | mit Fehler beendet |
 | 0xFF | Nicht definiert |
 
-<a id="table-tprovisioningstatusecall"></a>
 ### TPROVISIONINGSTATUSECALL
 
 Dimensions: 6 rows × 2 columns
@@ -3970,7 +3787,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | wurde nicht gestartet |
 | 0xFF | nicht definiert |
 
-<a id="table-tresetstatus"></a>
 ### TRESETSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3984,7 +3800,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | wurde nicht gestartet |
 | 0xFF | undefinierter Zustand |
 
-<a id="table-tstateecalllog"></a>
 ### TSTATEECALLLOG
 
 Dimensions: 76 rows × 2 columns
@@ -4068,7 +3883,6 @@ Dimensions: 76 rows × 2 columns
 | 0x9A01 | HYDROGEN_YES |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-tsimstatus"></a>
 ### TSIMSTATUS
 
 Dimensions: 8 rows × 2 columns
@@ -4084,7 +3898,6 @@ Dimensions: 8 rows × 2 columns
 | 0x05 | eingebucht und roaming off-net |
 | 0x10 | Emergency Call bereit |
 
-<a id="table-tabactivation"></a>
 ### TABACTIVATION
 
 Dimensions: 3 rows × 2 columns
@@ -4095,7 +3908,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktiv |
 | 0xFF | Nicht fediniert |
 
-<a id="table-taberrorstatusotdlsc"></a>
 ### TABERRORSTATUSOTDLSC
 
 Dimensions: 9 rows × 2 columns
@@ -4112,7 +3924,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Realtime provisioning was not granted |
 | 0xFF | Nicht definiert |
 
-<a id="table-tabstatusotdlsc"></a>
 ### TABSTATUSOTDLSC
 
 Dimensions: 5 rows × 2 columns
@@ -4125,7 +3936,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0300 | F3 deaktiviert OtD LSC |
 | 0x0400 | F4 deaktiviert OtD LSC |
 
-<a id="table-unexpected-link-up-status-tab"></a>
 ### UNEXPECTED_LINK_UP_STATUS_TAB
 
 Dimensions: 2 rows × 2 columns

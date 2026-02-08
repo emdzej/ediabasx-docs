@@ -27,7 +27,6 @@
 - [RESET_UHR_BC](#job-reset-uhr-bc) - power on Reset Uhr-BC
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -45,7 +44,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer UHRBC
@@ -58,7 +56,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer UhrBC
@@ -80,7 +77,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der BC-Codierung
@@ -104,7 +100,6 @@ _No arguments._
 | REICHWEITENBASIS | string | km oder Meilen |
 | UHR_BC | string | Codierung als Uhr oder Uhr/Bc |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 alle analogen Stati des Uhr-BC 5 lesen
@@ -126,7 +121,6 @@ _No arguments._
 | STAT_TKVA | long | Lowphase T KVA in us |
 | STAT_TACHO_A | long | Frequenz Wegsignal in Hz |
 
-<a id="job-reset-uhr-bc"></a>
 ### RESET_UHR_BC
 
 power on Reset Uhr-BC
@@ -139,7 +133,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode beenden
@@ -159,7 +152,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (6 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -173,7 +165,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

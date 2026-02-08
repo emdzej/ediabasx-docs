@@ -28,7 +28,6 @@
 - [STATUS_IO_LESEN](#job-status-io-lesen) - Auslesen der Ein- Ausgaenge
 - [STATUS_POS_LESEN](#job-status-pos-lesen) - Auslesen der Deckelpositionen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -41,7 +40,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -59,7 +57,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -78,7 +75,6 @@ _No arguments._
 | ID_DATUM_KW | string | Herstelldatum KW |
 | ID_DATUM_JAHR | string | Herstelldatum Jahr |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -98,7 +94,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -111,7 +106,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -124,7 +118,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Auslesen der Ein- Ausgaenge
@@ -161,7 +154,6 @@ _No arguments._
 | STAT_A_BETRIEBSART_BAUSTEINE_AKTIV | int | Liefert: 0 oder 1 |
 | STAT_SPANNUNG_U_BATT_WERT | int | Liefert: 0 der 1 |
 
-<a id="job-status-pos-lesen"></a>
 ### STATUS_POS_LESEN
 
 Auslesen der Deckelpositionen
@@ -183,7 +175,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (17 × 2)
 - [FARTTEXTE](#table-farttexte) (2 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 17 rows × 2 columns
@@ -208,7 +199,6 @@ Dimensions: 17 rows × 2 columns
 | 0x10 | DDSHD_Modul |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns

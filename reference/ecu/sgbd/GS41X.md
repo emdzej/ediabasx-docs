@@ -39,7 +39,6 @@
 - [STEUERN_STELLGLIED_GETAKTET](#job-steuern-stellglied-getaktet) - Getaktetes Ansteuern der Stellglieder mit variablen Tastverhaeltnis und variabler Periodendauer
 - [STATUS_KICKDOWN_SCHALTER](#job-status-kickdown-schalter) - Auslesen der digitalen Eingangsstati
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -57,7 +56,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -70,7 +68,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Abbruch der Kommunikation
@@ -79,7 +76,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -99,7 +95,6 @@ _No arguments._
 | ID_BMW_NR | string | BMW-Teilenummer |
 | ID_AIF_VORHANDEN | int | Ist ein AIF vorhanden (0 (nein)/ 1 (ja)) |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -143,7 +138,6 @@ _No arguments._
 | F_UW2_EINH | string | Umweltbedingung 2 des einzelnen Fehlers  Einheit |
 | F_CODEHEX | binary | 5 Fehlerbyte |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -156,7 +150,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -169,7 +162,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 RAM lesen
@@ -190,7 +182,6 @@ RAM lesen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 ROM lesen
@@ -211,7 +202,6 @@ ROM lesen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-reset-adaption"></a>
 ### RESET_ADAPTION
 
 Alle Adaptionswerte loeschen
@@ -231,7 +221,6 @@ Alle Adaptionswerte loeschen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Auslesen der Motordrehzahl
@@ -248,7 +237,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-abtriebsdrehz"></a>
 ### STATUS_ABTRIEBSDREHZ
 
 Auslesen der Abtriebsdrehzahl
@@ -265,7 +253,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-lastsignal-dkg"></a>
 ### STATUS_LASTSIGNAL_DKG
 
 Auslesen des Lastsignals DKG
@@ -282,7 +269,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Auslesen der Batteriespannung
@@ -299,7 +285,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-getriebetemp"></a>
 ### STATUS_GETRIEBETEMP
 
 Auslesen der Getriebetemperatur
@@ -316,7 +301,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-einspritzmenge"></a>
 ### STATUS_EINSPRITZMENGE
 
 Auslesen der Einspritzmenge
@@ -333,7 +317,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-digital-lesen"></a>
 ### STATUS_DIGITAL_LESEN
 
 Auslesen der digitalen Eingangsstati
@@ -358,7 +341,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-steuern-stellglied-getaktet"></a>
 ### STEUERN_STELLGLIED_GETAKTET
 
 Getaktetes Ansteuern der Stellglieder mit variablen Tastverhaeltnis und variabler Periodendauer
@@ -378,7 +360,6 @@ Getaktetes Ansteuern der Stellglieder mit variablen Tastverhaeltnis und variable
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | STAT_ANSTEUERUNG | int | Ansteuerergebnis 0: Stellglied kann angesteuert werden 1: PIN-Nummer ist unbekannt 2: Positionshebel ist nicht in N oder P 3: Abtriebsdrehzahl ist zu hoch 4: Relais ist abgefallen, ein Fehler ist vorhanden |
 
-<a id="job-status-kickdown-schalter"></a>
 ### STATUS_KICKDOWN_SCHALTER
 
 Auslesen der digitalen Eingangsstati
@@ -404,7 +385,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (10 × 5)
 - [STELLGLIEDER](#table-stellglieder) (12 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 28 rows × 4 columns
@@ -440,7 +420,6 @@ Dimensions: 28 rows × 4 columns
 | 0x6b | Umschaltg. N->D b. hoher Abtriebsd. | 0x02 | 0x01 |
 | 0xXY | unbekannte Fehlerart | 0x00 | 0x00 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -467,7 +446,6 @@ Dimensions: 19 rows × 2 columns
 | 0x11 | DME sendet fehlerh. Motortemperatursignal |
 | 0x12 | DME sendet fehlerh. Drosselklappensignal |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 28 rows × 17 columns
@@ -503,7 +481,6 @@ Dimensions: 28 rows × 17 columns
 | 0x6a | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0a | 0x0b | 0x0c | 0x0d |
 | 0x6b | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0a | 0x0b | 0x0c | 0x0d |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 10 rows × 5 columns
@@ -521,7 +498,6 @@ Dimensions: 10 rows × 5 columns
 | 0x08 | Statusbyte 2 | -- | 1.0 | 0.0 |
 | 0xXY | unbekannte Umweltbedingung | -- | 1.0 | 0.0 |
 
-<a id="table-stellglieder"></a>
 ### STELLGLIEDER
 
 Dimensions: 12 rows × 2 columns

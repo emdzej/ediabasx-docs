@@ -61,7 +61,6 @@
 - [STEUERN_FLOTTENMODUS](#job-steuern-flottenmodus) - Flottenmodus Status
 - [STATUS_FLOTTENMODUS](#job-status-flottenmodus) - Auslesen des Stati des Flottenmodus
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -80,7 +79,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -99,7 +97,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Navigationsrechner
@@ -112,7 +109,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 _No arguments._
@@ -156,7 +152,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Navigationsrechner
@@ -182,7 +177,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen High Konzept nach LH Codierung/Diagnose mit Umweltbeding
@@ -203,7 +197,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm des Steuergeraetes |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Fehlerspeicher lesen High Konzept nach LH Codierung/Diagnose mit Umweltbeding
@@ -224,7 +217,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm des Steuergeraetes |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -243,7 +235,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der Telegramme anzeigen |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -264,7 +255,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen, welche Software geladen ist
@@ -288,7 +278,6 @@ _No arguments._
 | SPRACHE_3_AKTUELL_TEXT | string | 3. geladene Sprache |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 #### Arguments
@@ -310,7 +299,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-speicher-loeschen"></a>
 ### SPEICHER_LOESCHEN
 
 Sprachen loeschen
@@ -325,7 +313,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-read-coding-data"></a>
 ### READ_CODING_DATA
 
 Auslesen der Codierdaten
@@ -347,7 +334,6 @@ _No arguments._
 | COD_NOT_RUF | string | Wert des Bytes AUTO_EM_CALL, Telematik und automatischer Notruf |
 | _TEL_ANTWORT | binary | Wert des Bytes _TEL_ANTWORT |
 
-<a id="job-write-coding-data"></a>
 ### WRITE_CODING_DATA
 
 Schreiben der configuration data
@@ -372,7 +358,6 @@ Schreiben der configuration data
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary | Wert des Bytes _TEL_ANTWORT |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Selbsttest Navigationsrechner
@@ -387,7 +372,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen im Navigationsrechner
@@ -400,7 +384,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-quick-erase"></a>
 ### QUICK_ERASE
 
 Fehlerspeicher loeschen ohne BUSY abzuwarten
@@ -413,7 +396,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. OKAY) |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -426,7 +408,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -439,7 +420,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-system-parameter-lesen"></a>
 ### SYSTEM_PARAMETER_LESEN
 
 _No arguments._
@@ -452,7 +432,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-sw-demand-flag-setzen"></a>
 ### SW_DEMAND_FLAG_SETZEN
 
 Herstellen des Auslieferzustandes
@@ -467,7 +446,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-write-configuration-data"></a>
 ### WRITE_CONFIGURATION_DATA
 
 Schreiben der configuration data
@@ -488,7 +466,6 @@ Schreiben der configuration data
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-read-configuration-data"></a>
 ### READ_CONFIGURATION_DATA
 
 Auslesen der configuration data
@@ -507,7 +484,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der Telegramme anzeigen |
 
-<a id="job-read-production-stamp-record"></a>
 ### READ_PRODUCTION_STAMP_RECORD
 
 Production stamp record lesen
@@ -525,7 +501,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-write-production-stamp-record"></a>
 ### WRITE_PRODUCTION_STAMP_RECORD
 
 Schreiben der configuration data
@@ -546,7 +521,6 @@ Schreiben der configuration data
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-read-production-stamp-table"></a>
 ### READ_PRODUCTION_STAMP_TABLE
 
 Production stamp table lesen
@@ -569,7 +543,6 @@ Production stamp table lesen
 | _3RD_RECORD_OF_PAGE | binary |  |
 | _4TH_RECORD_OF_PAGE | binary |  |
 
-<a id="job-read-production-stamp-table-quick-info"></a>
 ### READ_PRODUCTION_STAMP_TABLE_QUICK_INFO
 
 Production stamp table lesen
@@ -585,7 +558,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Wert des Bytes _TEL_ANTWORT |
 | RECORD_CONRTER | string | Anzahl der Records |
 
-<a id="job-set-no-save-nvr"></a>
 ### SET_NO_SAVE_NVR
 
 Speicherungs Verbot
@@ -599,7 +571,6 @@ _No arguments._
 | JOB_STATUS | string | Normal OKAY |
 | DONE | int | 1 = OK |
 
-<a id="job-remove-no-save-nvr"></a>
 ### REMOVE_NO_SAVE_NVR
 
 Speicherungs Freigabe
@@ -613,7 +584,6 @@ _No arguments._
 | JOB_STATUS | string | Normal OKAY |
 | DONE | int | 1 = OK |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -630,7 +600,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben ohne Verifikation
@@ -647,7 +616,6 @@ Codierdaten schreiben ohne Verifikation
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -665,7 +633,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -680,7 +647,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -698,7 +664,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-gps-antenna"></a>
 ### STATUS_GPS_ANTENNA
 
 _No arguments._
@@ -714,7 +679,6 @@ _No arguments._
 | STAT_ANTENNA_WERT | int | 0 - verbunden, 1 - nicht verbunden, 2 - Kurzschluss, 3 - anderer GPS Status |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sprachausgabe"></a>
 ### SPRACHAUSGABE
 
 Sprachausgabe Navigationsrechner
@@ -729,7 +693,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-force-eject"></a>
 ### FORCE_EJECT
 
 Freigabe der Eject Taste
@@ -744,7 +707,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-schreiben-navdvdpin"></a>
 ### SCHREIBEN_NAVDVDPIN
 
 Freigabecode zum Eject
@@ -766,7 +728,6 @@ Freigabecode zum Eject
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-navdvdpin-lesen"></a>
 ### NAVDVDPIN_LESEN
 
 Auslesen der 4 Stellen des CD eject Freigabecodes
@@ -781,7 +742,6 @@ _No arguments._
 | CD_EJECT_PINNR | string | CD eject Freigabecodes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-flottenmodus"></a>
 ### STEUERN_FLOTTENMODUS
 
 Flottenmodus Status
@@ -801,7 +761,6 @@ Flottenmodus Status
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-flottenmodus"></a>
 ### STATUS_FLOTTENMODUS
 
 Auslesen des Stati des Flottenmodus
@@ -837,7 +796,6 @@ _No arguments._
 - [CODESOFTWARELADENTEXT](#table-codesoftwareladentext) (3 × 2)
 - [FLOTTENMODUS](#table-flottenmodus) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -858,7 +816,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 77 rows × 2 columns
@@ -943,7 +900,6 @@ Dimensions: 77 rows × 2 columns
 | 0x76 | CEL |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -972,7 +928,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -981,7 +936,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -992,7 +946,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | nein |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1007,7 +960,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1022,7 +974,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -1040,7 +991,6 @@ Dimensions: 10 rows × 2 columns
 | 0x09 | CD-Fehler |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1049,7 +999,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 30 rows × 2 columns
@@ -1087,7 +1036,6 @@ Dimensions: 30 rows × 2 columns
 | 0xB6 | Adressfehler, Reset Navigationsrechner |
 | 0xFF | Unbekannter Fehlercode im Shadowspeicher |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1098,7 +1046,6 @@ Dimensions: 3 rows × 2 columns
 | 0x40 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-laendercodezielland"></a>
 ### LAENDERCODEZIELLAND
 
 Dimensions: 10 rows × 2 columns
@@ -1116,7 +1063,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Aus/Golf/ZA |
 | 0xFF | unbekanntes Land |
 
-<a id="table-codesprachen"></a>
 ### CODESPRACHEN
 
 Dimensions: 21 rows × 2 columns
@@ -1145,7 +1091,6 @@ Dimensions: 21 rows × 2 columns
 | 0x8A | russisch weiblich |
 | 0xFF | keine Sprache |
 
-<a id="table-codesoftwareladentext"></a>
 ### CODESOFTWARELADENTEXT
 
 Dimensions: 3 rows × 2 columns
@@ -1156,7 +1101,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Software laden erforderlich |
 | 0xFF | unplausibler Wert |
 
-<a id="table-flottenmodus"></a>
 ### FLOTTENMODUS
 
 Dimensions: 3 rows × 2 columns

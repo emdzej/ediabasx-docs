@@ -36,7 +36,6 @@
 - [KALIBRIERUNG_LOESCHEN](#job-kalibrierung-loeschen) - Loeschen der Kalibrierung ds NAV-Systems
 - [KALIBRIERUNG_LESEN](#job-kalibrierung-lesen) - Loeschen der Kalibrierung ds NAV-Systems
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -54,7 +53,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Navigationsrechner
@@ -67,7 +65,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Spezielle Eingaenge lesen
@@ -94,7 +91,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Navigationsrechner
@@ -118,7 +114,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen High Konzept nach LH Codierung/Diagnose mit Umweltbeding
@@ -143,7 +138,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm des Steuergeraetes |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -161,7 +155,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der Telegramme anzeigen |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -182,7 +175,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 "System Configuration lesen"
@@ -199,7 +191,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm anzeigen |
 | _TEL_ANZAHL | int | Anzahl der Telegramme anzeigen |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 RDS und GPS Configuration schreiben
@@ -218,7 +209,6 @@ RDS und GPS Configuration schreiben
 | JOB_STATUS | string | Normalerweise "OKAY" |
 | _TEL_SENDE | binary | Telegramm anzeigen |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Selbsttest Navigationsrechner
@@ -231,7 +221,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen im Navigationsrechner
@@ -244,7 +233,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-quick-erase"></a>
 ### QUICK_ERASE
 
 Fehlerspeicher loeschen ohne BUSY abzuwarten
@@ -257,7 +245,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. OKAY) |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -270,7 +257,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -283,7 +269,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-kalibrierung-loeschen"></a>
 ### KALIBRIERUNG_LOESCHEN
 
 Loeschen der Kalibrierung ds NAV-Systems
@@ -298,7 +283,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-kalibrierung-lesen"></a>
 ### KALIBRIERUNG_LESEN
 
 Loeschen der Kalibrierung ds NAV-Systems
@@ -358,7 +342,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 - [FUMWELTTEXTE](#table-fumwelttexte) (45 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -374,7 +357,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -390,7 +372,6 @@ Dimensions: 8 rows × 2 columns
 | 0x17 | Kalibrierfehler |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -401,7 +382,6 @@ Dimensions: 3 rows × 2 columns
 | 0x40 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 45 rows × 2 columns

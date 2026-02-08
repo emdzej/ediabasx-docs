@@ -28,7 +28,6 @@
 - [SEND_SEGMENT](#job-send-segment) - Segment aus IntelHex in ECU laden
 - [EXIT_VDLE](#job-exit-vdle) - Beenden VDLE Sitzung ggf. temporäre Dateien entfernen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -47,7 +46,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 _No arguments._
@@ -58,7 +56,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-init-vdle"></a>
 ### INIT_VDLE
 
 Segment aus IntelHex in ECU laden
@@ -77,7 +74,6 @@ Segment aus IntelHex in ECU laden
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | NR_OF_SEGMENTS | int | Anzahl der Segemente des IntelHexFiles |
 
-<a id="job-start-testerpresent"></a>
 ### START_TESTERPRESENT
 
 Start TesterPresent
@@ -94,7 +90,6 @@ Start TesterPresent
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-stop-testerpresent"></a>
 ### STOP_TESTERPRESENT
 
 Stop TesterPresent
@@ -111,7 +106,6 @@ Stop TesterPresent
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-request-segmentinfo"></a>
 ### REQUEST_SEGMENTINFO
 
 SegmentAddr und SegmentSize in Buf vereitstellen
@@ -131,7 +125,6 @@ SegmentAddr und SegmentSize in Buf vereitstellen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | REQUESTDOWNLOADBUFFER | binary | Buffer for Segment Adress and Size Infos |
 
-<a id="job-send-segment"></a>
 ### SEND_SEGMENT
 
 Segment aus IntelHex in ECU laden
@@ -152,7 +145,6 @@ Segment aus IntelHex in ECU laden
 | FLASH_SCHREIBEN_STATUS | int | +1, wenn fehlerfrei |
 | ERROR_MSG | string |  |
 
-<a id="job-exit-vdle"></a>
 ### EXIT_VDLE
 
 Beenden VDLE Sitzung ggf. temporäre Dateien entfernen

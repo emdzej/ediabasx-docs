@@ -65,7 +65,6 @@
 - [_CALIBRATION_CAMERA_LESEN](#job-calibration-camera-lesen) - reads the Camera Calibration Data UDS  : $22   ReadDataByIdentifier UDS  : $4032 Camera Calibration
 - [STEUERN_RESET_DEFAULT_PARAMETRISIERUNG](#job-steuern-reset-default-parametrisierung) - Resets the Calibration Data and Coding Data by this procedure: - 10s wait time from Kafas ECU start-up -> needed to allow DSP application to start - call the job:  STEUERN_RESET_DEFAULT_PARAMETRISIERUNG -> clears default_calib file on DSP - reset Kafas ECU - 10s  wait time - call the job again:  STEUERN_RESET_DEFAULT_PARAMETRISIERUNG -> clears also the back-up of the defaul_calib file - perfom coding of the Kafas ECU UDS: $2E $4033 (WriteDataByIdentifier_ResetDefaultCalib)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -84,7 +83,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -97,7 +95,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -114,7 +111,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -140,7 +136,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -182,7 +177,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -201,7 +195,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -219,7 +212,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -240,7 +232,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -269,7 +260,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -289,7 +279,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -310,7 +299,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -326,7 +314,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -348,7 +335,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -370,7 +356,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -389,7 +374,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -415,7 +399,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -457,7 +440,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -472,7 +454,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -498,7 +479,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -518,7 +498,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -537,7 +516,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -556,7 +534,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -575,7 +552,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -595,7 +571,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -612,7 +587,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -631,7 +605,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -647,7 +620,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -681,7 +653,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -696,7 +667,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -711,7 +681,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -728,7 +697,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -743,7 +711,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -758,7 +725,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -773,7 +739,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -789,7 +754,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -808,7 +772,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -828,7 +791,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -846,7 +808,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -862,7 +823,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-kafas-vin-lesen"></a>
 ### _KAFAS_VIN_LESEN
 
 read the Camera and ECU VIN, which is coded via E-SYS UDS  : $22   ReadDataByIdentifier UDS  : $F190 VIN
@@ -878,7 +838,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-tac"></a>
 ### _TAC
 
 TAC (target auto calibration) UDS:     $2E WriteDataByIdentifier .        $D3 .        $A3
@@ -906,7 +865,6 @@ TAC (target auto calibration) UDS:     $2E WriteDataByIdentifier .        $D3 . 
 | _REQUEST | binary | request to ECU |
 | _RESPONSE | binary | ECU response |
 
-<a id="job-calibration-camera-schreiben"></a>
 ### _CALIBRATION_CAMERA_SCHREIBEN
 
 writes the Camera Calibration Data all 25 digits must be entered, fill up with '0' otherwise numbers and capital letters allowed UDS  : $2E   WriteDataByIdentifier UDS  : $4032 Camera Calibration
@@ -934,7 +892,6 @@ writes the Camera Calibration Data all 25 digits must be entered, fill up with '
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-controlactuator-schreiben"></a>
 ### _CONTROLACTUATOR_SCHREIBEN
 
 writes the ControlActuator Data all 10 digits must be entered, fill up with '0' otherwise numbers and capital letters allowed UDS  : $2E   WriteDataByIdentifier UDS  : $A37E ControlAcuator
@@ -957,7 +914,6 @@ writes the ControlActuator Data all 10 digits must be entered, fill up with '0' 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calibration-camera-lesen"></a>
 ### _CALIBRATION_CAMERA_LESEN
 
 reads the Camera Calibration Data UDS  : $22   ReadDataByIdentifier UDS  : $4032 Camera Calibration
@@ -983,7 +939,6 @@ _No arguments._
 | GRABBING_SHIFT | int | 2 byte unsigned int , pixel |
 | VIN | string | 7 byte ascii |
 
-<a id="job-steuern-reset-default-parametrisierung"></a>
 ### STEUERN_RESET_DEFAULT_PARAMETRISIERUNG
 
 Resets the Calibration Data and Coding Data by this procedure: - 10s wait time from Kafas ECU start-up -> needed to allow DSP application to start - call the job:  STEUERN_RESET_DEFAULT_PARAMETRISIERUNG -> clears default_calib file on DSP - reset Kafas ECU - 10s  wait time - call the job again:  STEUERN_RESET_DEFAULT_PARAMETRISIERUNG -> clears also the back-up of the defaul_calib file - perfom coding of the Kafas ECU UDS: $2E $4033 (WriteDataByIdentifier_ResetDefaultCalib)
@@ -1072,7 +1027,6 @@ Resets the Calibration Data and Coding Data by this procedure: - 10s wait time f
 - [TAB_KAFAS_LIMIT](#table-tab-kafas-limit) (5 × 2)
 - [TAC_DESCRIPTION](#table-tac-description) (11 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -1146,7 +1100,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 116 rows × 2 columns
@@ -1270,7 +1223,6 @@ Dimensions: 116 rows × 2 columns
 | 0x0000A9 | Thyssen Krupp Presta |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -1297,7 +1249,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1322,7 +1273,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -1354,7 +1304,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1427,7 +1376,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1440,7 +1388,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1453,7 +1400,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1466,7 +1412,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -1485,7 +1430,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 120 rows × 3 columns
@@ -1613,7 +1557,6 @@ Dimensions: 120 rows × 3 columns
 | 0x5900 | Audio-Bedienteil | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1622,7 +1565,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 92 rows × 2 columns
@@ -1722,7 +1664,6 @@ Dimensions: 92 rows × 2 columns
 | 0x0067 | Defond Holding / BJAutomotive |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1748,7 +1689,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1759,7 +1699,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1768,7 +1707,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 17 rows × 3 columns
@@ -1793,7 +1731,6 @@ Dimensions: 17 rows × 3 columns
 | 0x0F | Betriebsmode 15 | nichts deaktiviert |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 100 rows × 3 columns
@@ -1901,7 +1838,6 @@ Dimensions: 100 rows × 3 columns
 | 0xE0D418 | Botschaft(27Ah NAV_GRAPH_SYNC (including Kill-all):Ausfall | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1915,7 +1851,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -1925,7 +1860,6 @@ Dimensions: 2 rows × 9 columns
 | 0x4080 | Aussentemperatur | °C | - | signed char | - | - | - | - |
 | 0x4081 | Batteriespannung | mV | - | signed int | - | - | - | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 23 rows × 3 columns
@@ -1956,7 +1890,6 @@ Dimensions: 23 rows × 3 columns
 | 0xC90402 | dm_queue_deleted | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1968,7 +1901,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -1978,7 +1910,6 @@ Dimensions: 2 rows × 9 columns
 | 0x4080 | Aussentemperatur | °C | - | signed char | - | 0,5 | - | -40 |
 | 0x4081 | Batteriespannung | mV | - | signed int | - | - | - | - |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 23 rows × 16 columns
@@ -2009,7 +1940,6 @@ Dimensions: 23 rows × 16 columns
 | Control Diagnostic Messages | 0xF001 | - | This service controls the output of the dignostic messages which come form the MuC and are only sent by the ST10 if the StartRoutine command is sent. | - | - | - | - | - | - | - | - | - | 31 | - | - |
 | Steuern_Test_Functional_TLC | 0xF000 | - | This control enables TLC performance tests in the BMW production facilities. During these tests the vehicle is placed in front of a LCD monitor that supplies the input for the camera. Speed and yaw signals from the vehicle CAN are replaced by values form the diagnostic command. | - | - | - | - | - | - | - | - | - | 31 | ARG_0xF000 | RES_0xF000 |
 
-<a id="table-tab-art-uebhol-zeichen"></a>
 ### TAB_ART_UEBHOL_ZEICHEN
 
 Dimensions: 8 rows × 2 columns
@@ -2025,7 +1955,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | 6 |
 | 0x07 | 7 |
 
-<a id="table-tab-tlc-test"></a>
 ### TAB_TLC_TEST
 
 Dimensions: 2 rows × 2 columns
@@ -2035,7 +1964,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | test not started (yaw and speed values from vehicle CAN) |
 | 0x01 | test started (yaw and speed values from diagnostic job) |
 
-<a id="table-res-0xf000"></a>
 ### RES_0XF000
 
 Dimensions: 1 rows × 13 columns
@@ -2044,7 +1972,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TLC_TEST | - | - | + | 0-n | - | char | - | TAB_TLC_TEST | - | - | - | Status of the test:  0: test not started (yaw and speed values from vehicle CAN)    1: test started (yaw and speed values from diagnostic job) |
 
-<a id="table-arg-0xf000"></a>
 ### ARG_0XF000
 
 Dimensions: 2 rows × 14 columns
@@ -2054,7 +1981,6 @@ Dimensions: 2 rows × 14 columns
 | SPEED | + | - | km/h | - | int | - | SPEED | - | - | - | 0 | 350 | 16 bit unsigned integer Range: 0 .. 350km/h |
 | YAW | + | - | °/s | - | int | - | YAW | 100 | - | - | -163,84 | 163,83 | 16 bit unsigned integer,  Range:-163.84 ... 163.83 °/s |
 
-<a id="table-res-0xa303"></a>
 ### RES_0XA303
 
 Dimensions: 1 rows × 13 columns
@@ -2063,7 +1989,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KALIB_KAFAS_MONTAGE_NR | - | - | + | 0-n | - | int | - | TAB_KAFAS_STAT_KALIB | - | - | - | Ausgabe des Status der Kalibierung: 0x00 Kalibrierung laeuft gerade,  0x01 Kalibrierung erfolgreich abgeschlossen,  0x02 Erfolg - fortfahren mit der Kalibrierung,  0x03 Unzureichende Bildqualität,  0x04 kein Target gefunden,  0x05 Targets befinden sich außerhalb des Bereichs,  0x06 Inkonsistenz zwischen linkem und rechtem Target  z.B. falscher Nickwinkel,  0x07 empfangene Parameter außerhalb der Limits, 0x08 fehlerhafter Target Aufbau, 0x09 ermittelte Kalibrierwerte außerhalb der Limits |
 
-<a id="table-arg-0xa303"></a>
 ### ARG_0XA303
 
 Dimensions: 8 rows × 14 columns
@@ -2079,7 +2004,6 @@ Dimensions: 8 rows × 14 columns
 | ENTFERNUNG_TARGETS | + | - | mm | - | int | - | - | - | - | - | - | - | Gibt an, wie weit die einzelnen Targetpositionen auseinander liegen. Gemessen wird von der linken Außenkante des Targets in der linken Position bis zur linken Außenkante des Targets in der rechten Position. |
 | QUADRAT_GROESSE | + | - | mm | - | int | - | - | - | - | - | - | - | Angabe der Größe der Quadrate des Schachbrettmusters der Targets. Diese Parameter sind notwendig, um TLC auch an geänderten Kalibrierständen kalibrieren zu können. Alle Parameter sind als 2Byte Signed Integer mit einen Auflösung von 1 mm definiert |
 
-<a id="table-tab-kafas-pos-target"></a>
 ### TAB_KAFAS_POS_TARGET
 
 Dimensions: 3 rows × 2 columns
@@ -2090,7 +2014,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Rechts |
 | 0xFF | Ungültig |
 
-<a id="table-tab-kafas-stat-kalib"></a>
 ### TAB_KAFAS_STAT_KALIB
 
 Dimensions: 11 rows × 2 columns
@@ -2109,7 +2032,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | ermittelte Kalibrierwerte außerhalb der Limits |
 | 0xFF | nicht definierter Fehler |
 
-<a id="table-res-0xd374"></a>
 ### RES_0XD374
 
 Dimensions: 3 rows × 10 columns
@@ -2120,7 +2042,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VORHANDEN_FLA | 0/1 | - | int | - | - | - | - | - | Gibt an, ob die Funktion Fernlichtassistent vorhanden ist: 0= nicht vorhanden; 1= vorhanden |
 | STAT_VORHANDEN_SLI | 0/1 | - | int | - | - | - | - | - | Gibt an, ob die Funktion Speed-Limit-Info vorhanden ist: 0= nicht vorhanden; 1= vorhanden |
 
-<a id="table-res-0xa304"></a>
 ### RES_0XA304
 
 Dimensions: 1 rows × 13 columns
@@ -2129,7 +2050,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KALIB_KAFAS_SERVICE_NR | - | - | + | 0-n | - | int | - | TAB_BLOCKAGETEST | - | - | - | 0x00 Blockagetest nicht gestartet, SPC (Service Point Calibration) nicht gestartet,  0x01 Blockagetest aktiv, SPC nicht gestartet,  0x02 Blockagetest erfolgreich beendet, SPC aktiv,  0x03 Blockagetest erfolgreich beendet, SPC erfolgreich abgeschlossen |
 
-<a id="table-tab-blockagetest"></a>
 ### TAB_BLOCKAGETEST
 
 Dimensions: 5 rows × 2 columns
@@ -2142,7 +2062,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Blockagetest erfolgreich beendet, SPC erfolgreich abgeschlossen |
 | 0xFF | Ungültig |
 
-<a id="table-tab-fla-empfehlung"></a>
 ### TAB_FLA_EMPFEHLUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2154,7 +2073,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0002 | Fernlicht EIN |
 | 0xFFFF | Ungültig |
 
-<a id="table-arg-0xd3a6"></a>
 ### ARG_0XD3A6
 
 Dimensions: 1 rows × 12 columns
@@ -2163,7 +2081,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | int | - | - | - | - | - | - | - | 1 = Demo-Mode einschalten,  0 = Demo-Mode ausschalten |
 
-<a id="table-res-0xd341"></a>
 ### RES_0XD341
 
 Dimensions: 8 rows × 10 columns
@@ -2179,7 +2096,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_FLA_SENSORTEMPERATUR | 0/1 | - | int | - | - | - | - | - | Gibt aus, ob Temperatur des Sensors das Einschalten des Fernlicht verhindert:  0 = Temperatur außerhalb des Arbeitsbereiches,  1 = Temperatur zulässig |
 | STAT_FLA_NEBELERKENNUNG | 0/1 | - | int | - | - | - | - | - | Gibt aus, ob Nebel erkannt worden ist:  0 = kein Nebel,  1 = Nebel erkannt |
 
-<a id="table-res-0xd38f"></a>
 ### RES_0XD38F
 
 Dimensions: 4 rows × 10 columns
@@ -2191,7 +2107,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_KAFAS_SPANNUNG_KAM_NR | 0-n | - | int | - | TAB_LIMIT | - | - | - | Siehe TAB_LIMIT |
 | STAT_KAFAS_STROM_KAM_NR | 0-n | - | int | - | TAB_LIMIT | - | - | - | Siehe TAB_LIMIT |
 
-<a id="table-tab-limit"></a>
 ### TAB_LIMIT
 
 Dimensions: 5 rows × 2 columns
@@ -2204,7 +2119,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | oberhalb Limit |
 | 0xFF | ungültiger Wert |
 
-<a id="table-arg-0xa37c"></a>
 ### ARG_0XA37C
 
 Dimensions: 1 rows × 12 columns
@@ -2213,7 +2127,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | - | int | - | TAB_KAFAS_KOMBI_ANZEIGE | - | - | - | - | - | 00h  alle Anzeigen im Kombi ausgeschaltet 01h  set ST_TLC aktiv,  02h  Balken rechts anzeigen,  04h  Balken links anzeigen,  07h  Balken rechts und links anzeigen;  08h  Aktivierungsanzeige = Verfügbarkeitsschwelle anzeigen; 10h  Verfügbarkeit rechts; 20h  Verfügbarkeit links;  FFh  Ungültig |
 
-<a id="table-tab-kafas-kombi-anzeige"></a>
 ### TAB_KAFAS_KOMBI_ANZEIGE
 
 Dimensions: 9 rows × 2 columns
@@ -2230,7 +2143,6 @@ Dimensions: 9 rows × 2 columns
 | 0x20 | Verfügbarkeit links |
 | 0xFF | Ungültig |
 
-<a id="table-res-0xd3aa"></a>
 ### RES_0XD3AA
 
 Dimensions: 7 rows × 10 columns
@@ -2245,7 +2157,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FUSIONIERT_GESCHWINDIGKEIT_WERT | km/h oder mph | - | int | - | - | - | - | - | Gibt aus, welche Geschwindigkeit aus dem fusionierten Erkennungsergebnis ausgegeben wird: 0 = Aufhebung alles, 5 bis 150 in 5-er Schritten |
 | STAT_GUETE_KAM_SLI_GESCHW_WERT | % | - | int | - | - | - | - | - | Gibt aus, mit welcher Güte das Beschränkungs- und Aufhebungszeichen für Geschwindigkeiten mit der Kamera erkannt wurde: 0 - 100 |
 
-<a id="table-tab-zeichen-kamera"></a>
 ### TAB_ZEICHEN_KAMERA
 
 Dimensions: 5 rows × 2 columns
@@ -2258,7 +2169,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Ungültige Kamerainformation |
 | 0xFF | Ungültig |
 
-<a id="table-tab-zeichen-karte"></a>
 ### TAB_ZEICHEN_KARTE
 
 Dimensions: 5 rows × 2 columns
@@ -2271,7 +2181,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Ungültige Karteninformation |
 | 0xFF | Ungültig |
 
-<a id="table-tab-zeichen-fusioniert"></a>
 ### TAB_ZEICHEN_FUSIONIERT
 
 Dimensions: 5 rows × 2 columns
@@ -2284,7 +2193,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | ungültiges Ergebnis |
 | 0xFF | Ungültig |
 
-<a id="table-tab-kafas-stat-lvds"></a>
 ### TAB_KAFAS_STAT_LVDS
 
 Dimensions: 3 rows × 2 columns
@@ -2295,7 +2203,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Datenstrom fehlerhaft |
 | 0xFF | Ungültig |
 
-<a id="table-tab-kam-verb"></a>
 ### TAB_KAM_VERB
 
 Dimensions: 3 rows × 2 columns
@@ -2306,7 +2213,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Kamera angeschlossen |
 | 0xFF | nicht definiert |
 
-<a id="table-arg-0xd399"></a>
 ### ARG_0XD399
 
 Dimensions: 5 rows × 12 columns
@@ -2319,7 +2225,6 @@ Dimensions: 5 rows × 12 columns
 | AMPLITUDE | - | - | int | - | - | - | - | - | 0 | 14 | Vibrationsstärke; es sind Amplituden von 0-14 (dezimal) möglich. |
 | FREQUENZ | - | - | int | - | - | - | - | - | 0 | 14 | Frequenz der Vibration, Frequenzstufen von 0-14 (dezimal) sind möglich. |
 
-<a id="table-res-0xd393"></a>
 ### RES_0XD393
 
 Dimensions: 3 rows × 10 columns
@@ -2330,7 +2235,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_KAFAS_ECU_VIN_WERT | - | - | string[7] | - | - | - | - | - | Ausgabe der 7-stelligen Fahrgestellnummer aus dem Steuergerät. |
 | STAT_KAFAS_VIN_STATUS_NR | 0-n | - | int | - | TAB_KAFAS_STAT_VIN | - | - | - | Gibt aus, ob die Zuordnung Kamera zu Steuergerät übereinstimmt:  0x00: KEINE UEBEREINSTIMMUNG,  0x01 UEBEREINSTIMMUNG |
 
-<a id="table-tab-kafas-stat-vin"></a>
 ### TAB_KAFAS_STAT_VIN
 
 Dimensions: 3 rows × 2 columns
@@ -2341,7 +2245,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Übereinstimmung |
 | 0xFF | Ungültig |
 
-<a id="table-arg-0xd3a5"></a>
 ### ARG_0XD3A5
 
 Dimensions: 1 rows × 12 columns
@@ -2350,7 +2253,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | - | int | - | TAB_FLA_CONTROL | - | - | - | - | - | Gibt an, ob das Fernlicht über BUS aus- oder eingeschaltet werden soll:  0 = AUS,  1 = EIN,  2 = Keine Empfehlung 3 = Zurück zum Normalmodus |
 
-<a id="table-tab-fla-control"></a>
 ### TAB_FLA_CONTROL
 
 Dimensions: 4 rows × 2 columns
@@ -2362,7 +2264,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | keine_Empfehlung |
 | 0x03 | Zurück_zum_Normalmodus |
 
-<a id="table-arg-0xd3a9"></a>
 ### ARG_0XD3A9
 
 Dimensions: 7 rows × 12 columns
@@ -2377,7 +2278,6 @@ Dimensions: 7 rows × 12 columns
 | LAENDERKODIERUNG_VERKEHRSZEICHEN | 0-n | - | int | - | TAB_ART_LAENDERKODIERUNG | - | - | - | - | - | Angabe der Länderkodierung der Verkehrszeichen, Argumente siehe TAB_ART_LAENDERKODIERUNG |
 | ANZEIGE_TEXT_MELDUNG | 0-n | - | int | - | TAB_ART_TEXT_MELDUNG | - | - | - | - | - | Gibt an, welche Textmeldung angezeigt werden soll: Argumente siehe TAB_ART_MELDUNG |
 
-<a id="table-tab-art-zeichen"></a>
 ### TAB_ART_ZEICHEN
 
 Dimensions: 4 rows × 2 columns
@@ -2389,7 +2289,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Aufhebungszeichen |
 | 0xFF | Ungültig |
 
-<a id="table-tab-art-ueberhol-zeichen"></a>
 ### TAB_ART_UEBERHOL_ZEICHEN
 
 Dimensions: 9 rows × 2 columns
@@ -2406,7 +2305,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | andere Überholverbote |
 | 0xFF | Ungültig |
 
-<a id="table-tab-art-laenderkodierung"></a>
 ### TAB_ART_LAENDERKODIERUNG
 
 Dimensions: 15 rows × 2 columns
@@ -2429,7 +2327,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0D | reserved |
 | 0x0E | signal invalid |
 
-<a id="table-tab-art-text-meldung"></a>
 ### TAB_ART_TEXT_MELDUNG
 
 Dimensions: 8 rows × 2 columns
@@ -2445,7 +2342,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 |  reserved  |
 | 0x07 | signal invalid |
 
-<a id="table-res-0xd396"></a>
 ### RES_0XD396
 
 Dimensions: 10 rows × 10 columns
@@ -2463,7 +2359,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_GRABBING_SHIFT_WERT | Pixel | - | unsigned int | - | - | - | - | - | Grabbing-Shift |
 | STAT_FAHRGESTELLNR_WERT | - | - | string[7] | - | - | - | - | - | Fahrgestellnummer in der Kamera |
 
-<a id="table-arg-0xd3ab"></a>
 ### ARG_0XD3AB
 
 Dimensions: 1 rows × 12 columns
@@ -2472,7 +2367,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | METHODE | 0-n | - | int | - | TAB_METHODE_SLI | - | - | - | - | - | Argumente siehe TAB_METHODE_SLI |
 
-<a id="table-tab-methode-sli"></a>
 ### TAB_METHODE_SLI
 
 Dimensions: 4 rows × 2 columns
@@ -2484,7 +2378,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Fusionierte Erkennung aktivieren |
 | 0xFF | Auf Standard zurücksetzen |
 
-<a id="table-tab-init"></a>
 ### TAB_INIT
 
 Dimensions: 3 rows × 2 columns
@@ -2495,7 +2388,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Initialisierung in Ordnung |
 | 0xFF | Initialisierung nicht in Ordnung |
 
-<a id="table-res-0xd394"></a>
 ### RES_0XD394
 
 Dimensions: 8 rows × 10 columns
@@ -2511,7 +2403,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_KAFAS_ECU_SPG_BORDNETZ_WERT | mV | - | int | - | - | - | - | - | Spannungen des Bordnetzes |
 | STAT_KAFAS_ECU_SPG_BORDNETZ_NR | 0-n | - | int | - | TAB_KAFAS_LIMIT | - | - | - | 0x01: unterhalb des Limits;  0x02: normal;  0x03: überhalb des Limits;  0x04: ungültig; 0xFF: ungültig |
 
-<a id="table-tab-kafas-limit"></a>
 ### TAB_KAFAS_LIMIT
 
 Dimensions: 5 rows × 2 columns
@@ -2524,7 +2415,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | ungültig |
 | 0xFF | Ungültig |
 
-<a id="table-tac-description"></a>
 ### TAC_DESCRIPTION
 
 Dimensions: 11 rows × 2 columns

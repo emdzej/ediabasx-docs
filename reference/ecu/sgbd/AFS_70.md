@@ -110,7 +110,6 @@
 - [IDENT_SSECUSON_LESEN](#job-ident-ssecuson-lesen) - ZFLD Softwarenummern auf MPC Seite KWP2000: $1A ReadECUIdentification SubID  : $94 systemSupplierECUSoftwareNumber Modus  : Default
 - [IDENT_SSECUSVN_LESEN](#job-ident-ssecusvn-lesen) - Auslesen der NEC Logistik, PAF-DAF und Bootblockkennung, SG darf NICHT im DRIVE Modus sein KWP2000: $1A ReadECUIdentification SubID  : $95 SystemSupplierECUSoftwareVersionNumber Modus  : Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -123,7 +122,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -142,7 +140,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -158,7 +155,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -175,7 +171,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -208,7 +203,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -235,7 +229,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -277,7 +270,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -296,7 +288,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -314,7 +305,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -335,7 +325,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -356,7 +345,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -376,7 +364,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2000 dtcShadowMemory
@@ -403,7 +390,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2001 - $20FF dtcShadowMemoryEntry Modus: Default
@@ -446,7 +432,6 @@ Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCShadowMemory Modus  : Default
@@ -461,7 +446,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -476,7 +460,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -497,7 +480,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -519,7 +501,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speicherse
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus  : Default
@@ -533,7 +514,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $9B Vehicle Manufacturer Coding Index oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -551,7 +531,6 @@ _No arguments._
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -567,7 +546,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number Modus  : Default
@@ -586,7 +564,6 @@ Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIden
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -607,7 +584,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B Write
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-lesen"></a>
 ### C_AEI_LESEN
 
 Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -623,7 +599,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-schreiben"></a>
 ### C_AEI_SCHREIBEN
 
 Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -642,7 +617,6 @@ Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   Writ
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-auftrag"></a>
 ### C_AEI_AUFTRAG
 
 Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -663,7 +637,6 @@ Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -683,7 +656,6 @@ Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -702,7 +674,6 @@ Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -723,7 +694,6 @@ Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteData
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -741,7 +711,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -766,7 +735,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -789,7 +757,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -807,7 +774,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -828,7 +794,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -849,7 +814,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -868,7 +832,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -885,7 +848,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-zufallszahl-lesen"></a>
 ### AUTHENTISIERUNG_ZUFALLSZAHL_LESEN
 
 Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $07 RequestForAuthentication Modus  : Default
@@ -907,7 +869,6 @@ Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-start"></a>
 ### AUTHENTISIERUNG_START
 
 Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAuthentication Modus  : Default
@@ -926,7 +887,6 @@ Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -943,7 +903,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-signatur-pruefen"></a>
 ### FLASH_SIGNATUR_PRUEFEN
 
 Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSignature Modus  : Default
@@ -963,7 +922,6 @@ Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSigna
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -978,7 +936,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 ClearMemory Modus  : Default
@@ -998,7 +955,6 @@ Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload Modus  : Default
@@ -1018,7 +974,6 @@ Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -1039,7 +994,6 @@ Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Defau
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferExit Modus  : Default
@@ -1058,7 +1012,6 @@ Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -1095,7 +1048,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D WriteMemoryByAddress Modus   : Default
@@ -1126,7 +1078,6 @@ Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D Write
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG AIF schreiben |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG AIF schreiben |
 
-<a id="job-c-checksumme"></a>
 ### C_CHECKSUMME
 
 Checksumme generieren und in BINAER_BUFFER schreiben Optionaler Codierjob
@@ -1144,7 +1095,6 @@ Checksumme generieren und in BINAER_BUFFER schreiben Optionaler Codierjob
 | OUT_BUFFER | binary | Als Result wird der gefuellte Binaerbuffer zurueckgegeben Der Binaerbuffer hat den Aufbau von BINAER_BUFFER |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-versorgungen"></a>
 ### STATUS_VERSORGUNGEN
 
 Auslesen der aktuellen Spanungspegel KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $01 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1168,7 +1118,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-afs-os"></a>
 ### STATUS_AFS_OS
 
 Auslesen verschiedener Betriebssystem (OS, SG) Stati KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $02 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1195,7 +1144,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-phasenstroeme"></a>
 ### STATUS_PHASENSTROEME
 
 Auslesen der Phasenstrome I1,I2,I3 am Stellmotor, Stator KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $04 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1215,7 +1163,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-temperaturen"></a>
 ### STATUS_TEMPERATUREN
 
 Auslesen der Steuergeraetetemperatur KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $05 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1233,7 +1180,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-szl"></a>
 ### STATUS_SZL
 
 Auslesen verschiedener vom SZL gesendeter Werte ueber F-CAN KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $06 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1254,7 +1200,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-sensorcluster"></a>
 ### STATUS_SENSORCLUSTER
 
 Auslesen verschiedener Stati des Sensorclsuter ueber F-CAN KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $07 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1278,7 +1223,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-summenlenkwinkel"></a>
 ### STATUS_SUMMENLENKWINKEL
 
 Auslesen des im SG errechneten Summenlenkwinkels KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $08 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1297,7 +1241,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-motorlagewinkel"></a>
 ### STATUS_MOTORLAGEWINKEL
 
 Auslesen verschiedener Motorlagewinkel KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $09 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1317,7 +1260,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-fahrerlenkwinkel"></a>
 ### STATUS_FAHRERLENKWINKEL
 
 Auslesen des Fahrerlenkwinkels vom SZL KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $0A InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1344,7 +1286,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-geschwindigkeiten"></a>
 ### STATUS_GESCHWINDIGKEITEN
 
 Auslesen verschiedener Geschwindigkeiten KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $0B InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1368,7 +1309,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-beschleunigung"></a>
 ### STATUS_BESCHLEUNIGUNG
 
 Auslesen der Quer- und Laengsbeschleunigungswerte KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $0C InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1388,7 +1328,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-gierraten"></a>
 ### STATUS_GIERRATEN
 
 Auslesen der Gierratenwerte KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $0D InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1407,7 +1346,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-dsc-info"></a>
 ### STATUS_DSC_INFO
 
 Auslesen aktueller DSC Stati ueber PT-CAN KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $0E InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1428,7 +1366,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-winkelwerte"></a>
 ### STATUS_WINKELWERTE
 
 Auslesen verschiedener Winkelwerte, wie Fahrerlenkwinkel, Summenlenkwinkel, Motorlagewinkel KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $0F InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1453,7 +1390,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-phasenspannungen"></a>
 ### STATUS_PHASENSPANNUNGEN
 
 Auslesen der Phasenspanngen U1,U2,U3 am Stellmotor, Stator KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $10 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1473,7 +1409,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-alive-info"></a>
 ### STATUS_ALIVE_INFO
 
 Auslesen verschiedener ALIVE Zaehler KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $13 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1498,7 +1433,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-sensorcluster-info"></a>
 ### STATUS_SENSORCLUSTER_INFO
 
 Status und Diagnoseinfos ueber den Sensorclsuter KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $15 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1553,7 +1487,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-cas-info"></a>
 ### STATUS_CAS_INFO
 
 Auslesen der vom CAS gesendeten Fahrgestellnummer ueber PT-CAN KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $16 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus : Default
@@ -1572,7 +1505,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-eco-servo"></a>
 ### STATUS_ECO_SERVO
 
 Auslesen des aktuell anliegenden Stromes am ECO Ventil und dessen Status KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $17 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1592,7 +1524,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-eco-ventil"></a>
 ### STATUS_ECO_VENTIL
 
 Auslesen des aktuell anliegenden Stromes am ECO Ventil und dessen Status KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $18 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1612,7 +1543,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-servo-ventil"></a>
 ### STATUS_SERVO_VENTIL
 
 Auslesen des aktuell anliegenden Stromes am SERVO Ventil und dessen Status KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $19 InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1632,7 +1562,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-ptcan-signal-fehler"></a>
 ### STATUS_PTCAN_SIGNAL_FEHLER
 
 diverse vom AFS eingelesene PTCAN Signale KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $1B InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1765,7 +1694,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-fcan-signal-fehler"></a>
 ### STATUS_FCAN_SIGNAL_FEHLER
 
 diverse vom AFS eingelesene FCAN Signale KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $1C InputOutputLocalIdentifier(IOLI) SubID  : $01 InputOutputControlParameter(IOCP) Modus  : Default
@@ -1844,7 +1772,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-start-lwm-ruecksetzen"></a>
 ### START_LWM_RUECKSETZEN
 
 Motorlagewinkel wird ungueltig gesetzt KWP2000: $31 StartRoutineByLocalIdentifier SubID  : $21 Motorlagewinkel ungueltig setzen,ueber ZFLS Fkt mit anschl. SG-RESET Modus  : Default KWP2000: $33 RequestRoutineResultsByLocalIdentifier SubID  : $50 Gueltigkeit Motorlagewinkel abfragen Modus  : Default
@@ -1865,7 +1792,6 @@ _No arguments._
 | _TEL_ANTWORT_2 | binary | Hex - Antwort von SG |
 | _TEL_DATEN_2 | binary | Hex - Antwort von SG |
 
-<a id="job-start-lwm-init"></a>
 ### START_LWM_INIT
 
 KWP2000: $31 StartRoutineByLocalIdentifier SubID  : $22 Inbetriebnahme Resultat abfragen Modus  : Default
@@ -1881,7 +1807,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-start-adaptivdaten-abgleich"></a>
 ### START_ADAPTIVDATEN_ABGLEICH
 
 KWP2000: $31 StartRoutineByLocalIdentifier SubID  : $51 Abgleich der Adaptivdaten wird gestartet Modus  : Default
@@ -1897,7 +1822,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-start-adaptivdaten-ruecksetzen"></a>
 ### START_ADAPTIVDATEN_RUECKSETZEN
 
 KWP2000: $31 StartRoutineByLocalIdentifier SubID  : $53 Adaptivdaten im EEPROM werden DEFAULT werten beschrieben Modus  : Default
@@ -1913,7 +1837,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-lwm-init"></a>
 ### STATUS_LWM_INIT
 
 Gueltigkeit des Motorlagewinkels auslesen KWP2000: $33 RequestRoutineResultsByLocalIdentifier SubID  : $50 Inbetriebnahme Resultat abfragen Modus  : Default
@@ -1932,7 +1855,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-adaptivdaten-abgleich"></a>
 ### STATUS_ADAPTIVDATEN_ABGLEICH
 
 aktueller Zustand des Adaptivdatenabgleichs KWP2000: $33 RequestRoutineResultsByLocalIdentifier SubID  : $51 alle aktuelle Abgleichstati abfragen Modus  : Default
@@ -1952,7 +1874,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-adaptivdaten-ruecksetzen"></a>
 ### STATUS_ADAPTIVDATEN_RUECKSETZEN
 
 aktueller Zustand des Ruecksetzens der Adaptivdaten KWP2000: $33 RequestRoutineResultsByLocalIdentifier SubID  : $53 Adaptivdaten werden mit DEFAULT Werten belegt Modus  : Default
@@ -1980,7 +1901,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-steuern-motorlagewinkel-offset"></a>
 ### STEUERN_MOTORLAGEWINKEL_OFFSET
 
 Schreiben des Motorlagewinkeloffsets ins EEPROM KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $22 InputOutputLocalIdentifier(IOLI) SubID  : $07 InputOutputControlParameter(IOCP) Modus  : Default
@@ -2001,7 +1921,6 @@ Schreiben des Motorlagewinkeloffsets ins EEPROM KWP2000: $30 InputOutputControlB
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-eeprom-seriennummer-szl"></a>
 ### STATUS_EEPROM_SERIENNUMMER_SZL
 
 Auslesen der im AFS EEPROM abgelegten Seriennummer des SZL AFS wird / bleibt inaktiv falls SZL getauscht wird KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $01 InputOutputLocalIdentifier(IOLI) SubID  : $08 InputOutputControlParameter(IOCP) Modus  : Default
@@ -2018,7 +1937,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-eeprom-offset-szl"></a>
 ### STATUS_EEPROM_OFFSET_SZL
 
 Auslesen des im AFS EEPROM abgelegten Fahrerlenkwinkeloffsets vom SZL KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $02 InputOutputLocalIdentifier(IOLI) SubID  : $08 InputOutputControlParameter(IOCP) Modus  : Default
@@ -2036,7 +1954,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-status-motorlagewinkel-offset"></a>
 ### STATUS_MOTORLAGEWINKEL_OFFSET
 
 Auslesen des Motorlagewinkeloffsets aus dem EEPROM und des Maximalwerts KWP2000: $30 InputOutputControlByLocalIdentifier SubID  : $03 InputOutputLocalIdentifier(IOLI) SubID  : $08 InputOutputControlParameter(IOCP) Modus  : Default
@@ -2055,7 +1972,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-zf-factory-daten-lesen"></a>
 ### ZF_FACTORY_DATEN_LESEN
 
 hier werden 12 Byte aus dem EEPROM Werksdatenbereich ausgelesen, ab Adresse 0x0FCA KWP2000: $23 readMemoryByAddress SubID  : $02 MemoryTypeIdentifier (ROMX), MT = 2 Modus  : Default
@@ -2077,7 +1993,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-ident-aif-lesen"></a>
 ### IDENT_AIF_LESEN
 
 aktuelles AIF Feld auslesen KWP2000: $1A ReadECUIdentification SubID  : $86 CurrentUIFDataTable Modus  : Default
@@ -2118,7 +2033,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-ident-istufe-lesen"></a>
 ### IDENT_ISTUFE_LESEN
 
 Auslesen der aktuellen Integrationsstufe KWP2000: $1A ReadECUIdentification SubID  : $82 reserved by Document Modus  : Default
@@ -2135,7 +2049,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-ident-divcalc-lesen"></a>
 ### IDENT_DIVCALC_LESEN
 
 Auslesen der aktuellen Kennung des diversitaeren Rechnens auf dem NEC, SG darf NICHT im DRIVE Modus sein KWP2000: $1A ReadECUIdentification SubID  : $83 reserved by Document Modus  : Default
@@ -2152,7 +2065,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-ident-dcm-lesen"></a>
 ### IDENT_DCM_LESEN
 
 Auslesen der aktuellen Kennung des DCM Datenstandes KWP2000: $1A ReadECUIdentification SubID  : $84 reserved by Document Modus  : Default
@@ -2170,7 +2082,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-ident-ssecuson-lesen"></a>
 ### IDENT_SSECUSON_LESEN
 
 ZFLD Softwarenummern auf MPC Seite KWP2000: $1A ReadECUIdentification SubID  : $94 systemSupplierECUSoftwareNumber Modus  : Default
@@ -2188,7 +2099,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex - Antwort von SG |
 | _TEL_DATEN | binary | Hex - Antwort von SG |
 
-<a id="job-ident-ssecusvn-lesen"></a>
 ### IDENT_SSECUSVN_LESEN
 
 Auslesen der NEC Logistik, PAF-DAF und Bootblockkennung, SG darf NICHT im DRIVE Modus sein KWP2000: $1A ReadECUIdentification SubID  : $95 SystemSupplierECUSoftwareVersionNumber Modus  : Default
@@ -2262,7 +2172,6 @@ _No arguments._
 - [BASISAKTIV](#table-basisaktiv) (3 × 2)
 - [LANGZEITABGLEICH](#table-langzeitabgleich) (3 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -2274,7 +2183,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -2377,7 +2285,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 77 rows × 2 columns
@@ -2462,7 +2369,6 @@ Dimensions: 77 rows × 2 columns
 | 0x76 | CEL |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2484,7 +2390,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2509,7 +2414,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2521,7 +2425,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -2543,7 +2446,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -2558,7 +2460,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2580,7 +2481,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -2607,7 +2507,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns
@@ -2627,7 +2526,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 11 rows × 2 columns
@@ -2646,7 +2544,6 @@ Dimensions: 11 rows × 2 columns
 | 0x81 | ERROR_FAILED_DELETE_NEC |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -2658,7 +2555,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 58 rows × 2 columns
@@ -2724,7 +2620,6 @@ Dimensions: 58 rows × 2 columns
 | 0xCEA3 | Botschaft (Kilometerstand, ID=330) von KI PT-CAN |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2739,7 +2634,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -2748,7 +2642,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | default | 0x01 | ZfFehlerCodeUndArt | 0x08 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 10 rows × 9 columns
@@ -2766,7 +2659,6 @@ Dimensions: 10 rows × 9 columns
 | 0xFF | ohne Bedeutung | 1 | -- | unsigned int | -- | 1 | 1 | 0 |
 | 0xXY | unbekannte Umweltbedingung | 1 | -- | unsigned char | -- | 1 | 1 | 0 |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -2775,7 +2667,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2790,7 +2681,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 151 rows × 2 columns
@@ -2949,7 +2839,6 @@ Dimensions: 151 rows × 2 columns
 | 0x7136 | NKFC_TBD54 |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2964,7 +2853,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-iumweltmatrix"></a>
 ### IUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -2973,7 +2861,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | default | InfoAllgemein | InfoFahrzeugStati | InfoUmweltBMW | InfoUmweltZF |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 23 rows × 9 columns
@@ -3004,7 +2891,6 @@ Dimensions: 23 rows × 9 columns
 | 0xFF | ohne Bedeutung | 1 | -- | unsigned int | -- | 1 | 1 | 0 |
 | 0xXY | unbekannte Umweltbedingung | 1 | -- | unsigned char | -- | 1 | 1 | 0 |
 
-<a id="table-iarttexteerweitert"></a>
 ### IARTTEXTEERWEITERT
 
 Dimensions: 4 rows × 3 columns
@@ -3016,7 +2902,6 @@ Dimensions: 4 rows × 3 columns
 | xxxxxx10 | 110 | AFS gestoert |
 | xxxxxx11 | 111 | Allgemeiner Fehler |
 
-<a id="table-zffehlercodeundart"></a>
 ### ZFFEHLERCODEUNDART
 
 Dimensions: 1 rows × 7 columns
@@ -3025,7 +2910,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x02 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 |
 
-<a id="table-ercosekmodi"></a>
 ### ERCOSEKMODI
 
 Dimensions: 7 rows × 2 columns
@@ -3040,7 +2924,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | OPM_INIT |
 | 0xFF | unbekannter Betriebssystemstatus |
 
-<a id="table-guerotor"></a>
 ### GUEROTOR
 
 Dimensions: 4 rows × 2 columns
@@ -3052,7 +2935,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | nicht definiert |
 | 0xFF | unbekannter Status |
 
-<a id="table-statuscanfehler"></a>
 ### STATUSCANFEHLER
 
 Dimensions: 9 rows × 2 columns
@@ -3069,7 +2951,6 @@ Dimensions: 9 rows × 2 columns
 | 0x80 | Fehler von CRC Alive Fehlerwert Botschaft nie empfangen |
 | 0xFF | unbekannter CAN Fehler Status |
 
-<a id="table-guelwd"></a>
 ### GUELWD
 
 Dimensions: 4 rows × 2 columns
@@ -3081,7 +2962,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Fehler |
 | 0xFF | unbekannter Status |
 
-<a id="table-guedsc"></a>
 ### GUEDSC
 
 Dimensions: 8 rows × 2 columns
@@ -3097,7 +2977,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | Signal ungueltig |
 | 0xFF | unbekannter Status |
 
-<a id="table-regeldsc"></a>
 ### REGELDSC
 
 Dimensions: 9 rows × 2 columns
@@ -3114,7 +2993,6 @@ Dimensions: 9 rows × 2 columns
 | 0x40 | FLR Regelung |
 | 0xFF | Signal ungueltig |
 
-<a id="table-szlprozinfo"></a>
 ### SZLPROZINFO
 
 Dimensions: 3 rows × 2 columns
@@ -3125,7 +3003,6 @@ Dimensions: 3 rows × 2 columns
 | 0xA0 | SZL Zwei-Prozessor; AFS |
 | 0xFF | unbekannter Status |
 
-<a id="table-statusmaschineeingaenge"></a>
 ### STATUSMASCHINEEINGAENGE
 
 Dimensions: 9 rows × 2 columns
@@ -3142,7 +3019,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | HL_PAUSE |
 | 0xFF | unbekannt |
 
-<a id="table-statusmaschinezustaende"></a>
 ### STATUSMASCHINEZUSTAENDE
 
 Dimensions: 33 rows × 2 columns
@@ -3183,7 +3059,6 @@ Dimensions: 33 rows × 2 columns
 | 0x1F | ccERROR |
 | 0xFF | unbekannt |
 
-<a id="table-infoumweltzf"></a>
 ### INFOUMWELTZF
 
 Dimensions: 1 rows × 9 columns
@@ -3192,7 +3067,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x30 | 0x31 | 0x32 | 0x33 | 0x34 | 0x35 | 0x36 | 0x37 |
 
-<a id="table-infoumweltbmw"></a>
 ### INFOUMWELTBMW
 
 Dimensions: 1 rows × 4 columns
@@ -3201,7 +3075,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x20 | 0x21 | 0x22 |
 
-<a id="table-infofahrzeugstati"></a>
 ### INFOFAHRZEUGSTATI
 
 Dimensions: 1 rows × 7 columns
@@ -3210,7 +3083,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x10 | 0x11 | 0x12 | 0x13 | 0x14 | 0x15 |
 
-<a id="table-infoallgemein"></a>
 ### INFOALLGEMEIN
 
 Dimensions: 1 rows × 5 columns
@@ -3219,7 +3091,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x01 | 0x02 | 0x03 | 0x04 |
 
-<a id="table-ecoservo"></a>
 ### ECOSERVO
 
 Dimensions: 9 rows × 2 columns
@@ -3236,7 +3107,6 @@ Dimensions: 9 rows × 2 columns
 | 0x57 | Uebertemperatur Endstufe CG207 |
 | 0xFF | unbekannter Fehler |
 
-<a id="table-sensorclustertyp"></a>
 ### SENSORCLUSTERTYP
 
 Dimensions: 13 rows × 2 columns
@@ -3257,7 +3127,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0E | TRW_YAW/LAT/LONG |
 | 0xFF | Signal ungueltig |
 
-<a id="table-sensorclusterstatus1"></a>
 ### SENSORCLUSTERSTATUS1
 
 Dimensions: 10 rows × 2 columns
@@ -3275,7 +3144,6 @@ Dimensions: 10 rows × 2 columns
 | 0x80 | Bus-Off Fehler |
 | 0xFF | unbekannter Status |
 
-<a id="table-cansignalfehler"></a>
 ### CANSIGNALFEHLER
 
 Dimensions: 10 rows × 2 columns
@@ -3293,7 +3161,6 @@ Dimensions: 10 rows × 2 columns
 | 0x80 | Eine Nachricht ist mehr als einmal vom System empfangen worden |
 | 0xFF | unbeaknnter Signal Fehler |
 
-<a id="table-sensorclusterstatus2"></a>
 ### SENSORCLUSTERSTATUS2
 
 Dimensions: 10 rows × 2 columns
@@ -3311,7 +3178,6 @@ Dimensions: 10 rows × 2 columns
 | 0x80 | reserviert |
 | 0xFF | unbekannter Status |
 
-<a id="table-sensclustersignalstatus"></a>
 ### SENSCLUSTERSIGNALSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3325,7 +3191,6 @@ Dimensions: 6 rows × 2 columns
 | 0x20 | Initialisierung beendet |
 | 0xFF | unbekannter Status |
 
-<a id="table-abgleichaktiv"></a>
 ### ABGLEICHAKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -3336,7 +3201,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Abgleich NICHT aktiv |
 | 0xFF | unbekannter Status |
 
-<a id="table-basisaktiv"></a>
 ### BASISAKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -3347,7 +3211,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Basiswert NICHT uebernehmen |
 | 0xFF | unbekannter Status |
 
-<a id="table-langzeitabgleich"></a>
 ### LANGZEITABGLEICH
 
 Dimensions: 3 rows × 2 columns

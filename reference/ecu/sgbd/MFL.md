@@ -28,7 +28,6 @@
 - [HERSTELLDATEN_LESEN](#job-herstelldaten-lesen) - Herstelldaten lesen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -47,7 +46,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer MFL E38
@@ -60,7 +58,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer MFL
@@ -83,7 +80,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -103,7 +99,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -116,7 +111,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 alle Stati des MFL lesen
@@ -148,7 +142,6 @@ _No arguments._
 | STAT_U_SCHALTER_WERT | long | Betriebsspannung am Schalter |
 | STAT_U_SCHALTER_EINH | string | Einheit zur Betriebsspannung am Schalter in Volt |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Herstelldaten lesen
@@ -165,7 +158,6 @@ _No arguments._
 | BYTE3 | int | Datenbyte 3 |
 | BYTE4 | int | Datenbyte 4 |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -190,7 +182,6 @@ _No arguments._
 - [EINGANG_LINKS](#table-eingang-links) (6 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 5 rows × 2 columns
@@ -203,7 +194,6 @@ Dimensions: 5 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 6 rows × 2 columns
@@ -217,7 +207,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0A | EEPROM Schreibfehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -228,7 +217,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler aktiv |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-sg-betriebsmode"></a>
 ### SG_BETRIEBSMODE
 
 Dimensions: 4 rows × 2 columns
@@ -240,7 +228,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | Umluft |
 | 0x08 | Tempomat |
 
-<a id="table-eingang-rechts"></a>
 ### EINGANG_RECHTS
 
 Dimensions: 5 rows × 2 columns
@@ -253,7 +240,6 @@ Dimensions: 5 rows × 2 columns
 | 0x24 | Tempomat Aus |
 | 0x80 | Umluft |
 
-<a id="table-eingang-links"></a>
 ### EINGANG_LINKS
 
 Dimensions: 6 rows × 2 columns
@@ -267,7 +253,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0B | Radio/Telefon |
 | 0x07 | Telefon |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

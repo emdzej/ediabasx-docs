@@ -29,7 +29,6 @@
 - [STATUS_BYTES_FT](#job-status-bytes-ft) - Status aller Signale des Peripheriemoduls FT Signalart: BYTE-weise, d.h. ohne Interpretation
 - [STATUS_FH_FT](#job-status-fh-ft) - Status der FH-Signale der FT
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -48,7 +47,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer FT
@@ -85,7 +82,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -103,7 +99,6 @@ _No arguments._
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-ft"></a>
 ### STATUS_DIGITAL_FT
 
 Status der Digitalsignale der FT ab 09/98 (Ein-/Ausgaenge)
@@ -168,7 +163,6 @@ _No arguments._
 | STAT_PS_FB_OK_AKTIV | int | gueltige FB liegt vor nur wenn FZG nach PU 98 gefertigt wurde ! 0, wenn FALSE / 1, wenn TRUE -1, wenn nicht vorhanden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-ft"></a>
 ### STATUS_ANALOG_FT
 
 Status der Analogsignale der FT ab 09/98
@@ -198,7 +192,6 @@ _No arguments._
 | STAT_UFHFTZ_EINH | string | Einheit: 'Volt' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-ft"></a>
 ### STEUERN_DIGITAL_FT
 
 Ansteuern eines digitalen Ein- oder Ausgangs der FT
@@ -218,7 +211,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs der FT
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-bytes-ft"></a>
 ### STATUS_BYTES_FT
 
 Status aller Signale des Peripheriemoduls FT Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -233,7 +225,6 @@ _No arguments._
 | STAT_DATEN | binary | 29 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-fh-ft"></a>
 ### STATUS_FH_FT
 
 Status der FH-Signale der FT
@@ -264,7 +255,6 @@ _No arguments._
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 - [BITS_FT](#table-bits-ft) (51 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -285,7 +275,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 69 rows × 2 columns
@@ -362,7 +351,6 @@ Dimensions: 69 rows × 2 columns
 | 0x68 | Atena GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -391,7 +379,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -415,7 +402,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-bits-ft"></a>
 ### BITS_FT
 
 Dimensions: 51 rows × 6 columns

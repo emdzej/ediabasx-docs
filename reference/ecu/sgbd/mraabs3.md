@@ -65,7 +65,6 @@
 - [STEUERN_VIN_SCHREIBEN](#job-steuern-vin-schreiben) - Fahrgestell Nr. 7 letzte Stellen schreiben Security Access notwendig
 - [STOP_KOMMUNIKATION](#job-stop-kommunikation) - Kommunikation mit dem Steuergerät beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -84,7 +83,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -97,7 +95,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnosemode-aus"></a>
 ### DIAGNOSEMODE_AUS
 
 Diagnose Modus beenden
@@ -111,7 +108,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-diagnosemode-ein"></a>
 ### DIAGNOSEMODE_EIN
 
 Diagnose Modus starten
@@ -130,7 +126,6 @@ Diagnose Modus starten
 | _TEL_ANFRAGE | binary | Hex Antwort vom SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnose Mode des Steuergerätes aufrecht erhalten TesterPresent (0x3E)
@@ -144,7 +139,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler)
@@ -171,7 +165,6 @@ _No arguments._
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hex Code |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher Löschen
@@ -185,7 +178,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -211,7 +203,6 @@ _No arguments._
 | ID_BUS_TYPE | string | CAN Bus Typ |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-security-access"></a>
 ### SECURITY_ACCESS
 
 SG für erweiterte Diagnose freischalten Security Access (0x27)
@@ -226,7 +217,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-start-kommunikation"></a>
 ### START_KOMMUNIKATION
 
 Kommunikation mit dem Steuergerät aufbauen
@@ -240,7 +230,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ad-werte"></a>
 ### STATUS_AD_WERTE
 
 AD-Werte lesen RDBLI 21, 01 bis 04
@@ -267,7 +256,6 @@ _No arguments._
 | STAT_DIGITAL | int | Status Werte lesen |
 | STAT_KODIERUNG_RAM | int | Status Werte lesen |
 
-<a id="job-status-analog-radgeschwindigkeit"></a>
 ### STATUS_ANALOG_RADGESCHWINDIGKEIT
 
 _No arguments._
@@ -283,7 +271,6 @@ _No arguments._
 | STAT_RAD_GESCHW_HINTEN_EINH | string | Einheit RadGeschwindigkeit hinten |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-analog-spannung"></a>
 ### STATUS_ANALOG_SPANNUNG
 
 analoge Spannungswerte auslesen
@@ -303,7 +290,6 @@ _No arguments._
 | STAT_EINHEIT | string | Einheit Volt |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-date-of-ecu-manufacturing"></a>
 ### STATUS_DATE_OF_ECU_MANUFACTURING
 
 Fahrzeughersteller Hardware Nr. Servcie 0x21, 0x9D
@@ -318,7 +304,6 @@ _No arguments._
 | ID_DATE | string | Herstellungsdatum |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 _No arguments._
@@ -340,7 +325,6 @@ _No arguments._
 | STAT_STEUERVENTIL_HINTEN | string | ABS-Steuerventil hinten: Ein, Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-druckwerte"></a>
 ### STATUS_DRUCKWERTE
 
 Druckwerte auslesen
@@ -359,7 +343,6 @@ _No arguments._
 | STAT_EINHEIT | string | Einheit Volt |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ecu-identification-data-table"></a>
 ### STATUS_ECU_IDENTIFICATION_DATA_TABLE
 
 Steuergeräte Identifikation lesen Service 0x21, 0x80
@@ -384,7 +367,6 @@ _No arguments._
 | ID_BUS_TYPE | string | CAN Bus Typ |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-eeprom-version"></a>
 ### STATUS_EEPROM_VERSION
 
 EEPROM Version lesen
@@ -399,7 +381,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 | STAT_VERSION | int | Eeprom Version |
 
-<a id="job-status-eeprom-zaehler"></a>
 ### STATUS_EEPROM_ZAEHLER
 
 EEPROM Zähler lesen
@@ -420,7 +401,6 @@ _No arguments._
 | STAT_FEHLEZEITPUNKT_WERT | string | Fehlerzeitpunkt |
 | STAT_EINHEIT | string | Zeit in Stunden:Minuten:Sekunden |
 
-<a id="job-status-fahrgestell-nr"></a>
 ### STATUS_FAHRGESTELL_NR
 
 Fahrgestell Nr. lesen, 7 letzte Stellen
@@ -435,7 +415,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 | STAT_WERT | string | Fahrgestell Nr. 7 letzte Stellen |
 
-<a id="job-status-fahrgestell-nr-eol"></a>
 ### STATUS_FAHRGESTELL_NR_EOL
 
 Fahrgestell Nr. EOL 7 letzte Stellen lesen
@@ -450,7 +429,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 | STAT_WERT | string | Fahrgestell Nr. 7 letzte Stellen |
 
-<a id="job-status-fte-seriennummer"></a>
 ### STATUS_FTE_SERIENNUMMER
 
 Hersteller (FTE) Serien Nr. auslesen
@@ -467,7 +445,6 @@ _No arguments._
 | JAHR | int | Jahr |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-fte-software-nr"></a>
 ### STATUS_FTE_SOFTWARE_NR
 
 Security Access notwendig Job Hauptschleife anhalten notwendig
@@ -488,7 +465,6 @@ _No arguments._
 | MODULATOR | string | Modulator |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-gehaeuse-barcode"></a>
 ### STATUS_GEHAEUSE_BARCODE
 
 _No arguments._
@@ -503,7 +479,6 @@ _No arguments._
 | INTERNE_INDEX_NR | int | interne Index Nr |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ict-barcode"></a>
 ### STATUS_ICT_BARCODE
 
 _No arguments._
@@ -516,7 +491,6 @@ _No arguments._
 | ICT_BARCODE | unsigned long | ICT Barcode |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-kodierung-ad"></a>
 ### STATUS_KODIERUNG_AD
 
 Fahrzeugkodierung Ad Wert lesen SecurityKey notwendig Hardware Test Modus notwendig (job STEUERN_HAUPTSCHLEIFE_ANHALTEN)
@@ -535,7 +509,6 @@ _No arguments._
 | STATUS_CODIERUNG4 | real | Codierung 4 als Zahl |
 | STATUS_EINHEIT | string | Wert in Volt |
 
-<a id="job-status-kodierung-eeprom"></a>
 ### STATUS_KODIERUNG_EEPROM
 
 Fahrzeugkodierung aus dem Eeprom auslesen
@@ -551,7 +524,6 @@ _No arguments._
 | STATUS_CODIERUNG | int | Codierung als Zahl |
 | STATUS_CODIERUNG_TEXT | string | Codierung als Text |
 
-<a id="job-status-kodierung-ram"></a>
 ### STATUS_KODIERUNG_RAM
 
 Fahrzeugkodierung aus dem RAM auslesen
@@ -567,7 +539,6 @@ _No arguments._
 | STATUS_CODIERUNG | int | Codierung als Zahl |
 | STATUS_CODIERUNG_TEXT | string | Codierung als Text |
 
-<a id="job-status-max-baudrate"></a>
 ### STATUS_MAX_BAUDRATE
 
 Zeit Hauptschleife lesen maximale Baudrate lesen
@@ -584,7 +555,6 @@ _No arguments._
 | STAT_MAIN_LOOP_TIME_EINHEIT | string | Einheit Zeit in Mikro Sekunden |
 | STAT_MAX_BAUDRATE_WERT | long | maximale Baudrate |
 
-<a id="job-status-modulator"></a>
 ### STATUS_MODULATOR
 
 Version Modulator lesen
@@ -599,7 +569,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 | STAT_VERSION | string | Modulator Version |
 
-<a id="job-status-software-version"></a>
 ### STATUS_SOFTWARE_VERSION
 
 Software Version Hauptrechner lesen
@@ -615,7 +584,6 @@ _No arguments._
 | STAT_VERSION | int | Software Version Hauptrechner |
 | STAT_DATE | string | Datum Software Version Hauptrechner |
 
-<a id="job-status-vehicle-manufacturer-hw-nr"></a>
 ### STATUS_VEHICLE_MANUFACTURER_HW_NR
 
 Fahrzeughersteller Hardware Nr. Servcie 0x21, 0x91
@@ -630,7 +598,6 @@ _No arguments._
 | ID_BMW_NR | string | BMW Teile Nr |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-zulaessige-kodierungen"></a>
 ### STATUS_ZULAESSIGE_KODIERUNGEN
 
 zulässige Fahrzeugkodierungen auslesen
@@ -646,7 +613,6 @@ _No arguments._
 | STATUS_CODIERUNG_WERT | int | Codierung als Zahl |
 | STATUS_CODIERUNG_TEXT | string | Codierung als Text |
 
-<a id="job-steuern-bremslicht"></a>
 ### STEUERN_BREMSLICHT
 
 Bremslicht einschalten Seed + HardwareTestModus integriert in Job Security Access notwendig Hardware Test Modus notwendig (job STEUERN_HAUPTSCHLEIFE_ANHALTEN)
@@ -665,7 +631,6 @@ Bremslicht einschalten Seed + HardwareTestModus integriert in Job Security Acces
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-bremslicht-gedimmt"></a>
 ### STEUERN_BREMSLICHT_GEDIMMT
 
 Bremslicht gedimmt einschalten Security Access notwendig Normal Modus notwendig (kein Hardware Test Modus) Job STEUERN_HAUPTSCHLEIFE_STARTEN
@@ -684,7 +649,6 @@ Bremslicht gedimmt einschalten Security Access notwendig Normal Modus notwendig 
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-deinit-kline-kommunikation"></a>
 ### STEUERN_DEINIT_KLINE_KOMMUNIKATION
 
 Beendet eine laufende K-Line Kommunikation
@@ -698,7 +662,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_DEINIT_KLINE_KOMMUNIKATION erfolgreich |
 
-<a id="job-steuern-fahrzeugcodierung-eeprom"></a>
 ### STEUERN_FAHRZEUGCODIERUNG_EEPROM
 
 Fahrzeug Kodierung in das EEPROM schreiben zulässige Kodierungen mit dem Dienst STATUS_ZULAESSIGE_KODIEURNGEN auslesen Security Access notwendig
@@ -717,7 +680,6 @@ Fahrzeug Kodierung in das EEPROM schreiben zulässige Kodierungen mit dem Dienst
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-hauptschleife-anhalten"></a>
 ### STEUERN_HAUPTSCHLEIFE_ANHALTEN
 
 Hauptschleife anhalten, Wechsel in den Hardware Test Modus Security Access notwendig
@@ -731,7 +693,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-hauptschleife-starten"></a>
 ### STEUERN_HAUPTSCHLEIFE_STARTEN
 
 Hauptschleife starten, Wechsel in den Normal Modus Security Access notwendig
@@ -746,7 +707,6 @@ _No arguments._
 | JOB_STATUS2 | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-pumpenmotor-hinten"></a>
 ### STEUERN_PUMPENMOTOR_HINTEN
 
 Pumpenmotor hinten ansteuern, PWM Mode Seed + HardwareTestModus integriert in Job Security Access notwendig Hardware Test Modus notwendig (job STEUERN_HAUPTSCHLEIFE_ANHALTEN)
@@ -768,7 +728,6 @@ Pumpenmotor hinten ansteuern, PWM Mode Seed + HardwareTestModus integriert in Jo
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-pumpenmotor-vorn"></a>
 ### STEUERN_PUMPENMOTOR_VORN
 
 Pumpenmotor vorn ansteuern, PWM Mode Seed + HardwareTestModus integriert in Job Security Access notwendig Hardware Test Modus notwendig (job STEUERN_HAUPTSCHLEIFE_ANHALTEN)
@@ -790,7 +749,6 @@ Pumpenmotor vorn ansteuern, PWM Mode Seed + HardwareTestModus integriert in Job 
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-regelventil-hinten"></a>
 ### STEUERN_REGELVENTIL_HINTEN
 
 Regelventil hinten ansteuern, PWM Mode Seed + HardwareTestModus integriert in Job Security Access notwendig Hardware Test Modus notwendig (job STEUERN_HAUPTSCHLEIFE_ANHALTEN)
@@ -809,7 +767,6 @@ Regelventil hinten ansteuern, PWM Mode Seed + HardwareTestModus integriert in Jo
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-regelventil-vorn"></a>
 ### STEUERN_REGELVENTIL_VORN
 
 Regelventil vorn ansteuern, PWM Mode Seed + HardwareTestModus integriert in Job Security Access notwendig Hardware Test Modus notwendig (job STEUERN_HAUPTSCHLEIFE_ANHALTEN)
@@ -828,7 +785,6 @@ Regelventil vorn ansteuern, PWM Mode Seed + HardwareTestModus integriert in Job 
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-vin-schreiben"></a>
 ### STEUERN_VIN_SCHREIBEN
 
 Fahrgestell Nr. 7 letzte Stellen schreiben Security Access notwendig
@@ -847,7 +803,6 @@ Fahrgestell Nr. 7 letzte Stellen schreiben Security Access notwendig
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-stop-kommunikation"></a>
 ### STOP_KOMMUNIKATION
 
 Kommunikation mit dem Steuergerät beenden
@@ -880,7 +835,6 @@ _No arguments._
 - [WARNLAMPE](#table-warnlampe) (3 × 2)
 - [LIEFERANTEN](#table-lieferanten) (81 × 2)
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 6 rows × 2 columns
@@ -894,7 +848,6 @@ Dimensions: 6 rows × 2 columns
 | 115200 | 0x05 |
 | 200000 | 0xFFFFFFFF |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 3 rows × 2 columns
@@ -905,7 +858,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | EIN |
 | 0xFF | UNBEKANNT |
 
-<a id="table-digitalfehlerstatus"></a>
 ### DIGITALFEHLERSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -916,7 +868,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | in Ordnung |
 | 0xFF | UNBEKANNT |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -934,7 +885,6 @@ Dimensions: 10 rows × 2 columns
 | 0x22 | MOMEMTAN VORHANDEN |
 | 0x23 | MOMEMTAN VORHANDEN UND GESPEICHERT |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 83 rows × 2 columns
@@ -1025,7 +975,6 @@ Dimensions: 83 rows × 2 columns
 | 0x45FF | Fehler bei erkanntem Spannungseinbruch aufgetreten |
 | 0xFFFFFF | unbekannter Fehler |
 
-<a id="table-fehlerstatus"></a>
 ### FEHLERSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -1038,7 +987,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | MOMEMTAN VORHANDEN UND GESPEICHERT |
 | 0xFF | STATUS: UNBEKANNT |
 
-<a id="table-fehlercodetest"></a>
 ### FEHLERCODETEST
 
 Dimensions: 3 rows × 2 columns
@@ -1049,7 +997,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | TEST UNVOLLSTAENDIG |
 | 0xFF | UNBEKANNT |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1070,7 +1017,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | FEHLER: MAXIMALE ANZAHL DER VERSUCHE ERREICHT |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1079,7 +1025,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-kodierung"></a>
 ### KODIERUNG
 
 Dimensions: 12 rows × 2 columns
@@ -1099,7 +1044,6 @@ Dimensions: 12 rows × 2 columns
 | 0x24 | R 850 R / R 1150 R / R 1150 R Rockster |
 | 0xFF | UNBEKANNT |
 
-<a id="table-responsecode"></a>
 ### RESPONSECODE
 
 Dimensions: 14 rows × 2 columns
@@ -1121,7 +1065,6 @@ Dimensions: 14 rows × 2 columns
 | 0xFD | Fehler: 0xFD - FALSCHER MODUS |
 | 0xFF | UNBEKANNT |
 
-<a id="table-systemnameorenginetype"></a>
 ### SYSTEMNAMEORENGINETYPE
 
 Dimensions: 18 rows × 3 columns
@@ -1147,7 +1090,6 @@ Dimensions: 18 rows × 3 columns
 | 0x4B25 |  | K25 |
 | 0xFFFF | UNBEKANNT | UNBEKANNT |
 
-<a id="table-warnlampe"></a>
 ### WARNLAMPE
 
 Dimensions: 3 rows × 2 columns
@@ -1158,7 +1100,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Ein |
 | 0xFF | UNBEKANNT |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 81 rows × 2 columns

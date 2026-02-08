@@ -31,7 +31,6 @@
 - [EDIABAS_SEND_JOB](#job-ediabas-send-job) - Modus  : Default
 - [EDIABAS_WAIT_SEC](#job-ediabas-wait-sec) - Modus: Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -44,7 +43,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -63,7 +61,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-uif-get-size"></a>
 ### UIF_GET_SIZE
 
 Ermitteln der Länge des AIFs Modus: Default
@@ -84,7 +81,6 @@ Ermitteln der Länge des AIFs Modus: Default
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort vom SG |
 
-<a id="job-uif-ident-read"></a>
 ### UIF_IDENT_READ
 
 Auslesen des aktuellen AIFs KWP2000: $1a ReadEcuIdentification $86 CurrentUifDataTable Modus  : Default
@@ -113,7 +109,6 @@ Auslesen des aktuellen AIFs KWP2000: $1a ReadEcuIdentification $86 CurrentUifDat
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-uif-mem-read"></a>
 ### UIF_MEM_READ
 
 Auslesen des AIF-Speichers KWP2000: $23 ReadMemoryByAddress $hh Address $mm Address $ll Address $07 UIF Memory $nn Size Modus  : Default
@@ -144,7 +139,6 @@ Auslesen des AIF-Speichers KWP2000: $23 ReadMemoryByAddress $hh Address $mm Addr
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-func-phys-hw-nr-read"></a>
 ### FUNC_PHYS_HW_NR_READ
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) Modus  : Default
@@ -166,7 +160,6 @@ Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $8
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-acm-init-ident"></a>
 ### ACM_INIT_IDENT
 
 Modus  : Default
@@ -180,7 +173,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 
-<a id="job-acm-show-ident"></a>
 ### ACM_SHOW_IDENT
 
 Modus  : Default
@@ -198,7 +190,6 @@ Modus  : Default
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 
-<a id="job-acm-force-error"></a>
 ### ACM_FORCE_ERROR
 
 Modus  : Default
@@ -219,7 +210,6 @@ Modus  : Default
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 
-<a id="job-ediabas-send-job"></a>
 ### EDIABAS_SEND_JOB
 
 Modus  : Default
@@ -242,7 +232,6 @@ Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ediabas-wait-sec"></a>
 ### EDIABAS_WAIT_SEC
 
 Modus: Default
@@ -266,7 +255,6 @@ Modus: Default
 - [KONZEPT_TABELLE](#table-konzept-tabelle) (2 × 2)
 - [JOBRESULT](#table-jobresult) (86 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -276,7 +264,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 86 rows × 2 columns

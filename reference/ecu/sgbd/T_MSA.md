@@ -22,7 +22,6 @@
 - [INFO](#job-info) - Information SGBD
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung und Kommunikationsparameter
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -41,7 +40,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -68,7 +66,6 @@ _No arguments._
 - [TAB_STPVERZ_40D2](#table-tab-stpverz-40d2) (224 × 2)
 - [MSA_DECODIERUNG](#table-msa-decodierung) (641 × 26)
 
-<a id="table-tab-nostop-40cc"></a>
 ### TAB_NOSTOP_40CC
 
 Dimensions: 384 rows × 2 columns
@@ -460,7 +457,6 @@ Dimensions: 384 rows × 2 columns
 | STAT_HFK_DIAG_EA_BIT_14_WERT | 0x0177 |
 | STAT_HFK_DIAG_EA_BIT_15_WERT | 0x017F |
 
-<a id="table-tab-start-40cd"></a>
 ### TAB_START_40CD
 
 Dimensions: 96 rows × 2 columns
@@ -564,7 +560,6 @@ Dimensions: 96 rows × 2 columns
 | STAT_STOPP_SEGEL_BIT14 | 0x0176 |
 | STAT_STOPP_SEGEL_BIT15 | 0x017E |
 
-<a id="table-tab-stpverz-40ce"></a>
 ### TAB_STPVERZ_40CE
 
 Dimensions: 385 rows × 2 columns
@@ -957,7 +952,6 @@ Dimensions: 385 rows × 2 columns
 | 383 | 0x017F |
 | 65535 | 0xFFFF |
 
-<a id="table-tab-stpverz-40cf"></a>
 ### TAB_STPVERZ_40CF
 
 Dimensions: 385 rows × 2 columns
@@ -1350,7 +1344,6 @@ Dimensions: 385 rows × 2 columns
 | 383 | 0x027F |
 | 65535 | 0xFFFF |
 
-<a id="table-tab-stpverz-40d0"></a>
 ### TAB_STPVERZ_40D0
 
 Dimensions: 129 rows × 2 columns
@@ -1487,7 +1480,6 @@ Dimensions: 129 rows × 2 columns
 | 127 | 0x017F |
 | 255 | 0xFFFF |
 
-<a id="table-tab-start-2-40d4"></a>
 ### TAB_START_2_40D4
 
 Dimensions: 144 rows × 2 columns
@@ -1639,7 +1631,6 @@ Dimensions: 144 rows × 2 columns
 | STAT_NOSTART_D_DIAG_BIT14_WERT | 0x00F7 |
 | STAT_NOSTART_D_DIAG_BIT15_WERT | 0x00FF |
 
-<a id="table-tab-stpabbr-40d1"></a>
 ### TAB_STPABBR_40D1
 
 Dimensions: 384 rows × 2 columns
@@ -2031,7 +2022,6 @@ Dimensions: 384 rows × 2 columns
 | STAT_STPABBR_DIAG_EA_BIT_14_WERT | 0x0177 |
 | STAT_STPABBR_DIAG_EA_BIT_15_WERT | 0x017F |
 
-<a id="table-tab-stpverz-40d2"></a>
 ### TAB_STPVERZ_40D2
 
 Dimensions: 224 rows × 2 columns
@@ -2263,7 +2253,6 @@ Dimensions: 224 rows × 2 columns
 | STAT_STPVERZ_DIAG_EA_BIT_14_WERT | 0x0177 |
 | STAT_STPVERZ_DIAG_EA_BIT_15_WERT | 0x017F |
 
-<a id="table-msa-decodierung"></a>
 ### MSA_DECODIERUNG
 
 Dimensions: 641 rows × 26 columns

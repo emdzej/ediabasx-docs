@@ -41,7 +41,6 @@
 - [AUSSTATTUNG_LESEN_EWS](#job-ausstattung-lesen-ews) - Ausstattung lesen
 - [PRUEFCODE_LESEN](#job-pruefcode-lesen) - Lesen des Pruefcodes, besteht aus Identifikationsdaten, Ausstattungsdaten und dem FS-Inhalt, jedes Telegrammpaket ist durch ein 0x00 abgeschlossen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -59,7 +58,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer AIRBAG MRS3
@@ -72,7 +70,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer AIRBAG MRS3
@@ -95,7 +92,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferant |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Quicktest High-Konzept nach Lastenheft
@@ -109,7 +105,6 @@ _No arguments._
 | JOB_STATUS | string | normalerweise OKAY |
 | F_ANZ | int | Anzahl Fehler |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -153,7 +148,6 @@ _No arguments._
 | F_UW2_WERT | long | Wert der 2. Umweltbedingung |
 | F_UW2_EINH | string | Einheit der 2. Umweltbedingung (hier: immer Sek.) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -166,7 +160,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher lesen
@@ -186,7 +179,6 @@ Speicher lesen
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Speicherinhalt |
 
-<a id="job-ausstattung-lesen"></a>
 ### AUSSTATTUNG_LESEN
 
 Ausstattung lesen
@@ -241,7 +233,6 @@ _No arguments._
 | LEHNE_BF_VERBAUT | int | Sitzlehnenverriegelung Beifahrer verbaut --> 1 |
 | LINKSLENKER | int | Rechtslenker --> 0, Linkslenker --> 1 |
 
-<a id="job-herstellerdaten-lesen"></a>
 ### HERSTELLERDATEN_LESEN
 
 Kodierte KFZ-Herstellerdaten lesen
@@ -261,7 +252,6 @@ _No arguments._
 | DATEN | binary | Antworttelegramm |
 | DATEN1 | binary | Antworttelegramm |
 
-<a id="job-typ-lesen"></a>
 ### TYP_LESEN
 
 Lesen des Fahrzeugtyps (Baureihe)
@@ -275,7 +265,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | TYP | string | Baureihe z.B: E31 / 03h , E34 / 01h ... |
 
-<a id="job-parameter-lesen"></a>
 ### PARAMETER_LESEN
 
 16 Byte aus Parametersatz 1 lesen
@@ -293,7 +282,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Spezifizierte Parameterdaten |
 
-<a id="job-bmw-seriennummer-lesen"></a>
 ### BMW_SERIENNUMMER_LESEN
 
 Lesen der BMW-Seriennummer
@@ -307,7 +295,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Antworttelegramm |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status des MRS3 lesen
@@ -353,7 +340,6 @@ _No arguments._
 | STAT_BF_LEHNE_MODUL_FEHLER | int | -1 = Information nicht verfuegbar 0 = n.i.O., 1 = i.O. |
 | STAT_BF_LEHNE_SYSTEM_FEHLER | int | -1 = Information nicht verfuegbar 0 = n.i.O., 1 = i.O. |
 
-<a id="job-verriegelung-lesen"></a>
 ### VERRIEGELUNG_LESEN
 
 Auslesen der Verriegelung (= Pruefstempel)
@@ -369,7 +355,6 @@ _No arguments._
 | BYTE2 | int | Datenbyte 2 |
 | BYTE3 | int | Datenbyte 3 |
 
-<a id="job-verriegelung-schreiben"></a>
 ### VERRIEGELUNG_SCHREIBEN
 
 Verriegelungsbytes setzen
@@ -383,7 +368,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | ERROR_CODE | string | Bei NIO Fehlertext, sonst Leerstring |
 
-<a id="job-controller-reset"></a>
 ### CONTROLLER_RESET
 
 Zuruecksetzen des Controllers
@@ -396,7 +380,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-sg-login"></a>
 ### SG_LOGIN
 
 Berechtigung fuer EEPROM-Zugriffe
@@ -409,7 +392,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -422,7 +404,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -435,7 +416,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-ausstattung-lesen-ews"></a>
 ### AUSSTATTUNG_LESEN_EWS
 
 Ausstattung lesen
@@ -449,7 +429,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | AUSSTATTUNG | string | x Ausstattungsbytes als String |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Lesen des Pruefcodes, besteht aus Identifikationsdaten, Ausstattungsdaten und dem FS-Inhalt, jedes Telegrammpaket ist durch ein 0x00 abgeschlossen
@@ -475,7 +454,6 @@ _No arguments._
 - [FUMWELTMATRIX](#table-fumweltmatrix) (1 × 5)
 - [FUMWELTTEXTE](#table-fumwelttexte) (2 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -489,7 +467,6 @@ Dimensions: 6 rows × 2 columns
 | 0xB1 | ERROR_ECU_FUNKTION |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 31 rows × 2 columns
@@ -528,7 +505,6 @@ Dimensions: 31 rows × 2 columns
 | 0x30 | NEC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 50 rows × 2 columns
@@ -586,7 +562,6 @@ Dimensions: 50 rows × 2 columns
 | 0xF0 | Interner Steuergeraetefehler |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 50 rows × 17 columns
@@ -644,7 +619,6 @@ Dimensions: 50 rows × 17 columns
 | 0xF0 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF |
 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 28 rows × 2 columns
@@ -680,7 +654,6 @@ Dimensions: 28 rows × 2 columns
 | 0x1A | Mind. ein Modul inaktiv |
 | 0xFF | -- |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -689,7 +662,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 0xFF | 0x02 | 0x01 | 0x01 | 0x02 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 3 columns

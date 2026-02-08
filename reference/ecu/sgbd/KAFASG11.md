@@ -56,7 +56,6 @@
 - [STATUS_ETH_IP_CONFIGURATION](#job-status-eth-ip-configuration) - Shall return the ARP table of a given network interface. The interface shall be identified by its IP address. UDS   : $31 RoutineControl $01 StartRoutine $1045
 - [STEUERN_ETH_WRITE_PHY_REGISTER](#job-steuern-eth-write-phy-register) - Writes an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 StartRoutine $104D
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -75,7 +74,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -88,7 +86,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -105,7 +102,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -136,7 +132,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -181,7 +176,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -200,7 +194,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -218,7 +211,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -239,7 +231,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -268,7 +259,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -288,7 +278,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -309,7 +298,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -325,7 +313,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -347,7 +334,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -366,7 +352,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -393,7 +378,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -438,7 +422,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -453,7 +436,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -473,7 +455,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -492,7 +473,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -511,7 +491,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -530,7 +509,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -550,7 +528,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -567,7 +544,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -586,7 +562,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -601,7 +576,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -618,7 +592,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -633,7 +606,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -648,7 +620,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -664,7 +635,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ip-configuration"></a>
 ### STATUS_IP_CONFIGURATION
 
 Reads out the actual ipconfig of the Ethernet interface of the HeadUnit.
@@ -683,7 +653,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eth-signal-quality"></a>
 ### STATUS_ETH_SIGNAL_QUALITY
 
 Returns the signal quality of all external ports of the ECU UDS   : $22 ReadDataByIdentifier $1801 ETH_SIGNAL_QUALITY
@@ -701,7 +670,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eth-read-phy-register"></a>
 ### STATUS_ETH_READ_PHY_REGISTER
 
 Reads an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 StartRoutine $1041
@@ -722,7 +690,6 @@ Reads an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 S
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eth-arp-table"></a>
 ### STATUS_ETH_ARP_TABLE
 
 Shall return the ARP table of a given network interface. The interface shall be identified by its IP address. UDS   : $31 RoutineControl $01 StartRoutine $1043
@@ -743,7 +710,6 @@ Shall return the ARP table of a given network interface. The interface shall be 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eth-phy-switch-engine-reset"></a>
 ### STEUERN_ETH_PHY_SWITCH_ENGINE_RESET
 
 Requests the reset of a given PHY or of the ECUs switch(es). If supported by the ECU, the PHY/switch(es) may be held in reset for a given amount of time. If an ECU does not support holding the PHY/switch(es) in reset for a given duration but STOP_PHY_FOR_T is greater than 0, the job shall quit with return value STAT_PHY_RESET = 2 and without performing the reset. After the reset, the default configuration, i.e., the configuration that is used during runtime, shall be applied. UDS   : $31 RoutineControl $01 StartRoutine $1044
@@ -765,7 +731,6 @@ Requests the reset of a given PHY or of the ECUs switch(es). If supported by the
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eth-ip-configuration"></a>
 ### STATUS_ETH_IP_CONFIGURATION
 
 Shall return the ARP table of a given network interface. The interface shall be identified by its IP address. UDS   : $31 RoutineControl $01 StartRoutine $1045
@@ -795,7 +760,6 @@ Shall return the ARP table of a given network interface. The interface shall be 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eth-write-phy-register"></a>
 ### STEUERN_ETH_WRITE_PHY_REGISTER
 
 Writes an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 StartRoutine $104D
@@ -1028,7 +992,6 @@ Writes an arbitrary PHY, MAC or switch register. UDS   : $31 RoutineControl $01 
 - [_EC_CALIBRATION](#table-ec-calibration) (2 × 2)
 - [_TAB_CALIB_STATUS](#table-tab-calib-status) (24 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1112,7 +1075,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 140 rows × 2 columns
@@ -1260,7 +1222,6 @@ Dimensions: 140 rows × 2 columns
 | 0x0000C1 | Flextronics |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1303,7 +1264,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1328,7 +1288,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1362,7 +1321,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1435,7 +1393,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1448,7 +1405,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1463,7 +1419,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1476,7 +1431,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1496,7 +1450,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1539,7 +1492,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1550,7 +1502,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x1023-r"></a>
 ### ARG_0X1023_R
 
 Dimensions: 1 rows × 14 columns
@@ -1559,7 +1510,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ACTIVATION | + | - | 0-n | high | unsigned char | - | EXTERNAL_HSFZ_ACTIVATION_TAB | - | - | - | - | - | Aktiviert bzw. deaktiviert den externen HSFZ. |
 
-<a id="table-arg-0x1046-r"></a>
 ### ARG_0X1046_R
 
 Dimensions: 1 rows × 14 columns
@@ -1568,7 +1518,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PORT_INDEX | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Portindex des zur diagnostizierenden Ports/PHYs (beginnend bei Port 0). Wertebereich: Port 0 - Port n-1 (bei insgesamt n Ports) |
 
-<a id="table-arg-0x1047-r"></a>
 ### ARG_0X1047_R
 
 Dimensions: 1 rows × 14 columns
@@ -1577,7 +1526,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PORT_INDEX | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Portindex Wertebereich: Port 0 - Port n-1 (bei insgesamt n Ports) |
 
-<a id="table-arg-0x1048-r"></a>
 ### ARG_0X1048_R
 
 Dimensions: 2 rows × 14 columns
@@ -1587,7 +1535,6 @@ Dimensions: 2 rows × 14 columns
 | PORT_INDEX | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Index des Ports, an dem der Test gestartet werden soll. Wertebereich: Port 0 - Port n-1 (bei insgesamt n Ports)  Wertebereich: Port 0 - Port n-1 (bei insgesamt n Ports) |
 | LOOPBACK_MODE | + | - | 0-n | high | unsigned char | - | ETH_LOOPBACK_MODE_TAB | - | - | - | - | - | 1 = internal Loopback-Mode, 2 = external Loopback-Mode, sonst = ungültig |
 
-<a id="table-arg-0x104c-r"></a>
 ### ARG_0X104C_R
 
 Dimensions: 3 rows × 14 columns
@@ -1598,7 +1545,6 @@ Dimensions: 3 rows × 14 columns
 | TEST_DURATION | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Zeit, für die der Testmodus geschaltet werden soll. Der Wert wird im SG mit 10 multipliziert, so dass die Testdauer von 0s bis 2550s variiert werden kann. |
 | TEST_MODE_ID | + | - | 0-n | high | unsigned char | - | ETH_TEST_MODE_TAB | - | - | - | - | - | ID des Testmodus, in den der PHY geschaltet werden soll |
 
-<a id="table-arg-0x4006-d"></a>
 ### ARG_0X4006_D
 
 Dimensions: 1 rows × 12 columns
@@ -1607,7 +1553,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FASTA_FLA_LOESCHEN | 0/1 | high | signed char | - | - | - | - | - | - | - | 1 = FASTA-Daten löschen |
 
-<a id="table-arg-0x4019-d"></a>
 ### ARG_0X4019_D
 
 Dimensions: 4 rows × 12 columns
@@ -1619,7 +1564,6 @@ Dimensions: 4 rows × 12 columns
 | ALGOCONFIG_STEREO | - | high | signed long | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 | HILMODE | - | high | signed long | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0x4030-d"></a>
 ### ARG_0X4030_D
 
 Dimensions: 3 rows × 12 columns
@@ -1630,7 +1574,6 @@ Dimensions: 3 rows × 12 columns
 | ALGO_QUALIFIER_SELECTION | 0-n | high | unsigned int | - | TAB_ALGO_QUALIFIER_VALUE | - | - | - | - | - | Selection of the value of the Algo Qualifier for the selected function |
 | DURATION | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1.0 | 255.0 | Specifies the duration [s] the algo qualifier for the selected function shall be manipulated with the selected qualifier value. Special value: 0x00 == set/manipulate selected algo qualifier until next ignition cycle == default value if nothing is specified when executing the job. |
 
-<a id="table-arg-0x4036-d"></a>
 ### ARG_0X4036_D
 
 Dimensions: 5 rows × 12 columns
@@ -1643,7 +1586,6 @@ Dimensions: 5 rows × 12 columns
 | PRERUN | 0/1 | high | signed char | - | - | - | - | - | - | - | Setzen des Ausgangssignals TR_PRN_CAM (0x3534 0x8004 BMW_DASS_WarningBreakingFunctions) |
 | GENERATORANSTEUERUNG | 0/1 | high | signed char | - | - | - | - | - | - | - | Setzen des Ausgangssignals TR_GEN_CAM (0x3534 0x8004 BMW_DASS_WarningBreakingFunctions) |
 
-<a id="table-arg-0x4037-d"></a>
 ### ARG_0X4037_D
 
 Dimensions: 5 rows × 12 columns
@@ -1656,7 +1598,6 @@ Dimensions: 5 rows × 12 columns
 | PRERUN | 0/1 | high | signed char | - | - | - | - | - | - | - | Setzen des Ausgangssignals TR_PRN_CAM (0x3534 0x0001 BMW_DASS_WarningBreakingFunctions) |
 | GENERATORANSTEUERUNG | 0/1 | high | signed char | - | - | - | - | - | - | - | Setzen des Ausgangssignals TR_GEN_CAM (0x3534 0x0001 BMW_DASS_WarningBreakingFunctions) |
 
-<a id="table-arg-0x4038-d"></a>
 ### ARG_0X4038_D
 
 Dimensions: 5 rows × 12 columns
@@ -1669,7 +1610,6 @@ Dimensions: 5 rows × 12 columns
 | PRERUN | 0/1 | high | signed char | - | - | - | - | - | - | - | Setzen des Ausgangssignals TR_PRN_CAM (0x3534 0x0001 BMW_DASS_WarningBreakingFunctions) |
 | GENERATORANSTEUERUNG | 0/1 | high | signed char | - | - | - | - | - | - | - | Setzen des Ausgangssignals TR_GEN_CAM (0x3534 0x0001 BMW_DASS_WarningBreakingFunctions) |
 
-<a id="table-arg-0x4039-d"></a>
 ### ARG_0X4039_D
 
 Dimensions: 1 rows × 12 columns
@@ -1678,7 +1618,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TYP | 0-n | high | unsigned char | - | TAB_TYP_CCM | - | - | - | - | - | Typ der CCM |
 
-<a id="table-arg-0x403f-d"></a>
 ### ARG_0X403F_D
 
 Dimensions: 1 rows × 12 columns
@@ -1687,7 +1626,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FASTA_LBD_LOESCHEN | 0/1 | high | signed char | - | - | - | - | - | - | - | 1 = FASTA-Daten löschen |
 
-<a id="table-arg-0x4047-d"></a>
 ### ARG_0X4047_D
 
 Dimensions: 1 rows × 12 columns
@@ -1696,7 +1634,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FASTA_LDW_LOESCHEN | 0/1 | high | signed char | - | - | - | - | - | - | - | 1 = FASTA-Daten löschen |
 
-<a id="table-arg-0x404e-d"></a>
 ### ARG_0X404E_D
 
 Dimensions: 1 rows × 12 columns
@@ -1705,7 +1642,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | _EC_CALIBRATION | 0-n | high | unsigned char | - | _EC_CALIBRATION | - | - | - | - | - | Steuern__EC_CALIBRATION |
 
-<a id="table-arg-0x4051-d"></a>
 ### ARG_0X4051_D
 
 Dimensions: 1 rows × 12 columns
@@ -1714,7 +1650,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FASTA_OBJ_LOESCHEN | 0/1 | high | signed char | - | - | - | - | - | - | - | 1 = FASTA-Daten löschen |
 
-<a id="table-arg-0x4052-d"></a>
 ### ARG_0X4052_D
 
 Dimensions: 1 rows × 12 columns
@@ -1723,7 +1658,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FASTA_URSAF_LOESCHEN | 0/1 | high | signed char | - | - | - | - | - | - | - | 1 = FASTA-Daten löschen |
 
-<a id="table-arg-0x4053-d"></a>
 ### ARG_0X4053_D
 
 Dimensions: 1 rows × 12 columns
@@ -1732,7 +1666,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FASTA_PED_LOESCHEN | 0/1 | high | signed char | - | - | - | - | - | - | - | 1 = FASTA-Daten löschen |
 
-<a id="table-arg-0x4055-d"></a>
 ### ARG_0X4055_D
 
 Dimensions: 1 rows × 12 columns
@@ -1741,7 +1674,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FASTA_VEH_LOESCHEN | 0/1 | high | signed char | - | - | - | - | - | - | - | 1 = FASTA-Daten löschen |
 
-<a id="table-arg-0x4062-d"></a>
 ### ARG_0X4062_D
 
 Dimensions: 1 rows × 12 columns
@@ -1750,7 +1682,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ACTIVE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Ob der Fertigungsmodus an(=1) oder aus (=0) |
 
-<a id="table-arg-0x4065-d"></a>
 ### ARG_0X4065_D
 
 Dimensions: 1 rows × 12 columns
@@ -1759,7 +1690,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | WWA_CCM | 0-n | high | unsigned char | - | TAB_WWA_CCM_KOMB_ANZEIGE | - | - | - | - | - | Setzt die WWA CCM   |
 
-<a id="table-arg-0x40a0-d"></a>
 ### ARG_0X40A0_D
 
 Dimensions: 2 rows × 12 columns
@@ -1769,7 +1699,6 @@ Dimensions: 2 rows × 12 columns
 | ERROR_ID | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Error number that shall be sent to the navigation (signal ST_ERR_NO_RCVR_NAVI), Range 0-255 |
 | SYNC_ID | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Number of the last successful sync that shall be sent to the navigation (signal: ST_COU_NAVGRPH_SYNC) , Range 0-255 |
 
-<a id="table-arg-0x40a8-d"></a>
 ### ARG_0X40A8_D
 
 Dimensions: 2 rows × 12 columns
@@ -1779,7 +1708,6 @@ Dimensions: 2 rows × 12 columns
 | ACTION | 0-n | high | signed char | - | STEUERN_UFM_SWITCH_ACTION | - | - | - | - | - | 0x01 - set input to unavailable 0x02 - use worst case input 0x03 - set output to unavailable |
 | PORT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0x40a9-d"></a>
 ### ARG_0X40A9_D
 
 Dimensions: 2 rows × 12 columns
@@ -1789,7 +1717,6 @@ Dimensions: 2 rows × 12 columns
 | ACTION | 0-n | high | signed char | - | STEUERN_UFM_SWITCH_ACTION | - | - | - | - | - | 0x01 - set input to unavailable 0x02 - use worst case input 0x03 - set output to unavailable |
 | PORT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0x40ab-d"></a>
 ### ARG_0X40AB_D
 
 Dimensions: 2 rows × 12 columns
@@ -1799,7 +1726,6 @@ Dimensions: 2 rows × 12 columns
 | ACTION | 0-n | high | signed char | - | STEUERN_UFM_SWITCH_ACTION | - | - | - | - | - | 0x01 - set input to unavailable 0x02 - use worst case input 0x03 - set output to unavailable |
 | PORT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0x40ac-d"></a>
 ### ARG_0X40AC_D
 
 Dimensions: 2 rows × 12 columns
@@ -1809,7 +1735,6 @@ Dimensions: 2 rows × 12 columns
 | ACTION | 0-n | high | signed char | - | STEUERN_UFM_SWITCH_ACTION | - | - | - | - | - | 0x01 - set input to unavailable 0x02 - use worst case input 0x03 - set output to unavailable |
 | PORT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0x40af-d"></a>
 ### ARG_0X40AF_D
 
 Dimensions: 6 rows × 12 columns
@@ -1823,7 +1748,6 @@ Dimensions: 6 rows × 12 columns
 | DUMP_1 | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 1 according to UFM DTC Specification |
 | DUMP_2 | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 2 according to UFM DTC Specification |
 
-<a id="table-arg-0x40b0-d"></a>
 ### ARG_0X40B0_D
 
 Dimensions: 6 rows × 12 columns
@@ -1837,7 +1761,6 @@ Dimensions: 6 rows × 12 columns
 | DUMP_1 | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 1 according to UFM DTC Specification |
 | DUMP_2 | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 2 according to UFM DTC Specification |
 
-<a id="table-arg-0x40b2-d"></a>
 ### ARG_0X40B2_D
 
 Dimensions: 6 rows × 12 columns
@@ -1851,7 +1774,6 @@ Dimensions: 6 rows × 12 columns
 | DUMP_1 | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 1 according to UFM DTC Specification |
 | DUMP_2 | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 2 according to UFM DTC Specification |
 
-<a id="table-arg-0x40b3-d"></a>
 ### ARG_0X40B3_D
 
 Dimensions: 6 rows × 12 columns
@@ -1865,7 +1787,6 @@ Dimensions: 6 rows × 12 columns
 | DUMP_1 | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 1 according to UFM DTC Specification |
 | DUMP_2 | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 2 according to UFM DTC Specification |
 
-<a id="table-arg-0x40b6-d"></a>
 ### ARG_0X40B6_D
 
 Dimensions: 2 rows × 12 columns
@@ -1875,7 +1796,6 @@ Dimensions: 2 rows × 12 columns
 | ACTION | 0-n | high | signed char | - | STEUERN_UFM_SWITCH_ACTION | - | - | - | - | - | 0x01 - set input to unavailable 0x02 - use worst case input 0x03 - set output to unavailable |
 | PORT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0x40b7-d"></a>
 ### ARG_0X40B7_D
 
 Dimensions: 6 rows × 12 columns
@@ -1889,7 +1809,6 @@ Dimensions: 6 rows × 12 columns
 | DUMP_1 | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 1 according to UFM DTC Specification |
 | DUMP_2 | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - | - | dump 2 according to UFM DTC Specification |
 
-<a id="table-arg-0x40b8-d"></a>
 ### ARG_0X40B8_D
 
 Dimensions: 10 rows × 12 columns
@@ -1907,7 +1826,6 @@ Dimensions: 10 rows × 12 columns
 | TRACK2_SUPP_CLASS | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Supplemental class id for track 2 |
 | TRACK2_ATTRIBUTES | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bit 0 & bit 1 are the position of the track (2 is passenger side, 1 is driver side & 0 is above). Bits 2 to 7 are characteristics of the track. |
 
-<a id="table-arg-0x4100-d"></a>
 ### ARG_0X4100_D
 
 Dimensions: 2 rows × 12 columns
@@ -1917,7 +1835,6 @@ Dimensions: 2 rows × 12 columns
 | WERTETABELLE_WARNTYP | 0-n | high | unsigned char | - | WARNARTEN | - | - | - | - | - | Werttabelle für Art der Warnung |
 | DAUER_IN_MS | ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Dauer der Warnung  |
 
-<a id="table-arg-0x4101-d"></a>
 ### ARG_0X4101_D
 
 Dimensions: 4 rows × 12 columns
@@ -1929,7 +1846,6 @@ Dimensions: 4 rows × 12 columns
 | EMPFINDLICHKEIT | 0-n | high | unsigned char | - | EMPFINDLICHKEIT | - | - | - | - | - | Empfindlichkeit des HBA |
 | DAUER_IN_MS | ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Dauer der Warnung  |
 
-<a id="table-arg-0x4102-d"></a>
 ### ARG_0X4102_D
 
 Dimensions: 2 rows × 12 columns
@@ -1939,7 +1855,6 @@ Dimensions: 2 rows × 12 columns
 | FUNKTIONSVERFUEGBARKEIT | 0-n | high | unsigned char | - | FUNKTIONSVERFUEGBARKEIT | - | - | - | - | - | Gibt in welchem Umfang die Funktion zur Verfügung steht |
 | DAUER_IN_MS | ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Dauer der Warnung  |
 
-<a id="table-arg-0x4103-d"></a>
 ### ARG_0X4103_D
 
 Dimensions: 2 rows × 12 columns
@@ -1949,7 +1864,6 @@ Dimensions: 2 rows × 12 columns
 | LUFTSPIELREDUKTION | 0-n | high | unsigned char | - | LUFTSPIELREDUKTION | - | - | - | - | - | Art der Luftspielreduktion |
 | DAUER_IN_MS | ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Dauer der Luftspielreduktion  |
 
-<a id="table-arg-0x4104-d"></a>
 ### ARG_0X4104_D
 
 Dimensions: 2 rows × 12 columns
@@ -1959,7 +1873,6 @@ Dimensions: 2 rows × 12 columns
 | EMPFINDLICHKEIT | 0-n | high | unsigned char | - | EMPFINDLICHKEIT | - | - | - | - | - | Empfindlichkeit der Funktion |
 | DAUER_IN_MS | ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Dauer der Warnung  |
 
-<a id="table-arg-0x4105-d"></a>
 ### ARG_0X4105_D
 
 Dimensions: 1 rows × 12 columns
@@ -1968,7 +1881,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RESYNC | 0/1 | high | unsigned char | - | - | - | - | - | - | - | fordert eine RESYNC der HU an  0=off; 1=on |
 
-<a id="table-arg-0x4106-d"></a>
 ### ARG_0X4106_D
 
 Dimensions: 2 rows × 12 columns
@@ -1978,7 +1890,6 @@ Dimensions: 2 rows × 12 columns
 | PARAM1 | TEXT | high | string[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | ASCII -Code a-z;A-Z |
 | PARAM2 | TEXT | high | string[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | ASCII -Code a-z;A-Z |
 
-<a id="table-arg-0x4107-d"></a>
 ### ARG_0X4107_D
 
 Dimensions: 3 rows × 12 columns
@@ -1989,7 +1900,6 @@ Dimensions: 3 rows × 12 columns
 | PARAM2 | TEXT | high | string[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | ASCII -Code a-z;A-Z |
 | LAENDERCODE_STUFE | 0-n | high | unsigned char | - | STUFEN | - | - | - | - | - | Wert  |
 
-<a id="table-arg-0x4108-d"></a>
 ### ARG_0X4108_D
 
 Dimensions: 2 rows × 12 columns
@@ -1999,7 +1909,6 @@ Dimensions: 2 rows × 12 columns
 | EVENT_DATA | 0-n | high | unsigned char | - | EVENT_DATA | - | - | - | - | - | Event data |
 | OPERATIONMODE | 0-n | high | unsigned char | - | OPERATIONMODE | - | - | - | - | - | Operation Mode |
 
-<a id="table-arg-0x4109-d"></a>
 ### ARG_0X4109_D
 
 Dimensions: 1 rows × 12 columns
@@ -2008,7 +1917,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ACTIVATE_FR | 0/1 | high | unsigned char | - | - | - | - | - | - | - | activates Fault reaction 0=off; 1=on |
 
-<a id="table-arg-0x4110-d"></a>
 ### ARG_0X4110_D
 
 Dimensions: 1 rows × 12 columns
@@ -2017,7 +1925,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FASTA_VFW_LOESCHEN | 0/1 | high | signed char | - | - | - | - | - | - | - | 1 = FASTA-Daten löschen |
 
-<a id="table-arg-0x4111-d"></a>
 ### ARG_0X4111_D
 
 Dimensions: 1 rows × 12 columns
@@ -2026,7 +1933,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KOMBI_EVENT | 0/1 | high | unsigned char | - | - | - | - | - | - | - | zeigt das dominante Bildverarbeitungsevent (worauf potentiell gewarnt werden würde) im Kombi an. 0=off; 1=on |
 
-<a id="table-arg-0x4112-d"></a>
 ### ARG_0X4112_D
 
 Dimensions: 1 rows × 12 columns
@@ -2035,7 +1941,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PREFILL_MODE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | (de)aktiviert die Möglichkeit der Funktion einen prefill auszulösen. 0=off; 1=on |
 
-<a id="table-arg-0x4113-d"></a>
 ### ARG_0X4113_D
 
 Dimensions: 1 rows × 12 columns
@@ -2044,7 +1949,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HBA_MODE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | (de)aktiviert die Möglichkeit der Funktion eine HBA Schwellwertanpassung vorzunehmen. 0=off; 1=on |
 
-<a id="table-arg-0x4114-d"></a>
 ### ARG_0X4114_D
 
 Dimensions: 2 rows × 12 columns
@@ -2054,7 +1958,6 @@ Dimensions: 2 rows × 12 columns
 | FUNCTION_ON | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - |  untere  Schwelle für die geschwindigkeitsabhängige Aktivierung der Funktion  |
 | FUNCTION_OFF | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | setzt obere Schwelle für die geschwindigkeitsabhängige Aktivierung der Funktion  |
 
-<a id="table-arg-0x4115-d"></a>
 ### ARG_0X4115_D
 
 Dimensions: 1 rows × 12 columns
@@ -2063,7 +1966,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EHR_MODE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | deaktiviert den EHR. Die Funktion verhält sich bei Deaktivierung wie offroad, der Ländercode soll jedoch weiterhin verwendet und ausgewertet werden.  0=off; 1=on |
 
-<a id="table-arg-0xa37c-d"></a>
 ### ARG_0XA37C_D
 
 Dimensions: 1 rows × 12 columns
@@ -2072,7 +1974,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | - | unsigned char | - | TAB_KAFAS_KOMBI_ANZEIGE | - | - | - | - | - | AKTION siehe Tabelle TAB_KAFAS_KOMBI_ANZEIGE |
 
-<a id="table-arg-0xd399-d"></a>
 ### ARG_0XD399_D
 
 Dimensions: 4 rows × 12 columns
@@ -2084,7 +1985,6 @@ Dimensions: 4 rows × 12 columns
 | INTENSITAET | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 3.0 | 3.0 | Vibrationsstaerke:  3 = Stufe 3 |
 | RICHTUNG | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 3.0 | Warnrichtung:  0 = keine Richtung  1 = Links  2 = Rechts  3 = Ungueltig |
 
-<a id="table-arg-0xd3a6-d"></a>
 ### ARG_0XD3A6_D
 
 Dimensions: 1 rows × 12 columns
@@ -2093,7 +1993,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DEMO_MODE_ACTIVATION | 0/1 | - | unsigned char | - | - | - | - | - | - | - | 1 = Demo-Mode einschalten,  0 = Demo-Mode ausschalten |
 
-<a id="table-arg-0xd3a9-d"></a>
 ### ARG_0XD3A9_D
 
 Dimensions: 8 rows × 12 columns
@@ -2109,7 +2008,6 @@ Dimensions: 8 rows × 12 columns
 | ANZEIGE_TEXT_MELDUNG | 0-n | - | unsigned char | - | TAB_ART_TEXT_MELDUNG | 1.0 | 1.0 | 0.0 | - | - | Gibt an, welche Textmeldung angezeigt werden soll: Argumente siehe TAB_ART_MELDUNG |
 | GESCHWINDIGKEIT_EINHEIT | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Steuert in welcher Einheit die Anzeige im Kombi erfolgt (kmh oder mph). 0 ist km/h und 1 ist mph. |
 
-<a id="table-arg-0xd3ab-d"></a>
 ### ARG_0XD3AB_D
 
 Dimensions: 1 rows × 12 columns
@@ -2118,7 +2016,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | METHODE | 0-n | - | unsigned char | - | TAB_METHODE_SLI | 1.0 | 1.0 | 0.0 | - | - | Argumente siehe TAB_METHODE_SLI |
 
-<a id="table-arg-0xd3ad-d"></a>
 ### ARG_0XD3AD_D
 
 Dimensions: 5 rows × 12 columns
@@ -2131,7 +2028,6 @@ Dimensions: 5 rows × 12 columns
 | GFA_LEFT_BOUNDARY | ° | - | unsigned char | - | - | 10.0 | 1.0 | 104.0 | -10.4 | 15.0 | Auszugebende linke Grenze in 0,1 Grad-Schritten des blendfreien Bereiches |
 | GFA_LOWER_BOUNDARY | ° | - | unsigned char | - | - | 20.0 | 1.0 | 100.0 | -5.0 | 5.0 | Auszugebende untere Grenze in 0,05 Schritten des blendfreien Bereichs |
 
-<a id="table-arg-0xd3bd-d"></a>
 ### ARG_0XD3BD_D
 
 Dimensions: 1 rows × 12 columns
@@ -2140,7 +2036,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x01 = Reset wird durchgeführt |
 
-<a id="table-arg-0xd3cd-d"></a>
 ### ARG_0XD3CD_D
 
 Dimensions: 2 rows × 12 columns
@@ -2150,7 +2045,6 @@ Dimensions: 2 rows × 12 columns
 | AKTION | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Ansteuerung KAFAS-Scheibenheizung: 0 = aus 1 = ein |
 | ZEIT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung in Sekunden |
 
-<a id="table-arg-0xf001-r"></a>
 ### ARG_0XF001_R
 
 Dimensions: 6 rows × 14 columns
@@ -2164,7 +2058,6 @@ Dimensions: 6 rows × 14 columns
 | STAT_CAM_R_POSITION_Y_WERT_1 | + | - | mm | high | signed long | - | - | 1.0 | 1.0 | 0.0 | - | - | Right  - Camera Pos in Y |
 | STAT_CAM_R_POSITION_Z_WERT_1 | + | - | mm | high | signed long | - | - | 1.0 | 1.0 | 0.0 | - | - | Right  - Camera Pos in Z |
 
-<a id="table-arg-0xf003-r"></a>
 ### ARG_0XF003_R
 
 Dimensions: 1 rows × 14 columns
@@ -2173,7 +2066,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_COUNTRY_CODE | + | - | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Country Code that should be used for the country code simulation. Each Byte represents an ASCII letter (for example 44h 45h = DE) |
 
-<a id="table-arg-0xf005-r"></a>
 ### ARG_0XF005_R
 
 Dimensions: 1 rows × 14 columns
@@ -2182,7 +2074,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EVENTID | + | - | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | DEM_EventID |
 
-<a id="table-arg-0xf006-r"></a>
 ### ARG_0XF006_R
 
 Dimensions: 2 rows × 14 columns
@@ -2192,7 +2083,6 @@ Dimensions: 2 rows × 14 columns
 | _CAMERA_EXPOSURE | + | - | HEX | high | signed int | - | - | - | - | - | - | - |  0x0000 - Schwarz 0xFFFF - Weiss  |
 | _CAMERA_SOURCE | + | - | HEX | high | signed char | - | - | - | - | - | - | - | 0x01 = rechts 0x02 = links 0x03 = beides |
 
-<a id="table-arg-0xf009-r"></a>
 ### ARG_0XF009_R
 
 Dimensions: 1 rows × 14 columns
@@ -2201,7 +2091,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_IOB_COMMAND_DATA | + | - | DATA | high | data[32] | - | - | 1.0 | 1.0 | 0.0 | - | - | Aquire image |
 
-<a id="table-arg-0xf00c-r"></a>
 ### ARG_0XF00C_R
 
 Dimensions: 1 rows × 14 columns
@@ -2210,7 +2099,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | _CPAR_TLR_PARAMETERS_T_E_BRIGHTNESSMODE | + | - | 0-n | high | unsigned char | - | _CPAR_TLR_PARAMETERS_T_E_BRIGHTNESSMODE | - | - | - | - | - | _CPAR_TLR_Parameters_t_e_BrightnessMode |
 
-<a id="table-arg-0xf00d-r"></a>
 ### ARG_0XF00D_R
 
 Dimensions: 1 rows × 14 columns
@@ -2219,7 +2107,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CPAR_TLR_PARAMETERS_T_U_FEATUREMASTER | + | - | 0-n | high | unsigned char | - | CPAR_TLR_PARAMETERS_T_U_FEATUREMASTER | - | - | - | - | - | CPAR_TLR_Parameters_t_u_FeatureMaster |
 
-<a id="table-arg-0xf00f-r"></a>
 ### ARG_0XF00F_R
 
 Dimensions: 5 rows × 14 columns
@@ -2232,7 +2119,6 @@ Dimensions: 5 rows × 14 columns
 | STAT_WIDTH_WERT_1 | + | - | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Breite des Bildes |
 | STAT_HEIGHT_WERT_1 | + | - | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Höhe des Bildes |
 
-<a id="table-bf-phy-link-state-btfld"></a>
 ### BF_PHY_LINK_STATE_BTFLD
 
 Dimensions: 16 rows × 10 columns
@@ -2256,7 +2142,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_PHY_LINK_STATE_PORT_14 | 0-n | high | unsigned int | 0x4000 | PHY_LINK_STATE_TAB | - | - | - | Linkstatus für Port 14 |
 | STAT_PHY_LINK_STATE_PORT_15 | 0-n | high | unsigned int | 0x8000 | PHY_LINK_STATE_TAB | - | - | - | Linkstatus für Port 15 |
 
-<a id="table-blockage-status"></a>
 ### BLOCKAGE_STATUS
 
 Dimensions: 7 rows × 2 columns
@@ -2271,7 +2156,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0101 | - |
 | 0x0110 | - |
 
-<a id="table-brigthness-condition"></a>
 ### BRIGTHNESS_CONDITION
 
 Dimensions: 4 rows × 2 columns
@@ -2283,7 +2167,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0010 | - |
 | 0x0100 | - |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2297,7 +2180,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-cable-diag-state-tab"></a>
 ### CABLE_DIAG_STATE_TAB
 
 Dimensions: 8 rows × 2 columns
@@ -2313,7 +2195,6 @@ Dimensions: 8 rows × 2 columns
 | 0x10 | Diagnose läuft bereits (bei aufeinanderfolgenden Jobaufrufen |
 | 0xFF | Diagnose konnte nicht gestartet werden, PHY unterstützt Kabeldiagnose nicht oder Port nicht vorhanden |
 
-<a id="table-cpar-tlr-parameters-t-u-featuremaster"></a>
 ### CPAR_TLR_PARAMETERS_T_U_FEATUREMASTER
 
 Dimensions: 4 rows × 2 columns
@@ -2325,7 +2206,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | TLR_FEATURE_CONFIG_CLASSIFICATION |
 | 0x08 | TLR_FEATURE_CONFIG_TRACKING |
 
-<a id="table-empfindlichkeit"></a>
 ### EMPFINDLICHKEIT
 
 Dimensions: 5 rows × 2 columns
@@ -2338,7 +2218,6 @@ Dimensions: 5 rows × 2 columns
 | 0x3 | höchste Empfindlichkeit |
 | 0xF | Signal ungültig |
 
-<a id="table-ergebnis-service-action-code"></a>
 ### ERGEBNIS_SERVICE_ACTION_CODE
 
 Dimensions: 6 rows × 2 columns
@@ -2352,7 +2231,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Prüfen aller anderen DTC's. Flashen und Kodieren der ECU. (general algo input error)  |
 | 0xFF | Wert ungültig |
 
-<a id="table-ergebnis-uwb-mac-sac-blockage-detected"></a>
 ### ERGEBNIS_UWB_MAC_SAC_BLOCKAGE_DETECTED
 
 Dimensions: 2 rows × 2 columns
@@ -2362,7 +2240,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | OK |
 | 1 | Kalibrierdistanz überschritten und Blockage war present.  |
 
-<a id="table-eth-loopback-mode-tab"></a>
 ### ETH_LOOPBACK_MODE_TAB
 
 Dimensions: 2 rows × 2 columns
@@ -2372,7 +2249,6 @@ Dimensions: 2 rows × 2 columns
 | 1 | internal Loopback-Mode |
 | 2 | external Loopback-Mode |
 
-<a id="table-eth-phy-loopback-test"></a>
 ### ETH_PHY_LOOPBACK_TEST
 
 Dimensions: 4 rows × 2 columns
@@ -2384,7 +2260,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Test nicht erfolgreich, TX- und RX-Zähler wurden durch Versendung des Testframes nicht inkrementiert |
 | 0xFF | Test läuft bereits |
 
-<a id="table-eth-phy-test-mode-state"></a>
 ### ETH_PHY_TEST_MODE_STATE
 
 Dimensions: 3 rows × 2 columns
@@ -2395,7 +2270,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | PHY kann nicht in den Testmodus geschaltet werden |
 | 0x02 | Gewünschter Testmodus für Port/Switch nicht verfügbar |
 
-<a id="table-eth-test-mode-tab"></a>
 ### ETH_TEST_MODE_TAB
 
 Dimensions: 5 rows × 2 columns
@@ -2408,7 +2282,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Transmit Distortion test |
 | 0x05 | Normal Operation at full power necessary for the PSD mask Test |
 
-<a id="table-event-data"></a>
 ### EVENT_DATA
 
 Dimensions: 3 rows × 2 columns
@@ -2419,7 +2292,6 @@ Dimensions: 3 rows × 2 columns
 | 0x1 | Event data available reduced |
 | 0x2 | Event data not available |
 
-<a id="table-external-hsfz-activation-tab"></a>
 ### EXTERNAL_HSFZ_ACTIVATION_TAB
 
 Dimensions: 2 rows × 2 columns
@@ -2429,7 +2301,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | activate external HSFZ |
 | 0x01 | deactivate external HSFZ |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2443,7 +2314,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 79 rows × 3 columns
@@ -2530,7 +2400,6 @@ Dimensions: 79 rows × 3 columns
 | 0xE0544D | Signalfehler - 0x9531 - 0x0001 - BMW_POWERTRAIN_AcceleratorPedal - Signal ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fscsm-errorcode-tab"></a>
 ### FSCSM_ERRORCODE_TAB
 
 Dimensions: 18 rows × 2 columns
@@ -2556,7 +2425,6 @@ Dimensions: 18 rows × 2 columns
 | 0x5A | ERC_CALCULATION_ERROR |
 | 0xFE | ERC_UNEXPECTED_ERROR |
 
-<a id="table-funktionsverfuegbarkeit"></a>
 ### FUNKTIONSVERFUEGBARKEIT
 
 Dimensions: 6 rows × 2 columns
@@ -2570,7 +2438,6 @@ Dimensions: 6 rows × 2 columns
 | 0xE | Funktion ist nicht verfügbar - auscodiert |
 | 0xF | Signal unbefüllt |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 96 rows × 9 columns
@@ -2674,7 +2541,6 @@ Dimensions: 96 rows × 9 columns
 | 0x6F09 | SystemCycleCounter | count | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2686,7 +2552,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 37 rows × 3 columns
@@ -2731,7 +2596,6 @@ Dimensions: 37 rows × 3 columns
 | 0xE0544A | Signalfehler - 0x1506 - 0x0001 - BMW_INFRASTRUCTURE_StatusEnergy - Signal Ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 96 rows × 9 columns
@@ -2835,7 +2699,6 @@ Dimensions: 96 rows × 9 columns
 | 0x6F09 | SystemCycleCounter | count | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2844,7 +2707,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-link-reset-status-tab"></a>
 ### LINK_RESET_STATUS_TAB
 
 Dimensions: 2 rows × 2 columns
@@ -2854,7 +2716,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0 | Linkverlust aufgrund SG-externen Ereignisses |
 | 0x1 | Linkverlust aufgrund SG-interen Ereignisses |
 
-<a id="table-luftspielreduktion"></a>
 ### LUFTSPIELREDUKTION
 
 Dimensions: 3 rows × 2 columns
@@ -2865,7 +2726,6 @@ Dimensions: 3 rows × 2 columns
 | 0x2 | Luftspielreduktion der Bremsanlage angefordert |
 | 0x3 | Signal ungültig |
 
-<a id="table-mode-of-operation"></a>
 ### MODE_OF_OPERATION
 
 Dimensions: 3 rows × 2 columns
@@ -2876,7 +2736,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | Overtemp-cooling requested |
 | 3 | Overtemp-Application disabled |
 
-<a id="table-operationmode"></a>
 ### OPERATIONMODE
 
 Dimensions: 11 rows × 2 columns
@@ -2895,7 +2754,6 @@ Dimensions: 11 rows × 2 columns
 | 0x9 | External_Destortion |
 | 0xA | Beginning_Blockage |
 
-<a id="table-phy-link-state-tab"></a>
 ### PHY_LINK_STATE_TAB
 
 Dimensions: 16 rows × 2 columns
@@ -2919,7 +2777,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Link up |
 | 0x0F | Link up |
 
-<a id="table-port-crc-error-count-1b-tab"></a>
 ### PORT_CRC_ERROR_COUNT_1B_TAB
 
 Dimensions: 16 rows × 2 columns
@@ -2943,7 +2800,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Port nicht verbunden |
 | 0x0F | Anzahl der verlorenen Frames konnte nicht bestimmt werden. |
 
-<a id="table-port-link-status-tab"></a>
 ### PORT_LINK_STATUS_TAB
 
 Dimensions: 2 rows × 2 columns
@@ -2953,7 +2809,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Link-off festgestellt |
 | 1 | Link-off festgestellt |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -2971,7 +2826,6 @@ Dimensions: 10 rows × 2 columns
 | 0x43 | HDDUpdateSession |
 | 0xff | ungültig |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -2983,7 +2837,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | ECU nicht mehr programmierbar |
 | 0xff | ungültig |
 
-<a id="table-res-0x1046-r"></a>
 ### RES_0X1046_R
 
 Dimensions: 1 rows × 13 columns
@@ -2992,7 +2845,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CABLE_DIAG_STATE | + | - | - | 0-n | high | unsigned char | - | CABLE_DIAG_STATE_TAB | - | - | - | Ergebnis der Kabeldiagnose. |
 
-<a id="table-res-0x1047-r"></a>
 ### RES_0X1047_R
 
 Dimensions: 3 rows × 13 columns
@@ -3003,7 +2855,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_MMN_WERT | + | - | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Die 6 Bit lange MMN des Phys. Die übrigen Bits sollen auf 0 gesetzt werden. |
 | STAT_REVISION_WERT | + | - | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 4 Bit lange Revisionsnummer des PHY. Die übrigen Bits sollen mit 0 belegt werden. |
 
-<a id="table-res-0x1048-r"></a>
 ### RES_0X1048_R
 
 Dimensions: 1 rows × 13 columns
@@ -3012,7 +2863,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PHY_LOOPBACK_TEST | + | - | - | 0-n | high | unsigned char | - | ETH_PHY_LOOPBACK_TEST | - | - | - | Ergebnis Loopback-Test |
 
-<a id="table-res-0x104c-r"></a>
 ### RES_0X104C_R
 
 Dimensions: 1 rows × 13 columns
@@ -3021,7 +2871,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PHY_TEST_MODE | + | - | - | 0-n | high | unsigned char | - | ETH_PHY_TEST_MODE_STATE | - | - | - | Gibt an, ob das Schalten des PHY in den gewünschten Modus erfolgreich war. |
 
-<a id="table-res-0x1802-d"></a>
 ### RES_0X1802_D
 
 Dimensions: 2 rows × 10 columns
@@ -3031,7 +2880,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_NUM_OF_PORTS_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Anzahl der physikalischen Ports.  |
 | - | Bit | high | BITFIELD | - | BF_PHY_LINK_STATE_BTFLD | - | - | - | Linkstatus aller Port. |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -3042,7 +2890,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -3056,7 +2903,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4001-d"></a>
 ### RES_0X4001_D
 
 Dimensions: 12 rows × 10 columns
@@ -3076,7 +2922,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_FLA_COUNT_FULL_LH_OVERRIDE_WERT | Counts | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Die Kenngröße bestimmt die Anzahl der FLA Übersteuerungen, bei denen der Fahrer die Lichthupe gezogen hat. |
 | STAT_FLA_COUNT_FL_OVERRIDE_WERT | Counts | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Die Kenngröße bestimmt die Anzahl der FLA Übersteuerungen, bei denen der Fahrer den Fernlicht Lenstockhebel gedrückt hat. |
 
-<a id="table-res-0x4002-d"></a>
 ### RES_0X4002_D
 
 Dimensions: 10 rows × 10 columns
@@ -3094,7 +2939,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_DRIVEN_DIST_NA_WERT | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Absolut gefahrene Kilometer ohne verfügbaren Straßentyp |
 | STAT_AMNT_ONLINE_CALIB_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Zähler über die Erfolgten Online-Kalibriervorgänge |
 
-<a id="table-res-0x4003-d"></a>
 ### RES_0X4003_D
 
 Dimensions: 5 rows × 10 columns
@@ -3107,7 +2951,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_LDW_AMNT_DEACT_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Deaktivierung der LDW-Funktion durch den Fahrer |
 | STAT_LDW_DRIV_DIST_ACT_WERT | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Gefahrene Kilometer mit aktiviertem LDW |
 
-<a id="table-res-0x4004-d"></a>
 ### RES_0X4004_D
 
 Dimensions: 15 rows × 10 columns
@@ -3130,7 +2973,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_URSAF_OBJ_AMNT_ACUTE_100_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Die Kenngröße wird bestimmt, indem die Anzahl der Akutwarnungen der Subfunktion OBJ gezählt wird, die dem Fahrer angezeigt werden (d.h., der Wert des Signals WARN_HDWOBS_OBJ ändert sich von 0-00b auf 0-01b) und bei denen die Geschwindigkeit des Egofahrzeugs zu Beginn der Akutwarnung größer gleich 100 km/h ist. Für jeden Anforderungszeitraum ist der Counter nur einmal hochzuzählen. |
 | STAT_URSAF_OBJ_TIME_BRAKE_WERT | min | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Die Kenngröße wird bestimmt, indem Datum und Uhrzeit der letzten Bremsanforderung durch die Subfunktionen OBJ-STAT oder OBJ-MOVE gespeichert wird (yyyymmddhhmmss). |
 
-<a id="table-res-0x4005-d"></a>
 ### RES_0X4005_D
 
 Dimensions: 12 rows × 10 columns
@@ -3150,7 +2992,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_SLI_NP_WITHDRAW_DIST_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl Aufhebungen Überholverbot infolge Überschreitung Haltedistanz |
 | STAT_SLI_NP_WITHDRAW_SIGN_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl Aufhebungen Überholverbot infolge Detektion Aufhebungsschild |
 
-<a id="table-res-0x4007-d"></a>
 ### RES_0X4007_D
 
 Dimensions: 102 rows × 10 columns
@@ -3260,7 +3101,6 @@ Dimensions: 102 rows × 10 columns
 | STAT_FA13_WERT | - | high | motorola float | - | - | 0.09761 | 1000000000.0 | 0.0 | fA13 |
 | STAT_FA23_WERT | - | high | motorola float | - | - | 0.09761 | 1000000000.0 | 0.0 | fA23 |
 
-<a id="table-res-0x4008-d"></a>
 ### RES_0X4008_D
 
 Dimensions: 93 rows × 10 columns
@@ -3361,7 +3201,6 @@ Dimensions: 93 rows × 10 columns
 | STAT_VERSMINOR_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | VersMinor |
 | STAT_VERSMAJOR_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | VersMajor |
 
-<a id="table-res-0x4009-d"></a>
 ### RES_0X4009_D
 
 Dimensions: 112 rows × 10 columns
@@ -3481,7 +3320,6 @@ Dimensions: 112 rows × 10 columns
 | STAT_UISTATUSWRITEPENDING_2_WERT | - | high | signed int | - | - | 1.0 | 1.0 | 0.0 | uiStatusWritePending |
 | STAT_SIPRODUCTIONANGLE_2_WERT | - | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Yaw angle nvm temp table data |
 
-<a id="table-res-0x400a-d"></a>
 ### RES_0X400A_D
 
 Dimensions: 34 rows × 10 columns
@@ -3523,7 +3361,6 @@ Dimensions: 34 rows × 10 columns
 | STAT_FTZSIGMA_DYNAMIC_WERT | - | high | motorola float | - | - | 0.09761 | 1000000000.0 | 0.0 | fTzSigma standard deviation of translation around vertical axis |
 | STAT_EFVERIFICATIONSTATUS_WERT | - | high | unsigned char | - | - | 0.09761 | 1000000000.0 | 0.0 | eMonoCalibrationVerificationStatus_t |
 
-<a id="table-res-0x400b-d"></a>
 ### RES_0X400B_D
 
 Dimensions: 11 rows × 10 columns
@@ -3542,7 +3379,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_FCAMYAWANGLEAC_WERT | rad | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | fCamYawAngleAC |
 | STAT_ICAMYAWACSTAGE_WERT | - | high | signed long | - | - | 1.0 | 1.0 | 0.0 | iCamYawACStage |
 
-<a id="table-res-0x400c-d"></a>
 ### RES_0X400C_D
 
 Dimensions: 17 rows × 10 columns
@@ -3567,7 +3403,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_FCALIODOMETERTOFIRSTVALIDCALIB_WERT | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | fCaliOdometer |
 | STAT_FCALIODOMETER_WERT | m | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | fCaliOdometer |
 
-<a id="table-res-0x4010-d"></a>
 ### RES_0X4010_D
 
 Dimensions: 18 rows × 10 columns
@@ -3593,7 +3428,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_URSAF_PED_AMNT_BRAKE_MAX_40_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Die Kenngröße wird bestimmt, indem die Anzahl der PED-Bremsanforderungen mit Vollverzögerung gezählt wird (d.h., die angeforderte Verzögerung erreicht einen Wert kleiner gleich -8 m/s*s), bei denen die Geschwindigkeit des Egofahrzeugs zu Beginn der Anforderung größer gleich 40 km/h ist. |
 | STAT_URSAF_PED_TIME_BRAKE_WERT | min | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Die Kenngröße wird bestimmt, indem Datum und Uhrzeit der letzten Bremsanforderung durch die Subfunktion PED gespeichert wird (yyyymmddhhmmss). |
 
-<a id="table-res-0x4011-d"></a>
 ### RES_0X4011_D
 
 Dimensions: 26 rows × 10 columns
@@ -3627,7 +3461,6 @@ Dimensions: 26 rows × 10 columns
 | STAT_URSAF_VEH_AMNT_BRAKE_MAX_50_WERT | Counts | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Die Kenngröße wird bestimmt, indem die Anzahl der VEH-Bremsanforderungen mit Vollverzögerung gezählt wird (d.h., die angeforderte Verzögerung erreicht einen Wert kleiner gleich -8 m/s*s), bei denen die Geschwindigkeit des Egofahrzeugs zu Beginn der Anforderung größer gleich 50 km/h. |
 | STAT_URSAF_VEH_TIME_BRAKE_WERT | min | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Die Kenngröße wird bestimmt, indem Datum und Uhrzeit der letzten Bremsanforderung durch die Subfunktion VEH gespeichert wird (yyyymmddhhmmss). |
 
-<a id="table-res-0x4017-d"></a>
 ### RES_0X4017_D
 
 Dimensions: 13 rows × 10 columns
@@ -3648,7 +3481,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_DSP_2_THRES_WERT | °C | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - |
 | STAT_CURRENT_MODE_OF_OPERATION | 0-n | high | unsigned char | - | MODE_OF_OPERATION | - | - | - | Normal = 1 Overtemp-Cooling requested = 2 Overtemp-Application disabled = 3 |
 
-<a id="table-res-0x4019-d"></a>
 ### RES_0X4019_D
 
 Dimensions: 4 rows × 10 columns
@@ -3660,7 +3492,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ALGOCONFIG_STEREO_WERT | - | high | signed long | - | - | 1.0 | 1.0 | 0.0 | - |
 | STAT_HILMODE_WERT | - | high | signed long | - | - | 1.0 | 1.0 | 0.0 | - |
 
-<a id="table-res-0x4032-d"></a>
 ### RES_0X4032_D
 
 Dimensions: 4 rows × 10 columns
@@ -3672,7 +3503,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BRIGTHNESS_CONDITION | 0-n | high | unsigned char | - | BRIGTHNESS_CONDITION | - | - | - | - |
 | STAT_HEATER_ACTIVATION | 0-n | high | unsigned char | - | STANDARD_ON_OFF_NA | - | - | - | - |
 
-<a id="table-res-0x4033-d"></a>
 ### RES_0X4033_D
 
 Dimensions: 16 rows × 10 columns
@@ -3696,7 +3526,6 @@ Dimensions: 16 rows × 10 columns
 | STAT__GLOBAL_ILLUMINATION_NIGHT_WERT | % | high | unsigned int | - | - | 100.0 | 65535.0 | 0.0 | Deutsch: Prozentualer Anteil der Gesamtbetriebsdauer des Fahrzeuges in der Nacht.  |
 | STAT__GLOBAL_ILLUMINATION_TWIGHLIGHT_WERT | % | high | unsigned int | - | - | 100.0 | 65535.0 | 0.0 | Deutsch: Prozentualer Anteil der Gesamtbetriebsdauer des Fahrzeuges in der Dämmerung.  |
 
-<a id="table-res-0x403e-d"></a>
 ### RES_0X403E_D
 
 Dimensions: 12 rows × 10 columns
@@ -3716,7 +3545,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_LBD_DRIV_LEFT_AND_RIGHT_EGO_GREATER_THAN_70_KMH_WERT | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Absolut gefahrene Kilometer mit gültiger linken und rechten Ego-Fahrstreifenbegrenzung im Geschwindigkeitsbereich größer 70 km/h.  Zähler-Aktivierungsbedingungen: eventDataQualifier == 0x00 AND ( (laneBoundaryFront[0].modelQualifier == 0x00 OR laneBoundaryFront[0].modelQualifier == 0x01) AND (laneBoundaryFront[1].modelQualifier == 0x00 OR laneBoundaryFront[1].modelQualifier == 0x01) ) AND v_ego greater 70 km/h |
 | STAT_LBD_DRIV_CS_WERT | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Absolut gefahrende Kilometer mit detektierter Baustelle.  Zähler-Aktivierungsbedingungen: eventDataQualifier = 0x00 AND laneRecognitionFront.routing = 0x03 |
 
-<a id="table-res-0x4048-d"></a>
 ### RES_0X4048_D
 
 Dimensions: 103 rows × 10 columns
@@ -3827,7 +3655,6 @@ Dimensions: 103 rows × 10 columns
 | STAT_DEM_THE_MAGIC_NUMBER_WERT | HEX | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | DEM THE MAGIC NUMBER  |
 | STAT_DEM_EIL_MASTER_VERSION_NUMBER_WERT | HEX | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | DEM EIL MASTER VERSION NUMBER |
 
-<a id="table-res-0x404a-d"></a>
 ### RES_0X404A_D
 
 Dimensions: 4 rows × 10 columns
@@ -3839,7 +3666,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BRIGTHNESS_CONDITION | 0-n | high | unsigned char | - | BRIGTHNESS_CONDITION | - | - | - | - |
 | STAT_HEATER_ACTIVATION | 0-n | high | unsigned char | - | STANDARD_ON_OFF_NA | - | - | - | - |
 
-<a id="table-res-0x404b-d"></a>
 ### RES_0X404B_D
 
 Dimensions: 4 rows × 10 columns
@@ -3851,7 +3677,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BRIGTHNESS_CONDITION | 0-n | high | unsigned char | - | BRIGTHNESS_CONDITION | - | - | - | - |
 | STAT_HEATER_ACTIVATION | 0-n | high | unsigned char | - | STANDARD_ON_OFF_NA | - | - | - | - |
 
-<a id="table-res-0x404d-d"></a>
 ### RES_0X404D_D
 
 Dimensions: 112 rows × 10 columns
@@ -3971,7 +3796,6 @@ Dimensions: 112 rows × 10 columns
 | STAT_CALIB_SAC_WINDSHIELD_MODEL_DATA_111_WERT | HEX | high | signed long | - | - | 1.0 | 1.0 | 0.0 | Abrufen Hex-String |
 | STAT_CALIB_SAC_WINDSHIELD_MODEL_DATA_112_WERT | HEX | high | signed long | - | - | 1.0 | 1.0 | 0.0 | Abrufen Hex-String |
 
-<a id="table-res-0x4050-d"></a>
 ### RES_0X4050_D
 
 Dimensions: 14 rows × 10 columns
@@ -3993,7 +3817,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_CALIB_SAC_FINE_DIST_BIN2_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Der persitente Wert beschreibt wie oft der SAC Zustand Feinkalibrierung innnerhalb folgender Distanzgrenzen  abgeschlossen werden konnte:   BIN2= [4000-6000m] |
 | STAT_CALIB_SAC_FINE_DIST_BIN3_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Der persitente Wert beschreibt wie oft der SAC Zustand Feinkalibrierung innnerhalb folgender Distanzgrenzen  abgeschlossen werden konnte:   BIN3= [+ 6000m] |
 
-<a id="table-res-0x4061-d"></a>
 ### RES_0X4061_D
 
 Dimensions: 5 rows × 10 columns
@@ -4006,7 +3829,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_FEE_BANK3_COUNTER_WERT | Counts | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - |
 | STAT_FEE_BANK_COUNTER_WERT | Counts | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - |
 
-<a id="table-res-0x4071-d"></a>
 ### RES_0X4071_D
 
 Dimensions: 3 rows × 10 columns
@@ -4017,7 +3839,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SOC_CRASH_DUMP_2_DATA | DATA | high | data[100] | - | - | 1.0 | 1.0 | 0.0 | Wiederabrufen der SOC Daten |
 | STAT_SOC_CRASH_DUMP_3_DATA | DATA | high | data[100] | - | - | 1.0 | 1.0 | 0.0 | Wiederabrufen der SOC Daten |
 
-<a id="table-res-0x40a1-d"></a>
 ### RES_0X40A1_D
 
 Dimensions: 13 rows × 10 columns
@@ -4038,7 +3859,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_CODING_DATA_RECEIVED | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_RECEIVED 0 = False 1 = True |
 | STAT_CODING_DATA_VALID | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_VALID 0 = False 1 = True |
 
-<a id="table-res-0x40a2-d"></a>
 ### RES_0X40A2_D
 
 Dimensions: 13 rows × 10 columns
@@ -4059,7 +3879,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_CODING_DATA_RECEIVED | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_RECEIVED 0 = False 1 = True |
 | STAT_CODING_DATA_VALID | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_VALID 0 = False 1 = True |
 
-<a id="table-res-0x40a4-d"></a>
 ### RES_0X40A4_D
 
 Dimensions: 13 rows × 10 columns
@@ -4080,7 +3899,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_CODING_DATA_RECEIVED | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_RECEIVED 0 = False 1 = True |
 | STAT_CODING_DATA_VALID | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_VALID 0 = False 1 = True |
 
-<a id="table-res-0x40a5-d"></a>
 ### RES_0X40A5_D
 
 Dimensions: 13 rows × 10 columns
@@ -4101,7 +3919,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_CODING_DATA_RECEIVED | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_RECEIVED 0 = False 1 = True |
 | STAT_CODING_DATA_VALID | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_VALID 0 = False 1 = True |
 
-<a id="table-res-0x40b5-d"></a>
 ### RES_0X40B5_D
 
 Dimensions: 11 rows × 10 columns
@@ -4120,7 +3937,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_CODING_DATA_RECEIVED | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_RECEIVED 0 = False 1 = True |
 | STAT_CODING_DATA_VALID | 0/1 | high | signed char | - | - | - | - | - | CODING_DATA_VALID 0 = False 1 = True |
 
-<a id="table-res-0x4116-d"></a>
 ### RES_0X4116_D
 
 Dimensions: 13 rows × 10 columns
@@ -4141,7 +3957,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_NUM_AMBIGUOUS_SITUATIONS_WERT | count | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | NUM_AMBIGUOUS_SITUATIONS: Anzahl von Situationen, wo aufgrund einer Nichteindeutigkeit nicht gewarnt werden konnte (z.B. keine eindeutige Zuordnung einer Ampel zu einer Fahrspur möglich) |
 | STAT_NUM_NOT_PLAUSIBLE_IP_EVENTS_WERT | count | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | NUM_NOT_PLAUSIBLE_IP_EVENTS: Anzahl von Bildverarbeitungsevents, die nicht plausibilisiert bzw. einer Situation zugeordnet werden konnten. |
 
-<a id="table-res-0xd341-d"></a>
 ### RES_0XD341_D
 
 Dimensions: 12 rows × 10 columns
@@ -4161,7 +3976,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_FLA_FAHRZEUGRICHTUNG | 0/1 | high | unsigned char | - | - | - | - | - | Gibt die erkannte Verkehrsrichtung aus:  0 = Rechtslenkerverkehr 1 = Linkslenkerverkehr |
 | STAT_FLA_FAILSAFE | 0/1 | high | unsigned char | - | - | - | - | - | Gibt aus, ob sich die Kamera im Fail Save Mode befindet: 0 = normal mode, 1 = fail safe mode |
 
-<a id="table-res-0xd374-d"></a>
 ### RES_0XD374_D
 
 Dimensions: 8 rows × 10 columns
@@ -4177,7 +3991,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VORHANDEN_WWA | 0/1 | high | unsigned char | - | - | - | - | - | Gibt an, ob die WWA (Wrong Way Assist) vorhanden ist: 0= nicht vorhanden; 1= vorhanden |
 | STAT_VORHANDEN_VFA | 0/1 | high | unsigned char | - | - | - | - | - | Gibt an, ob die Funktion VFA (Vorfahrtswarner) vorhanden ist: 0= nicht vorhanden; 1= vorhanden |
 
-<a id="table-res-0xd3aa-d"></a>
 ### RES_0XD3AA_D
 
 Dimensions: 7 rows × 10 columns
@@ -4192,7 +4005,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FUSIONIERT_GESCHWINDIGKEIT_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gibt aus, welche Geschwindigkeit aus dem fusionierten Erkennungsergebnis ausgegeben wird: 0 = Aufhebung alles, 5 bis 150 in 5-er Schritten |
 | STAT_GUETE_KAM_SLI_GESCHW_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gibt aus, mit welcher Güte das Beschränkungs- und Aufhebungszeichen für Geschwindigkeiten mit der Kamera erkannt wurde: 0 - 100 |
 
-<a id="table-res-0xd3ad-d"></a>
 ### RES_0XD3AD_D
 
 Dimensions: 5 rows × 10 columns
@@ -4205,7 +4017,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_GFA_LEFT_BOUNDARY_WERT | ° | - | unsigned char | - | - | 1.0 | 10.0 | -10.4 | Linke Grenze des blendfreien Bereiches |
 | STAT_GFA_LOWER_BOUNDARY_WERT | ° | - | unsigned char | - | - | 1.0 | 20.0 | -5.0 | Untere Grenze des blendfreien Bereichs |
 
-<a id="table-res-0xd3cd-d"></a>
 ### RES_0XD3CD_D
 
 Dimensions: 1 rows × 10 columns
@@ -4214,7 +4025,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KAFAS_HEIZUNG | 0-n | high | unsigned char | - | TAB_STATUS_SCHEIBENHEIZUNG | - | - | - | KAFAS-Heizung: Siehe Tabelle TAB_STATUS_SCHEIBENHEIZUNG |
 
-<a id="table-res-0xd3db-d"></a>
 ### RES_0XD3DB_D
 
 Dimensions: 9 rows × 10 columns
@@ -4231,7 +4041,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_ERROR_CODE_MAC_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Weitere Details zu den Fehler bei MAC. |
 | STAT_MAC_FIRST_DIST_WERT | m | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | The persistent value represents the driven distance which is necessary from plant until the first enabling of all functions. Enabling means that the quality of calibration is high enough that all functions are able to operate normally so that they can reach their own KPI's.    |
 
-<a id="table-res-0xd3dc-d"></a>
 ### RES_0XD3DC_D
 
 Dimensions: 9 rows × 10 columns
@@ -4248,7 +4057,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_IMAGER_TEMP_WERT | ° | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | Sensortemperatur |
 | STAT_MAX_DEV_LANE_SEMO | 0-n | high | unsigned char | - | TAB_MAX_DEV_LANE_SEMO | - | - | - | Text Siehe Tabelle TAB_MAX_DEV_LANE_SEMO |
 
-<a id="table-res-0xf001-r"></a>
 ### RES_0XF001_R
 
 Dimensions: 4 rows × 13 columns
@@ -4260,7 +4068,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_CONTRAST | - | - | + | 0-n | high | signed long | - | - | - | - | - | Contrast in the ROI where the target is expected to be |
 | STAT_MARKERS | - | - | + | 0-n | high | signed long | - | - | - | - | - | Number of recognized pattern markers |
 
-<a id="table-res-0xf003-r"></a>
 ### RES_0XF003_R
 
 Dimensions: 1 rows × 13 columns
@@ -4269,7 +4076,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_COUNTRY_CODE_WERT | - | + | + | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Rückgabewert des Ländercodes |
 
-<a id="table-res-0xf005-r"></a>
 ### RES_0XF005_R
 
 Dimensions: 6 rows × 13 columns
@@ -4283,7 +4089,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_OPERATION_CYCLE_COUNTER_WERT | + | - | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - |
 | STAT_FREEZE_FRAME_INFORMATION_DATA | + | - | - | DATA | high | data[60] | - | - | 1.0 | 1.0 | 0.0 | - |
 
-<a id="table-res-0xf006-r"></a>
 ### RES_0XF006_R
 
 Dimensions: 2 rows × 13 columns
@@ -4293,7 +4098,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_IMAGE_WIDTH_WERT | + | - | - | HEX | high | signed int | - | - | - | - | - | - |
 | STAT_IMAGE_HEIGHT_WERT | + | - | - | HEX | high | signed int | - | - | - | - | - | - |
 
-<a id="table-res-0xf009-r"></a>
 ### RES_0XF009_R
 
 Dimensions: 1 rows × 13 columns
@@ -4302,7 +4106,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_IOB_DATA | + | - | - | DATA | high | data[100] | - | - | 1.0 | 1.0 | 0.0 | Aquire image |
 
-<a id="table-res-0xf00a-r"></a>
 ### RES_0XF00A_R
 
 Dimensions: 1 rows × 13 columns
@@ -4311,7 +4114,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DQ_DEBUG_SENDING | - | - | + | 0-n | high | unsigned char | - | TAB_STAT_DQ_DEBUG_DATA_SENDING | - | - | - | Status if the DQ-relevant Debug-Messages are currently being send or not. |
 
-<a id="table-res-0xf015-r"></a>
 ### RES_0XF015_R
 
 Dimensions: 1 rows × 13 columns
@@ -4320,7 +4122,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DEMO_MODE_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 121 rows × 16 columns
@@ -4449,7 +4250,6 @@ Dimensions: 121 rows × 16 columns
 | _IOB_DOWNLOAD_IMAGE | 0xF00F | - | Zum runterladen der gespeicherten Images. | - | - | - | - | - | - | - | - | - | 31 | ARG_0xF00F_R | - |
 | _ACTIVATE_ALGO_DEMO_MODE | 0xF015 | - | Activation / Deactivation of the Demo mode on the Algo Side. All outputs will become default values | - | - | - | - | - | - | - | - | - | 31 | - | RES_0xF015_R |
 
-<a id="table-standard-on-off-na"></a>
 ### STANDARD_ON_OFF_NA
 
 Dimensions: 3 rows × 2 columns
@@ -4460,7 +4260,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0001 | off |
 | 0x0010 | n/a |
 
-<a id="table-stat-iob-state"></a>
 ### STAT_IOB_STATE
 
 Dimensions: 6 rows × 2 columns
@@ -4474,7 +4273,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | IOB_SM_IOB_DOWNLOADING_IN_PROGRESS |
 | 0x06 | IOB_SM_IOB_AQUIRING_IN_PROGRESS |
 
-<a id="table-steuern-ufm-switch-action"></a>
 ### STEUERN_UFM_SWITCH_ACTION
 
 Dimensions: 3 rows × 2 columns
@@ -4485,7 +4283,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | use worst case input |
 | 0x03 | set output to unavailable |
 
-<a id="table-stufen"></a>
 ### STUFEN
 
 Dimensions: 3 rows × 2 columns
@@ -4496,7 +4293,6 @@ Dimensions: 3 rows × 2 columns
 | 0x1 | mid |
 | 0x2 | high |
 
-<a id="table-tab-0x1752"></a>
 ### TAB_0X1752
 
 Dimensions: 1 rows × 17 columns
@@ -4505,7 +4301,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 16 | 0x0001 | 0x0002 | 0x0003 | 0x0004 | 0x0005 | 0x0006 | 0x0007 | 0x0008 | 0x0009 | 0x000A | 0x000B | 0x000C | 0x000D | 0x000E | 0x000F | 0x0010 |
 
-<a id="table-tab-0x1753"></a>
 ### TAB_0X1753
 
 Dimensions: 1 rows × 2 columns
@@ -4514,7 +4309,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x0011 |
 
-<a id="table-tab-0x175b"></a>
 ### TAB_0X175B
 
 Dimensions: 1 rows × 17 columns
@@ -4523,7 +4317,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 16 | 0x0012 | 0x0013 | 0x0014 | 0x0015 | 0x0016 | 0x0017 | 0x0018 | 0x0019 | 0x001A | 0x001B | 0x001C | 0x001D | 0x001E | 0x001F | 0x0020 | 0x0021 |
 
-<a id="table-tab-algo-qualifier-value"></a>
 ### TAB_ALGO_QUALIFIER_VALUE
 
 Dimensions: 12 rows × 2 columns
@@ -4543,7 +4336,6 @@ Dimensions: 12 rows × 2 columns
 | 65535 | ALGO_QUALIFIER_MAX |
 | 4660 | NO_ACTION |
 
-<a id="table-tab-art-laenderkodierung"></a>
 ### TAB_ART_LAENDERKODIERUNG
 
 Dimensions: 15 rows × 2 columns
@@ -4566,7 +4358,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0D | reserved |
 | 0x0E | signal invalid |
 
-<a id="table-tab-art-text-meldung"></a>
 ### TAB_ART_TEXT_MELDUNG
 
 Dimensions: 8 rows × 2 columns
@@ -4582,7 +4373,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 |  reserved  |
 | 0x07 | signal invalid |
 
-<a id="table-tab-art-ueberhol-zeichen"></a>
 ### TAB_ART_UEBERHOL_ZEICHEN
 
 Dimensions: 5 rows × 2 columns
@@ -4595,7 +4385,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Überholverbot Linksverkehr |
 | 0xFF | Ungültig |
 
-<a id="table-tab-art-zeichen"></a>
 ### TAB_ART_ZEICHEN
 
 Dimensions: 4 rows × 2 columns
@@ -4607,7 +4396,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Aufhebungszeichen |
 | 0xFF | Ungültig |
 
-<a id="table-tab-dq-reason"></a>
 ### TAB_DQ_REASON
 
 Dimensions: 8 rows × 2 columns
@@ -4623,7 +4411,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Blockage |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-errid-emelectronichorizon"></a>
 ### TAB_ERRID_EMELECTRONICHORIZON
 
 Dimensions: 8 rows × 2 columns
@@ -4639,7 +4426,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Reason 6 |
 | 7 | Reason 7 |
 
-<a id="table-tab-errid-emlaneassignment"></a>
 ### TAB_ERRID_EMLANEASSIGNMENT
 
 Dimensions: 8 rows × 2 columns
@@ -4655,7 +4441,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Reason 6 |
 | 7 | Reason 7 |
 
-<a id="table-tab-errid-emobjdesc"></a>
 ### TAB_ERRID_EMOBJDESC
 
 Dimensions: 8 rows × 2 columns
@@ -4671,7 +4456,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Reason 6 |
 | 7 | Reason 7 |
 
-<a id="table-tab-errid-emroadassembly"></a>
 ### TAB_ERRID_EMROADASSEMBLY
 
 Dimensions: 8 rows × 2 columns
@@ -4687,7 +4471,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Reason 6 |
 | 7 | Reason 7 |
 
-<a id="table-tab-error-id-emodoclient"></a>
 ### TAB_ERROR_ID_EMODOCLIENT
 
 Dimensions: 9 rows × 2 columns
@@ -4704,7 +4487,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | Reason 6 |
 | 8 | Reason 7 |
 
-<a id="table-tab-error-id-emroaddescriptionlegacyconstructor"></a>
 ### TAB_ERROR_ID_EMROADDESCRIPTIONLEGACYCONSTRUCTOR
 
 Dimensions: 9 rows × 2 columns
@@ -4721,7 +4503,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | Reason 6 |
 | 8 | Reason 8 |
 
-<a id="table-tab-error-id-emslconditionevaluator"></a>
 ### TAB_ERROR_ID_EMSLCONDITIONEVALUATOR
 
 Dimensions: 8 rows × 2 columns
@@ -4737,7 +4518,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Reason 6 |
 | 7 | Reason 7 |
 
-<a id="table-tab-error-id-emtrafficsignfusion"></a>
 ### TAB_ERROR_ID_EMTRAFFICSIGNFUSION
 
 Dimensions: 8 rows × 2 columns
@@ -4753,7 +4533,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Reason 6 |
 | 7 | Reason 7 |
 
-<a id="table-tab-fla-empfehlung"></a>
 ### TAB_FLA_EMPFEHLUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4765,7 +4544,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0002 | Fernlicht EIN |
 | 0xFFFF | Ungültig |
 
-<a id="table-tab-function-selection"></a>
 ### TAB_FUNCTION_SELECTION
 
 Dimensions: 10 rows × 2 columns
@@ -4783,7 +4561,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | STEREO_AUTO_CALIBRATION |
 | 9 | NO_ACTION |
 
-<a id="table-tab-hba-parametrierung"></a>
 ### TAB_HBA_PARAMETRIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4795,7 +4572,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Erhöhte Empfindlichkeit |
 | 0x04 | Höchste Empfindlichkeit |
 
-<a id="table-tab-kafas-kombi-anzeige"></a>
 ### TAB_KAFAS_KOMBI_ANZEIGE
 
 Dimensions: 4 rows × 2 columns
@@ -4807,7 +4583,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Funktion aktiv - nicht warnbereit |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-kalibrierung-mono"></a>
 ### TAB_KALIBRIERUNG_MONO
 
 Dimensions: 7 rows × 2 columns
@@ -4822,7 +4597,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0C | andere Kalibrierfehler |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-kalibrierung-stereo"></a>
 ### TAB_KALIBRIERUNG_STEREO
 
 Dimensions: 9 rows × 2 columns
@@ -4839,7 +4613,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0C | Stereokalibrierungsfehler alle andere |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-max-dev-lane-semo"></a>
 ### TAB_MAX_DEV_LANE_SEMO
 
 Dimensions: 6 rows × 2 columns
@@ -4853,7 +4626,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | >1.00° |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-methode-sli"></a>
 ### TAB_METHODE_SLI
 
 Dimensions: 4 rows × 2 columns
@@ -4865,7 +4637,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Fusionierte Erkennung aktivieren |
 | 0xFF | Auf Standard zurücksetzen |
 
-<a id="table-tab-status-scheibenheizung"></a>
 ### TAB_STATUS_SCHEIBENHEIZUNG
 
 Dimensions: 6 rows × 2 columns
@@ -4879,7 +4650,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Interner Fehler |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-stat-color-channel-selection"></a>
 ### TAB_STAT_COLOR_CHANNEL_SELECTION
 
 Dimensions: 4 rows × 2 columns
@@ -4891,7 +4661,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | GREEN_2 |
 | 0x08 | BLUE |
 
-<a id="table-tab-stat-dq-debug-data-sending"></a>
 ### TAB_STAT_DQ_DEBUG_DATA_SENDING
 
 Dimensions: 3 rows × 2 columns
@@ -4902,7 +4671,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Versenden der DQ-relevante Debugnachrichten ist aktuell eingeschaltet |
 | 2 | - |
 
-<a id="table-tab-stfla-control"></a>
 ### TAB_STFLA_CONTROL
 
 Dimensions: 4 rows × 2 columns
@@ -4914,7 +4682,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | EIN |
 | 0x03 | Zurück_zum_Normalbetrieb |
 
-<a id="table-tab-typ-ccm"></a>
 ### TAB_TYP_CCM
 
 Dimensions: 8 rows × 2 columns
@@ -4930,7 +4697,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Sende die in CCM_ERR_FCW und CCM_ERR_PFGS  beschriebenen CC-Meldungen gleichzeitig |
 | 7 | Sende die in CCM_RDC_FCN_BRK beschriebene CC-Meldung |
 
-<a id="table-tab-ufm-data"></a>
 ### TAB_UFM_DATA
 
 Dimensions: 3 rows × 2 columns
@@ -4941,7 +4707,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Invalid |
 | 0x02 | Reduced |
 
-<a id="table-tab-warnung"></a>
 ### TAB_WARNUNG
 
 Dimensions: 3 rows × 2 columns
@@ -4952,7 +4717,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Vorwarnung |
 | 0x02 | Akutwarnung |
 
-<a id="table-tab-wwa-ccm-komb-anzeige"></a>
 ### TAB_WWA_CCM_KOMB_ANZEIGE
 
 Dimensions: 3 rows × 2 columns
@@ -4963,7 +4727,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Rücksetzten CCM |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-zeichen-fusioniert"></a>
 ### TAB_ZEICHEN_FUSIONIERT
 
 Dimensions: 5 rows × 2 columns
@@ -4976,7 +4739,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | ungültiges Ergebnis |
 | 0xFF | Ungültig |
 
-<a id="table-tab-zeichen-kamera"></a>
 ### TAB_ZEICHEN_KAMERA
 
 Dimensions: 5 rows × 2 columns
@@ -4989,7 +4751,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Ungültige Kamerainformation |
 | 0xFF | Ungültig |
 
-<a id="table-tab-zeichen-karte"></a>
 ### TAB_ZEICHEN_KARTE
 
 Dimensions: 5 rows × 2 columns
@@ -5002,7 +4763,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Ungültige Karteninformation |
 | 0xFF | Ungültig |
 
-<a id="table-warnarten"></a>
 ### WARNARTEN
 
 Dimensions: 10 rows × 2 columns
@@ -5020,7 +4780,6 @@ Dimensions: 10 rows × 2 columns
 | 0xE | Sendefunktion in Betrieb, meldet Fehler |
 | 0xF | Sendefunktion nicht in Betrieb |
 
-<a id="table-weather-conditon"></a>
 ### WEATHER_CONDITON
 
 Dimensions: 5 rows × 2 columns
@@ -5033,7 +4792,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0011 | - |
 | 0x0100 | - |
 
-<a id="table-cpar-tlr-parameters-t-e-brightnessmode"></a>
 ### _CPAR_TLR_PARAMETERS_T_E_BRIGHTNESSMODE
 
 Dimensions: 4 rows × 2 columns
@@ -5045,7 +4803,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | TLR_MODE_NIGHT |
 | 0x08 | TLR_MODE_DAY_NIGHT |
 
-<a id="table-ec-calibration"></a>
 ### _EC_CALIBRATION
 
 Dimensions: 2 rows × 2 columns
@@ -5055,7 +4812,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | On |
 | 0x02 | Off |
 
-<a id="table-tab-calib-status"></a>
 ### _TAB_CALIB_STATUS
 
 Dimensions: 24 rows × 2 columns

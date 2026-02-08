@@ -63,7 +63,6 @@
 - [SLEEPINSTRUCTION_IHKA](#job-sleepinstruction-ihka) - PD-Telegramm über K-Bus vom LSZ an IHKA
 - [FS_LESEN_GESAMT](#job-fs-lesen-gesamt) - fs_lesen_gesamt job
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -82,7 +81,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -95,7 +93,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -119,7 +116,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -137,7 +133,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -156,7 +151,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -177,7 +171,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -196,7 +189,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -210,7 +202,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int | Anzahl gespeicherter Fehler |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -244,7 +235,6 @@ fs_lesen job
 | F_ZAHL_BLOCK_8 | int | Anzahl der Fehler im Block 8 |
 | F_ZAHL | int | Anzahl der Gesamtfehler der Bloecke 1 bis 3 (schwere Fehler) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -257,7 +247,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 is_lesen job
@@ -283,7 +272,6 @@ _No arguments._
 | F_ZAHL_BLOCK_7 | int | Anzahl der Fehler im Block 7 |
 | F_ZAHL_BLOCK_8 | int | Anzahl der Fehler im Block 8 |
 
-<a id="job-codierung-lesen-alles"></a>
 ### CODIERUNG_LESEN_ALLES
 
 Default CODIERUNG_LESEN_ALLES job
@@ -302,7 +290,6 @@ Default CODIERUNG_LESEN_ALLES job
 | BLOCK | int | angeforderte Blocknummer von 0 bis 16 |
 | CODIERDATEN | binary | CODIERDATENFELD |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 STATUS_LESEN job
@@ -460,7 +447,6 @@ _No arguments._
 | STAT_BLK_LINKS_HINTEN_DEFEKT | int | LSZ-RESULT NICHT MEHR GÜLTIG FÜR LSZ-2 !!!  |
 | STAT_BLK_RECHTS_HINTEN_DEFEKT | int | LSZ-RESULT NICHT MEHR GÜLTIG FÜR LSZ-2 !!!  |
 
-<a id="job-hersteller-lesen"></a>
 ### HERSTELLER_LESEN
 
 Default ident job
@@ -481,7 +467,6 @@ _No arguments._
 | GEH_INDEXNUMMER | int |  |
 | HERSTELLERDATEN_STRING | string | Herstellerdaten Byte 1 bis 10 |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 DIAGNOSE_WEITER job
@@ -494,7 +479,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 DIAGNOSE_ENDE job
@@ -507,7 +491,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
@@ -538,7 +521,6 @@ Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -557,7 +539,6 @@ Auslesen des Speicherinhaltes
 | JOB_STATUS | string |  |
 | DATEN | binary | angeforderter Datenblock (32 Bytes!) |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Schreiben des Speicherinhaltes
@@ -576,7 +557,6 @@ Schreiben des Speicherinhaltes
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-dimmer"></a>
 ### STEUERN_DIMMER
 
 STEUERN_DIMMER job
@@ -593,7 +573,6 @@ STEUERN_DIMMER job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-lwr-poti"></a>
 ### STEUERN_LWR_POTI
 
 STEUERN_LWR_POTI job
@@ -610,7 +589,6 @@ STEUERN_LWR_POTI job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-schalterspannung-fl-lh"></a>
 ### STEUERN_SCHALTERSPANNUNG_FL_LH
 
 STEUERN_SCHALTERSPANNUNG_FL_LH job
@@ -627,7 +605,6 @@ STEUERN_SCHALTERSPANNUNG_FL_LH job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-schalterspannung-blinker"></a>
 ### STEUERN_SCHALTERSPANNUNG_BLINKER
 
 STEUERN_SCHALTERSPANNUNG_BLINKER job
@@ -644,7 +621,6 @@ STEUERN_SCHALTERSPANNUNG_BLINKER job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-fotozelle"></a>
 ### STEUERN_FOTOZELLE
 
 STEUERN_FOTOZELLE job
@@ -661,7 +637,6 @@ STEUERN_FOTOZELLE job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-beladungssensor-vorn"></a>
 ### STEUERN_BELADUNGSSENSOR_VORN
 
 STEUERN_BELADUNGSSENSOR_VORN job
@@ -678,7 +653,6 @@ STEUERN_BELADUNGSSENSOR_VORN job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fg-nr-lesen"></a>
 ### FG_NR_LESEN
 
 Default FG_NR_LESEN job
@@ -692,7 +666,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | FG_NR | string | Fahrgestellnummer 7-stellig |
 
-<a id="job-sia-lesen"></a>
 ### SIA_LESEN
 
 Default SIA_LESEN job
@@ -717,7 +690,6 @@ _No arguments._
 | SI_ZEITINSPEKTIONSZAEHLER_WERT | long |  |
 | SI_ZEITINSPEKTIONSZAEHLER_EINH | string | Tage |
 
-<a id="job-betriebsstundenzaehler-lesen"></a>
 ### BETRIEBSSTUNDENZAEHLER_LESEN
 
 Default BETRIEBSSTUNDENZAEHLER_LESEN job
@@ -743,7 +715,6 @@ _No arguments._
 | BETRIEBSZEIT_EINH | string | Stunden [h] |
 | ANZAHL_BETAETIGUNGEN_BLS_WERT | long | Anzahl Betaetigungen des Bremslichtschalters, wird in 100er Einheiten gespeichert! |
 
-<a id="job-betriebsstundenzaehler-loeschen"></a>
 ### BETRIEBSSTUNDENZAEHLER_LOESCHEN
 
 Default BETRIEBSSTUNDENZAEHLER_LOESCHEN job
@@ -760,7 +731,6 @@ Default BETRIEBSSTUNDENZAEHLER_LOESCHEN job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-xenon-vorhanden"></a>
 ### XENON_VORHANDEN
 
 Default XENON_VORHANDEN job
@@ -774,7 +744,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY |
 | XENON | string | Xenonlicht |
 
-<a id="job-lwr-vorhanden"></a>
 ### LWR_VORHANDEN
 
 Default LWR_VORHANDEN job
@@ -788,7 +757,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY |
 | LWR | string | Leuchtweitenregulierung |
 
-<a id="job-laendercodierung"></a>
 ### LAENDERCODIERUNG
 
 Default CODIERUNG_BLOCK_5_LESEN job
@@ -802,7 +770,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | _FZG_LAENDERVARIANTE | string | codierte Laendervariante |
 
-<a id="job-c-fa-lesen"></a>
 ### C_FA_LESEN
 
 Fahrzeugauftrag lesen Gueltiger Adressblockbereich: 0x00 - 0x0D (219 Bytes in total)
@@ -817,7 +784,6 @@ _No arguments._
 | SPEICHER_STATUS | string | BELEGT bzw. UNBELEGT |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der FG-Nummer
@@ -831,7 +797,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | FG_NR | string | Fahrgestellnummer |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben der red. Datenablage mit der FG-Nummer
@@ -849,7 +814,6 @@ Beschreiben der red. Datenablage mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -867,7 +831,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -884,7 +847,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fa-auftrag"></a>
 ### C_FA_AUFTRAG
 
 Fahrzeugauftrag schreiben mit Gegenverifikation Gueltiger Adressblockbereich: 0x00 - 0x11 (288 Bytes in total)
@@ -901,7 +863,6 @@ Fahrzeugauftrag schreiben mit Gegenverifikation Gueltiger Adressblockbereich: 0x
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fa-loeschen"></a>
 ### C_FA_LOESCHEN
 
 Fahrzeugauftrag Löschen mit Gegenverifikation Gueltiger Adressblockbereich: 0x00 - 0x11 (288 Bytes in total)
@@ -914,7 +875,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-bfd-led"></a>
 ### STEUERN_BFD_LED
 
 E46/2,C - Steuern des Brake-Force-Display
@@ -933,7 +893,6 @@ E46/2,C - Steuern des Brake-Force-Display
 | _ANTWORT | binary | antworttelegramm |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-dyn-lwr"></a>
 ### STEUERN_DYN_LWR
 
 Fertigungsmodus schnelle Scheinwerfernachregelung
@@ -948,7 +907,6 @@ _No arguments._
 | _VARIANTE_FZG | string | Vercodete Fzg-Variante des LSZ_2 aus Codierblock 0, Byte 30 siehe table VarianteFzg WERT INT_VARIANTE VARIANTE_FZG |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-sleepinstruction-ihka"></a>
 ### SLEEPINSTRUCTION_IHKA
 
 PD-Telegramm über K-Bus vom LSZ an IHKA
@@ -964,7 +922,6 @@ _No arguments._
 | PATCH_ACTIVATION | string | gibt an, ob der Patch aktiviert ist |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fs-lesen-gesamt"></a>
 ### FS_LESEN_GESAMT
 
 fs_lesen_gesamt job
@@ -1014,7 +971,6 @@ _No arguments._
 - [VARIANTEFZG](#table-variantefzg) (9 × 3)
 - [LAENDERVARIANTEFZG](#table-laendervariantefzg) (3 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1035,7 +991,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 77 rows × 2 columns
@@ -1120,7 +1075,6 @@ Dimensions: 77 rows × 2 columns
 | 0x76 | CEL |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1149,7 +1103,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1174,7 +1127,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1183,7 +1135,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -1194,7 +1145,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | nein |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1209,7 +1159,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1224,7 +1173,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 65 rows × 2 columns
@@ -1297,7 +1245,6 @@ Dimensions: 65 rows × 2 columns
 | 0x51 | FWT-Mode |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1306,7 +1253,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1315,7 +1261,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1326,7 +1271,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 49 rows × 3 columns
@@ -1383,7 +1327,6 @@ Dimensions: 49 rows × 3 columns
 | QUICK_NACHF | 8 | 0x80 |
 | XXX | Y | Z |
 
-<a id="table-leuchtkammerstati"></a>
 ### LEUCHTKAMMERSTATI
 
 Dimensions: 27 rows × 3 columns
@@ -1418,7 +1361,6 @@ Dimensions: 27 rows × 3 columns
 | 99 | defekt | defekt |
 | 0xXY | unbekannt | unbekannter Leuchtkammerstatus |
 
-<a id="table-variantefzg"></a>
 ### VARIANTEFZG
 
 Dimensions: 9 rows × 3 columns
@@ -1435,7 +1377,6 @@ Dimensions: 9 rows × 3 columns
 | 0x07 | 7 | E85 >PU 01/06 |
 | 0xXY | 255 | unbekannte Fahrzeug-Variante |
 
-<a id="table-laendervariantefzg"></a>
 ### LAENDERVARIANTEFZG
 
 Dimensions: 3 rows × 3 columns

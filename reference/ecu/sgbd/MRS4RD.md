@@ -50,7 +50,6 @@
 - [SYSTEMZEIT_LESEN](#job-systemzeit-lesen) - aktuelle Systemzeit lesen Read current system time
 - [MRSA_LESEN](#job-mrsa-lesen) - Lesen Seriennummer fuer jeden Satellit Read seriell number of all satellits
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +68,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer AIRBAG MRS4RD
@@ -82,7 +80,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer AIRBAG MRS4RD
@@ -106,7 +103,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-security-change"></a>
 ### SECURITY_CHANGE
 
 Wechseln zum Sicherheitslevel 2 Change to security level 2
@@ -119,7 +115,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Error memory quicktest High-Konzept nach Lastenheft
@@ -133,7 +128,6 @@ _No arguments._
 | JOB_STATUS | string | normalerweise OKAY |
 | F_ANZ | int | Anzahl Fehler Number of errors |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Read error memory
@@ -177,7 +171,6 @@ _No arguments._
 | F_UW2_WERT | long | Wert der 2. Umweltbedingung |
 | F_UW2_EINH | string | Einheit der 2. Umweltbedingung (hier: immer Sek.) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen Clear error memory
@@ -190,7 +183,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher lesen Read memory
@@ -212,7 +204,6 @@ Speicher lesen Read memory
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Speicherinhalt |
 
-<a id="job-eam-flags-lesen"></a>
 ### EAM_FLAGS_LESEN
 
 Lesen der EAM (Ergebnis Ausloese Matrix) Flags read EAM
@@ -236,7 +227,6 @@ _No arguments._
 | BYTE_1_0 | int | Byte 0 der 1 EAM Flagsbytes (wiederholt) |
 | BYTE_1_1 | int | Byte 1 der 1 EAM Flagsbytes (wiederholt) |
 
-<a id="job-ausstattung-lesen"></a>
 ### AUSSTATTUNG_LESEN
 
 Ausstattung lesen Read equipment configuration
@@ -293,7 +283,6 @@ _No arguments._
 | BYTE_1_6 | int | Byte 6 der 7 Ausstattungsbytes (wiederholt) |
 | BYTE_1_7 | int | Byte 7 der 7 Ausstattungsbytes (wiederholt) |
 
-<a id="job-herstellerdaten-lesen"></a>
 ### HERSTELLERDATEN_LESEN
 
 Kodierte KFZ-Herstellerdaten lesen Read coded productiondata
@@ -313,7 +302,6 @@ _No arguments._
 | DATEN | binary | Antworttelegramm |
 | DATEN1 | binary | Antworttelegramm |
 
-<a id="job-typ-lesen"></a>
 ### TYP_LESEN
 
 Lesen des Fahrzeugtyps (Baureihe) Read vehicle model
@@ -327,7 +315,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | TYP | string | Baureihe z.B: E31 / 03h , E34 / 01h ... Vehicle e.g: L30, R50.... |
 
-<a id="job-parameter-lesen"></a>
 ### PARAMETER_LESEN
 
 16 Byte aus Parametersatz 1 lesen Read 16 bytes from block stated
@@ -345,7 +332,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Spezifizierte Parameterdaten Specified parameterdata |
 
-<a id="job-barcode-lesen"></a>
 ### BARCODE_LESEN
 
 Lesen der MRSZ4 RD barcode infos Read unique ECU barcode
@@ -363,7 +349,6 @@ _No arguments._
 | AENDERUNGS_INDEX | string | Aenderungs-Index Change/version index |
 | HERSTELLER_INFO | string | Hersteller-Info Production info |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status des MRS4 RD lesen Read status of MRS4 RD
@@ -439,7 +424,6 @@ _No arguments._
 | STAT_MRSA_B_SAEULE_R_3 | int | 0 = Leitungsfehler, 1 = i.0 |
 | STAT_MRSA_B_SAEULE_R_4 | int | 0 = falscher Typ, 1 = i.0 |
 
-<a id="job-verriegelung-lesen"></a>
 ### VERRIEGELUNG_LESEN
 
 Auslesen der Verriegelung (= Pruefstempel) Read lock byte status
@@ -456,7 +440,6 @@ _No arguments._
 | BYTE3 | int | Datenbyte 3 |
 | PRUEFSTEMPEL | binary | Gesamter Pruefstempel |
 
-<a id="job-verriegelung-schreiben"></a>
 ### VERRIEGELUNG_SCHREIBEN
 
 Verriegelungsbytes setzen Set lock byte
@@ -470,7 +453,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | ERROR_CODE | string | Bei NIO Fehlertext, sonst Leerstring |
 
-<a id="job-controller-reset"></a>
 ### CONTROLLER_RESET
 
 Zuruecksetzen des Controllers Reset ECU
@@ -483,7 +465,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-sg-login"></a>
 ### SG_LOGIN
 
 Berechtigung fuer EEPROM-Zugriffe Login to ECU
@@ -496,7 +477,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten Diagnosis wake up
@@ -509,7 +489,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden Diagnosis end
@@ -522,7 +501,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-ausstattung-lesen-ews"></a>
 ### AUSSTATTUNG_LESEN_EWS
 
 Ausstattung lesen Read equipment for EWS
@@ -536,7 +514,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | AUSSTATTUNG | string | x Ausstattungsbytes als String Equipment bytes as String |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Lesen des Pruefcodes, besteht aus Identifikationsdaten, Ausstattungsdaten, Systemzeit, System Zeit der letzten Fehlerloeschung, Barcode Daten und dem FS-Inhalt, jedes Telegrammpaket ist durch ein 0x00 abgeschlossen Read test codes (identdata, equipdata, system time, last error system time, barcode, errordata) Returned as strings separated by 0x00
@@ -550,7 +527,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | PRUEFCODE | binary | Daten in Hex-Format |
 
-<a id="job-c-fs-lesen"></a>
 ### C_FS_LESEN
 
 24 Byte aus Crashtelegram lesen Read 24 bytes from crashtelegram block stated
@@ -568,7 +544,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Spezifizierte Crashdaten Specified crashdata |
 
-<a id="job-c-fs-loeschen"></a>
 ### C_FS_LOESCHEN
 
 Crashtelegram loeschen Delete crash telegram
@@ -582,7 +557,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation |
 | ERROR_CODE | string | Bei NIO Fehlertext, sonst Leerstring |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Read codingdata
@@ -600,7 +574,6 @@ Codierdaten lesen Read codingdata
 | CODIER_DATEN | binary | Codierdaten Codingdata |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren Write and check codingdata
@@ -617,7 +590,6 @@ Codierdaten schreiben und verifizieren Write and check codingdata
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Kodierte KFZ-Herstellerdaten lesen Read coded productiondata
@@ -632,7 +604,6 @@ _No arguments._
 | FG_NR | string | Kurze Fahrgestellnummer Short VIN |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-systemzeit-lesen"></a>
 ### SYSTEMZEIT_LESEN
 
 aktuelle Systemzeit lesen Read current system time
@@ -647,7 +618,6 @@ _No arguments._
 | SYSTEMZEIT | string | Systemzeit system time |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-mrsa-lesen"></a>
 ### MRSA_LESEN
 
 Lesen Seriennummer fuer jeden Satellit Read seriell number of all satellits
@@ -720,7 +690,6 @@ _No arguments._
 - [FUMWELTMATRIX](#table-fumweltmatrix) (1 × 5)
 - [FUMWELTTEXTE](#table-fumwelttexte) (2 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -734,7 +703,6 @@ Dimensions: 6 rows × 2 columns
 | 0xB1 | ERROR_ECU_FUNKTION |
 | 0xFF | ERROR_ECU_UNKNOWN_KONTROLLBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -809,7 +777,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 66 rows × 2 columns
@@ -883,7 +850,6 @@ Dimensions: 66 rows × 2 columns
 | 0xF0 | Zentralsteuergeraet - interner Fehler |
 | 0xFF | Unbekannter Fehler |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 65 rows × 17 columns
@@ -956,7 +922,6 @@ Dimensions: 65 rows × 17 columns
 | 0x94 | 0xFF | 0xFF | 0x01 | 0x02 | 0xFF | 0x28 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF |
 | 0xF0 | 0xFF | 0xFF | 0x01 | 0x02 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0x08 | 0x09 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 39 rows × 2 columns
@@ -1003,7 +968,6 @@ Dimensions: 39 rows × 2 columns
 | 0x28 | Ueberpruefung Ausloeseschwelle |
 | 0xFF | -- |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -1012,7 +976,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 0xFF | 0x02 | 0x01 | 0x01 | 0x02 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 3 columns

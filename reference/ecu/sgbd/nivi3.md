@@ -58,7 +58,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -77,7 +76,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -90,7 +88,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -107,7 +104,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -137,7 +133,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -179,7 +174,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -198,7 +192,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -216,7 +209,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -237,7 +229,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -266,7 +257,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -286,7 +276,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -307,7 +296,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -323,7 +311,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -345,7 +332,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -367,7 +353,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -386,7 +371,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -412,7 +396,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -454,7 +437,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -469,7 +451,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -489,7 +470,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -508,7 +488,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -527,7 +506,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -546,7 +524,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -566,7 +543,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -583,7 +559,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -602,7 +577,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -618,7 +592,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -652,7 +625,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -667,7 +639,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -682,7 +653,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -699,7 +669,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -714,7 +683,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -729,7 +697,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -744,7 +711,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -760,7 +726,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -779,7 +744,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -799,7 +763,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -817,7 +780,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -940,7 +902,6 @@ _No arguments._
 - [TSIGNALART](#table-tsignalart) (9 × 2)
 - [TVIDEOAUSGANG](#table-tvideoausgang) (11 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1024,7 +985,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 134 rows × 2 columns
@@ -1166,7 +1126,6 @@ Dimensions: 134 rows × 2 columns
 | 0x0000BB | BMW - Fahrzeugsimulator |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -1193,7 +1152,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1218,7 +1176,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1252,7 +1209,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1325,7 +1281,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1338,7 +1293,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1351,7 +1305,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1364,7 +1317,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1384,7 +1336,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 202 rows × 3 columns
@@ -1594,7 +1545,6 @@ Dimensions: 202 rows × 3 columns
 | 0x7040 | Frontwischermotor | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1603,7 +1553,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 162 rows × 2 columns
@@ -1773,7 +1722,6 @@ Dimensions: 162 rows × 2 columns
 | 0x0121 | Hyundai MOBIS |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1799,7 +1747,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1810,7 +1757,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x4000-d"></a>
 ### ARG_0X4000_D
 
 Dimensions: 1 rows × 12 columns
@@ -1819,7 +1765,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CONTROL_SHUTTER_TIME | s | high | int | - | - | 1.0 | 1.0 | 0.0 | - | - | CONTROL_SHUTTER_TIME |
 
-<a id="table-arg-0x4002-d"></a>
 ### ARG_0X4002_D
 
 Dimensions: 2 rows × 12 columns
@@ -1829,7 +1774,6 @@ Dimensions: 2 rows × 12 columns
 | MCU_ADC_PORT | HEX | high | char | - | - | 1.0 | 1.0 | 0.0 | - | - | MCU_ADC_PORT |
 | MCU_ADC_VALUE | HEX | high | unsigned int | - | - | - | - | - | - | - | MCU_ADC_VALUE |
 
-<a id="table-arg-0x4004-d"></a>
 ### ARG_0X4004_D
 
 Dimensions: 2 rows × 12 columns
@@ -1839,7 +1783,6 @@ Dimensions: 2 rows × 12 columns
 | MCU_IO_PORT | HEX | high | char | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 | MCU_IO_VALUE | HEX | high | char | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0xa01a-r"></a>
 ### ARG_0XA01A_R
 
 Dimensions: 3 rows × 14 columns
@@ -1850,7 +1793,6 @@ Dimensions: 3 rows × 14 columns
 | ARG_AUSGANG | + | + | 0-n | - | unsigned int | - | TVideoAusgang | 1.0 | 1.0 | 0.0 | - | - | Default: 0 Alle Ausgänge des Steuergerätes müssen einzeln und kombiniert anwählbar sein. |
 | ARG_TIMEOUT | + | - | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Wertebereich: 0-30,255 0 schaltet wieder auf Normalbetrieb. 255 schaltet das Signal ohne einen TIMEOUT. Ansonsten legt dies Zahl die Sekunden fest, die das Testbild ausgegeben wird. Default: 255 Wird dieser Parameter nicht angegeben, erfolgt eine Ausgabe, bis: -der Job erneut mit Parameter 0 aufgerufen wird -das Steuergerät neu startet (Aufwachen, Reset, &) |
 
-<a id="table-arg-0xa380-r"></a>
 ### ARG_0XA380_R
 
 Dimensions: 1 rows × 14 columns
@@ -1859,7 +1801,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MODUS | + | - | 0-n | high | unsigned char | - | PIXELTEST_MODUS | - | - | - | - | - | Modus |
 
-<a id="table-arg-0xa381-r"></a>
 ### ARG_0XA381_R
 
 Dimensions: 3 rows × 14 columns
@@ -1870,7 +1811,6 @@ Dimensions: 3 rows × 14 columns
 | WINKEL | + | - | ° | high | unsigned char | - | - | 1.0 | 0.1 | 125.0 | - | - | Winkel für Anleuchten ( -12.5 ... 12.5°) |
 | DISTANZ | + | - | m | high | unsigned char | - | - | 1.0 | 5.0 | -4.0 | - | - | Virtuelle Distanz: (20 ... 90 m) |
 
-<a id="table-arg-0xa383-r"></a>
 ### ARG_0XA383_R
 
 Dimensions: 1 rows × 14 columns
@@ -1879,7 +1819,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MODE | + | - | 0-n | high | unsigned char | - | TAB_MODE_JUSTAGELINIEN | 1.0 | 1.0 | 0.0 | - | - | Mode der Justagelinienanzeige: 0x01 = Mode1: Im Bild zentiert 0x02 = Mode 2: Mit Korrektur aus Online-Kalibrierung 0x03 = Mode 3: |
 
-<a id="table-arg-0xd384-d"></a>
 ### ARG_0XD384_D
 
 Dimensions: 3 rows × 12 columns
@@ -1890,7 +1829,6 @@ Dimensions: 3 rows × 12 columns
 | NICKWINKEL | Grad | - | char | - | - | 10.0 | 1.0 | 0.0 | - | - | Angabe des in der ECU zu speichernden Nickwinkels auf 10-tel Grad genau (z.B. 2,3 °). |
 | GIERWINKEL | Grad | - | char | - | - | 10.0 | 1.0 | 0.0 | - | - | Angabe des in der ECU zu speichernden Gierwinkels auf 10-tel Grad genau (z.B. 2,3 °). |
 
-<a id="table-arg-0xd385-d"></a>
 ### ARG_0XD385_D
 
 Dimensions: 1 rows × 12 columns
@@ -1899,7 +1837,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | IDENTIFIER | hex | - | int | - | - | 1.0 | 1.0 | 0.0 | - | - | Ausgabe der gewünschten Zeile des Sensors.  IDENTIFIER = XX YY Hex,  XX h =  0x01: Pixel 1 - 160 der Zeile,  0x02: Pixel 161 - 320 der Zeile,  YY h =  0x01 - 0xF0: für die Zeile (1 - 240) |
 
-<a id="table-arg-0xd3ac-d"></a>
 ### ARG_0XD3AC_D
 
 Dimensions: 1 rows × 12 columns
@@ -1908,7 +1845,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BETRIEBSMODUS | 0-n | - | unsigned char | - | TAB_MODUS_PERSONENERKENNUNG | 1.0 | 1.0 | 0.0 | - | - | STOPP = Ansteuerung beenden, AUS = Personenerkennung AUS, EIN = Personenerkennung EIN (unabhängig von Umweltbedingungen), AUTO = Personenerkennung AUTO (mit Umweltbedingungsprüfung) |
 
-<a id="table-arg-0xd3ae-d"></a>
 ### ARG_0XD3AE_D
 
 Dimensions: 1 rows × 12 columns
@@ -1917,7 +1853,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | - | unsigned char | - | TAB_BLENDE | 1.0 | 1.0 | 0.0 | - | - | Ansteuerung der Blende der NiVi-Kamera: Argument siehe TAB_BLENDE |
 
-<a id="table-arg-0xd3af-d"></a>
 ### ARG_0XD3AF_D
 
 Dimensions: 1 rows × 12 columns
@@ -1926,7 +1861,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | - | unsigned char | - | TAB_ARG_LINSENHEIZUNG | 1.0 | 1.0 | 0.0 | - | - | Ansteuerung der Linsenheizung der NiVi-Kamera: Argumente siehe TAB_ARG_LINSENHEIZUNG |
 
-<a id="table-arg-0xd3b1-d"></a>
 ### ARG_0XD3B1_D
 
 Dimensions: 3 rows × 12 columns
@@ -1937,7 +1871,6 @@ Dimensions: 3 rows × 12 columns
 | RICHTUNG | 0-n | - | unsigned char | - | TAB_RICHTUNG | 1.0 | 1.0 | 0.0 | - | - | Angabe der Richtung der Verstellung in Pixel.  1 = OBEN = nach oben,  2 = UNTEN = nach unten |
 | ANZ_SCHRITTE | Pixel | - | char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vertikale Verschiebung um die Anzahl der Zeile nach oben bzw unten. 1 - 20 Zeilen. Default = 1, wenn nicht gesetzt. |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 5 rows × 3 columns
@@ -1950,7 +1883,6 @@ Dimensions: 5 rows × 3 columns
 | 0x04 | MOST-Mode | Night Vision 2 deaktiviert |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1964,7 +1896,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 80 rows × 3 columns
@@ -2052,7 +1983,6 @@ Dimensions: 80 rows × 3 columns
 | 0xDEEC16 | Signal STAT_OBJ_COOR:ST_AVAI_CHAIN_WARN (0x21F) is invalid | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 11 rows × 9 columns
@@ -2071,7 +2001,6 @@ Dimensions: 11 rows × 9 columns
 | 0x6F10 | QUALIFIER | 0-n | High | 0xFF | TAB_QUALIFIER | - | - | - |
 | 0x6F11 | SYS_EC | HEX | High | signed long | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2083,7 +2012,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | ja |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 15 rows × 3 columns
@@ -2106,7 +2034,6 @@ Dimensions: 15 rows × 3 columns
 | 0x8BAC82 | VSM_EVENT_VEHICLESTATE | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 3 rows × 9 columns
@@ -2117,7 +2044,6 @@ Dimensions: 3 rows × 9 columns
 | 0x6F03 | ECU_TEMPERATUR | °C | High | signed char | - | 1.0 | 1.0 | 0.0 |
 | 0x6F11 | SYS_EC | HEX | High | signed long | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2126,7 +2052,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-pixeltest-modus"></a>
 ### PIXELTEST_MODUS
 
 Dimensions: 2 rows × 2 columns
@@ -2136,7 +2061,6 @@ Dimensions: 2 rows × 2 columns
 | 00 | Default Modus, Initialisierung mit automatisch gefundenen defekten Pixeln. |
 | 01 | Werkseingestellte defekte Pixel Tabelle laden. |
 
-<a id="table-res-0x2300-d"></a>
 ### RES_0X2300_D
 
 Dimensions: 39 rows × 10 columns
@@ -2183,7 +2107,6 @@ Dimensions: 39 rows × 10 columns
 | STAT_NV_IMAGE_BRIGHTNESS_12_3_WERT | - | - | unsigned int | - | - | - | - | - | 220 <= B <= 240 - Driver 3 |
 | STAT_NV_IMAGE_BRIGHTNESS_13_3_WERT | - | - | unsigned int | - | - | - | - | - | 240 <= B <= 254 - Driver 3 |
 
-<a id="table-res-0x2301-d"></a>
 ### RES_0X2301_D
 
 Dimensions: 91 rows × 10 columns
@@ -2282,7 +2205,6 @@ Dimensions: 91 rows × 10 columns
 | STAT_NV_IMAGE_BRIGHTNESS_HISTO_12_50000_WERT | - | - | unsigned int | - | - | - | - | - | 220 <= B <= 240 - 50000 |
 | STAT_NV_IMAGE_BRIGHTNESS_HISTO_13_50000_WERT | - | - | unsigned int | - | - | - | - | - | 240 <= B <= 254 - 50000 |
 
-<a id="table-res-0x2302-d"></a>
 ### RES_0X2302_D
 
 Dimensions: 42 rows × 10 columns
@@ -2332,7 +2254,6 @@ Dimensions: 42 rows × 10 columns
 | STAT_NV_IMAGE_CONTRAST_13_3_WERT | - | - | unsigned int | - | - | - | - | - | 100 < C <= 120 - Driver 3 |
 | STAT_NV_IMAGE_CONTRAST_14_3_WERT | - | - | unsigned int | - | - | - | - | - | 120 < C <= 127 - Driver 3 |
 
-<a id="table-res-0x2303-d"></a>
 ### RES_0X2303_D
 
 Dimensions: 98 rows × 10 columns
@@ -2438,7 +2359,6 @@ Dimensions: 98 rows × 10 columns
 | STAT_NV_IMAGE_CONTRAST_HISTO_13_50000_WERT | - | - | unsigned int | - | - | - | - | - | 100 < C <= 120 - 50000 |
 | STAT_NV_IMAGE_CONTRAST_HISTO_14_50000_WERT | - | - | unsigned int | - | - | - | - | - | 120 < C <= 127 - 50000 |
 
-<a id="table-res-0x2304-d"></a>
 ### RES_0X2304_D
 
 Dimensions: 21 rows × 10 columns
@@ -2467,7 +2387,6 @@ Dimensions: 21 rows × 10 columns
 | STAT_NV_OBJECT_DETECTION_6_3_WERT | - | - | unsigned long | - | - | - | - | - | Number of pedestrians marked with marking lights - Driver 3 |
 | STAT_NV_OBJECT_DETECTION_7_3_WERT | - | - | unsigned long | - | - | - | - | - | Number of animals marked with marking lights - Driver 3 |
 
-<a id="table-res-0x2305-d"></a>
 ### RES_0X2305_D
 
 Dimensions: 49 rows × 10 columns
@@ -2524,7 +2443,6 @@ Dimensions: 49 rows × 10 columns
 | STAT_NV_OBJECT_DETECTION_6_50000_WERT | - | - | unsigned long | - | - | - | - | - | Number of pedestrians marked with marking lights - 50000 |
 | STAT_NV_OBJECT_DETECTION_7_50000_WERT | - | - | unsigned long | - | - | - | - | - | Number of animals marked with marking lights - 50000 |
 
-<a id="table-res-0x2306-d"></a>
 ### RES_0X2306_D
 
 Dimensions: 90 rows × 10 columns
@@ -2622,7 +2540,6 @@ Dimensions: 90 rows × 10 columns
 | STAT_NV_YAW_ONLINE_CALIB_29_3_WERT | - | - | unsigned int | - | - | - | - | - | 1.3 < C <= 1.4 Driver 3 |
 | STAT_NV_YAW_ONLINE_CALIB_30_3_WERT | - | - | unsigned int | - | - | - | - | - | 1.4 < C <= 1.5 Driver 3 |
 
-<a id="table-res-0x2307-d"></a>
 ### RES_0X2307_D
 
 Dimensions: 210 rows × 10 columns
@@ -2840,7 +2757,6 @@ Dimensions: 210 rows × 10 columns
 | STAT_NV_YAW_ONLINE_CALIB_HISTO_29_50000_WERT | - | - | unsigned int | - | - | - | - | - | 1.3 < C <= 1.4 - 50000 |
 | STAT_NV_YAW_ONLINE_CALIB_HISTO_30_50000_WERT | - | - | unsigned int | - | - | - | - | - | 1.4 < C <= 1.5 - 50000 |
 
-<a id="table-res-0x2308-d"></a>
 ### RES_0X2308_D
 
 Dimensions: 33 rows × 10 columns
@@ -2881,7 +2797,6 @@ Dimensions: 33 rows × 10 columns
 | STAT_TIMERS_CITY_10_3_WERT | - | - | unsigned long | - | - | - | - | - | Time right marking light unit is active - Driver 3 |
 | STAT_TIMERS_CITY_11_3_WERT | - | - | unsigned long | - | - | - | - | - | Time design light in the marking light unit is switched on. - Driver 3 |
 
-<a id="table-res-0x2309-d"></a>
 ### RES_0X2309_D
 
 Dimensions: 77 rows × 10 columns
@@ -2966,7 +2881,6 @@ Dimensions: 77 rows × 10 columns
 | STAT_TIMERS_CITY_HISTO_10_50000_WERT | - | - | unsigned long | - | - | - | - | - | Time right marking light unit is active - 50000 |
 | STAT_TIMERS_CITY_HISTO_11_50000_WERT | - | - | unsigned long | - | - | - | - | - | Time design light in the marking light unit is switched on. - 50000 |
 
-<a id="table-res-0x230a-d"></a>
 ### RES_0X230A_D
 
 Dimensions: 33 rows × 10 columns
@@ -3007,7 +2921,6 @@ Dimensions: 33 rows × 10 columns
 | STAT_TIMERS_RURAL_10_3_WERT | - | - | unsigned long | - | - | - | - | - | Time right marking light unit is active - Driver 3 |
 | STAT_TIMERS_RURAL_11_3_WERT | - | - | unsigned long | - | - | - | - | - | Time design light in the marking light unit is switched on. - Driver 3 |
 
-<a id="table-res-0x230b-d"></a>
 ### RES_0X230B_D
 
 Dimensions: 77 rows × 10 columns
@@ -3092,7 +3005,6 @@ Dimensions: 77 rows × 10 columns
 | STAT_TIMERS_RURAL_HISTO_10_50000_WERT | - | - | unsigned long | - | - | - | - | - | Time right marking light unit is active - 50000 |
 | STAT_TIMERS_RURAL_HISTO_11_50000_WERT | - | - | unsigned long | - | - | - | - | - | Time design light in the marking light unit is switched on. - 50000 |
 
-<a id="table-res-0x230c-d"></a>
 ### RES_0X230C_D
 
 Dimensions: 24 rows × 10 columns
@@ -3124,7 +3036,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_NV_MARKING_LIGHT_UNAVAILABLE_7_3_WERT | - | - | unsigned long | - | - | - | - | - | Time left marking light unit is unavailable due to not receving message ST_GZA_LH - Driver 3 |
 | STAT_NV_MARKING_LIGHT_UNAVAILABLE_8_3_WERT | - | - | unsigned long | - | - | - | - | - | Time right marking light unit is unavailable due to not receving message ST_GZA_RH - Driver 3 |
 
-<a id="table-res-0x230d-d"></a>
 ### RES_0X230D_D
 
 Dimensions: 56 rows × 10 columns
@@ -3188,7 +3099,6 @@ Dimensions: 56 rows × 10 columns
 | STAT_NV_MARKING_LIGHT_UNAVAILABLE_HISTO_7_50000_WERT | - | - | unsigned long | - | - | - | - | - | Time left marking light unit is unavailable due to not receving message ST_GZA_LH - 50000 |
 | STAT_NV_MARKING_LIGHT_UNAVAILABLE_HISTO_8_50000_WERT | - | - | unsigned long | - | - | - | - | - | Time right marking light unit is unavailable due to not receving message ST_GZA_RH - 50000 |
 
-<a id="table-res-0x230e-d"></a>
 ### RES_0X230E_D
 
 Dimensions: 45 rows × 10 columns
@@ -3241,7 +3151,6 @@ Dimensions: 45 rows × 10 columns
 | STAT_NV_LEFT_ANGLE_14_3_WERT | - | - | unsigned long | - | - | - | - | - | 10 < D <= 11 - Driver 3 |
 | STAT_NV_LEFT_ANGLE_15_3_WERT | - | - | unsigned long | - | - | - | - | - | 11 < D <= 12 - Driver 3 |
 
-<a id="table-res-0x230f-d"></a>
 ### RES_0X230F_D
 
 Dimensions: 105 rows × 10 columns
@@ -3354,7 +3263,6 @@ Dimensions: 105 rows × 10 columns
 | STAT_NV_LEFT_ANGLE_HISTO_14_50000_WERT | - | - | unsigned long | - | - | - | - | - | 10 < D <= 11 - 50000 |
 | STAT_NV_LEFT_ANGLE_HISTO_15_50000_WERT | - | - | unsigned long | - | - | - | - | - | 11 < D <= 12 - 50000 |
 
-<a id="table-res-0x2310-d"></a>
 ### RES_0X2310_D
 
 Dimensions: 45 rows × 10 columns
@@ -3407,7 +3315,6 @@ Dimensions: 45 rows × 10 columns
 | STAT_NV_RIGHT_ANGLE_14_3_WERT | - | - | unsigned long | - | - | - | - | - | -11 < B <= -10 - Driver 3 |
 | STAT_NV_RIGHT_ANGLE_15_3_WERT | - | - | unsigned long | - | - | - | - | - | -12 < B <= -11 - Driver 3 |
 
-<a id="table-res-0x2311-d"></a>
 ### RES_0X2311_D
 
 Dimensions: 105 rows × 10 columns
@@ -3520,7 +3427,6 @@ Dimensions: 105 rows × 10 columns
 | STAT_NV_RIGHT_ANGLE_HISTO_14_50000_WERT | - | - | unsigned long | - | - | - | - | - | -11 < B <= -10 - 50000 |
 | STAT_NV_RIGHT_ANGLE_HISTO_15_50000_WERT | - | - | unsigned long | - | - | - | - | - | -12 < B <= -11 - 50000 |
 
-<a id="table-res-0x2312-d"></a>
 ### RES_0X2312_D
 
 Dimensions: 63 rows × 10 columns
@@ -3591,7 +3497,6 @@ Dimensions: 63 rows × 10 columns
 | STAT_NV_ML_ON_HIST_20_3_WERT | - | - | unsigned long | - | - | - | - | - | 9.5 < t <= 10  - Driver 3 |
 | STAT_NV_ML_ON_HIST_21_3_WERT | - | - | unsigned long | - | - | - | - | - | 10 < t   - Driver 3 |
 
-<a id="table-res-0x2313-d"></a>
 ### RES_0X2313_D
 
 Dimensions: 147 rows × 10 columns
@@ -3746,7 +3651,6 @@ Dimensions: 147 rows × 10 columns
 | STAT_NV_ML_ON_HIST_HISTO_20_50000_WERT | - | - | unsigned long | - | - | - | - | - | 9.5 < t <= 10  - 50000 |
 | STAT_NV_ML_ON_HIST_HISTO_21_50000_WERT | - | - | unsigned long | - | - | - | - | - | 10 < t   - 50000 |
 
-<a id="table-res-0x2314-d"></a>
 ### RES_0X2314_D
 
 Dimensions: 30 rows × 10 columns
@@ -3784,7 +3688,6 @@ Dimensions: 30 rows × 10 columns
 | STAT_NV_DRIVER_REACTION_9_3_WERT | - | - | unsigned int | - | - | - | - | - | Number of times the driver switches off pedestrian detection within a long reaction time after an animal warning  - Driver 3 |
 | STAT_NV_DRIVER_REACTION_10_3_WERT | - | - | unsigned long | - | - | - | - | - | Number of times the driver cancels the marking light marking.  - Driver 3 |
 
-<a id="table-res-0x2315-d"></a>
 ### RES_0X2315_D
 
 Dimensions: 70 rows × 10 columns
@@ -3862,7 +3765,6 @@ Dimensions: 70 rows × 10 columns
 | STAT_NV_DRIVER_REACTION_HISTO_9_50000_WERT | - | - | unsigned int | - | - | - | - | - | Number of times the driver switches off pedestrian detection within a long reaction time after an animal warning  - 50000 |
 | STAT_NV_DRIVER_REACTION_HISTO_10_50000_WERT | - | - | unsigned long | - | - | - | - | - | Number of times the driver cancels the marking light marking.  - 50000 |
 
-<a id="table-res-0x2316-d"></a>
 ### RES_0X2316_D
 
 Dimensions: 39 rows × 10 columns
@@ -3909,7 +3811,6 @@ Dimensions: 39 rows × 10 columns
 | STAT_NV_HIST_AMB_TEMP_12_3_WERT | s | - | unsigned long | - | - | - | - | - | 60 < B <= 70   - Driver 3 |
 | STAT_NV_HIST_AMB_TEMP_13_3_WERT | s | - | unsigned long | - | - | - | - | - | 70 < B <= +inf   - Driver 3 |
 
-<a id="table-res-0x2317-d"></a>
 ### RES_0X2317_D
 
 Dimensions: 91 rows × 10 columns
@@ -4008,7 +3909,6 @@ Dimensions: 91 rows × 10 columns
 | STAT_NV_HIST_AMB_TEMP_HISTO_12_50000_WERT | s | - | unsigned long | - | - | - | - | - | 60 < B <= 70   - 50000 |
 | STAT_NV_HIST_AMB_TEMP_HISTO_13_50000_WERT | s | - | unsigned long | - | - | - | - | - | 70 < B <= +inf   - 50000 |
 
-<a id="table-res-0x2330-d"></a>
 ### RES_0X2330_D
 
 Dimensions: 14 rows × 10 columns
@@ -4030,7 +3930,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_NV_HIST_ECU_DSP_TEMP_13_WERT | s | - | unsigned long | - | - | - | - | - | 92 < T <= 102 |
 | STAT_NV_HIST_ECU_DSP_TEMP_14_WERT | s | - | unsigned long | - | - | - | - | - | 102 < T <= +inf |
 
-<a id="table-res-0x2332-d"></a>
 ### RES_0X2332_D
 
 Dimensions: 14 rows × 10 columns
@@ -4052,7 +3951,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_NV_HIST_ECU_DDR_TEMP_13_WERT | s | - | unsigned long | - | - | - | - | - | 92 < T <= 102 |
 | STAT_NV_HIST_ECU_DDR_TEMP_14_WERT | s | - | unsigned long | - | - | - | - | - | 102 < T <= +inf |
 
-<a id="table-res-0x2333-d"></a>
 ### RES_0X2333_D
 
 Dimensions: 14 rows × 10 columns
@@ -4074,7 +3972,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_NV_HIST_FIR_SENSOR_TEMP_13_WERT | s | - | unsigned long | - | - | - | - | - | 80 < T <= 85 |
 | STAT_NV_HIST_FIR_SENSOR_TEMP_14_WERT | s | - | unsigned long | - | - | - | - | - | 85 < T <= +inf |
 
-<a id="table-res-0x2334-d"></a>
 ### RES_0X2334_D
 
 Dimensions: 14 rows × 10 columns
@@ -4096,7 +3993,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_NV_HIST_AMB_TEMP_FIR_UNPOWERED_13_WERT | s | - | unsigned long | - | - | - | - | - | 80 < T <= 85 |
 | STAT_NV_HIST_AMB_TEMP_FIR_UNPOWERED_14_WERT | s | - | unsigned long | - | - | - | - | - | 85 < T <= +inf |
 
-<a id="table-res-0x2335-d"></a>
 ### RES_0X2335_D
 
 Dimensions: 4 rows × 10 columns
@@ -4108,7 +4004,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_NV_FIR_STATISTICS_3_WERT | - | - | unsigned long | - | - | - | - | - | Shutter count for whole lifetime |
 | STAT_NV_FIR_STATISTICS_4_WERT | s | - | unsigned long | - | - | - | - | - | Heater time since power on |
 
-<a id="table-res-0x2336-d"></a>
 ### RES_0X2336_D
 
 Dimensions: 5 rows × 10 columns
@@ -4121,7 +4016,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_VP_restarts_WERT | - | - | unsigned int | - | - | - | - | - | VP restarts |
 | STAT_CAM_restarts_WERT | - | - | unsigned int | - | - | - | - | - | CAM restarts |
 
-<a id="table-res-0x4001-d"></a>
 ### RES_0X4001_D
 
 Dimensions: 21 rows × 10 columns
@@ -4150,7 +4044,6 @@ Dimensions: 21 rows × 10 columns
 | STAT_SYSTEM_TEMPERATUR4_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Port13: Temperature Sensor at DSP B |
 | STAT_HW_IDENT_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Port14: Hardware Identification |
 
-<a id="table-res-0x4003-d"></a>
 ### RES_0X4003_D
 
 Dimensions: 4 rows × 10 columns
@@ -4162,7 +4055,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_PORT_BYTE_2_WERT | HEX | high | char | - | - | 1.0 | 1.0 | 0.0 | Port 16..23 |
 | STAT_PORT_BYTE_3_WERT | HEX | high | char | - | - | 1.0 | 1.0 | 0.0 | Port 24..31. Maske = 0x1f |
 
-<a id="table-res-0x4005-d"></a>
 ### RES_0X4005_D
 
 Dimensions: 4 rows × 10 columns
@@ -4174,7 +4066,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_FIRMWARE_TEXT | TEXT | high | string[8] | - | - | 1.0 | 1.0 | 0.0 | FIRMWARE |
 | STAT_SOFTWARE_TEXT | TEXT | high | string[8] | - | - | 1.0 | 1.0 | 0.0 | SOFTWARE |
 
-<a id="table-res-0x4007-d"></a>
 ### RES_0X4007_D
 
 Dimensions: 18 rows × 10 columns
@@ -4200,7 +4091,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_AMB_CAM_80C_M_WERT | min | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ambient temperature camera operating time for T>80 C Minutes |
 | STAT_AMB_CAM_80C_S_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ambient temperature camera operating time for T>80 C Seconds |
 
-<a id="table-res-0x4008-d"></a>
 ### RES_0X4008_D
 
 Dimensions: 18 rows × 10 columns
@@ -4226,7 +4116,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_INT_MCU_80C_M_WERT | min | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | internal MCU operating time for T>80 C Minutes |
 | STAT_INT_MCU_80C_S_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | internal MCU operating time for T>80 C Seconds |
 
-<a id="table-res-0x4009-d"></a>
 ### RES_0X4009_D
 
 Dimensions: 18 rows × 10 columns
@@ -4252,7 +4141,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_INT_CAM_80C_M_WERT | min | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Internal camera temperature operating time for  T>80 C Minutes |
 | STAT_INT_CAM_80C_S_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Internal camera temperature operating time for  T>80 C Seconds |
 
-<a id="table-res-0x400a-d"></a>
 ### RES_0X400A_D
 
 Dimensions: 18 rows × 10 columns
@@ -4278,7 +4166,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_INT_MCU_VP_80C_M_WERT | min | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | internal temperature MCU+VP operating time for T>80 C Minutes |
 | STAT_INT_MCU_VP_80C_S_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | internal temperature MCU+VP operating time for T>80 C Seconds |
 
-<a id="table-res-0x41f1-d"></a>
 ### RES_0X41F1_D
 
 Dimensions: 9 rows × 10 columns
@@ -4295,7 +4182,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_TIMEOUT_DSB_RESET_WERT | count | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Number of timeouts for DSPB reset |
 | STAT_ERROR_ID_TRANS_WERT | count | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Number of errors in initdata transmission |
 
-<a id="table-res-0xa380-r"></a>
 ### RES_0XA380_R
 
 Dimensions: 3 rows × 13 columns
@@ -4306,7 +4192,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_NIVI_KAM_DEFEKTE_PIXEL_WERT | - | - | + | Pixel | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Ausgabe der Anzahl defekter Pixel. |
 | STAT_NIVI_KAM_DEFEKTE_CLUSTER_WERT | - | - | + | Cluster | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Ausgabe der Anzahl defekter Cluster (Bereiche zusammenhängender defekter Pixel). |
 
-<a id="table-res-0xd384-d"></a>
 ### RES_0XD384_D
 
 Dimensions: 3 rows × 10 columns
@@ -4317,7 +4202,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_NICKWINKEL_WERT | Grad | - | char | - | - | 1.0 | 10.0 | 0.0 | Ausgabe des in der ECU gespeicherten Nickwinkels bis auf 10-tel Grad (z.B. 2,3 °). |
 | STAT_GIERWINKEL_WERT | Grad | - | char | - | - | 1.0 | 10.0 | 0.0 | Ausgabe des in der ECU gespeicherten Gierwinkels bis auf 10-tel Grad (z.B. 2,3 °). |
 
-<a id="table-res-0xd385-d"></a>
 ### RES_0XD385_D
 
 Dimensions: 1 rows × 10 columns
@@ -4326,7 +4210,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_NIVI_KAM_ZEILEN_DATA | DATA | - | data[160] | - | - | 1.0 | 1.0 | 0.0 | Ergebnis [IDENTIFIER, Byte 1, ... , Byte 160] IDENTIFIER = XX YY Hex Byte 1 bis Byte 160 sind die Pixelwerte |
 
-<a id="table-res-0xd38a-d"></a>
 ### RES_0XD38A_D
 
 Dimensions: 9 rows × 10 columns
@@ -4343,7 +4226,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_NIVI_KAM_LINSENHEIZUNG_EIN | 0-n | - | unsigned char | - | TAB_LINSENHEIZUNG | 1.0 | 1.0 | 0.0 | Ausgabe des Status der Linsenheizung: Results siehe TAB_LINSENHEIZUNG |
 | STAT_NIVI_KAM_BETRIEBSSTUNDEN_WERT | Stunden | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Ausgabe der Betriebsstunden der Kamera in Stunden. |
 
-<a id="table-res-0xd38c-d"></a>
 ### RES_0XD38C_D
 
 Dimensions: 3 rows × 10 columns
@@ -4354,7 +4236,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_NIVI_PERSONENERKENNUNG | 0-n | - | unsigned char | - | TAB_PERSONENERKENNUNG | - | - | - | Gibt aus, ob Personenerkennung eingeschaltet ist: Results siehe TAB_PERSONENERKENNUNG |
 | STAT_NIVI_ECU_TEMP_WERT | °C | - | char | - | - | 1.0 | 1.0 | 0.0 | Ausgabe der Temperatur des Steuergerätes. |
 
-<a id="table-res-0xd3cf-d"></a>
 ### RES_0XD3CF_D
 
 Dimensions: 3 rows × 10 columns
@@ -4365,7 +4246,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_DAUER_BIS_CCM_BLINDHEIT_WERT | min | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Dauer der Blindheit in Minuten (0-254), 0xFF wenn Blindheit beim Aufstarten erkannt. Zeit = (Coding-Wert) ¿ (Zeit seit Blockade im Bild) |
 | STAT_DAUER_BIS_CCM_NACH_BLINDHEIT_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Dauer in Sekunden (0-254) nach Blindheit, wenn Erkennung wieder aktiv , 0xFF wenn keine Blindheit erkannt wurde. Zeit = (Coding-Wert-2)-(Zeit Ohne Blockade) |
 
-<a id="table-seite"></a>
 ### SEITE
 
 Dimensions: 2 rows × 2 columns
@@ -4375,7 +4255,6 @@ Dimensions: 2 rows × 2 columns
 | 01 | Links |
 | 02 | Rechts |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 62 rows × 16 columns
@@ -4445,7 +4324,6 @@ Dimensions: 62 rows × 16 columns
 | _STATUS_OPERATION_HOURS__INT_MCU_VP | 0x400A | - | Internal ecu temperature operating hours for        T < -20C; STAT_..._M20C_WERT  -20C< T <=  0C; STAT_..._M20C__0C_WERT    0C< T <= 30C; STAT_..._0C__30C_WERT   30C< T <= 60C; STAT_..._30C__60C_WERT   60C< T <= 80C; STAT_..._60C__80C_WERT   80C< T       ; STAT_..._80C_WERT | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x400A_D |
 | _STATUS_UPTIME | 0x41F1 | - | ECU shall report the uptime status. Each counter shall be counted up from 0 seconds at power-on of the component (MCU/VP/CAM) and increment by one each second. | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x41F1_D |
 
-<a id="table-tab-arg-linsenheizung"></a>
 ### TAB_ARG_LINSENHEIZUNG
 
 Dimensions: 3 rows × 2 columns
@@ -4456,7 +4334,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | EIN |
 | 0x02 | Automatische Heizungssteuerung |
 
-<a id="table-tab-blende"></a>
 ### TAB_BLENDE
 
 Dimensions: 4 rows × 2 columns
@@ -4468,7 +4345,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Automatische Blendensteuerung |
 | 0x03 | Flat Field Correction |
 
-<a id="table-tab-diebstahlschutz"></a>
 ### TAB_DIEBSTAHLSCHUTZ
 
 Dimensions: 6 rows × 2 columns
@@ -4482,7 +4358,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Freischaltcode nicht vollständig geprüft oder Standard FSC-Prüfung fehlgeschlagen |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-init"></a>
 ### TAB_INIT
 
 Dimensions: 3 rows × 2 columns
@@ -4493,7 +4368,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Initialisierung in Ordnung |
 | 0xFF | Initialisierung nicht in Ordnung |
 
-<a id="table-tab-kalibrierung-nivi"></a>
 ### TAB_KALIBRIERUNG_NIVI
 
 Dimensions: 3 rows × 2 columns
@@ -4504,7 +4378,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | REFERENZBILD |
 | 0x02 | SPEICHERN |
 
-<a id="table-tab-kam-link-status"></a>
 ### TAB_KAM_LINK_STATUS
 
 Dimensions: 2 rows × 2 columns
@@ -4514,7 +4387,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Camera link not OK |
 | 1 | Camera link OK |
 
-<a id="table-tab-linsenheizung"></a>
 ### TAB_LINSENHEIZUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4526,7 +4398,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Defekt |
 | 0xFF | undefinierter Status |
 
-<a id="table-tab-mode-justagelinien"></a>
 ### TAB_MODE_JUSTAGELINIEN
 
 Dimensions: 3 rows × 2 columns
@@ -4537,7 +4408,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Mode 2: Mit Korrektur aus Onlinekalibrierung |
 | 0x03 | Mode 3 |
 
-<a id="table-tab-modus-blende"></a>
 ### TAB_MODUS_BLENDE
 
 Dimensions: 5 rows × 2 columns
@@ -4550,7 +4420,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | FFC ist in Bewegung (Blende geschlossen) |
 | 0xFF | Undefinierter Modus |
 
-<a id="table-tab-modus-personenerkennung"></a>
 ### TAB_MODUS_PERSONENERKENNUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4562,7 +4431,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | EIN |
 | 0x03 | AUTO |
 
-<a id="table-tab-nivi-pixeltest"></a>
 ### TAB_NIVI_PIXELTEST
 
 Dimensions: 4 rows × 2 columns
@@ -4574,7 +4442,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Test erfolgreich abgeschlossen |
 | 0x03 | Test fehlgeschlagen |
 
-<a id="table-tab-nivi-status"></a>
 ### TAB_NIVI_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -4587,7 +4454,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | System AUS |
 | 0xFF | undefinierter Zustand |
 
-<a id="table-tab-personenerkennung"></a>
 ### TAB_PERSONENERKENNUNG
 
 Dimensions: 5 rows × 2 columns
@@ -4600,7 +4466,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Detektion AUTOMATISCH |
 | 0xFF | unbekannter Zustand |
 
-<a id="table-tab-qualifier"></a>
 ### TAB_QUALIFIER
 
 Dimensions: 12 rows × 2 columns
@@ -4620,7 +4485,6 @@ Dimensions: 12 rows × 2 columns
 | 14 | Signalwert ist ungültig.Zustand/Status temporär |
 | 15 | Qualifier signal ungültig |
 
-<a id="table-tab-richtung"></a>
 ### TAB_RICHTUNG
 
 Dimensions: 2 rows × 2 columns
@@ -4630,7 +4494,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | OBEN |
 | 0x02 | UNTEN |
 
-<a id="table-tab-stat-nivi-cam"></a>
 ### TAB_STAT_NIVI_CAM
 
 Dimensions: 9 rows × 2 columns
@@ -4647,7 +4510,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Kamera an, Zuordnung nicht OK, Temperatur zu hoch |
 | 0xFF | Ungültig |
 
-<a id="table-tab-veh-con"></a>
 ### TAB_VEH_CON
 
 Dimensions: 16 rows × 2 columns
@@ -4671,7 +4533,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Fehler |
 | 15 | Signal ungültig |
 
-<a id="table-tsignalart"></a>
 ### TSIGNALART
 
 Dimensions: 9 rows × 2 columns
@@ -4688,7 +4549,6 @@ Dimensions: 9 rows × 2 columns
 | 0x08 | Testbild mit leicht springendem ACNT |
 | 0x09 | Testbild mit stark springendem ACNT |
 
-<a id="table-tvideoausgang"></a>
 ### TVIDEOAUSGANG
 
 Dimensions: 11 rows × 2 columns

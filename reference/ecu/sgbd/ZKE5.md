@@ -50,7 +50,6 @@
 - [C_C_LESEN](#job-c-c-lesen) - Codierdaten lesen
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +68,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -90,7 +88,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -109,7 +106,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob
@@ -124,7 +120,6 @@ _No arguments._
 | ID_COD_INDEX | int | Codier-Index |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -139,7 +134,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob
@@ -157,7 +151,6 @@ Fahrgestellnummer schreiben Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -175,7 +168,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer Grundmodul V automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -188,7 +180,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Grundmodul V
@@ -213,7 +204,6 @@ _No arguments._
 | ID_VARIANTE | string | Variante des Grundmoduls: ZKE5_LOW, ZKE5_HIGH, ZKE5_LOW_LIN, ZKE5_HIGH_LIN, ZKE? |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose Sonderfall: Loeschdatum (KW/Jahr) integriert !
@@ -238,7 +228,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary | 0. Hex-Antwort von SG |
 | _TEL_ANTWORT1 | binary | 1. Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen Sonderfall: Loeschdatum (KW/Jahr) integriert !
@@ -257,7 +246,6 @@ Fehlerspeicher loeschen Sonderfall: Loeschdatum (KW/Jahr) integriert !
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -271,7 +259,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -289,7 +276,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -310,7 +296,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -334,7 +319,6 @@ _No arguments._
 | BYTE10 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status der Digitalsignale des GM V (Ein-/Ausgaenge) Der Wertebereich ist bei fast allen Results: Bereich: 0, wenn FALSE / 1, wenn TRUE Andernfalls ist der Bereich gezielt spezifiziert.
@@ -503,7 +487,6 @@ _No arguments._
 | STAT_ZV0FS | int | Eingang Funk: ZV-Befehl verriegeln |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-eks"></a>
 ### STATUS_EKS
 
 Status bzgl. Einklemmschutz bei Grundmodul V
@@ -525,7 +508,6 @@ _No arguments._
 | STAT_EKSBH_TEXT | string | Einklemmschutz Beifahrertuer hinten moegliche Texte: GEDRUECKT, NICHT_GEDRUECKT, UNTERBRECHUNG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Status der Analogsignale des GM V
@@ -569,7 +551,6 @@ _No arguments._
 | STAT_V_VA1_WERT | real | Spannung Verbraucherabschaltung 1 Bereich: 0 bis 25,5 [V] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern eines digitalen Ein- oder Ausgangs v. GM5 ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! Aufruf 'XTRACT [-F] ZKE5.prg'
@@ -589,7 +570,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs v. GM5 ! erlaubte Namen des Argumen
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierdaten des GM V (Block 0) (Block 1 mit Parameter '1')
@@ -649,7 +629,6 @@ Auslesen der Codierdaten des GM V (Block 0) (Block 1 mit Parameter '1')
 | DATENSICHERUNG_BLOCK_1 | string | Datensicherungsbyte fuer Block 1 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen Info-Speicher ist im Aufbau analog zum Fehlerspeicher Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -671,7 +650,6 @@ _No arguments._
 | F_ART1_TEXT | string | 1. (einzige) Infoart als Text table IArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-zv"></a>
 ### IS_LESEN_ZV
 
 Infospeicher lesen / Sonderfall: ZV-Ringspeicher Analog zu FS_LESEN gibt es mehrere (15+1) Ergebnis-Saetze Im Satz  1 steht die Information zum letzten ZV-Befehl. Im Satz 15 steht die aelteste Information. Im Satz 16 steht das Ergebnis JOB_STATUS.
@@ -697,7 +675,6 @@ _No arguments._
 | I_EWS | int | Elektronische Wegfahrsperre Bereich: 0, wenn FALSE / 1, wenn TRUE |
 | I_FB_2MIN | int | 2 Minuten nach Fernbedienung entriegeln Bereich: 0, wenn FALSE / 1, wenn TRUE |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers der ZKE V Als Argumente werden die Anzahl und die Adresse der Datenbytes uebergeben.
@@ -716,7 +693,6 @@ Lesen des internen Speichers der ZKE V Als Argumente werden die Anzahl und die A
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Speicherinhalt lesen
@@ -736,7 +712,6 @@ Speicherinhalt lesen
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Write Telegram to ECU |
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG Write response |
 
-<a id="job-status-key-memory"></a>
 ### STATUS_KEY_MEMORY
 
 Auslesen der Nummer des Funkschluessels, mit dem zuletzt entriegelt wurde
@@ -751,7 +726,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-funkschluessel"></a>
 ### STATUS_FUNKSCHLUESSEL
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!        A C H T U N G         !!! !!! Dieser Job ist abhaengig von !!! !!! der Softwarenummer des SG's. !!! !!! Es liegen derzeit nur Daten  !!! !!! fuer folgende SW-Nr. vor :   !!! !!! 1.1, 1.2, 1.4, 1.5, 1.6, 2.0 !!! !!! 3.0, 3.1, 3.3                     !!! !!! bzw. für folgende Diag.Index !!! !!! 41, 51, 42, 52               !!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Auslesen der Funkschluesseldaten aus dem internen Speicher der ZKE V
@@ -771,7 +745,6 @@ _No arguments._
 | STAT_NR_4 | int | Speicher von Schluesselnummer 4 (auf ZKE V initialisiert) Bereich: 0 bis 255 |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-ib-aus"></a>
 ### STEUERN_IB_AUS
 
 dauerhaftes Ausschalten der Innenbeleuchtung Das Innenlicht kann nur manuell durch Druecken des Tasters wieder aktiviert werden.
@@ -785,7 +758,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-dwa"></a>
 ### FS_LESEN_DWA
 
 Fehlerspeicher lesen (nur DWA-Fehler) Sonderjob für Hr. Mühlbauer, TR-443
@@ -801,7 +773,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary | 0. Hex-Antwort von SG |
 | _TEL_ANTWORT1 | binary | 1. Hex-Antwort von SG |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -819,7 +790,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -850,7 +820,6 @@ Codierdaten schreiben und verifizieren
 - [IARTTEXTE](#table-iarttexte) (3 × 2)
 - [BITS](#table-bits) (95 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -871,7 +840,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -946,7 +914,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -975,7 +942,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -999,7 +965,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 87 rows × 2 columns
@@ -1094,7 +1059,6 @@ Dimensions: 87 rows × 2 columns
 | 0x72 | Spiegelverstellschalter (Vertikal) Signal ungültig |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1105,7 +1069,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 32 rows × 2 columns
@@ -1145,7 +1108,6 @@ Dimensions: 32 rows × 2 columns
 | 0x97 | Wiederholsperre: Spiegelbeiklappen |
 | 0xXY | unbekannter Info-Ort |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1156,7 +1118,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 95 rows × 6 columns

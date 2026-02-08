@@ -66,7 +66,6 @@
 - [STEUERN_SERVICEHISTORY_ERASE](#job-steuern-servicehistory-erase) - Gesamte Servicehistorie auf der HU löschen
 - [STEUERN_ZIN_GENERISCH](#job-steuern-zin-generisch) - 0xF022 ZIN_GENERISCH
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -85,7 +84,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -98,7 +96,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -115,7 +112,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -145,7 +141,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -187,7 +182,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -206,7 +200,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -224,7 +217,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -245,7 +237,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -274,7 +265,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -294,7 +284,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -315,7 +304,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -331,7 +319,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -353,7 +340,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -372,7 +358,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -398,7 +383,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -440,7 +424,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -455,7 +438,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -475,7 +457,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -494,7 +475,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -513,7 +493,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -528,7 +507,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -547,7 +525,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -567,7 +544,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -584,7 +560,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -603,7 +578,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -618,7 +592,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -633,7 +606,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -650,7 +622,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -665,7 +636,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -680,7 +650,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -695,7 +664,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -711,7 +679,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -730,7 +697,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -750,7 +716,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -768,7 +733,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -784,7 +748,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagtunnelling-uds"></a>
 ### DIAGTUNNELLING_UDS
 
 complete tunneling of UDS telegrams
@@ -803,7 +766,6 @@ complete tunneling of UDS telegrams
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-lesen-telefonnummern"></a>
 ### LESEN_TELEFONNUMMERN
 
 Auslesen der in HeadUnit gespeicherten Telefonnummern für - Bereitschaftsdienst - Heimathändler - Passo - Hotline
@@ -822,7 +784,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-schreiben-telefonnummern"></a>
 ### SCHREIBEN_TELEFONNUMMERN
 
 Schreiben der Telefonnummern für - Bereitschaftsdienst - Heimathändler - Passo - Hotline
@@ -844,7 +805,6 @@ Schreiben der Telefonnummern für - Bereitschaftsdienst - Heimathändler - Passo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bit-error-rate-dab"></a>
 ### STATUS_BIT_ERROR_RATE_DAB
 
 Measures the quality of the reception of the current DAB ensemble.
@@ -860,7 +820,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bt-read-phone-id"></a>
 ### STATUS_BT_READ_PHONE_ID
 
 Returns information about the phone selected as argument
@@ -883,7 +842,6 @@ Returns information about the phone selected as argument
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hw-variante"></a>
 ### STATUS_HW_VARIANTE
 
 Liefert die HW-Variante der Headunit
@@ -905,7 +863,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-softwarename"></a>
 ### STATUS_SOFTWARENAME
 
 Reads out the flashed Buildname
@@ -921,7 +878,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-servicehistory-add"></a>
 ### STEUERN_SERVICEHISTORY_ADD
 
 Servicehistorie Datensatz auf der HU hinzufügen
@@ -1002,7 +958,6 @@ Servicehistorie Datensatz auf der HU hinzufügen
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-servicehistory-erase"></a>
 ### STEUERN_SERVICEHISTORY_ERASE
 
 Gesamte Servicehistorie auf der HU löschen
@@ -1019,7 +974,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-zin-generisch"></a>
 ### STEUERN_ZIN_GENERISCH
 
 0xF022 ZIN_GENERISCH
@@ -1214,7 +1168,6 @@ _No arguments._
 - [T_ZIN_TESTPICTURE](#table-t-zin-testpicture) (25 × 2)
 - [SERVICEHISTORY](#table-servicehistory) (5 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1298,7 +1251,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 136 rows × 2 columns
@@ -1442,7 +1394,6 @@ Dimensions: 136 rows × 2 columns
 | 0x0000BD | U-Shin |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1485,7 +1436,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1510,7 +1460,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1544,7 +1493,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1617,7 +1565,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1630,7 +1577,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1643,7 +1589,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1656,7 +1601,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1676,7 +1620,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1702,7 +1645,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1713,7 +1655,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0xa000-r"></a>
 ### ARG_0XA000_R
 
 Dimensions: 1 rows × 14 columns
@@ -1722,7 +1663,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_KLANGZEICHEN | + | - | 0-n | - | unsigned char | - | TKlangzeichen | 1.0 | 1.0 | 0.0 | - | - | Legt das auszugebende Signal fest (Klingel,Gong):siehe Tabelle TKlangzeichen |
 
-<a id="table-arg-0xa001-r"></a>
 ### ARG_0XA001_R
 
 Dimensions: 3 rows × 14 columns
@@ -1733,7 +1673,6 @@ Dimensions: 3 rows × 14 columns
 | ARG_LEVEL | + | - | - | - | char | - | - | 1.0 | 1.0 | 0.0 | -96.0 | 127.0 | Bei Headunits: Hex-Wert, von 0x00 lückenlos bis 0x7F, Nicht unterstützte Werte (Stereo: 0x3F) dürfen nicht zu Fehlermeldungen führen.Sondern die für das Lautsprechersystem nächstmöglich kleinere verfügbare Lautstärke wird eingestellt.  Bei Verstärkern: Integer,-96..0 [dB] |
 | ARG_KANAL | + | - | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | bezeichnet den Kanal, auf dem ausgegeben werden soll. Tabelle TAudioKanal |
 
-<a id="table-arg-0xa003-r"></a>
 ### ARG_0XA003_R
 
 Dimensions: 2 rows × 14 columns
@@ -1743,7 +1682,6 @@ Dimensions: 2 rows × 14 columns
 | PDC_SIGNAL | + | - | 0-n | - | unsigned char | - | TPdcSignal | 1.0 | 1.0 | 0.0 | - | - | PDC Ton: Auswahl PDC Typ: siehe Tabelle TPdcSignal |
 | AUDIO_STEP | + | - | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | PDC Ton: Lautstärke abhängig vom Abstand zum Objekt (Schritte von 0-82) |
 
-<a id="table-arg-0xa008-r"></a>
 ### ARG_0XA008_R
 
 Dimensions: 1 rows × 14 columns
@@ -1752,7 +1690,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_WAVEBAND | + | - | 0-n | - | unsigned char | - | TWaveband | 1.0 | 1.0 | 0.0 | - | - | Auwählen des Frequenzbandes: siehe Tabelle TWaveband |
 
-<a id="table-arg-0xa009-r"></a>
 ### ARG_0XA009_R
 
 Dimensions: 1 rows × 14 columns
@@ -1761,7 +1698,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SUCHLAUF | + | - | 0-n | - | unsigned char | - | TTunerSuchlauf | 1.0 | 1.0 | 0.0 | - | - | Startet den Stationssuchlauf ab dem ausgewählten Bandbereich |
 
-<a id="table-arg-0xa00b-r"></a>
 ### ARG_0XA00B_R
 
 Dimensions: 1 rows × 14 columns
@@ -1770,7 +1706,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_ENTSOURCE | + | - | 0-n | - | unsigned char | - | TEntSource | 1.0 | 1.0 | 0.0 | - | - | die auszuwählende Entertainmentquelle |
 
-<a id="table-arg-0xa018-r"></a>
 ### ARG_0XA018_R
 
 Dimensions: 1 rows × 14 columns
@@ -1779,7 +1714,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_ANTENNE | + | - | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | 0.0 | - | Antenne(n) die getestet werden sollen. Tabelle TAntenne |
 
-<a id="table-arg-0xa01e-r"></a>
 ### ARG_0XA01E_R
 
 Dimensions: 1 rows × 14 columns
@@ -1788,7 +1722,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_VERBAU_ROUTINE | + | - | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | 0.0 | - | Routinen, die getestet werden sollen. Tabelle TVerbauRoutine |
 
-<a id="table-arg-0xa021-r"></a>
 ### ARG_0XA021_R
 
 Dimensions: 4 rows × 14 columns
@@ -1800,7 +1733,6 @@ Dimensions: 4 rows × 14 columns
 | ARG_KANAL | + | - | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | bezeichnet den Kanal, auf dem gemessen werden soll. Tabelle TAudioKanal |
 | ARG_MESSDAUER | + | - | - | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | legt die Dauer der Messung fest. Bereich: 50-1000ms Bei Verstärkern: Bereich: 200-3000ms |
 
-<a id="table-arg-0xa022-r"></a>
 ### ARG_0XA022_R
 
 Dimensions: 1 rows × 14 columns
@@ -1809,7 +1741,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SELBSTTEST_ROUTINE | + | - | 0-n | - | unsigned long | - | TSelbsttestRoutine | - | - | - | - | - | Routinen, die getestet werden sollen. Die Tabelle TSelbsttestRoutine wird in der SGBD von der Entwicklung bzw. vom Zulieferer befüllt und gepflegt |
 
-<a id="table-arg-0xa024-r"></a>
 ### ARG_0XA024_R
 
 Dimensions: 2 rows × 14 columns
@@ -1819,7 +1750,6 @@ Dimensions: 2 rows × 14 columns
 | ARG_MENU | + | - | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Einstellen eines MMI Menüs. |
 | ARG_MENU_RSE_RIGHT | + | - | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | ID des Menüs der zweiten MMI, z.B. RSE rechter Bildschirm. |
 
-<a id="table-arg-0xa025-r"></a>
 ### ARG_0XA025_R
 
 Dimensions: 1 rows × 14 columns
@@ -1828,7 +1758,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_LANGUAGE | + | - | 0-n | - | unsigned char | - | TAB_LANGUAGE | - | - | - | - | - | legt die Sprache fest |
 
-<a id="table-arg-0xa02e-r"></a>
 ### ARG_0XA02E_R
 
 Dimensions: 1 rows × 14 columns
@@ -1837,7 +1766,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_TYPE | + | - | 0-n | - | unsigned char | - | TAB_TypeUSBDevice | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0xa036-r"></a>
 ### ARG_0XA036_R
 
 Dimensions: 2 rows × 14 columns
@@ -1847,7 +1775,6 @@ Dimensions: 2 rows × 14 columns
 | ARG_LEVEL | + | - | - | - | char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bei Headunits:  Hex-Wert, von 0x00 lückenlos bis 0x7F Bei manchen sekundären Lautstärken wie Navi-Out wird die Lautstärke relativ angegeben, z.B: [-11;11]  Bei Verstärkern: Integer, -96..0 [dB] |
 | ARG_AUDIO_SIGNAL | + | - | 0-n | - | unsigned char | - | TAudioSignal | - | - | - | - | - | Gibt an, welche Lautstärke verstellt oder ausgelesen werden soll. Default: 0 |
 
-<a id="table-arg-0xa039-r"></a>
 ### ARG_0XA039_R
 
 Dimensions: 1 rows × 14 columns
@@ -1856,7 +1783,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_AUDIO_SIGNAL | + | - | 0-n | - | unsigned char | - | TAudioSignal | - | - | - | - | - | Gibt an, welche Lautstärke ausgelesen werden soll. Default: 0 |
 
-<a id="table-arg-0xa048-r"></a>
 ### ARG_0XA048_R
 
 Dimensions: 1 rows × 14 columns
@@ -1865,7 +1791,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_BT | + | - | 0-n | - | unsigned char | - | TBluetoothStatus | 1.0 | 1.0 | 0.0 | - | - | Setzt den Bluetooth Status |
 
-<a id="table-arg-0xa049-r"></a>
 ### ARG_0XA049_R
 
 Dimensions: 1 rows × 14 columns
@@ -1874,7 +1799,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_BT_ERKENNUNGSMODUS | + | - | 0-n | - | unsigned char | - | TBluetoothDiscoveryModeStatus | 1.0 | 1.0 | 0.0 | - | - | Steuert den Bluetooth Erkennungsmodus |
 
-<a id="table-arg-0xa04c-r"></a>
 ### ARG_0XA04C_R
 
 Dimensions: 1 rows × 14 columns
@@ -1883,7 +1807,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA_TO_RESET | + | - | 0-n | - | unsigned long | - | TBluetoothResetBasicState | 1.0 | 1.0 | 0.0 | - | - | Löschen persönlicher Informationen  Liste der gekoppelten Geräte beinhaltet auch Gespächslisten und Sprachaufnahmen |
 
-<a id="table-arg-0xa06a-r"></a>
 ### ARG_0XA06A_R
 
 Dimensions: 4 rows × 14 columns
@@ -1895,7 +1818,6 @@ Dimensions: 4 rows × 14 columns
 | ARG_VENDORID_TEL_SIA | + | - | HEX | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Hier wird die VendorID zum Vergleich mit dem USB Telefon vorgegeben. ACHTUNG: Eingabe von vier Hex-Zeichen mit 0x voran. BEISPIEL: 0xA1FB |
 | ARG_PRODUCTID_TEL_SIA | + | - | HEX | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Hier wird die ProductID zum Vergleich mit dem USB Telefon vorgegeben. ACHTUNG: Eingabe von vier Hex-Zeichen mit 0x voran. BEISPIEL: 0xA1FB |
 
-<a id="table-arg-0xa083-r"></a>
 ### ARG_0XA083_R
 
 Dimensions: 2 rows × 14 columns
@@ -1905,7 +1827,6 @@ Dimensions: 2 rows × 14 columns
 | ARG_NR_KEY | + | - | 0-n | high | unsigned char | - | TKeyNr | 1.0 | 1.0 | 0.0 | - | - | Schlüsselnummer / Fahrzeug für Reset. Auswahl siehe Tabelle TKeyNr |
 | ARG_PIA_SETTING | + | - | 0-n | high | unsigned long | - | TAB_DelPIASetting | - | - | - | - | - | PIA Einstellungen, die mit jedem Benutzerprofil gelöscht werden müssen |
 
-<a id="table-arg-0xa0aa-r"></a>
 ### ARG_0XA0AA_R
 
 Dimensions: 1 rows × 14 columns
@@ -1914,7 +1835,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SDARS_ACTIVATION | + | - | 0-n | high | unsigned char | - | TAB_ONOFF | 1.0 | 1.0 | 0.0 | - | - | 0x00 AUS 0x01 EIN 0xFF NICHT DEFINIERT |
 
-<a id="table-arg-0xa0b5-r"></a>
 ### ARG_0XA0B5_R
 
 Dimensions: 1 rows × 14 columns
@@ -1923,7 +1843,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SDARS_GENERATOR_FREQUENCY_SXM | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Frequency that must be set on the both channels |
 
-<a id="table-arg-0xa0d7-r"></a>
 ### ARG_0XA0D7_R
 
 Dimensions: 1 rows × 14 columns
@@ -1932,7 +1851,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SDARS_MPFA | + | - | 0-n | high | unsigned char | - | TAB_MPFA | - | - | - | - | - | to activate an MPFA |
 
-<a id="table-arg-0xd003-d"></a>
 ### ARG_0XD003_D
 
 Dimensions: 1 rows × 12 columns
@@ -1941,7 +1859,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_KANAL | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Kanalnummer |
 
-<a id="table-arg-0xd00d-d"></a>
 ### ARG_0XD00D_D
 
 Dimensions: 1 rows × 12 columns
@@ -1950,7 +1867,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_FREQUENZ | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | 150.0 | 108000.0 | Einzustellende Frequenz im Bereich 150 - 108000 [kHz] |
 
-<a id="table-arg-0xd00e-d"></a>
 ### ARG_0XD00E_D
 
 Dimensions: 2 rows × 12 columns
@@ -1960,7 +1876,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_TP | 0-n | - | unsigned char | - | TTp | 1.0 | 1.0 | 0.0 | - | - | Steuert die TP Funktionalität. Default: 2 |
 | ARG_RDS | 0-n | - | unsigned char | - | TRds | 1.0 | 1.0 | 0.0 | - | - | Steuert die RDS Funktionalität. Default: 2 |
 
-<a id="table-arg-0xd014-d"></a>
 ### ARG_0XD014_D
 
 Dimensions: 2 rows × 12 columns
@@ -1970,7 +1885,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_DEMUTE | 0-n | - | unsigned char | - | TDemuteStatus | 1.0 | 1.0 | 0.0 | - | - | - |
 | ARG_HEADPHONES | 0-n | - | unsigned char | - | TDemuteSource | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0xd01c-d"></a>
 ### ARG_0XD01C_D
 
 Dimensions: 1 rows × 12 columns
@@ -1979,7 +1893,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_BT_GERAETENAME | - | - | string | - | - | 1.0 | 1.0 | 0.0 | - | - | Schreibt den Bluetooth Gerätenamen |
 
-<a id="table-arg-0xd020-d"></a>
 ### ARG_0XD020_D
 
 Dimensions: 1 rows × 12 columns
@@ -1988,7 +1901,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_LOGISTIC_NR | - | - | string[7] | - | - | 1.0 | 1.0 | 0.0 | - | - | die zu schreibende Logistiknummer |
 
-<a id="table-arg-0xd028-d"></a>
 ### ARG_0XD028_D
 
 Dimensions: 1 rows × 12 columns
@@ -1997,7 +1909,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_RADON | 0-n | - | unsigned char | - | TRadOnLead | 1.0 | 1.0 | 0.0 | - | - | Setzen des Ausgangssignals RADON. |
 
-<a id="table-arg-0xd02d-d"></a>
 ### ARG_0XD02D_D
 
 Dimensions: 1 rows × 12 columns
@@ -2006,7 +1917,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_FREQUENZ_DAB | - | - | string[3] | - | - | 1.0 | 1.0 | 0.0 | - | - | Einstellung der DAB Frequenz. Achtung: Hat der Kanal nur 2 Ziffern, so muss mit führender 0 aufgefüllt werden. z.B. 52 wird zu 052 |
 
-<a id="table-arg-0xd02f-d"></a>
 ### ARG_0XD02F_D
 
 Dimensions: 1 rows × 12 columns
@@ -2015,7 +1925,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_NR_SDARS | - | - | string | - | - | 1.0 | 1.0 | 0.0 | - | - | Telefonnummer SDARS |
 
-<a id="table-arg-0xd043-d"></a>
 ### ARG_0XD043_D
 
 Dimensions: 3 rows × 12 columns
@@ -2026,7 +1935,6 @@ Dimensions: 3 rows × 12 columns
 | ARG_FOLLOWING_DAB_DAB | 0-n | - | unsigned char | - | TFollowingDabDab | 1.0 | 1.0 | 0.0 | - | - | Steuert das DAB DAB Following. |
 | ARG_TP_DAB | 0-n | - | unsigned char | - | TTpDab | 1.0 | 1.0 | 0.0 | - | - | Steuert den DAB Traffic Pilot. |
 
-<a id="table-arg-0xd044-d"></a>
 ### ARG_0XD044_D
 
 Dimensions: 1 rows × 12 columns
@@ -2035,7 +1943,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_AKTIVE_ANTENNE_DAB | 0-n | - | unsigned char | - | TAktiveAntenneDAB | 1.0 | 1.0 | 0.0 | - | - | Enables to control the activation state of both DAB antenna. |
 
-<a id="table-arg-0xd0bd-d"></a>
 ### ARG_0XD0BD_D
 
 Dimensions: 4 rows × 12 columns
@@ -2047,7 +1954,6 @@ Dimensions: 4 rows × 12 columns
 | ARG_GREEN | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Farbwerte für Grün, 6bit Auflösung |
 | ARG_BLUE | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Farbwerte für Blau, 6bit Auflösung |
 
-<a id="table-arg-0xd0be-d"></a>
 ### ARG_0XD0BE_D
 
 Dimensions: 1 rows × 12 columns
@@ -2056,7 +1962,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_TEST_PICTUREID | 0-n | high | unsigned char | - | T_ZIN_TESTPICTURE | - | - | - | - | - | Auswahl der erweiterten Test Bild-ID Integer-Werte aus der Tabelle T_ZIN_TESTPICTURE |
 
-<a id="table-arg-0xd0bf-d"></a>
 ### ARG_0XD0BF_D
 
 Dimensions: 2 rows × 12 columns
@@ -2066,7 +1971,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_WIDGETID | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Eindeutige ID der Animation (permanent, semi-permanent und Trigger-Ereignis) |
 | ARG_TRIGGER | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 2.0 | Wert des Triggers [0 - stopp, 1 - einmal, 2 - endlos] |
 
-<a id="table-arg-0xd0c6-d"></a>
 ### ARG_0XD0C6_D
 
 Dimensions: 1 rows × 12 columns
@@ -2075,7 +1979,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_LUM | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Wert der Ziel Leuchtdichte, 12 bit Auflösung |
 
-<a id="table-arg-0xd0c7-d"></a>
 ### ARG_0XD0C7_D
 
 Dimensions: 1 rows × 12 columns
@@ -2084,7 +1987,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DUMMY | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Setzt den CRC-Zähler des Zentralinstruments zurück |
 
-<a id="table-arg-0xd0c8-d"></a>
 ### ARG_0XD0C8_D
 
 Dimensions: 1 rows × 12 columns
@@ -2093,7 +1995,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DUMMY | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | - |
 
-<a id="table-arg-0xd0de-d"></a>
 ### ARG_0XD0DE_D
 
 Dimensions: 1 rows × 12 columns
@@ -2102,7 +2003,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SDARS_SXM_CHANNEL | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Channel that must be tuned |
 
-<a id="table-arg-0xd5c1-d"></a>
 ### ARG_0XD5C1_D
 
 Dimensions: 1 rows × 12 columns
@@ -2111,7 +2011,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_TESTBILD | 0-n | - | unsigned char | - | TAB_TESTBILD_CID | 1.0 | 1.0 | 0.0 | 0.0 | - | Ausgabe des Testbild unabhängig von Signalen der HU. Kann auch ohne HU ausgegeben werden:  Mögliche Werte: 0 = NORMALES_BILD, 1 = SCHWARZES_BILD, 2 = BLAUES_BILD,  3 = ROTES_BILD, 4 = GRUENES_BILD, 5 = NO_SIGNAL |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2125,7 +2024,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2139,7 +2037,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 3 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 58 rows × 3 columns
@@ -2205,7 +2102,6 @@ Dimensions: 58 rows × 3 columns
 | 0xE1CBFF | Dummy-Fehlerspeichereintrag im Netzwerkfehlerbereich nur für Testzwecke | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 8 rows × 9 columns
@@ -2221,7 +2117,6 @@ Dimensions: 8 rows × 9 columns
 | 0x4277 | VENDOR_INFO | HEX | High | unsigned int | - | - | - | - |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2233,7 +2128,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 37 rows × 3 columns
@@ -2278,7 +2172,6 @@ Dimensions: 37 rows × 3 columns
 | 0x930060 | kein/ungültiges Klemmensignal | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 9 rows × 9 columns
@@ -2295,7 +2188,6 @@ Dimensions: 9 rows × 9 columns
 | 0x4277 | VENDOR_INFO | HEX | High | unsigned int | - | - | - | - |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 2 rows × 2 columns
@@ -2305,7 +2197,6 @@ Dimensions: 2 rows × 2 columns
 | 01 | ERROR_MISSING_ARGUMENT |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0xa008-r"></a>
 ### RES_0XA008_R
 
 Dimensions: 1 rows × 13 columns
@@ -2314,7 +2205,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WAVEBAND | - | - | + | 0-n | - | unsigned char | - | TWaveband | 1.0 | 1.0 | 0.0 | aktuelles Frequenzband: siehe Tabelle TWaveband |
 
-<a id="table-res-0xa00a-r"></a>
 ### RES_0XA00A_R
 
 Dimensions: 5 rows × 13 columns
@@ -2327,7 +2217,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_FIELDSTRENGTH_WERT | - | - | + | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Fieldstrength of the best station |
 | STAT_QUALITY_WERT | - | - | + | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Quality of the best station |
 
-<a id="table-res-0xa00b-r"></a>
 ### RES_0XA00B_R
 
 Dimensions: 2 rows × 13 columns
@@ -2337,7 +2226,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ENTSOURCE | - | - | + | 0-n | - | unsigned char | - | TEntSource | 1.0 | 1.0 | 0.0 | die eingestellte Entertainmentquelle |
 | STAT_DESIRED_ENTSOURCE | - | - | + | 0-n | - | unsigned char | - | TEntSourceStatus | 1.0 | 1.0 | 0.0 | gibt zurück, ob die letzte einzustellende Entertainmentquelle verfügbar war. |
 
-<a id="table-res-0xa018-r"></a>
 ### RES_0XA018_R
 
 Dimensions: 51 rows × 13 columns
@@ -2396,7 +2284,6 @@ Dimensions: 51 rows × 13 columns
 | STAT_FEHLER_16_FEHLERART_ANTENNE | - | - | + | 0-n | - | unsigned char | - | TAntenneFehlerArt | 1.0 | 1.0 | 0.0 | Dieses Result wird mit 255 belegt, wenn STAT_TEST_ANTENNE nicht den Wert 3 (Fehler) meldet. |
 | STAT_FEHLER_16_MESSWERT_WIDERSTAND_WERT | - | - | + | 0,1kOhm | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | der auf der fehlerhaften Antenne X gemessene Widerstand in 0.1 kOhm. |
 
-<a id="table-res-0xa01e-r"></a>
 ### RES_0XA01E_R
 
 Dimensions: 2 rows × 13 columns
@@ -2406,7 +2293,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_VERBAU_ROUTINE | - | - | + | 0-n | - | unsigned long | - | TVerbauRoutine | - | - | - | Ausgeführte Testroutine(n). |
 | STAT_TEST_VERBAU | - | - | + | 0-n | - | unsigned char | - | TTESTSTATUS | - | - | - | Gibt den Status des Verbautests wieder. Nach dem Herunterfahren oder Neustart des Steuergerätes wird der Status automatisch auf 0 zurückgesetzt. |
 
-<a id="table-res-0xa021-r"></a>
 ### RES_0XA021_R
 
 Dimensions: 70 rows × 13 columns
@@ -2484,7 +2370,6 @@ Dimensions: 70 rows × 13 columns
 | STAT_FEHLER_16_MESSWERT_SPANNUNG_WERT | - | - | + | mV | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Die auf dem fehlerhaften Kanal X gemessene Spannung in mV Maximal mögliche Spannung: 50V Wird nur eine Strommessung durchgeführt, so ist dieser Wert mit 65535 zu belegen |
 | STAT_FEHLER_16_MESSWERT_STROMSTAERKE_WERT | - | - | + | mA | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Die auf dem fehlerhaften Kanal X gemessene Stromstärke in mA Maximal mögliche Stromstärke: 50A Wird nur eine Spannungsmessung durchgeführt, so ist dieser Wert mit 65535 zu belegen. |
 
-<a id="table-res-0xa022-r"></a>
 ### RES_0XA022_R
 
 Dimensions: 2 rows × 13 columns
@@ -2494,7 +2379,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_SELBSTTEST_ROUTINE | - | - | + | 0-n | - | unsigned long | - | TSelbsttestRoutine | - | - | - | Routine(n), die getestet wurde(n). Tabelle  TSelbsttestRoutine |
 | STAT_SELBSTTEST | - | - | + | 0-n | - | unsigned char | - | TTESTSTATUS | - | - | - | Gibt den Status des Tests wieder. |
 
-<a id="table-res-0xa024-r"></a>
 ### RES_0XA024_R
 
 Dimensions: 2 rows × 13 columns
@@ -2504,7 +2388,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_MENU_WERT | - | - | + | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | ID des Menüs. |
 | STAT_MENU_RSE_RIGHT_WERT | - | - | + | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | ID des Menü der zweiten MMI, z.B. RSE rechter Bildschirm. |
 
-<a id="table-res-0xa025-r"></a>
 ### RES_0XA025_R
 
 Dimensions: 1 rows × 13 columns
@@ -2513,7 +2396,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LANGUAGE | - | - | + | 0-n | - | unsigned char | - | TAB_LANGUAGE | - | - | - | Liest die derzeit eingestellte MMI Sprache. |
 
-<a id="table-res-0xa02e-r"></a>
 ### RES_0XA02E_R
 
 Dimensions: 44 rows × 13 columns
@@ -2565,7 +2447,6 @@ Dimensions: 44 rows × 13 columns
 | STAT_4_CONNECT_STATE | + | - | - | 0-n | - | unsigned char | - | TUsbConnectionState | 1.0 | 1.0 | 0.0 | Aktueller Zustand Connection USB Stick 4 |
 | STAT_4_USED_PORT | + | - | - | 0-n | - | unsigned char | - | TUsbInterface | 1.0 | 1.0 | 0.0 | Benutzter Port USB Stick 4 0: USB Interface 1: Snap In Adapter |
 
-<a id="table-res-0xa039-r"></a>
 ### RES_0XA039_R
 
 Dimensions: 1 rows × 13 columns
@@ -2574,7 +2455,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LEVEL_WERT | + | - | - | - | - | char | - | - | 1.0 | 1.0 | 0.0 | Bei Headunits:  Hex-Wert, von 0x00 lückenlos bis 0x7F, Nicht unterstützte Werte (Stereo: 0x3F) dürfen nicht zu Fehlermeldungen führen. Sondern die für das Lautsprechersystem nächstmöglich kleinere verfügbare Lautstärke wird eingestellt.   Bei manchen sekundären Lautstärken wie Navi-Out wird die Lautstärke relativ angegeben, z.B: [-11;11]  Bei Verstärkern: Integer, -96..0 [dB] |
 
-<a id="table-res-0xa03d-r"></a>
 ### RES_0XA03D_R
 
 Dimensions: 1 rows × 13 columns
@@ -2583,7 +2463,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SDARS_FACTORY_DEFAULTS | - | - | + | 0-n | - | unsigned char | - | TSdarsFactorySuccessful | 1.0 | 1.0 | 0.0 | SDARS Factory Defaults |
 
-<a id="table-res-0xa03f-r"></a>
 ### RES_0XA03F_R
 
 Dimensions: 5 rows × 13 columns
@@ -2596,7 +2475,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_ENSEMBLE_BER_WERT | - | - | + | HEX | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Bit Error Rate of active ensemble |
 | STAT_SERVICE_NAME_TEXT | - | - | + | TEXT | - | string | - | - | 1.0 | 1.0 | 0.0 | Name of active service (first service of ensemble) |
 
-<a id="table-res-0xa048-r"></a>
 ### RES_0XA048_R
 
 Dimensions: 1 rows × 13 columns
@@ -2605,7 +2483,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BT | - | - | + | 0-n | - | unsigned char | - | TBluetoothStatus | 1.0 | 1.0 | 0.0 | Liest den Bluetooth Status aus |
 
-<a id="table-res-0xa049-r"></a>
 ### RES_0XA049_R
 
 Dimensions: 1 rows × 13 columns
@@ -2614,7 +2491,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BT_ERKENNUNGSMODUS | - | - | + | 0-n | - | unsigned char | - | TBluetoothDiscoveryModeStatus | 1.0 | 1.0 | 0.0 | Liest den Status des Bluetooth Erkennungsmodus |
 
-<a id="table-res-0xa04c-r"></a>
 ### RES_0XA04C_R
 
 Dimensions: 6 rows × 13 columns
@@ -2628,7 +2504,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_MUSIC_LIST_DELETED | - | - | + | 0-n | - | unsigned char | - | TBluetoothReset | 1.0 | 1.0 | 0.0 | Status Löschen Music List |
 | STAT_PIM_DELETED | - | - | + | 0-n | - | unsigned char | - | TBluetoothReset | 1.0 | 1.0 | 0.0 | Status Löschen PIM |
 
-<a id="table-res-0xa06a-r"></a>
 ### RES_0XA06A_R
 
 Dimensions: 12 rows × 13 columns
@@ -2648,7 +2523,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_PRODUCTID_REC_TEL_SIA_WERT | - | - | + | HEX | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Hier wird die erkannte ProductID des Telefons vom Snap In Adapter ausgegeben. ACHTUNG: Rückgabe erfolgt als vierstelliger Hex-String ohne 0x vorangestellt. BEISPIEL: A1FB |
 | STAT_VENDORSTRING_SIA_REC_TEXT | - | - | + | TEXT | - | string | - | - | 1.0 | 1.0 | 0.0 | Hier wird der erkannte VendorString für das Telefon vom Snap In Adapter ausgegeben. ACHTUNG: Rückgabe erfolgt als String. |
 
-<a id="table-res-0xa083-r"></a>
 ### RES_0XA083_R
 
 Dimensions: 1 rows × 13 columns
@@ -2657,7 +2531,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RESET_PIA_SETTINGS | - | - | + | 0-n | high | unsigned char | - | TProcessStatus | 1.0 | 1.0 | 0.0 | Ergebnis siehe Tabelle TProcessStatus |
 
-<a id="table-res-0xa0aa-r"></a>
 ### RES_0XA0AA_R
 
 Dimensions: 1 rows × 13 columns
@@ -2666,7 +2539,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SDARS_ACTIVATION | - | - | + | 0-n | high | unsigned char | - | TAB_ONOFF | 1.0 | 1.0 | 0.0 | gibt den Zustand des SDARS Moduls anhang TAB_ONOFF an |
 
-<a id="table-res-0xa0b5-r"></a>
 ### RES_0XA0B5_R
 
 Dimensions: 1 rows × 13 columns
@@ -2675,7 +2547,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SDARS_GENERATOR_FREQUENCY_SXM_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Frequency that is currently active on the both channels  Range : 0 to 255 Frq in 100 Hz steps  0 = frequency generator off; 1 = 100Hz tone; 2 = 200Hz tone ¿. |
 
-<a id="table-res-0xa0d7-r"></a>
 ### RES_0XA0D7_R
 
 Dimensions: 2 rows × 13 columns
@@ -2685,7 +2556,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_COMPLETENESS_SDARS_MPFA | - | - | + | 0-n | high | unsigned char | - | TAB_COMPLETENESS | - | - | - | Status of the MPFA completeness |
 | STAT_ACTIVATED_SDARS_MPFA | - | - | + | 0-n | high | unsigned char | - | TAB_MPFA | - | - | - | Status of the activated MPFA |
 
-<a id="table-res-0xd003-d"></a>
 ### RES_0XD003_D
 
 Dimensions: 1 rows × 10 columns
@@ -2694,7 +2564,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KANAL | 0-n | - | unsigned long | - | TAudioKanal | 1.0 | 1.0 | 0.0 | Kanalnummer |
 
-<a id="table-res-0xd00d-d"></a>
 ### RES_0XD00D_D
 
 Dimensions: 1 rows × 10 columns
@@ -2703,7 +2572,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FREQUENZ_WERT | kHz | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Die derzeit eingestellte Frequenz im Bereich 150 - 108000 [kHz] |
 
-<a id="table-res-0xd00e-d"></a>
 ### RES_0XD00E_D
 
 Dimensions: 3 rows × 10 columns
@@ -2714,7 +2582,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_AF | 0-n | - | unsigned char | - | TAf | 1.0 | 1.0 | 0.0 | Gibt den Status der AF Funktion als Integer wieder. |
 | STAT_RDS | 0-n | - | unsigned char | - | TRds | 1.0 | 1.0 | 0.0 | Gibt den Status der RDS Funktion als Integer wieder. |
 
-<a id="table-res-0xd010-d"></a>
 ### RES_0XD010_D
 
 Dimensions: 5 rows × 10 columns
@@ -2727,7 +2594,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_FIELDSTRENGTH_EXACT_WERT | dBµV | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Werte zwischen 0..60 Dies entspricht 0..60 dBµV in Schritten von 1dB. Rückgabe von 255, wenn keine Messung möglich. |
 | STAT_FREQUENZ_WERT | kHz | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Die derzeit eingestellte Frequenz im Bereich 150 - 108000 [kHz] |
 
-<a id="table-res-0xd014-d"></a>
 ### RES_0XD014_D
 
 Dimensions: 2 rows × 10 columns
@@ -2737,7 +2603,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DEMUTE_SOURCE1 | 0-n | - | unsigned char | - | TSourceDemuteStatus | 1.0 | 1.0 | 0.0 | Gibt den eingestellten Mute-Modus zurück: Für Source1 sind nur die Werte 0-3 gültig. |
 | STAT_DEMUTE_SOURCE2 | 0-n | - | unsigned char | - | TSourceDemuteStatus | 1.0 | 1.0 | 0.0 | Gibt den eingestellten Mute-Modus zurück: Für Source2 sind nur die Werte 4-5 gültig. Bei Headunits wird hier 255 zurückgeliefert. |
 
-<a id="table-res-0xd01c-d"></a>
 ### RES_0XD01C_D
 
 Dimensions: 1 rows × 10 columns
@@ -2746,7 +2611,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BT_GERAETENAME_TEXT | TEXT | - | string | - | - | 1.0 | 1.0 | 0.0 | Liest den Bluetooth Gerätenamen |
 
-<a id="table-res-0xd01d-d"></a>
 ### RES_0XD01D_D
 
 Dimensions: 4 rows × 10 columns
@@ -2758,7 +2622,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BT_ADR_DEV_3_DATA | DATA | - | data[6] | - | - | 1.0 | 1.0 | 0.0 | Geräteadresse von Gerät 3 |
 | STAT_BT_ADR_DEV_4_DATA | DATA | - | data[6] | - | - | 1.0 | 1.0 | 0.0 | Geräteadresse von Gerät 4 |
 
-<a id="table-res-0xd020-d"></a>
 ### RES_0XD020_D
 
 Dimensions: 1 rows × 10 columns
@@ -2767,7 +2630,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LOGISTIC_NR_TEXT | TEXT | - | string[7] | - | - | 1.0 | 1.0 | 0.0 | Auslesen der Logistik-Nummer. ACHTUNG: RESULT wird von _WERT auf _TEXT gewandelt! |
 
-<a id="table-res-0xd021-d"></a>
 ### RES_0XD021_D
 
 Dimensions: 48 rows × 10 columns
@@ -2823,7 +2685,6 @@ Dimensions: 48 rows × 10 columns
 | STAT_APPL_ENABLED_16 | 0-n | - | unsigned char | - | TApplicationRunningStatus | 1.0 | 1.0 | 0.0 | gibt für jede Applikation X wieder, ob sie gerade läuft. |
 | STAT_APPL_CODED_16 | 0-n | - | unsigned char | - | TApplicationActivationStatus | 1.0 | 1.0 | 0.0 | gibt für jede Applikation X wieder, ob sie aktiviert ist. |
 
-<a id="table-res-0xd026-d"></a>
 ### RES_0XD026_D
 
 Dimensions: 6 rows × 10 columns
@@ -2837,7 +2698,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_TEMP_HDD_WERT | °C | - | char | - | - | 1.0 | 1.0 | 0.0 | liefert die Temperatur des HDD-Laufwerks. Bereich: -127,&,127 |
 | STAT_TEMP_DVD_WERT | °C | - | char | - | - | 1.0 | 1.0 | 0.0 | liefert die Temperatur des DVD-Laufwerks. Bereich: -127,&,127 |
 
-<a id="table-res-0xd028-d"></a>
 ### RES_0XD028_D
 
 Dimensions: 1 rows × 10 columns
@@ -2846,7 +2706,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RADON | 0-n | - | unsigned char | - | TRadOnLead | 1.0 | 1.0 | 0.0 | Status des Ausgangssignals RADON |
 
-<a id="table-res-0xd02d-d"></a>
 ### RES_0XD02D_D
 
 Dimensions: 1 rows × 10 columns
@@ -2855,7 +2714,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FREQUENZ_DAB_TEXT | TEXT | - | string[3] | - | - | 1.0 | 1.0 | 0.0 | Momentane DAB Frequenz. |
 
-<a id="table-res-0xd02f-d"></a>
 ### RES_0XD02F_D
 
 Dimensions: 1 rows × 10 columns
@@ -2864,7 +2722,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_NR_SDARS_TEXT | TEXT | - | string | - | - | 1.0 | 1.0 | 0.0 | SDARS Telefonnummer |
 
-<a id="table-res-0xd043-d"></a>
 ### RES_0XD043_D
 
 Dimensions: 3 rows × 10 columns
@@ -2875,7 +2732,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_FOLLOWING_DAB_DAB | 0-n | - | unsigned char | - | TFollowingDabDab | 1.0 | 1.0 | 0.0 | Gibt den Status der DAB DAB Following Funktion als Integer wieder. |
 | STAT_TP_DAB | 0-n | - | unsigned char | - | TTpDab | 1.0 | 1.0 | 0.0 | Gibt den Status der DAB TP Funktion als Integer wieder. |
 
-<a id="table-res-0xd044-d"></a>
 ### RES_0XD044_D
 
 Dimensions: 1 rows × 10 columns
@@ -2884,7 +2740,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AKTIVE_ANTENNE_DAB | 0-n | - | unsigned char | - | TAktiveAntenneDAB | 1.0 | 1.0 | 0.0 | Antenna that is currently active as integer |
 
-<a id="table-res-0xd057-d"></a>
 ### RES_0XD057_D
 
 Dimensions: 2 rows × 10 columns
@@ -2894,7 +2749,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_USB_HUB_TEST_PORT_1 | 0-n | - | unsigned char | - | THubConnectionState | 1.0 | 1.0 | 0.0 | Status HUB Verbindung Port 1 |
 | STAT_USB_HUB_TEST_PORT_2 | 0-n | - | unsigned char | - | THubConnectionState | 1.0 | 1.0 | 0.0 | Status HUB Verbindung Port 2 |
 
-<a id="table-res-0xd093-d"></a>
 ### RES_0XD093_D
 
 Dimensions: 2 rows × 10 columns
@@ -2904,7 +2758,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FM_PHASEDIV_ANTENNA1 | 0-n | high | unsigned char | - | TAB_stateFMPhasAntenna | 1.0 | 1.0 | 0.0 | Status FM 1 Phasendiversity Antenne. Ergebnis siehe Tabelle TAB_stateFMPhasAntenna |
 | STAT_FM_PHASEDIV_ANTENNA2 | 0-n | high | unsigned char | - | TAB_stateFMPhasAntenna | 1.0 | 1.0 | 0.0 | Status FM 2 Phasendiversity Antenne. Ergebnis siehe Tabelle TAB_stateFMPhasAntenna |
 
-<a id="table-res-0xd0c9-d"></a>
 ### RES_0XD0C9_D
 
 Dimensions: 6 rows × 10 columns
@@ -2918,7 +2771,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_DIAGNOSTIC_FLAGS | 0-n | high | unsigned char | - | TAB_ZIN_DIAGNOSTIC_FLAG | - | - | - | Gibt den Status des Zentralinstruments zurück Werte aus der Tabelle TAB_ZIN_DIAGNOSTIC_FLAG |
 | STAT_ZIN_VARIANT | 0-n | high | unsigned char | - | TAB_ZIN_VARIANT | - | - | - | Reports the variant of the used central instrument |
 
-<a id="table-res-0xd0ca-d"></a>
 ### RES_0XD0CA_D
 
 Dimensions: 7 rows × 10 columns
@@ -2933,7 +2785,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_EVENT_ID_5_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | sechste Event ID |
 | STAT_EVENT_ID_6_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | siebte Event ID |
 
-<a id="table-res-0xd0cb-d"></a>
 ### RES_0XD0CB_D
 
 Dimensions: 19 rows × 10 columns
@@ -2960,7 +2811,6 @@ Dimensions: 19 rows × 10 columns
 | STAT_SEMI_PER_EVENT_PRIO_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - |
 | STAT_SEMI_PER_EVENT_TRIGGER_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - |
 
-<a id="table-res-0xd0dd-d"></a>
 ### RES_0XD0DD_D
 
 Dimensions: 7 rows × 10 columns
@@ -2975,7 +2825,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_HDEC_REV_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | HDEC chipset Revision |
 | STAT_RF_REV_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | RF tuner chipset Revision |
 
-<a id="table-res-0xd0de-d"></a>
 ### RES_0XD0DE_D
 
 Dimensions: 2 rows × 10 columns
@@ -2985,7 +2834,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SDARS_SXM_CHANNEL_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Channel number of the current SDARS channel |
 | STAT_SDARS_SXM_CHANNEL_TUNE_SUCCESS | 0-n | high | unsigned char | - | TSdarsChannelTuneSuccess | - | - | - | Status of the current SDARS channel as integer |
 
-<a id="table-res-0xd0df-d"></a>
 ### RES_0XD0DF_D
 
 Dimensions: 2 rows × 10 columns
@@ -2995,7 +2843,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SDARS_COMP_RECEPTION_SXM | 0-n | high | unsigned char | - | TSdarsSignalQuality | - | - | - | Composite reception quality as integer |
 | STAT_SDARS_GLOBAL_STATUS | 0-n | high | unsigned char | - | TSdarsSignalQualityGlobalStatus | - | - | - | Global status as integer |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 72 rows × 16 columns
@@ -3075,7 +2922,6 @@ Dimensions: 72 rows × 16 columns
 | CID_TESTBILD | 0xD5C1 | - | Ansteuerung der Testbild-Ausgabe vom CID. | - | - | - | - | - | - | - | - | - | 2E | ARG_0xD5C1_D | - |
 | STEUERN_INTERNAL_DEBUG_ROUTINES | 0xF027 | - | Interner Entwicklerjob für Alpine | - | - | - | - | - | - | - | - | - | 31 | - | - |
 
-<a id="table-tab-completeness"></a>
 ### TAB_COMPLETENESS
 
 Dimensions: 3 rows × 2 columns
@@ -3086,7 +2932,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | complete |
 | 0xFF | not defined |
 
-<a id="table-tab-cpu-error"></a>
 ### TAB_CPU_ERROR
 
 Dimensions: 3 rows × 2 columns
@@ -3097,7 +2942,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | CPU usage stays at 100% for 20 seconds |
 | 0x04 | CPU usage by the driver related tasks stays at 100% for 5 seconds |
 
-<a id="table-tab-delpiasetting"></a>
 ### TAB_DELPIASETTING
 
 Dimensions: 7 rows × 2 columns
@@ -3112,7 +2956,6 @@ Dimensions: 7 rows × 2 columns
 | 0x00000010 | Language/Units |
 | 0x000000FF | Not defined |
 
-<a id="table-tab-heap-error"></a>
 ### TAB_HEAP_ERROR
 
 Dimensions: 4 rows × 2 columns
@@ -3124,7 +2967,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | Freed heap memory address is out of heap area |
 | 0x08 | Alignment of the freed heap memory address is not correct |
 
-<a id="table-tab-heap-warning"></a>
 ### TAB_HEAP_WARNING
 
 Dimensions: 6 rows × 2 columns
@@ -3138,7 +2980,6 @@ Dimensions: 6 rows × 2 columns
 | 0x10 | Allocated heap memory size exceeds 64 kbytes |
 | 0x20 | Freed heap memory size exceeds 64 kbytes |
 
-<a id="table-tab-language"></a>
 ### TAB_LANGUAGE
 
 Dimensions: 34 rows × 2 columns
@@ -3180,7 +3021,6 @@ Dimensions: 34 rows × 2 columns
 | 0x1F | Finnisch |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-mpfa"></a>
 ### TAB_MPFA
 
 Dimensions: 15 rows × 2 columns
@@ -3203,7 +3043,6 @@ Dimensions: 15 rows × 2 columns
 | 0xFE | not activated |
 | 0xFF | not defined |
 
-<a id="table-tab-onoff"></a>
 ### TAB_ONOFF
 
 Dimensions: 3 rows × 2 columns
@@ -3214,7 +3053,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | EIN |
 | 0xFF | NICHT DEFINIERT |
 
-<a id="table-tab-testbild-cid"></a>
 ### TAB_TESTBILD_CID
 
 Dimensions: 7 rows × 2 columns
@@ -3229,7 +3067,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | No Signal Bild |
 | 0xFF | Nicht definiert |
 
-<a id="table-tab-typeusbdevice"></a>
 ### TAB_TYPEUSBDEVICE
 
 Dimensions: 5 rows × 2 columns
@@ -3242,7 +3079,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | UNKNOWN |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-usb-info"></a>
 ### TAB_USB_INFO
 
 Dimensions: 2 rows × 2 columns
@@ -3252,7 +3088,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | Driver |
 | 0x02 | FileSystem |
 
-<a id="table-tab-zin-diagnostic-flag"></a>
 ### TAB_ZIN_DIAGNOSTIC_FLAG
 
 Dimensions: 7 rows × 2 columns
@@ -3267,7 +3102,6 @@ Dimensions: 7 rows × 2 columns
 | 0x8A | tbd |
 | 0xFF | ungültig |
 
-<a id="table-tab-zin-variant"></a>
 ### TAB_ZIN_VARIANT
 
 Dimensions: 4 rows × 2 columns
@@ -3279,7 +3113,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | 8,8  ZIN |
 | 0x03 | Radio ZIN |
 
-<a id="table-tab-statefmphasantenna"></a>
 ### TAB_STATEFMPHASANTENNA
 
 Dimensions: 6 rows × 2 columns
@@ -3293,7 +3126,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Kurzschluss nach Masse (Verbindung HU - Antennenverstärker) |
 | 0xFF | nicht definiert |
 
-<a id="table-taf"></a>
 ### TAF
 
 Dimensions: 4 rows × 2 columns
@@ -3305,7 +3137,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | AF keine Änderung |
 | 0xFF | Nicht definiert |
 
-<a id="table-taktiveantennedab"></a>
 ### TAKTIVEANTENNEDAB
 
 Dimensions: 5 rows × 2 columns
@@ -3318,7 +3149,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Beide Antennen |
 | 0xFF | Nicht definiert |
 
-<a id="table-tantenne"></a>
 ### TANTENNE
 
 Dimensions: 15 rows × 2 columns
@@ -3341,7 +3171,6 @@ Dimensions: 15 rows × 2 columns
 | 0x00001000 | WLAN Antenne |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-tantennefehlerart"></a>
 ### TANTENNEFEHLERART
 
 Dimensions: 6 rows × 2 columns
@@ -3355,7 +3184,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Antenne nicht gesteckt ( nur für BT- Antenne 12-07) |
 | 0xFF | Nicht definiert |
 
-<a id="table-tapplication"></a>
 ### TAPPLICATION
 
 Dimensions: 15 rows × 2 columns
@@ -3378,7 +3206,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0D | M Laptimer |
 | 0xFF | Nicht definiert |
 
-<a id="table-tapplicationactivationstatus"></a>
 ### TAPPLICATIONACTIVATIONSTATUS
 
 Dimensions: 13 rows × 2 columns
@@ -3399,7 +3226,6 @@ Dimensions: 13 rows × 2 columns
 | 0x22 | Aktiviert durch Codierung und SWT Freischaltcode eingespielt |
 | 0xFF | Nicht definiert |
 
-<a id="table-tapplicationrunningstatus"></a>
 ### TAPPLICATIONRUNNINGSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3410,7 +3236,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Applikation gestartet |
 | 0xFF | Nicht definiert |
 
-<a id="table-taudiokanal"></a>
 ### TAUDIOKANAL
 
 Dimensions: 26 rows × 2 columns
@@ -3444,7 +3269,6 @@ Dimensions: 26 rows × 2 columns
 | 0x00800000 | Center hinten (Erweiterter Kanal, speziell Hochtöner wenn getrennte Hoch/Mitteltöner) |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-taudiosignal"></a>
 ### TAUDIOSIGNAL
 
 Dimensions: 15 rows × 2 columns
@@ -3467,7 +3291,6 @@ Dimensions: 15 rows × 2 columns
 | 0x20 | nur für RSE: Entertainment Kopfhörer rechte Seite |
 | 0xFF | Nicht definiert |
 
-<a id="table-taudiosystem"></a>
 ### TAUDIOSYSTEM
 
 Dimensions: 8 rows × 2 columns
@@ -3483,7 +3306,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | HIFI-SYSTEM HARMAN KARDON |
 | 0xFF | Nicht definiert |
 
-<a id="table-tbluetoothdiscoverymodestatus"></a>
 ### TBLUETOOTHDISCOVERYMODESTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3494,7 +3316,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | BT Erkennungsmodus ein |
 | 0xFF | nicht definiert |
 
-<a id="table-tbluetoothreset"></a>
 ### TBLUETOOTHRESET
 
 Dimensions: 5 rows × 2 columns
@@ -3507,7 +3328,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | läuft gerade |
 | 0xFF | nicht definiert |
 
-<a id="table-tbluetoothresetbasicstate"></a>
 ### TBLUETOOTHRESETBASICSTATE
 
 Dimensions: 9 rows × 2 columns
@@ -3524,7 +3344,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0040 | Musiksammlung |
 | 0x0080 | Musiksammlung administrative Datenbanken |
 
-<a id="table-tbluetoothstatus"></a>
 ### TBLUETOOTHSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3535,7 +3354,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Bluetooth aktiviert |
 | 0xFF | nicht definiert |
 
-<a id="table-tdemutesource"></a>
 ### TDEMUTESOURCE
 
 Dimensions: 5 rows × 2 columns
@@ -3548,7 +3366,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Beide Kopfhörer |
 | 0xFF | Nicht definiert |
 
-<a id="table-tdemutestatus"></a>
 ### TDEMUTESTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3559,7 +3376,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Stummschaltung aus |
 | 0xFF | Nicht definiert |
 
-<a id="table-tentsource"></a>
 ### TENTSOURCE
 
 Dimensions: 27 rows × 2 columns
@@ -3594,7 +3410,6 @@ Dimensions: 27 rows × 2 columns
 | 0x19 | Entertainment server |
 | 0xFF | Entertainmentquelle nicht definiert |
 
-<a id="table-tentsourcestatus"></a>
 ### TENTSOURCESTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3606,7 +3421,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Entertainmentquelle wird gesucht |
 | 0xFF | Nicht definiert |
 
-<a id="table-tfollowingdabdab"></a>
 ### TFOLLOWINGDABDAB
 
 Dimensions: 4 rows × 2 columns
@@ -3618,7 +3432,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | DAB DAB Following keine Änderung |
 | 0xFF | Nicht definiert |
 
-<a id="table-tfollowingdabfm"></a>
 ### TFOLLOWINGDABFM
 
 Dimensions: 4 rows × 2 columns
@@ -3630,7 +3443,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | DAB FM Following keine Änderung |
 | 0xFF | Nicht definiert |
 
-<a id="table-thubconnectionstate"></a>
 ### THUBCONNECTIONSTATE
 
 Dimensions: 4 rows × 2 columns
@@ -3642,7 +3454,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | HUB nicht codiert |
 | 0xFF | nicht definiert |
 
-<a id="table-thweinheit"></a>
 ### THWEINHEIT
 
 Dimensions: 2 rows × 2 columns
@@ -3652,7 +3463,6 @@ Dimensions: 2 rows × 2 columns
 | 0xFF | Nicht definiert |
 | 0x04 | 4 Zeilen Display |
 
-<a id="table-thwlieferant"></a>
 ### THWLIEFERANT
 
 Dimensions: 9 rows × 2 columns
@@ -3669,7 +3479,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Magneti Marelli |
 | 0xFF | Nicht definiert |
 
-<a id="table-thwvar-device"></a>
 ### THWVAR_DEVICE
 
 Dimensions: 13 rows × 2 columns
@@ -3690,7 +3499,6 @@ Dimensions: 13 rows × 2 columns
 | 0x00000200 | VideoSwitch High |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-thwvar-function"></a>
 ### THWVAR_FUNCTION
 
 Dimensions: 13 rows × 2 columns
@@ -3711,7 +3519,6 @@ Dimensions: 13 rows × 2 columns
 | 0x08000000 | Media-USB |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-tinitialisierung"></a>
 ### TINITIALISIERUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3722,7 +3529,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | IO initialisiert |
 | 0xFF | NIO initialisiert |
 
-<a id="table-tkanalfehlerart"></a>
 ### TKANALFEHLERART
 
 Dimensions: 6 rows × 2 columns
@@ -3736,7 +3542,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Kurzschluss Untereinander |
 | 0xFF | Nicht definiert |
 
-<a id="table-tkeynr"></a>
 ### TKEYNR
 
 Dimensions: 8 rows × 2 columns
@@ -3752,7 +3557,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFE | Alle |
 | 0xFF | Alle Schlüssel |
 
-<a id="table-tklangzeichen"></a>
 ### TKLANGZEICHEN
 
 Dimensions: 27 rows × 2 columns
@@ -3787,7 +3591,6 @@ Dimensions: 27 rows × 2 columns
 | 0x19 | HMI_Sample_Sound |
 | 0xFF | Nicht definiert |
 
-<a id="table-tpdcsignal"></a>
 ### TPDCSIGNAL
 
 Dimensions: 4 rows × 2 columns
@@ -3799,7 +3602,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Aus |
 | 0xFF | Nicht definiert |
 
-<a id="table-tprocessstatus"></a>
 ### TPROCESSSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -3812,7 +3614,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Prozess beendet mit Fehler |
 | 255 | nicht definiert |
 
-<a id="table-tradonlead"></a>
 ### TRADONLEAD
 
 Dimensions: 3 rows × 2 columns
@@ -3823,7 +3624,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | ein |
 | 0xFF | Nicht definiert |
 
-<a id="table-trds"></a>
 ### TRDS
 
 Dimensions: 4 rows × 2 columns
@@ -3835,7 +3635,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | RDS keine Änderung |
 | 0xFF | Nicht definiert |
 
-<a id="table-tsdarschanneltunesuccess"></a>
 ### TSDARSCHANNELTUNESUCCESS
 
 Dimensions: 5 rows × 2 columns
@@ -3848,7 +3647,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Kanaleinstellung läuft |
 | 255 | nicht definiert |
 
-<a id="table-tsdarsfactorysuccessful"></a>
 ### TSDARSFACTORYSUCCESSFUL
 
 Dimensions: 5 rows × 2 columns
@@ -3861,7 +3659,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Wiederherstellung konnte nicht beendet werden |
 | 255 | nicht definiert |
 
-<a id="table-tsdarssignalquality"></a>
 ### TSDARSSIGNALQUALITY
 
 Dimensions: 5 rows × 2 columns
@@ -3874,7 +3671,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | exzellentes Signal |
 | 255 | nicht definiert |
 
-<a id="table-tsdarssignalqualityglobalstatus"></a>
 ### TSDARSSIGNALQUALITYGLOBALSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3885,7 +3681,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Audio |
 | 255 | nicht definiert |
 
-<a id="table-tsearchingprocess"></a>
 ### TSEARCHINGPROCESS
 
 Dimensions: 6 rows × 2 columns
@@ -3899,7 +3694,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Test unterbrochen |
 | 0xFF | Nicht definiert |
 
-<a id="table-tselbsttestroutine"></a>
 ### TSELBSTTESTROUTINE
 
 Dimensions: 2 rows × 2 columns
@@ -3909,7 +3703,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00000000 | Alle Routinen |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-tsignaldab"></a>
 ### TSIGNALDAB
 
 Dimensions: 3 rows × 2 columns
@@ -3920,7 +3713,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | gueltiges Signal |
 | 0xFF | Nicht definiert |
 
-<a id="table-tsourcedemutestatus"></a>
 ### TSOURCEDEMUTESTATUS
 
 Dimensions: 7 rows × 2 columns
@@ -3935,7 +3727,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | RSE Kopfhörer rechts ein |
 | 0xFF | Nicht definiert |
 
-<a id="table-tteststatus"></a>
 ### TTESTSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3949,7 +3740,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Test unterbrochen |
 | 0xFF | nicht definiert |
 
-<a id="table-ttaste"></a>
 ### TTASTE
 
 Dimensions: 21 rows × 2 columns
@@ -3978,7 +3768,6 @@ Dimensions: 21 rows × 2 columns
 | 0x24 | Preset 8 |
 | 0xFF | Nicht definiert |
 
-<a id="table-ttelmute"></a>
 ### TTELMUTE
 
 Dimensions: 3 rows × 2 columns
@@ -3989,7 +3778,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Tel-Mute aktiv |
 | 0xFF | Nicht definiert |
 
-<a id="table-ttp"></a>
 ### TTP
 
 Dimensions: 4 rows × 2 columns
@@ -4001,7 +3789,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | TP keine Änderung |
 | 0xFF | Nicht definiert |
 
-<a id="table-ttpdab"></a>
 ### TTPDAB
 
 Dimensions: 4 rows × 2 columns
@@ -4013,7 +3800,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | TP DAB keine Änderung |
 | 255 | Nicht definiert |
 
-<a id="table-ttunersuchlauf"></a>
 ### TTUNERSUCHLAUF
 
 Dimensions: 4 rows × 2 columns
@@ -4025,7 +3811,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Stopp |
 | 0xFF | Nicht definiert |
 
-<a id="table-tusbconnectionstate"></a>
 ### TUSBCONNECTIONSTATE
 
 Dimensions: 3 rows × 2 columns
@@ -4036,7 +3821,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | angeschlossen |
 | 0xFF | nicht definiert |
 
-<a id="table-tusbinterface"></a>
 ### TUSBINTERFACE
 
 Dimensions: 3 rows × 2 columns
@@ -4047,7 +3831,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Snap In Adapter |
 | 0xFF | nicht definiert |
 
-<a id="table-tusbteststatus"></a>
 ### TUSBTESTSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -4061,7 +3844,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFE | Gerät angeschlossen aber kein Massenspeicher |
 | 0xFF | Nicht definiert |
 
-<a id="table-tverbauroutine"></a>
 ### TVERBAUROUTINE
 
 Dimensions: 29 rows × 2 columns
@@ -4098,7 +3880,6 @@ Dimensions: 29 rows × 2 columns
 | 0x04000000 | Verbindung Headunit zum USB Interface 2 (USB2) |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-twaveband"></a>
 ### TWAVEBAND
 
 Dimensions: 7 rows × 2 columns
@@ -4113,7 +3894,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | TRF |
 | 0x06 | Nicht definiert |
 
-<a id="table-t-zin-testpicture"></a>
 ### T_ZIN_TESTPICTURE
 
 Dimensions: 25 rows × 2 columns
@@ -4146,7 +3926,6 @@ Dimensions: 25 rows × 2 columns
 | 0x17 | test picture extended 19 |
 | 0x18 | test picture extended 20 |
 
-<a id="table-servicehistory"></a>
 ### SERVICEHISTORY
 
 Dimensions: 5 rows × 2 columns

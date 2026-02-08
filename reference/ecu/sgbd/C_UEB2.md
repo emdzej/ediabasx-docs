@@ -28,7 +28,6 @@
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 - [C_LOGIN](#job-c-login) - login-procedure
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -46,7 +45,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer UER2
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer UEB2
@@ -83,7 +80,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -98,7 +94,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -116,7 +111,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -134,7 +128,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -151,7 +144,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-login"></a>
 ### C_LOGIN
 
 login-procedure
@@ -171,7 +163,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (7 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -186,7 +177,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

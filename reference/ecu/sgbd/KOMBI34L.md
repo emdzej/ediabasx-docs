@@ -30,7 +30,6 @@
 - [FG_NR_LESEN](#job-fg-nr-lesen) - Auslesen der Fahrgestellnummer
 - [TACHO_A](#job-tacho-a) - liefert geschwindigkeitsproportionales Signal
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -43,7 +42,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -61,7 +59,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -80,7 +77,6 @@ _No arguments._
 | ID_DATUM_KW | string | Herstelldatum KW |
 | ID_DATUM_JAHR | string | Herstelldatum Jahr |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -103,7 +99,6 @@ _No arguments._
 | F_ZAHL | int | Anzahl der Fehler |
 | F_HEX_CODE | binary | HEX.Werte des Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -116,7 +111,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -129,7 +123,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 Ruecksetzen des Gesamtwegstreckenzaehlers
@@ -142,7 +135,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -162,7 +154,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-fg-nr-lesen"></a>
 ### FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -176,7 +167,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | FG_NR | string | Fahrgestellnummer |
 
-<a id="job-tacho-a"></a>
 ### TACHO_A
 
 liefert geschwindigkeitsproportionales Signal
@@ -201,7 +191,6 @@ liefert geschwindigkeitsproportionales Signal
 - [FARTTEXTE](#table-farttexte) (7 × 2)
 - [SIARESET](#table-siareset) (4 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 16 rows × 3 columns
@@ -225,7 +214,6 @@ Dimensions: 16 rows × 3 columns
 | 0x1d | 0x0d | Kombitaste fehlerhaft |
 | 0xff | 0x00 | unbekannter Fehler |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -240,7 +228,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | statischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 4 rows × 2 columns

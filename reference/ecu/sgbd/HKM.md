@@ -33,7 +33,6 @@
 - [STEUERN_DIGITAL](#job-steuern-digital) - Ansteuern eines digitalen Ein- oder Ausgangs v. HKM
 - [COD_LESEN](#job-cod-lesen) - Auslesen der Codierdaten des HKM
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -51,7 +50,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Heckklappen-Modul automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer HKM
@@ -88,7 +85,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -110,7 +106,6 @@ _No arguments._
 | F_ART1_TEXT | string | Fehlerart als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -124,7 +119,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -138,7 +132,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -152,7 +145,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -169,7 +161,6 @@ _No arguments._
 | BYTE3 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -190,7 +181,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -208,7 +198,6 @@ _No arguments._
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Stati aller Signale des Heckklappen-Moduls
@@ -240,7 +229,6 @@ _No arguments._
 | STAT_ZAEHLER_EINH | string | Einheit: 1 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern eines digitalen Ein- oder Ausgangs v. HKM
@@ -260,7 +248,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs v. HKM
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierdaten des HKM
@@ -285,7 +272,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 - [BITS](#table-bits) (12 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -301,7 +287,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns
@@ -338,7 +323,6 @@ Dimensions: 29 rows × 2 columns
 | 0x28 | DODUCO |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -356,7 +340,6 @@ Dimensions: 10 rows × 2 columns
 | 0xA1 | Neigungsschalter oder Leitung Neigungsschalter |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -367,7 +350,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 12 rows × 6 columns

@@ -27,7 +27,6 @@
 - [FS_LOESCHEN](#job-fs-loeschen) - Initialisierung und Kommunikationsparameter
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Deinitialisierung
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -46,7 +45,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Fakeantwort notwendig wegen ISTA zur Steuerung SG-Baum
@@ -61,7 +59,6 @@ _No arguments._
 | JOB_STATUS2 | string | immer OKAY in ISTA wird damit Steuergerät grün markiert |
 | VARIANTE_IND | string | Name der SGBD |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -75,7 +72,6 @@ _No arguments._
 | HINWEIS | string | folgende Massnahmen |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler)
@@ -102,7 +98,6 @@ _No arguments._
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hex Code |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-init-fs-loeschen"></a>
 ### INIT_FS_LOESCHEN
 
 Initialisierung und Kommunikationsparameter
@@ -117,7 +112,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Initialisierung und Kommunikationsparameter
@@ -132,7 +126,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Deinitialisierung
@@ -152,7 +145,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (10 × 2)
 - [FORTTEXTE](#table-forttexte) (10 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -170,7 +162,6 @@ Dimensions: 10 rows × 2 columns
 | 0xFF | UNBEKANNTER FEHLER |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 10 rows × 3 columns

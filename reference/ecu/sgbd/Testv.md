@@ -13,7 +13,6 @@
 - [BINPARA](#job-binpara) - Verarbeitung binaerer Parameterdaten
 - [WAIT](#job-wait) - Warten
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Initialisierung
@@ -26,7 +25,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 falls ok, sonst 0 |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ermittlung des Identifikations-Strings
@@ -42,7 +40,6 @@ _No arguments._
 | DATE | string | Aktuelles Datum |
 | TIME | string | Aktuelle Uhrzeit |
 
-<a id="job-check"></a>
 ### CHECK
 
 Darstellung aller Ergebnistypen
@@ -68,7 +65,6 @@ Darstellung aller Ergebnistypen
 | APIBINARY | binary | data-Wert oder 64 Byte falls kein Parameter uebergeben wurde |
 | APIREAL | real | real-Wert oder -1.2345E-06 falls kein Parameter uebergeben wurde |
 
-<a id="job-binpara"></a>
 ### BINPARA
 
 Verarbeitung binaerer Parameterdaten
@@ -86,7 +82,6 @@ Verarbeitung binaerer Parameterdaten
 | JOB_STATUS | string | Liefert: OKAY oder ERROR_PARAMETER |
 | PARA | binary | Parameterdaten |
 
-<a id="job-wait"></a>
 ### WAIT
 
 Warten
@@ -110,7 +105,6 @@ Warten
 - [JOBSTATUS](#table-jobstatus) (3 × 2)
 - [IDENTSTRING](#table-identstring) (1 × 4)
 
-<a id="table-jobstatus"></a>
 ### JOBSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -121,7 +115,6 @@ Dimensions: 3 rows × 2 columns
 | Para | ERROR_PARAMETER |
 | Tab | ERROR_TABELLE |
 
-<a id="table-identstring"></a>
 ### IDENTSTRING
 
 Dimensions: 1 rows × 4 columns

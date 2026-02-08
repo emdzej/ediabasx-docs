@@ -36,7 +36,6 @@
 - [STEUERN_DIGITAL](#job-steuern-digital) - Ansteuern eines digitalen Ein- oder Ausgangs v. GM5 ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! Aufruf 'XTRACT [-F] ZKE6.prg'
 - [SPEICHER_LESEN](#job-speicher-lesen) - Lesen des internen Speichers der ZKE VI Als Argumente werden die Anzahl und die Adresse der Datenbytes uebergeben.
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -49,7 +48,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -73,7 +71,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -92,7 +89,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -111,7 +107,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -124,7 +119,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -137,7 +131,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen DS2-Low-Konzept mit Abweichungen Sonderfall: externer und interner Fehlerspeicher
@@ -159,7 +152,6 @@ _No arguments._
 | F_ART1_TEXT | string | 1. (einzige) Fehlerart als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antworten vom SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Alle Fehlerspeicher loeschen
@@ -172,7 +164,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-start"></a>
 ### diagnose_start
 
 Start der Diagnose
@@ -186,7 +177,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antworten vom SG |
 
-<a id="job-reset"></a>
 ### reset
 
 Grundeinstellung nach Diagnose
@@ -199,7 +189,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-restart"></a>
 ### diagnose_restart
 
 Start der Diagnose
@@ -212,7 +201,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -237,7 +225,6 @@ _No arguments._
 | BYTE11 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status der Digitalsignale des GM VI (Ein-/Ausgaenge) Der Wertebereich ist bei fast allen Results: Bereich: 0, wenn FALSE / 1, wenn TRUE Andernfalls ist der Bereich gezielt spezifiziert.
@@ -361,7 +348,6 @@ _No arguments._
 | STAT_HSH | int | Ausgang: Relais Heckscheibenheizung |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Status der Analogsignale des GM VI
@@ -401,7 +387,6 @@ _No arguments._
 | STAT_VBAT_EINH | string | Einheit: 1 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern eines digitalen Ein- oder Ausgangs v. GM5 ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! Aufruf 'XTRACT [-F] ZKE6.prg'
@@ -421,7 +406,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs v. GM5 ! erlaubte Namen des Argumen
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers der ZKE VI Als Argumente werden die Anzahl und die Adresse der Datenbytes uebergeben.
@@ -454,7 +438,6 @@ Lesen des internen Speichers der ZKE VI Als Argumente werden die Anzahl und die 
 - [BITS](#table-bits) (77 × 6)
 - [BITSAUS](#table-bitsaus) (35 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -475,7 +458,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 56 rows × 2 columns
@@ -539,7 +521,6 @@ Dimensions: 56 rows × 2 columns
 | 0x55 | BHTC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -568,7 +549,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 46 rows × 2 columns
@@ -622,7 +602,6 @@ Dimensions: 46 rows × 2 columns
 | 0xA8 | Thermistor Checksumme falsch |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -633,7 +612,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 23 rows × 2 columns
@@ -664,7 +642,6 @@ Dimensions: 23 rows × 2 columns
 | 0x95 | Wiederholsperre: Fensterheber |
 | 0xXY | unbekannter Info-Ort |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -675,7 +652,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 77 rows × 6 columns
@@ -760,7 +736,6 @@ Dimensions: 77 rows × 6 columns
 | 2 | 17 | 0x04 | 0x04 | IGN | Status Zuendung |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-bitsaus"></a>
 ### BITSAUS
 
 Dimensions: 35 rows × 6 columns

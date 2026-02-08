@@ -37,7 +37,6 @@
 - [SLEEP_MODE](#job-sleep-mode) - SG in Sleep-Mode versetzen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +55,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Videomodul TV-Teil
@@ -69,7 +67,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Videomodul TV-Teil
@@ -93,7 +90,6 @@ _No arguments._
 | ID_SW_NR | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low Konzept ohne Umweltbedingung
@@ -112,7 +108,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingen, hier 0 |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Shadowspeicher lesen
@@ -131,7 +126,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingen, hier 0 |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -149,7 +143,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Daten in den Pruefstempel schreiben
@@ -169,7 +162,6 @@ Daten in den Pruefstempel schreiben
 | JOB_STATUS | string | normalerweise "OKAY" |
 | _TEL_SENDE | binary |  |
 
-<a id="job-speicher-lesen"></a>
 ### Speicher_lesen
 
 Lesen, welche Parameter geladen sind
@@ -195,7 +187,6 @@ Lesen, welche Parameter geladen sind
 | EINGABEFEHLER | string | Fehlertextausgabe bei Eingabe >32 Byte |
 | _TEL_SENDE | binary | gesendetes Telegramm |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Selbsttest des Videomoduls TV-Teil
@@ -208,7 +199,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Stati lesen am Videomodul TV-Teil
@@ -236,7 +226,6 @@ _No arguments._
 | STAT_AUDIO_ANTENNENEINGANG_NIO | int |  |
 | STAT_SELBSTTEST_CVBS_NIO | int |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen im Videomodul TV-Teil
@@ -249,7 +238,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-mabiki-mode-schreiben"></a>
 ### MABIKI_MODE_SCHREIBEN
 
 Umschreiben eines Bytes
@@ -266,7 +254,6 @@ Umschreiben eines Bytes
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-codierung-multifunktion-lesen"></a>
 ### CODIERUNG_MULTIFUNKTION_LESEN
 
 auslesen der codierbyte 6f
@@ -282,7 +269,6 @@ _No arguments._
 | COD_MULTIFUNKTION_WERT | int |  |
 | ID_COD_INDEX | int | aus Id-lesen |
 
-<a id="job-codierung-laendervariante-lesen"></a>
 ### CODIERUNG_LAENDERVARIANTE_LESEN
 
 auslesen der codierbyte 7f
@@ -298,7 +284,6 @@ _No arguments._
 | COD_LAENDERVARIANTE_WERT | int |  |
 | ID_COD_INDEX | int | aus Id-lesen |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -319,7 +304,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -338,7 +322,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -363,7 +346,6 @@ _No arguments._
 - [SEGMENTAUSWAHL](#table-segmentauswahl) (6 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -384,7 +366,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -408,7 +389,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -420,7 +400,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | FeTraWe aktiviert |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -442,7 +421,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0D | Kein RGB Telegramm vom Graphikteil |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -453,7 +431,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler aktiv |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-segmentauswahl"></a>
 ### SEGMENTAUSWAHL
 
 Dimensions: 6 rows × 2 columns
@@ -467,7 +444,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0B | internes RAM IDATA |
 | 0xXY | Unbekanntes Segment |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

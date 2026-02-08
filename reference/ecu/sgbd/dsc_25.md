@@ -64,7 +64,6 @@
 - [STEUERN_HYDRO_SPUELEN](#job-steuern-hydro-spuelen) - DSC Hydraulikblock spuelen
 - [_SPEICHER_LESEN](#job-speicher-lesen) - Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Start-Adresse und Anzahl der Datenbytes UDS: $23 ReadMemoryByAddress Modus   : Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -83,7 +82,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -96,7 +94,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -113,7 +110,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -143,7 +139,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -185,7 +180,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -204,7 +198,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -222,7 +215,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -243,7 +235,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -272,7 +263,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -292,7 +282,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -313,7 +302,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -329,7 +317,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -351,7 +338,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -373,7 +359,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -392,7 +377,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -418,7 +402,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -460,7 +443,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -480,7 +462,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -499,7 +480,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -518,7 +498,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -533,7 +512,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -552,7 +530,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -572,7 +549,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -589,7 +565,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -608,7 +583,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -623,7 +597,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -638,7 +611,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -655,7 +627,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -670,7 +641,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -685,7 +655,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -700,7 +669,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -716,7 +684,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -735,7 +702,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -755,7 +721,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -773,7 +738,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -789,7 +753,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-debug-dmclient-systime"></a>
 ### DEBUG_DMCLIENT_SYSTIME
 
 Systemzeit UDS  : $22   ReadDataByIdentifier UDS  : $1701 Sub-Parameter Systemzeit Modus: Default
@@ -805,7 +768,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vin"></a>
 ### STATUS_VIN
 
 HW_NR UDS  : $22   ReadDataByIdentifier UDS  : $F190 Sub-Parameter VIN Modus: Default
@@ -821,7 +783,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flm-lesen-bmw"></a>
 ### FLM_LESEN_BMW
 
 Auslesen der FASTA Daten und der Debug Codierung UDS: $22 $5011 ReadDataByID FASTA_DATEN UDS: $22 $3000 ReadDataByID Codierdaten Allgemein Modus   : Default
@@ -836,7 +797,6 @@ _No arguments._
 | FLM_CODIER_DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-cbs-info"></a>
 ### CBS_INFO
 
 Ausgabe der CBS-Version
@@ -852,7 +812,6 @@ _No arguments._
 | CBS_VERSION_TEXT | string | CBS Version im Klartext |
 | CBS_VERSION_HEX | string | CBS Version als Wert |
 
-<a id="job-cbs-daten-lesen"></a>
 ### CBS_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 5) UDS: $22 ReadDataByIdentifier Modus  : Default
@@ -911,7 +870,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset"></a>
 ### CBS_RESET
 
 CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modus  : Default Musterparametersatz fuer Bremsbelagverschleiss Vorder/Hinterachse br_v,100,1,0,0,0,1,0,0 br_h,100,1,0,0,0,1,0,0 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!)
@@ -942,7 +900,6 @@ CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modu
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hydro-spuelen"></a>
 ### STEUERN_HYDRO_SPUELEN
 
 DSC Hydraulikblock spuelen
@@ -957,7 +914,6 @@ _No arguments._
 | _REQUEST | binary | CustomerDiagnosis request for STEUERN_SOLLDRUCK_VORGEBEN job |
 | _RESPONSE | binary | CustomerDiagnosis response for STEUERN_SOLLDRUCK_VORGEBEN job |
 
-<a id="job-speicher-lesen"></a>
 ### _SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Start-Adresse und Anzahl der Datenbytes UDS: $23 ReadMemoryByAddress Modus   : Default
@@ -1100,7 +1056,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Start-Adre
 - [TAB_VENTILE_KALIBRIERUNG_2](#table-tab-ventile-kalibrierung-2) (8 × 2)
 - [TAB_VENTILE_KALIBRIERUNG_3](#table-tab-ventile-kalibrierung-3) (8 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1184,7 +1139,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 137 rows × 2 columns
@@ -1329,7 +1283,6 @@ Dimensions: 137 rows × 2 columns
 | 0x0000BE | Schaeffler Technologies |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1372,7 +1325,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1397,7 +1349,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1431,7 +1382,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1504,7 +1454,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1517,7 +1466,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1530,7 +1478,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1543,7 +1490,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1563,7 +1509,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1589,7 +1534,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1600,7 +1544,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0xa061-r"></a>
 ### ARG_0XA061_R
 
 Dimensions: 2 rows × 14 columns
@@ -1610,7 +1553,6 @@ Dimensions: 2 rows × 14 columns
 | PHASE | + | - | 0-n | - | unsigned char | - | TAB_DSC_PHASE_ENTLUEFTUNG | 1.0 | 1.0 | 0.0 | - | - | Phase |
 | WIEDERHOLUNG | + | - | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Anzahl Wiederholungen |
 
-<a id="table-arg-0xa064-r"></a>
 ### ARG_0XA064_R
 
 Dimensions: 13 rows × 14 columns
@@ -1631,7 +1573,6 @@ Dimensions: 13 rows × 14 columns
 | VENTIL_6 | + | - | 0-n | - | unsigned char | - | TAB_DSC_VENTILE | 1.0 | 1.0 | 0.0 | - | - | Ventil Auswahl |
 | WERT_6 | + | - | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Ventil Ansteuerung |
 
-<a id="table-arg-0xa065-r"></a>
 ### ARG_0XA065_R
 
 Dimensions: 1 rows × 14 columns
@@ -1640,7 +1581,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ZEIT_ROUTINE | + | - | s | - | unsigned char | - | - | 10.0 | 1.0 | 0.0 | - | - | max. Ausführungsdauer |
 
-<a id="table-arg-0xa066-r"></a>
 ### ARG_0XA066_R
 
 Dimensions: 2 rows × 14 columns
@@ -1650,7 +1590,6 @@ Dimensions: 2 rows × 14 columns
 | ZEIT_TV_EIN | + | - | ms | - | unsigned char | - | - | 1.0 | 10.0 | 0.0 | - | - | Verzögerung Schliessen Trennventil |
 | ZEIT_PUMPE_AUS | + | - | ms | - | unsigned char | - | - | 1.0 | 10.0 | 0.0 | - | - | Verzögerung Stop Pumpe (> ZEIT_TV_EIN) |
 
-<a id="table-arg-0xa067-r"></a>
 ### ARG_0XA067_R
 
 Dimensions: 1 rows × 14 columns
@@ -1659,7 +1598,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ZEIT | + | - | s | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | max. Ausführungsdauer |
 
-<a id="table-arg-0xa06d-r"></a>
 ### ARG_0XA06D_R
 
 Dimensions: 2 rows × 14 columns
@@ -1669,7 +1607,6 @@ Dimensions: 2 rows × 14 columns
 | ZEIT_ROUTINE | + | - | s | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | max. Ausführungsdauer |
 | PHASE | + | - | 0-n | - | unsigned char | - | TAB_DSC_PHASE_VAKUUMBEFUELLUNG | 1.0 | 1.0 | 0.0 | - | - | Phase |
 
-<a id="table-arg-0xa06e-r"></a>
 ### ARG_0XA06E_R
 
 Dimensions: 1 rows × 14 columns
@@ -1678,7 +1615,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PHASE | + | - | 0-n | - | unsigned char | - | TAB_DSC_PHASE_VENTILE_KALIBRIERUNG | 1.0 | 1.0 | 0.0 | - | - | Phase |
 
-<a id="table-arg-0xa08f-r"></a>
 ### ARG_0XA08F_R
 
 Dimensions: 1 rows × 14 columns
@@ -1687,7 +1623,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PHASE | + | + | 0-n | - | unsigned char | - | TAB_DSC_PHASE_VENTILE_KALIBRIERUNG | 1.0 | 1.0 | 0.0 | - | - | Phase |
 
-<a id="table-arg-0xd7d7-d"></a>
 ### ARG_0XD7D7_D
 
 Dimensions: 1 rows × 12 columns
@@ -1696,7 +1631,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FBS_RESET | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | FBS Reset - 0x0000 Angeben zum löschen der FBS Daten |
 
-<a id="table-arg-0xdb98-d"></a>
 ### ARG_0XDB98_D
 
 Dimensions: 1 rows × 12 columns
@@ -1705,7 +1639,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | - | char | - | TAB_ROLLENMODUS | 1.0 | 1.0 | 0.0 | - | - | Setzen / Rücksetzen Rollenmodus (1 = Setzen; 0 =  Rücksetzen) |
 
-<a id="table-arg-0xdbe1-d"></a>
 ### ARG_0XDBE1_D
 
 Dimensions: 1 rows × 12 columns
@@ -1714,7 +1647,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LMV_FUNKTION_AKTIV | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 1 = aktiv;  0 = inaktiv |
 
-<a id="table-arg-0xdbe2-d"></a>
 ### ARG_0XDBE2_D
 
 Dimensions: 1 rows × 12 columns
@@ -1723,7 +1655,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | REKU_FUNKTION_AKTIV | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 1 = aktiv;  0 = inaktiv |
 
-<a id="table-arg-0xdbe8-d"></a>
 ### ARG_0XDBE8_D
 
 Dimensions: 1 rows × 12 columns
@@ -1732,7 +1663,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PUMPE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 1 = ein; 0 = aus |
 
-<a id="table-arg-0xdbe9-d"></a>
 ### ARG_0XDBE9_D
 
 Dimensions: 12 rows × 12 columns
@@ -1752,7 +1682,6 @@ Dimensions: 12 rows × 12 columns
 | TRENNVENTIL_VA | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Trennventil Vorderachse (0 % = nicht angesteuert; 100 % = voll angesteuert) |
 | TRENNVENTIL_HA | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Trennventil Hinterachse (0 % = nicht angesteuert; 100 % = voll angesteuert) ESPPremium: Trennventil VA (USV 2) ESPhev: Druckregelventil VA (PCR) |
 
-<a id="table-arg-0xdc1d-d"></a>
 ### ARG_0XDC1D_D
 
 Dimensions: 1 rows × 12 columns
@@ -1761,7 +1690,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUTOHOLDLED_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 1 = LED ein  0 = LED aus |
 
-<a id="table-arg-0xdcc0-d"></a>
 ### ARG_0XDCC0_D
 
 Dimensions: 2 rows × 12 columns
@@ -1771,7 +1699,6 @@ Dimensions: 2 rows × 12 columns
 | RE_ID | - | low | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | ID der Radelektronik |
 | RE_POS | 0-n | low | unsigned char | - | TAB_RDC_RAD_POSITION_NR | - | - | - | - | - | Position der Radelektronik: 0 = vorne links,  1 = vorne rechts, 2 = hinten links, 3 = hinten rechts, 4 = Reserverad(nur RDC Gen2), 5, 6, 7, 8, 9 = Radposition nicht bekannt |
 
-<a id="table-arg-0xdcc6-d"></a>
 ### ARG_0XDCC6_D
 
 Dimensions: 2 rows × 12 columns
@@ -1781,7 +1708,6 @@ Dimensions: 2 rows × 12 columns
 | FUNKTIONSNR | 0-n | - | unsigned char | - | TAB_RDC_STEUERFUNKTIONEN | 1.0 | 1.0 | 0.0 | - | - | 1 = BANDMODE - Bandmode; 2 = ER_FAHRT - Eigenraderkennung bei Fahrt; 3 = ER_STAND - Eigenraderkennung im Stand (Gen2); 4 = TEST_ER_FAHRT - Empfang der Eigenraeder bei Fahrt pruefen; 5 = TEST_ER_STAND - Empfang der Eigenraeder im Stand pruefen (Gen2); 6 = RDCBUS_DIAG - Stromdiagnose LIN-Teilnehmer (Gen2); 7 = SOLLDRUCK_SCHREIBEN - aktuelle Reifendruckwerte als Sollwert; 8 = CAL_REQUEST - Kalibrieranforderung; 9 = ER_FAHRT_OHNE_TRIGGER - Eigenraderkennung bei Fahrt ohne Auswertung Triggerbit (Gen3); 10 = TEST_ER_FAHRT_OHNE_TRIGGER = Empfang der Eigenraeder bei Fahrt pruefen ohne Auswertung Triggerbit (Gen3) |
 | AKTIONSNR | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 1 - SET; 0 - RESET |
 
-<a id="table-arg-0xdcee-d"></a>
 ### ARG_0XDCEE_D
 
 Dimensions: 2 rows × 12 columns
@@ -1791,7 +1717,6 @@ Dimensions: 2 rows × 12 columns
 | SOLLDRUCK | bar | low | unsigned int | - | - | 1000.0 | 1.0 | 0.0 | 3.0 | 4.8 | Sollwert Raddruck für Radelektronik |
 | RADPOS | 0-n | low | unsigned char | - | TAB_RDC_RAD_POSITION_NR | - | - | - | - | - | Position Rad |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1805,7 +1730,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-cbskennung"></a>
 ### CBSKENNUNG
 
 Dimensions: 11 rows × 3 columns
@@ -1824,7 +1748,6 @@ Dimensions: 11 rows × 3 columns
 | 0x0D | NOx_a | NOx-Additiv |
 | 0x64 | Sic_v | Sichtpruefung/Fahrzeug-Check verknuepft |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1838,7 +1761,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 415 rows × 3 columns
@@ -2261,7 +2183,6 @@ Dimensions: 415 rows × 3 columns
 | 0xD36D58 | Signalfehler (Radmoment Antrieb 1, ID: WMOM_DRV_1) - Qualifier | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 12 rows × 9 columns
@@ -2281,7 +2202,6 @@ Dimensions: 12 rows × 9 columns
 | 0x8005 | STATUS VEHICLE | Hex | high | unsigned char | - | 1 | 1 | 0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2293,7 +2213,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 11 rows × 3 columns
@@ -2312,7 +2231,6 @@ Dimensions: 11 rows × 3 columns
 | 0x480AB5 | Verteilergetriebe Langzeitschutzfunktion vom LMV angefordert | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 12 rows × 9 columns
@@ -2332,7 +2250,6 @@ Dimensions: 12 rows × 9 columns
 | 0x8005 | STATUS VEHICLE | Hex | high | unsigned char | - | 1 | 1 | 0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2341,7 +2258,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0xa061-r"></a>
 ### RES_0XA061_R
 
 Dimensions: 1 rows × 13 columns
@@ -2350,7 +2266,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ROUTINE_STATUS | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_ROUTINE | 1.0 | 1.0 | 0.0 | Ausführungsstatus |
 
-<a id="table-res-0xa064-r"></a>
 ### RES_0XA064_R
 
 Dimensions: 1 rows × 13 columns
@@ -2359,7 +2274,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ROUTINE_STATUS | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_ROUTINE | 1.0 | 1.0 | 0.0 | Ausführungsstatus |
 
-<a id="table-res-0xa065-r"></a>
 ### RES_0XA065_R
 
 Dimensions: 9 rows × 13 columns
@@ -2376,7 +2290,6 @@ Dimensions: 9 rows × 13 columns
 | STAT_GESCHW_RAD_HR_MIN_WERT | - | - | + | km/h | - | int | - | - | 1.0 | 100.0 | 0.0 | min. Radgeschwindigkeit hinten rechts |
 | STAT_GESCHW_RAD_HR_MAX_WERT | - | - | + | km/h | - | int | - | - | 1.0 | 100.0 | 0.0 | max. Radgeschwindigkeit hinten rechts |
 
-<a id="table-res-0xa066-r"></a>
 ### RES_0XA066_R
 
 Dimensions: 4 rows × 13 columns
@@ -2388,7 +2301,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_ABFALL_ZEIT_2_WERT | - | - | + | ms | - | unsigned char | - | - | 10.0 | 1.0 | 0.0 | Druckabfall Bremskreis 2 (Hinterachse) |
 | STAT_ABFALL_ZEIT_3_WERT | - | - | + | ms | - | unsigned char | - | - | 10.0 | 1.0 | 0.0 | Druckabfall Bremskreis 1 und 2 (Vorderachse und Hinterachse) |
 
-<a id="table-res-0xa067-r"></a>
 ### RES_0XA067_R
 
 Dimensions: 2 rows × 13 columns
@@ -2398,7 +2310,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ROUTINE_STATUS | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_ROUTINE | 1.0 | 1.0 | 0.0 | Ausführungsstatus |
 | STAT_FEHLER_DETAIL | - | - | + | 0-n | - | unsigned char | - | TAB_BPWS_DETAIL_INITIALISIERUNG | - | - | - | Fehler Detail |
 
-<a id="table-res-0xa06d-r"></a>
 ### RES_0XA06D_R
 
 Dimensions: 1 rows × 13 columns
@@ -2407,7 +2318,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ROUTINE_STATUS | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_ROUTINE | 1.0 | 1.0 | 0.0 | Ausführungsstatus |
 
-<a id="table-res-0xa06e-r"></a>
 ### RES_0XA06E_R
 
 Dimensions: 2 rows × 13 columns
@@ -2417,7 +2327,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ROUTINE_STATUS | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_ROUTINE | 1.0 | 1.0 | 0.0 | Ausführungsstatus |
 | STAT_DETAIL_VENTIL_KALIBRIERUNG | - | - | + | 0-n | - | unsigned char | - | TAB_DSC_DETAIL_VENTIL_KALIBRIERUNG | 1.0 | 1.0 | 0.0 | Ausführungsstatus Detail |
 
-<a id="table-res-0xa070-r"></a>
 ### RES_0XA070_R
 
 Dimensions: 1 rows × 13 columns
@@ -2426,7 +2335,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ROUTINE_STATUS | - | - | + | 0-n | - | unsigned char | - | TAB_STATUS_ROUTINE | 1.0 | 1.0 | 0.0 | Ausführungsstatus |
 
-<a id="table-res-0xa08f-r"></a>
 ### RES_0XA08F_R
 
 Dimensions: 4 rows × 13 columns
@@ -2438,7 +2346,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_VENTILE_KALIBRIERUNG_2 | - | - | + | 0-n | high | unsigned char | - | TAB_VENTILE_KALIBRIERUNG_2 | - | - | - | STAT_VENTILE_KALIBRIERUNG_2 |
 | STAT_VENTILE_KALIBRIERUNG_3 | - | - | + | 0-n | high | unsigned char | - | TAB_VENTILE_KALIBRIERUNG_3 | - | - | - | STAT_VENTILE_KALIBRIERUNG_3 |
 
-<a id="table-res-0xd7d7-d"></a>
 ### RES_0XD7D7_D
 
 Dimensions: 3 rows × 10 columns
@@ -2449,7 +2356,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ZEITSTEMPEL_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Zeitstempel der letzten Funktionsaktivierung |
 | STAT_KM_STAND_WERT | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Km Stand der letzten Funktionsaktivierung |
 
-<a id="table-res-0xdbdf-d"></a>
 ### RES_0XDBDF_D
 
 Dimensions: 2 rows × 10 columns
@@ -2459,7 +2365,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_PILLE_VA | 0-n | - | unsigned char | - | TAB_BBV_SENSOR | 1.0 | 1.0 | 0.0 | Bremsbelagspille Vorderachse |
 | STAT_PILLE_HA | 0-n | - | unsigned char | - | TAB_BBV_SENSOR | 1.0 | 1.0 | 0.0 | Bremsbelagspille Hinterachse |
 
-<a id="table-res-0xdbe1-d"></a>
 ### RES_0XDBE1_D
 
 Dimensions: 1 rows × 10 columns
@@ -2468,7 +2373,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LMV_FUNKTION_AKTIV | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1 = aktiv;  0 = inaktiv |
 
-<a id="table-res-0xdbe2-d"></a>
 ### RES_0XDBE2_D
 
 Dimensions: 1 rows × 10 columns
@@ -2477,7 +2381,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_REKU_FUNKTION_AKTIV | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1 = aktiv;  0 = inaktiv |
 
-<a id="table-res-0xdbe3-d"></a>
 ### RES_0XDBE3_D
 
 Dimensions: 10 rows × 10 columns
@@ -2495,7 +2398,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_LERNSTATUS_BEREICH_100_190_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Lernfortschritt Geschwindigkeitsbereich 100..190 km/h |
 | STAT_LERNSTATUS_BEREICH_UEBER_190_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Lernfortschritt Geschwindigkeitsbereich > 190 km/h |
 
-<a id="table-res-0xdbe4-d"></a>
 ### RES_0XDBE4_D
 
 Dimensions: 14 rows × 10 columns
@@ -2517,7 +2419,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_SIGNALQUALITAET_HL_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Signalqualität hinten links x < 10 % = kein Signal;  10 % <= x <= 50 % schwaches Signal;  x > 50 % Signal in Ordnung |
 | STAT_SIGNALQUALITAET_HR_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Signalqualität hinten rechts x < 10 % = kein Signal;  10 % <= x <= 50 % schwaches Signal;  x > 50 % Signal in Ordnung |
 
-<a id="table-res-0xdbe5-d"></a>
 ### RES_0XDBE5_D
 
 Dimensions: 6 rows × 10 columns
@@ -2531,7 +2432,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_DRUCK_HL_WERT | bar | - | int | - | - | 1.0 | 10.0 | 0.0 | Druck hinten links |
 | STAT_DRUCK_HR_WERT | bar | - | int | - | - | 1.0 | 10.0 | 0.0 | Druck hinten rechts |
 
-<a id="table-res-0xdbe7-d"></a>
 ### RES_0XDBE7_D
 
 Dimensions: 4 rows × 10 columns
@@ -2543,7 +2443,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SPANNUNG_VENTILE_WERT | V | - | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | Spannung Ventilversorgung |
 | STAT_SPANNUNG_WECKLEITUNG_WERT | V | - | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | Spannung Weckleitung |
 
-<a id="table-res-0xdbe8-d"></a>
 ### RES_0XDBE8_D
 
 Dimensions: 1 rows × 10 columns
@@ -2552,7 +2451,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PUMPE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1 = ein; 0 = aus |
 
-<a id="table-res-0xdbe9-d"></a>
 ### RES_0XDBE9_D
 
 Dimensions: 12 rows × 10 columns
@@ -2572,7 +2470,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_TRENNVENTIL_VA_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Trennventil Vorderachse (0 % = nicht angesteuert; 100 % = voll angesteuert) |
 | STAT_TRENNVENTIL_HA_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Trennventil Hinterachse (0 % = nicht angesteuert; 100 % = voll angesteuert) |
 
-<a id="table-res-0xdbf4-d"></a>
 ### RES_0XDBF4_D
 
 Dimensions: 2 rows × 10 columns
@@ -2582,7 +2479,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DRUCK_IST_WERT | bar | - | int | - | - | 1.0 | 1000.0 | 0.0 | aktueller Druck |
 | STAT_SPANNUNG_IST_WERT | V | - | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | aktuelle Spannung |
 
-<a id="table-res-0xdbf5-d"></a>
 ### RES_0XDBF5_D
 
 Dimensions: 4 rows × 10 columns
@@ -2594,7 +2490,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_WEG_NULLPUNKT_IST_WERT | mm | - | int | - | - | 1.0 | 100.0 | 0.0 | aktueller Pedal Nullpunkt |
 | STAT_WEG_LEERWEG_IST_WERT | mm | - | int | - | - | 1.0 | 100.0 | 0.0 | aktueller Pedal Leerweg (Einsatz Hydraulik bezogen auf WEG_NULLPUNKT_IST) |
 
-<a id="table-res-0xdbf6-d"></a>
 ### RES_0XDBF6_D
 
 Dimensions: 2 rows × 10 columns
@@ -2604,7 +2499,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MOMENT_SOLL_WERT | Nm | - | int | - | - | 1.0 | 1.0 | 0.0 | Sollwert Bremsrekuperation |
 | STAT_MOMENT_IST_WERT | Nm | - | int | - | - | 1.0 | 1.0 | 0.0 | Istwert Bremsrekuperation |
 
-<a id="table-res-0xdc14-d"></a>
 ### RES_0XDC14_D
 
 Dimensions: 25 rows × 10 columns
@@ -2637,7 +2531,6 @@ Dimensions: 25 rows × 10 columns
 | STAT_URSACHE_WARNUNG_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Typ der Warnmeldung (z.B. schnelle Luftfruckverlust etc.) |
 | STAT_MAX_NAEHERUNG_WARNGRENZE_SEIT_LETZTER_STD_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Maximale Näherung zur applizierten Warngrenze siet der letzte Initialisierung |
 
-<a id="table-res-0xdc15-d"></a>
 ### RES_0XDC15_D
 
 Dimensions: 24 rows × 10 columns
@@ -2669,7 +2562,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_MOMENTENKOMPENSATION_6_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Lernstatus Momentenkompensation Momentenbereich 6 (100 % = vollständig eingelernt) |
 | STAT_MOMENTENKOMPENSATION_7_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Lernstatus Momentenkompensation Momentenbereich 7 (100 % = vollständig eingelernt) |
 
-<a id="table-res-0xdc1d-d"></a>
 ### RES_0XDC1D_D
 
 Dimensions: 1 rows × 10 columns
@@ -2678,7 +2570,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUTOHOLD_LED_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1 = LED ein 0 = LED aus |
 
-<a id="table-res-0xdc95-d"></a>
 ### RES_0XDC95_D
 
 Dimensions: 24 rows × 10 columns
@@ -2710,7 +2601,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_STOERSENDER | 0-n | low | unsigned char | - | TAB_RDC_AKTIV_INAKTIV | - | - | - | Funkstoerung vorhanden : 0 = inaktiv , 1 = aktiv |
 | STAT_FREQUENZ_WERT | MHz | low | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Gibt die aktuelle RF-Frequenz zurück. Die Frequenz ist abhaengig von der Codierung. (315 oder 433). Angabe in MHz |
 
-<a id="table-res-0xdc96-d"></a>
 ### RES_0XDC96_D
 
 Dimensions: 18 rows × 10 columns
@@ -2736,7 +2626,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_3_INTERNER_FEHLERCODE_WERT | HEX | low | unsigned int | - | - | - | - | - | SG-interner Fehlercode |
 | STAT_3_ZAEHLER_INAKTIV | 0-n | low | unsigned char | - | - | - | - | - | Zähler für Inaktiv-Ereignisse |
 
-<a id="table-res-0xdc97-d"></a>
 ### RES_0XDC97_D
 
 Dimensions: 63 rows × 10 columns
@@ -2807,7 +2696,6 @@ Dimensions: 63 rows × 10 columns
 | STAT_3_BEFUELLTEMPERATUR_RE3_WERT | °C | low | char | - | - | 1.0 | 1.0 | 0.0 | Befuelltemperaturwert Radelektronik RE3 (-99 °C => ungueltig) |
 | STAT_3_ZAEHLER_KALIBRIERUNG | 0-n | low | unsigned char | - | TAB_RDC_RAD_POSITION_NR | - | - | - | Zähler für Kalibrierereignisse |
 
-<a id="table-res-0xdc98-d"></a>
 ### RES_0XDC98_D
 
 Dimensions: 20 rows × 10 columns
@@ -2835,7 +2723,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_ROLLSWITCH | 0-n | low | unsigned char | - | TAB_RE_ROLLSWITCH | - | - | - | Status Rollswitch |
 | STAT_TELEGRAMMTYP | 0-n | low | unsigned char | - | TAB_RE_TELEGRAMMTYP | - | - | - | Telegrammtyp |
 
-<a id="table-res-0xdc99-d"></a>
 ### RES_0XDC99_D
 
 Dimensions: 20 rows × 10 columns
@@ -2863,7 +2750,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_ROLLSWITCH | 0-n | low | unsigned char | - | TAB_RE_ROLLSWITCH | - | - | - | Status Rollswitch |
 | STAT_TELEGRAMMTYP | 0-n | low | unsigned char | - | TAB_RE_TELEGRAMMTYP | - | - | - | Telegrammtyp |
 
-<a id="table-res-0xdc9a-d"></a>
 ### RES_0XDC9A_D
 
 Dimensions: 20 rows × 10 columns
@@ -2891,7 +2777,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_ROLLSWITCH | 0-n | low | unsigned char | - | TAB_RE_ROLLSWITCH | - | - | - | Status Rollswitch |
 | STAT_TELEGRAMMTYP | 0-n | low | unsigned char | - | TAB_RE_TELEGRAMMTYP | - | - | - | Telegrammtyp |
 
-<a id="table-res-0xdc9b-d"></a>
 ### RES_0XDC9B_D
 
 Dimensions: 20 rows × 10 columns
@@ -2919,7 +2804,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_ROLLSWITCH | 0-n | low | unsigned char | - | TAB_RE_ROLLSWITCH | - | - | - | Status Rollswitch |
 | STAT_TELEGRAMMTYP | 0-n | low | unsigned char | - | TAB_RE_TELEGRAMMTYP | - | - | - | Telegrammtyp |
 
-<a id="table-res-0xdc9c-d"></a>
 ### RES_0XDC9C_D
 
 Dimensions: 31 rows × 10 columns
@@ -2958,7 +2842,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_REIFENTEMPERATUR_RE3_WERT | ° | low | char | - | - | 1.0 | 1.0 | 0.0 | Reifentemperatur RE3 |
 | STAT_ZAEHLER_WARNEREIGNIS_WERT | - | low | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zaehler Warnereignisse |
 
-<a id="table-res-0xdc9d-d"></a>
 ### RES_0XDC9D_D
 
 Dimensions: 31 rows × 10 columns
@@ -2997,7 +2880,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_REIFENTEMPERATUR_RE3_WERT | ° | low | char | - | - | 1.0 | 1.0 | 0.0 | Reifentemperatur RE3 |
 | STAT_ZAEHLER_WARNEREIGNIS_WERT | - | low | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zaehler Warnereignisse |
 
-<a id="table-res-0xdc9e-d"></a>
 ### RES_0XDC9E_D
 
 Dimensions: 31 rows × 10 columns
@@ -3036,7 +2918,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_REIFENTEMPERATUR_RE3_WERT | ° | low | char | - | - | 1.0 | 1.0 | 0.0 | Reifentemperatur RE3 |
 | STAT_ZAEHLER_WARNEREIGNIS_WERT | - | low | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zaehler Warnereignisse |
 
-<a id="table-res-0xdc9f-d"></a>
 ### RES_0XDC9F_D
 
 Dimensions: 31 rows × 10 columns
@@ -3075,7 +2956,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_REIFENTEMPERATUR_RE3_WERT | ° | low | char | - | - | 1.0 | 1.0 | 0.0 | Reifentemperatur RE3 |
 | STAT_ZAEHLER_WARN_RUECKNAHME | 0-n | low | unsigned char | - | TAB_RDC_RAD_POSITION_NR | - | - | - | Zähler für Warnungsrücknahmen durch Luftnachfüllen oder Radtausch. |
 
-<a id="table-res-0xdcd9-d"></a>
 ### RES_0XDCD9_D
 
 Dimensions: 32 rows × 10 columns
@@ -3115,7 +2995,6 @@ Dimensions: 32 rows × 10 columns
 | STAT_RESTLEBENSDAUER_RE7_WERT | - | low | int | - | - | 1.0 | 1.0 | 0.0 | Restlebensdauer Radelektronik RE7 in Monaten (-999 Monate => ungueltig) |
 | STAT_EMPFANGSZAEHLER_RE7_WERT | - | low | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Empfangszaehler Radelektronik RE7 (255 => ungueltig) |
 
-<a id="table-res-0xdcf1-d"></a>
 ### RES_0XDCF1_D
 
 Dimensions: 31 rows × 10 columns
@@ -3154,7 +3033,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_REIFENTEMPERATUR_RE3_WERT | ° | low | char | - | - | 1.0 | 1.0 | 0.0 | Reifentemperatur RE3 |
 | STAT_ZAEHLER_WARNEREIGNIS_WERT | - | low | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zaehler Warnereignisse |
 
-<a id="table-res-0xdcf2-d"></a>
 ### RES_0XDCF2_D
 
 Dimensions: 31 rows × 10 columns
@@ -3193,7 +3071,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_REIFENTEMPERATUR_RE3_WERT | ° | low | char | - | - | 1.0 | 1.0 | 0.0 | Reifentemperatur RE3 |
 | STAT_ZAEHLER_WARNEREIGNIS_WERT | - | low | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zaehler Warnereignisse |
 
-<a id="table-res-0xdcf3-d"></a>
 ### RES_0XDCF3_D
 
 Dimensions: 31 rows × 10 columns
@@ -3232,7 +3109,6 @@ Dimensions: 31 rows × 10 columns
 | STAT_REIFENTEMPERATUR_RE3_WERT | ° | low | char | - | - | 1.0 | 1.0 | 0.0 | Reifentemperatur RE3 |
 | STAT_ZAEHLER_WARNEREIGNIS_WERT | - | low | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zaehler Warnereignisse |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 51 rows × 16 columns
@@ -3291,7 +3167,6 @@ Dimensions: 51 rows × 16 columns
 | RDC_HS_WARNEREIGNIS_WEICH_2 | 0xDCF2 | - | RDC_HS_WARNEREIGNIS_WEICH_2 | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xDCF2_D |
 | RDC_HS_WARNEREIGNIS_WEICH_3 | 0xDCF3 | - | RDC_HS_WARNEREIGNIS_WEICH_3 | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xDCF3_D |
 
-<a id="table-tab-bbv-sensor"></a>
 ### TAB_BBV_SENSOR
 
 Dimensions: 4 rows × 2 columns
@@ -3303,7 +3178,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | 2. Stufe erreicht |
 | 0xFF | nicht verfügbar |
 
-<a id="table-tab-bpws-detail-initialisierung"></a>
 ### TAB_BPWS_DETAIL_INITIALISIERUNG
 
 Dimensions: 16 rows × 2 columns
@@ -3327,7 +3201,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Fehler - elektrischer Fehler des Bremspedalwegsensors ist aktiv |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-drehrichtung"></a>
 ### TAB_DREHRICHTUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3339,7 +3212,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Rueckwaerts |
 | 0x03 | nicht definiert |
 
-<a id="table-tab-dsc-detail-ventil-kalibrierung"></a>
 ### TAB_DSC_DETAIL_VENTIL_KALIBRIERUNG
 
 Dimensions: 8 rows × 2 columns
@@ -3355,7 +3227,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Motor aus |
 | 0xFF | ungueltig |
 
-<a id="table-tab-dsc-phase-entlueftung"></a>
 ### TAB_DSC_PHASE_ENTLUEFTUNG
 
 Dimensions: 9 rows × 2 columns
@@ -3372,7 +3243,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | VORBEREITUNG |
 | 0x08 | NACHBEREITUNG |
 
-<a id="table-tab-dsc-phase-vakuumbefuellung"></a>
 ### TAB_DSC_PHASE_VAKUUMBEFUELLUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3384,7 +3254,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | fuellen |
 | 0x03 | nivellieren |
 
-<a id="table-tab-dsc-phase-ventile-kalibrierung"></a>
 ### TAB_DSC_PHASE_VENTILE_KALIBRIERUNG
 
 Dimensions: 5 rows × 2 columns
@@ -3397,7 +3266,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Vorladeventile |
 | 0x04 | Trennventile |
 
-<a id="table-tab-dsc-ventile"></a>
 ### TAB_DSC_VENTILE
 
 Dimensions: 14 rows × 2 columns
@@ -3419,7 +3287,6 @@ Dimensions: 14 rows × 2 columns
 | 13 | TV1 |
 | 14 | TV2 |
 
-<a id="table-tab-kalibrierung"></a>
 ### TAB_KALIBRIERUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3430,7 +3297,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | RDCi finished with Success |
 | 0xFF | RDCi is Ongoing |
 
-<a id="table-tab-plausi-druck"></a>
 ### TAB_PLAUSI_DRUCK
 
 Dimensions: 3 rows × 2 columns
@@ -3441,7 +3307,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Passed |
 | 0xFF | Ongoing |
 
-<a id="table-tab-position-rad"></a>
 ### TAB_POSITION_RAD
 
 Dimensions: 5 rows × 2 columns
@@ -3454,7 +3319,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | hinten links |
 | 4 | hinten rechts |
 
-<a id="table-tab-rdc-aktiv-inaktiv"></a>
 ### TAB_RDC_AKTIV_INAKTIV
 
 Dimensions: 5 rows × 2 columns
@@ -3467,7 +3331,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Gateway oder Antennenfehler |
 | 0xFF | Signal unbekannt |
 
-<a id="table-tab-rdc-bandmode-active"></a>
 ### TAB_RDC_BANDMODE_ACTIVE
 
 Dimensions: 3 rows × 2 columns
@@ -3478,7 +3341,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Bandmode aktiv |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-bekannt-nicht-bekannt"></a>
 ### TAB_RDC_BEKANNT_NICHT_BEKANNT
 
 Dimensions: 3 rows × 2 columns
@@ -3489,7 +3351,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | bekannt |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-cal-active"></a>
 ### TAB_RDC_CAL_ACTIVE
 
 Dimensions: 4 rows × 2 columns
@@ -3501,7 +3362,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Kalibrierung abgewiesen |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-changed"></a>
 ### TAB_RDC_CHANGED
 
 Dimensions: 3 rows × 2 columns
@@ -3512,7 +3372,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | geändert |
 | 255 | Signal unbekannt |
 
-<a id="table-tab-rdc-confirmed"></a>
 ### TAB_RDC_CONFIRMED
 
 Dimensions: 3 rows × 2 columns
@@ -3523,7 +3382,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | bestätigt |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-detected"></a>
 ### TAB_RDC_DETECTED
 
 Dimensions: 3 rows × 2 columns
@@ -3534,7 +3392,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | erkannt |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-dtc-active"></a>
 ### TAB_RDC_DTC_ACTIVE
 
 Dimensions: 3 rows × 2 columns
@@ -3545,7 +3402,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | DTC aktiv |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-on-off"></a>
 ### TAB_RDC_ON_OFF
 
 Dimensions: 4 rows × 2 columns
@@ -3557,7 +3413,6 @@ Dimensions: 4 rows × 2 columns
 | 9 | nicht bedient |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-rad-drehrichtung"></a>
 ### TAB_RDC_RAD_DREHRICHTUNG
 
 Dimensions: 5 rows × 2 columns
@@ -3570,7 +3425,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | unbekannt |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-rad-position-nr"></a>
 ### TAB_RDC_RAD_POSITION_NR
 
 Dimensions: 10 rows × 2 columns
@@ -3588,7 +3442,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | unbekannt 4 |
 | 9 | unbekannt 5 (nur RDC Gen2) |
 
-<a id="table-tab-rdc-rad-position-nr-uint"></a>
 ### TAB_RDC_RAD_POSITION_NR_UINT
 
 Dimensions: 10 rows × 2 columns
@@ -3606,7 +3459,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | unbekannt 4 |
 | 9 | unbekannt  (nur RDC Gen2) |
 
-<a id="table-tab-rdc-started"></a>
 ### TAB_RDC_STARTED
 
 Dimensions: 3 rows × 2 columns
@@ -3617,7 +3469,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | gestartet |
 | 255 | nciht definiert |
 
-<a id="table-tab-rdc-steuerfunktionen"></a>
 ### TAB_RDC_STEUERFUNKTIONEN
 
 Dimensions: 11 rows × 2 columns
@@ -3636,7 +3487,6 @@ Dimensions: 11 rows × 2 columns
 | 10 | TEST_ER_FAHRT_OHNE_TRIGGER |
 | 11 | EINSCHALTEN_APPLIKATIONSBOTSCHAFT |
 
-<a id="table-tab-rdc-timeout"></a>
 ### TAB_RDC_TIMEOUT
 
 Dimensions: 3 rows × 2 columns
@@ -3647,7 +3497,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Timeout |
 | 255 | nicht definiert |
 
-<a id="table-tab-rdc-vehicle-running"></a>
 ### TAB_RDC_VEHICLE_RUNNING
 
 Dimensions: 3 rows × 2 columns
@@ -3658,7 +3507,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Fahrzeug fährt |
 | 255 | nicht definiert |
 
-<a id="table-tab-re-hersteller"></a>
 ### TAB_RE_HERSTELLER
 
 Dimensions: 7 rows × 2 columns
@@ -3673,7 +3521,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | Schrader |
 | 15 | Hersteller unbekannt |
 
-<a id="table-tab-re-rollswitch"></a>
 ### TAB_RE_ROLLSWITCH
 
 Dimensions: 3 rows × 2 columns
@@ -3684,7 +3531,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Rollswitch gesetzt |
 | 16 | Rollswitch Toggle |
 
-<a id="table-tab-re-sendemode"></a>
 ### TAB_RE_SENDEMODE
 
 Dimensions: 10 rows × 2 columns
@@ -3702,7 +3548,6 @@ Dimensions: 10 rows × 2 columns
 | 11 | Mode 3  LF triggered telegram |
 | 12 | Mode 4  LF triggered telegram |
 
-<a id="table-tab-re-telegrammtyp"></a>
 ### TAB_RE_TELEGRAMMTYP
 
 Dimensions: 5 rows × 2 columns
@@ -3715,7 +3560,6 @@ Dimensions: 5 rows × 2 columns
 | 160 | AK35 BERU medium |
 | 193 | AK35 BERU short |
 
-<a id="table-tab-rollenmodus"></a>
 ### TAB_ROLLENMODUS
 
 Dimensions: 3 rows × 2 columns
@@ -3726,7 +3570,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Setzen Werksrollenmodus |
 | 2 | Setzen Rollenmodus Innenraum |
 
-<a id="table-tab-status-rollenmodus"></a>
 ### TAB_STATUS_ROLLENMODUS
 
 Dimensions: 6 rows × 2 columns
@@ -3740,7 +3583,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Bandenderolle (Werk) |
 | 0x0E | ungueltig |
 
-<a id="table-tab-status-routine"></a>
 ### TAB_STATUS_ROUTINE
 
 Dimensions: 7 rows × 2 columns
@@ -3755,7 +3597,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Phasenende |
 | 0xFF | Ungültig |
 
-<a id="table-tab-ventile-kalibrierung-1"></a>
 ### TAB_VENTILE_KALIBRIERUNG_1
 
 Dimensions: 8 rows × 2 columns
@@ -3771,7 +3612,6 @@ Dimensions: 8 rows × 2 columns
 | 40 | Drucksensor ist defekt |
 | 80 | Pumpe läuft während Kalibrierung |
 
-<a id="table-tab-ventile-kalibrierung-2"></a>
 ### TAB_VENTILE_KALIBRIERUNG_2
 
 Dimensions: 8 rows × 2 columns
@@ -3787,7 +3627,6 @@ Dimensions: 8 rows × 2 columns
 | 40 | HCU Temperatur zu gering (< 10 °C) |
 | 80 | Benötigte Komponente(n) nicht verfügbar |
 
-<a id="table-tab-ventile-kalibrierung-3"></a>
 ### TAB_VENTILE_KALIBRIERUNG_3
 
 Dimensions: 8 rows × 2 columns

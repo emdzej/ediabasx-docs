@@ -113,7 +113,6 @@
 - [STATUS_TSR_2_LESEN](#job-status-tsr-2-lesen) - Tele Service Daten auslesen STATUS_TSR_2_LESEN (0xE2)
 - [STATUS_DEGRAD_DISP_LESEN](#job-status-degrad-disp-lesen) - Angezeigte Degradationen der letzten 10 Fahrzyklen DEGRAD_DISP_LESEN (0xDEC1)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -132,7 +131,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -145,7 +143,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -161,7 +158,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -178,7 +174,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -211,7 +206,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -238,7 +232,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -280,7 +273,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -299,7 +291,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -317,7 +308,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -338,7 +328,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -359,7 +348,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -379,7 +367,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus $04 requestIdentifiedShadowMemoryDTCAndStatus
@@ -406,7 +393,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -448,7 +434,6 @@ Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $17 ReadStatusOf
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCShadowMemory Modus  : Default
@@ -463,7 +448,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $0E Time controlled PowerDown oder b)       $05 PowerDown $00 all ECU Modus  : Default
@@ -482,7 +466,6 @@ SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C ControlEnergySavingMode Modus  : Default
@@ -503,7 +486,6 @@ Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C C
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -521,7 +503,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -546,7 +527,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -569,7 +549,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -587,7 +566,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -608,7 +586,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -629,7 +606,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -648,7 +624,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -665,7 +640,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-zufallszahl-lesen"></a>
 ### AUTHENTISIERUNG_ZUFALLSZAHL_LESEN
 
 Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $07 RequestForAuthentication Modus  : Default
@@ -687,7 +661,6 @@ Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-start"></a>
 ### AUTHENTISIERUNG_START
 
 Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAuthentication Modus  : Default
@@ -706,7 +679,6 @@ Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -723,7 +695,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-signatur-pruefen"></a>
 ### FLASH_SIGNATUR_PRUEFEN
 
 Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSignature Modus  : Default
@@ -743,7 +714,6 @@ Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSigna
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -758,7 +728,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 ClearMemory Modus  : Default
@@ -778,7 +747,6 @@ Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload Modus  : Default
@@ -798,7 +766,6 @@ Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -819,7 +786,6 @@ Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Defau
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferExit Modus  : Default
@@ -838,7 +804,6 @@ Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -875,7 +840,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D WriteMemoryByAddress Modus   : Default
@@ -906,7 +870,6 @@ Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D Write
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG AIF schreiben |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG AIF schreiben |
 
-<a id="job-seriennummer-lesen"></a>
 ### _SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -925,7 +888,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews"></a>
 ### STATUS_EWS
 
 KWP 2000: $22 ReadDataByCommonIdentifier CommonIdentifier=0xC000 Zurücklesen verschiedener interner Stati für EWS
@@ -956,7 +918,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews4-sk"></a>
 ### STATUS_EWS4_SK
 
 KWP 2000: $22 ReadDataByCommonIdentifier CommonIdentifier=0xC002 Lesen des SecretKey des Server sowie Client für EWS4
@@ -973,7 +934,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews4-sk"></a>
 ### STEUERN_EWS4_SK
 
 17 "EWS4-data" schreiben KWP 2000: $2E WriteDataByCommonIdentifier CommonIdentifier=0xC001
@@ -993,7 +953,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-schreiben-all"></a>
 ### _FREISCHALTCODE_SCHREIBEN_ALL
 
 Mehrere Aktionen, FSC Laenge schreiben, FSC schreiben KWP 2000: $31 $1F $F2 / SetFSCLen KWP 2000: $31 $1F $F1 / FSCwrite KWP 2000: $31 $1F $EE / FSCcheck
@@ -1013,7 +972,6 @@ Mehrere Aktionen, FSC Laenge schreiben, FSC schreiben KWP 2000: $31 $1F $F2 / Se
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-montagemodus"></a>
 ### STATUS_MONTAGEMODUS
 
 0x3343 STATUS_MONTAGEMODUS Auslesen Montage-Modus
@@ -1034,7 +992,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-montagemodus"></a>
 ### STEUERN_ENDE_MONTAGEMODUS
 
 0x3243 STEUERN_ENDE_MONTAGEMODUS Ende Montage-Modus
@@ -1049,7 +1006,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-montagemodus"></a>
 ### STEUERN_MONTAGEMODUS
 
 0x3143 STEUERN_MONTAGEMODUS Ansteuern Montage-Modus
@@ -1064,7 +1020,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvpm-dcdc-als"></a>
 ### STATUS_HVPM_DCDC_ALS
 
 HVPM DCDC ALS EME_HVPM_DCDC_ALS (0xDE1C)
@@ -1087,7 +1042,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvpm-dcdc-ansteuerung"></a>
 ### STATUS_HVPM_DCDC_ANSTEUERUNG
 
 DCDC Ansteuerung EME_HVPM_DCDC_ANSTEUERUNG (0xDE00)
@@ -1131,7 +1085,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvpm-energiebordnetz-2"></a>
 ### STATUS_HVPM_ENERGIEBORDNETZ_2
 
 Anzahl Herstellung Fahrbereitschaft im SOC Bereich EME_HVPM_ENERGIEBORDNETZ_2 (0xDE04)
@@ -1174,7 +1127,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvpm-energiebordnetz"></a>
 ### STATUS_HVPM_ENERGIEBORDNETZ
 
 HV Energie / Zellspannungen EME_HVPM_ENERGIEBORDNETZ (0xDE03)
@@ -1257,7 +1209,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvpm-pkor"></a>
 ### STATUS_HVPM_PKOR
 
 HVPM Leistungskoordinator EME_HVPM_PKOR (0xDE06)
@@ -1320,7 +1271,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-kle"></a>
 ### STATUS_KLE
 
 Infos zu Ladekabel und Phasenströme STATUS_KLE (0xDE97)
@@ -1343,7 +1293,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident-ibs"></a>
 ### IDENT_IBS
 
 0x224021 IDENT_IBS Identifikationsdaten fuer IBS-Sensor auslesen Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -1363,7 +1312,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-batterietausch-registrieren"></a>
 ### STEUERN_BATTERIETAUSCH_REGISTRIEREN
 
 UDS $31 F8 Batterietausch registrieren
@@ -1378,7 +1326,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-leminfo-aep"></a>
 ### STATUS_LEMINFO_AEP
 
 0x224017 STATUS_LEMINFO_AEP Infospeicher Leistungskoordination Elektrisch Mechanisch (LEM) auslesen
@@ -1433,7 +1380,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-messwerte-ibs"></a>
 ### STATUS_MESSWERTE_IBS
 
 0x22402B STATUS_MESSWERTE_IBS Messwerte IBS auslesen
@@ -1476,7 +1422,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-verbredinfo"></a>
 ### STATUS_VERBREDINFO
 
 0x22401D STATUS_VERBREDINFO Verbraucherreduzierungsspeicher auslesen
@@ -1524,7 +1469,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dcdc-wandler-result"></a>
 ### STEUERN_DCDC_WANDLER_RESULT
 
 RIDI_DCDC - Steuern der HV-Spannung des DC/DC-Wandlers EME_DCDC_WANDLER (0xF1)
@@ -1543,7 +1487,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dcdc-wandler-start"></a>
 ### STEUERN_DCDC_WANDLER_START
 
 RIDI_DCDC - Steuern der HV-Spannung des DC/DC-Wandlers EME_DCDC_WANDLER (0xF1)
@@ -1568,7 +1511,6 @@ RIDI_DCDC - Steuern der HV-Spannung des DC/DC-Wandlers EME_DCDC_WANDLER (0xF1)
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hvpm-infospeicher-pkor-loeschen"></a>
 ### STEUERN_HVPM_INFOSPEICHER_PKOR_LOESCHEN
 
 RIDI_HVPM_PKOR_CLR - Alle Infospeicher aus Job STATUS_HVPM_EKMV Null setzen EME_HVPM_INFOSPEICHER_PKOR_LOESCHEN (0xDE08)
@@ -1583,7 +1525,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hvpm-infospeicher-spmon-loeschen"></a>
 ### STEUERN_HVPM_INFOSPEICHER_SPMON_LOESCHEN
 
 RIDI_HVPM_SPMON_CLR - Löschen Infospeicher HVPM (SPMON) EME_HVPM_INFOSPEICHER_SPMON_LOESCHEN (0xDE0A)
@@ -1598,7 +1539,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hvpm-infospeicher-strzlr-loeschen"></a>
 ### STEUERN_HVPM_INFOSPEICHER_STRZLR_LOESCHEN
 
 RIDI_HVPM_STRZLR_CLR - Löschen Infospeicher HSPM (STRZL) EME_HVPM_INFOSPEICHER_STRZLR_LOESCHEN (0xDE09)
@@ -1613,7 +1553,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pm-histogram-reset"></a>
 ### STEUERN_PM_HISTOGRAM_RESET
 
 UDS $40 2B AEP Histogram Reset
@@ -1628,7 +1567,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-pedalwertgeber"></a>
 ### STATUS_PEDALWERTGEBER
 
 Werte vom Pedalwertgeber PEDALWERTGEBER (0xDE9C)
@@ -1649,7 +1587,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvstart-fehler"></a>
 ### STATUS_HVSTART_FEHLER
 
 Angabe des Fehlers beim Hochfahren des HV-Systems EME_HVSTART_FEHLER (0xDE26)
@@ -1681,7 +1618,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-elue-result"></a>
 ### STEUERN_ELUE_RESULT
 
 Ansteuerung E-Lüfter ELUE (0xF7)
@@ -1699,7 +1635,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-elue-start"></a>
 ### STEUERN_ELUE_START
 
 Ansteuerung E-Lüfter ELUE (0xF7)
@@ -1718,7 +1653,6 @@ Ansteuerung E-Lüfter ELUE (0xF7)
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-elue-stop"></a>
 ### STEUERN_ELUE_STOP
 
 Ansteuerung E-Lüfter ELUE (0xF7)
@@ -1733,7 +1667,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-connected-drive"></a>
 ### STATUS_CONNECTED_DRIVE
 
 Informationen über Connected Drive STATUS_CONNECTED_DRIVE (0xE0)
@@ -1768,7 +1701,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-hvpm-hv-system-on-off"></a>
 ### STATUS_HVPM_HV_SYSTEM_ON_OFF
 
 Hochvoltsystem An / Aus EME_HVPM_HV_SYSTEM_ON_OFF (0xDE02)
@@ -1793,7 +1725,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eme-ewap-result"></a>
 ### STEUERN_EME_EWAP_RESULT
 
 Ansteuerung der LIN Wasserpumpe EME mit Vorgabe Drehzahl und Ansteuerzeit EME_EWAP (0xF6)
@@ -1809,7 +1740,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eme-ewap-start"></a>
 ### STEUERN_EME_EWAP_START
 
 Ansteuerung der LIN Wasserpumpe EME mit Vorgabe Drehzahl und Ansteuerzeit EME_EWAP (0xF6)
@@ -1829,7 +1759,6 @@ Ansteuerung der LIN Wasserpumpe EME mit Vorgabe Drehzahl und Ansteuerzeit EME_EW
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eme-ewap-stop"></a>
 ### STEUERN_EME_EWAP_STOP
 
 Ansteuerung der LIN Wasserpumpe EME mit Vorgabe Drehzahl und Ansteuerzeit EME_EWAP (0xF6)
@@ -1844,7 +1773,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ae"></a>
 ### STATUS_AE
 
 Info über AE: DCDC, ELUP, Temperaturen STATUS_AE (0xDE99)
@@ -1877,7 +1805,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sme"></a>
 ### STATUS_SME
 
 Temperatur, Spannungen,Strom, SOC der HV-Batterie STATUS_SME (0xDE98)
@@ -1908,7 +1835,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ladeleistung-start"></a>
 ### STEUERN_LADELEISTUNG_START
 
 STEUERN_LADELEISTUNG (0xC2)
@@ -1927,7 +1853,6 @@ STEUERN_LADELEISTUNG (0xC2)
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-elup"></a>
 ### STATUS_ELUP
 
 aktueller Zustand ELUP EME_ELUP (0xDE19)
@@ -1948,7 +1873,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-eme-ansteuerung-elup"></a>
 ### STATUS_EME_ANSTEUERUNG_ELUP
 
 Aktueller Schaltzustand ELUP (0 = Aus, 1 = Ein) EME_ANSTEUERUNG_ELUP (0xDE0E)
@@ -1964,7 +1888,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-tsr-laden"></a>
 ### STATUS_TSR_LADEN
 
 Alle Rückgabewerte bezüglich TSR Laden STATUS_TSR_LADEN (0xE4)
@@ -2306,7 +2229,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-pm-info-1"></a>
 ### STATUS_SYSTEMCHECK_PM_INFO_1
 
 0x224022 STATUS_SYSTEMCHECK_PM_INFO_1 Intelligenter Batteriesensor Bitfeld Pminfo1 lesen
@@ -2463,7 +2385,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-pm-info-2"></a>
 ### STATUS_SYSTEMCHECK_PM_INFO_2
 
 0x224023 STATUS_SYSTEMCHECK_PM_INFO_2 Intelligenter Batteriesensor Bitfeld Pminfo2 lesen
@@ -2528,7 +2449,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-tsr-pkor"></a>
 ### STATUS_TSR_PKOR
 
 Status TSR Leistungskoordinator STATUS_TSR_PKOR (0xDEAC)
@@ -2793,7 +2713,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ecopro"></a>
 ### STATUS_ECOPRO
 
 STATUS_ECOPRO (0xDEB8)
@@ -2810,7 +2729,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-tsr-3-lesen"></a>
 ### STATUS_TSR_3_LESEN
 
 Teleservice Daten 3 auslesen STATUS_TSR_3_LESEN (0xE3)
@@ -3067,7 +2985,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-bpas-lesen"></a>
 ### STATUS_BPAS_LESEN
 
 Teleservice Daten bzgl. BPAS auslesen STATUS_TSR_3_LESEN (0xE6)
@@ -3324,7 +3241,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-aep-info-1"></a>
 ### STATUS_SYSTEMCHECK_AEP_INFO_1
 
 0x22DEBA STATUS_SYSTEMCHECK_AEP_INFO_1 Intelligenter Batteriesensor Bitfeld Pminfo1 lesen
@@ -3481,7 +3397,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-aep-info-2"></a>
 ### STATUS_SYSTEMCHECK_AEP_INFO_2
 
 0x22DEBB STATUS_SYSTEMCHECK_AEP_INFO_2 Intelligenter Batteriesensor Bitfeld Pminfo2 lesen
@@ -3546,7 +3461,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-flashmode-acan-result"></a>
 ### STEUERN_FLASHMODE_ACAN_RESULT
 
 Flashmode ACAN (0xF5)
@@ -3562,7 +3476,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-flashmode-acan-start"></a>
 ### STEUERN_FLASHMODE_ACAN_START
 
 Flashmode ACAN (0xF5)
@@ -3577,7 +3490,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-flashmode-acan-stop"></a>
 ### STEUERN_FLASHMODE_ACAN_STOP
 
 Flashmode ACAN (0xF5)
@@ -3592,7 +3504,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-tsr-1-lesen"></a>
 ### STATUS_TSR_1_LESEN
 
 Tele Service Daten auslesen STATUS_TSR_1_LESEN (0xE1)
@@ -3916,7 +3827,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-start-laden-start"></a>
 ### STEUERN_START_LADEN_START
 
 Ladestart anfordern STEUERN_START_LADEN (0xC0)
@@ -3931,7 +3841,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-stop-laden-stop"></a>
 ### STEUERN_STOP_LADEN_STOP
 
 Ladestop anfordern STEUERN_STOP_LADEN (0xC100)
@@ -3946,7 +3855,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-tsr-2-lesen"></a>
 ### STATUS_TSR_2_LESEN
 
 Tele Service Daten auslesen STATUS_TSR_2_LESEN (0xE2)
@@ -4163,7 +4071,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-degrad-disp-lesen"></a>
 ### STATUS_DEGRAD_DISP_LESEN
 
 Angezeigte Degradationen der letzten 10 Fahrzyklen DEGRAD_DISP_LESEN (0xDEC1)
@@ -4425,7 +4332,6 @@ _No arguments._
 - [_MOTORUDSCODIERUNG_RUHESTROM](#table-motorudscodierung-ruhestrom) (16 × 2)
 - [T_TAB_EDME_ECOPRO](#table-t-tab-edme-ecopro) (2 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -4438,7 +4344,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -4541,7 +4446,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 127 rows × 2 columns
@@ -4676,7 +4580,6 @@ Dimensions: 127 rows × 2 columns
 | 0xB4 | APAG Elektronik AG |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -4698,7 +4601,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -4723,7 +4625,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4735,7 +4636,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -4757,7 +4657,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -4784,7 +4683,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -4793,7 +4691,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -4805,7 +4702,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 251 rows × 2 columns
@@ -5064,7 +4960,6 @@ Dimensions: 251 rows × 2 columns
 | 0xCD9A | PT_CAN -Kommunikationsstoerung Botschaft (Waermestrom Klima 0x1B5 Sender IHKA) |
 | 0xFFFF | Unknown error location |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -5079,7 +4974,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 250 rows × 5 columns
@@ -5337,7 +5231,6 @@ Dimensions: 250 rows × 5 columns
 | 0x2731 | 52 | 51 | 48 | 47 |
 | 0xCD9A | 52 | 45 | 38 | 44 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 52 rows × 9 columns
@@ -5397,7 +5290,6 @@ Dimensions: 52 rows × 9 columns
 | 51 | Fahrzeuggeschwindigkeit | km/h | high | unsigned int | - | 1 | 10 | 0 |
 | 52 | Relativzeit | HEX | high | signed long | - | 1 | 1 | 1 |
 
-<a id="table-farttyp"></a>
 ### FARTTYP
 
 Dimensions: 257 rows × 5 columns
@@ -5662,7 +5554,6 @@ Dimensions: 257 rows × 5 columns
 | 0x27D8 | 0x0009 | 0x0004 | 0x0002 | 0x0001 |
 | 0x2761 | 0x0008 | 0x0004 | 0x0002 | 0x000e |
 
-<a id="table-farttexteindividuell"></a>
 ### FARTTEXTEINDIVIDUELL
 
 Dimensions: 18 rows × 2 columns
@@ -5688,7 +5579,6 @@ Dimensions: 18 rows × 2 columns
 | 0x0014 | ungueltige Spannung erkannt |
 | 0xFFFF | unbekannte Fehlerart |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -5697,7 +5587,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 251 rows × 2 columns
@@ -5956,7 +5845,6 @@ Dimensions: 251 rows × 2 columns
 | 0xCDC3 | PT_CAN -Kommunikationsstoerung Botschaft (Dienste 0x5E0 Sender KOMBI) |
 | 0xFFFF | Unknown error location |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -5971,7 +5859,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-iumweltmatrix"></a>
 ### IUMWELTMATRIX
 
 Dimensions: 250 rows × 5 columns
@@ -6229,7 +6116,6 @@ Dimensions: 250 rows × 5 columns
 | 0x2731 | 52 | 51 | 48 | 47 |
 | 0xCD9A | 52 | 45 | 38 | 44 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 52 rows × 9 columns
@@ -6289,7 +6175,6 @@ Dimensions: 52 rows × 9 columns
 | 51 | Fahrzeuggeschwindigkeit | km/h | high | unsigned int | - | 1 | 10 | 0 |
 | 52 | Relativzeit | HEX | high | signed long | - | 1 | 1 | 1 |
 
-<a id="table-iarttyp"></a>
 ### IARTTYP
 
 Dimensions: 257 rows × 5 columns
@@ -6554,7 +6439,6 @@ Dimensions: 257 rows × 5 columns
 | 0x27D8 | 0x0009 | 0x0004 | 0x0002 | 0x0001 |
 | 0x2761 | 0x0008 | 0x0004 | 0x0002 | 0x000e |
 
-<a id="table-iarttexteindividuell"></a>
 ### IARTTEXTEINDIVIDUELL
 
 Dimensions: 18 rows × 2 columns
@@ -6580,7 +6464,6 @@ Dimensions: 18 rows × 2 columns
 | 0x0014 | ungueltige Spannung erkannt |
 | 0xFFFF | unbekannte Fehlerart |
 
-<a id="table-msd85yl6-table-fs"></a>
 ### _MSD85YL6_TABLE_FS
 
 Dimensions: 11 rows × 2 columns
@@ -6599,7 +6482,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 | 255 | ungueltiger Wert |
 
-<a id="table-msd85yl6-table-st-montagemodus-aktiv-inaktiv"></a>
 ### _MSD85YL6_TABLE_ST_MONTAGEMODUS_AKTIV_INAKTIV
 
 Dimensions: 2 rows × 2 columns
@@ -6609,7 +6491,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Montage-Modus ist inaktiv |
 | 1 | Montage-Modus ist aktiv |
 
-<a id="table-t-tab-edme-ladekabel"></a>
 ### T_TAB_EDME_LADEKABEL
 
 Dimensions: 4 rows × 2 columns
@@ -6621,7 +6502,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Fehler |
 | 3 | Signal ungültig |
 
-<a id="table-t-tab-edme-betriebsmode-dcdc"></a>
 ### T_TAB_EDME_BETRIEBSMODE_DCDC
 
 Dimensions: 4 rows × 2 columns
@@ -6633,7 +6513,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | Error-State |
 | 4 | Signal ungültig |
 
-<a id="table-statclientauthtxt"></a>
 ### STATCLIENTAUTHTXT
 
 Dimensions: 4 rows × 2 columns
@@ -6645,7 +6524,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Freigabe abgelehnt (Challenge-Response fehlgeschlagen, falsche Response, Kommunikation i.O.) |
 | 0x03 | nicht definiert |
 
-<a id="table-statfreesktxt"></a>
 ### STATFREESKTXT
 
 Dimensions: 3 rows × 2 columns
@@ -6656,7 +6534,6 @@ Dimensions: 3 rows × 2 columns
 | 0xFF | ungültig |
 | 0xXY | freie Ablagen |
 
-<a id="table-statewsvertxt"></a>
 ### STATEWSVERTXT
 
 Dimensions: 3 rows × 2 columns
@@ -6667,7 +6544,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Direktschreiben des SecretKey und DH-Abgleich |
 | 0xXY | unbekannt |
 
-<a id="table-tab-stat-st-diag-dcdc-modus"></a>
 ### TAB_STAT_ST_DIAG_DCDC_MODUS
 
 Dimensions: 3 rows × 2 columns
@@ -6678,7 +6554,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Erfolg |
 | 2 | Fehler |
 
-<a id="table-tab-stat-st-diag-dcdc-grenzen"></a>
 ### TAB_STAT_ST_DIAG_DCDC_GRENZEN
 
 Dimensions: 2 rows × 2 columns
@@ -6688,7 +6563,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | erfolgreich |
 | 1 | nicht erfolgreich: mindestens eine geforderte Grenze verletzt eine Systemgrenze, stattdessen wird diese verwendet |
 
-<a id="table-t-tab-st-b-diag-dcdc"></a>
 ### T_TAB_ST_B_DIAG_DCDC
 
 Dimensions: 5 rows × 2 columns
@@ -6701,7 +6575,6 @@ Dimensions: 5 rows × 2 columns
 | 8 | U_diag_dcdc_lv_out verwenden |
 | 16 | U_diag_dcdc_hv_out verwenden |
 
-<a id="table-t-tab-st-diag-dcdc-anf"></a>
 ### T_TAB_ST_DIAG_DCDC_ANF
 
 Dimensions: 4 rows × 2 columns
@@ -6713,7 +6586,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Anforderung Boost-Modus |
 | 3 | Anforderung Standby-Modus |
 
-<a id="table-t-tab-edme-remote-laden"></a>
 ### T_TAB_EDME_REMOTE_LADEN
 
 Dimensions: 4 rows × 2 columns
@@ -6725,7 +6597,6 @@ Dimensions: 4 rows × 2 columns
 | 4 | RemoteLaden aktiv |
 | 255 | ungültig |
 
-<a id="table-t-tab-edme-status-laden"></a>
 ### T_TAB_EDME_STATUS_LADEN
 
 Dimensions: 7 rows × 2 columns
@@ -6740,7 +6611,6 @@ Dimensions: 7 rows × 2 columns
 | 32 | Ladefehler |
 | 255 | ungültig |
 
-<a id="table-t-tab-edme-timer-laden-nr"></a>
 ### T_TAB_EDME_TIMER_LADEN_NR
 
 Dimensions: 4 rows × 2 columns
@@ -6752,7 +6622,6 @@ Dimensions: 4 rows × 2 columns
 | 4 | TimerLaden aktiv |
 | 255 | ungültig |
 
-<a id="table-t-tab-eme-hvstart-komm"></a>
 ### T_TAB_EME_HVSTART_KOMM
 
 Dimensions: 16 rows × 2 columns
@@ -6776,7 +6645,6 @@ Dimensions: 16 rows × 2 columns
 | 15 | HV Störung |
 | 16 | Initialisierung / ungültig |
 
-<a id="table-t-tab-eme-i0anf-hvb"></a>
 ### T_TAB_EME_I0ANF_HVB
 
 Dimensions: 5 rows × 2 columns
@@ -6789,7 +6657,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Anforderung Nullstrom mit EV: HV-Power-Down |
 | 4 | Anforderung Nullstrom mit EV: Batterieloser Betrieb |
 
-<a id="table-t-tab-tsr-laden-stat-art-ladeanf-bit-0"></a>
 ### T_TAB_TSR_LADEN_STAT_ART_LADEANF_BIT_0
 
 Dimensions: 2 rows × 2 columns
@@ -6799,7 +6666,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Ladeanforderung HVB |
 | 1 | Ladeanforderung HVB |
 
-<a id="table-t-tab-tsr-laden-stat-art-ladeanf-bit-1"></a>
 ### T_TAB_TSR_LADEN_STAT_ART_LADEANF_BIT_1
 
 Dimensions: 2 rows × 2 columns
@@ -6809,7 +6675,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Vorkonditionierung |
 | 1 | Vorkonditionierung |
 
-<a id="table-t-tab-tsr-laden-stat-art-ladeanf-bit-2"></a>
 ### T_TAB_TSR_LADEN_STAT_ART_LADEANF_BIT_2
 
 Dimensions: 2 rows × 2 columns
@@ -6819,7 +6684,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Nachladeanforderung NVB |
 | 1 | Nachladeanforderung NVB |
 
-<a id="table-t-tab-tsr-laden-st-bedingung-ladestart"></a>
 ### T_TAB_TSR_LADEN_ST_BEDINGUNG_LADESTART
 
 Dimensions: 5 rows × 2 columns
@@ -6832,7 +6696,6 @@ Dimensions: 5 rows × 2 columns
 | 4 | Ladestart über Startfunktion I-Phone |
 | 7 | ungueltig |
 
-<a id="table-t-tab-tsr-laden-st-abbruchbedingung"></a>
 ### T_TAB_TSR_LADEN_ST_ABBRUCHBEDINGUNG
 
 Dimensions: 4 rows × 2 columns
@@ -6844,7 +6707,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Beenden des Ladevorgangs durch Entriegeln des Ladesteckers |
 | 3 | Ladeende bei Ziel-SoC erreicht |
 
-<a id="table-t-tab-tsr-laden-st-reas-ldunterbr"></a>
 ### T_TAB_TSR_LADEN_ST_REAS_LDUNTERBR
 
 Dimensions: 12 rows × 2 columns
@@ -6864,7 +6726,6 @@ Dimensions: 12 rows × 2 columns
 | 11 | Fehler Temperatur |
 | 15 | ungueltig |
 
-<a id="table-t-tab-tsr-laden-stat-reas-derating-bit-0"></a>
 ### T_TAB_TSR_LADEN_STAT_REAS_DERATING_BIT_0
 
 Dimensions: 2 rows × 2 columns
@@ -6874,7 +6735,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Übertemperatur |
 | 1 | Übertemperatur |
 
-<a id="table-t-tab-tsr-laden-stat-reas-derating-bit-1"></a>
 ### T_TAB_TSR_LADEN_STAT_REAS_DERATING_BIT_1
 
 Dimensions: 2 rows × 2 columns
@@ -6884,7 +6744,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Netzfrequenz nicht zu niedrig |
 | 1 | Netzfrequenz zu niedrig |
 
-<a id="table-t-tab-tsr-laden-stat-reas-derating-bit-2"></a>
 ### T_TAB_TSR_LADEN_STAT_REAS_DERATING_BIT_2
 
 Dimensions: 2 rows × 2 columns
@@ -6894,7 +6753,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Ausfall eines Lademoduls |
 | 1 | Ausfall eines Lademoduls |
 
-<a id="table-t-tab-tsr-laden-stat-reas-derating-bit-3"></a>
 ### T_TAB_TSR_LADEN_STAT_REAS_DERATING_BIT_3
 
 Dimensions: 2 rows × 2 columns
@@ -6904,7 +6762,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine DC-Strombegrenzung |
 | 1 | DC-Strombegrenzung |
 
-<a id="table-t-tab-tsr-laden-stat-reas-derating-bit-4"></a>
 ### T_TAB_TSR_LADEN_STAT_REAS_DERATING_BIT_4
 
 Dimensions: 2 rows × 2 columns
@@ -6914,7 +6771,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Netzseitig verfügbare Leistung nicht kleiner Nennleistung |
 | 1 | Netzseitig verfügbare Leistung kleiner Nennleistung |
 
-<a id="table-t-tab-tsr-laden-stat-anf-art-voko-bit-0"></a>
 ### T_TAB_TSR_LADEN_STAT_ANF_ART_VOKO_BIT_0
 
 Dimensions: 2 rows × 2 columns
@@ -6924,7 +6780,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Voko Innenraum |
 | 1 | Voko Innenraum |
 
-<a id="table-t-tab-tsr-laden-stat-anf-art-voko-bit-1"></a>
 ### T_TAB_TSR_LADEN_STAT_ANF_ART_VOKO_BIT_1
 
 Dimensions: 2 rows × 2 columns
@@ -6934,7 +6789,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Voko Innenraum forced |
 | 1 | Voko Innenraum forced |
 
-<a id="table-t-tab-tsr-laden-stat-anf-art-voko-bit-2"></a>
 ### T_TAB_TSR_LADEN_STAT_ANF_ART_VOKO_BIT_2
 
 Dimensions: 2 rows × 2 columns
@@ -6944,7 +6798,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Voko Batt |
 | 1 | Voko Batt |
 
-<a id="table-t-tab-tsr-laden-stat-anf-art-voko-bit-3"></a>
 ### T_TAB_TSR_LADEN_STAT_ANF_ART_VOKO_BIT_3
 
 Dimensions: 2 rows × 2 columns
@@ -6954,7 +6807,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Voko Batt forced |
 | 1 | Voko Batt forced |
 
-<a id="table-t-tab-tsr-laden-stat-nachladeanforderung"></a>
 ### T_TAB_TSR_LADEN_STAT_NACHLADEANFORDERUNG
 
 Dimensions: 3 rows × 2 columns
@@ -6965,7 +6817,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | Nachladeanforderung während das Fzg. wach war |
 | 3 | ungueltig |
 
-<a id="table-t-tab-tsr-laden-stat-zusatzinfo-abbruchbedingung"></a>
 ### T_TAB_TSR_LADEN_STAT_ZUSATZINFO_ABBRUCHBEDINGUNG
 
 Dimensions: 5 rows × 2 columns
@@ -6978,7 +6829,6 @@ Dimensions: 5 rows × 2 columns
 | 8 | Abbruch aufgrund schlechter Ladebilanz |
 | 15 | ungueltig |
 
-<a id="table-motorudscodierung-ruhestrom"></a>
 ### _MOTORUDSCODIERUNG_RUHESTROM
 
 Dimensions: 16 rows × 2 columns
@@ -7002,7 +6852,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Ruhestrom = 200...1000mA, erneuter Fehler bei Kl.30f aus (B_ierr3 = 1) |
 | 15 | Ruhestrom groesser 1000mA, erneuter Fehler bei Kl.30f aus (B_ierr3 = 1) |
 
-<a id="table-t-tab-edme-ecopro"></a>
 ### T_TAB_EDME_ECOPRO
 
 Dimensions: 2 rows × 2 columns

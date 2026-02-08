@@ -28,7 +28,6 @@
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 - [STATUS_BETRIEBSSTUNDEN](#job-status-betriebsstunden) - Auslesen des Betriebsstudenzaehlers
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -47,7 +46,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer ME9 automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -60,7 +58,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten fuer DME auslesen
@@ -89,7 +86,6 @@ _No arguments._
 | ID_SW_NR_RES | string | Softwarenummer (reserved - currently unused) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -104,7 +100,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -122,7 +117,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -141,7 +135,6 @@ Codierdaten lesen
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -159,7 +152,6 @@ Codierdaten schreiben und verifizieren
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-betriebsstunden"></a>
 ### STATUS_BETRIEBSSTUNDEN
 
 Auslesen des Betriebsstudenzaehlers
@@ -184,7 +176,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (76 × 2)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (1 × 2)
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 50 rows × 2 columns
@@ -242,7 +233,6 @@ Dimensions: 50 rows × 2 columns
 | 0x49 | Harman Kardon |
 | 0xFF | @unbekannter Hersteller@ |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -326,7 +316,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns

@@ -29,7 +29,6 @@
 - [SLEEP_MODE](#job-sleep-mode) - SG in Sleep-Mode versetzen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -50,7 +49,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -68,7 +66,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer ZIS E38
@@ -81,7 +78,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Front-ZIS
@@ -104,7 +100,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -124,7 +119,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -137,7 +131,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-zis-version"></a>
 ### ZIS_VERSION
 
 ZIS-Variante auslesen
@@ -152,7 +145,6 @@ _No arguments._
 | VARIANTE | string | AUDIO \| TELEFON \| BC |
 | VARIANTEN_NR | string | Nr der Variante fuer ELDI! |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -165,7 +157,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -189,7 +180,6 @@ _No arguments._
 - [ZISVARIANTE](#table-zisvariante) (10 × 3)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -213,7 +203,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -227,7 +216,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 6 rows × 2 columns
@@ -241,7 +229,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | Transportmode gesetzt |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -251,7 +238,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Fehler momentan nicht vorhanden |
 | 0x20 | Fehler momentan vorhanden |
 
-<a id="table-zisvariante"></a>
 ### ZISVARIANTE
 
 Dimensions: 10 rows × 3 columns
@@ -269,7 +255,6 @@ Dimensions: 10 rows × 3 columns
 | 0x14 | AUDIO, UHR, TELEFON, DSP | 9 |
 | 0xXY | unbekannte Variante | 0 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

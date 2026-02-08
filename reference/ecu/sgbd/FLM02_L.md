@@ -58,7 +58,6 @@
 - [STATUS_SATELLIT_LASER_KALIBRIERPARAMETER](#job-status-satellit-laser-kalibrierparameter) - Gibt die Kalibrierwerte des Lasersatelliten aus Modus: Default
 - [STATUS_SATELLIT_LASER_PROGRAMMING_COUNTER](#job-status-satellit-laser-programming-counter) - Programmierzähler Lasersatellit Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -77,7 +76,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -90,7 +88,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -107,7 +104,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -139,7 +135,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -184,7 +179,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -203,7 +197,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -221,7 +214,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -242,7 +234,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -271,7 +262,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -291,7 +281,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -312,7 +301,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -328,7 +316,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -350,7 +337,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -372,7 +358,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -391,7 +376,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $17 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -422,7 +406,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $18 reportDTCSnapshotRecordByDTCNumber UDS  : $19 reportDTCExtendedDataRecordByDTCNumber UDS  : $-- reportSeverityInformationOfDTC (nicht möglich!) Modus: Default
@@ -468,7 +451,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $19 ReadD
 | _RESPONSE_EXTENDED_DATA | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -483,7 +465,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -503,7 +484,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -522,7 +502,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -541,7 +520,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -556,7 +534,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -575,7 +552,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -595,7 +571,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -612,7 +587,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -631,7 +605,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -646,7 +619,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -663,7 +635,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -678,7 +649,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -693,7 +663,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -713,7 +682,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-satellit-daten"></a>
 ### STATUS_SATELLIT_DATEN
 
 Ausgabe der Logistikdaten Satellit mit HW-Version, SW-Version, BTLD-Version, Codierdaten-Checksumme Modus: Default
@@ -734,7 +702,6 @@ _No arguments._
 | STAT_SAT_1_CODIERDATEN_HASH_WERT | int | Codierdaten Hash-Wert Satellit 1 |
 | STAT_SAT_1_VENDOR_ID_WERT | int | Codierdaten Hash-Wert Satellit 1 |
 
-<a id="job-status-satellit-laser-sicherheit"></a>
 ### STATUS_SATELLIT_LASER_SICHERHEIT
 
 Gibt den Sicherheitsstatus des Lasers aus Modus: Default
@@ -765,7 +732,6 @@ _No arguments._
 | STAT_AGE_FACTOR_2_WERT | int | Kompensationsfaktor Alterung Laser Sensor 2 |
 | STAT_SAFETY_READ_ZKW_DATA | binary | Sicherheitsdaten Laser ZKW |
 
-<a id="job-status-satellit-fs-lesen"></a>
 ### STATUS_SATELLIT_FS_LESEN
 
 Ausgabe des internen Fehlerspeichers einer Satellitenelektronik Modus: Default
@@ -799,7 +765,6 @@ _No arguments._
 | STAT_SAT_FSP_EINTRAG_18_DATA | binary | FSP-Nummer Satellit inkl. Systemzeit, Fehlerstatus und Umweltbedingungen |
 | STAT_SAT_FSP_EINTRAG_19_DATA | binary | FSP-Nummer Satellit inkl. Systemzeit, Fehlerstatus und Umweltbedingungen |
 
-<a id="job-status-satellit-reset-zaehler"></a>
 ### STATUS_SATELLIT_RESET_ZAEHLER
 
 Gibt die Anzahl der Resets des Satelliten aus Modus: Default
@@ -815,7 +780,6 @@ _No arguments._
 | _RESPONSE | binary | Hex-Antwort von SG |
 | STAT_RESET_ZAEHLER_WERT | int | Hex-Antwort von SG |
 
-<a id="job-steuern-satellit-laser-sicherheitsstatus-reset"></a>
 ### STEUERN_SATELLIT_LASER_SICHERHEITSSTATUS_RESET
 
 Ruecksetzen des Sicherheitsstatus des Lasersatelliten Modus: Default
@@ -830,7 +794,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-satellit-laser-kalibrierparameter"></a>
 ### STATUS_SATELLIT_LASER_KALIBRIERPARAMETER
 
 Gibt die Kalibrierwerte des Lasersatelliten aus Modus: Default
@@ -862,7 +825,6 @@ _No arguments._
 | STAT_I_N_WERT | char | Nennstrom |
 | STAT_T_N_WERT | char | Nenntemperatur |
 
-<a id="job-status-satellit-laser-programming-counter"></a>
 ### STATUS_SATELLIT_LASER_PROGRAMMING_COUNTER
 
 Programmierzähler Lasersatellit Modus: Default
@@ -992,7 +954,6 @@ _No arguments._
 - [TAB_LF_LV_FRONT_ARG](#table-tab-lf-lv-front-arg) (78 × 2)
 - [TAB_SUPPLIERINFO_FIELD](#table-tab-supplierinfo-field) (64 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1076,7 +1037,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 142 rows × 2 columns
@@ -1226,7 +1186,6 @@ Dimensions: 142 rows × 2 columns
 | 0x0000C3 | Panasonic |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1269,7 +1228,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1294,7 +1252,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1328,7 +1285,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1401,7 +1357,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1414,7 +1369,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1429,7 +1383,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1442,7 +1395,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1462,7 +1414,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1505,7 +1456,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1516,7 +1466,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x4044-d"></a>
 ### ARG_0X4044_D
 
 Dimensions: 1 rows × 12 columns
@@ -1525,7 +1474,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ID | HEX | high | signed char | - | - | - | - | - | - | - | ID des Schrittmotorausgangs 0=LWR, 1=AHL |
 
-<a id="table-arg-0x4045-d"></a>
 ### ARG_0X4045_D
 
 Dimensions: 4 rows × 12 columns
@@ -1537,7 +1485,6 @@ Dimensions: 4 rows × 12 columns
 | RICHTUNG | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Richtung in die der Motor verfahren soll. 0: LWR direction 0 1: LWR direction 1 |
 | ZEIT_PRO_SCHRITT | µs | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Zeit in Mikrosekunden pro Schritt |
 
-<a id="table-arg-0x404c-d"></a>
 ### ARG_0X404C_D
 
 Dimensions: 10 rows × 12 columns
@@ -1555,7 +1502,6 @@ Dimensions: 10 rows × 12 columns
 | LED_CURRENT_8 | mA | high | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | gibt den einzustellenden Strom des im Namen genannten LED-Kanals an |
 | LED_CURRENT_9 | mA | high | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | gibt den einzustellenden Strom des im Namen genannten LED-Kanals an |
 
-<a id="table-arg-0x404e-d"></a>
 ### ARG_0X404E_D
 
 Dimensions: 1 rows × 12 columns
@@ -1564,7 +1510,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ACTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00: Löschen der Informationen des letzten Fusi-Resets durchführen 0x01: Löschen der Informationen des letzten Fusi-Resets durchführen |
 
-<a id="table-arg-0xa54b-r"></a>
 ### ARG_0XA54B_R
 
 Dimensions: 3 rows × 14 columns
@@ -1575,7 +1520,6 @@ Dimensions: 3 rows × 14 columns
 | PWM | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | PWM Wert |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der Aktivierungszeit in Sekunden. (255...dauerhaft ein) |
 
-<a id="table-arg-0xa54c-r"></a>
 ### ARG_0XA54C_R
 
 Dimensions: 5 rows × 14 columns
@@ -1588,7 +1532,6 @@ Dimensions: 5 rows × 14 columns
 | SUBFUNCTION_ID | + | - | HEX | high | unsigned char | - | - | - | - | - | - | - | Auswahl der Subfunction-ID Satellit |
 | ARGUMENT | + | - | HEX | high | unsigned long | - | - | - | - | - | - | - | Argument für WriteData in den Satelliten |
 
-<a id="table-arg-0xa54d-r"></a>
 ### ARG_0XA54D_R
 
 Dimensions: 1 rows × 14 columns
@@ -1597,7 +1540,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EINSCHALTDAUER_LUEFTER | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der Aktivierungszeit in Sekunden. (255...dauerhaft ein) |
 
-<a id="table-arg-0xa54e-r"></a>
 ### ARG_0XA54E_R
 
 Dimensions: 3 rows × 14 columns
@@ -1608,7 +1550,6 @@ Dimensions: 3 rows × 14 columns
 | GESCHWINDIGKEIT | + | - | °/s | high | unsigned char | - | - | 10.0 | 1.0 | 0.0 | - | - | Verfahrgeschwindigkeit des Schrittmotors in Grad pro Sekunde |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der Aktivierungszeit in Sekunden. (255...dauerhaft ein) |
 
-<a id="table-arg-0xa54f-r"></a>
 ### ARG_0XA54F_R
 
 Dimensions: 3 rows × 14 columns
@@ -1619,7 +1560,6 @@ Dimensions: 3 rows × 14 columns
 | GESCHWINDIGKEIT | + | - | °/s | high | unsigned char | - | - | 10.0 | 1.0 | 0.0 | - | - | Verfahrgeschwindigkeit des Schrittmotors in Grad pro Sekunde |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der Aktivierungszeit in Sekunden. (255...dauerhaft ein) |
 
-<a id="table-arg-0xa550-r"></a>
 ### ARG_0XA550_R
 
 Dimensions: 3 rows × 14 columns
@@ -1630,7 +1570,6 @@ Dimensions: 3 rows × 14 columns
 | PWM | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | PWM Wert |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der Aktivierungszeit in Sekunden. (255...dauerhaft ein) 255 = dauerhaft ein |
 
-<a id="table-arg-0xaff3-r"></a>
 ### ARG_0XAFF3_R
 
 Dimensions: 3 rows × 14 columns
@@ -1641,7 +1580,6 @@ Dimensions: 3 rows × 14 columns
 | PWM | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Angabe der PWM Duty Cycle in % |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der Aktivierungszeit in Sekunden. (255...dauerhaft ein) |
 
-<a id="table-arg-0xd6d4-d"></a>
 ### ARG_0XD6D4_D
 
 Dimensions: 1 rows × 12 columns
@@ -1650,7 +1588,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Zähler löschen: 0: keine Aktion 1: Start |
 
-<a id="table-arg-0xd6dc-d"></a>
 ### ARG_0XD6DC_D
 
 Dimensions: 2 rows × 12 columns
@@ -1660,7 +1597,6 @@ Dimensions: 2 rows × 12 columns
 | LICHTFUNKTION_LV | 0-n | - | signed int | - | TAB_LF_LV_FRONT_ARG | - | - | - | - | - | Auswahl siehe table TAB_LF_LV_FRONT_ARG |
 | ZEIT | s | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der Aktivierungszeit in Sekunden. (255...dauerhaft ein) |
 
-<a id="table-arg-0xd7ab-d"></a>
 ### ARG_0XD7AB_D
 
 Dimensions: 1 rows × 12 columns
@@ -1669,7 +1605,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSGANG | 0-n | high | unsigned char | - | TAB_FLM_HIGHSIDE_SWITCH | - | - | - | - | - | Auswahl des jeweiligen Highside Schalters Nr. |
 
-<a id="table-arg-0xd7ac-d"></a>
 ### ARG_0XD7AC_D
 
 Dimensions: 1 rows × 12 columns
@@ -1678,7 +1613,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Zähler löschen:  0: keine Aktion  1: Start |
 
-<a id="table-arg-0xd7b9-d"></a>
 ### ARG_0XD7B9_D
 
 Dimensions: 1 rows × 12 columns
@@ -1687,7 +1621,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Zähler löschen:  0: keine Aktion  1: Start |
 
-<a id="table-arg-0xd7bb-d"></a>
 ### ARG_0XD7BB_D
 
 Dimensions: 1 rows × 12 columns
@@ -1696,7 +1629,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Zähler löschen:  0: keine Aktion  1: Start |
 
-<a id="table-arg-0xd7bd-d"></a>
 ### ARG_0XD7BD_D
 
 Dimensions: 1 rows × 12 columns
@@ -1705,7 +1637,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Zähler löschen:  0: keine Aktion  1: Start |
 
-<a id="table-arg-0xd9be-d"></a>
 ### ARG_0XD9BE_D
 
 Dimensions: 1 rows × 12 columns
@@ -1714,7 +1645,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Speicher löschen:  0: keine Aktion  1: Start |
 
-<a id="table-arg-0xd9fd-d"></a>
 ### ARG_0XD9FD_D
 
 Dimensions: 2 rows × 12 columns
@@ -1724,7 +1654,6 @@ Dimensions: 2 rows × 12 columns
 | SCHRITTMOTOR | HEX | high | unsigned char | - | - | - | - | - | - | - | 0x00: keine Aktion  0x01: AHL  0x02: LWR 0x03: beide Schrittmotoren |
 | MODUS | HEX | high | unsigned char | - | - | - | - | - | - | - | 0x00: Referenzieren  0x01: Abstellposition anfahren |
 
-<a id="table-arg-0xda72-d"></a>
 ### ARG_0XDA72_D
 
 Dimensions: 1 rows × 12 columns
@@ -1733,7 +1662,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHEINWERFER_DATEN | DATA | high | data[16] | - | - | 1.0 | 1.0 | 0.0 | - | - | Scheinwerferspezifische Daten |
 
-<a id="table-arg-0xdac5-d"></a>
 ### ARG_0XDAC5_D
 
 Dimensions: 1 rows × 12 columns
@@ -1742,7 +1670,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HIGHSIDE_NR | HEX | high | unsigned char | - | - | - | - | - | - | - | Reset HSS Nr. 0x01: 1, 0x03: SBC, 0xFF: alle |
 
-<a id="table-arg-0xe3ed-d"></a>
 ### ARG_0XE3ED_D
 
 Dimensions: 2 rows × 12 columns
@@ -1752,7 +1679,6 @@ Dimensions: 2 rows × 12 columns
 | SCHEINWERFERSEITE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00: aktuelle Seite (Diagnoseadresse)  0x01: andere Seite (Diagnoseadresse) |
 | BINNINGDATEN | DATA | high | data[5] | - | - | 1.0 | 1.0 | 0.0 | - | - | Binningdaten Leuchtmittel der gewählten Fahrzeugseite |
 
-<a id="table-arg-0xf001-r"></a>
 ### ARG_0XF001_R
 
 Dimensions: 2 rows × 14 columns
@@ -1762,7 +1688,6 @@ Dimensions: 2 rows × 14 columns
 | LED_TREIBER_NR | + | - | HEX | high | unsigned char | - | - | - | - | - | - | - | Nummer des LED-Treibers |
 | REGISTER_ADRESSE | + | - | HEX | high | unsigned char | - | - | - | - | - | - | - | Adresse des Treiber-Registers |
 
-<a id="table-arg-0xf002-r"></a>
 ### ARG_0XF002_R
 
 Dimensions: 2 rows × 14 columns
@@ -1772,7 +1697,6 @@ Dimensions: 2 rows × 14 columns
 | PASSWORT | - | + | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort |
 | RESET_TYP | - | + | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00: Software-Reset 0x01: Power-On-Reset |
 
-<a id="table-bf-22-f152-supplierinfo"></a>
 ### BF_22_F152_SUPPLIERINFO
 
 Dimensions: 2 rows × 10 columns
@@ -1782,7 +1706,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HWMODEL | 0-n | high | unsigned char | 0xC0 | HW_MODEL | - | - | - | hardware model |
 | STAT_SUPPLIERINFOFIELD | 0-n | high | unsigned char | 0x3F | TAB_SUPPLIERINFO_FIELD | - | - | - | supplierInfo |
 
-<a id="table-bf-fahrzeug-entwicklungsbezeichnung"></a>
 ### BF_FAHRZEUG_ENTWICKLUNGSBEZEICHNUNG
 
 Dimensions: 2 rows × 10 columns
@@ -1792,7 +1715,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FAHRZEUGLISTE | 0-n | high | unsigned char | 0xFE | FAHRZEUG_TYP | - | - | - | Gibt die Entwicklungsbezeichnung des Fahrzeugs aus |
 | STAT_LCI | 0/1 | high | unsigned char | 0x01 | - | - | - | - | 0x00: NICHT_LCI 0x01: LCI |
 
-<a id="table-bf-fehlerarten-schrittmotor"></a>
 ### BF_FEHLERARTEN_SCHRITTMOTOR
 
 Dimensions: 8 rows × 10 columns
@@ -1808,7 +1730,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_TEMPERATUR_ABSCHALTUNG | 0/1 | high | unsigned char | 0x40 | - | - | - | - | 0x00: kein Fehler 0x01: Abschaltung Übertemperatur |
 | STAT_UNDERVOLTAGE | 0/1 | high | unsigned char | 0x80 | - | - | - | - | 0x00: kein Fehler 0x01: Unterspannungsfehler |
 
-<a id="table-bf-fehlerarten-schrittmotor-ahl"></a>
 ### BF_FEHLERARTEN_SCHRITTMOTOR_AHL
 
 Dimensions: 8 rows × 10 columns
@@ -1824,7 +1745,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_TEMPERATUR_ABSCHALTUNG_AHL | 0/1 | high | unsigned char | 0x40 | - | - | - | - | 0x00: kein Fehler 0x01: Abschaltung wegen Übertemperatur |
 | STAT_UNDERVOLTAGE_AHL | 0/1 | high | unsigned char | 0x80 | - | - | - | - | 0x00: kein Fehler 0x01: Unterspannung |
 
-<a id="table-bf-led-kanal"></a>
 ### BF_LED_KANAL
 
 Dimensions: 3 rows × 10 columns
@@ -1835,7 +1755,6 @@ Dimensions: 3 rows × 10 columns
 | KANAL1 | 0/1 | low | unsigned int | 0x02 | - | - | - | - | Kanal 1 |
 | KANAL2 | 0/1 | low | unsigned int | 0x04 | - | - | - | - | Kanal 2  |
 
-<a id="table-bf-scheinwerfer-typ"></a>
 ### BF_SCHEINWERFER_TYP
 
 Dimensions: 4 rows × 10 columns
@@ -1847,7 +1766,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SA_VARIANTE | 0-n | high | unsigned char | 0x0E | SCHEINWERFER_SA_VARIANTE | - | - | - | Ausgabe der SA-Variante |
 | STAT_LAENDER_VARIANTE | 0-n | high | unsigned char | 0x01 | SCHEINWERFER_LAENDER_VARIANTE | - | - | - | Ausgabe der Ländervariante:  - ECE  - US |
 
-<a id="table-bitfeld"></a>
 ### BITFELD
 
 Dimensions: 18 rows × 2 columns
@@ -1873,7 +1791,6 @@ Dimensions: 18 rows × 2 columns
 | 16 | Kanal 16 betroffen |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1887,7 +1804,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fahrzeug-typ"></a>
 ### FAHRZEUG_TYP
 
 Dimensions: 43 rows × 2 columns
@@ -1938,7 +1854,6 @@ Dimensions: 43 rows × 2 columns
 | 0x06 | RR25 |
 | 0xFF | Wert ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1952,7 +1867,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 213 rows × 4 columns
@@ -2173,7 +2087,6 @@ Dimensions: 213 rows × 4 columns
 | 0xD9D56B | Botschaft 0xCA (CTR_FN_IDC) - Signal OVLY_FN_IDC ungültig | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 23 rows × 9 columns
@@ -2204,7 +2117,6 @@ Dimensions: 23 rows × 9 columns
 | 0x4019 | NR_TEILSTRANG_LED_MATRIX | HEX | High | unsigned char | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-hw-model"></a>
 ### HW_MODEL
 
 Dimensions: 5 rows × 2 columns
@@ -2217,7 +2129,6 @@ Dimensions: 5 rows × 2 columns
 | 0xC0 | D-Muster |
 | 0xFF | Wert ungültig |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2230,7 +2141,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 42 rows × 4 columns
@@ -2280,7 +2190,6 @@ Dimensions: 42 rows × 4 columns
 | 0xD9D781 | Botschaft 0x32 (ST_CENG) - Signal ST_ENERG_SUPY ungültig | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 10 rows × 9 columns
@@ -2298,7 +2207,6 @@ Dimensions: 10 rows × 9 columns
 | 0x4050 | SCHRITTMOTOR_FUNKTION | HEX | High | unsigned char | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2307,7 +2215,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -2325,7 +2232,6 @@ Dimensions: 10 rows × 2 columns
 | 0x43 | HDDUpdateSession |
 | 0xff | ungültig |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -2337,7 +2243,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | ECU nicht mehr programmierbar |
 | 0xff | ungültig |
 
-<a id="table-referenzierung-schrittmotor"></a>
 ### REFERENZIERUNG_SCHRITTMOTOR
 
 Dimensions: 4 rows × 2 columns
@@ -2349,7 +2254,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | REFERENZIERT MECHANISCHER ANSCHLAG |
 | 0xFF | Wert ungültig |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -2360,7 +2264,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -2374,7 +2277,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4040-d"></a>
 ### RES_0X4040_D
 
 Dimensions: 2 rows × 10 columns
@@ -2384,7 +2286,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_VARIANT_DATA | DATA | high | data[8] | - | - | 1.0 | 1.0 | 0.0 | Bitweise Kodierung der Variante |
 | STAT_CORRECT_DATA | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | Gültigkeit der Variantendaten |
 
-<a id="table-res-0x4041-d"></a>
 ### RES_0X4041_D
 
 Dimensions: 2 rows × 10 columns
@@ -2394,7 +2295,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HLLPOSITION_WERT | Schritte | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Position des Schrittmotors der Leuchtweitenregulierung in Anzahl Schritte |
 | STAT_AHLPOSITION_WERT | Schritte | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Position des Schrittmotors des Kurvenlichts in Anzahl Schritte |
 
-<a id="table-res-0x4042-d"></a>
 ### RES_0X4042_D
 
 Dimensions: 2 rows × 10 columns
@@ -2404,7 +2304,6 @@ Dimensions: 2 rows × 10 columns
 | - | Bit | high | BITFIELD | - | BF_FEHLERARTEN_SCHRITTMOTOR | - | - | - | liefert den Fehlerzustand des Schrittmotors der Leuchtweitenregulierung zurück |
 | - | Bit | high | BITFIELD | - | BF_FEHLERARTEN_SCHRITTMOTOR_AHL | - | - | - | liefert den Fehlerzustand des Kurvenlichtmotors zurück |
 
-<a id="table-res-0x4046-d"></a>
 ### RES_0X4046_D
 
 Dimensions: 59 rows × 10 columns
@@ -2471,7 +2370,6 @@ Dimensions: 59 rows × 10 columns
 | STAT_I603_MAX_TEMP_GESCHW_WERT | km/h | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gibt die Geschwindigkeit des Fahrzeugs bei der Maximaltemperatur von I603 an. |
 | STAT_I603_MAX_TEMP_AUSSENTEMP_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Gibt die Aussentemperatur zum Zeitpunkt der maximalen Temperatur von I603 an |
 
-<a id="table-res-0x4047-d"></a>
 ### RES_0X4047_D
 
 Dimensions: 48 rows × 10 columns
@@ -2527,7 +2425,6 @@ Dimensions: 48 rows × 10 columns
 | STAT_NTC_MAX_TEMP_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Gibt die maximale Temperatur von NTC an |
 | STAT_NTC_MAX_TEMP_ZEIT_WERT | s | high | signed long | - | - | 1.0 | 1.0 | 0.0 | Gibt den Zeitpunkt der maximalen Temperatur an |
 
-<a id="table-res-0x4048-d"></a>
 ### RES_0X4048_D
 
 Dimensions: 6 rows × 10 columns
@@ -2541,7 +2438,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_TEMPERATUR_I603_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Aktuelle Temperatur I603 |
 | STAT_TEMPERATUR_NTC_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Aktuelle Temperatur NTC-FLM2 |
 
-<a id="table-res-0x4049-d"></a>
 ### RES_0X4049_D
 
 Dimensions: 18 rows × 10 columns
@@ -2567,7 +2463,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_SI_LUEFTER_2_HW_WERT | V | high | unsigned int | - | - | 5.0 | 1023.0 | 0.0 | Eingangspannung am Analogeingang |
 | STAT_SI_SENSOR_AHL_HW_WERT | V | high | unsigned int | - | - | 5.0 | 1023.0 | 0.0 | Eingangspannung am Analogeingang |
 
-<a id="table-res-0x404b-d"></a>
 ### RES_0X404B_D
 
 Dimensions: 11 rows × 10 columns
@@ -2586,7 +2481,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_R9_WERT | mOhm | high | signed int | - | - | 1.0 | 1.0 | 0.0 | gibt den Widerstandswert des im Namen genannten Shunts zurück |
 | STAT_VALID | 0/1 | high | signed char | - | - | - | - | - | gibt an, ob die konfigurierte Widerstandswerte gültig sind oder Defaultwerte verwendet werden |
 
-<a id="table-res-0x404d-d"></a>
 ### RES_0X404D_D
 
 Dimensions: 3 rows × 10 columns
@@ -2597,7 +2491,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_EXTRAINFO_WERT | HEX | high | unsigned long | - | - | - | - | - | extra info |
 | STAT_TIMESTAMP_WERT | HEX | high | unsigned long | - | - | - | - | - | Zeitstempel |
 
-<a id="table-res-0x4051-d"></a>
 ### RES_0X4051_D
 
 Dimensions: 2 rows × 10 columns
@@ -2607,7 +2500,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KALIBRIERUNG_DATA | DATA | high | data[80] | - | - | 1.0 | 1.0 | 0.0 | Werte Kalibrierung der LED-Treiber |
 | STAT_GUELTIGKEIT | 0/1 | high | unsigned char | - | - | - | - | - | 0x00: Kalibrierdaten gültig 0x01: Kalibrierdaten ungültig |
 
-<a id="table-res-0xa549-r"></a>
 ### RES_0XA549_R
 
 Dimensions: 34 rows × 13 columns
@@ -2649,7 +2541,6 @@ Dimensions: 34 rows × 13 columns
 | STAT_FUNKTIONSTEST_KURZSCHLUSSSCHALTER_9_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ergebnis Systemtest: 0...mit Fehler beendet 1...ohne Fehler beendet 2...noch nicht beendet |
 | STAT_FUNKTIONSTEST_KURZSCHLUSSSCHALTER_10_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ergebnis Systemtest: 0...mit Fehler beendet 1...ohne Fehler beendet 2...noch nicht beendet |
 
-<a id="table-res-0xa54a-r"></a>
 ### RES_0XA54A_R
 
 Dimensions: 1 rows × 13 columns
@@ -2658,7 +2549,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FUNKTIONSTEST_LASER_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ergebnis Systemtest: 0...mit Fehler beendet 1...ohne Fehler beendet 2...noch nicht beendet |
 
-<a id="table-res-0xa54c-r"></a>
 ### RES_0XA54C_R
 
 Dimensions: 1 rows × 13 columns
@@ -2667,7 +2557,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SATELLIT_DATA | + | - | - | DATA | high | data[252] | - | - | 1.0 | 1.0 | 0.0 | Ergebnis der Diagnoseanfrage Satelliten-Elektronik |
 
-<a id="table-res-0xa54d-r"></a>
 ### RES_0XA54D_R
 
 Dimensions: 48 rows × 13 columns
@@ -2723,7 +2612,6 @@ Dimensions: 48 rows × 13 columns
 | STAT_GRENZWERT_GRADIENT_LED14_WERT | - | - | + | K/ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Grenzwert für den Temperaturgradienten des jeweiligen LED-Ausgangs |
 | STAT_GRENZWERT_GRADIENT_LED15_WERT | - | - | + | K/ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Grenzwert für den Temperaturgradienten des jeweiligen LED-Ausgangs |
 
-<a id="table-res-0xa54e-r"></a>
 ### RES_0XA54E_R
 
 Dimensions: 1 rows × 13 columns
@@ -2732,7 +2620,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_POSITION_AHL_WERT | - | - | + | ° | high | unsigned int | - | - | 1.0 | 100.0 | -20.0 | Ausgabe der Position des Schrittmotors AHL |
 
-<a id="table-res-0xa54f-r"></a>
 ### RES_0XA54F_R
 
 Dimensions: 1 rows × 13 columns
@@ -2741,7 +2628,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_POSITION_LWR_WERT | - | - | + | ° | high | unsigned int | - | - | 1.0 | 100.0 | -20.0 | Ausgabe der Position des Schrittmotors LWR |
 
-<a id="table-res-0xaff3-r"></a>
 ### RES_0XAFF3_R
 
 Dimensions: 10 rows × 13 columns
@@ -2759,7 +2645,6 @@ Dimensions: 10 rows × 13 columns
 | STAT_PWM_KSS_9_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gibt die PWM des jeweiligen Kurzschlussschalters aus. |
 | STAT_PWM_KSS_10_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gibt die PWM des jeweiligen Kurzschlussschalters aus. |
 
-<a id="table-res-0xd6d3-d"></a>
 ### RES_0XD6D3_D
 
 Dimensions: 7 rows × 10 columns
@@ -2774,7 +2659,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_SCHRITTVERLUSTE_BEREICH_6_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Schrittverluste im Bereich 6. |
 | STAT_SCHRITTVERLUSTE_KUMMLIERT_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Summe aller bisheriger Schrittverluste seit letztem Zählerreset. |
 
-<a id="table-res-0xd6db-d"></a>
 ### RES_0XD6DB_D
 
 Dimensions: 60 rows × 10 columns
@@ -2842,7 +2726,6 @@ Dimensions: 60 rows × 10 columns
 | STAT_STRANGSPANNUNG_KANAL_15_WERT | V | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Strangspannung Kanal 15 |
 | STAT_STRANGSPANNUNG_KANAL_15_PHASE | 0/1 | high | unsigned char | - | - | - | - | - | Strangspannung on/off-Phase Kanal 15 |
 
-<a id="table-res-0xd6df-d"></a>
 ### RES_0XD6DF_D
 
 Dimensions: 12 rows × 10 columns
@@ -2862,7 +2745,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_SPANNUNG_AUSGANG_3_WERT | V | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Spannung Wert Ausgang 3 |
 | STAT_SPANNUNG_AUSGANG_3_PHASE | 0/1 | high | unsigned char | - | - | - | - | - | Phase Ausgang 3:  0: off-Phase 1: on-Phase |
 
-<a id="table-res-0xd7a7-d"></a>
 ### RES_0XD7A7_D
 
 Dimensions: 48 rows × 10 columns
@@ -2918,7 +2800,6 @@ Dimensions: 48 rows × 10 columns
 | STAT_ST_FE_2_RH_BRIGLEV_LP_EX_WERT | HEX | - | unsigned char | - | - | - | - | - | Helligkeit Leuchten rechts vorne.  [HEX] in BIN für Statusinhalt gemäß aktuell gültiger NK B2-CAN. |
 | STAT_ALIV_FE_2_RH_ST_LP_EX_WERT | HEX | - | unsigned char | - | - | - | - | - | Alivezähler FLM rechts.  [HEX] in BIN für Statusinhalt gemäß aktuell gültiger NK B2-CAN. |
 
-<a id="table-res-0xd7ad-d"></a>
 ### RES_0XD7AD_D
 
 Dimensions: 38 rows × 10 columns
@@ -2964,7 +2845,6 @@ Dimensions: 38 rows × 10 columns
 | STAT_SATELLIT_3_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Betriebsdauer Satellit 3. |
 | STAT_FLM_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Betriebsdauer Steuergerät FLM. |
 
-<a id="table-res-0xd7ba-d"></a>
 ### RES_0XD7BA_D
 
 Dimensions: 14 rows × 10 columns
@@ -2986,7 +2866,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_RESET_UNKNOWN_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Resets durch unbekannte Ursachen. |
 | STAT_RESET_MULTIPLE_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Resets durch mehrere Resetquellen gleichzeitig. |
 
-<a id="table-res-0xd7bc-d"></a>
 ### RES_0XD7BC_D
 
 Dimensions: 2 rows × 10 columns
@@ -2996,7 +2875,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_REFERENZLAUF_BEGONNEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der begonnenen Referenzläufe des AHL Schrittmotors. |
 | STAT_REFERENZLAUF_ABGESCHLOSSEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der abgeschlossenen Referenzläufe des AHL Schrittmotors. |
 
-<a id="table-res-0xd7be-d"></a>
 ### RES_0XD7BE_D
 
 Dimensions: 2 rows × 10 columns
@@ -3006,7 +2884,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_REFERENZLAUF_BEGONNEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der begonnenen Referenzläufe des LWR Schrittmotors. |
 | STAT_REFERENZLAUF_ABGESCHLOSSEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der abgeschlossenen Referenzläufe des LWR Schrittmotors. |
 
-<a id="table-res-0xd9bd-d"></a>
 ### RES_0XD9BD_D
 
 Dimensions: 2 rows × 10 columns
@@ -3016,7 +2893,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_STRANGSTROM_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Strangstrom des LED-Ausgangs für Blinker. |
 | STAT_PWM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM Wert des LED-Ausgangs für Blinker. |
 
-<a id="table-res-0xd9bf-d"></a>
 ### RES_0XD9BF_D
 
 Dimensions: 96 rows × 10 columns
@@ -3120,7 +2996,6 @@ Dimensions: 96 rows × 10 columns
 | STAT_LM_15_TEMPKLASSE_5_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Sensor NTC Leuchtmittel 15 in Temperaturklasse 5 |
 | STAT_LM_15_TEMPKLASSE_6_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Sensor NTC Leuchtmittel 15 in Temperaturklasse 6 |
 
-<a id="table-res-0xd9c8-d"></a>
 ### RES_0XD9C8_D
 
 Dimensions: 12 rows × 10 columns
@@ -3140,7 +3015,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_NTC_LSR_WERT | HEX | high | unsigned char | - | - | - | - | - | Status NTC Laser  0: kein Fehler  1: Fehler (KS/Leerlauf) |
 | STAT_LM_LSR_WERT | HEX | high | unsigned char | - | - | - | - | - | Leuchtmittelstatus Laser  0: LM nicht aktiv  1: LM aktiv |
 
-<a id="table-res-0xd9f6-d"></a>
 ### RES_0XD9F6_D
 
 Dimensions: 3 rows × 10 columns
@@ -3151,7 +3025,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_NORMALMODUS | 0/1 | high | unsigned char | - | - | - | - | - | Temperaturmodus: 1: aktiv  0: nicht aktiv |
 | STAT_HOCHTEMPERATURMODUS | 0/1 | high | unsigned char | - | - | - | - | - | Temperaturmodus: 1: aktiv  0: nicht aktiv |
 
-<a id="table-res-0xd9f7-d"></a>
 ### RES_0XD9F7_D
 
 Dimensions: 3 rows × 10 columns
@@ -3162,7 +3035,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_NORMALMODUS | 0/1 | high | unsigned char | - | - | - | - | - | Temperaturmodus: 1: aktiv  0: nicht aktiv |
 | STAT_HOCHTEMPERATURMODUS | 0/1 | high | unsigned char | - | - | - | - | - | Temperaturmodus: 1: aktiv  0: nicht aktiv |
 
-<a id="table-res-0xd9f8-d"></a>
 ### RES_0XD9F8_D
 
 Dimensions: 45 rows × 10 columns
@@ -3215,7 +3087,6 @@ Dimensions: 45 rows × 10 columns
 | STAT_BINNING_SPANNUNG_LED_14_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Anliegende Spannung am jeweiligen Binningwiderstand des jeweiligen LED-Ausgangs. |
 | STAT_BINNING_SPANNUNG_LED_15_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Anliegende Spannung am jeweiligen Binningwiderstand des jeweiligen LED-Ausgangs. |
 
-<a id="table-res-0xd9f9-d"></a>
 ### RES_0XD9F9_D
 
 Dimensions: 45 rows × 10 columns
@@ -3268,7 +3139,6 @@ Dimensions: 45 rows × 10 columns
 | STAT_NTC_SPANNUNG_LED_14_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Anliegende Spannung am NTC des jeweiligen LED-Ausgangs bzw. LED-Moduls. |
 | STAT_NTC_SPANNUNG_LED_15_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Anliegende Spannung am NTC des jeweiligen LED-Ausgangs bzw. LED-Moduls. |
 
-<a id="table-res-0xd9fa-d"></a>
 ### RES_0XD9FA_D
 
 Dimensions: 2 rows × 10 columns
@@ -3278,7 +3148,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_REFERENZIERUNG_AHL | 0-n | high | unsigned char | - | REFERENZIERUNG_SCHRITTMOTOR | - | - | - | Status Referenzierung |
 | STAT_POSITION_AHL_WERT | ° | high | unsigned int | - | - | 1.0 | 5.0 | -40.0 | Gibt die aktuelle Position des Schrittmotors AHL in ° (Grad) an. |
 
-<a id="table-res-0xd9fb-d"></a>
 ### RES_0XD9FB_D
 
 Dimensions: 2 rows × 10 columns
@@ -3288,7 +3157,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_REFERENZIERUNG_LWR | 0/1 | high | unsigned char | - | - | - | - | - | 0: NICHT REFERENZIERT 1: REFERENZIERT |
 | STAT_POSITION_LWR_WERT | ° | high | unsigned int | - | - | 1.0 | 5.0 | -40.0 | Gibt die aktuelle Position des Schrittmotors LWR in ° (Grad) an. |
 
-<a id="table-res-0xd9fc-d"></a>
 ### RES_0XD9FC_D
 
 Dimensions: 69 rows × 10 columns
@@ -3365,7 +3233,6 @@ Dimensions: 69 rows × 10 columns
 | STAT_LASERINSZENIERUNG_1_NTC_EINGANG_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ausgabe des phys. Sensoreingangs NTC zum jeweiligen Leuchtmittel. |
 | STAT_LASERINSZENIERUNG_2_NTC_EINGANG_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ausgabe des phys. Sensoreingangs NTC zum jeweiligen Leuchtmittel. |
 
-<a id="table-res-0xda71-d"></a>
 ### RES_0XDA71_D
 
 Dimensions: 6 rows × 10 columns
@@ -3379,7 +3246,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_SG_VARIANTE_GUELTIGKEIT | 0/1 | high | unsigned char | - | - | - | - | - | Ausgabe Gültigkeit der Variantendaten 0x00: ungültig, Default-Daten werden verwendet 0x01: gültig |
 | STAT_SG_PRODUKTIONSSTANDORT_WERT | HEX | high | unsigned char | - | - | - | - | - | 0x00: DEUTSCHLAND / KRONACH  0x01: MEXIKO / APODACA |
 
-<a id="table-res-0xda72-d"></a>
 ### RES_0XDA72_D
 
 Dimensions: 1 rows × 10 columns
@@ -3388,7 +3254,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SCHEINWERFER_DATEN_DATA | DATA | high | data[16] | - | - | 1.0 | 1.0 | 0.0 | Scheinwerferspezifische Daten |
 
-<a id="table-res-0xdac8-d"></a>
 ### RES_0XDAC8_D
 
 Dimensions: 3 rows × 10 columns
@@ -3399,7 +3264,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_HIGHSIDE_KURZSCHLUSS_ZAEHLER_DATA | DATA | high | data[3] | - | - | 1.0 | 1.0 | 0.0 | Byte 1/2 = HSS1/2  Byte 3 = SBC |
 | STAT_HIGHSIDE_KURZSCHLUSS_WIEDERHOL_ZAEHLER_DATA | DATA | high | data[3] | - | - | 1.0 | 1.0 | 0.0 | Byte 1/2 = HSS1/2  Byte 3 = SBC |
 
-<a id="table-res-0xe3ee-d"></a>
 ### RES_0XE3EE_D
 
 Dimensions: 14 rows × 10 columns
@@ -3421,7 +3285,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_BINNINGWERT_LM_11_WERT | HEX | high | unsigned char | - | - | - | - | - | Binningwert des Leuchtmittels X der aktuellen Fahrzeugseite DEZ [0..4], HEX [0x00..0x04] |
 | STAT_BINNINGWERT_LM_12_WERT | HEX | high | unsigned char | - | - | - | - | - | Binningwert des Leuchtmittels X der aktuellen Fahrzeugseite DEZ [0..4], HEX [0x00..0x04] |
 
-<a id="table-res-0xf001-r"></a>
 ### RES_0XF001_R
 
 Dimensions: 1 rows × 13 columns
@@ -3430,7 +3293,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_REGISTER_WERT | + | - | - | HEX | high | unsigned char | - | - | - | - | - | Inhalt des Registers |
 
-<a id="table-res-0xf152-d"></a>
 ### RES_0XF152_D
 
 Dimensions: 2 rows × 10 columns
@@ -3440,7 +3302,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HW_MODIFICATION_INDEX_WERT | HEX | high | unsigned char | - | - | - | - | - | Index of hardware modification:  FF: Not supported index |
 | - | Bit | high | BITFIELD | - | BF_22_F152_SUPPLIERINFO | - | - | - | Tab Supplierinfo |
 
-<a id="table-scheinwerfer-hersteller"></a>
 ### SCHEINWERFER_HERSTELLER
 
 Dimensions: 5 rows × 2 columns
@@ -3453,7 +3314,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | VALEO |
 | 0xFF | Wert ungültig |
 
-<a id="table-scheinwerfer-laender-variante"></a>
 ### SCHEINWERFER_LAENDER_VARIANTE
 
 Dimensions: 3 rows × 2 columns
@@ -3464,7 +3324,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | US |
 | 0xFF | Wert ungültig |
 
-<a id="table-scheinwerfer-sa-variante"></a>
 ### SCHEINWERFER_SA_VARIANTE
 
 Dimensions: 8 rows × 2 columns
@@ -3480,7 +3339,6 @@ Dimensions: 8 rows × 2 columns
 | 0x0C | 5AZ (LASERLICHT SCHEINWERFER) |
 | 0xFF | Wert ungültig |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 67 rows × 16 columns
@@ -3555,7 +3413,6 @@ Dimensions: 67 rows × 16 columns
 | READHWMODIFICATIONINDEX | 0xF152 | - | Dieser Service kommt nur zum Einsatz, wenn es eine geringfügige Hardwareänderung an dem Steuergerät gegeben hat, die nicht zu einer Änderung der Sachnummer bzw. der Hardware SGBM-IDs geführt hat. Eine solche Änderung ist von außen nicht diagnostizierbar, daher wurde dieser Dienst dafür eingeführt. | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xF152_D |
 | ACTIVE_DIAGNOSTIC_SESSION | 0xF186 | STAT_ACTIVE_DIAGNOSTIC_SESSION | activeDiagnosticSession | 0-n | - | High | unsigned char | RDBI_ADS_DOP | - | - | - | - | 22 | - | - |
 
-<a id="table-tab-flm-highside-switch"></a>
 ### TAB_FLM_HIGHSIDE_SWITCH
 
 Dimensions: 5 rows × 2 columns
@@ -3568,7 +3425,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Highside Schalter 3: LUEFTER |
 | 0x04 | alle Highside Schalter |
 
-<a id="table-tab-flm-kanal-arg"></a>
 ### TAB_FLM_KANAL_ARG
 
 Dimensions: 16 rows × 2 columns
@@ -3592,7 +3448,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Kanal 14 |
 | 0x0F | Kanal 15 |
 
-<a id="table-tab-lf-lv-front-arg"></a>
 ### TAB_LF_LV_FRONT_ARG
 
 Dimensions: 78 rows × 2 columns
@@ -3678,7 +3533,6 @@ Dimensions: 78 rows × 2 columns
 | 0x4D | ECO+ Dimmung 3 |
 | 0x4E | SML |
 
-<a id="table-tab-supplierinfo-field"></a>
 ### TAB_SUPPLIERINFO_FIELD
 
 Dimensions: 64 rows × 2 columns

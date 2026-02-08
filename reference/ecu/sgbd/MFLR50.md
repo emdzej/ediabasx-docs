@@ -28,7 +28,6 @@
 - [DIAGNOSE_AUFRECHT](#job-diagnose-aufrecht) - Diagnosemode aufrechterhalten Continue Diagnostics - Send ping message
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode des SG beenden End diagnostics
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -41,7 +40,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -60,7 +58,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Read the ECU Identification data
@@ -85,7 +82,6 @@ _No arguments._
 | ID_AIF_VORHANDEN | int | Ist ein AIF vorhanden (0 (nein)/ 1 (ja)) Is AIF data available 0=no 1=yes |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-ident-schreiben"></a>
 ### IDENT_SCHREIBEN
 
 Write the ECU Ident
@@ -111,7 +107,6 @@ Write the ECU Ident
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 
-<a id="job-steuern-iostates"></a>
 ### STEUERN_IOSTATES
 
 Force Digital Output States
@@ -131,7 +126,6 @@ Force Digital Output States
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 alle Stati des MFL lesen Read all input/outputs
@@ -157,7 +151,6 @@ _No arguments._
 | STAT_CRUISE_RESUME_ACTIVE | int | Cruise resume switch |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten Continue Diagnostics - Send ping message
@@ -171,7 +164,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden End diagnostics
@@ -194,7 +186,6 @@ _No arguments._
 - [ROVERPARTPREFIX](#table-roverpartprefix) (22 × 2)
 - [DIGITAL](#table-digital) (11 × 5)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -209,7 +200,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 45 rows × 2 columns
@@ -262,7 +252,6 @@ Dimensions: 45 rows × 2 columns
 | 0x44 | ISAD Electronic Systems |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartprefix"></a>
 ### ROVERPARTPREFIX
 
 Dimensions: 22 rows × 2 columns
@@ -292,7 +281,6 @@ Dimensions: 22 rows × 2 columns
 | 0xB6 | YUW |
 | 0xFF | ??? |
 
-<a id="table-digital"></a>
 ### DIGITAL
 
 Dimensions: 11 rows × 5 columns

@@ -51,7 +51,6 @@
 - [STEUERN_ROE_PERSISTENT_START](#job-steuern-roe-persistent-start) - Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
 - [CPS_LESEN](#job-cps-lesen) - Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -70,7 +69,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -83,7 +81,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -100,7 +97,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -131,7 +127,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -176,7 +171,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -195,7 +189,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -213,7 +206,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -234,7 +226,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -263,7 +254,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -283,7 +273,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -304,7 +293,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -320,7 +308,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -342,7 +329,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -364,7 +350,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -383,7 +368,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -410,7 +394,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -455,7 +438,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -470,7 +452,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -490,7 +471,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -509,7 +489,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -528,7 +507,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -543,7 +521,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -562,7 +539,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -582,7 +558,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -599,7 +574,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -618,7 +592,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -633,7 +606,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -650,7 +622,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -665,7 +636,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -680,7 +650,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -762,7 +731,6 @@ _No arguments._
 - [TAB_SPNM_VENTILE_STAT](#table-tab-spnm-ventile-stat) (6 × 2)
 - [TAB_SPNM_VERBAUPOSITION](#table-tab-spnm-verbauposition) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -846,7 +814,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -995,7 +962,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1038,7 +1004,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1063,7 +1028,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1097,7 +1061,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1170,7 +1133,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1183,7 +1145,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1198,7 +1159,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1211,7 +1171,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1231,7 +1190,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1274,7 +1232,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1285,7 +1242,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0xd7e3-d"></a>
 ### ARG_0XD7E3_D
 
 Dimensions: 2 rows × 12 columns
@@ -1295,7 +1251,6 @@ Dimensions: 2 rows × 12 columns
 | AKTION | 0-n | high | unsigned char | - | TAB_SPNM_LUFTBLASEN_AKTION | - | - | - | - | - | Auswahl der Aktion (siehe TAB_SPNM_LUFTBLASEN_AKTION) |
 | BLASE | 0-n | high | unsigned char | - | TAB_SPNM_LUFTBLASEN | - | - | - | - | - | Auswahl der Luftblase (siehe TAB_SPNM_LUFTBLASEN) |
 
-<a id="table-arg-0xd7e5-d"></a>
 ### ARG_0XD7E5_D
 
 Dimensions: 1 rows × 12 columns
@@ -1304,7 +1259,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ANLERNEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0 = keine Aktion 1 = Verbauposition anlernen (SG speichert sofort die aktuelle Pin-Codierung) |
 
-<a id="table-arg-0xd7f4-d"></a>
 ### ARG_0XD7F4_D
 
 Dimensions: 3 rows × 12 columns
@@ -1315,7 +1269,6 @@ Dimensions: 3 rows × 12 columns
 | PWM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | PWM-Wert für die Ansteuerung (Bereich: 0-100 %) |
 | TIMEOUT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Timeout-Zeit für die Ansteuerung in Sekunden (Bereich: 0-255 Sekunden) |
 
-<a id="table-arg-0xd7f5-d"></a>
 ### ARG_0XD7F5_D
 
 Dimensions: 1 rows × 12 columns
@@ -1324,7 +1277,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | high | unsigned char | - | TAB_SPNM_LORDOSE_ANST | - | - | - | - | - | Richtung der Lordosenansteuerung (siehe TAB_SPNM_LORDOSE_ANST) |
 
-<a id="table-arg-0xd7f6-d"></a>
 ### ARG_0XD7F6_D
 
 Dimensions: 2 rows × 12 columns
@@ -1334,7 +1286,6 @@ Dimensions: 2 rows × 12 columns
 | PROGRAMM | 0-n | high | unsigned char | - | TAB_SPNM_MASSAGE_PROG_ANST | - | - | - | - | - | Auswahl Massageprogramm (siehe TAB_SPNM_MASSAGE_PROG_ANST) |
 | STUFE | 0-n | high | unsigned char | - | TAB_SPNM_MASSAGE_STUFE | - | - | - | - | - | Auswahl Intensitätsstufe (siehe TAB_SPNM_MASSAGE_STUFE) |
 
-<a id="table-arg-0xd7f8-d"></a>
 ### ARG_0XD7F8_D
 
 Dimensions: 1 rows × 12 columns
@@ -1343,7 +1294,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | high | unsigned char | - | TAB_SPNM_DELETE_STATISTIK | - | - | - | - | - | Löschen der Statistikdaten für einzelne oder alle Funktionen im SPNM (siehe TAB_SPNM_DELETE_STATISTIK) |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1357,7 +1307,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1371,7 +1320,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 62 rows × 3 columns
@@ -1441,7 +1389,6 @@ Dimensions: 62 rows × 3 columns
 | 0xDF9403 | Botschaft (0x3C, Zustand Fahrzeug): Ausfall | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 4 rows × 9 columns
@@ -1453,7 +1400,6 @@ Dimensions: 4 rows × 9 columns
 | 0x4022 | Temperatur | °C | High | unsigned char | - | 1.0 | 1.0 | -40.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -1466,7 +1412,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 21 rows × 3 columns
@@ -1495,7 +1440,6 @@ Dimensions: 21 rows × 3 columns
 | 0x5A0125 | Codierwert über Grenzwert des Systems | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 4 rows × 9 columns
@@ -1507,7 +1451,6 @@ Dimensions: 4 rows × 9 columns
 | 0x4022 | Temperatur | °C | High | unsigned char | - | 1.0 | 1.0 | -40.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1516,7 +1459,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -1532,7 +1474,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -1546,7 +1487,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0xa710-r"></a>
 ### RES_0XA710_R
 
 Dimensions: 6 rows × 13 columns
@@ -1560,7 +1500,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_PUMPE | - | - | + | 0-n | high | unsigned char | - | TAB_SPNM_STEST_STATUS | - | - | - | Ergebnis Selbsttest der Pumpe (siehe TAB_SPNM_STEST_STATUS) |
 | STAT_BEDIENSCHALTER_LORDOSE | - | - | + | 0-n | high | unsigned char | - | TAB_SPNM_STEST_LORDOSE_SCHALTER | - | - | - | Ergebnis Selbsttest des Bedienschalters Lordose (siehe TAB_SPNM_STEST_LORDOSE_SCHALTER) |
 
-<a id="table-res-0xa711-r"></a>
 ### RES_0XA711_R
 
 Dimensions: 21 rows × 13 columns
@@ -1589,7 +1528,6 @@ Dimensions: 21 rows × 13 columns
 | STAT_ROTATIONSBLASE_OBEN_RECHTS | - | - | + | 0-n | high | unsigned char | - | TAB_SPNM_STEST_STATUS_PN | - | - | - | Ergebnis Selbsttest Rotationsblase oben rechts (Ventil 13) |
 | STAT_ROTATIONSBLASE_OBEN_LINKS | - | - | + | 0-n | high | unsigned char | - | TAB_SPNM_STEST_STATUS_PN | - | - | - | Ergebnis Selbsttest Rotationsblase oben links (Ventil 14) |
 
-<a id="table-res-0xd7e5-d"></a>
 ### RES_0XD7E5_D
 
 Dimensions: 2 rows × 10 columns
@@ -1599,7 +1537,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_VERBAUPOSITION_AKTUELL | 0-n | high | unsigned char | - | TAB_SPNM_VERBAUPOSITION | - | - | - | Aktuelle Verbauposition laut Pin-Codierung (siehe TAB_SPNM_VERBAUPOSITION) |
 | STAT_VERBAUPOSITION_SOLL | 0-n | high | unsigned char | - | TAB_SPNM_VERBAUPOSITION | - | - | - | Angelernte Verbauposition beim letzten Anlernvorgang (siehe TAB_SPNM_VERBAUPOSITION) |
 
-<a id="table-res-0xd7e8-d"></a>
 ### RES_0XD7E8_D
 
 Dimensions: 14 rows × 10 columns
@@ -1621,7 +1558,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_VENTIL_13 | 0-n | high | unsigned char | - | TAB_SPNM_VENTILE_STAT | - | - | - | Status Ventil 13 - Rotation oben rechts (siehe TAB_SPNM_VENTILE_STAT) |
 | STAT_VENTIL_14 | 0-n | high | unsigned char | - | TAB_SPNM_VENTILE_STAT | - | - | - | Status Ventil 14 - Rotation oben links (siehe TAB_SPNM_VENTILE_STAT) |
 
-<a id="table-res-0xd7e9-d"></a>
 ### RES_0XD7E9_D
 
 Dimensions: 4 rows × 10 columns
@@ -1633,7 +1569,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_DRUCKSENSOR_3_WERT | hPa | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Status Drucksensor 3 - Rotationsblase oben rechts (Wertebereich: 0 bis 2000 hPa; ungültig = 65535) |
 | STAT_DRUCKSENSOR_4_WERT | hPa | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Status Drucksensor 4 - Rotationsblase oben links (Wertebereich: 0 bis 2000 hPa; ungültig = 65535) |
 
-<a id="table-res-0xd7ed-d"></a>
 ### RES_0XD7ED_D
 
 Dimensions: 2 rows × 10 columns
@@ -1643,7 +1578,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TEMPERATUR_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Temperatur im SPNM nach SW-Korrektur (Wertebereich: -40 bis 150 °C) |
 | STAT_TEMPERATUR_ROH_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Temperatur Rohwert im SPNM (Wertebereich: -40 bis 150 °C) |
 
-<a id="table-res-0xd7f3-d"></a>
 ### RES_0XD7F3_D
 
 Dimensions: 3 rows × 10 columns
@@ -1654,7 +1588,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ANBINDUNG_SCHALTER_LORDOSE | 0/1 | high | unsigned char | - | - | - | - | - | Verbauort des Bedienschalters Lordose: 0 = direkt am SPNM angeschlossen, 1 = Empfang Statusnachrichten über Bus |
 | STAT_SCHALTER_MASSAGE | 0-n | high | unsigned char | - | TAB_SPNM_MASSAGE_SCHALTER | - | - | - | Statusabfrage Bedienschalter für Massage (siehe TAB_SPNM_MASSAGE_SCHALTER) |
 
-<a id="table-res-0xd7f4-d"></a>
 ### RES_0XD7F4_D
 
 Dimensions: 2 rows × 10 columns
@@ -1664,7 +1597,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_PUMPE | 0/1 | high | unsigned char | - | - | - | - | - | aktueller Status der Pumpe: 0 = ausgeschaltet, 1 = eingeschaltet |
 | STAT_PUMPE_PWM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert der Pumpenansteuerung (0-100 %) |
 
-<a id="table-res-0xd7f5-d"></a>
 ### RES_0XD7F5_D
 
 Dimensions: 2 rows × 10 columns
@@ -1674,7 +1606,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ZUSTAND | 0/1 | high | unsigned char | - | - | - | - | - | Status Lordose: 0 = aus, 1 = ein |
 | STAT_RICHTUNG | 0-n | high | unsigned char | - | TAB_SPNM_LORDOSE_STAT | - | - | - | Richtung der Lordosenverstellung (siehe TAB_SPNM_LORDOSE_STAT) |
 
-<a id="table-res-0xd7f6-d"></a>
 ### RES_0XD7F6_D
 
 Dimensions: 3 rows × 10 columns
@@ -1685,7 +1616,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROGRAMM | 0-n | high | unsigned char | - | TAB_SPNM_MASSAGE_PROG | - | - | - | Aktuelles Massageprogramm (siehe TAB_SPNM_MASSAGE_PROG) |
 | STAT_STUFE | 0-n | high | unsigned char | - | TAB_SPNM_MASSAGE_STUFE | - | - | - | Intensitätsstufe (siehe TAB_SPNM_MASSAGE_STUFE) |
 
-<a id="table-res-0xd7f7-d"></a>
 ### RES_0XD7F7_D
 
 Dimensions: 9 rows × 10 columns
@@ -1702,7 +1632,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_CRASHSCHWERE_HECK | 0-n | high | unsigned char | - | TAB_SPNM_BUS_IN_CRASH | - | - | - | Status Crashschwere heck (siehe TAB_SPNM_BUS_IN_CRASH) |
 | STAT_CRASHSCHWERE_ROLL_OVER | 0-n | high | unsigned char | - | TAB_SPNM_BUS_IN_CRASH | - | - | - | Status Crashschwere Überschlag (siehe TAB_SPNM_BUS_IN_CRASH) |
 
-<a id="table-res-0xd7f8-d"></a>
 ### RES_0XD7F8_D
 
 Dimensions: 33 rows × 10 columns
@@ -1743,7 +1672,6 @@ Dimensions: 33 rows × 10 columns
 | STAT_MASSAGE_PROG_8_INT_1_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl Programm/Intensität mit Dauer länger als 1 Minute |
 | STAT_MASSAGE_PROG_9_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl Programm/Intensität mit Dauer länger als 1 Minute |
 
-<a id="table-res-0xd7f9-d"></a>
 ### RES_0XD7F9_D
 
 Dimensions: 7 rows × 10 columns
@@ -1758,7 +1686,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_VERSION_DATE_MONTH | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Monat |
 | STAT_VERSION_DATE_DAY | 0-n | high | unsigned char | - | - | - | - | - | SW Releasedatum: Tag |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 19 rows × 16 columns
@@ -1785,7 +1712,6 @@ Dimensions: 19 rows × 16 columns
 | VERSION_PNSF | 0xD7F9 | - | Softwareversion der PNSF-Komponente im SPNM | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xD7F9_D |
 | ACTIVE_DIAGNOSTIC_SESSION | 0xF186 | STAT_ACTIVE_DIAGNOSTIC_SESSION | activeDiagnosticSession | 0-n | - | high | unsigned char | RDBI_ADS_DOP | - | - | - | - | 22 | - | - |
 
-<a id="table-tab-spnm-bus-in-crash"></a>
 ### TAB_SPNM_BUS_IN_CRASH
 
 Dimensions: 8 rows × 2 columns
@@ -1801,7 +1727,6 @@ Dimensions: 8 rows × 2 columns
 | 0x0F | Funktion meldet Fehler |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-bus-in-klemmen"></a>
 ### TAB_SPNM_BUS_IN_KLEMMEN
 
 Dimensions: 12 rows × 2 columns
@@ -1821,7 +1746,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0F | Signal ungültig |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-bus-in-lenkung"></a>
 ### TAB_SPNM_BUS_IN_LENKUNG
 
 Dimensions: 3 rows × 2 columns
@@ -1832,7 +1756,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Rechtslenker |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-delete-statistik"></a>
 ### TAB_SPNM_DELETE_STATISTIK
 
 Dimensions: 5 rows × 2 columns
@@ -1845,7 +1768,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Weckvorgänge Lordose |
 | 0x04 | alle Daten löschen |
 
-<a id="table-tab-spnm-lordose-anst"></a>
 ### TAB_SPNM_LORDOSE_ANST
 
 Dimensions: 5 rows × 2 columns
@@ -1858,7 +1780,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | nach vorne |
 | 0x08 | nach hinten |
 
-<a id="table-tab-spnm-lordose-schalter"></a>
 ### TAB_SPNM_LORDOSE_SCHALTER
 
 Dimensions: 7 rows × 2 columns
@@ -1873,7 +1794,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFE | nicht vorhanden / nicht codiert |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-lordose-stat"></a>
 ### TAB_SPNM_LORDOSE_STAT
 
 Dimensions: 7 rows × 2 columns
@@ -1888,7 +1808,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFE | nicht vorhanden / nicht codiert |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-luftblasen"></a>
 ### TAB_SPNM_LUFTBLASEN
 
 Dimensions: 15 rows × 2 columns
@@ -1911,7 +1830,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0D | Rotation Blase oben rechts |
 | 0x0E | Rotation Blase oben links |
 
-<a id="table-tab-spnm-luftblasen-aktion"></a>
 ### TAB_SPNM_LUFTBLASEN_AKTION
 
 Dimensions: 3 rows × 2 columns
@@ -1922,7 +1840,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | fluten |
 | 0x02 | entlüften |
 
-<a id="table-tab-spnm-massage-prog"></a>
 ### TAB_SPNM_MASSAGE_PROG
 
 Dimensions: 14 rows × 2 columns
@@ -1944,7 +1861,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0C | P12 (Reserve) |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-massage-prog-anst"></a>
 ### TAB_SPNM_MASSAGE_PROG_ANST
 
 Dimensions: 14 rows × 2 columns
@@ -1966,7 +1882,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0C | P12 (Reserve) |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-massage-schalter"></a>
 ### TAB_SPNM_MASSAGE_SCHALTER
 
 Dimensions: 3 rows × 2 columns
@@ -1977,7 +1892,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | betätigt |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-massage-stufe"></a>
 ### TAB_SPNM_MASSAGE_STUFE
 
 Dimensions: 5 rows × 2 columns
@@ -1990,7 +1904,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Stufe 3 |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-stest-aktiv"></a>
 ### TAB_SPNM_STEST_AKTIV
 
 Dimensions: 11 rows × 2 columns
@@ -2009,7 +1922,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Reserve |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-stest-lordose-schalter"></a>
 ### TAB_SPNM_STEST_LORDOSE_SCHALTER
 
 Dimensions: 5 rows × 2 columns
@@ -2022,7 +1934,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | nicht direkt angeschlossen oder nicht vorhanden |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-stest-status"></a>
 ### TAB_SPNM_STEST_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -2034,7 +1945,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Fehler festgestellt |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-stest-status-pn"></a>
 ### TAB_SPNM_STEST_STATUS_PN
 
 Dimensions: 5 rows × 2 columns
@@ -2047,7 +1957,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Zieldruck zu schnell erreicht oder Entlüftungszeit zu lang |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-ventile-stat"></a>
 ### TAB_SPNM_VENTILE_STAT
 
 Dimensions: 6 rows × 2 columns
@@ -2061,7 +1970,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Fehler / Status unplausibel |
 | 0xFF | ungültig |
 
-<a id="table-tab-spnm-verbauposition"></a>
 ### TAB_SPNM_VERBAUPOSITION
 
 Dimensions: 6 rows × 2 columns

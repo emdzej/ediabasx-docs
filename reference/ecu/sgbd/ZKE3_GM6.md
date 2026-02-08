@@ -53,7 +53,6 @@
 - [C_FG_LESEN](#job-c-fg-lesen) - Auslesen des Pruefstempels und Interpretation als FG-Nummer
 - [C_FG_AUFTRAG](#job-c-fg-auftrag) - Beschreiben des Pruefstempels mit der FG-Nummer
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -72,7 +71,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -93,7 +91,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -112,7 +109,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -125,7 +121,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer GM III
@@ -149,7 +144,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -172,7 +166,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -186,7 +179,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -200,7 +192,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -217,7 +208,6 @@ _No arguments._
 | BYTE3 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -238,7 +228,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -256,7 +245,6 @@ _No arguments._
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen-allgemein"></a>
 ### COD_LESEN_ALLGEMEIN
 
 Auslesen der allgemeinen Codierdaten des GM III (Block 0)
@@ -354,7 +342,6 @@ _No arguments._
 | CHECKSUMME_BLOCK_0 | int | Checksumme fuer Block 0 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen-servotronik"></a>
 ### COD_LESEN_SERVOTRONIK
 
 Auslesen der Codierdaten des GM III (Block 1 und 2)
@@ -375,7 +362,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen Info-Speicher ist im Aufbau identisch dem Fehlerspeicher Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -398,7 +384,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers der ZKE III Als Argumente werden die Anzahl, das Segment und die Adresse der Datenbytes uebergeben.
@@ -418,7 +403,6 @@ Lesen des internen Speichers der ZKE III Als Argumente werden die Anzahl, das Se
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-speicher-lesen-string"></a>
 ### SPEICHER_LESEN_STRING
 
 Lesen des internen Speichers der ZKE III Als Argumente werden die Anzahl, das Segment und die Adresse der Datenbytes uebergeben.
@@ -438,7 +422,6 @@ Lesen des internen Speichers der ZKE III Als Argumente werden die Anzahl, das Se
 | DATEN | string | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes und Datenbytes (Datenbytes durch Komma getrennt) KWP2000: $3D WriteMemoryByAddress Modus  : Default
@@ -459,7 +442,6 @@ Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speiche
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital-gm3-ea"></a>
 ### STATUS_DIGITAL_GM3_EA
 
 Status der Digitalsignale des GM III E53 Signalart: Ein-/Ausgaenge
@@ -542,7 +524,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-status-digital-gm3-kp"></a>
 ### STATUS_DIGITAL_GM3_KP
 
 Status der Digitalsignale des GM III E53 Signalart: K-Bus bzw. P-Bus
@@ -562,7 +543,6 @@ _No arguments._
 | STAT_PS_TKBT_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-gm3-int"></a>
 ### STATUS_DIGITAL_GM3_INT
 
 Status der Digitalsignale des GM III E53 Signalart: interne Signale
@@ -580,7 +560,6 @@ _No arguments._
 | STAT_IFN_BTOFFEN_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-gm3"></a>
 ### STATUS_ANALOG_GM3
 
 Status der Analogsignale des GM III E53
@@ -648,7 +627,6 @@ _No arguments._
 | STAT_GKL_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-gm3"></a>
 ### STEUERN_DIGITAL_GM3
 
 Ansteuern eines digitalen Ein- oder Ausgangs v. GM3
@@ -668,7 +646,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs v. GM3
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-analog-gm3"></a>
 ### STEUERN_ANALOG_GM3
 
 Ansteuern eines analogen Ein- oder Ausgangs v. GM3
@@ -688,7 +665,6 @@ Ansteuern eines analogen Ein- oder Ausgangs v. GM3
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-generic-gm3"></a>
 ### STEUERN_GENERIC_GM3
 
 Ansteuern eines Statussignals
@@ -709,7 +685,6 @@ Ansteuern eines Statussignals
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-simultan-gm3"></a>
 ### STEUERN_SIMULTAN_GM3
 
 Gleichzeitiges Ansteuern maximal 5 digitaler Signale des GM3 !!! ACHTUNG: ZKE III antwortet nicht !!!
@@ -732,7 +707,6 @@ Gleichzeitiges Ansteuern maximal 5 digitaler Signale des GM3 !!! ACHTUNG: ZKE II
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-bytes-gm3"></a>
 ### STATUS_BYTES_GM3
 
 Status der Digitalsignale des GM III Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -749,7 +723,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary |  |
 | _TEL_ANTWORT1 | binary |  |
 
-<a id="job-status-fh-hinten"></a>
 ### STATUS_FH_HINTEN
 
 Status der FH-Signale hinten (GM3)
@@ -777,7 +750,6 @@ _No arguments._
 | STAT_IFHMAX_EINH | string | Einheit: 'Ampere' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-inrs"></a>
 ### STATUS_INRS
 
 1.) Ansteuern: NGAG - 2.) Status lesen: INRS
@@ -798,7 +770,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-status-key-memory"></a>
 ### STATUS_KEY_MEMORY
 
 Auslesen der Nummer des Funkschluessels, mit dem zuletzt entriegelt wurde
@@ -813,7 +784,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -830,7 +800,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -848,7 +817,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -863,7 +831,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -894,7 +861,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 - [IORTTEXTE](#table-iorttexte) (27 × 2)
 - [BITS](#table-bits) (89 × 8)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -915,7 +881,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 81 rows × 2 columns
@@ -1004,7 +969,6 @@ Dimensions: 81 rows × 2 columns
 | 0x80 | Westfalia Automotive GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1033,7 +997,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1058,7 +1021,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 85 rows × 2 columns
@@ -1151,7 +1113,6 @@ Dimensions: 85 rows × 2 columns
 | 0xB3 | Kurzschluss Spiegelmotor BT Einklappen |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -1161,7 +1122,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | sporadischer Fehler |
 | 0x01 | statischer Fehler |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 27 rows × 2 columns
@@ -1196,7 +1156,6 @@ Dimensions: 27 rows × 2 columns
 | 0x63 | Fensterheber-Motor BTH |
 | 0xXY | unbekannter Info-Ort |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 89 rows × 8 columns

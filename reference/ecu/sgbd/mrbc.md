@@ -45,7 +45,6 @@
 - [SP_RESET](#job-sp-reset) - Reset Steuergerät
 - [SP_DIAGNOSE_ENDE](#job-sp-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -64,7 +63,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -77,7 +75,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn OK 0 wenn nicht OK |
 
-<a id="job-gp-testcom"></a>
 ### GP_TESTCOM
 
 Kommunikation mit dem Steuergerät prüfen
@@ -92,7 +89,6 @@ _No arguments._
 | TESTCOM | int | 1 - Kommunikation funktioniert 0 - Kommunikation funktioniert nicht |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Modus  : Default
@@ -107,7 +103,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-gp-teilenummer"></a>
 ### GP_TEILENUMMER
 
 Lesen der BMW Teile-Nummer Byte 3-6
@@ -122,7 +117,6 @@ _No arguments._
 | TEILENUMMER_WERT | unsigned long | BMW Teile-Nummer |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-gp-hardwarenummer"></a>
 ### GP_HARDWARENUMMER
 
 Lesen der Hardware Nummer Byte 7
@@ -137,7 +131,6 @@ _No arguments._
 | HARDWARENUMMER_WERT | int | Hardware Nummer |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-gp-codierindex"></a>
 ### GP_CODIERINDEX
 
 Codier Index lesen Byte 8
@@ -152,7 +145,6 @@ _No arguments._
 | CODIERINDEX_WERT | int | Codier Index |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-gp-diagnoseindex"></a>
 ### GP_DIAGNOSEINDEX
 
 Diagnose Index lesen Byte 9
@@ -167,7 +159,6 @@ _No arguments._
 | DIAGNOSEINDEX_WERT | int | Diagnose Index |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-gp-herstellerdatum-kw"></a>
 ### GP_HERSTELLERDATUM_KW
 
 Kalenderwoche Herstelldatum lesen Byte 10
@@ -182,7 +173,6 @@ _No arguments._
 | HERSTELLERDATUM_KW_WERT | int | Herstelldatum Kalenderwoche |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-gp-herstellerdatum-jahr"></a>
 ### GP_HERSTELLERDATUM_JAHR
 
 Herstelldatum Jahr lesen Byte 11
@@ -197,7 +187,6 @@ _No arguments._
 | HERSTELLERDATUM_JAHR_WERT | int | Herstelldatum Jahr |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-gp-lieferantennummer"></a>
 ### GP_LIEFERANTENNUMMER
 
 Lieferanten Nummer lesen Byte 12
@@ -213,7 +202,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Text Zulieferer |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-get-aussentemperatur"></a>
 ### GET_AUSSENTEMPERATUR
 
 Außentemperatur lesen in Grad Celsius
@@ -229,7 +217,6 @@ _No arguments._
 | AUSSENTEMPERATUR_EINH | string | Einheit °C |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-get-aussentemperatur-f"></a>
 ### GET_AUSSENTEMPERATUR_F
 
 Außentemperatur lesen in Grad Fahrenheit
@@ -245,7 +232,6 @@ _No arguments._
 | AUSSENTEMPERATUR_EINH | string | Einheit °F |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-get-reset-taster"></a>
 ### GET_RESET_TASTER
 
 Status Reset Taster
@@ -261,7 +247,6 @@ _No arguments._
 | STATUS_TASTER_TEXT | string | Werte: Ein, Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-get-mode-taster"></a>
 ### GET_MODE_TASTER
 
 Status Mode Taster
@@ -277,7 +262,6 @@ _No arguments._
 | STATUS_TASTER_TEXT | string | Werte: Ein, Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-get-fernbedienungs-taster"></a>
 ### GET_FERNBEDIENUNGS_TASTER
 
 Status Mode Taster
@@ -293,7 +277,6 @@ _No arguments._
 | STATUS_TASTER_TEXT | string | Werte: Ein, Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sl-tankinhalt"></a>
 ### SL_TANKINHALT
 
 Tankinhalt aus dem Speicher lesen Wert in Milli Liter
@@ -309,7 +292,6 @@ _No arguments._
 | TANKINHALT_EINH | string | Einheit in Milli Liter |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sl-tankinhalt-usgal"></a>
 ### SL_TANKINHALT_USGAL
 
 Tankinhalt aus dem Speicher lesen Wert in US Galonen
@@ -325,7 +307,6 @@ _No arguments._
 | TANKINHALT_EINH | string | Einheit in US Galonen |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sl-tankinhalt-gbgal"></a>
 ### SL_TANKINHALT_GBGAL
 
 Tankinhalt aus dem Speicher lesen Wert in GB Galonen
@@ -341,7 +322,6 @@ _No arguments._
 | TANKINHALT_EINH | string | Einheit in GB Galonen |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sl-kzahl"></a>
 ### SL_KZAHL
 
 Wert K Zahl lesen k_bc wert, Eeeprom Adresse 0x10000
@@ -356,7 +336,6 @@ _No arguments._
 | KZAHL_SL | int | k-Zahl |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sl-einspritzzeit"></a>
 ### SL_EINSPRITZZEIT
 
 Einspritzzeit lesen s_bc wert, Eeeprom Adresse 0x10002
@@ -372,7 +351,6 @@ _No arguments._
 | EINSPRITZZEIT_EINH | string | Einheit Milli Sekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sp-segmente-zustand"></a>
 ### SP_SEGMENTE_ZUSTAND
 
 Ansteuerung Segmente
@@ -390,7 +368,6 @@ Ansteuerung Segmente
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sp-helligkeit-wert"></a>
 ### SP_HELLIGKEIT_WERT
 
 Ansteuerung Helligkeit
@@ -408,7 +385,6 @@ Ansteuerung Helligkeit
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sp-reset"></a>
 ### SP_RESET
 
 Reset Steuergerät
@@ -422,7 +398,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sp-diagnose-ende"></a>
 ### SP_DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -444,7 +419,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (81 × 2)
 - [DIGITALARGUMENT](#table-digitalargument) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -465,7 +439,6 @@ Dimensions: 13 rows × 2 columns
 | 0x06 | FUNCTION BEENDET; DATEN GUELTIG |
 | 0x55 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 81 rows × 2 columns
@@ -554,7 +527,6 @@ Dimensions: 81 rows × 2 columns
 | 0x80 | Westfalia Automotive GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 3 rows × 2 columns

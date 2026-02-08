@@ -37,7 +37,6 @@
 - [POWER_DOWN](#job-power-down) - POWER_DOWN job
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - diagnose_ende job
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Default pruefstempel_lesen job
@@ -84,7 +81,6 @@ _No arguments._
 | PRUEFSTEMPEL2 | int |  |
 | PRUEFSTEMPEL3 | int |  |
 
-<a id="job-pruefstempel-setzen"></a>
 ### PRUEFSTEMPEL_SETZEN
 
 Default pruefstempel_setzen job
@@ -103,7 +99,6 @@ Default pruefstempel_setzen job
 | JOB_STATUS | string |  |
 | PRUEFSTEMPEL_ALT | binary | Alter Pruefstempel |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -123,7 +118,6 @@ Auslesen des Speicherinhaltes
 | JOB_STATUS | string |  |
 | DATEN | binary | angeforderter Datenblock (bis zu 24 Bytes!) |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default IDENTIFIKATION job
@@ -146,7 +140,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 fs_zaehler job
@@ -160,7 +153,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -181,7 +173,6 @@ _No arguments._
 | F_ART1_TEXT | string |  |
 | F_HFK | int |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default fs_loeschen job
@@ -194,7 +185,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Default status job
@@ -231,7 +221,6 @@ _No arguments._
 | STAT_LOESCHANLAGE_DEFEKT_EIN | int | IC B4 |
 | STAT_LUFTANLAGE_DEFEKT_EIN | int | IC B5 |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 selbsttest job
@@ -247,7 +236,6 @@ _No arguments._
 | ROM_NIO | int |  |
 | COD_DATEN_NIO | int |  |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 codierung_lesen job
@@ -320,7 +308,6 @@ _No arguments._
 | CC_MELDUNG_TEXT_GURT_AKTIV | int | j/n |
 | CC_MELDUNG_ZUENDSCHLUESSEL_AKTIV | int | j/n |
 
-<a id="job-lern-bereich-lesen"></a>
 ### LERN_BEREICH_LESEN
 
 lern_bereich_lesen job
@@ -336,7 +323,6 @@ _No arguments._
 | OELSTAND_MOTOR | int | flag OELSTAND Motor |
 | GESCHWINDIGKEIT_EINH | string | km/h oder mph |
 
-<a id="job-motorkennfeld-lesen"></a>
 ### MOTORKENNFELD_LESEN
 
 MOTORKENNFELD_LESEN job
@@ -350,7 +336,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | MOTORKENNFELD | binary | komplettes Motorkennfeld Bytes 1 bis 17 |
 
-<a id="job-oelwarnschwellen-lesen"></a>
 ### OELWARNSCHWELLEN_LESEN
 
 auslesen Oelwarnschwellen_LESEN job
@@ -366,7 +351,6 @@ _No arguments._
 | WARNSCHWELLE_OELVOR | int | Warnschwelle Oelvor |
 | WARNSCHWELLE_OELWARM | int | Warnschwelle Oelwarm |
 
-<a id="job-power-down"></a>
 ### POWER_DOWN
 
 POWER_DOWN job
@@ -379,7 +363,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 diagnose_ende job
@@ -400,7 +383,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 69 rows × 2 columns
@@ -477,7 +459,6 @@ Dimensions: 69 rows × 2 columns
 | 0x4C | Fehler illegal Opcode |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -493,7 +474,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

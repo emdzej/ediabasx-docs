@@ -42,7 +42,6 @@
 - [ECHO_CANC_DELAY_SETZEN](#job-echo-canc-delay-setzen) - Einstellen der Delay-Tap-Anzahl des Echo Cancellation Algorithmus der GSM Engine zur Optimierung des Freisprechbetriebes !!! Nur zu verwenden bei Problemen im Feld !!!
 - [GERAETECODE_RUECKSETZEN](#job-geraetecode-ruecksetzen) - Ruecksetzen des Geraetecodes, falls der Kunde ihn vergessen hat
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -61,7 +60,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -80,7 +78,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer BMW-TELEFON
@@ -93,7 +90,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer das BIT
@@ -115,7 +111,6 @@ _No arguments._
 | ID_LIEF_NR | string | Lieferanten-Nummer |
 | ID_SW_NR | string | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -136,7 +131,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text table FArtTexte ARTTEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -150,7 +144,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen
@@ -168,7 +161,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl der Fehlerarten |
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -186,7 +178,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -207,7 +198,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 verschiedenen Status IO-Ports
@@ -234,7 +224,6 @@ _No arguments._
 | STAT_SBDH_SWAKTIV_EIN | int | Status der SW der WDCT-Basis |
 | STAT_U_BATT | int | Messwert der Bordspannung in Deci-Volt |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 verschiedenen SG-Status lesen
@@ -249,7 +238,6 @@ _No arguments._
 | STAT_INTERNE_SW | string | interne Software-Versionen: A=GSM Engine, B=WDCT-Basis, C=Motherboard |
 | STAT_INTERNE_HW | string | interne Hardware-Versionen: A, B und C wie oben |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Durchfuehrung des Selbsttests (Ermittlung Checksum SW)
@@ -263,7 +251,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | CHECKSUM | int | Checksumme Sollvorgabe abhaengig vom internen SW-Stand |
 
-<a id="job-selbsttest-hw"></a>
 ### SELBSTTEST_HW
 
 Durchfuehrung des hardwarespez. Selbsttests (Ports)
@@ -284,7 +271,6 @@ _No arguments._
 | ERROR_MUTE_SET | int | 1 -> Fehler beim Setzen des Ports Mute |
 | ERROR_MUTE_RESET | int | 1 -> Fehler beim Ruecksetzen des Ports Mute |
 
-<a id="job-reset"></a>
 ### RESET
 
 Durchfuehrung eines resets ca. 2 Sek. nach senden von ACK erfolgt der Reset
@@ -297,7 +283,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrecht erhalten
@@ -310,7 +295,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode beenden
@@ -323,7 +307,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-imei-lesen"></a>
 ### IMEI_LESEN
 
 Identifikationsnummer (IMEI) der GSM Engine auslesen
@@ -337,7 +320,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | STAT_IMEI | string | IMEI der GSM Engine (15 Stellen ASCII) |
 
-<a id="job-rfpi-lesen"></a>
 ### RFPI_LESEN
 
 Identifikationsnummer (RFPI) der WDCT-Basis auslesen
@@ -351,7 +333,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | STAT_RFPI | string | RFPI der WDCT-Basis (10 Stellen ASCII) |
 
-<a id="job-sbdh-anmelden"></a>
 ### SBDH_ANMELDEN
 
 Anmelden eines SBDH an das S/E-Geraet
@@ -364,7 +345,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-sbdh-alle-abmelden"></a>
 ### SBDH_ALLE_ABMELDEN
 
 Abmelden aller SBDHs vom S/E-Geraet
@@ -377,7 +357,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-echo-canc-delay-setzen"></a>
 ### ECHO_CANC_DELAY_SETZEN
 
 Einstellen der Delay-Tap-Anzahl des Echo Cancellation Algorithmus der GSM Engine zur Optimierung des Freisprechbetriebes !!! Nur zu verwenden bei Problemen im Feld !!!
@@ -394,7 +373,6 @@ Einstellen der Delay-Tap-Anzahl des Echo Cancellation Algorithmus der GSM Engine
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-geraetecode-ruecksetzen"></a>
 ### GERAETECODE_RUECKSETZEN
 
 Ruecksetzen des Geraetecodes, falls der Kunde ihn vergessen hat
@@ -416,7 +394,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (13 × 2)
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -437,7 +414,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -461,7 +437,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -482,7 +457,6 @@ Dimensions: 13 rows × 2 columns
 | 0x12 | GSM Pegel |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns

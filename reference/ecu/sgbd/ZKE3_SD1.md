@@ -31,7 +31,6 @@
 - [SCHREIBEN_SHD_AW](#job-schreiben-shd-aw) - ACHTUNG: nur fuer E39/2 mit SHD-Software-Stand < 5  !!! Umcodieren des SHD E39/2 wegen Antiwummerstellung
 - [TESTEN_SHD_AW](#job-testen-shd-aw) - ACHTUNG: nur fuer E39/2 mit SHD-Software-Stand < 5  !!! Testen der Daten des SHD E39/2 bzgl. Antiwummerstellung
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer SHD
@@ -87,7 +84,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -105,7 +101,6 @@ _No arguments._
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-shd"></a>
 ### STATUS_DIGITAL_SHD
 
 Status der Digitalsignale des SHD (Ein-/Ausgaenge) Der Wertebereich ist bei allen Results: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -133,7 +128,6 @@ _No arguments._
 | STAT_IA_INKRV_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog-shd"></a>
 ### STATUS_ANALOG_SHD
 
 Status der Analogsignale des SHD
@@ -153,7 +147,6 @@ _No arguments._
 | STAT_DMOT_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital-shd"></a>
 ### STEUERN_DIGITAL_SHD
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SHD
@@ -173,7 +166,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SHD
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-bytes-shd"></a>
 ### STATUS_BYTES_SHD
 
 Status aller Signale des Peripheriemoduls SHD Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -188,7 +180,6 @@ _No arguments._
 | STAT_DATEN | binary | 9 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-shd"></a>
 ### STATUS_SHD
 
 Status der SHD-Signale
@@ -207,7 +198,6 @@ _No arguments._
 | STAT_DMOT_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-schreiben-shd-aw"></a>
 ### SCHREIBEN_SHD_AW
 
 ACHTUNG: nur fuer E39/2 mit SHD-Software-Stand < 5  !!! Umcodieren des SHD E39/2 wegen Antiwummerstellung
@@ -220,7 +210,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-testen-shd-aw"></a>
 ### TESTEN_SHD_AW
 
 ACHTUNG: nur fuer E39/2 mit SHD-Software-Stand < 5  !!! Testen der Daten des SHD E39/2 bzgl. Antiwummerstellung
@@ -244,7 +233,6 @@ _No arguments._
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 - [BITS_SHD](#table-bits-shd) (15 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -265,7 +253,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 69 rows × 2 columns
@@ -342,7 +329,6 @@ Dimensions: 69 rows × 2 columns
 | 0x68 | Atena GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -371,7 +357,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -395,7 +380,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-bits-shd"></a>
 ### BITS_SHD
 
 Dimensions: 15 rows × 6 columns

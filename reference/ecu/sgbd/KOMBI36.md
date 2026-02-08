@@ -37,7 +37,6 @@
 - [STEUERN_SELBSTTEST](#job-steuern-selbsttest) - Vorgeben des Tacho-Selbsttests
 - [STEUERN_DIGITAL](#job-steuern-digital) - Vorgeben der Digital-Ausgaenge
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -88,7 +85,6 @@ _No arguments._
 | ID_DATUM_JAHR | string | Herstelldatum Jahr |
 | _ANTWORT | binary | Antwort-Telegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -110,7 +106,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen, hier immer 0 |
 | F_ZAHL | int | Anzahl der Fehler |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -123,7 +118,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -136,7 +130,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 Ruecksetzen des Gesamtwegstreckenzaehlers
@@ -149,7 +142,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -169,7 +161,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-fg-nr-lesen"></a>
 ### FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -183,7 +174,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | FG_NR | string | Fahrgestellnummer |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -274,7 +264,6 @@ _No arguments._
 | DATUM_JAHR | int |  |
 | CODIERDATEN_HEX | binary | alle Daten |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Auslesen der Stati
@@ -324,7 +313,6 @@ Auslesen der Stati
 | STAT_FAHRERTUERKONTAKT_EIN | int | Liefert: 0 oder 1 |
 | TELEGRAMM | binary | Liefert: Antworttelegramm |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -345,7 +333,6 @@ Auslesen des Speicherinhaltes
 | _ANTWORT | binary | Liefert: Antworttelegramm |
 | DATEN | binary | Liefert: Hexdump des angeforderten Speicherbereiches |
 
-<a id="job-steuern-analog"></a>
 ### STEUERN_ANALOG
 
 Vorgeben der Analog-Signale
@@ -363,7 +350,6 @@ Vorgeben der Analog-Signale
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-steuern-tacho-a"></a>
 ### STEUERN_TACHO_A
 
 Vorgeben des Tacho-A-Signals
@@ -380,7 +366,6 @@ Vorgeben des Tacho-A-Signals
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Vorgeben des Tacho-Selbsttests
@@ -393,7 +378,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Vorgeben des Tacho-Selbsttests
@@ -406,7 +390,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Vorgeben der Digital-Ausgaenge
@@ -435,7 +418,6 @@ Vorgeben der Digital-Ausgaenge
 - [STEUERNANALOG](#table-steuernanalog) (8 × 2)
 - [STEUERNDIGITAL](#table-steuerndigital) (10 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 22 rows × 2 columns
@@ -465,7 +447,6 @@ Dimensions: 22 rows × 2 columns
 | 0x1F | Zuendschluesselkontakt |
 | 0xff | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -480,7 +461,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | statischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 5 rows × 2 columns
@@ -493,7 +473,6 @@ Dimensions: 5 rows × 2 columns
 | ZEIT_RESET | 0x04 |
 | unbekannt | 0x00 |
 
-<a id="table-steuernanalog"></a>
 ### STEUERNANALOG
 
 Dimensions: 8 rows × 2 columns
@@ -509,7 +488,6 @@ Dimensions: 8 rows × 2 columns
 | IK_LCD | 0x07 |
 | unbekannt | 0x00 |
 
-<a id="table-steuerndigital"></a>
 ### STEUERNDIGITAL
 
 Dimensions: 10 rows × 2 columns

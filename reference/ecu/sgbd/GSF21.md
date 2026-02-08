@@ -71,7 +71,6 @@
 - [STATUS_SIGNAL_STELLGLIED](#job-status-signal-stellglied) - Auslesen Status der Signale/Stellglieder KWP2000: $30 InputOutputControlByLocalIdentifier Modus  : Default
 - [SPEICHER_LESEN](#job-speicher-lesen) - Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes KWP 2000: $23 ReadMemoryByAddress Modus   : Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -84,7 +83,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -103,7 +101,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -119,7 +116,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -136,7 +132,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -169,7 +164,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -196,7 +190,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -238,7 +231,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -253,7 +245,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -271,7 +262,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -292,7 +282,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -313,7 +302,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -333,7 +321,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -348,7 +335,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -369,7 +355,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus  : Default
@@ -383,7 +368,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -401,7 +385,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -419,7 +402,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -440,7 +422,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -461,7 +442,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -476,7 +456,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -513,7 +492,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-status-byte-1"></a>
 ### STATUS_BYTE_1
 
 RLI = 01h mit dem SGBD-Generator erzeugt
@@ -531,7 +509,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-shiftlev"></a>
 ### STATUS_SHIFTLEV
 
 RLI = 14h mit dem SGBD-Generator erzeugt
@@ -548,7 +525,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-eng-speed"></a>
 ### STATUS_ENG_SPEED
 
 RLI = 0Ch mit dem SGBD-Generator erzeugt
@@ -565,7 +541,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-vehicle-speed"></a>
 ### STATUS_VEHICLE_SPEED
 
 RLI = 13h mit dem SGBD-Generator erzeugt
@@ -582,7 +557,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rev-out-t-m"></a>
 ### STATUS_REV_OUT_T_M
 
 RLI = 08h mit dem SGBD-Generator erzeugt
@@ -599,7 +573,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rev-in-t-m"></a>
 ### STATUS_REV_IN_T_M
 
 RLI = 09h mit dem SGBD-Generator erzeugt
@@ -616,7 +589,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-oil-temp-atf"></a>
 ### STATUS_OIL_TEMP_ATF
 
 RLI = 0Ah mit dem SGBD-Generator erzeugt
@@ -633,7 +605,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ig-voltage"></a>
 ### STATUS_IG_VOLTAGE
 
 RLI = 0Bh mit dem SGBD-Generator erzeugt
@@ -650,7 +621,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-eng-torque"></a>
 ### STATUS_ENG_TORQUE
 
 RLI = 0Dh mit dem SGBD-Generator erzeugt
@@ -667,7 +637,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-eng-torque-driver-request"></a>
 ### STATUS_ENG_TORQUE_DRIVER_REQUEST
 
 RLI = 0Eh mit dem SGBD-Generator erzeugt
@@ -684,7 +653,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-throttle-position"></a>
 ### STATUS_THROTTLE_POSITION
 
 RLI = 0Fh mit dem SGBD-Generator erzeugt
@@ -701,7 +669,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-torque-control-request"></a>
 ### STATUS_TORQUE_CONTROL_REQUEST
 
 RLI = 10H mit dem SGBD-Generator erzeugt
@@ -718,7 +685,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-torque-limit-request"></a>
 ### STATUS_TORQUE_LIMIT_REQUEST
 
 RLI =11h mit dem SGBD-Generator erzeugt
@@ -735,7 +701,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-torque-increase-request"></a>
 ### STATUS_TORQUE_INCREASE_REQUEST
 
 RLI =12h mit dem SGBD-Generator erzeugt
@@ -752,7 +717,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-slc1-out-current"></a>
 ### STATUS_SLC1_OUT_CURRENT
 
 RLI = 02h mit dem SGBD-Generator erzeugt
@@ -769,7 +733,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-slc2-out-current"></a>
 ### STATUS_SLC2_OUT_CURRENT
 
 RLI = 03h mit dem SGBD-Generator erzeugt
@@ -786,7 +749,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-slc3-out-current"></a>
 ### STATUS_SLC3_OUT_CURRENT
 
 RLI = 04h mit dem SGBD-Generator erzeugt
@@ -803,7 +765,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-slb1-out-current"></a>
 ### STATUS_SLB1_OUT_CURRENT
 
 RLI = 05h mit dem SGBD-Generator erzeugt
@@ -820,7 +781,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-slt-out-current"></a>
 ### STATUS_SLT_OUT_CURRENT
 
 RLI = 06h mit dem SGBD-Generator erzeugt
@@ -837,7 +797,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-slu-out-current"></a>
 ### STATUS_SLU_OUT_CURRENT
 
 RLI = 07h mit dem SGBD-Generator erzeugt
@@ -854,7 +813,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-byte-3"></a>
 ### STATUS_BYTE_3
 
 RLI = 15h mit dem SGBD-Generator erzeugt
@@ -877,7 +835,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-byte-4"></a>
 ### STATUS_BYTE_4
 
 RLI = 16h mit dem SGBD-Generator erzeugt
@@ -895,7 +852,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-byte-5"></a>
 ### STATUS_BYTE_5
 
 RLI = 17h mit dem SGBD-Generator erzeugt
@@ -914,7 +870,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-byte-7"></a>
 ### STATUS_BYTE_7
 
 RLI = 19h mit dem SGBD-Generator erzeugt
@@ -931,7 +886,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ramdata-readable"></a>
 ### STATUS_RAMDATA_READABLE
 
 RLI = 7Fh mit dem SGBD-Generator erzeugt
@@ -1004,7 +958,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-adaptionswerte-ruecksetzen"></a>
 ### STEUERN_ADAPTIONSWERTE_RUECKSETZEN
 
 alle Adaptionswerte ruecksetzen KWP2000: $31 StartRoutineByLocalIdentifier Modus  : Default
@@ -1019,7 +972,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 
-<a id="job-quicktest"></a>
 ### QUICKTEST
 
 Anzahl Fehler / Kilometerstand KWP2000: $31 StartRoutineByLocalIdentifier Modus  : Default
@@ -1037,7 +989,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 
-<a id="job-steuern-signal-stellglied"></a>
 ### STEUERN_SIGNAL_STELLGLIED
 
 Status setzen der Signale/Stellglieder KWP2000: $30 InputOutputControlByLocalIdentifier Modus  : Default
@@ -1058,7 +1009,6 @@ Status setzen der Signale/Stellglieder KWP2000: $30 InputOutputControlByLocalIde
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 
-<a id="job-status-signal-stellglied"></a>
 ### STATUS_SIGNAL_STELLGLIED
 
 Auslesen Status der Signale/Stellglieder KWP2000: $30 InputOutputControlByLocalIdentifier Modus  : Default
@@ -1080,7 +1030,6 @@ Auslesen Status der Signale/Stellglieder KWP2000: $30 InputOutputControlByLocalI
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -1138,7 +1087,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speicherse
 - [IDENTIFIER_SETZEN](#table-identifier-setzen) (10 × 5)
 - [SPEICHERSEGMENT](#table-speichersegment) (12 × 3)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -1150,7 +1098,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -1253,7 +1200,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -1333,7 +1279,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -1355,7 +1300,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1380,7 +1324,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -1392,7 +1335,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -1414,7 +1356,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -1429,7 +1370,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1438,7 +1378,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -1450,7 +1389,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 71 rows × 2 columns
@@ -1529,7 +1467,6 @@ Dimensions: 71 rows × 2 columns
 | 0x3410 | Lock up clutch |
 | 0xFFFF | Unkonwn error |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1544,7 +1481,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 71 rows × 5 columns
@@ -1623,7 +1559,6 @@ Dimensions: 71 rows × 5 columns
 | 0x3410 | 0x04 | 0x01 | 0x03 | 0x07 |
 | 0xFFFF | - | - | - | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 20 rows × 9 columns
@@ -1651,7 +1586,6 @@ Dimensions: 20 rows × 9 columns
 | 0x21 | Tip ON Pin Status        (1=Low, 0=High) | 0/1 | - | 0x40 | - | - | - | - |
 | 0xFF | Unknown | 1 | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-farttyp"></a>
 ### FARTTYP
 
 Dimensions: 71 rows × 5 columns
@@ -1730,7 +1664,6 @@ Dimensions: 71 rows × 5 columns
 | 0x3400 | 0x0097 | 0xFFFF | 0xFFFF | 0xFFFF |
 | 0x3410 | 0x0098 | 0xFFFF | 0xFFFF | 0xFFFF |
 
-<a id="table-farttexteindividuell"></a>
 ### FARTTEXTEINDIVIDUELL
 
 Dimensions: 53 rows × 2 columns
@@ -1791,7 +1724,6 @@ Dimensions: 53 rows × 2 columns
 | 0x0098 | Lock Up OFFStuck |
 | 0xFFFF | Unknown error |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1800,7 +1732,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1815,7 +1746,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1824,7 +1754,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-shift-lever-position"></a>
 ### SHIFT_LEVER_POSITION
 
 Dimensions: 13 rows × 2 columns
@@ -1845,7 +1774,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | 'L' range |
 | 0xYY | Not defined |
 
-<a id="table-torque-converter-status"></a>
 ### TORQUE_CONVERTER_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -1858,7 +1786,6 @@ Dimensions: 5 rows × 2 columns
 | 0xC0 | Status Unknown |
 | 0xYY | Not defined |
 
-<a id="table-actual-gear"></a>
 ### ACTUAL_GEAR
 
 Dimensions: 9 rows × 2 columns
@@ -1875,7 +1802,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Reverse Gear |
 | 0xYY | Not defined |
 
-<a id="table-gear-error"></a>
 ### GEAR_ERROR
 
 Dimensions: 10 rows × 2 columns
@@ -1893,7 +1819,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | 6th Gear Error |
 | 0xYY | Not defined |
 
-<a id="table-solenoid-pattern"></a>
 ### SOLENOID_PATTERN
 
 Dimensions: 2 rows × 4 columns
@@ -1903,7 +1828,6 @@ Dimensions: 2 rows × 4 columns
 | 3 | 0x12 | 0x13 | 0x14 |
 | 0xYY |  |  |  |
 
-<a id="table-pin-pattern"></a>
 ### PIN_PATTERN
 
 Dimensions: 2 rows × 8 columns
@@ -1913,7 +1837,6 @@ Dimensions: 2 rows × 8 columns
 | 7 | 0x15 | 0x16 | 0x17 | 0x18 | 0x19 | 0x20 | 0x21 |
 | 0xYY |  |  |  |  |  |  |  |
 
-<a id="table-gear-information"></a>
 ### GEAR_INFORMATION
 
 Dimensions: 112 rows × 2 columns
@@ -2033,7 +1956,6 @@ Dimensions: 112 rows × 2 columns
 | 0xED | Lockup Slip / ND6th |
 | 0xXY | Not Plausible Gear Conditionl |
 
-<a id="table-status-rbm-tabel"></a>
 ### STATUS_RBM_TABEL
 
 Dimensions: 21 rows × 3 columns
@@ -2062,7 +1984,6 @@ Dimensions: 21 rows × 3 columns
 | STATUS_RBM_C1_WRONGPULSE_NUMERATOR | 2 | 0xFF79F2 |
 | STATUS_RBM_SP_WRONGPULSE_NUMERATOR | 2 | 0xFF79F6 |
 
-<a id="table-controlstateumrechnung"></a>
 ### CONTROLSTATEUMRECHNUNG
 
 Dimensions: 5 rows × 2 columns
@@ -2075,7 +1996,6 @@ Dimensions: 5 rows × 2 columns
 | RCTECU | 0x04 |
 |  | 0x05 |
 
-<a id="table-identifier-lesen"></a>
 ### IDENTIFIER_LESEN
 
 Dimensions: 10 rows × 4 columns
@@ -2093,7 +2013,6 @@ Dimensions: 10 rows × 4 columns
 | 0x09 | SHIFTLOCK | OFF | ON |
 | 0x00 | Not used | - | - |
 
-<a id="table-identifier-setzen"></a>
 ### IDENTIFIER_SETZEN
 
 Dimensions: 10 rows × 5 columns
@@ -2111,7 +2030,6 @@ Dimensions: 10 rows × 5 columns
 | 0x09 | SHIFTLOCK | OFF | - | ON |
 | 0x00 | Not used |  |  |  |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns

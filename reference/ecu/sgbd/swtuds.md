@@ -36,7 +36,6 @@
 - [FREISCHALTCODE_SCHREIBEN](#job-freischaltcode-schreiben) - Software Signature im SG lesen UDS:     $31 Routine Control Request $01 Start Routine $0F SweepingTechnologies $1F SweepingTechnologies $03 SWTGetSigSID
 - [FREISCHALTCODE_PRUEFEN](#job-freischaltcode-pruefen) - Freischaltcode nach dem Einspielen prüfen UDS:     $31 Routine Control Request $01 Start Routine $0F SweepingTechnologies $1F SweepingTechnologies $09 SWTCheckFSC
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Freischaltstatus einer Software lesen KWP2000: $31 StartRoutineByLocalIdentifier $1F SweepingTechnologies $F6 SWTGetStatus
@@ -96,7 +93,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen-swid"></a>
 ### STATUS_LESEN_SWID
 
 Freischaltstatus einer Software lesen KWP2000: $31 StartRoutineByLocalIdentifier $1F SweepingTechnologies $F6 SWTGetStatus
@@ -136,7 +132,6 @@ Freischaltstatus einer Software lesen KWP2000: $31 StartRoutineByLocalIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-zertifikat-lesen"></a>
 ### ZERTIFIKAT_LESEN
 
 Lesen das Zertifikat im SG UDS:     $31 Routine Control Request $01 Start Routine $0F SweepingTechnologies $1F SweepingTechnologies $03 SWTGetSigSID
@@ -158,7 +153,6 @@ Lesen das Zertifikat im SG UDS:     $31 Routine Control Request $01 Start Routin
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-lesen"></a>
 ### FREISCHALTCODE_LESEN
 
 Freischaltcode lesen UDS:     $31 Routine Control Request $01 Start Routine $0F SweepingTechnologies $1F SweepingTechnologies $03 SWTGetSigSID
@@ -179,7 +173,6 @@ Freischaltcode lesen UDS:     $31 Routine Control Request $01 Start Routine $0F 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sg-daten-lesen"></a>
 ### SG_DATEN_LESEN
 
 Lesen SG spezifischer Daten UDS:     $31 Routine Control Request $01 Start Routine $0F SweepingTechnologies $1F SweepingTechnologies $0D SWTGetSGData
@@ -196,7 +189,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-swt-parameter-lesen"></a>
 ### SWT_PARAMETER_LESEN
 
 Gibt die SG-spezifischen SWT-Parameter zurück
@@ -210,7 +202,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY |
 | SG_ADRESSE | int | Steuergeräteadresse |
 
-<a id="job-swt-parameter-setzen"></a>
 ### SWT_PARAMETER_SETZEN
 
 Setzt die SG-spezifischen SWT-Parameter
@@ -227,7 +218,6 @@ Setzt die SG-spezifischen SWT-Parameter
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS     : $10 StartDiagnosticSession Modus   : einstellbar mit diesem Job
@@ -246,7 +236,6 @@ SG in bestimmten Diagnosemode bringen UDS     : $10 StartDiagnosticSession Modus
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -262,7 +251,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS   : $11 EcuReset $01 HardReset
@@ -277,7 +265,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestellnummer-lesen"></a>
 ### FAHRGESTELLNUMMER_LESEN
 
 FGN lesen im Steuergeraet UDS:     $22 Read data by local identifier $F1 VIN17 $90 VIN17
@@ -294,7 +281,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestellnummer-schreiben"></a>
 ### FAHRGESTELLNUMMER_SCHREIBEN
 
 FGN schreiben im Steuergeraet UDS:     $2E Write data by local identifier $F1 VIN17 $90 VIN17
@@ -314,7 +300,6 @@ FGN schreiben im Steuergeraet UDS:     $2E Write data by local identifier $F1 VI
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-schreiben"></a>
 ### FREISCHALTCODE_SCHREIBEN
 
 Software Signature im SG lesen UDS:     $31 Routine Control Request $01 Start Routine $0F SweepingTechnologies $1F SweepingTechnologies $03 SWTGetSigSID
@@ -335,7 +320,6 @@ Software Signature im SG lesen UDS:     $31 Routine Control Request $01 Start Ro
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-pruefen"></a>
 ### FREISCHALTCODE_PRUEFEN
 
 Freischaltcode nach dem Einspielen prüfen UDS:     $31 Routine Control Request $01 Start Routine $0F SweepingTechnologies $1F SweepingTechnologies $09 SWTCheckFSC
@@ -380,7 +364,6 @@ Freischaltcode nach dem Einspielen prüfen UDS:     $31 Routine Control Request 
 - [SWTFEHLER_TAB](#table-swtfehler-tab) (54 × 2)
 - [DIAGMODE](#table-diagmode) (6 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -464,7 +447,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -613,7 +595,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -656,7 +637,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -681,7 +661,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -715,7 +694,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -788,7 +766,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -801,7 +778,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -816,7 +792,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -829,7 +804,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -843,7 +817,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -857,7 +830,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -866,7 +838,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -875,7 +846,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -888,7 +858,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -897,7 +866,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -906,7 +874,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -915,7 +882,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-swtstatustab"></a>
 ### SWTSTATUSTAB
 
 Dimensions: 6 rows × 2 columns
@@ -929,7 +895,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | STORNIERT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUS_RESPONSE |
 
-<a id="table-swtfehler-tab"></a>
 ### SWTFEHLER_TAB
 
 Dimensions: 54 rows × 2 columns
@@ -991,7 +956,6 @@ Dimensions: 54 rows × 2 columns
 | 0xFF | UNBEKANNTER_FEHLER |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 6 rows × 3 columns

@@ -38,7 +38,6 @@
 - [AUSSTATTUNG_LESEN_EWS](#job-ausstattung-lesen-ews) - Ausstattung lesen
 - [PRUEFCODE_LESEN](#job-pruefcode-lesen) - Lesen des Pruefcodes, besteht aus Identifikationsdaten, Ausstattungsdaten und dem FS-Inhalt, jedes Telegrammpaket ist durch ein 0x00 abgeschlossen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +55,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer AIRBAG ZAE II
@@ -69,7 +67,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer AIRBAG ZAE II
@@ -92,7 +89,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferant |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status des AIRBAG II lesen
@@ -187,7 +183,6 @@ _No arguments._
 | STAT_MRSA_R_ALGO_IO | int | 0 -> MRSA_R falsche ALGO-Parameter |
 | STAT_MRSA_L_ALGO_IO | int | 0 -> MRSA_L falsche ALGO-Parameter |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Quicktest High-Konzept nach Lastenheft (mit Abwandlungen)
@@ -201,7 +196,6 @@ _No arguments._
 | JOB_STATUS | string | normalerweise OKAY |
 | F_ANZ | int | Anzahl Fehler |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -236,7 +230,6 @@ _No arguments._
 | BFU | long | Beginnfehleruhrzeit in Sec. |
 | EFU | long | Endefehleruhrzeit in Sec. |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -249,7 +242,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-sg-login"></a>
 ### SG_LOGIN
 
 _No arguments._
@@ -261,7 +253,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY, wenn fehlerfrei" |
 | TELEGRAMM | binary | antworttelegramm |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -274,7 +265,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher lesen ZAE
@@ -294,7 +284,6 @@ Speicher lesen ZAE
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Codierdaten |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -307,7 +296,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-ausstattung-lesen"></a>
 ### AUSSTATTUNG_LESEN
 
 Ausstattung lesen ZAE2
@@ -342,7 +330,6 @@ _No arguments._
 | MRS1_EMULATION | int | 1 --> Emulation aktiv |
 | ZAE2_EMULATION | int | 1 --> Emulation aktiv |
 
-<a id="job-verriegelung-lesen"></a>
 ### VERRIEGELUNG_LESEN
 
 Auslesen des Pruefstempels
@@ -358,7 +345,6 @@ _No arguments._
 | BYTE2 | int | kann beliebig verwendet werden |
 | BYTE3 | int | kann beliebig verwendet werden |
 
-<a id="job-verriegelung-schreiben"></a>
 ### VERRIEGELUNG_SCHREIBEN
 
 Verriegelungsbytes setzen
@@ -372,7 +358,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | ERROR_CODE | string | OKAY, FEHLER |
 
-<a id="job-herstellerdaten-lesen"></a>
 ### HERSTELLERDATEN_LESEN
 
 Herstellerdaten des SG lesen
@@ -393,7 +378,6 @@ _No arguments._
 | DATEN1 | binary | Antworttelegramm |
 | ERROR_CODE | string | OKAY, FEHLER |
 
-<a id="job-typ-lesen"></a>
 ### TYP_LESEN
 
 Typ des Fzg. lesen
@@ -407,7 +391,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | TYP | string | z.B: E31 / 03h , E34 / 01h ... |
 
-<a id="job-ausstattung-lesen-ews"></a>
 ### AUSSTATTUNG_LESEN_EWS
 
 Ausstattung lesen
@@ -421,7 +404,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | AUSSTATTUNG | string | x Ausstattungsbytes als String |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Lesen des Pruefcodes, besteht aus Identifikationsdaten, Ausstattungsdaten und dem FS-Inhalt, jedes Telegrammpaket ist durch ein 0x00 abgeschlossen
@@ -445,7 +427,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (19 × 2)
 - [LIEFERANTEN](#table-lieferanten) (31 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -461,7 +442,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 33 rows × 2 columns
@@ -502,7 +482,6 @@ Dimensions: 33 rows × 2 columns
 | 0x36 | Sensor Seitenairbag rechts: Kodierdaten stimmen mit Austattung nicht ueberein |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 33 rows × 15 columns
@@ -543,7 +522,6 @@ Dimensions: 33 rows × 15 columns
 | 0x35 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0x0F |
 | 0x36 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0x0F |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -570,7 +548,6 @@ Dimensions: 19 rows × 2 columns
 | 0x0F | Fehler momentan vorhanden |
 | 0xFF | -- |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 31 rows × 2 columns

@@ -10,7 +10,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung und Kommunikationsparameter
 - [IDENTIFIKATION](#job-identifikation) - !!! nur in Gruppendatei verwenden !!! Zuordnung von ADR_VAR_DIAG Steuergeräteadresse ADR  (Hex) Variantenindex      VAR  (Hex) = systemNameOrEngineType ( SNOET ) Diagnoseindex       DIAG (Hex) = vehicleManufacturerDiagnosticIndex ( VMDI  ) zu Steuergerätebeschreibungsdatei SGBD Gruppendatei                   GRUPPE Steuergeräteklartext           STEUERGERAET KWP2000: $1A ReadECUIdentification Modus  : Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -23,7 +22,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-identifikation"></a>
 ### IDENTIFIKATION
 
 !!! nur in Gruppendatei verwenden !!! Zuordnung von ADR_VAR_DIAG Steuergeräteadresse ADR  (Hex) Variantenindex      VAR  (Hex) = systemNameOrEngineType ( SNOET ) Diagnoseindex       DIAG (Hex) = vehicleManufacturerDiagnosticIndex ( VMDI  ) zu Steuergerätebeschreibungsdatei SGBD Gruppendatei                   GRUPPE Steuergeräteklartext           STEUERGERAET KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -46,7 +44,6 @@ _No arguments._
 - [ZUORDNUNGSTABELLEMOTORRAD](#table-zuordnungstabellemotorrad) (17 × 4)
 - [ZUORDNUNGSTABELLEUDS](#table-zuordnungstabelleuds) (18 × 5)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -58,7 +55,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -161,7 +157,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-zuordnungstabelle"></a>
 ### ZUORDNUNGSTABELLE
 
 Dimensions: 485 rows × 5 columns
@@ -654,7 +649,6 @@ Dimensions: 485 rows × 5 columns
 | ?? ---- 10E0 |  |  | E?? |  |
 | ?? ---- 10F0 |  |  | E?? |  |
 
-<a id="table-zuordnungstabellemotorrad"></a>
 ### ZUORDNUNGSTABELLEMOTORRAD
 
 Dimensions: 17 rows × 4 columns
@@ -679,7 +673,6 @@ Dimensions: 17 rows × 4 columns
 | ?? ---- 6E00 |  |  |  |
 | ?? ---- 6F00 |  |  |  |
 
-<a id="table-zuordnungstabelleuds"></a>
 ### ZUORDNUNGSTABELLEUDS
 
 Dimensions: 18 rows × 5 columns

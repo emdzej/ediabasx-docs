@@ -31,7 +31,6 @@
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 - [ENDE](#job-ende) - Called automatically when closing C_SGBD
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -49,7 +48,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Grundmodul V automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -62,7 +60,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-get-keybytes"></a>
 ### GET_KEYBYTES
 
 _No arguments._
@@ -74,7 +71,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident job
@@ -92,7 +88,6 @@ _No arguments._
 | HW_VER | string | Hardware Version |
 | SN_NUM | string | ECU Serial Number |
 
-<a id="job-start-diagnostics"></a>
 ### START_DIAGNOSTICS
 
 including Seed Key algorithm
@@ -105,7 +100,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status of communication table JobResult STATUS_TEXT |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -118,7 +112,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -132,7 +125,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation |
 | FG_NR | string | VIN number in hex format |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben der red. Datenablage mit der FG-Nummer
@@ -149,7 +141,6 @@ Beschreiben der red. Datenablage mit der FG-Nummer
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -167,7 +158,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -184,7 +174,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Called automatically when closing C_SGBD
@@ -200,7 +189,6 @@ _No results._
 - [JOBRESULT](#table-jobresult) (43 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 43 rows × 2 columns
@@ -251,7 +239,6 @@ Dimensions: 43 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

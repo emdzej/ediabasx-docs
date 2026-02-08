@@ -32,7 +32,6 @@
 - [_BOOTLOADER_BOOTUPDATER_VER_CHECK](#job-bootloader-bootupdater-ver-check) - Auslesen des Versionsstring vom Bootloader und Bootupdater Dazu wurde ein DCX Job hergenommen der schon in der Software (Applikation, Bootloader) vorhanden war (ApplDescReadSoftwareVersion()) Beschreibung: Es wird mit folgende Muster verglichen Beim Bootloader: 0x190901 Beim Bootupdater: 0x190900  WICHTIG: Sind diese Muster auf den SGen nicht zu finden, muss zuerst ein Bootloader/Bootupdater Update durchgeführt werden! Bootloader/Bootupdater I520 flashen!  UDS: $22,$F1 Read Data Identifier BMW $51 Hardware Part Number
 - [AIF_LESEN](#job-aif-lesen) - Auslesen des Anwender Informations Feldes Standard Flashjob Modus   : Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -51,7 +50,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -84,7 +81,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -106,7 +102,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -128,7 +123,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -147,7 +141,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -162,7 +155,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -184,7 +176,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -206,7 +197,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $3F30 Sub-Parameter SGBD-Index Modus: Default
@@ -247,7 +237,6 @@ _No arguments._
 | _REQUEST6 | binary | Hex-Auftrag an SG |
 | _RESPONSE6 | binary | Hex-Antwort von SG |
 
-<a id="job-bootloader-bootupdater-ver-check"></a>
 ### _BOOTLOADER_BOOTUPDATER_VER_CHECK
 
 Auslesen des Versionsstring vom Bootloader und Bootupdater Dazu wurde ein DCX Job hergenommen der schon in der Software (Applikation, Bootloader) vorhanden war (ApplDescReadSoftwareVersion()) Beschreibung: Es wird mit folgende Muster verglichen Beim Bootloader: 0x190901 Beim Bootupdater: 0x190900  WICHTIG: Sind diese Muster auf den SGen nicht zu finden, muss zuerst ein Bootloader/Bootupdater Update durchgeführt werden! Bootloader/Bootupdater I520 flashen!  UDS: $22,$F1 Read Data Identifier BMW $51 Hardware Part Number
@@ -262,7 +251,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob Modus   : Default
@@ -325,7 +313,6 @@ _No arguments._
 - [HYBRID_LIEF](#table-hybrid-lief) (6 × 2)
 - [DATUM_MONAT](#table-datum-monat) (53 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 64 rows × 2 columns
@@ -397,7 +384,6 @@ Dimensions: 64 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 111 rows × 2 columns
@@ -516,7 +502,6 @@ Dimensions: 111 rows × 2 columns
 | 0x0000A4 | ADC Automotive Distance Control Systems GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -542,7 +527,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -567,7 +551,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -599,7 +582,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -672,7 +654,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -685,7 +666,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -698,7 +678,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -711,7 +690,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 9 rows × 3 columns
@@ -728,7 +706,6 @@ Dimensions: 9 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -737,7 +714,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -747,7 +723,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -756,7 +731,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -770,7 +744,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -779,7 +752,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -791,7 +763,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 16 rows × 16 columns
@@ -815,7 +786,6 @@ Dimensions: 16 rows × 16 columns
 | STEUERN_KURZSCHLUSS_UVW_EMB | 0x4403 | - | Aktion kann 3 Werte annehmen: 0000980000: schließen der 3 IGBTs nach HV+  0000900000: schließen der 3 IGBTs nach HV- 0000880000: öffnen aller IGBTs | - | ISOLATIONSTEST | - | - | - | - | - | - | - | 31 | ARG_0x4403 | RES_0x4403 |
 | STEUERN_RESOLVER_LERNEN_BIT_RESET | 0x4500 | - | Job setzt das Bit  Resolver gelernt  zurück. Beim nächsten power up wird dadurch ein Resolver lernen ausgelöst Einzig sinnvoller Wert für AKTION = 0100000000 | - | RESOLVER_LERNEN | - | - | - | - | - | - | - | 31 | ARG_0x4500 | RES_0x4500 |
 
-<a id="table-tab-cpid44res"></a>
 ### TAB_CPID44RES
 
 Dimensions: 7 rows × 2 columns
@@ -830,7 +800,6 @@ Dimensions: 7 rows × 2 columns
 | 0x1102 | Umrichterstatus unzulässig (RUN, STOP erlaubt) |
 | 0x0000 | Befehl ausgeführt |
 
-<a id="table-res-0x4403"></a>
 ### RES_0X4403
 
 Dimensions: 1 rows × 13 columns
@@ -839,7 +808,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_THREE_PHASE_SHORT_NR | + | - | + | 0-n | - | int | - | TAB_CPID44RES | - | - | - | Gibt Grund für Misserfolg zurück |
 
-<a id="table-arg-0x4403"></a>
 ### ARG_0X4403
 
 Dimensions: 1 rows × 14 columns
@@ -848,7 +816,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | + | - | - | - | data[5] | - | - | - | - | - | - | - | Argument siehe Infofeld |
 
-<a id="table-tab-cpid45res"></a>
 ### TAB_CPID45RES
 
 Dimensions: 2 rows × 2 columns
@@ -858,7 +825,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0000 | OK |
 | 0x0001 | NOK |
 
-<a id="table-res-0x4500"></a>
 ### RES_0X4500
 
 Dimensions: 1 rows × 13 columns
@@ -867,7 +833,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RES_LERNEN_BIT_NR | - | - | + | 0-n | - | int | - | TAB_CPID45RES | - | - | - | liefert immer 0 zurück |
 
-<a id="table-arg-0x4500"></a>
 ### ARG_0X4500
 
 Dimensions: 1 rows × 14 columns
@@ -876,7 +841,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | + | - | - | - | data[5] | - | - | - | - | - | - | - | - |
 
-<a id="table-hybrid-lief"></a>
 ### HYBRID_LIEF
 
 Dimensions: 6 rows × 2 columns
@@ -890,7 +854,6 @@ Dimensions: 6 rows × 2 columns
 | 0008 | Siemens |
 | FFFF | undefinierter Lieferant |
 
-<a id="table-datum-monat"></a>
 ### DATUM_MONAT
 
 Dimensions: 53 rows × 2 columns

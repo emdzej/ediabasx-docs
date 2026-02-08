@@ -27,7 +27,6 @@
 - [STATUS_CODIERDATEN_LESEN](#job-status-codierdaten-lesen) - Auslesen der Codierdaten
 - [STEUERN_CODIERDATEN_SCHREIBEN](#job-steuern-codierdaten-schreiben) - Job, um die Codierdaten zu schreiben. Im Block 1 steht das Datum und die Händlernummer Das Datum liefert EDIABAS, die Händlernummer muss als Argument eingegeben werden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -46,7 +45,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn okay |
 
-<a id="job-ident-oc3"></a>
 ### IDENT_OC3
 
 Lesen Sachnummer und Codierindex
@@ -75,7 +72,6 @@ _No arguments._
 | CODIERINDEX | string | Codierindex des Steuergeraetes BCD-codiert |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -88,7 +84,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Read error memory
@@ -120,7 +115,6 @@ _No arguments._
 | F_UW2_WERT | long | Wert der 2. Umweltbedingung |
 | F_UW2_EINH | string | Einheit der 2. Umweltbedingung (hier: immer Min.) |
 
-<a id="job-status-codierdaten-lesen"></a>
 ### STATUS_CODIERDATEN_LESEN
 
 Auslesen der Codierdaten
@@ -162,7 +156,6 @@ _No arguments._
 | STAT_CODIERDATEN_TEXT | string | Status der Codierdaten in Textform Fehler beim Auslesen , veraltet, nicht hinterlegt |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-codierdaten-schreiben"></a>
 ### STEUERN_CODIERDATEN_SCHREIBEN
 
 Job, um die Codierdaten zu schreiben. Im Block 1 steht das Datum und die Händlernummer Das Datum liefert EDIABAS, die Händlernummer muss als Argument eingegeben werden
@@ -212,7 +205,6 @@ Job, um die Codierdaten zu schreiben. Im Block 1 steht das Datum und die Händle
 - [UEBERSICHT](#table-uebersicht) (29 × 3)
 - [CRCCHECK](#table-crccheck) (29 × 2)
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -221,7 +213,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -264,7 +255,6 @@ Dimensions: 35 rows × 2 columns
 | 0x27 | FRAM Fehler |
 | 0xFF | Unbekannter Fehler |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -273,7 +263,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 0xFF | 0x01 | 0x02 | 0x08 | 0x09 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -286,7 +275,6 @@ Dimensions: 5 rows × 2 columns
 | 0x09 | Fehler sporadisch |
 | 0xFF | -- |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -295,7 +283,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | default | 0x02 | 0x01 | 0x01 | 0x02 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -305,7 +292,6 @@ Dimensions: 2 rows × 9 columns
 | 0x01 | Fehlerbeginn_std | Std. | -- | long | -- | -- | -- | -- |
 | 0x02 | Fehlerbeginn_min | Min. | -- | long | -- | -- | -- | -- |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -326,7 +312,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -406,7 +391,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -431,7 +415,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-bloecke"></a>
 ### BLOECKE
 
 Dimensions: 2 rows × 2 columns
@@ -441,7 +424,6 @@ Dimensions: 2 rows × 2 columns
 | 2 | BLOCK_1 |
 | 3 | BLOCK_2 |
 
-<a id="table-codierdaten-1"></a>
 ### CODIERDATEN_1
 
 Dimensions: 26 rows × 3 columns
@@ -475,7 +457,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 96064717883089188B0C8D9F8E0CA19F |
 | 26 | 12 | 9F4F303007FE07000000B5EC |
 
-<a id="table-codierdaten-2"></a>
 ### CODIERDATEN_2
 
 Dimensions: 26 rows × 3 columns
@@ -509,7 +490,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 8730993088308B1C8B0C9D0D30303030 |
 | 26 | 12 | 3030303007FE03000000DE64 |
 
-<a id="table-codierdaten-3"></a>
 ### CODIERDATEN_3
 
 Dimensions: 26 rows × 3 columns
@@ -543,7 +523,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 85065A479B70880986309D1C9D309E53 |
 | 26 | 12 | 8C0D8A9E7FF8FF010000C712 |
 
-<a id="table-codierdaten-4"></a>
 ### CODIERDATEN_4
 
 Dimensions: 26 rows × 3 columns
@@ -577,7 +556,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 96064717883089188B0C8D9F8E0CA19F |
 | 26 | 12 | 9F4F303007FE0700000060DF |
 
-<a id="table-codierdaten-5"></a>
 ### CODIERDATEN_5
 
 Dimensions: 26 rows × 3 columns
@@ -611,7 +589,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 8543843091929CA393305516871D958E |
 | 26 | 12 | 5F20A122FFFCFF010000E843 |
 
-<a id="table-codierdaten-6"></a>
 ### CODIERDATEN_6
 
 Dimensions: 26 rows × 3 columns
@@ -645,7 +622,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 8543843091929CA393305516871D958E |
 | 26 | 12 | 5F20A122FFFCFF0100001B80 |
 
-<a id="table-codierdaten-7"></a>
 ### CODIERDATEN_7
 
 Dimensions: 26 rows × 3 columns
@@ -679,7 +655,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 86074809980A604B9930303030303030 |
 | 26 | 12 | 30303030C3FF0F00000085A7 |
 
-<a id="table-codierdaten-8"></a>
 ### CODIERDATEN_8
 
 Dimensions: 26 rows × 3 columns
@@ -713,7 +688,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 86074809980A604B9930303030303030 |
 | 26 | 12 | 30303030C3FF0F0000007664 |
 
-<a id="table-codierdaten-9"></a>
 ### CODIERDATEN_9
 
 Dimensions: 26 rows × 3 columns
@@ -747,7 +721,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 840546078F709D709011303030303030 |
 | 26 | 12 | 303030303FF80F000000D987 |
 
-<a id="table-codierdaten-10"></a>
 ### CODIERDATEN_10
 
 Dimensions: 26 rows × 3 columns
@@ -781,7 +754,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 840546078F709D709011303030303030 |
 | 26 | 12 | 303030303FF80F000000DA94 |
 
-<a id="table-codierdaten-11"></a>
 ### CODIERDATEN_11
 
 Dimensions: 26 rows × 3 columns
@@ -815,7 +787,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 81279A309C1B9E059F30A1078E0F9011 |
 | 26 | 12 | 92253030FFFFFB000000AD0F |
 
-<a id="table-codierdaten-12"></a>
 ### CODIERDATEN_12
 
 Dimensions: 26 rows × 3 columns
@@ -849,7 +820,6 @@ Dimensions: 26 rows × 3 columns
 | 25 | 16 | 81279A309C1B9E059F30A1078E0F9011 |
 | 26 | 12 | 92253030FFFFFB0000005ECC |
 
-<a id="table-teilenummern-1"></a>
 ### TEILENUMMERN_1
 
 Dimensions: 29 rows × 2 columns
@@ -886,7 +856,6 @@ Dimensions: 29 rows × 2 columns
 | 89139392 | CODIERDATEN_12 |
 | 89139393 | CODIERDATEN_11 |
 
-<a id="table-uebersicht"></a>
 ### UEBERSICHT
 
 Dimensions: 29 rows × 3 columns
@@ -923,7 +892,6 @@ Dimensions: 29 rows × 3 columns
 | 89139392 | E83    Basis | d13 |
 | 89139393 | E83 Basis Ersatz Kl.0 ohne SW | d13 |
 
-<a id="table-crccheck"></a>
 ### CRCCHECK
 
 Dimensions: 29 rows × 2 columns

@@ -114,7 +114,6 @@
 - [STEUERN_ADAPTIONSWERT_TEMPERATURSENSOR_WIDERSTAND_SCHREIBEN](#job-steuern-adaptionswert-temperatursensor-widerstand-schreiben) - Adaptionswert für den Temperatursensor Abspritzöl Pull-Up-Wiederstandswert ( Service ID 0x30, Identifier 0xAF )
 - [STEUERN_ADAPTION_ZURUECKSETZEN](#job-steuern-adaption-zuruecksetzen) - Adaptionswerte Zurücksetzen ( Service ID 0x30, Identifier 0x04 ) Voraussetzung für ordnungsgemäße Funktion ist, dass man in Anschluss die Zündung abschaltet und den Steuergeräte-Abfall abwartet, damit die Defaultwerte im NVRAM abgespeichert werden.
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -133,7 +132,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -146,7 +144,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -162,7 +159,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -179,7 +175,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -212,7 +207,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -239,7 +233,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -281,7 +274,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -300,7 +292,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -318,7 +309,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -339,7 +329,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -360,7 +349,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -380,7 +368,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers KWP2000: $85 ControlDTCSetting Modus  : Default
@@ -401,7 +388,6 @@ Sperren bzw. Freigeben des Fehlerspeichers KWP2000: $85 ControlDTCSetting Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2000 dtcShadowMemory
@@ -428,7 +414,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2001 - $20FF dtcShadowMemoryEntry Modus: Default
@@ -471,7 +456,6 @@ Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCShadowMemory Modus  : Default
@@ -486,7 +470,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-lesen"></a>
 ### HS_LESEN
 
 Historyspeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2100 HistoryMemory Modus  : Default
@@ -513,7 +496,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-lesen-detail"></a>
 ### HS_LESEN_DETAIL
 
 Historypeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2101 - $21FF HistoryMemoryEntry Modus: Default
@@ -556,7 +538,6 @@ Historypeicher lesen (alle History-Meldungen / Ort und Art) KWP2000: $22 ReadDat
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hs-loeschen"></a>
 ### HS_LOESCHEN
 
 Historyspeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $03 ClearHistoryMemory Modus  : Default
@@ -571,7 +552,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -586,7 +566,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -607,7 +586,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $0E Time controlled PowerDown oder b)       $05 PowerDown $00 all ECU Modus  : Default
@@ -626,7 +604,6 @@ SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C ControlEnergySavingMode Modus  : Default
@@ -647,7 +624,6 @@ Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C C
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -665,7 +641,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -690,7 +665,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -713,7 +687,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -731,7 +704,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -752,7 +724,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -773,7 +744,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -792,7 +762,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -809,7 +778,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-zufallszahl-lesen"></a>
 ### AUTHENTISIERUNG_ZUFALLSZAHL_LESEN
 
 Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $07 RequestForAuthentication Modus  : Default
@@ -831,7 +799,6 @@ Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-start"></a>
 ### AUTHENTISIERUNG_START
 
 Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAuthentication Modus  : Default
@@ -850,7 +817,6 @@ Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -867,7 +833,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-signatur-pruefen"></a>
 ### FLASH_SIGNATUR_PRUEFEN
 
 Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSignature Modus  : Default
@@ -887,7 +852,6 @@ Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSigna
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -902,7 +866,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 ClearMemory Modus  : Default
@@ -922,7 +885,6 @@ Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload Modus  : Default
@@ -942,7 +904,6 @@ Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -963,7 +924,6 @@ Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Defau
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferExit Modus  : Default
@@ -982,7 +942,6 @@ Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -1019,7 +978,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D WriteMemoryByAddress Modus   : Default
@@ -1050,7 +1008,6 @@ Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D Write
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG AIF schreiben |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG AIF schreiben |
 
-<a id="job-status-compiler-bootloader"></a>
 ### STATUS_COMPILER_BOOTLOADER
 
 Auslesen der Compilerdaten des SW-Standes Infos über die Erstellung des MPC-Bootloader KWP 2000: $21 ReadDataByLocalIdentifier $A0 status_compiler_bootloader
@@ -1070,7 +1027,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-compiler-applikation"></a>
 ### STATUS_COMPILER_APPLIKATION
 
 Auslesen der Compilerdaten des SW-Standes Infos über die Erstellung der Applikation KWP 2000: $21 ReadDataByLocalIdentifier $A1 status_compiler_applikation
@@ -1090,7 +1046,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-compiler-daf"></a>
 ### STATUS_COMPILER_DAF
 
 Auslesen der Compilerdaten des SW-Standes Infos über die Erstellung des DAF KWP 2000: $21 ReadDataByLocalIdentifier $A3 status_compiler_daf
@@ -1110,7 +1065,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sg-seriennummer"></a>
 ### STATUS_SG_SERIENNUMMER
 
 Auslesen der Temic SG ID  KWP 2000: $21 ReadDataByLocalIdentifier $FA status_temic_hw_seriennummer
@@ -1126,7 +1080,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Codierdaten lesen ( Service ID 0x22,Identifier 0x10,0x02 )
@@ -1142,7 +1095,6 @@ _No arguments._
 | STAT_RADABRISS_ABSCHALTUNG_AKTIV | int | Nur fuer Linie (um Geberrad-Kurbelwelle einzulernen / DME) Status Radabrissfunktionsabschaltung aktiv Wieder Einschalten (Normalzustand) über Codierdaten schreiben oder Zuendung aus/ein 0=inaktiv, 1=aktiv |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-schreiben"></a>
 ### CODIERDATEN_SCHREIBEN
 
 Codierung schreiben (Service ID 0x2E, Identifier 0x10,0x02)
@@ -1162,7 +1114,6 @@ Codierung schreiben (Service ID 0x2E, Identifier 0x10,0x02)
 | _TEL_AUFTRAG | binary | Hex-Auftrag an das SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode-lesen"></a>
 ### STATUS_ENERGIESPARMODE_LESEN
 
 Auslesen der Energiesparmodi ( Service ID 0x22, Identifier 0x10, 0x0A )
@@ -1179,7 +1130,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Auslesen des Energiesparmodes ( Service ID 0x22, Identifier 0x10, 0x0A )
@@ -1198,7 +1148,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-initialisierung"></a>
 ### STATUS_INITIALISIERUNG
 
 ( Service ID 0x30, Identifier 0xA0 )
@@ -1216,7 +1165,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-statistikdatensatz-1-lesen"></a>
 ### STATISTIKDATENSATZ_1_LESEN
 
 Statistikdatensatz 1 lesen ( Service ID 0x21, Identifier 0x01 )
@@ -1330,7 +1278,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-statistikdatensatz-2-lesen"></a>
 ### STATISTIKDATENSATZ_2_LESEN
 
 Statistikdatensatz 2 lesen ( Service ID 0x21, Identifier 0x02 )
@@ -1396,7 +1343,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-statistikdaten-loeschen"></a>
 ### STATISTIKDATEN_LOESCHEN
 
 Verschleissdaten loeschen ( Service ID 0x2E, Identifier 0x1001 )  
@@ -1415,7 +1361,6 @@ Verschleissdaten loeschen ( Service ID 0x2E, Identifier 0x1001 )
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-istwerte-lesen"></a>
 ### STATUS_ISTWERTE_LESEN
 
 ( Service ID 0x30, Identifier 0x01, 0x01 )
@@ -1580,7 +1525,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-rohwerte-lesen"></a>
 ### STATUS_ROHWERTE_LESEN
 
 ( Service ID 0x30, Identifier 0x02, 0x01 )
@@ -1626,7 +1570,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-stellglied"></a>
 ### STEUERN_STELLGLIED
 
 ( Service ID 0x30, Identifier 0x07 ) Eine Stellgliedeingabe mit Stellgliedwert werden über IO-Hex Eingabewert eingegeben  Es ist nur möglich Ausgänge anzusteuern, wenn kein Test- und Einlernprogramm aktiv ist. ACHTUNG: Bei der Ansteuerung Magnetventile (PV1-4, PV6, PV7 und SV1-4) wird das SG in einen sogenannten Prüfstandmode versetzt, bei dem dann unabhängig von der Ausgangssituation alle Magnetventile, bis auf den der angesteuert werden soll, auf den Sollwert 0 eingestellt.  WARNUNG: Der Bediener des Diagnosetesters ist für die Sicherheit von Leib und Leben sowie für den Schutz aller Bauteile, die im Zusammenhang mit der SG-Ausgangsansteuerung stehen, verantwortlich. Es ist nicht auszuschließen, dass sich das Fahrzeug durch eine unsachgemäße Ansteuerung fortbewegt. Nach Möglichkeit sollte sich das Fahrzeug während der Ausgangsansteuerung auf einer Hebebühne befinden, so dass es sich nicht fortbewegen kann.  STELLGLIED_IO_HEX                          STELLGLIED_WERT 0x20 = Sollstrom Magnetventil PV1 -     Min: 0 Max: 1900 0x21 = Sollstrom Magnetventil PV2 -     Min: 0 Max: 1900 0x22 = Sollstrom Magnetventil PV3 -     Min: 0 Max: 1900 0x23 = Sollstrom Magnetventil PV4 -     Min: 0 Max: 1900 0x24 = Sollstrom Magnetventil PV6 -     Min: 0 Max: 1900 0x25 = Sollstrom Magnetventil PV7 -     Min: 0 Max: 1900 0x26 = Sollzustand Magnetventil SV1 -   Min: 0 Max: 1 0x27 = Sollzustand Magnetventil SV2 -   Min: 0 Max: 1 0x28 = Sollzustand Magnetventil SV3 -   Min: 0 Max: 1 0x29 = Sollzustand Magnetventil SV4 -   Min: 0 Max: 1 0x2A = Parksperre verriegeln - 0= keine Reaktion  1= PS verriegeln  2= PS entriegeln 0x2B = Anzeige Programminformation (Statusausgang CAN ) -    Min: 1 Max: 6 0x2C = Getriebe nach Neutral stellen -  Ein: 1 0x2D = Parksperre Hakentest -           Ein: 1 Aus: 0 0x2E = Parksperre Magnettest -          Ein: 1 0x2F = Ansteuerung Parksperre aus/ein - 0= Parksperre ausgelegt - 1= Parksperre eingelegt 0x30 = Anzeige Wahlhebelschema -        Min: 1 Max: 4 0x31 = Anzeige Gänge -                  Min: 1 Max: 7 0x32 = Anzeige CC Meldung -             An: 1  Aus: 0 weiter Information im LH - Diagnoseschnittstelle
@@ -1653,7 +1596,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-stellglied-zuruecksetzen"></a>
 ### STEUERN_STELLGLIED_ZURUECKSETZEN
 
 ( Service ID 0x30, Identifier 0x00 ) STELLGLIED_IO_HEX 0x20 = Sollstrom Magnetventil PV1 0x21 = Sollstrom Magnetventil PV2 0x22 = Sollstrom Magnetventil PV3 0x23 = Sollstrom Magnetventil PV4 0x24 = Sollstrom Magnetventil PV5 0x25 = Sollstrom Magnetventil PV6 0x26 = Sollzustand Magnetventil SV1 0x27 = Sollzustand Magnetventil SV2 0x28 = Sollzustand Magnetventil SV3 0x29 = Sollzustand Magnetventil SV4 0x2A = Parksperre verriegeln 0x2B = Anzeige Programminformation 0x2C = Getriebe nach Neutral 0x2D = Parksperre Hakentest 0x2E = Ansteuerung Parksperre 0x30 = Anzeige Wahlhebelschema 0x31 = Anzeige Gaenge 0x32 = Anzeige CC Meldung 0xFE = Alle Ausgangsgrößen weiter Information im LH - Diagnoseschnittstelle
@@ -1672,7 +1614,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-testprg-starten"></a>
 ### STEUERN_TESTPRG_STARTEN
 
 Test- und Einlernprogramm starten ( Service ID 0x31, Identifier 0x20-0x27 + 0x30-0x35) WARNUNG: Weil die Diagnoseschnittstelle ein Event gesteuertes Modul in der Getriebesoftware darstellt, können Test- und Einlernprogramme nur durch den Bediener, in diesem Fall durch den Diagnosetester, ein- und ausgeschaltet bzw. abgefragt werden. Anderenfalls sind Zustände möglich, die nur durch das Abschalten der Kl.15 und das anschließende Abwarten des Steuergerätenachlaufs verlassen werden können.
@@ -1696,7 +1637,6 @@ Test- und Einlernprogramm starten ( Service ID 0x31, Identifier 0x20-0x27 + 0x30
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-testprg-istzustand"></a>
 ### STATUS_TESTPRG_ISTZUSTAND
 
 Test- und Einlernprogramm abfragen ( Service ID 0x33, Identifier 0x20-0x27 + 0x30-0x35) WARNUNG: Das Einschalten,Ausschalten und Abfragen von Test- und Einlernprogramm darf NUR über eines Diagnosetester erfolgen!
@@ -1729,7 +1669,6 @@ Test- und Einlernprogramm abfragen ( Service ID 0x33, Identifier 0x20-0x27 + 0x3
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-testprg-stop"></a>
 ### STEUERN_TESTPRG_STOP
 
 Test- und Einlernprogramm beenden ( Service ID 0x32, Identifier 0x20 - 0x27, 0x30 - 0x35 ) WARNUNG: Das Einschalten,Ausschalten und Abfragen von Test- und Einlernprogramm darf NUR über eines Diagnosetester erfolgen!
@@ -1748,7 +1687,6 @@ Test- und Einlernprogramm beenden ( Service ID 0x32, Identifier 0x20 - 0x27, 0x3
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-rbm-ratio-lesen"></a>
 ### STATUS_RBM_RATIO_LESEN
 
 Dient zum Aulesen der OBD fehlerbezogenen RBM Ratios Dabei wird die Häufigkeit des Durchlaufens von abgasrelevanten Diagnosefunktionen gezählt ( Service ID 0x22, Identifier 0x52, 0x00 )
@@ -1845,7 +1783,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort vom Steuergerät |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes ---------------- Zusätzlich für VS: --------------------- KWP2000: $30 A8 STATUS_GETRIEBE_TEACHEN KWP2000: $30 A4 STATUS_VENTILKENNLINIE_PV1 KWP2000: $30 A5 STATUS_VENTILKENNLINIE_PV2 KWP2000: $30 A6 STATUS_VENTILKENNLINIE_PV6 KWP2000: $30 A0 STATUS_ADAPTION_KUPPLUNGSSCHLEIFPUNKT_K1 KWP2000: $30 A1 STATUS_ADAPTION_KUPPLUNGSSCHLEIFPUNKT_K2 KWP2000: $30 A2 STATUS_ADAPTION_MOMENTENKENNLINIE_K1 KWP2000: $30 A3 STATUS_ADAPTION_MOMENTENKENNLINIE_K2 KWP2000: $30 A7 STATUS_SPERRSTELLUNG_PV7 KWP2000: $30 AA STATUS_ADAPTIONSWERT_PV6 KWP2000: $21 01 STATISTIKDATENSATZ_1_LESEN KWP2000: $21 02 STATISTIKDATENSATZ_2_LESEN Modus  : Default
@@ -1859,7 +1796,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-debugging-information"></a>
 ### DEBUGGING_INFORMATION
 
 Einlernwert Sperrstellung PV7 ( Service ID 0x21, Identifier 0xFD ) Debugging Information
@@ -1875,7 +1811,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-getriebe-teachen"></a>
 ### STATUS_GETRIEBE_TEACHEN
 
 Einlernwerte Getriebe Teachen ( Service ID 0x30, Identifier 0xA8 )
@@ -1913,7 +1848,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaption-kupplungsschleifpunkt-k1"></a>
 ### STATUS_ADAPTION_KUPPLUNGSSCHLEIFPUNKT_K1
 
 Adaptionswerte Kupplungsschleifpunkt K1 ( Service ID 0x30, Identifier 0xA0 )
@@ -1935,7 +1869,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaption-kupplungsschleifpunkt-k2"></a>
 ### STATUS_ADAPTION_KUPPLUNGSSCHLEIFPUNKT_K2
 
 Adaptionswerte Kupplungsschleifpunkt K2 ( Service ID 0x30, Identifier 0xA1 )
@@ -1957,7 +1890,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaption-momentenkennlinie-k1"></a>
 ### STATUS_ADAPTION_MOMENTENKENNLINIE_K1
 
 Adaptionswerte Kupplungsmomentenkennlinie K1 ( Service ID 0x30, Identifier 0xA2 )
@@ -1980,7 +1912,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaption-momentenkennlinie-k2"></a>
 ### STATUS_ADAPTION_MOMENTENKENNLINIE_K2
 
 Adaptionswerte Kupplungsmomentenkennlinie K2 ( Service ID 0x30, Identifier 0xA3 )
@@ -2003,7 +1934,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-ventilkennlinie-pv1"></a>
 ### STATUS_VENTILKENNLINIE_PV1
 
 Einlernwerte Ventilkennlinie PV1 ( Service ID 0x30, Identifier 0xA4 )
@@ -2035,7 +1965,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-ventilkennlinie-pv2"></a>
 ### STATUS_VENTILKENNLINIE_PV2
 
 Einlernwerte Ventilkennlinie PV2 ( Service ID 0x30, Identifier 0xA5 )
@@ -2067,7 +1996,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswert-ventilkennlinie-pv1-pv2"></a>
 ### STATUS_ADAPTIONSWERT_VENTILKENNLINIE_PV1_PV2
 
 Adaptionswert für PV1 und PV2 Ventilkennlinie ( Service ID 0x30, Identifier 0xB0 )
@@ -2086,7 +2014,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-ventilkennlinie-pv6"></a>
 ### STATUS_VENTILKENNLINIE_PV6
 
 Einlernwerte Ventilkennlinie PV6 ( Service ID 0x30, Identifier 0xA6 )
@@ -2118,7 +2045,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswert-pv6"></a>
 ### STATUS_ADAPTIONSWERT_PV6
 
 Adaptionswerte  PV6 ( Service ID 0x30, Identifier 0xAA )
@@ -2139,7 +2065,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-sperrstellung-pv7"></a>
 ### STATUS_SPERRSTELLUNG_PV7
 
 Einlernwert Sperrstellung PV7 ( Service ID 0x30, Identifier 0xA7 )
@@ -2155,7 +2080,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswert-getriebecode"></a>
 ### STATUS_ADAPTIONSWERT_GETRIEBECODE
 
 Adaptionswerte  für den Getriebecode ( Service ID 0x30, Identifier 0xAB )
@@ -2180,7 +2104,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswert-radsatzvariante"></a>
 ### STATUS_ADAPTIONSWERT_RADSATZVARIANTE
 
 Adaptionswert  für die Radsatzvariante ( Service ID 0x30, Identifier 0xAC )
@@ -2196,7 +2119,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswert-hydraulikpumpe"></a>
 ### STATUS_ADAPTIONSWERT_HYDRAULIKPUMPE
 
 Adaptionswert für die Hydraulikpumpe ( Service ID 0x30, Identifier 0xAD )
@@ -2212,7 +2134,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswert-temperatursensor"></a>
 ### STATUS_ADAPTIONSWERT_TEMPERATURSENSOR
 
 Adaptionswert für den Temperatursensor Abspritzöl (Typ) ( Service ID 0x30, Identifier 0xAE )
@@ -2228,7 +2149,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswert-temperatursensor-widerstand"></a>
 ### STATUS_ADAPTIONSWERT_TEMPERATURSENSOR_WIDERSTAND
 
 Adaptionswert für den Temperatursensor Abspritzöl Pull-Up-Wiederstandswert ( Service ID 0x30, Identifier 0xAF )
@@ -2245,7 +2165,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswert-temp-sensor-widerstand"></a>
 ### STATUS_ADAPTIONSWERT_TEMP_SENSOR_WIDERSTAND
 
 Adaptionswert für den Temperatursensor Abspritzöl Pull-Up-Wiederstandswert ( Service ID 0x30, Identifier 0xAF )
@@ -2262,7 +2181,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-software-version-lesen"></a>
 ### SOFTWARE_VERSION_LESEN
 
 Adaptionswerte Software Version ( Service ID 0x30, Identifier 0xA9 )
@@ -2279,7 +2197,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswerte-semischlupf-gaenge"></a>
 ### STATUS_ADAPTIONSWERTE_SEMISCHLUPF_GAENGE
 
 Adaptionswerte  für den Getriebecode ( Service ID 0x30, Identifier 0xB2 )
@@ -2308,7 +2225,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-status-adaptionswerte-drm"></a>
 ### STATUS_ADAPTIONSWERTE_DRM
 
 Adaptionswerte DRM ( Service ID 0x30, Identifier 0xB1 )
@@ -2324,7 +2240,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswerte-pv1-schreiben"></a>
 ### STEUERN_ADAPTIONSWERTE_PV1_SCHREIBEN
 
 Einlernwerte Ventilkennlinie PV1 ( Service ID 0x30, Identifier 0xA4 )
@@ -2374,7 +2289,6 @@ Einlernwerte Ventilkennlinie PV1 ( Service ID 0x30, Identifier 0xA4 )
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswerte-pv2-schreiben"></a>
 ### STEUERN_ADAPTIONSWERTE_PV2_SCHREIBEN
 
 Einlernwerte Ventilkennlinie PV2 ( Service ID 0x30, Identifier 0xA5 )
@@ -2424,7 +2338,6 @@ Einlernwerte Ventilkennlinie PV2 ( Service ID 0x30, Identifier 0xA5 )
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswerte-pv6-schreiben"></a>
 ### STEUERN_ADAPTIONSWERTE_PV6_SCHREIBEN
 
 Einlernwerte Ventilkennlinie PV6 ( Service ID 0x30, Identifier 0xA5 )
@@ -2474,7 +2387,6 @@ Einlernwerte Ventilkennlinie PV6 ( Service ID 0x30, Identifier 0xA5 )
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswerte-pv7-schreiben"></a>
 ### STEUERN_ADAPTIONSWERTE_PV7_SCHREIBEN
 
 Einlernwerte Ventilkennlinie PV7 ( Service ID 0x30, Identifier 0xA5 )
@@ -2494,7 +2406,6 @@ Einlernwerte Ventilkennlinie PV7 ( Service ID 0x30, Identifier 0xA5 )
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswert-getriebecode-schreiben"></a>
 ### STEUERN_ADAPTIONSWERT_GETRIEBECODE_SCHREIBEN
 
 Adaptionswerte für den Getriebecode ( Service ID 0x30, Identifier 0xAB )
@@ -2522,7 +2433,6 @@ Adaptionswerte für den Getriebecode ( Service ID 0x30, Identifier 0xAB )
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswert-radsatzvariante-schreiben"></a>
 ### STEUERN_ADAPTIONSWERT_RADSATZVARIANTE_SCHREIBEN
 
 Adaptionswert  für die Radsatzvariante ( Service ID 0x30, Identifier 0xAC )
@@ -2541,7 +2451,6 @@ Adaptionswert  für die Radsatzvariante ( Service ID 0x30, Identifier 0xAC )
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswert-hydraulikpumpe-schreiben"></a>
 ### STEUERN_ADAPTIONSWERT_HYDRAULIKPUMPE_SCHREIBEN
 
 Adaptionswert für die Hydraulikpumpe ( Service ID 0x30, Identifier 0xAD )
@@ -2560,7 +2469,6 @@ Adaptionswert für die Hydraulikpumpe ( Service ID 0x30, Identifier 0xAD )
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswert-temperatursensor-schreiben"></a>
 ### STEUERN_ADAPTIONSWERT_TEMPERATURSENSOR_SCHREIBEN
 
 Adaptionswert  für den Temperatursensor (Typ) ( Service ID 0x30, Identifier 0xAE )
@@ -2579,7 +2487,6 @@ Adaptionswert  für den Temperatursensor (Typ) ( Service ID 0x30, Identifier 0xA
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaptionswert-temperatursensor-widerstand-schreiben"></a>
 ### STEUERN_ADAPTIONSWERT_TEMPERATURSENSOR_WIDERSTAND_SCHREIBEN
 
 Adaptionswert für den Temperatursensor Abspritzöl Pull-Up-Wiederstandswert ( Service ID 0x30, Identifier 0xAF )
@@ -2599,7 +2506,6 @@ Adaptionswert für den Temperatursensor Abspritzöl Pull-Up-Wiederstandswert ( S
 | _TEL_AUFTRAG | binary | Hex Auftrag vom Steuergerät |
 | _TEL_ANTWORT | binary | Hex Antwort zum Steuergerät |
 
-<a id="job-steuern-adaption-zuruecksetzen"></a>
 ### STEUERN_ADAPTION_ZURUECKSETZEN
 
 Adaptionswerte Zurücksetzen ( Service ID 0x30, Identifier 0x04 ) Voraussetzung für ordnungsgemäße Funktion ist, dass man in Anschluss die Zündung abschaltet und den Steuergeräte-Abfall abwartet, damit die Defaultwerte im NVRAM abgespeichert werden.
@@ -2820,7 +2726,6 @@ Adaptionswerte Zurücksetzen ( Service ID 0x30, Identifier 0x04 ) Voraussetzung 
 - [FUMWELTTEXTE35N](#table-fumwelttexte35n) (256 × 2)
 - [STATUSKLACKERN](#table-statusklackern) (3 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -2833,7 +2738,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -2936,7 +2840,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 121 rows × 2 columns
@@ -3065,7 +2968,6 @@ Dimensions: 121 rows × 2 columns
 | 0xAE | MTA |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -3087,7 +2989,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -3112,7 +3013,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3124,7 +3024,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -3146,7 +3045,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -3161,7 +3059,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-harttexte"></a>
 ### HARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -3183,7 +3080,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -3205,7 +3101,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -3232,7 +3127,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -3241,7 +3135,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -3253,7 +3146,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 139 rows × 2 columns
@@ -3400,7 +3292,6 @@ Dimensions: 139 rows × 2 columns
 | 0xCF42 | Signal von der DSC: Alle 4 Raddrehzahlen ungültig |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -3415,7 +3306,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 138 rows × 5 columns
@@ -3561,7 +3451,6 @@ Dimensions: 138 rows × 5 columns
 | 0x5062 | FUmweltTabelle_5062a1 | 0xE9 | FUmweltTabelle_5062a | - |
 | 0x5063 | 0x01 | 0x0B | - | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 205 rows × 9 columns
@@ -3774,7 +3663,6 @@ Dimensions: 205 rows × 9 columns
 | 0xFD | Umweltdatum 9 | - | high | unsigned int | - | 1 | 1 | 0 |
 | 0xFE | Umweltdatum 10 | - | high | unsigned int | - | 1 | 1 | 0 |
 
-<a id="table-farttyp"></a>
 ### FARTTYP
 
 Dimensions: 138 rows × 5 columns
@@ -3920,7 +3808,6 @@ Dimensions: 138 rows × 5 columns
 | 0x5063 | 0xFFFF | 0xFFFF | 0xFFFF | 0x46 |
 | 0xFFFF | 0xFFFF | 0xFFFF | 0xFFFF | 0xFFFF |
 
-<a id="table-farttexteindividuell"></a>
 ### FARTTEXTEINDIVIDUELL
 
 Dimensions: 84 rows × 2 columns
@@ -4012,7 +3899,6 @@ Dimensions: 84 rows × 2 columns
 | 0x56 | Timeout Botschaft Bedienung Getriebewahlschalter LIN |
 | 0xFFFF | Fehlersymptom nicht definiert |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 139 rows × 2 columns
@@ -4159,7 +4045,6 @@ Dimensions: 139 rows × 2 columns
 | 0xCF42 | Signal von der DSC: Alle 4 Raddrehzahlen ungültig |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -4174,7 +4059,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-humweltmatrix"></a>
 ### HUMWELTMATRIX
 
 Dimensions: 138 rows × 5 columns
@@ -4320,7 +4204,6 @@ Dimensions: 138 rows × 5 columns
 | 0x5062 | FUmweltTabelle_5062a1 | 0xE9 | FUmweltTabelle_5062a | - |
 | 0x5063 | 0x01 | 0x0B | - | - |
 
-<a id="table-humwelttexte"></a>
 ### HUMWELTTEXTE
 
 Dimensions: 205 rows × 9 columns
@@ -4533,7 +4416,6 @@ Dimensions: 205 rows × 9 columns
 | 0xFD | Umweltdatum 9 | - | high | unsigned int | - | 1 | 1 | 0 |
 | 0xFE | Umweltdatum 10 | - | high | unsigned int | - | 1 | 1 | 0 |
 
-<a id="table-harttyp"></a>
 ### HARTTYP
 
 Dimensions: 138 rows × 5 columns
@@ -4679,7 +4561,6 @@ Dimensions: 138 rows × 5 columns
 | 0x5063 | 0xFFFF | 0xFFFF | 0xFFFF | 0x46 |
 | 0xFFFF | 0xFFFF | 0xFFFF | 0xFFFF | 0xFFFF |
 
-<a id="table-harttexteindividuell"></a>
 ### HARTTEXTEINDIVIDUELL
 
 Dimensions: 84 rows × 2 columns
@@ -4771,7 +4652,6 @@ Dimensions: 84 rows × 2 columns
 | 0x56 | Timeout Botschaft Bedienung Getriebewahlschalter LIN |
 | 0xFFFF | Fehlersymptom nicht definiert |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 139 rows × 2 columns
@@ -4918,7 +4798,6 @@ Dimensions: 139 rows × 2 columns
 | 0xCF42 | Signal von der DSC: Alle 4 Raddrehzahlen ungültig |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -4933,7 +4812,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-iumweltmatrix"></a>
 ### IUMWELTMATRIX
 
 Dimensions: 138 rows × 5 columns
@@ -5079,7 +4957,6 @@ Dimensions: 138 rows × 5 columns
 | 0x5062 | FUmweltTabelle_5062a1 | 0xE9 | FUmweltTabelle_5062a | - |
 | 0x5063 | 0x01 | 0x0B | - | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 205 rows × 9 columns
@@ -5292,7 +5169,6 @@ Dimensions: 205 rows × 9 columns
 | 0xFD | Umweltdatum 9 | - | high | unsigned int | - | 1 | 1 | 0 |
 | 0xFE | Umweltdatum 10 | - | high | unsigned int | - | 1 | 1 | 0 |
 
-<a id="table-iarttyp"></a>
 ### IARTTYP
 
 Dimensions: 138 rows × 5 columns
@@ -5438,7 +5314,6 @@ Dimensions: 138 rows × 5 columns
 | 0x5063 | 0xFFFF | 0xFFFF | 0xFFFF | 0x46 |
 | 0xFFFF | 0xFFFF | 0xFFFF | 0xFFFF | 0xFFFF |
 
-<a id="table-iarttexteindividuell"></a>
 ### IARTTEXTEINDIVIDUELL
 
 Dimensions: 84 rows × 2 columns
@@ -5530,7 +5405,6 @@ Dimensions: 84 rows × 2 columns
 | 0x56 | Timeout Botschaft Bedienung Getriebewahlschalter LIN |
 | 0xFFFF | Fehlersymptom nicht definiert |
 
-<a id="table-gangstatus"></a>
 ### GANGSTATUS
 
 Dimensions: 10 rows × 2 columns
@@ -5548,7 +5422,6 @@ Dimensions: 10 rows × 2 columns
 | 0x0E | Rueckwärtsgang |
 | 0x0F | Undefiniert |
 
-<a id="table-getriebestatus"></a>
 ### GETRIEBESTATUS
 
 Dimensions: 23 rows × 2 columns
@@ -5579,7 +5452,6 @@ Dimensions: 23 rows × 2 columns
 | 0x15 | Status Neutral einregeln unten |
 | 0xFF | Undefiniert |
 
-<a id="table-kupplungsstati"></a>
 ### KUPPLUNGSSTATI
 
 Dimensions: 10 rows × 2 columns
@@ -5597,7 +5469,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Kupplungszweig gesperrt |
 | 0xFF | Undefiniert |
 
-<a id="table-obdsteuerfunktion"></a>
 ### OBDSTEUERFUNKTION
 
 Dimensions: 16 rows × 2 columns
@@ -5621,7 +5492,6 @@ Dimensions: 16 rows × 2 columns
 | 0x33 | Warm Up Cycle erfüllt und Aktivierungsbedingung für Berechnung Driving cycle in EGS/SSG - Freeze-Frame wird verwaltet für: DME links |
 | 0xFF | Signal ungültig |
 
-<a id="table-schaltstangeposition"></a>
 ### SCHALTSTANGEPOSITION
 
 Dimensions: 11 rows × 2 columns
@@ -5640,7 +5510,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Position nach Synchron unten |
 | 0xFF | Undefiniert |
 
-<a id="table-io-setzen"></a>
 ### IO_SETZEN
 
 Dimensions: 20 rows × 5 columns
@@ -5668,7 +5537,6 @@ Dimensions: 20 rows × 5 columns
 | ANZEIGE CC MELDUNG | 0x32 | 1 | 0 | 1 |
 | ALLE AUSGANGSGRÖSSEN | 0xFE | - | - | - |
 
-<a id="table-testundeinlernprgtabelle"></a>
 ### TESTUNDEINLERNPRGTABELLE
 
 Dimensions: 15 rows × 2 columns
@@ -5691,7 +5559,6 @@ Dimensions: 15 rows × 2 columns
 | 0x35 | Fehlerspeicher formatieren |
 | 0xFF | Undefiniert |
 
-<a id="table-statustesteinlern"></a>
 ### STATUSTESTEINLERN
 
 Dimensions: 6 rows × 2 columns
@@ -5705,7 +5572,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Testprogramm abgebrochen |
 | 0xFF | Undefiniert |
 
-<a id="table-statuseinlerngetriebe"></a>
 ### STATUSEINLERNGETRIEBE
 
 Dimensions: 15 rows × 2 columns
@@ -5728,7 +5594,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0E | Einlernen durch Anwender abgebrochen |
 | 0xFF | Undefiniert |
 
-<a id="table-statuseinlernpv"></a>
 ### STATUSEINLERNPV
 
 Dimensions: 9 rows × 2 columns
@@ -5745,7 +5610,6 @@ Dimensions: 9 rows × 2 columns
 | 0x32 | Monotoniefehler |
 | 0xFF | Undefiniert |
 
-<a id="table-fehlertesteinlerngetriebe"></a>
 ### FEHLERTESTEINLERNGETRIEBE
 
 Dimensions: 36 rows × 2 columns
@@ -5789,7 +5653,6 @@ Dimensions: 36 rows × 2 columns
 | 0x40 | Einlegehänger Schaltstange 4 |
 | 0xFF | Undefiniert |
 
-<a id="table-fehlertesteinlernkuehlung"></a>
 ### FEHLERTESTEINLERNKUEHLUNG
 
 Dimensions: 9 rows × 2 columns
@@ -5806,7 +5669,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Abbruch durch Bediener |
 | 0xFF | Undefiniert |
 
-<a id="table-fehlertesteinlernpv"></a>
 ### FEHLERTESTEINLERNPV
 
 Dimensions: 18 rows × 2 columns
@@ -5832,7 +5694,6 @@ Dimensions: 18 rows × 2 columns
 | 0x10 | Abbruch durch den Benutzer |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttabelle-5a57a"></a>
 ### FUMWELTTABELLE_5A57A
 
 Dimensions: 1 rows × 8 columns
@@ -5841,7 +5702,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x0A | 0x0B | 0x86 | 0x5E | 0x60 | 0x02 | 0x87 |
 
-<a id="table-fumwelttabelle-5a60a"></a>
 ### FUMWELTTABELLE_5A60A
 
 Dimensions: 1 rows × 8 columns
@@ -5850,7 +5710,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x0B | 0x0C | 0x0D | 0x0E | 0x17 | 0x18 | 0x02 |
 
-<a id="table-fumwelttabelle-5a60d"></a>
 ### FUMWELTTABELLE_5A60D
 
 Dimensions: 1 rows × 2 columns
@@ -5859,7 +5718,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x13 |
 
-<a id="table-fumwelttabelle-5a61a"></a>
 ### FUMWELTTABELLE_5A61A
 
 Dimensions: 1 rows × 8 columns
@@ -5868,7 +5726,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x18 | 0x02 | 0x0B | 0x0C | 0x0D | 0x0E | 0x13 |
 
-<a id="table-fumwelttabelle-5a61d"></a>
 ### FUMWELTTABELLE_5A61D
 
 Dimensions: 1 rows × 2 columns
@@ -5877,7 +5734,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x1D |
 
-<a id="table-fumwelttabelle-5a62a"></a>
 ### FUMWELTTABELLE_5A62A
 
 Dimensions: 1 rows × 8 columns
@@ -5886,7 +5742,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x18 | 0x02 | 0x0B | 0x0C | 0x0D | 0x0E | 0x13 |
 
-<a id="table-fumwelttabelle-5a62d"></a>
 ### FUMWELTTABELLE_5A62D
 
 Dimensions: 1 rows × 2 columns
@@ -5895,7 +5750,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x1E |
 
-<a id="table-fumwelttabelle-5a63a"></a>
 ### FUMWELTTABELLE_5A63A
 
 Dimensions: 1 rows × 8 columns
@@ -5904,7 +5758,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x18 | 0x02 | 0x0B | 0x0C | 0x0D | 0x0E | 0x13 |
 
-<a id="table-fumwelttabelle-5a63d"></a>
 ### FUMWELTTABELLE_5A63D
 
 Dimensions: 1 rows × 2 columns
@@ -5913,7 +5766,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x20 |
 
-<a id="table-fumwelttabelle-5a64a"></a>
 ### FUMWELTTABELLE_5A64A
 
 Dimensions: 1 rows × 9 columns
@@ -5922,7 +5774,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x17 | 0x18 | 0x02 | 0x0B | 0x0C | 0x0D | 0x0E | 0x13 |
 
-<a id="table-fumwelttabelle-5a64d"></a>
 ### FUMWELTTABELLE_5A64D
 
 Dimensions: 1 rows × 2 columns
@@ -5931,7 +5782,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x1F |
 
-<a id="table-fumwelttabelle-5a65a"></a>
 ### FUMWELTTABELLE_5A65A
 
 Dimensions: 1 rows × 8 columns
@@ -5940,7 +5790,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x1B | 0x1C | 0x17 | 0x18 | 0x01 | 0x0B | 0x02 |
 
-<a id="table-fumwelttabelle-5a65d"></a>
 ### FUMWELTTABELLE_5A65D
 
 Dimensions: 1 rows × 2 columns
@@ -5949,7 +5798,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x13 |
 
-<a id="table-fumwelttabelle-5a66a"></a>
 ### FUMWELTTABELLE_5A66A
 
 Dimensions: 1 rows × 8 columns
@@ -5958,7 +5806,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x1B | 0x1C | 0x17 | 0x18 | 0x01 | 0x0B | 0x02 |
 
-<a id="table-fumwelttabelle-5a66d"></a>
 ### FUMWELTTABELLE_5A66D
 
 Dimensions: 1 rows × 2 columns
@@ -5967,7 +5814,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x13 |
 
-<a id="table-fumwelttabelle-5a67a"></a>
 ### FUMWELTTABELLE_5A67A
 
 Dimensions: 1 rows × 8 columns
@@ -5976,7 +5822,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x1B | 0x1C | 0x17 | 0x18 | 0x01 | 0x0B | 0x02 |
 
-<a id="table-fumwelttabelle-5a67d"></a>
 ### FUMWELTTABELLE_5A67D
 
 Dimensions: 1 rows × 2 columns
@@ -5985,7 +5830,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x13 |
 
-<a id="table-fumwelttabelle-5a68a"></a>
 ### FUMWELTTABELLE_5A68A
 
 Dimensions: 1 rows × 8 columns
@@ -5994,7 +5838,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x1B | 0x1C | 0x17 | 0x18 | 0x01 | 0x0B | 0x02 |
 
-<a id="table-fumwelttabelle-5a68d"></a>
 ### FUMWELTTABELLE_5A68D
 
 Dimensions: 1 rows × 2 columns
@@ -6003,7 +5846,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x13 |
 
-<a id="table-fumwelttabelle-5a69a"></a>
 ### FUMWELTTABELLE_5A69A
 
 Dimensions: 1 rows × 6 columns
@@ -6012,7 +5854,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x24 | 0x25 | 0x26 | 0x27 | 0x28 |
 
-<a id="table-fumwelttabelle-5a6ba"></a>
 ### FUMWELTTABELLE_5A6BA
 
 Dimensions: 1 rows × 8 columns
@@ -6021,7 +5862,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x18 | 0x02 | 0x0B | 0x0C | 0x0D | 0x0E | 0x13 |
 
-<a id="table-fumwelttabelle-5a6bd"></a>
 ### FUMWELTTABELLE_5A6BD
 
 Dimensions: 1 rows × 2 columns
@@ -6030,7 +5870,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x1D |
 
-<a id="table-fumwelttabelle-5a6ca"></a>
 ### FUMWELTTABELLE_5A6CA
 
 Dimensions: 1 rows × 8 columns
@@ -6039,7 +5878,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x18 | 0x02 | 0x0B | 0x0C | 0x0D | 0x0E | 0x13 |
 
-<a id="table-fumwelttabelle-5a6cd"></a>
 ### FUMWELTTABELLE_5A6CD
 
 Dimensions: 1 rows × 2 columns
@@ -6048,7 +5886,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x1E |
 
-<a id="table-fumwelttabelle-5a6da"></a>
 ### FUMWELTTABELLE_5A6DA
 
 Dimensions: 1 rows × 8 columns
@@ -6057,7 +5894,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x18 | 0x02 | 0x0B | 0x0C | 0x0D | 0x0E | 0x13 |
 
-<a id="table-fumwelttabelle-5a6dd"></a>
 ### FUMWELTTABELLE_5A6DD
 
 Dimensions: 1 rows × 2 columns
@@ -6066,7 +5902,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x1F |
 
-<a id="table-fumwelttabelle-5a6ea"></a>
 ### FUMWELTTABELLE_5A6EA
 
 Dimensions: 1 rows × 8 columns
@@ -6075,7 +5910,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x18 | 0x02 | 0x0B | 0x0C | 0x0D | 0x0E | 0x13 |
 
-<a id="table-fumwelttabelle-5a6ed"></a>
 ### FUMWELTTABELLE_5A6ED
 
 Dimensions: 1 rows × 2 columns
@@ -6084,7 +5918,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x20 |
 
-<a id="table-fumwelttabelle-5a70a"></a>
 ### FUMWELTTABELLE_5A70A
 
 Dimensions: 1 rows × 6 columns
@@ -6093,7 +5926,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x02 | 0x42 | 0x35 | 0x36 | 0x37 |
 
-<a id="table-fumwelttabelle-5a70d"></a>
 ### FUMWELTTABELLE_5A70D
 
 Dimensions: 1 rows × 2 columns
@@ -6102,7 +5934,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x38 |
 
-<a id="table-fumwelttabelle-5a71a"></a>
 ### FUMWELTTABELLE_5A71A
 
 Dimensions: 1 rows × 6 columns
@@ -6111,7 +5942,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x02 | 0x35 | 0x42 | 0x36 | 0x37 |
 
-<a id="table-fumwelttabelle-5a71d"></a>
 ### FUMWELTTABELLE_5A71D
 
 Dimensions: 1 rows × 2 columns
@@ -6120,7 +5950,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x39 |
 
-<a id="table-fumwelttabelle-5a72a"></a>
 ### FUMWELTTABELLE_5A72A
 
 Dimensions: 1 rows × 8 columns
@@ -6129,7 +5958,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x01 | 0x0B | 0x3A | 0x3B | 0x3C | 0x3D | 0x40 |
 
-<a id="table-fumwelttabelle-5a74a"></a>
 ### FUMWELTTABELLE_5A74A
 
 Dimensions: 1 rows × 8 columns
@@ -6138,7 +5966,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x31 | 0x0E | 0x04 | 0x34 | 0x61 | 0x62 | 0x05 |
 
-<a id="table-fumwelttabelle-5a75a"></a>
 ### FUMWELTTABELLE_5A75A
 
 Dimensions: 1 rows × 8 columns
@@ -6147,7 +5974,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x32 | 0x0E | 0x04 | 0x34 | 0x61 | 0x62 | 0x05 |
 
-<a id="table-fumwelttabelle-5a80a"></a>
 ### FUMWELTTABELLE_5A80A
 
 Dimensions: 1 rows × 4 columns
@@ -6156,7 +5982,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x3E | 0x3F | 0x40 |
 
-<a id="table-fumwelttabelle-5a81a"></a>
 ### FUMWELTTABELLE_5A81A
 
 Dimensions: 1 rows × 4 columns
@@ -6165,7 +5990,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x3E | 0x3F | 0x40 |
 
-<a id="table-fumwelttabelle-5a82a"></a>
 ### FUMWELTTABELLE_5A82A
 
 Dimensions: 1 rows × 4 columns
@@ -6174,7 +5998,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x3E | 0x3F | 0x40 |
 
-<a id="table-fumwelttabelle-5a83a"></a>
 ### FUMWELTTABELLE_5A83A
 
 Dimensions: 1 rows × 4 columns
@@ -6183,7 +6006,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x3E | 0x3F | 0x40 |
 
-<a id="table-fumwelttabelle-5a86a"></a>
 ### FUMWELTTABELLE_5A86A
 
 Dimensions: 1 rows × 6 columns
@@ -6192,7 +6014,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x0B | 0x02 | 0x42 | 0x35 | 0x36 |
 
-<a id="table-fumwelttabelle-5072a"></a>
 ### FUMWELTTABELLE_5072A
 
 Dimensions: 1 rows × 8 columns
@@ -6201,7 +6022,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x01 | 0x0B | 0x3A | 0x3B | 0x3C | 0x3D | 0x40 |
 
-<a id="table-fumwelttabelle-5073a"></a>
 ### FUMWELTTABELLE_5073A
 
 Dimensions: 1 rows × 3 columns
@@ -6210,7 +6030,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x3B | 0x3C |
 
-<a id="table-fumwelttabelle-5074a"></a>
 ### FUMWELTTABELLE_5074A
 
 Dimensions: 1 rows × 3 columns
@@ -6219,7 +6038,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x3B | 0x3C |
 
-<a id="table-fumwelttabelle-5a8ba"></a>
 ### FUMWELTTABELLE_5A8BA
 
 Dimensions: 1 rows × 6 columns
@@ -6228,7 +6046,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x0B | 0x02 | 0x42 | 0x35 | 0x36 |
 
-<a id="table-fumwelttabelle-cf30a"></a>
 ### FUMWELTTABELLE_CF30A
 
 Dimensions: 1 rows × 8 columns
@@ -6237,7 +6054,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x0D | 0x29 | 0x33 | 0x34 | 0x2E | 0x61 | 0x62 |
 
-<a id="table-fumwelttabelle-cf31a"></a>
 ### FUMWELTTABELLE_CF31A
 
 Dimensions: 1 rows × 8 columns
@@ -6246,7 +6062,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x0D | 0x2A | 0x33 | 0x34 | 0x2E | 0x61 | 0x62 |
 
-<a id="table-fumwelttabelle-cf32a"></a>
 ### FUMWELTTABELLE_CF32A
 
 Dimensions: 1 rows × 8 columns
@@ -6255,7 +6070,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x0D | 0x2B | 0x33 | 0x34 | 0x2E | 0x61 | 0x62 |
 
-<a id="table-fumwelttabelle-cf33a"></a>
 ### FUMWELTTABELLE_CF33A
 
 Dimensions: 1 rows × 8 columns
@@ -6264,7 +6078,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x0D | 0x2C | 0x33 | 0x34 | 0x2E | 0x61 | 0x62 |
 
-<a id="table-fumwelttabelle-5a52a"></a>
 ### FUMWELTTABELLE_5A52A
 
 Dimensions: 1 rows × 7 columns
@@ -6273,7 +6086,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x5F | 0x37 | 0x60 | 0x5E | 0x79 | 0x7A |
 
-<a id="table-fumwelttabelle-5a53a"></a>
 ### FUMWELTTABELLE_5A53A
 
 Dimensions: 1 rows × 8 columns
@@ -6282,7 +6094,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x5F | 0x37 | 0x60 | 0x5E | 0x79 | 0x7A | 0x87 |
 
-<a id="table-fumwelttabelle-5a54a"></a>
 ### FUMWELTTABELLE_5A54A
 
 Dimensions: 1 rows × 8 columns
@@ -6291,7 +6102,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x5F | 0x37 | 0x60 | 0x5E | 0x79 | 0x7A | 0x87 |
 
-<a id="table-fumwelttabelle-5a56a"></a>
 ### FUMWELTTABELLE_5A56A
 
 Dimensions: 1 rows × 8 columns
@@ -6300,7 +6110,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x0A | 0x0B | 0x86 | 0x5E | 0x60 | 0x02 | 0x87 |
 
-<a id="table-fumwelttabelle-5a58a"></a>
 ### FUMWELTTABELLE_5A58A
 
 Dimensions: 1 rows × 7 columns
@@ -6309,7 +6118,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x2E | 0x5F | 0xAF | 0x5E | 0x60 | 0x87 |
 
-<a id="table-fumwelttabelle-5a44a"></a>
 ### FUMWELTTABELLE_5A44A
 
 Dimensions: 1 rows × 4 columns
@@ -6318,7 +6126,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x4F | 0x2F | 0x7C |
 
-<a id="table-fumwelttabelle-5a45a"></a>
 ### FUMWELTTABELLE_5A45A
 
 Dimensions: 1 rows × 4 columns
@@ -6327,7 +6134,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x50 | 0x30 | 0x7D |
 
-<a id="table-fumwelttabelle-5027a"></a>
 ### FUMWELTTABELLE_5027A
 
 Dimensions: 1 rows × 3 columns
@@ -6336,7 +6142,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x02 | 0x8A |
 
-<a id="table-fumwelttabelle-5028a"></a>
 ### FUMWELTTABELLE_5028A
 
 Dimensions: 1 rows × 4 columns
@@ -6345,7 +6150,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x0D | 0x2D | 0x5D |
 
-<a id="table-fumwelttabelle-5029a"></a>
 ### FUMWELTTABELLE_5029A
 
 Dimensions: 1 rows × 3 columns
@@ -6354,7 +6158,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x4F | 0x2F |
 
-<a id="table-fumwelttabelle-5030a"></a>
 ### FUMWELTTABELLE_5030A
 
 Dimensions: 1 rows × 3 columns
@@ -6363,7 +6166,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x50 | 0x30 |
 
-<a id="table-fumwelttabelle-5a76a"></a>
 ### FUMWELTTABELLE_5A76A
 
 Dimensions: 1 rows × 3 columns
@@ -6372,7 +6174,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x0B | 0x3D |
 
-<a id="table-fumwelttabelle-5054a"></a>
 ### FUMWELTTABELLE_5054A
 
 Dimensions: 1 rows × 7 columns
@@ -6381,7 +6182,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x4D | 0x4E | 0x6A | 0xE6 | 0xE7 | 0xE8 |
 
-<a id="table-fumwelttabelle-5059a"></a>
 ### FUMWELTTABELLE_5059A
 
 Dimensions: 1 rows × 6 columns
@@ -6390,7 +6190,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x6A | 0x4D | 0x4E | 0x0A | 0x0B |
 
-<a id="table-fumwelttabelle-5060a"></a>
 ### FUMWELTTABELLE_5060A
 
 Dimensions: 1 rows × 6 columns
@@ -6399,7 +6198,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x6F | 0xB3 | 0xB4 | 0xB5 | 0xB6 |
 
-<a id="table-fumwelttabelle-5055a"></a>
 ### FUMWELTTABELLE_5055A
 
 Dimensions: 1 rows × 4 columns
@@ -6408,7 +6206,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x4C | 0x67 | 0x68 |
 
-<a id="table-fumwelttabelle-5a87d"></a>
 ### FUMWELTTABELLE_5A87D
 
 Dimensions: 1 rows × 5 columns
@@ -6417,7 +6214,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x7F | 0x80 | 0x81 | 0xAA |
 
-<a id="table-fumwelttabelle-5056a"></a>
 ### FUMWELTTABELLE_5056A
 
 Dimensions: 1 rows × 3 columns
@@ -6426,7 +6222,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x71 | 0x3D |
 
-<a id="table-fumwelttabelle-5a5ba"></a>
 ### FUMWELTTABELLE_5A5BA
 
 Dimensions: 1 rows × 8 columns
@@ -6435,7 +6230,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x86 | 0x87 | 0xA4 | 0xA5 | 0xA6 | 0x5E | 0x02 |
 
-<a id="table-fumwelttabelle-5a42a"></a>
 ### FUMWELTTABELLE_5A42A
 
 Dimensions: 1 rows × 6 columns
@@ -6444,7 +6238,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x8B | 0x8C | 0x2D | 0xAB | 0xAC |
 
-<a id="table-fumwelttabelle-5031a"></a>
 ### FUMWELTTABELLE_5031A
 
 Dimensions: 1 rows × 6 columns
@@ -6453,7 +6246,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x8B | 0x8C | 0x2D | 0xAB | 0xAD |
 
-<a id="table-fumwelttabelle-cf3ea"></a>
 ### FUMWELTTABELLE_CF3EA
 
 Dimensions: 1 rows × 6 columns
@@ -6462,7 +6254,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x51 | 0x31 | 0x32 | 0x61 | 0x62 |
 
-<a id="table-fumwelttabelle-5061a"></a>
 ### FUMWELTTABELLE_5061A
 
 Dimensions: 1 rows × 4 columns
@@ -6471,7 +6262,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0xE6 | 0xE7 | 0xE8 |
 
-<a id="table-fumwelttabelle-5131a"></a>
 ### FUMWELTTABELLE_5131A
 
 Dimensions: 1 rows × 7 columns
@@ -6480,7 +6270,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x8F | 0x90 | 0x93 | 0x8D | 0x91 | 0x83 |
 
-<a id="table-fumwelttabelle-5132a"></a>
 ### FUMWELTTABELLE_5132A
 
 Dimensions: 1 rows × 7 columns
@@ -6489,7 +6278,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x8F | 0x90 | 0x93 | 0x95 | 0x91 | 0x96 |
 
-<a id="table-fumwelttabelle-5132d"></a>
 ### FUMWELTTABELLE_5132D
 
 Dimensions: 1 rows × 3 columns
@@ -6498,7 +6286,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x92 | 0x94 |
 
-<a id="table-fumwelttabelle-5133a"></a>
 ### FUMWELTTABELLE_5133A
 
 Dimensions: 1 rows × 7 columns
@@ -6507,7 +6294,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x90 | 0xA1 | 0xA2 | 0xA3 | 0x9F | 0xA0 |
 
-<a id="table-fumwelttabelle-5134a"></a>
 ### FUMWELTTABELLE_5134A
 
 Dimensions: 1 rows × 8 columns
@@ -6516,7 +6302,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x98 | 0x99 | 0x9A | 0x9B | 0x93 | 0x9D | 0x9E |
 
-<a id="table-fehlertesteinlernkupplung"></a>
 ### FEHLERTESTEINLERNKUPPLUNG
 
 Dimensions: 15 rows × 2 columns
@@ -6539,7 +6324,6 @@ Dimensions: 15 rows × 2 columns
 | 0x15 | Adaption gültig |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttabelle-5a87a"></a>
 ### FUMWELTTABELLE_5A87A
 
 Dimensions: 1 rows × 3 columns
@@ -6548,7 +6332,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x01 | 0x02 |
 
-<a id="table-fumwelttabelle-5062a1"></a>
 ### FUMWELTTABELLE_5062A1
 
 Dimensions: 1 rows × 4 columns
@@ -6557,7 +6340,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0xE6 | 0xE7 | 0xE8 |
 
-<a id="table-fehlertesteinlernparksperrenmagnet"></a>
 ### FEHLERTESTEINLERNPARKSPERRENMAGNET
 
 Dimensions: 8 rows × 2 columns
@@ -6573,7 +6355,6 @@ Dimensions: 8 rows × 2 columns
 | 0x64 | Unbekannter Fehler |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttabelle-5137a"></a>
 ### FUMWELTTABELLE_5137A
 
 Dimensions: 1 rows × 6 columns
@@ -6582,7 +6363,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x02 | 0x0B | 0xB0 | 0xB1 | 0xB2 |
 
-<a id="table-fumwelttexte01"></a>
 ### FUMWELTTEXTE01
 
 Dimensions: 3 rows × 2 columns
@@ -6593,7 +6373,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Mit Anhänger |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte02"></a>
 ### FUMWELTTEXTE02
 
 Dimensions: 7 rows × 2 columns
@@ -6608,7 +6387,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Max |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte03"></a>
 ### FUMWELTTEXTE03
 
 Dimensions: 11 rows × 2 columns
@@ -6627,7 +6405,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Gangspringer |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte04"></a>
 ### FUMWELTTEXTE04
 
 Dimensions: 11 rows × 2 columns
@@ -6646,7 +6423,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Gangspringer |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte05"></a>
 ### FUMWELTTEXTE05
 
 Dimensions: 11 rows × 2 columns
@@ -6665,7 +6441,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Gangspringer |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte06"></a>
 ### FUMWELTTEXTE06
 
 Dimensions: 11 rows × 2 columns
@@ -6684,7 +6459,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Gangspringer |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte07"></a>
 ### FUMWELTTEXTE07
 
 Dimensions: 4 rows × 2 columns
@@ -6696,7 +6470,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Obere elektrische Grenze überschritten |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte08"></a>
 ### FUMWELTTEXTE08
 
 Dimensions: 4 rows × 2 columns
@@ -6708,7 +6481,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Obere elektrische Grenze überschritten |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte09"></a>
 ### FUMWELTTEXTE09
 
 Dimensions: 3 rows × 2 columns
@@ -6719,7 +6491,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Überstrom/Unterspannung |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte10"></a>
 ### FUMWELTTEXTE10
 
 Dimensions: 3 rows × 2 columns
@@ -6730,7 +6501,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Überstrom/Unterspannung |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte11"></a>
 ### FUMWELTTEXTE11
 
 Dimensions: 3 rows × 2 columns
@@ -6741,7 +6511,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Überstrom/Unterspannung |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte12"></a>
 ### FUMWELTTEXTE12
 
 Dimensions: 3 rows × 2 columns
@@ -6752,7 +6521,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler aktiv |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte13"></a>
 ### FUMWELTTEXTE13
 
 Dimensions: 13 rows × 2 columns
@@ -6773,7 +6541,6 @@ Dimensions: 13 rows × 2 columns
 | 0x1000 | Schutzziel 016 |
 | 0xFFFF | Undefiniert |
 
-<a id="table-fumwelttexte14"></a>
 ### FUMWELTTEXTE14
 
 Dimensions: 6 rows × 2 columns
@@ -6787,7 +6554,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0E | Manuell |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte15"></a>
 ### FUMWELTTEXTE15
 
 Dimensions: 5 rows × 2 columns
@@ -6800,7 +6566,6 @@ Dimensions: 5 rows × 2 columns
 | 0x08 | Anzeige D |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte16"></a>
 ### FUMWELTTEXTE16
 
 Dimensions: 7 rows × 2 columns
@@ -6815,7 +6580,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0500 | No Action |
 | 0XFF00 | Undefiniert |
 
-<a id="table-fumwelttexte17"></a>
 ### FUMWELTTEXTE17
 
 Dimensions: 3 rows × 2 columns
@@ -6826,7 +6590,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Unlocked |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte18"></a>
 ### FUMWELTTEXTE18
 
 Dimensions: 37 rows × 2 columns
@@ -6871,7 +6634,6 @@ Dimensions: 37 rows × 2 columns
 | 0x0080 | Gang R |
 | 0XFFFF | Undefiniert |
 
-<a id="table-fumwelttexte19"></a>
 ### FUMWELTTEXTE19
 
 Dimensions: 4 rows × 2 columns
@@ -6883,7 +6645,6 @@ Dimensions: 4 rows × 2 columns
 | 0x07 | Ungültig |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte20"></a>
 ### FUMWELTTEXTE20
 
 Dimensions: 4 rows × 2 columns
@@ -6895,7 +6656,6 @@ Dimensions: 4 rows × 2 columns
 | 0x07 | SV 3 |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte21"></a>
 ### FUMWELTTEXTE21
 
 Dimensions: 6 rows × 2 columns
@@ -6909,7 +6669,6 @@ Dimensions: 6 rows × 2 columns
 | 0x16 | SV3 Sollwert Fehler |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte22"></a>
 ### FUMWELTTEXTE22
 
 Dimensions: 3 rows × 2 columns
@@ -6920,7 +6679,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Signal not Valid |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte23"></a>
 ### FUMWELTTEXTE23
 
 Dimensions: 11 rows × 2 columns
@@ -6939,7 +6697,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Pl_init |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte24"></a>
 ### FUMWELTTEXTE24
 
 Dimensions: 6 rows × 2 columns
@@ -6953,7 +6710,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0E | M |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte25"></a>
 ### FUMWELTTEXTE25
 
 Dimensions: 6 rows × 2 columns
@@ -6967,7 +6723,6 @@ Dimensions: 6 rows × 2 columns
 | 0x000E | Sicherheitszeit Einlegen weil Tieftemperatur |
 | 0xFFFF | Undefiniert |
 
-<a id="table-fumwelttexte26"></a>
 ### FUMWELTTEXTE26
 
 Dimensions: 3 rows × 2 columns
@@ -6978,7 +6733,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02000000 | bestromt |
 | 0XFFFFFFFF | Undefiniert |
 
-<a id="table-fumwelttexte27"></a>
 ### FUMWELTTEXTE27
 
 Dimensions: 3 rows × 2 columns
@@ -6989,7 +6743,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00020000 | Auf Tank |
 | 0XFFFFFFFF | Undefiniert |
 
-<a id="table-fumwelttexte28"></a>
 ### FUMWELTTEXTE28
 
 Dimensions: 3 rows × 2 columns
@@ -7000,7 +6753,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00000200 | Auf Tank |
 | 0XFFFFFFFF | Undefiniert |
 
-<a id="table-fumwelttexte29"></a>
 ### FUMWELTTEXTE29
 
 Dimensions: 9 rows × 2 columns
@@ -7017,7 +6769,6 @@ Dimensions: 9 rows × 2 columns
 | 0x00000080 | Sicherheitszeit Einlegen |
 | 0xFFFFFFFF | Undefiniert |
 
-<a id="table-fumwelttexte30"></a>
 ### FUMWELTTEXTE30
 
 Dimensions: 8 rows × 2 columns
@@ -7033,7 +6784,6 @@ Dimensions: 8 rows × 2 columns
 | 0x0040 | Erhöhter Widerstand |
 | 0xFFFF | Undefiniert |
 
-<a id="table-fumwelttabelle-5137d"></a>
 ### FUMWELTTABELLE_5137D
 
 Dimensions: 1 rows × 3 columns
@@ -7042,7 +6792,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0xE0 | 0xE1 |
 
-<a id="table-fumwelttexte31"></a>
 ### FUMWELTTEXTE31
 
 Dimensions: 11 rows × 2 columns
@@ -7061,7 +6810,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0900 | Gangspringer |
 | 0xFFFF | Undefiniert |
 
-<a id="table-fumwelttexte32"></a>
 ### FUMWELTTEXTE32
 
 Dimensions: 11 rows × 2 columns
@@ -7080,7 +6828,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0009 | Gangspringer |
 | 0xFFFF | Undefiniert |
 
-<a id="table-fumwelttexte33"></a>
 ### FUMWELTTEXTE33
 
 Dimensions: 16 rows × 2 columns
@@ -7104,7 +6851,6 @@ Dimensions: 16 rows × 2 columns
 | 0x8000 | Trap_X1 |
 | 0xFFFF | Mehrere Zustände sind gleichzeitig aufgetreten |
 
-<a id="table-fumwelttexte34"></a>
 ### FUMWELTTEXTE34
 
 Dimensions: 4 rows × 2 columns
@@ -7116,7 +6862,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0003 | NMI + RAM Test |
 | 0xFFFF | Zustand nicht definiert |
 
-<a id="table-fumwelttabelle-5131d"></a>
 ### FUMWELTTABELLE_5131D
 
 Dimensions: 1 rows × 3 columns
@@ -7125,7 +6870,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x92 | 0x94 |
 
-<a id="table-fumwelttexte35"></a>
 ### FUMWELTTEXTE35
 
 Dimensions: 37 rows × 2 columns
@@ -7170,7 +6914,6 @@ Dimensions: 37 rows × 2 columns
 | 0x80 | Gang R |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte36"></a>
 ### FUMWELTTEXTE36
 
 Dimensions: 9 rows × 2 columns
@@ -7187,7 +6930,6 @@ Dimensions: 9 rows × 2 columns
 | 0x80 | Sicherheitszeit Einlegen |
 | 0xFF | Undefiniert |
 
-<a id="table-fumwelttexte37"></a>
 ### FUMWELTTEXTE37
 
 Dimensions: 11 rows × 2 columns
@@ -7206,7 +6948,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Pl_init |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttexte38"></a>
 ### FUMWELTTEXTE38
 
 Dimensions: 6 rows × 2 columns
@@ -7220,7 +6961,6 @@ Dimensions: 6 rows × 2 columns
 | 0x000E | M |
 | 0xFFFF | Undefiniert |
 
-<a id="table-fumwelttabelle-5055d"></a>
 ### FUMWELTTABELLE_5055D
 
 Dimensions: 1 rows × 3 columns
@@ -7229,7 +6969,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0xE4 | 0xE5 |
 
-<a id="table-fumwelttabelle-5056d"></a>
 ### FUMWELTTABELLE_5056D
 
 Dimensions: 1 rows × 3 columns
@@ -7238,7 +6977,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0xE4 | 0xE5 |
 
-<a id="table-fumwelttexte39"></a>
 ### FUMWELTTEXTE39
 
 Dimensions: 3 rows × 2 columns
@@ -7249,7 +6987,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | bestromt |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttabelle-5059d"></a>
 ### FUMWELTTABELLE_5059D
 
 Dimensions: 1 rows × 3 columns
@@ -7258,7 +6995,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0xE4 | 0xE5 |
 
-<a id="table-fumwelttabelle-5060d"></a>
 ### FUMWELTTABELLE_5060D
 
 Dimensions: 1 rows × 3 columns
@@ -7267,7 +7003,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0xE4 | 0x6B |
 
-<a id="table-fumwelttabelle-5054d"></a>
 ### FUMWELTTABELLE_5054D
 
 Dimensions: 1 rows × 3 columns
@@ -7276,7 +7011,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0xE4 | 0x74 |
 
-<a id="table-fumwelttabelle-5062a"></a>
 ### FUMWELTTABELLE_5062A
 
 Dimensions: 1 rows × 5 columns
@@ -7285,7 +7019,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x4B | 0x4C | 0x59 | 0x5A |
 
-<a id="table-fumwelttabelle-5138a"></a>
 ### FUMWELTTABELLE_5138A
 
 Dimensions: 1 rows × 8 columns
@@ -7294,7 +7027,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0x02 | 0x01 | 0x04 | 0x05 | 0x0A | 0x0B | 0x37 |
 
-<a id="table-fumwelttabelle-5057a"></a>
 ### FUMWELTTABELLE_5057A
 
 Dimensions: 1 rows × 7 columns
@@ -7303,7 +7035,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x4D | 0x4E | 0x6A | 0xE6 | 0xE7 | 0xE8 |
 
-<a id="table-fumwelttabelle-5057d"></a>
 ### FUMWELTTABELLE_5057D
 
 Dimensions: 1 rows × 3 columns
@@ -7312,7 +7043,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0xE4 | 0x74 |
 
-<a id="table-fumwelttabelle-5139a"></a>
 ### FUMWELTTABELLE_5139A
 
 Dimensions: 1 rows × 7 columns
@@ -7321,7 +7051,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x4C | 0x6A | 0x4D | 0x4E | 0x0A | 0x0B |
 
-<a id="table-fumwelttabelle-5129a"></a>
 ### FUMWELTTABELLE_5129A
 
 Dimensions: 1 rows × 7 columns
@@ -7330,7 +7059,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x6E | 0x6F | 0xB3 | 0xB4 | 0xB5 | 0xB6 |
 
-<a id="table-fumwelttexte40"></a>
 ### FUMWELTTEXTE40
 
 Dimensions: 8 rows × 2 columns
@@ -7346,7 +7074,6 @@ Dimensions: 8 rows × 2 columns
 | 0x0040 | Erhöhter Widerstand |
 | 0xFFFF | Undefiniert |
 
-<a id="table-fumwelttabelle-5a46a"></a>
 ### FUMWELTTABELLE_5A46A
 
 Dimensions: 1 rows × 5 columns
@@ -7355,7 +7082,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x3C | 0x5B | 0x17 | 0x45 |
 
-<a id="table-fumwelttabelle-5a47a"></a>
 ### FUMWELTTABELLE_5A47A
 
 Dimensions: 1 rows × 5 columns
@@ -7364,7 +7090,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x3C | 0x5C | 0x18 | 0x46 |
 
-<a id="table-fumwelttabelle-5a48a"></a>
 ### FUMWELTTABELLE_5A48A
 
 Dimensions: 1 rows × 5 columns
@@ -7373,7 +7098,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x5D | 0x0A | 0x0B | 0x47 |
 
-<a id="table-fumwelttabelle-5a4ba"></a>
 ### FUMWELTTABELLE_5A4BA
 
 Dimensions: 1 rows × 6 columns
@@ -7382,7 +7106,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x01 | 0x3A | 0x59 | 0x97 | 0x43 |
 
-<a id="table-fumwelttabelle-5a4ca"></a>
 ### FUMWELTTABELLE_5A4CA
 
 Dimensions: 1 rows × 6 columns
@@ -7391,7 +7114,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x01 | 0x3B | 0x5A | 0x98 | 0x44 |
 
-<a id="table-fumwelttabelle-5a55a"></a>
 ### FUMWELTTABELLE_5A55A
 
 Dimensions: 1 rows × 6 columns
@@ -7400,7 +7122,6 @@ Dimensions: 1 rows × 6 columns
 | --- | --- | --- | --- | --- | --- |
 | 5 | 0x3B | 0x5E | 0x0A | 0x0B | 0x48 |
 
-<a id="table-fumwelttabelle-5021a"></a>
 ### FUMWELTTABELLE_5021A
 
 Dimensions: 1 rows × 3 columns
@@ -7409,7 +7130,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x01 | 0x3A |
 
-<a id="table-fumwelttabelle-5022a"></a>
 ### FUMWELTTABELLE_5022A
 
 Dimensions: 1 rows × 3 columns
@@ -7418,7 +7138,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x01 | 0x3A |
 
-<a id="table-fumwelttabelle-5023a"></a>
 ### FUMWELTTABELLE_5023A
 
 Dimensions: 1 rows × 3 columns
@@ -7427,7 +7146,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x01 | 0x17 |
 
-<a id="table-fumwelttabelle-5024a"></a>
 ### FUMWELTTABELLE_5024A
 
 Dimensions: 1 rows × 3 columns
@@ -7436,7 +7154,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x01 | 0x17 |
 
-<a id="table-fumwelttabelle-5a84"></a>
 ### FUMWELTTABELLE_5A84
 
 Dimensions: 1 rows × 8 columns
@@ -7445,7 +7162,6 @@ Dimensions: 1 rows × 8 columns
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 | 0xF8 | 0xF9 | 0xFA | 0xFB | 0xFC | 0xFD | 0xFE |
 
-<a id="table-fumwelttexte41"></a>
 ### FUMWELTTEXTE41
 
 Dimensions: 9 rows × 2 columns
@@ -7462,7 +7178,6 @@ Dimensions: 9 rows × 2 columns
 | 0x02000000 | Checksumme n.i.O. und Default-Werte eingespielt |
 | 0XFFFFFFFF | Undefiniert |
 
-<a id="table-fumwelttexte42"></a>
 ### FUMWELTTEXTE42
 
 Dimensions: 3 rows × 2 columns
@@ -7473,7 +7188,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Checksumme i.O. |
 | 0XFF | Undefiniert |
 
-<a id="table-fumwelttabelle-5a88a"></a>
 ### FUMWELTTABELLE_5A88A
 
 Dimensions: 1 rows × 3 columns
@@ -7482,7 +7196,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x01 | 0x02 |
 
-<a id="table-fumwelttabelle-5a88d"></a>
 ### FUMWELTTABELLE_5A88D
 
 Dimensions: 1 rows × 5 columns
@@ -7491,7 +7204,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x7F | 0x80 | 0x81 | 0xAA |
 
-<a id="table-fumwelttabelle-cf29a"></a>
 ### FUMWELTTABELLE_CF29A
 
 Dimensions: 1 rows × 5 columns
@@ -7500,7 +7212,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0xBB | 0xBC | 0xBD | 0xBE |
 
-<a id="table-fumwelttexte18n"></a>
 ### FUMWELTTEXTE18N
 
 Dimensions: 257 rows × 2 columns
@@ -7765,7 +7476,6 @@ Dimensions: 257 rows × 2 columns
 | 0x00FF | 255 |
 | 0xFFFF | Undefiniert |
 
-<a id="table-fumwelttexte35n"></a>
 ### FUMWELTTEXTE35N
 
 Dimensions: 256 rows × 2 columns
@@ -8029,7 +7739,6 @@ Dimensions: 256 rows × 2 columns
 | 0xFE | 254 |
 | 0xFF | 255 |
 
-<a id="table-statusklackern"></a>
 ### STATUSKLACKERN
 
 Dimensions: 3 rows × 2 columns

@@ -32,7 +32,6 @@
 - [SETZEN_E39_2_GLAS_FIXIERT](#job-setzen-e39-2-glas-fixiert) - fixiert die Codierung auf E39/2 Glas
 - [SETZEN_SONDERFAHRZEUG_NICHT_FIXIERT](#job-setzen-sonderfahrzeug-nicht-fixiert) - setzt die Codierung auf Sonderfahrzeug loescht Fixierung
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -51,7 +50,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer SHD
@@ -88,7 +85,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -106,7 +102,6 @@ _No arguments._
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-shd"></a>
 ### STATUS_DIGITAL_SHD
 
 Status der Digitalsignale des neuen SHD fuer E39 ab 03/98 (Ein-/Ausgaenge) Der Wertebereich ist bei allen Results: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -145,7 +140,6 @@ _No arguments._
 | STAT_BUSAI_LOCK | int | Autoinit ueber Bus gesperrt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog-shd"></a>
 ### STATUS_ANALOG_SHD
 
 Status der Analogsignale des neuen SHD fuer E39 ab 03/98
@@ -169,7 +163,6 @@ _No arguments._
 | STAT_U_BATT_EINH | string | Einheit: Volt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital-shd"></a>
 ### STEUERN_DIGITAL_SHD
 
 Ansteuern eines digitalen Ein- oder Ausgangs des neuen SHD fuer E39 ab 03/98
@@ -189,7 +182,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des neuen SHD fuer E39 ab 03/98
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-bytes-shd"></a>
 ### STATUS_BYTES_SHD
 
 Status aller Signale des Peripheriemoduls SHD Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -204,7 +196,6 @@ _No arguments._
 | STAT_DATEN | binary | 10 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-start-autoinit"></a>
 ### STEUERN_START_AUTOINIT
 
 Autoinit starten (SHD E39 ab 03/98)
@@ -218,7 +209,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-pruefmodus-freigeben"></a>
 ### STEUERN_PRUEFMODUS_FREIGEBEN
 
 Pruefmodus freigeben (SHD E39 ab 03/98)
@@ -232,7 +222,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-setzen-e39-2-glas-fixiert"></a>
 ### SETZEN_E39_2_GLAS_FIXIERT
 
 fixiert die Codierung auf E39/2 Glas
@@ -247,7 +236,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-setzen-sonderfahrzeug-nicht-fixiert"></a>
 ### SETZEN_SONDERFAHRZEUG_NICHT_FIXIERT
 
 setzt die Codierung auf Sonderfahrzeug loescht Fixierung
@@ -271,7 +259,6 @@ _No arguments._
 - [ROVERPARTNUMPREFIX](#table-roverpartnumprefix) (21 × 2)
 - [BITS_SHD](#table-bits-shd) (5 × 5)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -292,7 +279,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 62 rows × 2 columns
@@ -362,7 +348,6 @@ Dimensions: 62 rows × 2 columns
 | 0x61 | Marquardt |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -391,7 +376,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-bits-shd"></a>
 ### BITS_SHD
 
 Dimensions: 5 rows × 5 columns

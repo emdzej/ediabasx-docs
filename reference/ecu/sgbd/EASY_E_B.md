@@ -37,7 +37,6 @@
 - [VARIANTE_LESEN](#job-variante-lesen) - SG-Variante aus Zelle 0x0124 auslesen
 - [SG_STATUS_LESEN](#job-sg-status-lesen) - auslesen der Systemstati aus dem Steuergeraet
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +55,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer B_SM46 automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -69,7 +67,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer das B_SM46
@@ -93,7 +90,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -115,7 +111,6 @@ _No arguments._
 | F_UW_ANZ | int | immer 0 |
 | F_HEX_CODE | binary | Hexdaten des Fehlers (2 Bytes) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -129,7 +124,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -142,7 +136,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrechterhalten
@@ -155,7 +148,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -176,7 +168,6 @@ Lesen des internen Speichers
 | DATENFELD | binary | Ergebnisfeld mit 1 bis 16 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des internen Speichers
@@ -195,7 +186,6 @@ Beschreiben des internen Speichers
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-1-lesen"></a>
 ### STATUS_1_LESEN
 
 Stati der Easy-Entry
@@ -215,7 +205,6 @@ _No arguments._
 | STAT_POS_SLV_WERT | long |  |
 | STAT_SCHALTER_SITZLAENGE | int | 0=aus,1=vor,2=zurueck |
 
-<a id="job-status-2-lesen"></a>
 ### STATUS_2_LESEN
 
 Stati des B_SM46
@@ -231,7 +220,6 @@ _No arguments._
 | STAT_SPANNUNG_KL30_WERT | real | Batterie-Spannung am SG |
 | STAT_SPANNUNGEN_EINH | string | Einheit der Spannung |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Ansteuern eines digitalen Einganges
@@ -248,7 +236,6 @@ Ansteuern eines digitalen Einganges
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -267,7 +254,6 @@ _No arguments._
 | LOESCHDATUM_KW | int | KW der Fehlerspeicherloeschung fuer Kundendienst |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -288,7 +274,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -302,7 +287,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-variante-lesen"></a>
 ### VARIANTE_LESEN
 
 SG-Variante aus Zelle 0x0124 auslesen
@@ -317,7 +301,6 @@ _No arguments._
 | SG_VARIANTE | string | Variante im Klartext |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sg-status-lesen"></a>
 ### SG_STATUS_LESEN
 
 auslesen der Systemstati aus dem Steuergeraet
@@ -349,7 +332,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 - [STEUERN](#table-steuern) (4 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -370,7 +352,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 56 rows × 2 columns
@@ -434,7 +415,6 @@ Dimensions: 56 rows × 2 columns
 | 0x55 | BHTC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -463,7 +443,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 15 rows × 2 columns
@@ -486,7 +465,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0D | Steuergeraetefehler, Motorbruecke defekt |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -497,7 +475,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 4 rows × 3 columns

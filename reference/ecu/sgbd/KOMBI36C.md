@@ -59,7 +59,6 @@
 - [SIA_ZEIT_MAX_USA](#job-sia-zeit-max-usa) - Umkodierung der SIA
 - [SERVICE_STATUS](#job-service-status)
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Kombi 36 CAN
@@ -72,7 +71,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -90,7 +88,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -116,7 +113,6 @@ _No arguments._
 | ID_AENDERUNGSINDEX | int | Aenderungsindex |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-aif-gwsz-lesen"></a>
 ### AIF_GWSZ_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen
@@ -132,7 +128,6 @@ _No arguments._
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-aif-fg-nr-lesen"></a>
 ### AIF_FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -147,7 +142,6 @@ _No arguments._
 | AIF_FG_NR | string | Fahrgestellnummer |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-aif-sia-daten-lesen"></a>
 ### AIF_SIA_DATEN_LESEN
 
 Anwenderinfofeld Block 3 auslesen
@@ -192,7 +186,6 @@ _No arguments._
 | STAT_ANZAHL_OELWECHSEL_WERT | int | Anzahl erfolgter Oelwechsel aus RAM |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-aif-zentralcode-lesen"></a>
 ### AIF_ZENTRALCODE_LESEN
 
 Anwenderinfofeld Block 4 auslesen
@@ -210,7 +203,6 @@ _No arguments._
 | STAT_ZENTRALCODE_ANLIEFERCODIERUNG | int | True falls der Zentralcode der Anliefercodierung entspricht |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-aif-datum-fz-lesen"></a>
 ### AIF_DATUM_FZ_LESEN
 
 Auslesen des Herstelldatums aus dem Anwenderinfofeld
@@ -225,7 +217,6 @@ _No arguments._
 | DATUM_FZ | string | Herstelldatum des FZ |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-verriegelung-lesen"></a>
 ### VERRIEGELUNG_LESEN
 
 Auslesen der Verriegelungsbits aus dem EEPROM
@@ -240,7 +231,6 @@ _No arguments._
 | STAT_VERRIEGELUNG_EIN | int | 1 wenn EEPROM schreibgeschuetzt, 0 wenn EEPROM nicht verriegelt |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-tacho-endwert-lesen"></a>
 ### TACHO_ENDWERT_LESEN
 
 Auslesen des Tacho-Endausschlags aus dem EEPROM
@@ -257,7 +247,6 @@ _No arguments._
 | TACHO_ENDWERT_EINH | string | Einheit des Tacho-Endwerts: [km/h] |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicherinhalt aus SG lesen
@@ -289,7 +278,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -302,7 +290,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 RAM-Speicher auslesen
@@ -322,7 +309,6 @@ RAM-Speicher auslesen
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | DATEN | binary | Datenfeld |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 EEPROM-Daten auslesen
@@ -341,7 +327,6 @@ EEPROM-Daten auslesen
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | DATEN | binary | Datenfeld |
 
-<a id="job-dpram-lesen"></a>
 ### DPRAM_LESEN
 
 DPRAM des CAN-Controllers auslesen
@@ -360,7 +345,6 @@ DPRAM des CAN-Controllers auslesen
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | DATEN | binary | Datenfeld |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Eingangs- und Ausgangsstati lesen
@@ -385,7 +369,6 @@ _No arguments._
 | STAT_SIA_RESET_EIN | int | 1, wenn "TRUE", 0, wenn "FALSE" |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 Spezielle analoge Eingaenge lesen
@@ -421,7 +404,6 @@ _No arguments._
 | STAT_KUEHLMITTELTEMP_CAN_EINH | string | Einheit [ADC-WERT] |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-status-tankinhalt-lesen"></a>
 ### STATUS_TANKINHALT_LESEN
 
 Tankinhalt aus RAM lesen
@@ -439,7 +421,6 @@ _No arguments._
 | STAT_TANKINHALT_ANZEIGE_EINH | string | Einheit Tankinhalt gesamt: "Liter" |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-steuern-anzeige"></a>
 ### STEUERN_ANZEIGE
 
 Anzeigenkomponenten steuern
@@ -458,7 +439,6 @@ Anzeigenkomponenten steuern
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-leuchte"></a>
 ### STEUERN_LEUCHTE
 
 Leuchten in der Anzeigeeinheit steuern
@@ -477,7 +457,6 @@ Leuchten in der Anzeigeeinheit steuern
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-gong3"></a>
 ### STEUERN_GONG3
 
 Ausgang Gong T3 ansteuern
@@ -491,7 +470,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-schnarre"></a>
 ### STEUERN_SCHNARRE
 
 Schnarre (Relais) einschalten
@@ -505,7 +483,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-sia-gwsz-reset"></a>
 ### SIA_GWSZ_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige u. des GWSZ Es koennen 1 bis 4 Parameter uebergeben werden.
@@ -526,7 +503,6 @@ Ruecksetzen der Service-Intervall-Anzeige u. des GWSZ Es koennen 1 bis 4 Paramet
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | TELEGRAMM | binary | Telegram an SG |
 
-<a id="job-steuern-tacho-a"></a>
 ### STEUERN_TACHO_A
 
 TACHO_A ansteuern
@@ -544,7 +520,6 @@ TACHO_A ansteuern
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Default pruefstempel_lesen job
@@ -561,7 +536,6 @@ _No arguments._
 | BYTE3 | int | Pruefstempel Datenbyte3 |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -581,7 +555,6 @@ Beschreiben des Pruefstempels
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -594,7 +567,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -607,7 +579,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -620,7 +591,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Fortsetzen der Diagnose
@@ -633,7 +603,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -646,7 +615,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-software-reset"></a>
 ### SOFTWARE_RESET
 
 Kombi loest selbststaendig einen Reset aus
@@ -659,7 +627,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-status-can-motordrehzahl-lesen"></a>
 ### STATUS_CAN_MOTORDREHZAHL_LESEN
 
 DUAL PORT RAM des CAN-Controllers auslesen und Motordrehzahl ausgeben
@@ -675,7 +642,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_EINH | string | Einheit [U/min] |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-status-can-kuehlmitteltemp-lesen"></a>
 ### STATUS_CAN_KUEHLMITTELTEMP_LESEN
 
 DUAL PORT RAM des CAN-Controllers auslesen Kuehlmitteltemperatur u. Status der Kuehlmitteltemperaturleuchte ausgeben
@@ -691,7 +657,6 @@ _No arguments._
 | STAT_KUEHLMITTELTEMP_EINH | string | Einheit [Grad Celsius] |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-status-can-getriebeinfo-lesen"></a>
 ### STATUS_CAN_GETRIEBEINFO_LESEN
 
 DUAL PORT RAM des CAN-Controllers auslesen Zielgang, Positionswaehlhebelanzeige, Programminformations- anzeige und Stoeranzeige ausgeben
@@ -713,7 +678,6 @@ _No arguments._
 | STAT_L_GETR_STEUERUNG_TEXT | string | gibt Zustand der Getriebesteuerung an: Getriebenotprogramm ein |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-status-can-einspritzmenge-lesen"></a>
 ### STATUS_CAN_EINSPRITZMENGE_LESEN
 
 DUAL PORT RAM des CAN-Controllers auslesen und Einspritzmenge ausgeben
@@ -729,7 +693,6 @@ _No arguments._
 | STAT_EINSPRITZMENGE_EINH | string | Einheit [ul] |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-status-can-signale-lesen"></a>
 ### STATUS_CAN_SIGNALE_LESEN
 
 DUAL PORT RAM des CAN-Controllers auslesen und Kontrollsignale ausgeben
@@ -761,7 +724,6 @@ _No arguments._
 | STAT_S_KLIMAKOMPRESSOR_EIN | int | 1, wenn "TRUE", 0, wenn "FALSE" |
 | STAT_S_KLIMABEREITSCHAFT_EIN | int | 1, wenn "TRUE", 0, wenn "FALSE" |
 
-<a id="job-sia-zeit-max-usa"></a>
 ### SIA_ZEIT_MAX_USA
 
 Umkodierung der SIA
@@ -774,7 +736,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-service-status"></a>
 ### SERVICE_STATUS
 
 _No arguments._
@@ -807,7 +768,6 @@ _No arguments._
 - [ZEITINSPINFO](#table-zeitinspinfo) (4 × 2)
 - [SERVICEINFO](#table-serviceinfo) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -822,7 +782,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 30 rows × 2 columns
@@ -860,7 +819,6 @@ Dimensions: 30 rows × 2 columns
 | 0x29 | DENSO |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-getriebetypen"></a>
 ### GETRIEBETYPEN
 
 Dimensions: 3 rows × 2 columns
@@ -871,7 +829,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Automatikgetriebe |
 | 0xFF | unbekannte Getriebeart |
 
-<a id="table-ganginfo"></a>
 ### GANGINFO
 
 Dimensions: 9 rows × 2 columns
@@ -888,7 +845,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Rueckwaertsgang |
 | 0xFF | unbekannte Getriebeinfo |
 
-<a id="table-waehlhebelinfo"></a>
 ### WAEHLHEBELINFO
 
 Dimensions: 12 rows × 2 columns
@@ -908,7 +864,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A | 6 |
 | 0xFF | unbekannte Waehlhebelinfo |
 
-<a id="table-programminfo"></a>
 ### PROGRAMMINFO
 
 Dimensions: 7 rows × 2 columns
@@ -923,7 +878,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Anzeige aus |
 | 0xFF | unbekannte Programminfo |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -950,7 +904,6 @@ Dimensions: 19 rows × 2 columns
 | 0xFB | keine CAN ID EGS1 |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -966,7 +919,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-komponenten"></a>
 ### KOMPONENTEN
 
 Dimensions: 16 rows × 2 columns
@@ -990,7 +942,6 @@ Dimensions: 16 rows × 2 columns
 | alle | 0x20 |
 | FEHLER | 0xFF |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 5 rows × 2 columns
@@ -1003,7 +954,6 @@ Dimensions: 5 rows × 2 columns
 | GWSZ_RESET | 0x08 |
 | FEHLER | 0x00 |
 
-<a id="table-zeitinspinfo"></a>
 ### ZEITINSPINFO
 
 Dimensions: 4 rows × 2 columns
@@ -1015,7 +965,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Keine Zeitinspektion durchfuehren |
 | 0xFF | Unbekannte Anzeigevorgabe |
 
-<a id="table-serviceinfo"></a>
 ### SERVICEINFO
 
 Dimensions: 3 rows × 2 columns

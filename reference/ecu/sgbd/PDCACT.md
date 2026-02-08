@@ -42,7 +42,6 @@
 - [C_C_LESEN](#job-c-c-lesen) - Codierdaten lesen
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -61,7 +60,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -85,7 +83,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer PDC
@@ -98,7 +95,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen bedingtes High-Konzept nach Lastenheft Codierung/Diagnose Die Fehlerspeichercodes sind willkuerlich vergeben Fehler stehen immer an der gleichen Stelle
@@ -129,7 +125,6 @@ _No arguments._
 | F_ART6_NR | int | Index der 6. Fehlerart |
 | F_ART6_TEXT | string | 6. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -142,7 +137,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -161,7 +155,6 @@ Lesen des internen Speichers
 | DATEN | binary |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-cod-lesen-variante"></a>
 ### COD_LESEN_VARIANTE
 
 Auslesen der Codiervariante der PDC aktiv
@@ -210,7 +203,6 @@ _No arguments._
 | COD_WEGKENNZAHL | int | 0 - 8160 Imp/sek (Byte * 32) |
 | COD_VERZOEGERUNG_RUECKFAHRGONG | real | 0 - 25,5 sek (Byte * 0,1) |
 
-<a id="job-cod-lesen-schwelle"></a>
 ### COD_LESEN_SCHWELLE
 
 Auslesen der codierten Schwellwerte der PDC aktiv
@@ -241,7 +233,6 @@ Auslesen der codierten Schwellwerte der PDC aktiv
 | COD_SCHWELLE_90MS | int | Schwellenwert ab 9 ms |
 | COD_FLAGS | int |  |
 
-<a id="job-cod-lesen-checksum"></a>
 ### COD_LESEN_CHECKSUM
 
 Auslesen der Codierchecksummen
@@ -259,7 +250,6 @@ _No arguments._
 | COD_CHKSUM_V_ECKEN | int |  |
 | COD_CHKSUM_V_MITTE | int |  |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Status der I/O Ports lesen
@@ -284,7 +274,6 @@ _No arguments._
 | STAT_DIAG_FUNKTIONSANZEIGE | int |  |
 | STAT_KLEMME_15 | int |  |
 
-<a id="job-steuern-io-status"></a>
 ### STEUERN_IO_STATUS
 
 Ansteuern von den I/O Stati
@@ -301,7 +290,6 @@ Ansteuern von den I/O Stati
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-ausschwingzeit-lesen"></a>
 ### STATUS_AUSSCHWINGZEIT_LESEN
 
 AUSSCHWINGZEIT lesen
@@ -323,7 +311,6 @@ _No arguments._
 | STAT_AUSSCHWING_T_VML_WERT | int | Ausschwingzeit vorne mitte links |
 | STAT_AUSSCHWING_T_VMR_WERT | int | Ausschwingzeit vorne mitte rechts |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -341,7 +328,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -362,7 +348,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-weg-v-mode-lesen"></a>
 ### STATUS_WEG_V_MODE_LESEN
 
 Status des Steuergeraets lesen
@@ -404,7 +389,6 @@ _No arguments._
 | STAT_ABSCHALTMELDUNG | int | 0 oder 1 |
 | STAT_TASTERMELDUNG | int | 0 oder 1 |
 
-<a id="job-status-messwerte-lesen"></a>
 ### STATUS_MESSWERTE_LESEN
 
 Messwerte direkt und indirekt lesen
@@ -438,7 +422,6 @@ _No arguments._
 | STAT_WEG_VR_WERT | int | Abstand vorne rechts |
 | STAT_WEG_EINH | string | Einheit cm fuer Abstaende |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrechterhalten
@@ -451,7 +434,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -464,7 +446,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -479,7 +460,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -497,7 +477,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -515,7 +494,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -544,7 +522,6 @@ Codierdaten schreiben und verifizieren
 - [FARTMATRIX](#table-fartmatrix) (18 × 13)
 - [IO_STATUS](#table-io-status) (8 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -565,7 +542,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -649,7 +625,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -678,7 +653,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -705,7 +679,6 @@ Dimensions: 19 rows × 2 columns
 | 0x28 | Mikrocomputer |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -731,7 +704,6 @@ Dimensions: 18 rows × 2 columns
 | 0x10 | sporadischer Fehler |
 | 0xFF | -- |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 18 rows × 13 columns
@@ -757,7 +729,6 @@ Dimensions: 18 rows × 13 columns
 | 0x27 | 0x00 | 0x07 | 0x00 | 0x08 | 0x00 | 0x09 | 0xFF | 0xFF | 0x00 | 0x0A | 0x00 | 0x0B |
 | 0x28 | 0x00 | 0x0C | 0x00 | 0x0D | 0x00 | 0x0E | 0xFF | 0xFF | 0x00 | 0x0F | 0x00 | 0x10 |
 
-<a id="table-io-status"></a>
 ### IO_STATUS
 
 Dimensions: 8 rows × 2 columns

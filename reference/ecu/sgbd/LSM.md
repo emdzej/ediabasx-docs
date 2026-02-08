@@ -28,7 +28,6 @@
 - [MODELL_COD_LESEN](#job-modell-cod-lesen) - Auslesen der MODELL-Codierung -- aus RAM und EEPROM
 - [MODELL_COD_SCHREIBEN](#job-modell-cod-schreiben) - Schreiben der MODELL-Codierung
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -46,7 +45,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -76,7 +73,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_PP_NR | int | Pruefplannummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -94,7 +90,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -107,7 +102,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -120,7 +114,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-modell-cod-lesen"></a>
 ### MODELL_COD_LESEN
 
 Auslesen der MODELL-Codierung -- aus RAM und EEPROM
@@ -134,7 +127,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | MODELL_COD | string | Liefert: E31_CODIERT od. E32_34_CODIERT |
 
-<a id="job-modell-cod-schreiben"></a>
 ### MODELL_COD_SCHREIBEN
 
 Schreiben der MODELL-Codierung
@@ -158,7 +150,6 @@ Schreiben der MODELL-Codierung
 - [FORTTEXTE](#table-forttexte) (32 × 3)
 - [MODELL_COD](#table-modell-cod) (2 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 32 rows × 3 columns
@@ -198,7 +189,6 @@ Dimensions: 32 rows × 3 columns
 | 0x21 | 0x10 | Relaisueberwachung |
 | 0x00 | 0x00 | unbekannte Fehlerart |
 
-<a id="table-modell-cod"></a>
 ### MODELL_COD
 
 Dimensions: 2 rows × 2 columns

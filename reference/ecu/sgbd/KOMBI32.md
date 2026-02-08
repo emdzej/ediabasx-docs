@@ -31,7 +31,6 @@
 - [AGS_COD_LESEN](#job-ags-cod-lesen) - Auslesen der AGS-Codierung
 - [AGS_COD_SCHREIBEN](#job-ags-cod-schreiben) - Schreiben der AGS-Codierung
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -44,7 +43,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -62,7 +60,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -78,7 +75,6 @@ _No arguments._
 | ID_SW_NR | string | Softwarenummer |
 | ID_PP_NR | string | Pruefplannummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -96,7 +92,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -109,7 +104,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -122,7 +116,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 Ruecksetzen des Gesamtwegstreckenzaehlers
@@ -135,7 +128,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -155,7 +147,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-fg-nr-lesen"></a>
 ### FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -169,7 +160,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | FG_NR | string | Fahrgestellnummer |
 
-<a id="job-ags-cod-lesen"></a>
 ### AGS_COD_LESEN
 
 Auslesen der AGS-Codierung
@@ -183,7 +173,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | AGS_COD | string | Liefert: AGS_CODIERT od. AGS_NICHT_CODIERT |
 
-<a id="job-ags-cod-schreiben"></a>
 ### AGS_COD_SCHREIBEN
 
 Schreiben der AGS-Codierung
@@ -204,7 +193,6 @@ _No arguments._
 - [SIARESET](#table-siareset) (4 × 2)
 - [AGS_COD](#table-ags-cod) (2 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 6 rows × 3 columns
@@ -218,7 +206,6 @@ Dimensions: 6 rows × 3 columns
 | 0x03 | 0x04 | Tachoprogrammierung |
 | 0x05 | 0x05 | Geschwindigkeitslimit |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 4 rows × 2 columns
@@ -230,7 +217,6 @@ Dimensions: 4 rows × 2 columns
 | AG_OEL_RESET | 0x03 |
 | ZEIT_RESET | 0x04 |
 
-<a id="table-ags-cod"></a>
 ### AGS_COD
 
 Dimensions: 2 rows × 2 columns

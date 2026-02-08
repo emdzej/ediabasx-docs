@@ -34,7 +34,6 @@
 - [STEUERN_DLE_ODP](#job-steuern-dle-odp) - Datenverbindung für DLE II öffnen
 - [STEUERN_DLE_SID](#job-steuern-dle-sid) - Service ID für DLE II setzen Der Service ID String wird von der DLE II automatisch Header und Daten eingefügt
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -53,7 +52,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 _No arguments._
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-status-dle-version"></a>
 ### STATUS_DLE_VERSION
 
 Feststellen, ob eine DLE vorhanden ist und Versionsstring zurückliefern Diese Funktion ist die Einzige, die mit einem Interface ohne DLE aufgerufen werden darf, alle Anderen bewirken ohne DLE einen Abbruch von EDIABAS
@@ -80,7 +77,6 @@ _No arguments._
 | VERSION | string | Versionsstring in der Form <MAJOR>.<MINOR> |
 | _TEL_ANTWORT | binary | Antwort des OPPS |
 
-<a id="job-steuern-dle-reset"></a>
 ### STEUERN_DLE_RESET
 
 DLE Rücksetzen: Senden und DNMT/TP stoppen, Ringpuffer löschen
@@ -94,7 +90,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antworten des OPPS |
 
-<a id="job-steuern-tp-intervall"></a>
 ### STEUERN_TP_INTERVALL
 
 Intervall für Tester Present setzen
@@ -112,7 +107,6 @@ Intervall für Tester Present setzen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antworten des OPPS |
 
-<a id="job-steuern-dle-header"></a>
 ### STEUERN_DLE_HEADER
 
 Headerinformationen setzen
@@ -132,7 +126,6 @@ Headerinformationen setzen
 | DLE_KOMMANDO | binary | Kommando an OPPS |
 | _TEL_ANTWORT | binary | Antworten des OPPS |
 
-<a id="job-steuern-dle-ioantwort"></a>
 ### STEUERN_DLE_IOANTWORT
 
 Vergleichstelegramm  setzen
@@ -153,7 +146,6 @@ Vergleichstelegramm  setzen
 | _TEL_KOMMANDOM | binary | Auftrag für Maske |
 | _TEL_ANTWORT | binary | Antworten des OPPS |
 
-<a id="job-steuern-dle-tp"></a>
 ### STEUERN_DLE_TP
 
 Tester Present ein / ausschalten
@@ -171,7 +163,6 @@ Tester Present ein / ausschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antworten des OPPS |
 
-<a id="job-steuern-dle-laden"></a>
 ### STEUERN_DLE_LADEN
 
 Daten in den Ringpuffer laden
@@ -194,7 +185,6 @@ Daten in den Ringpuffer laden
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antworten des OPPS |
 
-<a id="job-steuern-dle-bufferclear"></a>
 ### STEUERN_DLE_BUFFERCLEAR
 
 Ringpuffer löschen
@@ -208,7 +198,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des OPPS |
 
-<a id="job-status-dle"></a>
 ### STATUS_DLE
 
 DLE Status holen
@@ -227,7 +216,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antworten des OPPS |
 
-<a id="job-wait-for-dle"></a>
 ### WAIT_FOR_DLE
 
 Warten bis die DLE alle Blocks geschrieben hat
@@ -246,7 +234,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antworten des OPPS |
 
-<a id="job-steuern-dle-odp"></a>
 ### STEUERN_DLE_ODP
 
 Datenverbindung für DLE II öffnen
@@ -262,7 +249,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des OPPS |
 
-<a id="job-steuern-dle-sid"></a>
 ### STEUERN_DLE_SID
 
 Service ID für DLE II setzen Der Service ID String wird von der DLE II automatisch Header und Daten eingefügt

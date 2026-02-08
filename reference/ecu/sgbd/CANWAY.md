@@ -39,7 +39,6 @@
 - [STATUS_LESEN](#job-status-lesen) - Lesen eines oder mehrerer Stati $22 ReadDataByCommonIdentifier
 - [STEUERN](#job-steuern) - Vorgeben eines Status $2E WriteDataByCommonIdentifier
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -58,7 +57,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -71,7 +69,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -87,7 +84,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -104,7 +100,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -137,7 +132,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -164,7 +158,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -206,7 +199,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -225,7 +217,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -243,7 +234,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -264,7 +254,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -285,7 +274,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -305,7 +293,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -323,7 +310,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-status"></a>
 ### _STATUS
 
 Auslesen der Stati nur fuer Entwicklung !!! KWP: $22   ReadDataByIdentifier KWP: $Fxxx CanWay-spezifischer Bereich (für alle Varianten)
@@ -342,7 +328,6 @@ Auslesen der Stati nur fuer Entwicklung !!! KWP: $22   ReadDataByIdentifier KWP:
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | INBUF | binary |  |
 
-<a id="job-steuern"></a>
 ### _STEUERN
 
 Vorgeben von Digital-Ausgaengen nur fuer Entwicklung !!! KWP: $2E   WriteDataByCommonIdentifier service KWP: $Fxxx CanWay-spezifischer Bereich (für alle Varianten)
@@ -360,7 +345,6 @@ Vorgeben von Digital-Ausgaengen nur fuer Entwicklung !!! KWP: $2E   WriteDataByC
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-stat-cw-version"></a>
 ### STAT_CW_VERSION
 
 Auslesen der CanWay-Versionsinfo nur fuer Entwicklung !!! KWP  : $22   ReadDataByIdentifier KWP  : $Fxxx SG-spezifischer Bereich
@@ -377,7 +361,6 @@ _No arguments._
 | STAT_SW_VERSION | string | die im SG abgelegte SW_Versonsinformation |
 | INBUF | binary | Rohdaten |
 
-<a id="job-flash-cw"></a>
 ### FLASH_CW
 
 Flash Daten schreiben XXL-Format Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -397,7 +380,6 @@ Flash Daten schreiben XXL-Format Standard Flashjob KWP2000: $36 TransferData Mod
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati $22 ReadDataByCommonIdentifier
@@ -416,7 +398,6 @@ Lesen eines oder mehrerer Stati $22 ReadDataByCommonIdentifier
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _REQUEST | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status $2E WriteDataByCommonIdentifier
@@ -492,7 +473,6 @@ Vorgeben eines Status $2E WriteDataByCommonIdentifier
 - [ARG_0XF126](#table-arg-0xf126) (3 × 12)
 - [ARG_0XF132](#table-arg-0xf132) (2 × 12)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -505,7 +485,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -608,7 +587,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 137 rows × 2 columns
@@ -753,7 +731,6 @@ Dimensions: 137 rows × 2 columns
 | 0xBE | Schaeffler Technologies |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -775,7 +752,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -800,7 +776,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -812,7 +787,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -827,7 +801,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -853,7 +826,6 @@ Dimensions: 18 rows × 2 columns
 | 0xA218 | Fensterheber: Taster BFT Unterbrechung |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -868,7 +840,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -877,7 +848,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -892,7 +862,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -901,7 +870,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 6 rows × 2 columns
@@ -915,7 +883,6 @@ Dimensions: 6 rows × 2 columns
 | ?18? | ERROR_ECU_RESPONSE_NO_STRING_END_CHAR |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 5 rows × 2 columns
@@ -928,7 +895,6 @@ Dimensions: 5 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 15 rows × 16 columns
@@ -951,7 +917,6 @@ Dimensions: 15 rows × 16 columns
 | PGO_AUSSENBELEUCHTUNG | 0xF126 | - | Gibt den Status der Aussenbeleuchtung aus oder steuert diese an. | - | - | - | - | - | - | - | - | - | 2E;22 | ARG_0xF126 | RES_0xF126 |
 | PGO_SUMMER_KOMBI | 0xF132 | - | Steuert den Summer im Kombi an. | - | - | - | - | - | - | - | - | - | 2E | ARG_0xF132 | - |
 
-<a id="table-tab-einaus"></a>
 ### TAB_EINAUS
 
 Dimensions: 2 rows × 2 columns
@@ -961,7 +926,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | AUS |
 | 0x01 | EIN |
 
-<a id="table-res-0xf101"></a>
 ### RES_0XF101
 
 Dimensions: 7 rows × 10 columns
@@ -976,7 +940,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_ADC_VAL_BKL_RECHTS_WERT | - | h | unsigned int | - | - | - | - | - | - |
 | DUMMY_ADC_VAL_RES | DATA | - | data[8] | - | - | - | - | - | - |
 
-<a id="table-res-0xf106"></a>
 ### RES_0XF106
 
 Dimensions: 8 rows × 10 columns
@@ -992,7 +955,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_RADIMPULSE2_WERT | - | - | long | - | - | - | - | - | Radimpulszähler rechts |
 | DUMMY_WEG04 | DATA | - | data[12] | - | - | - | - | - | - |
 
-<a id="table-res-0xf112"></a>
 ### RES_0XF112
 
 Dimensions: 9 rows × 10 columns
@@ -1009,7 +971,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_ANSTEUERUNG_BFT_ZU | 0/1 | - | unsigned char | - | - | - | - | - | Ausgang Fensterheber BFT zu  (B14) |
 | DUMMY_FH01 | DATA | - | data[2] | - | - | - | - | - | - |
 
-<a id="table-res-0xf113"></a>
 ### RES_0XF113
 
 Dimensions: 7 rows × 10 columns
@@ -1024,7 +985,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_CTR_KLIMA_BEREIT_WERT | - | - | unsigned char | - | - | - | 2 | - | gesendetes  Signal 'Steuerung_Klima_Bereitschaft' |
 | DUMMY_KLIMA01 | DATA | - | data[1] | - | - | - | - | - | - |
 
-<a id="table-res-0xf114"></a>
 ### RES_0XF114
 
 Dimensions: 3 rows × 10 columns
@@ -1035,7 +995,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_BEDIEN_TEMPOMAT | 0-n | - | unsigned char | - | TAB_BED_TEMPOMAT | - | - | - | erfasste Bedienung des Tempomathebels |
 | DUMMY_TEMPOMAT | DATA | - | data[3] | - | - | - | - | - | - |
 
-<a id="table-tab-bed-tempomat"></a>
 ### TAB_BED_TEMPOMAT
 
 Dimensions: 9 rows × 2 columns
@@ -1052,7 +1011,6 @@ Dimensions: 9 rows × 2 columns
 | 0x09 | CMD_OFF + EIN |
 | 0xFF | UNBEKANNT |
 
-<a id="table-res-0xf115"></a>
 ### RES_0XF115
 
 Dimensions: 6 rows × 10 columns
@@ -1066,7 +1024,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_KCAN_AKTIV | 0/1 | - | unsigned char | - | - | - | - | - | interner Status 'K-CAN aktiv' |
 | STAT_DSPLCAN_AKTIV | 0/1 | - | unsigned char | - | - | - | - | - | interner Status 'DSPL-CAN aktiv' |
 
-<a id="table-tab-klemmenstatus"></a>
 ### TAB_KLEMMENSTATUS
 
 Dimensions: 13 rows × 2 columns
@@ -1087,7 +1044,6 @@ Dimensions: 13 rows × 2 columns
 | 0x1F | KL_61 |
 | 0xFF | ungültig |
 
-<a id="table-res-0xf116"></a>
 ### RES_0XF116
 
 Dimensions: 3 rows × 10 columns
@@ -1098,7 +1054,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_INNENLICHT | 0/1 | - | unsigned char | - | - | - | - | - | Sollzustand Innenlicht |
 | STAT_DIMMUNG_WERT | - | h | unsigned int | - | - | - | - | - | aktueller Dimmwert |
 
-<a id="table-res-0xf120"></a>
 ### RES_0XF120
 
 Dimensions: 6 rows × 10 columns
@@ -1112,7 +1067,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_SCHALTER_CRASH | 0/1 | - | unsigned char | - | - | - | - | - | Eingang 'Chrashschalter' |
 | STAT_SCHALTER_GETRIEBE | 0/1 | - | unsigned char | - | - | - | - | - | Eingang 'release shifter' |
 
-<a id="table-res-0xf121"></a>
 ### RES_0XF121
 
 Dimensions: 8 rows × 10 columns
@@ -1128,7 +1082,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ANST_LEUCHTE_TANK | 0/1 | - | unsigned char | - | - | - | - | - | Ansteuerung Leuchte Tankfüllstand |
 | STAT_ANST_LEUCHTE_ENGINE | 0/1 | - | unsigned char | - | - | - | - | - | Ansteuerung Leuchte Motorfehler |
 
-<a id="table-res-0xf122"></a>
 ### RES_0XF122
 
 Dimensions: 2 rows × 10 columns
@@ -1138,7 +1091,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_WARNLED_KOMBI | BIT | - | BITFIELD | - | TAB_WARNLED | - | - | - | aktuelle Ansteuerung der Warnleuchten im Kombi |
 | DUMMY_TEMPOMAT | DATA | - | data[2] | - | - | - | - | - | - |
 
-<a id="table-tab-warnled"></a>
 ### TAB_WARNLED
 
 Dimensions: 12 rows × 10 columns
@@ -1158,7 +1110,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_LED_SEAT_BELT | 0-n | - | long | 0x00003000 | TAB_LED_ZUSTAND | - | 0x00001000 | - | aktuelle Anforderung der LED 'Gurtwarnung' ans Kombi |
 | STAT_LED_SHIFT_REL | 0-n | - | long | 0x0000C000 | TAB_LED_ZUSTAND | - | 0x00004000 | - | aktuelle Anforderung der LED 'Gangfreischaltung' ans Kombi |
 
-<a id="table-tab-led-zustand"></a>
 ### TAB_LED_ZUSTAND
 
 Dimensions: 4 rows × 2 columns
@@ -1170,7 +1121,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | RESERVIERT |
 | 0x03 | UNGUELTIG |
 
-<a id="table-res-0xf124"></a>
 ### RES_0XF124
 
 Dimensions: 13 rows × 10 columns
@@ -1191,7 +1141,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_AUSGANG_HK_SCHLIESSEN | 0/1 | - | unsigned char | - | - | - | - | - | Status Ausgang 'ZV-Bolzen HK schliessen'(B50) |
 | STAT_AUSGANG_HK_OEFFNEN | 0/1 | - | unsigned char | - | - | - | - | - | Status Ausgang 'ZV-Bolzen HK oeffnen'   (B32) |
 
-<a id="table-tab-tuerstatus"></a>
 ### TAB_TUERSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -1202,7 +1151,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | OFFEN |
 | 0xFF | UNBEKANNT |
 
-<a id="table-tab-zv-status"></a>
 ### TAB_ZV_STATUS
 
 Dimensions: 3 rows × 2 columns
@@ -1213,7 +1161,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | VERRIEGELT |
 | 0xFF | UNBEKANNT |
 
-<a id="table-res-0xf125"></a>
 ### RES_0XF125
 
 Dimensions: 4 rows × 10 columns
@@ -1225,7 +1172,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SCHWIBENWASCHANL | 0/1 | - | unsigned char | - | - | - | - | - | Eingang 'Scheibenwaschanlage'         (A40) |
 | STAT_WISCHERNACHLAUF | 0/1 | - | unsigned char | - | - | - | - | - | Ausgang 'Wischer_Nachlauf'            (B41) |
 
-<a id="table-res-0xf126"></a>
 ### RES_0XF126
 
 Dimensions: 8 rows × 10 columns
@@ -1241,7 +1187,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_AUSGANG_BLINKER_LI | 0/1 | - | unsigned char | - | - | - | - | - | Ausgang Blinker links         (A35) |
 | STAT_AUSGANG_BLINKER_RE | 0/1 | - | unsigned char | - | - | - | - | - | Ausgang Blinker rechts        (A36) |
 
-<a id="table-arg-0xf112"></a>
 ### ARG_0XF112
 
 Dimensions: 3 rows × 12 columns
@@ -1252,7 +1197,6 @@ Dimensions: 3 rows × 12 columns
 | RICHTUNG_FENSTERHEBER | 0-n | - | unsigned int | - | TAB_FH_RICHT | - | - | - | - | - | Ansteuerrichtung 1=AUF, 2=ZU |
 | ANSTEUER_ZEIT | ms | - | unsigned int | - | - | - | - | - | - | - | Ansteuerzeit in ms |
 
-<a id="table-tab-fh-auswahl"></a>
 ### TAB_FH_AUSWAHL
 
 Dimensions: 2 rows × 2 columns
@@ -1262,7 +1206,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | FAHRER |
 | 0x02 | BEIFAHRER |
 
-<a id="table-tab-fh-richt"></a>
 ### TAB_FH_RICHT
 
 Dimensions: 2 rows × 2 columns
@@ -1272,7 +1215,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | AUF |
 | 0x02 | ZU |
 
-<a id="table-arg-0xf113"></a>
 ### ARG_0XF113
 
 Dimensions: 2 rows × 12 columns
@@ -1282,7 +1224,6 @@ Dimensions: 2 rows × 12 columns
 | ANSTEUERUNG_KLIMAKUPPLUNG | 0-n | - | unsigned char | - | TAB_EINAUS | - | - | - | - | - | Ausgang Klimakupplung ansteuern |
 | ANSTEUERUNG_KONTROLLLEUCHTE | 0-n | - | unsigned char | - | TAB_EINAUS | - | - | - | - | - | Ausgang Kontrollleuchte Klimaanlage ansteuern |
 
-<a id="table-arg-0xf116"></a>
 ### ARG_0XF116
 
 Dimensions: 3 rows × 12 columns
@@ -1293,7 +1234,6 @@ Dimensions: 3 rows × 12 columns
 | DIMMUNG_LED_INNENLICHT | - | - | unsigned char | - | - | - | - | - | - | - | Ansteuerung LED_Innenleuchten 0 -100% |
 | ANSTEUER_ZEIT | ms | - | int | - | - | - | - | - | - | - | Ansteuerzeit in ms |
 
-<a id="table-arg-0xf118"></a>
 ### ARG_0XF118
 
 Dimensions: 3 rows × 12 columns
@@ -1304,7 +1244,6 @@ Dimensions: 3 rows × 12 columns
 | WERT_ANALOGINSTRUMENT | - | - | unsigned char | - | - | - | - | - | - | - | Ansteuerwert Analoginstrumente 0-100% |
 | ANSTEUER_ZEIT | ms | - | int | - | - | - | - | - | - | - | Ansteuerzeit in ms |
 
-<a id="table-tab-inst-auswahl"></a>
 ### TAB_INST_AUSWAHL
 
 Dimensions: 4 rows × 2 columns
@@ -1316,7 +1255,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Tankanzeige |
 | 0x04 | Wassertemperatur |
 
-<a id="table-arg-0xf121"></a>
 ### ARG_0XF121
 
 Dimensions: 2 rows × 12 columns
@@ -1326,7 +1264,6 @@ Dimensions: 2 rows × 12 columns
 | AUSWAHL_DIGITALAUSGANG | 0-n | - | unsigned char | - | TAB_OUT_AUSWAHL | - | - | - | - | - | Ausgang laut Tabelle |
 | ANSTEUER_ZEIT | ms | - | int | - | - | - | - | - | - | - | Ansteuerzeit in ms |
 
-<a id="table-tab-out-auswahl"></a>
 ### TAB_OUT_AUSWAHL
 
 Dimensions: 8 rows × 2 columns
@@ -1342,7 +1279,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | LEUCHTE_TANK |
 | 0x08 | LEUCHTE_ENGINE |
 
-<a id="table-arg-0xf122"></a>
 ### ARG_0XF122
 
 Dimensions: 3 rows × 12 columns
@@ -1353,7 +1289,6 @@ Dimensions: 3 rows × 12 columns
 | WERT_LED_KOMBI | 0-n | - | unsigned char | - | TAB_EINAUS | - | - | - | - | - | Schaltwert 0= Aus, 1= Ein   |
 | ANSTEUER_ZEIT | ms | - | unsigned int | - | - | - | - | - | - | - | Ansteuerzeit in ms |
 
-<a id="table-tab-led-auswahl"></a>
 ### TAB_LED_AUSWAHL
 
 Dimensions: 11 rows × 2 columns
@@ -1372,7 +1307,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0A | Frontscheibenheizung |
 | 0x0B | Gurtwarnung |
 
-<a id="table-arg-0xf124"></a>
 ### ARG_0XF124
 
 Dimensions: 1 rows × 12 columns
@@ -1381,7 +1315,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_ZV | 0-n | - | unsigned char | - | TAB_ZV_STEUERN | - | - | - | - | - |  steuert die ZV über Diagnose an |
 
-<a id="table-tab-zv-steuern"></a>
 ### TAB_ZV_STEUERN
 
 Dimensions: 2 rows × 2 columns
@@ -1391,7 +1324,6 @@ Dimensions: 2 rows × 2 columns
 | 0x51 | ENTRIEGELT |
 | 0x52 | VERRIEGELT |
 
-<a id="table-arg-0xf125"></a>
 ### ARG_0XF125
 
 Dimensions: 2 rows × 12 columns
@@ -1401,7 +1333,6 @@ Dimensions: 2 rows × 12 columns
 | STEUERN_WISCHER | 0-n | - | unsigned char | - | TAB_EINAUS | - | - | - | - | - | steuert über den Ausgang 'Wischernachlauf den Wischer an |
 | ANSTEUER_ZEIT | ms | - | int | - | - | - | - | - | - | - | Ansteuerzeit in ms |
 
-<a id="table-arg-0xf126"></a>
 ### ARG_0XF126
 
 Dimensions: 3 rows × 12 columns
@@ -1412,7 +1343,6 @@ Dimensions: 3 rows × 12 columns
 | AUSGANG_BLINKER_RE | 0-n | - | unsigned char | - | TAB_EINAUS | - | - | - | - | - | steuert den Ausgang Blinker rechts an |
 | ANSTEUER_ZEIT | ms | - | int | - | - | - | - | - | - | - | Ansteuerzeit in ms |
 
-<a id="table-arg-0xf132"></a>
 ### ARG_0XF132
 
 Dimensions: 2 rows × 12 columns

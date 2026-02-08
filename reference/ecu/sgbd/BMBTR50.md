@@ -34,7 +34,6 @@
 - [READ_LCD_OFFSET](#job-read-lcd-offset) - LC helligkeit abgleich auflesen Read the LCD brightness offset value
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode des SG beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -53,7 +52,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -74,7 +72,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -87,7 +84,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identification data
@@ -113,7 +109,6 @@ _No arguments._
 | ID_AIF_VORHANDEN | int | Ist ein AIF vorhanden (0 (nein)/ 1 (ja)) Is AIF data available 0=no 1=yes |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels Read the Test Stamp
@@ -130,7 +125,6 @@ _No arguments._
 | BYTE3 | int | Test Stamp byte 3 Pruefstempel Datenbyte3 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Write the Test Stamp
@@ -151,7 +145,6 @@ Beschreiben des Pruefstempels Write the Test Stamp
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-read-system-parameters"></a>
 ### READ_SYSTEM_PARAMETERS
 
 Auslesen verschiedener Geraetestati Read door status, dimmer position and LCD operation times
@@ -169,7 +162,6 @@ _No arguments._
 | LC_ANZEIGE_DAUER_UEBERTEMPERATUR | string | in Sekunden hexadezimal, 4 Byte LCD display - time of over temperature in seconds hex |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Read all faults
@@ -192,7 +184,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | _TEL_SENDE | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen Clear error memory
@@ -206,7 +197,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Status der Analogsignale auslesen Read Analogue Input and Output States
@@ -229,7 +219,6 @@ _No arguments._
 | STAT_PHOTO_SENSOR_EINH | string |  |
 | STAT_CLAMP_R_ON | int | Status clamp R  1=ON 0=OFF |
 
-<a id="job-status-lesen-drehgeber"></a>
 ### STATUS_LESEN_DREHGEBER
 
 Stati lesen am Bordmitor Bedien-Teil
@@ -246,7 +235,6 @@ _No arguments._
 | STAT_MONITOR_DREHGEBER_SCHRITTE | int | Rotary encoder steps |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 Steuergeraet in Sleep-Mode versetzen Power down ECU
@@ -261,7 +249,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-read-lcd-offset"></a>
 ### READ_LCD_OFFSET
 
 LC helligkeit abgleich auflesen Read the LCD brightness offset value
@@ -277,7 +264,6 @@ _No arguments._
 | OFFSET_WERT | int | Value of the LCD Brightness offset |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden
@@ -302,7 +288,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 - [ANALOG](#table-analog) (8 × 4)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -323,7 +308,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -347,7 +331,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -422,7 +405,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -437,7 +419,6 @@ Dimensions: 7 rows × 2 columns
 | 0x16 | EEPROM Checksumfehler |
 | 0xFF | Unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -448,7 +429,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler aktiv |
 | 0xFF | Unbekannter Fehlerort |
 
-<a id="table-analog"></a>
 ### ANALOG
 
 Dimensions: 8 rows × 4 columns

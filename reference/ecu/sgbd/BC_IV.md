@@ -29,7 +29,6 @@
 - [RAM_LESEN](#job-ram-lesen) - Lesen des RAM-Speichers
 - [EPROM_LESEN](#job-eprom-lesen) - Lesen des EPROM-Speichers
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -42,7 +41,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -60,7 +58,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -74,7 +71,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | ID_VERSION_NR | int | Generationsnummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -96,7 +92,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen hier 0 |
 | F_HFK | int | Haeufigkeit des Einzelfehlers (1 oder 2) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -109,7 +104,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -122,7 +116,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Auslesen der I-O-Ports
@@ -188,7 +181,6 @@ _No arguments._
 | STAT_A_DAC_AKTIV | int | Liefert: 0 oder 1 |
 | STAT_A_TD_AKTIV | int | Liefert: 0 oder 1 |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Lesen des RAM-Speichers
@@ -202,7 +194,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | RAM_DATA | binary | Liefert: 256Bytes RAM |
 
-<a id="job-eprom-lesen"></a>
 ### EPROM_LESEN
 
 Lesen des EPROM-Speichers
@@ -225,7 +216,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (13 × 3)
 - [FARTTEXTE](#table-farttexte) (7 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 13 rows × 3 columns
@@ -246,7 +236,6 @@ Dimensions: 13 rows × 3 columns
 | 0x0C | 0x0c | Tauchrohrgeber |
 | 0xFF | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 7 rows × 2 columns

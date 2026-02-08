@@ -178,7 +178,6 @@
 - [STEUERN_LUFTFILTERKLAPPE](#job-steuern-luftfilterklappe) - Luftfilterklappe oeffnen bzw. schliessen
 - [STEUERN_DMTL_HEIZUNG](#job-steuern-dmtl-heizung) - Stellgliedansteuerung DM-TL-Pumpenheizung
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -197,7 +196,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -210,7 +208,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -242,7 +239,6 @@ _No arguments._
 | ID_SG_HERSTELLER | int | Parameter fuer MoTest 0=Bosch, 1=Siemens-Fahrzeug |
 | ID_EWS_SS | int | Identifikation EWS-Schnittstelle |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -257,7 +253,6 @@ _No arguments._
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-digital-dslsr-lesen"></a>
 ### DIGITAL_DSLSR_LESEN
 
 Auslesen des DSLSR-Info
@@ -273,7 +268,6 @@ _No arguments._
 | STAT_TKATM | int |  |
 | STAT_ML | int |  |
 
-<a id="job-status-digital-mfl"></a>
 ### STATUS_DIGITAL_MFL
 
 Status Schalteingaenge
@@ -293,7 +287,6 @@ _No arguments._
 | STAT_B_FGRTWA | int | MFL Taste Wiederaufnahme ( Byte 6, xx1x xxxx) |
 | STAT_B_FGRTBE | int | FGR Bereitschaftsanzeige ( Byte 6, xxxx x1xx) |
 
-<a id="job-dk-anschlag"></a>
 ### DK_ANSCHLAG
 
 _No arguments._
@@ -304,7 +297,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-digital-sonde"></a>
 ### STATUS_DIGITAL_SONDE
 
 Status Schalteingaenge
@@ -325,7 +317,6 @@ _No arguments._
 | STAT_B_SBBVK | int | Sonde betriebsbereit vor Kat ( Byte 7, xx1x xxxx) |
 | STAT_B_SBBHK2 | int | Sonde betriebsbereit hinter Kat 2 ( Byte 7, xxxx x1xx) |
 
-<a id="job-status-digital-teile"></a>
 ### STATUS_DIGITAL_TEILE
 
 Status Schalteingaenge
@@ -358,7 +349,6 @@ _No arguments._
 | STAT_S_LDPR | int | Leckdiagnosepumpenrelais ( Byte 7, xx1x xxxx) |
 | STAT_B_LDPEIN | int | LDP ein ( Byte 13, xxxx xxx1) |
 
-<a id="job-status-digital-ll"></a>
 ### STATUS_DIGITAL_LL
 
 Status Schalteingaenge
@@ -376,7 +366,6 @@ _No arguments._
 | STAT_B_NAC | int | erh. LL durch Klimaanlage (Byte 9, 1xxx xxxx) |
 | STAT_B_DKPU | int | erh. LL durch falsche oder unbek. DK Stellung ( Byte 9, xxx1 xxxx) |
 
-<a id="job-status-digital-abgas"></a>
 ### STATUS_DIGITAL_ABGAS
 
 Status Schalteingaenge
@@ -394,7 +383,6 @@ _No arguments._
 | STAT_B_CDHSV | int | Codewort Sonderheizungsverzoegerung frei (Byte 6, x1xx xxxx) |
 | STAT_B_CDTES | int | Codewort Tankentlueftungssystem frei ( Byte 6, xxxx x1xx) |
 
-<a id="job-status-digital-check"></a>
 ### STATUS_DIGITAL_CHECK
 
 Status Schalteingaenge
@@ -413,7 +401,6 @@ _No arguments._
 | STAT_B_KATRDY | int | Katalysatoren ready ( Byte 7, xxxx xxx1) |
 | STAT_B_AGRRDY | int | Abgasrueckfuehrung ready ( Byte 7, 1xxx xxxx) |
 
-<a id="job-status-digital-pkw"></a>
 ### STATUS_DIGITAL_PKW
 
 Status Schalteingaenge
@@ -430,7 +417,6 @@ _No arguments._
 | STAT_B_AUTGET | int | Automatik-Fzg. (Byte 7, xxxx xx1x) |
 | STAT_B_NOKATFZG | int | Kat.-Vorbereitung (Byte 7, xxxx xxx1) |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -453,7 +439,6 @@ _No arguments._
 | AIF_KM_STAND | long | km-Stand |
 | AIF_ANZAHL_PROG | int | Anzahl Programmiervorgaenge |
 
-<a id="job-ecu-config"></a>
 ### ECU_CONFIG
 
 Ident-Daten fuer DME
@@ -477,7 +462,6 @@ _No arguments._
 | AKLAPPE_VORHANDEN | int | Abgasklappe vorhanden 1=ja ,  0=nein , 0xff=nicht unterstuetzt |
 | ANZAHL_ZYLINDER | int | Anzahl Zylinder |
 
-<a id="job-abgas-variante-lesen"></a>
 ### ABGAS_VARIANTE_LESEN
 
 Auslesen der Abgasvariante
@@ -491,7 +475,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | ABGAS_VARIANTE_WERT | int | Abgasvariante 0=KAT-V , 1= KAT |
 
-<a id="job-status-geberrad-adaption"></a>
 ### STATUS_GEBERRAD_ADAPTION
 
 Geberradadaption
@@ -508,7 +491,6 @@ _No arguments._
 | STATUS_GEBERRAD_ADAPTION_EINH | string | Einheit inc |
 | STAT_GEBERRAD_ADAPTION_EINH | string | Einheit inc |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher auslesen ueber RAM lesen
@@ -666,7 +648,6 @@ _No arguments._
 | F_HFK | int | Haeufigkeit des einzelnen Fehlers |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-status-digital-test"></a>
 ### STATUS_DIGITAL_TEST
 
 Status Schalteingaenge
@@ -680,7 +661,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_REEDSWITCH_EIN | int | 0=Nein / 1=Ja |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status Schalteingaenge
@@ -756,7 +736,6 @@ _No arguments._
 | STAT_REEDSWITCH_EIN | int | 0=Nein / 1=Ja |
 | STATUS_VL_EIN | int | Beschleunigungsanreicherung 0=Aus / 1=Ein |
 
-<a id="job-status-solldrehzahl"></a>
 ### STATUS_SOLLDREHZAHL
 
 _No arguments._
@@ -772,7 +751,6 @@ _No arguments._
 | STAT_DNSACMV | long | Abgleichwert DNFSACMV |
 | STAT_DNFSMV | long | Abgleichwert DNFSMV |
 
-<a id="job-status-dk-lrnstep"></a>
 ### STATUS_DK_LRNSTEP
 
 _No arguments._
@@ -785,7 +763,6 @@ _No arguments._
 | STAT_DK_WERT | int | Adaptionswert DK-Lernen auslesen |
 | STAT_DK_LRNSTEP | int | Logischer Adaptionswert DK-Lernen (0<9 1>9) |
 
-<a id="job-status-vanos"></a>
 ### STATUS_VANOS
 
 _No arguments._
@@ -806,7 +783,6 @@ _No arguments._
 | STAT_WNWI_W0 | real | Istwinkel fuer Vanos 1 |
 | STAT_WNWI_W1 | real | Istwinkel fuer Vanos 2 |
 
-<a id="job-sg-adressen"></a>
 ### SG_ADRESSEN
 
 Steuergeaetespezifische Adressen
@@ -846,7 +822,6 @@ _No arguments._
 | HEX_STRING2 | string | die andere Haelfte des HexStrings |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -859,7 +834,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -872,7 +846,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-stop"></a>
 ### DIAGNOSE_STOP
 
 Diagnose beenden mit KWP-Befehl COM_STOP
@@ -885,7 +858,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-sync-mode"></a>
 ### STEUERN_SYNC_MODE
 
 #### Arguments
@@ -902,7 +874,6 @@ _No arguments._
 | STEUERN_SYNC_MODE_STATUS | int | Statusflag |
 | STEUERN_SYNC_MODE_TEXT | string | Statustext |
 
-<a id="job-wechselcode-sync-dme"></a>
 ### WECHSELCODE_SYNC_DME
 
 Wechselcodesynchronisation EWS 3 - DME anstossen
@@ -916,7 +887,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sync-mode"></a>
 ### STATUS_SYNC_MODE
 
 _No arguments._
@@ -929,7 +899,6 @@ _No arguments._
 | STATUS_SYNC_MODE_STATUS | int | Statusflag |
 | STATUS_SYNC_MODE_TEXT | string | Statustext |
 
-<a id="job-fs-lesen-status"></a>
 ### FS_LESEN_STATUS
 
 Auslesen des Fehlerspeichers
@@ -943,7 +912,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_CODEHEX | binary | alle Fehlerbyte |
 
-<a id="job-fs-lesen-kwp"></a>
 ### FS_LESEN_KWP
 
 Auslesen des Fehlerspeichers
@@ -1042,7 +1010,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdump des Fehlersatzes |
 | F_UW_SATZ | int | Anzahl der Umweltsaetze , Steuerung der Anzeige in der Applikation |
 
-<a id="job-steuern-ll-drehzahl-verstellen"></a>
 ### STEUERN_LL_DREHZAHL_VERSTELLEN
 
 LL-Drehzahl verstellen,  512-2550 U/min
@@ -1059,7 +1026,6 @@ LL-Drehzahl verstellen,  512-2550 U/min
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-steuern-vanos-verstellzeit"></a>
 ### STEUERN_VANOS_VERSTELLZEIT
 
 Verstellzeitmessung VANOS
@@ -1076,7 +1042,6 @@ Verstellzeitmessung VANOS
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-verstellzeit-mess-vanos"></a>
 ### STATUS_VERSTELLZEIT_MESS_VANOS
 
 Verstellzeitmessung Nockenwelle Einlass
@@ -1096,7 +1061,6 @@ _No arguments._
 | STAT_VERSTELLZEIT_MESS_VANOS_SPAET_2_WERT | real | Ergebnis |
 | STAT_VERSTELLZEIT_MESS_VANOS_EINH | string | Einheit |
 
-<a id="job-steuern-vanos-dichtheit"></a>
 ### STEUERN_VANOS_DICHTHEIT
 
 Dichtheitsmessung VANOS
@@ -1109,7 +1073,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-vanos-test-stop"></a>
 ### STEUERN_VANOS_TEST_STOP
 
 Dichtheitsmessung VANOS
@@ -1122,7 +1085,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-dichtheit-mess-vanos"></a>
 ### STATUS_DICHTHEIT_MESS_VANOS
 
 DICHTHEITmessung Nockenwelle Einlass
@@ -1146,7 +1108,6 @@ _No arguments._
 | STAT_DICHTHEIT_MESS_VANOS_2_MAX_WERT | real | Ergebnis |
 | STAT_DICHTHEIT_MESS_VANOS_EINH | string | Einheit |
 
-<a id="job-status-systemcheck-laufunruhe"></a>
 ### STATUS_SYSTEMCHECK_LAUFUNRUHE
 
 Laufunruhe lesen
@@ -1167,7 +1128,6 @@ _No arguments._
 | STAT_SYSTEMCHECK_LAUFUNRUHE_ZYL7_WERT | real |  |
 | STAT_SYSTEMCHECK_LAUFUNRUHE_ZYL8_WERT | real |  |
 
-<a id="job-lesen-systemcheck-laufunruhe"></a>
 ### LESEN_SYSTEMCHECK_LAUFUNRUHE
 
 Laufunruhe lesen
@@ -1188,7 +1148,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_LAUFUNRUHE_ZYL7_WERT | int |  |
 | LESEN_SYSTEMCHECK_LAUFUNRUHE_ZYL8_WERT | int |  |
 
-<a id="job-steuern-ekp"></a>
 ### STEUERN_EKP
 
 EKP ansteuern
@@ -1201,7 +1160,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-1"></a>
 ### STEUERN_EV_1
 
 EV  1 ansteuern
@@ -1214,7 +1172,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-2"></a>
 ### STEUERN_EV_2
 
 EV  2 ansteuern
@@ -1227,7 +1184,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-3"></a>
 ### STEUERN_EV_3
 
 EV 3 ansteuern
@@ -1240,7 +1196,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-4"></a>
 ### STEUERN_EV_4
 
 EV 4 ansteuern
@@ -1253,7 +1208,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-5"></a>
 ### STEUERN_EV_5
 
 EV  5 ansteuern
@@ -1266,7 +1220,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-6"></a>
 ### STEUERN_EV_6
 
 EV  6 ansteuern
@@ -1279,7 +1232,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-7"></a>
 ### STEUERN_EV_7
 
 EV  6 ansteuern
@@ -1292,7 +1244,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev-8"></a>
 ### STEUERN_EV_8
 
 EV  6 ansteuern
@@ -1305,7 +1256,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-e-luefter"></a>
 ### STEUERN_E_LUEFTER
 
 E-Luefter verstellen , Bereich 0-100%
@@ -1322,7 +1272,6 @@ E-Luefter verstellen , Bereich 0-100%
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-steuern-e-luefter-ecos"></a>
 ### STEUERN_E_LUEFTER_ECOS
 
 E-Luefter verstellen , Bereich 0-100%
@@ -1335,7 +1284,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-steuern-ebox-luefter"></a>
 ### STEUERN_EBOX_LUEFTER
 
 E-Box Luefter verstellen 0 oder 1
@@ -1352,7 +1300,6 @@ E-Box Luefter verstellen 0 oder 1
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-status-s-evan-s"></a>
 ### STATUS_S_EVAN_S
 
 Nockenwinkel Sollwert  auslesen
@@ -1367,7 +1314,6 @@ _No arguments._
 | STAT_S_EVAN_S_WERT | real | Ergebnis |
 | STAT_S_EVAN_S_EINH | string | Einheit |
 
-<a id="job-status-nw-b1-fl1"></a>
 ### STATUS_NW_B1_FL1
 
 Adaptionswinkel NW-B1 Flanke 1
@@ -1382,7 +1328,6 @@ _No arguments._
 | STAT_NW_B1_FL1_WERT | real | Ergebnis |
 | STAT_NW_B1_FL1_EINH | string | Einheit |
 
-<a id="job-status-nw-b1-fl2"></a>
 ### STATUS_NW_B1_FL2
 
 Adaptionswinkel NW-B1 Flanke 2
@@ -1397,7 +1342,6 @@ _No arguments._
 | STAT_NW_B1_FL2_WERT | real | Ergebnis |
 | STAT_NW_B1_FL2_EINH | string | Einheit |
 
-<a id="job-status-nw-b1-fl3"></a>
 ### STATUS_NW_B1_FL3
 
 Adaptionswinkel NW-B1 Flanke 3
@@ -1412,7 +1356,6 @@ _No arguments._
 | STAT_NW_B1_FL3_WERT | real | Ergebnis |
 | STAT_NW_B1_FL3_EINH | string | Einheit |
 
-<a id="job-status-nw-b1-fl4"></a>
 ### STATUS_NW_B1_FL4
 
 Adaptionswinkel NW-B1 Flanke 4
@@ -1427,7 +1370,6 @@ _No arguments._
 | STAT_NW_B1_FL4_WERT | real | Ergebnis |
 | STAT_NW_B1_FL4_EINH | string | Einheit |
 
-<a id="job-status-nw-b2-fl1"></a>
 ### STATUS_NW_B2_FL1
 
 Adaptionswinkel NW-B1 Flanke 1
@@ -1442,7 +1384,6 @@ _No arguments._
 | STAT_NW_B2_FL1_WERT | real | Ergebnis |
 | STAT_NW_B2_FL1_EINH | string | Einheit |
 
-<a id="job-status-nw-b2-fl2"></a>
 ### STATUS_NW_B2_FL2
 
 Adaptionswinkel NW-B1 Flanke 2
@@ -1457,7 +1398,6 @@ _No arguments._
 | STAT_NW_B2_FL2_WERT | real | Ergebnis |
 | STAT_NW_B2_FL2_EINH | string | Einheit |
 
-<a id="job-status-nw-b2-fl3"></a>
 ### STATUS_NW_B2_FL3
 
 Adaptionswinkel NW-B2 Flanke 3
@@ -1472,7 +1412,6 @@ _No arguments._
 | STAT_NW_B2_FL3_WERT | real | Ergebnis |
 | STAT_NW_B2_FL3_EINH | string | Einheit |
 
-<a id="job-status-nw-b2-fl4"></a>
 ### STATUS_NW_B2_FL4
 
 Adaptionswinkel NW-B2 Flanke 4
@@ -1487,7 +1426,6 @@ _No arguments._
 | STAT_NW_B2_FL4_WERT | real | Ergebnis |
 | STAT_NW_B2_FL4_EINH | string | Einheit |
 
-<a id="job-status-einspritzzeit"></a>
 ### STATUS_EINSPRITZZEIT
 
 Einspritzzeit EV1
@@ -1502,7 +1440,6 @@ _No arguments._
 | STAT_EINSPRITZZEIT_WERT | real | Ergebnis |
 | STAT_EINSPRITZZEIT_EINH | string | Einheit |
 
-<a id="job-status-lambda-integrator-1"></a>
 ### STATUS_LAMBDA_INTEGRATOR_1
 
 Lambdaregler1
@@ -1517,7 +1454,6 @@ _No arguments._
 | STAT_LAMBDA_INTEGRATOR_1_WERT | real | Ergebnis |
 | STAT_LAMBDA_INTEGRATOR_1_EINH | string | Einheit |
 
-<a id="job-status-int"></a>
 ### STATUS_INT
 
 Lambdaregler1
@@ -1534,7 +1470,6 @@ _No arguments._
 | STATUS_INT_EINH | string | Einheit |
 | STAT_INT_EINH | string | Einheit |
 
-<a id="job-status-lambda-integrator-2"></a>
 ### STATUS_LAMBDA_INTEGRATOR_2
 
 Lambdaregler2
@@ -1549,7 +1484,6 @@ _No arguments._
 | STAT_LAMBDA_INTEGRATOR_2_WERT | real | Ergebnis |
 | STAT_LAMBDA_INTEGRATOR_2_EINH | string | Einheit |
 
-<a id="job-status-int-2"></a>
 ### STATUS_INT_2
 
 Lambdaregler2
@@ -1566,7 +1500,6 @@ _No arguments._
 | STATUS_INT_2_EINH | string | Einheit |
 | STAT_INT_2_EINH | string | Einheit |
 
-<a id="job-status-geschwindigkeit"></a>
 ### STATUS_GESCHWINDIGKEIT
 
 Fahrzeuggeschwindigkeit
@@ -1581,7 +1514,6 @@ _No arguments._
 | STAT_GESCHWINDIGKEIT_WERT | real | Ergebnis |
 | STAT_GESCHWINDIGKEIT_EINH | string | Einheit |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Motordrehzahl
@@ -1597,7 +1529,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | real | Ergebnis |
 | STAT_MOTORDREHZAHL_EINH | string | Einheit |
 
-<a id="job-status-motordrehzahl-soll"></a>
 ### STATUS_MOTORDREHZAHL_SOLL
 
 LL-Solldrehzahl
@@ -1613,7 +1544,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | real | Ergebnis |
 | STAT_MOTORDREHZAHL_SOLL_EINH | string | Einheit |
 
-<a id="job-status-vanos-nw-lage-einlass-bank-1"></a>
 ### STATUS_VANOS_NW_LAGE_EINLASS_BANK_1
 
 Nockenwellenposition Bank1
@@ -1628,7 +1558,6 @@ _No arguments._
 | STAT_VANOS_NW_LAGE_EINLASS_BANK_1_WERT | real | Ergebnis |
 | STAT_VANOS_NW_LAGE_EINLASS_BANK_1_EINH | string | Einheit |
 
-<a id="job-status-vanos-nw-lage-einlass-bank-2"></a>
 ### STATUS_VANOS_NW_LAGE_EINLASS_BANK_2
 
 Nockenwellenposition Bank2
@@ -1643,7 +1572,6 @@ _No arguments._
 | STAT_VANOS_NW_LAGE_EINLASS_BANK_2_WERT | real | Ergebnis |
 | STAT_VANOS_NW_LAGE_EINLASS_BANK_2_EINH | string | Einheit |
 
-<a id="job-status-an-lufttemperatur"></a>
 ### STATUS_AN_LUFTTEMPERATUR
 
 Ansauglufttemperatur
@@ -1659,7 +1587,6 @@ _No arguments._
 | STATUS_AN_LUFTTEMPERATUR_WERT | real | Ergebnis |
 | STAT_AN_LUFTTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 Motortemperatur
@@ -1675,7 +1602,6 @@ _No arguments._
 | STATUS_MOTORTEMPERATUR_WERT | real | Ergebnis |
 | STAT_MOTORTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-zuendwinkel"></a>
 ### STATUS_ZUENDWINKEL
 
 Zuendwinkel Zyl1
@@ -1690,7 +1616,6 @@ _No arguments._
 | STAT_ZUENDWINKEL_WERT | real | Ergebnis |
 | STAT_ZUENDWINKEL_EINH | string | Einheit |
 
-<a id="job-status-dkp-winkel"></a>
 ### STATUS_DKP_WINKEL
 
 DK-Winkel
@@ -1705,7 +1630,6 @@ _No arguments._
 | STAT_DKP_WINKEL_WERT | real | Ergebnis |
 | STAT_DKP_WINKEL_EINH | string | Einheit |
 
-<a id="job-status-lmm-masse"></a>
 ### STATUS_LMM_MASSE
 
 Luftmasse
@@ -1720,7 +1644,6 @@ _No arguments._
 | STAT_LMM_MASSE_WERT | real | Ergebnis |
 | STAT_LMM_MASSE_EINH | string | Einheit |
 
-<a id="job-status-lmm"></a>
 ### STATUS_LMM
 
 Auslesen Luftmasse kg/h
@@ -1737,7 +1660,6 @@ _No arguments._
 | STATUS_LMM_EINH | string | Einheit Masse Luft |
 | STAT_LMM_EINH | string | Einheit Masse Luft |
 
-<a id="job-status-miist"></a>
 ### STATUS_MIIST
 
 MIIST
@@ -1752,7 +1674,6 @@ _No arguments._
 | STAT_MIIST_WERT | real | Ergebnis |
 | STAT_MIIST_EINH | string | Einheit |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Ubatt
@@ -1768,7 +1689,6 @@ _No arguments._
 | STATUS_UBATT_WERT | real | Ergebnis |
 | STAT_UBATT_EINH | string | Einheit |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -1784,7 +1704,6 @@ _No arguments._
 | BYTE2 | int | 0-255 bzw. 0x00-0xFF |
 | BYTE3 | int | 0-255 bzw. 0x00-0xFF |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -1803,7 +1722,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-status-pwg-poti-spannung"></a>
 ### STATUS_PWG_POTI_SPANNUNG
 
 Fahrerwunsch
@@ -1820,7 +1738,6 @@ _No arguments._
 | STAT_ROHWERT1 | int | Ergebnis |
 | STAT_ROHWERT2 | int | Ergebnis |
 
-<a id="job-status-pwg-test"></a>
 ### STATUS_PWG_TEST
 
 Fahrerwunsch
@@ -1837,7 +1754,6 @@ _No arguments._
 | STAT_PWG_TEST_3_WERT | real | Ergebnis |
 | STAT_PWG_POTI_SPANNUNG_EINH | string | Einheit |
 
-<a id="job-status-kuehlw-ausl-temperatur"></a>
 ### STATUS_KUEHLW_AUSL_TEMPERATUR
 
 Temperatur Kuehleraustritt
@@ -1852,7 +1768,6 @@ _No arguments._
 | STAT_KUEHLW_AUSL_TEMPERATUR_WERT | real | Ergebnis |
 | STAT_KUEHLW_AUSL_TEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-ldb-integrator"></a>
 ### STATUS_LDB_INTEGRATOR
 
 Integrator Ladebilanz Batterie
@@ -1867,7 +1782,6 @@ _No arguments._
 | STAT_LDB_INTEGRATOR_WERT | real | Ergebnis |
 | STAT_LDB_INTEGRATOR_EINH | string | Einheit |
 
-<a id="job-status-ls-vkat-signal-1"></a>
 ### STATUS_LS_VKAT_SIGNAL_1
 
 Lambdasondenspannung v Kat
@@ -1882,7 +1796,6 @@ _No arguments._
 | STAT_LS_VKAT_SIGNAL_1_WERT | real | Ergebnis |
 | STAT_LS_VKAT_SIGNAL_1_EINH | string | Einheit |
 
-<a id="job-status-l-sonde"></a>
 ### STATUS_L_SONDE
 
 Lambdasondenspannung v Kat
@@ -1899,7 +1812,6 @@ _No arguments._
 | STATUS_L_SONDE_EINH | string | Einheit |
 | STAT_L_SONDE_EINH | string | Einheit |
 
-<a id="job-status-ls-vkat-signal-2"></a>
 ### STATUS_LS_VKAT_SIGNAL_2
 
 Lambdasondenspannung v Kat 2
@@ -1914,7 +1826,6 @@ _No arguments._
 | STAT_LS_VKAT_SIGNAL_2_WERT | real | Ergebnis |
 | STAT_LS_VKAT_SIGNAL_2_EINH | string | Einheit |
 
-<a id="job-status-l-sonde-2"></a>
 ### STATUS_L_SONDE_2
 
 Lambdasondenspannung v Kat 2
@@ -1931,7 +1842,6 @@ _No arguments._
 | STATUS_L_SONDE_2_EINH | string | Einheit |
 | STAT_L_SONDE_2_EINH | string | Einheit |
 
-<a id="job-status-ls-nkat-signal-1"></a>
 ### STATUS_LS_NKAT_SIGNAL_1
 
 Lambdasondenspannung n Kat
@@ -1946,7 +1856,6 @@ _No arguments._
 | STAT_LS_NKAT_SIGNAL_1_WERT | real | Ergebnis |
 | STAT_LS_NKAT_SIGNAL_1_EINH | string | Einheit |
 
-<a id="job-status-l-sonde-h"></a>
 ### STATUS_L_SONDE_H
 
 Lambdasondenspannung n Kat
@@ -1963,7 +1872,6 @@ _No arguments._
 | STATUS_L_SONDE_H_EINH | string | Einheit |
 | STAT_L_SONDE_H_EINH | string | Einheit |
 
-<a id="job-status-ls-nkat-signal-2"></a>
 ### STATUS_LS_NKAT_SIGNAL_2
 
 Lambdasondenspannung n Kat 2
@@ -1978,7 +1886,6 @@ _No arguments._
 | STAT_LS_NKAT_SIGNAL_2_WERT | real | Ergebnis |
 | STAT_LS_NKAT_SIGNAL_2_EINH | string | Einheit |
 
-<a id="job-status-l-sonde-2-h"></a>
 ### STATUS_L_SONDE_2_H
 
 Lambdasondenspannung n Kat 2
@@ -1995,7 +1902,6 @@ _No arguments._
 | STATUS_L_SONDE_2_H_EINH | string | Einheit |
 | STAT_L_SONDE_2_H_EINH | string | Einheit |
 
-<a id="job-status-lambda-add-1"></a>
 ### STATUS_LAMBDA_ADD_1
 
 Gemischadaption additiv 1
@@ -2010,7 +1916,6 @@ _No arguments._
 | STAT_LAMBDA_ADD_1_WERT | real | Ergebnis |
 | STAT_LAMBDA_ADD_1_EINH | string | Einheit |
 
-<a id="job-status-add"></a>
 ### STATUS_ADD
 
 Gemischadaption additiv 1
@@ -2027,7 +1932,6 @@ _No arguments._
 | STATUS_ADD_EINH | string | Einheit |
 | STAT_ADD_EINH | string | Einheit |
 
-<a id="job-status-lambda-add-2"></a>
 ### STATUS_LAMBDA_ADD_2
 
 Gemischadaption additiv 2
@@ -2042,7 +1946,6 @@ _No arguments._
 | STAT_LAMBDA_ADD_2_WERT | real | Ergebnis |
 | STAT_LAMBDA_ADD_2_EINH | string | Einheit |
 
-<a id="job-status-add-2"></a>
 ### STATUS_ADD_2
 
 Gemischadaption additiv 2
@@ -2059,7 +1962,6 @@ _No arguments._
 | STATUS_ADD_2_EINH | string | Einheit |
 | STAT_ADD_2_EINH | string | Einheit |
 
-<a id="job-status-lambda-mul-1"></a>
 ### STATUS_LAMBDA_MUL_1
 
 Gemischadaption multipl. 1
@@ -2074,7 +1976,6 @@ _No arguments._
 | STAT_LAMBDA_MUL_1_WERT | real | Ergebnis |
 | STAT_LAMBDA_MUL_1_EINH | string | Einheit |
 
-<a id="job-status-mul"></a>
 ### STATUS_MUL
 
 Gemischadaption multipl. 1
@@ -2091,7 +1992,6 @@ _No arguments._
 | STATUS_MUL_EINH | string | Einheit |
 | STAT_MUL_EINH | string | Einheit |
 
-<a id="job-status-lambda-mul-2"></a>
 ### STATUS_LAMBDA_MUL_2
 
 Gemischadaption multipl. 2
@@ -2106,7 +2006,6 @@ _No arguments._
 | STAT_LAMBDA_MUL_2_WERT | real | Ergebnis |
 | STAT_LAMBDA_MUL_2_EINH | string | Einheit |
 
-<a id="job-status-mul-2"></a>
 ### STATUS_MUL_2
 
 Gemischadaption multipl. 2
@@ -2123,7 +2022,6 @@ _No arguments._
 | STATUS_MUL_2_EINH | string | Einheit |
 | STAT_MUL_2_EINH | string | Einheit |
 
-<a id="job-status-ls-vkat-heizung-tv-1"></a>
 ### STATUS_LS_VKAT_HEIZUNG_TV_1
 
 norm. Heizleist. L-Sonde vKat1
@@ -2138,7 +2036,6 @@ _No arguments._
 | STAT_LS_VKAT_HEIZUNG_TV_1_WERT | real | Ergebnis |
 | STAT_LS_VKAT_HEIZUNG_TV_1_EINH | string | Einheit |
 
-<a id="job-status-ls-vkat-heizung-tv-2"></a>
 ### STATUS_LS_VKAT_HEIZUNG_TV_2
 
 norm. Heizleist. L-Sonde vKat2
@@ -2153,7 +2050,6 @@ _No arguments._
 | STAT_LS_VKAT_HEIZUNG_TV_2_WERT | real | Ergebnis |
 | STAT_LS_VKAT_HEIZUNG_TV_2_EINH | string | Einheit |
 
-<a id="job-status-ls-nkat-heizung-tv-1"></a>
 ### STATUS_LS_NKAT_HEIZUNG_TV_1
 
 norm. Heizleist. L-Sonde hKat1
@@ -2168,7 +2064,6 @@ _No arguments._
 | STAT_LS_NKAT_HEIZUNG_TV_1_WERT | real | Ergebnis |
 | STAT_LS_NKAT_HEIZUNG_TV_1_EINH | string | Einheit |
 
-<a id="job-status-ls-nkat-heizung-tv-2"></a>
 ### STATUS_LS_NKAT_HEIZUNG_TV_2
 
 norm. Heizleist. L-Sonde hKat2
@@ -2183,7 +2078,6 @@ _No arguments._
 | STAT_LS_NKAT_HEIZUNG_TV_2_WERT | real | Ergebnis |
 | STAT_LS_NKAT_HEIZUNG_TV_2_EINH | string | Einheit |
 
-<a id="job-status-ls-vkat-periodendauer-1"></a>
 ### STATUS_LS_VKAT_PERIODENDAUER_1
 
 PeridenDauer L-Sonde v Kat1
@@ -2198,7 +2092,6 @@ _No arguments._
 | STAT_LS_VKAT_PERIODENDAUER_1_WERT | real | Ergebnis |
 | STAT_LS_VKAT_PERIODENDAUER_1_EINH | string | Einheit |
 
-<a id="job-status-ls-vkat-periodendauer-2"></a>
 ### STATUS_LS_VKAT_PERIODENDAUER_2
 
 PeridenDauer L-Sonde v Kat2
@@ -2213,7 +2106,6 @@ _No arguments._
 | STAT_LS_VKAT_PERIODENDAUER_2_WERT | real | Ergebnis |
 | STAT_LS_VKAT_PERIODENDAUER_2_EINH | string | Einheit |
 
-<a id="job-status-te-tastverhaeltnis"></a>
 ### STATUS_TE_TASTVERHAELTNIS
 
 Tastverhaeltnis TEV
@@ -2228,7 +2120,6 @@ _No arguments._
 | STAT_TE_TASTVERHAELTNIS_WERT | real | Ergebnis |
 | STAT_TE_TASTVERHAELTNIS_EINH | string | Einheit |
 
-<a id="job-status-vanos-nw-lage-einlass-tv-1"></a>
 ### STATUS_VANOS_NW_LAGE_EINLASS_TV_1
 
 Tastverhaeltnis Vanos 1
@@ -2243,7 +2134,6 @@ _No arguments._
 | STAT_VANOS_NW_LAGE_EINLASS_TV_1_WERT | real | Ergebnis |
 | STAT_VANOS_NW_LAGE_EINLASS_TV_1_EINH | string | Einheit |
 
-<a id="job-status-vanos-nw-lage-einlass-tv-2"></a>
 ### STATUS_VANOS_NW_LAGE_EINLASS_TV_2
 
 Tastverhaeltnis Vanos 2
@@ -2258,7 +2148,6 @@ _No arguments._
 | STAT_VANOS_NW_LAGE_EINLASS_TV_2_WERT | real | Ergebnis |
 | STAT_VANOS_NW_LAGE_EINLASS_TV_2_EINH | string | Einheit |
 
-<a id="job-status-e-luefter-tv"></a>
 ### STATUS_E_LUEFTER_TV
 
 Tastverhaeltnis E-Luefter
@@ -2273,7 +2162,6 @@ _No arguments._
 | STAT_E_LUEFTER_TV_WERT | real | Ergebnis |
 | STAT_E_LUEFTER_TV_EINH | string | Einheit |
 
-<a id="job-status-lutsfi1"></a>
 ### STATUS_LUTSFI1
 
 gefilterte Laufunruhen Zyl1
@@ -2288,7 +2176,6 @@ _No arguments._
 | STAT_LUTSFI1_WERT | real | Ergebnis |
 | STAT_LUTSFI1_EINH | string | Einheit |
 
-<a id="job-status-lutsfi2"></a>
 ### STATUS_LUTSFI2
 
 gefilterte Laufunruhen Zyl2
@@ -2303,7 +2190,6 @@ _No arguments._
 | STAT_LUTSFI2_WERT | real | Ergebnis |
 | STAT_LUTSFI2_EINH | string | Einheit |
 
-<a id="job-status-lutsfi3"></a>
 ### STATUS_LUTSFI3
 
 gefilterte Laufunruhen Zyl3
@@ -2318,7 +2204,6 @@ _No arguments._
 | STAT_LUTSFI3_WERT | real | Ergebnis |
 | STAT_LUTSFI3_EINH | string | Einheit |
 
-<a id="job-status-lutsfi4"></a>
 ### STATUS_LUTSFI4
 
 gefilterte Laufunruhen Zyl4
@@ -2333,7 +2218,6 @@ _No arguments._
 | STAT_LUTSFI4_WERT | real | Ergebnis |
 | STAT_LUTSFI4_EINH | string | Einheit |
 
-<a id="job-status-lutsfi5"></a>
 ### STATUS_LUTSFI5
 
 gefilterte Laufunruhen Zyl5
@@ -2348,7 +2232,6 @@ _No arguments._
 | STAT_LUTSFI5_WERT | real | Ergebnis |
 | STAT_LUTSFI5_EINH | string | Einheit |
 
-<a id="job-status-lutsfi6"></a>
 ### STATUS_LUTSFI6
 
 gefilterte Laufunruhen Zyl6
@@ -2363,7 +2246,6 @@ _No arguments._
 | STAT_LUTSFI6_WERT | real | Ergebnis |
 | STAT_LUTSFI6_EINH | string | Einheit |
 
-<a id="job-status-lutsfi7"></a>
 ### STATUS_LUTSFI7
 
 gefilterte Laufunruhen Zyl7
@@ -2378,7 +2260,6 @@ _No arguments._
 | STAT_LUTSFI7_WERT | real | Ergebnis |
 | STAT_LUTSFI7_EINH | string | Einheit |
 
-<a id="job-status-lutsfi8"></a>
 ### STATUS_LUTSFI8
 
 gefilterte Laufunruhen Zyl8
@@ -2393,7 +2274,6 @@ _No arguments._
 | STAT_LUTSFI8_WERT | real | Ergebnis |
 | STAT_LUTSFI8_EINH | string | Einheit |
 
-<a id="job-adapt-selektiv-loeschen"></a>
 ### ADAPT_SELEKTIV_LOESCHEN
 
 Adaptionen selektiv loeschen
@@ -2411,7 +2291,6 @@ Adaptionen selektiv loeschen
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-adapt-loeschen"></a>
 ### ADAPT_LOESCHEN
 
 Adaptionen selektiv loeschen
@@ -2424,7 +2303,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-start-systemcheck-sek-luft"></a>
 ### START_SYSTEMCHECK_SEK_LUFT
 
 Systemcheck  Sekundaerluft starten
@@ -2438,7 +2316,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | START_SYSTEMCHECK_SEK_LUFT_STATUS | int |  |
 
-<a id="job-stop-systemcheck-sek-luft"></a>
 ### STOP_SYSTEMCHECK_SEK_LUFT
 
 Systemcheck  Sekundaerluft starten
@@ -2451,7 +2328,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-start-systemcheck-tank-leck"></a>
 ### START_SYSTEMCHECK_TANK_LECK
 
 Systemcheck Tankentlueftungssystem Leckdiagnose starten
@@ -2464,7 +2340,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-start-systemcheck-dmtl"></a>
 ### START_SYSTEMCHECK_DMTL
 
 Systemcheck Tankentlueftungssystem Leckdiagnose starten
@@ -2477,7 +2352,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-start-systemcheck-dmtl-ecos"></a>
 ### START_SYSTEMCHECK_DMTL_ECOS
 
 Systemcheck Tankentlueftungssystem Leckdiagnose starten
@@ -2491,7 +2365,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STATUS_DMTL_ECOS | int |  |
 
-<a id="job-lesen-systemcheck-sek-luft"></a>
 ### LESEN_SYSTEMCHECK_SEK_LUFT
 
 Systemcheck  Sekundaerluft lesen
@@ -2505,7 +2378,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | LESEN_SYSTEMCHECK_SEK_LUFT_STATUS | unsigned int | Status |
 
-<a id="job-lesen-systemcheck-sek-luft-1"></a>
 ### LESEN_SYSTEMCHECK_SEK_LUFT_1
 
 Systemcheck  Sekundaerluft lesen
@@ -2519,7 +2391,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | LESEN_SYSTEMCHECK_SEK_LUFT_1_STATUS | unsigned int | Status |
 
-<a id="job-lesen-systemcheck-tank-leck"></a>
 ### LESEN_SYSTEMCHECK_TANK_LECK
 
 Systemcheck Tankentlueftungssystem Leckdiagnose lesen
@@ -2536,7 +2407,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_TANK_LECK_PER_WERT | real | Periodendauer |
 | LESEN_SYSTEMCHECK_TANK_LECK_AKTIV_WERT | real | Aktuelle Laufzeit |
 
-<a id="job-lesen-systemcheck-dmtl"></a>
 ### LESEN_SYSTEMCHECK_DMTL
 
 Systemcheck Tankentlueftungssystem Leckdiagnose lesen
@@ -2553,7 +2423,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_DMTL_WERT | real | Periodendauer |
 | LESEN_SYSTEMCHECK_DMTL_AKTIV_WERT | real | Aktuelle Laufzeit |
 
-<a id="job-status-dmtl-eol"></a>
 ### STATUS_DMTL_EOL
 
 Systemcheck Tankentlueftungssystem Leckdiagnose lesen
@@ -2567,7 +2436,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_DMTL_EOL_WERT | int |  |
 
-<a id="job-co-abgleich-lesen"></a>
 ### CO_ABGLEICH_LESEN
 
 CO-Abgleich lesen
@@ -2582,7 +2450,6 @@ _No arguments._
 | STATUS_CO_ABGLEICH_WERT | char | Aktuellen Abgleichwert |
 | STAT_CO_ABGLEICH_WERT | char | Aktuellen Abgleichwert |
 
-<a id="job-co-abgleich-verstellen"></a>
 ### CO_ABGLEICH_VERSTELLEN
 
 CO-Drehzahl  verstellen
@@ -2599,7 +2466,6 @@ CO-Drehzahl  verstellen
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-co-abgleich-programmieren"></a>
 ### CO_ABGLEICH_PROGRAMMIEREN
 
 CO-Drehzahl Abgleich programmieren
@@ -2612,7 +2478,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-steuern-testplatz"></a>
 ### STEUERN_TESTPLATZ
 
 Freischaltung fuer SG-Befundung ansteuern
@@ -2625,7 +2490,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-ktest-motordrehzahl"></a>
 ### STATUS_KTEST_MOTORDREHZAHL
 
 Motordrehzahl auslesen
@@ -2640,7 +2504,6 @@ _No arguments._
 | STAT_KTEST_MOTORDREHZAHL_WERT | real | Ergebnis Motordrehzahl |
 | STAT_KTEST_MOTORDREHZAHL_EINH | string | Einheit Motordrehzahl |
 
-<a id="job-status-ktest-an-lufttemperatur"></a>
 ### STATUS_KTEST_AN_LUFTTEMPERATUR
 
 Ansauglufttemperatur auslesen
@@ -2655,7 +2518,6 @@ _No arguments._
 | STAT_KTEST_AN_LUFTTEMPERATUR_WERT | real | Ergebnis Ansauglufttemperatur |
 | STAT_KTEST_AN_LUFTTEMPERATUR_EINH | string | Einheit Ansauglufttemperatur |
 
-<a id="job-status-ktest-motortemperatur"></a>
 ### STATUS_KTEST_MOTORTEMPERATUR
 
 Ansauglufttemperatur auslesen
@@ -2670,7 +2532,6 @@ _No arguments._
 | STAT_KTEST_MOTORTEMPERATUR_WERT | real | Ergebnis Ansauglufttemperatur |
 | STAT_KTEST_MOTORTEMPERATUR_EINH | string | Einheit Ansauglufttemperatur |
 
-<a id="job-status-ktest-dkp-winkel"></a>
 ### STATUS_KTEST_DKP_WINKEL
 
 Ansauglufttemperatur auslesen
@@ -2685,7 +2546,6 @@ _No arguments._
 | STAT_KTEST_DKP_WINKEL_WERT | real | Ergebnis Ansauglufttemperatur |
 | STAT_KTEST_DKP_WINKEL_EINH | string | Einheit Ansauglufttemperatur |
 
-<a id="job-status-ktest-vanos-nw-lage-e-bank-1"></a>
 ### STATUS_KTEST_VANOS_NW_LAGE_E_BANK_1
 
 Nockenwellenposition Bank1
@@ -2700,7 +2560,6 @@ _No arguments._
 | STAT_KTEST_VANOS_NW_LAGE_E_BANK_1_WERT | real | Ergebnis |
 | STAT_KTEST_VANOS_NW_LAGE_E_BANK_1_EINH | string | Einheit |
 
-<a id="job-status-ktest-vanos-nw-lage-e-bank-2"></a>
 ### STATUS_KTEST_VANOS_NW_LAGE_E_BANK_2
 
 Nockenwellenposition Bank2
@@ -2715,7 +2574,6 @@ _No arguments._
 | STAT_KTEST_VANOS_NW_LAGE_E_BANK_2_WERT | real | Ergebnis |
 | STAT_KTEST_VANOS_NW_LAGE_E_BANK_2_EINH | string | Einheit |
 
-<a id="job-steuern-ktest-vanos-verstellzeit"></a>
 ### STEUERN_KTEST_VANOS_VERSTELLZEIT
 
 Verstellzeitmessung VANOS
@@ -2732,7 +2590,6 @@ Verstellzeitmessung VANOS
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-klopfsensor1"></a>
 ### STATUS_KLOPFSENSOR1
 
 Geraeuschwert Klopfsensor 1
@@ -2747,7 +2604,6 @@ _No arguments._
 | STAT_KLOPF1_WERT | real | Klopfsensor 1 Geraeusch Wert |
 | STAT_KLOPF1_EINH | string | Einheit V |
 
-<a id="job-status-klopfsensor2"></a>
 ### STATUS_KLOPFSENSOR2
 
 Geraeuschwert Klopfsensor 2
@@ -2762,7 +2618,6 @@ _No arguments._
 | STAT_KLOPF2_WERT | real | Klopfsensor 2 Geraeusch Wert |
 | STAT_KLOPF2_EINH | string | Einheit V |
 
-<a id="job-status-klopfsensor3"></a>
 ### STATUS_KLOPFSENSOR3
 
 Geraeuschwert Klopfsensor 3
@@ -2777,7 +2632,6 @@ _No arguments._
 | STAT_KLOPF3_WERT | real | Klopfsensor 3 Geraeusch Wert |
 | STAT_KLOPF3_EINH | string | Einheit V |
 
-<a id="job-status-klopfsensor4"></a>
 ### STATUS_KLOPFSENSOR4
 
 Geraeuschwert Klopfsensor 4
@@ -2792,7 +2646,6 @@ _No arguments._
 | STAT_KLOPF4_WERT | real | Klopfsensor 4 Geraeusch Wert |
 | STAT_KLOPF4_EINH | string | Einheit V |
 
-<a id="job-steuern-ev-selektiv-ausblenden"></a>
 ### STEUERN_EV_SELEKTIV_AUSBLENDEN
 
 EV selektiv ausblenden, Zylinder 1- 6 angeben
@@ -2809,7 +2662,6 @@ EV selektiv ausblenden, Zylinder 1- 6 angeben
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-abgleich-timer-verstellen-programmieren"></a>
 ### ABGLEICH_TIMER_VERSTELLEN_PROGRAMMIEREN
 
 FGR-Funktion und Mainswitch konfigurieren
@@ -2826,7 +2678,6 @@ FGR-Funktion und Mainswitch konfigurieren
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-steuern-tev"></a>
 ### STEUERN_TEV
 
 Stellgliedansteuerung TEV
@@ -2840,7 +2691,6 @@ _No arguments._
 | JOB_STATUS | string | "POS_RESPONSE", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-steuern-tev-aus"></a>
 ### STEUERN_TEV_AUS
 
 Stellgliedansteuerung TEV
@@ -2854,7 +2704,6 @@ _No arguments._
 | JOB_STATUS | string | "POS_RESPONSE", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-tev-system"></a>
 ### TEV_SYSTEM
 
 Status Systemtest TEV
@@ -2869,7 +2718,6 @@ _No arguments._
 | JOB_STATUS | string | "POS_RESPONSE", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-tev-zyklus"></a>
 ### TEV_ZYKLUS
 
 Zyklusflags Systemtest TEV auslesen
@@ -2884,7 +2732,6 @@ _No arguments._
 | JOB_STATUS | string | "POS_RESPONSE", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-tev-ende"></a>
 ### TEV_ENDE
 
 Systemtestende von TEV
@@ -2899,7 +2746,6 @@ _No arguments._
 | RESULT_TEXT | string | gibt den EndeCode der Diagnose zurueck |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-start-systemcheck-tev-func"></a>
 ### START_SYSTEMCHECK_TEV_FUNC
 
 Stellgliedansteuerung TEV
@@ -2912,7 +2758,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY"wenn fehlerfrei |
 
-<a id="job-lesen-systemcheck-tev-func"></a>
 ### LESEN_SYSTEMCHECK_TEV_FUNC
 
 Zyklusflags Systemtest TEV auslesen
@@ -2927,7 +2772,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_TEV_TEXT | string |  |
 | JOB_STATUS | string | wenn fehlerfrei |
 
-<a id="job-status-gaspedal"></a>
 ### STATUS_GASPEDAL
 
 Fahrerwunsch
@@ -2941,7 +2785,6 @@ _No arguments._
 | JOB_STATUS | string | JOB_STATUS -> OKAY, wenn fehlerfrei |
 | STAT_GASPEDAL_WERT | real | Ergebnis |
 
-<a id="job-steuern-luftfilterklappe"></a>
 ### STEUERN_LUFTFILTERKLAPPE
 
 Luftfilterklappe oeffnen bzw. schliessen
@@ -2958,7 +2801,6 @@ Luftfilterklappe oeffnen bzw. schliessen
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-steuern-dmtl-heizung"></a>
 ### STEUERN_DMTL_HEIZUNG
 
 Stellgliedansteuerung DM-TL-Pumpenheizung
@@ -3000,7 +2842,6 @@ Stellgliedansteuerung DM-TL-Pumpenheizung
 - [TEILE_BITS](#table-teile-bits) (20 × 4)
 - [PKW_BITS](#table-pkw-bits) (4 × 4)
 
-<a id="table-betriebswtab"></a>
 ### BETRIEBSWTAB
 
 Dimensions: 154 rows × 17 columns
@@ -3162,7 +3003,6 @@ Dimensions: 154 rows × 17 columns
 | DNSACMV | B812F10330A101 | 0  | 0 | 0  | 8 | 3 | -- | 10 | 0 | 0 | 0 | 1.0 |   |   | Abgleichwert  | DNSACMV                        |
 | DNFSMV | B812F10330A101 | 0  | 0 | 0  | 11 | 3 | -- | 10 | 0 | 0 | 0 | 1.0 |   |   | Abgleichwert  | DNFSMV                         |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 37 rows × 2 columns
@@ -3207,7 +3047,6 @@ Dimensions: 37 rows × 2 columns
 | ?04? | KEIN AIF MEHR FREI |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte12"></a>
 ### FORTTEXTE12
 
 Dimensions: 132 rows × 6 columns
@@ -3347,7 +3186,6 @@ Dimensions: 132 rows × 6 columns
 | 0xED | Startautomatik | 0x0A | 0x1A | 0x14 | 0x0B |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-ftypmatrix"></a>
 ### FTYPMATRIX
 
 Dimensions: 1 rows × 17 columns
@@ -3356,7 +3194,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 133 rows × 49 columns
@@ -3497,7 +3334,6 @@ Dimensions: 133 rows × 49 columns
 | 0xED | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x05 | 0x00 | 0x06 | 0x00 | 0x07 | 0x00 | 0x08 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 | 0xXY | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x05 | 0x00 | 0x06 | 0x00 | 0x07 | 0x00 | 0x08 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 153 rows × 2 columns
@@ -3658,7 +3494,6 @@ Dimensions: 153 rows × 2 columns
 | 0xFD | MIL blink                   |
 | 0xFE | Fehler sporadisch           |
 
-<a id="table-ftyptexte"></a>
 ### FTYPTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -3673,7 +3508,6 @@ Dimensions: 7 rows × 2 columns
 | 0x25 | Regelung EIN mit Einschraenkung                     |
 | 0xFF | ??                          |
 
-<a id="table-stagedmtl"></a>
 ### STAGEDMTL
 
 Dimensions: 17 rows × 2 columns
@@ -3698,7 +3532,6 @@ Dimensions: 17 rows × 2 columns
 | 0x17 | Abbruch :Ubatt-Schwankung zu gross |
 | 0x18 | Abbruch :Bedingung Kl.15 AUS/EIN erkannt |
 
-<a id="table-stagedmtlfreeze"></a>
 ### STAGEDMTLFREEZE
 
 Dimensions: 23 rows × 2 columns
@@ -3729,7 +3562,6 @@ Dimensions: 23 rows × 2 columns
 | 0x21 | Fkt. beendet, Modulfehler erkannt |
 | 0x22 | Fkt. beendet, kein Grobleck erkannt |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 118 rows × 6 columns
@@ -3855,7 +3687,6 @@ Dimensions: 118 rows × 6 columns
 | 0x9A | Differenz Pumpenstrom                | mA | 0.1953 | 0 | 0 |
 | 0xXY | unbekannte Umweltbedingung           | -- | 1 | 0 | 0 |
 
-<a id="table-fehlercodes"></a>
 ### FEHLERCODES
 
 Dimensions: 30 rows × 2 columns
@@ -3893,7 +3724,6 @@ Dimensions: 30 rows × 2 columns
 | 0x80 | serviceNotSupportedInActiveDiagnosticMode    |
 | 0xXY | unbekannter Rueckgabewert (ResponseCode)  |
 
-<a id="table-stagepointer"></a>
 ### STAGEPOINTER
 
 Dimensions: 20 rows × 2 columns
@@ -3921,7 +3751,6 @@ Dimensions: 20 rows × 2 columns
 | 0x12 | Wartezustand TANS-Monitor nach Fehlererkennung Feinleck aus Auswertung |
 | 0xXY | Stagepointer wird noch nicht ausgegeben |
 
-<a id="table-tevstatus"></a>
 ### TEVSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -3934,7 +3763,6 @@ Dimensions: 5 rows × 2 columns
 | 0x06 | Systemtest TEV ist beendet |
 | 0xXY | Status Systemtest TEV kann nicht ausgegeben werden |
 
-<a id="table-mfl-bits"></a>
 ### MFL_BITS
 
 Dimensions: 7 rows × 4 columns
@@ -3949,7 +3777,6 @@ Dimensions: 7 rows × 4 columns
 | S_B_FGRTWA | 0 | 0x20 | 0x20 |
 | S_B_FGRTBE | 0 | 0x04 | 0x04 |
 
-<a id="table-sonde-bits"></a>
 ### SONDE_BITS
 
 Dimensions: 8 rows × 4 columns
@@ -3965,7 +3792,6 @@ Dimensions: 8 rows × 4 columns
 | S_B_SBBVK | 0 | 0x20 | 0x20 |
 | S_B_SBBHK2 | 0 | 0x04 | 0x04 |
 
-<a id="table-ll-bits"></a>
 ### LL_BITS
 
 Dimensions: 5 rows × 4 columns
@@ -3978,7 +3804,6 @@ Dimensions: 5 rows × 4 columns
 | S_B_NAC | 0 | 0x80 | 0x80 |
 | S_B_DKPU | 0 | 0x10 | 0x10 |
 
-<a id="table-abgas-bits"></a>
 ### ABGAS_BITS
 
 Dimensions: 5 rows × 4 columns
@@ -3991,7 +3816,6 @@ Dimensions: 5 rows × 4 columns
 | S_B_CDHSV | 0 | 0x40 | 0x40 |
 | S_B_CDTES | 0 | 0x04 | 0x04 |
 
-<a id="table-check-bits"></a>
 ### CHECK_BITS
 
 Dimensions: 6 rows × 4 columns
@@ -4005,7 +3829,6 @@ Dimensions: 6 rows × 4 columns
 | S_B_KATRDY | 0 | 0x01 | 0x01 |
 | S_B_AGRRDY | 0 | 0x80 | 0x80 |
 
-<a id="table-teile-bits"></a>
 ### TEILE_BITS
 
 Dimensions: 20 rows × 4 columns
@@ -4033,7 +3856,6 @@ Dimensions: 20 rows × 4 columns
 | S_S_LDPR | 4 | 0x10 | 0x10 |
 | S_B_LDPEIN | 2 | 0x01 | 0x01 |
 
-<a id="table-pkw-bits"></a>
 ### PKW_BITS
 
 Dimensions: 4 rows × 4 columns

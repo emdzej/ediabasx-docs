@@ -23,7 +23,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Default init job
 - [IDENT](#job-ident) - Default ident job
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -41,7 +40,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -54,7 +52,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -80,7 +77,6 @@ _No arguments._
 
 - [JOBRESULT](#table-jobresult) (12 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 12 rows × 2 columns

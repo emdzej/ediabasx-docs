@@ -52,7 +52,6 @@
 - [DIAGNOSE_WEITER](#job-diagnose-weiter) - Diagnose aufrechterhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -71,7 +70,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer UER2
@@ -84,7 +82,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer UEB2
@@ -108,7 +105,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Fehlerzaehler lesen
@@ -122,7 +118,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | F_ANZ | int | Fehlerzaehler |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen bedingtes High-Konzept nach Lastenheft Codierung/Diagnose
@@ -157,7 +152,6 @@ _No arguments._
 | F_ART8_NR | int | Index der 8. Fehlerart |
 | F_ART8_TEXT | string | 8. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -170,7 +164,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierdaten der UEB2
@@ -192,7 +185,6 @@ _No arguments._
 | COD_DATEN_7 | string | Block 7 |
 | COD_DATEN_8 | string | Block 8 |
 
-<a id="job-cod-ausstattung-lesen"></a>
 ### COD_AUSSTATTUNG_LESEN
 
 Auslesen der Ausstattungsbytes des UEB2
@@ -206,7 +198,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | COD_DATEN_0 | string | Block 0 |
 
-<a id="job-cod-parametersatz1-lesen"></a>
 ### COD_PARAMETERSATZ1_LESEN
 
 Auslesen Parametersatz1 des UEB2
@@ -222,7 +213,6 @@ _No arguments._
 | COD_DATEN_2 | string | Block 2 |
 | COD_DATEN_3 | string | Block 3 |
 
-<a id="job-cod-parametersatz2-lesen"></a>
 ### COD_PARAMETERSATZ2_LESEN
 
 Auslesen Parametersatz2 des UEB2
@@ -238,7 +228,6 @@ _No arguments._
 | COD_DATEN_5 | string | Block 5 |
 | COD_DATEN_6 | string | Block 6 |
 
-<a id="job-cod-verriegelung-lesen"></a>
 ### COD_VERRIEGELUNG_LESEN
 
 Auslesen der Verriegelungsbytes des UEB2
@@ -252,7 +241,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | COD_DATEN_7 | string | Block 7 |
 
-<a id="job-cod-kfz-daten-lesen"></a>
 ### COD_KFZ_DATEN_LESEN
 
 Auslesen Kfz-Herstellerdaten des UEB2
@@ -267,7 +255,6 @@ _No arguments._
 | COD_DATEN_8 | string | Block 8 |
 | COD_DATEN_KONVERTIERT | string | Block 8 umgewandelt |
 
-<a id="job-status-fehlerzustaende-lesen"></a>
 ### STATUS_FEHLERZUSTAENDE_LESEN
 
 _No arguments._
@@ -293,7 +280,6 @@ _No arguments._
 | STAT_UBATTSCHLUSS_M2 | int | 0: Ubatt Schluss Magnet 2 |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-anzahl-ausloesungen-lesen"></a>
 ### STATUS_ANZAHL_AUSLOESUNGEN_LESEN
 
 Anzahl der Ausloesungen
@@ -310,7 +296,6 @@ _No arguments._
 | STAT_AUSLOESUNGEN | long | Ausloesungen Lowbyte |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-bordspannung-lesen"></a>
 ### STATUS_BORDSPANNUNG_LESEN
 
 _No arguments._
@@ -323,7 +308,6 @@ _No arguments._
 | STAT_BORDSPANNUNG | long | Bordspannung lesen |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-g-sensor-lesen"></a>
 ### STATUS_G_SENSOR_LESEN
 
 _No arguments._
@@ -336,7 +320,6 @@ _No arguments._
 | STAT_G_SENSOR | int | 1: G-Sensor schwerelos, ansonsten 0 |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-crashdaten-g-sensor-lesen"></a>
 ### STATUS_CRASHDATEN_G_SENSOR_LESEN
 
 _No arguments._
@@ -352,7 +335,6 @@ _No arguments._
 | STAT_AUSLOESUNGEN | long | Ausloesungen Lowbyte |
 | CRASH_DATEN_1 | string | Kennung 1 |
 
-<a id="job-status-crashdaten-libelle1-lesen"></a>
 ### STATUS_CRASHDATEN_LIBELLE1_LESEN
 
 _No arguments._
@@ -368,7 +350,6 @@ _No arguments._
 | STAT_AUSLOESUNGEN | long | Ausloesungen Lowbyte |
 | CRASH_DATEN_2 | string | Kennung 2 |
 
-<a id="job-status-crashdaten-libelle2-lesen"></a>
 ### STATUS_CRASHDATEN_LIBELLE2_LESEN
 
 _No arguments._
@@ -384,7 +365,6 @@ _No arguments._
 | STAT_AUSLOESUNGEN | long | Ausloesungen Lowbyte |
 | CRASH_DATEN_3 | string | Kennung 3 |
 
-<a id="job-status-crashdaten-diagnose-lesen"></a>
 ### STATUS_CRASHDATEN_DIAGNOSE_LESEN
 
 _No arguments._
@@ -400,7 +380,6 @@ _No arguments._
 | STAT_AUSLOESUNGEN | long | Ausloesungen Lowbyte |
 | CRASH_DATEN_4 | string | Kennung 4 |
 
-<a id="job-status-transportsicherung-lesen"></a>
 ### STATUS_TRANSPORTSICHERUNG_LESEN
 
 Zustand der Transportsicherung
@@ -417,7 +396,6 @@ _No arguments._
 | STAT_TRANSPORTSICHERUNG_EIN | int | 1, wenn Transportsicherung gesetzt, sonst 0 |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-steuern-buegel"></a>
 ### STEUERN_BUEGEL
 
 Ausfahren des Buegels
@@ -430,7 +408,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-transportsicherung-an"></a>
 ### STEUERN_TRANSPORTSICHERUNG_AN
 
 Transportsicherung setzen
@@ -444,7 +421,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-steuern-transportsicherung-aus"></a>
 ### STEUERN_TRANSPORTSICHERUNG_AUS
 
 Transportsicherung entfernen
@@ -458,7 +434,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-login"></a>
 ### LOGIN
 
 login-procedure
@@ -471,7 +446,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-login2"></a>
 ### LOGIN2
 
 login-procedure
@@ -484,7 +458,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-kfz-daten-schreiben"></a>
 ### KFZ_DATEN_SCHREIBEN
 
 KFZ-Herstellerdaten schreiben
@@ -520,7 +493,6 @@ KFZ-Herstellerdaten schreiben
 | TELEGRAMM | binary | Telegramm an SG |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-verriegelung-setzen"></a>
 ### VERRIEGELUNG_SETZEN
 
 Verriegelung setzen
@@ -534,7 +506,6 @@ _No arguments._
 | COD_DATEN_7 | string | Block 7 |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -552,7 +523,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -573,7 +543,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrechterhalten
@@ -586,7 +555,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -609,7 +577,6 @@ _No arguments._
 - [FARTMATRIX](#table-fartmatrix) (14 × 17)
 - [LIEFERANTEN](#table-lieferanten) (30 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -624,7 +591,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 15 rows × 2 columns
@@ -647,7 +613,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0E | g-Sensor |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -665,7 +630,6 @@ Dimensions: 10 rows × 2 columns
 | 0x80 | sporadischer Fehler |
 | 0xFF | -- |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 14 rows × 17 columns
@@ -687,7 +651,6 @@ Dimensions: 14 rows × 17 columns
 | 0x0D | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x04 | 0x00 | 0x08 | 0x00 | 0x10 | 0x00 | 0x20 | 0x00 | 0x40 | 0x00 | 0x80 |
 | 0x0E | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x04 | 0x00 | 0x08 | 0x00 | 0x10 | 0x00 | 0x20 | 0x00 | 0x40 | 0x00 | 0x80 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 30 rows × 2 columns

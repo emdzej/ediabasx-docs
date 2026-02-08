@@ -10,7 +10,6 @@
 - [INITIALISIERUNG](#job-initialisierung)
 - [IDENTIFIKATION](#job-identifikation)
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 _No arguments._
@@ -21,7 +20,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int |  |
 
-<a id="job-identifikation"></a>
 ### IDENTIFIKATION
 
 _No arguments._

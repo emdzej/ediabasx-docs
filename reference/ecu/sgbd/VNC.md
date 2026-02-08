@@ -34,7 +34,6 @@
 - [STEUERN_E_LUEFTER](#job-steuern-e-luefter) - Ansteuern des E-Luefters
 - [STEUERN_BEENDEN](#job-steuern-beenden) - Beenden von Ansteuerungen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -47,7 +46,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -65,7 +63,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer die VNC
@@ -87,7 +84,6 @@ _No arguments._
 | ID_LIEF_NR | string | Lieferanten-Nummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-version-lesen"></a>
 ### VERSION_LESEN
 
 Auslesen der Versionsnummer
@@ -102,7 +98,6 @@ _No arguments._
 | VERSIONSNUMMER | string | VNC Versionsnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -123,7 +118,6 @@ _No arguments._
 | F_HFK | int | Haeufigkeit eines Fehlers |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -137,7 +131,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -150,7 +143,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Einlesen der Betriebswerte
@@ -182,7 +174,6 @@ _No arguments._
 | STAT_GESCHW_WERT | int | Geschwindigkeit |
 | STAT_GESCHW_EINH | string | Geschwindigkeit in [km/h] |
 
-<a id="job-messe-verstellzeit"></a>
 ### MESSE_VERSTELLZEIT
 
 Messen der minimalen und maximalen Verstellzeit
@@ -200,7 +191,6 @@ _No arguments._
 | STAT_MIN_WERT | unsigned int | Minimale Verstellzeit |
 | STAT_MIN_EINH | string | in [ms] |
 
-<a id="job-anfahren-position"></a>
 ### ANFAHREN_POSITION
 
 Anfahren einer vorgegebenen Position
@@ -222,7 +212,6 @@ Anfahren einer vorgegebenen Position
 | STAT_IST_WERT | unsigned int | Istwert |
 | STAT_IST_EINH | string | Istwert |
 
-<a id="job-steuern-dichtheit-pruef"></a>
 ### STEUERN_DICHTHEIT_PRUEF
 
 Messen der Dichtheit der Ventile
@@ -244,7 +233,6 @@ Messen der Dichtheit der Ventile
 | STAT_IST_WERT | unsigned int | Istwert |
 | STAT_IST_EINH | string | Istwert |
 
-<a id="job-steuern-ventile"></a>
 ### STEUERN_VENTILE
 
 Ansteuern der Ventile
@@ -262,7 +250,6 @@ Ansteuern der Ventile
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-e-luefter"></a>
 ### STEUERN_E_LUEFTER
 
 Ansteuern des E-Luefters
@@ -276,7 +263,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-beenden"></a>
 ### STEUERN_BEENDEN
 
 Beenden von Ansteuerungen
@@ -298,7 +284,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (9 × 2)
 - [FARTTEXTE](#table-farttexte) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -314,7 +299,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 9 rows × 2 columns
@@ -331,7 +315,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0E | Geber 2 defekt |
 | 0x00 | unbekannte Fehlerart |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns

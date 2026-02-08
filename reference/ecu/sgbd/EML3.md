@@ -65,7 +65,6 @@
 - [STATUS_DK1_FANGBETRIEB](#job-status-dk1-fangbetrieb) - DK1-Fangbetrieb
 - [STATUS_DK2_FANGBETRIEB](#job-status-dk2-fangbetrieb) - DK1-Fangbetrieb
 
-<a id="job-edic-reset"></a>
 ### EDIC_RESET
 
 EDIC-Reset
@@ -78,7 +77,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -96,7 +94,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default Init-Job
@@ -109,7 +106,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-ram-mc1-lesen"></a>
 ### RAM_MC1_LESEN
 
 Beliebige RAM - Zellen auslesen
@@ -129,7 +125,6 @@ Beliebige RAM - Zellen auslesen
 | RAM_LESEN_WERT | binary | nichts |
 | RAM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-ram-mc2-lesen"></a>
 ### RAM_MC2_LESEN
 
 Beliebige RAM - Zellen auslesen
@@ -149,7 +144,6 @@ Beliebige RAM - Zellen auslesen
 | RAM_LESEN_WERT | binary | nichts |
 | RAM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-eprom-lesen"></a>
 ### EPROM_LESEN
 
 Beliebige EPROM - Zellen auslesen
@@ -169,7 +163,6 @@ Beliebige EPROM - Zellen auslesen
 | EPROM_LESEN_WERT | binary | nichts |
 | EPROM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -193,7 +186,6 @@ _No arguments._
 | ID_AI_NR | string | Aenderungsindex |
 | ID_PROD_NR | string | Produktionsnummer |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Auslesen des QUICK Fehlerspeichers
@@ -209,7 +201,6 @@ _No arguments._
 | F_BSZ_AKT | real | Betriebsstundenzahler aktuell |
 | F_BSZ_ALT | real | Betriebsstundenzaehler beim letzten Loeschen |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -262,7 +253,6 @@ _No arguments._
 | F_UW4_EINH | string | Umweltbedingung 4 des einzelnen Fehlers Einheit |
 | F_HEX_CODE | binary | 18 Fehlerbyte in Hexformat |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -275,7 +265,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-login"></a>
 ### LOGIN
 
 Schutzmechanismus LOGIN
@@ -289,7 +278,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_LOGIN | binary | Rueckgabewert Status |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -303,7 +291,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 
-<a id="job-status-variante"></a>
 ### STATUS_VARIANTE
 
 Programmierte Variante auslesen
@@ -319,7 +306,6 @@ _No arguments._
 | STAT_VARIANTE_TEXT | string | Einheit HEX |
 | STAT_VARIANTE_EEPROM2_WERT | long | Zahlenwert der programmierten Variante |
 
-<a id="job-pwg-adaption-reset"></a>
 ### PWG_ADAPTION_RESET
 
 Adaptionswert PWG Reset
@@ -332,7 +318,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-stat-pwg-lern"></a>
 ### STAT_PWG_LERN
 
 Status fuer PWG Lernvorgang auslesen
@@ -347,7 +332,6 @@ _No arguments._
 | STAT_PWG_LERN_WERT | int | Status beim Lernvorgang des PWG |
 | STAT_PWG_LERN_EINH | string | Einheit HEX |
 
-<a id="job-codier-var-1-schreiben"></a>
 ### CODIER_VAR_1_SCHREIBEN
 
 Variante 1 E31 programmieren
@@ -360,7 +344,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-2-schreiben"></a>
 ### CODIER_VAR_2_SCHREIBEN
 
 Variante 2 E31 programmieren
@@ -373,7 +356,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-3-schreiben"></a>
 ### CODIER_VAR_3_SCHREIBEN
 
 Variante 3 E31 programmieren
@@ -386,7 +368,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-4-schreiben"></a>
 ### CODIER_VAR_4_SCHREIBEN
 
 Variante 4 E38 Programmieren
@@ -399,7 +380,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-5-schreiben"></a>
 ### CODIER_VAR_5_SCHREIBEN
 
 Variante 5 E38 programmieren
@@ -412,7 +392,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-6-schreiben"></a>
 ### CODIER_VAR_6_SCHREIBEN
 
 Variante 6 E38 programmieren
@@ -425,7 +404,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-7-schreiben"></a>
 ### CODIER_VAR_7_SCHREIBEN
 
 Variante 7 E38 programmieren
@@ -438,7 +416,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-8-schreiben"></a>
 ### CODIER_VAR_8_SCHREIBEN
 
 Variante 8 E38 programmieren
@@ -451,7 +428,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-9-schreiben"></a>
 ### CODIER_VAR_9_SCHREIBEN
 
 Variante 9 E38 programmieren
@@ -464,7 +440,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-a-schreiben"></a>
 ### CODIER_VAR_A_SCHREIBEN
 
 Variante A E38 programmieren
@@ -477,7 +452,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-b-schreiben"></a>
 ### CODIER_VAR_B_SCHREIBEN
 
 Variante 11 E38 programmieren
@@ -490,7 +464,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-c-schreiben"></a>
 ### CODIER_VAR_C_SCHREIBEN
 
 Variante 12 E38 programmieren
@@ -503,7 +476,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-d-schreiben"></a>
 ### CODIER_VAR_D_SCHREIBEN
 
 Variante 13 E38 programmieren
@@ -516,7 +488,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-e-schreiben"></a>
 ### CODIER_VAR_E_SCHREIBEN
 
 Variante 14 E38 programmieren
@@ -529,7 +500,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-f-schreiben"></a>
 ### CODIER_VAR_F_SCHREIBEN
 
 Variante 15 E38 programmieren
@@ -542,7 +512,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codier-var-10-schreiben"></a>
 ### CODIER_VAR_10_SCHREIBEN
 
 Variante 16 E38 programmieren
@@ -555,7 +524,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-pedalwinkel"></a>
 ### STATUS_PEDALWINKEL
 
 Pedalwinkel
@@ -570,7 +538,6 @@ _No arguments._
 | STATUS_PEDALWINKEL_WERT | real | Pedalwinkel Wert |
 | STATUS_PEDALWINKEL_EINH | string | Einheit [%] |
 
-<a id="job-status-pwg-lern-restzeit"></a>
 ### STATUS_PWG_LERN_RESTZEIT
 
 Lern Restzeit
@@ -585,7 +552,6 @@ _No arguments._
 | STATUS_PWG_LERN_RESTZEIT_WERT | real | Pedalwinkel Lern Restzeit |
 | STATUS_PWG_LERN_RESTZEIT_EINH | string | Einheit [s] |
 
-<a id="job-status-pwg-olern"></a>
 ### STATUS_PWG_OLERN
 
 PWG_OLERN
@@ -600,7 +566,6 @@ _No arguments._
 | STATUS_PWG_OLERN_WERT | real | PWG_OLERN Wert |
 | STATUS_PWG_OLERN_EINH | string | Einheit [%] |
 
-<a id="job-status-pwg-ulern"></a>
 ### STATUS_PWG_ULERN
 
 PWG_ULERN
@@ -615,7 +580,6 @@ _No arguments._
 | STATUS_PWG_ULERN_WERT | real | PWG_ULERN Wert |
 | STATUS_PWG_ULERN_EINH | string | Einheit [%] |
 
-<a id="job-status-w-dk1"></a>
 ### STATUS_W_DK1
 
 W_DK1
@@ -630,7 +594,6 @@ _No arguments._
 | STATUS_W_DK1_WERT | real | W_DK1 Wert |
 | STATUS_W_DK1_EINH | string | Einheit [%] |
 
-<a id="job-status-w-dk2"></a>
 ### STATUS_W_DK2
 
 W_DK2
@@ -645,7 +608,6 @@ _No arguments._
 | STATUS_W_DK2_WERT | real | W_DK2 Wert |
 | STATUS_W_DK2_EINH | string | Einheit [%] |
 
-<a id="job-status-dk1-p1"></a>
 ### STATUS_DK1_P1
 
 DK1_P1
@@ -660,7 +622,6 @@ _No arguments._
 | STATUS_DK1_P1_WERT | real | DK1_P1 Wert |
 | STATUS_DK1_P1_EINH | string | Einheit [V] |
 
-<a id="job-status-dk1-p2"></a>
 ### STATUS_DK1_P2
 
 DK1_P1
@@ -675,7 +636,6 @@ _No arguments._
 | STATUS_DK1_P2_WERT | real | DK1_P1 Wert |
 | STATUS_DK1_P2_EINH | string | Einheit [V] |
 
-<a id="job-status-dk2-p1"></a>
 ### STATUS_DK2_P1
 
 DK2_P1
@@ -690,7 +650,6 @@ _No arguments._
 | STATUS_DK2_P1_WERT | real | DK2_P1 Wert |
 | STATUS_DK2_P1_EINH | string | Einheit [V] |
 
-<a id="job-status-dk2-p2"></a>
 ### STATUS_DK2_P2
 
 DK2_P2
@@ -705,7 +664,6 @@ _No arguments._
 | STATUS_DK2_P2_WERT | real | DK2_P2 Wert |
 | STATUS_DK2_P2_EINH | string | Einheit [V] |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status Schalteingaenge
@@ -729,7 +687,6 @@ _No arguments._
 | STATUS_TEMPOMAT_VERZ_EIN | int | Status Tempomat Verzoegerung erkannt  0=Aus / 1=Ein |
 | STATUS_TEMPOMAT_WIEDERAUF_EIN | int | Status Tempomat Wiederaufnahme  0=Aus / 1=Ein |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Loeschen des Fehlerspeichers
@@ -742,7 +699,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-dk1-fangbetrieb"></a>
 ### STATUS_DK1_FANGBETRIEB
 
 DK1-Fangbetrieb
@@ -757,7 +713,6 @@ _No arguments._
 | STAT_DK1_FANGBETRIEB_1_WERT | int | DK1 Fangbetrieb 1 Wert |
 | STAT_DK1_FANGBETRIEB_2_WERT | int | DK1 Fangbetrieb 2 Wert |
 
-<a id="job-status-dk2-fangbetrieb"></a>
 ### STATUS_DK2_FANGBETRIEB
 
 DK1-Fangbetrieb
@@ -784,7 +739,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (5 × 5)
 - [JOBRESULT](#table-jobresult) (8 × 2)
 
-<a id="table-betriebswmatrix"></a>
 ### BETRIEBSWMATRIX
 
 Dimensions: 18 rows × 8 columns
@@ -810,7 +764,6 @@ Dimensions: 18 rows × 8 columns
 | FANG_DK2_1 | EEPROM2 | 0x010A | HL | 1 | 1 | 0 | HEX |
 | FANG_DK2_2 | EEPROM2 | 0x010C | HL | 1 | 1 | 0 | HEX |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 11 rows × 4 columns
@@ -829,7 +782,6 @@ Dimensions: 11 rows × 4 columns
 | S_T_EINM | 3 | 0x08 | 0x08 |
 | S_T_WA | 3 | 0x02 | 0x02 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 128 rows × 5 columns
@@ -965,7 +917,6 @@ Dimensions: 128 rows × 5 columns
 | 0x9F | Fehler Diagnose Schrittmotor-IC | 0x01 | 0x02 | 0x03 |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 2 rows × 17 columns
@@ -975,7 +926,6 @@ Dimensions: 2 rows × 17 columns
 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x05 | 0x06 | 0x07 | 0x00 | 0x00 | 0x09 | 0x08 |
 | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY | 0xXY |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -993,7 +943,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Fehler sporadisch |
 | 0x09 | Fehler statisch |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 5 rows × 5 columns
@@ -1006,7 +955,6 @@ Dimensions: 5 rows × 5 columns
 | 0x03 | UW3 | [1] | 1 | 0 |
 | 0xXY | unbekannte Umweltbedingung | -- | 1 | 99 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns

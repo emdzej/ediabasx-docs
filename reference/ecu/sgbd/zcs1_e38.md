@@ -27,7 +27,6 @@
 - [DIAGNOSE_FORTSETZEN](#job-diagnose-fortsetzen) - Fortsetzen der Diagnose
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer IKE
@@ -40,7 +39,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -58,7 +56,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -81,7 +78,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferanten-Nummer |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-zcs-gm-lesen"></a>
 ### ZCS_GM_LESEN
 
 _No arguments._
@@ -96,7 +92,6 @@ _No arguments._
 | MO_TXT | string | Modell |
 | LA_TXT | string | Laenderausfuehrung mit Typschluessel |
 
-<a id="job-prod-datum-lesen"></a>
 ### PROD_DATUM_LESEN
 
 _No arguments._
@@ -113,7 +108,6 @@ _No arguments._
 | JAHR_TXT | string |  |
 | JAHR_DEC | int |  |
 
-<a id="job-diagnose-fortsetzen"></a>
 ### DIAGNOSE_FORTSETZEN
 
 Fortsetzen der Diagnose
@@ -126,7 +120,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -147,7 +140,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (24 × 2)
 - [ZCS_TEXTE](#table-zcs-texte) (43 × 7)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -163,7 +155,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_SG_NACK |
 | 0x00 | ERROR_SG_UNBEKANNTES_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 24 rows × 2 columns
@@ -195,7 +186,6 @@ Dimensions: 24 rows × 2 columns
 | 0x23 | Motorola |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-zcs-texte"></a>
 ### ZCS_TEXTE
 
 Dimensions: 43 rows × 7 columns

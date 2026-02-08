@@ -33,7 +33,6 @@
 - [EEPROM_LESEN](#job-eeprom-lesen) - Auslesen des Speicherinhaltes
 - [EEPROM_SCHREIBEN](#job-eeprom-schreiben) - Schreiben des Speicherinhaltes
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -51,7 +50,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -87,7 +84,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Default fs_lesen job
@@ -105,7 +101,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl der Fehlerarten (hier immer 0) |
 | F_UW_ANZ | int | Anzahl der Umweltarten (hier immer 0) |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 Default position_lesen job
@@ -140,7 +135,6 @@ _No arguments._
 | STAT_U_BATT_WERT | int | Messwert Batteriespannung 0 bis 18 Volt |
 | STAT_U_BATT_EINH | string | Messwert Batteriespannung |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -153,7 +147,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern eines digitalen Ein- oder Ausgangs
@@ -170,7 +163,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-digital-lesen"></a>
 ### STATUS_DIGITAL_LESEN
 
 Default STATUS_DIGITAL_LESEN job
@@ -243,7 +235,6 @@ _No arguments._
 | STAT_RELAIS_7_ANSTEUERUNG_EIN | int | aktiv low |
 | STAT_RELAIS_8_ANSTEUERUNG_EIN | int | aktiv low |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Default diagnose_ende job
@@ -256,7 +247,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Auslesen des Speicherinhaltes
@@ -275,7 +265,6 @@ Auslesen des Speicherinhaltes
 | JOB_STATUS | string |  |
 | DATEN | binary | angeforderter Datenblock (max 12 Bytes!) |
 
-<a id="job-ram-schreiben"></a>
 ### RAM_SCHREIBEN
 
 Schreiben des Speicherinhaltes
@@ -301,7 +290,6 @@ Schreiben des Speicherinhaltes
 | JOB_STATUS | string |  |
 | DATEN | binary | geaenderte Bytes |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 Auslesen des Speicherinhaltes
@@ -320,7 +308,6 @@ Auslesen des Speicherinhaltes
 | JOB_STATUS | string |  |
 | DATEN | binary | angeforderter Datenblock (max 12 Bytes!) |
 
-<a id="job-eeprom-schreiben"></a>
 ### EEPROM_SCHREIBEN
 
 Schreiben des Speicherinhaltes
@@ -356,7 +343,6 @@ Schreiben des Speicherinhaltes
 - [BYTES](#table-bytes) (11 × 9)
 - [JOBRESULT](#table-jobresult) (8 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 48 rows × 2 columns
@@ -412,7 +398,6 @@ Dimensions: 48 rows × 2 columns
 | 0x2F | intern 2F |
 | 0x30 | intern 30 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -447,7 +432,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 21 rows × 4 columns
@@ -476,7 +460,6 @@ Dimensions: 21 rows × 4 columns
 | SPBR | 0xFF | 0xFF | 0x1E |
 | default | 0xFF | 0xFF | 0xFF |
 
-<a id="table-bytes"></a>
 ### BYTES
 
 Dimensions: 11 rows × 9 columns
@@ -495,7 +478,6 @@ Dimensions: 11 rows × 9 columns
 | POFV | 0x0C | 0x08 | 0xF8 | -1 | -2 | -20 | 5000 | 1000 |
 | UBAT | 0x0E | 0x00 | 0xFF |   |   | 718 | 0 | 10 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns

@@ -31,7 +31,6 @@
 - [PRUEFSTEMPEL_SCHREIBEN](#job-pruefstempel-schreiben) - Read the Test Stamp Beschreiben des Pruefstempels
 - [HERSTELLERDATEN_LESEN](#job-herstellerdaten-lesen) - Herstellerdaten auslesen Read supplier specific data
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Instrument Pack
@@ -90,7 +87,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -105,7 +101,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -123,7 +118,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten lesen Read the coding data
@@ -142,7 +136,6 @@ Codierdaten lesen Read the coding data
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren Write and then verify the coding data
@@ -162,7 +155,6 @@ Codierdaten schreiben und verifizieren Write and then verify the coding data
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read coding data response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-s-schreiben"></a>
 ### C_S_SCHREIBEN
 
 Codierdaten schreiben
@@ -179,7 +171,6 @@ Codierdaten schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Read the Test Stamp Default pruefstempel_lesen job
@@ -196,7 +187,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Read the Test Stamp Beschreiben des Pruefstempels
@@ -217,7 +207,6 @@ Read the Test Stamp Beschreiben des Pruefstempels
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-herstellerdaten-lesen"></a>
 ### HERSTELLERDATEN_LESEN
 
 Herstellerdaten auslesen Read supplier specific data
@@ -245,7 +234,6 @@ Herstellerdaten auslesen Read supplier specific data
 - [LIEFERANTEN](#table-lieferanten) (47 × 2)
 - [SUPPLIERDATA](#table-supplierdata) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -259,7 +247,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns
@@ -314,7 +301,6 @@ Dimensions: 47 rows × 2 columns
 | 0x46 | Gemel |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-supplierdata"></a>
 ### SUPPLIERDATA
 
 Dimensions: 2 rows × 2 columns

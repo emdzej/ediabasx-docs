@@ -49,7 +49,6 @@
 - [STEUERN_ROE_PERSISTENT_START](#job-steuern-roe-persistent-start) - Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
 - [CPS_LESEN](#job-cps-lesen) - Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -68,7 +67,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -81,7 +79,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -98,7 +95,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -129,7 +125,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -174,7 +169,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -193,7 +187,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -211,7 +204,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -232,7 +224,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -261,7 +252,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -281,7 +271,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -302,7 +291,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -318,7 +306,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -340,7 +327,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -359,7 +345,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -386,7 +371,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -431,7 +415,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -446,7 +429,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -466,7 +448,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -485,7 +466,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -504,7 +484,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -523,7 +502,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -543,7 +521,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -560,7 +537,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -579,7 +555,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -594,7 +569,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -611,7 +585,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -626,7 +599,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -641,7 +613,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -725,7 +696,6 @@ _No arguments._
 - [TAB_ENTLASTUNG_GENERATOR](#table-tab-entlastung-generator) (16 × 2)
 - [TAB_URSACHE_EARSAR](#table-tab-ursache-earsar) (9 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -809,7 +779,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 139 rows × 2 columns
@@ -956,7 +925,6 @@ Dimensions: 139 rows × 2 columns
 | 0x0000C0 | VLF |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -999,7 +967,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1024,7 +991,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1058,7 +1024,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1131,7 +1096,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1144,7 +1108,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1159,7 +1122,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1172,7 +1134,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1192,7 +1153,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1235,7 +1195,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1246,7 +1205,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x4008"></a>
 ### ARG_0X4008
 
 Dimensions: 2 rows × 12 columns
@@ -1256,7 +1214,6 @@ Dimensions: 2 rows × 12 columns
 | TORQUE_MISUSE_1 | Nm | high | int | - | - | 1.0 | 1.0 | 0.0 | - | - | Drehmoment-Belastungsgrenze 1 in Nm |
 | TORQUE_MISUSE_2 | Nm | high | int | - | - | 1.0 | 1.0 | 0.0 | - | - | Drehmoment-Belastungsgrenze 2 in Nm (reserviert) |
 
-<a id="table-arg-0x400b"></a>
 ### ARG_0X400B
 
 Dimensions: 4 rows × 12 columns
@@ -1268,7 +1225,6 @@ Dimensions: 4 rows × 12 columns
 | PWM_W | % | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM duty cycle für U Phase |
 | PWM_DAUER | ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 10000.0 | PWM Dauer |
 
-<a id="table-arg-0x400c"></a>
 ### ARG_0X400C
 
 Dimensions: 1 rows × 12 columns
@@ -1277,7 +1233,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Argument nicht verwendet |
 
-<a id="table-arg-0x400d"></a>
 ### ARG_0X400D
 
 Dimensions: 1 rows × 12 columns
@@ -1286,7 +1241,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DREHMOMENT | Nm | high | int | - | - | 26.0 | 1.0 | 0.0 | -1214.0 | 1214.0 | Vorgabe Sollmoment |
 
-<a id="table-arg-0x4016"></a>
 ### ARG_0X4016
 
 Dimensions: 6 rows × 12 columns
@@ -1300,7 +1254,6 @@ Dimensions: 6 rows × 12 columns
 | INDUKTIVITAET_D | H | high | unsigned int | - | - | 6.5536E7 | 1.0 | 0.0 | - | - | Ld |
 | INDUKTIVITAET_Q | H | high | unsigned int | - | - | 6.5536E7 | 1.0 | 0.0 | - | - | Lq |
 
-<a id="table-arg-0x4101"></a>
 ### ARG_0X4101
 
 Dimensions: 73 rows × 12 columns
@@ -1381,7 +1334,6 @@ Dimensions: 73 rows × 12 columns
 | TAB_M_AKTUATOR_ADAPT_NM_34 | Nm | high | int | - | - | 1.0 | 1.0 | 0.0 | -5000.0 | 5000.0 | Stützstelle der y-Achse der adaptierten Aktuatorkennlinie (Drehmoment) |
 | TAB_M_AKTUATOR_ADAPT_NM_35 | Nm | high | int | - | - | 1.0 | 1.0 | 0.0 | -5000.0 | 5000.0 | Stützstelle der y-Achse der adaptierten Aktuatorkennlinie (Drehmoment) |
 
-<a id="table-arg-0x4191"></a>
 ### ARG_0X4191
 
 Dimensions: 1 rows × 12 columns
@@ -1390,7 +1342,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BDM_PARAMETERS | DATA | high | data[32] | - | - | 1.0 | 1.0 | 0.0 | - | - | Betriebsdatenmonitor Parameter |
 
-<a id="table-arg-0xd69e"></a>
 ### ARG_0XD69E
 
 Dimensions: 5 rows × 12 columns
@@ -1403,7 +1354,6 @@ Dimensions: 5 rows × 12 columns
 | STAT_MOTOR_WERT | HEX | high | unsigned long | - | - | - | - | - | - | - | Byte 1: ID, Byte 2: Hauptversion, Byte 3: Unterversion, Byte 4: Patchversion |
 | STAT_INT_MOMENTENSENSOR_WERT | HEX | high | unsigned long | - | - | - | - | - | - | - | Byte 1: ID, Byte 2: Hauptversion, Byte 3: Unterversion, Byte 4: Patchversion |
 
-<a id="table-arg-0xd6a0"></a>
 ### ARG_0XD6A0
 
 Dimensions: 1 rows × 12 columns
@@ -1412,7 +1362,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ENDTEST | 0-n | high | unsigned char | - | TAB_ENDTEST | - | - | - | - | - | ENDTEST Schritte |
 
-<a id="table-arg-0xd6a1"></a>
 ### ARG_0XD6A1
 
 Dimensions: 1 rows × 12 columns
@@ -1421,7 +1370,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OFFSET_ROTORLAGESENSOR | ° | high | unsigned int | - | - | 65536.0 | 360.0 | 0.0 | - | - | Offset Rotorlagesensor |
 
-<a id="table-arg-0xd6a2"></a>
 ### ARG_0XD6A2
 
 Dimensions: 3 rows × 12 columns
@@ -1432,7 +1380,6 @@ Dimensions: 3 rows × 12 columns
 | OFFSET_TEMPERATURSENSOREN_POWERBOARD | ° | high | unsigned char | - | - | 1.0 | 1.0 | 40.0 | -40.0 | 215.0 | OFFSET_TEMPERATURSENSOREN_powerBOARD |
 | OFFSET_TEMPERATURSENSOREN_MOTOR | ° | high | unsigned char | - | - | 1.0 | 1.0 | 40.0 | -40.0 | 215.0 | OFFSET_TEMPERATURSENSOREN_MOTOR |
 
-<a id="table-arg-0xd6a4"></a>
 ### ARG_0XD6A4
 
 Dimensions: 2 rows × 12 columns
@@ -1442,7 +1389,6 @@ Dimensions: 2 rows × 12 columns
 | OFFSET | Nm | high | int | - | - | 26.0 | 1.0 | 0.0 | -1214.0 | 1214.0 | Offset |
 | STEIGUNG | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - | - | Steigung |
 
-<a id="table-arg-0xdb20"></a>
 ### ARG_0XDB20
 
 Dimensions: 3 rows × 12 columns
@@ -1453,7 +1399,6 @@ Dimensions: 3 rows × 12 columns
 | STAT_RGL_VERST_DZ_EMOT_I_WERT | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - | - | Aktuator Regler I Verstärkung |
 | STAT_RGL_LIM_DZ_EMOT_I_WERT | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | - | - | Aktuator Regler I Grenze |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1467,7 +1412,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1481,7 +1425,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 58 rows × 3 columns
@@ -1547,7 +1490,6 @@ Dimensions: 58 rows × 3 columns
 | 0xCA1AE9 | Signalfehler (Relativzeit BN2020, ID: RELATIVZEIT) - Ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 34 rows × 9 columns
@@ -1589,7 +1531,6 @@ Dimensions: 34 rows × 9 columns
 | 0x5018 | TORQ_ERR_STATUS | HEX | High | unsigned long | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1601,7 +1542,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 28 rows × 3 columns
@@ -1637,7 +1577,6 @@ Dimensions: 28 rows × 3 columns
 | 0x4836FF | E-Motorfehler - Detail | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 29 rows × 9 columns
@@ -1674,7 +1613,6 @@ Dimensions: 29 rows × 9 columns
 | 0x5018 | TORQ_ERR_STATUS | HEX | High | unsigned long | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1683,7 +1621,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -1699,7 +1636,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -1710,7 +1646,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ECUMindestensEinmalVollstaendigProgrammierbar |
 | 2 | ECUNichtMehrProgrammierbar |
 
-<a id="table-res-0x2502"></a>
 ### RES_0X2502
 
 Dimensions: 3 rows × 10 columns
@@ -1721,7 +1656,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504"></a>
 ### RES_0X2504
 
 Dimensions: 6 rows × 10 columns
@@ -1735,7 +1669,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4008"></a>
 ### RES_0X4008
 
 Dimensions: 2 rows × 10 columns
@@ -1745,7 +1678,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TORQUE_MISUSE_1_WERT | Nm | high | int | - | - | 1.0 | 1.0 | 0.0 | Drehmoment-Belastungsgrenze 1 in Nm |
 | STAT_RES_WERT | - | high | int | - | - | 1.0 | 1.0 | 0.0 | reserviert |
 
-<a id="table-res-0x4009"></a>
 ### RES_0X4009
 
 Dimensions: 2 rows × 10 columns
@@ -1755,7 +1687,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MAX_ABS_MEAS_TORQ_WERT | Nm | high | int | - | - | 1.0 | 1.0 | 0.0 | maximaler gemessener Wert des Drehmomentsensors |
 | STAT_RES_WERT | HEX | high | unsigned int | - | - | - | - | - | reserved |
 
-<a id="table-res-0x4016"></a>
 ### RES_0X4016
 
 Dimensions: 6 rows × 10 columns
@@ -1769,7 +1700,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_INDUKTIVITAET_D_WERT | H | high | unsigned int | - | - | 1.0 | 6.5536E7 | 0.0 | Ld |
 | STAT_INDUKTIVITAET_Q_WERT | H | high | unsigned int | - | - | 1.0 | 6.5536E7 | 0.0 | Lq |
 
-<a id="table-res-0x4190"></a>
 ### RES_0X4190
 
 Dimensions: 20 rows × 10 columns
@@ -1797,7 +1727,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_TASK_RES4_WERT | µs | high | unsigned long | - | - | 1.0 | 120.0 | 0.0 | Maximallaufzeit der Reserve 4 Task |
 | STAT_TASK_RES5_WERT | µs | high | unsigned long | - | - | 1.0 | 120.0 | 0.0 | Maximallaufzeit der Reserve 5 Task |
 
-<a id="table-res-0x4191"></a>
 ### RES_0X4191
 
 Dimensions: 1 rows × 10 columns
@@ -1806,7 +1735,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BDM_PARAMETERS_DATA | DATA | high | data[32] | - | - | 1.0 | 1.0 | 0.0 | Betriebsdatenmonitor Parameter |
 
-<a id="table-res-0x4192"></a>
 ### RES_0X4192
 
 Dimensions: 25 rows × 10 columns
@@ -1839,7 +1767,6 @@ Dimensions: 25 rows × 10 columns
 | STAT_BDM_DATA_TEMP_MAGN_DURATIONS_DATA | DATA | high | data[56] | - | - | 1.0 | 1.0 | 0.0 | Ergebnisdaten Betriebsdatenmonitor Magnettemperatur Verweildauern |
 | STAT_BDM_DATA_QU_FN_DURATIONS_DATA | DATA | high | data[28] | - | - | 1.0 | 1.0 | 0.0 | Ergebnisdaten Betriebsdatenmonitor Funktionsqualifier Verweildauern |
 
-<a id="table-res-0xd499"></a>
 ### RES_0XD499
 
 Dimensions: 2 rows × 10 columns
@@ -1849,7 +1776,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KL30_WERT | - | high | unsigned int | - | - | 1.0 | 1638.0 | 0.0 | Spannung Klemme 30 |
 | STAT_KL15_WERT | - | high | unsigned int | - | - | 1.0 | 1638.0 | 0.0 | Spannung Klemme 15 |
 
-<a id="table-res-0xd699"></a>
 ### RES_0XD699
 
 Dimensions: 3 rows × 10 columns
@@ -1860,7 +1786,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_DREHZAHL_MOTOR_IST_WERT | 1/min | high | int | - | - | 1.0 | 3.0 | 0.0 | Ist-Drehzahl-Motor |
 | STAT_WINKEL_MOTOR_IST_WERT | ° | high | int | - | - | 1.0 | 1.0 | 0.0 | Ist-Winkel-Motor |
 
-<a id="table-res-0xd69a"></a>
 ### RES_0XD69A
 
 Dimensions: 2 rows × 10 columns
@@ -1870,7 +1795,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SOLL_MOTOR_MOMENT_WERT | Nm | high | int | - | - | 1.0 | 3276.0 | 0.0 | Soll-Moment Motor |
 | STAT_IST_MOTOR_MOMENT_WERT | Nm | high | int | - | - | 1.0 | 3276.0 | 0.0 | Ist-Moment Motor |
 
-<a id="table-res-0xd69b"></a>
 ### RES_0XD69B
 
 Dimensions: 3 rows × 10 columns
@@ -1881,7 +1805,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_STROM_D_ACHSE_WERT | A | high | int | - | - | 1.0 | 150.0 | 0.0 | Strom d-Achse |
 | STAT_STROM_Q_ACHSE_WERT | A | high | int | - | - | 1.0 | 150.0 | 0.0 | Strom q-Achse |
 
-<a id="table-res-0xd69c"></a>
 ### RES_0XD69C
 
 Dimensions: 8 rows × 10 columns
@@ -1897,7 +1820,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_U5_WERT | V | high | unsigned int | - | - | 1.0 | 1638.0 | 0.0 | Spannung U5 |
 | STAT_U6_WERT | V | high | unsigned int | - | - | 1.0 | 1638.0 | 0.0 | Spannung U6 |
 
-<a id="table-res-0xd69d"></a>
 ### RES_0XD69D
 
 Dimensions: 4 rows × 10 columns
@@ -1909,7 +1831,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TEMPERATUR_POWERBOARD_WERT | ° | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Temperatur Power-Board |
 | STAT_TEMPERATUR_LOGIKBOARD_WERT | ° | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Temperatur Logik-Board |
 
-<a id="table-res-0xd69e"></a>
 ### RES_0XD69E
 
 Dimensions: 5 rows × 10 columns
@@ -1922,7 +1843,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_MOTOR_WERT | HEX | high | unsigned long | - | - | - | - | - | Byte 1: ID, Byte 2: Hauptversion, Byte 3: Unterversion, Byte 4: Patchversion |
 | STAT_INT_MOMEMTENSENSOR_WERT | HEX | high | unsigned long | - | - | - | - | - | Byte 1: ID, Byte 2: Hauptversion, Byte 3: Unterversion, Byte 4: Patchversion |
 
-<a id="table-res-0xd6a1"></a>
 ### RES_0XD6A1
 
 Dimensions: 1 rows × 10 columns
@@ -1931,7 +1851,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_OFFSET_ROTORLAGESENSOR_WERT | ° | high | unsigned int | - | - | 360.0 | 65536.0 | 0.0 | Offset Rotorlagesensor |
 
-<a id="table-res-0xd6a4"></a>
 ### RES_0XD6A4
 
 Dimensions: 2 rows × 10 columns
@@ -1941,7 +1860,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_OFFSET_WERT | Nm | high | int | - | - | 1.0 | 26.0 | 0.0 | Offset |
 | STAT_STEIGUNG_WERT | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | Steigung |
 
-<a id="table-res-0xd6bb"></a>
 ### RES_0XD6BB
 
 Dimensions: 15 rows × 10 columns
@@ -1964,7 +1882,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_ISTMOM_STABI_ARS_WERT | Nm | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Aktuelles Stabilisatormoment (Messbereich +/-1200 Nm), das am entsprechenden Aktor anliegt (BN-Signal: AVL_TORQ_STAB_FTAX_ARS oder AVL_TORQ_STAB_BAX_ARS) |
 | STAT_QU_ISTMOM_STABI_ARS | 0-n | high | unsigned char | - | TAB_EARSAR_QU_AVL_TORQ_STAB_XAX_ARS | - | - | - | Qualifierstatus vom Sensorsignal des Stabilisatormomentes. |
 
-<a id="table-res-0xd8f0"></a>
 ### RES_0XD8F0
 
 Dimensions: 70 rows × 10 columns
@@ -2042,7 +1959,6 @@ Dimensions: 70 rows × 10 columns
 | STAT_WINKEL_35_WERT | ° | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | Winkel |
 | STAT_DREHMOMENT_35_WERT | Nm | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | Drehmoment |
 
-<a id="table-res-0xdb20"></a>
 ### RES_0XDB20
 
 Dimensions: 3 rows × 10 columns
@@ -2053,7 +1969,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_RGL_VERST_DZ_EMOT_I_WERT | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | Aktuator Regler I Verstärkung |
 | STAT_RGL_LIM_DZ_EMOT_I_WERT | - | high | motorola float | - | - | 1.0 | 1.0 | 0.0 | Aktuator Regler I Grenze |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 37 rows × 16 columns
@@ -2098,7 +2013,6 @@ Dimensions: 37 rows × 16 columns
 | DELETE_RUNTIME | 0xF190 | - | Maximalwerte der Laufzeitmessung löschen | - | - | - | - | - | - | - | - | - | 31 | - | - |
 | DELETE_BDM_DATA | 0xF192 | - | Daten des Betriebsdatenmonitors löschen | - | - | - | - | - | - | - | - | - | 31 | - | - |
 
-<a id="table-tab-0x28a6"></a>
 ### TAB_0X28A6
 
 Dimensions: 1 rows × 5 columns
@@ -2107,7 +2021,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 4 | 0x0001 | 0x0002 | 0x0003 | 0x0004 |
 
-<a id="table-tab-earsar-qu-avl-torq-stab-xax-ars"></a>
 ### TAB_EARSAR_QU_AVL_TORQ_STAB_XAX_ARS
 
 Dimensions: 9 rows × 2 columns
@@ -2124,7 +2037,6 @@ Dimensions: 9 rows × 2 columns
 | 14 | Wert nicht verfügbar |
 | 0xFF | Signal unbefüllt |
 
-<a id="table-tab-earsar-strg-fkt-xa-ars"></a>
 ### TAB_EARSAR_STRG_FKT_XA_ARS
 
 Dimensions: 20 rows × 2 columns
@@ -2152,7 +2064,6 @@ Dimensions: 20 rows × 2 columns
 | 254 | Funktion_meldet_Fehler |
 | 0xFF | Signal_unbefuellt |
 
-<a id="table-tab-earsar-st-fn-xax-ars"></a>
 ### TAB_EARSAR_ST_FN_XAX_ARS
 
 Dimensions: 11 rows × 2 columns
@@ -2171,7 +2082,6 @@ Dimensions: 11 rows × 2 columns
 | 179 | Nullpositionsregelung - aktiv - Fehler und Vorgabe / NPR eigenst¿ndig wegen Fehler und Anforderung |
 | 0xFF | Signal_unbefuellt / Sendefunktion nicht in Betrieb |
 
-<a id="table-tab-endtest"></a>
 ### TAB_ENDTEST
 
 Dimensions: 6 rows × 2 columns
@@ -2185,7 +2095,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Schritt 5 |
 | 5 | Schritt 6 |
 
-<a id="table-tab-entlastung-generator"></a>
 ### TAB_ENTLASTUNG_GENERATOR
 
 Dimensions: 16 rows × 2 columns
@@ -2209,7 +2118,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Vorhalt |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-ursache-earsar"></a>
 ### TAB_URSACHE_EARSAR
 
 Dimensions: 9 rows × 2 columns

@@ -25,7 +25,6 @@
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 - [C_C_LESEN](#job-c-c-lesen) - Codierdaten schreiben und verifizieren
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -43,7 +42,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -56,7 +54,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation
@@ -74,7 +71,6 @@ _No arguments._
 | ID_COD_INDEX | string | Codierindex |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -91,7 +87,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -115,7 +110,6 @@ Codierdaten schreiben und verifizieren
 
 - [JOBRESULT](#table-jobresult) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 2 rows × 2 columns

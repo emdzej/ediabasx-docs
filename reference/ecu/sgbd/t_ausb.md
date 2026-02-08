@@ -22,7 +22,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung und Kommunikationsparameter
 - [INFO](#job-info) - Information SGBD
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -35,7 +34,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -60,7 +58,6 @@ _No arguments._
 
 - [AUSB_VORAB](#table-ausb-vorab) (40 × 5)
 
-<a id="table-ausb-vorab"></a>
 ### AUSB_VORAB
 
 Dimensions: 40 rows × 5 columns

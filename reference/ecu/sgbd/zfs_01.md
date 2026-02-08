@@ -66,7 +66,6 @@
 - [STEUERN_ROE_START_PERS_TAS_DF](#job-steuern-roe-start-pers-tas-df) - Persistentes Aktivieren der aktiven Fehlermeldung ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
 - [STEUERN_ROE_STOP_PERS_TAS_DF](#job-steuern-roe-stop-pers-tas-df) - Persistentes Deaktivieren der aktiven Fehlermeldung ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -85,7 +84,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -98,7 +96,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -115,7 +112,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -145,7 +141,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -187,7 +182,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -206,7 +200,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -224,7 +217,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -245,7 +237,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -274,7 +265,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -294,7 +284,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -315,7 +304,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -331,7 +319,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -346,7 +333,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -363,7 +349,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -378,7 +363,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -393,7 +377,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -408,7 +391,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-liste-lockable-dtcs"></a>
 ### STATUS_LISTE_LOCKABLE_DTCS
 
 Abfrage der DTCs, die der Fehlerspeichersperre laut LH Diagnosemaster unterliegen UDS     : $22   ReadDataByIdentifierRequestServiceID UDS     : $1724 DataIdentifier DM_IS_DTC_LOCKABLE Modus   : Default
@@ -437,7 +419,6 @@ Abfrage der DTCs, die der Fehlerspeichersperre laut LH Diagnosemaster unterliege
 | _REQUEST | binary | Hex-Auftrag an SG, letzter von mehreren |
 | _RESPONSE | binary | Hex-Antwort von SG, letzte von mehreren |
 
-<a id="job-status-liste-active-response"></a>
 ### STATUS_LISTE_ACTIVE_RESPONSE
 
 Abfrage der DTCs, die der Aktiven Fehlermeldung laut LH Diagnosemaster unterliegen UDS     : $22   ReadDataByIdentifierRequestServiceID UDS     : $1723 DataIdentifier DM_IS_DTC_ACTIVE_RESPONSE Modus   : Default
@@ -466,7 +447,6 @@ Abfrage der DTCs, die der Aktiven Fehlermeldung laut LH Diagnosemaster unterlieg
 | _REQUEST | binary | Hex-Auftrag an SG, letzter von mehreren |
 | _RESPONSE | binary | Hex-Antwort von SG, letzte von mehreren |
 
-<a id="job-status-liste-supported-dtcs"></a>
 ### STATUS_LISTE_SUPPORTED_DTCS
 
 Abfrage der DTCs, die vom SG unterstützt werden UDS     : $19   ReadDTCInformationRequestServiceID UDS     : $0A	subFunction reportSupportedDTCs  (liefert DTCs und Statusbytes) Modus   : Default
@@ -495,7 +475,6 @@ Abfrage der DTCs, die vom SG unterstützt werden UDS     : $19   ReadDTCInformat
 | _REQUEST | binary | Hex-Auftrag an SG, letzter von mehreren |
 | _RESPONSE | binary | Hex-Antwort von SG, letzte von mehreren |
 
-<a id="job-steuern-trigger-dummy-dtc-funktional"></a>
 ### STEUERN_TRIGGER_DUMMY_DTC_FUNKTIONAL
 
 Triggern eines Dummy-DTCs UDS   : $31 RoutineControl $01 StartRountine $03 RID Trigger_Dummy_DTC $04 RID Trigger_Dummy_DTC $00/01 Param Dummy_DTC_Type
@@ -518,7 +497,6 @@ Triggern eines Dummy-DTCs UDS   : $31 RoutineControl $01 StartRountine $03 RID T
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-i-stufe-lesen"></a>
 ### I_STUFE_LESEN
 
 Auslesen der I-Stufe aus ZGW und CAS UDS:    $22   ReadDataByIdentifier UDS:    $100B DataIdentifier I-Level Byte     |0|1|2|3| 4| 5| 6| 7| | ASCII |    Byte   | IStufe   |F|0|0|1|09|08| 4 00|
@@ -537,7 +515,6 @@ _No arguments._
 | _RESPONSE_ZGW | binary | Hex-Antwort von ZGW |
 | _RESPONSE_CAS | binary | Hex-Antwort von CAS |
 
-<a id="job-status-vcm-get-ecu-list-active-response"></a>
 ### STATUS_VCM_GET_ECU_LIST_ACTIVE_RESPONSE
 
 Liste aller in der SVTSoll gespeicherte SGe UDS  : $22 ReadDataByIdentifier UDS  : $3F VcmGetEcuListActiveResponse UDS  : $08 VcmGetEcuListActiveResponse
@@ -556,7 +533,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report-funktional"></a>
 ### STATUS_ROE_REPORT_FUNKTIONAL
 
 Statusabfrage der aktiven Fehlermeldung mittels funktionaler Adressierung UDS   : $86 ResponseOnEvent $04 RoE_STATUS [$02 EventWindowTime (nur ab 35up)] Es werden beide Versionen des Requests der Reihe nach durchgeführt 86 04 (pre35up) und 86 04 02 (35up) jeweils mittels funktionaler Adressierung an 0xDF. Pro antwortendem SG ein Resultset.
@@ -574,7 +550,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start-funktional"></a>
 ### STEUERN_ROE_START_FUNKTIONAL
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -592,7 +567,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop-funktional"></a>
 ### STEUERN_ROE_STOP_FUNKTIONAL
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -610,7 +584,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-zfs-loeschen"></a>
 ### STEUERN_ZFS_LOESCHEN
 
 Loeschen des Zentralen Fehlerspeichers UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $00   DM_Lock UDS     : $01   DM_Unlock UDS     : $05   DM_Clear Modus   : Default
@@ -625,7 +598,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-zfs-lesen-reduziert"></a>
 ### STATUS_ZFS_LESEN_REDUZIERT
 
 Lesen einer Teilmenge des Zentralen Fehlerspeichers UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $00   DM_Lock UDS     : $01   DM_Unlock UDS     : $04   DM_ReadEvent Modus   : Default
@@ -646,7 +618,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-zfs-events-werk"></a>
 ### STATUS_ZFS_EVENTS_WERK
 
 Lesen einer Teilmenge des Zentralen Fehlerspeichers fuer Ablage in CASCADE UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $00   DM_Lock UDS     : $01   DM_Unlock UDS     : $04   DM_ReadEvent Modus   : Default
@@ -671,7 +642,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG, letzter von mehreren |
 | _RESPONSE | binary | Hex-Antwort von SG, letzte von mehreren |
 
-<a id="job-status-zfs-lesen-gesamt"></a>
 ### STATUS_ZFS_LESEN_GESAMT
 
 Lesen des Zentralen Fehlerspeichers Kompatible Gateways: ZGW_01, ZGW_02, FEM, BDC-LR, BDC 35up Spec.: LH Diagnosemaster SAP 10000504 Es werden nur die Results zurückgeliefert, welche vom vorliegenden Gateway auch unterstützt werden. Pro Fehlereintrag ein Resultset. --------- UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     :     $00   DM_Lock UDS     :     $01   DM_Unlock UDS     :     $03   DM_ReadSysContext UDS     :     $04   DM_ReadEvent UDS     :     $F3   DM_ReadFormatVersion Mit SubFunction 0xF3 ReadFormatVersion wird geprüft, um welche ZFS-Version es sich handelt (Systemkontext-Version). Es wird im Jobverlauf ausserdem von jedem SG, zu welchem ein DTC eingetragen ist, der SGBD-Index mit UDS 22 F150 abgefragt. Um die SGBD-Namen korrekt zu bestimmen, wird die T_GRTB.PRG herangezogen. Aus den entsprechenden SGBDn werden die FOrtTexte der vorhandenen DTCs extrahiert.
@@ -725,7 +695,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-anzahl-systemkontexte"></a>
 ### STATUS_ANZAHL_SYSTEMKONTEXTE
 
 Anzahl der Systemkontexte des Zentralen Fehlerspeichers UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $F1   DM_AnzSysContext Modus   : Default
@@ -741,7 +710,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-anzahl-mappings"></a>
 ### STATUS_ANZAHL_MAPPINGS
 
 Anzahl der Mappings des Zentralen Fehlerspeichers UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $F2   DM_AnzMapping Modus   : Default
@@ -757,7 +725,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dm-version-syskontexte-mappings"></a>
 ### STATUS_DM_VERSION_SYSKONTEXTE_MAPPINGS
 
 MAPPING Version und Systemkontext Version auslesen UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $F3   Version Modus   : Default
@@ -774,7 +741,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dm-zfs-ringspeicher-statusindikator"></a>
 ### STATUS_DM_ZFS_RINGSPEICHER_STATUSINDIKATOR
 
 Statusindikator Ringspeicher (für ZFS Mappings/Systemkontexte) nach LH DM DMA_PA_9125 Es wird zurückgegeben, ob der ZFS bereits 'voll' ist, so dass bei weiteren Einträgen alte überschrieben werden Ausserdem der 'START' Zeitstempel, ab dem im laufenden LifeCycle der Ringspeicher wiederholt überschrieben wurde, so dass ZFS Einträge ab dann ganz geblockt wurden. Details im LH Diagnosemaster 4.1.3.2.2 Zentraler Fehlerspeicher / Central fault memory speziell: DMA_PA_9125 und DMA_PA_9137, DMA_PA_8688, DMA_PA_9139, DMA_PA_9140 UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $08   Statusindikator
@@ -793,7 +759,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-initialisierung"></a>
 ### STEUERN_ROE_INITIALISIERUNG
 
 Persistentes Aktivieren der aktiven Fehlermeldung an alle Diagnosemasterclients ueber TAS UDS   : $86 ResponseOnEvent $C5 Start persistent, suppressPosRspMsg $02 (EventWindowTime)
@@ -808,7 +773,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-initialisierung-check"></a>
 ### STEUERN_ROE_INITIALISIERUNG_CHECK
 
 Persistentes Aktivieren der aktiven Fehlermeldung an alle Diagnosemasterclients ueber TAS mittels funktionaler Adressierung UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -827,7 +791,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-initialisierung-check2"></a>
 ### STEUERN_ROE_INITIALISIERUNG_CHECK2
 
 Persistentes Aktivieren der aktiven Fehlermeldung an alle Diagnosemasterclients ueber TAS mit physikalischer Adressierung an SGs in VCM-Liste (falls VCM-Daten ungültig, wird ersatzweise RoE funktional aktiviert) UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -846,7 +809,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dm-lock"></a>
 ### _STEUERN_DM_LOCK
 
 Sperren des Zentralen Fehlerspeichers UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $00   DM_Lock Modus   : Default
@@ -861,7 +823,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dm-unlock"></a>
 ### _STEUERN_DM_UNLOCK
 
 Entsperren des Zentralen Fehlerspeichers UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $01   DM_Unlock Modus   : Default
@@ -876,7 +837,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dm-lockstate"></a>
 ### _STATUS_DM_LOCKSTATE
 
 Sperrzustand des Zentralen Fehlerspeichers UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $4000 DataIdentifier DM_Master_Syskontext UDS     : $02   DM_Lockstate Modus   : Default
@@ -892,7 +852,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dm-fss-master"></a>
 ### STEUERN_DM_FSS_MASTER
 
 Manipulation der Zentralen Fehlerspeichersperre nach LH Diagnosemaster 10000504 DMA_PA_8960 Der JOb gilt nur fürs FEM-GW PL7 und nicht fürs ZGW PL6 UDS    : $31   RoutineControl UDS    : $xx   01: StartRoutine, 02: StopRoutine UDS    : $0305 RID für Fehlerspeichersperre UDS    : $xx   Signalvorgabe per Argument (zur Statusabfrage vergleiche Job STATUS_DM_FSS_MASTER)
@@ -911,7 +870,6 @@ Manipulation der Zentralen Fehlerspeichersperre nach LH Diagnosemaster 10000504 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dm-fss-master"></a>
 ### STATUS_DM_FSS_MASTER
 
 Gibt aktuellen Zustand der Zentralen Fehlerspeichersperre nach LH Diagnosemaster 10000504 DMA_PA_8960 Der JOb gilt nur fürs FEM-GW PL7 und nicht fürs ZGW PL6 UDS    : $22   ReadDataByIdentifier UDS    : $40   Byte #1 von SG-spez. DataIdentifier $4040 "Status_FSS" UDS    : $40   Byte #2 von SG-spez. DataIdentifier $4040 "Status_FSS"  Request 0x22,40,40 => liefert Antwort der Form 0x62,40,40,xx,yy Wertetabelle für xx: 0x00: Fehlerspeicherfreigabe 0x01: Fehlerspeichersperre 0x02: Reserve 0x03: Signal ungültig 0x04: Nachricht 0x3A0 stumm Wertetabelle für yy: 0x00: Freilaufend 0x01: Fest wie mittels Routine vorgegeben 0xFF: keine Angabe möglich
@@ -930,7 +888,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-tas"></a>
 ### STEUERN_TAS
 
 Tester Assistent - TAS wird Aktiviert oder Deaktiviert UDS   : $31   ResponseOnEvent $01   StartRoutine $100A DataIdentifier TAS Aktivieren/Deaktivieren
@@ -949,7 +906,6 @@ Tester Assistent - TAS wird Aktiviert oder Deaktiviert UDS   : $31   ResponseOnE
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-stop-routine-tas-beauftragung"></a>
 ### STEUERN_STOP_ROUTINE_TAS_BEAUFTRAGUNG
 
 Tester Assistent - laufende TAS-Beauftragung wird gestoppt UDS   : $31   ResponseOnEvent $02   StopRoutine $0F0B DataIdentifier TAS Beauftragung
@@ -964,7 +920,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start-pers-tas-df"></a>
 ### STEUERN_ROE_START_PERS_TAS_DF
 
 Persistentes Aktivieren der aktiven Fehlermeldung ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -981,7 +936,6 @@ _No arguments._
 | ECU_GROBNAME | string | Grobname des Steuergerätes table Grobname GROBNAME |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei NOK: Testerassistent: NRC 0x21 BusyRepeatRequest!, wenn 15 Wiederholungen a 1s bei TAS=busy nicht ausreichten NOK: Testerassistent Request NOK, wenn TAS anderweitig Job nicht ausführt table JobResult STATUS_TEXT |
 
-<a id="job-steuern-roe-stop-pers-tas-df"></a>
 ### STEUERN_ROE_STOP_PERS_TAS_DF
 
 Persistentes Deaktivieren der aktiven Fehlermeldung ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -1055,7 +1009,6 @@ _No arguments._
 - [TABDMFSBETRIEBSARTSTATUS](#table-tabdmfsbetriebsartstatus) (4 × 2)
 - [TABZFSSTATUS](#table-tabzfsstatus) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1139,7 +1092,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 137 rows × 2 columns
@@ -1284,7 +1236,6 @@ Dimensions: 137 rows × 2 columns
 | 0x0000BE | Schaeffler Technologies |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1327,7 +1278,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1352,7 +1302,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1386,7 +1335,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1459,7 +1407,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1472,7 +1419,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1485,7 +1431,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1498,7 +1443,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1509,7 +1453,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0xf190"></a>
 ### ARG_0XF190
 
 Dimensions: 1 rows × 12 columns
@@ -1518,7 +1461,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | VIN | - | - | string[17] | - | - | 1 | 1 | 0 | - | - | Fahrgestellnummer / VIN (17 Byte) |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 3 rows × 3 columns
@@ -1529,7 +1471,6 @@ Dimensions: 3 rows × 3 columns
 | 0x01 | FlashEnabled | FlashEnabled |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1543,7 +1484,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 8 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 49 rows × 3 columns
@@ -1600,7 +1540,6 @@ Dimensions: 49 rows × 3 columns
 | 0xCD1410 | Empfang keine Systemzeit | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 54 rows × 9 columns
@@ -1662,7 +1601,6 @@ Dimensions: 54 rows × 9 columns
 | 0x4602 | Fehlerhaftes Softwaremodul TAS | 0-n | high | 0xFF | TabFehlerhaftesSoftwaremodulTAS | 1 | 1 | 0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1674,7 +1612,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 53 rows × 3 columns
@@ -1735,7 +1672,6 @@ Dimensions: 53 rows × 3 columns
 | 0x930008 | ConfigOk not Time-Systemzustand Ok nicht fristgerecht erkannt | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 55 rows × 9 columns
@@ -1798,7 +1734,6 @@ Dimensions: 55 rows × 9 columns
 | 0x497F | Adresse der Fehlernachricht in der Binaerdatei | n/a | high | unsigned long | - | 1 | 1 | 0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1807,7 +1742,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 2 rows × 16 columns
@@ -1817,7 +1751,6 @@ Dimensions: 2 rows × 16 columns
 | SYSTEMZEIT_LESEN | 0x1701 | STAT_SYSTEMZEIT_WERT | resetgesicherter Sekundenzähler | sek | - | high | unsigned long | - | 1 | 1 | 0 | 0x10 | 22 | - | - |
 | STEUERN_VIN_SCHREIBEN | 0xF190 | - | Setzen der VIN. | - | VIN_SCHREIBEN | - | - | - | - | - | - | 0x10 | 2E | ARG_0xF190 | - |
 
-<a id="table-tabbmlineshortedtognd"></a>
 ### TABBMLINESHORTEDTOGND
 
 Dimensions: 3 rows × 2 columns
@@ -1828,7 +1761,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabbmlineshortedtosupplyvoltage"></a>
 ### TABBMLINESHORTEDTOSUPPLYVOLTAGE
 
 Dimensions: 3 rows × 2 columns
@@ -1839,7 +1771,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabbplineshortedtognd"></a>
 ### TABBPLINESHORTEDTOGND
 
 Dimensions: 3 rows × 2 columns
@@ -1850,7 +1781,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabbplineshortedtosupplyvoltage"></a>
 ### TABBPLINESHORTEDTOSUPPLYVOLTAGE
 
 Dimensions: 3 rows × 2 columns
@@ -1861,7 +1791,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabbusloadtoohigh"></a>
 ### TABBUSLOADTOOHIGH
 
 Dimensions: 3 rows × 2 columns
@@ -1872,7 +1801,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabbusloadtoolow"></a>
 ### TABBUSLOADTOOLOW
 
 Dimensions: 3 rows × 2 columns
@@ -1883,7 +1811,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabccmsgs"></a>
 ### TABCCMSGS
 
 Dimensions: 210 rows × 2 columns
@@ -2101,7 +2028,6 @@ Dimensions: 210 rows × 2 columns
 | 0x0238 | Antrieb, Vorsichtig anhalten |
 | 0xFFFF | ungueltig |
 
-<a id="table-tabdiagadressen"></a>
 ### TABDIAGADRESSEN
 
 Dimensions: 76 rows × 2 columns
@@ -2185,7 +2111,6 @@ Dimensions: 76 rows × 2 columns
 | 0xA8 | RK_HR |
 | 0xFF | SG unbekannt |
 
-<a id="table-tabfehlerhaftessoftwaremodul"></a>
 ### TABFEHLERHAFTESSOFTWAREMODUL
 
 Dimensions: 9 rows × 2 columns
@@ -2202,7 +2127,6 @@ Dimensions: 9 rows × 2 columns
 | 0x08 | ErrorHandlerAdapter |
 | 0xFF | Ungueltiger Wert |
 
-<a id="table-tabfehlerhaftessoftwaremodultas"></a>
 ### TABFEHLERHAFTESSOFTWAREMODULTAS
 
 Dimensions: 4 rows × 2 columns
@@ -2214,7 +2138,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | TAS_ErrorHandler - Tester Assistant Fehler-Manager |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabflexraylerndiagplus"></a>
 ### TABFLEXRAYLERNDIAGPLUS
 
 Dimensions: 3 rows × 2 columns
@@ -2225,7 +2148,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | DIAG+ ist nicht aktiv. |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabflexraylernmode"></a>
 ### TABFLEXRAYLERNMODE
 
 Dimensions: 3 rows × 2 columns
@@ -2236,7 +2158,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | FlexRay Lern Mode wurde noch nicht durchgeführt |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabgrundsystemkontextnichtkomplett"></a>
 ### TABGRUNDSYSTEMKONTEXTNICHTKOMPLETT
 
 Dimensions: 6 rows × 2 columns
@@ -2250,7 +2171,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | ErrorMessage-Queue für eingehende CC-Meldungen ist voll |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabillegalesnachrichtenformat"></a>
 ### TABILLEGALESNACHRICHTENFORMAT
 
 Dimensions: 25 rows × 2 columns
@@ -2283,7 +2203,6 @@ Dimensions: 25 rows × 2 columns
 | 0x18 | MOST_SEND_FAIL |
 | 0xFF | Ungueltiger Wert |
 
-<a id="table-tabovertemperature"></a>
 ### TABOVERTEMPERATURE
 
 Dimensions: 3 rows × 2 columns
@@ -2294,7 +2213,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabroeinitfehler"></a>
 ### TABROEINITFEHLER
 
 Dimensions: 6 rows × 2 columns
@@ -2308,7 +2226,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | SG hat mit nicht interpretierbarer response geantwortet |
 | 0x05 | SG hat mit nicht interpretierbarer response geantwortet, obwohl es nicht in VCM-Liste steht |
 
-<a id="table-tabswfehlercode"></a>
 ### TABSWFEHLERCODE
 
 Dimensions: 55 rows × 2 columns
@@ -2371,7 +2288,6 @@ Dimensions: 55 rows × 2 columns
 | 0x36 | ERROR_ER_WRONGACTIVERESPONSELENGTH |
 | 0xFF | Ungueltiger Wert |
 
-<a id="table-tabsoftwareerror"></a>
 ### TABSOFTWAREERROR
 
 Dimensions: 2 rows × 2 columns
@@ -2381,7 +2297,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | allgemeine Fehler |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabsoftwaremodul"></a>
 ### TABSOFTWAREMODUL
 
 Dimensions: 2 rows × 2 columns
@@ -2391,7 +2306,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | VCM |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabtxenispermanentlylow"></a>
 ### TABTXENISPERMANENTLYLOW
 
 Dimensions: 3 rows × 2 columns
@@ -2402,7 +2316,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabvbatundervoltage"></a>
 ### TABVBATUNDERVOLTAGE
 
 Dimensions: 3 rows × 2 columns
@@ -2413,7 +2326,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabvccundervoltage"></a>
 ### TABVCCUNDERVOLTAGE
 
 Dimensions: 3 rows × 2 columns
@@ -2424,7 +2336,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabvcmreaderrorcode"></a>
 ### TABVCMREADERRORCODE
 
 Dimensions: 8 rows × 2 columns
@@ -2440,7 +2351,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | EEPROM-Manager Fehler |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabvcmserialgenerationerrorcode"></a>
 ### TABVCMSERIALGENERATIONERRORCODE
 
 Dimensions: 4 rows × 2 columns
@@ -2452,7 +2362,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Generierung ohne Ergebnis-Abbruch nachGeneral Reject vom TAS |
 | 0xFF | Ungueltiger Wert |
 
-<a id="table-tabvcmsvtgenerationerrorcode"></a>
 ### TABVCMSVTGENERATIONERRORCODE
 
 Dimensions: 3 rows × 2 columns
@@ -2463,7 +2372,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Generierung ohne Ergebnis-Abbruch nachGeneral Reject vom TAS (nach Testerauftrag) |
 | 0xFF | Ungueltiger Wert |
 
-<a id="table-tabvcmwriteerrorcode"></a>
 ### TABVCMWRITEERRORCODE
 
 Dimensions: 6 rows × 2 columns
@@ -2477,7 +2385,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | Allgemeiner Fehler |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabvioundervoltage"></a>
 ### TABVIOUNDERVOLTAGE
 
 Dimensions: 3 rows × 2 columns
@@ -2488,7 +2395,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00 | nicht aufgetreten |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tabweckgrund"></a>
 ### TABWECKGRUND
 
 Dimensions: 56 rows × 2 columns
@@ -2552,7 +2458,6 @@ Dimensions: 56 rows × 2 columns
 | 0x3E | Kupplungsschalter |
 | 0x3F | ungueltiger Weckgrund, Weckgrund nicht gesetzt |
 
-<a id="table-grobname"></a>
 ### GROBNAME
 
 Dimensions: 91 rows × 2 columns
@@ -2651,7 +2556,6 @@ Dimensions: 91 rows × 2 columns
 | 0xAB | MMCDSP |
 | 0xXY | ???? |
 
-<a id="table-tabdmfssperrestatus"></a>
 ### TABDMFSSPERRESTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -2665,7 +2569,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Nachricht 0x3A0 stumm |
 | 0xFF | ungueltig |
 
-<a id="table-tabdmfsbetriebsartstatus"></a>
 ### TABDMFSBETRIEBSARTSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -2677,7 +2580,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | keine Angabe möglich |
 | 0xFF | ungueltig |
 
-<a id="table-tabzfsstatus"></a>
 ### TABZFSSTATUS
 
 Dimensions: 3 rows × 2 columns

@@ -10,7 +10,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Einstellen der Kommunikationsparameter
 - [IDENTIFIKATION](#job-identifikation) - Ermittlung der SG Variante Zur Gruppe gehoerende Varianten: BC_III : Konzept 1 (nicht Standard) BC_IVA : Konzept 1 (nicht Standard) BC_IV  : Konzept 1 (nicht Standard) BC_V   : Konzept 1 MID    : Konzept 1 UHR_BC : Konzept DS1
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Einstellen der Kommunikationsparameter
@@ -23,7 +22,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-identifikation"></a>
 ### IDENTIFIKATION
 
 Ermittlung der SG Variante Zur Gruppe gehoerende Varianten: BC_III : Konzept 1 (nicht Standard) BC_IVA : Konzept 1 (nicht Standard) BC_IV  : Konzept 1 (nicht Standard) BC_V   : Konzept 1 MID    : Konzept 1 UHR_BC : Konzept DS1

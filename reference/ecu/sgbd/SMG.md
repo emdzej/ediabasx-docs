@@ -34,7 +34,6 @@
 - [TEST_PRG_STOP](#job-test-prg-stop) - Beenden eines laufenden Testprogrammes
 - [COD_ADAPT_LESEN](#job-cod-adapt-lesen) - Codierdaten oder Adaptionswerte Lesen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer EGS
@@ -47,7 +46,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -65,7 +63,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EGS
@@ -89,7 +86,6 @@ _No arguments._
 | ID_SN_NR | string | Seriennummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -109,7 +105,6 @@ _No arguments._
 | AIF_BEHOERDEN_NR | long | Behoerdennummer |
 | AIF_ZB_NR | long | Zusbaunummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -139,7 +134,6 @@ _No arguments._
 | F_UW2_EINH | string | Einheit |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen fuer EGS
@@ -154,7 +148,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-codier-cs-pruefen"></a>
 ### CODIER_CS_PRUEFEN
 
 Ueberpruefen der Codier-Checksumme fuer EGS
@@ -170,7 +163,6 @@ _No arguments._
 | CS_STATUS_POINTER | string | Pointerbereich OKAY, FEHLER |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Status Eingaenge SMG
@@ -270,7 +262,6 @@ _No arguments._
 | STAT_FEHLER_EIN | int | Tempomat-Fehler |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher Lesen
@@ -292,7 +283,6 @@ Speicher Lesen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-steuern-stellglied"></a>
 ### STEUERN_STELLGLIED
 
 Ansteuern der Stellglieder
@@ -312,7 +302,6 @@ Ansteuern der Stellglieder
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | STAT_ANSTEUERUNG | int | Ansteuerergebnis 0 : Stellglied wird ordnungsgemaess angesteuert 1 : Pin-Nr ist unbekannt 2 : nicht gueltig 3 : nicht gueltig 4 : Stellglied nicht ansteuerbar |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -327,7 +316,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-testprg-starten"></a>
 ### TESTPRG_STARTEN
 
 Testprogramm starten
@@ -349,7 +337,6 @@ Testprogramm starten
 | INFO_STATUS | string | Nur bei Getriebeadaption, wird auf alle erweitert |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-test-prg-stop"></a>
 ### TEST_PRG_STOP
 
 Beenden eines laufenden Testprogrammes
@@ -362,7 +349,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-cod-adapt-lesen"></a>
 ### COD_ADAPT_LESEN
 
 Codierdaten oder Adaptionswerte Lesen
@@ -452,7 +438,6 @@ Codierdaten oder Adaptionswerte Lesen
 - [INFOTEXTE13F](#table-infotexte13f) (5 × 2)
 - [INFOTEXTE14F](#table-infotexte14f) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -468,7 +453,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 48 rows × 5 columns
@@ -524,7 +508,6 @@ Dimensions: 48 rows × 5 columns
 | 0xCA | Anfahrgaenge | 0x15 | 0x16 | 0x00 |
 | 0xFF | unbekannter Fehlerort | 0x06 | 0x08 | 0x00 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 24 rows × 6 columns
@@ -556,7 +539,6 @@ Dimensions: 24 rows × 6 columns
 | 0x17 | Keine Umweltbedingung | - | 1 | 1 | 0 |
 | 0xXY | unbekannte Umweltbedingung | XY | 1 | 1 | 0 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -567,7 +549,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-speicher"></a>
 ### SPEICHER
 
 Dimensions: 4 rows × 2 columns
@@ -579,7 +560,6 @@ Dimensions: 4 rows × 2 columns
 | ROM | 0x02 |
 | E2PROM | 0x12 |
 
-<a id="table-stellglieder"></a>
 ### STELLGLIEDER
 
 Dimensions: 11 rows × 2 columns
@@ -598,7 +578,6 @@ Dimensions: 11 rows × 2 columns
 | SHIFTLOCK | 0x21 |
 | KOMBI | 0x42 |
 
-<a id="table-stattesttexte"></a>
 ### STATTESTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -611,7 +590,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Testprogramm nicht ordnungsgemaess beendet |
 | 0xFF | Unbekannter Status |
 
-<a id="table-infotexte1a"></a>
 ### INFOTEXTE1A
 
 Dimensions: 2 rows × 2 columns
@@ -621,7 +599,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Adaption laeuft |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte2a"></a>
 ### INFOTEXTE2A
 
 Dimensions: 2 rows × 2 columns
@@ -631,7 +608,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Adaption laeuft |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte3a"></a>
 ### INFOTEXTE3A
 
 Dimensions: 2 rows × 2 columns
@@ -641,7 +617,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Adaption laeuft |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte4a"></a>
 ### INFOTEXTE4A
 
 Dimensions: 11 rows × 2 columns
@@ -660,7 +635,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Ende der Anschlussplausibilitaet |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte5a"></a>
 ### INFOTEXTE5A
 
 Dimensions: 22 rows × 2 columns
@@ -690,7 +664,6 @@ Dimensions: 22 rows × 2 columns
 | 0x14 | Ende der Aktuatorentlueftung |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte6a"></a>
 ### INFOTEXTE6A
 
 Dimensions: 8 rows × 2 columns
@@ -706,7 +679,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | in NV RAM schreiben |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte7a"></a>
 ### INFOTEXTE7A
 
 Dimensions: 5 rows × 2 columns
@@ -719,7 +691,6 @@ Dimensions: 5 rows × 2 columns
 | 0x07 | Waehlwinkeloffsetstromadaption |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte8a"></a>
 ### INFOTEXTE8A
 
 Dimensions: 19 rows × 2 columns
@@ -746,7 +717,6 @@ Dimensions: 19 rows × 2 columns
 | 0x15 | Bowdenzug testen |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte9a"></a>
 ### INFOTEXTE9A
 
 Dimensions: 4 rows × 2 columns
@@ -758,7 +728,6 @@ Dimensions: 4 rows × 2 columns
 | 0x29 | Kupplung ist offen, wird geschlossen |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte10a"></a>
 ### INFOTEXTE10A
 
 Dimensions: 3 rows × 2 columns
@@ -769,7 +738,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fahrpedal durchtreten |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte11a"></a>
 ### INFOTEXTE11A
 
 Dimensions: 2 rows × 2 columns
@@ -779,7 +747,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Adaption laeuft |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte12a"></a>
 ### INFOTEXTE12A
 
 Dimensions: 2 rows × 2 columns
@@ -789,7 +756,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Adaption laeuft |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte13a"></a>
 ### INFOTEXTE13A
 
 Dimensions: 6 rows × 2 columns
@@ -803,7 +769,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Minimale Ueberdeckung einlernen |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte14a"></a>
 ### INFOTEXTE14A
 
 Dimensions: 3 rows × 2 columns
@@ -814,7 +779,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Ende der Schaltwegmittellagepositionierung |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte1f"></a>
 ### INFOTEXTE1F
 
 Dimensions: 4 rows × 2 columns
@@ -826,7 +790,6 @@ Dimensions: 4 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft, oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte2f"></a>
 ### INFOTEXTE2F
 
 Dimensions: 3 rows × 2 columns
@@ -837,7 +800,6 @@ Dimensions: 3 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte3f"></a>
 ### INFOTEXTE3F
 
 Dimensions: 7 rows × 2 columns
@@ -852,7 +814,6 @@ Dimensions: 7 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor ist aus, Gang eingelegt oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte4f"></a>
 ### INFOTEXTE4F
 
 Dimensions: 16 rows × 2 columns
@@ -876,7 +837,6 @@ Dimensions: 16 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte5f"></a>
 ### INFOTEXTE5F
 
 Dimensions: 10 rows × 2 columns
@@ -894,7 +854,6 @@ Dimensions: 10 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte6f"></a>
 ### INFOTEXTE6F
 
 Dimensions: 6 rows × 2 columns
@@ -908,7 +867,6 @@ Dimensions: 6 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte7f"></a>
 ### INFOTEXTE7F
 
 Dimensions: 10 rows × 2 columns
@@ -926,7 +884,6 @@ Dimensions: 10 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte8f"></a>
 ### INFOTEXTE8F
 
 Dimensions: 46 rows × 2 columns
@@ -980,7 +937,6 @@ Dimensions: 46 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft, oder Zuendung ist aus) |
 | 0xFF | unbekannter Infotext |
 
-<a id="table-infotexte9f"></a>
 ### INFOTEXTE9F
 
 Dimensions: 5 rows × 2 columns
@@ -993,7 +949,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft, oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte10f"></a>
 ### INFOTEXTE10F
 
 Dimensions: 3 rows × 2 columns
@@ -1004,7 +959,6 @@ Dimensions: 3 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte11f"></a>
 ### INFOTEXTE11F
 
 Dimensions: 4 rows × 2 columns
@@ -1016,7 +970,6 @@ Dimensions: 4 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte12f"></a>
 ### INFOTEXTE12F
 
 Dimensions: 4 rows × 2 columns
@@ -1028,7 +981,6 @@ Dimensions: 4 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte13f"></a>
 ### INFOTEXTE13F
 
 Dimensions: 5 rows × 2 columns
@@ -1041,7 +993,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA0 | Testbedingung nicht erfuellt (Motor laeuft oder Zuendung ist aus) |
 | 0xFF | Unbekannter Infotext |
 
-<a id="table-infotexte14f"></a>
 ### INFOTEXTE14F
 
 Dimensions: 6 rows × 2 columns

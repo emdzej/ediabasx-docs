@@ -91,7 +91,6 @@
 - [AIF_BATTMON_BLOCK_8_LESEN](#job-aif-battmon-block-8-lesen) - Batterie-Monitor Unterspannungs-Block 8 auslesen Read battery monitor low voltage block 8
 - [AIF_BATTMON_RESET](#job-aif-battmon-reset) - Batterie-Monitor zuruecksetzen Reset battery monitor
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -104,7 +103,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -123,7 +121,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -142,7 +139,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Instrument Pack
@@ -168,7 +164,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-sia-daten-lesen"></a>
 ### AIF_SIA_DATEN_LESEN
 
 Read the SIA from the User Information
@@ -198,7 +193,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-datum-fz-lesen"></a>
 ### AIF_DATUM_FZ_LESEN
 
 Read the Build Data from the User Information Auslesen Herstelldatum des FZ
@@ -213,7 +207,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-gwsz-lesen"></a>
 ### AIF_GWSZ_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen Read the Kilometers from the User Information Memory Block
@@ -229,7 +222,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm vom SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-gwsz-offset-lesen"></a>
 ### GWSZ_OFFSET_LESEN
 
 OFFSET-Wert des GWSZ aus EEPROM lesen
@@ -243,7 +235,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | GWSZ_OFFSET_WERT | int | absoluter Offset-Wert des GWSZ (0-255) |
 
-<a id="job-gwsz-offset-schreiben"></a>
 ### GWSZ_OFFSET_SCHREIBEN
 
 OFFSET-Wert des GWSZ in EEPROM schreiben
@@ -260,7 +251,6 @@ OFFSET-Wert des GWSZ in EEPROM schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 GWSZ zuruecksetzen, nur moeglich wenn Km-Stand < 255
@@ -273,7 +263,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-gwsz-minus-offset-lesen"></a>
 ### GWSZ_MINUS_OFFSET_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen und Offset abziehen
@@ -288,7 +277,6 @@ _No arguments._
 | STAT_GWSZ_MINUS_OFFSET_WERT | long | Gesamtwegstreckenzaehler minus Offset |
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 
-<a id="job-aif-zentralcode-lesen"></a>
 ### AIF_ZENTRALCODE_LESEN
 
 Anwenderinfofeld Block 4 auslesen Read the ZCS from the AIF record
@@ -306,7 +294,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Anwenderinfofeld Block 4 auslesen Read the ZCS from the AIF record
@@ -323,7 +310,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-zcs-auftrag"></a>
 ### C_ZCS_AUFTRAG
 
 Write and verify the Central code
@@ -345,7 +331,6 @@ Write and verify the Central code
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read ZCS response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-fg-nr-lesen"></a>
 ### AIF_FG_NR_LESEN
 
 Read the VIN from the User Information Auslesen der Fahrgestellnummer aus dem Anwenderinfofeld
@@ -361,7 +346,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read user information response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Read the VIN from the User Information Auslesen der Fahrgestellnummer aus dem Anwenderinfofeld
@@ -377,7 +361,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read user information response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Schreiben der 7-stelligen Fahrgestellnummer Write the 7 digit VIN into block 2 of the AIF record
@@ -398,7 +381,6 @@ Schreiben der 7-stelligen Fahrgestellnummer Write the 7 digit VIN into block 2 o
 | _TEL_ANTWORT3 | binary | Hex-Antwort von SG Read VIN response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Read the coding data
@@ -417,7 +399,6 @@ Codierdaten lesen Read the coding data
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-codierblock-lesen"></a>
 ### CODIERBLOCK_LESEN
 
 Codierblock auslesen Read the coding data
@@ -436,7 +417,6 @@ Codierblock auslesen Read the coding data
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren Write and then verify the coding data
@@ -456,7 +436,6 @@ Codierdaten schreiben und verifizieren Write and then verify the coding data
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read coding data response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Read internal and external faults
@@ -496,7 +475,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Clears All Faults
@@ -510,7 +488,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 RAM-Speicher auslesen Read internal and external RAM
@@ -531,7 +508,6 @@ RAM-Speicher auslesen Read internal and external RAM
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 ROM-Speicher auslesen Read ROM out of IKE
@@ -552,7 +528,6 @@ ROM-Speicher auslesen Read ROM out of IKE
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 EEPROM-Speicher auslesen Read EEPROM out of IKE
@@ -573,7 +548,6 @@ EEPROM-Speicher auslesen Read EEPROM out of IKE
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-pseudo-eeprom-lesen"></a>
 ### PSEUDO_EEPROM_LESEN
 
 PSEUDO-EEPROM-Speicher auslesen Read EEPROM out of IKE
@@ -594,7 +568,6 @@ PSEUDO-EEPROM-Speicher auslesen Read EEPROM out of IKE
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-power"></a>
 ### STATUS_IO_POWER
 
 Read Power digital inputs from Port 0
@@ -611,7 +584,6 @@ _No arguments._
 | STAT_KLR_50_ON | int | 1 wenn ein / 0 wenn aus 1=Ignition switch not at CRANK, 0=Ignition switch at CRANK |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-trip-reset"></a>
 ### STATUS_IO_TRIP_RESET
 
 Read Trip Reset digital input from Port 3
@@ -626,7 +598,6 @@ _No arguments._
 | STAT_TRIP_RESET_PRESSED | int | 1 wenn einschalten / 0 wenn ausschalten 1=SIA reset switch pressed, 0=not pressed |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-dimmer-sw"></a>
 ### STATUS_IO_DIMMER_SW
 
 Read dimmer switch digital inputs from Port 1
@@ -642,7 +613,6 @@ _No arguments._
 | STAT_DIMMER_2_PRESSED | int | 1 wenn einschalten / 0 wenn ausschalten 1=pressed 0=not pressed |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-misc"></a>
 ### STATUS_IO_MISC
 
 Read miscellaneous digital inputs from Port 2
@@ -664,7 +634,6 @@ _No arguments._
 | STAT_HAND_BRAKE_INPUT_ON | int | 1 wenn Handbremse ein / 0 wenn Handbremse aus 1=on, 0=off |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-hazard-sw"></a>
 ### STATUS_IO_HAZARD_SW
 
 Read hazard switch digital input from Port 4
@@ -679,7 +648,6 @@ _No arguments._
 | STAT_HAZARD_SWITCH_PRESSED | int | 1 wenn einschalten / 0 wenn ausschalten 1=pressed, 0=not pressed |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-wake-up"></a>
 ### STATUS_IO_WAKE_UP
 
 Read 10 minute wake up status from port 2
@@ -694,7 +662,6 @@ _No arguments._
 | STAT_10_MIN_TIMER_CHARGED | int | 1 wenn laden / 0 wenn nicht laden 1=timer capacitor charged, 0=not charged |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-lcd-backlight"></a>
 ### STATUS_IO_LCD_BACKLIGHT
 
 Read LCD Backlight input from port 4
@@ -709,7 +676,6 @@ _No arguments._
 | STAT_LCD_BACKLIGHT_ON | int | 1 wenn ein / 0 wenn aus 1=on, 0=off |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-can-shutdown"></a>
 ### STATUS_IO_CAN_SHUTDOWN
 
 Read status of CAN shutdown output from port 4
@@ -724,7 +690,6 @@ _No arguments._
 | STAT_CAN_SHUTDOWN_OUTPUT_HIGH | int | 1 wenn ein / 0 wenn aus 1=CAN shutdown output high, 0=CAN shutdown output low |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-kbus-interrupt"></a>
 ### STATUS_IO_KBUS_INTERRUPT
 
 Read status of Kbus interrupt from port 2
@@ -739,7 +704,6 @@ _No arguments._
 | STAT_KBUS_INTERRUPT_ON | int | 1 wenn ein / 0 wenn aus 1=on, 0=off |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-dimmer-driver"></a>
 ### STATUS_IO_DIMMER_DRIVER
 
 Read dimmer driver digital input from Port 4
@@ -754,7 +718,6 @@ _No arguments._
 | STAT_DIMMER_ACTIVE | int | 1=active (over heat / sc load / ac load), 0=not active |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-led-dig-inputs"></a>
 ### STATUS_IO_LED_DIG_INPUTS
 
 Read LED 19, LED 20 and LED A9 digital inputs from Port 3
@@ -771,7 +734,6 @@ _No arguments._
 | STAT_SPARE_LED_A9_ON | int | 1 wenn ein / 0 wenn aus 1=on, 0=off |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-motor-drivers"></a>
 ### STATUS_IO_MOTOR_DRIVERS
 
 Read status of the motor drivers from port 2
@@ -789,7 +751,6 @@ _No arguments._
 | STAT_TEMP_AND_FUEL_MOTORS_SELECTED | int | 1 wenn ein / 0 wenn aus 1=temp or fuel motors selected, 0=not selected |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-read-digital"></a>
 ### READ_DIGITAL
 
 Read all Digital Inputs for a specified port
@@ -809,7 +770,6 @@ Read all Digital Inputs for a specified port
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Read Analogue Input States
@@ -857,7 +817,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-tankinhalt-lesen"></a>
 ### STATUS_TANKINHALT_LESEN
 
 Tankinhalt lesen
@@ -877,7 +836,6 @@ _No arguments._
 | STAT_TANKINHALT_EINH | string | Einheit Tankinhalt gesamt: "Liter" |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-aussentemp-lesen"></a>
 ### STATUS_AUSSENTEMP_LESEN
 
 Read Temprature
@@ -893,7 +851,6 @@ _No arguments._
 | STAT_AUSSENTEMP_SENSOR_EINH | string | Temp. Unit in: "Grad Celsius" |
 | ANTWORT | binary |  |
 
-<a id="job-steuern-leuchte"></a>
 ### STEUERN_LEUCHTE
 
 Force the warning lamps in byte blocks
@@ -919,7 +876,6 @@ Force the warning lamps in byte blocks
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-anzeige"></a>
 ### STEUERN_ANZEIGE
 
 Force an instrument gauge
@@ -939,7 +895,6 @@ Force an instrument gauge
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-all-gauges"></a>
 ### STEUERN_ALL_GAUGES
 
 Force all instrument gauges
@@ -962,7 +917,6 @@ Force all instrument gauges
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-all-gauges-2"></a>
 ### STEUERN_ALL_GAUGES_2
 
 Force all instrument gauges
@@ -986,7 +940,6 @@ Force all instrument gauges
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-panel-light"></a>
 ### STEUERN_PANEL_LIGHT
 
 Force the Panel Illumination
@@ -1005,7 +958,6 @@ Force the Panel Illumination
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet table JobResult STATUS_TEXT |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-backlight"></a>
 ### STEUERN_BACKLIGHT
 
 Force the Odometer and trip computer backlight
@@ -1024,7 +976,6 @@ Force the Odometer and trip computer backlight
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-gong"></a>
 ### STEUERN_GONG
 
 Force the gong
@@ -1043,7 +994,6 @@ Force the gong
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-lcd-odo"></a>
 ### STEUERN_LCD_ODO
 
 Force the LCD Odometer
@@ -1063,7 +1013,6 @@ Force the LCD Odometer
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-lcd-trip"></a>
 ### STEUERN_LCD_TRIP
 
 Force the LCD trip computer
@@ -1083,7 +1032,6 @@ Force the LCD trip computer
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Perform ECU Self Test
@@ -1097,7 +1045,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Force an SIA reset
@@ -1115,7 +1062,6 @@ Force an SIA reset
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-zeitinspektionszaehler-lesen"></a>
 ### ZEITINSPEKTIONSZAEHLER_LESEN
 
 Zeitinspektionszaehler auslesen
@@ -1132,7 +1078,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Read the Test Stamp Default pruefstempel_lesen job
@@ -1149,7 +1094,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Read the Test Stamp Beschreiben des Pruefstempels
@@ -1170,7 +1114,6 @@ Read the Test Stamp Beschreiben des Pruefstempels
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-software-reset"></a>
 ### SOFTWARE_RESET
 
 Instrument cluster will reset itself Kombi loest selbststaendig einen Reset aus
@@ -1184,7 +1127,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 ECU Pinging message
@@ -1198,7 +1140,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden Terminate the diagnostic session
@@ -1212,7 +1153,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-herstellerdaten-lesen"></a>
 ### HERSTELLERDATEN_LESEN
 
 Herstellerdaten auslesen Read supplier specific data
@@ -1232,7 +1172,6 @@ Herstellerdaten auslesen Read supplier specific data
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-status-lesen"></a>
 ### AIF_BATTMON_STATUS_LESEN
 
 Batterie-Monitor Status auslesen Read status of battery monitor
@@ -1252,7 +1191,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-lesen"></a>
 ### AIF_BATTMON_BLOCK_LESEN
 
 Batterie-Monitor Unterspannungs-Block auslesen Read battery monitor low voltage block
@@ -1283,7 +1221,6 @@ Batterie-Monitor Unterspannungs-Block auslesen Read battery monitor low voltage 
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-1-lesen"></a>
 ### AIF_BATTMON_BLOCK_1_LESEN
 
 Batterie-Monitor Unterspannungs-Block 1 auslesen Read battery monitor low voltage block 1
@@ -1310,7 +1247,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-2-lesen"></a>
 ### AIF_BATTMON_BLOCK_2_LESEN
 
 Batterie-Monitor Unterspannungs-Block 2 auslesen Read battery monitor low voltage block 2
@@ -1337,7 +1273,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-3-lesen"></a>
 ### AIF_BATTMON_BLOCK_3_LESEN
 
 Batterie-Monitor Unterspannungs-Block 3 auslesen Read battery monitor low voltage block 3
@@ -1364,7 +1299,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-4-lesen"></a>
 ### AIF_BATTMON_BLOCK_4_LESEN
 
 Batterie-Monitor Unterspannungs-Block 4 auslesen Read battery monitor low voltage block 4
@@ -1391,7 +1325,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-5-lesen"></a>
 ### AIF_BATTMON_BLOCK_5_LESEN
 
 Batterie-Monitor Unterspannungs-Block 5 auslesen Read battery monitor low voltage block 5
@@ -1418,7 +1351,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-6-lesen"></a>
 ### AIF_BATTMON_BLOCK_6_LESEN
 
 Batterie-Monitor Unterspannungs-Block 6 auslesen Read battery monitor low voltage block 6
@@ -1445,7 +1377,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-7-lesen"></a>
 ### AIF_BATTMON_BLOCK_7_LESEN
 
 Batterie-Monitor Unterspannungs-Block 7 auslesen Read battery monitor low voltage block 7
@@ -1472,7 +1403,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-block-8-lesen"></a>
 ### AIF_BATTMON_BLOCK_8_LESEN
 
 Batterie-Monitor Unterspannungs-Block 8 auslesen Read battery monitor low voltage block 8
@@ -1499,7 +1429,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-battmon-reset"></a>
 ### AIF_BATTMON_RESET
 
 Batterie-Monitor zuruecksetzen Reset battery monitor
@@ -1532,7 +1461,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (4 × 3)
 - [SUPPLIERDATA](#table-supplierdata) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1553,7 +1481,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 77 rows × 2 columns
@@ -1638,7 +1565,6 @@ Dimensions: 77 rows × 2 columns
 | 0x76 | CEL |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-digital"></a>
 ### DIGITAL
 
 Dimensions: 28 rows × 4 columns
@@ -1674,7 +1600,6 @@ Dimensions: 28 rows × 4 columns
 | KBUS_INTERRUPT | 3 | 0x10 | 0x10 |
 | ?? | FF | 0x00 | 0xFF |
 
-<a id="table-analog"></a>
 ### ANALOG
 
 Dimensions: 14 rows × 4 columns
@@ -1696,7 +1621,6 @@ Dimensions: 14 rows × 4 columns
 | ENGINE_TEMP_CAN | 0.75 | -48.0 | Grad C |
 | Unknown item | 0.0 | 0 |  |
 
-<a id="table-leddata"></a>
 ### LEDDATA
 
 Dimensions: 29 rows × 3 columns
@@ -1733,7 +1657,6 @@ Dimensions: 29 rows × 3 columns
 | CAN_TIRE_DEFLATION | 4 | 0x08 |
 | Unknown item | 0 | 0x00 |
 
-<a id="table-roverpartprefix"></a>
 ### ROVERPARTPREFIX
 
 Dimensions: 22 rows × 2 columns
@@ -1763,7 +1686,6 @@ Dimensions: 22 rows × 2 columns
 | 0xB6 | YUW |
 | 0xFF | ??? |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 4 rows × 3 columns
@@ -1775,7 +1697,6 @@ Dimensions: 4 rows × 3 columns
 | ZEIT_RESET | 0x04 | Zeit Service Reset |
 |  | 0x00 |  |
 
-<a id="table-komponenten"></a>
 ### KOMPONENTEN
 
 Dimensions: 8 rows × 3 columns
@@ -1791,7 +1712,6 @@ Dimensions: 8 rows × 3 columns
 | OELDRUCK | 0x11 | Oel-Druck-Anzeige |
 | unbekannt | 0xFF |  |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 37 rows × 2 columns
@@ -1836,7 +1756,6 @@ Dimensions: 37 rows × 2 columns
 | 0x92 | Airbag Warnlampe 'aktiv' empfangen vom Airbag SG |
 | 0xFF | Unbekannter Fehler |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -1852,7 +1771,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 13 columns
@@ -1861,7 +1779,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x01 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x04 | 0x00 | 0x08 | 0x00 | 0x40 | 0x00 | 0x80 |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 4 rows × 6 columns
@@ -1873,7 +1790,6 @@ Dimensions: 4 rows × 6 columns
 | 0x31 | 0x02 | 0x00 | 0x01 | 0x08 | 0x01 |
 | 0xXY | 0x02 | 0x00 | 0xXY | 0x08 | 0x01 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 4 rows × 3 columns
@@ -1885,7 +1801,6 @@ Dimensions: 4 rows × 3 columns
 | 0x02 | RDA-Status |  |
 | 0xXY | unbekannte Umweltbedingung | XY |
 
-<a id="table-supplierdata"></a>
 ### SUPPLIERDATA
 
 Dimensions: 3 rows × 2 columns

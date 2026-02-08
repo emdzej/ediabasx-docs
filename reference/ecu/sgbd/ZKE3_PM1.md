@@ -50,7 +50,6 @@
 - [STEUERN_DIGITAL_NACHEINANDER](#job-steuern-digital-nacheinander) - Ansteuern maximal 5 digitaler Signale des GM3 oder eines Peripheriemoduls NACHEINANDER
 - [IDENT_SW_NR_TUEREN](#job-ident-sw-nr-tueren) - Vergleich der Softwarenummern der Tuermodule FT und BT
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +68,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -82,7 +80,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer GM III
@@ -110,7 +107,6 @@ Ident-Daten fuer GM III
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-sm-lsm"></a>
 ### STATUS_DIGITAL_SM_LSM
 
 Status der Digitalsignale des SM/LSM (Ein-/Ausgaenge) nur bei E38 / nicht bei E39
@@ -142,7 +138,6 @@ _No arguments._
 | STAT_E_MLSLZU_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm"></a>
 ### STATUS_ANALOG_SM
 
 Status der Achsenposition des SM
@@ -170,7 +165,6 @@ _No arguments._
 | STAT_ACHSE6_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf"></a>
 ### STATUS_ANALOG_SMBF
 
 Status der Achsenposition des SMBF
@@ -198,7 +192,6 @@ _No arguments._
 | STAT_ACHSE6_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-lsm"></a>
 ### STATUS_ANALOG_LSM
 
 Status der Achsenposition des LSM
@@ -216,7 +209,6 @@ _No arguments._
 | STAT_ACHSE8_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-laengs-min-max"></a>
 ### STATUS_ANALOG_SM_LAENGS_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -234,7 +226,6 @@ _No arguments._
 | STAT_ACHSE0_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-hoehe-min-max"></a>
 ### STATUS_ANALOG_SM_HOEHE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -252,7 +243,6 @@ _No arguments._
 | STAT_ACHSE1_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-neigung-min-max"></a>
 ### STATUS_ANALOG_SM_NEIGUNG_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -270,7 +260,6 @@ _No arguments._
 | STAT_ACHSE2_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-lehne-min-max"></a>
 ### STATUS_ANALOG_SM_LEHNE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -288,7 +277,6 @@ _No arguments._
 | STAT_ACHSE3_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-kopf-min-max"></a>
 ### STATUS_ANALOG_SM_KOPF_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -306,7 +294,6 @@ _No arguments._
 | STAT_ACHSE4_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-sitztiefe-min-max"></a>
 ### STATUS_ANALOG_SM_SITZTIEFE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -324,7 +311,6 @@ _No arguments._
 | STAT_ACHSE5_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-lehnenkopf-min-max"></a>
 ### STATUS_ANALOG_SM_LEHNENKOPF_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -342,7 +328,6 @@ _No arguments._
 | STAT_ACHSE6_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-lsm-neigung-min-max"></a>
 ### STATUS_ANALOG_LSM_NEIGUNG_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -360,7 +345,6 @@ _No arguments._
 | STAT_ACHSE7_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-lsm-laengs-min-max"></a>
 ### STATUS_ANALOG_LSM_LAENGS_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -378,7 +362,6 @@ _No arguments._
 | STAT_ACHSE8_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-laengs-min-max"></a>
 ### STATUS_ANALOG_SMBF_LAENGS_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -396,7 +379,6 @@ _No arguments._
 | STAT_ACHSE0_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-hoehe-min-max"></a>
 ### STATUS_ANALOG_SMBF_HOEHE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -414,7 +396,6 @@ _No arguments._
 | STAT_ACHSE1_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-neigung-min-max"></a>
 ### STATUS_ANALOG_SMBF_NEIGUNG_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -432,7 +413,6 @@ _No arguments._
 | STAT_ACHSE2_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-lehne-min-max"></a>
 ### STATUS_ANALOG_SMBF_LEHNE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -450,7 +430,6 @@ _No arguments._
 | STAT_ACHSE3_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-kopf-min-max"></a>
 ### STATUS_ANALOG_SMBF_KOPF_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -468,7 +447,6 @@ _No arguments._
 | STAT_ACHSE4_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-sitztiefe-min-max"></a>
 ### STATUS_ANALOG_SMBF_SITZTIEFE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -486,7 +464,6 @@ _No arguments._
 | STAT_ACHSE5_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-lehnenkopf-min-max"></a>
 ### STATUS_ANALOG_SMBF_LEHNENKOPF_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -504,7 +481,6 @@ _No arguments._
 | STAT_ACHSE6_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-sm-lsm"></a>
 ### STEUERN_DIGITAL_SM_LSM
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SM_LSM nur bei E38 / nicht bei E39
@@ -524,7 +500,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SM_LSM nur bei E38 / nicht bei 
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-smbf"></a>
 ### STATUS_DIGITAL_SMBF
 
 Status der Digitalsignale des SMBF (Ein-/Ausgaenge) nur bei E38 / nicht bei E39
@@ -552,7 +527,6 @@ _No arguments._
 | STAT_E_LKZBF_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-smbf"></a>
 ### STEUERN_DIGITAL_SMBF
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SMBF nur bei E38 / nicht bei E39
@@ -572,7 +546,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SMBF nur bei E38 / nicht bei E3
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-smsfb"></a>
 ### STATUS_DIGITAL_SMSFB
 
 Status der Digitalsignale des SMSFB (Ein-/Ausgaenge) nur bei E38 / nicht bei E39
@@ -600,7 +573,6 @@ _No arguments._
 | STAT_E_LKZBF_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-smsfb"></a>
 ### STEUERN_DIGITAL_SMSFB
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SMSFB nur bei E38 / nicht bei E39
@@ -620,7 +592,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SMSFB nur bei E38 / nicht bei E
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-nacheinander"></a>
 ### STEUERN_DIGITAL_NACHEINANDER
 
 Ansteuern maximal 5 digitaler Signale des GM3 oder eines Peripheriemoduls NACHEINANDER
@@ -649,7 +620,6 @@ Ansteuern maximal 5 digitaler Signale des GM3 oder eines Peripheriemoduls NACHEI
 | _TEL_AUFTRAG5 | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-ident-sw-nr-tueren"></a>
 ### IDENT_SW_NR_TUEREN
 
 Vergleich der Softwarenummern der Tuermodule FT und BT
@@ -677,7 +647,6 @@ _No arguments._
 - [BITS_SM_LSM](#table-bits-sm-lsm) (19 × 6)
 - [BITS_SMBF](#table-bits-smbf) (15 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -698,7 +667,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 69 rows × 2 columns
@@ -775,7 +743,6 @@ Dimensions: 69 rows × 2 columns
 | 0x68 | Atena GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -804,7 +771,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -828,7 +794,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-peripheriemodule"></a>
 ### PERIPHERIEMODULE
 
 Dimensions: 9 rows × 3 columns
@@ -845,7 +810,6 @@ Dimensions: 9 rows × 3 columns
 | 0x09 | SM_SFB | Sitzmemory Fernbedienung Beifahrersitz |
 | 0xXY | XY | ERROR_PM_UNBEKANNT |
 
-<a id="table-bits-sm-lsm"></a>
 ### BITS_SM_LSM
 
 Dimensions: 19 rows × 6 columns
@@ -872,7 +836,6 @@ Dimensions: 19 rows × 6 columns
 | MLSLZU | 3 | 0x02 | 0x02 | E | Lenksaeule zurueck |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-bits-smbf"></a>
 ### BITS_SMBF
 
 Dimensions: 15 rows × 6 columns

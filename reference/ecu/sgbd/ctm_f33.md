@@ -60,7 +60,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -79,7 +78,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -92,7 +90,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -109,7 +106,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -139,7 +135,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -181,7 +176,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -200,7 +194,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -218,7 +211,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -239,7 +231,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -268,7 +259,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -288,7 +278,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -309,7 +298,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -325,7 +313,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -347,7 +334,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -369,7 +355,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -388,7 +373,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -414,7 +398,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -456,7 +439,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -471,7 +453,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -497,7 +478,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -517,7 +497,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -536,7 +515,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -555,7 +533,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -570,7 +547,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -589,7 +565,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -609,7 +584,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -626,7 +600,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -645,7 +618,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -661,7 +633,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -695,7 +666,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -710,7 +680,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -725,7 +694,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -742,7 +710,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -757,7 +724,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -772,7 +738,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -787,7 +752,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -803,7 +767,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -822,7 +785,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -842,7 +804,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -860,7 +821,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -984,7 +944,6 @@ _No arguments._
 - [TAB_VERBRAUCHERSTEUERUNG](#table-tab-verbrauchersteuerung) (4 × 2)
 - [TAB_VERDECK_POSITION](#table-tab-verdeck-position) (10 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1068,7 +1027,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 136 rows × 2 columns
@@ -1212,7 +1170,6 @@ Dimensions: 136 rows × 2 columns
 | 0x0000BD | U-Shin |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1255,7 +1212,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1280,7 +1236,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1314,7 +1269,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1387,7 +1341,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1400,7 +1353,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1413,7 +1365,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1426,7 +1377,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1446,7 +1396,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 203 rows × 3 columns
@@ -1657,7 +1606,6 @@ Dimensions: 203 rows × 3 columns
 | 0x7100 | NFC Leser Innenraum vorne | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1666,7 +1614,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 181 rows × 2 columns
@@ -1855,7 +1802,6 @@ Dimensions: 181 rows × 2 columns
 | 0x0134 | OLHO tronic GmbH |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1881,7 +1827,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1892,7 +1837,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x4201"></a>
 ### ARG_0X4201
 
 Dimensions: 2 rows × 12 columns
@@ -1902,7 +1846,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_SENSOREN | 0-n | high | unsigned char | - | TAB_SENSOREN | 1.0 | 1.0 | 0.0 | - | - | AuswahlSensorversorgung siehe Tabelle TAB_SENSOREN |
 | ARG_MODE | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Steuern Sensorversorgung 0x00 aus 0x01 ein |
 
-<a id="table-arg-0x4211"></a>
 ### ARG_0X4211
 
 Dimensions: 1 rows × 12 columns
@@ -1911,7 +1854,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MESSBEREICH | 0-n | - | unsigned char | - | TAB_MESSBEREICH | - | - | - | - | - | - |
 
-<a id="table-arg-0xa1a4-r"></a>
 ### ARG_0XA1A4_R
 
 Dimensions: 3 rows × 14 columns
@@ -1922,7 +1864,6 @@ Dimensions: 3 rows × 14 columns
 | ARG_RICHTUNG | + | - | 0-n | high | unsigned char | - | TAB_CV_ANSTEUERRICHTUNG | - | - | - | - | - | Richtung der Ansteuerung (siehe TAB_CV_ANSTEUERRICHTUNG) |
 | ARG_ZEIT | + | - | ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Dauer der Ansteuerung in ms (0 bis 65534 ms) |
 
-<a id="table-arg-0xd2a5-d"></a>
 ### ARG_0XD2A5_D
 
 Dimensions: 1 rows × 12 columns
@@ -1931,7 +1872,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_FREIGABE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | vom SG-Verbund unabhängige Ansteuerung des CV erlauben 0x00 unabhängige Ansteuerung verboten 0x01 unabhängige Ansteuerung erlaubt |
 
-<a id="table-arg-0xd2a7-d"></a>
 ### ARG_0XD2A7_D
 
 Dimensions: 1 rows × 12 columns
@@ -1940,7 +1880,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_LOESCHEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Statistikzähler löschen |
 
-<a id="table-arg-0xd2a8-d"></a>
 ### ARG_0XD2A8_D
 
 Dimensions: 1 rows × 12 columns
@@ -1949,7 +1888,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_LOESCHEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Löschen aller bisher gespeicherten Daten |
 
-<a id="table-arg-0xd2a9-d"></a>
 ### ARG_0XD2A9_D
 
 Dimensions: 2 rows × 12 columns
@@ -1959,7 +1897,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_ELEMENT | 0-n | high | unsigned char | - | TAB_CV_SCA | - | - | - | - | - | Auswahl SCA-Element (siehe TAB_CV_SCA) |
 | ARG_RICHTUNG | 0-n | high | unsigned char | - | TAB_CV_SCA_RICHTUNG | - | - | - | - | - | Verfahrrichtung der SCA (siehe TAB_CV_SCA_RICHTUNG) |
 
-<a id="table-arg-0xd2aa-d"></a>
 ### ARG_0XD2AA_D
 
 Dimensions: 1 rows × 12 columns
@@ -1968,7 +1905,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_ANTENNE | 0-n | high | unsigned char | - | TAB_ANTENNENUMSCHALTUNG | - | - | - | - | - | Steuert die Aktivierung der Antennensysteme 0x00 Applikation (Kundenbetrieb) 0x01 Heckscheibenantenne 0x02 Brüstungsantenne |
 
-<a id="table-arg-0xd2ab-d"></a>
 ### ARG_0XD2AB_D
 
 Dimensions: 1 rows × 12 columns
@@ -1977,7 +1913,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_LOESCHEN | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Löschen aller bisher gespeicherten Daten |
 
-<a id="table-arg-0xd2ad-d"></a>
 ### ARG_0XD2AD_D
 
 Dimensions: 2 rows × 12 columns
@@ -1987,7 +1922,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_RELAIS | 0-n | high | unsigned char | - | TAB_CV_RELAIS | - | - | - | - | - | Auswahl angesteuertes Relais (siehe TAB_CV_RELAIS) |
 | ARG_RICHTUNG | 0-n | high | unsigned char | - | TAB_CV_RELAIS_RICHTUNG | - | - | - | - | - | Richtung der Ansteuerung (siehe TAB_CV_RELAIS_RICHTUNG) |
 
-<a id="table-arg-0xd2ae-d"></a>
 ### ARG_0XD2AE_D
 
 Dimensions: 2 rows × 12 columns
@@ -1997,7 +1931,6 @@ Dimensions: 2 rows × 12 columns
 | ANSTEUERUNG | 0-n | high | unsigned char | - | TAB_CV_ANSTEUERUNG | - | - | - | - | - | Ansteuerung (siehe TAB_CV_ANSTEUERUNG) |
 | RICHTUNG | 0-n | high | unsigned char | - | TAB_CV_ANSTEUERRICHTUNG | - | - | - | - | - | Richtung der Ansteuerung (siehe TAB_CV_ANSTEUERRICHTUNG) |
 
-<a id="table-arg-0xd2af-d"></a>
 ### ARG_0XD2AF_D
 
 Dimensions: 2 rows × 12 columns
@@ -2007,7 +1940,6 @@ Dimensions: 2 rows × 12 columns
 | ANSTEUERUNG | 0-n | high | unsigned char | - | TAB_CV_ANSTEUERUNG | - | - | - | - | - | Übergabe der Ansteuerung an Diagnose (siehe TAB_CV_ANSTEUERUNG) |
 | RICHTUNG | 0-n | high | unsigned char | - | TAB_CV_GELENK_BELADEHILFE_ANST | - | - | - | - | - | Richtung der Ansteuerung (siehe TAB_CV_GELENK_BELADEHILFE_ANST) |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2021,7 +1953,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2035,7 +1966,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 134 rows × 3 columns
@@ -2177,7 +2107,6 @@ Dimensions: 134 rows × 3 columns
 | 0xD21408 | Ausfall Botschaft Fahrzeugzustand | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 9 rows × 9 columns
@@ -2194,7 +2123,6 @@ Dimensions: 9 rows × 9 columns
 | 0x460b | Sensoren_Beladehilfe | 0-n | - | 0xFF | TAB_FF_SENSOREN_BELADEHILFE | - | - | - |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2206,7 +2134,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 46 rows × 3 columns
@@ -2260,7 +2187,6 @@ Dimensions: 46 rows × 3 columns
 | 0x240042 | Keine Timeoutüberwachung der CAS Freigabe | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 8 rows × 9 columns
@@ -2276,7 +2202,6 @@ Dimensions: 8 rows × 9 columns
 | 0x4608 | Sensoren | 0-n | high | 0xffff | TAB_FF_SENSOREN | - | - | - |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2285,7 +2210,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x4000"></a>
 ### RES_0X4000
 
 Dimensions: 11 rows × 10 columns
@@ -2304,7 +2228,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_BLH_RIGHT | 0-n | - | unsigned char | - | TAB_STAT_BLH | - | - | - | - |
 | STAT_VERRIEGELUNG | 0-n | - | unsigned char | - | TAB_STAT_VERRIEGELUNG | - | - | - | - |
 
-<a id="table-res-0x4010"></a>
 ### RES_0X4010
 
 Dimensions: 30 rows × 10 columns
@@ -2342,7 +2265,6 @@ Dimensions: 30 rows × 10 columns
 | STAT_TASTER_BELADEPOSITION_ANFAHREN | 0-n | - | unsigned char | - | TAB_BUTTON | - | - | - | Karosseriestecker Pin 10 |
 | STAT_TASTER_BELADEPOSITION_VERLASSEN | 0-n | - | unsigned char | - | TAB_BUTTON | - | - | - | Karosseriestecker Pin 11 |
 
-<a id="table-res-0x4020"></a>
 ### RES_0X4020
 
 Dimensions: 32 rows × 10 columns
@@ -2382,7 +2304,6 @@ Dimensions: 32 rows × 10 columns
 | STAT_BEDIEN_C03 | 0/1 | - | unsigned char | - | - | - | - | - | - |
 | STAT_BEDIEN_C04 | 0/1 | - | unsigned char | - | - | - | - | - | - |
 
-<a id="table-res-0x4050"></a>
 ### RES_0X4050
 
 Dimensions: 10 rows × 10 columns
@@ -2400,7 +2321,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_SPANNUNG_U_LAS_A3_2_WERT | V | high | unsigned int | - | - | 1 | 1000 | 0 | Spannung Ausgang LAS_A3_2 |
 | STAT_SPANNUNG_I_LAS_3_WERT | V | high | unsigned int | - | - | 1 | 1000 | 0 | Spannung Stromspiegel Ausgänge A3 |
 
-<a id="table-res-0x4060"></a>
 ### RES_0X4060
 
 Dimensions: 12 rows × 10 columns
@@ -2420,7 +2340,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_ZEIT_VENTILE_SPERRE_WERT | s | high | unsigned int | - | - | 1 | 1 | 0 | Zeit Sperre Ventile |
 | STAT_ZEIT_VENTILE_FREIGABE_WERT | s | high | unsigned int | - | - | 1 | 1 | 0 | Zeit Freigabe Ventile |
 
-<a id="table-res-0x4100"></a>
 ### RES_0X4100
 
 Dimensions: 2 rows × 10 columns
@@ -2430,7 +2349,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SWFL_WERT | HEX | - | unsigned int | - | - | - | - | - | - |
 | STAT_BTLD_WERT | HEX | - | unsigned int | - | - | - | - | - | - |
 
-<a id="table-res-0xa1a4-r"></a>
 ### RES_0XA1A4_R
 
 Dimensions: 1 rows × 13 columns
@@ -2439,7 +2357,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_CV_STAT_ROUTINE | - | - | - | Ergebnis der Routineausführung (siehe TAB_CV_STAT_ROUTINE) |
 
-<a id="table-res-0xd2a0-d"></a>
 ### RES_0XD2A0_D
 
 Dimensions: 8 rows × 10 columns
@@ -2455,7 +2372,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VORHANDEN_ESH | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0x00: elektrischer Schiebehimmel nicht vorhanden 0x01: elektrischer Schiebehimmel vorhanden |
 | STAT_VORHANDEN_WINDSCHOTT | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0x00: elektrisches Windschott nicht vorhanden 0x01: elektrisches Windschott vorhanden |
 
-<a id="table-res-0xd2a1-d"></a>
 ### RES_0XD2A1_D
 
 Dimensions: 15 rows × 10 columns
@@ -2478,7 +2394,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_FUSSPUNKT_SENSOR_TEMPORAER_EIN | 0/1 | high | unsigned char | - | - | - | - | - | TBD |
 | STAT_SUPPLY_C_SCHALTER_ANALOG_WERT | V | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | TBD |
 
-<a id="table-res-0xd2a3-d"></a>
 ### RES_0XD2A3_D
 
 Dimensions: 33 rows × 10 columns
@@ -2519,7 +2434,6 @@ Dimensions: 33 rows × 10 columns
 | STAT_MOTOR_BELADEHILFE_NR | 0-n | high | unsigned char | - | TAB_CVM_MOTOR_BELADEHILFE | 1.0 | 1.0 | 0.0 | Interpretation siehe Tabelle TAB_CVM_MOTOR_BELADEHILFE |
 | STAT_MOTOR_SCA_NR | 0-n | high | unsigned char | - | TAB_CVM_MOTOR_SCA | 1.0 | 1.0 | 0.0 | Interpretation siehe Tabelle TAB_CVM_MOTOR_SCA |
 
-<a id="table-res-0xd2a4-d"></a>
 ### RES_0XD2A4_D
 
 Dimensions: 2 rows × 10 columns
@@ -2529,7 +2443,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TASTER_CV_NR | 0-n | high | unsigned char | - | TAB_CV_BEDIENTASTER_VERDECK | 1.0 | 1.0 | 0.0 | Tasteranforderung siehe Tabelle TAB_CV_BEDIENTASTER_VERDECK |
 | STAT_TASTER_BELADEHILFE_NR | 0-n | high | unsigned char | - | TAB_CV_BEDIENTASTER_BELADEHILFE | 1.0 | 1.0 | 0.0 | Tasteranforderung siehe Tabelle TAB_CV_BEDIENTASTER_BELADEHILFE |
 
-<a id="table-res-0xd2a5-d"></a>
 ### RES_0XD2A5_D
 
 Dimensions: 1 rows × 10 columns
@@ -2538,7 +2451,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FREIGABE | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | vom SG-Verbund unabhängige Ansteuerung des CV erlauben 0x00 unabhängige Ansteuerung verboten 0x01 unabhängige Ansteuerung erlaubt |
 
-<a id="table-res-0xd2a6-d"></a>
 ### RES_0XD2A6_D
 
 Dimensions: 20 rows × 10 columns
@@ -2566,7 +2478,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_SENSOR_BELHI_VERSCHL_LI_GESCHL | 0-n | high | unsigned char | - | TAB_CV_SENSORIK_ZUSTAND | - | - | - | Zustand siehe Tabelle TAB_CV_SENSORIK_ZUSTAND |
 | STAT_SENSOR_BELHI_VERSCHL_RE_GESCHL | 0-n | high | unsigned char | - | TAB_CV_SENSORIK_ZUSTAND | - | - | - | Zustand siehe Tabelle TAB_CV_SENSORIK_ZUSTAND |
 
-<a id="table-res-0xd2a7-d"></a>
 ### RES_0XD2A7_D
 
 Dimensions: 12 rows × 10 columns
@@ -2586,7 +2497,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_BEDIENUNG_FBD_SCHLIESSZYLINDER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl Vorgänge Betätigung Verdeck über FBD oder Schließzylinder Bedienstelle |
 | STAT_VORGANG_BELADEHILFE_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl Vorgänge Betätigung Beladehilfe |
 
-<a id="table-res-0xd2a8-d"></a>
 ### RES_0XD2A8_D
 
 Dimensions: 52 rows × 10 columns
@@ -2646,7 +2556,6 @@ Dimensions: 52 rows × 10 columns
 | STAT_SENSOR_BELHI_VERSCHL_RE_GESCHL_MAX_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Beladehilfe Verschluss rechts geschlossen Schaltzustand  0x00: Aus  0x01: Ein |
 | STAT_RESERVE1_MAX_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Reserve Schaltzustand 0x00: Aus 0x01: Ein |
 
-<a id="table-res-0xd2a9-d"></a>
 ### RES_0XD2A9_D
 
 Dimensions: 2 rows × 10 columns
@@ -2656,7 +2565,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCA1 | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | SCA  0x00: offen  0x01: zugezogen |
 | STAT_SCA2 | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | SCA  0x00: offen  0x01: zugezogen |
 
-<a id="table-res-0xd2aa-d"></a>
 ### RES_0XD2AA_D
 
 Dimensions: 1 rows × 10 columns
@@ -2665,7 +2573,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ANTENNE | 0-n | high | unsigned char | - | TAB_ANTENNENUMSCHALTUNG | - | - | - | Gibt an welches Antennensytem aktiv ist 0x00 Applikation 0x01 Heckscheibenantenne 0x02 Brüstungsantenne |
 
-<a id="table-res-0xd2ab-d"></a>
 ### RES_0XD2AB_D
 
 Dimensions: 52 rows × 10 columns
@@ -2725,7 +2632,6 @@ Dimensions: 52 rows × 10 columns
 | STAT_SENSOR_BELHI_VERSCHL_RE_GESCHL_MAX_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Beladehilfe Verschluss rechts geschlossen Schaltzustand  0x00: Aus  0x01: Ein |
 | STAT_RESERVE1_MAX_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Reserve Schaltzustand 0x00: Aus 0x01: Ein |
 
-<a id="table-res-0xd2ae-d"></a>
 ### RES_0XD2AE_D
 
 Dimensions: 2 rows × 10 columns
@@ -2735,7 +2641,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_VERRIEGELUNG | 0-n | high | unsigned char | - | TAB_CV_VERRIEGELUNG | - | - | - | Status der Verriegelung (siehe TAB_CV_VERRIEGELUNG) |
 | STAT_HALLZAEHLER_POS_VERRIEGELUNG_WERT | Inkremente | high | unsigned int | - | - | 1.0 | 1.0 | -30000.0 | Zählerstand Hallinkremente Verriegelung (kein Hallzähler vorhanden, wenn Wert -30000 ausgegeben wird) |
 
-<a id="table-res-0xd2af-d"></a>
 ### RES_0XD2AF_D
 
 Dimensions: 2 rows × 10 columns
@@ -2745,7 +2650,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_GELENK_BELADEHILFE_LINKS | 0-n | high | unsigned char | - | TAB_CV_GELENK_BELADEHILFE | - | - | - | Status der Gelenk-Umschaltung für Beladehilfe links (siehe TAB_CV_GELENK_BELADEHILFE) |
 | STAT_GELENK_BELADEHILFE_RECHTS | 0-n | high | unsigned char | - | TAB_CV_GELENK_BELADEHILFE | - | - | - | Status der Gelenk-Umschaltung für Beladehilfe rechts (siehe TAB_CV_GELENK_BELADEHILFE) |
 
-<a id="table-res-0xd2b0-d"></a>
 ### RES_0XD2B0_D
 
 Dimensions: 4 rows × 10 columns
@@ -2757,7 +2661,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SPANNUNG_GRENZWERT_PREALARM_WERT | V | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | Grenzwert für Prealarm-Zustand |
 | STAT_SPANNUNG_GRENZWERT_ALARM_WERT | V | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | Grenzwert für Alarm-Zustand |
 
-<a id="table-res-0xddd5-d"></a>
 ### RES_0XDDD5_D
 
 Dimensions: 4 rows × 10 columns
@@ -2769,7 +2672,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SENSOR_GEPAECK_ABTRENN_UNTEN_FEHLERZUSTAND_NR | 0-n | high | unsigned char | - | TAB_CV_SENSORIK_FEHLERZUSTAND | 1.0 | 1.0 | 0.0 | Fehlerzustand Gepäckraumabtrennung in Position siehe Tabelle TAB_CV_SENSORIK_FEHLERZUSTAND |
 | STAT_SCHALTER_RES1 | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reserve |
 
-<a id="table-res-0xdddf-d"></a>
 ### RES_0XDDDF_D
 
 Dimensions: 20 rows × 10 columns
@@ -2797,7 +2699,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_RELATIVZEIT_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Ausgabe Relativzeit Fahrzeug |
 | STAT_ZENTRALVERRIEGELUNG | 0-n | high | unsigned char | - | TAB_STAT_ZENTRALVERRIEGELUNG | - | - | - | Status Zentralverriegelung Fahrzeug Interpretation siehe Tabelle |
 
-<a id="table-res-0xdde1-d"></a>
 ### RES_0XDDE1_D
 
 Dimensions: 25 rows × 10 columns
@@ -2830,7 +2731,6 @@ Dimensions: 25 rows × 10 columns
 | STAT_SPERR_POSITION_VERDECK | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Sperrbedingung 0 = Sperrbedingung nicht gesetzt 1 = Sperrbedingung gesetzt  Umsetzung: CVD |
 | STAT_SPERR_SCHEIBEN | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Sperrbedingung 0 = Sperrbedingung nicht gesetzt 1 = Sperrbedingung gesetzt  Umsetzung: CVC |
 
-<a id="table-res-0xdde1-d-430"></a>
 ### RES_0XDDE1_D_430
 
 Dimensions: 24 rows × 10 columns
@@ -2862,7 +2762,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_SPERR_POSITION_VERDECK | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Sperrbedingung 0 = Sperrbedingung nicht gesetzt 1 = Sperrbedingung gesetzt  Umsetzung: CVD |
 | STAT_SPERR_SCHEIBEN | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Sperrbedingung 0 = Sperrbedingung nicht gesetzt 1 = Sperrbedingung gesetzt  Umsetzung: CVC |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 29 rows × 16 columns
@@ -2899,7 +2798,6 @@ Dimensions: 29 rows × 16 columns
 | _CV_SENSORVERSORGUNG | 0x4201 | - | Aktivierung der Sensorversorgung | - | - | - | - | - | - | - | - | - | 2E | ARG_0x4201 | - |
 | _CV_MESSBEREICH | 0x4211 | - | Strommessbereich der Motorausgänge LAS_C1_x ... LAS_A2_x | - | - | - | - | - | - | - | - | 0x24 | 2E | ARG_0x4211 | - |
 
-<a id="table-tab-antennenumschaltung"></a>
 ### TAB_ANTENNENUMSCHALTUNG
 
 Dimensions: 3 rows × 2 columns
@@ -2910,7 +2808,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Heckscheibenantenne |
 | 0x02 | Brüstungsantenne |
 
-<a id="table-tab-button"></a>
 ### TAB_BUTTON
 
 Dimensions: 4 rows × 2 columns
@@ -2922,7 +2819,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Kurzschluss nach Minus |
 | 0x07 | Initialisierung |
 
-<a id="table-tab-cvm-freigabe"></a>
 ### TAB_CVM_FREIGABE
 
 Dimensions: 3 rows × 2 columns
@@ -2933,7 +2829,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Freigegeben |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-cvm-klemmen-status"></a>
 ### TAB_CVM_KLEMMEN_STATUS
 
 Dimensions: 16 rows × 2 columns
@@ -2957,7 +2852,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Fehler |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-cvm-komfort-funktion"></a>
 ### TAB_CVM_KOMFORT_FUNKTION
 
 Dimensions: 12 rows × 2 columns
@@ -2977,7 +2871,6 @@ Dimensions: 12 rows × 2 columns
 | 0x08 | Beladeposition ablegen |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-cvm-motor-beladehilfe"></a>
 ### TAB_CVM_MOTOR_BELADEHILFE
 
 Dimensions: 4 rows × 2 columns
@@ -2989,7 +2882,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Beladehilfe schließt |
 | 0xFF | Status unbekannt |
 
-<a id="table-tab-cvm-motor-sca"></a>
 ### TAB_CVM_MOTOR_SCA
 
 Dimensions: 4 rows × 2 columns
@@ -3001,7 +2893,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | SCA schließt |
 | 0xFF | Status unbekannt |
 
-<a id="table-tab-cvm-motor-windlauf"></a>
 ### TAB_CVM_MOTOR_WINDLAUF
 
 Dimensions: 4 rows × 2 columns
@@ -3013,7 +2904,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Windlauf schließt |
 | 0xFF | Status unbekannt |
 
-<a id="table-tab-cvm-sensoren"></a>
 ### TAB_CVM_SENSOREN
 
 Dimensions: 8 rows × 2 columns
@@ -3029,7 +2919,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Versorgung abgeschaltet |
 | 0x07 | Sensor nicht verbaut oder nicht initialisiert |
 
-<a id="table-tab-cvm-stat-msa"></a>
 ### TAB_CVM_STAT_MSA
 
 Dimensions: 13 rows × 2 columns
@@ -3050,7 +2939,6 @@ Dimensions: 13 rows × 2 columns
 | 0x1E | Verbrennungsmotor im Auslauf mit Startankündigung durch MSA-Anforderung |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-cvm-zustaende-fenster"></a>
 ### TAB_CVM_ZUSTAENDE_FENSTER
 
 Dimensions: 4 rows × 2 columns
@@ -3062,7 +2950,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Geoeffnet |
 | 0xFF | Ungueltig |
 
-<a id="table-tab-cvm-zustaende-heckklappe"></a>
 ### TAB_CVM_ZUSTAENDE_HECKKLAPPE
 
 Dimensions: 3 rows × 2 columns
@@ -3073,7 +2960,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Geöffnet |
 | 0xFF | Ungültig |
 
-<a id="table-tab-cv-ansteuerrichtung"></a>
 ### TAB_CV_ANSTEUERRICHTUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3084,7 +2970,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Oeffnen |
 | 0x02 | Schliessen |
 
-<a id="table-tab-cv-ansteuerung"></a>
 ### TAB_CV_ANSTEUERUNG
 
 Dimensions: 2 rows × 2 columns
@@ -3094,7 +2979,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Applikation |
 | 0x01 | Diagnose |
 
-<a id="table-tab-cv-bedienanforderung"></a>
 ### TAB_CV_BEDIENANFORDERUNG
 
 Dimensions: 10 rows × 2 columns
@@ -3112,7 +2996,6 @@ Dimensions: 10 rows × 2 columns
 | 0x12 | Komfortschließen Funkschlüssel |
 | 0xFF | Bedienanforderung ungültig |
 
-<a id="table-tab-cv-bedientaster-beladehilfe"></a>
 ### TAB_CV_BEDIENTASTER_BELADEHILFE
 
 Dimensions: 4 rows × 2 columns
@@ -3124,7 +3007,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Richtung schließen betätigt |
 | 0xFF | ungültig |
 
-<a id="table-tab-cv-bedientaster-verdeck"></a>
 ### TAB_CV_BEDIENTASTER_VERDECK
 
 Dimensions: 4 rows × 2 columns
@@ -3136,7 +3018,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Richtung schließen betätigt |
 | 0xFF | ungültig |
 
-<a id="table-tab-cv-element"></a>
 ### TAB_CV_ELEMENT
 
 Dimensions: 3 rows × 2 columns
@@ -3147,7 +3028,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Beladehilfe |
 | 0x03 | Heckscheibe |
 
-<a id="table-tab-cv-gelenk-beladehilfe"></a>
 ### TAB_CV_GELENK_BELADEHILFE
 
 Dimensions: 5 rows × 2 columns
@@ -3160,7 +3040,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Umschaltung Gelank Fehler |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-cv-gelenk-beladehilfe-anst"></a>
 ### TAB_CV_GELENK_BELADEHILFE_ANST
 
 Dimensions: 3 rows × 2 columns
@@ -3171,7 +3050,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Position Beladefunktion anfahren |
 | 0x02 | Position Dachfunktion anfahren |
 
-<a id="table-tab-cv-pumpe-temperatur"></a>
 ### TAB_CV_PUMPE_TEMPERATUR
 
 Dimensions: 4 rows × 2 columns
@@ -3183,7 +3061,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Dacbewegung gesperrt |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-cv-relais"></a>
 ### TAB_CV_RELAIS
 
 Dimensions: 10 rows × 2 columns
@@ -3201,7 +3078,6 @@ Dimensions: 10 rows × 2 columns
 | 0x09 | Relais 9 |
 | 0x0A | Relais 10 |
 
-<a id="table-tab-cv-relais-richtung"></a>
 ### TAB_CV_RELAIS_RICHTUNG
 
 Dimensions: 2 rows × 2 columns
@@ -3211,7 +3087,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Ausgang auf Ubatt |
 | 0x01 | Ausgang auf Masse |
 
-<a id="table-tab-cv-sca"></a>
 ### TAB_CV_SCA
 
 Dimensions: 3 rows × 2 columns
@@ -3222,7 +3097,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | SCA1 |
 | 0x02 | SCA2 |
 
-<a id="table-tab-cv-sca-richtung"></a>
 ### TAB_CV_SCA_RICHTUNG
 
 Dimensions: 2 rows × 2 columns
@@ -3232,7 +3106,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | entriegeln |
 | 0x01 | verriegeln |
 
-<a id="table-tab-cv-sensorik-fehlerzustand"></a>
 ### TAB_CV_SENSORIK_FEHLERZUSTAND
 
 Dimensions: 4 rows × 2 columns
@@ -3244,7 +3117,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Kurzschluss nach Ubatt |
 | 0x03 | Signal ungültig |
 
-<a id="table-tab-cv-sensorik-zustand"></a>
 ### TAB_CV_SENSORIK_ZUSTAND
 
 Dimensions: 8 rows × 2 columns
@@ -3260,7 +3132,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Versorgungsspannung ist abgeschaltet oder fehlerhaft |
 | 0x07 | Sensor auscodiert oder noch nicht vorhanden |
 
-<a id="table-tab-cv-status-wiederholsperre"></a>
 ### TAB_CV_STATUS_WIEDERHOLSPERRE
 
 Dimensions: 4 rows × 2 columns
@@ -3272,7 +3143,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Wiederholsperre aktiv |
 | 0xff | Status ungültig |
 
-<a id="table-tab-cv-stat-routine"></a>
 ### TAB_CV_STAT_ROUTINE
 
 Dimensions: 8 rows × 2 columns
@@ -3288,7 +3158,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Routine abgebrochen |
 | 0xFF | ungültig |
 
-<a id="table-tab-cv-stat-spannung"></a>
 ### TAB_CV_STAT_SPANNUNG
 
 Dimensions: 9 rows × 2 columns
@@ -3305,7 +3174,6 @@ Dimensions: 9 rows × 2 columns
 | 0x06 | Spannungsfilter Neustart |
 | 0x0f | Initialisierung |
 
-<a id="table-tab-cv-verriegelung"></a>
 ### TAB_CV_VERRIEGELUNG
 
 Dimensions: 6 rows × 2 columns
@@ -3319,7 +3187,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Blockfahrt |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-ff-sensoren"></a>
 ### TAB_FF_SENSOREN
 
 Dimensions: 21 rows × 2 columns
@@ -3348,7 +3215,6 @@ Dimensions: 21 rows × 2 columns
 | 0x4002 | Verdeck abgelegt rechts und links |
 | 0xFFFF | ungültiger Sensor |
 
-<a id="table-tab-ff-sensoren-beladehilfe"></a>
 ### TAB_FF_SENSOREN_BELADEHILFE
 
 Dimensions: 7 rows × 2 columns
@@ -3363,7 +3229,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0C | Funktion Beladeposition links und rechts |
 | 0xFF | ungültiger Sensor |
 
-<a id="table-tab-messbereich"></a>
 ### TAB_MESSBEREICH
 
 Dimensions: 3 rows × 2 columns
@@ -3374,7 +3239,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | HIGH_CURRENT |
 | 0x03 | DIAGNOSE_OFF |
 
-<a id="table-tab-sensoren"></a>
 ### TAB_SENSOREN
 
 Dimensions: 21 rows × 2 columns
@@ -3403,7 +3267,6 @@ Dimensions: 21 rows × 2 columns
 | 0x13 | POS_DP_ABGEL_LI |
 | 0x14 | Reserve |
 
-<a id="table-tab-stat-blh"></a>
 ### TAB_STAT_BLH
 
 Dimensions: 4 rows × 2 columns
@@ -3415,7 +3278,6 @@ Dimensions: 4 rows × 2 columns
 | 0x00 | Umschaltung Gelenk Heckmodul in Position Dachfunktion |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-stat-button-inside"></a>
 ### TAB_STAT_BUTTON_INSIDE
 
 Dimensions: 3 rows × 2 columns
@@ -3426,7 +3288,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Anforderung Verdeck öffnen |
 | 0x02 | Anforderung Verdeck schließen |
 
-<a id="table-tab-stat-sca"></a>
 ### TAB_STAT_SCA
 
 Dimensions: 4 rows × 2 columns
@@ -3438,7 +3299,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Softclose-Automatik offen zur Aufnahme |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-stat-verriegelung"></a>
 ### TAB_STAT_VERRIEGELUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3450,7 +3310,6 @@ Dimensions: 4 rows × 2 columns
 | 02 | Verriegellung offen |
 | FF | Signal ungültig |
 
-<a id="table-tab-stat-zentralverriegelung"></a>
 ### TAB_STAT_ZENTRALVERRIEGELUNG
 
 Dimensions: 9 rows × 2 columns
@@ -3467,7 +3326,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | interner ZV-Master gesichert |
 | 0x0f | Signal ungültig |
 
-<a id="table-tab-verbrauchersteuerung"></a>
 ### TAB_VERBRAUCHERSTEUERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3479,7 +3337,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Standverbraucher müssen sich abschalten |
 | 0xFF | Signal ungültig |
 
-<a id="table-tab-verdeck-position"></a>
 ### TAB_VERDECK_POSITION
 
 Dimensions: 10 rows × 2 columns

@@ -29,7 +29,6 @@
 - [C_ZCS_LESEN](#job-c-zcs-lesen) - Read the ZCS record
 - [C_CHECKSUM](#job-c-checksum) - Berechnung und Speicherung der Checksumme
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -47,7 +46,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -60,7 +58,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation
@@ -80,7 +77,6 @@ _No arguments._
 | ID_DATUM_JAHR | string | Herstelldatum Jahr |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -93,7 +89,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_... |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -110,7 +105,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -128,7 +122,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-zcs-auftrag"></a>
 ### C_ZCS_AUFTRAG
 
 Write and verify the Central code
@@ -147,7 +140,6 @@ Write and verify the Central code
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Read the ZCS record
@@ -163,7 +155,6 @@ _No arguments._
 | VN | string | Zentralcode C3 - Versionsmerkmal (10 ASCII nos + 1 ASCII c/sum) Version information |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Speicherung der Checksumme
@@ -187,7 +178,6 @@ Berechnung und Speicherung der Checksumme
 
 - [JOBRESULT](#table-jobresult) (7 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns

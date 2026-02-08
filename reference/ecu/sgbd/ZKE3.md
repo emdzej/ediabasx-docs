@@ -96,7 +96,6 @@
 - [STEUERN_START_AUTOINIT](#job-steuern-start-autoinit) - Autoinit starten (SHD neu)
 - [STEUERN_PRUEFMODUS_FREIGEBEN](#job-steuern-pruefmodus-freigeben) - Pruefmodus freigeben (SHD neu)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -115,7 +114,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -136,7 +134,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -155,7 +152,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -168,7 +164,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer GM III
@@ -196,7 +191,6 @@ Ident-Daten fuer GM III
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -219,7 +213,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -233,7 +226,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -247,7 +239,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -264,7 +255,6 @@ _No arguments._
 | BYTE3 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -285,7 +275,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -307,7 +296,6 @@ Auslesen der Herstelldaten
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen-allgemein"></a>
 ### COD_LESEN_ALLGEMEIN
 
 Auslesen der allgemeinen Codierdaten des GM III (Block 0)
@@ -385,7 +373,6 @@ _No arguments._
 | CHECKSUMME_BLOCK_0 | int | Checksumme fuer Block 0 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen-servotronik"></a>
 ### COD_LESEN_SERVOTRONIK
 
 Auslesen der Codierdaten des GM III (Block 1 und 2)
@@ -406,7 +393,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-infospeicher-lesen"></a>
 ### INFOSPEICHER_LESEN
 
 Infospeicher lesen Info-Speicher ist im Aufbau identisch dem Fehlerspeicher Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -429,7 +415,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-status-digital-gm3-ea"></a>
 ### STATUS_DIGITAL_GM3_EA
 
 Status der Digitalsignale des GM III Signalart: Ein-/Ausgaenge
@@ -511,7 +496,6 @@ _No arguments._
 | STAT_IFN_BTOFFEN_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-gm3-kp"></a>
 ### STATUS_DIGITAL_GM3_KP
 
 Status der Digitalsignale des GM III Signalart: K-Bus bzw. P-Bus
@@ -529,7 +513,6 @@ _No arguments._
 | STAT_K_KL58_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-gm3-int"></a>
 ### STATUS_DIGITAL_GM3_INT
 
 Status der Digitalsignale des GM III Signalart: interne Signale
@@ -545,7 +528,6 @@ _No arguments._
 | STAT_IFN_ZV_GESICHERT | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-gm3"></a>
 ### STATUS_ANALOG_GM3
 
 Status der Analogsignale des GM III
@@ -593,7 +575,6 @@ _No arguments._
 | STAT_UEKSFH_EINH | string | Einheit: 'Volt' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-gm3"></a>
 ### STEUERN_DIGITAL_GM3
 
 Ansteuern eines digitalen Ein- oder Ausgangs v. GM3
@@ -613,7 +594,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs v. GM3
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-analog-gm3"></a>
 ### STEUERN_ANALOG_GM3
 
 Ansteuern eines analogen Ein- oder Ausgangs v. GM3
@@ -633,7 +613,6 @@ Ansteuern eines analogen Ein- oder Ausgangs v. GM3
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-ft"></a>
 ### STATUS_DIGITAL_FT
 
 Status der Digitalsignale der FT (Ein-/Ausgaenge)
@@ -700,7 +679,6 @@ _No arguments._
 | STAT_PS_FB_OK_AKTIV | int | gueltige FB liegt vor nur wenn FZG nach PU 98 gefertigt wurde ! 0, wenn FALSE / 1, wenn TRUE -1, wenn nicht vorhanden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-ft"></a>
 ### STATUS_ANALOG_FT
 
 Status der Analogsignale der FT
@@ -730,7 +708,6 @@ _No arguments._
 | STAT_UFHFTZ_EINH | string | Einheit: 'Volt' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-ft"></a>
 ### STEUERN_DIGITAL_FT
 
 Ansteuern eines digitalen Ein- oder Ausgangs der FT
@@ -750,7 +727,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs der FT
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-bt"></a>
 ### STATUS_DIGITAL_BT
 
 Status der Digitalsignale der BT (Ein-/Ausgaenge)
@@ -815,7 +791,6 @@ _No arguments._
 | STAT_PS_FB_OK_AKTIV | int | gueltige FB liegt vor nur wenn FZG nach PU 98 gefertigt wurde ! 0, wenn FALSE / 1, wenn TRUE -1, wenn nicht vorhanden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-bt"></a>
 ### STATUS_ANALOG_BT
 
 Status der Analogsignale der BT
@@ -845,7 +820,6 @@ _No arguments._
 | STAT_UFHBTZ_EINH | string | Einheit: 'Volt' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-bt"></a>
 ### STEUERN_DIGITAL_BT
 
 Ansteuern eines digitalen Ein- oder Ausgangs der BT
@@ -865,7 +839,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs der BT
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-shd"></a>
 ### STATUS_DIGITAL_SHD
 
 Status der Digitalsignale des SHD (Ein-/Ausgaenge) Der Wertebereich ist bei allen Results: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -893,7 +866,6 @@ _No arguments._
 | STAT_IA_INKRV_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog-shd"></a>
 ### STATUS_ANALOG_SHD
 
 Status der Analogsignale des SHD
@@ -913,7 +885,6 @@ _No arguments._
 | STAT_DMOT_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital-shd"></a>
 ### STEUERN_DIGITAL_SHD
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SHD
@@ -933,7 +904,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SHD
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital-shd-neu"></a>
 ### STATUS_DIGITAL_SHD_NEU
 
 Status der Digitalsignale des neuen SHD fuer E39 (Ein-/Ausgaenge) Der Wertebereich ist bei allen Results: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -972,7 +942,6 @@ _No arguments._
 | STAT_BUSAI_LOCK | int | Autoinit ueber Bus gesperrt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog-shd-neu"></a>
 ### STATUS_ANALOG_SHD_NEU
 
 Status der Analogsignale des neuen SHD fuer E39
@@ -994,7 +963,6 @@ _No arguments._
 | STAT_U_BATT_EINH | string | Einheit: Volt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital-shd-neu"></a>
 ### STEUERN_DIGITAL_SHD_NEU
 
 Ansteuern eines digitalen Ein- oder Ausgangs des neuen SHD fuer E39
@@ -1014,7 +982,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des neuen SHD fuer E39
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital-sb"></a>
 ### STATUS_DIGITAL_SB
 
 Status der Digitalsignale des SB (Ein-/Ausgaenge) nur bei E38 / nicht bei E39
@@ -1047,7 +1014,6 @@ _No arguments._
 | STAT_IE_SBSE_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-sb"></a>
 ### STEUERN_DIGITAL_SB
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SB nur bei E38 / nicht bei E39
@@ -1067,7 +1033,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SB nur bei E38 / nicht bei E39
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-sm-lsm"></a>
 ### STATUS_DIGITAL_SM_LSM
 
 Status der Digitalsignale des SM/LSM (Ein-/Ausgaenge) nur bei E38 / nicht bei E39
@@ -1099,7 +1064,6 @@ _No arguments._
 | STAT_E_MLSLZU_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm"></a>
 ### STATUS_ANALOG_SM
 
 Status der Achsenposition des SM
@@ -1127,7 +1091,6 @@ _No arguments._
 | STAT_ACHSE6_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf"></a>
 ### STATUS_ANALOG_SMBF
 
 Status der Achsenposition des SMBF
@@ -1155,7 +1118,6 @@ _No arguments._
 | STAT_ACHSE6_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-lsm"></a>
 ### STATUS_ANALOG_LSM
 
 Status der Achsenposition des LSM
@@ -1173,7 +1135,6 @@ _No arguments._
 | STAT_ACHSE8_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-laengs-min-max"></a>
 ### STATUS_ANALOG_SM_LAENGS_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1191,7 +1152,6 @@ _No arguments._
 | STAT_ACHSE0_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-hoehe-min-max"></a>
 ### STATUS_ANALOG_SM_HOEHE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1209,7 +1169,6 @@ _No arguments._
 | STAT_ACHSE1_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-neigung-min-max"></a>
 ### STATUS_ANALOG_SM_NEIGUNG_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1227,7 +1186,6 @@ _No arguments._
 | STAT_ACHSE2_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-lehne-min-max"></a>
 ### STATUS_ANALOG_SM_LEHNE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1245,7 +1203,6 @@ _No arguments._
 | STAT_ACHSE3_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-kopf-min-max"></a>
 ### STATUS_ANALOG_SM_KOPF_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1263,7 +1220,6 @@ _No arguments._
 | STAT_ACHSE4_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-sitztiefe-min-max"></a>
 ### STATUS_ANALOG_SM_SITZTIEFE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1281,7 +1237,6 @@ _No arguments._
 | STAT_ACHSE5_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-sm-lehnenkopf-min-max"></a>
 ### STATUS_ANALOG_SM_LEHNENKOPF_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1299,7 +1254,6 @@ _No arguments._
 | STAT_ACHSE6_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-lsm-neigung-min-max"></a>
 ### STATUS_ANALOG_LSM_NEIGUNG_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1317,7 +1271,6 @@ _No arguments._
 | STAT_ACHSE7_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-lsm-laengs-min-max"></a>
 ### STATUS_ANALOG_LSM_LAENGS_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1335,7 +1288,6 @@ _No arguments._
 | STAT_ACHSE8_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-laengs-min-max"></a>
 ### STATUS_ANALOG_SMBF_LAENGS_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1353,7 +1305,6 @@ _No arguments._
 | STAT_ACHSE0_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-hoehe-min-max"></a>
 ### STATUS_ANALOG_SMBF_HOEHE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1371,7 +1322,6 @@ _No arguments._
 | STAT_ACHSE1_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-neigung-min-max"></a>
 ### STATUS_ANALOG_SMBF_NEIGUNG_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1389,7 +1339,6 @@ _No arguments._
 | STAT_ACHSE2_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-lehne-min-max"></a>
 ### STATUS_ANALOG_SMBF_LEHNE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1407,7 +1356,6 @@ _No arguments._
 | STAT_ACHSE3_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-kopf-min-max"></a>
 ### STATUS_ANALOG_SMBF_KOPF_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1425,7 +1373,6 @@ _No arguments._
 | STAT_ACHSE4_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-sitztiefe-min-max"></a>
 ### STATUS_ANALOG_SMBF_SITZTIEFE_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1443,7 +1390,6 @@ _No arguments._
 | STAT_ACHSE5_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-smbf-lehnenkopf-min-max"></a>
 ### STATUS_ANALOG_SMBF_LEHNENKOPF_MIN_MAX
 
 Status des Schleppzeigerwertes der Achse
@@ -1461,7 +1407,6 @@ _No arguments._
 | STAT_ACHSE6_EINH_MIN | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-sm-lsm"></a>
 ### STEUERN_DIGITAL_SM_LSM
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SM_LSM nur bei E38 / nicht bei E39
@@ -1481,7 +1426,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SM_LSM nur bei E38 / nicht bei 
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-smbf"></a>
 ### STATUS_DIGITAL_SMBF
 
 Status der Digitalsignale des SMBF (Ein-/Ausgaenge) nur bei E38 / nicht bei E39
@@ -1509,7 +1453,6 @@ _No arguments._
 | STAT_E_LKZBF_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-smbf"></a>
 ### STEUERN_DIGITAL_SMBF
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SMBF nur bei E38 / nicht bei E39
@@ -1529,7 +1472,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SMBF nur bei E38 / nicht bei E3
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-smsfb"></a>
 ### STATUS_DIGITAL_SMSFB
 
 Status der Digitalsignale des SMSFB (Ein-/Ausgaenge) nur bei E38 / nicht bei E39
@@ -1557,7 +1499,6 @@ _No arguments._
 | STAT_E_LKZBF_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-smsfb"></a>
 ### STEUERN_DIGITAL_SMSFB
 
 Ansteuern eines digitalen Ein- oder Ausgangs des SMSFB nur bei E38 / nicht bei E39
@@ -1577,7 +1518,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs des SMSFB nur bei E38 / nicht bei E
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-nacheinander"></a>
 ### STEUERN_DIGITAL_NACHEINANDER
 
 Ansteuern maximal 5 digitaler Signale des GM3 oder eines Peripheriemoduls NACHEINANDER
@@ -1606,7 +1546,6 @@ Ansteuern maximal 5 digitaler Signale des GM3 oder eines Peripheriemoduls NACHEI
 | _TEL_AUFTRAG5 | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-simultan-gm3"></a>
 ### STEUERN_SIMULTAN_GM3
 
 Gleichzeitiges Ansteuern maximal 5 digitaler Signale des GM3 !!! ACHTUNG: ZKE III antwortet nicht !!!
@@ -1629,7 +1568,6 @@ Gleichzeitiges Ansteuern maximal 5 digitaler Signale des GM3 !!! ACHTUNG: ZKE II
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-bytes-gm3"></a>
 ### STATUS_BYTES_GM3
 
 Status der Digitalsignale des GM III Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -1644,7 +1582,6 @@ _No arguments._
 | STAT_DATEN | binary | 32 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-bytes-ft"></a>
 ### STATUS_BYTES_FT
 
 Status aller Signale des Peripheriemoduls FT Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -1659,7 +1596,6 @@ _No arguments._
 | STAT_DATEN | binary | 27 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-bytes-bt"></a>
 ### STATUS_BYTES_BT
 
 Status aller Signale des Peripheriemoduls BT Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -1674,7 +1610,6 @@ _No arguments._
 | STAT_DATEN | binary | 27 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-bytes-shd"></a>
 ### STATUS_BYTES_SHD
 
 Status aller Signale des Peripheriemoduls SHD Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -1689,7 +1624,6 @@ _No arguments._
 | STAT_DATEN | binary | 9 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-bytes-sb"></a>
 ### STATUS_BYTES_SB
 
 Status aller Signale des Peripheriemoduls SB Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -1704,7 +1638,6 @@ _No arguments._
 | STAT_DATEN | binary | 4 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-fh-ft"></a>
 ### STATUS_FH_FT
 
 Status der FH-Signale der FT
@@ -1725,7 +1658,6 @@ _No arguments._
 | STAT_IFTMAX_EINH | string | Einheit: 'Ampere' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-fh-bt"></a>
 ### STATUS_FH_BT
 
 Status der FH-Signale der BT
@@ -1746,7 +1678,6 @@ _No arguments._
 | STAT_IBTMAX_EINH | string | Einheit: 'Ampere' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-fh-hinten"></a>
 ### STATUS_FH_HINTEN
 
 Status der FH-Signale hinten (GM3)
@@ -1774,7 +1705,6 @@ _No arguments._
 | STAT_IFHMAX_EINH | string | Einheit: 'Ampere' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-shd"></a>
 ### STATUS_SHD
 
 Status der SHD-Signale
@@ -1793,7 +1723,6 @@ _No arguments._
 | STAT_DMOT_EINH | string | Einheit: '1' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-ident-sw-nr-tueren"></a>
 ### IDENT_SW_NR_TUEREN
 
 Vergleich der Softwarenummern der Tuermodule FT und BT
@@ -1809,7 +1738,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-status-inrs"></a>
 ### STATUS_INRS
 
 1.) Ansteuern: NGAG - 2.) Status lesen: INRS
@@ -1830,7 +1758,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-schreiben-shd-aw"></a>
 ### SCHREIBEN_SHD_AW
 
 ACHTUNG: nur fuer E39/2 mit SHD-Software-Stand < 5  !!! Umcodieren des SHD E39/2 wegen Antiwummerstellung
@@ -1843,7 +1770,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-testen-shd-aw"></a>
 ### TESTEN_SHD_AW
 
 ACHTUNG: nur fuer E39/2 mit SHD-Software-Stand < 5  !!! Testen der Daten des SHD E39/2 bzgl. Antiwummerstellung
@@ -1857,7 +1783,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | WERT_POS_AUF | int | Wert an der Speicherzelle bzgl. 'Position auf' (low Byte) |
 
-<a id="job-steuern-start-autoinit"></a>
 ### STEUERN_START_AUTOINIT
 
 Autoinit starten (SHD neu)
@@ -1871,7 +1796,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-pruefmodus-freigeben"></a>
 ### STEUERN_PRUEFMODUS_FREIGEBEN
 
 Pruefmodus freigeben (SHD neu)
@@ -1907,7 +1831,6 @@ _No arguments._
 - [BITS_SM_LSM](#table-bits-sm-lsm) (19 × 6)
 - [BITS_SMBF](#table-bits-smbf) (15 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -1925,7 +1848,6 @@ Dimensions: 10 rows × 2 columns
 | ?20? | ERROR_FEHLERANZAHL |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 56 rows × 2 columns
@@ -1989,7 +1911,6 @@ Dimensions: 56 rows × 2 columns
 | 0x55 | BHTC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -2018,7 +1939,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -2042,7 +1962,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-peripheriemodule"></a>
 ### PERIPHERIEMODULE
 
 Dimensions: 9 rows × 3 columns
@@ -2059,7 +1978,6 @@ Dimensions: 9 rows × 3 columns
 | 0x09 | SM_SFB | Sitzmemory Fernbedienung Beifahrersitz |
 | 0xXY | XY | ERROR_PM_UNBEKANNT |
 
-<a id="table-peripheriemodule-hd"></a>
 ### PERIPHERIEMODULE_HD
 
 Dimensions: 5 rows × 3 columns
@@ -2072,7 +1990,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | SHD | Schiebehebedach |
 | 0xXY | XY | ERROR_PM_NICHT_ERLAUBT |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 155 rows × 2 columns
@@ -2235,7 +2152,6 @@ Dimensions: 155 rows × 2 columns
 | 0xFF | BFS Lehnenkopf: Blockierung hinten |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -2245,7 +2161,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | sporadischer Fehler |
 | 0x01 | statischer Fehler |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 34 rows × 2 columns
@@ -2287,7 +2202,6 @@ Dimensions: 34 rows × 2 columns
 | 0x63 | Fensterheber-Motor BTH |
 | 0xXY | unbekannter Info-Ort |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 84 rows × 6 columns
@@ -2379,7 +2293,6 @@ Dimensions: 84 rows × 6 columns
 | K_KL58 | 25 | 0x02 | 0x02 | KS | Klemme 58 (ueber K-Bus) |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-bits-ft"></a>
 ### BITS_FT
 
 Dimensions: 53 rows × 6 columns
@@ -2440,7 +2353,6 @@ Dimensions: 53 rows × 6 columns
 | MELED | 9 | 0x10 | 0x10 | A | LED im Memoryschalter |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-bits-bt"></a>
 ### BITS_BT
 
 Dimensions: 51 rows × 6 columns
@@ -2499,7 +2411,6 @@ Dimensions: 51 rows × 6 columns
 | MELED | 9 | 0x10 | 0x10 | A | LED im Memoryschalter |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-bits-shd"></a>
 ### BITS_SHD
 
 Dimensions: 15 rows × 6 columns
@@ -2522,7 +2433,6 @@ Dimensions: 15 rows × 6 columns
 | INKRV | 3 | 0x80 | 0x80 | IA | Inkrementalgeber Versorgung |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-bits-shd-neu"></a>
 ### BITS_SHD_NEU
 
 Dimensions: 5 rows × 5 columns
@@ -2535,7 +2445,6 @@ Dimensions: 5 rows × 5 columns
 | SHDI | 2 | 0x04 | 0x04 | GM-Signale 2: SHD inaktiv |
 | XY | XY | 0xXY | 0xXY | nicht definiertes Signal |
 
-<a id="table-bits-sb"></a>
 ### BITS_SB
 
 Dimensions: 20 rows × 6 columns
@@ -2563,7 +2472,6 @@ Dimensions: 20 rows × 6 columns
 | SBSE | 3 | 0x20 | 0x20 | IE | PM Schalterblock Spiegel Einklappen |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-bits-sm-lsm"></a>
 ### BITS_SM_LSM
 
 Dimensions: 19 rows × 6 columns
@@ -2590,7 +2498,6 @@ Dimensions: 19 rows × 6 columns
 | MLSLZU | 3 | 0x02 | 0x02 | E | Lenksaeule zurueck |
 | XY | XY | 0xXY | 0xXY | XY | nicht definiertes Signal |
 
-<a id="table-bits-smbf"></a>
 ### BITS_SMBF
 
 Dimensions: 15 rows × 6 columns

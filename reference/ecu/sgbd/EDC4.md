@@ -36,7 +36,6 @@
 - [C_S_AUFTRAG](#job-c-s-auftrag) - Codierdaten schreiben und verifizieren
 - [C_S_LESEN](#job-c-s-lesen) - Codierdaten lesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -92,7 +89,6 @@ _No arguments._
 | ID_STRUKTUR_NR | int | Strukturdatennummer |
 | ID_COD_INDEX | int | Pruefplannummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -111,7 +107,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl der Fehlerarten |
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -124,7 +119,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -137,7 +131,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern der Ventilendstufen
@@ -156,7 +149,6 @@ Ansteuern der Ventilendstufen
 | JOB_STATUS | string | "OKAY" "ERROR_NACK" |
 | _TEL_AN_SG | binary |  |
 
-<a id="job-steuern-vf"></a>
 ### STEUERN_VF
 
 Abspeichern der aktuellen Geschwindigkeit VF
@@ -169,7 +161,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY" "ERROR_NACK" |
 
-<a id="job-status-vf"></a>
 ### STATUS_VF
 
 Auslesen der Raddrehzahl
@@ -185,7 +176,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Auslesen der Statusbytes
@@ -219,7 +209,6 @@ _No arguments._
 | STAT_SHUT_DOWN_AKTIV | int | SYS_STAT_high - SHUT_DOWN |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Analogwerte auslesen
@@ -259,7 +248,6 @@ _No arguments._
 | STAT_U_KL15_EINH | string | Spannung in Volt [V] |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-online"></a>
 ### STATUS_ONLINE
 
 Online-Lesen
@@ -289,7 +277,6 @@ _No arguments._
 | STAT_VENTILSTELLUNG_EINH | string | Einheit der Ventilstellung |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Fahrzeugcodierung auslesen
@@ -308,7 +295,6 @@ Fahrzeugcodierung auslesen
 | CODIERDATEN | binary | Datenbytes 0..15 |
 | _TEL_SENDE | binary |  |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 Lesen des EEPROM-Speichers
@@ -329,7 +315,6 @@ Lesen des EEPROM-Speichers
 | _TEL_AN_SG | binary | Auftragstelegramm |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -346,7 +331,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten lesen
@@ -371,7 +355,6 @@ Codierdaten lesen
 - [FORTTEXTE](#table-forttexte) (31 × 2)
 - [STEUERN_DIGITAL](#table-steuern-digital) (12 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 31 rows × 2 columns
@@ -410,7 +393,6 @@ Dimensions: 31 rows × 2 columns
 | 0x85 | Ventilfehler hinten: Unterbrechung Ventilleitung |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Dimensions: 12 rows × 2 columns

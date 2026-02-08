@@ -61,7 +61,6 @@
 - [KOMPRESSOR_SPERRE](#job-kompressor-sperre) - Codieren der Kompressortransportsperre
 - [C_FG_AUFTRAG](#job-c-fg-auftrag) - Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -80,7 +79,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -93,7 +91,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -117,7 +114,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -130,7 +126,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -148,7 +143,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -167,7 +161,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -188,7 +181,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -207,7 +199,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -220,7 +211,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -233,7 +223,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob
@@ -248,7 +237,6 @@ _No arguments._
 | ID_COD_INDEX | int | Codier-Index |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -263,7 +251,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob
@@ -281,7 +268,6 @@ Fahrgestellnummer schreiben Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -312,7 +298,6 @@ _No arguments._
 | F_ART6_TEXT | string | 'sporadischer Fehler' oder '--' |
 | F_HEX_CODE | binary | Fehlerspeicherdaten |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes uebergeben.
@@ -331,7 +316,6 @@ Lesen des internen Speichers Als Argumente werden die Adresse, die Anzahl der Da
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-ram-schreiben"></a>
 ### RAM_SCHREIBEN
 
 Beschreiben des internen Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes und das Datenfeld uebergeben. Die Daten werden als String uebergeben und durch ein Komma getrennt.
@@ -350,7 +334,6 @@ Beschreiben des internen Speichers Als Argumente werden die Adresse, die Anzahl 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-eeprom-schreiben"></a>
 ### EEPROM_SCHREIBEN
 
 Beschreiben des internen EEPROM-Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes und das Datenfeld uebergeben. Die Daten werden als String uebergeben und durch ein Komma getrennt.
@@ -369,7 +352,6 @@ Beschreiben des internen EEPROM-Speichers Als Argumente werden die Adresse, die 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-codierung-schreiben"></a>
 ### CODIERUNG_SCHREIBEN
 
 Codierdaten Schreiben fuer IHKA E85 Es muessen immer alle vier Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -389,7 +371,6 @@ Codierdaten Schreiben fuer IHKA E85 Es muessen immer alle vier Argumente im Bere
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -405,7 +386,6 @@ _No arguments._
 | KOMPRESSOR_SPERRE | int | Klimakompressor deaktiviert |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-analogeingaenge"></a>
 ### STATUS_ANALOGEINGAENGE
 
 Status lesen
@@ -438,7 +418,6 @@ _No arguments._
 | TELEGRAMM | binary | Antworttelegramm |
 | TELEGRAMM1 | binary | Antworttelegramm |
 
-<a id="job-status-reglergroessen"></a>
 ### STATUS_REGLERGROESSEN
 
 Status lesen
@@ -464,7 +443,6 @@ _No arguments._
 | TELEGRAMM1 | binary | Antworttelegramm fuer Status lesen |
 | TELEGRAMM2 | binary | Antworttelegramm fuer Status lesen |
 
-<a id="job-status-bedienteil"></a>
 ### STATUS_BEDIENTEIL
 
 Status lesen
@@ -485,7 +463,6 @@ _No arguments._
 | STAT_TASTE_UMLUFT | int | Taste Umluftbetrieb oder AUC |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Status lesen
@@ -507,7 +484,6 @@ _No arguments._
 | STAT_SCHALTER_LUFTVERTEILUNG_EIN | int | Microschalter betaetigt |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-motor-klappenposition"></a>
 ### STATUS_MOTOR_KLAPPENPOSITION
 
 Status lesen
@@ -524,7 +500,6 @@ _No arguments._
 | STAT_MISCHLUFT_WERT | int | Mischluftmotor |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-diagnose-testbit"></a>
 ### DIAGNOSE_TESTBIT
 
 Ansteuern des Diagnosetest-Bits Das Bit kann ein- bzw. ausgeschaltet werden.
@@ -541,7 +516,6 @@ Ansteuern des Diagnosetest-Bits Das Bit kann ein- bzw. ausgeschaltet werden.
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -559,7 +533,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -576,7 +549,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -594,7 +566,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -611,7 +582,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-eichlauf"></a>
 ### STEUERN_EICHLAUF
 
 Anstossen des Schrittmotoreichlaufs, auch Frischluft Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -628,7 +598,6 @@ Anstossen des Schrittmotoreichlaufs, auch Frischluft Vor dem Ansteuern den Job D
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-relais-heckscheibe"></a>
 ### STEUERN_RELAIS_HECKSCHEIBE
 
 Ansteuern des Heckscheibenrelais Das Relais kann ein- bzw. ausgeschaltet werden. Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -646,7 +615,6 @@ Ansteuern des Heckscheibenrelais Das Relais kann ein- bzw. ausgeschaltet werden.
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-kompressorkupplung"></a>
 ### STEUERN_KOMPRESSORKUPPLUNG
 
 Ansteuern der Kompressorkupplung Der Kompressor kann ein- bzw. ausgeschaltet werden. Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -664,7 +632,6 @@ Ansteuern der Kompressorkupplung Der Kompressor kann ein- bzw. ausgeschaltet wer
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-wasserventil"></a>
 ### STEUERN_WASSERVENTIL
 
 Ansteuern des Wasserventils nur bei N52 Das Wasserventil kann geschlossen- bzw. geoeffnet werden. Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -682,7 +649,6 @@ Ansteuern des Wasserventils nur bei N52 Das Wasserventil kann geschlossen- bzw. 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-zusatzwasserpumpe"></a>
 ### STEUERN_ZUSATZWASSERPUMPE
 
 Ansteuern der Zusatzwasserpumpe nur bei N46 Die Zusatzwasserpumpe kann ein- bzw. ausgeschaltet werden. Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -700,7 +666,6 @@ Ansteuern der Zusatzwasserpumpe nur bei N46 Die Zusatzwasserpumpe kann ein- bzw.
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-funktionsbeleuchtung"></a>
 ### STEUERN_FUNKTIONSBELEUCHTUNG
 
 Ansteuern der gesamten Steuergeraet Funktionsbeleuchtung Die Beleuchtung kann ein- bzw. ausgeschaltet werden. Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -718,7 +683,6 @@ Ansteuern der gesamten Steuergeraet Funktionsbeleuchtung Die Beleuchtung kann ei
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-motor-klappenposition-frischluft"></a>
 ### STEUERN_MOTOR_KLAPPENPOSITION_FRISCHLUFT
 
 Ansteuern des Schnelllaeufers in Prozent 0-100 % Es ist moeglich auch nur einzelne Argumente zu schreiben. Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -736,7 +700,6 @@ Ansteuern des Schnelllaeufers in Prozent 0-100 % Es ist moeglich auch nur einzel
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-motor-klappenposition-mischluft"></a>
 ### STEUERN_MOTOR_KLAPPENPOSITION_MISCHLUFT
 
 Ansteuern des Schrittmotors in Prozent 0-100 % Es ist moeglich auch nur einzelne Argumente zu schreiben. Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -754,7 +717,6 @@ Ansteuern des Schrittmotors in Prozent 0-100 % Es ist moeglich auch nur einzelne
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-geblaese"></a>
 ### STEUERN_GEBLAESE
 
 Ansteuern des Geblaeses Das Geblaese kann von 0-100 % angesteuert werden. Vor dem Ansteuern den Job DIAGNOSE_AUFRECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -772,7 +734,6 @@ Ansteuern des Geblaeses Das Geblaese kann von 0-100 % angesteuert werden. Vor de
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-waermestrom"></a>
 ### STEUERN_WAERMESTROM
 
 Ansteuern der Waermestromanforderung an DME 0 bis 100 % Vor dem Ansteuern den Job DIAGNOSE_AUFECHT aufrufen Nach dem Ansteuern den Job DIAGNOSE_ENDE aufrufen
@@ -790,7 +751,6 @@ Ansteuern der Waermestromanforderung an DME 0 bis 100 % Vor dem Ansteuern den Jo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-kompressor-sperre"></a>
 ### KOMPRESSOR_SPERRE
 
 Codieren der Kompressortransportsperre
@@ -807,7 +767,6 @@ Codieren der Kompressortransportsperre
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -840,7 +799,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 - [FARTTEXTE](#table-farttexte) (8 × 2)
 - [FARTMATRIX](#table-fartmatrix) (1 × 13)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -861,7 +819,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -945,7 +902,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -974,7 +930,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -999,7 +954,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1008,7 +962,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 61 rows × 2 columns
@@ -1077,7 +1030,6 @@ Dimensions: 61 rows × 2 columns
 | 0xFF | Energiesparmode aktiv |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1086,7 +1038,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1095,7 +1046,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -1111,7 +1061,6 @@ Dimensions: 8 rows × 2 columns
 | 0x80 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 13 columns

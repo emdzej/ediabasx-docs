@@ -44,7 +44,6 @@
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 - [FG_LESEN](#job-fg-lesen) - Auslesen der Fahrgestellnummer
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -63,7 +62,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer DSP-Booster E38
@@ -76,7 +74,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DSP
@@ -99,7 +96,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -120,7 +116,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -133,7 +128,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-io-lines"></a>
 ### STATUS_IO_LINES
 
 Auslesen einiger interner Statusleitungen
@@ -149,7 +143,6 @@ _No arguments._
 | STAT_TEMP1 | int | 1-> Temperaturschwelle 1 ueberschritten, sonst 0 |
 | STAT_TEMP2 | int | 1-> Temperaturschwelle 2 ueberschritten, sonst 0 |
 
-<a id="job-status-sg"></a>
 ### STATUS_SG
 
 Auslesen interner Stati
@@ -167,7 +160,6 @@ _No arguments._
 | STAT_SOFTWAREVERSION | int | Softwareversion |
 | STAT_DSP | int | ????? |
 
-<a id="job-status-dsp-on"></a>
 ### STATUS_DSP_ON
 
 Auslesen DS on/off
@@ -181,7 +173,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_DSP_ON | int | 0:DSP aus, 1:DSP an |
 
-<a id="job-status-dsp-volume"></a>
 ### STATUS_DSP_VOLUME
 
 Auslesen Lautstaerke
@@ -195,7 +186,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_VOLUME | int | Volume in dB (0 = maximum) |
 
-<a id="job-status-quelle"></a>
 ### STATUS_QUELLE
 
 Auslesen DSP Tonquelle
@@ -210,7 +200,6 @@ _No arguments._
 | STAT_QUELLE | int | Tonquelle |
 | STAT_QUELLE_TEXT | string | Tonquelle table QUELLE ORT |
 
-<a id="job-status-loudness"></a>
 ### STATUS_LOUDNESS
 
 Auslesen loudness on / off
@@ -224,7 +213,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_LOUDNESS_ON | int | 0: loudness off, 1: loudness on |
 
-<a id="job-status-balance"></a>
 ### STATUS_BALANCE
 
 Auslesen Einstellung Balance
@@ -238,7 +226,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_BALANCE | int | Einstellung der Balance (-16 rechts...links +16) |
 
-<a id="job-status-fader"></a>
 ### STATUS_FADER
 
 Auslesen Einstellung Fader
@@ -252,7 +239,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_FADER | int | Einstellung des Faders (-16 hinten...vorne +16) |
 
-<a id="job-status-bass"></a>
 ### STATUS_BASS
 
 Auslesen Einstellung Bass
@@ -266,7 +252,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_BASS | int | Einstellung des Basses (-16 ... +16) |
 
-<a id="job-status-treble"></a>
 ### STATUS_TREBLE
 
 Auslesen Einstellung Bass
@@ -280,7 +265,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_TREBLE | int | Einstellung der Hoehen (-16 ... +16) |
 
-<a id="job-status-gal"></a>
 ### STATUS_GAL
 
 Auslesen der GAL-Einstellung
@@ -294,7 +278,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_GAL | int | Einstellung der GAL (1 ... 6) |
 
-<a id="job-reset"></a>
 ### RESET
 
 Loest einen Reset des Verstaerkers aus
@@ -307,7 +290,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-dsp"></a>
 ### STEUERN_DSP
 
 DSP Einstellungen veraendern
@@ -325,7 +307,6 @@ DSP Einstellungen veraendern
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-dsp-selbsttest"></a>
 ### DSP_SELBSTTEST
 
 startet den Digitalteil selbsttest (!anschliessend FS-lesen notwendig)
@@ -338,7 +319,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-lautsprecher-test-start"></a>
 ### LAUTSPRECHER_TEST_START
 
 startet die zyklische Ansteuerung aller 4 Kanaele mit verschiedenen Frequenzen
@@ -351,7 +331,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-lautsprecher-test-ende"></a>
 ### LAUTSPRECHER_TEST_ENDE
 
 beendet die zyklische Ansteuerung aller 4 Kanaele
@@ -364,7 +343,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrechterhalten
@@ -377,7 +355,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -390,7 +367,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fg-lesen"></a>
 ### FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -417,7 +393,6 @@ _No arguments._
 - [STEUERN](#table-steuern) (9 × 2)
 - [QUELLE](#table-quelle) (8 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -438,7 +413,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -462,7 +436,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 59 rows × 2 columns
@@ -529,7 +502,6 @@ Dimensions: 59 rows × 2 columns
 | 0x58 | Autoliv |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 12 rows × 2 columns
@@ -549,7 +521,6 @@ Dimensions: 12 rows × 2 columns
 | 0x11 | Checksummenfehler im externen EEPROM (BMW) |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -560,7 +531,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 9 rows × 2 columns
@@ -577,7 +547,6 @@ Dimensions: 9 rows × 2 columns
 | TREBLE | 0x07 |
 | GAL | 0x08 |
 
-<a id="table-quelle"></a>
 ### QUELLE
 
 Dimensions: 8 rows × 2 columns

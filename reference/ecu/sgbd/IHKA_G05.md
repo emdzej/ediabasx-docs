@@ -53,7 +53,6 @@
 - [CALID_CVN_LESEN](#job-calid-cvn-lesen) - OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
 - [CPS_LESEN](#job-cps-lesen) - Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -72,7 +71,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -85,7 +83,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -102,7 +99,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -134,7 +130,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -187,7 +182,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -206,7 +200,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -224,7 +217,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -245,7 +237,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -274,7 +265,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -294,7 +284,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -315,7 +304,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -331,7 +319,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -353,7 +340,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -372,7 +358,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -399,7 +384,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -452,7 +436,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -467,7 +450,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -487,7 +469,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -506,7 +487,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -525,7 +505,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -540,7 +519,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -559,7 +537,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -579,7 +556,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -596,7 +572,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -615,7 +590,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -631,7 +605,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -665,7 +638,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -680,7 +652,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -697,7 +668,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -712,7 +682,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -727,7 +696,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen"></a>
 ### CALID_CVN_LESEN
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -745,7 +713,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -947,7 +914,6 @@ _No arguments._
 - [UWB_OBDR_EKMV_SHUTDOWN_REFRIGERANT_PRESSURE_STATUS_TABLE](#table-uwb-obdr-ekmv-shutdown-refrigerant-pressure-status-table) (1 × 2)
 - [WERTETABELLE_OBDM_UW_JHUDM](#table-wertetabelle-obdm-uw-jhudm) (17 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1031,7 +997,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 153 rows × 2 columns
@@ -1192,7 +1157,6 @@ Dimensions: 153 rows × 2 columns
 | 0x0000CE | Eldor Corporation |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1235,7 +1199,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1260,7 +1223,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1294,7 +1256,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1367,7 +1328,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1380,7 +1340,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 9 rows × 9 columns
@@ -1397,7 +1356,6 @@ Dimensions: 9 rows × 9 columns
 | 0x1769 | ABS_ZEIT_SUP | 0-n | - | 0xFFFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-tab-zeit-syncmethod"></a>
 ### TAB_ZEIT_SYNCMETHOD
 
 Dimensions: 4 rows × 2 columns
@@ -1409,7 +1367,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | IEEE802.1AS |
 | 0x03 | invalid |
 
-<a id="table-tab-zeit-user-info"></a>
 ### TAB_ZEIT_USER_INFO
 
 Dimensions: 8 rows × 2 columns
@@ -1425,7 +1382,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | invalid |
 | 0x07 | invalid |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1438,7 +1394,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -1460,7 +1415,6 @@ Dimensions: 14 rows × 3 columns
 | 0x61 | ECUSUPSPEC | ECUSupplierSpecificSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 408 rows × 3 columns
@@ -1876,7 +1830,6 @@ Dimensions: 408 rows × 3 columns
 | 0xF090 | Motorrad Kombischalter links | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1885,7 +1838,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 225 rows × 2 columns
@@ -2118,7 +2070,6 @@ Dimensions: 225 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2161,7 +2112,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2172,7 +2122,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x102f-r"></a>
 ### ARG_0X102F_R
 
 Dimensions: 1 rows × 14 columns
@@ -2181,7 +2130,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MESSEMODUS | + | - | 0-n | high | unsigned char | - | PWF_MESSEMODUS | - | - | - | - | - | Das Argument gibt an in welchen Fahrzeugzustand  geschaltet werden soll. |
 
-<a id="table-arg-0x403e-d"></a>
 ### ARG_0X403E_D
 
 Dimensions: 1 rows × 12 columns
@@ -2190,7 +2138,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | DUMMY_WERT |
 
-<a id="table-arg-0xa114-r"></a>
 ### ARG_0XA114_R
 
 Dimensions: 2 rows × 14 columns
@@ -2200,7 +2147,6 @@ Dimensions: 2 rows × 14 columns
 | FREQUENZ | + | - | Hz | high | unsigned char | - | - | 20.0 | 1.0 | 0.0 | 0.0 | 12.7 | Frequenz der Dosierpumpe in Hertz |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 255.0 | Dauer der Ansteuerung |
 
-<a id="table-arg-0xa115-r"></a>
 ### ARG_0XA115_R
 
 Dimensions: 2 rows × 14 columns
@@ -2210,7 +2156,6 @@ Dimensions: 2 rows × 14 columns
 | LEISTUNG | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Leistung der Wasserpumpe in Prozent |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 255.0 | Dauer der Ansteuerung |
 
-<a id="table-arg-0xa116-r"></a>
 ### ARG_0XA116_R
 
 Dimensions: 2 rows × 14 columns
@@ -2220,7 +2165,6 @@ Dimensions: 2 rows × 14 columns
 | TAKTUNG | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Taktung des Umschaltventils |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 255.0 | Dauer der Ansteuerung |
 
-<a id="table-arg-0xa11e-r"></a>
 ### ARG_0XA11E_R
 
 Dimensions: 1 rows × 14 columns
@@ -2229,7 +2173,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KLAPPENMOTOR | + | - | 0-n | high | unsigned char | - | TAB_KLAPPENMOTOR | - | - | - | - | - | Name des Klappenmotor (Siehe Tabelle TAB_KLAPPENMOTOR) |
 
-<a id="table-arg-0xa11f-r"></a>
 ### ARG_0XA11F_R
 
 Dimensions: 1 rows × 14 columns
@@ -2238,7 +2181,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KLAPPENMOTOR | + | - | 0-n | high | unsigned char | - | TAB_KLAPPENMOTOR | - | - | - | - | - | Name des Klappenmotor (Siehe Tabelle TAB_KLAPPENMOTOR) |
 
-<a id="table-arg-0xa121-r"></a>
 ### ARG_0XA121_R
 
 Dimensions: 2 rows × 14 columns
@@ -2248,7 +2190,6 @@ Dimensions: 2 rows × 14 columns
 | ZENTRALANTRIEB | + | - | 0-n | - | unsigned char | - | TAB_ZENTRALANTRIEBE | - | - | - | - | - | Auswahl Zentralantrieb |
 | SOLLPOSITION | + | - | ° | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 360.0 | Sollwert Kulissenstellung: 0..360 Grad |
 
-<a id="table-arg-0xa122-r"></a>
 ### ARG_0XA122_R
 
 Dimensions: 2 rows × 14 columns
@@ -2258,7 +2199,6 @@ Dimensions: 2 rows × 14 columns
 | KLAPPE | + | - | 0-n | high | unsigned char | - | TAB_KLAPPENMOTOR | - | - | - | - | - | Auswahl der anzusteuernden Klappe aus der Tabelle TAB_KLAPPENMOTOR |
 | KLAPPENOEFFNUNG | + | - | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Gibt an, wie weit die Klappe geöffnet werden soll: 0 ... 100%,  0%=Geschlossen, 100%=Offen |
 
-<a id="table-arg-0xa126-r"></a>
 ### ARG_0XA126_R
 
 Dimensions: 2 rows × 14 columns
@@ -2268,7 +2208,6 @@ Dimensions: 2 rows × 14 columns
 | TASTE | + | - | 0-n | - | unsigned char | - | TAB_TASTEN_KLIMA | - | - | - | - | - | Zu verwendende Texte für die Tabelle zur Ansteuerung der Tasten. Siehe Tabelle TAB_TASTEN_KLIMA. |
 | AKTION | + | - | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0 = nicht gedrückt, 1 = gedrückt |
 
-<a id="table-arg-0xa127-r"></a>
 ### ARG_0XA127_R
 
 Dimensions: 1 rows × 14 columns
@@ -2277,7 +2216,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LEDS | + | - | 0-n | - | unsigned char | - | TAB_KLIMA_LEDS_ANSTEUERUNG | - | - | - | - | - | Ansteuerung der LEDs |
 
-<a id="table-arg-0xa128-r"></a>
 ### ARG_0XA128_R
 
 Dimensions: 2 rows × 14 columns
@@ -2287,7 +2225,6 @@ Dimensions: 2 rows × 14 columns
 | VERBAUORT_GEBLAESE | + | - | 0-n | high | unsigned char | - | TAB_VERBAUORT_GEBLAESE | - | - | - | - | - | Verbauort Gebläse; Klimatisierte 3. Sitzreihe über GEBLAESE_HKA |
 | GEBLAESELEISTUNG | + | - | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Gibt an, auf wieviel Prozent die Gebläseendstufe angesteuert werden soll. |
 
-<a id="table-arg-0xa129-r"></a>
 ### ARG_0XA129_R
 
 Dimensions: 1 rows × 14 columns
@@ -2296,7 +2233,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MUSTER | + | - | 0-n | high | unsigned char | - | TAB_BITMUSTER | - | - | - | - | - | Gibt an, welches Bitmuster angesteuert werden soll: Siehe Tabelle TAB_BITMUSTER 0x00 = Alle Segmente aus und 0x01 = Alle Segmente ein sind Pflicht, andere Bitmuster können  frei definiert werden. |
 
-<a id="table-arg-0xa12a-r"></a>
 ### ARG_0XA12A_R
 
 Dimensions: 2 rows × 14 columns
@@ -2306,7 +2242,6 @@ Dimensions: 2 rows × 14 columns
 | SOLLWERT_ORT | + | - | 0-n | high | unsigned char | - | TAB_SOLLWERT_ORT | - | - | - | - | - | Ort der einzustellenden Sollwert-Temperatur. Siehe TAB_SOLLWERT_ORT |
 | TEMPERATUR | + | - | °C | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 16.0 | 28.0 | Sollwert-Temperatur |
 
-<a id="table-arg-0xa12b-r"></a>
 ### ARG_0XA12B_R
 
 Dimensions: 2 rows × 14 columns
@@ -2316,7 +2251,6 @@ Dimensions: 2 rows × 14 columns
 | VERBAUORT_ZUHEIZER | + | - | 0-n | high | unsigned char | - | TAB_VERBAUORT_ZUHEIZER | - | - | - | - | - | Gibt an, welcher elektrische Zuheizer angesteuert werden. Siehe Tabelle TAB_VERBAUORT_ZUHEIZER |
 | SOLLWERT | + | - | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Vorgabe des Sollwertes für die Ansteuerung: 0 ... 100% |
 
-<a id="table-arg-0xa12e-r"></a>
 ### ARG_0XA12E_R
 
 Dimensions: 1 rows × 14 columns
@@ -2325,7 +2259,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CTR_MOD_IZR | + | - | 0-n | high | unsigned char | - | TAB_IONISATOR_KLIMA | - | - | - | - | - | Steuern des Ionisators. |
 
-<a id="table-arg-0xa12f-r"></a>
 ### ARG_0XA12F_R
 
 Dimensions: 3 rows × 14 columns
@@ -2336,7 +2269,6 @@ Dimensions: 3 rows × 14 columns
 | POS_BEDUFTERKLAPPE | + | - | % | high | unsigned char | - | - | 2.0 | 1.0 | 0.0 | 0.0 | 100.0 | Position der Bedufterklappe für den Applikationsmodus.  |
 | DUFT | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 2.0 | Auswahl der Duftkartusche im Applikationsmodus. |
 
-<a id="table-arg-0xa134-r"></a>
 ### ARG_0XA134_R
 
 Dimensions: 2 rows × 14 columns
@@ -2346,7 +2278,6 @@ Dimensions: 2 rows × 14 columns
 | TASTE | + | - | 0-n | high | unsigned char | - | TAB_TASTEN_KLIMA_FKA_3SR | - | - | - | - | - | Zu verwendende Texte für die Tabelle zur Ansteuerung der Tasten. Siehe TAB_TASTEN_KLIMA_FKA_3SR. |
 | AKTION | + | - | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0 = nicht gedrückt, 1 = gedrückt |
 
-<a id="table-arg-0xd89f-d"></a>
 ### ARG_0XD89F_D
 
 Dimensions: 2 rows × 12 columns
@@ -2356,7 +2287,6 @@ Dimensions: 2 rows × 12 columns
 | UNTERSPANNUNGSABSCHALTSCHWELLE_MILLIVOLT | mV | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Status Unterspannungsabschaltschwelle in [mV] |
 | ZEITKRITERIUM_UNTERSPANNUNG_SEKUNDEN | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Status Zeitkriterium in [s] für Unterspannung |
 
-<a id="table-arg-0xd8c3-d"></a>
 ### ARG_0XD8C3_D
 
 Dimensions: 1 rows × 12 columns
@@ -2365,7 +2295,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DREHZAHL | % | high | unsigned char | - | - | 2.0 | 1.0 | 0.0 | - | - | Vorgabe der Drehzahl in Prozent. |
 
-<a id="table-arg-0xd8c6-d"></a>
 ### ARG_0XD8C6_D
 
 Dimensions: 1 rows × 12 columns
@@ -2374,7 +2303,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RESET | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Reset Kältemittelverdichter: 0 = kein Reset 1 = Reset durchführen |
 
-<a id="table-arg-0xd8c7-d"></a>
 ### ARG_0XD8C7_D
 
 Dimensions: 1 rows × 12 columns
@@ -2383,7 +2311,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKS_ANFORDERUNG | 0-n | high | unsigned char | - | TAB_AKS_EKMV | 1.0 | 1.0 | 0.0 | - | - | Isolationprüfung: 0x00 = kein aktiver Kurzschluss 0x01 = aktiver Kurzschluss Low-Side 0x02 = aktiver Kurzschluss High-Side |
 
-<a id="table-arg-0xd8cb-d"></a>
 ### ARG_0XD8CB_D
 
 Dimensions: 1 rows × 12 columns
@@ -2392,7 +2319,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FREILAUF_ANFORDERUNG | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Isolationprüfung: 0x00 = aktiven Freilauf beenden 0x01 = aktiver Freilauf starten |
 
-<a id="table-arg-0xd8e2-d"></a>
 ### ARG_0XD8E2_D
 
 Dimensions: 1 rows × 12 columns
@@ -2401,7 +2327,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DREHZAHL | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe Drehzahl EWP_2 |
 
-<a id="table-arg-0xd918-d"></a>
 ### ARG_0XD918_D
 
 Dimensions: 1 rows × 12 columns
@@ -2410,7 +2335,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EINLAUFSCHUTZ | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Setzt den Einlaufschutz für den Klimakompressor: 0 = Einlaufschutz ausschalten 1 = Einlaufschutz einschalten |
 
-<a id="table-arg-0xd927-d"></a>
 ### ARG_0XD927_D
 
 Dimensions: 1 rows × 12 columns
@@ -2419,7 +2343,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | unsigned char | - | - | - | - | - | - | - | 0 = Ansteuerungen werden nicht beendet 1 = Ansteuerung werden beendet |
 
-<a id="table-arg-0xd9a7-d"></a>
 ### ARG_0XD9A7_D
 
 Dimensions: 1 rows × 12 columns
@@ -2428,7 +2351,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FREIGABE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Freigabe für Einlaufschutz: 0 = Keine Freigabe (gesperrt) = Einlaufroutine kann nicht automatisch gestartet werden. 1 = Freigabe nach Einschaltbedingungen |
 
-<a id="table-arg-0xd9ad-d"></a>
 ### ARG_0XD9AD_D
 
 Dimensions: 7 rows × 12 columns
@@ -2443,7 +2365,6 @@ Dimensions: 7 rows × 12 columns
 | POS_EXP_VENTIL_2 | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Expansionsventil 2:  0x00 = 0% = geschlossen 0x64 = 100% = offen 0xFF = Bei Ansteuerung nicht berücksichtigt |
 | POS_EXP_VENTIL_3 | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Expansionsventil 3:  0x00 = 0% = geschlossen 0x64 = 100% = offen 0xFF = Bei Ansteuerung nicht berücksichtigt |
 
-<a id="table-arg-0xd9df-d"></a>
 ### ARG_0XD9DF_D
 
 Dimensions: 2 rows × 12 columns
@@ -2453,7 +2374,6 @@ Dimensions: 2 rows × 12 columns
 | VENTIL | 0-n | high | unsigned char | - | TAB_WP_VENTILE | - | - | - | - | - | Angabe des Ventils, welches angesteuert werden soll. Siehe TAB_WP_VENTILE |
 | ZUSTAND | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Wert, mit dem das Ventil angesteuert werden soll: Bei Absperrventil 1-3: 0x00 = Ventil offen, 0x01 = Ventil geschlossen Bei Absperrventil 4: 0x00 = Ventil geschlossen, 0x01 = Ventil offen Bei Expansionsventil: 0 - 100 % 0% = geschlossen, 100% = offen |
 
-<a id="table-arg-0xe410-d"></a>
 ### ARG_0XE410_D
 
 Dimensions: 1 rows × 12 columns
@@ -2462,7 +2382,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CONTROL_RES_HMI_CUSTOMER_REQUEST | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00: Funktion RES in MMI deaktivieren 0x01: Funktion RES in MMI aktivieren |
 
-<a id="table-bf-ihka-konfiguration"></a>
 ### BF_IHKA_KONFIGURATION
 
 Dimensions: 21 rows × 10 columns
@@ -2491,7 +2410,6 @@ Dimensions: 21 rows × 10 columns
 | STAT_DRITTE_SITZREIHE_CODIERT | 0/1 | high | unsigned long | 0x00080000 | - | - | - | - | 0 = Nicht codiert, 1 = codiert |
 | STAT_SH_TASTEN_DRITTE_SITZREIHE_CODIERT | 0/1 | high | unsigned long | 0x00100000 | - | - | - | - | 0 = Nicht codiert, 1 = codiert |
 
-<a id="table-bf-klima-bedienteilvariante-hinten"></a>
 ### BF_KLIMA_BEDIENTEILVARIANTE_HINTEN
 
 Dimensions: 3 rows × 10 columns
@@ -2502,7 +2420,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SH_TASTEN_HINTEN | 0/1 | high | unsigned int | 0x0008 | - | - | - | - | Bedienteil mit Sitzheiungstasten |
 | STAT_SL_TASTEN_HINTEN | 0/1 | high | unsigned int | 0x0010 | - | - | - | - | Bedienteil mit Sitzlüftungstasten |
 
-<a id="table-bf-klima-bedienteilvariante-vorn"></a>
 ### BF_KLIMA_BEDIENTEILVARIANTE_VORN
 
 Dimensions: 5 rows × 10 columns
@@ -2515,7 +2432,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_BEDUFTER_TASTE | 0/1 | high | unsigned int | 0x0020 | - | - | - | - | Bedienteil mit Beduftertaste |
 | STAT_KLIMAMENUE_TASTE | 0/1 | high | unsigned int | 0x0040 | - | - | - | - | Bedienteil mit Taste Klimamenü |
 
-<a id="table-bf-stat-tasten-off"></a>
 ### BF_STAT_TASTEN_OFF
 
 Dimensions: 4 rows × 10 columns
@@ -2527,7 +2443,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BYTE_30_RESERVE_1 | 0-n | high | unsigned char | 0x30 | TAB_STAT_BF_4_TASTEN | - | - | - | 0=Taste nicht betätigt, 1=Taste betätigt, 2=nicht verbaut |
 | STAT_BYTE_30_RESERVE_2 | 0-n | high | unsigned char | 0xC0 | TAB_STAT_BF_4_TASTEN | - | - | - | 0=Taste nicht betätigt, 1=Taste betätigt, 2=nicht verbaut |
 
-<a id="table-bf-stat-tasten-temp-2-sr"></a>
 ### BF_STAT_TASTEN_TEMP_2_SR
 
 Dimensions: 4 rows × 10 columns
@@ -2539,7 +2454,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TASTE_TEMP_2_SR_RE_PLUS | 0-n | high | unsigned char | 0x30 | TAB_STAT_BF_4_TASTEN | - | - | - | 0=Taste nicht betätigt, 1=Taste betätigt, 2=nicht verbaut |
 | STAT_TASTE_TEMP_2_SR_RE_MINUS | 0-n | high | unsigned char | 0xC0 | TAB_STAT_BF_4_TASTEN | - | - | - | 0=Taste nicht betätigt, 1=Taste betätigt, 2=nicht verbaut |
 
-<a id="table-bf-stat-tasten-temp-front"></a>
 ### BF_STAT_TASTEN_TEMP_FRONT
 
 Dimensions: 4 rows × 10 columns
@@ -2551,7 +2465,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TASTE_TEMP_FRONT_RE_PLUS | 0-n | high | unsigned char | 0x30 | TAB_STAT_BF_4_TASTEN | - | - | - | 0=Taste nicht betätigt, 1=Taste betätigt, 2=nicht verbaut |
 | STAT_TASTE_TEMP_FRONT_RE_MINUS | 0-n | high | unsigned char | 0xC0 | TAB_STAT_BF_4_TASTEN | - | - | - | 0=Taste nicht betätigt, 1=Taste betätigt, 2=nicht verbaut |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2565,7 +2478,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2579,7 +2491,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-fehlerwerte-bedufter"></a>
 ### FEHLERWERTE_BEDUFTER
 
 Dimensions: 16 rows × 2 columns
@@ -2603,7 +2514,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | unbekannter Fehlerwert |
 | 15 | Signal ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 419 rows × 4 columns
@@ -3030,7 +2940,6 @@ Dimensions: 419 rows × 4 columns
 | 0xE71470 | AC-LIN:Botschaft (0x2D, StatusExpansionValve1LIN): Alive-Counter / CRC-Fehler | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 67 rows × 9 columns
@@ -3105,7 +3014,6 @@ Dimensions: 67 rows × 9 columns
 | 0xD6FF | Sub-Tabelle | 0-n | - | 0xFF | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-hklusv-diag-path-n"></a>
 ### HKLUSV_DIAG_PATH_N
 
 Dimensions: 4 rows × 2 columns
@@ -3117,7 +3025,6 @@ Dimensions: 4 rows × 2 columns
 | 0x08 | Pfad_3 |
 | 0x0e | Diagnose_Fehler |
 
-<a id="table-hklusv-klemmt-in"></a>
 ### HKLUSV_KLEMMT_IN
 
 Dimensions: 2 rows × 2 columns
@@ -3127,7 +3034,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Klemmt geschlossen |
 | 1 | Klemmt offen |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -3140,7 +3046,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 50 rows × 4 columns
@@ -3198,7 +3103,6 @@ Dimensions: 50 rows × 4 columns
 | 0x801245 | PTC-Modul vorn: Timeout | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 16 rows × 9 columns
@@ -3222,7 +3126,6 @@ Dimensions: 16 rows × 9 columns
 | 0x6006 | BATTERIESPANNUNG | V | High | unsigned char | - | 1.0 | 10.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -3231,7 +3134,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-pwf-messemodus"></a>
 ### PWF_MESSEMODUS
 
 Dimensions: 3 rows × 2 columns
@@ -3242,7 +3144,6 @@ Dimensions: 3 rows × 2 columns
 | 0xFF | Wert ungültig |
 | 1 | MESSEMODUS_AKTIV |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -3260,7 +3161,6 @@ Dimensions: 10 rows × 2 columns
 | 0x43 | HDDUpdateSession |
 | 0xff | ungültig |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -3272,7 +3172,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | ECU nicht mehr programmierbar |
 | 0xff | ungültig |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -3283,7 +3182,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -3297,7 +3195,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4006-r"></a>
 ### RES_0X4006_R
 
 Dimensions: 1 rows × 13 columns
@@ -3306,7 +3203,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RAM_DATEN_SCHREIBEN | - | - | + | 0-n | high | unsigned char | - | STATUS_RAM_DATEN_SCHREIBEN_TAB | - | - | - | Status RAM_DATEN_SCHREIBEN |
 
-<a id="table-res-0x403d-d"></a>
 ### RES_0X403D_D
 
 Dimensions: 8 rows × 10 columns
@@ -3322,7 +3218,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_TASK_CYCLICPREH_MIN_DATA | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | Min Wdg Task CyclicPreh |
 | STAT_TASK_CYCLICPREH_MAX_DATA | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | Max Wdg Task CyclicPreh |
 
-<a id="table-res-0x5028-d"></a>
 ### RES_0X5028_D
 
 Dimensions: 2 rows × 10 columns
@@ -3332,7 +3227,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MIKROSCHALTER_DATA | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | aktueller Status des Mikroschalters |
 | STAT_MIKROSCHALTER_ENTPRELLT_DATA | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | Status des Mikroschalters der Zentralkulisse wird mit und ohne Entprellung ausgegeben |
 
-<a id="table-res-0x5032-d"></a>
 ### RES_0X5032_D
 
 Dimensions: 6 rows × 10 columns
@@ -3346,7 +3240,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_DATE_MONTH_WERT | mth | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Monat des Erstelldatums |
 | STAT_DATE_DAY_WERT | d | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Tag des Erstelldatums |
 
-<a id="table-res-0x5033-d"></a>
 ### RES_0X5033_D
 
 Dimensions: 6 rows × 10 columns
@@ -3360,7 +3253,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_DATE_MONTH_WERT | mth | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Monat des Erstelldatums |
 | STAT_DATE_DAY_WERT | d | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Tag des Erstelldatums |
 
-<a id="table-res-0xa113-r"></a>
 ### RES_0XA113_R
 
 Dimensions: 1 rows × 13 columns
@@ -3369,7 +3261,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_HEIZGERAETEVERRIEGLUNG | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | Zustand Heizgeräteverriegelung = 0 = nicht aktiv. Zustand Heizgeräteverriegelung = 1 = aktiv. |
 
-<a id="table-res-0xa11b-r"></a>
 ### RES_0XA11B_R
 
 Dimensions: 2 rows × 13 columns
@@ -3379,7 +3270,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_EDH_VERRIEGELUNG_AKTIV | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | Zustand der Verriegelung (aktiv = 1/nicht aktiv = 0. |
 | STAT_EDH_VERRIEGELUNG_ZAEHLER_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gibt die Anzahl der bisher aufgetretenen Schutzverriegelungen an. |
 
-<a id="table-res-0xa11d-r"></a>
 ### RES_0XA11D_R
 
 Dimensions: 1 rows × 13 columns
@@ -3388,7 +3278,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KALIBRIERUNG | - | - | + | 0-n | high | unsigned char | - | TAB_KALIBRIERUNG_EXV | - | - | - | Status der Kalibrierung: 0x00 = Kalibrierung nicht aktiv 0x01 = Kalibrierung aktiv |
 
-<a id="table-res-0xa11e-r"></a>
 ### RES_0XA11E_R
 
 Dimensions: 7 rows × 13 columns
@@ -3403,7 +3292,6 @@ Dimensions: 7 rows × 13 columns
 | STAT_MOTOR_VERSTELLBEREICH_WERT | + | - | - | Inkremente | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Angelernter Verstellbereich, =0:Motor beim Kalibrierlauf blockiert, =65535:Während Kalibierlauf kein Anschlag gefunden |
 | STAT_MOTOR_KALIBRIERUNG | + | - | - | 0-n | - | unsigned char | - | TAB_MOTOR_KALIBRIERUNG | - | - | - | Status der Kalibrierung. Siehe Tabelle TAB_MOTOR_KALIBRIERUNG |
 
-<a id="table-res-0xa11f-r"></a>
 ### RES_0XA11F_R
 
 Dimensions: 8 rows × 13 columns
@@ -3419,7 +3307,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_SCHRITTMOTOR_INTERNER_FEHLER_WERT | - | - | + | Fehler | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Ausgabe des Status des zuletzt angesteuerten Schrittmotors: Fehlerzähler interner Motorfehler |
 | STAT_SCHRITTMOTOR_INITIALISIERUNG_FEHLER_WERT | - | - | + | Fehler | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Ausgabe des Status des zuletzt angesteuerten Schrittmotors: Fehlerzähler Initialisierungsfehler |
 
-<a id="table-res-0xa120-r"></a>
 ### RES_0XA120_R
 
 Dimensions: 1 rows × 13 columns
@@ -3428,7 +3315,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SELBSTTEST | - | - | + | 0-n | high | unsigned char | - | TAB_SELBSTTEST_KLAPPENMOTOREN | - | - | - | Status vom Selbsttest der Klappenmotoren. Siehe Tabelle TAB_SELBSTTEST_KLAPPENMOTOREN |
 
-<a id="table-res-0xa121-r"></a>
 ### RES_0XA121_R
 
 Dimensions: 2 rows × 13 columns
@@ -3438,7 +3324,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_MOT_ISTPOS_ZENTRALANTRIEB_WERT | - | - | + | ° | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Istwert Kulissenstellung: 0...360 Grad |
 | STAT_MOT_SOLLPOS_ZENTRALANTRIEB_WERT | - | - | + | ° | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Sollwert Kulissenstellung: 0...360 Grad |
 
-<a id="table-res-0xa122-r"></a>
 ### RES_0XA122_R
 
 Dimensions: 30 rows × 13 columns
@@ -3476,7 +3361,6 @@ Dimensions: 30 rows × 13 columns
 | STAT_ISTPOSITION_RESERVE6_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Istwert Klappenöffnung: 0...100 %  (255 = Klappe nicht codiert) |
 | STAT_ISTPOSITION_RESERVE7_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Istwert Klappenöffnung: 0...100 %  (255 = Klappe nicht codiert) |
 
-<a id="table-res-0xa124-r"></a>
 ### RES_0XA124_R
 
 Dimensions: 22 rows × 13 columns
@@ -3506,7 +3390,6 @@ Dimensions: 22 rows × 13 columns
 | STAT_MOTOR_19_NR | - | - | + | 0-n | - | unsigned char | - | TAB_KALIB_ERG | - | - | - | 0 = Kalibrierung NIO, 1 = Kalibrierung IO, 2 = Klappe nicht verbaut |
 | STAT_MOTOR_20_NR | - | - | + | 0-n | - | unsigned char | - | TAB_KALIB_ERG | - | - | - | 0 = Kalibrierung NIO, 1 = Kalibrierung IO, 2 = Klappe nicht verbaut |
 
-<a id="table-res-0xa125-r"></a>
 ### RES_0XA125_R
 
 Dimensions: 31 rows × 13 columns
@@ -3545,7 +3428,6 @@ Dimensions: 31 rows × 13 columns
 | STAT_ADRESSIERUNG_BELUEFTUNG_ENTFROSTUNG | - | - | + | 0-n | high | unsigned char | - | TAB_STATUS_AUTOADRESSIERUNG | - | - | - | Status der Autoadressierung. Siehe Tabelle TAB_STATUS_AUTOADRESSIERUNG |
 | STAT_ADRESSIERUNG_ZENTRALANTRIEB | - | - | + | 0-n | high | unsigned char | - | TAB_STATUS_AUTOADRESSIERUNG | - | - | - | Status der Autoadressierung. Siehe Tabelle TAB_STATUS_AUTOADRESSIERUNG |
 
-<a id="table-res-0xa126-r"></a>
 ### RES_0XA126_R
 
 Dimensions: 48 rows × 13 columns
@@ -3601,7 +3483,6 @@ Dimensions: 48 rows × 13 columns
 | STAT_RESERVE_5 | - | - | + | 0-n | high | unsigned char | - | - | - | - | - | Reserve 5 |
 | STAT_RESERVE_6 | - | - | + | 0-n | high | unsigned char | - | - | - | - | - | Reserve 6 |
 
-<a id="table-res-0xa128-r"></a>
 ### RES_0XA128_R
 
 Dimensions: 3 rows × 13 columns
@@ -3612,7 +3493,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_GEBLAESE_FKA_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gebläseleistung FKA |
 | STAT_GEBLAESE_HKA_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gebläseleistung HKA/Klimatisierung 3. Sitzreihe |
 
-<a id="table-res-0xa12a-r"></a>
 ### RES_0XA12A_R
 
 Dimensions: 10 rows × 13 columns
@@ -3630,7 +3510,6 @@ Dimensions: 10 rows × 13 columns
 | STAT_RESERVE2_WERT | - | - | + | °C | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Sollwert-Temperatur. (255 = Zone nicht codiert) |
 | STAT_RESERVE3_WERT | - | - | + | °C | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Sollwert-Temperatur. (255 = Zone nicht codiert) |
 
-<a id="table-res-0xa12b-r"></a>
 ### RES_0XA12B_R
 
 Dimensions: 4 rows × 13 columns
@@ -3642,7 +3521,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_ZUHEIZER_STROM_VORN_WERT | - | - | + | A | high | unsigned char | - | - | 1.0 | 5.0 | 0.0 | Ausgabe des Gesamtstroms der Zuheizer auf 1 Ampere genau (nur eDH). |
 | STAT_ZUHEIZER_TEMP_VORN_WERT | - | - | + | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Ausgabe der Temperatur auf der Leiterplatte bei PTC-Modul oder Wasseraustrittstemperatur bei eDH. |
 
-<a id="table-res-0xa12c-r"></a>
 ### RES_0XA12C_R
 
 Dimensions: 22 rows × 13 columns
@@ -3672,7 +3550,6 @@ Dimensions: 22 rows × 13 columns
 | STAT_MOT_0X3F_WERT | - | - | + | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Verfügbarkeit des Slaves mit der Adresse 0x3F (63 dez): 0x00 = Slave mit Adresse 0x3F verbaut, 0xFF = Slave mit Adresse 0x3F nicht verbaut |
 | STAT_FEHLERSTATUS_WERT | - | - | + | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | 0 = kein Fehler, 255 = unbekannter Fehler |
 
-<a id="table-res-0xa12e-r"></a>
 ### RES_0XA12E_R
 
 Dimensions: 2 rows × 13 columns
@@ -3682,7 +3559,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_MODUS_IONISATOR | - | - | + | 0-n | high | unsigned char | - | TAB_IONISATOR_KLIMA | - | - | - | Status des Ionisators. |
 | STAT_FEHLER_IONISATOR | - | - | + | 0-n | high | unsigned char | - | TAB_FEHLER_IONISATOR | - | - | - | Aktuelle Fehler des Ionisators. |
 
-<a id="table-res-0xa12f-r"></a>
 ### RES_0XA12F_R
 
 Dimensions: 13 rows × 13 columns
@@ -3703,7 +3579,6 @@ Dimensions: 13 rows × 13 columns
 | STAT_FUELLSTAND_2_WERT | - | - | + | - | high | unsigned char | - | - | 5.0 | 1.0 | 0.0 | Fuellstand Duft 2. Mapping: STAT_FUELLSTAND_2_WERT = ST_FLLV_2_LIN |
 | STAT_FEHLER_BEDUFTER | - | - | + | 0-n | high | unsigned char | - | FEHLERWERTE_BEDUFTER | - | - | - | Fehlerinformation des Bedufters. Mapping: STAT_FEHLER_BEDUFTER = ERR_ST_SNT_LIN |
 
-<a id="table-res-0xa131-r"></a>
 ### RES_0XA131_R
 
 Dimensions: 2 rows × 13 columns
@@ -3713,7 +3588,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_BEDUFTER | - | - | + | 0-n | high | unsigned char | - | STATUS_BEDUFTER | - | - | - | Status des Bedufters. |
 | STAT_POS_KLAPPE_WERT | - | - | + | % | high | unsigned char | - | - | 2.0 | 1.0 | 0.0 | Aktuelle Position Bedufterklappe. |
 
-<a id="table-res-0xa133-r"></a>
 ### RES_0XA133_R
 
 Dimensions: 1 rows × 13 columns
@@ -3722,7 +3596,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BEFUELLUNG_KAELTEMITTEL | - | - | + | 0-n | high | unsigned char | - | TAB_BEFUELLUNG_KAELTEMITTEL | - | - | - | 0x00 Diagnosejob läuft nicht; 0x01 Diagnosejob gestartet, alle Ventile in der erforderlichen Position bzw. keine relevanten Ventile vorhanden; 0x02 Diagnosejob gestartet, jedoch mind. 1 Ventil nicht in der erforderlichen Position |
 
-<a id="table-res-0xa134-r"></a>
 ### RES_0XA134_R
 
 Dimensions: 14 rows × 13 columns
@@ -3744,7 +3617,6 @@ Dimensions: 14 rows × 13 columns
 | STAT_TASTE_FKA_3SR_RESERVE_2_EIN | - | - | + | 0-n | high | unsigned char | - | TAB_TASTENSTATUS_KLIMA | - | - | - | 0=Taste nicht betätigt, 1=Taste betätigt, 2=nicht verbaut |
 | STAT_TASTE_FKA_3SR_RESERVE_3_EIN | - | - | + | 0-n | high | unsigned char | - | TAB_TASTENSTATUS_KLIMA | - | - | - | 0=Taste nicht betätigt, 1=Taste betätigt, 2=nicht verbaut |
 
-<a id="table-res-0xa880-r"></a>
 ### RES_0XA880_R
 
 Dimensions: 1 rows × 13 columns
@@ -3753,7 +3625,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SHZH_TESTLAUF_NR | - | - | + | 0-n | high | unsigned char | - | TAB_SH_TESTLAUF | - | - | - | Ausgabe des Ergebnisses des Testlaufs vom Standheizgerät: siehe Tabelle TAB_SH_TESTLAUF |
 
-<a id="table-res-0xd89f-d"></a>
 ### RES_0XD89F_D
 
 Dimensions: 3 rows × 10 columns
@@ -3764,7 +3635,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_UMWAELZPUMPE_VORHANDEN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gibt aus, ob eine Umwälzpumpe direkt am Standheizgerät angschlossen ist: 0 = nicht vorhanden, 1 = vorhanden |
 | STAT_UMSCHALTVENTIL_VORHANDEN | 0/1 | - | unsigned char | - | - | - | - | - | Gibt aus, ob ein Umschaltventil direkt am Standheizgerät angeschlossen ist: 0 = nicht vorhanden, 1 = vorhanden |
 
-<a id="table-res-0xd8c3-d"></a>
 ### RES_0XD8C3_D
 
 Dimensions: 2 rows × 10 columns
@@ -3774,7 +3644,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EKMV_DREHZAHL_SOLL_WERT | % | high | unsigned char | - | - | 1.0 | 2.0 | 0.0 | Soll-Drehzahl in % |
 | STAT_EKMV_DREHZAHL_IST_WERT | % | high | unsigned char | - | - | 1.0 | 2.0 | 0.0 | Ist-Drehzahl in % |
 
-<a id="table-res-0xd8c4-d"></a>
 ### RES_0XD8C4_D
 
 Dimensions: 6 rows × 10 columns
@@ -3788,7 +3657,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_TEMPERATUR_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -50.0 | Ausgabe der Temperatur in Grad Celsius. Das Steuergerät liefert den Wert mit Offset 50. SGBD subtrahiert 50. |
 | STAT_STROM_AC_WERT | A | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ausgabe des Stroms. |
 
-<a id="table-res-0xd8c5-d"></a>
 ### RES_0XD8C5_D
 
 Dimensions: 14 rows × 10 columns
@@ -3810,7 +3678,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_KOMMUNIKATION | 0/1 | high | unsigned int | 0x4000 | - | 1.0 | 1.0 | 0.0 | Status der Kommunikation, 0 = kein Fehler, 1 = Fehler aktiv |
 | STAT_KOMMUNIKATION_2 | 0/1 | high | unsigned int | 0x8000 | - | 1.0 | 1.0 | 0.0 | Status der Kommunikation 2, 0 = kein Fehler, 1 = Fehler aktiv |
 
-<a id="table-res-0xd8c7-d"></a>
 ### RES_0XD8C7_D
 
 Dimensions: 1 rows × 10 columns
@@ -3819,7 +3686,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AKS_EKMV | 0-n | high | unsigned char | - | TAB_AKS_EKMV | 1.0 | 1.0 | 0.0 | Ergebnis der Isolationsprüfung: 0 = kein aktiver Kurzschluss 1 = aktiver Kurzschluss Low-Side 2 = aktiver Kurzschluss High-Side |
 
-<a id="table-res-0xd8cb-d"></a>
 ### RES_0XD8CB_D
 
 Dimensions: 1 rows × 10 columns
@@ -3828,7 +3694,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FREILAUF_EKMV | 0/1 | high | unsigned char | - | - | - | - | - | Ergebnis der Isolationsprüfung: 0 = kein aktiver Freilauf 1 = aktiver Freilauf |
 
-<a id="table-res-0xd8cc-d"></a>
 ### RES_0XD8CC_D
 
 Dimensions: 11 rows × 10 columns
@@ -3847,7 +3712,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_UMSCHALTVENTIL_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Hierin ist der aktuelle Zustand des Umschaltventils (Magnetventils) ablesbar. Dies ist jedoch nur möglich, falls ein Magnetventil an der Standheizung angebracht und codiert ist. Falls das Ventil nicht an der SHZH verbaut ist, wird  nicht verbaut  gemeldet. 0 %: Grosser Kreislauf 100 %: Kleiner Kreislauf (Standheizbetrieb) 253 %:  nicht verbaut  254 %: Fehler 255 %: Signal ungültig |
 | STAT_HEIZLEISTUNG_WERT | % | high | unsigned char | - | - | 10.0 | 1.0 | 0.0 | Status der Heizleistung des Heizgeräts.  0 %: Heizung aus ... 100 %: Heizung ein (maximum) 140 %: Fehler 150 %: Signal ungültig |
 
-<a id="table-res-0xd8cd-d"></a>
 ### RES_0XD8CD_D
 
 Dimensions: 4 rows × 10 columns
@@ -3859,7 +3723,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_HOCHVOLTSPANNUNG_WERT | V | high | unsigned int | - | - | 2.0 | 1.0 | 0.0 | Hochvoltspannung gemessen am elektrischen Durchlauferhitzers. Ungültigkeitswert = 510 Volt. |
 | STAT_ZAEHLER_VERRIEGELUNG_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Verriegelungszähler des elektrischen Durchlauferhitzers. |
 
-<a id="table-res-0xd8d0-d"></a>
 ### RES_0XD8D0_D
 
 Dimensions: 4 rows × 10 columns
@@ -3871,7 +3734,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ENDLAGENSCHALTER | 0/1 | high | unsigned char | - | - | - | - | - | Status Endlagenschalter: 0x00 = nicht betätigt 0x01 = betätigt |
 | STAT_TASTER_GEBLAESE | 0/1 | high | unsigned char | - | - | - | - | - | Status Taster Gebläse: 0x00 = nicht betätigt 0x01 = betätigt |
 
-<a id="table-res-0xd8d2-d"></a>
 ### RES_0XD8D2_D
 
 Dimensions: 2 rows × 10 columns
@@ -3881,7 +3743,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FREIGABE_KLIMAKOMPRESSOR | 0/1 | high | unsigned char | - | - | - | - | - | HV-Freigabe für eKMV: 0x00 = keine Freigabe 0x01 = Freigabe |
 | STAT_LEISTUNG_KLIMAKOMPRESSOR_MAXIMAL_WERT | kW | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | Maximal vom HV-PM für den eKMV bereitgestellte Leistung. |
 
-<a id="table-res-0xd8d3-d"></a>
 ### RES_0XD8D3_D
 
 Dimensions: 2 rows × 10 columns
@@ -3891,7 +3752,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FREIGABE_EDH | 0/1 | high | unsigned char | - | - | - | - | - | HV-Freigabe für EDH: 0x00 = keine Freigabe 0x01 = Freigabe |
 | STAT_LEISTUNG_EDH_MAXIMAL_WERT | kW | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | Maximal vom HV-PM für den EDH bereitgestellte Leistung. |
 
-<a id="table-res-0xd8d5-d"></a>
 ### RES_0XD8D5_D
 
 Dimensions: 9 rows × 10 columns
@@ -3908,7 +3768,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_WASSERPUMPE_CODIERT | 0-n | high | unsigned char | - | TAB_KLIMA_WASSERPUMPE | - | - | - | Wasserpumpe |
 | - | Bit | high | BITFIELD | - | BF_IHKA_KONFIGURATION | - | - | - | IHKA Konfiguration |
 
-<a id="table-res-0xd8d7-d"></a>
 ### RES_0XD8D7_D
 
 Dimensions: 16 rows × 10 columns
@@ -3932,7 +3791,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_TEMP_RESERVE_5_WERT | °C | high | signed char | - | - | 1.0 | 1.0 | 0.0 | Reserve 5 |
 | STAT_TEMP_RESERVE_6_WERT | °C | high | signed char | - | - | 1.0 | 1.0 | 0.0 | Reserve 6 |
 
-<a id="table-res-0xd8d8-d"></a>
 ### RES_0XD8D8_D
 
 Dimensions: 10 rows × 10 columns
@@ -3950,7 +3808,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_RESERVE3_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reserve Potentiometer |
 | STAT_RESERVE4_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reserve Potentiometer |
 
-<a id="table-res-0xd8d9-d"></a>
 ### RES_0XD8D9_D
 
 Dimensions: 13 rows × 10 columns
@@ -3971,7 +3828,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_BUS_IN_RESERVE3_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reservewert |
 | STAT_BUS_IN_RESERVE4_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reservewert |
 
-<a id="table-res-0xd8db-d"></a>
 ### RES_0XD8DB_D
 
 Dimensions: 28 rows × 10 columns
@@ -4007,7 +3863,6 @@ Dimensions: 28 rows × 10 columns
 | STAT_KLIMA_SL_FKA_RECHTS_STUFE_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Stufe Sitzlüftung: 0..3, 255 = ungültig |
 | STAT_KLIMA_FKA_GEBL_STUFE_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gebläsestufe FKA |
 
-<a id="table-res-0xd8dd-d"></a>
 ### RES_0XD8DD_D
 
 Dimensions: 5 rows × 10 columns
@@ -4020,7 +3875,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_SCHRITTE_FLANKE2_KURZE_NOCKE_WERT | Schritte | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Schritte zur zweiten Flanke der kurzen Nocke. |
 | STAT_SCHRITTE_GANZE_UMDREHUNG_WERT | Schritte | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Schritte für eine ganze Umdrehung der Kulissenscheibe. |
 
-<a id="table-res-0xd8de-d"></a>
 ### RES_0XD8DE_D
 
 Dimensions: 15 rows × 10 columns
@@ -4043,7 +3897,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_RESERVE_4 | 0/1 | high | unsigned char | - | - | - | - | - | Reserve 4 |
 | STAT_RESERVE_5 | 0/1 | high | unsigned char | - | - | - | - | - | Reserve 5 |
 
-<a id="table-res-0xd8df-d"></a>
 ### RES_0XD8DF_D
 
 Dimensions: 5 rows × 10 columns
@@ -4056,7 +3909,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_IST_SCHRITTZAHL_WERT | Schritte | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Ist-Schrittzahl |
 | STAT_MIKROSCHALTER_NOCKE_EIN | 0/1 | high | unsigned char | - | - | - | - | - | 0x00 = Mikroschalter steht nicht auf Nocke 0x01 = Mikroschalter steht auf Nocke |
 
-<a id="table-res-0xd8e1-d"></a>
 ### RES_0XD8E1_D
 
 Dimensions: 11 rows × 10 columns
@@ -4075,7 +3927,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_EWP_2_ELECTRICAL_ERROR | 0-n | high | unsigned char | - | - | - | - | - | Fehlererkennung EWP_2 |
 | STAT_EWP_2_KOMMUNIKATION_ERROR | 0/1 | high | unsigned char | - | - | - | - | - | Kommunikationsfehler EWP_2 |
 
-<a id="table-res-0xd8e2-d"></a>
 ### RES_0XD8E2_D
 
 Dimensions: 2 rows × 10 columns
@@ -4085,7 +3936,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EWP_2_DREHZAHL_SOLL_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Solldrehzahl EWP_2 |
 | STAT_EWP_2_DREHZAHL_IST_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ist-Drehzahl EWP_2 |
 
-<a id="table-res-0xd905-d"></a>
 ### RES_0XD905_D
 
 Dimensions: 2 rows × 10 columns
@@ -4095,7 +3945,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TIMER_EINLAUFSCHUTZ_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Restzeit des Einlaufschutzes in Sekunden |
 | STAT_TIMER_START_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Startwert vom Timer für Einlaufschutz |
 
-<a id="table-res-0xd918-d"></a>
 ### RES_0XD918_D
 
 Dimensions: 2 rows × 10 columns
@@ -4105,7 +3954,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EINLAUFSCHUTZ_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ausgabe Status Einlaufschutz: 0 = Einlaufschutz abgeschlossen 1 = Einlaufschutz noch gesetzt |
 | STAT_EINLAUF_AKTIV_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Ausgabe Status Einlaufschutz: 0 = Einlauf nicht aktiv 1 = Einlauf aktiv |
 
-<a id="table-res-0xd9a7-d"></a>
 ### RES_0XD9A7_D
 
 Dimensions: 1 rows × 10 columns
@@ -4114,7 +3962,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_EINLAUFSCHUTZ_FREIGABE | 0/1 | high | unsigned char | - | - | - | - | - | Freigabe für Einlaufschutz: 0 = Keine Freigabe (gesperrt) = Einlaufroutine kann nicht automatisch gestartet werden. 1 = Freigabe nach Einschaltbedingungen |
 
-<a id="table-res-0xd9ac-d"></a>
 ### RES_0XD9AC_D
 
 Dimensions: 12 rows × 10 columns
@@ -4134,7 +3981,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_RESERVE_2_DRUCK_WERT | bar | high | unsigned int | - | - | 0.01 | 1.0 | 0.0 | Reserve |
 | STAT_RESERVE_2_TEMP_WERT | °C | high | unsigned int | - | - | 0.1 | 1.0 | -40.0 | Reserve |
 
-<a id="table-res-0xd9ad-d"></a>
 ### RES_0XD9AD_D
 
 Dimensions: 5 rows × 10 columns
@@ -4147,7 +3993,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RESERVE_3_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Expansionsventil 2:  0% = geschlossen 100% = offen 255 = ungültig |
 | STAT_RESERVE_4_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Expansionsventil 3:  0% = geschlossen 100% = offen 255 = ungültig |
 
-<a id="table-res-0xe410-d"></a>
 ### RES_0XE410_D
 
 Dimensions: 1 rows × 10 columns
@@ -4156,7 +4001,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RES_HMI_CUSTOMER_REQUEST_ACTIVE | 0-n | high | unsigned char | - | TAB_STATUS_RES_CUSTOMER_REQUEST | - | - | - | Auswahl Remote Engine Start aktiviert/deaktiviert in MMI |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 73 rows × 16 columns
@@ -4237,7 +4081,6 @@ Dimensions: 73 rows × 16 columns
 | RES_HMI_CUSTOMER_REQUEST | 0xE410 | - | Setzen und auslesen des aktuellen Status HMI Remote Engine-Start | - | - | - | - | - | - | - | - | - | 2E;22 | ARG_0xE410_D | RES_0xE410_D |
 | ACTIVE_DIAGNOSTIC_SESSION | 0xF186 | STAT_ACTIVE_DIAGNOSTIC_SESSION | activeDiagnosticSession | 0-n | - | High | unsigned char | RDBI_ADS_DOP | - | - | - | - | 22 | - | - |
 
-<a id="table-status-bedufter"></a>
 ### STATUS_BEDUFTER
 
 Dimensions: 7 rows × 2 columns
@@ -4252,7 +4095,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | Testlauf aktiv |
 | 7 | Signal ungültig |
 
-<a id="table-status-ram-daten-schreiben-tab"></a>
 ### STATUS_RAM_DATEN_SCHREIBEN_TAB
 
 Dimensions: 4 rows × 2 columns
@@ -4264,7 +4106,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Schreiben läuft |
 | 0x03 | Schreiben noch nicht angestoßen (Routine nicht gestartet) |
 
-<a id="table-tab-aks-ekmv"></a>
 ### TAB_AKS_EKMV
 
 Dimensions: 3 rows × 2 columns
@@ -4275,7 +4116,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | aktiver Kurzschluss Low-Side |
 | 0x02 | aktiver Kurzschluss High-Side |
 
-<a id="table-tab-autoadressierung"></a>
 ### TAB_AUTOADRESSIERUNG
 
 Dimensions: 5 rows × 2 columns
@@ -4288,7 +4128,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Autoadressierung mit Fehler beendet |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-bedienteilvar-hinten"></a>
 ### TAB_BEDIENTEILVAR_HINTEN
 
 Dimensions: 5 rows × 2 columns
@@ -4301,7 +4140,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0003 | High |
 | 0xFFFF | ungültiger Wert |
 
-<a id="table-tab-bedienteilvar-vorn"></a>
 ### TAB_BEDIENTEILVAR_VORN
 
 Dimensions: 4 rows × 2 columns
@@ -4313,7 +4151,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0003 | High |
 | 0xFFFF | ungültiger Wert |
 
-<a id="table-tab-befuellung-kaeltemittel"></a>
 ### TAB_BEFUELLUNG_KAELTEMITTEL
 
 Dimensions: 4 rows × 2 columns
@@ -4325,7 +4162,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Diagnosejob gestartet mit Ventilfehler |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-betriebsstatus-ekmvgen20"></a>
 ### TAB_BETRIEBSSTATUS_EKMVGEN20
 
 Dimensions: 8 rows × 2 columns
@@ -4341,7 +4177,6 @@ Dimensions: 8 rows × 2 columns
 | 0x3000 | eKMV Reset nicht möglich |
 | 0x3800 | ungültig |
 
-<a id="table-tab-bitmuster"></a>
 ### TAB_BITMUSTER
 
 Dimensions: 8 rows × 2 columns
@@ -4357,7 +4192,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | BITMUSTER_7 |
 | 0x07 | BITMUSTER_8 |
 
-<a id="table-tab-err-rem-sta-dtl-bdc"></a>
 ### TAB_ERR_REM_STA_DTL_BDC
 
 Dimensions: 12 rows × 2 columns
@@ -4377,7 +4211,6 @@ Dimensions: 12 rows × 2 columns
 | 0x10000000 | BDC_Abbruch_RES_Fahreraktion_SST_Remote_Parken |
 | 0xFFFFFFFF | Wert ungültig |
 
-<a id="table-tab-err-rem-sta-dtl-dme"></a>
 ### TAB_ERR_REM_STA_DTL_DME
 
 Dimensions: 10 rows × 2 columns
@@ -4395,7 +4228,6 @@ Dimensions: 10 rows × 2 columns
 | 0x00000800 | DME_SCR_Tank_leer |
 | 0xFFFFFFFF | Wert ungültig |
 
-<a id="table-tab-err-rem-sta-dtl-ihka"></a>
 ### TAB_ERR_REM_STA_DTL_IHKA
 
 Dimensions: 12 rows × 2 columns
@@ -4415,7 +4247,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0000000A | IHKA_Abbruch_Standfunktion durch DME / BDC |
 | 0xFFFFFFFF | Wert ungültig |
 
-<a id="table-tab-fahrzeugart-klima"></a>
 ### TAB_FAHRZEUGART_KLIMA
 
 Dimensions: 5 rows × 2 columns
@@ -4428,7 +4259,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Elektrisch |
 | 0xFF | ungltiger Wert |
 
-<a id="table-tab-fehler-ionisator"></a>
 ### TAB_FEHLER_IONISATOR
 
 Dimensions: 16 rows × 2 columns
@@ -4452,7 +4282,6 @@ Dimensions: 16 rows × 2 columns
 | 0xE | unbekannter Fehler |
 | 0xF | unbekannter Fehler |
 
-<a id="table-tab-ionisator-klima"></a>
 ### TAB_IONISATOR_KLIMA
 
 Dimensions: 4 rows × 2 columns
@@ -4464,7 +4293,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Prüfmodus |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-kalibrierung-exv"></a>
 ### TAB_KALIBRIERUNG_EXV
 
 Dimensions: 3 rows × 2 columns
@@ -4475,7 +4303,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Kalibrierlauf läuft gerade |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-kalib-erg"></a>
 ### TAB_KALIB_ERG
 
 Dimensions: 3 rows × 2 columns
@@ -4486,7 +4313,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Kalibrierung IO |
 | 0x02 | Klappe nicht verbaut |
 
-<a id="table-tab-klappenmotor"></a>
 ### TAB_KLAPPENMOTOR
 
 Dimensions: 30 rows × 2 columns
@@ -4524,7 +4350,6 @@ Dimensions: 30 rows × 2 columns
 | 0x1D | FUSSRAUM |
 | 0x1E | BELUEFTUNG_ENTFROSTUNG |
 
-<a id="table-tab-klima-ecu-hw-variante"></a>
 ### TAB_KLIMA_ECU_HW_VARIANTE
 
 Dimensions: 8 rows × 2 columns
@@ -4540,7 +4365,6 @@ Dimensions: 8 rows × 2 columns
 | 0x07 | IHKA Mid ohne 3te LIN |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-klima-kaeltemittel"></a>
 ### TAB_KLIMA_KAELTEMITTEL
 
 Dimensions: 4 rows × 2 columns
@@ -4552,7 +4376,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | CO2 |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-klima-leds-ansteuerung"></a>
 ### TAB_KLIMA_LEDS_ANSTEUERUNG
 
 Dimensions: 2 rows × 2 columns
@@ -4562,7 +4385,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | ALLE_LEDS_AUS |
 | 0x01 | ALLE_LEDS_AN |
 
-<a id="table-tab-klima-scheibenheizung"></a>
 ### TAB_KLIMA_SCHEIBENHEIZUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4574,7 +4396,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Getaktet |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-klima-varianten"></a>
 ### TAB_KLIMA_VARIANTEN
 
 Dimensions: 7 rows × 2 columns
@@ -4589,7 +4410,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | IHKA 4-zonig |
 | 0xFF | ungltiger Wert |
 
-<a id="table-tab-klima-wasserpumpe"></a>
 ### TAB_KLIMA_WASSERPUMPE
 
 Dimensions: 9 rows × 2 columns
@@ -4606,7 +4426,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | LIN-Zusatzwasserpumpe und Wasserpumpe von Standheizung |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-motor-fehler"></a>
 ### TAB_MOTOR_FEHLER
 
 Dimensions: 5 rows × 2 columns
@@ -4619,7 +4438,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Interner Motorfehler |
 | 0x04 | Ungültiger Wert |
 
-<a id="table-tab-motor-kalibrierung"></a>
 ### TAB_MOTOR_KALIBRIERUNG
 
 Dimensions: 6 rows × 2 columns
@@ -4633,7 +4451,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Kalibrierung nicht in Ordnung |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-produktlinie-klima"></a>
 ### TAB_PRODUKTLINIE_KLIMA
 
 Dimensions: 11 rows × 2 columns
@@ -4652,7 +4469,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | LK_K_BEV |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-selbsttest-klappenmotoren"></a>
 ### TAB_SELBSTTEST_KLAPPENMOTOREN
 
 Dimensions: 5 rows × 2 columns
@@ -4665,7 +4481,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Test mit Fehler beendet, Ergebnis im Fehlerspeicher |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-sh-betriebszustand"></a>
 ### TAB_SH_BETRIEBSZUSTAND
 
 Dimensions: 10 rows × 2 columns
@@ -4683,7 +4498,6 @@ Dimensions: 10 rows × 2 columns
 | 0x09 | EIN-Nachlauf-Regelpause |
 | 0x0F | Signal ungültig |
 
-<a id="table-tab-sh-funktionszustand"></a>
 ### TAB_SH_FUNKTIONSZUSTAND
 
 Dimensions: 159 rows × 2 columns
@@ -4850,7 +4664,6 @@ Dimensions: 159 rows × 2 columns
 | 0xA2 | Startrampe, Warmstart  |
 | 0xA3 | Test Restwärmenutzung  |
 
-<a id="table-tab-sh-kraftstoffart"></a>
 ### TAB_SH_KRAFTSTOFFART
 
 Dimensions: 4 rows × 2 columns
@@ -4862,7 +4675,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | RME |
 | 0xFF | ungültig |
 
-<a id="table-tab-sh-testlauf"></a>
 ### TAB_SH_TESTLAUF
 
 Dimensions: 4 rows × 2 columns
@@ -4874,7 +4686,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Testbetrieb aktiv |
 | 0xFF | ungültig |
 
-<a id="table-tab-sollwert-ort"></a>
 ### TAB_SOLLWERT_ORT
 
 Dimensions: 7 rows × 2 columns
@@ -4889,7 +4700,6 @@ Dimensions: 7 rows × 2 columns
 | 0x06 | HINTEN |
 | 0x07 | FKA_3SR |
 
-<a id="table-tab-status-autoadressierung"></a>
 ### TAB_STATUS_AUTOADRESSIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -4901,7 +4711,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFE | Motor nicht codiert |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-status-kalibrierlauf"></a>
 ### TAB_STATUS_KALIBRIERLAUF
 
 Dimensions: 3 rows × 2 columns
@@ -4912,7 +4721,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Kalibrierlauf läuft gerade |
 | 0x02 | Kalibrierlauf abgeschlossen |
 
-<a id="table-tab-status-res-customer-request"></a>
 ### TAB_STATUS_RES_CUSTOMER_REQUEST
 
 Dimensions: 4 rows × 2 columns
@@ -4924,7 +4732,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFE | nicht codiert |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-bf-4-tasten"></a>
 ### TAB_STAT_BF_4_TASTEN
 
 Dimensions: 14 rows × 2 columns
@@ -4946,7 +4753,6 @@ Dimensions: 14 rows × 2 columns
 | 0xC0 | Ungültig |
 | 0xFF | Ungültig |
 
-<a id="table-tab-tastenstatus-klima"></a>
 ### TAB_TASTENSTATUS_KLIMA
 
 Dimensions: 4 rows × 2 columns
@@ -4958,7 +4764,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | nicht verbaut |
 | 0xFF | Ungültig |
 
-<a id="table-tab-tasten-klima"></a>
 ### TAB_TASTEN_KLIMA
 
 Dimensions: 40 rows × 2 columns
@@ -5006,7 +4811,6 @@ Dimensions: 40 rows × 2 columns
 | 0x27 | MENU_ODER_BEDUFTER |
 | 0x28 | FKA_AC_MAX |
 
-<a id="table-tab-tasten-klima-fka-3sr"></a>
 ### TAB_TASTEN_KLIMA_FKA_3SR
 
 Dimensions: 11 rows × 2 columns
@@ -5025,7 +4829,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0A | FKA_3SR_SITZHEIZUNG_LINKS |
 | 0x0B | FKA_3SR_SITZHEIZUNG_RECHTS |
 
-<a id="table-tab-verbauort-geblaese"></a>
 ### TAB_VERBAUORT_GEBLAESE
 
 Dimensions: 3 rows × 2 columns
@@ -5036,7 +4839,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | GEBLAESE_FKA |
 | 0x03 | GEBLAESE_HKA |
 
-<a id="table-tab-verbauort-zuheizer"></a>
 ### TAB_VERBAUORT_ZUHEIZER
 
 Dimensions: 1 rows × 2 columns
@@ -5045,7 +4847,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0x01 | ZUHEIZER_VORN |
 
-<a id="table-tab-wp-ventile"></a>
 ### TAB_WP_VENTILE
 
 Dimensions: 7 rows × 2 columns
@@ -5060,7 +4861,6 @@ Dimensions: 7 rows × 2 columns
 | 0x06 | EXPANSIONSVENTIL_2 |
 | 0x07 | EXPANSIONSVENTIL_3 |
 
-<a id="table-tab-zentralantriebe"></a>
 ### TAB_ZENTRALANTRIEBE
 
 Dimensions: 1 rows × 2 columns
@@ -5069,7 +4869,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0x00 | ZENTRALANTRIEB |
 
-<a id="table-tab-0x4001"></a>
 ### TAB_0X4001
 
 Dimensions: 1 rows × 9 columns
@@ -5078,7 +4877,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x0002 | 0x0003 | 0x0004 | 0x0005 | 0x0006 | 0x0007 | 0x0008 | 0x0009 |
 
-<a id="table-tab-0x4010"></a>
 ### TAB_0X4010
 
 Dimensions: 1 rows × 3 columns
@@ -5087,7 +4885,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x0010 | 0x0011 |
 
-<a id="table-tab-0x4011"></a>
 ### TAB_0X4011
 
 Dimensions: 1 rows × 3 columns
@@ -5096,7 +4893,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 2 | 0x0012 | 0x0013 |
 
-<a id="table-tab-0x4021"></a>
 ### TAB_0X4021
 
 Dimensions: 1 rows × 12 columns
@@ -5105,7 +4901,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 11 | 0x0014 | 0x0015 | 0x0016 | 0x0017 | 0x0018 | 0x0019 | 0x001A | 0x001B | 0x001C | 0x001D | 0x001E |
 
-<a id="table-tab-0x4031"></a>
 ### TAB_0X4031
 
 Dimensions: 1 rows × 4 columns
@@ -5114,7 +4909,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x001F | 0x0020 | 0x0021 |
 
-<a id="table-tab-0x600c"></a>
 ### TAB_0X600C
 
 Dimensions: 1 rows × 2 columns
@@ -5123,7 +4917,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x000C |
 
-<a id="table-tab-0xd6ff"></a>
 ### TAB_0XD6FF
 
 Dimensions: 1 rows × 2 columns
@@ -5132,7 +4925,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | 0x0001 |
 
-<a id="table-uwb-botschaftsausfall-ursache"></a>
 ### UWB_BOTSCHAFTSAUSFALL_URSACHE
 
 Dimensions: 17 rows × 2 columns
@@ -5157,7 +4949,6 @@ Dimensions: 17 rows × 2 columns
 | 15 | Timeout + AliveCounter Fehler + CRC Fehler + Signal ungueltig |
 | 0xFF | Wert ungültig |
 
-<a id="table-uwb-obdr-ekmv-shutdown-refrigerant-pressure-status-table"></a>
 ### UWB_OBDR_EKMV_SHUTDOWN_REFRIGERANT_PRESSURE_STATUS_TABLE
 
 Dimensions: 1 rows × 2 columns
@@ -5166,7 +4957,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-wertetabelle-obdm-uw-jhudm"></a>
 ### WERTETABELLE_OBDM_UW_JHUDM
 
 Dimensions: 17 rows × 2 columns

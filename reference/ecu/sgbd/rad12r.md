@@ -126,7 +126,6 @@
 - [LESE_INDIVIDUALDATA](#job-lese-individualdata) - Lesen von Individualisierungsdaten Modus   : Default
 - [SCHREIBEN_INDIVIDUALDATA](#job-schreiben-individualdata) - Schreiben von Individualisierungsdaten Modus   : Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -145,7 +144,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -158,7 +156,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -174,7 +171,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -191,7 +187,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -224,7 +219,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -251,7 +245,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -293,7 +286,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -312,7 +304,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -330,7 +321,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -351,7 +341,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -372,7 +361,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -392,7 +380,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers KWP2000: $85 ControlDTCSetting Modus  : Default
@@ -413,7 +400,6 @@ Sperren bzw. Freigeben des Fehlerspeichers KWP2000: $85 ControlDTCSetting Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2000 dtcShadowMemory
@@ -440,7 +426,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2001 - $20FF dtcShadowMemoryEntry Modus: Default
@@ -483,7 +468,6 @@ Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCShadowMemory Modus  : Default
@@ -498,7 +482,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -513,7 +496,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -534,7 +516,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $0E Time controlled PowerDown oder b)       $05 PowerDown $00 all ECU Modus  : Default
@@ -553,7 +534,6 @@ SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C ControlEnergySavingMode Modus  : Default
@@ -574,7 +554,6 @@ Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C C
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus  : Default
@@ -588,7 +567,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $9B Vehicle Manufacturer Coding Index oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -606,7 +584,6 @@ _No arguments._
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -622,7 +599,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number Modus  : Default
@@ -641,7 +617,6 @@ Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIden
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -662,7 +637,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B Write
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-lesen"></a>
 ### C_AEI_LESEN
 
 Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -678,7 +652,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-schreiben"></a>
 ### C_AEI_SCHREIBEN
 
 Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -697,7 +670,6 @@ Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   Writ
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-auftrag"></a>
 ### C_AEI_AUFTRAG
 
 Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -718,7 +690,6 @@ Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -738,7 +709,6 @@ Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -757,7 +727,6 @@ Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -778,7 +747,6 @@ Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteData
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -796,7 +764,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -821,7 +788,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -844,7 +810,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -862,7 +827,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -883,7 +847,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -904,7 +867,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -923,7 +885,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -940,7 +901,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-zufallszahl-lesen"></a>
 ### AUTHENTISIERUNG_ZUFALLSZAHL_LESEN
 
 Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $07 RequestForAuthentication Modus  : Default
@@ -962,7 +922,6 @@ Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-start"></a>
 ### AUTHENTISIERUNG_START
 
 Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAuthentication Modus  : Default
@@ -981,7 +940,6 @@ Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -998,7 +956,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-signatur-pruefen"></a>
 ### FLASH_SIGNATUR_PRUEFEN
 
 Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSignature Modus  : Default
@@ -1018,7 +975,6 @@ Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSigna
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -1033,7 +989,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 ClearMemory Modus  : Default
@@ -1053,7 +1008,6 @@ Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload Modus  : Default
@@ -1073,7 +1027,6 @@ Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -1094,7 +1047,6 @@ Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Defau
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferExit Modus  : Default
@@ -1113,7 +1065,6 @@ Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -1150,7 +1101,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D WriteMemoryByAddress Modus   : Default
@@ -1181,7 +1131,6 @@ Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D Write
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG AIF schreiben |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG AIF schreiben |
 
-<a id="job-steuern-ant-eigen-diag"></a>
 ### STEUERN_ANT_EIGEN_DIAG
 
 Starts antenna diagnostics cycle for the respective antenna specification
@@ -1196,7 +1145,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-eigen-diag"></a>
 ### STATUS_ANT_EIGEN_DIAG
 
 Result of the antenna diversity self-diagnosis.
@@ -1213,7 +1161,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-qfs"></a>
 ### STATUS_ANT_QFS
 
 Reads the current quality and the field strength of the actual radio signal of the actual frequency.
@@ -1233,7 +1180,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-scan"></a>
 ### STEUERN_ANT_SCAN
 
 Creates an 8 Volt peek (if diversity diagnosis modus is active done by steuern_ant_eigen_diagnose) to switch through the FM antennas of the diversity or to switch back to normal operation mode into the AM band with the AM amplifier being active
@@ -1252,7 +1198,6 @@ Creates an 8 Volt peek (if diversity diagnosis modus is active done by steuern_a
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-test-antenne"></a>
 ### STEUERN_TEST_ANTENNE
 
 Performs an impedance measurement of one, some or all antennas
@@ -1271,7 +1216,6 @@ Performs an impedance measurement of one, some or all antennas
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-test-antenne"></a>
 ### STATUS_TEST_ANTENNE
 
 Returns the results of the impedance measurements performed with steuern_test_antenne
@@ -1296,7 +1240,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-audiokanaele"></a>
 ### STEUERN_AUDIOKANAELE
 
 Ansteuern eines AudioKanals
@@ -1315,7 +1258,6 @@ Ansteuern eines AudioKanals
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-audiokanaele"></a>
 ### STATUS_AUDIOKANAELE
 
 Returns the status of the Audiokanaele
@@ -1332,7 +1274,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-find-best-station"></a>
 ### STEUERN_FIND_BEST_STATION
 
 Triggers the search in the current waveband of the best station (station with the best reception). When the best station has been detected, the head-unit switches to this best station.
@@ -1347,7 +1288,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-find-best-station"></a>
 ### STATUS_FIND_BEST_STATION
 
 Returns the status of the searching process and the information data of the best station if the searching process has been ended successfully.
@@ -1368,7 +1308,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-frequenz"></a>
 ### STEUERN_FREQUENZ
 
 Set the tuner frequency.
@@ -1387,7 +1326,6 @@ Set the tuner frequency.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-frequenz"></a>
 ### STATUS_FREQUENZ
 
 Get back the currently active tuner frequency
@@ -1403,7 +1341,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-next-entsource"></a>
 ### STEUERN_NEXT_ENTSOURCE
 
 Enables to switch to the next or to a specified entertainment source.
@@ -1422,7 +1359,6 @@ Enables to switch to the next or to a specified entertainment source.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-next-entsource"></a>
 ### STATUS_NEXT_ENTSOURCE
 
 Gives back the status of actual entertainmentsource.
@@ -1441,7 +1377,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-radon"></a>
 ### STEUERN_RADON
 
 Sets the RADON control lead to logical High or Low. ONLY TO USE WITH RADIO 1.2 BY CONTINENTAL (from PU 09/10)
@@ -1460,7 +1395,6 @@ Sets the RADON control lead to logical High or Low. ONLY TO USE WITH RADIO 1.2 B
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-radon"></a>
 ### STATUS_RADON
 
 Reads out the status of the RADON control lead.
@@ -1477,7 +1411,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-clear-ckmdata"></a>
 ### STEUERN_CLEAR_CKMDATA
 
 Restores the delivery state (resets the PIA settings to their default settings) for the desired key/car.
@@ -1496,7 +1429,6 @@ Restores the delivery state (resets the PIA settings to their default settings)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-clear-ckmdata"></a>
 ### STATUS_CLEAR_CKMDATA
 
 Status des Löschens der Car-Key-PIA Daten eines oder aller Schlüssel.
@@ -1513,7 +1445,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-rds"></a>
 ### STEUERN_RDS
 
 Enables to control the activation state of the RDS and of the TP functionalities.
@@ -1533,7 +1464,6 @@ Enables to control the activation state of the RDS and of the TP functionalities
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rds"></a>
 ### STATUS_RDS
 
 Reads out the activation state of the TP, RDS and AF functionalities.
@@ -1554,7 +1484,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-volumeaudio"></a>
 ### STEUERN_VOLUMEAUDIO
 
 Adjusts the volume of a definite audio signal
@@ -1574,7 +1503,6 @@ Adjusts the volume of a definite audio signal
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-volumeaudio"></a>
 ### STATUS_VOLUMEAUDIO
 
 Abfragen der Audio-Lautstaerke
@@ -1594,7 +1522,6 @@ Abfragen der Audio-Lautstaerke
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-volumeaudio-default"></a>
 ### STEUERN_VOLUMEAUDIO_DEFAULT
 
 Set Volumeaudio default
@@ -1609,7 +1536,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-test-verbau"></a>
 ### STEUERN_TEST_VERBAU
 
 Performs a test of one, some or all external interfaces ONLY TO USE WITH RADIO 1.2 BY CONTINENTAL (from PU 09/10)
@@ -1628,7 +1554,6 @@ Performs a test of one, some or all external interfaces ONLY TO USE WITH RADIO 1
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-test-verbau"></a>
 ### STATUS_TEST_VERBAU
 
 Returns the result of the test of external interfaces performed with steuern_test_verbau ONLY TO USE WITH RADIO 1.2 BY CONTINENTAL (from PU 09/10)
@@ -1647,7 +1572,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-lautsprecher-impedanzmessung"></a>
 ### STEUERN_LAUTSPRECHER_IMPEDANZMESSUNG
 
 Enables to test a loudspeaker connection by performing an impedance measurement.
@@ -1669,7 +1593,6 @@ Enables to test a loudspeaker connection by performing an impedance measurement.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lautsprecher-impedanzmessung"></a>
 ### STATUS_LAUTSPRECHER_IMPEDANZMESSUNG
 
 Returns the result of the test performed with steuern_lautsprecher_impedanzmessung.
@@ -1697,7 +1620,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-radio-schalten"></a>
 ### STEUERN_RADIO_SCHALTEN
 
 Controls the mute status of the current entertainment source.
@@ -1716,7 +1638,6 @@ Controls the mute status of the current entertainment source.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-radio-schalten"></a>
 ### STATUS_RADIO_SCHALTEN
 
 Returns the mute status of the current entertainment source.
@@ -1733,7 +1654,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Performs a test of internal functions and components.
@@ -1752,7 +1672,6 @@ Performs a test of internal functions and components.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-selbsttest"></a>
 ### STATUS_SELBSTTEST
 
 Returns the mute status of the current entertainment source.
@@ -1770,7 +1689,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-sinusgenerator-ein"></a>
 ### STEUERN_SINUSGENERATOR_EIN
 
 Aktivieren des Sinusgenerators und Ausgabe auf allen ausgewählten Lautsprechern
@@ -1791,7 +1709,6 @@ Aktivieren des Sinusgenerators und Ausgabe auf allen ausgewählten Lautsprechern
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-sinusgenerator-aus"></a>
 ### STEUERN_SINUSGENERATOR_AUS
 
 Ausschalten des Sinusgenerators
@@ -1806,7 +1723,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog-temperatur"></a>
 ### STATUS_ANALOG_TEMPERATUR
 
 The temperature values on the FOT, in the module and at the amplifier and all other reasonable locations (e.g. drive) in degrees Celsius.
@@ -1833,7 +1749,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ser-nr-dom-lesen"></a>
 ### SER_NR_DOM_LESEN
 
 Reads the serial number with 14 digits (DIN ISO 10486)
@@ -1849,7 +1764,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-klangzeichen"></a>
 ### STEUERN_KLANGZEICHEN
 
 Ausloesen eines Klangzeichens
@@ -1868,7 +1782,6 @@ Ausloesen eines Klangzeichens
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen-systemaudio"></a>
 ### STATUS_LESEN_SYSTEMAUDIO
 
 This job reads which audio system is currently coded
@@ -1885,7 +1798,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-tel-mute"></a>
 ### STATUS_TEL_MUTE
 
 Outputs whether the phone mute lead is active or inactive.
@@ -1902,7 +1814,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen-laufwerk"></a>
 ### STATUS_LESEN_LAUFWERK
 
 Reads out which drives the Head-Unit contains and the type and firmware of each drive.
@@ -1940,7 +1851,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-track-number"></a>
 ### STEUERN_TRACK_NUMBER
 
 Sets the track number
@@ -1959,7 +1869,6 @@ Sets the track number
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-drive-cd"></a>
 ### STATUS_DRIVE_CD
 
 Status of DVD Drive
@@ -1976,7 +1885,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eject"></a>
 ### STEUERN_EJECT
 
 Ejects the media of the selected drives.
@@ -1995,7 +1903,6 @@ Ejects the media of the selected drives.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-hw-variante"></a>
 ### STATUS_HW_VARIANTE
 
 Liefert die HW-Variante der Headunit
@@ -2017,7 +1924,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-bootloader-version"></a>
 ### _STATUS_BOOTLOADER_VERSION
 
 Umsetzung ab E89x-11-03-410 Auslesen der Laendervariante KWP2000: $21 ReadDataByLocalIdentifier $B8 recordLocalIdentifier - Bootloader Version Modus  : Default
@@ -2032,7 +1938,6 @@ _No arguments._
 | STAT_BOOT | string | STAT BOOT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-taste"></a>
 ### STATUS_TASTE
 
 Auslesen, ob gerade eine Taste gedrueckt ist
@@ -2048,7 +1953,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-drehknopf"></a>
 ### STATUS_DREHKNOPF
 
 gibt die Position des Drehknopfes bezüglich des letzen Aufstartens wieder
@@ -2064,7 +1968,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-cd-md-cdc"></a>
 ### STATUS_CD_MD_CDC
 
 Reads out the disc identifier and the quality level of the digital playback
@@ -2081,7 +1984,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-linear"></a>
 ### STEUERN_LINEAR
 
 This job resets the tone controls such as bass treble, fader, balance, surround to the default values
@@ -2096,7 +1998,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode-lesen"></a>
 ### ENERGIESPARMODE_LESEN
 
 gfAuslesen des Energiesparmodes KWP2000: $22 ReadDataByCommonIdentifier Modus  : Default
@@ -2113,7 +2014,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-schreiben-telefonnummern"></a>
 ### SCHREIBEN_TELEFONNUMMERN
 
 nur für CD 92 (zweizeiliges Display L3) ab PU 03/2011 Schreiben der Telefonnummern für - Bereitschaftsdienst - Heimathändler - Passo - Hotline KWP2000: $3B writeDataByLocalIdentifier $A4 recordLocalIdentifier Modus  : Default
@@ -2134,7 +2034,6 @@ nur für CD 92 (zweizeiliges Display L3) ab PU 03/2011 Schreiben der Telefonnumm
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-lesen-telefonnummern"></a>
 ### LESEN_TELEFONNUMMERN
 
 nur für CD 92 (zweizeiliges Display L3) ab PU 03/2011 Auslesen der im MASK gespeicherten Telefonnummern für - Bereitschaftsdienst - Heimathändler - Passo - Hotline KWP2000: $21 readDataByLocalIdentifier $BE recordLocalIdentifier Modus  : Default
@@ -2152,7 +2051,6 @@ _No arguments._
 | NR_HOTLINE | string | Nummer der Hotline |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-xdebug"></a>
 ### STEUERN_XDEBUG
 
 Enables to control the activation state of the XDEBUG Traces
@@ -2171,7 +2069,6 @@ Enables to control the activation state of the XDEBUG Traces
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-xdebug"></a>
 ### STATUS_XDEBUG
 
 Reads out the activation state XDEBUG
@@ -2188,7 +2085,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-lesen-individualdata-liste"></a>
 ### LESEN_INDIVIDUALDATA_LISTE
 
 Lesen eines Listeneintrags der Individualisierungsdaten KWP2000: $31 ReadDataByLocalIdentifier $80 recordLocalIdentifier
@@ -2210,7 +2106,6 @@ Lesen eines Listeneintrags der Individualisierungsdaten KWP2000: $31 ReadDataByL
 | RET_COMMENT | string | Kommentarspalte des Entries |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-lese-individualdata"></a>
 ### LESE_INDIVIDUALDATA
 
 Lesen von Individualisierungsdaten Modus   : Default
@@ -2238,7 +2133,6 @@ Lesen von Individualisierungsdaten Modus   : Default
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-schreiben-individualdata"></a>
 ### SCHREIBEN_INDIVIDUALDATA
 
 Schreiben von Individualisierungsdaten Modus   : Default
@@ -2341,7 +2235,6 @@ Schreiben von Individualisierungsdaten Modus   : Default
 - [TXDEBUG](#table-txdebug) (4 × 2)
 - [TINDIVIDUALDATALISTE](#table-tindividualdataliste) (1 × 17)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -2354,7 +2247,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -2457,7 +2349,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 125 rows × 2 columns
@@ -2590,7 +2481,6 @@ Dimensions: 125 rows × 2 columns
 | 0xB2 | ASK |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2612,7 +2502,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2637,7 +2526,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2649,7 +2537,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -2671,7 +2558,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -2686,7 +2572,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2708,7 +2593,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -2735,7 +2619,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2744,7 +2627,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -2756,7 +2638,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 31 rows × 2 columns
@@ -2795,7 +2676,6 @@ Dimensions: 31 rows × 2 columns
 | 0xE1C7 | K-CAN Kommunikationsfehler |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2810,7 +2690,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 31 rows × 5 columns
@@ -2849,7 +2728,6 @@ Dimensions: 31 rows × 5 columns
 | 0xE1C7 | 0x06 | 0x06 | 0x06 | 0x06 |
 | default | -- | -- | -- | -- |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 12 rows × 9 columns
@@ -2869,7 +2747,6 @@ Dimensions: 12 rows × 9 columns
 | 0x08 | error ID of M10 Drive: 0xD0 CD decoder Hardware error; 0xE0-EF Internal drive Error; 0xA0 Slege error/home switch not operating; 0xA2 Spindle (turn table) motor error; 0xC0-C1 Loader switch error; 0xC5 Loader eject error; 0xC3-C4 Loader insert error | Hex | - | unsigned char | - | - | - | - |
 | 0xFF | unbekannte Umweltbedingung | 1 | -- | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -2878,7 +2755,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 17 rows × 2 columns
@@ -2903,7 +2779,6 @@ Dimensions: 17 rows × 2 columns
 | 0x10B7 | ERR_KEY_MFL |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2918,7 +2793,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-iumweltmatrix"></a>
 ### IUMWELTMATRIX
 
 Dimensions: 8 rows × 5 columns
@@ -2934,7 +2808,6 @@ Dimensions: 8 rows × 5 columns
 | 0x10B7 | 0x11 | - | - | - |
 | 0x10B3 | - | - | - | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 12 rows × 9 columns
@@ -2954,7 +2827,6 @@ Dimensions: 12 rows × 9 columns
 | 0x12 | interior temperature in °C | Grad C | high | signed char | - | 1 | 1 | 0 |
 | 0xXY | unbekannte Umweltbedingung | 1 | - | unsigned int | - | 1 | 1 | 0 |
 
-<a id="table-twaveband"></a>
 ### TWAVEBAND
 
 Dimensions: 7 rows × 2 columns
@@ -2969,7 +2841,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | TRF |
 | 0x06 | Nicht definiert |
 
-<a id="table-tauxverbindung"></a>
 ### TAUXVERBINDUNG
 
 Dimensions: 6 rows × 2 columns
@@ -2983,7 +2854,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0400 | Aux In RSE BMW Individual |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-tverbindungfehlerart"></a>
 ### TVERBINDUNGFEHLERART
 
 Dimensions: 4 rows × 2 columns
@@ -2995,7 +2865,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Leitungsunterbrechung |
 | 0xFF | Nicht definiert |
 
-<a id="table-tdemutestatus"></a>
 ### TDEMUTESTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3006,7 +2875,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Stummschaltung aus |
 | 0xFF | Nicht definiert |
 
-<a id="table-tdemutesource"></a>
 ### TDEMUTESOURCE
 
 Dimensions: 5 rows × 2 columns
@@ -3019,7 +2887,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Beide Kopfhörer |
 | 0xFF | Nicht definiert |
 
-<a id="table-tsourcedemutestatus"></a>
 ### TSOURCEDEMUTESTATUS
 
 Dimensions: 7 rows × 2 columns
@@ -3034,7 +2901,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | RSE Kopfhörer rechts ein |
 | 0xFF | Nicht definiert |
 
-<a id="table-tverbauroutine"></a>
 ### TVERBAUROUTINE
 
 Dimensions: 6 rows × 2 columns
@@ -3048,7 +2914,6 @@ Dimensions: 6 rows × 2 columns
 | 0x00000100 | RAD ON Leitung |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-thwvariante"></a>
 ### THWVARIANTE
 
 Dimensions: 83 rows × 2 columns
@@ -3139,7 +3004,6 @@ Dimensions: 83 rows × 2 columns
 | 0x02040010 | RearSeatEntertainment High mit Funktion Video-in als China/Korea-Variante |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-thwlieferant"></a>
 ### THWLIEFERANT
 
 Dimensions: 7 rows × 2 columns
@@ -3154,7 +3018,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Fuba |
 | 0xFF | Nicht definiert |
 
-<a id="table-thweinheit"></a>
 ### THWEINHEIT
 
 Dimensions: 3 rows × 2 columns
@@ -3165,7 +3028,6 @@ Dimensions: 3 rows × 2 columns
 | 0x00000002 | Zweizeilendisplay |
 | 0xFF | Nicht definiert |
 
-<a id="table-ttunerri"></a>
 ### TTUNERRI
 
 Dimensions: 5 rows × 2 columns
@@ -3178,7 +3040,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Leitungsunterbrechung |
 | 0xFF | Nicht definiert |
 
-<a id="table-tkanalfehlerart"></a>
 ### TKANALFEHLERART
 
 Dimensions: 5 rows × 2 columns
@@ -3191,7 +3052,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Außerhalb Toleranz |
 | 0xFF | Nicht definiert |
 
-<a id="table-tapplication"></a>
 ### TAPPLICATION
 
 Dimensions: 8 rows × 2 columns
@@ -3207,7 +3067,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | SDARS |
 | 0xFF | Nicht definiert |
 
-<a id="table-tapplicationrunningstatus"></a>
 ### TAPPLICATIONRUNNINGSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3218,7 +3077,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Applikation gestartet |
 | 0xFF | Nicht definiert |
 
-<a id="table-tapplicationactivationstatus"></a>
 ### TAPPLICATIONACTIVATIONSTATUS
 
 Dimensions: 12 rows × 2 columns
@@ -3238,7 +3096,6 @@ Dimensions: 12 rows × 2 columns
 | 0x22 | Aktiviert durch Codierung und SWT Freischaltcode eingespielt |
 | 0xFF | Nicht definiert |
 
-<a id="table-tinsertedmedium"></a>
 ### TINSERTEDMEDIUM
 
 Dimensions: 6 rows × 2 columns
@@ -3252,7 +3109,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Flashspeicher Medium ist eingelegt |
 | 0xFF | Nicht definiert |
 
-<a id="table-tklangzeichen"></a>
 ### TKLANGZEICHEN
 
 Dimensions: 7 rows × 2 columns
@@ -3267,7 +3123,6 @@ Dimensions: 7 rows × 2 columns
 | 0x11 | PDC_Sample |
 | 0xFF | Nicht definiert |
 
-<a id="table-tradonlead"></a>
 ### TRADONLEAD
 
 Dimensions: 3 rows × 2 columns
@@ -3278,7 +3133,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | ein |
 | 0xFF | Nicht definiert |
 
-<a id="table-ttaste"></a>
 ### TTASTE
 
 Dimensions: 22 rows × 2 columns
@@ -3308,7 +3162,6 @@ Dimensions: 22 rows × 2 columns
 | 0x35 | Preset 6 |
 | 0xFF | Nicht definiert |
 
-<a id="table-taudiokanal"></a>
 ### TAUDIOKANAL
 
 Dimensions: 26 rows × 2 columns
@@ -3342,7 +3195,6 @@ Dimensions: 26 rows × 2 columns
 | 0x00800000 | Center hinten (Erweiterter Kanal, speziell Hochtöner wenn getrennte Hoch/Mitteltöner) |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-ttelmute"></a>
 ### TTELMUTE
 
 Dimensions: 3 rows × 2 columns
@@ -3353,7 +3205,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Tel-Mute aktiv |
 | 0xFF | Nicht definiert |
 
-<a id="table-ttunersuchlauf"></a>
 ### TTUNERSUCHLAUF
 
 Dimensions: 4 rows × 2 columns
@@ -3365,7 +3216,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Stopp |
 | 0xFF | Nicht definiert |
 
-<a id="table-tantennadiag"></a>
 ### TANTENNADIAG
 
 Dimensions: 3 rows × 2 columns
@@ -3376,7 +3226,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Antennendiagnose NIO |
 | 0xFF | Nicht definiert |
 
-<a id="table-tteststatus"></a>
 ### TTESTSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3390,7 +3239,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Test unterbrochen |
 | 0xFF | Nicht definiert |
 
-<a id="table-tantenne"></a>
 ### TANTENNE
 
 Dimensions: 13 rows × 2 columns
@@ -3411,7 +3259,6 @@ Dimensions: 13 rows × 2 columns
 | 0x00000400 | Bluetooth Antenne |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-tantennefehlerart"></a>
 ### TANTENNEFEHLERART
 
 Dimensions: 5 rows × 2 columns
@@ -3424,7 +3271,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Falscher Antennfuß oder Diversity |
 | 0xFF | Nicht definiert |
 
-<a id="table-taudiosystem"></a>
 ### TAUDIOSYSTEM
 
 Dimensions: 5 rows × 2 columns
@@ -3437,7 +3283,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | M Individual Sound |
 | 0xFF | Nicht definiert |
 
-<a id="table-ttp"></a>
 ### TTP
 
 Dimensions: 4 rows × 2 columns
@@ -3449,7 +3294,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | TP keine Änderung |
 | 0xFF | Nicht definiert |
 
-<a id="table-taf"></a>
 ### TAF
 
 Dimensions: 4 rows × 2 columns
@@ -3461,7 +3305,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | AF keine Änderung |
 | 0xFF | Nicht definiert |
 
-<a id="table-trds"></a>
 ### TRDS
 
 Dimensions: 4 rows × 2 columns
@@ -3473,7 +3316,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | RDS keine Änderung |
 | 0xFF | Nicht definiert |
 
-<a id="table-tkeynr"></a>
 ### TKEYNR
 
 Dimensions: 4 rows × 2 columns
@@ -3485,7 +3327,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFE | Alle |
 | 0xFF | Alle Schlüssel |
 
-<a id="table-tantscan"></a>
 ### TANTSCAN
 
 Dimensions: 3 rows × 2 columns
@@ -3496,7 +3337,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Auf nächste FM Antenne schalten |
 | 255 | Nicht definiert |
 
-<a id="table-tinitialisierung"></a>
 ### TINITIALISIERUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3507,7 +3347,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | IO initialisiert |
 | 0xFF | NIO initialisiert |
 
-<a id="table-tlanguage"></a>
 ### TLANGUAGE
 
 Dimensions: 16 rows × 2 columns
@@ -3531,7 +3370,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | Russisch |
 | 0xFF | Nicht definiert |
 
-<a id="table-tluefterstatus"></a>
 ### TLUEFTERSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -3544,7 +3382,6 @@ Dimensions: 5 rows × 2 columns
 | 0xFE | Lüfter läuft mit unbekannter Drehzahl |
 | 0xFF | Nicht definiert |
 
-<a id="table-taudiosignal"></a>
 ### TAUDIOSIGNAL
 
 Dimensions: 4 rows × 2 columns
@@ -3556,7 +3393,6 @@ Dimensions: 4 rows × 2 columns
 | 0x06 | Gong |
 | 0xFF | Nicht definiert |
 
-<a id="table-tsearchingprocess"></a>
 ### TSEARCHINGPROCESS
 
 Dimensions: 6 rows × 2 columns
@@ -3570,7 +3406,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Test unterbrochen |
 | 0xFF | Nicht definiert |
 
-<a id="table-tlaufwerk"></a>
 ### TLAUFWERK
 
 Dimensions: 19 rows × 2 columns
@@ -3597,7 +3432,6 @@ Dimensions: 19 rows × 2 columns
 | 0x00000064 | DVD, USB und Flash Speicher |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-tpdcsignal"></a>
 ### TPDCSIGNAL
 
 Dimensions: 4 rows × 2 columns
@@ -3609,7 +3443,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | AUS |
 | 0xFF | Nicht definiert |
 
-<a id="table-tentsource"></a>
 ### TENTSOURCE
 
 Dimensions: 27 rows × 2 columns
@@ -3644,7 +3477,6 @@ Dimensions: 27 rows × 2 columns
 | 0x19 | Entertainment server |
 | 0xFF | Entertainmentquelle nicht definiert |
 
-<a id="table-tentsourcestatus"></a>
 ### TENTSOURCESTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3656,7 +3488,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Entertainmentquelle wird gesucht |
 | 0xFF | Nicht definiert |
 
-<a id="table-tantenna-number"></a>
 ### TANTENNA_NUMBER
 
 Dimensions: 7 rows × 2 columns
@@ -3671,7 +3502,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | ERROR_INVALID_RESULT |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-tfault-code"></a>
 ### TFAULT_CODE
 
 Dimensions: 7 rows × 2 columns
@@ -3686,7 +3516,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | ERROR_INVALID_RESULT |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-tschaltmodi"></a>
 ### TSCHALTMODI
 
 Dimensions: 5 rows × 3 columns
@@ -3699,7 +3528,6 @@ Dimensions: 5 rows × 3 columns
 | AUS | 0x00 | Radio ausschalten |
 | XY | 0xXY | Nicht definiert |
 
-<a id="table-tprocessstatus"></a>
 ### TPROCESSSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3713,7 +3541,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Prozess unterbrochen |
 | 0xFF | Nicht definiert |
 
-<a id="table-tradioeinausstatus"></a>
 ### TRADIOEINAUSSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3724,7 +3551,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Radio ein |
 | 0xFF | Nicht definiert |
 
-<a id="table-tselbsttestroutine"></a>
 ### TSELBSTTESTROUTINE
 
 Dimensions: 2 rows × 2 columns
@@ -3734,7 +3560,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00000000 | Alle Routinen |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-txdebug"></a>
 ### TXDEBUG
 
 Dimensions: 4 rows × 2 columns
@@ -3746,7 +3571,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | XDBG_ON |
 | 0x03 | XDBG_DEFAULT |
 
-<a id="table-tindividualdataliste"></a>
 ### TINDIVIDUALDATALISTE
 
 Dimensions: 1 rows × 17 columns

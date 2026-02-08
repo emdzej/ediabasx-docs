@@ -59,7 +59,6 @@
 - [_STEUERN_CALIBUN2OFFSET](#job-steuern-calibun2offset) - Kalibrierung der Offsetspannung UN_2 des DC_DC Wandlers Korrekturbereich +/- 2V in 0,1V Schritten von -128 bis +127 bzw. 0x00-0xFF uebergeben werden UDS : $31 RoutineControl Request Service Id
 - [_STEUERN_NVRAM_LESEN](#job-steuern-nvram-lesen) - Lesen des Steuergeraete-Speichers Als Argumente werden uebergeben: NVRAM, Start-Adresse, Anzahl der Datenbytes
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -78,7 +77,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -91,7 +89,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -108,7 +105,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -134,7 +130,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -176,7 +171,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -195,7 +189,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -213,7 +206,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -234,7 +226,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -263,7 +254,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -283,7 +273,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -304,7 +293,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -320,7 +308,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -342,7 +329,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -368,7 +354,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -410,7 +395,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -425,7 +409,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -445,7 +428,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -460,7 +442,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -479,7 +460,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -499,7 +479,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -514,7 +493,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -529,7 +507,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -546,7 +523,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -561,7 +537,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -576,7 +551,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -591,7 +565,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -607,7 +580,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -626,7 +598,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -646,7 +617,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -664,7 +634,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -680,7 +649,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pcu-test"></a>
 ### _STEUERN_PCU_TEST
 
 Dtagnose Steuerung des PCU UDS : $31 RoutineControl Request Service Id UDS : $F001 Sub-Parameter PCU_TEST
@@ -712,7 +680,6 @@ Dtagnose Steuerung des PCU UDS : $31 RoutineControl Request Service Id UDS : $F0
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-schreiben"></a>
 ### _SPEICHER_SCHREIBEN
 
 Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes und Datenbytes (Datenbytes durch Komma getrennt) Modus  : Default
@@ -734,7 +701,6 @@ Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speiche
 | _REQUEST | string | Hex-Auftrag an SG |
 | _RESPONSE | string | Hex-Antwort von SG |
 
-<a id="job-steuern-calibtemp"></a>
 ### _STEUERN_CALIBTEMP
 
 Kalibriert den Temperatursensor des DC_DC Wandlers UDS : $31 RoutineControl Request Service Id
@@ -753,7 +719,6 @@ Kalibriert den Temperatursensor des DC_DC Wandlers UDS : $31 RoutineControl Requ
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-testmessage"></a>
 ### _STEUERN_TESTMESSAGE
 
 entlädt den SuperCap sofort UDS : $31 RoutineControl Request Service Id UDS : $F004 Sub-Parameter
@@ -772,7 +737,6 @@ entlädt den SuperCap sofort UDS : $31 RoutineControl Request Service Id UDS : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-speicher-lesen"></a>
 ### _STEUERN_SPEICHER_LESEN
 
 Lesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes
@@ -794,7 +758,6 @@ Lesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegme
 | _REQUEST | string | Hex-Auftrag an SG |
 | _RESPONSE | string | Hex-Antwort von SG |
 
-<a id="job-steuern-calibi12u12"></a>
 ### _STEUERN_CALIBI12U12
 
 Kalibrierung Strom- und Spannungswerte des DC_DC Wandlers Es muessen immer alle vier Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS : $31 RoutineControl Request Service Id
@@ -816,7 +779,6 @@ Kalibrierung Strom- und Spannungswerte des DC_DC Wandlers Es muessen immer alle 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-calibun2offset"></a>
 ### _STEUERN_CALIBUN2OFFSET
 
 Kalibrierung der Offsetspannung UN_2 des DC_DC Wandlers Korrekturbereich +/- 2V in 0,1V Schritten von -128 bis +127 bzw. 0x00-0xFF uebergeben werden UDS : $31 RoutineControl Request Service Id
@@ -835,7 +797,6 @@ Kalibrierung der Offsetspannung UN_2 des DC_DC Wandlers Korrekturbereich +/- 2V 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-nvram-lesen"></a>
 ### _STEUERN_NVRAM_LESEN
 
 Lesen des Steuergeraete-Speichers Als Argumente werden uebergeben: NVRAM, Start-Adresse, Anzahl der Datenbytes
@@ -1031,7 +992,6 @@ _No arguments._
 - [RES_0XDA57](#table-res-0xda57) (6 × 10)
 - [TAB_PCU_TRENNELEMENT](#table-tab-pcu-trennelement) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -1105,7 +1065,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 115 rows × 2 columns
@@ -1228,7 +1187,6 @@ Dimensions: 115 rows × 2 columns
 | 0x0000A8 | Wanyu |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1254,7 +1212,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1279,7 +1236,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -1311,7 +1267,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1384,7 +1339,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1397,7 +1351,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1410,7 +1363,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1423,7 +1375,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1449,7 +1400,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1460,7 +1410,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1469,7 +1418,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -1479,7 +1427,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 41 rows × 3 columns
@@ -1528,7 +1475,6 @@ Dimensions: 41 rows × 3 columns
 | 0xD49402 | DM_EVENT_ZEITBOTSCHAFTTIMEOUT_ZGW | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1542,7 +1488,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 16 rows × 9 columns
@@ -1566,7 +1511,6 @@ Dimensions: 16 rows × 9 columns
 | 0x4010 | Status_TE | 0-n | - | 0xff | Status_TE | - | - | - |
 | 0x4011 | DSPSTAT | hex | - | unsigned char | - | - | - | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 12 rows × 3 columns
@@ -1586,7 +1530,6 @@ Dimensions: 12 rows × 3 columns
 | 0xD49403 | VSM_EVENT_VEHICLESTATE | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1598,7 +1541,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 16 rows × 9 columns
@@ -1622,7 +1564,6 @@ Dimensions: 16 rows × 9 columns
 | 0x4010 | Status_TE | 0-n | - | 0xff | Status_TE | - | - | - |
 | 0x4011 | DSPSTAT | hex | - | unsigned int | - | - | - | - |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 6 rows × 16 columns
@@ -1636,7 +1577,6 @@ Dimensions: 6 rows × 16 columns
 | SC_HISTORIE | 0xDA5D | - | Status Supercap Historie; Supercap Historie löschen | - | - | - | - | - | - | - | - | - | 2E;22 | ARG_0xDA5D | RES_0xDA5D |
 | STEUERN_TAUSCH_ENERGIESPEICHER_REGISTRIEREN | 0xDBBD | - | Der Tausch des Energiespeichers wird im Steuergerät registriert. Einige Eingangswerte werden auf Default gesetzt. | - | - | - | - | - | - | - | - | - | 31 | - | - |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns
@@ -1656,7 +1596,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-trip-flags"></a>
 ### TRIP_FLAGS
 
 Dimensions: 17 rows × 2 columns
@@ -1681,7 +1620,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | TZ1 Signal: Über-/Unterspannung in Netz1 TZ2 Signal: Überspannung in Netz2 TZ3 Signal: Überstrom in Netz1 und Trip Hold Signal TZ4 Signal: Überstrom in Netz2  |
 | 0xFF | ungültiger Wert |
 
-<a id="table-vierdraht-st-fehler"></a>
 ### VIERDRAHT_ST_FEHLER
 
 Dimensions: 8 rows × 2 columns
@@ -1697,7 +1635,6 @@ Dimensions: 8 rows × 2 columns
 | 0x08 | undefinierter Bereich |
 | 0xff | ungueltiger Wert |
 
-<a id="table-phasenfehlerhaft"></a>
 ### PHASENFEHLERHAFT
 
 Dimensions: 9 rows × 2 columns
@@ -1714,7 +1651,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Phase 1 fehlerhaft; Phase 2 fehlerhaft; Phase 3 fehlerhaft;  |
 | 0xff | ungueltiger Wert |
 
-<a id="table-status-te"></a>
 ### STATUS_TE
 
 Dimensions: 12 rows × 2 columns
@@ -1734,7 +1670,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0b | WREL_OPEN_OR_SHORT |
 | 0xff | ungueltiger Wert |
 
-<a id="table-res-0xda5d"></a>
 ### RES_0XDA5D
 
 Dimensions: 165 rows × 10 columns
@@ -1907,7 +1842,6 @@ Dimensions: 165 rows × 10 columns
 | STAT_WIDERSTAND_NACH_X_BETRIEBSSTUNDEN_50_WERT | Ohm | - | unsigned int | - | - | - | 100000.0 | - | Widerstand des Supercaps alle 100 Betriebsstunden |
 | STAT_SC_QELAD_MSA_WERT | C | - | unsigned long | - | - | 989.0 | 18.0 | - | Verbrauchte Ladungsmenge aus BNE-Speicher in MSA Stoppphase  |
 
-<a id="table-arg-0xda5d"></a>
 ### ARG_0XDA5D
 
 Dimensions: 1 rows × 12 columns
@@ -1916,7 +1850,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SC_HISTORIE_LOESCHEN | 0/1 | - | unsigned char | - | - | - | - | - | - | - | Historie: 0: -; 1: löschen |
 
-<a id="table-res-0xda58"></a>
 ### RES_0XDA58
 
 Dimensions: 2 rows × 10 columns
@@ -1926,7 +1859,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SC_SPANNUNGSFLAG | 0-n | - | unsigned char | - | TAB_PCU_SC_SPANNUNGSFLAG | - | - | - | Spannungsflag Vierdrahtschnittstelle  |
 | STAT_SC_TEMPERATUR_WERT | °C | - | int | - | - | - | 10.0 | -100.0 | Temperatur Vierdrahtschnittstelle  |
 
-<a id="table-tab-pcu-sc-spannungsflag"></a>
 ### TAB_PCU_SC_SPANNUNGSFLAG
 
 Dimensions: 6 rows × 2 columns
@@ -1940,7 +1872,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Statusflagfehler |
 | 0xFF | Ungueltiger Status |
 
-<a id="table-res-0xda59"></a>
 ### RES_0XDA59
 
 Dimensions: 1 rows × 10 columns
@@ -1949,7 +1880,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TRENNELEMENT | 0-n | - | unsigned char | - | TAB_PCU_TRENNELEMENT | - | - | - | Trennelementzustand |
 
-<a id="table-arg-0xda59"></a>
 ### ARG_0XDA59
 
 Dimensions: 1 rows × 12 columns
@@ -1958,7 +1888,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TRENNELEMENT | 0/1 | - | unsigned char | - | - | - | - | - | - | - | Trennelement: 0: öffnen; 1: schließen; |
 
-<a id="table-res-0xda5c"></a>
 ### RES_0XDA5C
 
 Dimensions: 72 rows × 10 columns
@@ -2038,7 +1967,6 @@ Dimensions: 72 rows × 10 columns
 | STAT_BEREICH_U9_T7_WERT | - | - | unsigned long | - | - | - | - | - | Spannungsbereich U > 19,2V im Temperaturbereich 50°C < T < 60°C |
 | STAT_BEREICH_U9_T8_WERT | - | - | unsigned long | - | - | - | - | - | Spannungsbereich U > 19,2V  im Temperaturbereich T > 60°C |
 
-<a id="table-arg-0xda5c"></a>
 ### ARG_0XDA5C
 
 Dimensions: 1 rows × 12 columns
@@ -2047,7 +1975,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TABELLENSPEICHER_LOESCHEN | 0/1 | - | unsigned char | - | - | - | - | - | - | - | Tabellenspeicher: 0: -; 1: löschen |
 
-<a id="table-res-0xda57"></a>
 ### RES_0XDA57
 
 Dimensions: 6 rows × 10 columns
@@ -2061,7 +1988,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_TEMPERATUR_WERT | °C | - | int | - | - | - | 10.0 | -100.0 | Temperatur des DC-DC-Wandlers |
 | STAT_TRENNELEMENTZUSTAND | 0-n | - | unsigned char | - | TAB_PCU_TRENNELEMENT | - | - | - | Status Trennelement |
 
-<a id="table-tab-pcu-trennelement"></a>
 ### TAB_PCU_TRENNELEMENT
 
 Dimensions: 4 rows × 2 columns

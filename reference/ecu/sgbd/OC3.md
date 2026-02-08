@@ -38,7 +38,6 @@
 - [STATUS_LESEN](#job-status-lesen) - Status des OC-3 lesen Read status of OC-3
 - [OC3_DATEN_SCHREIBEN](#job-oc3-daten-schreiben) - Codierung der Haenddlernummer und Freigabe des OC-3 Systems 
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -57,7 +56,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -70,7 +68,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -94,7 +91,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob
@@ -109,7 +105,6 @@ _No arguments._
 | ID_COD_INDEX | int | Codier-Index |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -122,7 +117,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -135,7 +129,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -148,7 +141,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen
@@ -163,7 +155,6 @@ _No arguments._
 | SERIENNUMMER | string | Seriennummer des Steuergeraets BCD-codiert |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Error memory quicktest High-Konzept nach Lastenheft
@@ -177,7 +168,6 @@ _No arguments._
 | JOB_STATUS | string | normalerweise OKAY |
 | F_ANZ | int | Anzahl Fehler Number of errors |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Read error memory
@@ -209,7 +199,6 @@ _No arguments._
 | F_UW2_WERT | long | Wert der 2. Umweltbedingung |
 | F_UW2_EINH | string | Einheit der 2. Umweltbedingung (hier: immer Min.) |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher lesen Read memory
@@ -230,7 +219,6 @@ Speicher lesen Read memory
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Speicherinhalt |
 
-<a id="job-code-lesen"></a>
 ### CODE_LESEN
 
 16 Byte aus Parametersatz BLOCKNR lesen Read 16 bytes from block BLOCKNR stated
@@ -248,7 +236,6 @@ Speicher lesen Read memory
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Spezifizierte Parameterdaten Specified parameterdata |
 
-<a id="job-sg-login"></a>
 ### SG_LOGIN
 
 Berechtigung fuer EEPROM-Zugriffe Login to ECU
@@ -261,7 +248,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Read codingdata
@@ -279,7 +265,6 @@ Codierdaten lesen Read codingdata
 | CODIER_DATEN | binary | Codierdaten Codingdata |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren Write and check codingdata
@@ -296,7 +281,6 @@ Codierdaten schreiben und verifizieren Write and check codingdata
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben Write codingdata
@@ -313,7 +297,6 @@ Codierdaten schreiben Write codingdata
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status des OC-3 lesen Read status of OC-3
@@ -341,7 +324,6 @@ _No arguments._
 | STAT_DOM_2 | int | Wahrscheinlichkeit Kl.2 |
 | STAT_DOM_3 | int | Wahrscheinlichkeit Kl.3 |
 
-<a id="job-oc3-daten-schreiben"></a>
 ### OC3_DATEN_SCHREIBEN
 
 Codierung der Haenddlernummer und Freigabe des OC-3 Systems 
@@ -374,7 +356,6 @@ Codierung der Haenddlernummer und Freigabe des OC-3 Systems
 - [FUMWELTTEXTE](#table-fumwelttexte) (2 × 9)
 - [DIGITALARGUMENT](#table-digitalargument) (17 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -395,7 +376,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -479,7 +459,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -508,7 +487,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -517,7 +495,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -560,7 +537,6 @@ Dimensions: 35 rows × 2 columns
 | 0x27 | FRAM Fehler |
 | 0xFF | Unbekannter Fehler |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -569,7 +545,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 0xFF | 0x01 | 0x02 | 0x08 | 0x09 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -582,7 +557,6 @@ Dimensions: 5 rows × 2 columns
 | 0x09 | Fehler sporadisch |
 | 0xFF | -- |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -591,7 +565,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | default | 0x02 | 0x01 | 0x01 | 0x02 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -601,7 +574,6 @@ Dimensions: 2 rows × 9 columns
 | 0x01 | Fehlerbeginn_std | Std. | -- | long | -- | -- | -- | -- |
 | 0x02 | Fehlerbeginn_min | Min. | -- | long | -- | -- | -- | -- |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns

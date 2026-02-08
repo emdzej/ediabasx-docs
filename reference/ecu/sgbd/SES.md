@@ -27,7 +27,6 @@
 - [SELBSTTEST](#job-selbsttest) - startet den Selbsttest Ausgabe 2 Toene AD-DA Mikro Empfang
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -46,7 +45,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer BMW-TELEFON
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer SES
@@ -85,7 +82,6 @@ _No arguments._
 | ID_SERIEN_NR | string | Seriennummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -107,7 +103,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary |  |
 | _TEL_ANTWORT1 | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -121,7 +116,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 startet den Selbsttest Ausgabe 2 Toene AD-DA Mikro Empfang
@@ -134,7 +128,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -156,7 +149,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (3 × 2)
 - [FARTTEXTE](#table-farttexte) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -170,7 +162,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 38 rows × 2 columns
@@ -216,7 +207,6 @@ Dimensions: 38 rows × 2 columns
 | 0x37 | Dunlop |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -227,7 +217,6 @@ Dimensions: 3 rows × 2 columns
 | 0x04 | Speicherfehler |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns

@@ -204,7 +204,6 @@
 - [STATUS_UTDT_CC_MESS](#job-status-utdt-cc-mess) - NUTZDATEN_CHECK-CONTROL_MELDUNG KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $9E Index fuer UTDT_CC_MESS $01 ReportCurrentState Modus  : Default
 - [STATUS_VEH_CO](#job-status-veh-co) - FAHRZEUGZUSTAND KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $9F Index fuer VEH_CO $01 ReportCurrentState Modus  : Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -223,7 +222,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -236,7 +234,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -252,7 +249,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -269,7 +265,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -302,7 +297,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -329,7 +323,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -371,7 +364,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -390,7 +382,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -408,7 +399,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -429,7 +419,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -450,7 +439,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -470,7 +458,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2000 dtcShadowMemory
@@ -497,7 +484,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2001 - $20FF dtcShadowMemoryEntry Modus: Default
@@ -540,7 +526,6 @@ Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCShadowMemory Modus  : Default
@@ -555,7 +540,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -570,7 +554,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -591,7 +574,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $0E Time controlled PowerDown oder b)       $05 PowerDown $00 all ECU Modus  : Default
@@ -610,7 +592,6 @@ SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -632,7 +613,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speicherse
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -650,7 +630,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -668,7 +647,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-status-bo-pres"></a>
 ### STATUS_BO_PRES
 
 Lesen Ansprechdruck Boil-Off KWP2000: $21 ReadDataByLocalIdentifier Modus  : Default
@@ -683,7 +661,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-wpda-les"></a>
 ### STATUS_WPDA_LES
 
 Lesen Wärmeleistung PDA KWP2000: $21 ReadDataByLocalIdentifier Modus  : Default
@@ -698,7 +675,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-wpbo-les"></a>
 ### STATUS_WPBO_LES
 
 Lesen Wärmeleistung PBO KWP2000: $21 ReadDataByLocalIdentifier Modus  : Default
@@ -713,7 +689,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-start-dicht-test"></a>
 ### START_DICHT_TEST
 
 Dichtigkeitstest anfangen KWP2000: $31 StartRoutineByLocalIdentifier $20 StartDichtigkeitsTest Modus  : Default
@@ -728,7 +703,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-stop-dicht-test"></a>
 ### STOP_DICHT_TEST
 
 Dichtigkeitstest aufhören KWP2000: $32 StopRoutineByLocalIdentifier $20 StopDichtigkeitsTest Modus  : Default
@@ -743,7 +717,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-rout-res-dicht-test"></a>
 ### ROUT_RES_DICHT_TEST
 
 Ergebnisse des Dichtigkeitstests abfragen KWP2000: $33 RequestRoutineResultsByLocalIdentifier $20 DichtigkeitsTest Modus  : Default
@@ -775,7 +748,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-anzahl-letzten-dicht-test"></a>
 ### ANZAHL_LETZTEN_DICHT_TEST
 
 Anzahl der Tage seit dem letzten Dichtigkeitstest KWP2000: $21 ReadDataByLocalIdentifier $10 AnzahlTagenLetzenDichtTest Modus  : Default
@@ -791,7 +763,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | ANZAHL_TAGEN | unsigned int | Normal Bereich 0 bis 65535 Tage I.O. Bereich 0 bis 99 Tage |
 
-<a id="job-start-vorlauf-entspannen"></a>
 ### START_VORLAUF_ENTSPANNEN
 
 H2-Vorlaufleitung entspannen KWP2000: $31 StartRoutineByLocalIdentifier $21 StartVorlaufEntspannung Modus  : Default
@@ -806,7 +777,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-start-zugang-tank"></a>
 ### START_ZUGANG_TANK
 
 Zugang zum Tank bzw. zur Entnahmeleitung KWP2000: $31 StartRoutineByLocalIdentifier $22 StartZugangTankEntnahme Modus  : Default
@@ -825,7 +795,6 @@ Zugang zum Tank bzw. zur Entnahmeleitung KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-stop-zugang-tank-entnahme"></a>
 ### STOP_ZUGANG_TANK_ENTNAHME
 
 ZugangTank aufhören KWP2000: $32 StopRoutineByLocalIdentifier $22 Stop ZugangTankt Modus  : Default
@@ -840,7 +809,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-start-gaswarn-test"></a>
 ### START_GASWARN_TEST
 
 Test der Gaswarn-LED's starten KWP2000: $31 StartRoutineByLocalIdentifier $23 Gas Warn Test Modus  : Default
@@ -855,7 +823,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-start-boil-off-test"></a>
 ### START_BOIL_OFF_TEST
 
 Boil Off Test beim nächsten H2-Betrieb auslösen KWP2000: $31 StartRoutineByLocalIdentifier $24 Boil Off Test Modus  : Default
@@ -870,7 +837,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-start-kalibr-mass-test"></a>
 ### START_KALIBR_MASS_TEST
 
 Kalibrierung der Füllmassenerfassung starten KWP2000: $31 StartRoutineByLocalIdentifier $25 Kalibrierung Modus  : Default
@@ -885,7 +851,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-start-bef-ent-druckspeicher"></a>
 ### START_BEF_ENT_DRUCKSPEICHER
 
 Befüllen oder Entleeren des Druckspeichers starten KWP2000: $31 StartRoutineByLocalIdentifier $26 Befüllen/Entleeren des Druckspeichers Modus  : Default
@@ -904,7 +869,6 @@ Befüllen oder Entleeren des Druckspeichers starten KWP2000: $31 StartRoutineByL
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-stop-bef-ent-druckspeicher"></a>
 ### STOP_BEF_ENT_DRUCKSPEICHER
 
 Befüllen und Entleeren des Druckspeichers stoppen KWP2000: $32 StopRoutineByLocalIdentifier $26 Befüllen und Entleeren des Druckspeichers Modus  : Default
@@ -919,7 +883,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-start-allow-warm-btank"></a>
 ### START_ALLOW_WARM_BTANK
 
 Warmbetankung erlauben KWP2000: $31 StartRoutineByLocalIdentifier $27 Warmbetankung erlauben Modus  : Default
@@ -934,7 +897,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-start-reset-thermoshock"></a>
 ### START_RESET_THERMOSHOCK
 
 Thermoschockzaehler zuruecksetzen KWP2000: $31 StartRoutineByLocalIdentifier $28 Thermoschockzaehler zuruecksetzen Modus  : Default
@@ -949,7 +911,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-anzahl-thermoschocks"></a>
 ### ANZAHL_THERMOSCHOCKS
 
 Anzahl der Thermoschocks KWP2000: $21 ReadDataByLocalIdentifier $11 Anzahl der Thermoschocks Modus  : Default
@@ -965,7 +926,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | ANZAHL_THERMOSCHOCKS | unsigned int | Normalbereich 0 bis 65535 Thermoschocks |
 
-<a id="job-steuern-persis-daten-ruecksetzen"></a>
 ### STEUERN_PERSIS_DATEN_RUECKSETZEN
 
 Persistente Daten zuruecksetzen KWP2000: $31 StartRoutineByLocalIdentifier $29 Persistente Daten Ruecksetzen Modus  : Default
@@ -980,7 +940,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-em-reset-values"></a>
 ### EM_RESET_VALUES
 
 Energie Management Job - Rücksetzen der berechneten Werte KWP2000: $3B WriteDataByLocalIdentifier Modus  : Default
@@ -995,7 +954,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-em-bt-throughput-set"></a>
 ### EM_BT_THROUGHPUT_SET
 
 Energie Management Job - Setzen des Energiedurchsatzes KWP2000: $3B WriteDataByLocalIdentifier Modus  : Default
@@ -1014,7 +972,6 @@ Energie Management Job - Setzen des Energiedurchsatzes KWP2000: $3B WriteDataByL
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-em-f-sp-cl"></a>
 ### EM_F_SP_CL
 
 Energie Management Job - Betankungsfreigabe KWP2000: $3B WriteDataByLocalIdentifier Modus  : Default
@@ -1029,7 +986,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-auwp-h2-i"></a>
 ### STATUS_AUWP_H2_I
 
 Strom der H2-Hilfswasserpumpe KWP2000:  $30 InputOutputControlByLocalIdentifier $01 Index fuer AUWP_H2_I $01 ReportCurrentState Modus  : Default
@@ -1046,7 +1002,6 @@ _No arguments._
 | STAT_AUWP_H2_I_CD_WERT | real | AUWP_H2_I konditionierter Wert in Ampere Normal Bereich 0 bis 255 A |
 | STAT_AUWP_H2_I_CD_EINH | string | Einheit von AUWP_H2_I_CD |
 
-<a id="job-status-auwp-h2-temp"></a>
 ### STATUS_AUWP_H2_TEMP
 
 Temperatur der H2-Hilfswasserpumpe KWP2000:  $30 InputOutputControlByLocalIdentifier $02 Index fuer AUWP_H2_TEMP $01 ReportCurrentState Modus  : Default
@@ -1063,7 +1018,6 @@ _No arguments._
 | STAT_AUWP_H2_TEMP_CD_WERT | real | AUWP_H2_TEMP konditionierter Wert in °C Normal Bereich 0 bis 255 °C |
 | STAT_AUWP_H2_TEMP_CD_EINH | string | Einheit des konditionierten Werts von AUWP_H2_TEMP |
 
-<a id="job-status-auwp-h2-va"></a>
 ### STATUS_AUWP_H2_VA
 
 Variante der H2-Hilfswasserpumpe KWP2000:  $30 InputOutputControlByLocalIdentifier $03 Index fuer AUWP_H2_VA $01 ReportCurrentState Modus  : Default
@@ -1079,7 +1033,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_AUWP_H2_VA_CD_WERT | int | AUWP_H2_VA konditionierter Wert |
 
-<a id="job-status-auwp-h2-volt"></a>
 ### STATUS_AUWP_H2_VOLT
 
 Spannung der H2-Hilfswasserpumpe KWP2000:  $30 InputOutputControlByLocalIdentifier $04 Index fuer AUWP_H2_VOLT $01 ReportCurrentState Modus  : Default
@@ -1096,7 +1049,6 @@ _No arguments._
 | STAT_AUWP_H2_VOLT_CD_WERT | real | AUWP_H2_VOLT konditionierter Wert in Volt Normal Bereich 0 bis 25,5 V |
 | STAT_AUWP_H2_VOLT_CD_EINH | string | Einheit des konditionierten Werts von AUWP_H2_VOLT_CD |
 
-<a id="job-status-cal-info"></a>
 ### STATUS_CAL_INFO
 
 Kalibrierungsinfo KWP2000:  $30 InputOutputControlByLocalIdentifier $05 Index fuer CAL_INFO $01 ReportCurrentState Modus  : Default
@@ -1113,7 +1065,6 @@ _No arguments._
 | STAT_CAL_INFO_CD_NR | int | CAL_INFO konditionierter Wert 0h Kalibrierung erfolgreich abgeschlossen 1h Kalibrierung im Gange 2h Kalibrierung nie erfolgt 3h Kalibrierung fehlgeschlagen, Vorbedingung Temperatur verletzt 4h Kalibrierung fehlgeschlagen, Vorbedingung Druck verletzt 5h Kalibrierung fehlgeschlagen, Messwert außerhalb Gültigkeitsbereich 7h ungültig |
 | STAT_CAL_INFO_TEXT | string | Beschreibung CAL_INFO konditionierter Wert |
 
-<a id="job-status-cer-iden"></a>
 ### STATUS_CER_IDEN
 
 Protokollkennung KWP2000:  $30 InputOutputControlByLocalIdentifier $06 Index fuer CER_IDEN $01 ReportCurrentState Modus  : Default
@@ -1129,7 +1080,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_CER_IDEN_CD_WERT | int | CER_IDEN konditionierter Wert |
 
-<a id="job-status-dma-temp"></a>
 ### STATUS_DMA_TEMP
 
 Wert des 1ten Temperatursensors KWP2000:  $30 InputOutputControlByLocalIdentifier $07 Index fuer DMA_TEMP $01 ReportCurrentState Modus  : Default
@@ -1146,7 +1096,6 @@ _No arguments._
 | STAT_DMA_TEMP_V_WERT | real | DMA_TEMP validierter Wert in °C Normal Bereich -273 bis 227 °C |
 | STAT_DMA_TEMP_V_EINH | string | Einheit von DMA_TEMP_V |
 
-<a id="job-status-err-fl-lv-sen"></a>
 ### STATUS_ERR_FL_LV_SEN
 
 Fehler Füllungsgradsensoren_1_2 KWP2000:  $30 InputOutputControlByLocalIdentifier $08 Index fuer ERR_FL_LV_SEN $01 ReportCurrentState Modus  : Default
@@ -1163,7 +1112,6 @@ _No arguments._
 | STAT_ERR_FL_LV_SEN_CD_NR | int | ERR_FL_LV_SEN konditionierter Wert Bits 0 und 1 0...kein Fehler Sensor 1 1...Sensor 1 Fehlt 2...Kurzschluss Sensor 1 3...fehlerhafter Sensor 1 Bits 2 und 3: 0...Kein Fehler Sensor 2 1...Sensor 2 Fehlt 2...Kurzschluss Sensor 2 3...fehlerhafter Sensor 2 Bits 4 und 5: 0...Vorhalt 1...Vorhalt 2...Vorhalt 3...UNGÜLTIG" |
 | STAT_ERR_FL_LV_SEN_CD_TEXT | string | Beschreibung ERR_FL_LV_SEN konditionierter Wert |
 
-<a id="job-status-err-temp-sen"></a>
 ### STATUS_ERR_TEMP_SEN
 
 Fehler Temperatursensoren KWP2000:  $30 InputOutputControlByLocalIdentifier $09 Index fuer ERR_TEMP_SEN $01 ReportCurrentState Modus  : Default
@@ -1180,7 +1128,6 @@ _No arguments._
 | STAT_ERR_TEMP_SEN_CD_NR | int | ERR_TEMP_SEN konditionierter Wert Bits 0 und 1 0...kein Fehler Sensor 1 1...Sensor 1 Fehlt 2...Kurzschluss Sensor 1 3...fehlerhafter Sensor 1 Bits 2 und 3 0...kein Fehler Sensor 2 1...Sensor 2 Fehlt 2...Kurzschluss Sensor 2 3...fehlerhafter Sensor 2 |
 | STAT_ERR_TEMP_SEN_CD_TEXT | string | Beschreibung ERR_TEMP_SEN konditionierter Wert |
 
-<a id="job-status-grad-info"></a>
 ### STATUS_GRAD_INFO
 
 Gradienteninformation KWP2000:  $30 InputOutputControlByLocalIdentifier $0A Index fuer GRAD_INFO $01 ReportCurrentState Modus  : Default
@@ -1197,7 +1144,6 @@ _No arguments._
 | STAT_GRAD_INFO_CD_NR | int | GRAD_INFO konditionierter Wert 0h..Gradientenfilter initialisiert, Gradient nicht verletzt 1h..Gradientenfilter noch nicht initialisiert 2h..Gradientenfilter initialisiert, Gradient nach unten verletzt 4h..Gradientenfilter initialisiert, Gradient nach oben verletzt 7h..ungültig |
 | STAT_GRAD_INFO_CD_TEXT | string | Beschreibung GRAD_INFO konditionierter Wert |
 
-<a id="job-status-hs-boot-hyc"></a>
 ### STATUS_HS_BOOT_HYC
 
 Hy-Sensor_Kofferraum_H2-Konzentration KWP2000:  $30 InputOutputControlByLocalIdentifier $0B Index fuer HS_BOOT_HYC $01 ReportCurrentState Modus  : Default
@@ -1214,7 +1160,6 @@ _No arguments._
 | STAT_HS_BOOT_HYC_V_WERT | real | HS_BOOT_HYC validierter Wert Normal Bereich von 0% bis 4,4% |
 | STAT_HS_BOOT_HYC_V_EINH | string | Einheit von HS_BOOT_HYC_V |
 
-<a id="job-status-hs-boot-ll"></a>
 ### STATUS_HS_BOOT_LL
 
 Hy-Sensor_Kofferraum_Unterer_Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $0C Index fuer HS_BOOT_LL $01 ReportCurrentState Modus  : Default
@@ -1231,7 +1176,6 @@ _No arguments._
 | STAT_HS_BOOT_LL_CD_NR | int | HS_BOOT_LL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_BOOT_LL_CD_TEXT | string | Beschreibung HS_BOOT_LL konditionierter Wert |
 
-<a id="job-status-hs-boot-st-1"></a>
 ### STATUS_HS_BOOT_ST_1
 
 Hy-Sensor_Kofferraum_Status_1 KWP2000:  $30 InputOutputControlByLocalIdentifier $0D Index fuer HS_BOOT_ST_1 $01 ReportCurrentState Modus  : Default
@@ -1248,7 +1192,6 @@ _No arguments._
 | STAT_HS_BOOT_ST_1_CD_NR | int | HS_BOOT_ST_1 konditionierter Wert 0...NC 1...Minor Error 2...Minor functional error 3...Fatal functional error |
 | STAT_HS_BOOT_ST_1_CD_TEXT | string | Beschreibung HS_BOOT_ST_1 konditionierter Wert |
 
-<a id="job-status-hs-boot-ul"></a>
 ### STATUS_HS_BOOT_UL
 
 Hy-Sensor_Kofferraum_Oberer_Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $0E Index fuer HS_BOOT_UL $01 ReportCurrentState Modus  : Default
@@ -1265,7 +1208,6 @@ _No arguments._
 | STAT_HS_BOOT_UL_CD_NR | int | HS_BOOT_UL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_BOOT_UL_CD_TEXT | string | Beschreibung HS_BOOT_UL_CD konditionierter Wert |
 
-<a id="job-status-hs-eng-hyc"></a>
 ### STATUS_HS_ENG_HYC
 
 Hy-Sensor_Motor_H2-Konzentration KWP2000:  $30 InputOutputControlByLocalIdentifier $0F Index fuer HS_ENG_HYC $01 ReportCurrentState Modus  : Default
@@ -1282,7 +1224,6 @@ _No arguments._
 | STAT_HS_ENG_HYC_V_WERT | real | HS_ENG_HYC validierter Wert Normal Bereich von 0% bis 4,4% |
 | STAT_HS_ENG_HYC_V_EINH | string | Einheit von HS_ENG_HYC_V |
 
-<a id="job-status-hs-eng-ll"></a>
 ### STATUS_HS_ENG_LL
 
 Hy-Sensor Motor Unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $10 Index fuer HS_ENG_LL $01 ReportCurrentState Modus  : Default
@@ -1299,7 +1240,6 @@ _No arguments._
 | STAT_HS_ENG_LL_CD_NR | int | HS_ENG_LL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_ENG_LL_CD_TEXT | string | Beschreibung HS_ENG_LL konditionierter Wert |
 
-<a id="job-status-hs-eng-st-1"></a>
 ### STATUS_HS_ENG_ST_1
 
 Hy-Sensor Motor Status 1 KWP2000:  $30 InputOutputControlByLocalIdentifier $11 Index fuer HS_ENG_ST_1 $01 ReportCurrentState Modus  : Default
@@ -1316,7 +1256,6 @@ _No arguments._
 | STAT_HS_ENG_ST_1_CD_NR | int | HS_ENG_ST_1 konditionierter Wert 0...NC 1...Minor Error 2...Minor functional error 3...Fatal functional error |
 | STAT_HS_ENG_ST_1_CD_TEXT | string | Beschreibung HS_ENG_ST_1 konditionierter Wert |
 
-<a id="job-status-hs-eng-ul"></a>
 ### STATUS_HS_ENG_UL
 
 Hy-Sensor Motor Oberer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $12 Index fuer HS_ENG_UL $01 ReportCurrentState Modus  : Default
@@ -1333,7 +1272,6 @@ _No arguments._
 | STAT_HS_ENG_UL_CD_NR | int | HS_ENG_UL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_ENG_UL_CD_TEXT | string | Beschreibung HS_ENG_UL_CD konditionierter Wert |
 
-<a id="job-status-hs-futa-clt-hyc"></a>
 ### STATUS_HS_FUTA_CLT_HYC
 
 Hy-Sensor_TANK_KUPPLUNG_H2-Konzentration KWP2000:  $30 InputOutputControlByLocalIdentifier $13 Index fuer HS_FUTA_CLT_HYC $01 ReportCurrentState Modus  : Default
@@ -1350,7 +1288,6 @@ _No arguments._
 | STAT_HS_FUTA_CLT_HYC_V_WERT | real | HS_FUTA_CLT_HYC validierter Wert Normal Bereich von 0% bis 4,4% |
 | STAT_HS_FUTA_CLT_HYC_V_EINH | string | Einheit von HS_FUTA_CLT_HYC_V |
 
-<a id="job-status-hs-futa-clt-ll"></a>
 ### STATUS_HS_FUTA_CLT_LL
 
 Hy-Sensor Tank Kupplung Unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $14 Index fuer HS_FUTA_CLT_LL $01 ReportCurrentState Modus  : Default
@@ -1367,7 +1304,6 @@ _No arguments._
 | STAT_HS_FUTA_CLT_LL_CD_NR | int | HS_FUTA_CLT_LL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_FUTA_CLT_LL_CD_TEXT | string | Beschreibung HS_FUTA_CLT_LL konditionierter Wert |
 
-<a id="job-status-hs-futa-clt-st-1"></a>
 ### STATUS_HS_FUTA_CLT_ST_1
 
 Hy-Sensor Tank Kupplung Status 1 KWP2000:  $30 InputOutputControlByLocalIdentifier $15 Index fuer HS_FUTA_CLT_ST_1 $01 ReportCurrentState Modus  : Default
@@ -1384,7 +1320,6 @@ _No arguments._
 | STAT_HS_FUTA_CLT_ST_1_CD_NR | int | HS_FUTA_CLT_ST_1 konditionierter Wert 0...NC 1...Minor Error 2...Minor functional error 3...Fatal functional error |
 | STAT_HS_FUTA_CLT_ST_1_CD_TEXT | string | Beschreibung HS_FUTA_CLT_ST_1 konditionierter Wert |
 
-<a id="job-status-hs-futa-clt-ul"></a>
 ### STATUS_HS_FUTA_CLT_UL
 
 Hy-Sensor Tank Kupplung Oberer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $16 Index fuer HS_FUTA_CLT_UL $01 ReportCurrentState Modus  : Default
@@ -1401,7 +1336,6 @@ _No arguments._
 | STAT_HS_FUTA_CLT_UL_CD_NR | int | HS_FUTA_CLT_UL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_FUTA_CLT_UL_CD_TEXT | string | Beschreibung HS_FUTA_CLT_UL_CD konditionierter Wert |
 
-<a id="job-status-hs-pscmp-hyc"></a>
 ### STATUS_HS_PSCMP_HYC
 
 Hy-Sensor Fahrgastzelle H2-Konzentration KWP2000:  $30 InputOutputControlByLocalIdentifier $17 Index fuer HS_PSCMP_HYC $01 ReportCurrentState Modus  : Default
@@ -1418,7 +1352,6 @@ _No arguments._
 | STAT_HS_PSCMP_HYC_V_WERT | real | HS_PSCMP_HYC validierter Wert Normal Bereich von 0% bis 4,4% |
 | STAT_HS_PSCMP_HYC_V_EINH | string | Einheit von HS_PSCMP_HYC_V |
 
-<a id="job-status-hs-pscmp-ll"></a>
 ### STATUS_HS_PSCMP_LL
 
 Hy-Sensor Fahrgastzelle UntererGrenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $18 Index fuer HS_PSCMP_LL $01 ReportCurrentState Modus  : Default
@@ -1435,7 +1368,6 @@ _No arguments._
 | STAT_HS_PSCMP_LL_CD_NR | int | HS_PSCMP_LL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_PSCMP_LL_CD_TEXT | string | Beschreibung HS_PSCMP_LL konditionierter Wert |
 
-<a id="job-status-hs-pscmp-st-1"></a>
 ### STATUS_HS_PSCMP_ST_1
 
 Hy-Sensor Fahrgastzelle Status 1 KWP2000:  $30 InputOutputControlByLocalIdentifier $19 Index fuer HS_PSCMP_ST_1 $01 ReportCurrentState Modus  : Default
@@ -1452,7 +1384,6 @@ _No arguments._
 | STAT_HS_PSCMP_ST_1_CD_NR | int | HS_PSCMP_ST_1 konditionierter Wert 0...NC 1...Minor Error 2...Minor functional error 3...Fatal functional error |
 | STAT_HS_PSCMP_ST_1_CD_TEXT | string | Beschreibung HS_PSCMP_ST_1 konditionierter Wert |
 
-<a id="job-status-hs-pscmp-ul"></a>
 ### STATUS_HS_PSCMP_UL
 
 Hy-Sensor Fahrgastzelle Oberer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $1A Index fuer HS_PSCMP_UL $01 ReportCurrentState Modus  : Default
@@ -1469,7 +1400,6 @@ _No arguments._
 | STAT_HS_PSCMP_UL_CD_NR | int | HS_PSCMP_UL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_PSCMP_UL_CD_TEXT | string | Beschreibung HS_PSCMP_UL_CD konditionierter Wert |
 
-<a id="job-status-hs-scap-hyc"></a>
 ### STATUS_HS_SCAP_HYC
 
 Hy-Sensor Nebensystemkapsel H2-Konzentration KWP2000:  $30 InputOutputControlByLocalIdentifier $1B Index fuer HS_SCAP_HYC $01 ReportCurrentState Modus  : Default
@@ -1486,7 +1416,6 @@ _No arguments._
 | STAT_HS_SCAP_HYC_V_WERT | real | HS_SCAP_HYC validierter Wert Normal Bereich von 0% bis 4,4% |
 | STAT_HS_SCAP_HYC_V_EINH | string | Einheit von HS_SCAP_HYC_V |
 
-<a id="job-status-hs-scap-ll"></a>
 ### STATUS_HS_SCAP_LL
 
 Hy-Sensor Nebensystemkapsel Unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $1C Index fuer HS_SCAP_LL $01 ReportCurrentState Modus  : Default
@@ -1503,7 +1432,6 @@ _No arguments._
 | STAT_HS_SCAP_LL_CD_NR | int | HS_SCAP_LL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_SCAP_LL_CD_TEXT | string | Beschreibung HS_SCAP_LL konditionierter Wert |
 
-<a id="job-status-hs-scap-st-1"></a>
 ### STATUS_HS_SCAP_ST_1
 
 Hy-Sensor Nebensystemkapsel Status 1 KWP2000:  $30 InputOutputControlByLocalIdentifier $1D Index fuer HS_SCAP_ST_1 $01 ReportCurrentState Modus  : Default
@@ -1520,7 +1448,6 @@ _No arguments._
 | STAT_HS_SCAP_ST_1_CD_NR | int | HS_SCAP_ST_1 konditionierter Wert 0...NC 1...Minor Error 2...Minor functional error 3...Fatal functional error |
 | STAT_HS_SCAP_ST_1_CD_TEXT | string | Beschreibung HS_SCAP_ST_1 konditionierter Wert |
 
-<a id="job-status-hs-scap-ul"></a>
 ### STATUS_HS_SCAP_UL
 
 Hy-Sensor Nebensystemkapsel Oberer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier $1E Index fuer HS_SCAP_UL $01 ReportCurrentState Modus  : Default
@@ -1537,7 +1464,6 @@ _No arguments._
 | STAT_HS_SCAP_UL_CD_NR | int | HS_SCAP_UL konditionierter Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_HS_SCAP_UL_CD_TEXT | string | Beschreibung HS_SCAP_UL_CD konditionierter Wert |
 
-<a id="job-status-in-amb-p"></a>
 ### STATUS_IN_AMB_P
 
 Auslesen UMGEBUNG DRUCK Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $1F Index fuer IN_AMB_P $01 ReportCurrentState Modus  : Default
@@ -1554,7 +1480,6 @@ _No arguments._
 | STAT_IN_AMB_P_CD_WERT | real | IN_AMB_P konditionierter Wert Normal Bereich 0,47 bis 1,25 Bar |
 | STAT_IN_AMB_P_CD_EINH | string | Einheit des konditionierten Wert von IN_AMB_P |
 
-<a id="job-status-in-auwp-h2-err"></a>
 ### STATUS_IN_AUWP_H2_ERR
 
 Eingang Hilfswasserpumpe H2 Fehler KWP2000:  $30 InputOutputControlByLocalIdentifier $21 Index fuer IN_AUWP_H2_ERR $01 ReportCurrentState Modus  : Default
@@ -1571,7 +1496,6 @@ _No arguments._
 | STAT_IN_AUWP_H2_ERR_CD_NR | int | IN_AUWP_H2_ERR konditionierter Wert Bit 0: Nicht belegt Bit 1: Keine Drehzahlüberwachung Bit 2: wird geschrieben (siehe Bus-Ausgangssignale) Bit 3: Übertemperatur Bit 4: Blockierng Bit 5: Trockenlauf Bit 6: Falsche Spannung Bit 7: Deblockierung aktiv |
 | STAT_IN_AUWP_H2_ERR_CD_TEXT | string | Beschreibung IN_AUWP_H2_ERR konditionierter Wert |
 
-<a id="job-status-in-auwp-h2-rpm"></a>
 ### STATUS_IN_AUWP_H2_RPM
 
 EINGANG_HILFSWASSERPUMPE_H2_RPM KWP2000:  $30 InputOutputControlByLocalIdentifier $22 Index fuer IN_AUWP_H2_RPM $01 ReportCurrentState Modus  : Default
@@ -1588,7 +1512,6 @@ _No arguments._
 | STAT_IN_AUWP_H2_RPM_CD_NR | int | IN_AUWP_H2_RPM konditionierter Wert 0: Stopp und Rücksetzen Fehler 1..19: Betrieb im unüberwachten Modus (18..400 U/min) 20..250: Geregelter Betrieb im überwachten Modus (400..4500 U/min) 251: Nachlauf aktivieren (5 min, 1200 U/min) 252: Nachlauf aktivieren (2,5 min, 1200 U/min) 253: Nachlauf aktivieren (5 min, 700 U/min) 254: Nachlauf aktivieren (2,5 min, 700 U/min) 255: Nachlauf deaktivieren |
 | STAT_IN_AUWP_H2_RPM_CD_TEXT | string | Beschreibung IN_AUWP_H2_RPM konditionierter Wert |
 
-<a id="job-status-in-bn"></a>
 ### STATUS_IN_BN
 
 Eingang Bordnetz Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $23 Index fuer IN_BN $01 ReportCurrentState Modus  : Default
@@ -1605,7 +1528,6 @@ _No arguments._
 | STAT_IN_BN_CD_WERT | real | IN_BN konditionierter Wert Normal Bereich -1 bis 21 Volt Ungültig Wert = 64,535 |
 | STAT_IN_BN_CD_EINH | string | Einheit des konditionierten Wert von IN_BN |
 
-<a id="job-status-in-bo-p"></a>
 ### STATUS_IN_BO_P
 
 BOIL-OFF VALVE DRUCK Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $24 Index fuer IN_BO_P $01 ReportCurrentState Modus  : Default
@@ -1622,7 +1544,6 @@ _No arguments._
 | STAT_IN_BO_P_CD_WERT | real | IN_BO_P konditionierter Wert Normal Bereich 0,47 bis 8 Bar Ungültig Wert = 65,535 |
 | STAT_IN_BO_P_CD_EINH | string | Einheit des konditionierten Werts von IN_BO_P |
 
-<a id="job-status-in-col-exh-temp"></a>
 ### STATUS_IN_COL_EXH_TEMP
 
 KÜHLMITTEL AUSLASS TEMPERATUR Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $25 Index fuer IN_COL_EXH_TEMP $01 ReportCurrentState Modus  : Default
@@ -1639,7 +1560,6 @@ _No arguments._
 | STAT_IN_COL_EXH_TEMP_CD_WERT | real | IN_COL_EXH_TEMP konditionierter Wert Normal Bereich -40 bis +120 °C Ungültig Wert = 615,35 |
 | STAT_IN_COL_EXH_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_COL_EXH_TEMP |
 
-<a id="job-status-in-col-inl-temp"></a>
 ### STATUS_IN_COL_INL_TEMP
 
 KÜHLMITTEL EINLASS TEMPERATUR Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $26 Index fuer IN_COL_INL_TEMP $01 ReportCurrentState Modus  : Default
@@ -1656,7 +1576,6 @@ _No arguments._
 | STAT_IN_COL_INL_TEMP_CD_WERT | real | IN_COL_INL_TEMP konditionierter Wert Normal Bereich -40 bis +120 °C Ungültig Wert = 615,35 |
 | STAT_IN_COL_INL_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_COL_INL_TEMP |
 
-<a id="job-status-in-comp-temp"></a>
 ### STATUS_IN_COMP_TEMP
 
 KOMPRESSOR TEMPERATUR Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $27 Index fuer IN_COMP_TEMP $01 ReportCurrentState Modus  : Default
@@ -1673,7 +1592,6 @@ _No arguments._
 | STAT_IN_COMP_TEMP_CD_WERT | real | IN_COMP_TEMP konditionierter Wert Normal Bereich -40 bis +140 °C Ungültig Wert = 615,35 |
 | STAT_IN_COMP_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_COMP_TEMP |
 
-<a id="job-status-in-cr"></a>
 ### STATUS_IN_CR
 
 CRASH Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $28 Index fuer IN_CR $01 ReportCurrentState Modus  : Default
@@ -1690,7 +1608,6 @@ _No arguments._
 | STAT_IN_CR_CD_WERT | real | IN_CR konditionierter Wert Normal Bereich -1 bis 21 Volt Ungültig Wert = 64,535 |
 | STAT_IN_CR_CD_EINH | string | Einheit des konditionierten Werts von IN_CR |
 
-<a id="job-status-in-ftc-clo-1"></a>
 ### STATUS_IN_FTC_CLO_1
 
 TANKDECKEL GESCHLOSSEN Sensor 1 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $29 Index fuer IN_FTC_CLO_1 $01 ReportCurrentState Modus  : Default
@@ -1708,7 +1625,6 @@ _No arguments._
 | STAT_IN_FTC_CLO_1_CD_EINH | string | Einheit des konditionierten Werts von IN_FTC_CLO_1 |
 | STAT_IN_FTC_CLO_1_GESCHLOSSEN | int | 1 = Kontakt geschlossen (wenn < 10mA), 0 = Kontakt offen (wenn >= 10mA) |
 
-<a id="job-status-in-ftc-clo-2"></a>
 ### STATUS_IN_FTC_CLO_2
 
 TANKDECKEL GESCHLOSSEN Sensor 2 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $2A Index fuer IN_FTC_CLO_2 $01 ReportCurrentState Modus  : Default
@@ -1726,7 +1642,6 @@ _No arguments._
 | STAT_IN_FTC_CLO_2_CD_EINH | string | Einheit des konditionierten Werts von IN_FTC_CLO_2 |
 | STAT_IN_FTC_CLO_2_GESCHLOSSEN | int | 1 = Kontakt geschlossen (wenn < 10mA), 0 = Kontakt offen (wenn >= 10mA) |
 
-<a id="job-status-in-ftc-opn"></a>
 ### STATUS_IN_FTC_OPN
 
 TANKDECKEL OFFEN Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $2B Index fuer IN_FTC_OPN $01 ReportCurrentState Modus  : Default
@@ -1744,7 +1659,6 @@ _No arguments._
 | STAT_IN_FTC_OPN_CD_EINH | string | Einheit des konditionierten Werts von IN_FTC_OPN |
 | STAT_IN_FTC_OPN_GESCHLOSSEN | int | 1 = Kontakt geschlossen (wenn < 10mA), 0 = Kontakt offen (wenn >= 10mA) |
 
-<a id="job-status-in-fut-clt-temp"></a>
 ### STATUS_IN_FUT_CLT_TEMP
 
 TANK KUPPLUNG TEMPERATUR KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $20 Index fuer IN_FUT_CLT_TEMP $01 ReportCurrentState Modus  : Default
@@ -1761,7 +1675,6 @@ _No arguments._
 | STAT_IN_FUT_CLT_TEMP_CD_WERT | real | IN_FTC_OPN konditionierter Wert Normal Bereich -60°C bis 120°C Ungültig Wert = 595,53 |
 | STAT_IN_FUT_CLT_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_FUT_CLT_TEMP |
 
-<a id="job-status-in-futa-p-1"></a>
 ### STATUS_IN_FUTA_P_1
 
 TANK DRUCK Sensor 1 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $2C Index fuer IN_FUTA_P_1 $01 ReportCurrentState Modus  : Default
@@ -1778,7 +1691,6 @@ _No arguments._
 | STAT_IN_FUTA_P_1_CD_WERT | real | IN_FUTA_P_1 konditionierter Wert Normal Bereich 0,47 bis 8 Bar Ungültig Wert = 65,535 |
 | STAT_IN_FUTA_P_1_CD_EINH | string | Einheit des konditionierten Werts von IN_FUTA_P_1 |
 
-<a id="job-status-in-futa-p-2"></a>
 ### STATUS_IN_FUTA_P_2
 
 TANK DRUCK Sensor 2 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $2D Index fuer IN_FUTA_P_2 $01 ReportCurrentState Modus  : Default
@@ -1795,7 +1707,6 @@ _No arguments._
 | STAT_IN_FUTA_P_2_CD_WERT | real | IN_FUTA_P_2 konditionierter Wert Normal Bereich 0,47 bis 8 Bar Ungültig Wert = 65,535 |
 | STAT_IN_FUTA_P_2_CD_EINH | string | Einheit des konditionierten Werts von IN_FUTA_P_2 |
 
-<a id="job-status-in-ghy-cl-p"></a>
 ### STATUS_IN_GHY_CL_P
 
 GASFÖRMIGER-H2 STEUERLEITUNGS DRUCK Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $2E Index fuer IN_GHY_CL_P $01 ReportCurrentState Modus  : Default
@@ -1812,7 +1723,6 @@ _No arguments._
 | STAT_IN_GHY_CL_P_CD_WERT | real | IN_GHY_CL_P konditionierter Wert Normal Bereich 0,47 bis 22 Bar Ungültig Wert = 65,535 |
 | STAT_IN_GHY_CL_P_CD_EINH | string | Einheit des konditionierten Werts von IN_GHY_CL_P Normal Bereich 0 bis 21 Bar |
 
-<a id="job-status-in-heatex-temp"></a>
 ### STATUS_IN_HEATEX_TEMP
 
 WT TEILSTROM WARM TEMPERATUR Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $2F Index fuer IN_HEATEX_TEMP $01 ReportCurrentState Modus  : Default
@@ -1829,7 +1739,6 @@ _No arguments._
 | STAT_IN_HEATEX_TEMP_CD_WERT | real | IN_HEATEX_TEMP konditionierter Wert Normal Bereich -55 bis +120 °C Ungültig Wert = 600,35 |
 | STAT_IN_HEATEX_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_HEATEX_TEMP |
 
-<a id="job-status-in-lhy-cl-p"></a>
 ### STATUS_IN_LHY_CL_P
 
 FLÜSSIGER-H2 STEUERLEITUNGS DRUCK Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $30 Index fuer IN_LHY_CL_P $01 ReportCurrentState Modus  : Default
@@ -1846,7 +1755,6 @@ _No arguments._
 | STAT_IN_LHY_CL_P_CD_WERT | real | IN_LHY_CL_P konditionierter Wert Normal Bereich 0,47 bis 22 Bar Ungültig Wert = 65,535 |
 | STAT_IN_LHY_CL_P_CD_EINH | string | Einheit von IN_LHY_CL_P konditionierten Wert in Bar |
 
-<a id="job-status-in-mpva-in-temp"></a>
 ### STATUS_IN_MPVA_IN_TEMP
 
 WÄRMETAUSCHER TEMPERATUR Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $31 Index fuer IN_MPVA_IN_TEMP $01 ReportCurrentState Modus  : Default
@@ -1863,7 +1771,6 @@ _No arguments._
 | STAT_IN_MPVA_IN_TEMP_CD_WERT | real | IN_MPVA_IN_TEMP konditionierter Wert Normal Bereich -55 bis +120 °C Ungültig Wert = 600,35 |
 | STAT_IN_MPVA_IN_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_MPVA_IN_TEMP |
 
-<a id="job-status-in-mpva-sp-temp"></a>
 ### STATUS_IN_MPVA_SP_TEMP
 
 MOTOR ABSPERRVENTIL TEMPERATUR Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $32 Index fuer IN_MPVA_SP_TEMP $01 ReportCurrentState Modus  : Default
@@ -1880,7 +1787,6 @@ _No arguments._
 | STAT_IN_MPVA_SP_TEMP_CD_WERT | real | IN_MPVA_SP_TEMP konditionierter Wert Normal Bereich -55 bis +120 °C Ungültig Wert = 600,35 |
 | STAT_IN_MPVA_SP_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_MPVA_SP_TEMP |
 
-<a id="job-status-in-ofi-pr-1"></a>
 ### STATUS_IN_OFI_PR_1
 
 ÜBERLAUFSICHERUNG Sensor 1 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $33 Index fuer IN_OFI_PR_1 $01 ReportCurrentState Modus  : Default
@@ -1899,7 +1805,6 @@ _No arguments._
 | STAT_IN_OFI_PR_1_NR | int | 1=nicht überfüllt, 2=überfüllt |
 | STAT_IN_OFI_PR_1_TEXT | string | nicht überfüllt, überfüllt |
 
-<a id="job-status-in-ofi-pr-2"></a>
 ### STATUS_IN_OFI_PR_2
 
 ÜBERLAUFSICHERUNG Sensor 2 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $34 Index fuer IN_OFI_PR_2 $01 ReportCurrentState Modus  : Default
@@ -1918,7 +1823,6 @@ _No arguments._
 | STAT_IN_OFI_PR_2_NR | int | 1=nicht überfüllt, 2=überfüllt |
 | STAT_IN_OFI_PR_2_TEXT | string | nicht überfüllt, überfüllt |
 
-<a id="job-status-in-ox-temp"></a>
 ### STATUS_IN_OX_TEMP
 
 BOIL OFF MANAGAMENT SYSTEM TEMPERATUR Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $35 Index fuer IN_OX_TEMP $01 ReportCurrentState Modus  : Default
@@ -1935,7 +1839,6 @@ _No arguments._
 | STAT_IN_OX_TEMP_CD_WERT | real | IN_OX_TEMP konditionierter Wert Normal Bereich -40 bis 787,6 °C Ungültig Wert = 1270,7 |
 | STAT_IN_OX_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_OX_TEMP |
 
-<a id="job-status-in-prs-accu-p"></a>
 ### STATUS_IN_PRS_ACCU_P
 
 PRS DRUCKSPEICHER DRUCK Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $36 Index fuer IN_PRS_ACCU_P $01 ReportCurrentState Modus  : Default
@@ -1952,7 +1855,6 @@ _No arguments._
 | STAT_IN_PRS_ACCU_P_CD_WERT | real | IN_PRS_ACCU_P konditionierter Wert Normal Bereich 0,47 bis 22 Bar Ungültig Wert = 65,535 |
 | STAT_IN_PRS_ACCU_P_CD_EINH | string | Einheit des konditionierten Werts von IN_PRS_ACCU_P |
 
-<a id="job-status-in-strt-ilk-1"></a>
 ### STATUS_IN_STRT_ILK_1
 
 STARTER SPERRE Sensor 1 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $37 Index fuer IN_STRT_ILK_1 $01 ReportCurrentState Modus  : Default
@@ -1969,7 +1871,6 @@ _No arguments._
 | STAT_IN_STRT_ILK_1_CD_WERT | real | IN_STRT_ILK_1 konditionierter Wert Normal Bereich -0,25 bis 5,25 Volt Ungültig Wert = 65,285 |
 | STAT_IN_STRT_ILK_1_CD_EINH | string | Einheit des konditionierten Werts von IN_STRT_ILK_1 |
 
-<a id="job-status-in-strt-ilk-2"></a>
 ### STATUS_IN_STRT_ILK_2
 
 STARTER SPERRE Sensor 2 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $38 Index fuer IN_STRT_ILK_2 $01 ReportCurrentState Modus  : Default
@@ -1986,7 +1887,6 @@ _No arguments._
 | STAT_IN_STRT_ILK_2_CD_WERT | real | IN_STRT_ILK_2 konditionierter Wert Normal Bereich -0,25 bis 5,25 Volt Ungültig Wert = 65,285 |
 | STAT_IN_STRT_ILK_2_CD_EINH | string | Einheit des konditionierten Werts von IN_STRT_ILK_2 |
 
-<a id="job-status-in-suppipe-p-1"></a>
 ### STATUS_IN_SUPPIPE_P_1
 
 TEILSTROMREGELVENTIL DRUCK Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $39 Index fuer IN_SUPPIPE_P_1 $01 ReportCurrentState Modus  : Default
@@ -2003,7 +1903,6 @@ _No arguments._
 | STAT_IN_SUPPIPE_P_1_CD_WERT | real | IN_SUPPIPE_P_1 konditionierter Wert Normal Bereich 0,47 bis 8 Bar Ungültig Wert = 65,535 |
 | STAT_IN_SUPPIPE_P_1_CD_EINH | string | Einheit des konditionierten Werts von IN_SUPPIPE_P_1 |
 
-<a id="job-status-in-suppipe-p-2"></a>
 ### STATUS_IN_SUPPIPE_P_2
 
 EINGANG MOTOR ABSPERRVENTIL DRUCK Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $3A Index fuer IN_SUPPIPE_P_2 $01 ReportCurrentState Modus  : Default
@@ -2020,7 +1919,6 @@ _No arguments._
 | STAT_IN_SUPPIPE_P_2_CD_WERT | real | IN_SUPPIPE_P_2 konditionierter Wert Normal Bereich 0,47 bis 8 Bar Ungültig Wert = 65,535 |
 | STAT_IN_SUPPIPE_P_2_CD_EINH | string | Einheit des konditionierten Werts von IN_SUPPIPE_P_2 |
 
-<a id="job-status-in-vent-temp"></a>
 ### STATUS_IN_VENT_TEMP
 
 VENTURIDÜSE TEMPERATUR Sensor KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $3B Index fuer IN_VENT_TEMP $01 ReportCurrentState Modus  : Default
@@ -2037,7 +1935,6 @@ _No arguments._
 | STAT_IN_VENT_TEMP_CD_WERT | real | IN_VENT_TEMP konditionierter Wert Normal Bereich -40 bis 787,6 °C Ungültig Wert = 1310,7 |
 | STAT_IN_VENT_TEMP_CD_EINH | string | Einheit des konditionierten Werts von IN_VENT_TEMP |
 
-<a id="job-status-r-bt-chg"></a>
 ### STATUS_R_BT_CHG
 
 Lesen Batterie Zuladung KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $3D Index fuer R_BT_CHG $01 ReportCurrentState Modus  : Default
@@ -2054,7 +1951,6 @@ _No arguments._
 | STAT_R_BT_CHG_CD_WERT | real | R_BT_CHG konditionierter Wert |
 | STAT_R_BT_CHG_CD_EINH | string | Einheit des konditionierten Werts von R_BT_CHG_CD |
 
-<a id="job-status-r-bt-chg-pstp"></a>
 ### STATUS_R_BT_CHG_PSTP
 
 Lesen Batterie Zuladung Vor-Stop KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $3E Index fuer R_BT_CHG_PSTP $01 ReportCurrentState Modus  : Default
@@ -2071,7 +1967,6 @@ _No arguments._
 | STAT_R_BT_CHG_PSTP_CD_WERT | real | R_BT_CHG_PSTP konditionierter Wert |
 | STAT_R_BT_CHG_PSTP_CD_EINH | string | Einheit des konditionierten Werts von R_BT_CHG_PSTP_CD |
 
-<a id="job-status-r-bt-dchg"></a>
 ### STATUS_R_BT_DCHG
 
 Lesen Batterie Entladung KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $3F Index fuer R_BT_DCHG $01 ReportCurrentState Modus  : Default
@@ -2088,7 +1983,6 @@ _No arguments._
 | STAT_R_BT_DCHG_CD_WERT | real | R_BT_DCHG konditionierter Wert |
 | STAT_R_BT_DCHG_CD_EINH | string | Einheit des konditionierten Werts von R_BT_DCHG_CD |
 
-<a id="job-status-r-bt-dchg-pstp"></a>
 ### STATUS_R_BT_DCHG_PSTP
 
 Lesen Batterie Entladung Vor-Stop KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $40 Index fuer R_BT_DCHG_PSTP $01 ReportCurrentState Modus  : Default
@@ -2105,7 +1999,6 @@ _No arguments._
 | STAT_R_BT_DCHG_PSTP_CD_WERT | real | R_BT_DCHG_PSTP konditionierter Wert |
 | STAT_R_BT_DCHG_PSTP_CD_EINH | string | Einheit des konditionierten Werts von R_BT_DCHG_PSTP_CD |
 
-<a id="job-status-r-ibs-reg-2"></a>
 ### STATUS_R_IBS_REG_2
 
 Lesen IBS_REG_2 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $41 Index fuer R_IBS_REG_2 $01 ReportCurrentState Modus  : Default
@@ -2121,7 +2014,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_R_IBS_REG_2_CD_WERT | real | R_IBS_REG_2 konditionierter Wert |
 
-<a id="job-status-r-ibs-reg-4"></a>
 ### STATUS_R_IBS_REG_4
 
 Lesen IBS_REG_4 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $42 Index fuer R_IBS_REG_4 $01 ReportCurrentState Modus  : Default
@@ -2137,7 +2029,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_R_IBS_REG_4_CD_WERT | real | R_IBS_REG_4 konditionierter Wert |
 
-<a id="job-status-r-qvm-crcs"></a>
 ### STATUS_R_QVM_CRCS
 
 Lesen CRC Summe KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $43 Index fuer R_QVM_CRCS $01 ReportCurrentState Modus  : Default
@@ -2153,7 +2044,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_R_QVM_CRCS_CD_WERT | real | R_QVM_CRCS konditionierter Wert |
 
-<a id="job-status-r-qvm-i"></a>
 ### STATUS_R_QVM_I
 
 LESEN RUHESPANNUNGSMESSUNG STROM KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $44 Index fuer R_QVM_I $01 ReportCurrentState Modus  : Default
@@ -2170,7 +2060,6 @@ _No arguments._
 | STAT_R_QVM_I_CD_WERT | real | R_QVM_I konditionierter Wert |
 | STAT_R_QVM_I_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_I_CD |
 
-<a id="job-status-r-qvm-t-1"></a>
 ### STATUS_R_QVM_T_1
 
 LESEN RUHESPANNUNGSMESSUNG ZEIT 1 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $45 Index fuer R_QVM_T_1 $01 ReportCurrentState Modus  : Default
@@ -2187,7 +2076,6 @@ _No arguments._
 | STAT_R_QVM_T_1_CD_WERT | real | R_QVM_T_1 konditionierter Wert |
 | STAT_R_QVM_T_1_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_T_1_CD |
 
-<a id="job-status-r-qvm-t-2"></a>
 ### STATUS_R_QVM_T_2
 
 LESEN RUHESPANNUNGSMESSUNG ZEIT 2 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $46 Index fuer R_QVM_T_2 $01 ReportCurrentState Modus  : Default
@@ -2204,7 +2092,6 @@ _No arguments._
 | STAT_R_QVM_T_2_CD_WERT | real | R_QVM_T_2 konditionierter Wert |
 | STAT_R_QVM_T_2_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_T_2_CD |
 
-<a id="job-status-r-qvm-t-3"></a>
 ### STATUS_R_QVM_T_3
 
 LESEN RUHESPANNUNGSMESSUNG ZEIT 3 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $47 Index fuer R_QVM_T_3 $01 ReportCurrentState Modus  : Default
@@ -2221,7 +2108,6 @@ _No arguments._
 | STAT_R_QVM_T_3_CD_WERT | real | R_QVM_T_3 konditionierter Wert |
 | STAT_R_QVM_T_3_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_T_3_CD |
 
-<a id="job-status-r-qvm-t-4"></a>
 ### STATUS_R_QVM_T_4
 
 LESEN RUHESPANNUNGSMESSUNG ZEIT 4 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $48 Index fuer R_QVM_T_4 $01 ReportCurrentState Modus  : Default
@@ -2238,7 +2124,6 @@ _No arguments._
 | STAT_R_QVM_T_4_CD_WERT | real | R_QVM_T_4 konditionierter Wert |
 | STAT_R_QVM_T_4_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_T_4_CD |
 
-<a id="job-status-r-qvm-temp"></a>
 ### STATUS_R_QVM_TEMP
 
 LESEN RUHESPANNUNGSMESSUNG TEMPERATUR KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $49 Index fuer R_QVM_TEMP $01 ReportCurrentState Modus  : Default
@@ -2255,7 +2140,6 @@ _No arguments._
 | STAT_R_QVM_TEMP_CD_WERT | real | R_QVM_TEMP konditionierter Wert |
 | STAT_R_QVM_TEMP_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_TEMP |
 
-<a id="job-status-r-qvm-u-1"></a>
 ### STATUS_R_QVM_U_1
 
 LESEN RUHESPANNUNGSMESSUNG SPANNUNG 1 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $4A Index fuer R_QVM_U_1 $01 ReportCurrentState Modus  : Default
@@ -2272,7 +2156,6 @@ _No arguments._
 | STAT_R_QVM_U_1_CD_WERT | real | R_QVM_U_1 konditionierter Wert |
 | STAT_R_QVM_U_1_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_U_1_CD |
 
-<a id="job-status-r-qvm-u-2"></a>
 ### STATUS_R_QVM_U_2
 
 LESEN RUHESPANNUNGSMESSUNG SPANNUNG 2 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $4B Index fuer R_QVM_U_2 $01 ReportCurrentState Modus  : Default
@@ -2289,7 +2172,6 @@ _No arguments._
 | STAT_R_QVM_U_2_CD_WERT | real | R_QVM_U_2 konditionierter Wert |
 | STAT_R_QVM_U_2_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_U_2_CD |
 
-<a id="job-status-r-qvm-u-3"></a>
 ### STATUS_R_QVM_U_3
 
 LESEN RUHESPANNUNGSMESSUNG SPANNUNG 3 KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $4C Index fuer R_QVM_U_3 $01 ReportCurrentState Modus  : Default
@@ -2306,7 +2188,6 @@ _No arguments._
 | STAT_R_QVM_U_3_CD_WERT | real | R_QVM_U_3 konditionierter Wert |
 | STAT_R_QVM_U_3_CD_EINH | string | Einheit des konditionierten Werts von R_QVM_U_3_CD |
 
-<a id="job-status-st-clc-n"></a>
 ### STATUS_ST_CLC_N
 
 STROMSCHLEIFE NEGATIV KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $4D Index fuer ST_CLC_N $01 ReportCurrentState Modus  : Default
@@ -2322,7 +2203,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_ST_CLC_N_GESCHLOSSEN | unsigned int | Status von ST_CLC_N |
 
-<a id="job-status-st-clc-p"></a>
 ### STATUS_ST_CLC_P
 
 STROMSCHLEIFE POSITIV KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $4E Index fuer ST_CLC_P $01 ReportCurrentState Modus  : Default
@@ -2338,7 +2218,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_ST_CLC_P_GESCHLOSSEN | unsigned int | Status von ST_CLC_P |
 
-<a id="job-status-st-futa-cho-sw"></a>
 ### STATUS_ST_FUTA_CHO_SW
 
 TANK WAHL SCHALTER KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $4F Index fuer ST_FUTA_CHO_SW $01 ReportCurrentState Modus  : Default
@@ -2354,7 +2233,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_ST_FUTA_CHO_SW | unsigned int | Status von ST_FUTA_CHO_SW |
 
-<a id="job-status-st-grb-ppos"></a>
 ### STATUS_ST_GRB_PPOS
 
 GETRIEBE PARK POSITION KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $50 Index fuer ST_GRB_PPOS $01 ReportCurrentState Modus  : Default
@@ -2370,7 +2248,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_ST_GRB_PPOS | unsigned int | Status von ST_GRB_PPOS |
 
-<a id="job-status-wgh-lh2"></a>
 ### STATUS_WGH_LH2
 
 H2 Massenwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $51 Index fuer WGH_LH2 $01 ReportCurrentState Modus  : Default
@@ -2387,7 +2264,6 @@ _No arguments._
 | STAT_WGH_LH2_V_WERT | real | WGH_LH2 validierter Wert |
 | STAT_WGH_LH2_V_EINH | string | Einheit des validierten Werts von WGH_LH2_V |
 
-<a id="job-status-wgh-lh2-max"></a>
 ### STATUS_WGH_LH2_MAX
 
 Maximal zulässige Füllmasse KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $52 Index fuer WGH_LH2_MAX $01 ReportCurrentState Modus  : Default
@@ -2404,7 +2280,6 @@ _No arguments._
 | STAT_WGH_LH2_MAX_CD_WERT | real | WGH_LH2_MAX konditionierter Wert |
 | STAT_WGH_LH2_MAX_CD_EINH | string | Einheit des konditionierten Werts von WGH_LH2_MAX_CD |
 
-<a id="job-status-cosp-hy-max"></a>
 ### STATUS_COSP_HY_MAX
 
 Verbrauch Wasserstoff Maximal KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $64 Index fuer COSP_HY_MAX $01 ReportCurrentState Modus  : Default
@@ -2421,7 +2296,6 @@ _No arguments._
 | STAT_COSP_HY_MAX_WERT | real | COSP_HY_MAX in kg/h Normal Bereich 0 bis 200 kg/h Ungültig Wert 8191,875 |
 | STAT_COSP_HY_MAX_EINH | string | Einheit von COSP_HY_MAX |
 
-<a id="job-status-dma-futa-p"></a>
 ### STATUS_DMA_FUTA_P
 
 DMA Tank Druck KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $65 Index fuer DMA_FUTA_P $01 ReportCurrentState Modus  : Default
@@ -2438,7 +2312,6 @@ _No arguments._
 | STAT_DMA_FUTA_P_WERT | real | DMA_FUTA_P Normal Bereich 0 bis 8 Bar |
 | STAT_DMA_FUTA_P_EINH | string | Einheit von DMA_FUTA_P |
 
-<a id="job-status-err-ce-opmo-hy"></a>
 ### STATUS_ERR_CE_OPMO_HY
 
 Fehler CE Betriebsart Wasserstoff KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $66 Index fuer ERR_CE_OPMO_HY $01 ReportCurrentState Modus  : Default
@@ -2455,7 +2328,6 @@ _No arguments._
 | STAT_ERR_CE_OPMO_HY_NR | int | 0..kein Fehler 1-12..leichte Fehler 13..schwerer Fehler / kein H2-Betrieb 14..schwerer Fehler / kein Start 15..nicht erlaubt |
 | STAT_ERR_CE_OPMO_HY_TEXT | string | Beschreibung ERR_CE_OPMO_HY |
 
-<a id="job-status-fllv-futa-hy"></a>
 ### STATUS_FLLV_FUTA_HY
 
 Füllstand Tank Wasserstoff KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $67 Index fuer FLLV_FUTA_HY $01 ReportCurrentState Modus  : Default
@@ -2472,7 +2344,6 @@ _No arguments._
 | STAT_FLLV_FUTA_HY_WERT | real | FLLV_FUTA_HY Normal Bereich 0 bis 100 % |
 | STAT_FLLV_FUTA_HY_EINH | string | Einheit von FLLV_FUTA_HY |
 
-<a id="job-status-fn-rq"></a>
 ### STATUS_FN_RQ
 
 FUNKTIONS ANFORDERUNG KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $68 Index fuer FN_RQ $01 ReportCurrentState Modus  : Default
@@ -2489,7 +2360,6 @@ _No arguments._
 | STAT_FN_RQ_NR | int | 0..zyklische Messung soll durchgeführt werden 1..Reset-Aufforderung 2..Power-Off-Aufforderung 4..Kalibrierung durchführen |
 | STAT_FN_RQ_TEXT | string | Beschreibung FN_RQ |
 
-<a id="job-status-fu-tar"></a>
 ### STATUS_FU_TAR
 
 Kraftstoff Soll KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $69 Index fuer FU_TAR $01 ReportCurrentState Modus  : Default
@@ -2506,7 +2376,6 @@ _No arguments._
 | STAT_FU_TAR_NR | int | 1..Benzin 2..Wasserstoff 3..Signal ungültig |
 | STAT_FU_TAR_TEXT | string | Beschreibung FU_TAR |
 
-<a id="job-status-fu-tar-staprc"></a>
 ### STATUS_FU_TAR_STAPRC
 
 Kraftstoff Soll Startvorgang KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $6A Index fuer FU_TAR_STAPRC $01 ReportCurrentState Modus  : Default
@@ -2523,7 +2392,6 @@ _No arguments._
 | STAT_FU_TAR_STAPRC_NR | int | 1..Benzin 2..Wasserstoff 3..Signal ungültig |
 | STAT_FU_TAR_STAPRC_TEXT | string | Beschreibung FU_TAR_STAPRC |
 
-<a id="job-status-id-fn-reac-hveh"></a>
 ### STATUS_ID_FN_REAC_HVEH
 
 ID FUNKTION REAKTION WASSERSTOFF FAHRZEUG KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $6B Index fuer ID_FN_REAC_HVEH $01 ReportCurrentState Modus  : Default
@@ -2540,7 +2408,6 @@ _No arguments._
 | STAT_ID_FN_REAC_HVEH_NR | int | 0..Keine Aktion 40..Zentralverriegelung entsichern 41..Zentralverriegelung sichern 50..EWS aktivieren 51..EWS deaktivieren 60..EMF ?? 61..EMF ?? 100..Fenster FAT öffnen 101..Fenster BFT öffnen 102..Fenster FATH öffnen 103..Fenster BFTH öffnen 104..HK öffnen 105..SHD/MDS öffnen 130..Alle Klappen öffnen 131..Alle Fenster öffnen 150..Fenster FAT schließen 151..Fenster BFT schließen 152..Fenster FATH schließen 153..Fenster BFTH schließen 154..HK schließen 155..SHD/MDS schließen 180..Alle Klappen schließen 181..Alle Fenster schließen 200..Fenster FAT in Lüfterspalt 201..Fenster BFT in Lüfterspalt 202..Fenster FATH in Lüfterspalt 203..Fenster BFTH in Lüfterspalt 204..HK in Lüfterspalt (Dichtung) 205..SHD/MDS in Lüfterspalt 230..Alle Klappen in Lüfterspalt 231..Alle Fenster in Lüfterspalt 250..FAT "Zwischenposition" 251..BFT "Zwischenposition" 252..FATH "Zwischenposition" 253..BFTH "Zwischenposition" 254..HK "Zwischenposition" 255..SHD/MDS "Zwischenposition" 280..Alle Klappen "Zwischenposition" 281..Alle Fenster "Zwischenposition" 300..Klima-Klappen öffnen 301..Klima-Klappen schließen 65535..Signal ungültig |
 | STAT_ID_FN_REAC_HVEH_TEXT | string | Beschreibung ID_FN_REAC_HVEH |
 
-<a id="job-status-id2-cc-mess-ext"></a>
 ### STATUS_ID2_CC_MESS_EXT
 
 Identifier Kontrollmeldungsdienst KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $6C Index fuer ID2_CC_MESS_EXT $01 ReportCurrentState Modus  : Default
@@ -2557,7 +2424,6 @@ _No arguments._
 | STAT_ID2_CC_MESS_EXT_NR | int | 64..Standart CC-Meldung 65..Erweiterte CC-Meldung |
 | STAT_ID2_CC_MESS_EXT_TEXT | string | Beschreibung ID2_CC_MESS_EXT |
 
-<a id="job-status-no-cc-mess-ext"></a>
 ### STATUS_NO_CC_MESS_EXT
 
 Nummer_Meldung KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $6D Index fuer NO_CC_MESS_EXT $01 ReportCurrentState Modus  : Default
@@ -2574,7 +2440,6 @@ _No arguments._
 | STAT_NO_CC_MESS_EXT_NR | int | 39..Motor Überhitzt 188..H2 Betrieb nicht möglich - Benzinstart aktivieren 189..H2 Tankklappe offen. Voraussichtliche Tankzeit ca. ... 310..Tanken nicht möglich 312..H2-Betrieb nicht möglich 313..Benzin-Betrieb nicht möglich 315..H2-System erheblich gestört 316..H2-Tankklappe offen 319..Tankvorbereitungen treffen! 329..Batteriefehler 359..H2-Betrieb zurzeit nicht möglich! Bitte tanken. 360..H2 tanken zurzeit nicht möglich! Nachtanken nur bei Tank ... 361..Wasserstoffsystem gestört 362..Nicht in geschlossene Räume fahren |
 | STAT_NO_CC_MESS_EXT_TEXT | string | Beschreibung NO_CC_MESS_EXT |
 
-<a id="job-status-no-frm-cc-mes-ext"></a>
 ### STATUS_NO_FRM_CC_MES_EXT
 
 Nummer aktueller Frame KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $6E Index fuer NO_FRM_CC_MES_EXT $01 ReportCurrentState Modus  : Default
@@ -2590,7 +2455,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_NO_FRM_CC_MES_EXT_WERT | int | NO_FRM_CC_MES_EXT wert |
 
-<a id="job-status-out-add-abv"></a>
 ### STATUS_OUT_ADD_ABV
 
 ZUSATZENTLÜFTUNGSVENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $6F Index fuer OUT_ADD_ABV_PWM $01 ReportCurrentState Modus  : Default
@@ -2607,7 +2471,6 @@ _No arguments._
 | STAT_OUT_ADD_ABV_PWM_WERT | real | OUT_ADD_ABV_PWM Wert |
 | STAT_OUT_ADD_ABV_PWM_EINH | string | Einheit von OUT_ADD_ABV_PWM |
 
-<a id="job-status-out-auwp-dr"></a>
 ### STATUS_OUT_AUWP_DR
 
 ZUSATZWASSERPUMPE NOTLAUF KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $70 Index fuer OUT_AUWP_DR $01 ReportCurrentState Modus  : Default
@@ -2623,7 +2486,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_AUWP_DR | int | Status von OUT_AUWP_DR |
 
-<a id="job-status-out-auwp-h2-rpm"></a>
 ### STATUS_OUT_AUWP_H2_RPM
 
 AUSGANG ZUSATZWASSERPUMPE H2 DREHZAHL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $71 Index fuer OUT_AUWP_H2_RPM $01 ReportCurrentState Modus  : Default
@@ -2640,7 +2502,6 @@ _No arguments._
 | STAT_OUT_AUWP_H2_RPM_NR | int | 0: Stopp und Rücksetzen Fehler 1..19: Betrieb im unüberwachten Modus (18..400 U/min) 20..250: Geregelter Betrieb im überwachten Modus (400..4500 U/min) 251: Nachlauf aktivieren (5 min, 1200 U/min) 252: Nachlauf aktivieren (2,5 min, 1200 U/min) 253: Nachlauf aktivieren (5 min, 700 U/min) 254: Nachlauf aktivieren (2,5 min, 700 U/min) 255: Nachlauf deaktivieren |
 | STAT_OUT_AUWP_H2_RPM_TEXT | string | Beschreibung OUT_AUWP_H2_RPM konditionierter Wert |
 
-<a id="job-status-out-bo-clo-rv"></a>
 ### STATUS_OUT_BO_CLO_RV
 
 BOIL OFF ZU UMSCHALTVENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $72 Index fuer OUT_BO_CLO_RV_PWM $01 ReportCurrentState Modus  : Default
@@ -2657,7 +2518,6 @@ _No arguments._
 | STAT_OUT_BO_CLO_RV_PWM_WERT | real | OUT_BO_CLO_RV_PWM Wert |
 | STAT_OUT_BO_CLO_RV_PWM_EINH | string | Einheit von OUT_BO_CLO_RV_PWM |
 
-<a id="job-status-out-bo-open-rv"></a>
 ### STATUS_OUT_BO_OPEN_RV
 
 BOIL OFF AUF UMSCHALTVENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $73 Index fuer OUT_BO_OPEN_RV_PWM $01 ReportCurrentState Modus  : Default
@@ -2674,7 +2534,6 @@ _No arguments._
 | STAT_OUT_BO_OPEN_RV_PWM_WERT | real | OUT_BO_OPEN_RV_PWM Wert |
 | STAT_OUT_BO_OPEN_RV_PWM_EINH | string | Einheit von OUT_BO_OPEN_RV_PWM |
 
-<a id="job-status-out-comp-rel"></a>
 ### STATUS_OUT_COMP_REL
 
 KOMPRESSOR PRS RELAIS KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $74 Index fuer OUT_COMP_REL $01 ReportCurrentState Modus  : Default
@@ -2690,7 +2549,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_COMP_REL_AKTIV | int | Status von OUT_COMP_REL |
 
-<a id="job-status-out-eng-opm-led"></a>
 ### STATUS_OUT_ENG_OPM_LED
 
 MOTOR BETRIEBSMODUS LED KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $75 Index fuer OUT_ENG_OPM_LED $01 ReportCurrentState Modus  : Default
@@ -2706,7 +2564,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_ENG_OPM_LED_KENNZEICHNUNG | int | Status von OUT_ENG_OPM_LED |
 
-<a id="job-status-out-eng-sov"></a>
 ### STATUS_OUT_ENG_SOV
 
 MOTOR ABSPERRVENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $76 Index fuer OUT_ENG_SOV_PWM $01 ReportCurrentState Modus  : Default
@@ -2723,7 +2580,6 @@ _No arguments._
 | STAT_OUT_ENG_SOV_PWM_WERT | real | OUT_ENG_SOV_PWM Wert |
 | STAT_OUT_ENG_SOV_PWM_EINH | string | Einheit von OUT_ENG_SOV_PWM |
 
-<a id="job-status-out-futa-cho-sw-led"></a>
 ### STATUS_OUT_FUTA_CHO_SW_LED
 
 TANK WAHL SCHALTER LED KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $77 Index fuer OUT_FUTA_CHO_SW_LED $01 ReportCurrentState Modus  : Default
@@ -2739,7 +2595,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_FUTA_CHO_SW_LED_KENNZEICHNUNG | int | Status von OUT_FUTA_CHO_SW_LED |
 
-<a id="job-status-out-fuff-n"></a>
 ### STATUS_OUT_FUFF_N
 
 TANKKLAPPE N KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $78 Index fuer OUT_FUFF_N_PWM $01 ReportCurrentState Modus  : Default
@@ -2756,7 +2611,6 @@ _No arguments._
 | STAT_OUT_FUFF_N_PWM_WERT | real | OUT_FUFF_N_PWM Wert |
 | STAT_OUT_FUFF_N_PWM_EINH | string | Einheit von OUT_FUFF_N_PWM |
 
-<a id="job-status-out-fuff-p"></a>
 ### STATUS_OUT_FUFF_P
 
 TANKKLAPPE P KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $79 Index fuer OUT_FUFF_P_PWM $01 ReportCurrentState Modus  : Default
@@ -2773,7 +2627,6 @@ _No arguments._
 | STAT_OUT_FUFF_P_PWM_WERT | real | OUT_FUFF_P_PWM Wert |
 | STAT_OUT_FUFF_P_PWM_EINH | string | Einheit von OUT_FUFF_P_PWM |
 
-<a id="job-status-out-ghy-cov"></a>
 ### STATUS_OUT_GHY_COV
 
 GASFÖRMIGER-H2 PRS STEUERVENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $7A Index fuer OUT_GHY_COV_PWM $01 ReportCurrentState Modus  : Default
@@ -2790,7 +2643,6 @@ _No arguments._
 | STAT_OUT_GHY_COV_PWM_WERT | real | OUT_GHY_COV_PWM Wert |
 | STAT_OUT_GHY_COV_PWM_EINH | string | Einheit von OUT_GHY_COV_PWM |
 
-<a id="job-status-out-hs-boot-ll"></a>
 ### STATUS_OUT_HS_BOOT_LL
 
 H2 Sensor Kofferraum unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $7B Index fuer OUT_HS_BOOT_LL $01 ReportCurrentState Modus  : Default
@@ -2807,7 +2659,6 @@ _No arguments._
 | STAT_OUT_HS_BOOT_LL_NR | int | OUT_HS_BOOT_LL 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_BOOT_LL_TEXT | string | Beschreibung von OUT_HS_BOOT_LL |
 
-<a id="job-status-out-hs-boot-ul"></a>
 ### STATUS_OUT_HS_BOOT_UL
 
 H2 Sensor Kofferraum unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $7C Index fuer OUT_HS_BOOT_UL $01 ReportCurrentState Modus  : Default
@@ -2824,7 +2675,6 @@ _No arguments._
 | STAT_OUT_HS_BOOT_UL_NR | int | OUT_HS_BOOT_UL 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_BOOT_UL_TEXT | string | Beschreibung von OUT_HS_BOOT_UL |
 
-<a id="job-status-out-hs-eng-ll"></a>
 ### STATUS_OUT_HS_ENG_LL
 
 H2 Sensor Motor unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $7D Index fuer OUT_HS_ENG_LL $01 ReportCurrentState Modus  : Default
@@ -2841,7 +2691,6 @@ _No arguments._
 | STAT_OUT_HS_ENG_LL_NR | int | OUT_HS_ENG_LL 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_ENG_LL_TEXT | string | Beschreibung von OUT_HS_ENG_LL |
 
-<a id="job-status-out-hs-eng-ul"></a>
 ### STATUS_OUT_HS_ENG_UL
 
 H2 Sensor Motor unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $7E Index fuer OUT_HS_ENG_UL $01 ReportCurrentState Modus  : Default
@@ -2858,7 +2707,6 @@ _No arguments._
 | STAT_OUT_HS_ENG_UL_NR | int | OUT_HS_ENG_UL 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_ENG_UL_TEXT | string | Beschreibung von OUT_HS_ENG_UL |
 
-<a id="job-status-out-hs-ft-clt-ll"></a>
 ### STATUS_OUT_HS_FT_CLT_LL
 
 H2 Sensor Tank Kupplung unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $7F Index fuer OUT_HS_FT_CLT_LL $01 ReportCurrentState Modus  : Default
@@ -2875,7 +2723,6 @@ _No arguments._
 | STAT_OUT_HS_FT_CLT_LL_NR | int | OUT_HS_FT_CLT_LL 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_FT_CLT_LL_TEXT | string | Beschreibung von OUT_HS_FT_CLT_LL |
 
-<a id="job-status-out-hs-ft-clt-ul"></a>
 ### STATUS_OUT_HS_FT_CLT_UL
 
 H2 Sensor Tank Kupplung unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $80 Index fuer OUT_HS_FT_CLT_UL $01 ReportCurrentState Modus  : Default
@@ -2892,7 +2739,6 @@ _No arguments._
 | STAT_OUT_HS_FT_CLT_UL_NR | int | OUT_HS_FT_CLT_UL 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_FT_CLT_UL_TEXT | string | Beschreibung von OUT_HS_FT_CLT_UL |
 
-<a id="job-status-out-hs-msg-cnt"></a>
 ### STATUS_OUT_HS_MSG_CNT
 
 H2 Sensor Nachrichten Zähler KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $81 Index fuer OUT_HS_MSG_CNT $01 ReportCurrentState Modus  : Default
@@ -2908,7 +2754,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_HS_MSG_CNT_WERT | int | OUT_HS_MSG_CNT Wert |
 
-<a id="job-status-out-hs-pscmp-ll"></a>
 ### STATUS_OUT_HS_PSCMP_LL
 
 H2 Sensor Fahrgastzelle unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $82 Index fuer OUT_HS_PSCMP_LL $01 ReportCurrentState Modus  : Default
@@ -2925,7 +2770,6 @@ _No arguments._
 | STAT_OUT_HS_PSCMP_LL_NR | int | OUT_HS_PSCMP_LL Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_PSCMP_LL_TEXT | string | Beschreibung von OUT_HS_PSCMP_LL |
 
-<a id="job-status-out-hs-pscmp-ul"></a>
 ### STATUS_OUT_HS_PSCMP_UL
 
 H2 Sensor Fahrgastzelle unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $83 Index fuer OUT_HS_PSCMP_UL $01 ReportCurrentState Modus  : Default
@@ -2942,7 +2786,6 @@ _No arguments._
 | STAT_OUT_HS_PSCMP_UL_NR | int | OUT_HS_PSCMP_UL Wert 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_PSCMP_UL_TEXT | string | Beschreibung von OUT_HS_PSCMP_UL |
 
-<a id="job-status-out-hs-scap-ll"></a>
 ### STATUS_OUT_HS_SCAP_LL
 
 H2 Sensor Nebensystemkapsel unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $84 Index fuer OUT_HS_SCAP_LL $01 ReportCurrentState Modus  : Default
@@ -2959,7 +2802,6 @@ _No arguments._
 | STAT_OUT_HS_SCAP_LL_NR | int | OUT_HS_SCAP_LL 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_SCAP_LL_TEXT | string | Beschreibung von OUT_HS_SCAP_LL |
 
-<a id="job-status-out-hs-scap-ul"></a>
 ### STATUS_OUT_HS_SCAP_UL
 
 H2 Sensor Nebensystemkapsel unterer Grenzwert KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $85 Index fuer OUT_HS_SCAP_UL $01 ReportCurrentState Modus  : Default
@@ -2976,7 +2818,6 @@ _No arguments._
 | STAT_OUT_HS_SCAP_UL_NR | int | OUT_HS_SCAP_UL 0..0,0% 1..0,25% 2..0,5% 3..1,0% 4..1,5% 5..2,0% 6..4,4% 7..ungültig |
 | STAT_OUT_HS_SCAP_UL_TEXT | string | Beschreibung von OUT_HS_SCAP_UL |
 
-<a id="job-status-out-lhy-cov"></a>
 ### STATUS_OUT_LHY_COV
 
 FLÜSSIGER-H2 PRS STEUERVENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $86 Index fuer OUT_LHY_COV_PWM $01 ReportCurrentState Modus  : Default
@@ -2993,7 +2834,6 @@ _No arguments._
 | STAT_OUT_LHY_COV_PWM_WERT | real | OUT_LHY_COV_PWM Wert |
 | STAT_OUT_LHY_COV_PWM_EINH | string | Einheit von OUT_LHY_COV_PWM |
 
-<a id="job-status-out-ml"></a>
 ### STATUS_OUT_ML
 
 MOVILINE KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $87 Index fuer OUT_ML $01 ReportCurrentState Modus  : Default
@@ -3009,7 +2849,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_ML_AKTIV | int | Status von OUT_ML |
 
-<a id="job-status-out-mpva"></a>
 ### STATUS_OUT_MPVA
 
 TEILSTROMREGELVENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $88 Index fuer OUT_MPVA_PWM $01 ReportCurrentState Modus  : Default
@@ -3026,7 +2865,6 @@ _No arguments._
 | STAT_OUT_MPVA_PWM_WERT | real | OUT_MPVA_PWM Wert |
 | STAT_OUT_MPVA_PWM_EINH | string | Einheit von OUT_MPVA_PWM |
 
-<a id="job-status-out-nsk-fl-va"></a>
 ### STATUS_OUT_NSK_FL_VA
 
 Nebensystemkapsel Spülung PRS Ventil KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $89 Index fuer OUT_NSK_FL_VA_PWM $01 ReportCurrentState Modus  : Default
@@ -3043,7 +2881,6 @@ _No arguments._
 | STAT_OUT_NSK_FL_VA_PWM_WERT | real | OUT_NSK_FL_VA_PWM Wert |
 | STAT_OUT_NSK_FL_VA_PWM_EINH | string | Einheit von OUT_NSK_FL_VA_PWM |
 
-<a id="job-status-out-ofi-pr-diag"></a>
 ### STATUS_OUT_OFI_PR_DIAG
 
 ÜBERFÜLLSICHERUNG DIAGNOSE KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $8A Index fuer OUT_OFI_PR_DIAG $01 ReportCurrentState Modus  : Default
@@ -3059,7 +2896,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_OFI_PR_DIAG_AN | int | Status von OUT_OFI_PR_DIAG |
 
-<a id="job-status-out-ofi-pr-pwr"></a>
 ### STATUS_OUT_OFI_PR_PWR
 
 ÜBERFÜLLSICHERUNG VERSORGUNG KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $8B Index fuer OUT_OFI_PR_PWR $01 ReportCurrentState Modus  : Default
@@ -3075,7 +2911,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_OFI_PR_PWR_AKTIV | int | Status von OUT_OFI_PR_PWR |
 
-<a id="job-status-out-p-accu-va"></a>
 ### STATUS_OUT_P_ACCU_VA
 
 DRUCKSPEICHER PRS VENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $8C Index fuer OUT_P_ACCU_VA_PWM $01 ReportCurrentState Modus  : Default
@@ -3092,7 +2927,6 @@ _No arguments._
 | STAT_OUT_P_ACCU_VA_PWM_WERT | real | OUT_P_ACCU_VA_PWM Wert |
 | STAT_OUT_P_ACCU_VA_PWM_EINH | string | Einheit von OUT_P_ACCU_VA_PWM |
 
-<a id="job-status-out-reg-va"></a>
 ### STATUS_OUT_REG_VA
 
 REGENERIERUNG PRS VENTIL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $8D Index fuer OUT_REG_VA_PWM $01 ReportCurrentState Modus  : Default
@@ -3109,7 +2943,6 @@ _No arguments._
 | STAT_OUT_REG_VA_PWM_WERT | real | OUT_REG_VA_PWM Wert |
 | STAT_OUT_REG_VA_PWM_EINH | string | Einheit von OUT_REG_VA_PWM |
 
-<a id="job-status-out-strt-ilk"></a>
 ### STATUS_OUT_STRT_ILK
 
 STARTER SPERRE KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $8E Index fuer OUT_STRT_ILK $01 ReportCurrentState Modus  : Default
@@ -3125,7 +2958,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_OUT_STRT_ILK_AKTIV | int | Status von OUT_STRT_ILK |
 
-<a id="job-status-p-futa-hy"></a>
 ### STATUS_P_FUTA_HY
 
 DRUCK TANK INNEN WASSERSTOFF KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $8F Index fuer P_FUTA_HY $01 ReportCurrentState Modus  : Default
@@ -3142,7 +2974,6 @@ _No arguments._
 | STAT_P_FUTA_HY_WERT | real | P_FUTA_HY Wert Normal Bereich 0 bis 12 Bar |
 | STAT_P_FUTA_HY_EINH | string | Einheit von P_FUTA_HY |
 
-<a id="job-status-p-suppln-hy"></a>
 ### STATUS_P_SUPPLN_HY
 
 H2 Druck Versorgungsleituung KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $90 Index fuer P_SUPPLN_HY $01 ReportCurrentState Modus  : Default
@@ -3159,7 +2990,6 @@ _No arguments._
 | STAT_P_SUPPLN_HY_WERT | real | P_SUPPLN_HY Wert |
 | STAT_P_SUPPLN_HY_EINH | string | Einheit von P_SUPPLN_HY |
 
-<a id="job-status-qu-frm-cc-mes-ext"></a>
 ### STATUS_QU_FRM_CC_MES_EXT
 
 Gesamt Zahl Frames KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $91 Index fuer QU_FRM_CC_MES_EXT $01 ReportCurrentState Modus  : Default
@@ -3175,7 +3005,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_QU_FRM_CC_MES_EXT_WERT | int | QU_FRM_CC_MES_EXT wert |
 
-<a id="job-status-rng-hy"></a>
 ### STATUS_RNG_HY
 
 Reichweite Wasserstoff KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $92 Index fuer RNG_HY $01 ReportCurrentState Modus  : Default
@@ -3192,7 +3021,6 @@ _No arguments._
 | STAT_RNG_HY_WERT | int | RNG_HY Wert Normal Bereich 0 bis 4094 km Ungültig Wert = 4095 |
 | STAT_RNG_HY_EINH | string | Einheit von RNG_HY |
 
-<a id="job-status-rq-fu-tar"></a>
 ### STATUS_RQ_FU_TAR
 
 ANFORDERUNG_KRAFTSTOFF_SOLL KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $93 Index fuer RQ_FU_TAR $01 ReportCurrentState Modus  : Default
@@ -3209,7 +3037,6 @@ _No arguments._
 | STAT_RQ_FU_TAR_NR | int | 1 Benzin 2 Wasserstoff 3 Signal ungültig |
 | STAT_RQ_FU_TAR_TEXT | string | Beschreibung RQ_FU_TAR |
 
-<a id="job-status-st-cc-dsp-frq"></a>
 ### STATUS_ST_CC_DSP_FRQ
 
 STATUS BLINKEN TAKT CHECKCONTROL MELDUNG ERWEITERT KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $94 Index fuer ST_CC_DSP_FRQ $01 ReportCurrentState Modus  : Default
@@ -3226,7 +3053,6 @@ _No arguments._
 | STAT_ST_CC_DSP_FRQ_NR | int | 0..kein Blinken 1..langsames Blinken 2..schnelles Blinken 3..Signal ungültig |
 | STAT_ST_CC_DSP_FRQ_TEXT | string | Beschreibung ST_CC_DSP_FRQ |
 
-<a id="job-status-st-cc-mess-ext"></a>
 ### STATUS_ST_CC_MESS_EXT
 
 Meldung_setzen_ruecksetzen KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $95 Index fuer ST_CC_MESS_EXT $01 ReportCurrentState Modus  : Default
@@ -3243,7 +3069,6 @@ _No arguments._
 | STAT_ST_CC_MESS_EXT_NR | int | 0..rücksetzen 1..setzen 2..reserviert 3..Signal ungültig |
 | STAT_ST_CC_MESS_EXT_TEXT | string | Beschreibung ST_CC_MESS_EXT |
 
-<a id="job-status-st-fllv-futa-spar-hy"></a>
 ### STATUS_ST_FLLV_FUTA_SPAR_HY
 
 Status_Füllstand_Tank_Reserve_Wasserstoff KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $96 Index fuer ST_FLLV_FUTA_SPAR_HY $01 ReportCurrentState Modus  : Default
@@ -3260,7 +3085,6 @@ _No arguments._
 | STAT_ST_FLLV_FUTA_SPAR_HY_NR | int | 0..Nicht aktiv 1..Aktiv 3..Signal ungültig |
 | STAT_ST_FLLV_FUTA_SPAR_HY_TEXT | string | Beschreibung ST_FLLV_FUTA_SPAR_HY |
 
-<a id="job-status-st-opmo-hy"></a>
 ### STATUS_ST_OPMO_HY
 
 STATUS_BETRIEBSART_WASSERSTOFF KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $97 Index fuer ST_OPMO_HY $01 ReportCurrentState Modus  : Default
@@ -3277,7 +3101,6 @@ _No arguments._
 | STAT_ST_OPMO_HY_NR | int | 0..Reserviert 1..Wasserstoff Betrieb möglich 2..Wasserstoff Betrieb nicht möglich 3..Signal ungültig |
 | STAT_ST_OPMO_HY_TEXT | string | Beschreibung ST_OPMO_HY |
 
-<a id="job-status-st-opmochg-ce"></a>
 ### STATUS_ST_OPMOCHG_CE
 
 Status Betriebsartenwechsel CE KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $98 Index fuer ST_OPMOCHG_CE $01 ReportCurrentState Modus  : Default
@@ -3294,7 +3117,6 @@ _No arguments._
 | STAT_ST_OPMOCHG_CE_NR | int | 0..kein BA-Wechsel 1-12..Reserviert 13..BA-Wechsel durchgeführt 14..BA-Wechsel abgebrochen 15..nicht erlaubt |
 | STAT_ST_OPMOCHG_CE_TEXT | string | Beschreibung ST_OPMOCHG_CE |
 
-<a id="job-status-st-rfg-hy"></a>
 ### STATUS_ST_RFG_HY
 
 Status_Nachtanken_Wasserstoff KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $99 Index fuer ST_RFG_HY $01 ReportCurrentState Modus  : Default
@@ -3311,7 +3133,6 @@ _No arguments._
 | STAT_ST_RFG_HY_NR | int | 1..H2-Nachtanken aktiv 2..H2-Nachtanken nicht aktiv 3..Signal ungültig |
 | STAT_ST_RFG_HY_TEXT | string | Beschreibung ST_RFG_HY |
 
-<a id="job-status-startfreigabe-ce"></a>
 ### STATUS_STARTFREIGABE_CE
 
 Meldung Motorstart Verhindern KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $9A Index fuer STARTFREIGABE_CE $01 ReportCurrentState Modus  : Default
@@ -3328,7 +3149,6 @@ _No arguments._
 | STAT_STARTFREIGABE_CE_NR | int | 0..Signal ungültig 1..Motorstart möglich 2..Motorstart nicht möglich 3..Fehlercode |
 | STAT_STARTFREIGABE_CE_TEXT | string | Beschreibung STARTFREIGABE_CE |
 
-<a id="job-status-temp-ex-ta"></a>
 ### STATUS_TEMP_EX_TA
 
 TEMPERATUR AUßENDRUCK KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $9B Index fuer TEMP_EX_TA $01 ReportCurrentState Modus  : Default
@@ -3345,7 +3165,6 @@ _No arguments._
 | STAT_TEMP_EX_TA_WERT | real | TEMP_EX_TA Wert |
 | STAT_TEMP_EX_TA_EINH | string | Einheit von TEMP_EX_TA |
 
-<a id="job-status-tranf-cc-mess-ext"></a>
 ### STATUS_TRANF_CC_MESS_EXT
 
 Übetragungsintervall KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $9C Index fuer TRANF_CC_MESS_EXT $01 ReportCurrentState Modus  : Default
@@ -3361,7 +3180,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_TRANF_CC_MESS_EXT_WERT | int | TRANF_CC_MESS_EXT Wert Normal Bereich 1 bis 14 Sekunden |
 
-<a id="job-status-tstmp"></a>
 ### STATUS_TSTMP
 
 ZEITSPANNE KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $9D Index fuer TSTMP $01 ReportCurrentState Modus  : Default
@@ -3377,7 +3195,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_TSTMP_WERT | int | TSTMP Wert Zeitspannenauflösung 1 s, Abklemmen der CE-Versorgung führt zur Rücksetzung auf 0 |
 
-<a id="job-status-utdt-cc-mess"></a>
 ### STATUS_UTDT_CC_MESS
 
 NUTZDATEN_CHECK-CONTROL_MELDUNG KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $9E Index fuer UTDT_CC_MESS $01 ReportCurrentState Modus  : Default
@@ -3393,7 +3210,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_UTDT_CC_MESS_WERT | long | UTDT_CC_MESS wert |
 
-<a id="job-status-veh-co"></a>
 ### STATUS_VEH_CO
 
 FAHRZEUGZUSTAND KWP2000:  $30 InputOutputControlByLocalIdentifier argument: $9F Index fuer VEH_CO $01 ReportCurrentState Modus  : Default
@@ -3440,7 +3256,6 @@ _No arguments._
 - [IARTTYP](#table-iarttyp) (7 × 5)
 - [IARTTEXTEINDIVIDUELL](#table-iarttexteindividuell) (116 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -3453,7 +3268,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -3556,7 +3370,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 91 rows × 2 columns
@@ -3655,7 +3468,6 @@ Dimensions: 91 rows × 2 columns
 | 0x90 | Keihin |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -3677,7 +3489,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -3702,7 +3513,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3714,7 +3524,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -3736,7 +3545,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -3751,7 +3559,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -3773,7 +3580,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns
@@ -3793,7 +3599,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -3802,7 +3607,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -3814,7 +3618,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 138 rows × 2 columns
@@ -3960,7 +3763,6 @@ Dimensions: 138 rows × 2 columns
 | 0xCE26 | Botschaft (BEDIENUNG_AUDIO_TEL, 1D6) |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -3975,7 +3777,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 137 rows × 5 columns
@@ -4120,7 +3921,6 @@ Dimensions: 137 rows × 5 columns
 | 0xCE25 | 0x0066 | 0x0001 | 0x004F | 0xFFFE |
 | 0xCE26 | 0x0067 | 0x0068 | 0xFFFE | 0xFFFE |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 108 rows × 9 columns
@@ -4236,7 +4036,6 @@ Dimensions: 108 rows × 9 columns
 | 0xFFFE | Unbenutzte Umweltbedingung | - | high | unsigned int | - | 1 | 1 | 0 |
 | 0xFFFF | Unbekannte Umweltbedingung | - | high | unsigned int | - | 1 | 1 | 0 |
 
-<a id="table-farttyp"></a>
 ### FARTTYP
 
 Dimensions: 137 rows × 5 columns
@@ -4381,7 +4180,6 @@ Dimensions: 137 rows × 5 columns
 | 0xCE25 | 0xFFFF | 0xFFFF | 0x003E | 0x0072 |
 | 0xCE26 | 0xFFFF | 0x0072 | 0xFFFF | 0xFFFF |
 
-<a id="table-farttexteindividuell"></a>
 ### FARTTEXTEINDIVIDUELL
 
 Dimensions: 119 rows × 2 columns
@@ -4508,7 +4306,6 @@ Dimensions: 119 rows × 2 columns
 | 0x0075 | Strom Über- oder Unterschreitung im angesteuerten oder nicht angesteuerten Zustand |
 | 0xFFFF | unbekannte Fehlerart |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -4517,7 +4314,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -4533,7 +4329,6 @@ Dimensions: 8 rows × 2 columns
 | 0x5D2E | Stromschleife für Betankung |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -4548,7 +4343,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-iumweltmatrix"></a>
 ### IUMWELTMATRIX
 
 Dimensions: 7 rows × 5 columns
@@ -4563,7 +4357,6 @@ Dimensions: 7 rows × 5 columns
 | 0x5D2C | 0x0063 | 0x005C | 0x005D | 0xFFFE |
 | 0x5D2E | 0x0066 | 0x0001 | 0x0064 | 0x0065 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 106 rows × 9 columns
@@ -4677,7 +4470,6 @@ Dimensions: 106 rows × 9 columns
 | 0xFFFE | Unbenutzte Umweltbedingung | - | high | unsigned int | - | 1 | 1 | 0 |
 | 0xFFFF | Unbekannte Umweltbedingung | - | high | unsigned int | - | 1 | 1 | 0 |
 
-<a id="table-iarttyp"></a>
 ### IARTTYP
 
 Dimensions: 7 rows × 5 columns
@@ -4692,7 +4484,6 @@ Dimensions: 7 rows × 5 columns
 | 0x5D2C | 0x0051 | 0x0050 | 0x0010 | 0x004F |
 | 0x5D2E | 0xFFFF | 0xFFFF | 0x0008 | 0x0069 |
 
-<a id="table-iarttexteindividuell"></a>
 ### IARTTEXTEINDIVIDUELL
 
 Dimensions: 116 rows × 2 columns

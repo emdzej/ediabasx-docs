@@ -64,7 +64,6 @@
 - [STEUERN_DLE_TRACEON](#job-steuern-dle-traceon) - Download Engine Trace einschalten
 - [STEUERN_DLE_TRACEOFF](#job-steuern-dle-traceoff) - Abschalten Download Engine Trace
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -83,7 +82,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 _No arguments._
@@ -94,7 +92,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-status-batt-ignition"></a>
 ### STATUS_BATT_IGNITION
 
 Ubatt(Kl. 30) ignition (Kl. 15) Werte
@@ -109,7 +106,6 @@ _No arguments._
 | STAT_IGNITION | long | Spannung in mV |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-typ-ver"></a>
 ### STATUS_TYP_VER
 
 Typ und Version des Interfaces zurückliefern Wenn ICOM, dann wird "OPPS" zurückgeliefert
@@ -126,7 +122,6 @@ _No arguments._
 | STAT_SUBVERSION | int | Tatsächliche Version |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-router-autocomm"></a>
 ### STEUERN_ROUTER_AUTOCOMM
 
 Setze Router in Auto-Communication Mode
@@ -140,7 +135,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-most"></a>
 ### STEUERN_ROUTER_MOST
 
 Setze Router in MOST Modus
@@ -154,7 +148,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-obd"></a>
 ### STEUERN_ROUTER_OBD
 
 Setze Router in OBD Mode
@@ -168,7 +161,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-byteflight"></a>
 ### STEUERN_ROUTER_BYTEFLIGHT
 
 Setze Router in Byteflight Mode
@@ -182,7 +174,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-mostmeas"></a>
 ### STEUERN_ROUTER_MOSTMEAS
 
 Set_Meas_Mode
@@ -196,7 +187,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-par-free"></a>
 ### STEUERN_ROUTER_PAR_FREE
 
 veranlaßt eine IFH Instanz, alle Interfaces freizugeben
@@ -210,7 +200,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-reset"></a>
 ### STEUERN_ROUTER_RESET
 
 veranlaßt eine IFH Instanz, alle Interfaces freizugeben
@@ -224,7 +213,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-par-obd"></a>
 ### STEUERN_ROUTER_PAR_OBD
 
 Parallelbetrieb auf K-Line, alle anderen Interfaces werden freigegeben
@@ -238,7 +226,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-par-most"></a>
 ### STEUERN_ROUTER_PAR_MOST
 
 Parallelbetrieb auf K-Line, alle anderen Interfaces werden freigegeben
@@ -252,7 +239,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-router"></a>
 ### STATUS_ROUTER
 
 liefert den Namen des aktuell eingestellten Bus- interfaces oder "AUTO" für Automatik Modus
@@ -268,7 +254,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-traceon"></a>
 ### STEUERN_ROUTER_TRACEON
 
 Router Trace einschalten
@@ -282,7 +267,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-router-traceoff"></a>
 ### STEUERN_ROUTER_TRACEOFF
 
 Router command: Windows Ce Trace off
@@ -296,7 +280,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-most-nodes"></a>
 ### STATUS_MOST_NODES
 
 Ads4Most Kommando: Get diagnose nodes der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -310,7 +293,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-buildregistry"></a>
 ### STEUERN_MOST_BUILDREGISTRY
 
 Abfragen der MOST Central Registry  auslösen der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -328,7 +310,6 @@ Abfragen der MOST Central Registry  auslösen der Router muß auf MOST geschalte
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-most-onofftime"></a>
 ### STATUS_MOST_ONOFFTIME
 
 Ads4Most Kommando: Ermitteln MOST On- und Off- Zeiten sowie Zustand MOST Supervisor Achtung: dieser Job funktioniert erst ab OPPS Version 616. der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST.
@@ -345,7 +326,6 @@ _No arguments._
 | STAT_NET | string | Zustand des MOST Supervisors |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-master-mode"></a>
 ### STEUERN_MOST_MASTER_MODE
 
 CLock und Network Master Funktionalität für MOST schalten der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -364,7 +344,6 @@ CLock und Network Master Funktionalität für MOST schalten der Router muß auf 
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-asyncoff"></a>
 ### STEUERN_MOST_ASYNCOFF
 
 MOST Asynchronkanal abschalten der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -378,7 +357,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-asyncon"></a>
 ### STEUERN_MOST_ASYNCON
 
 Ads4Most Kommando: Asynchronkanal einschalten der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -392,7 +370,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-asyncminlength"></a>
 ### STEUERN_MOST_ASYNCMINLENGTH
 
 Setze Minimallänge für Asynchronkanal der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST Default in OPPS Registry: 200d
@@ -410,7 +387,6 @@ Setze Minimallänge für Asynchronkanal der Router muß auf MOST geschaltet sein
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-most-sg-async"></a>
 ### STATUS_MOST_SG_ASYNC
 
 Fragt auf dem MOST die Asynchron-Fähigkeit eines SG ab
@@ -432,7 +408,6 @@ Fragt auf dem MOST die Asynchron-Fähigkeit eines SG ab
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-nowakeup"></a>
 ### STEUERN_MOST_NOWAKEUP
 
 MOST Wakeup abschalten der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -446,7 +421,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-wakeup"></a>
 ### STEUERN_MOST_WAKEUP
 
 Ads4Most Kommando: Wakeup einschalten der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -460,7 +434,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-mostctrl-llintervall"></a>
 ### STEUERN_MOSTCTRL_LLINTERVALL
 
 Setze den zeitlichen Abstand, in dem die Low Level Telegramme des MOST Kontrollkanals gesendet werden. Der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST Achtung! dieser Befehl ist erst ab OPPS Version 408 verfügbar!
@@ -478,7 +451,6 @@ Setze den zeitlichen Abstand, in dem die Low Level Telegramme des MOST Kontrollk
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort vom OPPS |
 
-<a id="job-steuern-mostctrl-llretry"></a>
 ### STEUERN_MOSTCTRL_LLRETRY
 
 Setze die Zeit, nach der nach einem Fehler ein  Low Level Telegramm des MOST Kontrollkanals wiederholt wird sowie die maximale Anzahl der Wiederholungen. Der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST Achtung! dieser Befehl ist erst ab OPPS Version 408 verfügbar!
@@ -498,7 +470,6 @@ Setze die Zeit, nach der nach einem Fehler ein  Low Level Telegramm des MOST Kon
 | _TEL_AUFTRAG | binary | Hex-Auftrag an das OPPS |
 | _TEL_ANTWORT | binary | Hex-Antwort vom OPPS |
 
-<a id="job-steuern-most-diag-fblock"></a>
 ### STEUERN_MOST_DIAG_FBLOCK
 
 Ein und Ausschalten des Diagnose Funktionsblockes im OPPS
@@ -516,7 +487,6 @@ Ein und Ausschalten des Diagnose Funktionsblockes im OPPS
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-most-diag-fblock"></a>
 ### STATUS_MOST_DIAG_FBLOCK
 
 Prüfen, ob MOST Diagnose FBlock aktiv ist
@@ -532,7 +502,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-tester-adresse"></a>
 ### STEUERN_MOST_TESTER_ADRESSE
 
 Setzen der Tester-Diagnoseadresse, die das OPPS auf dem MOST verwendet Ist der Diagnose Funktionsblock aktiv, so wird er umgemeldet Default nach Booten : 0xF5
@@ -550,7 +519,6 @@ Setzen der Tester-Diagnoseadresse, die das OPPS auf dem MOST verwendet Ist der D
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-threads"></a>
 ### STATUS_THREADS
 
 liefert die Anzahl möglicher parallel laufender IFH-Slaves auf einem Remote Interface
@@ -565,7 +533,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-most-registry"></a>
 ### STATUS_MOST_REGISTRY
 
 Ads4Most Kommando: GETREGSTATUS (0x95) Holt Informationen über den Zustand der MOST Registry der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -583,7 +550,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-traceon"></a>
 ### STEUERN_MOST_TRACEON
 
 Trace für MOST einschalten der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -597,7 +563,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-traceoff"></a>
 ### STEUERN_MOST_TRACEOFF
 
 Ads4Most Kommando: Windows Ce Trace aus der Router muß auf MOST geschaltet sein mit STEUERN_ROUTER_MOST
@@ -611,7 +576,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-ethtrace"></a>
 ### STEUERN_MOST_ETHTRACE
 
 Ads4Most command: Enables/disables the ethernet trace
@@ -631,7 +595,6 @@ Ads4Most command: Enables/disables the ethernet trace
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-most-registers"></a>
 ### STATUS_MOST_REGISTERS
 
 Liest Bank 0 .. 3 der Register im MOST Chipsatz aus
@@ -650,7 +613,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag zum SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-most-acclog"></a>
 ### STATUS_MOST_ACCLOG
 
 liest das Access Log der 8104 nur in speziellen OPPS Testversionen verfügbar!
@@ -666,7 +628,6 @@ _No arguments._
 | STAT_ACC_42_83 | binary | Zugriffe 42..83 |
 | STAT_ACC_84_99 | binary | Zugriffe 84..99 |
 
-<a id="job-steuern-can-mode"></a>
 ### STEUERN_CAN_MODE
 
 Setzen des Umschaltemodus für CAN
@@ -684,7 +645,6 @@ Setzen des Umschaltemodus für CAN
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-can-mode"></a>
 ### STATUS_CAN_MODE
 
 Prüfen des Umschaltemodus für CAN
@@ -699,7 +659,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-can-kl-15"></a>
 ### STATUS_CAN_KL_15
 
 Prüft ob Klemmenstatus Botschaft auf CAN empfangen wird
@@ -717,7 +676,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-obd-kwp2ks"></a>
 ### STATUS__OBD_KWP2KS
 
 Holt Fehlerstatus KWP2000*
@@ -731,7 +689,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dle-traceon"></a>
 ### STEUERN_DLE_TRACEON
 
 Download Engine Trace einschalten
@@ -745,7 +702,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dle-traceoff"></a>
 ### STEUERN_DLE_TRACEOFF
 
 Abschalten Download Engine Trace

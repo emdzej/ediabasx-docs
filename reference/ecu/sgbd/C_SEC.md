@@ -32,7 +32,6 @@
 - [C_C_LESEN](#job-c-c-lesen) - Codierdaten lesen
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 
-<a id="job-info"></a>
 ### INFO
 
 Information bzgl. SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -87,7 +84,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -100,7 +96,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen DS2-Low-Konzept mit Abweichungen
@@ -122,7 +117,6 @@ _No arguments._
 | F_ART1_TEXT | string | 1. (einzige) Fehlerart als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antworten vom SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -139,7 +133,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer beide Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -157,7 +150,6 @@ Beschreiben des Pruefstempels Es muessen immer beide Argumente im Bereich von 0-
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-kodierdaten-lesen"></a>
 ### KODIERDATEN_LESEN
 
 Auslesen des Kodierdatenblocks1 2 Byte fuer Ausstattung & Sprache
@@ -173,7 +165,6 @@ _No arguments._
 | BYTE2 | int | 0-255 bzw. 0x00-0xFF |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-kodierdaten-schreiben"></a>
 ### KODIERDATEN_SCHREIBEN
 
 Schreiben des Kodierdatenblocks1 2 Byte fuer Ausstattung & Sprache
@@ -191,7 +182,6 @@ Schreiben des Kodierdatenblocks1 2 Byte fuer Ausstattung & Sprache
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -209,7 +199,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -227,7 +216,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -254,7 +242,6 @@ Codierdaten schreiben und verifizieren
 - [FORTTEXTE](#table-forttexte) (9 × 2)
 - [FARTTEXTE](#table-farttexte) (20 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -272,7 +259,6 @@ Dimensions: 10 rows × 2 columns
 | ?20? | ERROR_FEHLERANZAHL |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns
@@ -327,7 +313,6 @@ Dimensions: 47 rows × 2 columns
 | 0x46 | Gemel |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -356,7 +341,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 9 rows × 2 columns
@@ -373,7 +357,6 @@ Dimensions: 9 rows × 2 columns
 | 0x08 | Seitenscheibenheizung Beifahrerseite |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 20 rows × 2 columns

@@ -33,7 +33,6 @@
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Beendet Kommuniktion mit SG DUMMY
 - [DIAGNOSE_AUFRECHT](#job-diagnose-aufrecht) - Aufrechterhalten Kommuniktion mit SG
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -51,7 +50,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default Initialisierung der Kommunikation via EDIC
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done/true |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifizierung SG lesen
@@ -87,7 +84,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferanten-Nummer |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher Sg lesen und auswerten Pro Fehler wird ein Ergenbissatz gebildet
@@ -105,7 +101,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl der Fehlerarten |
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -118,7 +113,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn erfolgreich |
 
-<a id="job-status-klemme-r-ein"></a>
 ### STATUS_KLEMME_R_EIN
 
 Status Klemme R abfragen
@@ -133,7 +127,6 @@ _No arguments._
 | STAT_KLEMME_R_EIN_WERT | int | 1=true / 0=false |
 | STAT_KLEMME_R_EIN_TEXT | string | "EIN" / "AUS" |
 
-<a id="job-steuern-test-empfang"></a>
 ### STEUERN_TEST_EMPFANG
 
 Steuern Selbsttestfunktion HF-Empfang
@@ -148,7 +141,6 @@ _No arguments._
 | STAT_RX_OKAY_WERT | int | 1 = true / 0 = false |
 | STAT_RX_OKAY_TEXT | string | 'korrekter Empfang','fehlerhafter Empfang' |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -165,7 +157,6 @@ _No arguments._
 | BYTE3 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -184,7 +175,6 @@ Beschreiben des Pruefstempels
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-code-schreiben"></a>
 ### CODE_SCHREIBEN
 
 Schreiben der Codierdaten
@@ -207,7 +197,6 @@ Schreiben der Codierdaten
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn erfolgreich |
 
-<a id="job-code-lesen"></a>
 ### CODE_LESEN
 
 Auslesen der Codierdaten
@@ -227,7 +216,6 @@ _No arguments._
 | RANGE_CLOSE | int | "1", wenn Reichweite Schliessen reduziert |
 | KOMFORT_CLOSE | int | "1", wenn Komfortschliessen aktiv |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beendet Kommuniktion mit SG DUMMY
@@ -240,7 +228,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Aufrechterhalten Kommuniktion mit SG
@@ -261,7 +248,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (4 × 2)
 - [JOBRESULT](#table-jobresult) (8 × 2)
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -296,7 +282,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -308,7 +293,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Batteriefehler in Transmitter 3 |
 | 0x04 | Batteriefehler in Transmitter 4 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns

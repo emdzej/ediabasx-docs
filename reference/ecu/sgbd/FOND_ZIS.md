@@ -28,7 +28,6 @@
 - [SLEEP_MODE](#job-sleep-mode) - SG in Sleep-Mode versetzen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -46,7 +45,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer FOND_ZIS E38
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Front-FOND_ZIS
@@ -82,7 +79,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -102,7 +98,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -115,7 +110,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fond-zis-version"></a>
 ### FOND_ZIS_VERSION
 
 FOND_ZIS-Variante auslesen
@@ -130,7 +124,6 @@ _No arguments._
 | VARIANTE | string | AUDIO \| TELEFON \| BC |
 | VARIANTEN_NR | string | Nr der Variante fuer ELDI! |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -143,7 +136,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -166,7 +158,6 @@ _No arguments._
 - [FOND_ZISVARIANTE](#table-fond-zisvariante) (7 × 3)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -180,7 +171,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -191,7 +181,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Keine gueltige Statusrueckmeldung AUDIO |
 | 0x03 | Keine gueltige Statusrueckmeldung TELEFON |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -201,7 +190,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Fehler momentan nicht vorhanden |
 | 0x20 | Fehler momentan vorhanden |
 
-<a id="table-fond-zisvariante"></a>
 ### FOND_ZISVARIANTE
 
 Dimensions: 7 rows × 3 columns
@@ -216,7 +204,6 @@ Dimensions: 7 rows × 3 columns
 | 0x12 | AUDIO, UHR, DSP | 6 |
 | 0x03 | BC/UHR | 1 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

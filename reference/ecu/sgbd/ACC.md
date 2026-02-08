@@ -45,7 +45,6 @@
 - [JUSTAGEKENNLINIE_LESEN](#job-justagekennlinie-lesen) - Auslesen der Steilheiten der vertikalen und horizontalen Justagekennlinien im linearen Bereich Modus: Default
 - [SUCHE_PROGRAMMBLOCKFEHLER](#job-suche-programmblockfehler) - durchsucht den Historyspeicher nach dem Programmblockfehler RB-Codes: 0x3002, 0x3003, 0x3081 oder 0x3084
 
-<a id="job-info"></a>
 ### INFO
 
 Information bzgl. SGBD
@@ -63,7 +62,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer ACC automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -76,7 +74,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-start-modus"></a>
 ### START_MODUS
 
 Starten eines Diagnose-Modus fuer ACC
@@ -95,7 +92,6 @@ Starten eines Diagnose-Modus fuer ACC
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-stop-modus"></a>
 ### STOP_MODUS
 
 Stop des aktuellen Diagnose-Modus fuer ACC
@@ -109,7 +105,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer ACC Modus: Default
@@ -134,7 +129,6 @@ _No arguments._
 | ID_SERIEN_NR | string | Seriennummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -148,7 +142,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-otl-daten-reset"></a>
 ### OTL_DATEN_RESET
 
 Ruecksetzen der OTL-Daten
@@ -162,7 +155,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -231,7 +223,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary | 0. Hex-Antwort von SG |
 | _TEL_ANTWORT1 | binary | 1. Hex-Antwort von SG |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Lesen der Codierdaten
@@ -246,7 +237,6 @@ _No arguments._
 | CODIER_DATA | binary | Codierdaten |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-radarziel"></a>
 ### STATUS_RADARZIEL
 
 Radarziel auslesen Modus: Default
@@ -279,7 +269,6 @@ Radarziel auslesen Modus: Default
 | STAT_AMPL_2_WERT | real | Radarobjekt Nr. 2: Amplitude Bereich: 0 bis 2 [] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-radarziel-online"></a>
 ### STATUS_RADARZIEL_ONLINE
 
 Radarziel waehrend der Fahrt auslesen Modus: Default
@@ -305,7 +294,6 @@ _No arguments._
 | STAT_PLAUS_2_WERT | real | Radarobjekt Nr. 2: Plausibilitaet Bereich: ? bis ? [?] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-justagedaten"></a>
 ### STATUS_JUSTAGEDATEN
 
 Justagedaten lesen Modus: ECUAdjustmentMode (ECU)
@@ -324,7 +312,6 @@ _No arguments._
 | STAT_PLAUS_DISTANZ_WERT | real | Plausibilitaet Distanz ? Bereich: ? bis ? [?] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-justagedaten-neu"></a>
 ### STATUS_JUSTAGEDATEN_NEU
 
 Justagedaten lesen, auszuwertende Spektrallinie frei waehlbar Modus: ECUAdjustmentMode (ECU)
@@ -347,7 +334,6 @@ Justagedaten lesen, auszuwertende Spektrallinie frei waehlbar Modus: ECUAdjustme
 | STAT_PLAUS_DISTANZ_WERT | real | Plausibilitaet Distanz ? Bereich: ? bis ? [?] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-spu-dynamisch-lesen"></a>
 ### SPU_DYNAMISCH_LESEN
 
 Lesen von Dejustage und Verschmutzungsinformationen
@@ -366,7 +352,6 @@ _No arguments._
 | STATUS_VERSCHMUTZ | real | Status der Verschmutzungserkennung |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-spu-schreiben"></a>
 ### SPU_SCHREIBEN
 
 Dynamische Daten SPU schreiben Modi: Default
@@ -389,7 +374,6 @@ Dynamische Daten SPU schreiben Modi: Default
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-spu-dyn-daten-reset"></a>
 ### SPU_DYN_DATEN_RESET
 
 Reset der Dynamischen Daten SPU Modi: Default
@@ -404,7 +388,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-schalter-eol-ein"></a>
 ### SCHALTER_EOL_EIN
 
 Sonderfunktionen fuer Bandende aktivieren Modi: Default
@@ -418,7 +401,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-schalter-eol-aus"></a>
 ### SCHALTER_EOL_AUS
 
 Sonderfunktionen fuer Rollenpruefstand deaktivieren Modi: Default
@@ -432,7 +414,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-rpu-dynamisch-lesen"></a>
 ### RPU_DYNAMISCH_LESEN
 
 Dynamische RPU-Daten lesen
@@ -447,7 +428,6 @@ _No arguments._
 | BETRSTD_ZAEHLER | real | Betriebsstundenzaehler |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-operation-constraints-lesen"></a>
 ### OPERATION_CONSTRAINTS_LESEN
 
 Operation-Constraints lesen
@@ -478,7 +458,6 @@ _No arguments._
 | SWITCH_OFF_CONSTRAINT6 | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sw-reset"></a>
 ### SW_RESET
 
 Ausloesen eines SW_Resets
@@ -492,7 +471,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Lesen des Pruefstempels
@@ -510,7 +488,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Schreiben des Pruefstempels
@@ -531,7 +508,6 @@ Schreiben des Pruefstempels
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-justagekennlinie-lesen"></a>
 ### JUSTAGEKENNLINIE_LESEN
 
 Auslesen der Steilheiten der vertikalen und horizontalen Justagekennlinien im linearen Bereich Modus: Default
@@ -547,7 +523,6 @@ _No arguments._
 | JUSKENN_HOR | real | Steilheit der horizontalen Justagekennlinie im linearen Bereich Einheit: 1/Grad Wertebereich: 0.0 ... 6.0 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-suche-programmblockfehler"></a>
 ### SUCHE_PROGRAMMBLOCKFEHLER
 
 durchsucht den Historyspeicher nach dem Programmblockfehler RB-Codes: 0x3002, 0x3003, 0x3081 oder 0x3084
@@ -576,7 +551,6 @@ _No arguments._
 - [OPCON](#table-opcon) (7 × 2)
 - [SWOFFCON](#table-swoffcon) (7 × 2)
 
-<a id="table-diagmodus"></a>
 ### DIAGMODUS
 
 Dimensions: 5 rows × 3 columns
@@ -589,7 +563,6 @@ Dimensions: 5 rows × 3 columns
 | 0x86 | E | Entwicklung |
 | 0xXY | -- | unbekannter Diagnose-Modus |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 34 rows × 2 columns
@@ -631,7 +604,6 @@ Dimensions: 34 rows × 2 columns
 | 0xFF | ERROR_ECU_RESERVED_BY_DOCUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 33 rows × 2 columns
@@ -672,7 +644,6 @@ Dimensions: 33 rows × 2 columns
 | 0x32 | Pioneer |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 31 rows × 2 columns
@@ -711,7 +682,6 @@ Dimensions: 31 rows × 2 columns
 | 0x5D29 | Fehler Umsetzung Beschleunigungssollwert im Bremsfall |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -729,7 +699,6 @@ Dimensions: 10 rows × 2 columns
 | 0x60 | Fehler momentan vorhanden und bereits gespeichert |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 11 rows × 3 columns
@@ -748,7 +717,6 @@ Dimensions: 11 rows × 3 columns
 | 0x0A | verwendeter Flash-Block: | 0/1 |
 | 0xXY | unbekannte Umweltbedingung | ? |
 
-<a id="table-actcon"></a>
 ### ACTCON
 
 Dimensions: 6 rows × 2 columns
@@ -762,7 +730,6 @@ Dimensions: 6 rows × 2 columns
 | 0x10 | externe Aktivierungsbedingung verletzt |
 | 0xXY |  |
 
-<a id="table-opcon"></a>
 ### OPCON
 
 Dimensions: 7 rows × 2 columns
@@ -777,7 +744,6 @@ Dimensions: 7 rows × 2 columns
 | 0x20 | Linse verschmutzt |
 | 0xXY |  |
 
-<a id="table-swoffcon"></a>
 ### SWOFFCON
 
 Dimensions: 7 rows × 2 columns

@@ -46,7 +46,6 @@
 - [STEUERN_ABS_RELAIS](#job-steuern-abs-relais) - Messung Motor Relais Schließzeit Spec Punkt 4.9.3
 - [STEUERN_CODIERUNG_EEPROM_LOESCHEN](#job-steuern-codierung-eeprom-loeschen) - Codierung EEPROM löschen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -65,7 +64,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -78,7 +76,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-start-kommunikation"></a>
 ### START_KOMMUNIKATION
 
 _No arguments._
@@ -90,7 +87,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-stop-kommunikation"></a>
 ### STOP_KOMMUNIKATION
 
 Beenden der Diagnose
@@ -103,7 +99,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 _No arguments._
@@ -114,7 +109,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-baudrate-setzen"></a>
 ### BAUDRATE_SETZEN
 
 #### Arguments
@@ -131,7 +125,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Antwort zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 _No arguments._
@@ -158,7 +151,6 @@ _No arguments._
 | FEHLERCODE_SLAVE_DUMP | binary |  |
 | FEHLERCODE_EEPROM_DUMP | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 _No arguments._
@@ -170,7 +162,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Steuergeräte Identifikation lesen
@@ -193,7 +184,6 @@ _No arguments._
 | SG_KENNZEICHEN | int | Kennzeichnung Steuergerät |
 | VARIANTE_IND | string | Name der SGBD, hier immer MRAABS2 |
 
-<a id="job-sg-softwarestand"></a>
 ### SG_SOFTWARESTAND
 
 _No arguments._
@@ -208,7 +198,6 @@ _No arguments._
 | ISO_DATENSTAND | string | ISO Datenstand |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-abs-taster"></a>
 ### STATUS_ABS_TASTER
 
 Status ABS Quittiertaste auslesen
@@ -224,7 +213,6 @@ _No arguments._
 | STATUS_WERT | int | Wert als Zahl |
 | STATUS_TASTER_TEXT | string | EIN/AUS |
 
-<a id="job-status-codierung-kabelbaum"></a>
 ### STATUS_CODIERUNG_KABELBAUM
 
 Kodierung Kabelbaum auslesen
@@ -240,7 +228,6 @@ _No arguments._
 | STATUS_CODIERUNG | int | Codierung als Zahl |
 | STATUS_CODIERUNG_TEXT | string | Codierung als Text table KabelCodierung |
 
-<a id="job-status-codierung-eeprom"></a>
 ### STATUS_CODIERUNG_EEPROM
 
 Codierung EEPROM auslesen
@@ -256,7 +243,6 @@ _No arguments._
 | STATUS_CODIERUNG | int | Codierung als Zahl |
 | STATUS_CODIERUNG_TEXT | string | Codierung als Text table KabelCodierung |
 
-<a id="job-status-sensorfrequenz"></a>
 ### STATUS_SENSORFREQUENZ
 
 Raddrehzahlfrequenzen auslesen
@@ -275,7 +261,6 @@ _No arguments._
 | FREQUENZ_HINTERRAD_WERT | int |  |
 | FREQUENZ_HINTERRAD_EINH | string |  |
 
-<a id="job-status-radgeschwindigkeit"></a>
 ### STATUS_RADGESCHWINDIGKEIT
 
 _No arguments._
@@ -292,7 +277,6 @@ _No arguments._
 | RAD_GESCHW_VORN_EINH | string | Einheit Geschwindigkeit vorn in km/h |
 | RAD_GESCHW_HINTEN_EINH | string | Einheit Geschwindigkeit hinten in km/h |
 
-<a id="job-status-eeprom-lesen"></a>
 ### STATUS_EEPROM_LESEN
 
 _No arguments._
@@ -304,7 +288,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | EEPROM_HEXDUMP | binary | Hexdump von 0x00-0x7f, wortweise High Byte, Low Byte |
 
-<a id="job-status-analog-werte"></a>
 ### STATUS_ANALOG_WERTE
 
 Auslesen von analogen Messwerten
@@ -328,7 +311,6 @@ _No arguments._
 | ANTWORT1 | binary |  |
 | ANTWORT2 | binary |  |
 
-<a id="job-steuern-warnlampe-1"></a>
 ### STEUERN_WARNLAMPE_1
 
 Testbrett Lampe W, Warnlampe 1, Warnlampen Relais (Öffner)
@@ -346,7 +328,6 @@ Testbrett Lampe W, Warnlampe 1, Warnlampen Relais (Öffner)
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANFRAGE | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-warnlampe-2"></a>
 ### STEUERN_WARNLAMPE_2
 
 Testbrett Lampe K, Warnlampe 2
@@ -364,7 +345,6 @@ Testbrett Lampe K, Warnlampe 2
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANFRAGE | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-warnlampe-zuruecksetzen"></a>
 ### STEUERN_WARNLAMPE_ZURUECKSETZEN
 
 Hardware TestModus ausschalten, für Warnlampe 1, 2
@@ -377,7 +357,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-steuern-warnlampen-test"></a>
 ### STEUERN_WARNLAMPEN_TEST
 
 Testbrett Lampe K, Warnlampe 2 Testbrett Lampe W, Warnlampe 1, Warnlampen Relais (Öffner)
@@ -391,7 +370,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-fmw-test"></a>
 ### STEUERN_FMW_TEST
 
 FMW - Find Maximum Way Vorderrad und Hinterrad PWM/Weg Kennlinie, Spec Punkt 4.9.1
@@ -405,7 +383,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | FEHLERCODE | unsigned long | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-steuern-elg-test"></a>
 ### STEUERN_ELG_TEST
 
 ELG - Entlastungsgradient Vorderrad und Hinterrad Spec Punkt 4.9.2
@@ -421,7 +398,6 @@ _No arguments._
 | ENTLASTUNGSZEIT_EINHEIT | string | Einheit Entlastungszeit |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-steuern-pumpenmotor"></a>
 ### STEUERN_PUMPENMOTOR
 
 Pumpenmotor ansteuern Messung der Batteriespannung unter Last Angabe Parameter Zeit ist optional Spec Punkt 4.5
@@ -442,7 +418,6 @@ Pumpenmotor ansteuern Messung der Batteriespannung unter Last Angabe Parameter Z
 | KLEMME_30_MIN_WERT | real | minimal gemessene Batteriespannung |
 | KLEMME_30_MIN_EINH | string |  |
 
-<a id="job-steuern-abs-relais"></a>
 ### STEUERN_ABS_RELAIS
 
 Messung Motor Relais Schließzeit Spec Punkt 4.9.3
@@ -456,7 +431,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-codierung-eeprom-loeschen"></a>
 ### STEUERN_CODIERUNG_EEPROM_LOESCHEN
 
 Codierung EEPROM löschen
@@ -491,7 +465,6 @@ _No arguments._
 - [RESPONSECODE](#table-responsecode) (7 × 2)
 - [LIEFERANTEN](#table-lieferanten) (81 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 57 rows × 2 columns
@@ -556,7 +529,6 @@ Dimensions: 57 rows × 2 columns
 | 0x38 | Interne Störung |
 | 0xFF | unbekannter Fehler |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 9 rows × 2 columns
@@ -573,7 +545,6 @@ Dimensions: 9 rows × 2 columns
 | 0x22 | MOMEMTAN VORHANDEN |
 | 0x23 | MOMEMTAN VORHANDEN |
 
-<a id="table-fehlercodetest"></a>
 ### FEHLERCODETEST
 
 Dimensions: 3 rows × 2 columns
@@ -584,7 +555,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | TEST UNVOLLSTAENDIG |
 | 0xFF | UNBEKANNT |
 
-<a id="table-fehlerstatus"></a>
 ### FEHLERSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -597,7 +567,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | MOMEMTAN VORHANDEN |
 | 0xFF | STATUS: UNBEKANNT |
 
-<a id="table-warnlampe"></a>
 ### WARNLAMPE
 
 Dimensions: 3 rows × 2 columns
@@ -608,7 +577,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Ein |
 | 0xFF | UNBEKANNT |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -623,7 +591,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | FEHLER: FORMATFEHLER DATEN (NICHT HEX) |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-fmw-test"></a>
 ### FMW_TEST
 
 Dimensions: 8 rows × 2 columns
@@ -639,7 +606,6 @@ Dimensions: 8 rows × 2 columns
 | 0x0A | FEHLER: Kommunikationsfehler |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-elg-test"></a>
 ### ELG_TEST
 
 Dimensions: 7 rows × 2 columns
@@ -654,7 +620,6 @@ Dimensions: 7 rows × 2 columns
 | 0x08 | FEHLER: Motor nicht ausgeschaltet |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-mot-test"></a>
 ### MOT_TEST
 
 Dimensions: 6 rows × 2 columns
@@ -668,7 +633,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | NICHT OK |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-pumpenmotor"></a>
 ### PUMPENMOTOR
 
 Dimensions: 5 rows × 2 columns
@@ -681,7 +645,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | NICHT OK: Batteriespannung unter Last < 9 Volt |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-statuswarnlampe"></a>
 ### STATUSWARNLAMPE
 
 Dimensions: 5 rows × 2 columns
@@ -694,7 +657,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Fehler: Warnlampe K und Warnlampe W, Relais defekt |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-kabelcodierung"></a>
 ### KABELCODIERUNG
 
 Dimensions: 11 rows × 2 columns
@@ -713,7 +675,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0C | R 850 R / R 1100 R |
 | 0xFF | UNBEKANNT |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 17 rows × 2 columns
@@ -738,7 +699,6 @@ Dimensions: 17 rows × 2 columns
 | 31250 | 0 |
 | 0xFFFF | 0xFF |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 3 rows × 2 columns
@@ -749,7 +709,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | EIN |
 | 0xFF | UNBEKANNT |
 
-<a id="table-responsecode"></a>
 ### RESPONSECODE
 
 Dimensions: 7 rows × 2 columns
@@ -764,7 +723,6 @@ Dimensions: 7 rows × 2 columns
 | 0x78 | 0x78: ANFORDERUNG NOCH NICHT BEENDET |
 | 0xFF | UNBEKANNT |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 81 rows × 2 columns

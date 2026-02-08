@@ -254,7 +254,6 @@
 - [STATUS_SYSTEMCHECK_PM_MESSEMODE](#job-status-systemcheck-pm-messemode) - Auslesen Messemode SYSTEMCHECK_PM_MESSEMODE (0xF0F6)
 - [STOP_SYSTEMCHECK_PM_MESSEMODE](#job-stop-systemcheck-pm-messemode) - Ende Messemode SYSTEMCHECK_PM_MESSEMODE (0xF0F6)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -273,7 +272,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -286,7 +284,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -303,7 +300,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -329,7 +325,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -371,7 +366,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -390,7 +384,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -408,7 +401,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -429,7 +421,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -458,7 +449,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -474,7 +464,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -489,7 +478,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -515,7 +503,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -535,7 +522,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -554,7 +540,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -573,7 +558,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -588,7 +572,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -607,7 +590,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -627,7 +609,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -644,7 +625,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -663,7 +643,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -679,7 +658,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -713,7 +691,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -728,7 +705,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-info"></a>
 ### CBS_INFO
 
 Ausgabe der CBS-Version
@@ -744,7 +720,6 @@ _No arguments._
 | CBS_VERSION_TEXT | string | CBS Version im Klartext |
 | CBS_VERSION_HEX | string | CBS Version als Wert |
 
-<a id="job-cbs-daten-lesen"></a>
 ### CBS_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 5) UDS: $22 ReadDataByIdentifier Modus  : Default
@@ -803,7 +778,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset"></a>
 ### CBS_RESET
 
 CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modus  : Default Musterparametersatz fuer Bremsbelagverschleiss Vorder/Hinterachse br_v,100,1,0,0,0,1,0,0 br_h,100,1,0,0,0,1,0,0 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!)
@@ -834,7 +808,6 @@ CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modu
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -849,7 +822,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -866,7 +838,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -881,7 +852,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -896,7 +866,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -911,7 +880,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -927,7 +895,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -946,7 +913,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -966,7 +932,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -984,7 +949,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -1000,7 +964,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -1026,7 +989,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -1068,7 +1030,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-ews4-sk"></a>
 ### STEUERN_EWS4_SK
 
 17 "EWS4-data" schreiben UDS   : $2E   WriteDataByIdentifier UDS   : $C001 Sub-Parameter
@@ -1089,7 +1050,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews"></a>
 ### STATUS_EWS
 
 Zurücklesen verschiedener interner Stati für EWS UDS   : $22   ReadDataByIdentifier UDS   : $C000 Sub-Parameter
@@ -1122,7 +1082,6 @@ Zurücklesen verschiedener interner Stati für EWS UDS   : $22   ReadDataByIdent
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews4-sk"></a>
 ### STATUS_EWS4_SK
 
 Lesen des SecretKey des Server sowie Client für EWS4 UDS   : $22   ReadDataByIdentifier UDS   : $C002 Sub-Parameter
@@ -1143,7 +1102,6 @@ Lesen des SecretKey des Server sowie Client für EWS4 UDS   : $22   ReadDataById
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-permanent"></a>
 ### FS_LESEN_PERMANENT
 
 permanente Fehler aus Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $15 ReportDTCWithPermanentStatus Modus: Default
@@ -1169,7 +1127,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen-ascii"></a>
 ### SPEICHER_LESEN_ASCII
 
 0x23 SPEICHER_LESEN_ASCII Auslesen des Steuergeraete-Speichers Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -1192,7 +1149,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-swe-lesen"></a>
 ### _SWE_LESEN
 
 0x31010205 SWE_LESEN Informationen zu Softwareeinheiten auf dem Steuergerät unter Verwendung des Jobs SVK_LESEN UDS  : $31   RoutinControl by RequestSerice ID UDS  : $01xx Sub-Parameter fuer SVK UDS  : $0205 SWEDI (Default) Modus: Default
@@ -1220,7 +1176,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-messwertblock-lesen"></a>
 ### MESSWERTBLOCK_LESEN
 
 0x2CF0 MESSWERTBLOCK_LESEN DDLI Messwerte auf Basis Übergabestring aus DME auslesen Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -1249,7 +1204,6 @@ _No arguments._
 | _TEL_AUFTRAG_S | binary | Hex-Auftrag an  SG Block lesen |
 | _TEL_ANTWORT | binary | Hex-response von SG Block lesen |
 
-<a id="job-abgleichwerte-schreiben"></a>
 ### ABGLEICHWERTE_SCHREIBEN
 
 0x2E5F90 ABGLEICHWERTE_SCHREIBEN Abgleichwerte Injektoren programmieren für CASCADE mit Übernahme Daten aus COD-Datei Aktivierung: Klemme 15 = EIN UND Drehzahl = 0 1/min Activation: LV_IGK = 1 UND LV_ES = 1
@@ -1270,7 +1224,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-abgleichwerte-lesen"></a>
 ### ABGLEICHWERTE_LESEN
 
 0x225F90 ABGLEICHWERTE_LESEN Abgleichwerte Injektoren auslesen für CASCADE für Vergleich mit Daten aus COD-Datei Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -1293,7 +1246,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-llerh"></a>
 ### START_SYSTEMCHECK_LLERH
 
 Ansteuern Diagnosefunktion Leerlauf-Erhoehung SYSTEMCHECK_LLERH (0xF026)
@@ -1312,7 +1264,6 @@ Ansteuern Diagnosefunktion Leerlauf-Erhoehung SYSTEMCHECK_LLERH (0xF026)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-llerh"></a>
 ### STATUS_SYSTEMCHECK_LLERH
 
 Auslesen Diagnosefunktion Leerlauf-Erhoehung SYSTEMCHECK_LLERH (0xF026)
@@ -1329,7 +1280,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-llerh"></a>
 ### STOP_SYSTEMCHECK_LLERH
 
 Diagnosefunktion Leerlauf-Erhoehung beenden SYSTEMCHECK_LLERH (0xF026)
@@ -1344,7 +1294,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bzediag"></a>
 ### STATUS_BZEDIAG
 
 BZE Infospeicher BZEDIAG (0x403B)
@@ -1491,7 +1440,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-messwerte"></a>
 ### STATUS_MESSWERTE
 
 Messwerte auslesen MESSWERTE (0x4000)
@@ -1548,7 +1496,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dfmonitor"></a>
 ### STATUS_DFMONITOR
 
 Batterieladezustand auslesen DFMONITOR (0x4001)
@@ -1565,7 +1512,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital-1"></a>
 ### STATUS_DIGITAL_1
 
 Status Schaltzustaende 1 DIGITAL_1 (0x4002)
@@ -1592,7 +1538,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-nockenwelle-adaption"></a>
 ### STATUS_NOCKENWELLE_ADAPTION
 
 Nockenwellenadationswerte auslesen NOCKENWELLE_ADAPTION (0x4006)
@@ -1635,7 +1580,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital-0"></a>
 ### STATUS_DIGITAL_0
 
 Status Schaltzustaende 0 DIGITAL_0 (0x4007)
@@ -1675,7 +1619,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-adaption-dk"></a>
 ### STATUS_ADAPTION_DK
 
 Drosselklappenadaptionswerte auslesen ADAPTION_DK (0x4008)
@@ -1696,7 +1639,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-adaption-gemisch"></a>
 ### STATUS_ADAPTION_GEMISCH
 
 Gemischadaptionswerte auslesen ADAPTION_GEMISCH (0x400A)
@@ -1714,7 +1656,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-messwerte-vvt"></a>
 ### STATUS_MESSWERTE_VVT
 
 VVT Messwerte auslesen MESSWERTE_VVT (0x400B)
@@ -1742,7 +1683,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fasta10"></a>
 ### FASTA10
 
 FASTA-Messwertblock 10 lesen FASTA10 (0x4015)
@@ -1936,7 +1876,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-geninfo"></a>
 ### STATUS_GENINFO
 
 Infospeicher Generatordiagnose erweitert auslesen GENINFO (0x401B)
@@ -2016,7 +1955,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ident-ibs"></a>
 ### IDENT_IBS
 
 Identifikationsdaten fuer IBS-Sensor auslesen IDENT_IBS (0x4021)
@@ -2036,7 +1974,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-messwerte-ewap"></a>
 ### STATUS_MESSWERTE_EWAP
 
 elektr. Wasserpumpe ueber BSD (Bit Serielle Datenschnittstelle) Messwerte auslesen MESSWERTE_EWAP (0x4024)
@@ -2068,7 +2005,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-messwerte-vad"></a>
 ### STATUS_MESSWERTE_VAD
 
 Variantenadaptionen auslesen MESSWERTE_VAD (0x4025)
@@ -2084,7 +2020,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbmmode9"></a>
 ### STATUS_RBMMODE9
 
 Rate Based Monitoring Mode 9 auslesen (Ausgabe der Werte wie im Scantool Mode 9) RBMMODE9 (0x4026)
@@ -2119,7 +2054,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbmme1"></a>
 ### STATUS_RBMME1
 
 Rate Based Monitoring Motorsteuerung ME... Block 1 auslesen (Vorhalt) RBMME1 (0x4029)
@@ -2172,7 +2106,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbmme2"></a>
 ### STATUS_RBMME2
 
 Rate Based Monitoring Motorsteuerung ME... Block 2 auslesen (Vorhalt) RBMME2 (0x402A)
@@ -2261,7 +2194,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-messwerte-lrp"></a>
 ### STATUS_MESSWERTE_LRP
 
 Messwerte Laufruhepruefung auslesen MESSWERTE_LRP (0x402D)
@@ -2318,7 +2250,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-calcvn"></a>
 ### STATUS_CALCVN
 
 Cal-ID (Calibration-ID) und CVN(Calibration Verification Number) auslesen. CALCVN (0x403C)
@@ -2336,7 +2267,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-injad"></a>
 ### STATUS_INJAD
 
 Injektor Adaptionswerte lesen INJAD (Kleinstmengen-Adaption RB-Umfaenge) INJAD (0x403F)
@@ -2426,7 +2356,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-atldiag"></a>
 ### STATUS_ATLDIAG
 
 Turboladerstatus auslesen ATLDIAG (0x4044)
@@ -2444,7 +2373,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-klannadap"></a>
 ### STATUS_KLANNADAP
 
 KLANN Adaptionen auslesen KLANNADAP (0x4046)
@@ -2479,7 +2407,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-typpruefnr"></a>
 ### STATUS_TYPPRUEFNR
 
 Typpruefnummer fuer BN2020 SGs auslesen TYPPRUEFNR (0x4047)
@@ -2495,7 +2422,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-readiness"></a>
 ### STATUS_READINESS
 
 Monitorfunktionen und Readinessflags aus DME auslesen READINESS (0x4105)
@@ -2554,7 +2480,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-gvobd"></a>
 ### STATUS_GVOBD
 
 Gemischvertrimmung fuer OBD-Demo und PVE auslesen. GVOBD (0x5F80)
@@ -2575,7 +2500,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-gvobd"></a>
 ### STEUERN_GVOBD
 
 Gemischvertrimmung fuer OBD-Demo und PVE vorgeben. Der Korrekturfaktor soll bei Klemmenwechsel auf den Standardwert 1 zurueckgesetzt werden. STEUERN_GVOBD (0x5F80)
@@ -2599,7 +2523,6 @@ Gemischvertrimmung fuer OBD-Demo und PVE vorgeben. Der Korrekturfaktor soll bei 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-programm-gvobd"></a>
 ### STEUERN_PROGRAMM_GVOBD
 
 Gemischvertrimmung fuer OBD-Demo und PVE programmieren. STEUERN_PROGRAMM_GVOBD (0x5F80)
@@ -2623,7 +2546,6 @@ Gemischvertrimmung fuer OBD-Demo und PVE programmieren. STEUERN_PROGRAMM_GVOBD (
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pm-backup"></a>
 ### STATUS_PM_BACKUP
 
 Auslesen des PM-Backup PM_BACKUP (0x5F8B)
@@ -2645,7 +2567,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pm-restore"></a>
 ### STEUERN_PM_RESTORE
 
 Schreiben PM-Restore PM_RESTORE (0x5F8B)
@@ -2670,7 +2591,6 @@ Schreiben PM-Restore PM_RESTORE (0x5F8B)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hubkorr"></a>
 ### STATUS_HUBKORR
 
 Hubkorrektur auslesen HUBKORR (0x5F8C)
@@ -2688,7 +2608,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hubkorr-programmieren"></a>
 ### STEUERN_HUBKORR_PROGRAMMIEREN
 
 Hubkorrektur programmieren STEUERN_HUBKORR_PROGRAMMIEREN (0x5F8C)
@@ -2707,7 +2626,6 @@ Hubkorrektur programmieren STEUERN_HUBKORR_PROGRAMMIEREN (0x5F8C)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hubkorr-reset"></a>
 ### STEUERN_HUBKORR_RESET
 
 Hubkorrektur loeschen STEUERN_HUBKORR_RESET (0x5F8C)
@@ -2722,7 +2640,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hubkorr-verstellen"></a>
 ### STEUERN_HUBKORR_VERSTELLEN
 
 Hubkorrektur vorgeben STEUERN_HUBKORR_VERSTELLEN (0x5F8C)
@@ -2741,7 +2658,6 @@ Hubkorrektur vorgeben STEUERN_HUBKORR_VERSTELLEN (0x5F8C)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-imaalle"></a>
 ### STATUS_IMAALLE
 
 Abgleichwerte Injektoren auslesen ACHTUNG: Dieser Diagnosedienst darf nur in Ausnahmefaellen als Ersatz fuer den entsprechenden Diagnosedienst 0x30xx-xx verwendet werden. IMAALLE (0x5F90)
@@ -2768,7 +2684,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-imaalle"></a>
 ### STEUERN_IMAALLE
 
 Abgleichwerte Injektoren programmieren IMAALLE (0x5F90)
@@ -2792,7 +2707,6 @@ Abgleichwerte Injektoren programmieren IMAALLE (0x5F90)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ima-zyl-1"></a>
 ### STEUERN_IMA_ZYL_1
 
 Abgleichwert Injektor 01 (phys) programmieren IMA_ZYL_1 (0x5F91)
@@ -2811,7 +2725,6 @@ Abgleichwert Injektor 01 (phys) programmieren IMA_ZYL_1 (0x5F91)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ima-zyl-2"></a>
 ### STEUERN_IMA_ZYL_2
 
 Abgleichwert Injektor 02 (phys) programmieren IMA_ZYL_2 (0x5F92)
@@ -2830,7 +2743,6 @@ Abgleichwert Injektor 02 (phys) programmieren IMA_ZYL_2 (0x5F92)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ima-zyl-3"></a>
 ### STEUERN_IMA_ZYL_3
 
 Abgleichwert Injektor 03 (phys) programmieren IMA_ZYL_3 (0x5F93)
@@ -2849,7 +2761,6 @@ Abgleichwert Injektor 03 (phys) programmieren IMA_ZYL_3 (0x5F93)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ima-zyl-4"></a>
 ### STEUERN_IMA_ZYL_4
 
 Abgleichwert Injektor 04 (phys) programmieren IMA_ZYL_4 (0x5F94)
@@ -2868,7 +2779,6 @@ Abgleichwert Injektor 04 (phys) programmieren IMA_ZYL_4 (0x5F94)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ima-zyl-5"></a>
 ### STEUERN_IMA_ZYL_5
 
 Abgleichwert Injektor 05 (phys) programmieren IMA_ZYL_5 (0x5F95)
@@ -2887,7 +2797,6 @@ Abgleichwert Injektor 05 (phys) programmieren IMA_ZYL_5 (0x5F95)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ima-zyl-6"></a>
 ### STEUERN_IMA_ZYL_6
 
 Abgleichwert Injektor 06 (phys) programmieren IMA_ZYL_6 (0x5F96)
@@ -2906,7 +2815,6 @@ Abgleichwert Injektor 06 (phys) programmieren IMA_ZYL_6 (0x5F96)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-kva"></a>
 ### STEUERN_KVA
 
 KraftstoffVerbrauchsAnzeige - Korrekturfaktor schreiben KVA (0x5FC1)
@@ -2925,7 +2833,6 @@ KraftstoffVerbrauchsAnzeige - Korrekturfaktor schreiben KVA (0x5FC1)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vvtminh"></a>
 ### STATUS_VVTMINH
 
 VVT-Minhub auslesen ACHTUNG: Dieser Diagnosedienst darf nur in Ausnahmefaellen als Ersatz fuer den entsprechenden Diagnosedienst 0x30xx-xx verwendet werden. VVTMINH (0x5FDE)
@@ -2942,7 +2849,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ll-abgleich"></a>
 ### STATUS_LL_ABGLEICH
 
 Abgleichwert LL (Leerlauf) auslesen ACHTUNG: Dieser Diagnosedienst darf nur in Ausnahmefaellen als Ersatz fuer den entsprechenden Diagnosedienst 0x30xx-xx verwendet werden. LL_ABGLEICH (0x5FF0)
@@ -2967,7 +2873,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-abll"></a>
 ### STEUERN_ENDE_ABLL
 
 Abgleichwert LL (Leerlauf) Vorgeben beenden STEUERN_ENDE_ABLL (0x5FF0)
@@ -2982,7 +2887,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-llabg-prog"></a>
 ### STEUERN_LLABG_PROG
 
 Abgleichwert LL (Leerlauf) programmieren STEUERN_LLABG_PROG (0x5FF0)
@@ -3005,7 +2909,6 @@ Abgleichwert LL (Leerlauf) programmieren STEUERN_LLABG_PROG (0x5FF0)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ll-abgleich"></a>
 ### STEUERN_LL_ABGLEICH
 
 Abgleichwert LL (Leerlauf) vorgeben STEUERN_LL_ABGLEICH (0x5FF0)
@@ -3028,7 +2931,6 @@ Abgleichwert LL (Leerlauf) vorgeben STEUERN_LL_ABGLEICH (0x5FF0)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ecu-config"></a>
 ### ECU_CONFIG
 
 Variante auslesen ACHTUNG: Dieser Diagnosedienst darf nur in Ausnahmefaellen als Ersatz fuer den entsprechenden Diagnosedienst 0x30xx-xx verwendet werden. ECU_CONFIG (0x5FF2)
@@ -3108,7 +3010,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ecu-config-reset"></a>
 ### ECU_CONFIG_RESET
 
 Variante loeschen ECU_CONFIG_RESET (0x5FF2)
@@ -3123,7 +3024,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pm-histogram-reset"></a>
 ### STEUERN_PM_HISTOGRAM_RESET
 
 Powermanagement Histogramm loeschen STEUERN_PM_HISTOGRAM_RESET (0x5FF5)
@@ -3138,7 +3038,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dk"></a>
 ### STEUERN_DK
 
 Drosselklappe ansteuern DK (0x602A)
@@ -3158,7 +3057,6 @@ Drosselklappe ansteuern DK (0x602A)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-dk"></a>
 ### STEUERN_ENDE_DK
 
 Drosselklappe Ansteuerung beenden DK (0x602A)
@@ -3173,7 +3071,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ugen"></a>
 ### STEUERN_ENDE_UGEN
 
 Generator Sollspannung BSD (Bit Serielle Datenschnittstelle) Ansteuerung beenden UGEN (0x6032)
@@ -3188,7 +3085,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ugen"></a>
 ### STEUERN_UGEN
 
 Generator Sollspannung BSD (Bit Serielle Datenschnittstelle) ansteuern UGEN (0x6032)
@@ -3208,7 +3104,6 @@ Generator Sollspannung BSD (Bit Serielle Datenschnittstelle) ansteuern UGEN (0x6
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eluer"></a>
 ### STEUERN_ELUER
 
 E-Luefter-Relais ansteuern ELUER (0x6081)
@@ -3228,7 +3123,6 @@ E-Luefter-Relais ansteuern ELUER (0x6081)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-eluer"></a>
 ### STEUERN_ENDE_ELUER
 
 E-Luefter-Relais Ansteuerung beenden ELUER (0x6081)
@@ -3243,7 +3137,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-glf2"></a>
 ### STEUERN_ENDE_GLF2
 
 Gesteuerte Luftfuehrung Klappe 2 Ansteuerung beenden GLF2 (0x60A4)
@@ -3258,7 +3151,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-glf2"></a>
 ### STEUERN_GLF2
 
 Gesteuerte Luftfuehrung Klappe 2 ansteuern GLF2 (0x60A4)
@@ -3278,7 +3170,6 @@ Gesteuerte Luftfuehrung Klappe 2 ansteuern GLF2 (0x60A4)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-odr"></a>
 ### STEUERN_ENDE_ODR
 
 Oel Druck Regelung (Geregeltes Oeldrucksystem) Ansteuerung beenden ODR (0x60AB)
@@ -3293,7 +3184,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-odr"></a>
 ### STEUERN_ODR
 
 Oel Druck Regelung (Geregeltes Oeldrucksystem) ansteuern ODR (0x60AB)
@@ -3313,7 +3203,6 @@ Oel Druck Regelung (Geregeltes Oeldrucksystem) ansteuern ODR (0x60AB)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-odv"></a>
 ### STEUERN_ENDE_ODV
 
 Oeldruckventil (Geregeltes Oeldrucksystem) Ansteuerung beenden ODV (0x60AC)
@@ -3328,7 +3217,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-odv"></a>
 ### STEUERN_ODV
 
 Oeldruckventil (Geregeltes Oeldrucksystem) ansteuern ODV (0x60AC)
@@ -3348,7 +3236,6 @@ Oeldruckventil (Geregeltes Oeldrucksystem) ansteuern ODV (0x60AC)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-mls"></a>
 ### STEUERN_ENDE_MLS
 
 Motorlagersteuerung Ansteuerung beenden MLS (0x60B2)
@@ -3363,7 +3250,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-mls"></a>
 ### STEUERN_MLS
 
 Motorlagersteuerung ansteuern MLS (0x60B2)
@@ -3383,7 +3269,6 @@ Motorlagersteuerung ansteuern MLS (0x60B2)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ulv"></a>
 ### STEUERN_ENDE_ULV
 
 Umluftventil Ansteuerung beenden ULV (0x60B5)
@@ -3398,7 +3283,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ulv"></a>
 ### STEUERN_ULV
 
 Umluftventil ansteuern ULV (0x60B5)
@@ -3418,7 +3302,6 @@ Umluftventil ansteuern ULV (0x60B5)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-lds1"></a>
 ### STEUERN_ENDE_LDS1
 
 Ladedrucksteller 1 (z.B. Waste Gate oder VTG variable Turbinengeometrie) Ansteuerung beenden LDS1 (0x60B6)
@@ -3433,7 +3316,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-lds1"></a>
 ### STEUERN_LDS1
 
 Ladedrucksteller 1 (z.B. Waste Gate oder VTG variable Turbinengeometrie) ansteuern LDS1 (0x60B6)
@@ -3453,7 +3335,6 @@ Ladedrucksteller 1 (z.B. Waste Gate oder VTG variable Turbinengeometrie) ansteue
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-msv"></a>
 ### STEUERN_ENDE_MSV
 
 Mengensteuerventil Ansteuerung beenden MSV (0x60BD)
@@ -3468,7 +3349,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-msv"></a>
 ### STEUERN_MSV
 
 Mengensteuerventil ansteuern MSV (0x60BD)
@@ -3488,7 +3368,6 @@ Mengensteuerventil ansteuern MSV (0x60BD)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ewap"></a>
 ### STEUERN_ENDE_EWAP
 
 elektr. Wasserpumpe Ansteuerung beenden EWAP (0x60BF)
@@ -3503,7 +3382,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ewap"></a>
 ### STEUERN_EWAP
 
 elektr. Wasserpumpe (Bit Serielle Datenschnittstelle) ansteuern EWAP (0x60BF)
@@ -3523,7 +3401,6 @@ elektr. Wasserpumpe (Bit Serielle Datenschnittstelle) ansteuern EWAP (0x60BF)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-agk"></a>
 ### STEUERN_AGK
 
 Abgasklappe ansteuern AGK (0x60C1)
@@ -3543,7 +3420,6 @@ Abgasklappe ansteuern AGK (0x60C1)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-agk"></a>
 ### STEUERN_ENDE_AGK
 
 Abgasklappe Ansteuerung beenden AGK (0x60C1)
@@ -3558,7 +3434,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-glf"></a>
 ### STEUERN_ENDE_GLF
 
 Gesteuerte Luftfuehrung (Klappe 1) Ansteuerung beenden GLF (0x60C3)
@@ -3573,7 +3448,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-glf"></a>
 ### STEUERN_GLF
 
 Gesteuerte Luftfuehrung (Klappe 1) ansteuern GLF (0x60C3)
@@ -3593,7 +3467,6 @@ Gesteuerte Luftfuehrung (Klappe 1) ansteuern GLF (0x60C3)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-kft"></a>
 ### STEUERN_ENDE_KFT
 
 Kennfeldthermostat Ansteuerung beenden KFT (0x60C9)
@@ -3608,7 +3481,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-kft"></a>
 ### STEUERN_KFT
 
 Kennfeldthermostat ansteuern KFT (0x60C9)
@@ -3628,7 +3500,6 @@ Kennfeldthermostat ansteuern KFT (0x60C9)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dmtl-p"></a>
 ### STEUERN_DMTL_P
 
 Diagnosemodul-Tank Leckage Pumpe ansteuern DMTL_P (0x60CC)
@@ -3648,7 +3519,6 @@ Diagnosemodul-Tank Leckage Pumpe ansteuern DMTL_P (0x60CC)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-dmtl-p"></a>
 ### STEUERN_ENDE_DMTL_P
 
 Diagnosemodul-Tank Leckage Pumpe Ansteuerung beenden DMTL_P (0x60CC)
@@ -3663,7 +3533,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dmtl-v"></a>
 ### STEUERN_DMTL_V
 
 Diagnosemodul-Tank Leckage Ventil ansteuern DMTL_V (0x60CD)
@@ -3683,7 +3552,6 @@ Diagnosemodul-Tank Leckage Ventil ansteuern DMTL_V (0x60CD)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-dmtl-v"></a>
 ### STEUERN_ENDE_DMTL_V
 
 Diagnosemodul-Tank Leckage Ventil Ansteuerung beenden DMTL_V (0x60CD)
@@ -3698,7 +3566,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dmtl-heizung"></a>
 ### STEUERN_DMTL_HEIZUNG
 
 Diagnosemodul-Tank Leckage Heizung ansteuern DMTL_HEIZUNG (0x60CE)
@@ -3718,7 +3585,6 @@ Diagnosemodul-Tank Leckage Heizung ansteuern DMTL_HEIZUNG (0x60CE)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-dmtl-heizung"></a>
 ### STEUERN_ENDE_DMTL_HEIZUNG
 
 Diagnosemodul-Tank Leckage Heizung Ansteuerung beenden DMTL_HEIZUNG (0x60CE)
@@ -3733,7 +3599,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-tev"></a>
 ### STEUERN_ENDE_TEV
 
 Tankentlueftungsventil Ansteuerung beenden TEV (0x60CF)
@@ -3748,7 +3613,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-tev"></a>
 ### STEUERN_TEV
 
 Tankentlueftungsventil ansteuern TEV (0x60CF)
@@ -3768,7 +3632,6 @@ Tankentlueftungsventil ansteuern TEV (0x60CF)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-lsh1"></a>
 ### STEUERN_ENDE_LSH1
 
 Lambdasondenheizung vor Kat Bank1 Ansteuerung beenden LSH1 (0x60D0)
@@ -3783,7 +3646,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-lsh1"></a>
 ### STEUERN_LSH1
 
 Lambdasondenheizung vor Kat Bank1 ansteuern LSH1 (0x60D0)
@@ -3803,7 +3665,6 @@ Lambdasondenheizung vor Kat Bank1 ansteuern LSH1 (0x60D0)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-lsh2"></a>
 ### STEUERN_ENDE_LSH2
 
 Lambdasondenheizung hinter Kat Bank1 Ansteuerung beenden LSH2 (0x60D1)
@@ -3818,7 +3679,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-lsh2"></a>
 ### STEUERN_LSH2
 
 Lambdasondenheizung hinter Kat Bank1 ansteuern LSH2 (0x60D1)
@@ -3838,7 +3698,6 @@ Lambdasondenheizung hinter Kat Bank1 ansteuern LSH2 (0x60D1)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-mil"></a>
 ### STEUERN_ENDE_MIL
 
 MIL (Malfunction Indicator Lamp) Ansteuerung beenden MIL (0x60D4)
@@ -3853,7 +3712,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-mil"></a>
 ### STEUERN_MIL
 
 MIL (Malfunction Indicator Lamp) ansteuern MIL (0x60D4)
@@ -3873,7 +3731,6 @@ MIL (Malfunction Indicator Lamp) ansteuern MIL (0x60D4)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-eml"></a>
 ### STEUERN_EML
 
 EML (Engine Malfunction Lamp) ansteuern EML (0x60D6)
@@ -3893,7 +3750,6 @@ EML (Engine Malfunction Lamp) ansteuern EML (0x60D6)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-eml"></a>
 ### STEUERN_ENDE_EML
 
 EML (Engine Malfunction Lamp) Ansteuerung beenden EML (0x60D6)
@@ -3908,7 +3764,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ekp"></a>
 ### STEUERN_EKP
 
 Elektrische Kraftstoffpumpe 1 ansteuern Elektrische Kraftstoffpumpe 1 Deaktivierung aufheben EKP (0x60D8)
@@ -3928,7 +3783,6 @@ Elektrische Kraftstoffpumpe 1 ansteuern Elektrische Kraftstoffpumpe 1 Deaktivier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ekp"></a>
 ### STEUERN_ENDE_EKP
 
 Elektrische Kraftstoffpumpe 1 Ansteuerung beenden Elektrische Kraftstoffpumpe 1 Deaktivierung aufheben EKP (0x60D8)
@@ -3943,7 +3797,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-e-luefter"></a>
 ### STEUERN_ENDE_E_LUEFTER
 
 E-Luefter Ansteuerung beenden E_LUEFTER (0x60DA)
@@ -3958,7 +3811,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-e-luefter"></a>
 ### STEUERN_E_LUEFTER
 
 E-Luefter ansteuern E_LUEFTER (0x60DA)
@@ -3978,7 +3830,6 @@ E-Luefter ansteuern E_LUEFTER (0x60DA)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-vvt"></a>
 ### STEUERN_ENDE_VVT
 
 VVT Ansteuerung beenden VVT (0x60DD)
@@ -3993,7 +3844,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-vvt"></a>
 ### STEUERN_VVT
 
 VVT ansteuern VVT (0x60DD)
@@ -4013,7 +3863,6 @@ VVT ansteuern VVT (0x60DD)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ev1"></a>
 ### STEUERN_ENDE_EV1
 
 Einspritzventil 1 (physikalisch) Ansteuerung beenden EV1 (0x60E1)
@@ -4028,7 +3877,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ev1"></a>
 ### STEUERN_EV1
 
 Einspritzventil 1 (physikalisch) ansteuern EV1 (0x60E1)
@@ -4049,7 +3897,6 @@ Einspritzventil 1 (physikalisch) ansteuern EV1 (0x60E1)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ev2"></a>
 ### STEUERN_ENDE_EV2
 
 Einspritzventil 2 (physikalisch) Ansteuerung beenden EV2 (0x60E2)
@@ -4064,7 +3911,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ev2"></a>
 ### STEUERN_EV2
 
 Einspritzventil 2 (physikalisch) ansteuern EV2 (0x60E2)
@@ -4085,7 +3931,6 @@ Einspritzventil 2 (physikalisch) ansteuern EV2 (0x60E2)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ev3"></a>
 ### STEUERN_ENDE_EV3
 
 Einspritzventil 3 (physikalisch) Ansteuerung beenden EV3 (0x60E3)
@@ -4100,7 +3945,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ev3"></a>
 ### STEUERN_EV3
 
 Einspritzventil 3 (physikalisch) ansteuern EV3 (0x60E3)
@@ -4121,7 +3965,6 @@ Einspritzventil 3 (physikalisch) ansteuern EV3 (0x60E3)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ev4"></a>
 ### STEUERN_ENDE_EV4
 
 Einspritzventil 4 (physikalisch) Ansteuerung beenden EV4 (0x60E4)
@@ -4136,7 +3979,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ev4"></a>
 ### STEUERN_EV4
 
 Einspritzventil 4 (physikalisch) ansteuern EV4 (0x60E4)
@@ -4157,7 +3999,6 @@ Einspritzventil 4 (physikalisch) ansteuern EV4 (0x60E4)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ev5"></a>
 ### STEUERN_ENDE_EV5
 
 Einspritzventil 5 (physikalisch) Ansteuerung beenden EV5 (0x60E5)
@@ -4172,7 +4013,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ev5"></a>
 ### STEUERN_EV5
 
 Einspritzventil 5 (physikalisch) ansteuern EV5 (0x60E5)
@@ -4193,7 +4033,6 @@ Einspritzventil 5 (physikalisch) ansteuern EV5 (0x60E5)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-ev6"></a>
 ### STEUERN_ENDE_EV6
 
 Einspritzventil 6 (physikalisch) Ansteuerung beenden EV6 (0x60E6)
@@ -4208,7 +4047,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ev6"></a>
 ### STEUERN_EV6
 
 Einspritzventil 6 (physikalisch) ansteuern EV6 (0x60E6)
@@ -4229,7 +4067,6 @@ Einspritzventil 6 (physikalisch) ansteuern EV6 (0x60E6)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-enws"></a>
 ### STEUERN_ENDE_ENWS
 
 Vanos Einlass Ventil Ansteuerung beenden ENWS (0x60ED)
@@ -4244,7 +4081,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-enws"></a>
 ### STEUERN_ENWS
 
 Vanos Einlass Ventil ansteuern ENWS (0x60ED)
@@ -4264,7 +4100,6 @@ Vanos Einlass Ventil ansteuern ENWS (0x60ED)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-anws"></a>
 ### STEUERN_ANWS
 
 Vanos Auslass Ventil ansteuern ANWS (0x60EE)
@@ -4284,7 +4119,6 @@ Vanos Auslass Ventil ansteuern ANWS (0x60EE)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-anws"></a>
 ### STEUERN_ENDE_ANWS
 
 Vanos Auslass Ventil Ansteuerung beenden ANWS (0x60EE)
@@ -4299,7 +4133,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-teav"></a>
 ### STEUERN_ENDE_TEAV
 
 Absperrventil Tankentlueftung Ansteuerung beenden TEAV (0x60FC)
@@ -4314,7 +4147,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-teav"></a>
 ### STEUERN_TEAV
 
 Absperrventil Tankentlueftung Ansteuerung TEAV (0x60FC)
@@ -4334,7 +4166,6 @@ Absperrventil Tankentlueftung Ansteuerung TEAV (0x60FC)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-tev"></a>
 ### START_SYSTEMCHECK_TEV
 
 Ansteuern Diagnosefunktion Tankentlueftungsventil SYSTEMCHECK_TEV (0xF022)
@@ -4349,7 +4180,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-tev"></a>
 ### STATUS_SYSTEMCHECK_TEV
 
 Auslesen Diagnosefunktion Tankentlueftungsventil SYSTEMCHECK_TEV (0xF022)
@@ -4366,7 +4196,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-tev"></a>
 ### STOP_SYSTEMCHECK_TEV
 
 Diagnosefunktion Tankentlueftungsventil beenden SYSTEMCHECK_TEV (0xF022)
@@ -4381,7 +4210,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-evausbl"></a>
 ### START_SYSTEMCHECK_EVAUSBL
 
 Ansteuern Diagnosefunktion Einspritzventilausblendung SYSTEMCHECK_EVAUSBL (0xF025)
@@ -4400,7 +4228,6 @@ Ansteuern Diagnosefunktion Einspritzventilausblendung SYSTEMCHECK_EVAUSBL (0xF02
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-evausbl"></a>
 ### STATUS_SYSTEMCHECK_EVAUSBL
 
 Auslesen Diagnosefunktion EinspritzVentile EV-Ausblendung SYSTEMCHECK_EVAUSBL (0xF025)
@@ -4417,7 +4244,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-evausbl"></a>
 ### STOP_SYSTEMCHECK_EVAUSBL
 
 Ende Diagnosefunktion EinspritzVentile EV-Ausblendung SYSTEMCHECK_EVAUSBL (0xF025)
@@ -4432,7 +4258,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-vvt-anschlag"></a>
 ### START_SYSTEMCHECK_VVT_ANSCHLAG
 
 Ansteuern Diagnosefunktion VVT-Anschlag lernen SYSTEMCHECK_VVT_ANSCHLAG (0xF027)
@@ -4447,7 +4272,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-vvt-anschlag"></a>
 ### STATUS_SYSTEMCHECK_VVT_ANSCHLAG
 
 Auslesen VVT Anschlag lernen SYSTEMCHECK_VVT_ANSCHLAG (0xF027)
@@ -4484,7 +4308,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-vvt-anschlag"></a>
 ### STOP_SYSTEMCHECK_VVT_ANSCHLAG
 
 Diagnosefunktion VVT Anschlag lernen beenden SYSTEMCHECK_VVT_ANSCHLAG (0xF027)
@@ -4499,7 +4322,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-gen"></a>
 ### START_SYSTEMCHECK_GEN
 
 Diagnosefunktion Generatortest SYSTEMCHECK_GEN (0xF02A)
@@ -4514,7 +4336,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-gen"></a>
 ### STATUS_SYSTEMCHECK_GEN
 
 Auslesen Diagnosefunktion Generatortest SYSTEMCHECK_GEN (0xF02A)
@@ -4557,7 +4378,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-gen"></a>
 ### STOP_SYSTEMCHECK_GEN
 
 Diagnosefunktion Generatortest beenden SYSTEMCHECK_GEN (0xF02A)
@@ -4572,7 +4392,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-odr"></a>
 ### START_SYSTEMCHECK_ODR
 
 Diagnosefunktion Oeldruckregelung SYSTEMCHECK_ODR (0xF02C)
@@ -4587,7 +4406,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-odr"></a>
 ### STATUS_SYSTEMCHECK_ODR
 
 Auslesen Diagnosefunktion Oeldruckregelung SYSTEMCHECK_ODR (0xF02C)
@@ -4616,7 +4434,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-odr"></a>
 ### STOP_SYSTEMCHECK_ODR
 
 Diagnosefunktion Oeldruckregelung beenden SYSTEMCHECK_ODR (0xF02C)
@@ -4631,7 +4448,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-adap-selektiv-loeschen"></a>
 ### ADAP_SELEKTIV_LOESCHEN
 
 Ansteuern Adaptionen selektiv loeschen - Batterietausch ausgeblendet. ADAP_SELEKTIV_LOESCHEN (0xF030)
@@ -4652,7 +4468,6 @@ Ansteuern Adaptionen selektiv loeschen - Batterietausch ausgeblendet. ADAP_SELEK
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-adap2-selektiv-loeschen"></a>
 ### ADAP2_SELEKTIV_LOESCHEN
 
 Ansteuern Adaptionen 2 selektiv loeschen ADAP2_SELEKTIV_LOESCHEN (0xF031)
@@ -4673,7 +4488,6 @@ Ansteuern Adaptionen 2 selektiv loeschen ADAP2_SELEKTIV_LOESCHEN (0xF031)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-zsz"></a>
 ### START_SYSTEMCHECK_ZSZ
 
 Ansteuern Zuendkerze freibrennen (Kalttestspezifisch) SYSTEMCHECK_ZSZ (0xF036)
@@ -4694,7 +4508,6 @@ Ansteuern Zuendkerze freibrennen (Kalttestspezifisch) SYSTEMCHECK_ZSZ (0xF036)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-zsz"></a>
 ### STATUS_SYSTEMCHECK_ZSZ
 
 Auslesen Zuendkerze freibrennen (Kalttestspezifisch) SYSTEMCHECK_ZSZ (0xF036)
@@ -4711,7 +4524,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-zsz"></a>
 ### STOP_SYSTEMCHECK_ZSZ
 
 Ende Zuendkerze freibrennen (Kalttestspezifisch) SYSTEMCHECK_ZSZ (0xF036)
@@ -4726,7 +4538,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-zszw"></a>
 ### START_SYSTEMCHECK_ZSZW
 
 Ansteuern betriebspunktunabhaengiger (Winkelsynchroner) Zuenspulentest (Kalttestspezifisch) SYSTEMCHECK_ZSZW (0xF037)
@@ -4746,7 +4557,6 @@ Ansteuern betriebspunktunabhaengiger (Winkelsynchroner) Zuenspulentest (Kalttest
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-zszw"></a>
 ### STATUS_SYSTEMCHECK_ZSZW
 
 Auslesen betriebspunktunabhaengiger (Winkelsynchroner) Zuenspulentest (Kalttestspezifisch) SYSTEMCHECK_ZSZW (0xF037)
@@ -4763,7 +4573,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-zszw"></a>
 ### STOP_SYSTEMCHECK_ZSZW
 
 Ende betriebspunktunabhaengiger (Winkelsynchroner) Zuenspulentest (Kalttestspezifisch) SYSTEMCHECK_ZSZW (0xF037)
@@ -4778,7 +4587,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-evz"></a>
 ### START_SYSTEMCHECK_EVZ
 
 Ansteuern Sequentieller EV-Zylinderabfolgetest (Kalttestspezifisch) SYSTEMCHECK_EVZ (0xF038)
@@ -4800,7 +4608,6 @@ Ansteuern Sequentieller EV-Zylinderabfolgetest (Kalttestspezifisch) SYSTEMCHECK_
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-evz"></a>
 ### STATUS_SYSTEMCHECK_EVZ
 
 Auslesen Sequentieller EV-Zylinderabfolgetest (Kalttestspezifisch) SYSTEMCHECK_EVZ (0xF038)
@@ -4817,7 +4624,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-evz"></a>
 ### STOP_SYSTEMCHECK_EVZ
 
 Ende Sequentieller EV-Zylinderabfolgetest (Kalttestspezifisch) SYSTEMCHECK_EVZ (0xF038)
@@ -4832,7 +4638,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-zszz"></a>
 ### START_SYSTEMCHECK_ZSZZ
 
 Ansteuern Zeitbasierte Zuendsequenz (Kalttestspezifisch) SYSTEMCHECK_ZSZZ (0xF039)
@@ -4852,7 +4657,6 @@ Ansteuern Zeitbasierte Zuendsequenz (Kalttestspezifisch) SYSTEMCHECK_ZSZZ (0xF03
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-zszz"></a>
 ### STATUS_SYSTEMCHECK_ZSZZ
 
 Auslesen Zeitbasierte Zuendsequenz (Kalttestspezifisch) SYSTEMCHECK_ZSZZ (0xF039)
@@ -4869,7 +4673,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-zszz"></a>
 ### STOP_SYSTEMCHECK_ZSZZ
 
 Ende Zeitbasierte Zuendsequenz (Kalttestspezifisch) SYSTEMCHECK_ZSZZ (0xF039)
@@ -4884,7 +4687,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-zwdiag"></a>
 ### START_ZWDIAG
 
 CSERS Diagnose zur Fehlerdemo (Zuendwinkeldiagnose) Start-Routine ZWDIAG (0xF03A)
@@ -4905,7 +4707,6 @@ CSERS Diagnose zur Fehlerdemo (Zuendwinkeldiagnose) Start-Routine ZWDIAG (0xF03A
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-zwdiag"></a>
 ### STATUS_ZWDIAG
 
 CSERS Diagnose zur Fehlerdemo (Zuendwinkeldiagnose) Status-Routine ZWDIAG (0xF03A)
@@ -4936,7 +4737,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-zwdiag"></a>
 ### STOP_ZWDIAG
 
 CSERS Diagnose zur Fehlerdemo (Zuendwinkeldiagnose) Stop-Routine ZWDIAG (0xF03A)
@@ -4951,7 +4751,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-vanosspuelen"></a>
 ### START_VANOSSPUELEN
 
 VANOS Spuelen fuer OBD und PVE. VANOSSPUELEN (0xF042)
@@ -4980,7 +4779,6 @@ VANOS Spuelen fuer OBD und PVE. VANOSSPUELEN (0xF042)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vanosspuelen"></a>
 ### STATUS_VANOSSPUELEN
 
 VANOS Spuelen fuer OBD und PVE. VANOSSPUELEN (0xF042)
@@ -5002,7 +4800,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-vanosspuelen"></a>
 ### STOP_VANOSSPUELEN
 
 VANOS Spuelen fuer OBD und PVE. VANOSSPUELEN (0xF042)
@@ -5017,7 +4814,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-atl"></a>
 ### START_SYSTEMCHECK_ATL
 
 Diagnosefunktion Abgasturbolader starten SYSTEMCHECK_ATL (0xF0D0)
@@ -5032,7 +4828,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-atl"></a>
 ### STATUS_SYSTEMCHECK_ATL
 
 Diagnosefunktion Abgasturbolader auslesen SYSTEMCHECK_ATL (0xF0D0)
@@ -5072,7 +4867,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-atl"></a>
 ### STOP_SYSTEMCHECK_ATL
 
 Diagnosefunktion Abgasturbolader beenden SYSTEMCHECK_ATL (0xF0D0)
@@ -5087,7 +4881,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-glf"></a>
 ### START_SYSTEMCHECK_GLF
 
 Ansteuern Gesteuerte Luftfuehrung Systemcheck SYSTEMCHECK_GLF (0xF0D5)
@@ -5102,7 +4895,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-glf"></a>
 ### STATUS_SYSTEMCHECK_GLF
 
 Auslesen Gesteuerte Luftfuehrung Systemcheck SYSTEMCHECK_GLF (0xF0D5)
@@ -5154,7 +4946,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-glf"></a>
 ### STOP_SYSTEMCHECK_GLF
 
 Ende Gesteuerte Luftfuehrung Systemcheck SYSTEMCHECK_GLF (0xF0D5)
@@ -5169,7 +4960,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-l-regelung-aus"></a>
 ### START_SYSTEMCHECK_L_REGELUNG_AUS
 
 Ansteuerung Lambdaregelung deaktivieren SYSTEMCHECK_L_REGELUNG_AUS (0xF0D9)
@@ -5184,7 +4974,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-l-regelung-aus"></a>
 ### STATUS_SYSTEMCHECK_L_REGELUNG_AUS
 
 Auslesen Lambdaregelung ausschalten SYSTEMCHECK_L_REGELUNG_AUS (0xF0D9)
@@ -5203,7 +4992,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-l-regelung-aus"></a>
 ### STOP_SYSTEMCHECK_L_REGELUNG_AUS
 
 Ende Lambdaregelung ausschalten SYSTEMCHECK_L_REGELUNG_AUS (0xF0D9)
@@ -5218,7 +5006,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-dmtl"></a>
 ### START_SYSTEMCHECK_DMTL
 
 Ansteuern Diagnosefunktion DMTL SYSTEMCHECK_DMTL (0xF0DA)
@@ -5233,7 +5020,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-dmtl"></a>
 ### STATUS_SYSTEMCHECK_DMTL
 
 Auslesen Diagnosefunktion DMTL SYSTEMCHECK_DMTL (0xF0DA)
@@ -5252,7 +5038,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-dmtl"></a>
 ### STOP_SYSTEMCHECK_DMTL
 
 Diagnosefunktion DMTL beenden SYSTEMCHECK_DMTL (0xF0DA)
@@ -5267,7 +5052,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-eisyugd"></a>
 ### START_EISYUGD
 
 Ansteuern Eisy-Adaptionswerte (ungedrosselt) (Anforderung aus CP5403) EISYUGD (0xF0E0)
@@ -5289,7 +5073,6 @@ Ansteuern Eisy-Adaptionswerte (ungedrosselt) (Anforderung aus CP5403) EISYUGD (0
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eisyugd"></a>
 ### STATUS_EISYUGD
 
 Auslesen Eisy-Adaptionswerte (ungedrosselt) (Anforderung aus CP5403) EISYUGD (0xF0E0)
@@ -5307,7 +5090,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-eisygd"></a>
 ### START_EISYGD
 
 Ansteuern Eisy-Adaptionswerte (gedrosselt) (Anforderung aus CP5403) EISYGD (0xF0E1)
@@ -5329,7 +5111,6 @@ Ansteuern Eisy-Adaptionswerte (gedrosselt) (Anforderung aus CP5403) EISYGD (0xF0
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eisygd"></a>
 ### STATUS_EISYGD
 
 Auslesen Eisy-Adaptionswerte (gedrosselt) (Anforderung aus CP5403) EISYGD (0xF0E1)
@@ -5347,7 +5128,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-klann"></a>
 ### START_KLANN
 
 Ansteuern Klann-Adaptionswerte (Anforderung aus CP10798) KLANN (0xF0E4)
@@ -5368,7 +5148,6 @@ Ansteuern Klann-Adaptionswerte (Anforderung aus CP10798) KLANN (0xF0E4)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-klann"></a>
 ### STATUS_KLANN
 
 Auslesen Klann-Adaptionswerte (Anforderung aus CP10798) KLANN (0xF0E4)
@@ -5385,7 +5164,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-ddlshk"></a>
 ### START_DDLSHK
 
 Ansteuern Dynamik Diagnose Lamdasonden hinter Hauptkat DDLSHK (0xF0E7)
@@ -5400,7 +5178,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ddlshk"></a>
 ### STATUS_DDLSHK
 
 Auslesen Dynamik Diagnose Lamdasonden hinter Hauptkat DDLSHK (0xF0E7)
@@ -5427,7 +5204,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-ddlshk"></a>
 ### STOP_DDLSHK
 
 Ende Dynamik Diagnose Lamdasonden hinter Hauptkat DDLSHK (0xF0E7)
@@ -5442,7 +5218,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-cram"></a>
 ### START_CRAM
 
 Ansteuern RAM-Backup-Werte loeschen CRAM (0xF0E9)
@@ -5457,7 +5232,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cram"></a>
 ### STATUS_CRAM
 
 Auslesen RAM-Backup-Werte loeschen CRAM (0xF0E9)
@@ -5474,7 +5248,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-dkat"></a>
 ### START_SYSTEMCHECK_DKAT
 
 Ansteuern Kurztest Kat SYSTEMCHECK_DKAT (0xF0EB)
@@ -5489,7 +5262,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-dkat"></a>
 ### STATUS_SYSTEMCHECK_DKAT
 
 Auslesen Kurztest Kat SYSTEMCHECK_DKAT (0xF0EB)
@@ -5506,7 +5278,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-dkat"></a>
 ### STOP_SYSTEMCHECK_DKAT
 
 Ende Kurztest Kat SYSTEMCHECK_DKAT (0xF0EB)
@@ -5521,7 +5292,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-ram"></a>
 ### START_RAM
 
 Ansteuern RAM Backup zwangssichern RAM (0xF0F2)
@@ -5536,7 +5306,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ram"></a>
 ### STATUS_RAM
 
 Auslesen RAM Backup zwangssichern RAM (0xF0F2)
@@ -5553,7 +5322,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-pm-messemode"></a>
 ### START_SYSTEMCHECK_PM_MESSEMODE
 
 Ansteuern Messemode SYSTEMCHECK_PM_MESSEMODE (0xF0F6)
@@ -5568,7 +5336,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-pm-messemode"></a>
 ### STATUS_SYSTEMCHECK_PM_MESSEMODE
 
 Auslesen Messemode SYSTEMCHECK_PM_MESSEMODE (0xF0F6)
@@ -5585,7 +5352,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-pm-messemode"></a>
 ### STOP_SYSTEMCHECK_PM_MESSEMODE
 
 Ende Messemode SYSTEMCHECK_PM_MESSEMODE (0xF0F6)
@@ -5712,7 +5478,6 @@ _No arguments._
 - [T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT2_DOP](#table-t-1bit-switch-position-high-byte-bit2-dop) (2 × 2)
 - [RES_0XF04](#table-res-0xf04) (1 × 13)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -5786,7 +5551,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 116 rows × 2 columns
@@ -5910,7 +5674,6 @@ Dimensions: 116 rows × 2 columns
 | 0x0000A9 | Thyssen Krupp Presta |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -5937,7 +5700,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -5962,7 +5724,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -5994,7 +5755,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -6067,7 +5827,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -6080,7 +5839,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -6093,7 +5851,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -6106,7 +5863,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -6125,7 +5881,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 120 rows × 3 columns
@@ -6253,7 +6008,6 @@ Dimensions: 120 rows × 3 columns
 | 0x5900 | Audio-Bedienteil | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -6262,7 +6016,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 92 rows × 2 columns
@@ -6362,7 +6115,6 @@ Dimensions: 92 rows × 2 columns
 | 0x0067 | Defond Holding / BJAutomotive |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -6373,7 +6125,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-cbskennung"></a>
 ### CBSKENNUNG
 
 Dimensions: 11 rows × 3 columns
@@ -6392,7 +6143,6 @@ Dimensions: 11 rows × 3 columns
 | 0x0D | NOx_a | NOx-Additiv |
 | 0x64 | Sic_v | Sichtpruefung/Fahrzeug-Check verknuepft |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -6401,7 +6151,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 8 rows × 3 columns
@@ -6417,7 +6166,6 @@ Dimensions: 8 rows × 3 columns
 | 0x06 | Rollenmode | Rollenmode |
 | 0xFF | ungültiger Betriebsmodus | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 849 rows × 3 columns
@@ -7274,7 +7022,6 @@ Dimensions: 849 rows × 3 columns
 | 0xCDC304 | 0xCDC304 A-CAN, Botschaft (Status Elektrische Kraftstoffpumpe, 0x335): fehlt | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -7288,7 +7035,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 8 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 525 rows × 9 columns
@@ -7821,7 +7567,6 @@ Dimensions: 525 rows × 9 columns
 | 0xF487 | PID 87 | text | - | 5 | - | 1 | 1 | 0 |
 | 0x58FF | Umweltbedingung unbekannt | - | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -7830,7 +7575,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -7842,7 +7586,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-messwertetab"></a>
 ### MESSWERTETAB
 
 Dimensions: 388 rows × 12 columns
@@ -8238,7 +7981,6 @@ Dimensions: 388 rows × 12 columns
 | STAT_0x58FD_WERT | 0x58FD | STAT_0x58FD_WERT | Untermodi des Fe Tra Fla Mode | - | fetraflamod | - | unsigned integer | - | 1,0 | 1 | 0,0 |
 | - | 0x58FF | - | Umweltbedingung unbekannt | - | - | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-reset-grpid"></a>
 ### RESET_GRPID
 
 Dimensions: 33 rows × 2 columns
@@ -8279,7 +8021,6 @@ Dimensions: 33 rows × 2 columns
 | 0x1F | RESET_FLASH_E |
 | 0xFF | undefiniert |
 
-<a id="table-reset-id"></a>
 ### RESET_ID
 
 Dimensions: 146 rows × 2 columns
@@ -8433,7 +8174,6 @@ Dimensions: 146 rows × 2 columns
 | 0x3053 | SWRST_FLASHCONFIG_E |
 | 0xFFFF | undefiniert |
 
-<a id="table-ba-vcv-state-text"></a>
 ### BA_VCV_STATE_TEXT
 
 Dimensions: 8 rows × 2 columns
@@ -8449,7 +8189,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | VCV_LIH |
 | 0xFF | undefiniert |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 388 rows × 16 columns
@@ -8845,7 +8584,6 @@ Dimensions: 388 rows × 16 columns
 | STAT_0x58FD_WERT | 0x58FD | STAT_0x58FD_WERT | Untermodi des Fe Tra Fla Mode | - | fetraflamod | - | unsigned integer | - | 1,0 | 1 | 0,0 | - | 22;2C | - | - |
 | - | 0x58FF | - | Umweltbedingung unbekannt | - | - | - | unsigned char | - | 1 | 1 | 0 | - | 22;2C | - | - |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -8871,7 +8609,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-statclientauthtxt"></a>
 ### STATCLIENTAUTHTXT
 
 Dimensions: 4 rows × 2 columns
@@ -8883,7 +8620,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Freigabe von Zuendung und Einspritzung abgelehnt (Challenge-Response fehlgeschlagen, falsche Response, Kommunikation i.O.) |
 | 0x03 | nicht definiert |
 
-<a id="table-statfreesktxt"></a>
 ### STATFREESKTXT
 
 Dimensions: 3 rows × 2 columns
@@ -8894,7 +8630,6 @@ Dimensions: 3 rows × 2 columns
 | 0xFF | ungültig |
 | 0xXY | freie Ablagen |
 
-<a id="table-statewsvertxt"></a>
 ### STATEWSVERTXT
 
 Dimensions: 3 rows × 2 columns
@@ -8905,7 +8640,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Direktschreiben des SecretKey und DH-Abgleich |
 | 0xXY | unbekannt |
 
-<a id="table-t-1bit-switch-position-high-byte-bit4-dop"></a>
 ### T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT4_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -8915,7 +8649,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Lambdaregelung vor Katalysator Bank 2 nicht aktiv |
 | 1 | Lambdaregelung vor Katalysator Bank 2 aktiv |
 
-<a id="table-t-st-atlsvc-pvdk-dop"></a>
 ### T_ST_ATLSVC_PVDK_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -8929,7 +8662,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Turbolader 2 mit Ladedruckfehler |
 | 5 | Gesamtladedruck zu niedrig, Bank nicht identifiziert |
 
-<a id="table-t-b-bzdon-dop"></a>
 ### T_B_BZDON_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -8939,7 +8671,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine BZE3 |
 | 1 | BZE3 |
 
-<a id="table-t-1bit-switch-position-low-byte-bit2-dop"></a>
 ### T_1BIT_SWITCH_POSITION_LOW_BYTE_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -8949,7 +8680,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Kickdown erkannt |
 | 1 | Kickdown erkannt |
 
-<a id="table-t-1bit-state-ready-obd-2-bit2-dop"></a>
 ### T_1BIT_STATE_READY_OBD_2_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -8959,7 +8689,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-1bit-geniutest-err-bit2-dop"></a>
 ### T_1BIT_GENIUTEST_ERR_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -8969,7 +8698,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, Hochtemperaturfehler Generator nicht vorhanden |
 | 1 | Generatortest, Hochtemperaturfehler Generator vorhanden |
 
-<a id="table-t-1bit-state-ready-obd-1-bit6-dop"></a>
 ### T_1BIT_STATE_READY_OBD_1_BIT6_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -8979,7 +8707,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-1bit-switch-position-bit2-dop"></a>
 ### T_1BIT_SWITCH_POSITION_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -8989,7 +8716,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Kupplung aus |
 | 1 | Kupplung ein |
 
-<a id="table-t-1bit-geniutest-err-bit7-dop"></a>
 ### T_1BIT_GENIUTEST_ERR_BIT7_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -8999,7 +8725,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, Generatorregler plausibel |
 | 1 | Generatortest, Generatorregler unplausibel |
 
-<a id="table-t-1bit-state-ready-obd-1-bit0-dop"></a>
 ### T_1BIT_STATE_READY_OBD_1_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9009,7 +8734,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-1bit-geniutest-err-bit3-dop"></a>
 ### T_1BIT_GENIUTEST_ERR_BIT3_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9019,7 +8743,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, Generatortyp plausibel |
 | 1 | Generatortest, Generatortyp unplausibel |
 
-<a id="table-t-1bit-c-state-ready-obd-2-bit2-dop"></a>
 ### T_1BIT_C_STATE_READY_OBD_2_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9029,7 +8752,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-1bit-fs-erw-vvtl-bit4-dop"></a>
 ### T_1BIT_FS_ERW_VVTL_BIT4_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9039,7 +8761,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bit 4 - Fehler zulaessige Hoechstzeit Anschlaglernvorgang ueberschritten |
 | 1 | Bit 4 - Fehler zulaessige Hoechstzeit Anschlaglernvorgang ueberschritten |
 
-<a id="table-t-1bit-fs-erw-vvtl-bit5-dop"></a>
 ### T_1BIT_FS_ERW_VVTL_BIT5_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9049,7 +8770,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bit 5 - Fehler Spannungsversorgung |
 | 1 | Bit 5 - Fehler Spannungsversorgung |
 
-<a id="table-t-1bit-state-ready-obd-1-bit4-dop"></a>
 ### T_1BIT_STATE_READY_OBD_1_BIT4_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9059,7 +8779,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-b-bzd-wrgbat-dop"></a>
 ### T_B_BZD_WRGBAT_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9069,7 +8788,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wechsel zulaessig |
 | 1 | Wechsel unzulaessig |
 
-<a id="table-t-bzd-btzust-dop"></a>
 ### T_BZD_BTZUST_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -9081,7 +8799,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Batterie nicht i.O. |
 | 3 | ungueltig |
 
-<a id="table-t-state-dmtl-dop"></a>
 ### T_STATE_DMTL_DOP
 
 Dimensions: 21 rows × 2 columns
@@ -9110,7 +8827,6 @@ Dimensions: 21 rows × 2 columns
 | 34 | Funktion beendet: Kein Grobleck erkannt |
 | 255 | Funktion noch nicht gestartet |
 
-<a id="table-t-1bit-c-state-ready-obd-2-bit4-dop"></a>
 ### T_1BIT_C_STATE_READY_OBD_2_BIT4_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9120,7 +8836,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-1bit-c-state-ready-obd-2-bit6-dop"></a>
 ### T_1BIT_C_STATE_READY_OBD_2_BIT6_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9130,7 +8845,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-1bit-state-ready-obd-2-bit7-dop"></a>
 ### T_1BIT_STATE_READY_OBD_2_BIT7_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9140,7 +8854,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-1bit-switch-position-bit0-dop"></a>
 ### T_1BIT_SWITCH_POSITION_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9150,7 +8863,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Klemme-15 aus |
 | 1 | Klemme-15 ein |
 
-<a id="table-t-st-atlsvc-dop"></a>
 ### T_ST_ATLSVC_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -9167,7 +8879,6 @@ Dimensions: 9 rows × 2 columns
 | 8 | Funktion vollstaendig durchlaufen und kein Fehler erkannt |
 | 9 | Funktion vollstaendig durchlaufen und Fehler erkannt |
 
-<a id="table-t-1bit-switch-position-bit3-dop"></a>
 ### T_1BIT_SWITCH_POSITION_BIT3_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9177,7 +8888,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bremslichtschalter-Kanal 1 aus |
 | 1 | Bremslichtschalter-Kanal 1 ein |
 
-<a id="table-t-1bit-switch-position-high-byte-bit6-dop"></a>
 ### T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT6_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9187,7 +8897,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Regelkreis Bank 2 nicht geschlossen |
 | 1 | Regelkreis Bank 2 geschlossen |
 
-<a id="table-t-1bit-c-state-ready-obd-2-bit7-dop"></a>
 ### T_1BIT_C_STATE_READY_OBD_2_BIT7_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9197,7 +8906,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-b-vvtnotl-dop"></a>
 ### T_B_VVTNOTL_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9207,7 +8915,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | 0 |
 | 1 | 1 |
 
-<a id="table-t-1bit-switch-position-high-byte-bit7-dop"></a>
 ### T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT7_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9217,7 +8924,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Regelkreis Bank 1 nicht geschlossen |
 | 1 | Regelkreis Bank 1 geschlossen |
 
-<a id="table-t-1byte-fs-ddlhk-dop"></a>
 ### T_1BYTE_FS_DDLHK_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -9231,7 +8937,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Closed Loop - Min. eine Lambdasonde fehlerhaft. U.u. in Einzelbetrieb. |
 | 5 | Ungültiger Wert |
 
-<a id="table-t-1bit-switch-position-high-byte-bit0-dop"></a>
 ### T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9241,7 +8946,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Leerlauf |
 | 1 | Leerlauf |
 
-<a id="table-t-1bit-fs-erw-vvtl-bit7-dop"></a>
 ### T_1BIT_FS_ERW_VVTL_BIT7_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9251,7 +8955,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bit 7 - Ruecknahme Lernanforderung |
 | 1 | Bit 7 - Ruecknahme Lernanforderung |
 
-<a id="table-t-1bit-switch-position-low-byte-bit7-dop"></a>
 ### T_1BIT_SWITCH_POSITION_LOW_BYTE_BIT7_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9261,7 +8964,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Drosselklappen-Neuabgleich erforderlich |
 | 1 | Drosselklappen-Neuabgleich nicht erforderlich |
 
-<a id="table-t-1bit-geniutest-err-bit1-dop"></a>
 ### T_1BIT_GENIUTEST_ERR_BIT1_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9271,7 +8973,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, mechanischer Fehler Generator nicht vorhanden |
 | 1 | Generatortest, mechanischer Fehler Generator vorhanden |
 
-<a id="table-t-1bit-geniutest-err-bit4-dop"></a>
 ### T_1BIT_GENIUTEST_ERR_BIT4_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9281,7 +8982,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, Generatorkommunikation vorhanden |
 | 1 | Generatortest, keine Generatorkommunikation vorhanden |
 
-<a id="table-t-1bit-fs-erw-vvtl-bit3-dop"></a>
 ### T_1BIT_FS_ERW_VVTL_BIT3_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9291,7 +8991,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bit 3 - Fehler Verstellbereich Referenzsensor unplausibel |
 | 1 | Bit 3 - Fehler Verstellbereich Referenzsensor unplausibel |
 
-<a id="table-t-1bit-state-ready-obd-2-bit4-dop"></a>
 ### T_1BIT_STATE_READY_OBD_2_BIT4_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9301,7 +9000,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-1bit-geniutest-err-bit6-dop"></a>
 ### T_1BIT_GENIUTEST_ERR_BIT6_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9311,7 +9009,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, Hochtemperaturfehler Generator aus Berechnung nicht vorhanden |
 | 1 | Generatortest, Hochtemperaturfehler Generator aus Berechnung vorhanden |
 
-<a id="table-t-1bit-geniutest-err-bit5-dop"></a>
 ### T_1BIT_GENIUTEST_ERR_BIT5_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9321,7 +9018,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, Generatorspannung aus Berechnung plausibel |
 | 1 | Generatortest, Generatorspannung aus Berechnung unplausibel |
 
-<a id="table-t-eol-ram-1-dop"></a>
 ### T_EOL_RAM_1__DOP
 
 Dimensions: 10 rows × 2 columns
@@ -9339,7 +9035,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Funktion durchlaufen und kein Fehler erkannt |
 | 9 | Funktion durchlaufen und Fehler erkannt |
 
-<a id="table-t-1bit-switch-position-bit4-dop"></a>
 ### T_1BIT_SWITCH_POSITION_BIT4_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9349,7 +9044,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bremslichtschalter-Kanal 2 aus |
 | 1 | Bremslichtschalter-Kanal 2 ein |
 
-<a id="table-t-st-testpoelsys2-dop"></a>
 ### T_ST_TESTPOELSYS2_DOP
 
 Dimensions: 7 rows × 2 columns
@@ -9364,7 +9058,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | Abbruch der Diagnosefunktion nach Schritt 2 (Fehlerspeicher auslesen) |
 | 6 | Abbruch der Diagnosefunktion nach Schritt 3 (Fehlerspeicher auslesen) |
 
-<a id="table-t-1bit-fs-erw-vvtl-bit1-dop"></a>
 ### T_1BIT_FS_ERW_VVTL_BIT1_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9374,7 +9067,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bit 1 - Fehler oberer Anschlag nicht gefunden |
 | 1 | Bit 1 - Fehler oberer Anschlag nicht gefunden |
 
-<a id="table-t-1bit-fs-erw-vvtl-bit6-dop"></a>
 ### T_1BIT_FS_ERW_VVTL_BIT6_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9384,7 +9076,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bit 6 - Fehler VVT-Sensor, Leistungsversorgung oder Stellglied |
 | 1 | Bit 6 - Fehler VVT-Sensor, Leistungsversorgung oder Stellglied |
 
-<a id="table-t-b-qvch2o-dop"></a>
 ### T_B_QVCH2O_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9394,7 +9085,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wasserverbrauch i.O. |
 | 1 | Wasserverbrauch nicht i.O. |
 
-<a id="table-t-1bit-state-ready-obd-2-bit3-dop"></a>
 ### T_1BIT_STATE_READY_OBD_2_BIT3_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9404,7 +9094,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-1bit-state-ready-obd-2-bit1-dop"></a>
 ### T_1BIT_STATE_READY_OBD_2_BIT1_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9414,7 +9103,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-1bit-c-state-ready-obd-2-bit1-dop"></a>
 ### T_1BIT_C_STATE_READY_OBD_2_BIT1_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9424,7 +9112,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-1bit-state-ready-obd-1-bit2-dop"></a>
 ### T_1BIT_STATE_READY_OBD_1_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9434,7 +9121,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-b-bzd-te-dop"></a>
 ### T_B_BZD_TE_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9444,7 +9130,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Batterie i.O. |
 | 1 | Batterie tiefentladen |
 
-<a id="table-t-1bit-switch-position-bit1-dop"></a>
 ### T_1BIT_SWITCH_POSITION_BIT1_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9454,7 +9139,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Motor laeuft |
 | 1 | Motor steht |
 
-<a id="table-t-1bit-state-ready-obd-2-bit5-dop"></a>
 ### T_1BIT_STATE_READY_OBD_2_BIT5_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9464,7 +9148,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-1bit-c-state-ready-obd-2-bit3-dop"></a>
 ### T_1BIT_C_STATE_READY_OBD_2_BIT3_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9474,7 +9157,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-1bit-state-ready-obd-2-bit6-dop"></a>
 ### T_1BIT_STATE_READY_OBD_2_BIT6_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9484,7 +9166,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-st-gentest-dop"></a>
 ### T_ST_GENTEST_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -9500,7 +9181,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Funktion beendet |
 | 7 | Funktion abgebrochen |
 
-<a id="table-t-1bit-c-state-ready-obd-2-bit5-dop"></a>
 ### T_1BIT_C_STATE_READY_OBD_2_BIT5_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9510,7 +9190,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-b-standard-1byte-lesen-0-1"></a>
 ### T_B_STANDARD_1BYTE_LESEN_0_1
 
 Dimensions: 3 rows × 2 columns
@@ -9521,7 +9200,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | 1 |
 | 2 | Groesser 1 |
 
-<a id="table-t-1bit-c-state-ready-obd-2-bit0-dop"></a>
 ### T_1BIT_C_STATE_READY_OBD_2_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9531,7 +9209,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-1byte-fs-dop"></a>
 ### T_1BYTE_FS_DOP
 
 Dimensions: 11 rows × 2 columns
@@ -9550,7 +9227,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1bit-switch-position-low-byte-bit3-dop"></a>
 ### T_1BIT_SWITCH_POSITION_LOW_BYTE_BIT3_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9560,7 +9236,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Gang nicht eingelegt, Park- oder Neutralstellung |
 | 1 | Gang eingelegt, nicht Park- oder Neutralstellung |
 
-<a id="table-t-1bit-state-ready-obd-1-bit1-dop"></a>
 ### T_1BIT_STATE_READY_OBD_1_BIT1_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9570,7 +9245,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test wird durch dieses Modul nicht unterstuetzt |
 | 1 | Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-t-1bit-state-ready-obd-1-bit5-dop"></a>
 ### T_1BIT_STATE_READY_OBD_1_BIT5_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9580,7 +9254,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-1bit-fs-erw-vvtl-bit0-dop"></a>
 ### T_1BIT_FS_ERW_VVTL_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9590,7 +9263,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bit 0 - Fehler unterer Anschlag nicht gefunden |
 | 1 | Bit 0 - Fehler unterer Anschlag nicht gefunden |
 
-<a id="table-t-1bit-geniutest-ab-bit0-dop"></a>
 ### T_1BIT_GENIUTEST_AB_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9600,7 +9272,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, Generatorauslastung nicht zu hoch |
 | 1 | Generatortest, Generatorauslastung zu hoch |
 
-<a id="table-t-1bit-switch-position-high-byte-bit3-dop"></a>
 ### T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT3_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9610,7 +9281,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Lambdaregelung hinter Katalysator Bank 2 nicht aktiv |
 | 1 | Lambdaregelung hinter Katalysator Bank 2 aktiv |
 
-<a id="table-t-1bit-switch-position-bit7-dop"></a>
 ### T_1BIT_SWITCH_POSITION_BIT7_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9620,7 +9290,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Anforderung Klimabereitschaft aus |
 | 1 | Anforderung Klimabereitschaft ein |
 
-<a id="table-t-s-vsmnhb-dop"></a>
 ### T_S_VSMNHB_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9630,7 +9299,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | 0 |
 | 128 | 1 |
 
-<a id="table-t-1bit-fs-erw-vvtl-bit2-dop"></a>
 ### T_1BIT_FS_ERW_VVTL_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9640,7 +9308,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bit 2 - Fehler Verstellbereich Fuehrungssensor unplausibel |
 | 1 | Bit 2 - Fehler Verstellbereich Fuehrungssensor unplausibel |
 
-<a id="table-t-1bit-geniutest-err-bit0-dop"></a>
 ### T_1BIT_GENIUTEST_ERR_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9650,7 +9317,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Generatortest, elektrischer Fehler Generator nicht vorhanden |
 | 1 | Generatortest, elektrischer Fehler Generator vorhanden |
 
-<a id="table-t-1bit-switch-position-low-byte-bit6-dop"></a>
 ### T_1BIT_SWITCH_POSITION_LOW_BYTE_BIT6_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9660,7 +9326,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Schubabschaltung aktiv |
 | 1 | Schubabschaltung aktiv |
 
-<a id="table-t-1bit-switch-position-high-byte-bit1-dop"></a>
 ### T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT1_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9670,7 +9335,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine Vollast |
 | 1 | Vollast |
 
-<a id="table-t-st-testpoelsys-dop"></a>
 ### T_ST_TESTPOELSYS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -9686,7 +9350,6 @@ Dimensions: 8 rows × 2 columns
 | 8 | Funktion vollstaendig durchlaufen und kein Fehler erkannt |
 | 9 | Funktion vollstaendig durchlaufen und Fehler erkannt |
 
-<a id="table-t-1bit-switch-position-high-byte-bit5-dop"></a>
 ### T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT5_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9696,7 +9359,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Lambdaregelung vor Katalysator Bank 1 nicht aktiv |
 | 1 | Lambdaregelung vor Katalysator Bank 1 aktiv |
 
-<a id="table-t-1bit-state-ready-obd-2-bit0-dop"></a>
 ### T_1BIT_STATE_READY_OBD_2_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9706,7 +9368,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Test abgeschlossen oder nicht anwendbar |
 | 1 | Test nicht abgeschlossen |
 
-<a id="table-t-ba-ist-dop"></a>
 ### T_BA_IST_DOP
 
 Dimensions: 5 rows × 2 columns
@@ -9719,7 +9380,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Homogen_Schicht |
 | 8 | Notlauf |
 
-<a id="table-t-1bit-switch-position-high-byte-bit2-dop"></a>
 ### T_1BIT_SWITCH_POSITION_HIGH_BYTE_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -9729,7 +9389,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Lambdaregelung hinter Katalysator Bank 1 nicht aktiv |
 | 1 | Lambdaregelung hinter Katalysator Bank 1 aktiv |
 
-<a id="table-res-0xf04"></a>
 ### RES_0XF04
 
 Dimensions: 1 rows × 13 columns

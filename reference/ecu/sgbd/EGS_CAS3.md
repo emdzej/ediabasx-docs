@@ -24,7 +24,6 @@
 - [STATUS_EWS_EGS_CODIERUNG](#job-status-ews-egs-codierung) - EWS_EGS setup KWP2000: $22   ReadDataByCommonIdentifier $3010 CodingDataSet Modus  : Default NUR FUER ERSATZTEILPLATZ W2.2! ONLY FOR SPARE PARTS W2.2!
 - [STEUERN_EWS_EGS_CODIERUNG](#job-steuern-ews-egs-codierung) - Auxiliary output setup KWP2000: $2E   WriteDataByCommonIdentifier $3010 CodingDataSet Modus  : Default NUR FUER ERSATZTEILPLATZ W2.2! ONLY FOR SPARE PARTS W2.2!
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -43,7 +42,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -56,7 +54,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-status-ews-egs-codierung"></a>
 ### STATUS_EWS_EGS_CODIERUNG
 
 EWS_EGS setup KWP2000: $22   ReadDataByCommonIdentifier $3010 CodingDataSet Modus  : Default NUR FUER ERSATZTEILPLATZ W2.2! ONLY FOR SPARE PARTS W2.2!
@@ -71,7 +68,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews-egs-codierung"></a>
 ### STEUERN_EWS_EGS_CODIERUNG
 
 Auxiliary output setup KWP2000: $2E   WriteDataByCommonIdentifier $3010 CodingDataSet Modus  : Default NUR FUER ERSATZTEILPLATZ W2.2! ONLY FOR SPARE PARTS W2.2!
@@ -108,7 +104,6 @@ Auxiliary output setup KWP2000: $2E   WriteDataByCommonIdentifier $3010 CodingDa
 - [HORTTEXTE](#table-horttexte) (1 × 2)
 - [IORTTEXTE](#table-iorttexte) (1 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -121,7 +116,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -224,7 +218,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 118 rows × 2 columns
@@ -350,7 +343,6 @@ Dimensions: 118 rows × 2 columns
 | 0xAB | Kongsberg Automotive GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -372,7 +364,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -397,7 +388,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -409,7 +399,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -418,7 +407,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -430,7 +418,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -439,7 +426,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -448,7 +434,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns

@@ -128,7 +128,6 @@
 - [EMF_EINBREMSPROZEDUR](#job-emf-einbremsprozedur) - Musterparametersatz: "END" oder "START" Je nach Bedarfszustand der EMF-Einbremsprozedur ist der jeweilige Parameter zu waehlen zusaetzlich kann der Parameter"R" uebergeben werden "R" fordert ein Ergebnis-Telegramm an Musterparametersatz: "START,R" Argumente mit "Strich_Punkt" getrennt (nicht mit Komma !) Als Argumente werden uebergeben:
 - [_CODIERDATEN_SCHREIBEN_LESEN_EMF](#job-codierdaten-schreiben-lesen-emf) - KWP2000: $2E $3007 Musterparametersatz: "720.3,1000,5,0" es muessen immer alle 4 Argumente uebergeben werden jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!) bei Kommazahlen alle Kommas durch "Punkte" ersetzen falls keine Argumente eingegeben werden, wird nur ausgelesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -147,7 +146,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -160,7 +158,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -176,7 +173,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -193,7 +189,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -226,7 +221,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -253,7 +247,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -295,7 +288,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -314,7 +306,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -332,7 +323,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -353,7 +343,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -373,7 +362,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -388,7 +376,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -409,7 +396,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $0E Time controlled PowerDown oder b)       $05 PowerDown $00 all ECU Modus  : Default
@@ -428,7 +414,6 @@ SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen KWP2000: $22 ReadDataByCommonIdentifier $1600 IdentifyNumberofSubbusMembers Modus  : Default
@@ -444,7 +429,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen KWP2000: $22 ReadDataByCommonIdentifier $1600 IdentifyNumberofSubbusMembers $16xx SubbusMemberSerialNumber Modus  : Default
@@ -468,7 +452,6 @@ Identifikation der intelligenten Subbussensoren lesen KWP2000: $22 ReadDataByCom
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-info"></a>
 ### CBS_INFO
 
 Ausgabe der CBS-Version
@@ -484,7 +467,6 @@ _No arguments._
 | CBS_VERSION_TEXT | string | CBS Version im Klartext |
 | CBS_VERSION_HEX | string | CBS Version als Wert |
 
-<a id="job-cbs-daten-lesen"></a>
 ### CBS_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 4) KWP2000: $22 ReadDataByCommonIdentifier Modus  : Default
@@ -537,7 +519,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset"></a>
 ### CBS_RESET
 
 CBS Daten Zuruecksetzen (fuer CBS-Version 4) KWP2000: $2E WriteDataByCommonIdentifier Modus  : Default Musterparametersatz fuer Bremsbelagverschleiss Vorder/Hinterachse br_v,100,1,0,0,0,1,0,0 br_h,100,1,0,0,0,1,0,0 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!)
@@ -568,7 +549,6 @@ CBS Daten Zuruecksetzen (fuer CBS-Version 4) KWP2000: $2E WriteDataByCommonIdent
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus  : Default
@@ -582,7 +562,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $9B Vehicle Manufacturer Coding Index oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -600,7 +579,6 @@ _No arguments._
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -616,7 +594,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number Modus  : Default
@@ -635,7 +612,6 @@ Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIden
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -656,7 +632,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B Write
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-lesen"></a>
 ### C_AEI_LESEN
 
 Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -672,7 +647,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-schreiben"></a>
 ### C_AEI_SCHREIBEN
 
 Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -691,7 +665,6 @@ Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   Writ
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-auftrag"></a>
 ### C_AEI_AUFTRAG
 
 Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -712,7 +685,6 @@ Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -732,7 +704,6 @@ Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -751,7 +722,6 @@ Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -772,7 +742,6 @@ Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteData
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -790,7 +759,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -815,7 +783,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -838,7 +805,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -856,7 +822,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -877,7 +842,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -898,7 +862,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -917,7 +880,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -934,7 +896,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-zufallszahl-lesen"></a>
 ### AUTHENTISIERUNG_ZUFALLSZAHL_LESEN
 
 Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $07 RequestForAuthentication Modus  : Default
@@ -956,7 +917,6 @@ Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-start"></a>
 ### AUTHENTISIERUNG_START
 
 Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAuthentication Modus  : Default
@@ -975,7 +935,6 @@ Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -992,7 +951,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-signatur-pruefen"></a>
 ### FLASH_SIGNATUR_PRUEFEN
 
 Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSignature Modus  : Default
@@ -1012,7 +970,6 @@ Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSigna
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -1027,7 +984,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 ClearMemory Modus  : Default
@@ -1047,7 +1003,6 @@ Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload Modus  : Default
@@ -1067,7 +1022,6 @@ Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -1088,7 +1042,6 @@ Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Defau
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferExit Modus  : Default
@@ -1107,7 +1060,6 @@ Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -1144,7 +1096,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D WriteMemoryByAddress Modus   : Default
@@ -1175,7 +1126,6 @@ Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D Write
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG AIF schreiben |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG AIF schreiben |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. Diag_Mode ist integriert KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -1196,7 +1146,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-radgeschwindigkeit"></a>
 ### STATUS_RADGESCHWINDIGKEIT
 
 Radgeschwindigkeiten auslesen KWP2000: $21,$01 ReadDataByLocalIdentifier service Modus  : Default
@@ -1224,7 +1173,6 @@ _No arguments._
 | STAT_DREHRICHTUNG_HR_WERT | int | Drehrichtung hinten rechts |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status Eingaenge KWP2000: $21,$03 ReadDataByLocalIdentifier service
@@ -1265,7 +1213,6 @@ _No arguments._
 | STAT_VENTIL_RELAIS_EIN | int | 0 oder 1 |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Status Eingaenge DSC_8 KWP2000: $21,$02 ReadDataByLocalIdentifier service
@@ -1299,7 +1246,6 @@ _No arguments._
 | STAT_PUMPENMOTOR_SPANNUNG_EINH | string | Einheit = V |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-can"></a>
 ### STATUS_CAN
 
 Fuer die Zuordnung Text-Wertausgabe, siehe Tabelle CAN_FAHRZUSTAND KWP2000: $21 $04
@@ -1325,7 +1271,6 @@ _No arguments._
 | STAT_KUPPLUNG_EINH | string | Kupplung MK_IST Einheit [Nm] |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-cbs-sensor-bbv"></a>
 ### STATUS_CBS_SENSOR_BBV
 
 CBS Bremsbelagverschleiss (BBV) Sensor auslesen Verschleiss-Schwellen: 2_stufig Fuer die Zuordnung Text-Wert siehe Tabelle CBS_BBV KWP2000: $21 $11 ReadDataByCommonIdentifier Modus  : Default
@@ -1344,7 +1289,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-stop"></a>
 ### STEUERN_STOP
 
 Digitale Stellglieder ansteuern ABS_DSC57 KWP2000: $30,$10 InputOutputByLocalIdentifier service
@@ -1364,7 +1308,6 @@ Digitale Stellglieder ansteuern ABS_DSC57 KWP2000: $30,$10 InputOutputByLocalIde
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | _TEL_ANTWORT_1 | binary | Hex-Antwort von SG |
 
-<a id="job-laengsbeschleunigung-dsc-abgleichen"></a>
 ### LAENGSBESCHLEUNIGUNG_DSC_ABGLEICHEN
 
 der Parameter"R" ist optional: "R" fordert zusaetzlich ein Ergebnis-Telegramm an Musterparametersatz: R mit diesem Job wird auch die MM3.x Teilenummer in die ECU eingelesen KWP2000 : $30,$0B InputOutputControlByLocalIdentifier
@@ -1388,7 +1331,6 @@ der Parameter"R" ist optional: "R" fordert zusaetzlich ein Ergebnis-Telegramm an
 | _TEL_ANTWORT_1 | binary | Antworttelegramm |
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 
-<a id="job-steuern-d-stellglied"></a>
 ### STEUERN_D_STELLGLIED
 
 Digitale Stellglieder ansteuern KWP2000: $30,$04 InputOutputControlByLocalIdentifier Parameter (argument) koennen ausgewaehlt werden Mit dem Parameter"E" werden 2 Telegramme gesendet Diagnose_Mode,  und Ansteuersequenz-Ausfuehren: Mit dem Parameter"W" wird nur die Ansteuersequenz ausgefuehrt Der Parameter"R" ist optional: "R" fordert zusaetzlich ein Ergebnis-Telegramm an Musterparametersatz: "E,EIN,EVVL,AUS,AVVL,1000,EIN,MRA,EIN,USV1" Musterparametersatz: "E,EIN,EVVL,AUS,AVVL,1000,EIN,MRA,EIN,USV,R" jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !)
@@ -1420,7 +1362,6 @@ Digitale Stellglieder ansteuern KWP2000: $30,$04 InputOutputControlByLocalIdenti
 | _TEL_AUFTRAG_2 | binary | Anforderungstelegramm |
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 
-<a id="job-steuern-dx-stellglied"></a>
 ### STEUERN_DX_STELLGLIED
 
 Digitale Stellglieder ansteuern DSC_8 KWP2000 star: $30,$04 InputOutputControlByLocalIdentifier Mit dem Parameter"E" werden 2 Telegramme gesendet Diagnose_Mode,  und Ansteuersequenz-Ausfuehren: Mit dem Parameter"W" wird nur die Ansteuersequenz ausgefuehrt Der Parameter"R" ist optional: "R" fordert zusaetzlich ein Ergebnis-Telegramm an Musterparametersatz_1: "E,EIN,0,0,USV1,USV2,EIN,0,0,0,MRA,800,AUS,0,0,USV2,USV1,EIN,EVVL,EVVR,EVHL,EVHR" Musterparametersatz_2: "W,EIN,VLV1,VLV1,VLV2,VLV2,EIN,MRA,MRA,MRA,MRA,800,AUS,USV1,USV2,USV2,USV1,EIN,AVVL,AVVL,AVVR,AVHR,R" jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) es gibt 5 Stellgliedgruppen "EIN/AUS,MRA" "EIN/AUS,USV1,USV2" "EIN/AUS,VLV1,VLV2" "EIN/AUS,EVVL,EVVR,EVHL,EVHR" "EIN/AUS,AVVL,AVVR,AVHL,AVHR" in jedem Job koennen dann 4 beliebige Stellgliedgruppen angesteuert werden und zwar 2 Stellgliedgruppen vor dem Zeitglied und 2 Stellgliedgruppen nach dem Zeitglied dazwischen steht das Argument fuer die Wartezeit:  W_ZEIT in ms eine Stellgliedgruppe besteht aus 5 Argumenten: einem Befehl "EIN" oder "AUS" und aus genau 4 Stellgliedern werden weniger als 4 Stellglieder angesteuert, bzw. koennen pro Gruppe nur 1 bzw. 2 Stellglieder angesteuert werden, so sind die restlichen linksbuendig mit "0" zu besetzen(siehe Musterparametersatz_1) um Nullen zu vermeiden kann man sie auch mehrfach mit dem gleichen Stellglied besetzen (siehe Musterparametersatz_2) die Stellglieder einer Gruppen duerfen nicht mit Stellgliedern anderer Gruppen gemixt werden
@@ -1464,7 +1405,6 @@ Digitale Stellglieder ansteuern DSC_8 KWP2000 star: $30,$04 InputOutputControlBy
 | _TEL_AUFTRAG_2 | binary | Anforderungstelegramm |
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 
-<a id="job-steuern-stellglied-dynamisch"></a>
 ### STEUERN_STELLGLIED_DYNAMISCH
 
 Digitale Stellglieder ansteuern DSC_8 KWP2000 star: $30,$04 InputOutputControlByLocalIdentifier Mit dem Parameter"E" werden 2 Telegramme gesendet Diagnose_Mode,  und Ansteuersequenz-Ausfuehren: Mit dem Parameter"W" wird nur die Ansteuersequenz ausgefuehrt Der Parameter"R" ist optional: "R" fordert zusaetzlich ein Ergebnis-Telegramm an Musterparametersatz_1: "E,EIN,0,0,USV1,USV2,EIN,0,0,0,MRA,800,AUS,0,0,USV2,USV1,EIN,EVVL,EVVR,EVHL,EVHR,100" Musterparametersatz_2: "W,EIN,VLV1,VLV1,VLV2,VLV2,EIN,MRA,MRA,MRA,MRA,800,AUS,USV1,USV2,USV2,USV1,EIN,AVVL,AVVL,AVVR,AVHR,200,R" jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) es gibt 5 Stellgliedgruppen "EIN/AUS,MRA" "EIN/AUS,USV1,USV2" "EIN/AUS,VLV1,VLV2" "EIN/AUS,EVVL,EVVR,EVHL,EVHR" "EIN/AUS,AVVL,AVVR,AVHL,AVHR" in jedem Job koennen dann 4 beliebige Stellgliedgruppen angesteuert werden und zwar 2 Stellgliedgruppen vor dem Zeitglied und 2 Stellgliedgruppen nach dem Zeitglied dazwischen steht das Argument fuer die Wartezeit:  W_ZEIT in ms eine Stellgliedgruppe besteht aus 5 Argumenten: einem Befehl "EIN" oder "AUS" und aus genau 4 Stellgliedern werden weniger als 4 Stellglieder angesteuert, bzw. koennen pro Gruppe nur 1 bzw. 2 Stellglieder angesteuert werden, so sind die restlichen linksbuendig mit "0" zu besetzen(siehe Musterparametersatz_1) um Nullen zu vermeiden kann man sie auch mehrfach mit dem gleichen Stellglied besetzen (siehe Musterparametersatz_2) die Stellglieder einer Gruppen duerfen nicht mit Stellgliedern anderer Gruppen gemixt werden
@@ -1513,7 +1453,6 @@ Digitale Stellglieder ansteuern DSC_8 KWP2000 star: $30,$04 InputOutputControlBy
 | _TEL_AUFTRAG_2 | binary | Anforderungstelegramm |
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 
-<a id="job-steuern-drehzahlfuehler-alle"></a>
 ### STEUERN_DREHZAHLFUEHLER_ALLE
 
 Test Drehzahlfuehler Musterparametersatz: 2000 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) KWP2000 : $30,$03 InputOutputControlByLocalIdentifier
@@ -1544,7 +1483,6 @@ Test Drehzahlfuehler Musterparametersatz: 2000 jedoch mit "Strich_Punkt" getrenn
 | _TEL_ANTWORT_1 | binary | Antworttelegramm |
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 
-<a id="job-steuern-aktuatorik"></a>
 ### STEUERN_AKTUATORIK
 
 Statischer Test der Komponenten DSC_8 Musterparametersatz: 600,400 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) KWP2000 : $30,$06 InputOutputControlByLocalIdentifier
@@ -1571,7 +1509,6 @@ Statischer Test der Komponenten DSC_8 Musterparametersatz: 600,400 jedoch mit "S
 | _TEL_ANTWORT_1 | binary | Antworttelegramm |
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 
-<a id="job-reset-sensorcluster-mm3-x"></a>
 ### RESET_SENSORCLUSTER_MM3_X
 
 loescht den internen Fehlerspeicher des Sensorclusters KWP2000:
@@ -1585,7 +1522,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-steuern-kupplungs-test"></a>
 ### STEUERN_KUPPLUNGS_TEST
 
 der Kupplungstest dauert ca. 10 sec im n.i.O. Fall dauert der Kupplungstest ca. 26 sec der Parameter"R" oder "r" ist optional "R" fordert zusaetzlich ein Ergebnis-Telegramm an Fuer die Zuordnung Text-Wertausgabe, siehe Tabelle ERGEBNIS_ROUTINE KWP2000: $30,$09 InputOutputByLocalIdentifier service
@@ -1609,7 +1545,6 @@ der Kupplungstest dauert ca. 10 sec im n.i.O. Fall dauert der Kupplungstest ca. 
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-steuern-kupplung"></a>
 ### STEUERN_KUPPLUNG
 
 Kupplung aktiv bzw. passiv schalten KWP2000 : $31,$20 Musterparametersatz: "AKTIV" oder "PASSIV" Default ist aktiv Fuer die Zuordnung Text-Wertausgabe, siehe Tabelle TAB_STEUERN_KUPPLUNG
@@ -1630,7 +1565,6 @@ Kupplung aktiv bzw. passiv schalten KWP2000 : $31,$20 Musterparametersatz: "AKTI
 | _TEL_AUFTRAG | binary | Anforderungstelegramm |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-steuern-vak-befuell"></a>
 ### STEUERN_VAK_BEFUELL
 
 Evakuierung und Befuellung der Parameter"R" ist optional: "R" fordert zusaetzlich ein Ergebnis-Telegramm an Musterparametersatz: E,12,6,R jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) KWP2000 : $30,$01 InputOutputControlByLocalIdentifier
@@ -1657,7 +1591,6 @@ Evakuierung und Befuellung der Parameter"R" ist optional: "R" fordert zusaetzlic
 | _TEL_AUFTRAG_2 | binary | Anforderungstelegramm |
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 
-<a id="job-steuern-rep-entlueftung"></a>
 ### STEUERN_REP_ENTLUEFTUNG
 
 Evakuierung und Befuellung der Parameter"R" ist optional: "R" fordert zusaetzlich ein Ergebnis-Telegramm an diese Reihenfolge beachten Musterparametersatz: E,H_links,3,R Musterparametersatz: E,V_links,3,R Musterparametersatz: E,V_rechts,3,R Musterparametersatz: E,H_rechts,3,R jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) Fuer die Zuordnung Text-Wertausgabe, siehe Tabelle ERGEBNIS_ROUTINE KWP2000 : $30,$02 InputOutputControlByLocalIdentifier
@@ -1685,7 +1618,6 @@ Evakuierung und Befuellung der Parameter"R" ist optional: "R" fordert zusaetzlic
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | _TEL_AUFTRAG_2 | binary | Anforderungstelegramm |
 
-<a id="job-steuern-ergebnis-routine"></a>
 ### STEUERN_ERGEBNIS_ROUTINE
 
 Ergebnis der Routine abholen Musterparametersatz: "REP_ENTLUEFTUNG" Musterparametersatz: "VAK_BEFUELL" Musterparametersatz: "KUPPLUNGS_TEST" Musterparametersatz: "EMF" Musterparametersatz: "AL_ABGLEICH" Fuer die Zuordnung Text-Wertausgabe, siehe Tabelle ERGEBNIS_ROUTINE KWP2000 : $33,$01 02 09 InputOutputControlByLocalIdentifier
@@ -1707,7 +1639,6 @@ Ergebnis der Routine abholen Musterparametersatz: "REP_ENTLUEFTUNG" Musterparame
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | _TEL_ANTWORT_2 | binary | Antworttelegramm |
 
-<a id="job-stat-ergebnis-abgleich-routine"></a>
 ### STAT_ERGEBNIS_ABGLEICH_ROUTINE
 
 Ergebnis der Routine LWS abholen dieser Job wurde identisch zur DSC_87 aufgebaut und gilt nur fuer den LWS Musterparametersatz: "LWS" fuer Abgleich Lenkwinkelsensor oder mit 2. Argument "R": "LWS,R" dann wird eine Schleife max. 20sec durchlaufen, bis endgueltiges Ergebnis der Routine vorliegt jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) Fuer die Zuordnung der Ausgabe Text-Wert siehe Tabelle ABGLEICH_V_ERGEBNIS KWP2000: $33 $08 RequestRoutineResultsByLocalIdentifier
@@ -1729,7 +1660,6 @@ Ergebnis der Routine LWS abholen dieser Job wurde identisch zur DSC_87 aufgebaut
 | _TEL_AUFTRAG | binary | Anforderungstelegramm |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes Musterparametersatz: ROMI,0xFF12AB,12 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) das High-Byte ist bei R.Bosch DSC_60 immer 0xFFxxxx KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -1750,7 +1680,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speicherse
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes und Datenbytes (Datenbytes durch Komma getrennt !) Musterparametersatz: ROMI,0xFF12AB,12,Datenbytes Argumente mit "Strich_Punkt" getrennt (nicht mit Komma !) 0x04,0x05,0x0B,0x0C...Datenbytes(hex) durch Komma getrennt !) 04,05,03,11,12 ... Datenbytes(dec) durch Komma getrennt !) das High-Byte ist bei R.Bosch DSC_60 immer 0xFFxxxx KWP2000: $3D WriteMemoryByAddress Modus  : Default
@@ -1771,7 +1700,6 @@ Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speiche
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident-vin"></a>
 ### IDENT_VIN
 
 Identdaten KWP2000: $1A $90 ReadECUIdentification Modus  : Default
@@ -1786,7 +1714,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer 7-stellig |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident-bosch-hw-nr"></a>
 ### IDENT_BOSCH_HW_NR
 
 Identdaten KWP2000: $1A $92 ReadECUIdentification Modus  : Default
@@ -1801,7 +1728,6 @@ _No arguments._
 | ID_TT_NR | string | RB-Teilenummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident-bosch-sw-bb-nr"></a>
 ### IDENT_BOSCH_SW_BB_NR
 
 Identdaten KWP2000: $1A $94 ReadECUIdentification Modus  : Default
@@ -1817,7 +1743,6 @@ _No arguments._
 | ID_BB_NR_SS | string | RB-BB-Nummer System Server |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident-bosch-sw-version-nr"></a>
 ### IDENT_BOSCH_SW_VERSION_NR
 
 Identdaten KWP2000: $1A $95 ReadECUIdentification Modus  : Default
@@ -1833,7 +1758,6 @@ _No arguments._
 | ID_RB_SW_NR_SS | string | RB-SW-Nummer System Server |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rpa"></a>
 ### STATUS_RPA
 
 Radgeschwindigkeiten auslesen KWP2000: $21,$05 ReadDataByLocalIdentifier service Modus  : Default
@@ -1860,7 +1784,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rpa-fasta"></a>
 ### STATUS_RPA_FASTA
 
 RPA Fastadaten auslesen KWP2000: $21,$06 ReadDataByLocalIdentifier service Modus  : Default
@@ -1894,7 +1817,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rpa-standardisierung-1"></a>
 ### STATUS_RPA_STANDARDISIERUNG_1
 
 Radgeschwindigkeiten auslesen KWP2000: $21,$07 ReadDataByLocalIdentifier service Modus  : Default
@@ -1915,7 +1837,6 @@ _No arguments._
 | STAT_CRC | real |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rpa-standardisierung-2"></a>
 ### STATUS_RPA_STANDARDISIERUNG_2
 
 Radgeschwindigkeiten auslesen KWP2000: $21,$08 ReadDataByLocalIdentifier service Modus  : Default
@@ -1936,7 +1857,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rpa-standardisierung-3"></a>
 ### STATUS_RPA_STANDARDISIERUNG_3
 
 Radgeschwindigkeiten auslesen erst ab DXC8 SW19 und DSC8 I5.20 KWP2000: $21,$09 ReadDataByLocalIdentifier service Modus  : Default
@@ -1963,7 +1883,6 @@ _No arguments._
 | STAT_CRC | real |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-rpa-schreiben"></a>
 ### RPA_SCHREIBEN
 
 KWP2000: $3B WriteDataByLocalIdentifier $05 RPA Standardisierung 00: keine Aktion 01: Standardisierung starten
@@ -1983,7 +1902,6 @@ KWP2000: $3B WriteDataByLocalIdentifier $05 RPA Standardisierung 00: keine Aktio
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_1 | binary | Hex-Antwort von SG |
 
-<a id="job-rpa-fasta-loeschen"></a>
 ### RPA_FASTA_LOESCHEN
 
 KWP2000: $3B WriteDataByLocalIdentifier $06 RPA_FASTA_loeschen
@@ -1999,7 +1917,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_1 | binary | Hex-Antwort von SG |
 
-<a id="job-rpa-default"></a>
 ### RPA_DEFAULT
 
 KWP2000: $3B WriteDataByLocalIdentifier $06 RPA_FASTA_loeschen $07 Standardisierungdaten_1 $08 Standardisierungdaten_2 $09 Standardisierungdaten_3 Fasta- und Standardisierungsdaten auf default setzten
@@ -2021,7 +1938,6 @@ _No arguments._
 | _TEL_ANTWORT_4 | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_5 | binary | Hex-Antwort von SG |
 
-<a id="job-rpa-standardisierung-schreiben"></a>
 ### _RPA_STANDARDISIERUNG_SCHREIBEN
 
 KWP2000: $3B WriteDataByLocalIdentifier $07,$08,$09, RPA Standardisierungsdaten vorgeben Es muessen die Standardisierungsdaten als ein Hex_String uebergeben werden, beginnend mit der Standardisierungsblock-Nr: z.B. 01,AB,56,FF ... 18
@@ -2040,7 +1956,6 @@ KWP2000: $3B WriteDataByLocalIdentifier $07,$08,$09, RPA Standardisierungsdaten 
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-cod-lesen"></a>
 ### _COD_LESEN
 
 Auslesen der Codierdaten Es muessen 2 Byte (Blocknummer) als Hex_String uebergeben werden Argument: z.B.: 30,05 KWP2000: $22 ReadDataByCommonIdentifier $300x Codierdaten Modus  : Default
@@ -2058,7 +1973,6 @@ Auslesen der Codierdaten Es muessen 2 Byte (Blocknummer) als Hex_String uebergeb
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-cod-schreiben"></a>
 ### _COD_SCHREIBEN
 
 Codierdaten schreiben Es muessen die Codierbytes als ein Hex_String uebergeben werden, beginnend mit der Codier-Blocknummer Argument: z.B.: 30,02,A1,02,F7,65 ..... das Laengenbyte wird automatisch von der SGBD berechnet KWP2000: $2E WriteDataByCommonIdentifier $300x codingDataSet Modus  : Default
@@ -2077,7 +1991,6 @@ Codierdaten schreiben Es muessen die Codierbytes als ein Hex_String uebergeben w
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary |  |
 
-<a id="job-cod-schreiben-zusatzfunktionen"></a>
 ### _COD_SCHREIBEN_ZUSATZFUNKTIONEN
 
 Zusatzfunktionen auscodieren Es koennen max. 8 Argumente uebergeben werden CBS:  Condition Based Service FLR:  Fahrleistungsreduzierung VCH:  charkt. Geschwindigkeit HBA:  Hydraulischer Bremsassistent AY:   Offsetabgleich AY gesperrt LW:   Offsetabgleich Lenkwinkel gesperrt PSI_STAND: Offsetabgleich im Stand fuer Giergeschwindigkeit gesperrt PSI_FAHRT: Offsetabgleich waehrend der Fahrt fuer Giergeschwindigkeit gesperrt PSI_EMPF:  Empfindlichkeitsabgleich fuer Giergeschwindigkeit gesperrt SW:        Steilwandmodus aktiviert HVV:  hydraulische Vollverzögerung SST:  Softstop EVB:  Bremsbereitschaft BSW:  Trockenbremsen HHC:  Anfahrassistenz HPS:  Hydraulic Fading Compensation ASL:  Anhaengerschlingerlogik HDC:  Hill Descent Control Argument: z.B.: CBS,HBA,ASL jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) werden keine Argumente übergeben ist die Defaultcodierung wieder aktiv KWP2000: $2E WriteDataByCommonIdentifier $300x codingDataSet Modus  : Default
@@ -2103,7 +2016,6 @@ Zusatzfunktionen auscodieren Es koennen max. 8 Argumente uebergeben werden CBS: 
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary |  |
 
-<a id="job-ident-sensorcluster-mm3-x"></a>
 ### IDENT_SENSORCLUSTER_MM3_X
 
 Auslesen des DSC Sensor-Clusters KWP2000: $22 ReadDataByCommonIdentifier $1602 DSC Sensor-Cluster  lesen Modus    : Default
@@ -2125,7 +2037,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-cod-schreiben-lesen-emf"></a>
 ### _COD_SCHREIBEN_LESEN_EMF
 
 KWP2000: $2E $3007 Musterparametersatz: "720.3,1000,10.5,0" es muessen immer alle 4 argumente angegeben werden jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!) bei Kommazahlen alle Kommas durch "Punkte" ersetzen falls keine Argumente eingegeben werden, wird nur ausgelesen
@@ -2152,7 +2063,6 @@ KWP2000: $2E $3007 Musterparametersatz: "720.3,1000,10.5,0" es muessen immer all
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary |  |
 
-<a id="job-test-auto-codierung"></a>
 ### _TEST_AUTO_CODIERUNG
 
 Autocodierung wird ausgeloest
@@ -2166,7 +2076,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | _TEL_AUFTRAG | binary | Anforderungstelegramm |
 
-<a id="job-cbs-zustand-neufahrzeug"></a>
 ### CBS_ZUSTAND_NEUFAHRZEUG
 
 CBS Daten schreiben KWP2000: $3D Argument vorbelegt mit "E70" sonst anderes Argument erforderlich: z.B. "E70_06" Argumente siehe auch Tabellen Info: EEPROM_BELEGUNG Ruecksetzen VA und HA auf 100% Verfuegbarkeit CUS-Block01/02: Neuzustand-Bremsbelagdicken (BPTXA) für VA =13,7mm und HA = 11,05 mm Gesamtlaufleistung Bremsbeläge (TotalMilageXA)  für VA und HA = 0 km CUS-Block03: Enable Korrektur wegen Info1XA (EnKorr1XA)  für VA und HA = 1 Enable Korrektur wegen Info2XA (EnKorr1XA)  für VA und HA = 0 Info Verschleißpillen (Info1XA, Info2XA) für VA und HA = 0 Steuerbits plausibel (CtrlBitsEEPROM) = 1 Anforderung Serviceinfo (ServReqXa) für VA und HA=0 Stopbit (StopBPTXA) für VA und HA = 0 Manipulationsbit (ManipulationXA) für VA und HA = 0 Korrekturfaktor (PKorrXA) für VA und HA = 1,0 CUS-Block04: Anfangs-Restlaufleistung (BPTMXA) für VA=40.000km und für HA=50.000km Servicezaehler (ServCntXA)  für VA und HA =1
@@ -2192,7 +2101,6 @@ CBS Daten schreiben KWP2000: $3D Argument vorbelegt mit "E70" sonst anderes Argu
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_4 | binary | Hex-Antwort von SG |
 
-<a id="job-bremsentemperatur"></a>
 ### _BREMSENTEMPERATUR
 
 EEPROM lesen und schreiben es muessen 5 Argumente in folgender Reihenfolge uebergeben werden 1.Argument: z.B. "E70" oder "E70_06" Argumente siehe auch Tabellen Info: EEPROM_BELEGUNG Bremsentemperatur E70,VL,VR,HL,HR Musterparametersatz: "E70,500,550,600,720" jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) zulaessige Werte: 50 .... 850 Grad werden keine Temperaturargumente uebergeben, dann werden die vorhandenen Temperaturwerte beibehalten KWP2000: $23,$3D
@@ -2219,7 +2127,6 @@ EEPROM lesen und schreiben es muessen 5 Argumente in folgender Reihenfolge ueber
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-cbs-korrekturfaktor"></a>
 ### _CBS_KORREKTURFAKTOR
 
 CBS_KORREKTURFAKTOR eingeben Argument erforderlich: z.B. "E70" oder "E70_06" Argumente siehe auch Tabellen Info: EEPROM_BELEGUNG dann koennen weitere 2 Argumente uebergeben werden Korrekturfaktor VA, Korrekturfaktor HA wird nur ein Korrekturfaktor uebergeben, dann wird nur die VA geaendert die HA wird auf die Basiswert Korrekturfaktor=1.0 eingestellt Musterparametersatz: "E70,1.2,0.9" jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) zulaessige Werte: 0.2 .... 7.9 werden keine Korrekturfaktor-Argumente uebergeben, dann ist die Basiseinstellung aktiv d.h. Korrekturfaktor=1.0 KWP2000: $3D
@@ -2241,7 +2148,6 @@ CBS_KORREKTURFAKTOR eingeben Argument erforderlich: z.B. "E70" oder "E70_06" Arg
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_AUFTRAG | binary |  |
 
-<a id="job-cbs-manipulations-bit"></a>
 ### _CBS_MANIPULATIONS_BIT
 
 CBS_MANIPULATIONS_BIT eingeben Argument erforderlich: z.B. "E70" oder "E70_06" Argumente siehe auch Tabellen Info: EEPROM_BELEGUNG dann koennen max. 2 weitere Argumente uebergeben werden Manipulationsbit VA, Manipulationsbit HA wird nur ein Manipulationsbit uebergeben, dann wird nur die VA geaendert die HA wird auf die Basiswert Manipulationsbit=0 eingestellt Musterparametersatz: "E70,0,1" jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) zulaessige Werte: 0 bzw. 1 werden keine Manipulationsbit-Argumente uebergeben, dann ist die Basiseinstellung aktiv d.h. Manipulationsbit=0 KWP2000: $3D
@@ -2263,7 +2169,6 @@ CBS_MANIPULATIONS_BIT eingeben Argument erforderlich: z.B. "E70" oder "E70_06" A
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_AUFTRAG | binary |  |
 
-<a id="job-cbs-totalmilage-startwerte"></a>
 ### _CBS_TOTALMILAGE_STARTWERTE
 
 EEPROM lesen/schreiben Argument erforderlich: z.B. "E70" oder "E70_06" Argumente siehe auch Tabellen Info: EEPROM_BELEGUNG dann koennen max. 2 weitere Argumente uebergeben werden Gesamtlaufleistung VA (km), Gesamtlaufleistung HA (km) wird nur ein Korrekturfaktor uebergeben, dann wird nur die VA geaendert die HA wird auf die Basiswert 50000km eingestellt Musterparametersatz: "E70,15000,32000" jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) zulaessiger Bereich: 10000 ... 80000km werden keine Korrekturfaktor-Argumente uebergeben, dann ist die Basiseinstellung aktiv VA=40000km, HA=50000km der aktuelle Service-Zaehlerstand wird immer uebernommen zulaessiger Bereich 0 ... 31 KWP2000: $3D
@@ -2289,7 +2194,6 @@ EEPROM lesen/schreiben Argument erforderlich: z.B. "E70" oder "E70_06" Argumente
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary |  |
 
-<a id="job-cbs-servicezaehler"></a>
 ### _CBS_SERVICEZAEHLER
 
 EEPROM lesen/schreiben Argument erforderlich: z.B. "E70" oder "E70_06" Argumente siehe auch Tabellen Info: EEPROM_BELEGUNG dann koennen max. 2 weitere Argumente uebergeben werden Servicezaehler VA, Servicezaehler HA wird nur ein Servicezaehlerstand (ServCntXA) uebergeben, dann wird nur die VA geaendert die HA wird auf die Basiswert 1 eingestellt Musterparametersatz: "E70,1,2" jedoch mit "Strich_Punkt" getrennt (nicht mit Komma !) zulaessiger Bereich: 0 ... 31 werden keine Servicezaehler_Argumente uebergeben, dann ist die Basiseinstellung aktiv VA = 1, HA = 1 der aktuelle Gesamtlaufleistung wird immer uebernommen Servicezaehler-wert (ServCntXA) 31 : fuehrt zum automatischen Inkrementieren des Servicezaehlers im DSC- SG um +1 Servicezaehler (ServCntXA)  0 fuehrt zur Anforderung (ServiceRequest) der aktuellen CBS-Werte vom Kombiinstrument KWP2000: $3D
@@ -2315,7 +2219,6 @@ EEPROM lesen/schreiben Argument erforderlich: z.B. "E70" oder "E70_06" Argumente
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary |  |
 
-<a id="job-cbs-basisinitialisierung"></a>
 ### CBS_BASISINITIALISIERUNG
 
 CBS Daten schreiben KWP2000: $3D Argument vorbelegt mit "E70" sonst anderes Argument erforderlich: z.B. "E70_06" Argumente siehe auch Tabellen Info: EEPROM_BELEGUNG Neuzustand DSC-Steuergerät = Auslieferungszustand RB-Werk ASW-Block:   FLR ein, CBS-totalmilage fix aus ROM CUS-Block01/02: Neuzustand-Bremsbelagdicken (BPTXA) für VA=0 mm und HA = 0,0 mm Gesamtlaufleistung Bremsbeläge (TotalMilageXA)  für VA und HA = 0 km CUS-Block03: Enable Korrektur wegen Info1XA (EnKorr1XA)  für VA und HA = 1 Enable Korrektur wegen Info2XA (EnKorr1XA)  für VA und HA = 0 Info Verschleißpillen (Info1XA, Info2XA) für VA und HA = 0 Steuerbits plausibel (CtrlBitsEEPROM) = 0 Anforderung Serviceinfo (ServReqXa) für VA und HA = 1 Stopbit (StopBPTXA) für VA und HA = 0 Manipulationsbit (ManipulationXA) für VA und HA = 0 Korrekturfaktor (PKorrXA) für VA und HA = 1,0 CUS-Block04: Anfangs-Restlaufleistung (BPTMXA) für VA = 0 km und für  HA = 0 km Servicezaehler (ServCntXA)  für VA und HA = 0
@@ -2345,7 +2248,6 @@ CBS Daten schreiben KWP2000: $3D Argument vorbelegt mit "E70" sonst anderes Argu
 | _TEL_ANTWORT_5 | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_6 | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-eeprom-lesen"></a>
 ### _CBS_EEPROM_LESEN
 
 EEPROM lesen KWP2000: $23 Argument vorbelegt mit "E70" sonst anderes Argument erforderlich: z.B. "E70_06" Argumente siehe auch Tabellen Info: EEPROM_BELEGUNG
@@ -2398,7 +2300,6 @@ EEPROM lesen KWP2000: $23 Argument vorbelegt mit "E70" sonst anderes Argument er
 | _TEL_ANTWORT_4 | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_5 | binary | Hex-Antwort von SG |
 
-<a id="job-dsc-eeprom-lesen"></a>
 ### _DSC_EEPROM_LESEN
 
 DSC EEPROM lesen KWP2000: $23
@@ -2547,7 +2448,6 @@ DSC EEPROM lesen KWP2000: $23
 | _TEL_ANTWORT_25 | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_26 | binary | Hex-Antwort von SG |
 
-<a id="job-lenkwinkel-dsc-abgleichen"></a>
 ### LENKWINKEL_DSC_ABGLEICHEN
 
 KWP2000 star: $30,$08 InputOutputControlByLocalIdentifier service
@@ -2567,7 +2467,6 @@ KWP2000 star: $30,$08 InputOutputControlByLocalIdentifier service
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-f-can-taster-audio-tel"></a>
 ### STATUS_F_CAN_TASTER_AUDIO_TEL
 
 Botschaft des Tasters Audio/Telefon auslesen Fuer die Zuordnung Text-Wertausgabe, siehe Tabelle AUDIO_TEL KWP2000: $22 ReadDataByCommonIdentifier $01D6 Botschaft des Tasters Audio/Telefon auslesen Modus    : Default
@@ -2596,7 +2495,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-f-can-tempomat-acc"></a>
 ### STATUS_F_CAN_TEMPOMAT_ACC
 
 Botschaft des Tempomats/ACC auslesen Fuer die Zuordnung Text-Wertausgabe, siehe Tabelle TEMP_ACC KWP2000: $22 ReadDataByCommonIdentifier $0194 - Botschaft des Tempomats/ACC auslesen Modus    : Default
@@ -2617,7 +2515,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-f-can-wischertaster"></a>
 ### STATUS_F_CAN_WISCHERTASTER
 
 Botschaft desWischertasters auslesen Fuer die Zuordnung Text-Wertausgabe, siehe Tabelle WISCHER KWP2000: $22 ReadDataByCommonIdentifier $02A6 - Botschaft des Wischertasters auslesen Modus    : Default
@@ -2636,7 +2533,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-sar"></a>
 ### _FS_LESEN_SAR
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -2652,7 +2548,6 @@ _No arguments._
 | F_ORT_TEXT | string | Fehlerort als Text table FOrtTexte ORTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen-eeprom"></a>
 ### _SERIENNUMMER_LESEN_EEPROM
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben:
@@ -2678,7 +2573,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-emf-zaehler"></a>
 ### STATUS_EMF_ZAEHLER
 
 Als Argumente werden uebergeben:
@@ -2698,7 +2592,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-emf-einbremsprozedur"></a>
 ### EMF_EINBREMSPROZEDUR
 
 Musterparametersatz: "END" oder "START" Je nach Bedarfszustand der EMF-Einbremsprozedur ist der jeweilige Parameter zu waehlen zusaetzlich kann der Parameter"R" uebergeben werden "R" fordert ein Ergebnis-Telegramm an Musterparametersatz: "START,R" Argumente mit "Strich_Punkt" getrennt (nicht mit Komma !) Als Argumente werden uebergeben:
@@ -2722,7 +2615,6 @@ Musterparametersatz: "END" oder "START" Je nach Bedarfszustand der EMF-Einbremsp
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT_1 | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-schreiben-lesen-emf"></a>
 ### _CODIERDATEN_SCHREIBEN_LESEN_EMF
 
 KWP2000: $2E $3007 Musterparametersatz: "720.3,1000,5,0" es muessen immer alle 4 Argumente uebergeben werden jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!) bei Kommazahlen alle Kommas durch "Punkte" ersetzen falls keine Argumente eingegeben werden, wird nur ausgelesen
@@ -2806,7 +2698,6 @@ KWP2000: $2E $3007 Musterparametersatz: "720.3,1000,5,0" es muessen immer alle 4
 - [WERKSKENNZAHL](#table-werkskennzahl) (3 × 2)
 - [SCHICHTKENNZEICHEN](#table-schichtkennzeichen) (12 × 3)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -2818,7 +2709,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -2921,7 +2811,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 77 rows × 2 columns
@@ -3006,7 +2895,6 @@ Dimensions: 77 rows × 2 columns
 | 0x76 | CEL |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -3028,7 +2916,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -3053,7 +2940,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3065,7 +2951,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -3087,7 +2972,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -3102,7 +2986,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -3129,7 +3012,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 12 rows × 2 columns
@@ -3149,7 +3031,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A00 | Regen- Lichtsensor |
 | 0xFFFF | unbekannter Verbauort |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -3158,7 +3039,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-cbskennung"></a>
 ### CBSKENNUNG
 
 Dimensions: 16 rows × 3 columns
@@ -3182,7 +3062,6 @@ Dimensions: 16 rows × 3 columns
 | 0x20 | TUV | §Fahrzeuguntersuchung |
 | 0x21 | AU | §Abgasuntersuchung |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -3191,7 +3070,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -3203,7 +3081,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 798 rows × 2 columns
@@ -4009,7 +3886,6 @@ Dimensions: 798 rows × 2 columns
 | 0x6f64 | 6F64 - PT-CAN: Verdacht auf Leitungsunterbrechung. |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -4024,7 +3900,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | ja |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -4033,7 +3908,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | default | 0x01 | DIGITAL | ANALOG | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 19 rows × 9 columns
@@ -4060,7 +3934,6 @@ Dimensions: 19 rows × 9 columns
 | 0x12 | U_Bordnetz | Volt | - | unsigned char | - | 1 | 10.0 | 0 |
 | 0xFF | ohne_Funktion | 1 | - | unsigned int | - | 1 | 1 | 0 |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -4069,7 +3942,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -4084,7 +3956,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -4093,7 +3964,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -4108,7 +3978,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-digital"></a>
 ### DIGITAL
 
 Dimensions: 1 rows × 16 columns
@@ -4117,7 +3986,6 @@ Dimensions: 1 rows × 16 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 15 | 0x02 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0A | 0x0B | 0x0C | 0x0D | 0x0E | 0x0F | 0x10 |
 
-<a id="table-analog"></a>
 ### ANALOG
 
 Dimensions: 1 rows × 4 columns
@@ -4126,7 +3994,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 3 | 0x11 | 0x12 | 0xFF |
 
-<a id="table-stg-tabelle"></a>
 ### STG_TABELLE
 
 Dimensions: 17 rows × 4 columns
@@ -4151,7 +4018,6 @@ Dimensions: 17 rows × 4 columns
 | 0 | 0x00 | 0x00 | 0x00 |
 | 00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-steuern-i-o-ein"></a>
 ### STEUERN_I_O_EIN
 
 Dimensions: 18 rows × 4 columns
@@ -4177,7 +4043,6 @@ Dimensions: 18 rows × 4 columns
 | 00 | 0x00 | 0x00 | 0x00 |
 | XYZ | 0x00 | 0x00 | 0x00 |
 
-<a id="table-steuern-i-o-aus"></a>
 ### STEUERN_I_O_AUS
 
 Dimensions: 16 rows × 4 columns
@@ -4201,7 +4066,6 @@ Dimensions: 16 rows × 4 columns
 | 00 | 0x00 | 0x00 | 0x00 |
 | XYZ | 0x00 | 0x00 | 0x00 |
 
-<a id="table-rad-nr-tabelle"></a>
 ### RAD_NR_TABELLE
 
 Dimensions: 5 rows × 4 columns
@@ -4214,7 +4078,6 @@ Dimensions: 5 rows × 4 columns
 | H_LINKS | 0xA6 | 0x22 | 0x04 |
 | KEINE_POSITION_ERKANNT | 0xFF | 0xFF | 0x00 |
 
-<a id="table-cbs-bbv"></a>
 ### CBS_BBV
 
 Dimensions: 5 rows × 3 columns
@@ -4227,7 +4090,6 @@ Dimensions: 5 rows × 3 columns
 | 0xFF | Signal nicht verfuegbar | 4 |
 | 0xXY | nicht_definiert | 99 |
 
-<a id="table-boskennung"></a>
 ### BOSKENNUNG
 
 Dimensions: 11 rows × 3 columns
@@ -4246,7 +4108,6 @@ Dimensions: 11 rows × 3 columns
 | 0x20 | TUV | TÜV |
 | 0x21 | AU | AU |
 
-<a id="table-eeprom-belegung"></a>
 ### EEPROM_BELEGUNG
 
 Dimensions: 30 rows × 3 columns
@@ -4284,7 +4145,6 @@ Dimensions: 30 rows × 3 columns
 | ACB_11 | 0xD5 | 0xC1 |
 | ERROR_UNKNOWN | 0xXY | 0xXY |
 
-<a id="table-codierung"></a>
 ### CODIERUNG
 
 Dimensions: 19 rows × 5 columns
@@ -4311,7 +4171,6 @@ Dimensions: 19 rows × 5 columns
 | HDC | 0x3005 | 0x02 | 0x80 | 0x80 |
 | XXX | 0xXY | 0xXY | 0xXY | 0xXY |
 
-<a id="table-raddrehrichtung"></a>
 ### RADDREHRICHTUNG
 
 Dimensions: 7 rows × 6 columns
@@ -4326,7 +4185,6 @@ Dimensions: 7 rows × 6 columns
 | 0xFF | steht | steht | steht | steht | 0 |
 | 0xXY | nicht_definiert | nicht_definiert | nicht_definiert | nicht_definiert | 99 |
 
-<a id="table-can-fahrzustand"></a>
 ### CAN_FAHRZUSTAND
 
 Dimensions: 6 rows × 3 columns
@@ -4340,7 +4198,6 @@ Dimensions: 6 rows × 3 columns
 | 0x07 | Signal_ungueltig | 5 |
 | 0xXY | nicht_definiert | 99 |
 
-<a id="table-tab-steuern-kupplung"></a>
 ### TAB_STEUERN_KUPPLUNG
 
 Dimensions: 3 rows × 3 columns
@@ -4351,7 +4208,6 @@ Dimensions: 3 rows × 3 columns
 | 0x01 | Kupplung_passiv_geschaltet | 2 |
 | 0xXY | nicht_definiert | 99 |
 
-<a id="table-ergebnis-routine"></a>
 ### ERGEBNIS_ROUTINE
 
 Dimensions: 9 rows × 6 columns
@@ -4368,7 +4224,6 @@ Dimensions: 9 rows × 6 columns
 | 0xFF |  |  | Fehler_waehrend_der_Ausfuehrung_aufgetreten |  | 7 |
 | 0xXY | nicht_definiert | nicht_definiert | nicht_definiert |  | 99 |
 
-<a id="table-abgleich-lws-ergebnis"></a>
 ### ABGLEICH_LWS_ERGEBNIS
 
 Dimensions: 3 rows × 3 columns
@@ -4379,7 +4234,6 @@ Dimensions: 3 rows × 3 columns
 | 0x01 | Routine_erfolgreich_beendet | 1 |
 | 0xXY | kein_Ergebnis | 99 |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns
@@ -4399,7 +4253,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-audio-tel"></a>
 ### AUDIO_TEL
 
 Dimensions: 12 rows × 9 columns
@@ -4419,7 +4272,6 @@ Dimensions: 12 rows × 9 columns
 | 0xC0 |  |  |  |  |  |  | Signal_ungueltig | 4 |
 | 0xXY | nicht_definiert | nicht_definiert | nicht_definiert | nicht_definiert | nicht_definiert | nicht_definiert | nicht_definiert | 99 |
 
-<a id="table-temp-acc"></a>
 ### TEMP_ACC
 
 Dimensions: 12 rows × 5 columns
@@ -4439,7 +4291,6 @@ Dimensions: 12 rows × 5 columns
 | 0xFF | Signal_ungueltig |  |  | 9 |
 | 0xXY | nicht_definiert | nicht_definiert | nicht_definiert | 99 |
 
-<a id="table-wischer"></a>
 ### WISCHER
 
 Dimensions: 12 rows × 4 columns
@@ -4459,7 +4310,6 @@ Dimensions: 12 rows × 4 columns
 | 0xFF | Signal_ungueltig |  | 9 |
 | 0xXY | nicht_definiert | nicht_definiert | 99 |
 
-<a id="table-bosch-ttnr1"></a>
 ### BOSCH_TTNR1
 
 Dimensions: 26 rows × 3 columns
@@ -4493,7 +4343,6 @@ Dimensions: 26 rows × 3 columns
 | Y | 2267 | NFZ_Baugr. |
 | Z |  |  |
 
-<a id="table-bosch-ttnr2"></a>
 ### BOSCH_TTNR2
 
 Dimensions: 6 rows × 2 columns
@@ -4507,7 +4356,6 @@ Dimensions: 6 rows × 2 columns
 | E | 032 |
 | F | 106 |
 
-<a id="table-bosch"></a>
 ### BOSCH
 
 Dimensions: 36 rows × 2 columns
@@ -4551,7 +4399,6 @@ Dimensions: 36 rows × 2 columns
 | Y | 34 |
 | Z | 35 |
 
-<a id="table-werkskennzahl"></a>
 ### WERKSKENNZAHL
 
 Dimensions: 3 rows × 2 columns
@@ -4562,7 +4409,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | ANSBACH |
 | 3 | TOCHIGI |
 
-<a id="table-schichtkennzeichen"></a>
 ### SCHICHTKENNZEICHEN
 
 Dimensions: 12 rows × 3 columns

@@ -23,7 +23,6 @@
 - [NUMMERN_CHECK](#job-nummern-check) - Sachnummern Airbag-Ausloeseeinheit
 - [INFO](#job-info) - Information SGBD
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -36,7 +35,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-nummern-check"></a>
 ### NUMMERN_CHECK
 
 Sachnummern Airbag-Ausloeseeinheit
@@ -60,7 +58,6 @@ Sachnummern Airbag-Ausloeseeinheit
 | AIRBAG_ART1 | string | Art-Zuordnung 1. Einheit (Fahrer/Beifahrer/Cabrio) |
 | AIRBAG_ART2 | string | Art-Zuordnung 2. Einheit (Fahrer/Beifahrer/Cabrio) |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -88,7 +85,6 @@ _No arguments._
 - [E34](#table-e34) (13 × 3)
 - [E36](#table-e36) (17 × 3)
 
-<a id="table-e38"></a>
 ### E38
 
 Dimensions: 16 rows × 3 columns
@@ -112,7 +108,6 @@ Dimensions: 16 rows × 3 columns
 | 1093246 | US | F |
 | XXXXXXX | unbekannt | Y |
 
-<a id="table-e39"></a>
 ### E39
 
 Dimensions: 2 rows × 3 columns
@@ -122,7 +117,6 @@ Dimensions: 2 rows × 3 columns
 | 8229630 | US | F |
 | XXXXXXX | unbekannt | Y |
 
-<a id="table-e31"></a>
 ### E31
 
 Dimensions: 15 rows × 3 columns
@@ -145,7 +139,6 @@ Dimensions: 15 rows × 3 columns
 | 1094444 | ECE | F |
 | XXXXXXX | unbekannt | Y |
 
-<a id="table-e34"></a>
 ### E34
 
 Dimensions: 13 rows × 3 columns
@@ -166,7 +159,6 @@ Dimensions: 13 rows × 3 columns
 | 2228016 | US | F |
 | XXXXXXX | unbekannt | Y |
 
-<a id="table-e36"></a>
 ### E36
 
 Dimensions: 17 rows × 3 columns

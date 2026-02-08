@@ -36,7 +36,6 @@
 - [CODIERUNG_LESEN](#job-codierung-lesen) - Auslesen der Codierung des Steuergeraetes Der Wertebereich fuer digitale Results: Bereich: 0, wenn FALSE / 1, wenn TRUE
 - [SPEICHER_LESEN](#job-speicher-lesen) - Ansteuern von Funktionen des Steuergeraetes
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -92,7 +89,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -105,7 +101,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -123,7 +118,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -142,7 +136,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -163,7 +156,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -182,7 +174,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -195,7 +186,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -208,7 +198,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -229,7 +218,6 @@ _No arguments._
 | F_ART1_TEXT | string | table FArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -250,7 +238,6 @@ _No arguments._
 | F_ART1_TEXT | string | table IArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Auslesen der IO-Stati des Steuergeraetes Der Wertebereich fuer digitale Results: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -321,7 +308,6 @@ _No arguments._
 | STAT_BLOCKSTROM_WERT | real |  |
 | STAT_BLOCKSTROM_EINH | string | Ampere |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern von Funktionen des Steuergeraetes
@@ -339,7 +325,6 @@ Ansteuern von Funktionen des Steuergeraetes
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierung des Steuergeraetes Der Wertebereich fuer digitale Results: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -361,7 +346,6 @@ _No arguments._
 | COD_LINKSLENKER_AKTIV | int | 1=LL, 0=RL |
 | COD_GESCHWINDIGKEIT_VERRIEGELUNGSSPERRE_WERT | int | 0 bis 255 |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Ansteuern von Funktionen des Steuergeraetes
@@ -394,7 +378,6 @@ Ansteuern von Funktionen des Steuergeraetes
 - [IORTTEXTE](#table-iorttexte) (6 × 2)
 - [STEUERN](#table-steuern) (22 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -415,7 +398,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 70 rows × 2 columns
@@ -493,7 +475,6 @@ Dimensions: 70 rows × 2 columns
 | 0x69 | Magna-Donelly |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -522,7 +503,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -546,7 +526,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -557,7 +536,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0x?? | unbekannte Fehlerart |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -568,7 +546,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0x?? | unbekannte Fehlerart |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -590,7 +567,6 @@ Dimensions: 14 rows × 2 columns
 | 0x00E | Spiegelmotor Einklappen Kurzschluss |
 | 0x??? | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 6 rows × 2 columns
@@ -604,7 +580,6 @@ Dimensions: 6 rows × 2 columns
 | 0x004 | Spiegelmotor, Potentiometer Plausibilitaet |
 | 0x??? | unbekannter Fehlerort |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 22 rows × 3 columns

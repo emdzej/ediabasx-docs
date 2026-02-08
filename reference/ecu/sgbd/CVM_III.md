@@ -36,7 +36,6 @@
 - [CODIERUNG_LESEN](#job-codierung-lesen) - Codierung lesen job
 - [SPEICHER_LESEN](#job-speicher-lesen) - Lesen des internen Speichers des CVM Als Argumente werden die Anzahl und die Adresse der Datenbytes uebergeben.
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -92,7 +89,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -110,7 +106,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -129,7 +124,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -142,7 +136,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -155,7 +148,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -168,7 +160,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -182,7 +173,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -210,7 +200,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 is_lesen job
@@ -232,7 +221,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 STATUS_LESEN job
@@ -268,7 +256,6 @@ _No arguments._
 | STAT_VERDECKZAEHLER_ZU_WERT | int |  |
 | STAT_VERDECKZAEHLER_AUF_WERT | int |  |
 
-<a id="job-hersteller-lesen"></a>
 ### HERSTELLER_LESEN
 
 Default ident job
@@ -282,7 +269,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | HERSTELLERDATEN | binary | Herstellerdaten Byte 1 bis 4 |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 STEUERN_DIGITAL job
@@ -300,7 +286,6 @@ STEUERN_DIGITAL job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Codierung lesen job
@@ -318,7 +303,6 @@ Codierung lesen job
 | JOB_STATUS | string |  |
 | DATENBLOCK | binary | Netto Hex-Daten von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers des CVM Als Argumente werden die Anzahl und die Adresse der Datenbytes uebergeben.
@@ -350,7 +334,6 @@ Lesen des internen Speichers des CVM Als Argumente werden die Anzahl und die Adr
 - [FUMWELTTEXTE](#table-fumwelttexte) (3 × 3)
 - [STEUERN](#table-steuern) (8 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -371,7 +354,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 59 rows × 2 columns
@@ -438,7 +420,6 @@ Dimensions: 59 rows × 2 columns
 | 0x58 | Autoliv |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -467,7 +448,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 71 rows × 2 columns
@@ -546,7 +526,6 @@ Dimensions: 71 rows × 2 columns
 | 0x6E | RPUMPEZ, Kurzschluss nach UBatt |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -557,7 +536,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 11 rows × 2 columns
@@ -576,7 +554,6 @@ Dimensions: 11 rows × 2 columns
 | 0x7C | SW in undefiniertem Zustand, unbekannte Verdeckstellung |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 3 rows × 3 columns
@@ -587,7 +564,6 @@ Dimensions: 3 rows × 3 columns
 | 0x01 | Aussentemperatur | Grad C |
 | 0xXY | unbekannte Umweltbedingung | -- |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 8 rows × 3 columns

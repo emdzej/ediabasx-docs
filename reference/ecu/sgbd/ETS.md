@@ -39,7 +39,6 @@
 - [HERSTELLDATEN_LESEN](#job-herstelldaten-lesen) - Auslesen der Herstelldaten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -58,7 +57,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer ETS automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -71,7 +69,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer ETS
@@ -95,7 +92,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -118,7 +114,6 @@ _No arguments._
 | F_ART1_TEXT | string | 1. (einzige) Fehlerart als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -132,7 +127,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des Speichers
@@ -153,7 +147,6 @@ Lesen des Speichers
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des Speichers
@@ -173,7 +166,6 @@ Beschreiben des Speichers
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Lesen der Codierdaten
@@ -188,7 +180,6 @@ _No arguments._
 | DATEN | binary | Ausgelesene Codierdaten |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-schreiben"></a>
 ### CODIERDATEN_SCHREIBEN
 
 Schreiben der Codierdaten
@@ -207,7 +198,6 @@ Schreiben der Codierdaten
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital-lesen"></a>
 ### STATUS_DIGITAL_LESEN
 
 Lesen der Digitalwerte
@@ -243,7 +233,6 @@ _No arguments._
 | STAT_DIG_MOTOR_ON | int | Motor laeuft: 0 oder 1 (=laeuft) Bit 7 von STAT_BYTE3 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 Lesen der Analogwerte
@@ -291,7 +280,6 @@ _No arguments._
 | STAT_ANA_ZYKLENZAEHLER_EINH | string | Einheit von Zaehler der E-Kat-Zyklen |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Vorgeben eines Statuswertes (1 Signal)
@@ -311,7 +299,6 @@ Vorgeben eines Statuswertes (1 Signal)
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zyklenzaehler-schreiben"></a>
 ### ZYKLENZAEHLER_SCHREIBEN
 
 Zaehlerstand des Zyklenzaehlers vorgeben
@@ -330,7 +317,6 @@ Zaehlerstand des Zyklenzaehlers vorgeben
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -347,7 +333,6 @@ _No arguments._
 | BYTE3 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -368,7 +353,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-modul-inaktiv"></a>
 ### MODUL_INAKTIV
 
 Setzt das Modul temporaer inaktiv
@@ -382,7 +366,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-modul-aktiv"></a>
 ### MODUL_AKTIV
 
 Setzt das Modul wieder aktiv
@@ -396,7 +379,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -414,7 +396,6 @@ _No arguments._
 | BYTE4 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -437,7 +418,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (20 × 2)
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -452,7 +432,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns
@@ -489,7 +468,6 @@ Dimensions: 29 rows × 2 columns
 | 0x28 | DODUCO |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 20 rows × 2 columns
@@ -517,7 +495,6 @@ Dimensions: 20 rows × 2 columns
 | 0x1C | Externer Fehler: K-Bus- oder Kombisignal fehlt |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns

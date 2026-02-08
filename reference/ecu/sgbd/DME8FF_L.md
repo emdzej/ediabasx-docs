@@ -213,7 +213,6 @@
 - [START_RESET_FVVM_DATEN](#job-start-reset-fvvm-daten) - Rücksetzen der FVVM Daten RESET_FVVM_DATEN (0x31 01 F305)
 - [_GETRIEBEEINGANG_DREHZAHL_RESET](#job-getriebeeingang-drehzahl-reset) - Ereignisse fuer die erhoehten Drehzahlen an der Getriebeeingangswelle loeschen (FASTA). _GETRIEBEEINGANG_DREHZAHL_RESET (0x31 01 F320)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -232,7 +231,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -245,7 +243,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -262,7 +259,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -294,7 +290,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -347,7 +342,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -366,7 +360,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -384,7 +377,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -405,7 +397,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -434,7 +425,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -454,7 +444,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -475,7 +464,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -491,7 +479,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -513,7 +500,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -535,7 +521,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -554,7 +539,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-permanent"></a>
 ### FS_LESEN_PERMANENT
 
 permanente Fehler aus Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $15 ReportDTCWithPermanentStatus Modus: Default
@@ -580,7 +564,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -607,7 +590,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -660,7 +642,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -675,7 +656,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -701,7 +681,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -721,7 +700,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -740,7 +718,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -759,7 +736,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -774,7 +750,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -793,7 +768,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -813,7 +787,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -830,7 +803,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -849,7 +821,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -865,7 +836,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -899,7 +869,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -914,7 +883,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-info"></a>
 ### CBS_INFO
 
 Ausgabe der CBS-Version
@@ -930,7 +898,6 @@ _No arguments._
 | CBS_VERSION_TEXT | string | CBS Version im Klartext |
 | CBS_VERSION_HEX | string | CBS Version als Wert |
 
-<a id="job-cbs-daten-lesen"></a>
 ### CBS_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 5) UDS: $22 ReadDataByIdentifier Modus  : Default
@@ -994,7 +961,6 @@ CBS Daten auslesen (fuer CBS-Version 5) UDS: $22 ReadDataByIdentifier Modus  : D
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-interne-daten-lesen"></a>
 ### CBS_INTERNE_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 5) UDS  : $22   ReadDataByIdentifier UDS  : $1003 Data Identifier Modus  : Default
@@ -1039,7 +1005,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset"></a>
 ### CBS_RESET
 
 CBS Daten Zuruecksetzen (fuer CBS-Version 6) Fahrzeug muss in einem der folgenden Zustaende sein:) - Pruefen_Analyse_Diagnose - Fahrbereitschaft_herstellen - Wohnen, ab CBS 6.2 - Fahren - Fahrbereitschaft_beenden UDS: $2E WriteDataByIdentifier Modus  : Default Musterparametersatz fuer Bremsbelagverschleiss Vorder/Hinterachse br_v,100,1,0,0,0,1,0,0 br_h,100,1,0,0,0,1,0,0 jedoch mit 'Strich_Punkt' getrennt (nicht mit Komma!)
@@ -1073,7 +1038,6 @@ CBS Daten Zuruecksetzen (fuer CBS-Version 6) Fahrzeug muss in einem der folgende
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset-detail-lesen"></a>
 ### CBS_RESET_DETAIL_LESEN
 
 Lesen der CBx-Daten aus einem CBx-Steuergerät UDS: $22 ReadDataByIdentifier Modus  : Default
@@ -1097,7 +1061,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -1112,7 +1075,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -1129,7 +1091,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -1144,7 +1105,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -1159,7 +1119,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -1174,7 +1133,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen"></a>
 ### CALID_CVN_LESEN
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -1192,7 +1150,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -1212,7 +1169,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -1231,7 +1187,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -1251,7 +1206,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -1269,7 +1223,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -1285,7 +1238,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fvvm-blk3"></a>
 ### STATUS_FVVM_BLK3
 
 Auslesen Bereich 1 der FVVM Daten. Positivresponse mit Nutzdaten nur einmalig beim ersten Auslesen nach dem Erreichen des Status Aktivität beendet. Davor und danach wird Negativ Response hex 22 zurückgegeben. Diese verhalten kann über den Job 2E5FA2 für Testzwecke abgeschalten werden. FVVM_BLK3 (0x22 4115)
@@ -1305,7 +1257,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fvvm-blk2"></a>
 ### STATUS_FVVM_BLK2
 
 Auslesen Bereich 1 der FVVM Daten. Positivresponse mit Nutzdaten nur einmalig beim ersten Auslesen nach dem Erreichen des Status Aktivität beendet. Davor und danach wird Negativ Response hex 22 zurückgegeben. Diese verhalten kann über den Job 2E5FA2 für Testzwecke abgeschalten werden. FVVM_BLK2 (0x22 4114)
@@ -1323,7 +1274,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fvvm-blk1"></a>
 ### STATUS_FVVM_BLK1
 
 Auslesen Bereich 1 der FVVM Daten. Positivresponse mit Nutzdaten nur einmalig beim ersten Auslesen nach dem Erreichen des Status Aktivität beendet. Davor und danach wird Negativ Response hex 22 zurückgegeben. Diese verhalten kann über den Job 2E5FA2 für Testzwecke abgeschalten werden. FVVM_BLK1 (0x22 4113)
@@ -1342,7 +1292,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-freischaltung"></a>
 ### STATUS_FREISCHALTUNG
 
 Grunddaten SWT lesen
@@ -1363,7 +1312,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-triprec-dyn-event"></a>
 ### START_TRIPREC_DYN_EVENT
 
 Event auslösen PannenDaten TRIPREC_DYN_EVENT (0x31 01 F093)
@@ -1382,7 +1330,6 @@ Event auslösen PannenDaten TRIPREC_DYN_EVENT (0x31 01 F093)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-group"></a>
 ### STATUS_RBM_GROUP
 
 Auslesen aller DIUMPR Ratios ReadDataByIdentifier $22
@@ -1404,7 +1351,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ea-fs-loeschen-funktional"></a>
 ### _EA_FS_LOESCHEN_FUNKTIONAL
 
 Fehlerspeicher löschen UDS   : $14 ClearDiagnosticInformation $FF DTCHighByte $FF DTCMiddleByte $FF DTCLowByte
@@ -1422,7 +1368,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msa-tab-stpverz"></a>
 ### STATUS_MSA_TAB_STPVERZ
 
 Auslesen der MSA Historie Stopverzögerung. MSA_TAB_STPVERZ (0x22 40D2)
@@ -1662,7 +1607,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-resetinfo-lesen"></a>
 ### RESETINFO_LESEN
 
 Informationen fuer Resets lesen
@@ -1681,7 +1625,6 @@ _No arguments._
 | STAT_BMW_SW_WERT | string | BMW Programmstands-Bezeichnung [1] a2l-Name: ecu_sw_bmw |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-start-triprec-lzq-daten"></a>
 ### START_TRIPREC_LZQ_DATEN
 
 LZQ Daten auslesen TRIPREC_LZQ_DATEN (0x31 01 F092)
@@ -1702,7 +1645,6 @@ LZQ Daten auslesen TRIPREC_LZQ_DATEN (0x31 01 F092)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-triprec-dyn-event"></a>
 ### STATUS_TRIPREC_DYN_EVENT
 
 Event auslösen PannenDaten TRIPREC_DYN_EVENT (0x31 03 F093)
@@ -1718,7 +1660,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-freischaltung-swt"></a>
 ### STATUS_FREISCHALTUNG_SWT
 
 Status der Freischaltung für Vmax und Pmax lesen STATUS Freischaltung SWT (0x31010F1F) Achtung: es werden mehrere Saetze von Results angelegt, für jede Freischaltung ein eigener Satz
@@ -1743,7 +1684,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-triprec-lzq-daten"></a>
 ### STATUS_TRIPREC_LZQ_DATEN
 
 LZQ Daten - Starten / Stoppen / Auslesen TRIPREC_LZQ_DATEN (0x31 03 F092)
@@ -1781,7 +1721,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-obdradar-diagknlinfo"></a>
 ### STATUS_OBDRADAR_DIAGKNLINFO
 
 OBD-Radar: Diagnosekanal-Informationen, gueltig fuer alle im OBD-Radar ausgewerteten Diagnosekanaele, auslesen (FASTA). STATUS_OBDRADAR_DIAGNKNLINFO (0x22 4186)
@@ -1802,7 +1741,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-opf"></a>
 ### _START_SYSTEMCHECK_OPF
 
 OPF Systemtest SYSTEMCHECK_OPF (0x31 01 F07B)
@@ -1817,7 +1755,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ident-ibs2015"></a>
 ### STATUS_IDENT_IBS2015
 
 Identifikation des Inteligenten BatterieSensors IDENT_IBS2015 (0x22 40C5)
@@ -1838,7 +1775,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msa-tab-nostop"></a>
 ### STATUS_MSA_TAB_NOSTOP
 
 Auslesen der MSA Historie NichtStop. MSA_TAB_NOSTOP (0x22 40CC)
@@ -2242,7 +2178,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-verriegelung-kunden-nummer-industrie"></a>
 ### START_VERRIEGELUNG_KUNDEN_NUMMER_INDUSTRIE
 
 Industriekundennummer Verriegeln. Klammerung: IK Projekte VERRIEGELUNG_KUNDEN_NUMMER_INDUSTRIE (0x31 01 F099)
@@ -2257,7 +2192,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eisyugd"></a>
 ### _STATUS_EISYUGD
 
 0x3101F0E0 & 0x3103F0E0 _STATUS_EISYUGD Ansteuern und Auslesen Eisy-Adaptionswerte (ungedrosselt) Aktivierung: Klemme 15 = EIN
@@ -2292,7 +2226,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-raildruck-statistik-nio"></a>
 ### STATUS_RAILDRUCK_STATISTIK_NIO
 
 Raildruckstatistik NIO Anteil Klammerung mit: RAILDRUCK_STATISTIK_NIO (0x22 414C)
@@ -2324,7 +2257,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-adap-loeschen"></a>
 ### ADAP_LOESCHEN
 
 Ansteuern Adaptionen loeschen Es werden alle Adaptionen im Bereich F300 bis F3FF gelöscht ausser die Ausnahmen in der Tabelle F3XXBLACKLIST. ADAP_LOESCHEN (0x31 01 F3xx)
@@ -2341,7 +2273,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-opf"></a>
 ### _STOP_SYSTEMCHECK_OPF
 
 OPF Systemtest SYSTEMCHECK_OPF (0x31 02 F07B)
@@ -2356,7 +2287,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-triprec-dyn-daten"></a>
 ### STATUS_TRIPREC_DYN_DATEN
 
 PannenDaten auslesen TRIPREC_DYN_DATEN (0x31 03 F095)
@@ -2395,7 +2325,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-klann"></a>
 ### _STATUS_KLANN
 
 0x3101F0E4 & 0x3103F0E4 _STATUS_KLANN Ansteuern und Auslesen Klann-Adaptionswerte Aktivierung: Klemme 15 = EIN
@@ -2426,7 +2355,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-swe-lesen"></a>
 ### _SWE_LESEN
 
 0x31010205 SWE_LESEN Informationen zu Softwareeinheiten auf dem Steuergerät unter Verwendung des Jobs SVK_LESEN UDS  : $31   RoutinControl by RequestSerice ID UDS  : $01xx Sub-Parameter fuer SVK UDS  : $0205 SWEDI (Default) Modus: Default
@@ -2454,7 +2382,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen-ascii"></a>
 ### SPEICHER_LESEN_ASCII
 
 0x23 SPEICHER_LESEN_ASCII Auslesen des Steuergeraete-Speichers Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -2477,7 +2404,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-obd-radar-uw-daten-set"></a>
 ### OBD_RADAR_UW_DATEN_SET
 
 0x3101F0FA OBD_RADAR_UW_DATEN_SET Auslesen der Umweltdaten für die beim OBD Radar abgeseicherten Blöcke im gesamten als Sets in desem Job werden aktuell 10 Blöcke abgefragt, eine Verkleinerung/ Vergrößerung bearf einer SW Anpassung Aktivierung: Klemme 15 = EIN
@@ -2503,7 +2429,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-obdradar-histogramm"></a>
 ### STATUS_OBDRADAR_HISTOGRAMM
 
 OBD-Radar: Histogramm-Informationen, gueltig fuer alle im OBD-Radar ausgewerteten Diagnosekanaele, auslesen (FASTA). STATUS_OBDRADAR_HISTOGRAMM (0x22 4187)
@@ -2522,7 +2447,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-switchover-freischaltung"></a>
 ### _STEUERN_SWITCHOVER_FREISCHALTUNG
 
 Freischaltung Daten schreiben über Importfile
@@ -2541,7 +2465,6 @@ Freischaltung Daten schreiben über Importfile
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-obd-testgroup"></a>
 ### STATUS_OBD_TESTGROUP
 
 0x22F813  STATUS_OBD_TESTGROUP Abfragen der Antriebsstrang Identifier
@@ -2557,7 +2480,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-aepdfmonitor"></a>
 ### STATUS_AEPDFMONITOR
 
 0x224015 STATUS_AEPDFMONITOR FASTA-Messwertblock 10 lesen Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -2715,7 +2637,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-triprec-lzq-event"></a>
 ### START_TRIPREC_LZQ_EVENT
 
 Event auslösen LZQ TRIPREC_LZQ_EVENT (0x31 01 F090)
@@ -2734,7 +2655,6 @@ Event auslösen LZQ TRIPREC_LZQ_EVENT (0x31 01 F090)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-messwertblock-lesen"></a>
 ### MESSWERTBLOCK_LESEN
 
 0x2CF0 MESSWERTBLOCK_LESEN DDLI Messwerte auf Basis Übergabestring aus DME auslesen Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1 es können 40 Messwerte in einem Block zusammengefasst werden
@@ -2763,7 +2683,6 @@ Event auslösen LZQ TRIPREC_LZQ_EVENT (0x31 01 F090)
 | _TEL_AUFTRAG_S | binary | Hex-Auftrag an  SG Block lesen |
 | _TEL_ANTWORT | binary | Hex-response von SG Block lesen |
 
-<a id="job-steuern-ende-verbraucherstrom-efii"></a>
 ### STEUERN_ENDE_VERBRAUCHERSTROM_EFII
 
 Ansteuerung Verbraucherstrommessung EFII (IBS) beenden UDS  : $31   RoutineControl UDS  : $02   routineControlType UDS  : $7002 routineIdentifier
@@ -2778,7 +2697,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msa-schsp-nostart"></a>
 ### STATUS_MSA_SCHSP_NOSTART
 
 Auslesen der MSA Historie Schiebespeicher NichtStart. MSA_SCHSP_NOSTART (0x22 40CF)
@@ -2899,7 +2817,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-switchover-challenge"></a>
 ### _STATUS_SWITCHOVER_CHALLENGE
 
 Daten für Berechnung lesen STATUS Freischaltung (0x22 FDxx)
@@ -2914,7 +2831,6 @@ _No arguments._
 | STAT_TOKENDATENASCI_1 | string | Daten zur Freischaltberechnug |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-start-systemcheck-glf"></a>
 ### START_SYSTEMCHECK_GLF
 
 Ansteuern Gesteuerte Luftfuehrung Systemcheck SYSTEMCHECK_GLF (0x31 01 F0D5)
@@ -2929,7 +2845,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-raildruck-statistik-io"></a>
 ### STATUS_RAILDRUCK_STATISTIK_IO
 
 Raildruckstatistik IO Anteil Klammerung mit: RAILDRUCK_STATISTIK_IO (0x22 414B)
@@ -2960,7 +2875,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-switchover-freischaltung-ende"></a>
 ### _STEUERN_SWITCHOVER_FREISCHALTUNG_ENDE
 
 Freischaltung ruecksetzen STATUS Freischaltung (0x2E FD00)
@@ -2975,7 +2889,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-glf"></a>
 ### STATUS_SYSTEMCHECK_GLF
 
 Systemcheck Gesteuerte Luftfuehrung - Starten / Stoppen / Auslesen SYSTEMCHECK_GLF (0x31 03 F0D5)
@@ -3029,7 +2942,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msa-tab-stpabbr"></a>
 ### STATUS_MSA_TAB_STPABBR
 
 Auslesen der MSA Historie für Stopabbrueche. MSA_TAB_STPABBR (0x22 40D1)
@@ -3428,7 +3340,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-verriegelung-kunden-nummer-industrie"></a>
 ### STATUS_VERRIEGELUNG_KUNDEN_NUMMER_INDUSTRIE
 
 Industriekundennummer Verrigelungsstatus auslesen. Klammerung: IK Projekte VERRIEGELUNG_KUNDEN_NUMMER_INDUSTRIE (0x31 03 F099)
@@ -3447,7 +3358,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-obd-radar-uw-daten"></a>
 ### OBD_RADAR_UW_DATEN
 
 0x3101F0FA OBD_RADAR_UW_DATEN Auslesen der Umweltdaten für die beim OBD Radar abgeseicherten Blöcke Aktivierung: Klemme 15 = EIN
@@ -3475,7 +3385,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-obd-testgroup"></a>
 ### STEUERN_OBD_TESTGROUP
 
 0x2EF813 Setzen der OBD_TESTGROUP
@@ -3494,7 +3403,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-batterietausch-registrieren"></a>
 ### STEUERN_BATTERIETAUSCH_REGISTRIEREN
 
 UDS $31 01 F030 Batterietausch registrieren
@@ -3509,7 +3417,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-stop-obd-demo-cvo"></a>
 ### _STOP_OBD_DEMO_CVO
 
 OBD Demo fuer CVO - Starten / Stoppen / Auslesen Startvorraussetzungen: ApplikationsSG oder SerienSG mit SwitchOver Freischaltung und KL15 EIN OBD_DEMO_CVO (0x31 02 F073)
@@ -3524,7 +3431,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eisygd"></a>
 ### _STATUS_EISYGD
 
 0x3101F0E1 & 0x3103F0E1 _STATUS_EISYGD Ansteuern und Auslesen Eisy-Adaptionswerte (gedrosselt) Aktivierung: Klemme 15 = EIN
@@ -3557,7 +3463,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-raildruck-system-history"></a>
 ### STATUS_RAILDRUCK_SYSTEM_HISTORY
 
 Ringspeicher Raildruckereignisse Historie Klammerung mit: Implementierungshinweis: Nicht aktive Ereignisse werden nicht im Telegramm ausgegeben RAILDRUCK_SYSTEM_HISTORY (0x22 4104)
@@ -3592,7 +3497,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-darol-lesen"></a>
 ### STATUS_DAROL_LESEN
 
 0x224061 STATUS_DAROL_LESEN Job zum Auslesen der DAROL Lastkollektivdaten
@@ -3616,7 +3520,6 @@ _No arguments._
 | STAT_DRL_UEB_FDAT_2 | binary | Array der Vorwaertsgaenge (Werte 192 - 239) Die Werte werden in aufsteigender Reihenfolge als Bytearray ausgegeben {fdat[192](High Word, High Byte),fdat[192](High Word, Low Byte),fdat[192](Low Word, High Byte),fdat[192](Low Word, Low Byte),... ...,fdat[239](Low Word, High Byte),fdat[239](Low Word, Low Byte)} a2l-Name: Drl_ueb_fdat[192..239] |
 | STAT_DRL_DATENVERSION_WERT | unsigned char | Versionsnummer der Datenvariante a2l-Name: BMWdrl_nr_DataVer_ub Min: 0.0 Max: 255.0 |
 
-<a id="job-start-triprec-dyn-reset"></a>
 ### START_TRIPREC_DYN_RESET
 
 Reset auslösen PannenDaten TRIPREC_DYN_RESET (0x31 01 F094)
@@ -3631,7 +3534,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-triprec-lzq-reset"></a>
 ### START_TRIPREC_LZQ_RESET
 
 Reset der aktiven LZQ Daten , TRIPREC_LZQ_RESET (0x31 01 F091)
@@ -3646,7 +3548,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-glf"></a>
 ### STOP_SYSTEMCHECK_GLF
 
 Ende Gesteuerte Luftfuehrung Systemcheck SYSTEMCHECK_GLF (0x31 02 F0D5)
@@ -3661,7 +3562,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-verbraucherstrom-efii"></a>
 ### STATUS_VERBRAUCHERSTROM_EFII
 
 Auslesen Verbraucherstrommessung EFII UDS  : $31   RoutineControl UDS  : $03   routineControlType UDS  : $7002 routineIdentifier
@@ -3685,7 +3585,6 @@ _No arguments._
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-msa-tab-start-2"></a>
 ### STATUS_MSA_TAB_START_2
 
 Auslesen der MSA Historie Start Teil 2. MSA_TAB_START_2 (0x22 40D4)
@@ -3967,7 +3866,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-funktion"></a>
 ### CBS_FUNKTION
 
 Auslesen der internen CBS Funktionsgroessen CBS_FUNKTION (0x22 4116)
@@ -4038,7 +3936,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-obd-demo-cvo"></a>
 ### _STATUS_OBD_DEMO_CVO
 
 OBD Demo fuer CVO - Starten / Stoppen / Auslesen Startvorraussetzungen: ApplikationsSG oder SerienSG mit SwitchOver Freischaltung und KL15 EIN OBD_DEMO_CVO (0x31 03 F073)
@@ -4055,7 +3952,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msa-schsp-start"></a>
 ### STATUS_MSA_SCHSP_START
 
 Auslesen der MSA Historie Schiebespeicher Start. MSA_SCHSP_START (0x22 40D0)
@@ -4190,7 +4086,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cod-lern-vergleich"></a>
 ### STATUS_COD_LERN_VERGLEICH
 
 Vergleich der gelernten und codierten Komponenten ReadDataByIdentifier (0x22 5A05 - 5A0E)
@@ -4213,7 +4108,6 @@ Vergleich der gelernten und codierten Komponenten ReadDataByIdentifier (0x22 5A0
 | _REQUEST_LERN | binary | Hex-Auftrag an SG |
 | _RESPONSE_LERN | binary | Hex-Antwort von SG |
 
-<a id="job-varianten-loeschen"></a>
 ### VARIANTEN_LOESCHEN
 
 Ansteuern Varianten loeschen VARIANTEN_LOESCHEN (0x31 01 F2xx)
@@ -4230,7 +4124,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msa-schsp-nostop"></a>
 ### STATUS_MSA_SCHSP_NOSTOP
 
 Auslesen der MSA Historie Schiebespeicher NichtStop. MSA_SCHSP_NOSTOP (0x22 40CE)
@@ -4445,7 +4338,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-triprec-dyn-daten"></a>
 ### START_TRIPREC_DYN_DATEN
 
 PannenDaten auslesen TRIPREC_DYN_DATEN (0x31 01 F095)
@@ -4469,7 +4361,6 @@ PannenDaten auslesen TRIPREC_DYN_DATEN (0x31 01 F095)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msa-tab-start"></a>
 ### STATUS_MSA_TAB_START
 
 Auslesen der MSA Historie Start. MSA_TAB_START (0x22 40CD)
@@ -4964,7 +4855,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-swe-komplett-lesen"></a>
 ### SWE_KOMPLETT_LESEN
 
 0x31010205 SWE_KOMPLETT_LESEN Informationen zu Softwareeinheiten auf dem Steuergerät unter Verwendung des Jobs SVK_LESEN UDS  : $31   RoutinControl by RequestSerice ID UDS  : $01xx Sub-Parameter fuer SVK UDS  : $0205 SWEDI (Default) Modus: Default
@@ -4980,7 +4870,6 @@ _No arguments._
 | STAT_BMW_SW_WERT | string | BMW Programmstands-Bezeichnung [1] a2l-Name: ecu_sw_bmw |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-rb-reset-info"></a>
 ### _STATUS_RB_RESET_INFO
 
 Entwicklung: Reset-Informationen bei RB DMEs/DDEs auslesen. _RB_RESET_INFO (0x22 4099)
@@ -5015,7 +4904,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-obd-demo-cvo"></a>
 ### _START_OBD_DEMO_CVO
 
 OBD Demo fuer CVO - Starten / Stoppen / Auslesen Startvorraussetzungen: ApplikationsSG oder SerienSG mit SwitchOver Freischaltung und KL15 EIN OBD_DEMO_CVO (0x31 01 F073)
@@ -5038,7 +4926,6 @@ OBD Demo fuer CVO - Starten / Stoppen / Auslesen Startvorraussetzungen: Applikat
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ringsp-aktive-regeneration-opf"></a>
 ### STATUS_RINGSP_AKTIVE_REGENERATION_OPF
 
 Ringspeicher aktiver Regenerationen Klammerung mit: BMW_GAPAFI_SC == 1 RINGSP_AKTIVE_REGENERATION_OPF (0x22 411F)
@@ -5079,7 +4966,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fvvm-grd-daten"></a>
 ### STATUS_FVVM_GRD_DATEN
 
 Auslesen Grunddaten FVVM FVVM_GRD_DATEN (0x22 4112)
@@ -5118,7 +5004,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eisygd-ps"></a>
 ### _STATUS_EISYGD_PS
 
 0x3101F0E1 & 0x3103F0E1 _STATUS_EISYGD_PS Ansteuern und Auslesen Eisy-Adaptionswerte (gedrosselt) unter Verwendung der Druckwerte Aktivierung: Klemme 15 = EIN
@@ -5151,7 +5036,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-triprec-lzq-event"></a>
 ### STATUS_TRIPREC_LZQ_EVENT
 
 Event auslösen LZQ TRIPREC_LZQ_EVENT (0x31 03 F090)
@@ -5167,7 +5051,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-erweitert-gangsensor-erkennung-sent"></a>
 ### STATUS_ERWEITERT_GANGSENSOR_ERKENNUNG_SENT
 
 Erweiterte Gangsensorwerte Abfrage. ERWEITERT_GANGSENSOR_ERKENNUNG_SENT (0x22 4150)
@@ -5222,7 +5105,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-krann"></a>
 ### _STATUS_KRANN
 
 0x3101F0E3 & 0x3103F0E3 _STATUS_KRANN Ansteuern und Auslesen Krann-Adaptionswerte Aktivierung: Klemme 15 = EIN
@@ -5255,7 +5137,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-verbraucherstrom-efii"></a>
 ### STEUERN_VERBRAUCHERSTROM_EFII
 
 Ansteuerung Verbraucherstrommessung EFII (IBS) UDS  : $31   RoutineControl UDS  : $01   routineControlType UDS  : $7002 routineIdentifier
@@ -5284,7 +5165,6 @@ Ansteuerung Verbraucherstrommessung EFII (IBS) UDS  : $31   RoutineControl UDS  
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-lesemodus-fvvm"></a>
 ### _STEUERN_LESEMODUS_FVVM
 
 Vorgabe des Auslesemodus für FVVM Service wirkt nur teporär und wird nach Klemmenwechsel resetiert bzw nicht Flashresistent gepeichert. _LESEMODUS_FVVM (0x2E 5FAA)
@@ -5303,7 +5183,6 @@ Vorgabe des Auslesemodus für FVVM Service wirkt nur teporär und wird nach Klem
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ecu-config-reset"></a>
 ### ECU_CONFIG_RESET
 
 Varianten loeschen START-CONDITION: Motor aus nmot_w=0 Adaption gelernte Varianten B_clvar (0x31 01 F030)
@@ -5318,7 +5197,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-opf"></a>
 ### _STATUS_SYSTEMCHECK_OPF
 
 OPF Systemtest Der STATUS ist aktuell noch nicht genauer Definiert. Hierzu muss noch eine weitere CP folgen welche die Details anfordert. Abgestimmt mit EA-363. SYSTEMCHECK_OPF (0x31 03 F07B)
@@ -5348,7 +5226,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-codierung-teil1"></a>
 ### STATUS_CODIERUNG_TEIL1
 
 Codierung Teil 1 CODIERUNG_TEIL1 (0x22 3010)
@@ -5371,7 +5248,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-codierung-teil2"></a>
 ### STATUS_CODIERUNG_TEIL2
 
 Codierung Teil 2 CODIERUNG_TEIL2 (0x22 3020)
@@ -5415,7 +5291,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-igrinfo-aep"></a>
 ### STATUS_IGRINFO_AEP
 
 0x224016 STATUS_IGRINFO_AEP Infospeicher Intelligente Generator Regelung (IGR) auslesen
@@ -5465,7 +5340,6 @@ _No arguments._
 | _REQUEST | binary | Hexfo-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-leminfo-aep"></a>
 ### STATUS_LEMINFO_AEP
 
 0x224017 STATUS_LEMINFO_AEP Infospeicher Leistungskoordination Elektrisch Mechanisch (LEM) auslesen
@@ -5527,7 +5401,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msainfo-aep"></a>
 ### STATUS_MSAINFO_AEP
 
 0x224018 _STATUS_MSAINFO_AEP Infospeicher Motor-Start/Stop Automatik (MSA) auslesen
@@ -5633,7 +5506,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-verbredinfo"></a>
 ### STATUS_VERBREDINFO
 
 0x22401D STATUS_VERBREDINFO Verbraucherreduzierungsspeicher auslesen
@@ -5737,7 +5609,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ident-ibs"></a>
 ### IDENT_IBS
 
 0x224021 IDENT_IBS Identifikationsdaten fuer IBS-Sensor auslesen Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -5757,7 +5628,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-aep-info-1"></a>
 ### STATUS_SYSTEMCHECK_AEP_INFO_1
 
 0x224022 STATUS_SYSTEMCHECK_AEP_INFO_1 Intelligenter Batteriesensor Bitfeld Pminfo1 lesen
@@ -5927,7 +5797,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-aep-info-2"></a>
 ### STATUS_SYSTEMCHECK_AEP_INFO_2
 
 0x224023 STATUS_SYSTEMCHECK_AEP_INFO_2 Intelligenter Batteriesensor Bitfeld Pminfo2 lesen
@@ -5992,7 +5861,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-messwerte-ibs"></a>
 ### STATUS_MESSWERTE_IBS
 
 0x22402B STATUS_MESSWERTE_IBS Messwerte IBS auslesen
@@ -6036,7 +5904,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-messwerte-lrp"></a>
 ### STATUS_MESSWERTE_LRP
 
 Messwerte Laufruhepruefung auslesen MESSWERTE_LRP (0x22 402D)
@@ -6182,7 +6049,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bzediag"></a>
 ### STATUS_BZEDIAG
 
 0x22403B STATUS_BZEDIAG BZE Infospeicher
@@ -6341,7 +6207,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-typpruefnr"></a>
 ### STATUS_TYPPRUEFNR
 
 Typpruefnummer fuer BN2020 SGs auslesen TYPPRUEFNR (0x22 4047)
@@ -6359,7 +6224,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bzediag2"></a>
 ### STATUS_BZEDIAG2
 
 Auslesen Infospeicher Batteriezustandserkennung 2 UDS*: $22 ReadDataByIdentifier
@@ -6396,7 +6260,6 @@ _No arguments._
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-dfdsprofle"></a>
 ### STATUS_DFDSPROFLE
 
 Generatorauslastungsprofil auslesen DFDSPROFLE (0x22 4081)
@@ -6427,7 +6290,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-msainfo2"></a>
 ### STATUS_MSAINFO2
 
 Auslesen Infospeicher Batteriezustandserkennung 2 UDS*: 0x224092 ReadDataByIdentifier
@@ -6522,7 +6384,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bzetomsa2"></a>
 ### STATUS_BZETOMSA2
 
 0x224093 STATUS_BZETOMSA2 Analyse von MSA-Abschaltverhinderern durch BZE3 gegenüber AEPBZE SDG(A2l-NAME=bzetomsa)
@@ -6547,7 +6408,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rb-startupbblockid"></a>
 ### _STATUS_RB_STARTUPBBLOCKID
 
 Entwicklung: Beschreibung Startupblock-Identifikation der RB DMEs/DDEs auslesen. _RB_STARTUPBBLOCKID (0x22 4098)
@@ -6564,7 +6424,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bcu"></a>
 ### _STATUS_BCU
 
 Batterie Charge Unit (BCU) Informationen lesen SY_HYBRID_GEN3 == TRUE. _BCU (0x22 409C)
@@ -6599,7 +6458,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-aep-i12-zyklisches-nachladen-info"></a>
 ### STATUS_AEP_I12_ZYKLISCHES_NACHLADEN_INFO
 
 Auslesen von wichtigen Kenngrößen der letzten 4 Vorgänge des zykllischen Nachladens plus dem letzten Parkvorgang AEP_I12_ZYKLISCHES_NACHLADEN_INFO (0x22 409D)
@@ -6708,7 +6566,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-aep-i12-zyklisches-nachladen-histogramm"></a>
 ### STATUS_AEP_I12_ZYKLISCHES_NACHLADEN_HISTOGRAMM
 
 Auslesen der Histogramme über die Standzeit bis zum Beginn des zyklischen Nachladens und der Ladedauern der zyklischen Nachladevorgänge AEP_I12_ZYKLISCHES_NACHLADEN_HISTOGRAMM (0x22 409E)
@@ -6739,7 +6596,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ccm-history"></a>
 ### STATUS_CCM_HISTORY
 
 CCM Historie auslesen CCM_HISTORY (0x22 4103)
@@ -6787,7 +6643,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-funktion"></a>
 ### _CBS_FUNKTION
 
 Auslesen der internen CBS Funktionsgroessen CBS_FUNKTION (0x22 4116)
@@ -6858,7 +6713,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-kat-bank-1"></a>
 ### STATUS_RBM_KAT_BANK_1
 
 Auslesen Rate Based Monitoring Katalysator Bank 1 RBM_KAT_BANK_1 (0x22 4120)
@@ -6880,7 +6734,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-kat-bank-2"></a>
 ### STATUS_RBM_KAT_BANK_2
 
 Auslesen Rate Based Monitoring Katalysator Bank 2 RBM_KAT_BANK_2 (0x22 4121)
@@ -6902,7 +6755,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-lambda-bank-1"></a>
 ### STATUS_RBM_LAMBDA_BANK_1
 
 Auslesen Rate Based Monitoring Lambdasonde vor Kat Bank 1 RBM_LAMBDA_BANK_1 (0x22 4122)
@@ -6924,7 +6776,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-lambda-bank-2"></a>
 ### STATUS_RBM_LAMBDA_BANK_2
 
 Auslesen Rate Based Monitoring Lambdasonde vor Kat Bank 2 RBM_LAMBDA_BANK_2 (0x22 4123)
@@ -6946,7 +6797,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-agr-vanos"></a>
 ### STATUS_RBM_AGR_VANOS
 
 Auslesen Rate Based Monitoring Abgasrueckfuehrung und Vanos RBM_AGR_VANOS (0x22 4124)
@@ -6968,7 +6818,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-sek-luft"></a>
 ### STATUS_RBM_SEK_LUFT
 
 Auslesen Rate Based Monitoring Sekundaerluftsystem RBM_SEK_LUFT (0x22 4125)
@@ -6990,7 +6839,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-tank-entl"></a>
 ### STATUS_RBM_TANK_ENTL
 
 Auslesen Rate Based Monitoring Tankentlueftung RBM_TANK_ENTL (0x22 4126)
@@ -7012,7 +6860,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-lambda-nk-bank-1"></a>
 ### STATUS_RBM_LAMBDA_NK_BANK_1
 
 Auslesen Rate Based Monitoring Lambdasonde nach Kat Bank 1 RBM_LAMBDA_NK_BANK_1 (0x22 4127)
@@ -7034,7 +6881,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-lambda-nk-bank-2"></a>
 ### STATUS_RBM_LAMBDA_NK_BANK_2
 
 Auslesen Rate Based Monitoring Lambdasonde nach Kat Bank 2 RBM_LAMBDA_NK_BANK_2 (0x22 4128)
@@ -7056,7 +6902,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-privat"></a>
 ### STATUS_RBM_PRIVAT
 
 Auslesen Rate Based Monitoring aller nur aufzeichnungspflichtiger Diagnosen RBM_PRIVAT (0x22 4129)
@@ -7078,7 +6923,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-fuellung-ungl-bank1"></a>
 ### STATUS_RBM_FUELLUNG_UNGL_BANK1
 
 Auslesen Rate Based Monitoring Zylinder-Füllung Ungleichgewicht Fehler(AFRI) Bank 1 RBM_AFRI_BANK_1(0x22 412A)
@@ -7100,7 +6944,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-fuellung-ungl-bank2"></a>
 ### STATUS_RBM_FUELLUNG_UNGL_BANK2
 
 Auslesen Rate Based Monitoring Zylinder-Füllung Ungleichgewicht Fehler (AFRI) Bank 2 RBM_AFRI_BANK_2(0x22 412B)
@@ -7122,7 +6965,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-opf-bank1"></a>
 ### STATUS_RBM_OPF_BANK1
 
 Auslesen Rate Based Monitoring Partikelfilter Bank 1 RBM_OPF_BANK_1(0x22 412C)
@@ -7144,7 +6986,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-opf-bank2"></a>
 ### STATUS_RBM_OPF_BANK2
 
 Auslesen Rate Based Monitoring Partikelfilter Bank 2 RBM_OPF_BANK_2(0x22 412D)
@@ -7166,7 +7007,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bzetomsa"></a>
 ### STATUS_BZETOMSA
 
 0x224155 STATUS_BZETOMSA Analyse von MSA-Abschaltverhinderern durch BZE3 gegenüber AEPBZE SDG(A2l-NAME=bzetomsa)
@@ -7191,7 +7031,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dfdsn"></a>
 ### STATUS_DFDSN
 
 0x224156 STATUS_DFDSN Diagnose der Generatorauslastung über FASTA
@@ -7252,7 +7091,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-getriebeeingang-ueberdrehzahl"></a>
 ### _GETRIEBEEINGANG_UEBERDREHZAHL
 
 Ereignisse fuer die erhoehten Drehzahlen an der Getriebeeingangswelle auslesen (FASTA). _GETRIEBEEINGANG_UEBERDREHZAHL (0x22 41D8)
@@ -7269,7 +7107,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-abgasnorm"></a>
 ### STATUS_ABGASNORM
 
 Abgasnorm lesen Startvorraussetzung: Klammerung: ABGASNORM (0x22 E83F)
@@ -7287,7 +7124,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-aep-i12-test-ladeendegrund"></a>
 ### _STEUERN_AEP_I12_TEST_LADEENDEGRUND
 
 Job zum Test für AEP Funktionen AEP_I12_GRUND_LADEENDE (0x2E 5FA0)
@@ -7306,7 +7142,6 @@ Job zum Test für AEP Funktionen AEP_I12_GRUND_LADEENDE (0x2E 5FA0)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pm-histogram-reset"></a>
 ### STEUERN_PM_HISTOGRAM_RESET
 
 $2E 5F F5 04 Loeschen von pminfo1 index 23-30
@@ -7321,7 +7156,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-steuern-ende-bcu-usoll"></a>
 ### _STEUERN_ENDE_BCU_USOLL
 
 Batterie Charge Unit (BCU), Soll-Spannung - Ansteuerung starten und beenden BCU_USOLL (0x2F 00 6077)
@@ -7336,7 +7170,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-bcu-usoll"></a>
 ### _STEUERN_BCU_USOLL
 
 Fuer Batterie Charge Unit (BCU), Soll-Spannung - Ansteuerung starten und beenden (B_bcusolldiaganf == TRUE undund SY_HYBRID_GEN3 == TRUE.). BCU_USOLL (0x2F 03 6077)
@@ -7355,7 +7188,6 @@ Fuer Batterie Charge Unit (BCU), Soll-Spannung - Ansteuerung starten und beenden
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-aep-i12-zyknl-infospeicher-loeschen"></a>
 ### START_AEP_I12_ZYKNL_INFOSPEICHER_LOESCHEN
 
 Löschen des Historienspeichers für die letzen 4 Ladevorgänge der 12V-Batterie aus der Hochvolt-Batterie AEP_I12_ZYKNL_INFOSPEICHER_LOESCHEN (0x31 01 AE02)
@@ -7370,7 +7202,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-aep-i12-zyknl-histogramm-loeschen"></a>
 ### START_AEP_I12_ZYKNL_HISTOGRAMM_LOESCHEN
 
 Löschen von Histogramm und Zähler aller Ladevorgänge der 12V-Batterie aus dem Hochvolt-System AEP_I12_ZYKNL_HISTOGRAMM_LOESCHEN (0x31 01 AE03)
@@ -7385,7 +7216,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ruhestrommessung"></a>
 ### STEUERN_RUHESTROMMESSUNG
 
 Ansteuern Ruhestrompruefung mit IBS UDS  : $31 RoutineControl UDS  : $01 startRoutine UDS  : $F02B Ruhestrompruefung
@@ -7407,7 +7237,6 @@ Ansteuern Ruhestrompruefung mit IBS UDS  : $31 RoutineControl UDS  : $01 startRo
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-status-ruhestrommessung"></a>
 ### STATUS_RUHESTROMMESSUNG
 
 Auslesen Ruhestromprüfung mit IBS UDS  : $31 RoutineControl UDS  : $03 requestRoutineResults UDS  : $F02B Ruhestrompruefung
@@ -7427,7 +7256,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG (MEN48) |
 | _RESPONSE | binary | Hex-Auftrag an SG (MEN48) |
 
-<a id="job-adap-selektiv-loeschen"></a>
 ### ADAP_SELEKTIV_LOESCHEN
 
 Ansteuern Adaptionen selektiv loeschen - Batterietausch ausgeblendet. ADAP_SELEKTIV_LOESCHEN (0x31 01 F030)
@@ -7448,7 +7276,6 @@ Ansteuern Adaptionen selektiv loeschen - Batterietausch ausgeblendet. ADAP_SELEK
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-adap2-selektiv-loeschen"></a>
 ### ADAP2_SELEKTIV_LOESCHEN
 
 Ansteuern Adaptionen 2 selektiv loeschen ADAP2_SELEKTIV_LOESCHEN (0x31 01 F031)
@@ -7469,7 +7296,6 @@ Ansteuern Adaptionen 2 selektiv loeschen ADAP2_SELEKTIV_LOESCHEN (0x31 01 F031)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-varianten-sichern"></a>
 ### START_VARIANTEN_SICHERN
 
 Varianten Sichern nach Loeschen oder Schreiben. Muss nach dem loeschen ueber F2xx ausgefuehrt werden. sonst werden die Werte nicht gespeichert. VARIANTEN_SICHERN (0x31 01 F032)
@@ -7484,7 +7310,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ibs-strommessung"></a>
 ### STEUERN_IBS_STROMMESSUNG
 
 Ansteuern IBS Strommessung UDS: $31 RoutineControl
@@ -7506,7 +7331,6 @@ Ansteuern IBS Strommessung UDS: $31 RoutineControl
 | _RESPONSE | binary | Hex-Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-ibs-strommessung"></a>
 ### STATUS_IBS_STROMMESSUNG
 
 Auslesen IBS Strommessung UDS: $31 RoutineControl
@@ -7524,7 +7348,6 @@ _No arguments._
 | STAT_STROMWERT_WERT | real | (A2L_Name: Eco_i_result) |
 | STAT_STROMWERT_EINH | string | A |
 
-<a id="job-status-aep-i12-test-batteryguard"></a>
 ### _STATUS_AEP_I12_TEST_BATTERYGUARD
 
 Anforderung Aufruf BatteryGuard Call auslesen Startvoraussetzungen: B_kl15 == TRUE. AEP_I12_TEST_BATTERYGUARD (0x31 03 F052)
@@ -7540,7 +7363,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-aep-i12-test-batteryguard"></a>
 ### _START_AEP_I12_TEST_BATTERYGUARD
 
 Anforderung Aufruf BatteryGuard Call Setzen der Größe B_batteryguardcalldiag =1 Startvoraussetzungen: B_kl15 == TRUE. AEP_I12_TEST_BATTERYGUARD (0x31 01 F052)
@@ -7555,7 +7377,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-aep-i12-test-batteryguard"></a>
 ### _STOP_AEP_I12_TEST_BATTERYGUARD
 
 Anforderung Aufruf BatteryGuard Call beenden Setzen der Größe B_batteryguardcalldiag =0 Startvoraussetzungen: B_kl15 == TRUE. AEP_I12_TEST_BATTERYGUARD (0x31 02 F052)
@@ -7570,7 +7391,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-obd-demo-nockenwelle-erweitert"></a>
 ### STOP_OBD_DEMO_NOCKENWELLE_ERWEITERT
 
 OBD DEMO fuer NockenwellenDiagnose - Starten / Stoppen / Auslesen Startvorraussetzung: ApplikationsSG oder SerienSG mit SwitchOver Freischaltung OBD_DEMO_NOCKENWELLE_ERWEITERT (0x31 02 F074)
@@ -7585,7 +7405,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-obd-demo-nockenwelle-erweitert"></a>
 ### STATUS_OBD_DEMO_NOCKENWELLE_ERWEITERT
 
 OBD DEMO fuer NockenwellenDiagnose - Starten / Stoppen / Auslesen Startvorraussetzung: ApplikationsSG oder SerienSG mit SwitchOver Freischaltung OBD_DEMO_NOCKENWELLE_ERWEITERT (0x31 03 F074)
@@ -7651,7 +7470,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-obd-demo-nockenwelle-erweitert"></a>
 ### START_OBD_DEMO_NOCKENWELLE_ERWEITERT
 
 OBD DEMO fuer NockenwellenDiagnose - Starten / Stoppen / Auslesen Startvorraussetzung: ApplikationsSG oder SerienSG mit SwitchOver Freischaltung OBD_DEMO_NOCKENWELLE_ERWEITERT (0x31 01 F074)
@@ -7676,7 +7494,6 @@ OBD DEMO fuer NockenwellenDiagnose - Starten / Stoppen / Auslesen Startvorrausse
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-deak-abs-gruende-serie"></a>
 ### _STATUS_DEAK_ABS_GRUENDE_SERIE
 
 Dauerhafte Deaktivierung der Ansteuerbedingungen fuer Werksjobs Vorbedingung: Applikationsgeraet oder Serie mit Switchover 1 _DEAK_ABS_GRUENDE_SERIE (0x31 03 F077)
@@ -7693,7 +7510,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-deak-abs-gruende-serie"></a>
 ### _STOP_DEAK_ABS_GRUENDE_SERIE
 
 Dauerhafte Deaktivierung der Ansteuerbedingungen fuer Werksjobs Vorbedingung: Applikationsgeraet oder Serie mit Switchover 1, KL_15 == ein , Nmot==0 Der Wert der durch den Job gesetzt wird soll sofort, permanent gespeichert werden. _DEAK_ABS_GRUENDE_SERIE (0x31 02 F077)
@@ -7708,7 +7524,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-deak-abs-gruende-serie"></a>
 ### _START_DEAK_ABS_GRUENDE_SERIE
 
 Dauerhafte Deaktivierung der Ansteuerbedingungen fuer Werksjobs Vorbedingung: Applikationsgeraet oder Serie mit Switchover 1, KL_15 == ein , Nmot==0 Der Wert der durch den Job gesetzt wird soll sofort, permanent gespeichert werden. _DEAK_ABS_GRUENDE_SERIE (0x31 01 F077)
@@ -7723,7 +7538,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-bzediag-soc"></a>
 ### _STEUERN_BZEDIAG_SOC
 
 Vorgabe Ladezustand und Ladequalitaetswert Es muss eine Funktionsaktivierung erfolgen, welches das Senden an den IBS triggert. BZEDIAG_SOC (0x31 01 F079)
@@ -7743,7 +7557,6 @@ Vorgabe Ladezustand und Ladequalitaetswert Es muss eine Funktionsaktivierung erf
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-bzediag-weckgrund"></a>
 ### _STEUERN_BZEDIAG_WECKGRUND
 
 Vorgabe Weckgrund und Weckverzoegerung Es muss eine Funktionsaktivierung erfolgen, welches das Senden an den IBS triggert. BZEDIAG_WECKGRUND (0x31 01 F07A)
@@ -7763,7 +7576,6 @@ Vorgabe Weckgrund und Weckverzoegerung Es muss eine Funktionsaktivierung erfolge
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-freischaltung-kunden-nummer-industrie"></a>
 ### START_FREISCHALTUNG_KUNDEN_NUMMER_INDUSTRIE
 
 Industriekundennummer Freischalten. Klammerung: IK Projekte FREISCHALTUNG_KUNDEN_NUMMER_INDUSTRIE (0x31 01 F09C)
@@ -7782,7 +7594,6 @@ Industriekundennummer Freischalten. Klammerung: IK Projekte FREISCHALTUNG_KUNDEN
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-systemcheck-igr-aus"></a>
 ### START_SYSTEMCHECK_IGR_AUS
 
 0x3101F0F7 START_SYSTEMCHECK_IGR_AUS Ansteuerung Intelligente Generatorregelung deaktivieren Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -7797,7 +7608,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stop-systemcheck-igr-aus"></a>
 ### STOP_SYSTEMCHECK_IGR_AUS
 
 0x3102F0F7 STOP_SYSTEMCHECK_IGR_AUS Ende Intelligente Generatorregelung deaktivieren Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -7812,7 +7622,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-systemcheck-igr-aus"></a>
 ### STATUS_SYSTEMCHECK_IGR_AUS
 
 0x3103F0F7 STATUS_SYSTEMCHECK_IGR_AUS Auslesen Intelligente Generatorregelung deaktivieren Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -7830,7 +7639,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-start-reset-fvvm-daten"></a>
 ### START_RESET_FVVM_DATEN
 
 Rücksetzen der FVVM Daten RESET_FVVM_DATEN (0x31 01 F305)
@@ -7849,7 +7657,6 @@ Rücksetzen der FVVM Daten RESET_FVVM_DATEN (0x31 01 F305)
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-getriebeeingang-drehzahl-reset"></a>
 ### _GETRIEBEEINGANG_DREHZAHL_RESET
 
 Ereignisse fuer die erhoehten Drehzahlen an der Getriebeeingangswelle loeschen (FASTA). _GETRIEBEEINGANG_DREHZAHL_RESET (0x31 01 F320)
@@ -8597,7 +8404,6 @@ Ereignisse fuer die erhoehten Drehzahlen an der Getriebeeingangswelle loeschen (
 - [_KRANN_INPA](#table-krann-inpa) (145 × 4)
 - [MOTORUDSCODIERUNG_RUHESTROM](#table-motorudscodierung-ruhestrom) (16 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -8681,7 +8487,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 149 rows × 2 columns
@@ -8838,7 +8643,6 @@ Dimensions: 149 rows × 2 columns
 | 0x0000CA | SEG Automotive Germany GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -8881,7 +8685,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -8906,7 +8709,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -8940,7 +8742,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -9013,7 +8814,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -9026,7 +8826,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 9 rows × 9 columns
@@ -9043,7 +8842,6 @@ Dimensions: 9 rows × 9 columns
 | 0x1769 | ABS_ZEIT_SUP | 0-n | - | 0xFFFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-tab-zeit-syncmethod"></a>
 ### TAB_ZEIT_SYNCMETHOD
 
 Dimensions: 4 rows × 2 columns
@@ -9055,7 +8853,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | IEEE802.1AS |
 | 0x03 | invalid |
 
-<a id="table-tab-zeit-user-info"></a>
 ### TAB_ZEIT_USER_INFO
 
 Dimensions: 8 rows × 2 columns
@@ -9071,7 +8868,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | invalid |
 | 0x07 | invalid |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -9084,7 +8880,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -9106,7 +8901,6 @@ Dimensions: 14 rows × 3 columns
 | 0x61 | ECUSUPSPEC | ECUSupplierSpecificSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 406 rows × 3 columns
@@ -9520,7 +9314,6 @@ Dimensions: 406 rows × 3 columns
 | 0xF090 | Motorrad Kombischalter links | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -9529,7 +9322,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 225 rows × 2 columns
@@ -9762,7 +9554,6 @@ Dimensions: 225 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -9805,7 +9596,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -9816,7 +9606,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-cbsnrtext"></a>
 ### CBSNRTEXT
 
 Dimensions: 27 rows × 3 columns
@@ -9851,7 +9640,6 @@ Dimensions: 27 rows × 3 columns
 | 0xE1 | Cbr_e | CBR Evalboard |
 | 0xFF | rda | Anlieferzustand |
 
-<a id="table-cbskennung"></a>
 ### CBSKENNUNG
 
 Dimensions: 30 rows × 3 columns
@@ -9889,7 +9677,6 @@ Dimensions: 30 rows × 3 columns
 | 0xE1 | Cbr_e | CBR Evalboard |
 | 0xFF | rda | Anlieferzustand |
 
-<a id="table-tab-ecu-name"></a>
 ### TAB_ECU_NAME
 
 Dimensions: 6 rows × 2 columns
@@ -9903,7 +9690,6 @@ Dimensions: 6 rows × 2 columns
 | 0x60 | KOMBI |
 | 0xFF | unbekannt |
 
-<a id="table-tab-cbs-einheiten"></a>
 ### TAB_CBS_EINHEITEN
 
 Dimensions: 5 rows × 2 columns
@@ -9916,7 +9702,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0F | Signal ungültig |
 | 0xFF | nicht erlaubt |
 
-<a id="table-tab-cbs-status"></a>
 ### TAB_CBS_STATUS
 
 Dimensions: 17 rows × 2 columns
@@ -9941,7 +9726,6 @@ Dimensions: 17 rows × 2 columns
 | 0xF0 | Signal ungültig |
 | 0xFF | nicht erlaubt |
 
-<a id="table-tab-cbs-monat"></a>
 ### TAB_CBS_MONAT
 
 Dimensions: 16 rows × 2 columns
@@ -9965,7 +9749,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0F | Wert ungültig, Datum nicht verfügbar |
 | 0xFF | nicht erlaubt |
 
-<a id="table-tab-rueck-grund"></a>
 ### TAB_RUECK_GRUND
 
 Dimensions: 11 rows × 2 columns
@@ -9984,7 +9767,6 @@ Dimensions: 11 rows × 2 columns
 | 0xFE | keine Angabe |
 | 0xFF | ungültig |
 
-<a id="table-arg-0x5f74-d"></a>
 ### ARG_0X5F74_D
 
 Dimensions: 1 rows × 12 columns
@@ -9993,7 +9775,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_KATHEIZFUNKTION_DEAKTIVIERUNG_AKTIV_INAKTIV | 0-n | - | unsigned char | - | T_1BYTE_KATHEIZFUNKTION_DEAKTIVIERUNG_AKTIV_INAKTIV_DOP | - | - | - | - | - | Deaktivierung der Katheizfunktionalitaet aktiv / inaktiv. (1=aktiv, 0=inaktiv).Nach 50 Km muss die Deaktivierung der Katheizfunktionalitaetzurueckgenommen werden. |
 
-<a id="table-arg-0x5f75-d"></a>
 ### ARG_0X5F75_D
 
 Dimensions: 1 rows × 12 columns
@@ -10002,7 +9783,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_VVT_EXWINKSREV | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | Sollwert Zaehler Rueckdrehereignisse aufgrund von Lagereglerabweichung VVT-Steller |
 
-<a id="table-arg-0x5f77-d"></a>
 ### ARG_0X5F77_D
 
 Dimensions: 1 rows × 12 columns
@@ -10011,7 +9791,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_B_ONABK_OZDEAKTIV | 0-n | - | unsigned char | - | T_B_ONABK_OZDEAKTIV_DOP | - | - | - | - | - | Deaktivierung des Oelniveausensors |
 
-<a id="table-arg-0x5f7a-d"></a>
 ### ARG_0X5F7A_D
 
 Dimensions: 1 rows × 12 columns
@@ -10020,7 +9799,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_LGRF_IREV | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 
-<a id="table-arg-0x5f7b-d"></a>
 ### ARG_0X5F7B_D
 
 Dimensions: 1 rows × 12 columns
@@ -10029,7 +9807,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_VVT_LGRF | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 
-<a id="table-arg-0x5f7e-d"></a>
 ### ARG_0X5F7E_D
 
 Dimensions: 1 rows × 12 columns
@@ -10038,7 +9815,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_DIS_COD_BSR | 0-n | - | unsigned char | - | T_SW_5F7E_DOP | - | - | - | - | - | Verriegelung des betriebsstundenrelevanten Kodierbereichs |
 
-<a id="table-arg-0x5f80-d"></a>
 ### ARG_0X5F80_D
 
 Dimensions: 8 rows × 12 columns
@@ -10054,7 +9830,6 @@ Dimensions: 8 rows × 12 columns
 | SW_F_MK_KORR_EXT_XZYL_7 | - | - | unsigned int | - | - | 32768.0 | 1.0 | 0.0 | 0.0 | 1.99996948 | Faktor auf Einspritzung Zylinder 7 (Physikalische Reihenfolge). |
 | SW_F_MK_KORR_EXT_XZYL_8 | - | - | unsigned int | - | - | 32768.0 | 1.0 | 0.0 | 0.0 | 1.99996948 | Faktor auf Einspritzung Zylinder 8 (Physikalische Reihenfolge). |
 
-<a id="table-arg-0x5f81-d"></a>
 ### ARG_0X5F81_D
 
 Dimensions: 8 rows × 12 columns
@@ -10070,7 +9845,6 @@ Dimensions: 8 rows × 12 columns
 | SW_F_MK_KORR_EXT_XZYL_7 | - | - | unsigned int | - | - | 32768.0 | 1.0 | 0.0 | 0.0 | 1.99996948 | Faktor auf Einspritzung Zylinder 7 (Physikalische Reihenfolge). |
 | SW_F_MK_KORR_EXT_XZYL_8 | - | - | unsigned int | - | - | 32768.0 | 1.0 | 0.0 | 0.0 | 1.99996948 | Faktor auf Einspritzung Zylinder 8 (Physikalische Reihenfolge). |
 
-<a id="table-arg-0x5f8a-d"></a>
 ### ARG_0X5F8A_D
 
 Dimensions: 1 rows × 12 columns
@@ -10079,7 +9853,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_NGS | % | - | unsigned int | - | - | 1.0 | 0.01 | 0.0 | 0.0 | 655.35 | Nullgang Lernwert |
 
-<a id="table-arg-0x5f8c-d"></a>
 ### ARG_0X5F8C_D
 
 Dimensions: 1 rows × 12 columns
@@ -10088,7 +9861,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_STVBRVS | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Codierdaten Hub Korrektur |
 
-<a id="table-arg-0x5f9f-d"></a>
 ### ARG_0X5F9F_D
 
 Dimensions: 1 rows × 12 columns
@@ -10097,7 +9869,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_ADR | 0/1 | - | unsigned char | - | - | - | - | - | - | - | Aktivierungsbit fuer Anschlussdrehzahlregelung im FES Comfort bei Handschalter schreiben 0== Funktion inaktiv 1== Funktion aktiv |
 
-<a id="table-arg-0x5fa3-d"></a>
 ### ARG_0X5FA3_D
 
 Dimensions: 1 rows × 12 columns
@@ -10106,7 +9877,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_STVBRVS | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Codierdaten Hub Korrektur |
 
-<a id="table-arg-0x5faf-d"></a>
 ### ARG_0X5FAF_D
 
 Dimensions: 6 rows × 12 columns
@@ -10120,7 +9890,6 @@ Dimensions: 6 rows × 12 columns
 | SW_GEMVERT_FAKTOR_ZYL_5 | - | - | unsigned char | - | - | 128.0 | 1.0 | 0.0 | 0.0 | 1.9921875 | Faktor auf Einspritzung pysikalischer Zylinder 5 fluechtig schreiben |
 | SW_GEMVERT_FAKTOR_ZYL_6 | - | - | unsigned char | - | - | 128.0 | 1.0 | 0.0 | 0.0 | 1.9921875 | Faktor auf Einspritzung pysikalischer Zylinder 6 fluechtig schreiben |
 
-<a id="table-arg-0x5fb0-d"></a>
 ### ARG_0X5FB0_D
 
 Dimensions: 6 rows × 12 columns
@@ -10134,7 +9903,6 @@ Dimensions: 6 rows × 12 columns
 | SW_PROG_GEMVERT_FAKTOR_ZYL_5 | - | - | unsigned char | - | - | 128.0 | 1.0 | 0.0 | 0.0 | 1.9921875 | Faktor auf Einspritzung pysikalischer Zylinder 5 permanent schreiben |
 | SW_PROG_GEMVERT_FAKTOR_ZYL_6 | - | - | unsigned char | - | - | 128.0 | 1.0 | 0.0 | 0.0 | 1.9921875 | Faktor auf Einspritzung pysikalischer Zylinder 6 permanent schreiben |
 
-<a id="table-arg-0x5fc1-d"></a>
 ### ARG_0X5FC1_D
 
 Dimensions: 1 rows × 12 columns
@@ -10143,7 +9911,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KVA | - | - | signed char | - | - | 1.0 | 0.001 | 0.0 | -0.128 | 0.127 | Codierung Verbrauchsanzeigekorrektur (-0.128% bis 0.127%) |
 
-<a id="table-arg-0x5fe6-d"></a>
 ### ARG_0X5FE6_D
 
 Dimensions: 8 rows × 12 columns
@@ -10159,7 +9926,6 @@ Dimensions: 8 rows × 12 columns
 | SW_VMAVDI_6_WERT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 | SW_VMAVDI_7_WERT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 
-<a id="table-arg-0x5fe7-d"></a>
 ### ARG_0X5FE7_D
 
 Dimensions: 8 rows × 12 columns
@@ -10175,7 +9941,6 @@ Dimensions: 8 rows × 12 columns
 | SW_VMEVDI_6_WERT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 | SW_VMEVDI_7_WERT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 
-<a id="table-arg-0x5fe8-d"></a>
 ### ARG_0X5FE8_D
 
 Dimensions: 8 rows × 12 columns
@@ -10191,7 +9956,6 @@ Dimensions: 8 rows × 12 columns
 | SW_VMEADI_6_WERT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 | SW_VMEADI_7_WERT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 
-<a id="table-arg-0x5fe9-d"></a>
 ### ARG_0X5FE9_D
 
 Dimensions: 8 rows × 12 columns
@@ -10207,7 +9971,6 @@ Dimensions: 8 rows × 12 columns
 | SW_VMDDI_6_WERT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 | SW_VMDDI_7_WERT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | - |
 
-<a id="table-arg-0x5feb-d"></a>
 ### ARG_0X5FEB_D
 
 Dimensions: 1 rows × 12 columns
@@ -10216,7 +9979,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_ZKW_KMSTAND_WECHSEL | km | - | unsigned int | - | - | 1.0 | 100.0 | 0.0 | - | - | km Stand letzter Zuendkerzenwechsel |
 
-<a id="table-arg-0x5fef-d"></a>
 ### ARG_0X5FEF_D
 
 Dimensions: 5 rows × 12 columns
@@ -10229,7 +9991,6 @@ Dimensions: 5 rows × 12 columns
 | SW_ABLL4 | 1/min | - | signed char | - | - | 1.0 | 10.0 | 0.0 | -250.0 | 250.0 | Drehzahlanhebung im Leerlauf mit Fahrstufe und Klimaanlage ein |
 | SW_ABLL5 | 1/min | - | signed char | - | - | 1.0 | 10.0 | 0.0 | -250.0 | 250.0 | Drehzahlanhebung im Leerlauf zum Batterie laden |
 
-<a id="table-arg-0x5ff0-d"></a>
 ### ARG_0X5FF0_D
 
 Dimensions: 5 rows × 12 columns
@@ -10242,7 +10003,6 @@ Dimensions: 5 rows × 12 columns
 | SW_ABLL4 | 1/min | - | signed char | - | - | 1.0 | 10.0 | 0.0 | -250.0 | 250.0 | Drehzahlanhebung im Leerlauf mit Fahrstufe und Klimaanlage ein |
 | SW_ABLL5 | 1/min | - | signed char | - | - | 1.0 | 10.0 | 0.0 | -250.0 | 250.0 | Drehzahlanhebung im Leerlauf zum Batterie laden |
 
-<a id="table-arg-0x5ffd-d"></a>
 ### ARG_0X5FFD_D
 
 Dimensions: 1 rows × 12 columns
@@ -10251,7 +10011,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOUNDTUNING_DEAK | 0/1 | - | unsigned char | - | - | - | - | - | - | - | Codierung Sound-Tuning Off: (BasSvrAppl_stSTOff)0 = Soundtuning aktiv1 = Soundtuning deaktiviert |
 
-<a id="table-arg-0x6013-d"></a>
 ### ARG_0X6013_D
 
 Dimensions: 1 rows × 12 columns
@@ -10260,7 +10019,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_AKKS_1 | % | - | signed int | - | - | - | - | - | 0.0 | 100.0 | Sollwertvorgabe Klappe 1 |
 
-<a id="table-arg-0x6014-d"></a>
 ### ARG_0X6014_D
 
 Dimensions: 1 rows × 12 columns
@@ -10269,7 +10027,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_AKKS_2 | % | - | signed int | - | - | - | - | - | 0.0 | 100.0 | Sollwertvorgabe Klappe 1 |
 
-<a id="table-arg-0x6020-d"></a>
 ### ARG_0X6020_D
 
 Dimensions: 1 rows × 12 columns
@@ -10278,7 +10035,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_PHY_UVLSS | 0/1 | - | signed int | - | - | - | - | - | - | - | Spannung Versorgung Einspritzung / Zuendung schalten |
 
-<a id="table-arg-0x602a-d"></a>
 ### ARG_0X602A_D
 
 Dimensions: 1 rows × 12 columns
@@ -10287,7 +10043,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_DK | % DK | - | signed int | - | - | 40.96 | 1.0 | 0.0 | 0.0 | 100.0 | Tastverhaeltnis Drosselklappe |
 
-<a id="table-arg-0x606b-d"></a>
 ### ARG_0X606B_D
 
 Dimensions: 1 rows × 12 columns
@@ -10296,7 +10051,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_TAV_STEUERN | 0/1 | - | signed int | - | - | - | - | - | - | - | Tastverhaeltnis TAV ansteuern. |
 
-<a id="table-arg-0x6073-d"></a>
 ### ARG_0X6073_D
 
 Dimensions: 1 rows × 12 columns
@@ -10305,7 +10059,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_USOLL | V | - | unsigned int | - | - | 1000.0 | 1.0 | 0.0 | 10.6 | 16.0 | Tastverhaeltnis Sollspannungswert. |
 
-<a id="table-arg-0x6074-d"></a>
 ### ARG_0X6074_D
 
 Dimensions: 1 rows × 12 columns
@@ -10314,7 +10067,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_RRZ | s | - | unsigned int | - | - | 20.0 | 1.0 | 0.0 | 0.0 | 15.0 | Tastverhaeltnis Loadresponsewert (des Generators) (UGEN) |
 
-<a id="table-arg-0x6075-d"></a>
 ### ARG_0X6075_D
 
 Dimensions: 1 rows × 12 columns
@@ -10323,7 +10075,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_IERRGRENZ | A | - | unsigned int | - | - | 800.0 | 1.0 | 0.0 | 0.0 | 25.5 | Tastverhaeltnis Grenzerregerstromwert (des Generators) vorgeben (UGEN). |
 
-<a id="table-arg-0x6078-d"></a>
 ### ARG_0X6078_D
 
 Dimensions: 1 rows × 12 columns
@@ -10332,7 +10083,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_EWG | % | - | unsigned int | - | - | 2.56 | 1.0 | 0.0 | 0.0 | 99.609375 | Tastverhaeltnis Tastverhaeltnis elektr. Wastegate. normierte Sollpositionsvorgabe elektrisches Wastegate vom Tester (0%:WG geschlossen, 100% WG offen) vorgeben (EWG). |
 
-<a id="table-arg-0x607a-d"></a>
 ### ARG_0X607A_D
 
 Dimensions: 1 rows × 12 columns
@@ -10341,7 +10091,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_WMM_MOD | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Ansteuerung des WMM Moduls Ausgang aus der SW perc_wmm_soll bzw. ERClntVlv_r |
 
-<a id="table-arg-0x6081-d"></a>
 ### ARG_0X6081_D
 
 Dimensions: 1 rows × 12 columns
@@ -10350,7 +10099,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_IELUER | - | - | unsigned int | - | - | - | - | - | 0.0 | 2.0 | Komponentenansteuerung: intelligenter E-Luefter-Relais1 = Ansteuern0 = Aussteuern(A2L-NAME: Ieltst_testerrelais) |
 
-<a id="table-arg-0x60ab-d"></a>
 ### ARG_0X60AB_D
 
 Dimensions: 1 rows × 12 columns
@@ -10359,7 +10107,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_P_OELSOL_TST | hPa | - | unsigned int | - | - | 1.0 | 32.0 | 0.0 | 0.0 | 8160.0 | Oeldruck Sollwert |
 
-<a id="table-arg-0x60ac-d"></a>
 ### ARG_0X60AC_D
 
 Dimensions: 1 rows × 12 columns
@@ -10368,7 +10115,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_ODV | % | - | unsigned int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Tastverhaeltnis Oeldruckventil Sollwert |
 
-<a id="table-arg-0x60ad-d"></a>
 ### ARG_0X60AD_D
 
 Dimensions: 1 rows × 12 columns
@@ -10377,7 +10123,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_KGEH | 0/1 | - | signed int | - | - | - | - | - | - | - | Tastverhaeltnis Kurbelgehaeuseentlueftungsheizung |
 
-<a id="table-arg-0x60b2-d"></a>
 ### ARG_0X60B2_D
 
 Dimensions: 1 rows × 12 columns
@@ -10386,7 +10131,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_MLS | 0/1 | - | unsigned int | - | - | - | - | - | - | - | Komponentenansteuerung: Motorlagersteuerung1 = Ansteuern0 = Aussteuern (default) |
 
-<a id="table-arg-0x60b5-d"></a>
 ### ARG_0X60B5_D
 
 Dimensions: 1 rows × 12 columns
@@ -10395,7 +10139,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_ULV | % | - | unsigned int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Tastverhaeltnis Umluftventil |
 
-<a id="table-arg-0x60b6-d"></a>
 ### ARG_0X60B6_D
 
 Dimensions: 1 rows × 12 columns
@@ -10404,7 +10147,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_LDS1 | % | - | unsigned int | - | - | 65536.0 | 100.0 | 0.0 | 0.0 | 99.99847412 | Tastverhaeltnis Ladedrucksteller 1 (z.B. Waste Gate oder VTG variable Turbinengeometrie) |
 
-<a id="table-arg-0x60bd-d"></a>
 ### ARG_0X60BD_D
 
 Dimensions: 1 rows × 12 columns
@@ -10413,7 +10155,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_MSV | MPa | - | unsigned int | - | - | 10000.0 | 5.0 | 0.0 | 0.0 | 32.7675 | Tastverhaeltnis Mengensteuerventil |
 
-<a id="table-arg-0x60c3-d"></a>
 ### ARG_0X60C3_D
 
 Dimensions: 1 rows × 12 columns
@@ -10422,7 +10163,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_GLF | 0/1 | - | signed int | - | - | - | - | - | - | - | Komponentenansteuerung: Gesteuerte Luftfuehrung Klappe 11 = Ansteuern0 = Aussteuern (default) |
 
-<a id="table-arg-0x60c9-d"></a>
 ### ARG_0X60C9_D
 
 Dimensions: 1 rows × 12 columns
@@ -10431,7 +10171,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_KFT | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Komponentenansteuerung: Kennfeldthermostat |
 
-<a id="table-arg-0x60cc-d"></a>
 ### ARG_0X60CC_D
 
 Dimensions: 1 rows × 12 columns
@@ -10440,7 +10179,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_DMTL_P | 0/1 | - | unsigned int | - | - | - | - | - | - | - | Komponentenansteuerung: Diagnosemodul-Tank Leckage Pumpe1 = Ansteuern0 = Aussteuern (default) |
 
-<a id="table-arg-0x60cd-d"></a>
 ### ARG_0X60CD_D
 
 Dimensions: 1 rows × 12 columns
@@ -10449,7 +10187,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_DMTL_V | 0/1 | - | unsigned int | - | - | - | - | - | - | - | Komponentenansteuerung: Diagnosemodul-Tank Leckage Ventil1 = Ansteuern0 = Aussteuern (default) |
 
-<a id="table-arg-0x60ce-d"></a>
 ### ARG_0X60CE_D
 
 Dimensions: 1 rows × 12 columns
@@ -10458,7 +10195,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_DMTLH | 0/1 | - | unsigned int | - | - | - | - | - | - | - | Komponentenansteuerung: Diagnosemodul-Tank Leckage Heizung1 = Ansteuern0 = Aussteuern (default) |
 
-<a id="table-arg-0x60cf-d"></a>
 ### ARG_0X60CF_D
 
 Dimensions: 1 rows × 12 columns
@@ -10467,7 +10203,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_TEV | % | - | unsigned int | - | - | 655.36 | 1.0 | 0.0 | 0.0 | 99.99847412 | Tastverhaeltnis Tankentlueftungsventil |
 
-<a id="table-arg-0x60d0-d"></a>
 ### ARG_0X60D0_D
 
 Dimensions: 1 rows × 12 columns
@@ -10476,7 +10211,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_LSH1 | % | - | signed int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 32767.0 | Tastverhaeltnis Lambdasondenheizung vor Kat 1 |
 
-<a id="table-arg-0x60d1-d"></a>
 ### ARG_0X60D1_D
 
 Dimensions: 1 rows × 12 columns
@@ -10485,7 +10219,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_LSH2 | - | - | unsigned int | - | - | 25600.0 | 1.0 | 0.0 | 0.0 | 0.98 | Tastverhaeltnis Lambdasondenheizung hinter Kat 1 |
 
-<a id="table-arg-0x60d4-d"></a>
 ### ARG_0X60D4_D
 
 Dimensions: 1 rows × 12 columns
@@ -10494,7 +10227,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_MIL | 0/1 | - | signed int | - | - | - | - | - | - | - | Komponentenansteuerung: MIL (Malfunction Indicator Lamp)1 = Ansteuern0 = Aussteuern (default) |
 
-<a id="table-arg-0x60d6-d"></a>
 ### ARG_0X60D6_D
 
 Dimensions: 1 rows × 12 columns
@@ -10503,7 +10235,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_EML | 0/1 | - | signed int | - | - | - | - | - | - | - | Komponentenansteuerung: EML (Engine Malfunction Lamp)1 = Ansteuern0 = Aussteuern (default) |
 
-<a id="table-arg-0x60da-d"></a>
 ### ARG_0X60DA_D
 
 Dimensions: 1 rows × 12 columns
@@ -10512,7 +10243,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_IELUE | % | - | unsigned int | - | - | 655.36 | 1.0 | 0.0 | 0.0 | 99.99847412 | Tastverhaeltnis intelligenter E-Luefter mit BMW SW. |
 
-<a id="table-arg-0x60dd-d"></a>
 ### ARG_0X60DD_D
 
 Dimensions: 1 rows × 12 columns
@@ -10521,7 +10251,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_VVT | % | - | unsigned int | - | - | 2.56 | 1.0 | 0.0 | 0.0 | 99.609375 | Normierter Exzenterwinkel VVT |
 
-<a id="table-arg-0x60ed-d"></a>
 ### ARG_0X60ED_D
 
 Dimensions: 1 rows × 12 columns
@@ -10530,7 +10259,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_ENWS | ° KW | - | unsigned int | - | - | 1.25 | 1.0 | 160.0 | -128.0 | 76.0 | Tastverhaeltnis Vanos Einlassventil |
 
-<a id="table-arg-0x60ee-d"></a>
 ### ARG_0X60EE_D
 
 Dimensions: 1 rows × 12 columns
@@ -10539,7 +10267,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_ANWS | ° KW | - | unsigned int | - | - | 1.25 | 1.0 | 160.0 | -128.0 | 76.0 | Tastverhaeltnis Vanos Auslassventil |
 
-<a id="table-arg-0x60fd-d"></a>
 ### ARG_0X60FD_D
 
 Dimensions: 1 rows × 12 columns
@@ -10548,7 +10275,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_EAGK | 0-n | - | unsigned int | - | T_ATS_60FD_TV_TXT_DOP | - | - | - | - | - | Tastverhaeltnis elektrische Abgasklappe Ansteuerung 10%, 30%, 50% und 90% |
 
-<a id="table-arg-0x60fe-d"></a>
 ### ARG_0X60FE_D
 
 Dimensions: 1 rows × 12 columns
@@ -10557,7 +10283,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_EWG2 | % | - | unsigned int | - | - | 2.56 | 1.0 | 0.0 | 0.0 | 99.609375 | Normierte Sollpositionsvorgabe des zweiten elektrischen Wastegates vom Tester vorgeben (0%: eWG2 geschlossen, 100% eWG2 offen).(A2L-Name: Ewgposs_norm_tester_2) |
 
-<a id="table-arg-0x60ff-d"></a>
 ### ARG_0X60FF_D
 
 Dimensions: 1 rows × 12 columns
@@ -10566,7 +10291,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_FPC_PWM | % | - | signed int | - | - | 100.0 | 1.0 | 0.0 | 0.0 | 100.0 | Tastverhaeltnis FPC |
 
-<a id="table-arg-0x6104-d"></a>
 ### ARG_0X6104_D
 
 Dimensions: 1 rows × 12 columns
@@ -10575,7 +10299,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_EWP_ATL | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 9.99755859 | 93.00537109 | Tastverhaeltnis elektrische Wasserpumpe Abgasturbolader |
 
-<a id="table-arg-0x6106-d"></a>
 ### ARG_0X6106_D
 
 Dimensions: 1 rows × 12 columns
@@ -10584,7 +10307,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_EWP_LLK | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 9.99755859 | 93.00537109 | Tastverhaeltnis Wasserpumpe Ladeluftkuehler. |
 
-<a id="table-arg-0x6107-d"></a>
 ### ARG_0X6107_D
 
 Dimensions: 1 rows × 12 columns
@@ -10593,7 +10315,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_HEI_ASP_V | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Komponentenansteuerung: Heizungsabsperventil0 = Aussteuern stromlos offen 1 = Ansteuern bestromt geschlossen |
 
-<a id="table-arg-0x6108-d"></a>
 ### ARG_0X6108_D
 
 Dimensions: 1 rows × 12 columns
@@ -10602,7 +10323,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_KASK_WMK | % | - | unsigned int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 799.98779297 | Tastverhaeltnis KASK Wasserpumpe. |
 
-<a id="table-arg-0x6109-d"></a>
 ### ARG_0X6109_D
 
 Dimensions: 1 rows × 12 columns
@@ -10611,7 +10331,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_ELUENSOLL | % | - | unsigned int | - | - | 2.56 | 1.0 | 0.0 | 0.0 | 99.609375 | Sollwertvorgabe fuer E-Luefter LIN |
 
-<a id="table-arg-0x610a-d"></a>
 ### ARG_0X610A_D
 
 Dimensions: 1 rows × 12 columns
@@ -10620,7 +10339,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_ELUERLY | 0/1 | - | signed int | - | - | - | - | - | - | - | Sollwertvorgabe fuer Relais E-Luefter LIN0: Relais deaktivieren 1: Relais aktivieren |
 
-<a id="table-arg-0x610c-d"></a>
 ### ARG_0X610C_D
 
 Dimensions: 1 rows × 12 columns
@@ -10629,7 +10347,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_POSITION_LUFTKLAPPE | % | - | unsigned int | - | - | - | - | - | 0.0 | 100.0 | Ansteuerposition der Luftklappen von 0 bis 100%0 = GESCHLOSSEN. 100 = OFFEN. |
 
-<a id="table-arg-0x610e-d"></a>
 ### ARG_0X610E_D
 
 Dimensions: 1 rows × 12 columns
@@ -10638,7 +10355,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_VENTIL | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Sollwert des Ventils 0 - kein Volumenstrom (geschlossen)100% - Volumenstrom (geoeffnet) |
 
-<a id="table-arg-0x610f-d"></a>
 ### ARG_0X610F_D
 
 Dimensions: 1 rows × 12 columns
@@ -10647,7 +10363,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_PVENTIL | - | - | unsigned int | - | - | - | - | - | 0.0 | 1.0 | Sollwert des Poppetventils |
 
-<a id="table-arg-0x6110-d"></a>
 ### ARG_0X6110_D
 
 Dimensions: 1 rows × 12 columns
@@ -10656,7 +10371,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOLL_UMDREHUNG_EWPATL | - | - | unsigned int | - | - | - | - | - | 0.0 | 250.0 | Soll Umdrehungszahl der Pumpemin 0max 250 |
 
-<a id="table-arg-0x6111-d"></a>
 ### ARG_0X6111_D
 
 Dimensions: 1 rows × 12 columns
@@ -10665,7 +10379,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOLL_UMDREHUNG_EWP_ILLK | - | - | unsigned int | - | - | - | - | - | 0.0 | 250.0 | Soll Umdrehungszahl der Pumpemin 0max 250 |
 
-<a id="table-arg-0x6112-d"></a>
 ### ARG_0X6112_D
 
 Dimensions: 1 rows × 12 columns
@@ -10674,7 +10387,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOLL_UMDREHUNG_EWP_EME | - | - | unsigned int | - | - | - | - | - | 0.0 | 250.0 | Soll Umdrehungszahl der Pumpemin 0max 250 |
 
-<a id="table-arg-0x6113-d"></a>
 ### ARG_0X6113_D
 
 Dimensions: 1 rows × 12 columns
@@ -10683,7 +10395,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOLL_SPUELLUFT_VENT | 0-n | - | unsigned int | - | T_ATS_6113_TT_DOP | - | - | - | - | - | Sollwert des Stellers SpuelluftVentilPurgIsoVlv_O_S_ATS |
 
-<a id="table-arg-0x6114-d"></a>
 ### ARG_0X6114_D
 
 Dimensions: 1 rows × 12 columns
@@ -10692,7 +10403,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOLL_KUEHLTREN_VENT | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | Sollwert des Kuehltrennventils |
 
-<a id="table-arg-0x6115-d"></a>
 ### ARG_0X6115_D
 
 Dimensions: 1 rows × 12 columns
@@ -10701,7 +10411,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_RAILDRUCK_SOLLWERT | MPa | - | unsigned int | - | - | 500.0 | 1.0 | 0.0 | 0.0 | 45.0 | Raildruck Vorgabe |
 
-<a id="table-arg-0x6116-d"></a>
 ### ARG_0X6116_D
 
 Dimensions: 1 rows × 12 columns
@@ -10710,7 +10419,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_ABSP_VENT_KUEHLW_AUSGL_BEH | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Sollwert fuer das Absperrventil |
 
-<a id="table-arg-0x6117-d"></a>
 ### ARG_0X6117_D
 
 Dimensions: 1 rows × 12 columns
@@ -10719,7 +10427,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_KUEHLMITTEL_VENT | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Sollwert fuer das Kuehlmittelventil |
 
-<a id="table-arg-0x6118-d"></a>
 ### ARG_0X6118_D
 
 Dimensions: 1 rows × 12 columns
@@ -10728,7 +10435,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_E_LUEFTER | % | - | signed int | - | - | 100.0 | 1.0 | 0.0 | 0.0 | 100.0 | Sollwert des E-Luefters |
 
-<a id="table-arg-0x6119-d"></a>
 ### ARG_0X6119_D
 
 Dimensions: 1 rows × 12 columns
@@ -10737,7 +10443,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_REL_E_LUEFTER | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Sollwert Relais Elektrischer Luefter |
 
-<a id="table-arg-0x611b-d"></a>
 ### ARG_0X611B_D
 
 Dimensions: 1 rows × 12 columns
@@ -10746,7 +10451,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_TV_OEL_SP_VENTIL | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Sollwert fuer das Oelspritzventil |
 
-<a id="table-arg-0x611c-d"></a>
 ### ARG_0X611C_D
 
 Dimensions: 1 rows × 12 columns
@@ -10755,7 +10459,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOLL_UMDREHUNG_EWPLLK2 | - | - | unsigned int | - | - | - | - | - | 0.0 | 250.0 | Soll Umdrehungszahl der Pumpemin 0max 250 |
 
-<a id="table-arg-0x611d-d"></a>
 ### ARG_0X611D_D
 
 Dimensions: 1 rows × 12 columns
@@ -10764,7 +10467,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOLL_UMDREHUNG_EWP_48V | - | - | unsigned int | - | - | - | - | - | 0.0 | 250.0 | Soll Umdrehungszahl der Pumpemin 0max 250 |
 
-<a id="table-arg-0x611e-d"></a>
 ### ARG_0X611E_D
 
 Dimensions: 1 rows × 12 columns
@@ -10773,7 +10475,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_GER_EL_AGK | % | - | signed int | - | - | 81.92 | 1.0 | 0.0 | 0.0 | 100.0 | Sollwertvorgabe geregelte elektische Abgasklappe (St_Akr ==8) |
 
-<a id="table-arg-0xe68c-d"></a>
 ### ARG_0XE68C_D
 
 Dimensions: 1 rows × 12 columns
@@ -10782,7 +10483,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_WASSER_LEITUNGSHEIZUNG | - | - | unsigned int | - | - | - | - | - | 0.0 | 1.0 | Sollwert der Leitungsheizung |
 
-<a id="table-arg-0xf025-r"></a>
 ### ARG_0XF025_R
 
 Dimensions: 1 rows × 14 columns
@@ -10791,7 +10491,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DEVOFF | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Ausblendmaske !in Logischer Zuendreihenfolge! |
 
-<a id="table-arg-0xf026-r"></a>
 ### ARG_0XF026_R
 
 Dimensions: 1 rows × 14 columns
@@ -10800,7 +10499,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LL | + | - | 1/min | - | signed int | - | - | - | - | - | 0.0 | 4000.0 | Drehzahlerhoehung. Die Testereingabe ist bis 8191.75 U/min moeglich, aber die Leerlaufdrehzahl wird in der folgenden Funktion auf 4000 U/min begrenzt. |
 
-<a id="table-arg-0xf03a-r"></a>
 ### ARG_0XF03A_R
 
 Dimensions: 3 rows × 14 columns
@@ -10811,7 +10509,6 @@ Dimensions: 3 rows × 14 columns
 | FAC_CH_DIAG_EXT_ADJ_PL | + | - | - | - | unsigned char | - | - | 1.0 | 0.0078125 | 0.0 | 0.0 | 1.9921875 | Manipulation factor of CH torque reserve for ignition angle efficiency monitoring - demo-mode PL |
 | LV_CH_DIAG_EXT_REQ | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 3.0 | External request for ignition angle efficiency monitoring - demo- mode |
 
-<a id="table-arg-0xf03c-r"></a>
 ### ARG_0XF03C_R
 
 Dimensions: 1 rows × 14 columns
@@ -10820,7 +10517,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_BA_LUFT | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Vorgabe Betriebsart Luft ueber St_dps_svc(BMW Groesse) |
 
-<a id="table-arg-0xf03d-r"></a>
 ### ARG_0XF03D_R
 
 Dimensions: 1 rows × 14 columns
@@ -10829,7 +10525,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SAUGROHRDRUCK_SOLL | + | - | hPa | - | signed int | - | - | 32767.0 | 4096.0 | 0.0 | - | - | Sollwert Saugrohrdruckkdifferenz |
 
-<a id="table-arg-0xf042-r"></a>
 ### ARG_0XF042_R
 
 Dimensions: 11 rows × 14 columns
@@ -10848,7 +10543,6 @@ Dimensions: 11 rows × 14 columns
 | VANOSSPL_DVSA1_VO1AV | + | - | ° KW | - | signed int | - | - | 1.0 | 0.1 | 0.0 | -102.4 | 101.6 | Verstelloffset 1 Auslas-Vanos (von -102,4 bis 101,6 Grad KW). Default-Wert=-5.6 Grad. (A2L-Name: ofstclnwa1) |
 | VANOSSPL_DVSA2_VO1AV | + | - | ° KW | - | signed int | - | - | 1.0 | 0.1 | 0.0 | -102.4 | 101.6 | Verstelloffset 2 Auslas-Vanos (von -102,4 bis 101,6 Grad KW). Default-Wert=5.6 Grad. (A2L-Name: ofstclnwa2) |
 
-<a id="table-arg-0xf053-r"></a>
 ### ARG_0XF053_R
 
 Dimensions: 1 rows × 14 columns
@@ -10857,7 +10551,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_BA_ELUE_LIN | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 7.0 | Sollwert Betriebsmodus0: Drehzahlgeregelter Betrieb1: Autarke Luftdichtekompensation2: Autarker Luefterbetrieb3: Rekuperation4: Vorhalt 15: Vorhalt 26: Vorhalt 37: ungueltiger Wert |
 
-<a id="table-arg-0xf054-r"></a>
 ### ARG_0XF054_R
 
 Dimensions: 1 rows × 14 columns
@@ -10866,7 +10559,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_ADAP_MODE | + | - | 0-n | - | unsigned char | - | T_1BYTE_ADAP_AGK_DOP | - | - | - | - | - | Vorgabewert des Adaptionmodus |
 
-<a id="table-arg-0xf055-r"></a>
 ### ARG_0XF055_R
 
 Dimensions: 1 rows × 14 columns
@@ -10875,7 +10567,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_MODUS_ZEIT | + | - | s | - | unsigned int | - | - | 100.0 | 1.0 | 0.0 | - | - | Sekundenzahl bis zum Ruecksetzen des Jobs |
 
-<a id="table-arg-0xf05a-r"></a>
 ### ARG_0XF05A_R
 
 Dimensions: 1 rows × 14 columns
@@ -10884,7 +10575,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SIGNAL_FEV | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Vorgabewert Energieverfuegbarkeit fuer Busbotschaft |
 
-<a id="table-arg-0xf05b-r"></a>
 ### ARG_0XF05B_R
 
 Dimensions: 1 rows × 14 columns
@@ -10893,7 +10583,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SIGNAL_FLV | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Vorgabewert Leistungsverfuegkeit fuer Busbotschaft |
 
-<a id="table-arg-0xf05f-r"></a>
 ### ARG_0XF05F_R
 
 Dimensions: 1 rows × 14 columns
@@ -10902,7 +10591,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_MSA_STRTZGESCHK | + | - | - | - | unsigned long | - | - | - | - | - | 0.0 | 4.294967295E9 | abgefragte Gesamtstartzahl |
 
-<a id="table-arg-0xf06d-r"></a>
 ### ARG_0XF06D_R
 
 Dimensions: 1 rows × 14 columns
@@ -10911,7 +10599,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_MSA_HIST_SPEICH | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Auswahl welcher Speicherbereich geloescht werden soll. Es wird BMWmsa_st_HisSaveRst_ub beschrieben 0== kein Loeschen wird ausgefuehrt1== Daten von 40CC, 40D1, 40D2 werden geloescht2==Daten von 40CD, 40D4 werden geloescht3==Daten von 40CE werden geloescht4==Daten von 40CF werden geloescht5==Daten von 40D0 werden geloescht 6==Daten aller Speicherbereichen werden geloescht |
 
-<a id="table-arg-0xf06f-r"></a>
 ### ARG_0XF06F_R
 
 Dimensions: 1 rows × 14 columns
@@ -10920,7 +10607,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_DREHZAHLOFFSET | + | - | 1/min | - | signed int | - | - | - | - | - | -500.0 | 500.0 | Offset auf die LL-Drehzahl |
 
-<a id="table-arg-0xf071-r"></a>
 ### ARG_0XF071_R
 
 Dimensions: 2 rows × 14 columns
@@ -10930,7 +10616,6 @@ Dimensions: 2 rows × 14 columns
 | SW_NOCKENWELLE_WAHL | + | - | 0-n | - | unsigned char | - | T_1BYTE_NOCKENWELLE_WAHL | - | - | - | - | - | Auswahl der beaufschlagten Nockenwelle |
 | SW_DELTAWKL_NOCKENW_SOLL | + | - | ° KW | - | signed int | - | - | 1.0 | 0.1 | 0.0 | -15.0 | 15.0 | Offset Testeranforderung fuer den Nockenwellenregeler |
 
-<a id="table-arg-0xf072-r"></a>
 ### ARG_0XF072_R
 
 Dimensions: 1 rows × 14 columns
@@ -10939,7 +10624,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_STARTSYSTEM | + | - | 0-n | - | unsigned char | - | T_1BYTE_FS_VORGABE_STARTSYSTEM_DOP | - | - | - | - | - | Vorgabe Startsystem |
 
-<a id="table-arg-0xf073-r"></a>
 ### ARG_0XF073_R
 
 Dimensions: 5 rows × 14 columns
@@ -10952,7 +10636,6 @@ Dimensions: 5 rows × 14 columns
 | SW_DIAG_FSIM_CVO_ERR_MAX_MIN | + | - | 0-n | - | unsigned int | - | T_2BYTE_CVODEMO_DOP | - | - | - | - | - | Auswahl des zu simulierenden Fehlers: DFC_IVGdiCtlCvoErrMax, DFC_IVGdiCtlCvoErrMin |
 | SW_DIAG_OFFS_ZEIT_CVO_ADPN | + | - | µs | - | signed int | - | - | 10.0 | 1.0 | 0.0 | - | - | Offset fuer die zu simulierenden Fehler in FC: IVGdiCtl_CvoAdpn und den/die jeweiligen Zylinder |
 
-<a id="table-arg-0xf07c-r"></a>
 ### ARG_0XF07C_R
 
 Dimensions: 2 rows × 14 columns
@@ -10962,7 +10645,6 @@ Dimensions: 2 rows × 14 columns
 | SW_RADMOMENT_MAX | + | - | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | Maximales Radmoment fuer Bandendepruefung |
 | SW_DREHZAHL_MAX | + | - | 1/min | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | Maximale Drehzahl fuer Bandendepruefung |
 
-<a id="table-arg-0xf07d-r"></a>
 ### ARG_0XF07D_R
 
 Dimensions: 1 rows × 14 columns
@@ -10971,7 +10653,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_MOMENT_OFFSET | + | - | Nm | - | signed int | - | - | 10.0 | 1.0 | 0.0 | - | - | Aufweitung der Verbrennungsmotor-Lastpunktabsenkung fuer Fehler Demo CSERS ueber Tester |
 
-<a id="table-arg-0xf07e-r"></a>
 ### ARG_0XF07E_R
 
 Dimensions: 3 rows × 14 columns
@@ -10982,7 +10663,6 @@ Dimensions: 3 rows × 14 columns
 | SW_MOMENT_OFFSET_INK | + | - | Nm | - | signed int | - | - | 10.0 | 1.0 | 0.0 | - | - | Aufweitung der Verbrennungsmotor-Lastpunktabsenkung fuer Fehler Demo CSERS ueber Tester |
 | SW_MOMENT_OFFSET_DEK | + | - | Nm | - | signed int | - | - | 10.0 | 1.0 | 0.0 | - | - | Aufweitung der Verbrennungsmotor-Lastpunktanhebung fuer Fehler Demo CSERS ueber Tester |
 
-<a id="table-arg-0xf080-r"></a>
 ### ARG_0XF080_R
 
 Dimensions: 6 rows × 14 columns
@@ -10996,7 +10676,6 @@ Dimensions: 6 rows × 14 columns
 | SW_ZEIT_ADAPTION_OFFSET | + | - | µs | - | signed int | - | - | 10.0 | 1.0 | 0.0 | - | - | Offset fuer die zu simulierenden Fehler in FC: IVGdiCtl_CvoAdpn und den/die jeweiligen Zylinder Hinweis 0 entsp. Applikationsgroeße aus dem Datensatz |
 | SW_ZEIT_DELTA_TI_BALLISTIK | + | - | µs | - | signed int | - | - | 10.0 | 1.0 | 0.0 | - | - | Simulierte Ansteuerzeitkorrektur Delta TI der Balistik Hinweis 0 entsp. Applikationsgroeße aus dem Datensatz |
 
-<a id="table-arg-0xf081-r"></a>
 ### ARG_0XF081_R
 
 Dimensions: 1 rows × 14 columns
@@ -11005,7 +10684,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_ZYLINDER_ABSCH_MUSTER | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Zylinderabschaltmuster in physikalischer AnordnungBit 0 Zylinder 1Bit 1 Zylinder 2....und Kombinationen |
 
-<a id="table-arg-0xf086-r"></a>
 ### ARG_0XF086_R
 
 Dimensions: 1 rows × 14 columns
@@ -11014,7 +10692,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BETRIEBSART_EM1 | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | E-Maschine 1 Betriebsart vorgeben. 0 = Standby3 = DC-Spannungsregelung5 = Drehzahlregelung mit Momentenvorsteuerng6 = IHVBCTL - mit Momentenvorsteuerung 10 = Freilauf |
 
-<a id="table-arg-0xf087-r"></a>
 ### ARG_0XF087_R
 
 Dimensions: 1 rows × 14 columns
@@ -11023,7 +10700,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BETRIEBSART_EM2 | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | E-Maschine 2 (Generator) - Betriebsart vorgeben. 0 = Standby3 = DC-Spannungsregelung5 = Drehzahlregelung mit Momentenvorsteuerng6 = IHVBCTL - mit Momentenvorsteuerung 10 = Freilauf |
 
-<a id="table-arg-0xf088-r"></a>
 ### ARG_0XF088_R
 
 Dimensions: 3 rows × 14 columns
@@ -11034,7 +10710,6 @@ Dimensions: 3 rows × 14 columns
 | SW_TV_EV1 | + | - | % | - | unsigned char | - | - | 1.0 | 0.390625 | 0.0 | 0.0 | 99.609375 | Tastverhaeltnis Einspritzventil 1 |
 | SW_TO_EV1 | + | - | s | - | unsigned char | - | - | 1.0 | 2.0 | 0.0 | 0.0 | 510.0 | Timeout Einspritzventil 1 |
 
-<a id="table-arg-0xf089-r"></a>
 ### ARG_0XF089_R
 
 Dimensions: 3 rows × 14 columns
@@ -11045,7 +10720,6 @@ Dimensions: 3 rows × 14 columns
 | SW_TV_EV2 | + | - | % | - | unsigned char | - | - | 1.0 | 0.390625 | 0.0 | 0.0 | 99.609375 | Tastverhaeltnis Einspritzventil 2 |
 | SW_TO_EV2 | + | - | s | - | unsigned char | - | - | 1.0 | 2.0 | 0.0 | 0.0 | 510.0 | Timeout Einspritzventil 2 |
 
-<a id="table-arg-0xf08a-r"></a>
 ### ARG_0XF08A_R
 
 Dimensions: 3 rows × 14 columns
@@ -11056,7 +10730,6 @@ Dimensions: 3 rows × 14 columns
 | SW_TV_EV3 | + | - | % | - | unsigned char | - | - | 1.0 | 0.390625 | 0.0 | 0.0 | 99.609375 | Tastverhaeltnis Einspritzventil 3 |
 | SW_TO_EV3 | + | - | s | - | unsigned char | - | - | 1.0 | 2.0 | 0.0 | 0.0 | 510.0 | Timeout Einspritzventil 3 |
 
-<a id="table-arg-0xf08b-r"></a>
 ### ARG_0XF08B_R
 
 Dimensions: 3 rows × 14 columns
@@ -11067,7 +10740,6 @@ Dimensions: 3 rows × 14 columns
 | SW_TV_EV4 | + | - | % | - | unsigned char | - | - | 1.0 | 0.390625 | 0.0 | 0.0 | 99.609375 | Tastverhaeltnis Einspritzventil 4 |
 | SW_TO_EV4 | + | - | s | - | unsigned char | - | - | 1.0 | 2.0 | 0.0 | 0.0 | 510.0 | Timeout Einspritzventil 4 |
 
-<a id="table-arg-0xf08c-r"></a>
 ### ARG_0XF08C_R
 
 Dimensions: 3 rows × 14 columns
@@ -11078,7 +10750,6 @@ Dimensions: 3 rows × 14 columns
 | SW_TV_EV5 | + | - | % | - | unsigned char | - | - | 1.0 | 0.390625 | 0.0 | 0.0 | 99.609375 | Tastverhaeltnis Einspritzventil 5 |
 | SW_TO_EV5 | + | - | s | - | unsigned char | - | - | 1.0 | 2.0 | 0.0 | 0.0 | 510.0 | Timeout Einspritzventil 5 |
 
-<a id="table-arg-0xf08d-r"></a>
 ### ARG_0XF08D_R
 
 Dimensions: 3 rows × 14 columns
@@ -11089,7 +10760,6 @@ Dimensions: 3 rows × 14 columns
 | SW_TV_EV6 | + | - | % | - | unsigned char | - | - | 1.0 | 0.390625 | 0.0 | 0.0 | 99.609375 | Tastverhaeltnis Einspritzventil 6 |
 | SW_TO_EV6 | + | - | s | - | unsigned char | - | - | 1.0 | 2.0 | 0.0 | 0.0 | 510.0 | Timeout Einspritzventil 6 |
 
-<a id="table-arg-0xf08f-r"></a>
 ### ARG_0XF08F_R
 
 Dimensions: 1 rows × 14 columns
@@ -11098,7 +10768,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MOXETC_RSTLRNGPERDPLAUSYBYT | + | - | - | - | unsigned char | - | - | - | - | - | - | - | Plausibilisierungsbyte vom Tester fuer Testerjob Ruecksetzen der Lernzeit des Laengsbeschleunigungssensors |
 
-<a id="table-arg-0xf09a-r"></a>
 ### ARG_0XF09A_R
 
 Dimensions: 1 rows × 14 columns
@@ -11107,7 +10776,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_SOCMIN_SOLL | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | 1 = angehobener, minimaler SOC aktiv; 2 = niedriger, minimaler SOC aktiv; |
 
-<a id="table-arg-0xf09e-r"></a>
 ### ARG_0XF09E_R
 
 Dimensions: 1 rows × 14 columns
@@ -11116,7 +10784,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_OBDDEMO_MOMENT | + | - | Nm | - | signed int | - | - | 10.0 | 1.0 | 0.0 | - | - | Momentendifferenz für Vertrimmung Mdi |
 
-<a id="table-arg-0xf0a1-r"></a>
 ### ARG_0XF0A1_R
 
 Dimensions: 1 rows × 14 columns
@@ -11125,7 +10792,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_MOTORMOMENT_MAX | + | - | - | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | Maximales Motormoment fuer Bandendepruefung |
 
-<a id="table-arg-0xf0a2-r"></a>
 ### ARG_0XF0A2_R
 
 Dimensions: 2 rows × 14 columns
@@ -11135,7 +10801,6 @@ Dimensions: 2 rows × 14 columns
 | SW_VORGABE_ADAPTIONSANPASSUNG | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_VORGABE_ADAPTIONSANPASSUNG_DOP | - | - | - | - | - | Vorgabe ob der/die Adaptionswerte Zeitlich vorgegeben werden oder Initwert verwendet wird. |
 | SW_HUBKOR_ADAPTION_WERT | + | - | mm | - | signed int | - | - | 1000.0 | 1.0 | 0.0 | - | - | Hubkorrektur Sollwertvorgabe Adaption |
 
-<a id="table-arg-0xf0a5-r"></a>
 ### ARG_0XF0A5_R
 
 Dimensions: 5 rows × 14 columns
@@ -11148,7 +10813,6 @@ Dimensions: 5 rows × 14 columns
 | SW_SPF_ODS_SOLL_DAUER_2 | + | - | ms | - | unsigned int | - | - | - | - | - | 0.0 | 65535.0 | Dauer fuer Ansteuerung Oeldruck Phase 2 |
 | SW_SPF_ODS_SOLL_ZYKLEN | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Anzahl der Wiederholungen der Oeldruck-Zyklen (Phase1 und Phase2) |
 
-<a id="table-arg-0xf0a6-r"></a>
 ### ARG_0XF0A6_R
 
 Dimensions: 2 rows × 14 columns
@@ -11158,7 +10822,6 @@ Dimensions: 2 rows × 14 columns
 | SW_EINSPR_AUSBLEND | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_OBD_MEHRFACH_EINSPRITZ_AUSW_DOP | - | - | - | - | - | für die OBD DEMO auszublendende Einspritzung |
 | SW_ZYLAUSW | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Ausblendmaske für DMEO Mehrfacheinspritung Bit0 Zylinder 1 physikalischBit1 Zylinder 2 physikalischBit2 Zylinder 3 physikalischBit3 Zylinder 4 physikalischBit4 Zylinder 5 physikalischBit5 Zylinder 6 physikalischBit6 Zylinder 7 physikalisch Bit7 Zylinder 8 physikalisch Kombinationen sind zulaessig. |
 
-<a id="table-arg-0xf0e0-r"></a>
 ### ARG_0XF0E0_R
 
 Dimensions: 5 rows × 14 columns
@@ -11171,7 +10834,6 @@ Dimensions: 5 rows × 14 columns
 | HUBEV_IST | + | - | - | - | unsigned int | - | - | 1.0 | 0.001 | 0.0 | 0.0 | 65.535 | Istwert Einlassventilhub |
 | PS | + | - | hPa | - | unsigned int | - | - | 1.0 | 0.125 | 0.0 | 0.0 | 8191.875 | Absolut Druck im Saugrohr (A2L-Name: Ps) (IstwertUmgebungsdruck) |
 
-<a id="table-arg-0xf0e1-r"></a>
 ### ARG_0XF0E1_R
 
 Dimensions: 4 rows × 14 columns
@@ -11183,7 +10845,6 @@ Dimensions: 4 rows × 14 columns
 | VSA_SPRI | + | - | ° KW | - | unsigned int | - | - | 1.0 | 0.1 | 0.0 | 0.0 | 6553.5 | Istwert Auslassspreizung variable NWS |
 | WDK_IST | + | - | % | - | signed int | - | - | 1.0 | 0.02441406 | 0.0 | -799.99998362 | 799.97556955 | Aktueller Drosselklappenwinkel |
 
-<a id="table-arg-0xf0e3-r"></a>
 ### ARG_0XF0E3_R
 
 Dimensions: 5 rows × 14 columns
@@ -11196,7 +10857,6 @@ Dimensions: 5 rows × 14 columns
 | TMOT_LOC | + | - | °C | - | signed int | - | - | 1.0 | 0.01 | 0.0 | -327.68 | 327.67 | Kuehlwassertemperatur |
 | BA_IST_LOC | + | - | 0-n | - | unsigned char | - | T_BA_IST_DOP | - | - | - | - | - | Istbetriebsart |
 
-<a id="table-arg-0xf0e4-r"></a>
 ### ARG_0XF0E4_R
 
 Dimensions: 3 rows × 14 columns
@@ -11207,7 +10867,6 @@ Dimensions: 3 rows × 14 columns
 | RK_LOC | + | - | - | - | unsigned int | - | - | 1.0 | 0.04882813 | 0.0 | 0.0 | 3199.95117188 | Relative Kraftstoffmasse |
 | TMOT_LOC | + | - | °C | - | signed int | - | - | 1.0 | 0.01 | 0.0 | -327.68 | 327.67 | Kuehlwassertemperatur |
 
-<a id="table-arg-0xf102-r"></a>
 ### ARG_0XF102_R
 
 Dimensions: 2 rows × 14 columns
@@ -11217,7 +10876,6 @@ Dimensions: 2 rows × 14 columns
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 | DATEN_ID | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Reset DatenID |
 
-<a id="table-arg-0xf106-r"></a>
 ### ARG_0XF106_R
 
 Dimensions: 2 rows × 14 columns
@@ -11227,7 +10885,6 @@ Dimensions: 2 rows × 14 columns
 | SW_PERMANENT_VORGABE | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Schalter fuer die Vorgabe ob die Steuerung permanent wirkt. |
 | SW_SOLLWERT_SCHALTER | + | - | - | - | unsigned char | - | - | - | - | - | 0.0 | 255.0 | Sollwer des Schalters |
 
-<a id="table-arg-0xf10b-r"></a>
 ### ARG_0XF10B_R
 
 Dimensions: 2 rows × 14 columns
@@ -11237,7 +10894,6 @@ Dimensions: 2 rows × 14 columns
 | SW_LADESCHWELLE_LADEGERAET | + | - | % | - | unsigned char | - | - | - | - | - | 0.0 | 100.0 | obere SoC-Schwelle bei Laden ueber 12V-Ladegeraet im aktiven Werkslademodus 48V |
 | SW_LADESCHWELLE_VERBRENNUNGSMOTOR | + | - | % | - | unsigned char | - | - | - | - | - | 0.0 | 100.0 | obere SoC-Schwelle bei Laden ueber Verbrennungsmotor im aktiven Werkslademodus 48V |
 
-<a id="table-arg-0xf300-r"></a>
 ### ARG_0XF300_R
 
 Dimensions: 1 rows × 14 columns
@@ -11246,7 +10902,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf301-r"></a>
 ### ARG_0XF301_R
 
 Dimensions: 1 rows × 14 columns
@@ -11255,7 +10910,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf302-r"></a>
 ### ARG_0XF302_R
 
 Dimensions: 1 rows × 14 columns
@@ -11264,7 +10918,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf303-r"></a>
 ### ARG_0XF303_R
 
 Dimensions: 1 rows × 14 columns
@@ -11273,7 +10926,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf304-r"></a>
 ### ARG_0XF304_R
 
 Dimensions: 1 rows × 14 columns
@@ -11282,7 +10934,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf306-r"></a>
 ### ARG_0XF306_R
 
 Dimensions: 1 rows × 14 columns
@@ -11291,7 +10942,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf307-r"></a>
 ### ARG_0XF307_R
 
 Dimensions: 1 rows × 14 columns
@@ -11300,7 +10950,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf308-r"></a>
 ### ARG_0XF308_R
 
 Dimensions: 1 rows × 14 columns
@@ -11309,7 +10958,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf309-r"></a>
 ### ARG_0XF309_R
 
 Dimensions: 1 rows × 14 columns
@@ -11318,7 +10966,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf30a-r"></a>
 ### ARG_0XF30A_R
 
 Dimensions: 1 rows × 14 columns
@@ -11327,7 +10974,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf30b-r"></a>
 ### ARG_0XF30B_R
 
 Dimensions: 1 rows × 14 columns
@@ -11336,7 +10982,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf30c-r"></a>
 ### ARG_0XF30C_R
 
 Dimensions: 1 rows × 14 columns
@@ -11345,7 +10990,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf30d-r"></a>
 ### ARG_0XF30D_R
 
 Dimensions: 1 rows × 14 columns
@@ -11354,7 +10998,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf30e-r"></a>
 ### ARG_0XF30E_R
 
 Dimensions: 1 rows × 14 columns
@@ -11363,7 +11006,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf30f-r"></a>
 ### ARG_0XF30F_R
 
 Dimensions: 1 rows × 14 columns
@@ -11372,7 +11014,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf310-r"></a>
 ### ARG_0XF310_R
 
 Dimensions: 1 rows × 14 columns
@@ -11381,7 +11022,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf311-r"></a>
 ### ARG_0XF311_R
 
 Dimensions: 1 rows × 14 columns
@@ -11390,7 +11030,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf312-r"></a>
 ### ARG_0XF312_R
 
 Dimensions: 1 rows × 14 columns
@@ -11399,7 +11038,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf313-r"></a>
 ### ARG_0XF313_R
 
 Dimensions: 1 rows × 14 columns
@@ -11408,7 +11046,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf314-r"></a>
 ### ARG_0XF314_R
 
 Dimensions: 1 rows × 14 columns
@@ -11417,7 +11054,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf315-r"></a>
 ### ARG_0XF315_R
 
 Dimensions: 1 rows × 14 columns
@@ -11426,7 +11062,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf316-r"></a>
 ### ARG_0XF316_R
 
 Dimensions: 1 rows × 14 columns
@@ -11435,7 +11070,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf317-r"></a>
 ### ARG_0XF317_R
 
 Dimensions: 1 rows × 14 columns
@@ -11444,7 +11078,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf318-r"></a>
 ### ARG_0XF318_R
 
 Dimensions: 1 rows × 14 columns
@@ -11453,7 +11086,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf319-r"></a>
 ### ARG_0XF319_R
 
 Dimensions: 1 rows × 14 columns
@@ -11462,7 +11094,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf31a-r"></a>
 ### ARG_0XF31A_R
 
 Dimensions: 1 rows × 14 columns
@@ -11471,7 +11102,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf31b-r"></a>
 ### ARG_0XF31B_R
 
 Dimensions: 1 rows × 14 columns
@@ -11480,7 +11110,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf31c-r"></a>
 ### ARG_0XF31C_R
 
 Dimensions: 1 rows × 14 columns
@@ -11489,7 +11118,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf31d-r"></a>
 ### ARG_0XF31D_R
 
 Dimensions: 1 rows × 14 columns
@@ -11498,7 +11126,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf31e-r"></a>
 ### ARG_0XF31E_R
 
 Dimensions: 1 rows × 14 columns
@@ -11507,7 +11134,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf321-r"></a>
 ### ARG_0XF321_R
 
 Dimensions: 1 rows × 14 columns
@@ -11516,7 +11142,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf323-r"></a>
 ### ARG_0XF323_R
 
 Dimensions: 1 rows × 14 columns
@@ -11525,7 +11150,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf325-r"></a>
 ### ARG_0XF325_R
 
 Dimensions: 1 rows × 14 columns
@@ -11534,7 +11158,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf326-r"></a>
 ### ARG_0XF326_R
 
 Dimensions: 1 rows × 14 columns
@@ -11543,7 +11166,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf327-r"></a>
 ### ARG_0XF327_R
 
 Dimensions: 1 rows × 14 columns
@@ -11552,7 +11174,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf328-r"></a>
 ### ARG_0XF328_R
 
 Dimensions: 1 rows × 14 columns
@@ -11561,7 +11182,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf329-r"></a>
 ### ARG_0XF329_R
 
 Dimensions: 1 rows × 14 columns
@@ -11570,7 +11190,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf32a-r"></a>
 ### ARG_0XF32A_R
 
 Dimensions: 1 rows × 14 columns
@@ -11579,7 +11198,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf32b-r"></a>
 ### ARG_0XF32B_R
 
 Dimensions: 1 rows × 14 columns
@@ -11588,7 +11206,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf32e-r"></a>
 ### ARG_0XF32E_R
 
 Dimensions: 1 rows × 14 columns
@@ -11597,7 +11214,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf32f-r"></a>
 ### ARG_0XF32F_R
 
 Dimensions: 1 rows × 14 columns
@@ -11606,7 +11222,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf330-r"></a>
 ### ARG_0XF330_R
 
 Dimensions: 1 rows × 14 columns
@@ -11615,7 +11230,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf331-r"></a>
 ### ARG_0XF331_R
 
 Dimensions: 1 rows × 14 columns
@@ -11624,7 +11238,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf332-r"></a>
 ### ARG_0XF332_R
 
 Dimensions: 1 rows × 14 columns
@@ -11633,7 +11246,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf333-r"></a>
 ### ARG_0XF333_R
 
 Dimensions: 1 rows × 14 columns
@@ -11642,7 +11254,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf334-r"></a>
 ### ARG_0XF334_R
 
 Dimensions: 1 rows × 14 columns
@@ -11651,7 +11262,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf335-r"></a>
 ### ARG_0XF335_R
 
 Dimensions: 1 rows × 14 columns
@@ -11660,7 +11270,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf336-r"></a>
 ### ARG_0XF336_R
 
 Dimensions: 1 rows × 14 columns
@@ -11669,7 +11278,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf337-r"></a>
 ### ARG_0XF337_R
 
 Dimensions: 1 rows × 14 columns
@@ -11678,7 +11286,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf33a-r"></a>
 ### ARG_0XF33A_R
 
 Dimensions: 1 rows × 14 columns
@@ -11687,7 +11294,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf33b-r"></a>
 ### ARG_0XF33B_R
 
 Dimensions: 1 rows × 14 columns
@@ -11696,7 +11302,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf33c-r"></a>
 ### ARG_0XF33C_R
 
 Dimensions: 1 rows × 14 columns
@@ -11705,7 +11310,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf33d-r"></a>
 ### ARG_0XF33D_R
 
 Dimensions: 1 rows × 14 columns
@@ -11714,7 +11318,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf33e-r"></a>
 ### ARG_0XF33E_R
 
 Dimensions: 1 rows × 14 columns
@@ -11723,7 +11326,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf33f-r"></a>
 ### ARG_0XF33F_R
 
 Dimensions: 1 rows × 14 columns
@@ -11732,7 +11334,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf340-r"></a>
 ### ARG_0XF340_R
 
 Dimensions: 1 rows × 14 columns
@@ -11741,7 +11342,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-arg-0xf341-r"></a>
 ### ARG_0XF341_R
 
 Dimensions: 1 rows × 14 columns
@@ -11750,7 +11350,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SW_FUNKT_SICH | + | - | 0-n | - | unsigned char | - | T_1BYTE_TEXT_FUSI_A5_DOP | - | - | - | - | - | Wert fuer das gewollte Loeschen dieser Adaption |
 
-<a id="table-applnum"></a>
 ### APPLNUM
 
 Dimensions: 5 rows × 2 columns
@@ -11763,7 +11362,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0098 | Pmax Master |
 | 0xFFFF | unbekannt |
 
-<a id="table-bf-0x4002-0"></a>
 ### BF_0X4002_0
 
 Dimensions: 6 rows × 10 columns
@@ -11777,7 +11375,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_MOTOR_EIN | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Status Motorzustand: 0=Motor steht, 1=Motor laeuft |
 | STAT_KL15_EIN | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Status Klemme-15: 0=aus, 1=ein |
 
-<a id="table-bf-0x4007-0"></a>
 ### BF_0X4007_0
 
 Dimensions: 6 rows × 10 columns
@@ -11791,7 +11388,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_KICKDOWN | 0/1 | - | unsigned char | 0x04 | - | - | - | - | Status Kickdownerkennung: 0=nicht erkannt, 1=erkannt |
 | STAT_SPORT | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Status Sportschalter: 0=nicht erkannt, 1=erkannt |
 
-<a id="table-bf-0x4007-1"></a>
 ### BF_0X4007_1
 
 Dimensions: 8 rows × 10 columns
@@ -11807,7 +11403,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VL | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Status Vollast: 0=aus, 1=ein (B_vl bei SY_DKNOTVVT=0) |
 | STAT_LL | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Status Leerlauf: 0=aus, 1=ein |
 
-<a id="table-bf-0x403b-0"></a>
 ### BF_0X403B_0
 
 Dimensions: 6 rows × 10 columns
@@ -11821,7 +11416,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_TIEFENTLADEN | 0-n | - | unsigned int | 0x08 | T_B_BZD_TE_BK_DOP | - | - | - | Anzeige Batterie wurde tiefentladen |
 | STAT_IBS_BZE | 0-n | - | unsigned int | 0x10 | T_B_BZDON_BK_DOP | - | - | - | Gibt an, ob eine IBS mit BZE3 erkannt wurde und die BZE-Daten somit relevant sind. |
 
-<a id="table-bf-0x4044-0"></a>
 ### BF_0X4044_0
 
 Dimensions: 3 rows × 10 columns
@@ -11832,7 +11426,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ATLDIAG_BANK1 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Ladedruckdiagnose fuer Bank 1 durchgelaufen (a2l-Name: statldiagnom Bit 1) |
 | STAT_ATLDIAG_BANK2 | 0/1 | - | unsigned char | 0x04 | - | - | - | - | Ladedruckdiagnose fuer Bank 2 durchgelaufen (a2l-Name: statldiagnom Bit 2) |
 
-<a id="table-bf-0x409c-0"></a>
 ### BF_0X409C_0
 
 Dimensions: 3 rows × 10 columns
@@ -11843,7 +11436,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_BCU_STATI_FREMDLADEERKENNUNG_BIT23 | 0-n | - | unsigned char | 0x0C | T_1BYTE_TEXT_ST_BCU_BIT23_DOP | - | - | - | Zustand Fremdladeerkennung |
 | STAT_BCU_STATI_STEUERPIN_RELAIS_BIT47 | 0-n | - | unsigned char | 0xF0 | T_1BYTE_TEXT_ST_BCU_BIT47_DOP | - | - | - | Diagnose Steuerpin Relais |
 
-<a id="table-bf-0x40c3-0"></a>
 ### BF_0X40C3_0
 
 Dimensions: 3 rows × 10 columns
@@ -11854,7 +11446,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_FEPM_CODIERUNG_BORDNETZKONFIGURATION_ZSE | 0-n | - | unsigned char | 0x02 | T_1BIT_FEPM_COD_BORDNETZKONF_BIT1_DOP | - | - | - | Codierung Bordnetzkonfiguration Bit 1 (00000010): 12V-Zustartbordnetz |
 | STAT_FEPM_CODIERUNG_BORDNETZKONFIGURATION_HV | 0-n | - | unsigned char | 0x04 | T_1BIT_FEPM_COD_BORDNETZKONF_BIT2_DOP | - | - | - | Codierung Bordnetzkonfiguration Bit 2 (00000100): HV-Bordnetz |
 
-<a id="table-bf-0x40e1-0"></a>
 ### BF_0X40E1_0
 
 Dimensions: 4 rows × 10 columns
@@ -11866,7 +11457,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TRENNELEMENT_DIAG_ERFOLG | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Diagnose erfolgreich: 0=nein, 1=ja |
 | STAT_TRENNELEMENT_DIAG_LAUF | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Diagnose durchgefuehrt: 0=nein, 1=ja |
 
-<a id="table-bf-0x40ef-0"></a>
 ### BF_0X40EF_0
 
 Dimensions: 3 rows × 10 columns
@@ -11877,7 +11467,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_OPF_DIAG_BANK1 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Schlauchabfalldiagnose fuer Bank 1 ist durchgelaufen |
 | STAT_OPF_DIAG_BANK2 | 0/1 | - | unsigned char | 0x04 | - | - | - | - | Schlauchabfalldiagnose fuer Bank 2 ist durchgelaufen |
 
-<a id="table-bf-0x4105-0"></a>
 ### BF_0X4105_0
 
 Dimensions: 6 rows × 10 columns
@@ -11891,7 +11480,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_FUELSYSTEM_MONITOR | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Ueberwachung Kraftstoffsystem: 0=Test wird durch dieses Modul nicht unterstuetzt, 1=Test wird durch dieses Modul unterstuetzt |
 | STAT_MISSFIRE_MONITOR | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Ueberwachung Verbrennungsaussetzer: 0=Test wird durch dieses Modul nicht unterstuetzt, 1=Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-bf-0x4105-1"></a>
 ### BF_0X4105_1
 
 Dimensions: 8 rows × 10 columns
@@ -11907,7 +11495,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_HKATRDY_EIN | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Ueberwachung Katalysatorheizung: 0=Test abgeschlossen oder nicht anwendbar, 1=Test nicht abgeschlossen |
 | STAT_KATRDY_EIN | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Ueberwachung Katalysator: 0=Test abgeschlossen oder nicht anwendbar, 1=Test nicht abgeschlossen |
 
-<a id="table-bf-0x4105-2"></a>
 ### BF_0X4105_2
 
 Dimensions: 8 rows × 10 columns
@@ -11923,7 +11510,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_HKATMON_EIN | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Ueberwachung Katalysatorheizung: 0=Test wird durch dieses Modul nicht unterstuetzt, 1=Test wird durch dieses Modul unterstuetzt |
 | STAT_KATMON_EIN | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Ueberwachung Katalysator: 0=Test wird durch dieses Modul nicht unterstuetzt, 1=Test wird durch dieses Modul unterstuetzt |
 
-<a id="table-bf-0xf025-0"></a>
 ### BF_0XF025_0
 
 Dimensions: 8 rows × 10 columns
@@ -11939,7 +11525,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_EV7_AUSBL | 0/1 | - | unsigned char | 0x40 | - | - | - | - | Status ausgeblendetes logisches Ventil 7 |
 | STAT_EV8_AUSBL | 0/1 | - | unsigned char | 0x80 | - | - | - | - | Status ausgeblendetes logisches Ventil 8 |
 
-<a id="table-bf-0xf027-0"></a>
 ### BF_0XF027_0
 
 Dimensions: 8 rows × 10 columns
@@ -11955,7 +11540,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VVTL_BIT6 | 0/1 | - | unsigned char | 0x40 | - | - | - | - | Auswertung Bit 6Fehler VVT-Sensor, Leistungsversorgung oder Stellglied |
 | STAT_VVTL_BIT7 | 0/1 | - | unsigned char | 0x80 | - | - | - | - | Auswertung Bit 7Ruecknahme Lernanforderung |
 
-<a id="table-bf-0xf045-0"></a>
 ### BF_0XF045_0
 
 Dimensions: 7 rows × 10 columns
@@ -11970,7 +11554,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_ALG_ABSCHALTUNG_EWG | 0/1 | - | unsigned char | 0x20 | - | - | - | - | allgemeine Abschaltung Reglerausgang (siehe Fehlerspeicher) |
 | STAT_WARNSCH_UEBTEMP_EWG | 0/1 | - | unsigned char | 0x40 | - | - | - | - | Warnschwelle Uebertemperatur eWG vorhanden |
 
-<a id="table-bf-0xf04e-0"></a>
 ### BF_0XF04E_0
 
 Dimensions: 6 rows × 10 columns
@@ -11984,7 +11567,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_WMM_KLEMMT_GESCHLOSSEN | 0/1 | - | unsigned long | 0x0200 | - | - | - | - | WMM Modul Steller Klemmt im geschlossenen Zustand Ausgabe Bit aus Statuswort21/15 ACTR_JAMVLVCLSD_BP Stellglied klemmt in geschlossener Position |
 | STAT_REGELABWEICHUNG | 0/1 | - | unsigned long | 0x08 | - | - | - | - | WMM Modul bleibende Regelabweichung erkannt Ausgabe Bit aus Statuswort8/8 ACTR_GOVDVT_BP bleibende Regelabweichung erkannt |
 
-<a id="table-bf-0xf06a-0"></a>
 ### BF_0XF06A_0
 
 Dimensions: 8 rows × 10 columns
@@ -12000,7 +11582,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_BDE_STSYSTEST_BIT25 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Status maximaler Niederdruck |
 | STAT_BDE_STSYSTEST_BIT24 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | nicht belegt |
 
-<a id="table-bf-0xf06a-1"></a>
 ### BF_0XF06A_1
 
 Dimensions: 8 rows × 10 columns
@@ -12016,7 +11597,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_BDE_STSYSTEST_BIT17 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Drehzahl falsch |
 | STAT_BDE_STSYSTEST_BIT16 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Motortemperatur |
 
-<a id="table-bf-0xf06a-2"></a>
 ### BF_0XF06A_2
 
 Dimensions: 8 rows × 10 columns
@@ -12032,7 +11612,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_BDE_STSYSTEST_BIT9 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | nicht belegt |
 | STAT_BDE_STSYSTEST_BIT8 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | nicht belegt |
 
-<a id="table-bf-0xf06a-3"></a>
 ### BF_0XF06A_3
 
 Dimensions: 8 rows × 10 columns
@@ -12048,7 +11627,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_BDE_STSYSTEST_BIT1 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | BDETEST erfolgreich durchgelaufen |
 | STAT_BDE_STSYSTEST_BIT0 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | BDETEST gefordert, Freigabebedingungen erfuellt, keine Fehler |
 
-<a id="table-bf-0xf0d5-0"></a>
 ### BF_0XF0D5_0
 
 Dimensions: 8 rows × 10 columns
@@ -12064,7 +11642,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ECRAS_UP_ERR1 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Klappe oben blockiert! |
 | STAT_ECRAS_UP_ERR0 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Fehler im Luftklappengesamtsystem (0=nicht vorhanden; 1= vorhanden) |
 
-<a id="table-bf-0xf0d5-1"></a>
 ### BF_0XF0D5_1
 
 Dimensions: 2 rows × 10 columns
@@ -12074,7 +11651,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ECRAS_UP_DIAG_END9 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Werkssystemtest erfolgreich (0= nicht erfolgreich, 1= erfolgreich) |
 | STAT_ECRAS_UP_DIAG_END8 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Werkssystemtest gelaufen (0= nicht durchgelaufen, 1= durchgelaufen) |
 
-<a id="table-bf-0xf0d5-2"></a>
 ### BF_0XF0D5_2
 
 Dimensions: 8 rows × 10 columns
@@ -12090,7 +11666,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ECRAS_UP_DIAG_END1 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | Status Kommunikationsdiagnose auf Framefehler (0= noch nicht durchgefuehrt, 1= beendet) |
 | STAT_ECRAS_UP_DIAG_END0 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Status Kommunikationsdiagnose auf LIN Botschaften (0= noch nicht durchgefuehrt, 1= beendet) |
 
-<a id="table-bf-0xf0d5-3"></a>
 ### BF_0XF0D5_3
 
 Dimensions: 8 rows × 10 columns
@@ -12106,7 +11681,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ECRAS_UP1 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | AKKS-LIN geschlossen (0= nicht geschlossen; 1= geschlossen) |
 | STAT_ECRAS_UP0 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Variante AKKS-LIN (0=nicht vorhanden; 1= vorhanden) |
 
-<a id="table-bf-0xf0d5-4"></a>
 ### BF_0XF0D5_4
 
 Dimensions: 8 rows × 10 columns
@@ -12122,7 +11696,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ECRAS_DOWN1 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | elektrischer Fehler PKKS (0=nicht vorhanden; 1= vorhanden) |
 | STAT_ECRAS_DOWN0 | 0/1 | - | unsigned char | 0x01 | - | - | - | - | Variante PKKS (0=nicht vorhanden; 1= vorhanden) |
 
-<a id="table-bf-0xf0d9-0"></a>
 ### BF_0XF0D9_0
 
 Dimensions: 5 rows × 10 columns
@@ -12135,7 +11708,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_LR_AUS_BIT3 | 0/1 | - | unsigned char | 0x08 | - | - | - | - | Auswertung Bit 3Open Loop - Fehler erkannt |
 | STAT_LR_AUS_BIT4 | 0/1 | - | unsigned char | 0x10 | - | - | - | - | Auswertung Bit 4Closed Loop - Min. eine Lambdasonde fehlerhaft. U.u. in Einzelbetrieb |
 
-<a id="table-bf-0xf0ea-0"></a>
 ### BF_0XF0EA_0
 
 Dimensions: 8 rows × 10 columns
@@ -12151,7 +11723,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ON_ST_MSB_BIT6_SENSOR_MESSW_NIO | 0/1 | - | unsigned char | 0x40 | - | - | - | - | Messwerte vom Sensor (0=k.A. 1=Keine Messwerte vom Sensor) |
 | STAT_ON_ST_MSB_BIT7_APPLKDATA_NIO | 0/1 | - | unsigned char | 0x80 | - | - | - | - | Applikationsdaten (0=k.A. 1=Keine Applikationsdaten) |
 
-<a id="table-bf-0xf0ea-1"></a>
 ### BF_0XF0EA_1
 
 Dimensions: 8 rows × 10 columns
@@ -12167,7 +11738,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ON_ST_LSB_BED_BIT6_NMOT | 0/1 | - | unsigned char | 0x40 | - | - | - | - | Motordrehzahl (0=Randbedingung i.O. 1=Randbedingung n.i.O.:Motordrehzahl n.i.O.) |
 | STAT_ON_ST_LSB_BED_BIT7_MOTOEL | 0/1 | - | unsigned char | 0x80 | - | - | - | - | Motoroeltemp. (0=Randbedingung i.O. 1=Randbedingung n.i.O.: Motoroeltemp. n.i.O.) |
 
-<a id="table-bf-0xf0ec-0"></a>
 ### BF_0XF0EC_0
 
 Dimensions: 8 rows × 10 columns
@@ -12183,7 +11753,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ON_ST_MSB_BIT6_SENSOR_MESSW_NIO | 0/1 | - | unsigned char | 0x40 | - | - | - | - | Messwerte vom Sensor (0=k.A. 1=Keine Messwerte vom Sensor) |
 | STAT_ON_ST_MSB_BIT7_APPLKDATA_NIO | 0/1 | - | unsigned char | 0x80 | - | - | - | - | Applikationsdaten (0=k.A. 1=Keine Applikationsdaten) |
 
-<a id="table-bf-0xf0ec-1"></a>
 ### BF_0XF0EC_1
 
 Dimensions: 8 rows × 10 columns
@@ -12199,7 +11768,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ON_ST_LSB_BED_BIT6_NMOT | 0/1 | - | unsigned char | 0x40 | - | - | - | - | Motordrehzahl (0=Randbedingung i.O. 1=Randbedingung n.i.O.:Motordrehzahl n.i.O.) |
 | STAT_ON_ST_LSB_BED_BIT7_MOTOEL | 0/1 | - | unsigned char | 0x80 | - | - | - | - | Motoroeltemp. (0=Randbedingung i.O. 1=Randbedingung n.i.O.: Motoroeltemp. n.i.O.) |
 
-<a id="table-bf-0xf0fd-0"></a>
 ### BF_0XF0FD_0
 
 Dimensions: 7 rows × 10 columns
@@ -12214,7 +11782,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_ALG_ABSCHALTUNG_EWG | 0/1 | - | unsigned char | 0x20 | - | - | - | - | allgemeine Abschaltung Reglerausgang (siehe Fehlerspeicher) |
 | STAT_WARNSCH_UEBTEMP_EWG | 0/1 | - | unsigned char | 0x40 | - | - | - | - | Warnschwelle Uebertemperatur eWG vorhanden |
 
-<a id="table-bf-0xf109-0"></a>
 ### BF_0XF109_0
 
 Dimensions: 10 rows × 10 columns
@@ -12232,7 +11799,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_AKKS_1_WERKSSYSTEMTEST_ENDE_BIT_8 | 0/1 | - | unsigned int | 0x0100 | - | - | - | - | AKKS-Werkssystemtest durchgelaufen (0=nicht durchlaufen, 1 = durchlaufen) |
 | STAT_AKKS_1_WERKSSYSTEMTEST_FUNKTION_BIT_9 | 0/1 | - | unsigned int | 0x0200 | - | - | - | - | AKKS-Werkssystemtest Ergebnis (0=Fehler erkannt, 1 = kein Fehler erkannt) |
 
-<a id="table-bf-0xf10a-0"></a>
 ### BF_0XF10A_0
 
 Dimensions: 10 rows × 10 columns
@@ -12250,7 +11816,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_AKKS_2_WERKSSYSTEMTEST_ENDE_BIT_8 | 0/1 | - | unsigned int | 0x0100 | - | - | - | - | AKKS-Werkssystemtest durchgelaufen (0=nicht durchlaufen, 1 = durchlaufen) |
 | STAT_AKKS_2_WERKSSYSTEMTEST_FUNKTION_BIT_9 | 0/1 | - | unsigned int | 0x0200 | - | - | - | - | AKKS-Werkssystemtest Ergebnis (0=Fehler erkannt, 1 = kein Fehler erkannt) |
 
-<a id="table-bf-0xf110-0"></a>
 ### BF_0XF110_0
 
 Dimensions: 2 rows × 10 columns
@@ -12260,7 +11825,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FREIGABE_KSU | 0-n | - | unsigned long | 0x01 | T_4BYTE_TEXT_ST_KSU_DOP | - | - | - | Status der Freigabe der KSU |
 | STAT_DUMMY | 0/1 | - | unsigned long | 0x01 | - | - | - | - | Dummy Parameter |
 
-<a id="table-bf-3010-byte-1"></a>
 ### BF_3010_BYTE_1
 
 Dimensions: 2 rows × 10 columns
@@ -12270,7 +11834,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MIL | 0-n | high | unsigned char | 0x0F | BF_DISC_NIBBLE | - | - | - | MIL |
 | STAT_UNUSED_1 | 0-n | high | unsigned char | 0xF0 | BF_DISC_NIBBLE_HIGH | - | - | - | Unused. |
 
-<a id="table-bf-3010-byte-3"></a>
 ### BF_3010_BYTE_3
 
 Dimensions: 2 rows × 10 columns
@@ -12280,7 +11843,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_LK | 0-n | high | unsigned char | 0x0F | BF_DISC_NIBBLE | - | - | - | LK-Codierung. |
 | STAT_UNUSED_3 | 0-n | high | unsigned char | 0xF0 | BF_DISC_NIBBLE_HIGH | - | - | - | Unused |
 
-<a id="table-bf-3010-byte-4"></a>
 ### BF_3010_BYTE_4
 
 Dimensions: 2 rows × 10 columns
@@ -12290,7 +11852,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ANTRIEBSVARIANTE | 0-n | high | unsigned char | 0x0F | BF_DISC_NIBBLE | - | - | - | 0: init 1: heck 2: Allrad 3: front |
 | STAT_UNUSED_4 | 0-n | high | unsigned char | 0xf0 | BF_DISC_NIBBLE_HIGH | - | - | - | unused |
 
-<a id="table-bf-3010-byte-7"></a>
 ### BF_3010_BYTE_7
 
 Dimensions: 2 rows × 10 columns
@@ -12300,7 +11861,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HFM | 0-n | high | unsigned char | 0x0f | BF_DISC_NIBBLE | - | - | - | HFM |
 | STAT_UNUSED_7 | 0-n | high | unsigned char | 0xf0 | BF_DISC_NIBBLE_HIGH | - | - | - | Unused |
 
-<a id="table-bf-3010-byte-9"></a>
 ### BF_3010_BYTE_9
 
 Dimensions: 4 rows × 10 columns
@@ -12312,7 +11872,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_UNUSED_9_1 | 0-n | high | unsigned char | 0x0E | BF_DISC_3BIT | - | - | - | Unused |
 | STAT_UNUSED_9_2 | 0-n | high | unsigned char | 0xF0 | BF_DISC_NIBBLE_HIGH | - | - | - | Unused |
 
-<a id="table-bf-3020-byte-12"></a>
 ### BF_3020_BYTE_12
 
 Dimensions: 2 rows × 10 columns
@@ -12322,7 +11881,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_E_LUEFTER_BUS | 0-n | high | unsigned char | 0x0f | BF_DISC_NIBBLE | - | - | - | E_LUEFTER_BUS |
 | STAT_LLK_CAC | 0-n | high | unsigned char | 0xf0 | BF_DISC_NIBBLE_HIGH | - | - | - | Ladeluftkühler / Charge Air Cooling |
 
-<a id="table-bf-3020-byte-13"></a>
 ### BF_3020_BYTE_13
 
 Dimensions: 2 rows × 10 columns
@@ -12332,7 +11890,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DMDZMS | 0-n | high | unsigned char | 0x0f | BF_DISC_NIBBLE | - | - | - | DMDZMS |
 | STAT_AKKS | 0-n | high | unsigned char | 0xf0 | BF_DISC_NIBBLE_HIGH | - | - | - | AKKS |
 
-<a id="table-bf-3020-byte-19"></a>
 ### BF_3020_BYTE_19
 
 Dimensions: 4 rows × 10 columns
@@ -12344,7 +11901,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_UNUSED_19_1 | 0-n | high | unsigned char | 0x0C | BF_DISC_2BIT | - | - | - | Unused |
 | STAT_UNUSED_19_2 | 0-n | high | unsigned char | 0xF0 | BF_DISC_NIBBLE_HIGH | - | - | - | Unused |
 
-<a id="table-bf-3020-byte-26"></a>
 ### BF_3020_BYTE_26
 
 Dimensions: 8 rows × 10 columns
@@ -12360,7 +11916,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_HC2 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | HC2 |
 | STAT_MRR | 0/1 | high | unsigned char | 0x80 | - | - | - | - | Mid-Range-Radar (Radargerät zur Entfernungs- und Positionserkennung mit 100 bis 200 m Reichweite) |
 
-<a id="table-bf-3020-byte-27"></a>
 ### BF_3020_BYTE_27
 
 Dimensions: 5 rows × 10 columns
@@ -12373,7 +11928,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_VDP_BSW | 0/1 | high | unsigned char | 0x40 | - | - | - | - | VDP_BSW |
 | STAT_LP_CAN | 0/1 | high | unsigned char | 0x80 | - | - | - | - | LP_CAN |
 
-<a id="table-bf-3020-byte-3"></a>
 ### BF_3020_BYTE_3
 
 Dimensions: 2 rows × 10 columns
@@ -12383,7 +11937,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_IGR | 0-n | high | unsigned char | 0x0f | BF_DISC_NIBBLE | - | - | - | IGR |
 | STAT_BUDS | 0-n | high | unsigned char | 0xf0 | BF_DISC_NIBBLE_HIGH | - | - | - | BUDS |
 
-<a id="table-bf-3020-byte-30"></a>
 ### BF_3020_BYTE_30
 
 Dimensions: 4 rows × 10 columns
@@ -12395,7 +11948,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_UNUSED_30_2 | 0/1 | high | unsigned char | 0x08 | - | - | - | - | Unused |
 | STAT_UNUSED_30_3 | 0-n | high | unsigned char | 0xF0 | BF_DISC_NIBBLE_HIGH | - | - | - | Unused |
 
-<a id="table-bf-3020-byte-32"></a>
 ### BF_3020_BYTE_32
 
 Dimensions: 2 rows × 10 columns
@@ -12405,7 +11957,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MONTHOVERDUELIMIT1 | 0-n | high | unsigned char | 0x0F | BF_DISC_NIBBLE | - | - | - | MonthOverdueLimit1 |
 | STAT_RESETBEHAVIOUR1 | 0/1 | high | unsigned char | 0x10 | - | - | - | - | ResetBehaviour1 |
 
-<a id="table-bf-3020-byte-34"></a>
 ### BF_3020_BYTE_34
 
 Dimensions: 3 rows × 10 columns
@@ -12416,7 +11967,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SGLIA | 0/1 | high | unsigned char | 0x04 | - | - | - | - | Segeln im Aufstartmodus |
 | STAT_ENGSTRTMOD | 0/1 | high | unsigned char | 0x08 | - | - | - | - | Motorstartinszenierung |
 
-<a id="table-bf-3020-byte-48"></a>
 ### BF_3020_BYTE_48
 
 Dimensions: 2 rows × 10 columns
@@ -12426,7 +11976,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MONTHOVERDUELIMIT7 | 0-n | high | unsigned char | 0x0F | BF_DISC_NIBBLE | - | - | - | MonthOverdueLimit7 |
 | STAT_RESETBEHAVIOUR7 | 0/1 | high | unsigned char | 0x10 | - | - | - | - | ResetBehaviour7 |
 
-<a id="table-bf-3020-byte-49"></a>
 ### BF_3020_BYTE_49
 
 Dimensions: 8 rows × 10 columns
@@ -12442,7 +11991,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MSA_CONNECTED_BIT_14 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | MSA_Connected_Bit_14 |
 | STAT_MSA_CONNECTED_BIT_15 | 0/1 | high | unsigned char | 0x80 | - | - | - | - | MSA_Connected_Bit_15 |
 
-<a id="table-bf-3020-byte-50"></a>
 ### BF_3020_BYTE_50
 
 Dimensions: 8 rows × 10 columns
@@ -12458,7 +12006,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MSA_CONNECTED_BIT_22 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | MSA_Connected_Bit_22 |
 | STAT_MSA_CONNECTED_BIT_23 | 0/1 | high | unsigned char | 0x80 | - | - | - | - | MSA_Connected_Bit_23 |
 
-<a id="table-bf-3020-byte-51"></a>
 ### BF_3020_BYTE_51
 
 Dimensions: 8 rows × 10 columns
@@ -12474,7 +12021,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MSA_CONNECTED_BIT_30 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | MSA_Connected_Bit_30 |
 | STAT_MSA_CONNECTED_BIT_31 | 0/1 | high | unsigned char | 0x80 | - | - | - | - | MSA_Connected_Bit_31 |
 
-<a id="table-bf-3020-fepm-bordnetztopologie"></a>
 ### BF_3020_FEPM_BORDNETZTOPOLOGIE
 
 Dimensions: 8 rows × 10 columns
@@ -12490,7 +12036,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_FEPM_BORDNETZTOPOLOGIE_BIT_6 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | fEPM_Bordnetztopologie_Bit_6 |
 | STAT_FEPM_BORDNETZTOPOLOGIE_BIT_7 | 0/1 | high | unsigned char | 0x80 | - | - | - | - | fEPM_Bordnetztopologie_Bit_7 |
 
-<a id="table-bf-3020-msaconnected"></a>
 ### BF_3020_MSACONNECTED
 
 Dimensions: 8 rows × 10 columns
@@ -12506,7 +12051,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MSA_CONNECTED_BIT_6 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | MSA_Connected_Bit_6 |
 | STAT_MSA_CONNECTED_BIT_7 | 0/1 | high | unsigned char | 0x80 | - | - | - | - | MSA_Connected_Bit_7 |
 
-<a id="table-bf-disc-2bit"></a>
 ### BF_DISC_2BIT
 
 Dimensions: 5 rows × 2 columns
@@ -12519,7 +12063,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | 3 |
 | 0xFF | Wert ungültig |
 
-<a id="table-bf-disc-3bit"></a>
 ### BF_DISC_3BIT
 
 Dimensions: 9 rows × 2 columns
@@ -12536,7 +12079,6 @@ Dimensions: 9 rows × 2 columns
 | 0xE | 7 |
 | 0xFF | Wert ungültig |
 
-<a id="table-bf-disc-byte-28"></a>
 ### BF_DISC_BYTE_28
 
 Dimensions: 6 rows × 10 columns
@@ -12550,7 +12092,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_LKS_UNTEN | 0/1 | high | unsigned char | 0x10 | - | - | - | - | LKS_UNTEN |
 | STAT_DISC_NIBBLE_HIGH_E0 | 0-n | high | unsigned char | 0xE0 | BF_DISC_NIBBLE_HIGH_E0 | - | - | - | Unused |
 
-<a id="table-bf-disc-nibble"></a>
 ### BF_DISC_NIBBLE
 
 Dimensions: 17 rows × 2 columns
@@ -12575,7 +12116,6 @@ Dimensions: 17 rows × 2 columns
 | 15 | F |
 | 0xFF | Wert ungültig |
 
-<a id="table-bf-disc-nibble-high"></a>
 ### BF_DISC_NIBBLE_HIGH
 
 Dimensions: 17 rows × 2 columns
@@ -12600,7 +12140,6 @@ Dimensions: 17 rows × 2 columns
 | 0xF0 | F |
 | 0xFF | Wert ungültig |
 
-<a id="table-bf-disc-nibble-high-e0"></a>
 ### BF_DISC_NIBBLE_HIGH_E0
 
 Dimensions: 9 rows × 2 columns
@@ -12617,7 +12156,6 @@ Dimensions: 9 rows × 2 columns
 | 0xE0 | 7 |
 | 0xFF | Wert ungültig |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -12631,7 +12169,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-f2xxblacklist"></a>
 ### F2XXBLACKLIST
 
 Dimensions: 1 rows × 2 columns
@@ -12640,7 +12177,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0x00 | 0xF299 |
 
-<a id="table-f3xxblacklist"></a>
 ### F3XXBLACKLIST
 
 Dimensions: 7 rows × 2 columns
@@ -12655,7 +12191,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | 0xF30D |
 | 0x06 | 0xF305 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -12669,7 +12204,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 3 |
 | F_HLZ_VIEW | ja |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 3527 rows × 4 columns
@@ -16204,7 +15738,6 @@ Dimensions: 3527 rows × 4 columns
 | 0xCDFA04 | FA-CAN, Botschaft (Schlafbereitschaft Global FZM, 0x3A5): fehlt | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fsctyp1"></a>
 ### FSCTYP1
 
 Dimensions: 7 rows × 2 columns
@@ -16219,7 +15752,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | SWT short |
 | 0xFF | unbekannt |
 
-<a id="table-fsctyp1ret"></a>
 ### FSCTYP1RET
 
 Dimensions: 3 rows × 2 columns
@@ -16230,7 +15762,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | FSC retten |
 | 0xFF | unbekannt |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1498 rows × 9 columns
@@ -17736,7 +17267,6 @@ Dimensions: 1498 rows × 9 columns
 | 0x5A18 | Selbsterkennungs-Status bis zur Freeze-Time | - | - | unsigned char | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-grobname"></a>
 ### GROBNAME
 
 Dimensions: 118 rows × 2 columns
@@ -17862,7 +17392,6 @@ Dimensions: 118 rows × 2 columns
 | 0xAB | MMCDSP |
 | 0xXY | ???? |
 
-<a id="table-ibs-deak"></a>
 ### IBS_DEAK
 
 Dimensions: 10 rows × 2 columns
@@ -17880,7 +17409,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und kein Fehler erkannt |
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -17893,7 +17421,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 3527 rows × 4 columns
@@ -21428,7 +20955,6 @@ Dimensions: 3527 rows × 4 columns
 | 0xCDFA04 | FA-CAN, Botschaft (Schlafbereitschaft Global FZM, 0x3A5): fehlt | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1498 rows × 9 columns
@@ -22934,7 +22460,6 @@ Dimensions: 1498 rows × 9 columns
 | 0x5A18 | Selbsterkennungs-Status bis zur Freeze-Time | - | - | unsigned char | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 18 rows × 2 columns
@@ -22960,7 +22485,6 @@ Dimensions: 18 rows × 2 columns
 | 0x100F | Fehler Argument Wert im negativ Bereich |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-lernwerte-codierwerte"></a>
 ### LERNWERTE_CODIERWERTE
 
 Dimensions: 19 rows × 5 columns
@@ -22987,7 +22511,6 @@ Dimensions: 19 rows × 5 columns
 | 18 | 3 | 0x10 | STAT_LKKS_UNTEN | Luftklappensteuerung unten LKKS-unten |
 | 19 | 5 | 0x04 | STAT_SAS | Sonderausstattungssteuergerät SAS |
 
-<a id="table-msd85uds-cnv-s-2-def-bit-ub-741-cm"></a>
 ### MSD85UDS_CNV_S_2_DEF_BIT_UB_741_CM
 
 Dimensions: 2 rows × 2 columns
@@ -22997,7 +22520,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | -- |
 | 1 | -- |
 
-<a id="table-obd-radar-diagkanid-tab"></a>
 ### OBD_RADAR_DIAGKANID_TAB
 
 Dimensions: 27 rows × 2 columns
@@ -23032,7 +22554,6 @@ Dimensions: 27 rows × 2 columns
 | 0x001A | MisfDet_nrFltIdEmiStrt_C Emissionsrelevante Aussetzer nach Start |
 | 0xFFFF | Kanal-ID nicht Definiert |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -23050,7 +22571,6 @@ Dimensions: 10 rows × 2 columns
 | 0x43 | HDDUpdateSession |
 | 0xff | ungültig |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -23062,7 +22582,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | ECU nicht mehr programmierbar |
 | 0xff | ungültig |
 
-<a id="table-res-0x1061-r"></a>
 ### RES_0X1061_R
 
 Dimensions: 1 rows × 13 columns
@@ -23071,7 +22590,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_ENDE_WABL | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 0: Verriegelt (loeschen von Einzelfehlern und PDTCs wird unterbunden) 1: Entriegelt (loeschen von Einzelfehlern und PDTCs wird nicht unterbunden) |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -23082,7 +22600,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -23096,7 +22613,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x3010-d"></a>
 ### RES_0X3010_D
 
 Dimensions: 9 rows × 10 columns
@@ -23113,7 +22629,6 @@ Dimensions: 9 rows × 10 columns
 | - | Bit | high | BITFIELD | - | BF_3010_BYTE_9 | - | - | - | Codierung Byte 9 |
 | STAT_UNUSED_100_BSR_DATA | DATA | high | data[90] | - | - | 1.0 | 1.0 | 0.0 | Unused BSR |
 
-<a id="table-res-0x3020-d"></a>
 ### RES_0X3020_D
 
 Dimensions: 52 rows × 10 columns
@@ -23173,7 +22688,6 @@ Dimensions: 52 rows × 10 columns
 | STAT_LKS_GEOMETRIEPARAMETER_WERT | HEX | high | unsigned char | - | - | - | - | - | LKS_GeometrieParameter |
 | STAT_UNUSED_100_BSU_DATA | DATA | high | data[47] | - | - | 1.0 | 1.0 | 0.0 | Unused BSU |
 
-<a id="table-res-0x4000-d"></a>
 ### RES_0X4000_D
 
 Dimensions: 24 rows × 10 columns
@@ -23205,7 +22719,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_KLOPFWERT_SPANNUNG_ZYL7_WERT | V*ms | - | unsigned long | - | - | 0.05 | 65536.0 | 0.0 | Spannung Klopfwerte Zylinder 7 (phys). |
 | STAT_KLOPFWERT_SPANNUNG_ZYL8_WERT | V*ms | - | unsigned long | - | - | 0.05 | 65536.0 | 0.0 | Spannung Klopfwerte Zylinder 8 (phys). |
 
-<a id="table-res-0x4006-d"></a>
 ### RES_0X4006_D
 
 Dimensions: 16 rows × 10 columns
@@ -23229,7 +22742,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_B_PHADA | 0-n | - | unsigned char | - | T_B_PHADE_JOB_DOP | - | - | - | Adaption Kurbel/Auslassnockenwelle erfolgt. |
 | STAT_B_PHADE | 0-n | - | unsigned char | - | T_B_PHADA_JOB_DOP | - | - | - | Adaption Kurbel/Einlassnockenwelle erfolgt. |
 
-<a id="table-res-0x4006-r"></a>
 ### RES_0X4006_R
 
 Dimensions: 1 rows × 13 columns
@@ -23238,7 +22750,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RAM_DATEN_SCHREIBEN | - | - | + | 0-n | high | unsigned char | - | STATUS_RAM_DATEN_SCHREIBEN_TAB | - | - | - | Status RAM_DATEN_SCHREIBEN |
 
-<a id="table-res-0x4007-d"></a>
 ### RES_0X4007_D
 
 Dimensions: 2 rows × 10 columns
@@ -23248,7 +22759,6 @@ Dimensions: 2 rows × 10 columns
 | - | Bit | - | BITFIELD | - | BF_0x4007_0 | - | - | - | Bitfeld 1 Statusinformationen fuer Schalterstellungen |
 | - | Bit | - | BITFIELD | - | BF_0x4007_1 | - | - | - | Bitfeld 2 Statusinformationen fuer Schalterstellungen |
 
-<a id="table-res-0x400a-d"></a>
 ### RES_0X400A_D
 
 Dimensions: 4 rows × 10 columns
@@ -23260,7 +22770,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_PWM_UP_1_WERT | % | - | unsigned int | - | - | 0.00305176 | 1.0 | 0.0 | Tastverhaeltnis fuer Lambdasondenheizung fuer Bank 1. |
 | STAT_PWM_UP_2_WERT | % | - | unsigned int | - | - | 0.00305176 | 1.0 | 0.0 | Tastverhaeltnis fuer Lambdasondenheizung fur Bank 2. |
 
-<a id="table-res-0x400b-d"></a>
 ### RES_0X400B_D
 
 Dimensions: 8 rows × 10 columns
@@ -23276,7 +22785,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_NOTL_VVT | 0-n | - | unsigned char | - | T_B_VVTNOTL_DOP | - | - | - | VVT-Notlaufzustand |
 | STAT_SUEL_VVT_WERT | - | - | unsigned char | - | - | - | - | - | VVT-Systemueberlast |
 
-<a id="table-res-0x4015-d"></a>
 ### RES_0X4015_D
 
 Dimensions: 88 rows × 10 columns
@@ -23372,7 +22880,6 @@ Dimensions: 88 rows × 10 columns
 | STAT_TANSB4_WERT | % | - | unsigned int | - | - | 100.0 | 65536.0 | 0.0 | prozentuale Zeit, in der gilt: Ansauglufttemperatur zwischen 60 Grad C und 70 Grad C |
 | STAT_TANSB5_WERT | % | - | unsigned int | - | - | 100.0 | 65536.0 | 0.0 | prozentuale Zeit, in der gilt: Ansauglufttemperatur > 70 Grad C |
 
-<a id="table-res-0x4025-d"></a>
 ### RES_0X4025_D
 
 Dimensions: 4 rows × 10 columns
@@ -23384,7 +22891,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_I_HAL_HA_WERT | - | - | unsigned int | - | - | 0.00097656 | 1.0 | 0.0 | Die aktuell im Lern-/verifikationszyklus bestimmte Uebersetzungsverhaeltnis der Hinterachse. |
 | STAT_STATUS_KSU | 0-n | - | unsigned char | - | T_STATE_KSU_INTERN_DOP | - | - | - | Interne Status der Kupplungsschlupfunterdrueckungsfunktion KSU. |
 
-<a id="table-res-0x4026-d"></a>
 ### RES_0X4026_D
 
 Dimensions: 20 rows × 10 columns
@@ -23412,7 +22918,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_SO2COMP2_WERT | - | - | unsigned int | - | - | - | - | - | SO2 Sensor Monitor Completion Condition Counts Bank 2 (Numerator) |
 | STAT_SO2COND2_WERT | - | - | unsigned int | - | - | - | - | - | SO2 Sensor Monitor Conditions Encountered Counts Bank 2 (Denominator) |
 
-<a id="table-res-0x402e-d"></a>
 ### RES_0X402E_D
 
 Dimensions: 7 rows × 10 columns
@@ -23427,7 +22932,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_MOT_DREHT | 0-n | - | unsigned char | - | T_B_STANDARD_1BYTE_LESEN_0_1 | - | - | - | Motor laeuft (0=falsch 1= wahr) |
 | STAT_NG_IM_LF | 0-n | - | unsigned char | - | T_B_STANDARD_1BYTE_LESEN_0_1 | - | - | - | Sensorwert im Lernfenster (kein Gang eingelegt) (0=falsch 1= wahr) |
 
-<a id="table-res-0x4035-d"></a>
 ### RES_0X4035_D
 
 Dimensions: 13 rows × 10 columns
@@ -23448,7 +22952,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_KM5_WERT | km | - | unsigned int | - | - | 8.0 | 1.0 | 0.0 | Kilometerstand 5 |
 | STAT_KM5QB_WERT | - | - | unsigned char | - | - | - | - | - | Qualitaetsbereich bei Kilometerstand 5 |
 
-<a id="table-res-0x4038-d"></a>
 ### RES_0X4038_D
 
 Dimensions: 6 rows × 10 columns
@@ -23462,7 +22965,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_CHIPVERSION_WERT | - | - | unsigned char | - | - | - | - | - | Chipversion |
 | STAT_LEISTUNGSKLASSE_ELEKTR_WERT | A | - | unsigned char | - | - | 5.0 | 1.0 | 0.0 | Leistungsklasse in Ampere |
 
-<a id="table-res-0x403c-d"></a>
 ### RES_0X403C_D
 
 Dimensions: 8 rows × 10 columns
@@ -23478,7 +22980,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_SUBCALID_SWFK_WERT | HEX | - | unsigned long | - | - | - | - | - | Eingebrachte Sub-CAL-ID des SWFK |
 | STAT_SUBCVN_SWFK_WERT | HEX | - | unsigned long | - | - | - | - | - | Berechnete Sub-CVN des SWFK |
 
-<a id="table-res-0x403d-d"></a>
 ### RES_0X403D_D
 
 Dimensions: 19 rows × 10 columns
@@ -23505,7 +23006,6 @@ Dimensions: 19 rows × 10 columns
 | STAT_FAKTOR_ADAP_HIGH_ZYL_7_WERT | - | - | unsigned int | - | - | 0.00003052 | 1.0 | 0.0 | Zylinderindividuelle Adaptionswerte im Highbereich fuer Zylinder 7 (phys). Dient zur Beschreibung, keine logische Zuordnung. |
 | STAT_FAKTOR_ADAP_HIGH_ZYL_8_WERT | - | - | unsigned int | - | - | 0.00003052 | 1.0 | 0.0 | Zylinderindividuelle Adaptionswerte im Highbereich fuer Zylinder 8 (phys). Dient zur Beschreibung, keine logische Zuordnung. |
 
-<a id="table-res-0x4046-d"></a>
 ### RES_0X4046_D
 
 Dimensions: 38 rows × 10 columns
@@ -23551,7 +23051,6 @@ Dimensions: 38 rows × 10 columns
 | STAT_FLRADAP2C_W_14_WERT | - | - | unsigned int | - | - | 0.00003052 | 1.0 | 0.0 | Faktoren aus KLANN-Befragung an applizierten Zentren Bank2 15 |
 | STAT_F_LRLZA2_WERT | - | - | unsigned int | - | - | 0.00003052 | 1.0 | 0.0 | Langzeitadaptions-Faktor aus KLANN Bank2 (NV-Ram) (A2L-Name: frannlza2_w) |
 
-<a id="table-res-0x4048-d"></a>
 ### RES_0X4048_D
 
 Dimensions: 18 rows × 10 columns
@@ -23577,7 +23076,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_ANZAHLCODLK_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl Codierungen Leistungsklasse |
 | STAT_MAXIMALEVVEH_WERT | - | - | unsigned int | - | - | - | - | - | maximale V_VEH |
 
-<a id="table-res-0x404c-d"></a>
 ### RES_0X404C_D
 
 Dimensions: 8 rows × 10 columns
@@ -23593,7 +23091,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_T_PRAIL_MON_XB_YPB_2_1_WERT | s | - | unsigned long | - | - | 0.01 | 1.0 | 0.0 | Raildruckmonitor: aufintegrierte Zeit des Raildrucks Prail_ist_xpb von Rail ix zwischen Schwellen iy. Umrechnung = 0,01 |
 | STAT_T_PRAIL_MON_XB_YPB_3_1_WERT | s | - | unsigned long | - | - | 0.01 | 1.0 | 0.0 | Raildruckmonitor: aufintegrierte Zeit des Raildrucks Prail_ist_xpb von Rail ixzwischen Schwellen iy. Umrechnung = 0,01 |
 
-<a id="table-res-0x404f-d"></a>
 ### RES_0X404F_D
 
 Dimensions: 3 rows × 10 columns
@@ -23604,7 +23101,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_COZ_KMVERBR_WERT | km | - | unsigned long | - | - | - | - | - | Gefahrene Strecke fuer Coz_kvbverbrabs (A2L-NAME=Coz_kmverbr) |
 | STAT_COZ_KVBVERBRABS_WERT | l | - | unsigned long | - | - | 0.01 | 1.0 | 0.0 | Absolute verbrauchte Kraftstoffmenge (A2L-NAME=Coz_kvbverbrabs) |
 
-<a id="table-res-0x407a-d"></a>
 ### RES_0X407A_D
 
 Dimensions: 2 rows × 10 columns
@@ -23614,7 +23110,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SW_DRL_TGOE_DAT_DATA | DATA | - | data[40] | - | - | - | - | - | Temperaturverteilung Getriebeoel [10] |
 | STAT_SW_DRL_TGGL_DAT_DATA | DATA | - | data[40] | - | - | - | - | - | Temperaturverteilung Getriebeglocke [10] |
 
-<a id="table-res-0x407f-d"></a>
 ### RES_0X407F_D
 
 Dimensions: 261 rows × 10 columns
@@ -23883,7 +23378,6 @@ Dimensions: 261 rows × 10 columns
 | STAT_LRP_LAMBDA_IST_19_WERT | - | - | unsigned char | - | - | 1.0 | 128.0 | 0.0 | Lambdaistwert im Infoblock x |
 | STAT_LRP_LAMBDA_IST_20_WERT | - | - | unsigned char | - | - | 1.0 | 128.0 | 0.0 | Lambdaistwert im Infoblock x |
 
-<a id="table-res-0x4083-d"></a>
 ### RES_0X4083_D
 
 Dimensions: 4 rows × 10 columns
@@ -23895,7 +23389,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_FAK_PREDSOHSGR_WERT | - | - | unsigned char | - | - | 0.01 | 1.0 | 0.0 | praediktiver SGR SOH abhaengiger Faktor fuer Degradation in EME |
 | STAT_BETRIEBSSTUNDENZAEHLER_WERT | s | - | unsigned long | - | - | 0.01 | 1.0 | 0.0 | Betriebsstundenzaehler in s |
 
-<a id="table-res-0x408f-d"></a>
 ### RES_0X408F_D
 
 Dimensions: 373 rows × 10 columns
@@ -24276,7 +23769,6 @@ Dimensions: 373 rows × 10 columns
 | STAT_ABW_ZEITOFFEN_ZYL6_WERT | µs | - | signed int | - | - | 0.1 | 1.0 | 0.0 | Offenzeitabweichung im Uebergangsbereich Logischer Zylinder 6 |
 | STAT_ABW_ZEITOFFEN_ZYL7_WERT | µs | - | signed int | - | - | 0.1 | 1.0 | 0.0 | Offenzeitabweichung im Uebergangsbereich Logischer Zylinder 7 |
 
-<a id="table-res-0x4094-d"></a>
 ### RES_0X4094_D
 
 Dimensions: 8 rows × 10 columns
@@ -24292,7 +23784,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MISFDET_RATDSTTOTDMFDSBCSUSPCTOVEHMILG_WERT | - | - | motorola float | - | - | 1.0 | 1000000000.0 | 0.0 | Verhaeltnis Wegstrecke Verdacht auf verklemmte ZMS-Federn zu Kilometerstand.(A2L:MisfDet_ratDstTotDmfDsbcSuspcToVehMilg) |
 | STAT_MISFDET_RATDSTTOTDMFDSBCTOVEHMILG_WERT | - | - | motorola float | - | - | 1.0 | 1000000000.0 | 0.0 | Verhaeltnis Wegstrecke Laufunruhesignal gestoert durch ZMSEinfluesse zu Kilometerstand.(A2L:MisfDet_ratDstTotDmfDsbcToVehMilg) |
 
-<a id="table-res-0x4095-d"></a>
 ### RES_0X4095_D
 
 Dimensions: 10 rows × 10 columns
@@ -24310,7 +23801,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_AVG_IDLMOD_WERT | l/h | - | unsigned int | - | - | 0.001 | 1.0 | 0.0 | Kraftstoffverbrauch im Leerlauf (A2L-NAME: BMWstat_avg_IdlMod_uw). |
 | STAT_TI_IDLMOD_WERT | s | - | unsigned long | - | - | - | - | - | Zeit im Leerlauf (A2L-NAME: BMWstat_ti_IdlMod_ul). |
 
-<a id="table-res-0x4097-d"></a>
 ### RES_0X4097_D
 
 Dimensions: 130 rows × 10 columns
@@ -24448,7 +23938,6 @@ Dimensions: 130 rows × 10 columns
 | STAT_CVO3_STATMASKE_TANTOT_VIS_7_WERT | - | - | unsigned char | - | - | - | - | - | Statusmaske TanTot - Viskositaetsstufe 7 |
 | STAT_CVO3_STATMASKE_TANTOT_VIS_8_WERT | - | - | unsigned char | - | - | - | - | - | Statusmaske TanTot - Viskositaetsstufe 8 |
 
-<a id="table-res-0x409a-d"></a>
 ### RES_0X409A_D
 
 Dimensions: 4 rows × 10 columns
@@ -24460,7 +23949,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_CNT_PAKMX_SOLL_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl der noetigen PAKMX Einzelpruefungen fuer statistischen Fehler (FSP-Ausgabe) (A2L-NAME: SwSABMW_cntEgpChkStcErr). |
 | STAT_F_PAKMX_ERR_WERT | - | - | unsigned char | - | - | 0.00390625 | 1.0 | 0.0 | Statistischer Fehler der PAKMX (Abgasdruck zu hoch). |
 
-<a id="table-res-0x40a0-d"></a>
 ### RES_0X40A0_D
 
 Dimensions: 15 rows × 10 columns
@@ -24483,7 +23971,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_WERK_LUEFTER_WERT | HEX | - | unsigned char | - | - | - | - | - | Produktionswerk Luefterantrieb |
 | STAT_FAM_LUEFTER_WERT | HEX | - | unsigned char | - | - | - | - | - | Produktfamilie Luefterantrieb |
 
-<a id="table-res-0x40a1-d"></a>
 ### RES_0X40A1_D
 
 Dimensions: 8 rows × 10 columns
@@ -24499,7 +23986,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_HISTOGRAMM_FEV_20_WERT | s | - | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Klasse FEV-Signal Bereich ..20% |
 | STAT_HISTOGRAMM_FEV_00_WERT | s | - | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Klasse FEV-Signal Bereich ..00% |
 
-<a id="table-res-0x40a2-d"></a>
 ### RES_0X40A2_D
 
 Dimensions: 5 rows × 10 columns
@@ -24512,7 +23998,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_HISTOGRAMM_TEMP_4_WERT | min | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Klasse Speichertemperatur bei aktiven Erzeuger Bereich [30 Grad C <= T < 60 Grad C] |
 | STAT_HISTOGRAMM_TEMP_5_WERT | min | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Klasse Speichertemperatur bei aktiven Erzeuger Bereich ab [60 Grad C <= T] |
 
-<a id="table-res-0x40a3-d"></a>
 ### RES_0X40A3_D
 
 Dimensions: 6 rows × 10 columns
@@ -24526,7 +24011,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_HISTORIE_KM_KURZ_4_TAGE_WERT | km | - | unsigned int | - | - | - | - | - | Historie km-Stand verkuerzt vor 4 Tagen |
 | STAT_HISTORIE_KM_KURZ_5_TAGE_WERT | km | - | unsigned int | - | - | - | - | - | Historie km-Stand verkuerzt vor 5 Tagen |
 
-<a id="table-res-0x40a4-d"></a>
 ### RES_0X40A4_D
 
 Dimensions: 2 rows × 10 columns
@@ -24536,7 +24020,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ANZ_ENERGIEANGEBOTSERHOEHUNG_FEPM_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl der Energieangebotserhoehung aufgrund Powermanagement |
 | STAT_ANZ_ENERGIEANGEBOTSERHOEHUNG_ELMA_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl der Energieangebotserhoehung aufgrund Elma |
 
-<a id="table-res-0x40a5-d"></a>
 ### RES_0X40A5_D
 
 Dimensions: 6 rows × 10 columns
@@ -24550,7 +24033,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_HISTORIE_USFG_VOR_4_TAGEN_WERT | % | - | signed char | - | - | - | - | - | Historie Startfaehigkeitsgrenze vor 4 Tagen |
 | STAT_HISTORIE_USFG_VOR_5_TAGEN_WERT | % | - | signed char | - | - | - | - | - | Historie Startfaehigkeitsgrenze vor 5 Tagen |
 
-<a id="table-res-0x40a6-d"></a>
 ### RES_0X40A6_D
 
 Dimensions: 13 rows × 10 columns
@@ -24571,7 +24053,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_HISTORIE_LADUNGSBILANZ_ERZEUGER_AUS_VOR_5_TAGEN_WERT | Ah | - | signed char | - | - | - | - | - | Historie Ladungsbilanz bei inaktivem Erzeuger vor 5 Tagen |
 | STAT_HISTORIE_LADUNGSBILANZ_ERZEUGER_EIN_VOR_5_TAGEN_WERT | Ah | - | signed char | - | - | - | - | - | Historie Ladungsbilanz bei aktivem Erzeuger vor 5 Tagen |
 
-<a id="table-res-0x40a8-d"></a>
 ### RES_0X40A8_D
 
 Dimensions: 3 rows × 10 columns
@@ -24582,7 +24063,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_BATTERIEENTLADUNG_GESAMT_WERT | Ah | - | unsigned long | - | - | 0.01 | 1.0 | 0.0 | Gesamtentladungsmenge der Batterie |
 | STAT_BATTERIELADUNG_BILANZ_WERT | Ah | - | signed long | - | - | 0.01 | 1.0 | 0.0 | Ladungsbilanz der Batterie |
 
-<a id="table-res-0x40a9-d"></a>
 ### RES_0X40A9_D
 
 Dimensions: 9 rows × 10 columns
@@ -24599,7 +24079,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_Q_AGM_ERKANNT_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | -126.0 | Qualitaetswert AGM |
 | STAT_FALSCHE_BATTERIE_ERKANNT_WERT | - | - | unsigned char | - | - | - | - | - | Status falsche Batterie erkannt |
 
-<a id="table-res-0x40aa-d"></a>
 ### RES_0X40AA_D
 
 Dimensions: 5 rows × 10 columns
@@ -24612,7 +24091,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_BATTERIETAUSCH_TAGE_LETZTER_WERT | - | - | unsigned int | - | - | - | - | - | Zeit bei letztem Batteriewechsel |
 | STAT_BATTERIETAUSCH_TAGE_VORLETZTER_WERT | - | - | unsigned int | - | - | - | - | - | Zeit bei vorletztem Batteriewechsel |
 
-<a id="table-res-0x40ab-d"></a>
 ### RES_0X40AB_D
 
 Dimensions: 8 rows × 10 columns
@@ -24628,7 +24106,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_INNENWIDERSTAND_VOR_4_ZEITEINHEITEN_WERT | mOhm | - | unsigned char | - | - | 0.1 | 1.0 | 0.0 | Historie Innenwiderstand vor 4 Zeiteinheiten |
 | STAT_INNENWIDERSTAND_VOR_5_ZEITEINHEITEN_WERT | mOhm | - | unsigned char | - | - | 0.1 | 1.0 | 0.0 | Historie Innenwiderstand vor 5 Zeiteinheiten |
 
-<a id="table-res-0x40ac-d"></a>
 ### RES_0X40AC_D
 
 Dimensions: 12 rows × 10 columns
@@ -24648,7 +24125,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_BATTERIEKAPAZITAET_VOR_5_ZEITEINHEITEN_WERT | Ah | - | unsigned char | - | - | - | - | - | Historie Istkapazitaet vor 5 Zeiteinheiten |
 | STAT_Q_BATTERIEKAPAZITAET_VOR_5_ZEITEINHEITEN_WERT | - | - | unsigned char | - | - | - | - | - | Historie Qualitaetswert Istkapazitaet vor 5 Zeiteinheiten |
 
-<a id="table-res-0x40ad-d"></a>
 ### RES_0X40AD_D
 
 Dimensions: 19 rows × 10 columns
@@ -24675,7 +24151,6 @@ Dimensions: 19 rows × 10 columns
 | STAT_ZEIT_IM_LADUNGSBEREICH_F_G_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm SOC Bereich zwischen 90% und 100% |
 | STAT_ZEIT_IM_LADUNGSBEREICH_GROESSER_G_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm SOC Bereich Qualifier ungueltig |
 
-<a id="table-res-0x40ae-d"></a>
 ### RES_0X40AE_D
 
 Dimensions: 18 rows × 10 columns
@@ -24701,7 +24176,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_RUHESTROMVERLETZUNG_10_WERT | - | - | unsigned char | - | - | - | - | - | Historie Ruhestromverletzung |
 | STAT_RUHESTROMVERLETZUNG_11_WERT | - | - | unsigned char | - | - | - | - | - | Historie Ruhestromverletzung |
 
-<a id="table-res-0x40af-d"></a>
 ### RES_0X40AF_D
 
 Dimensions: 5 rows × 10 columns
@@ -24714,7 +24188,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_ZEIT_IM_TEMPERATURBEREICH_C_D_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Zeiteinheiten im Temperaturbereich zwischen C und D bei Motor an |
 | STAT_ZEIT_IM_TEMPERATURBEREICH_GROESSER_D_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Zeiteinheiten im Temperaturbereich groesser als D bei Motor an |
 
-<a id="table-res-0x40b0-d"></a>
 ### RES_0X40B0_D
 
 Dimensions: 8 rows × 10 columns
@@ -24730,7 +24203,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ENTLADUNG_25AH_BIS_50AH_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Entladung waehrend Motor aus zwischen 25Ah und 50Ah |
 | STAT_ENTLADUNG_GROESSER_50AH_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Entladung waehrend Motor aus > 50Ah |
 
-<a id="table-res-0x40b1-d"></a>
 ### RES_0X40B1_D
 
 Dimensions: 6 rows × 10 columns
@@ -24744,7 +24216,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_LADUNG_10AH_BIS_20AH_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Ladung waehrend Motor ein zwischen 10Ah und 20Ah |
 | STAT_LADUNG_GROESSER_20AH_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Ladung waehrend Motor ein > 20Ah |
 
-<a id="table-res-0x40b2-d"></a>
 ### RES_0X40B2_D
 
 Dimensions: 8 rows × 10 columns
@@ -24760,7 +24231,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ENTLADUNG_MSA_BEREICH_G_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Batterieentladung bei MSA-Stopp im Bereich G |
 | STAT_ENTLADUNG_MSA_BEREICH_H_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Batterieentladung bei MSA-Stopp im Bereich H |
 
-<a id="table-res-0x40b3-d"></a>
 ### RES_0X40B3_D
 
 Dimensions: 12 rows × 10 columns
@@ -24780,7 +24250,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_ENTLADUNG_GEWICHTET_WERT | Ah | - | unsigned long | - | - | 0.01 | 1.0 | 0.0 | gewichtete Entladung |
 | STAT_VOLLZYKLEN_GEWICHTET_LONG_WERT | - | - | unsigned long | - | - | 1.0 | 100.0 | 0.0 | gewichtete Vollzyklen (long) |
 
-<a id="table-res-0x40b4-d"></a>
 ### RES_0X40B4_D
 
 Dimensions: 5 rows × 10 columns
@@ -24793,7 +24262,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_TIEFENTLADUNG_AKTUELL_WERT | - | - | unsigned char | - | - | 0.00390625 | 1.0 | 0.0 | Index fuer Schaedigungsgrad der aktuellen Tiefentladung |
 | STAT_TIEFENTLADUNG_GESAMT_WERT | - | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | Index fuer den Schaedigungsgrad aller Tiefentladung |
 
-<a id="table-res-0x40b5-d"></a>
 ### RES_0X40B5_D
 
 Dimensions: 14 rows × 10 columns
@@ -24815,7 +24283,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_Q_SOH_BATTERIE_WERT | % | - | signed char | - | - | - | - | - | Qualitaetswert des SOH |
 | STAT_BATTERIEZUSTAND_WERT | - | - | unsigned char | - | - | - | - | - | Batteriezustand |
 
-<a id="table-res-0x40b6-d"></a>
 ### RES_0X40B6_D
 
 Dimensions: 6 rows × 10 columns
@@ -24829,7 +24296,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_FREIGABE_OBERE_SFG | 0-n | - | unsigned char | - | T_BMWesv_b_EnaCrbyLim1_bo_DOP | - | - | - | Freigabe obere Startfaehigkeitsgrenze |
 | STAT_FREIGABE_UNTERE_SFG | 0-n | - | unsigned char | - | T_BMWesv_b_EnaCrbyLim2_bo_DOP | - | - | - | Freigabe untere Startfaehigkeitsgrenze |
 
-<a id="table-res-0x40b7-d"></a>
 ### RES_0X40B7_D
 
 Dimensions: 9 rows × 10 columns
@@ -24846,7 +24312,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_KM_2_SCHLECHTESTER_WERT | km | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | MSA Motorstart km-Stand aktuell 2.-schlechtester Wert |
 | STAT_BATTERIETEMP_2_SCHLECHTESTER_WERT | - | - | unsigned char | - | - | - | - | - | MSA Motorstart Batterietemperatur aktuell 2.-schlechtester Wert |
 
-<a id="table-res-0x40bd-d"></a>
 ### RES_0X40BD_D
 
 Dimensions: 8 rows × 10 columns
@@ -24862,7 +24327,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_HISTOGRAMM_MSA_STOPPDAUER_30_WERT | - | - | unsigned int | - | - | - | - | - | Klasse MSA-Stoppdauer ..60s |
 | STAT_HISTOGRAMM_MSA_STOPPDAUER_60_WERT | - | - | unsigned int | - | - | - | - | - | Klasse MSA-Stoppdauer 60s.. |
 
-<a id="table-res-0x40be-d"></a>
 ### RES_0X40BE_D
 
 Dimensions: 8 rows × 10 columns
@@ -24878,7 +24342,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_HISTORIE_VERSCHIEBEKONSTANTE_AKTUELL_WERT | % | - | signed char | - | - | - | - | - | Verschiebekonstante der letzten Kennlinienverschiebung |
 | STAT_HISTORIE_VERSCHIEBEKONSTANTE_LETZTE_WERT | % | - | signed char | - | - | - | - | - | Verschiebekonstante der vorletzten Kennlinienverschiebung |
 
-<a id="table-res-0x40bf-d"></a>
 ### RES_0X40BF_D
 
 Dimensions: 9 rows × 10 columns
@@ -24895,7 +24358,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_ENTLADUNG_MSASTART_SPEICHER_01_WERT | As | - | unsigned long | - | - | 1.0 | 10.0 | 0.0 | Entlademenge Basisbatterie waehrend aller MSA-Starts mit aktueller Batterie |
 | STAT_ENTLADUNG_MSASTART_SPEICHER_02_WERT | As | - | unsigned long | - | - | 1.0 | 10.0 | 0.0 | Entlademenge Leistungsbatterie waehrend aller MSA-Starts mit aktueller Batterie |
 
-<a id="table-res-0x40c0-d"></a>
 ### RES_0X40C0_D
 
 Dimensions: 4 rows × 10 columns
@@ -24907,7 +24369,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BATTERIEENTLADUNG_IGR_DISCHARGE_WERT | As | - | unsigned long | - | - | 1.0 | 10.0 | 0.0 | Batterieentladung waehrend IGR-Discharge seit letztem Batterietausch |
 | STAT_LADUNGSMENGE_IGR_RECUPERIERT_WERT | Ah | - | unsigned long | - | - | 1.0 | 16777216.0 | 0.0 | aktuelle akkumulierte Ladungsmenge im IGR-Recu-Topf |
 
-<a id="table-res-0x40c1-d"></a>
 ### RES_0X40C1_D
 
 Dimensions: 9 rows × 10 columns
@@ -24924,7 +24385,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_HISTOGRAMM_BATTERIESPANNUNG_16_WERT | s | - | unsigned int | - | - | - | - | - | Klasse Batteriespannung Basisbordnetz bei aktivem Erzeuger 16V < U |
 | STAT_HISTOGRAMM_BATTERIESPANNUNG_10_WERT | s | - | unsigned int | - | - | - | - | - | Klasse Batteriespannung Basisbordnetz bei aktivem Erzeuger 10V <= U < 11V |
 
-<a id="table-res-0x40c2-d"></a>
 ### RES_0X40C2_D
 
 Dimensions: 11 rows × 10 columns
@@ -24943,7 +24403,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_HISTOGRAMM_PRIORITAET_09_WERT | s | - | unsigned int | - | - | - | - | - | Klasse globale Prioritaet 9 (elektrisch Sicherheit 2) |
 | STAT_HISTOGRAMM_PRIORITAET_10_WERT | s | - | unsigned int | - | - | - | - | - | Klasse globale Prioritaet 10 (mechanisch Motorstart) |
 
-<a id="table-res-0x40c3-d"></a>
 ### RES_0X40C3_D
 
 Dimensions: 16 rows × 10 columns
@@ -24967,7 +24426,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_FEPM_FUNKTION_UNTERVERSION_WERT | - | - | unsigned char | - | - | - | - | - | Funktionale Unterversionsnummer fEPM |
 | STAT_FEPM_FUNKTION_PATCHVERSION_WERT | - | - | unsigned char | - | - | - | - | - | Funktionale Patchversionsnummer fEPM |
 
-<a id="table-res-0x40c4-d"></a>
 ### RES_0X40C4_D
 
 Dimensions: 9 rows × 10 columns
@@ -24984,7 +24442,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_MOTORSTART_KM_2_SCHLECHTESTER_WERT | km | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | Motorstart km-Stand aktuell 2.-schlechtester Wert |
 | STAT_MOTORSTART_BATTERIETEMP_2_SCHLECHTESTER_WERT | °C | - | signed char | - | - | - | - | - | Motorstart Batterietemperatur aktuell 2.-schlechtester Wert |
 
-<a id="table-res-0x40c6-d"></a>
 ### RES_0X40C6_D
 
 Dimensions: 4 rows × 10 columns
@@ -24996,7 +24453,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TEMPERATUR_IBS2015_WERT | °C | - | signed char | - | - | - | - | - | momentane Temperatur des Speichers |
 | STAT_VALOK_IBS2015_WERT | - | - | unsigned char | - | - | - | - | - | Gueltigkeitssignal IBS-Werte |
 
-<a id="table-res-0x40c7-d"></a>
 ### RES_0X40C7_D
 
 Dimensions: 46 rows × 10 columns
@@ -25050,7 +24506,6 @@ Dimensions: 46 rows × 10 columns
 | STAT_SZE_Z_TIEFEL_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl Tiefentladungen der ZSE-Batterie |
 | STAT_SZE_Z_ZUSTART_WERT | - | - | unsigned long | - | - | - | - | - | Anzahl erfolgte Zustarte aus der ZSE-Batterie |
 
-<a id="table-res-0x40c8-d"></a>
 ### RES_0X40C8_D
 
 Dimensions: 7 rows × 10 columns
@@ -25065,7 +24520,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_KURZZEITSUMME_SPANNUNGSVERLETZUNG_WERT | - | - | unsigned long | - | - | - | - | - | Kurzzeitzaehler Summe Spannungsverletzungen |
 | STAT_GESAMTSUMME_SPANNUNGSVERLETZUNG_WERT | - | - | unsigned long | - | - | - | - | - | Gesamtzaehler Summe Spannungsverletzungen |
 
-<a id="table-res-0x40c9-d"></a>
 ### RES_0X40C9_D
 
 Dimensions: 8 rows × 10 columns
@@ -25081,7 +24535,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ZAEHLER_RESET_WATCHDOG_WERT | - | - | unsigned char | - | - | - | - | - | Zaehler Watchdogreset |
 | STAT_RELATIVZEIT_IBS_WERT | min | - | unsigned long | - | - | - | - | - | Relativzeit IBS ResetFalls Layergroessen wirlich nur als 3Byte Groesse vorhanden muss das High Byte mit 00 belegt werden! |
 
-<a id="table-res-0x40ca-d"></a>
 ### RES_0X40CA_D
 
 Dimensions: 17 rows × 10 columns
@@ -25106,7 +24559,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_AKT_SPERRGRUENDE_WERT | - | - | unsigned int | - | - | - | - | - | Aktuell Anliegende Anlassersperrengruende Achtung nur gueltig fuer Altprojekte bis Meta F400B |
 | STAT_AKT_SPERRGRUENDE_ERW_WERT | - | - | unsigned long | - | - | - | - | - | Aktuell Anliegende Anlassersperrengruende |
 
-<a id="table-res-0x40cb-d"></a>
 ### RES_0X40CB_D
 
 Dimensions: 12 rows × 10 columns
@@ -25126,7 +24578,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_ERZEUGERSTEUERUNG_FEPM_SOLLSPANNUNG_RAMPE_FID_WERT | - | - | unsigned int | - | - | - | - | - | FID Anforderung Spannungsrampe FEPM an 12V-Erzeugersteuerung |
 | STAT_ERZEUGERSTEUERUNG_FEPM_SITUATIVESREGELWERK | 0/1 | - | unsigned char | - | - | - | - | - | Situative-Regel ueberschreibt Standard-Regelwerk |
 
-<a id="table-res-0x40d3-d"></a>
 ### RES_0X40D3_D
 
 Dimensions: 3 rows × 10 columns
@@ -25137,7 +24588,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ERZENTL_BATTERIEENTLADUNG_WERT | As | - | unsigned long | - | - | 1.0 | 10.0 | 0.0 | Batterieentladung waehrend Erzeugerentlastung |
 | STAT_ERZENTL_GESAMTZEIT_WERT | s | - | unsigned long | - | - | 1.0 | 10.0 | 0.0 | Gesamtzeit bei aktiver Erzeugerentlastung |
 
-<a id="table-res-0x40d5-d"></a>
 ### RES_0X40D5_D
 
 Dimensions: 39 rows × 10 columns
@@ -25184,7 +24634,6 @@ Dimensions: 39 rows × 10 columns
 | STAT_HISTOGRAMM_PRODUCER_INVERTED_WERT | s | - | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Klasse Regelwerk PRODUCER_INVERTED - in konv. Fahrzeuge nicht genutzt |
 | STAT_HISTOGRAMM_PRODUCER_LIMITED_POWER_WERT | s | - | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Klasse Regelwerk PRODUCER_LIMITED_POWER - Begrenzte Leistung |
 
-<a id="table-res-0x40d6-d"></a>
 ### RES_0X40D6_D
 
 Dimensions: 28 rows × 10 columns
@@ -25220,7 +24669,6 @@ Dimensions: 28 rows × 10 columns
 | STAT_HISTOGRAMM_PST_DISCHARGE_FAST_WERT | s | - | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Klasse Regelwerk PST_DISCHARGE_FAST - Maximale Entladung |
 | STAT_HISTOGRAMM_PLINCST_EMERGENCY_WERT | s | - | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Klasse Regelwerk PLINCST_EMERGENCY - Der Prozentzaehler wird auf 100 gesetzt. |
 
-<a id="table-res-0x40d8-d"></a>
 ### RES_0X40D8_D
 
 Dimensions: 13 rows × 10 columns
@@ -25241,7 +24689,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_FILT_KH_SEG_EIN_4_WERT | ° KW | - | signed int | - | - | 0.00015259 | 1.0 | 0.0 | Filterwert KH-Segmentabweichung, eingerechnet |
 | STAT_FILT_KH_SEG_EIN_5_WERT | ° KW | - | signed int | - | - | 0.00015259 | 1.0 | 0.0 | Filterwert KH-Segmentabweichung, eingerechnet |
 
-<a id="table-res-0x40d9-d"></a>
 ### RES_0X40D9_D
 
 Dimensions: 7 rows × 10 columns
@@ -25256,7 +24703,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_LADUNGSZUSTAND_AKTUELL_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | -126.0 | SOC aktuell |
 | STAT_Q_LADEZUSTAND_AKTUELL_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | -126.0 | Qualitaetswert SOC aktuell (Absoluter Fehler) |
 
-<a id="table-res-0x40da-d"></a>
 ### RES_0X40DA_D
 
 Dimensions: 2 rows × 10 columns
@@ -25266,7 +24712,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HISTORIE_AUSLASTUNG_DZU_WERT | s | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | Gesamtzeit bei drehzahlunabhaengiger hoher Generatorauslastung |
 | STAT_HISTORIE_AUSLASTUNG_DZA_WERT | s | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | Gesamtzeit bei drehzahlabhaengiger hoher Generatorauslastung |
 
-<a id="table-res-0x40db-d"></a>
 ### RES_0X40DB_D
 
 Dimensions: 25 rows × 10 columns
@@ -25299,7 +24744,6 @@ Dimensions: 25 rows × 10 columns
 | STAT_HISTOGRAMM_ERZEUGERAUSLASTUNG_34_WERT | s | - | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Klasse PRODUCERLOAD_NEG_TEN - ENERGYBALANCECHANGERATE_NEG_EXH |
 | STAT_HISTOGRAMM_ERZEUGERAUSLASTUNG_44_WERT | s | - | unsigned int | - | - | 5.0 | 1.0 | 0.0 | Klasse PRODUCERLOAD_NEG_EXH - ENERGYBALANCECHANGERATE_NEG_EXH |
 
-<a id="table-res-0x40dc-d"></a>
 ### RES_0X40DC_D
 
 Dimensions: 582 rows × 10 columns
@@ -25889,7 +25333,6 @@ Dimensions: 582 rows × 10 columns
 | STAT_AUSSETZ_N_M_LANG_ZYL8_70_WERT | rad/s² | - | signed int | - | - | 0.0625 | 1.0 | 0.0 | Drehzahl- / Lastabhaengiger Langzeitwert der AdaptionswerteAussetzererkennung fuer physikalischen Zylinder 8 |
 | STAT_AUSSETZ_N_M_LANG_ZYL8_71_WERT | rad/s² | - | signed int | - | - | 0.0625 | 1.0 | 0.0 | Drehzahl- / Lastabhaengiger Langzeitwert der AdaptionswerteAussetzererkennung fuer physikalischen Zylinder 8 |
 
-<a id="table-res-0x40dd-d"></a>
 ### RES_0X40DD_D
 
 Dimensions: 288 rows × 10 columns
@@ -26185,7 +25628,6 @@ Dimensions: 288 rows × 10 columns
 | STAT_AUSSETZ_N_M_LANG_ZYL12_70_WERT | rad/s² | - | signed int | - | - | 0.0625 | 1.0 | 0.0 | Drehzahl- / Lastabhaengiger Langzeitwert der AdaptionswerteAussetzererkennung fuer physikalischen Zylinder 12 |
 | STAT_AUSSETZ_N_M_LANG_ZYL12_71_WERT | rad/s² | - | signed int | - | - | 0.0625 | 1.0 | 0.0 | Drehzahl- / Lastabhaengiger Langzeitwert der AdaptionswerteAussetzererkennung fuer physikalischen Zylinder 12 |
 
-<a id="table-res-0x40de-d"></a>
 ### RES_0X40DE_D
 
 Dimensions: 6 rows × 10 columns
@@ -26199,7 +25641,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_MADAP_LL_NIC_WERT | Nm | - | signed int | - | - | 1.0 | 256.0 | 0.0 | Drehmoment fuer Adaption ohne Klima, mit Standabkopplung (Fahrstufe eingelegt - NIC) |
 | STAT_MADAP_LL_NIC_KLIMA_WERT | Nm | - | signed int | - | - | 1.0 | 256.0 | 0.0 | Drehmoment fuer Adaption mit Klima, mit Standabkopplung (Fahrstufe eingelegt - NIC) |
 
-<a id="table-res-0x40df-d"></a>
 ### RES_0X40DF_D
 
 Dimensions: 44 rows × 10 columns
@@ -26251,7 +25692,6 @@ Dimensions: 44 rows × 10 columns
 | STAT_HISTORIE_NL_SOC_NV_ABSTELL_03_WERT | % | - | unsigned char | - | - | - | - | - | Batterieladezustand NV beim Abstellen 3 |
 | STAT_HISTORIE_NL_SOC_NV_ABSTELL_04_WERT | % | - | unsigned char | - | - | - | - | - | Batterieladezustand NV beim Abstellen 4 |
 
-<a id="table-res-0x40e0-d"></a>
 ### RES_0X40E0_D
 
 Dimensions: 4 rows × 10 columns
@@ -26263,7 +25703,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_FIT_SOC_WERT | % | - | unsigned int | - | - | 0.00152588 | 1.0 | 0.0 | FIT Ausgabe SOC aktuell |
 | STAT_FIT_SOC_NOFILTER_WERT | % | - | unsigned int | - | - | 0.00152588 | 1.0 | 0.0 | FIT Ausgabe SOC ungefiltert aktuell |
 
-<a id="table-res-0x40e1-d"></a>
 ### RES_0X40E1_D
 
 Dimensions: 6 rows × 10 columns
@@ -26277,7 +25716,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_TRENNELEMENT_VERSUCH_DIAGNOSE_WERT | - | - | unsigned long | - | - | - | - | - | Anzahl versuchte Diagnosen Trennelement |
 | STAT_TRENNELEMENT_ERFOLG_DIAGNOSE_WERT | - | - | unsigned long | - | - | - | - | - | Anzahl erfolgreiche Diagnosen Trennelement |
 
-<a id="table-res-0x40e2-d"></a>
 ### RES_0X40E2_D
 
 Dimensions: 10 rows × 10 columns
@@ -26295,7 +25733,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_ZELLDEFEKT_DETAIL_WERT | - | - | unsigned char | - | - | - | - | - | Status Zelldefekt Detail |
 | STAT_QUALITAET_ZELLDEFEKT_DETAIL_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | -126.0 | Qualitaetswert Zelldefekterkennung Detail |
 
-<a id="table-res-0x40e3-d"></a>
 ### RES_0X40E3_D
 
 Dimensions: 7 rows × 10 columns
@@ -26310,7 +25747,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_LADUNGSZUSTAND_AKTUELL_WERT | % | - | signed char | - | - | - | - | - | SOC aktuell |
 | STAT_TEMPERATUR_SPEICHER_WERT | °C | - | signed char | - | - | - | - | - | momentane Temperatur Speicher |
 
-<a id="table-res-0x40e4-d"></a>
 ### RES_0X40E4_D
 
 Dimensions: 6 rows × 10 columns
@@ -26324,7 +25760,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_LADESTROMVERLETZUNG_LEVEL5_WERT | s | - | unsigned long | - | - | - | - | - | Dauer Ladestromverletzung Level 5 |
 | STAT_LADESTROMVERLETZUNG_LEVEL6_WERT | s | - | unsigned long | - | - | - | - | - | Dauer Ladestromverletzung Level 6 |
 
-<a id="table-res-0x40e6-d"></a>
 ### RES_0X40E6_D
 
 Dimensions: 11 rows × 10 columns
@@ -26343,7 +25778,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_ATLWP_DIAG_PUMPENBLOCK_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status Blockierung el. Wasserpumpe aktiv |
 | STAT_ATLWP_DIAG_ELEKTR_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status elektrischer Fehler |
 
-<a id="table-res-0x40e7-d"></a>
 ### RES_0X40E7_D
 
 Dimensions: 11 rows × 10 columns
@@ -26362,7 +25796,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_LALUFTWP_DIAG_PUMPENBLOCK_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status Blockierung el. Wasserpumpe aktiv |
 | STAT_LALUFTWP_DIAG_ELEKTR_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status elektrischer Fehler |
 
-<a id="table-res-0x40e8-d"></a>
 ### RES_0X40E8_D
 
 Dimensions: 11 rows × 10 columns
@@ -26381,7 +25814,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_EMEWP_DIAG_PUMPENBLOCK_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status Blockierung el. Wasserpumpe aktiv |
 | STAT_EMEWP_DIAG_ELEKTR_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status elektrischer Fehler |
 
-<a id="table-res-0x40e9-d"></a>
 ### RES_0X40E9_D
 
 Dimensions: 12 rows × 10 columns
@@ -26401,7 +25833,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_AUSSETZ_ZHL_DAUERLAUF_11_WERT | - | - | unsigned int | - | - | - | - | - | Aussetzerzaehler Dauerlauf |
 | STAT_AUSSETZ_ZHL_DAUERLAUF_12_WERT | - | - | unsigned int | - | - | - | - | - | Aussetzerzaehler Dauerlauf |
 
-<a id="table-res-0x40ea-d"></a>
 ### RES_0X40EA_D
 
 Dimensions: 6 rows × 10 columns
@@ -26415,7 +25846,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ADAP_LAMBDA_LOW_ZYL_5_WERT | - | - | signed int | - | - | 2.0 | 65536.0 | 0.0 | Gefilterte Adaptionswerte fuer Lowbereich Zylinder 5 |
 | STAT_ADAP_LAMBDA_LOW_ZYL_6_WERT | - | - | signed int | - | - | 2.0 | 65536.0 | 0.0 | Gefilterte Adaptionswerte fuer Lowbereich Zylinder 6 |
 
-<a id="table-res-0x40eb-d"></a>
 ### RES_0X40EB_D
 
 Dimensions: 13 rows × 10 columns
@@ -26436,7 +25866,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_SCHALTZ_SONDENSPG_MAFE_SE_2_BNK_1_WERT | s | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | ausgewertete Transition Time der Sondenspannung waehrend Uebergang Mager - Fett, Sonde 2, Bank 1 |
 | STAT_SCHALTZ_SONDENSPG_FEMA_SE_2_BNK_1_WERT | s | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | ausgewertete Transition Time der Sondenspannung waehrend Uebergang Fett - Mager, Sonde 2, Bank 1 |
 
-<a id="table-res-0x40ed-d"></a>
 ### RES_0X40ED_D
 
 Dimensions: 35 rows × 10 columns
@@ -26479,7 +25908,6 @@ Dimensions: 35 rows × 10 columns
 | STAT_KL_HIST_ANZ_VORGAENGER_KORREKTUR_4_WERT | ° | - | signed int | - | - | 1.0 | 100.0 | 0.0 | Updatehistorie letzter Anzeigewert vor Korrektur Element 4 |
 | STAT_KL_HIST_ANZ_VORGAENGER_KORREKTUR_5_WERT | ° | - | signed int | - | - | 1.0 | 100.0 | 0.0 | Updatehistorie letzter Anzeigewert vor Korrektur Element 5 |
 
-<a id="table-res-0x40ee-d"></a>
 ### RES_0X40EE_D
 
 Dimensions: 25 rows × 10 columns
@@ -26512,7 +25940,6 @@ Dimensions: 25 rows × 10 columns
 | STAT_ZT_DKG_AUT_WERT | - | - | unsigned long | - | - | - | - | - | DKG-Modus D aktiv |
 | STAT_ZT_DKG_SEG_WERT | - | - | unsigned long | - | - | - | - | - | DKG-Modus S aktiv |
 
-<a id="table-res-0x40f0-d"></a>
 ### RES_0X40F0_D
 
 Dimensions: 5 rows × 10 columns
@@ -26525,7 +25952,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_AGTEMP_KAT_HIST_4_WERT | s | - | unsigned long | - | - | 1.0 | 5.0 | 0.0 | Zeit Klasse 4 der Abgastemperatur im Katalysator |
 | STAT_AGTEMP_KAT_HIST_5_WERT | s | - | unsigned long | - | - | 1.0 | 5.0 | 0.0 | Zeit Klasse 5 der Abgastemperatur im Katalysator |
 
-<a id="table-res-0x40f1-d"></a>
 ### RES_0X40F1_D
 
 Dimensions: 22 rows × 10 columns
@@ -26555,7 +25981,6 @@ Dimensions: 22 rows × 10 columns
 | STAT_QSTAT_FEHLERFAKT_SIMUL_PLAUS_WERT | - | - | unsigned char | - | - | - | - | - | Fehlerfaktoren fuer Fehlersimulation plausibel |
 | STAT_QSTAT_ABSOLUT_EINGESCH_RUECKSETZANF_ABGESCHL_WERT | - | - | unsigned char | - | - | - | - | - | Adaption Absolut eingeschwungen Ruecksetzanforderung ueber Tester erfolgreich abgeschlossen |
 
-<a id="table-res-0x40f2-d"></a>
 ### RES_0X40F2_D
 
 Dimensions: 11 rows × 10 columns
@@ -26574,7 +25999,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_LLKWP_2_DIAG_PUMPENBLOCK_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status Blockierung el. Wasserpumpe aktiv |
 | STAT_LLKWP_2_DIAG_ELEKTR_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status elektrischer Fehler |
 
-<a id="table-res-0x40f3-d"></a>
 ### RES_0X40F3_D
 
 Dimensions: 6 rows × 10 columns
@@ -26588,7 +26012,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_SPANNUNG_ZELLE_MIN_WERT | V | - | unsigned int | - | - | 0.001 | 1.0 | 1.0 | Minimale Zellspannung bei Oeffnen Trennelement |
 | STAT_SOC_BEI_ABSTELLEN_WERT | % | - | unsigned char | - | - | - | - | - | Ladezustand bei Beginn Ueberwachung |
 
-<a id="table-res-0x40f4-d"></a>
 ### RES_0X40F4_D
 
 Dimensions: 11 rows × 10 columns
@@ -26607,7 +26030,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_EWP_48V_DIAG_PUMPENBLOCK_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status Blockierung el. Wasserpumpe aktiv |
 | STAT_EWP_48V_DIAG_ELEKTR_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Status elektrischer Fehler |
 
-<a id="table-res-0x40f5-d"></a>
 ### RES_0X40F5_D
 
 Dimensions: 3 rows × 10 columns
@@ -26618,7 +26040,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_FEPM_TAUSCH_BATT48_RELATIVZEIT_WERT | s | - | unsigned long | - | - | - | - | - | Relativzeit beim letzten Tausch der 48V-Batterie |
 | STAT_FEPM_TAUSCH_BATT48_ANZAHL_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl 48V Batterietausch |
 
-<a id="table-res-0x4102-d"></a>
 ### RES_0X4102_D
 
 Dimensions: 10 rows × 10 columns
@@ -26636,7 +26057,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_MON_RE_WERT | - | - | unsigned char | - | - | - | - | - | letztes Ruecksetzen |
 | STAT_TG_RE_WERT | - | - | unsigned char | - | - | - | - | - | letztes Ruecksetzen |
 
-<a id="table-res-0x4105-d"></a>
 ### RES_0X4105_D
 
 Dimensions: 3 rows × 10 columns
@@ -26647,7 +26067,6 @@ Dimensions: 3 rows × 10 columns
 | - | Bit | - | BITFIELD | - | BF_0x4105_1 | - | - | - | Readiness code completion status 2 |
 | - | Bit | - | BITFIELD | - | BF_0x4105_2 | - | - | - | Status configuration for readiness code (non continuous tests) |
 
-<a id="table-res-0x4106-d"></a>
 ### RES_0X4106_D
 
 Dimensions: 3 rows × 10 columns
@@ -26658,7 +26077,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SEGEL_FEHLER_EXT_WERT | HEX | - | unsigned int | - | - | - | - | - | Auslesung der Fehler der externen Segelverhinderer.(A2L-NAME: Stat_segel_fehler_ext) |
 | STAT_SEGEL_VERHINDERER_HYBR_WERT | HEX | - | unsigned long | - | - | - | - | - | Segelverhinderer im Hybriden (A2L-NAME: Stat_segeln_hybrid) |
 
-<a id="table-res-0x4117-d"></a>
 ### RES_0X4117_D
 
 Dimensions: 3 rows × 10 columns
@@ -26669,7 +26087,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SOLLZUST_OPF_DRUCKSENS_WERT | - | - | unsigned char | - | - | - | - | - | Sollzustand des OPFDrucksensors: Verbaut und Typ |
 | STAT_SOLLZUST_OPF_TEMPSENS_WERT | - | - | unsigned char | - | - | - | - | - | Sollzustand OPF Temperatursensoren TPFlt_stSnsrCfg_C |
 
-<a id="table-res-0x4118-d"></a>
 ### RES_0X4118_D
 
 Dimensions: 4 rows × 10 columns
@@ -26681,7 +26098,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ANZ_OPF_TAUSCH_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl der getauschten Ottopartikelfilter. Wird Inkrementiert beim Resetieren der Adaptionswerte zum Ottopartikelfilter. |
 | STAT_KM_ST_AKT_OPF_TAUSCH_WERT | km | - | signed long | - | - | - | - | - | Km Stand der letzten Tauschaktion |
 
-<a id="table-res-0x4119-d"></a>
 ### RES_0X4119_D
 
 Dimensions: 6 rows × 10 columns
@@ -26695,7 +26111,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ZHL_REG_ANF_SERVICE_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl aller Regenerationsanforderungen die durch Servicetester angefordert worden sind. |
 | STAT_ZHL_REG_ANF_SERVICE_VOLLST_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl aller Regenerationsanforderungen die durch Servicetester angefordert worden sind und vollstaendig durchgelaufen sind. |
 
-<a id="table-res-0x411a-d"></a>
 ### RES_0X411A_D
 
 Dimensions: 5 rows × 10 columns
@@ -26708,7 +26123,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_PEILSTAB_FEHLER_WERT | - | - | unsigned char | - | - | - | - | - | Fehler Peilstab |
 | STAT_RESTWEG_PEILSTAB_WERT | km | - | signed int | - | - | 10.0 | 1.0 | 0.0 | Restweg Peilstab |
 
-<a id="table-res-0x411b-d"></a>
 ### RES_0X411B_D
 
 Dimensions: 6 rows × 10 columns
@@ -26722,7 +26136,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_BATTREG_STATUS_WERT | - | - | unsigned char | - | - | - | - | - | Status der Regeneration aktuell |
 | STAT_BATTREG_TARGET_WERT | Ah | - | signed long | - | - | 1.0 | 100.0 | 0.0 | Target Ladebilanz fuer aktive Batterieregeneration |
 
-<a id="table-res-0x411c-d"></a>
 ### RES_0X411C_D
 
 Dimensions: 98 rows × 10 columns
@@ -26828,7 +26241,6 @@ Dimensions: 98 rows × 10 columns
 | STAT_CVO3_SZ_TAB_VH_MAX_5_WERT | µs | - | unsigned int | - | - | 0.1 | 1.0 | 0.0 | Schleppzeiger: VH Max Zyl 5 |
 | STAT_CVO3_SZ_TAB_VH_MAX_6_WERT | µs | - | unsigned int | - | - | 0.1 | 1.0 | 0.0 | Schleppzeiger: VH Max Zyl 6 |
 
-<a id="table-res-0x411d-d"></a>
 ### RES_0X411D_D
 
 Dimensions: 10 rows × 10 columns
@@ -26846,7 +26258,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HIST_REGGRUND_BMW_INT_1_WERT | - | - | unsigned int | - | - | - | - | - | Regenerationen aus BMW Internen Anforderungen ueber Lebenszeit |
 | STAT_HIST_REGGRUND_DRINGLKT_SCHIEFLAGE_WERT | - | - | unsigned int | - | - | - | - | - | Regeneration aus Dringlichkeitverstellung ueber erkannte Schieflage zwischen den Einzelbaenken der Partikelfilter |
 
-<a id="table-res-0x411e-d"></a>
 ### RES_0X411E_D
 
 Dimensions: 4 rows × 10 columns
@@ -26858,7 +26269,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_OPF_TEMPKLASSE_3_WERT | s | - | signed long | - | - | 1.0 | 10.0 | 0.0 | OPF Verweildauer im Temperaturbetriebsbereich 3 |
 | STAT_OPF_TEMPKLASSE_4_WERT | s | - | signed long | - | - | 1.0 | 10.0 | 0.0 | OPF Verweildauer im Temperaturbetriebsbereich 4 |
 
-<a id="table-res-0x4140-d"></a>
 ### RES_0X4140_D
 
 Dimensions: 5 rows × 10 columns
@@ -26871,7 +26281,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_BATTERIELADUNG_BILANZ_PARKEN_GESAMT_WERT | Ah | - | signed long | - | - | 1.0 | 100.0 | 0.0 | Differenz zwischen Gesamtladungsmenge und Gesamtentladungsmenge der Batterie im Fahrzeugzustand Parken (keine LIN-Kommunikation). |
 | STAT_BATTERIELADUNG_BILANZ_WOHNEN_FAHREN_GESAMT_WERT | Ah | - | signed long | - | - | 1.0 | 100.0 | 0.0 | Differenz zwischen Gesamtladungsmenge und Gesamtentladungsmenge der Batterie im Fahrzeugzustand Wohnen / Standfunktion / Fahren (LIN-Kommunikation). |
 
-<a id="table-res-0x4141-d"></a>
 ### RES_0X4141_D
 
 Dimensions: 3 rows × 10 columns
@@ -26882,7 +26291,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_BATTERIETAUSCH_KM_AKTUELLER_WERT | km | - | unsigned long | - | - | - | - | - | Kilometerstand bei aktuellem Batteriewechsel |
 | STAT_BATTERIETAUSCH_KM_LETZTER_WERT | km | - | unsigned long | - | - | - | - | - | Kilometerstand bei letztem Batteriewechsel |
 
-<a id="table-res-0x4142-d"></a>
 ### RES_0X4142_D
 
 Dimensions: 35 rows × 10 columns
@@ -26925,7 +26333,6 @@ Dimensions: 35 rows × 10 columns
 | STAT_SUM_ZTANT_SOC_TEMP_6_3_WERT | min | - | unsigned long | - | - | - | - | - | Histogramm aufsummierte Zeit in Ladezustand Bereich und TemperaturbereichGroeße Histogramm SOC x Temperatur |
 | STAT_SUM_ZTANT_SOC_TEMP_6_4_WERT | min | - | unsigned long | - | - | - | - | - | Histogramm aufsummierte Zeit in Ladezustand Bereich und TemperaturbereichGroeße Histogramm SOC x Temperatur |
 
-<a id="table-res-0x4143-d"></a>
 ### RES_0X4143_D
 
 Dimensions: 8 rows × 10 columns
@@ -26941,7 +26348,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_INNENWIDERSTAND_VOR_4_WOCHEN_WERT | mOhm | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | Historie Innenwiderstand vor 4 Wochen |
 | STAT_INNENWIDERSTAND_VOR_5_WOCHEN_WERT | mOhm | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | Historie Innenwiderstand vor 5 Wochen |
 
-<a id="table-res-0x4144-d"></a>
 ### RES_0X4144_D
 
 Dimensions: 12 rows × 10 columns
@@ -26961,7 +26367,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_Q_BATTERIEKAPAZITAET_NACH_4_MONATEN_WERT | - | - | unsigned char | - | - | - | - | - | Historie Qualitaetswert Ist-Kapazitaet nach 4 Monaten |
 | STAT_Q_BATTERIEKAPAZITAET_NACH_5_MONATEN_WERT | - | - | unsigned char | - | - | - | - | - | Historie Qualitaetswert Ist-Kapazitaet nach 5 Monaten |
 
-<a id="table-res-0x4145-d"></a>
 ### RES_0X4145_D
 
 Dimensions: 36 rows × 10 columns
@@ -27005,7 +26410,6 @@ Dimensions: 36 rows × 10 columns
 | STAT_ENTLADUNG_PARKEN_ZEIT_LETZTER_WERT | min | - | unsigned char | - | - | - | - | - | Aktueller Wert Zeit Umladung im Parken |
 | STAT_ENTLADUNG_PARKEN_ZEIT_MAX_WERT | min | - | unsigned char | - | - | - | - | - | Wert maximale Zeit Umladung im Parken |
 
-<a id="table-res-0x4146-d"></a>
 ### RES_0X4146_D
 
 Dimensions: 23 rows × 10 columns
@@ -27036,7 +26440,6 @@ Dimensions: 23 rows × 10 columns
 | STAT_ZEIT_IM_ENTLADUNGSBEREICH_60_BIS_80_PROZ_WERT | min | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | Zeit Selbstentladung zwischen 60% und 80% Batterie-Kapazitaet |
 | STAT_ZEIT_IM_ENTLADUNGSBEREICH_GROESSER_80_PROZ_WERT | min | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | Zeit Selbstentladung > 80% Batterie-Kapazitaet |
 
-<a id="table-res-0x4147-d"></a>
 ### RES_0X4147_D
 
 Dimensions: 8 rows × 10 columns
@@ -27052,7 +26455,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MOTORSTART_KM_SCHLECHTESTER_WERT | km | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | Motorstart km-Stand schlechtester Wert |
 | STAT_MOTORSTART_BATTERIETEMP_SCHLECHTESTER_WERT | °C | - | signed char | - | - | - | - | - | Motorstart Batterietemperatur schlechtester Wert |
 
-<a id="table-res-0x4148-d"></a>
 ### RES_0X4148_D
 
 Dimensions: 8 rows × 10 columns
@@ -27068,7 +26470,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MSA_MOTORSTART_KM_SCHLECHTESTER_WERT | km | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | MSA Motorstart km-Stand schlechtester Wert |
 | STAT_MSA_MOTORSTART_BATTERIETEMP_SCHLECHTESTER_WERT | °C | - | signed char | - | - | - | - | - | MSA Motorstart Batterietemperatur schlechtester Wert |
 
-<a id="table-res-0x4149-d"></a>
 ### RES_0X4149_D
 
 Dimensions: 10 rows × 10 columns
@@ -27086,7 +26487,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_FEPM_HISTORIE_PWRDIAG_LEISTUNGSBATTERIE_NOK_TEMP_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl fehlgeschlagener Leistungsfaehigkeitsdiagnosen der Leistungsbatterie aufgrund der Temperatur |
 | STAT_FEPM_HISTORIE_PWRDIAG_LEISTUNGSBATTERIE_ENTLADUNG_WERT | min | - | unsigned int | - | - | - | - | - | Fahrzeit, waehrend der die Leistungsbatterie mit ueber 20 A entladen wird |
 
-<a id="table-res-0x414a-d"></a>
 ### RES_0X414A_D
 
 Dimensions: 6 rows × 10 columns
@@ -27100,7 +26500,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_FEPM_HISTORIE_ABKUEHL_BASISBATTERIE_5_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl: 20 Grad C < T_Ref < 40 Grad C und Abkuehlung oberhalb kritischer Schwelle |
 | STAT_FEPM_HISTORIE_ABKUEHL_BASISBATTERIE_6_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl: 40 Grad C < T_Ref und Abkuehlung oberhalb kritischer Schwelle |
 
-<a id="table-res-0x4150-d"></a>
 ### RES_0X4150_D
 
 Dimensions: 16 rows × 10 columns
@@ -27124,7 +26523,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_GETRIEBETMP_WERT | °C | - | signed int | - | - | 0.1 | 1.0 | -273.14 | Aktuelle Getriebetemperatur. |
 | STAT_SCHALTHBLPOS | 0-n | - | unsigned char | - | T_GbxPos_numLvrPos_text_DOP | - | - | - | Schalthebelposition. Bit 0-5: Gang 1-6, Bit 6: Rueckwaertsgang, Bit 7: Gang eingelegt? [1] / Synchronisation?[0] |
 
-<a id="table-res-0x4151-d"></a>
 ### RES_0X4151_D
 
 Dimensions: 42 rows × 10 columns
@@ -27174,7 +26572,6 @@ Dimensions: 42 rows × 10 columns
 | STAT_MSALED_TASTER | 0-n | - | unsigned char | - | T_1BYTE_MSA_LED_DOP | - | - | - | Ausgabe 1 Byte in dezimaler Form, ohne Umrechnung.Bit 0 = MSA-LED an Bit 1 = MSA-LED-Statussignal fehlerhaft |
 | STAT_MSA_KUPPL | 0-n | - | unsigned char | - | T_1BYTE_MSA_KUP_DOP | - | - | - | Status MSA Kupplung Betaetigung |
 
-<a id="table-res-0x4159-d"></a>
 ### RES_0X4159_D
 
 Dimensions: 9 rows × 10 columns
@@ -27191,7 +26588,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_GRENZWERT_TEMPERATUR_WOHNEN_ANZAHL_WERT | - | - | unsigned char | - | - | - | - | - | Zaehler Anzahl Grenzwertverletzungen Temperatur im Fahrzeugzustand Wohnen |
 | STAT_GRENZWERT_TEMPERATUR_PARKEN_ANZAHL_WERT | - | - | unsigned char | - | - | - | - | - | Zaehler Anzahl Grenzwertverletzungen Temperatur im Fahrzeugzustand Parken |
 
-<a id="table-res-0x415a-d"></a>
 ### RES_0X415A_D
 
 Dimensions: 15 rows × 10 columns
@@ -27214,7 +26610,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_FEHLER_PARKEN_I_LETZTER_WERT | A | - | signed int | - | - | 1.0 | 10.0 | 0.0 | Grenzwertverletzung im Fahrzeugzustand Parken: Zellstrom letzer Wert |
 | STAT_FEHLER_PARKEN_I_VORLETZTER_WERT | A | - | signed int | - | - | 1.0 | 10.0 | 0.0 | Grenzwertverletzung im Fahrzeugzustand Parken: Zellstrom vorletzter Wert |
 
-<a id="table-res-0x415b-d"></a>
 ### RES_0X415B_D
 
 Dimensions: 4 rows × 10 columns
@@ -27226,7 +26621,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ZEIT_IN_DEGRADATION_BEREICH_3_WERT | min | - | unsigned int | - | - | - | - | - | Histogramm - Zeit bei Degradationsfaktor Bereich 50 bis 74 % |
 | STAT_ZEIT_IN_DEGRADATION_BEREICH_4_WERT | min | - | unsigned int | - | - | - | - | - | Histogramm - Zeit bei Degradationsfaktor Bereich 75 bis 100 % |
 
-<a id="table-res-0x415c-d"></a>
 ### RES_0X415C_D
 
 Dimensions: 18 rows × 10 columns
@@ -27252,7 +26646,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_BATTERIETYP_ELEMENT_11_WERT | - | - | unsigned char | - | - | - | - | - | Batterieinformation 11 |
 | STAT_FIRMWARE_VERSION_TEXT | TEXT | - | string[5] | - | - | - | - | - | Zaehler Anzahl Grenzwertverletzungen Strom im Fahrzeugzustand Fahren |
 
-<a id="table-res-0x415d-d"></a>
 ### RES_0X415D_D
 
 Dimensions: 15 rows × 10 columns
@@ -27275,7 +26668,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_TRENNELEMENT_FORCED_CLOSE_GESAMT_WERT | - | - | unsigned int | - | - | - | - | - | Zaehler Kommandierung Relay Force-Close |
 | STAT_TRENNELEMENT_DISCONNECTED_TIME_WOHNEN_FAHREN_GESAMT_WERT | min | - | unsigned int | - | - | - | - | - | Gesamtzeit Speicher getrennt im Fahrzeugzustand  Fahren  oder  Wohnen  |
 
-<a id="table-res-0x415e-d"></a>
 ### RES_0X415E_D
 
 Dimensions: 10 rows × 10 columns
@@ -27293,7 +26685,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_KUPPREIB_CCM_ANZ_BEREICH_4_WERT | - | - | unsigned int | - | - | - | - | - | Anzahl Vorgaenge Kupplungreibleistung CCM Bereich 4 |
 | STAT_KUPPREIB_CCM_ANZ_BEREICH_5_WERT | - | - | unsigned int | - | - | - | - | - | Anzahl Vorgaenge Kupplungreibleistung CCM Bereich 5 |
 
-<a id="table-res-0x4160-d"></a>
 ### RES_0X4160_D
 
 Dimensions: 25 rows × 10 columns
@@ -27326,7 +26717,6 @@ Dimensions: 25 rows × 10 columns
 | STAT_SCHWELLE_7_WERT | % | - | unsigned char | - | - | 0.390625 | 1.0 | 0.0 | Schwellwert Element 7 |
 | STAT_SCHWELLE_8_WERT | % | - | unsigned char | - | - | 0.390625 | 1.0 | 0.0 | Schwellwert Element 8 |
 
-<a id="table-res-0x4161-d"></a>
 ### RES_0X4161_D
 
 Dimensions: 79 rows × 10 columns
@@ -27413,7 +26803,6 @@ Dimensions: 79 rows × 10 columns
 | STAT_GEN_BETR_PNKT_62_WERT | % | - | unsigned int | - | - | 0.00152588 | 1.0 | 0.0 | Generator Betriebspunkte ueber Lebenszeit |
 | STAT_GEN_BETR_PNKT_63_WERT | % | - | unsigned int | - | - | 0.00152588 | 1.0 | 0.0 | Generator Betriebspunkte ueber Lebenszeit |
 
-<a id="table-res-0x4162-d"></a>
 ### RES_0X4162_D
 
 Dimensions: 15 rows × 10 columns
@@ -27436,7 +26825,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_REMOTESTART_ZEIT_ERZEUGERAUSLASTUNG_UNAUSGELASTET_GES_WERT | s | - | unsigned int | - | - | - | - | - | Gesamtdauer in PRODUCERLOAD_NEG_EXH waehrend RemoteStart |
 | STAT_REMOTESTART_ZEIT_ERZEUGERAUSLASTUNG_UNGUELTIG_GES_WERT | s | - | unsigned int | - | - | - | - | - | Gesamtdauer in PRODUCERLOAD_INVALID waehrend RemoteStart |
 
-<a id="table-res-0x4163-d"></a>
 ### RES_0X4163_D
 
 Dimensions: 3 rows × 10 columns
@@ -27447,7 +26835,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ZWK_AKT_RESTLAUFSTRECKE_WERT | km | - | signed int | - | - | 100.0 | 1.0 | 0.0 | Hochrechnung Restlaufstrecke Zuendkerzensatz |
 | STAT_ZKW_AKT_LAUFSTRECKE_WERT | km | - | unsigned long | - | - | - | - | - | Auslesen der Laufstrecke Zuendkerze |
 
-<a id="table-res-0x4164-d"></a>
 ### RES_0X4164_D
 
 Dimensions: 3 rows × 10 columns
@@ -27458,7 +26845,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_OPF_ADAP_STRECKE_AKT_WERT | km | - | unsigned long | - | - | 1.0 | 100.0 | 0.0 | Gefahrene Strecke seit letzter Adaption |
 | STAT_OPF_ADAP_STRECKE_MAXIMAL_WERT | km | - | unsigned long | - | - | 1.0 | 100.0 | 0.0 | Laengste über Laufzeit gefahrene Strecke ohne Adaption |
 
-<a id="table-res-0x4165-d"></a>
 ### RES_0X4165_D
 
 Dimensions: 9 rows × 10 columns
@@ -27475,7 +26861,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_OPF_ADAP_ZEIT_KLASSE_4_WERT | - | - | unsigned int | - | - | - | - | - | Klassierungstatistik der möglichen Adaptionen nach Dauer 4 |
 | STAT_OPF_ADAP_ANZ_RESET_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl der Sensorbedingten Resets der Beladung |
 
-<a id="table-res-0x4166-d"></a>
 ### RES_0X4166_D
 
 Dimensions: 3 rows × 10 columns
@@ -27486,7 +26871,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_OPF_ZHL_RUSSMOD_KORR_UNTEN_B1_WERT | - | - | unsigned int | - | - | - | - | - | Anzahl Korrekturen nach unten |
 | STAT_OPF_ZHL_RUSSMOD_KORR_VERW_B1_WERT | - | - | unsigned int | - | - | - | - | - | Anzahl abgelehnte Korrekturen |
 
-<a id="table-res-0x4167-d"></a>
 ### RES_0X4167_D
 
 Dimensions: 3 rows × 10 columns
@@ -27497,7 +26881,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_OPF_ZHL_RUSSMOD_KORR_UNTEN_B2_WERT | - | - | unsigned int | - | - | - | - | - | Anzahl Korrekturen nach unten Bank2 |
 | STAT_OPF_ZHL_RUSSMOD_KORR_VERW_B2_WERT | - | - | unsigned int | - | - | - | - | - | Anzahl abgelehnte Korrekturen Bank2 |
 
-<a id="table-res-0x416b-d"></a>
 ### RES_0X416B_D
 
 Dimensions: 4 rows × 10 columns
@@ -27509,7 +26892,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_MAX_ENTLADUNG_2_BIS_3_AH_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Zaehler maximale Entladung zwischen 2 Ah und 3 Ah |
 | STAT_MAX_ENTLADUNG_GROESSER_3_AH_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Zaehler maximale Entladung ueber 3Ah |
 
-<a id="table-res-0x416c-d"></a>
 ### RES_0X416C_D
 
 Dimensions: 4 rows × 10 columns
@@ -27521,7 +26903,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_OPF_ALLZ_WEG_MAX_WECH_WERT | km | - | unsigned long | - | - | 1.0 | 100.0 | 0.0 | All-Time max-Wert: gefahrene Strecke bis zum Wechsel |
 | STAT_OPF_ALLZ_WEG_SUMM_WERT | km | - | unsigned long | - | - | 1.0 | 100.0 | 0.0 | All-Time Aufsummierung: gefahrene Strecke EmiRisk |
 
-<a id="table-res-0x417b-d"></a>
 ### RES_0X417B_D
 
 Dimensions: 3 rows × 10 columns
@@ -27532,7 +26913,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VVT_LRGF_IREV_WERT | - | - | unsigned int | - | - | - | - | - | Anzahl erkannter VVT Lageregelungsfehlerwarnungen irreversibel |
 | STAT_VVT_LRGF_REV_WERT | - | - | unsigned int | - | - | - | - | - | Anzahl erkannter VVT Lageregelungsfehlerwarnungen reversibel |
 
-<a id="table-res-0x417d-d"></a>
 ### RES_0X417D_D
 
 Dimensions: 3 rows × 10 columns
@@ -27543,7 +26923,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_STVBRVSNNV_WERT | - | - | unsigned char | - | - | - | - | - | Statuswort Verbrennungsregelung vom Tester nichtfluechtig. |
 | STAT_STVBRVSO_WERT | - | - | unsigned int | - | - | - | - | - | Statuswort Verbrennungsregelung fuer Service. |
 
-<a id="table-res-0x417e-d"></a>
 ### RES_0X417E_D
 
 Dimensions: 4 rows × 10 columns
@@ -27555,7 +26934,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_LADESTROM_BEREICH_3_WERT | - | - | unsigned int | - | - | - | - | - | Ladestrom im Bereich 3 |
 | STAT_LADESTROM_BEREICH_4_WERT | - | - | unsigned int | - | - | - | - | - | Ladestrom im Bereich 4 |
 
-<a id="table-res-0x417f-d"></a>
 ### RES_0X417F_D
 
 Dimensions: 64 rows × 10 columns
@@ -27627,7 +27005,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_2DHIST_SOCANDTEMP_DRIVE_63_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Ladezustand und Temperatur Fahrbetrieb Kennfeldpunkt 63 |
 | STAT_2DHIST_SOCANDTEMP_DRIVE_64_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Ladezustand und Temperatur Fahrbetrieb Kennfeldpunkt 64 |
 
-<a id="table-res-0x4180-d"></a>
 ### RES_0X4180_D
 
 Dimensions: 64 rows × 10 columns
@@ -27699,7 +27076,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_2DHIST_SOCANDTEMP_SLEEP_63_WERT | - | - | unsigned int | - | - | - | - | - | 2D Histogramm von SOC und Temperatur ueber die Standphase (Modell) Kennfeldpunkt 63 |
 | STAT_2DHIST_SOCANDTEMP_SLEEP_64_WERT | - | - | unsigned int | - | - | - | - | - | 2D Histogramm von SOC und Temperatur ueber die Standphase (Modell) Kennfeldpunkt 64 |
 
-<a id="table-res-0x4181-d"></a>
 ### RES_0X4181_D
 
 Dimensions: 2 rows × 10 columns
@@ -27709,7 +27085,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BZEDIAG_VERSION_WERT | - | - | unsigned char | - | - | - | - | - | Hauptversionsnummer |
 | STAT_BZEDIAG_SUBVERSION_WERT | - | - | unsigned char | - | - | - | - | - | Unterversionsnummer |
 
-<a id="table-res-0x418e-d"></a>
 ### RES_0X418E_D
 
 Dimensions: 50 rows × 10 columns
@@ -27767,7 +27142,6 @@ Dimensions: 50 rows × 10 columns
 | STAT_BMWSDC_RC_STCARYTITHD_UW_14_WERT | s | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | - |
 | STAT_BMWSDC_RC_STCARYTITHD_UW_15_WERT | s | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | - |
 
-<a id="table-res-0x418f-d"></a>
 ### RES_0X418F_D
 
 Dimensions: 9 rows × 10 columns
@@ -27784,7 +27158,6 @@ Dimensions: 9 rows × 10 columns
 | - | Bit | high | BITFIELD | - | BF_3010_BYTE_9 | - | - | - | Codierung Byte 9 |
 | STAT_UNUSED_100_BSR_DATA | DATA | high | data[90] | - | - | 1.0 | 1.0 | 0.0 | Unused BSR |
 
-<a id="table-res-0x4190-d"></a>
 ### RES_0X4190_D
 
 Dimensions: 192 rows × 10 columns
@@ -27984,7 +27357,6 @@ Dimensions: 192 rows × 10 columns
 | STAT_CVO3_ADAP_UEB_OEFNZEIT_ZYL_8_VIS_7_WERT | µs | - | unsigned int | - | - | 0.1 | 1.0 | 0.0 | Oeffnungszeit Uebergangsbereich - physikalischer Zylinder 8, Viskositaetsstufe 7 |
 | STAT_CVO3_ADAP_UEB_OEFNZEIT_ZYL_8_VIS_8_WERT | µs | - | unsigned int | - | - | 0.1 | 1.0 | 0.0 | Oeffnungszeit Uebergangsbereich - physikalischer Zylinder 8, Viskositaetsstufe 8 |
 
-<a id="table-res-0x4191-d"></a>
 ### RES_0X4191_D
 
 Dimensions: 448 rows × 10 columns
@@ -28440,7 +27812,6 @@ Dimensions: 448 rows × 10 columns
 | STAT_CVO3_ADAP_GH_OEFNZEITVERZ_ZYL_8_VIS_8_DRK_6_WERT | µs | - | signed char | - | - | - | - | - | Oeffnungszeitverzug im Uebergangsbereich Grundadaption - physikalischer Zylinder 8, Viskositaetsstufe 8, Druckstufe 6 |
 | STAT_CVO3_ADAP_GH_OEFNZEITVERZ_ZYL_8_VIS_8_DRK_7_WERT | µs | - | signed char | - | - | - | - | - | Oeffnungszeitverzug im Uebergangsbereich Grundadaption - physikalischer Zylinder 8, Viskositaetsstufe 8, Druckstufe 7 |
 
-<a id="table-res-0x4192-d"></a>
 ### RES_0X4192_D
 
 Dimensions: 448 rows × 10 columns
@@ -28896,7 +28267,6 @@ Dimensions: 448 rows × 10 columns
 | STAT_CVO3_ADAP_GH_ANSTZEITKOR_BAL_ZYL_8_VIS_8_DRK_6_WERT | µs | - | signed char | - | - | 0.4 | 1.0 | 0.0 | Ansteuerzeitkorrektur Ballistik Grundadaption - physikalischer Zylinder 8, Viskositaetsstufe 8, Druckstufe 6 |
 | STAT_CVO3_ADAP_GH_ANSTZEITKOR_BAL_ZYL_8_VIS_8_DRK_7_WERT | µs | - | signed char | - | - | 0.4 | 1.0 | 0.0 | Ansteuerzeitkorrektur Ballistik Grundadaption - physikalischer Zylinder 8, Viskositaetsstufe 8, Druckstufe 7 |
 
-<a id="table-res-0x4193-d"></a>
 ### RES_0X4193_D
 
 Dimensions: 448 rows × 10 columns
@@ -29352,7 +28722,6 @@ Dimensions: 448 rows × 10 columns
 | STAT_CVO3_ADAP_GH_ANSTZEITKOR_BALEN_ZYL_8_VIS_8_DRK_6_WERT | µs | - | signed char | - | - | 0.4 | 1.0 | 0.0 | Ansteuerzeitkorrektur Ende Ballistik Grundadaption - physikalischer Zylinder 8, Viskositaetsstufe 8, Druckstufe 6 |
 | STAT_CVO3_ADAP_GH_ANSTZEITKOR_BALEN_ZYL_8_VIS_8_DRK_7_WERT | µs | - | signed char | - | - | 0.4 | 1.0 | 0.0 | Ansteuerzeitkorrektur Ende Ballistik Grundadaption - physikalischer Zylinder 8, Viskositaetsstufe 8, Druckstufe 7 |
 
-<a id="table-res-0x4194-d"></a>
 ### RES_0X4194_D
 
 Dimensions: 320 rows × 10 columns
@@ -29680,7 +29049,6 @@ Dimensions: 320 rows × 10 columns
 | STAT_CVO3_ADAP_UEB_ANSTZEITKOR_ZYL_8_VIS_8_PKT_4_WERT | µs | - | signed int | - | - | 0.4 | 1.0 | 0.0 | Ansteuerzeitkorrektur Uebergangsbereich - physikalischer Zylinder 8, Viskositaetsstufe 8, Adaptionspunkt 4 |
 | STAT_CVO3_ADAP_UEB_ANSTZEITKOR_ZYL_8_VIS_8_PKT_5_WERT | µs | - | signed int | - | - | 0.4 | 1.0 | 0.0 | Ansteuerzeitkorrektur Uebergangsbereich - physikalischer Zylinder 8, Viskositaetsstufe 8, Adaptionspunkt 5 |
 
-<a id="table-res-0x4195-d"></a>
 ### RES_0X4195_D
 
 Dimensions: 2 rows × 10 columns
@@ -29690,7 +29058,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ANZ_OPF_TAUSCH_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl der getauschten Ottopartikelfilter. Wird Inkrementiert beim Resetieren der Adaptionswerte zum Ottopartikelfilter. |
 | STAT_KM_ST_AKT_OPF_TAUSCH_WERT | km | - | signed long | - | - | - | - | - | Km Stand der letzten Tauschaktion |
 
-<a id="table-res-0x4196-d"></a>
 ### RES_0X4196_D
 
 Dimensions: 2 rows × 10 columns
@@ -29700,7 +29067,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ANZ_OPF_BANK2_TAUSCH_WERT | - | - | unsigned char | - | - | - | - | - | Anzahl der geforderten OPF Tauschaktionen von Bank 2 |
 | STAT_KM_ST_AKT_OPF_BANK2_TAUSCH_WERT | km | - | signed long | - | - | - | - | - | Km Stand der letzten Tauschaktion von Bank 2 |
 
-<a id="table-res-0x4197-d"></a>
 ### RES_0X4197_D
 
 Dimensions: 4 rows × 10 columns
@@ -29712,7 +29078,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_OPF_BANK2_TEMPKLASSE_3_WERT | s | - | signed long | - | - | 1.0 | 10.0 | 0.0 | OPF Verweildauer im Temperaturbetriebsbereich 3 Bank 2 |
 | STAT_OPF_BANK2_TEMPKLASSE_4_WERT | s | - | signed long | - | - | 1.0 | 10.0 | 0.0 | OPF Verweildauer im Temperaturbetriebsbereich 4 Bank 2 |
 
-<a id="table-res-0x419b-d"></a>
 ### RES_0X419B_D
 
 Dimensions: 16 rows × 10 columns
@@ -29736,7 +29101,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ABBRUCHZAEHL_BEDING_ABGASMASSSTROM_KATTEMP_HIGH_BANK2_WERT | - | - | unsigned int | - | - | - | - | - | Abbruchzaehler Bedingung Abgasmassenstrom/Kattemperatur High Bank 2 |
 | STAT_ABBRUCHZAEHL_BEDING_ABGASMASSSTROM_KATTEMP_LOW_BANK2_WERT | - | - | unsigned int | - | - | - | - | - | Abbruchzaehler Bedingung Abgasmassenstrom/Kattemperatur Low Bank 2 |
 
-<a id="table-res-0x5c60-d"></a>
 ### RES_0X5C60_D
 
 Dimensions: 4 rows × 10 columns
@@ -29748,7 +29112,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_IDR_GEBERRADADAPTION_03_DATA | DATA | - | data[3] | - | - | - | - | - | GEBERRADADAPTION 3 |
 | STAT_IDR_GEBERRADADAPTION_04_DATA | DATA | - | data[1] | - | - | - | - | - | GEBERRADADAPTION 4 |
 
-<a id="table-res-0x5f74-d"></a>
 ### RES_0X5F74_D
 
 Dimensions: 1 rows × 10 columns
@@ -29757,7 +29120,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KATHEIZFUNKTION_DEAKTIVIERUNG_AKTIV_INAKTIV | 0-n | - | unsigned char | - | T_1BYTE_KATHEIZFUNKTION_DEAKTIVIERUNG_AKTIV_INAKTIV_DOP | - | - | - | Deaktivierung der Katheizfunktionalitaet aktiv / inaktiv. (1=aktiv, 0=inaktiv). |
 
-<a id="table-res-0x5f75-d"></a>
 ### RES_0X5F75_D
 
 Dimensions: 1 rows × 10 columns
@@ -29766,7 +29128,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_VVT_EXWINKSREV_WERT | - | - | unsigned int | - | - | - | - | - | Zaehler Rueckdrehereignisse aufgrund von Lagereglerabweichung VVT-Steller |
 
-<a id="table-res-0x5f7e-d"></a>
 ### RES_0X5F7E_D
 
 Dimensions: 1 rows × 10 columns
@@ -29775,7 +29136,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DIS_COD_BSR_WERT | - | - | unsigned char | - | - | - | - | - | Verriegelung des betriebsstundenrelevanten Kodierbereichs (Auslesen vom Bit: DIS_COD_BSR) |
 
-<a id="table-res-0x5f80-d"></a>
 ### RES_0X5F80_D
 
 Dimensions: 8 rows × 10 columns
@@ -29791,7 +29151,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_SW_F_MK_KORR_EXT_XZYL_7_WERT | - | - | unsigned int | - | - | 1.0 | 32768.0 | 0.0 | Faktor auf Einspritzung Zylinder 7 (Physikalische Reihenfolge) |
 | STAT_SW_F_MK_KORR_EXT_XZYL_8_WERT | - | - | unsigned int | - | - | 1.0 | 32768.0 | 0.0 | Faktor auf Einspritzung Zylinder 8 (Physikalische Reihenfolge) |
 
-<a id="table-res-0x5fae-d"></a>
 ### RES_0X5FAE_D
 
 Dimensions: 6 rows × 10 columns
@@ -29805,7 +29164,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_GEMVERT_FAKTOR_ZYL_5_WERT | - | - | unsigned int | - | - | 2.0 | 65536.0 | 0.0 | Faktor auf Einspritzung pysikalischer Zylinder 5 |
 | STAT_GEMVERT_FAKTOR_ZYL_6_WERT | - | - | unsigned int | - | - | 2.0 | 65536.0 | 0.0 | Faktor auf Einspritzung pysikalischer Zylinder 6 |
 
-<a id="table-res-0x5faf-d"></a>
 ### RES_0X5FAF_D
 
 Dimensions: 6 rows × 10 columns
@@ -29819,7 +29177,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_GEMVERT_FAKTOR_ZYL_5_WERT | - | - | unsigned char | - | - | 1.0 | 128.0 | 0.0 | Faktor auf Einspritzung pysikalischer Zylinder 5 |
 | STAT_GEMVERT_FAKTOR_ZYL_6_WERT | - | - | unsigned char | - | - | 1.0 | 128.0 | 0.0 | Faktor auf Einspritzung pysikalischer Zylinder 6 |
 
-<a id="table-res-0x5fe6-d"></a>
 ### RES_0X5FE6_D
 
 Dimensions: 8 rows × 10 columns
@@ -29835,7 +29192,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VMAVDI_6_WERT | - | - | unsigned int | - | - | - | - | - | - |
 | STAT_VMAVDI_7_WERT | - | - | unsigned int | - | - | - | - | - | - |
 
-<a id="table-res-0x5fe7-d"></a>
 ### RES_0X5FE7_D
 
 Dimensions: 8 rows × 10 columns
@@ -29851,7 +29207,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VMEVDI_6_WERT | - | - | unsigned int | - | - | - | - | - | - |
 | STAT_VMEVDI_7_WERT | - | - | unsigned int | - | - | - | - | - | - |
 
-<a id="table-res-0x5fe8-d"></a>
 ### RES_0X5FE8_D
 
 Dimensions: 8 rows × 10 columns
@@ -29867,7 +29222,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VMEADI_6_WERT | - | - | unsigned int | - | - | - | - | - | - |
 | STAT_VMEADI_7_WERT | - | - | unsigned int | - | - | - | - | - | - |
 
-<a id="table-res-0x5fe9-d"></a>
 ### RES_0X5FE9_D
 
 Dimensions: 8 rows × 10 columns
@@ -29883,7 +29237,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VMDDI_6_WERT | - | - | unsigned int | - | - | - | - | - | - |
 | STAT_VMDDI_7_WERT | - | - | unsigned int | - | - | - | - | - | - |
 
-<a id="table-res-0x5feb-d"></a>
 ### RES_0X5FEB_D
 
 Dimensions: 1 rows × 10 columns
@@ -29892,7 +29245,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ZKW_KMSTAND_WECHSEL_WERT | km | - | unsigned int | - | - | 100.0 | 1.0 | 0.0 | km Stand letzter Zuendkerzenwechsel |
 
-<a id="table-res-0x5ff0-d"></a>
 ### RES_0X5FF0_D
 
 Dimensions: 5 rows × 10 columns
@@ -29905,7 +29257,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_OFS_ACC_DRI_WERT | 1/min | - | signed char | - | - | 10.0 | 1.0 | 0.0 | Drehzahlanhebung im Leerlauf mit Fahrstufe und Klimaanlage ein |
 | STAT_OFS_VB_WERT | 1/min | - | signed char | - | - | 10.0 | 1.0 | 0.0 | Drehzahlanhebung im Leerlauf zum Batterie laden |
 
-<a id="table-res-0x5ff2-d"></a>
 ### RES_0X5FF2_D
 
 Dimensions: 79 rows × 10 columns
@@ -29992,7 +29343,6 @@ Dimensions: 79 rows × 10 columns
 | STAT_ELUE_LIN_WERT | - | - | unsigned char | - | - | - | - | - | Variante des Luefters0: PWM-Luefter 1: LIN-Luefter |
 | STAT_SPUELLUFT_VENT_WERT | - | - | unsigned char | - | - | - | - | - | Variante mit Verbauten Spuelluftventil PIV vorhanden |
 
-<a id="table-res-0x5ffd-d"></a>
 ### RES_0X5FFD_D
 
 Dimensions: 1 rows × 10 columns
@@ -30001,7 +29351,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SOUNDTUNING_DEAK | 0-n | - | unsigned char | - | T_1BYTE_SOUNDTUNING_DEAKTIVIERUNG_AKTIV_INAKTIV_DOP | - | - | - | Codierung Sound-Tuning Off0 = Soundtuning aktiv1 = Soundtuning deaktiviert |
 
-<a id="table-res-0x631e-d"></a>
 ### RES_0X631E_D
 
 Dimensions: 2 rows × 10 columns
@@ -30011,7 +29360,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ASW_GER_EL_AGK_WERT | % | - | signed int | - | - | 1.0 | 81.92 | 0.0 | Ansteuerwert geregelte elektrische Abgasklapppe |
 | STAT_ASW_GER_EL_AGK_BANK2_WERT | % | - | signed int | - | - | 1.0 | 81.92 | 0.0 | Ansteuerwert Bank 2 geregelte elektrische Abgasklappe |
 
-<a id="table-res-0x651e-d"></a>
 ### RES_0X651E_D
 
 Dimensions: 2 rows × 10 columns
@@ -30021,7 +29369,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ASG_GER_EL_AGK_WERT | % | - | unsigned int | - | - | 0.00152588 | 1.0 | 0.0 | Ausgangsstellgroesse vom Tester zum Ansteuerwert geregelte elektrische Abgasklapppe |
 | STAT_ASG_GER_EL_AGK_BANK2_WERT | % | - | unsigned int | - | - | 0.00152588 | 1.0 | 0.0 | Ausgangsstellgroesse vom Tester Bank 2 zum Ansteuerwert geregelte elektrische Abgasklappe |
 
-<a id="table-res-0x6722-d"></a>
 ### RES_0X6722_D
 
 Dimensions: 4 rows × 10 columns
@@ -30033,7 +29380,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_AKTIV_ZHLR_SCHLUPF_WERT | - | - | unsigned int | - | - | - | - | - | Aktivierungszaehler fuer Fehlerspeicher CC-Meldung der Schlupfunterdrueckung |
 | STAT_INFO_SCHLUPF_EINKUPP_WERT | - | - | unsigned int | - | - | - | - | - | Infospeicher Schlupf nach Einkuppeln |
 
-<a id="table-res-0xe82a-d"></a>
 ### RES_0XE82A_D
 
 Dimensions: 8 rows × 10 columns
@@ -30049,7 +29395,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MAX_ENTLADUNG_10AH_BIS_15AH_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Entladungen zwischen 10 AH und 15 AH |
 | STAT_MAX_ENTLADUNG_GROESSER_15AH_WERT | - | - | unsigned int | - | - | - | - | - | Histogramm Entladungen groesser 15 AH |
 
-<a id="table-res-0xe83d-d"></a>
 ### RES_0XE83D_D
 
 Dimensions: 28 rows × 10 columns
@@ -30085,7 +29430,6 @@ Dimensions: 28 rows × 10 columns
 | STAT_MEDIENQUALITAET_LEITFA_WASSER | 0-n | high | unsigned char | - | T_1BYTE_TEXT_EA_DOP | - | - | - | Leitfähigkeit Medium im Wassertank für WI |
 | STAT_MEDIENQUALITAET_SCHALL_WASSER_WERT | m/s | high | unsigned int | - | - | 1.0 | 1.0 | 1000.0 | Schallgeschwindigkeit Medium im Wassertank für WI |
 
-<a id="table-res-0xe83e-d"></a>
 ### RES_0XE83E_D
 
 Dimensions: 33 rows × 10 columns
@@ -30126,7 +29470,6 @@ Dimensions: 33 rows × 10 columns
 | STAT_BTSCHTZ_BS_WASSER_ZEIT_WERT | s | - | unsigned int | - | - | - | - | - | BS-Eingriff per Wassereinspritzung |
 | STAT_BTSCHTZ_BS_AKTIV_STRECKE_WERT | km | - | unsigned long | - | - | - | - | - | Gefahrene Strecke seit Aktivierung/Resetierung der Bauteilschutz Statistiken |
 
-<a id="table-res-0xf022-r"></a>
 ### RES_0XF022_R
 
 Dimensions: 1 rows × 13 columns
@@ -30135,7 +29478,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_DFTE | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | FUNKTIONSSTATUS DFTE |
 
-<a id="table-res-0xf025-r"></a>
 ### RES_0XF025_R
 
 Dimensions: 2 rows × 13 columns
@@ -30145,7 +29487,6 @@ Dimensions: 2 rows × 13 columns
 | - | - | - | + | Bit | - | BITFIELD | - | BF_0xF025_0 | - | - | - | Status Byte ausgeblendete Ventile |
 | STAT_FS_DFEV_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Status ausgeblendete Ventile (BasSvrAppl_faevz) |
 
-<a id="table-res-0xf026-r"></a>
 ### RES_0XF026_R
 
 Dimensions: 1 rows × 13 columns
@@ -30154,7 +29495,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DIAGNOSE | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus Diagnosefunktion LL-Erhoehung |
 
-<a id="table-res-0xf027-r"></a>
 ### RES_0XF027_R
 
 Dimensions: 4 rows × 13 columns
@@ -30166,7 +29506,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_ROTW_VVT_WERT | - | - | + | ° | - | unsigned int | - | - | - | - | - | VVT Rotorwinkel |
 | STAT_EXW_VVT_WERT | - | - | + | ° | - | signed int | - | - | 0.1 | 1.0 | 0.0 | Rel. Exenterwinkel |
 
-<a id="table-res-0xf02c-r"></a>
 ### RES_0XF02C_R
 
 Dimensions: 7 rows × 13 columns
@@ -30181,7 +29520,6 @@ Dimensions: 7 rows × 13 columns
 | STAT_NKW_SOLL_WERT | - | - | + | 1/min | - | signed int | - | - | - | - | - | Sollwertanforderung Drehzahl aus Funktion Oeldruckregelung |
 | STAT_NKW_WERT | - | - | + | 1/min | - | signed int | - | - | 0.5 | 1.0 | 0.0 | Istwert Drehzahl Kurbelwelle |
 
-<a id="table-res-0xf034-r"></a>
 ### RES_0XF034_R
 
 Dimensions: 3 rows × 13 columns
@@ -30192,7 +29530,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_CILCN_STDIAGTSTR | - | - | + | 0-n | - | unsigned char | - | T_CILCN_STDIAGTSTR_TEXT_DOP | - | - | - | Testerschnittstelle (A2L-Name: CILCN_stDiagTstr) |
 | STAT_CILCN_CTLRNCYCLTSTR_WERT | - | - | + | - | - | unsigned int | - | - | - | - | - | Anzahl der Adaptionen im Testerbetrieb (A2L-Name: CILCN_ctLrnCyclTstr) |
 
-<a id="table-res-0xf03a-r"></a>
 ### RES_0XF03A_R
 
 Dimensions: 8 rows × 13 columns
@@ -30208,7 +29545,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_LV_CDN_DIAG_EFF_IGA_CST_IS | - | - | + | 0-n | - | unsigned char | - | T_B_STANDARD_1BYTE_LESEN_0_1 | - | - | - | Diagnosis conditions fulfilled Ignition angle efficiency at coldstart - idle speed |
 | STAT_LV_CDN_DIAG_EFF_IGA_CST_PL | - | - | + | 0-n | - | unsigned char | - | T_B_STANDARD_1BYTE_LESEN_0_1 | - | - | - | Diagnosis conditions fulfilled Ignition angle efficiency at coldstart - part load |
 
-<a id="table-res-0xf03e-r"></a>
 ### RES_0XF03E_R
 
 Dimensions: 25 rows × 13 columns
@@ -30241,7 +29577,6 @@ Dimensions: 25 rows × 13 columns
 | STAT_DELTA_LAMBDAR_WERT | - | - | + | % | - | signed int | - | - | 100.0 | 32768.0 | 0.0 | Lambda-Regler Differenz zwischen Zustand 2 minus Zustand 1 in Werkstattest Saugrohrdifferenzdruckvorgabe |
 | STAT_DELTA_SAUGROHDRUCK_WERT | - | - | + | - | - | signed int | - | - | 32.0 | 65536.0 | 0.0 | Mshfm Differenz zwischen Zustand 2 minus Zustand 1 in Werkstattest Saugrohrdifferenzdruckvorgabe |
 
-<a id="table-res-0xf03f-r"></a>
 ### RES_0XF03F_R
 
 Dimensions: 2 rows × 13 columns
@@ -30251,7 +29586,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_CVO_DIAG_DEAK | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Funktionsstatus der Abschaltung von CVO Diagnosen |
 | STAT_ZAEHLER_JBANF_WERT | - | - | + | - | - | unsigned int | - | - | - | - | - | Zaehler wie oft der Job angefordert worden ist. muss im Flashresistenten Bereich liegen. Bei Ueberlauf auf max Wert zu begrenzen.Label muss noch von Bosch erstellt werden. |
 
-<a id="table-res-0xf042-r"></a>
 ### RES_0XF042_R
 
 Dimensions: 5 rows × 13 columns
@@ -30264,7 +29598,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_ST_LL_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Status Leerlauf (A2L-Name: St_ll) |
 | STAT_CTR_CAM_OFS_EXT_ADJ_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Zaehler Spuelvorgaenge waerend Testereingriff |
 
-<a id="table-res-0xf043-r"></a>
 ### RES_0XF043_R
 
 Dimensions: 2 rows × 13 columns
@@ -30274,7 +29607,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_MONTAGEMODUS | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | FUNKTIONSSTATUS MONTAGEMODUS |
 | STAT_ST_MONTAGE_MODUS | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_ST_MONTAGE_MODUS_DOP | - | - | - | Status Montage-Modus aktiv/inaktiv |
 
-<a id="table-res-0xf044-r"></a>
 ### RES_0XF044_R
 
 Dimensions: 2 rows × 13 columns
@@ -30284,7 +29616,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_KLACKERTEST | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | FUNKTIONSSTATUS KLACKERTEST |
 | STAT_AKTUELL_ANSTUERWERT_ATS_WERT | - | - | + | HEX | - | unsigned char | - | - | - | - | - | aktueller Ansteuerwert aus ATS-Funktion mit Parameter ACTR_TST_MFVLV1_ACT |
 
-<a id="table-res-0xf045-r"></a>
 ### RES_0XF045_R
 
 Dimensions: 16 rows × 13 columns
@@ -30308,7 +29639,6 @@ Dimensions: 16 rows × 13 columns
 | STAT_VRSTL_MAX_EWG_SL1SL2_WERT | - | - | + | s | - | unsigned char | - | - | 0.005 | 1.0 | 0.0 | Maximale Verstellzeit fuer Verstellung von Sollposition 1 auf 2 im ewg-Systemtest.(A2L-NAME: Tewgsvcmax_tester[0]) |
 | STAT_VRSTL_MAX_EWG_SL2SL3_WERT | - | - | + | s | - | unsigned char | - | - | 0.005 | 1.0 | 0.0 | Maximale Verstellzeit fuer Verstellung von Sollposition 2 auf 3 im ewg-Systemtest (A2L-NAME: Tewgsvcmax_tester[1]) |
 
-<a id="table-res-0xf046-r"></a>
 ### RES_0XF046_R
 
 Dimensions: 11 rows × 13 columns
@@ -30327,7 +29657,6 @@ Dimensions: 11 rows × 13 columns
 | STAT_B_TEAKT | - | - | + | 0-n | - | unsigned char | - | T_B_TEAKT_DOP | - | - | - | Bedingung Tankentlueftung aktiv (normaler Betrieb oder Notlauf) |
 | STAT_B_FRASTAB | - | - | + | 0-n | - | unsigned char | - | T_B_FRASTAB_DOP | - | - | - | Bedingung: FRA-Integrator (lokal) stabil |
 
-<a id="table-res-0xf047-r"></a>
 ### RES_0XF047_R
 
 Dimensions: 7 rows × 13 columns
@@ -30342,7 +29671,6 @@ Dimensions: 7 rows × 13 columns
 | STAT_LV_DIAG_SMT_SWI_AV_NVLD | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Aktuelle Schalterposition |
 | STAT_TAM_SMT_NVLD_WERT | - | - | + | °C | - | unsigned char | - | - | 0.75 | 1.0 | -48.0 | Umgebungstemperatur von NVLD (A2L-Name: tam_smt_nvld) |
 
-<a id="table-res-0xf04b-r"></a>
 ### RES_0XF04B_R
 
 Dimensions: 2 rows × 13 columns
@@ -30352,7 +29680,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_TEV2 | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | FUNKTIONSSTATUS TEV2 |
 | STAT_BED_P_VOR_VERDICHTER | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Bedingung Druck vor Verdichter.Druckverhaeltnis Saugstrahlpumpe im erlaubten Bereich0/1=false/true |
 
-<a id="table-res-0xf04d-r"></a>
 ### RES_0XF04D_R
 
 Dimensions: 5 rows × 13 columns
@@ -30365,7 +29692,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_ANZ_SICHERSTART_WERT | - | - | + | - | - | unsigned int | - | - | - | - | - | Anzahl der durchgefuehrten  Sicher  MSA-Starts |
 | STAT_ANZ_SCHLUESSELSTART_WERT | - | - | + | - | - | unsigned int | - | - | - | - | - | Anzahl der durchgefuehrten Key-Starts |
 
-<a id="table-res-0xf04e-r"></a>
 ### RES_0XF04E_R
 
 Dimensions: 11 rows × 13 columns
@@ -30384,7 +29710,6 @@ Dimensions: 11 rows × 13 columns
 | STAT_WMM_STELLER_IST_ROH_WERT | - | - | + | mV | - | signed int | - | - | 0.2 | 1.0 | 0.0 | Roh Istwert des Stellers als Spannung SENT Signal |
 | STAT_WMM_STELLER_SOLL_ROH_WERT | - | - | + | mV | - | signed int | - | - | 0.2 | 1.0 | 0.0 | Roh Sollwert des Stellers als Spannung SENT Signal |
 
-<a id="table-res-0xf051-r"></a>
 ### RES_0XF051_R
 
 Dimensions: 8 rows × 13 columns
@@ -30400,7 +29725,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_DREHZAHL_MIN_GRENZ_WERT | - | - | + | 1/min | - | unsigned char | - | - | 40.0 | 1.0 | 0.0 | Untere Drehzahlgrenze fuer Lernbereich Geberrad-Adaption A2L-NAME: nufof_tmp |
 | STAT_FREIG_GEBERRADADAP | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Bedingung Geberrad-Adaption freigegeben Bzw Freigabe duch andere Funktionen gesperrt. A2L-NAME: B_fofadpen |
 
-<a id="table-res-0xf053-r"></a>
 ### RES_0XF053_R
 
 Dimensions: 2 rows × 13 columns
@@ -30410,7 +29734,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_BETR_MODE_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rueckgabewert Betriebsmodes E-Luefter LIN 0: Tester inaktiv1: WMK-Anforderung zu hoch, Job nicht ausfuehrbar2: Fehler (Nachlauf, Montagemodus, Relaisfehler, LIN-Fehler)3: Ansteuerung Betriebsmodus aktiv 4: Betriebsmodus nicht unterstuetzt |
 | STAT_IST_BA_ELUELIN_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Ist Betriebsart Luefter 1 LIN |
 
-<a id="table-res-0xf054-r"></a>
 ### RES_0XF054_R
 
 Dimensions: 3 rows × 13 columns
@@ -30421,7 +29744,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_LERNVORGANG_AKT_2 | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_STAT_LERN_AGK_ADAP_DOP | - | - | - | Aktueller Status 2 des Lernvorgangs des eAKS |
 | STAT_EL_ABGASKLAPPE_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Anforderung Diagnose oder Erkennung der elektrische Abgasklappe |
 
-<a id="table-res-0xf055-r"></a>
 ### RES_0XF055_R
 
 Dimensions: 2 rows × 13 columns
@@ -30431,7 +29753,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_SIKOABSCH | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus Job aktiv |
 | STAT_RESTZEIT_WERT | - | - | + | s | - | unsigned int | - | - | 1.0 | 100.0 | 0.0 | Restzeit bis zum Ruecksetzen der Funktion |
 
-<a id="table-res-0xf057-r"></a>
 ### RES_0XF057_R
 
 Dimensions: 68 rows × 13 columns
@@ -30507,7 +29828,6 @@ Dimensions: 68 rows × 13 columns
 | STAT_GRENZW_DEL_FE_MAG_WERT | - | - | + | s | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | Grenzwert Delay Fett zu Mager |
 | STAT_GRENZW_DEL_MAG_FE_WERT | - | - | + | s | - | unsigned int | - | - | 0.01 | 1.0 | 0.0 | Grenzwert Delay Mager zu Fett |
 
-<a id="table-res-0xf058-r"></a>
 ### RES_0XF058_R
 
 Dimensions: 6 rows × 13 columns
@@ -30521,7 +29841,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_BED_TP_REG_SON_2_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Taupunkt Regelsonde erreicht Bank2 |
 | STAT_BED_TP_MON_SON_2_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Taupunkt Monitorsonde erreich Bank2 |
 
-<a id="table-res-0xf05a-r"></a>
 ### RES_0XF05A_R
 
 Dimensions: 2 rows × 13 columns
@@ -30531,7 +29850,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_SIGNAL_FEV_STATUS | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Vorgabe ueber Tester Aktiv/Inaktiv auslesen |
 | STAT_SIGNAL_FEV_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rueckgelesener Verfuegbarkeitswert vom Bus |
 
-<a id="table-res-0xf05b-r"></a>
 ### RES_0XF05B_R
 
 Dimensions: 2 rows × 13 columns
@@ -30541,7 +29859,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_SIGNAL_FLV_STATUS | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Vorgabe ueber Tester Aktiv/Inaktiv auslesen |
 | STAT_SIGNAL_FLV_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rueckgelesener Verfuegbarkeitswert vom Bus |
 
-<a id="table-res-0xf05c-r"></a>
 ### RES_0XF05C_R
 
 Dimensions: 46 rows × 13 columns
@@ -30595,7 +29912,6 @@ Dimensions: 46 rows × 13 columns
 | STAT_STATISTIK_GEN_DATENFELD_12_WERT | - | - | + | - | - | signed int | - | - | - | - | - | - |
 | STAT_SWSABMW_TOTOPHRSISGSDMSTAT_WERT | - | - | + | - | - | unsigned long | - | - | - | - | - | Gesamt-Betriebsstundenzaehler fuer Isgsdm_statistik |
 
-<a id="table-res-0xf05f-r"></a>
 ### RES_0XF05F_R
 
 Dimensions: 5 rows × 13 columns
@@ -30608,7 +29924,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_MSA_STRTZRFL0_WERT | - | - | + | - | - | unsigned long | - | - | - | - | - | Gesamtreflexstartzahl beim letzen Startertausch |
 | STAT_MSA_STRTZKM0_WERT | - | - | + | km | - | unsigned long | - | - | - | - | - | Gesamtkilometerzahl beim letzten Startertausch |
 
-<a id="table-res-0xf063-r"></a>
 ### RES_0XF063_R
 
 Dimensions: 1 rows × 13 columns
@@ -30617,7 +29932,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MSA2_DEAK | - | - | + | 0-n | - | unsigned char | - | T_B_STANDARD_1BYTE_LESEN_0_1 | - | - | - | MSA2 (MotorStopAutomatik) deaktiviert (0=falsch 1=wahr) |
 
-<a id="table-res-0xf064-r"></a>
 ### RES_0XF064_R
 
 Dimensions: 1 rows × 13 columns
@@ -30626,7 +29940,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MSA2_DEAK | - | - | + | 0-n | - | unsigned char | - | T_B_STANDARD_1BYTE_LESEN_0_1 | - | - | - | MSA2 (MotorStopAutomatik) deaktiviert (0=falsch 1=wahr) |
 
-<a id="table-res-0xf068-r"></a>
 ### RES_0XF068_R
 
 Dimensions: 1 rows × 13 columns
@@ -30635,7 +29948,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FUNKBRENNDAUER_ABSCHLTMUSTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Funkenbrenndauer-Diagnose: Abschaltmuster. |
 
-<a id="table-res-0xf06a-r"></a>
 ### RES_0XF06A_R
 
 Dimensions: 14 rows × 13 columns
@@ -30657,7 +29969,6 @@ Dimensions: 14 rows × 13 columns
 | STAT_BED_TV_MIN_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Minimal Tastverhaeltnis erreicht ohne Erkennung PRV Oeffnungsdruck |
 | STAT_HD_TEST_END_WERT | - | - | + | MPa | - | unsigned int | - | - | 0.002 | 1.0 | 0.0 | Raildruck bei Ende des Abstelltests |
 
-<a id="table-res-0xf06c-r"></a>
 ### RES_0XF06C_R
 
 Dimensions: 1 rows × 13 columns
@@ -30666,7 +29977,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WERK_AKKS_FS | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus des Werkssystemtests |
 
-<a id="table-res-0xf06f-r"></a>
 ### RES_0XF06F_R
 
 Dimensions: 3 rows × 13 columns
@@ -30677,7 +29987,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_DREHZAHL_SOLL_WERT | - | - | + | 1/min | - | signed int | - | - | 1.0 | 2.0 | 0.0 | Solldrehzahl |
 | STAT_DREHZAHLABWEICHUNG_WERT | - | - | + | 1/min | - | signed int | - | - | 1.0 | 2.0 | 0.0 | LLR: Drehzahlabweichung zur stationaeren Solldrehzahl |
 
-<a id="table-res-0xf070-r"></a>
 ### RES_0XF070_R
 
 Dimensions: 1 rows × 13 columns
@@ -30686,7 +29995,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_SPUELLUFT_VENT | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus des Systemtest Spuelluftventil |
 
-<a id="table-res-0xf071-r"></a>
 ### RES_0XF071_R
 
 Dimensions: 21 rows × 13 columns
@@ -30715,7 +30023,6 @@ Dimensions: 21 rows × 13 columns
 | STAT_AUSL_WKL_ABW_SOLLCERS_SOLLNOCERS_WERT | - | - | + | ° KW | - | signed int | - | - | 1.0 | 64.0 | 0.0 | Winkelabweichung Sollwert CSERS zu Sollwert nonCSERS Diagnose Auslass B1 |
 | STAT_EINL_WKL_ABW_SOLLCERS_SOLLNOCERS_WERT | - | - | + | ° KW | - | signed int | - | - | 1.0 | 64.0 | 0.0 | Winkelabweichung Sollwert CSERS zu Sollwert nonCSERS Diagnose Einlass B1 |
 
-<a id="table-res-0xf072-r"></a>
 ### RES_0XF072_R
 
 Dimensions: 1 rows × 13 columns
@@ -30724,7 +30031,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_STARTER_AKTIV | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_STARTSYSTEM_DOP | - | - | - | Ausgabe des Ausgewaehlten Startsystems |
 
-<a id="table-res-0xf073-r"></a>
 ### RES_0XF073_R
 
 Dimensions: 1 rows × 13 columns
@@ -30733,7 +30039,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_CVODEMO | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus der CVO Demo |
 
-<a id="table-res-0xf075-r"></a>
 ### RES_0XF075_R
 
 Dimensions: 4 rows × 13 columns
@@ -30745,7 +30050,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_OEL_DRK_WERT | - | - | + | hPa | - | signed int | - | - | - | - | - | Oeldruck |
 | STAT_OEL_TEMP_WERT | - | - | + | ° | - | signed int | - | - | 1.0 | 10.0 | -273.14 | Oeltemperatur |
 
-<a id="table-res-0xf078-r"></a>
 ### RES_0XF078_R
 
 Dimensions: 8 rows × 13 columns
@@ -30761,7 +30065,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_KG_DRUCKDIAG_GLOB_FREIGABEBED_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Globale Freigaben fuer die Kurbelgehaeuse-Leckerkennung sind erfuellt |
 | STAT_KG_DRUCKDIAG_DIAGNOSE_FREIGABE_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Sonderfreigaben fuer die Kurbelgehaeuse-Leckerkennung sind erfuellt |
 
-<a id="table-res-0xf07b-r"></a>
 ### RES_0XF07B_R
 
 Dimensions: 8 rows × 13 columns
@@ -30777,7 +30080,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_OPF_REGENERATIONSVERHINDERER_2 | - | - | + | 0-n | - | unsigned int | - | T_2BYTE_TEXT_OPF_GRUND_HIGH_DOP | - | - | - | Regeneration kann aktuell nicht begonnen werden Teil 2 |
 | STAT_OPF_VERBESSERUNGS_INDEX_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Bewertungsinfo Regenerationserfolg in der Werkstattregeneration |
 
-<a id="table-res-0xf07c-r"></a>
 ### RES_0XF07C_R
 
 Dimensions: 1 rows × 13 columns
@@ -30786,7 +30088,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_ROLLENBEGRENZUNG | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | aktueller Zustand der Rollenbegrenzung |
 
-<a id="table-res-0xf07d-r"></a>
 ### RES_0XF07D_R
 
 Dimensions: 1 rows × 13 columns
@@ -30795,7 +30096,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_OBD_DEMO_KATHEIZEN | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | aktueller Zustand der Rollenbegrenzung |
 
-<a id="table-res-0xf07e-r"></a>
 ### RES_0XF07E_R
 
 Dimensions: 1 rows × 13 columns
@@ -30804,7 +30104,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_CSERS_LASTPUNKTDIAG_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Funktionsstatus Fehler Demo CSERS-Diagnose Verbrennungsmotor-Lastpunktabsenkung. |
 
-<a id="table-res-0xf080-r"></a>
 ### RES_0XF080_R
 
 Dimensions: 1 rows × 13 columns
@@ -30813,7 +30112,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_CVODEMO | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus der CVO Demo |
 
-<a id="table-res-0xf081-r"></a>
 ### RES_0XF081_R
 
 Dimensions: 3 rows × 13 columns
@@ -30824,7 +30122,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_FS_ZYLABSCH_ZUEND | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Funktionsstatus Zündungsabschaltung |
 | STAT_ZYLABSCH_AKTIVE_ZYL_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | aktive Zylinderausblendung rueckgelesen physikalische Zylinder |
 
-<a id="table-res-0xf082-r"></a>
 ### RES_0XF082_R
 
 Dimensions: 3 rows × 13 columns
@@ -30835,7 +30132,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_ZAEHLER_FUNKT_IO_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Zaehler, wie oft die Funktion schon iO gelaufen ist. |
 | STAT_FUNKTIONSFORTSCHRITT_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Funktionsfortschritt |
 
-<a id="table-res-0xf086-r"></a>
 ### RES_0XF086_R
 
 Dimensions: 2 rows × 13 columns
@@ -30845,7 +30141,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_BETRIEBSARTEN_EM1 | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus Tester-Vorgabe fuer E-Maschine 1 Betriebsart (Status_betriebsart_em1_lesen). |
 | STAT_BETRIEBSARTEN_EM1 | - | - | + | 0-n | - | unsigned char | - | T_BETRIEBSART_EM_DOP | - | - | - | E-Maschine 1 Betriebsart lesen (A2L-NAME: Betriebsart_em1_lesen). |
 
-<a id="table-res-0xf087-r"></a>
 ### RES_0XF087_R
 
 Dimensions: 2 rows × 13 columns
@@ -30855,7 +30150,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_BETRIEBSART_EM2 | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus Tester-Vorgabe fuer E-Maschine 2 Betriebsart. (A2L-NAME: Status_betriebsart_em1_lesen) |
 | STAT_BETRIEBSART_EM2 | - | - | + | 0-n | - | unsigned char | - | T_BETRIEBSART_EM_DOP | - | - | - | E-Maschine 2 (Generator) Betriebsart lesen. (A2L-NAME: Betriebsart_em2_lesen) |
 
-<a id="table-res-0xf08f-r"></a>
 ### RES_0XF08F_R
 
 Dimensions: 1 rows × 13 columns
@@ -30864,7 +30158,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MOFLAS_TILRNGPERD_WERT | - | - | + | ms | - | unsigned long | - | - | 10.0 | 1.0 | 0.0 | Lernzeit fuer Laengsbeschleunigungssensor |
 
-<a id="table-res-0xf098-r"></a>
 ### RES_0XF098_R
 
 Dimensions: 1 rows × 13 columns
@@ -30873,7 +30166,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FREISCHALTUNG_AKTIV_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Ausgabe des aktuellen Status der Freischaltung |
 
-<a id="table-res-0xf099-r"></a>
 ### RES_0XF099_R
 
 Dimensions: 2 rows × 13 columns
@@ -30883,7 +30175,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_VARIANTE_EEPROM_WERT | - | - | + | - | - | unsigned int | - | - | - | - | - | Industriekunden-Nummer aus dem EPROM |
 | STAT_VARIANTE_DATENSATZ_WERT | - | - | + | - | - | unsigned int | - | - | - | - | - | Industriekunden-Nummer aus dem Datensatz |
 
-<a id="table-res-0xf09a-r"></a>
 ### RES_0XF09A_R
 
 Dimensions: 1 rows × 13 columns
@@ -30892,7 +30183,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SOCMIN_AKTUELL_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Status Anhebung minimaler SOC des HV Speichers im PHEV |
 
-<a id="table-res-0xf09e-r"></a>
 ### RES_0XF09E_R
 
 Dimensions: 1 rows × 13 columns
@@ -30901,7 +30191,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_OBD_MOMENTBEG | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus der OBD DEMO Momentenbegrenzung |
 
-<a id="table-res-0xf09f-r"></a>
 ### RES_0XF09F_R
 
 Dimensions: 1 rows × 13 columns
@@ -30910,7 +30199,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_OPF_DRUCKSCHLAUCHABFALL | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus der Diagnosefunktion OPF Druckschlauchabfall |
 
-<a id="table-res-0xf0a0-r"></a>
 ### RES_0XF0A0_R
 
 Dimensions: 1 rows × 13 columns
@@ -30919,7 +30207,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_OPF_FS | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus OBD-Demo Katheizen auf Maximum |
 
-<a id="table-res-0xf0a1-r"></a>
 ### RES_0XF0A1_R
 
 Dimensions: 1 rows × 13 columns
@@ -30928,7 +30215,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_MOTORMOMENTBEGRENZUNG | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Aktueller Zustand der Motormomentbegrenzung |
 
-<a id="table-res-0xf0a2-r"></a>
 ### RES_0XF0A2_R
 
 Dimensions: 7 rows × 13 columns
@@ -30943,7 +30229,6 @@ Dimensions: 7 rows × 13 columns
 | STAT_SOLLWERT_ADAPTION_WERT | - | - | + | mm | - | signed int | - | - | 1.0 | 1000.0 | 0.0 | Rueckgelesener Sollwert der Adaption |
 | STAT_ISTWERT_ADAPTION_WERT | - | - | + | mm | - | signed int | - | - | 1.0 | 1000.0 | 0.0 | Aktueller Istwert der Adaption |
 
-<a id="table-res-0xf0a4-r"></a>
 ### RES_0XF0A4_R
 
 Dimensions: 7 rows × 13 columns
@@ -30958,7 +30243,6 @@ Dimensions: 7 rows × 13 columns
 | STAT_SOLLWERT_ADAPTION | - | - | + | 0-n | - | unsigned int | - | T_2BYTE_TEXT_SOLLWERT_ANZEIGE_DOP | - | - | - | Rueckgelesener Sollwert der Adaption |
 | STAT_ISTWERT_ADAPTION_WERT | - | - | + | kg/h | - | signed int | - | - | 1.0 | 32.0 | 0.0 | Aktueller Istwert der Adaption |
 
-<a id="table-res-0xf0a5-r"></a>
 ### RES_0XF0A5_R
 
 Dimensions: 9 rows × 13 columns
@@ -30975,7 +30259,6 @@ Dimensions: 9 rows × 13 columns
 | STAT_SPF_NMOT_WERT | - | - | + | 1/min | - | signed int | - | - | 1.0 | 2.0 | 0.0 | Motordrehzahl |
 | STAT_SPF_V_FZG_WERT | - | - | + | km/h | - | signed int | - | - | 1.0 | 100.0 | 0.0 | Fahrzeuggeschwindigkeit |
 
-<a id="table-res-0xf0a6-r"></a>
 ### RES_0XF0A6_R
 
 Dimensions: 1 rows × 13 columns
@@ -30984,7 +30267,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_DEMO_MEHRFACHEINSPRITZUNG | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus OBD DEMO Mehrfacheinspritzung |
 
-<a id="table-res-0xf0a7-r"></a>
 ### RES_0XF0A7_R
 
 Dimensions: 1 rows × 13 columns
@@ -30993,7 +30275,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_ADAP_GER_EL_AGK | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus Adaption geregelte elektrische Abgasklappe |
 
-<a id="table-res-0xf0d0-r"></a>
 ### RES_0XF0D0_R
 
 Dimensions: 16 rows × 13 columns
@@ -31017,7 +30298,6 @@ Dimensions: 16 rows × 13 columns
 | STAT_PU_WERT | - | - | + | hPa | - | unsigned int | - | - | 0.0390625 | 1.0 | 0.0 | Umgebungsdruck |
 | STAT_LV_ERR_PUT_EL | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Sensorfehler elektrisch erkannt |
 
-<a id="table-res-0xf0d5-r"></a>
 ### RES_0XF0D5_R
 
 Dimensions: 10 rows × 13 columns
@@ -31035,7 +30315,6 @@ Dimensions: 10 rows × 13 columns
 | - | - | - | + | Bit | - | BITFIELD | - | BF_0xF0D5_4 | - | - | - | Status untere Luftklappe |
 | STAT_STATE_ECRAS_UP_VAR_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Varianteninfo vom AKKS-LIN Steller(highbyte= Hardwareversion 0-F lowbyte= Softwareversion 0-F) (a2l: shtrecu_stinit) |
 
-<a id="table-res-0xf0d9-r"></a>
 ### RES_0XF0D9_R
 
 Dimensions: 2 rows × 13 columns
@@ -31045,7 +30324,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_DFL0 | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | FUNKTIONSSTATUS DFLO |
 | - | - | - | + | Bit | - | BITFIELD | - | BF_0xF0D9_0 | - | - | - | CARB FREEZE FRAME Byte, Bank 1, fuer Lambdaregelung. |
 
-<a id="table-res-0xf0da-r"></a>
 ### RES_0XF0DA_R
 
 Dimensions: 2 rows × 13 columns
@@ -31055,7 +30333,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_DIAGNOSE_1 | - | - | + | 0-n | - | unsigned char | - | T_EOL_RAM_1__DOP | - | - | - | Funktionsstatus Diagnosefunktion DMTL |
 | STAT_DIAGNOSE_2 | - | - | + | 0-n | - | unsigned char | - | T_STATE_DMTL_DOP | - | - | - | Status Diagnosefunktion DMTL |
 
-<a id="table-res-0xf0df-r"></a>
 ### RES_0XF0DF_R
 
 Dimensions: 14 rows × 13 columns
@@ -31077,7 +30354,6 @@ Dimensions: 14 rows × 13 columns
 | STAT_FAK_TEV_ADAP_WERT | - | - | + | - | - | signed int | - | - | 0.00195313 | 1.0 | 0.0 | Faktor Tankentlueftungs-Adaption (A2L-Name: ftead_w) |
 | STAT_B_TEV_AKT | - | - | + | 0-n | - | unsigned char | - | T_B_TEAKT_DOP | - | - | - | Bedingung Tankentlueftung aktiv (normaler Betrieb oder Notlauf) (A2L-Name: B_teakt) |
 
-<a id="table-res-0xf0e0-r"></a>
 ### RES_0XF0E0_R
 
 Dimensions: 2 rows × 13 columns
@@ -31087,7 +30363,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_EISYUGD | - | - | + | 0-n | - | unsigned char | - | T_B_MSRHUBAD_DOP | - | - | - | FUNKTIONSSTATUS Eisy Adaption Ungedrosselt (EISYUGD) |
 | STAT_MRNN_TEST_VVT_WERT | - | - | + | - | - | signed int | - | - | 0.00003052 | 1.0 | 0.0 | Massenstromregler-Adaptionswert NN im VVT Betrieb ueber Test gelesen |
 
-<a id="table-res-0xf0e1-r"></a>
 ### RES_0XF0E1_R
 
 Dimensions: 2 rows × 13 columns
@@ -31097,7 +30372,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_EISYGD | - | - | + | 0-n | - | unsigned char | - | T_B_MSRDKAD_DOP | - | - | - | Massestromregler auf DK erstmalig erfolgt |
 | STAT_MRNN_TEST_DK_WERT | - | - | + | - | - | signed int | - | - | 0.00003052 | 1.0 | 0.0 | Massenstromregler-Adaptionswert NN im GD - Betrieb ueber Test gelesen |
 
-<a id="table-res-0xf0e3-r"></a>
 ### RES_0XF0E3_R
 
 Dimensions: 1 rows × 13 columns
@@ -31106,7 +30380,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KRNN_TEST_WERT | - | - | + | ° | - | signed int | - | - | 0.1 | 1.0 | 0.0 | Zuendwinkelaenderung aus Adaption Klopfregelung fuer Testerabfrage |
 
-<a id="table-res-0xf0e4-r"></a>
 ### RES_0XF0E4_R
 
 Dimensions: 2 rows × 13 columns
@@ -31116,7 +30389,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_KLNN_TEST_WERT | - | - | + | % | - | signed int | - | - | 0.00152588 | 1.0 | 0.0 | Lambdaadaptionswert fuer Testerabfrage |
 | STAT_KLNN2_TEST_WERT | - | - | + | % | - | signed int | - | - | 0.00152588 | 1.0 | 0.0 | Lambdaadaptionswert fuer Testerabfrage |
 
-<a id="table-res-0xf0ea-r"></a>
 ### RES_0XF0EA_R
 
 Dimensions: 4 rows × 13 columns
@@ -31128,7 +30400,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_OEL_NACHFUELLMENGE_WERT | - | - | + | l | - | signed char | - | - | 1.0 | 10.0 | 0.0 | Oelnachfuellmenge in Liter fuer den Service. |
 | STAT_OEL_TEMP_KORR_WERT | - | - | + | °C | - | signed int | - | - | 0.1 | 1.0 | 0.0 | Korrigierte Oeltemperatur fuer ON |
 
-<a id="table-res-0xf0ec-r"></a>
 ### RES_0XF0EC_R
 
 Dimensions: 3 rows × 13 columns
@@ -31139,7 +30410,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | - | BITFIELD | - | BF_0xF0EC_1 | - | - | - | Status Oelniveaeu Detailmessung: Abbruchbedingungen/Randbedingungen (LSB-Status).Messung Abgebrochen falls Wert != 0 (Abbruch: B_on_dtlmssgsrv = false).(A2L-NAME: BasSvrAppl_stOilLvlDescrAbrt). |
 | STAT_ON_NIVEAUQNT_SRV_WERT | - | - | + | l | - | unsigned char | - | - | 0.01 | 1.0 | 0.0 | Oelniveau in Liter ueber Minimum fuer den Service. Ein Messwert unter 65 Grad_C ist ein grober Schaetzwert.Gueltige Messwertausgaben sind: 0.00 (MIN), 0.25, 0.50, 0.75, 1.00, 1.25, 1.50 (MAX), 1.75, 2.00, 2.25 Liter.Falls Messwerteausgebe == 2.55 Liter, wurde die Detailmessung im Driving Cycle noch NICHT erfolgreich durchgefuehrt.(A2L-NAME: SwSABMW_lOilLvlOverMin). |
 
-<a id="table-res-0xf0f6-r"></a>
 ### RES_0XF0F6_R
 
 Dimensions: 1 rows × 13 columns
@@ -31148,7 +30418,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SYSTEMCHECK_PM_MESSEMODE | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus Powermanagement Messemode |
 
-<a id="table-res-0xf0fc-r"></a>
 ### RES_0XF0FC_R
 
 Dimensions: 1 rows × 13 columns
@@ -31157,7 +30426,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FPC_MONTAGEMODUS | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_ST_FPC_MONTAGE_MODUS_DOP | - | - | - | FPC Montagemodus auslesen. |
 
-<a id="table-res-0xf0fd-r"></a>
 ### RES_0XF0FD_R
 
 Dimensions: 16 rows × 13 columns
@@ -31181,7 +30449,6 @@ Dimensions: 16 rows × 13 columns
 | STAT_VRSTL_MAX_EWG2_SL1SL2_WERT | - | - | + | s | - | unsigned char | - | - | 0.005 | 1.0 | 0.0 | Maximale Verstellzeit fuer Verstellung von Sollposition 1 auf 2 im eWG2-Systemtest. |
 | STAT_VRSTL_MAX_EWG2_SL2SL3_WERT | - | - | + | s | - | unsigned char | - | - | 0.005 | 1.0 | 0.0 | Maximale Verstellzeit fuer Verstellung von Sollposition 2 auf 3 im eWG2-Systemtest |
 
-<a id="table-res-0xf0ff-r"></a>
 ### RES_0XF0FF_R
 
 Dimensions: 3 rows × 13 columns
@@ -31192,7 +30459,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_FPC_SOLL_PARAMETER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Sollwert FPC Konfiguration. |
 | STAT_FPC_VARIANTE_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | FPC Variante. |
 
-<a id="table-res-0xf103-r"></a>
 ### RES_0XF103_R
 
 Dimensions: 8 rows × 13 columns
@@ -31208,7 +30474,6 @@ Dimensions: 8 rows × 13 columns
 | STAT_GEBERRAD_DREHZ_SEGMENT_MIN_WERT | - | - | + | 1/min | - | signed int | - | - | 1.0 | 2.0 | 0.0 | Minimaldrehzahl für Segmentzeitadaption |
 | STAT_FREIGABE_SEGMENTADAPTION_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Bedingung Segmentzeitadaption freigegeben |
 
-<a id="table-res-0xf106-r"></a>
 ### RES_0XF106_R
 
 Dimensions: 2 rows × 13 columns
@@ -31218,7 +30483,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_SCHALTERSTATUS_AKTUELL_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | aktuell ausgelesener Sollwert |
 | STAT_SCHALTERSTATUS_PERMANENT_SOLL_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | aktuell ausgelesener Sollwert fuer die Permanente vorgabe |
 
-<a id="table-res-0xf107-r"></a>
 ### RES_0XF107_R
 
 Dimensions: 1 rows × 13 columns
@@ -31227,7 +30491,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_48V_SYSTEMZUST | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_TEXT_48V_SYS_STATUS_DOP | - | - | - | Systemzustand des 48 V Bordnetzsystems |
 
-<a id="table-res-0xf108-r"></a>
 ### RES_0XF108_R
 
 Dimensions: 1 rows × 13 columns
@@ -31236,7 +30499,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FS_48V_SPERRE | - | - | + | 0/1 | - | unsigned char | - | - | - | - | - | Ruecklesen des Status der Sperranforderung: 0== Sperre nicht aktiv, 1==Sperre aktiv |
 
-<a id="table-res-0xf109-r"></a>
 ### RES_0XF109_R
 
 Dimensions: 9 rows × 13 columns
@@ -31253,7 +30515,6 @@ Dimensions: 9 rows × 13 columns
 | STAT_AKKS_1_FUNKTIONSZUSTAND_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Aktueller Status der ersten Klappe fuer Werkstatttester |
 | STAT_AKKS_1_VARIANTE_WERT | - | - | + | HEX | - | unsigned char | - | - | - | - | - | Version fuer die AKKS 1 |
 
-<a id="table-res-0xf10a-r"></a>
 ### RES_0XF10A_R
 
 Dimensions: 9 rows × 13 columns
@@ -31270,7 +30531,6 @@ Dimensions: 9 rows × 13 columns
 | STAT_AKKS_2_FUNKTIONSZUSTAND_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Aktueller Status der zweiten Klappe fuer Werkstatttester |
 | STAT_AKKS_2_VARIANTE_WERT | - | - | + | HEX | - | unsigned char | - | - | - | - | - | Version fuer die zweite Klappe |
 
-<a id="table-res-0xf10b-r"></a>
 ### RES_0XF10B_R
 
 Dimensions: 3 rows × 13 columns
@@ -31281,7 +30541,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_LADESCHWELLE_LADEGERAET_WERT | - | - | + | % | - | unsigned char | - | - | - | - | - | obere SoC-Schwelle bei Laden ueber 12V-Ladegeraet im aktiven Werkslademodus 48V |
 | STAT_LADESCHWELLE_VERBRENNUNGSMOTOR_WERT | - | - | + | % | - | unsigned char | - | - | - | - | - | obere SoC-Schwelle bei Laden ueber Verbrennungsmotor im aktiven Werkslademodus 48V |
 
-<a id="table-res-0xf10d-r"></a>
 ### RES_0XF10D_R
 
 Dimensions: 2 rows × 13 columns
@@ -31291,7 +30550,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_STARTER_SYS_FS | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus Systemcheck Ritzelstarter |
 | STAT_MODELWERT_MASCHKONST_WERT | - | - | + | - | - | unsigned int | - | - | 1.0 | 65536.0 | 0.0 | modellierte Maschinenkonstante |
 
-<a id="table-res-0xf10e-r"></a>
 ### RES_0XF10E_R
 
 Dimensions: 1 rows × 13 columns
@@ -31300,7 +30558,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DSS_ZEITABSCH_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Ruecklesestatus der Zeitabschaltung fuer den Dualspeicher |
 
-<a id="table-res-0xf110-r"></a>
 ### RES_0XF110_R
 
 Dimensions: 2 rows × 13 columns
@@ -31310,7 +30567,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_DEAK_KSU | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_FS_DOP | - | - | - | Funktionsstatus der Deaktivierung der Kupplungsschlupfunterdrueckung |
 | - | - | - | + | Bit | - | BITFIELD | - | BF_0xF110_0 | - | - | - | Bitfeld Status Freigabe KSU |
 
-<a id="table-res-0xf200-r"></a>
 ### RES_0XF200_R
 
 Dimensions: 12 rows × 13 columns
@@ -31330,7 +30586,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf201-r"></a>
 ### RES_0XF201_R
 
 Dimensions: 12 rows × 13 columns
@@ -31350,7 +30605,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf202-r"></a>
 ### RES_0XF202_R
 
 Dimensions: 12 rows × 13 columns
@@ -31370,7 +30624,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf203-r"></a>
 ### RES_0XF203_R
 
 Dimensions: 12 rows × 13 columns
@@ -31390,7 +30643,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf204-r"></a>
 ### RES_0XF204_R
 
 Dimensions: 12 rows × 13 columns
@@ -31410,7 +30662,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf205-r"></a>
 ### RES_0XF205_R
 
 Dimensions: 12 rows × 13 columns
@@ -31430,7 +30681,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf220-r"></a>
 ### RES_0XF220_R
 
 Dimensions: 12 rows × 13 columns
@@ -31450,7 +30700,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_LERNVAR_GETRIEBE_DOP | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW | - | - | + | 0-n | - | unsigned char | - | T_1BYTE_LERNVAR_GETRIEBE_DOP | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf22f-r"></a>
 ### RES_0XF22F_R
 
 Dimensions: 12 rows × 13 columns
@@ -31470,7 +30719,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf230-r"></a>
 ### RES_0XF230_R
 
 Dimensions: 12 rows × 13 columns
@@ -31490,7 +30738,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf231-r"></a>
 ### RES_0XF231_R
 
 Dimensions: 12 rows × 13 columns
@@ -31510,7 +30757,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf232-r"></a>
 ### RES_0XF232_R
 
 Dimensions: 12 rows × 13 columns
@@ -31530,7 +30776,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf233-r"></a>
 ### RES_0XF233_R
 
 Dimensions: 12 rows × 13 columns
@@ -31550,7 +30795,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf234-r"></a>
 ### RES_0XF234_R
 
 Dimensions: 12 rows × 13 columns
@@ -31570,7 +30814,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf235-r"></a>
 ### RES_0XF235_R
 
 Dimensions: 12 rows × 13 columns
@@ -31590,7 +30833,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-res-0xf236-r"></a>
 ### RES_0XF236_R
 
 Dimensions: 12 rows × 13 columns
@@ -31610,7 +30852,6 @@ Dimensions: 12 rows × 13 columns
 | STAT_CODIERUNG_MASTER_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Codierung hat den Vorrang |
 | STAT_KOMP_AKTIV_RAW_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Rohwert Aktivstatus der Komponenten. |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 2053 rows × 16 columns
@@ -33671,7 +32912,6 @@ Dimensions: 2053 rows × 16 columns
 | RESET_HISTORIE_PWRDIAG | 0xF341 | - | Ruecksetzen Historenereignisse fuer die Batterieinformationen zur sicheren Energieversorgung Klammerung: BMW_FEPM_GEN_SC >= 156 Bei Ausfuehrung des Jobs wird BMWfepm_b_RstHistStorPwrDiag_bo für 5 Sekunden gesetzt. | - | - | - | - | - | - | - | - | - | 31 | ARG_0xF341_R | - |
 | 0XFFFE | 0xFFFE | - | Umweltbedingung unbekannt | - | - | - | - | - | - | - | - | - | 31 | - | - |
 
-<a id="table-status-ram-daten-schreiben-tab"></a>
 ### STATUS_RAM_DATEN_SCHREIBEN_TAB
 
 Dimensions: 4 rows × 2 columns
@@ -33683,7 +32923,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Schreiben läuft |
 | 0x03 | Schreiben noch nicht angestoßen (Routine nicht gestartet) |
 
-<a id="table-swsigstatus"></a>
 ### SWSIGSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -33696,7 +32935,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | abgelehnt |
 | 0xFF | unbekannt |
 
-<a id="table-table-status-batteriezustand"></a>
 ### TABLE_STATUS_BATTERIEZUSTAND
 
 Dimensions: 4 rows × 2 columns
@@ -33708,7 +32946,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Batterie nicht i.O. |
 | 3 | ungueltig |
 
-<a id="table-table-status-eco2-funktionsstati"></a>
 ### TABLE_STATUS_ECO2_FUNKTIONSSTATI
 
 Dimensions: 11 rows × 2 columns
@@ -33727,7 +32964,6 @@ Dimensions: 11 rows × 2 columns
 | 10 | Messung beendet, Time Out erreicht |
 | 255 | Ungültiger Wert |
 
-<a id="table-table-status-ibs-bze"></a>
 ### TABLE_STATUS_IBS_BZE
 
 Dimensions: 2 rows × 2 columns
@@ -33737,7 +32973,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | BZE nicht aktiv |
 | 1 | BZE aktiv |
 
-<a id="table-table-status-letzter-batteriewechsel"></a>
 ### TABLE_STATUS_LETZTER_BATTERIEWECHSEL
 
 Dimensions: 2 rows × 2 columns
@@ -33747,7 +32982,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wechsel zulässig |
 | 1 | Wechsel unzulässig |
 
-<a id="table-table-status-tiefentladung"></a>
 ### TABLE_STATUS_TIEFENTLADUNG
 
 Dimensions: 2 rows × 2 columns
@@ -33757,7 +32991,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Batterie i.O. |
 | 1 | Batterie durch Tiefentladung geschädigt |
 
-<a id="table-table-status-wasserverlust"></a>
 ### TABLE_STATUS_WASSERVERLUST
 
 Dimensions: 2 rows × 2 columns
@@ -33767,7 +33000,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wasserverlust i.O. |
 | 1 | Wasserverlust nicht i.O. |
 
-<a id="table-t-1bit-fepm-cod-bordnetzkonf-bit0-dop"></a>
 ### T_1BIT_FEPM_COD_BORDNETZKONF_BIT0_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -33777,7 +33009,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bordnetzkonfiguration Bordnetzunterstuetzungsmassnahme nicht codiert |
 | 1 | Bordnetzkonfiguration Bordnetzunterstuetzungsmassnahme codiert |
 
-<a id="table-t-1bit-fepm-cod-bordnetzkonf-bit1-dop"></a>
 ### T_1BIT_FEPM_COD_BORDNETZKONF_BIT1_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -33787,7 +33018,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bordnetzkonfiguration Zustarteinheit nicht codiert |
 | 2 | Bordnetzkonfiguration Zustarteinheit codiert |
 
-<a id="table-t-1bit-fepm-cod-bordnetzkonf-bit2-dop"></a>
 ### T_1BIT_FEPM_COD_BORDNETZKONF_BIT2_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -33797,7 +33027,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Bordnetzkonfiguration Hochvoltsystem nicht codiert |
 | 4 | Bordnetzkonfiguration Hochvoltsystem codiert |
 
-<a id="table-t-1byte-0x59c7-texttab-sigdop"></a>
 ### T_1BYTE_0X59C7_TEXTTAB_SIGDOP
 
 Dimensions: 24 rows × 2 columns
@@ -33829,7 +33058,6 @@ Dimensions: 24 rows × 2 columns
 | 254 | SW-ID nicht vorhanden |
 | 255 | Unbekannter Fehler |
 
-<a id="table-t-1byte-adap-agk-dop"></a>
 ### T_1BYTE_ADAP_AGK_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -33841,7 +33069,6 @@ Dimensions: 4 rows × 2 columns
 | 20 | Feedback AGK (20%) |
 | 40 | AGK (40%) |
 
-<a id="table-t-1byte-bzelisb-oefgrd-dop"></a>
 ### T_1BYTE_BZELISB_OEFGRD_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -33857,7 +33084,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Letzter Oeffnungsgrund: SoC zu niedrig |
 | 255 | Signal unbefuellt |
 
-<a id="table-t-1byte-cvodemo-1-dop"></a>
 ### T_1BYTE_CVODEMO_1_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -33868,7 +33094,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | Kein Tab Vollhub gefunden |
 | 0 | keine Auswahl Grundzustand |
 
-<a id="table-t-1byte-ecos-dop"></a>
 ### T_1BYTE_ECOS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -33886,7 +33111,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Funktion vollstaendig durchlaufen und kein Fehler erkannt |
 | 9 | Funktion vollstaendig durchlaufen und Fehler erkannt |
 
-<a id="table-t-1byte-fs-cvo-dop"></a>
 ### T_1BYTE_FS_CVO_DOP
 
 Dimensions: 11 rows × 2 columns
@@ -33905,7 +33129,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1byte-fs-dop"></a>
 ### T_1BYTE_FS_DOP
 
 Dimensions: 11 rows × 2 columns
@@ -33924,7 +33147,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1byte-fs-ewg-systest-dop"></a>
 ### T_1BYTE_FS_EWG_SYSTEST_DOP
 
 Dimensions: 13 rows × 2 columns
@@ -33945,7 +33167,6 @@ Dimensions: 13 rows × 2 columns
 | 11 | Funktion mit Fehler beendet Fehler allgemein |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1byte-fs-mil-ccm-dop"></a>
 ### T_1BYTE_FS_MIL_CCM_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -33957,7 +33178,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | momentan blinkend |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1byte-fs-obd-demo-nockenwelle-dop"></a>
 ### T_1BYTE_FS_OBD_DEMO_NOCKENWELLE_DOP
 
 Dimensions: 11 rows × 2 columns
@@ -33976,7 +33196,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1byte-fs-odrspuelfunkt"></a>
 ### T_1BYTE_FS_ODRSPUELFUNKT
 
 Dimensions: 12 rows × 2 columns
@@ -33996,7 +33215,6 @@ Dimensions: 12 rows × 2 columns
 | 10 | Abbruch durch Timeout |
 | 11 | Abbruch durch Tester (extern) |
 
-<a id="table-t-1byte-fs-opf-dop"></a>
 ### T_1BYTE_FS_OPF_DOP
 
 Dimensions: 11 rows × 2 columns
@@ -34015,7 +33233,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1byte-fs-opf-erw-dop"></a>
 ### T_1BYTE_FS_OPF_ERW_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -34032,7 +33249,6 @@ Dimensions: 9 rows × 2 columns
 | 30 | Warten auf Ende Russabbrand |
 | 255 | ungueltig |
 
-<a id="table-t-1byte-fs-startsystem-dop"></a>
 ### T_1BYTE_FS_STARTSYSTEM_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -34046,7 +33262,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Startsystem nicht verfuegbar - Startsystem nicht bereit |
 | 255 | Ungueltig/Init |
 
-<a id="table-t-1byte-fs-vorgabe-startsystem-dop"></a>
 ### T_1BYTE_FS_VORGABE_STARTSYSTEM_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -34060,7 +33275,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Ritzelstarter |
 | 5 | Zahnriehmenstarter |
 
-<a id="table-t-1byte-katheizfunktion-deaktivierung-aktiv-inaktiv-dop"></a>
 ### T_1BYTE_KATHEIZFUNKTION_DEAKTIVIERUNG_AKTIV_INAKTIV_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34070,7 +33284,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Deaktivierung der Katheizfunktion inaktiv |
 | 1 | Deaktivierung der Katheizfunktion aktiv |
 
-<a id="table-t-1byte-lernvar-getriebe-dop"></a>
 ### T_1BYTE_LERNVAR_GETRIEBE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34082,7 +33295,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | DKG aktiv |
 | 255 | nicht gueltig |
 
-<a id="table-t-1byte-msa-kup-dop"></a>
 ### T_1BYTE_MSA_KUP_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34094,7 +33306,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Kupplungssensorsignal unplausibel |
 | 3 | Kupplung zu mindestens 90% betaetigt |
 
-<a id="table-t-1byte-msa-led-dop"></a>
 ### T_1BYTE_MSA_LED_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34106,7 +33317,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Taster-LED aus , Signal unplausibel |
 | 3 | Taster-LED an , SignalunpPlausibel |
 
-<a id="table-t-1byte-nockenwelle-wahl"></a>
 ### T_1BYTE_NOCKENWELLE_WAHL
 
 Dimensions: 14 rows × 2 columns
@@ -34128,7 +33338,6 @@ Dimensions: 14 rows × 2 columns
 | 14 | Auslassnockenwelle Slow Response |
 | 15 | Ein_und_Auslassnockenwelle Slow Response |
 
-<a id="table-t-1byte-nockenwelle-wahl-erweitert"></a>
 ### T_1BYTE_NOCKENWELLE_WAHL_ERWEITERT
 
 Dimensions: 17 rows × 2 columns
@@ -34153,7 +33362,6 @@ Dimensions: 17 rows × 2 columns
 | 18 | Auslassnockenwelle Offset nach KH |
 | 19 | Ein_und_Auslassnockenwelle Offset nach KH |
 
-<a id="table-t-1byte-opf-reg-fs-dop"></a>
 ### T_1BYTE_OPF_REG_FS_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -34167,7 +33375,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Serviceregeneration wurde komplett durchgefuehrt und reduzierte Russbeladung bestaetigt |
 | 255 | ungueltig |
 
-<a id="table-t-1byte-sg-id"></a>
 ### T_1BYTE_SG_ID
 
 Dimensions: 11 rows × 2 columns
@@ -34186,7 +33393,6 @@ Dimensions: 11 rows × 2 columns
 | 128 | Slave DME |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1byte-soundtuning-deaktivierung-aktiv-inaktiv-dop"></a>
 ### T_1BYTE_SOUNDTUNING_DEAKTIVIERUNG_AKTIV_INAKTIV_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34196,7 +33402,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Deaktivierung des Sound-Tuning inaktiv |
 | 1 | Deaktivierung des Sound-Tuning aktiv |
 
-<a id="table-t-1byte-stat-lern-agk-adap-dop"></a>
 ### T_1BYTE_STAT_LERN_AGK_ADAP_DOP
 
 Dimensions: 7 rows × 2 columns
@@ -34211,7 +33416,6 @@ Dimensions: 7 rows × 2 columns
 | 32 | Anlernvorgang Abgasklappe: erfolgreich |
 | 255 | Ungueltiger Wert |
 
-<a id="table-t-1byte-st-fpc-montage-modus-dop"></a>
 ### T_1BYTE_ST_FPC_MONTAGE_MODUS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -34222,7 +33426,6 @@ Dimensions: 3 rows × 2 columns
 | 5 | Montage-Modus ist aktiv |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-1byte-st-montage-modus-dop"></a>
 ### T_1BYTE_ST_MONTAGE_MODUS_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34232,7 +33435,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Montage-Modus ist inaktiv |
 | 1 | Montage-Modus ist aktiv |
 
-<a id="table-t-1byte-text-48v-sys-status-dop"></a>
 ### T_1BYTE_TEXT_48V_SYS_STATUS_DOP
 
 Dimensions: 27 rows × 2 columns
@@ -34267,7 +33469,6 @@ Dimensions: 27 rows × 2 columns
 | 25 | Ungueltig oder Undefiniert |
 | 255 | Ungueltig oder Undefiniert |
 
-<a id="table-t-1byte-text-adaptionsfunktion-dop"></a>
 ### T_1BYTE_TEXT_ADAPTIONSFUNKTION_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34277,7 +33478,6 @@ Dimensions: 2 rows × 2 columns
 | 1 | VORHANDEN |
 | 0 | NICHT VORHANDEN |
 
-<a id="table-t-1byte-text-aktiv-anzeige-dop"></a>
 ### T_1BYTE_TEXT_AKTIV_ANZEIGE_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -34288,7 +33488,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ADAPTION_AKTIV |
 | 255 | Funktion nicht vorhanden |
 
-<a id="table-t-1byte-text-bcu-daten-dop"></a>
 ### T_1BYTE_TEXT_BCU_DATEN_DOP
 
 Dimensions: 5 rows × 2 columns
@@ -34301,7 +33500,6 @@ Dimensions: 5 rows × 2 columns
 | 15 | SIGNAL UNGUELTIG |
 | 255 | Undefined |
 
-<a id="table-t-1byte-text-bcu-err-dop"></a>
 ### T_1BYTE_TEXT_BCU_ERR_DOP
 
 Dimensions: 5 rows × 2 columns
@@ -34314,7 +33512,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Fehler Status Ausfall BCU: Signal ungueltig |
 | 255 | Undefined |
 
-<a id="table-t-1byte-text-cbsopmode-dop"></a>
 ### T_1BYTE_TEXT_CBSOPMODE_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -34328,7 +33525,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | TRANSITION |
 | 255 | Undefiniert |
 
-<a id="table-t-1byte-text-ea-dop"></a>
 ### T_1BYTE_TEXT_EA_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -34339,7 +33535,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Abschaltgruende sind deaktiviert |
 | 255 | Ungueltig |
 
-<a id="table-t-1byte-text-fusi-a5-dop"></a>
 ### T_1BYTE_TEXT_FUSI_A5_DOP
 
 Dimensions: 1 rows × 2 columns
@@ -34348,7 +33543,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 165 | 165 |
 
-<a id="table-t-1byte-text-medienqualitaet-dop"></a>
 ### T_1BYTE_TEXT_MEDIENQUALITAET_DOP
 
 Dimensions: 5 rows × 2 columns
@@ -34361,7 +33555,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Signal Ungueltig |
 | 255 | Ungueltig |
 
-<a id="table-t-1byte-text-obd-cers-ausw-dop"></a>
 ### T_1BYTE_TEXT_OBD_CERS_AUSW_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34371,7 +33564,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Lastpunktabsenkung aktivieren BMWdgt_b_TqLimInc_bo wird  gesetzt |
 | 1 | Lastpunktanhebung  aktivieren BMWdgt_b_TqLimDec_bo wird gesetzt |
 
-<a id="table-t-1byte-text-obd-mehrfach-einspritz-ausw-dop"></a>
 ### T_1BYTE_TEXT_OBD_MEHRFACH_EINSPRITZ_AUSW_DOP
 
 Dimensions: 1 rows × 2 columns
@@ -34380,7 +33572,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 2 | Deaktivierung EinspritzImpuls 2 |
 
-<a id="table-t-1byte-text-ruecksetzanforderung-dop"></a>
 ### T_1BYTE_TEXT_RUECKSETZANFORDERUNG_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -34391,7 +33582,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | RUECKSETZEN_ERFOLGREICH |
 | 255 | UNGUELTIG |
 
-<a id="table-t-1byte-text-st-bcu-bit01-dop"></a>
 ### T_1BYTE_TEXT_ST_BCU_BIT01_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34403,7 +33593,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | Status Notstartschalter: Signal ungueltig |
 | 2 | Nicht definiert |
 
-<a id="table-t-1byte-text-st-bcu-bit23-dop"></a>
 ### T_1BYTE_TEXT_ST_BCU_BIT23_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34415,7 +33604,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | Zustand Fremdladeerkennung: Signal ungueltig |
 | 2 | Nicht definiert |
 
-<a id="table-t-1byte-text-st-bcu-bit47-dop"></a>
 ### T_1BYTE_TEXT_ST_BCU_BIT47_DOP
 
 Dimensions: 16 rows × 2 columns
@@ -34439,7 +33627,6 @@ Dimensions: 16 rows × 2 columns
 | 13 | nicht definiert |
 | 14 | nicht definiert |
 
-<a id="table-t-1byte-text-st-bcu-cmd-dop"></a>
 ### T_1BYTE_TEXT_ST_BCU_CMD_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34451,7 +33638,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | Sollvorgabe Position Schalter 2: Signal ungueltig |
 | 255 | Undefined |
 
-<a id="table-t-1byte-text-vorgabe-adaptionsanpassung-dop"></a>
 ### T_1BYTE_TEXT_VORGABE_ADAPTIONSANPASSUNG_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34463,7 +33649,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | TEMPORAER_STANDART_INITWERT_VORGEBEN |
 | 3 | TEMPORAER_ADAPTION_SPERREN |
 
-<a id="table-t-2byte-cvodemo2-dop"></a>
 ### T_2BYTE_CVODEMO2_DOP
 
 Dimensions: 14 rows × 2 columns
@@ -34485,7 +33670,6 @@ Dimensions: 14 rows × 2 columns
 | 40 | Demo Fett |
 | 576 | Demo Mager |
 
-<a id="table-t-2byte-cvodemo-dop"></a>
 ### T_2BYTE_CVODEMO_DOP
 
 Dimensions: 12 rows × 2 columns
@@ -34505,7 +33689,6 @@ Dimensions: 12 rows × 2 columns
 | 512 | delta Ti-Adaptionswert Ballistik |
 | 1024 | delta Ti-Adaptionswert Ballistik (nur fuer Diagnosefunktion verstellt) |
 
-<a id="table-t-2byte-text-cbs-id-dop"></a>
 ### T_2BYTE_TEXT_CBS_ID_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34517,7 +33700,6 @@ Dimensions: 4 rows × 2 columns
 | 7 | CBR_DPF |
 | 65535 | Undefiniert |
 
-<a id="table-t-2byte-text-opf-grund-high-dop"></a>
 ### T_2BYTE_TEXT_OPF_GRUND_HIGH_DOP
 
 Dimensions: 13 rows × 2 columns
@@ -34538,7 +33720,6 @@ Dimensions: 13 rows × 2 columns
 | 32768 | Eine Abgaskomponente ist zu heiß |
 | 65535 | Ungueltig |
 
-<a id="table-t-2byte-text-opf-grund-low-dop"></a>
 ### T_2BYTE_TEXT_OPF_GRUND_LOW_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34550,7 +33731,6 @@ Dimensions: 4 rows × 2 columns
 | 32768 | Eine externer Befehl zum Stoppen der Service Regeneration wurde empfangen |
 | 65535 | Ungueltig |
 
-<a id="table-t-2byte-text-sollwert-anzeige-dop"></a>
 ### T_2BYTE_TEXT_SOLLWERT_ANZEIGE_DOP
 
 Dimensions: 1 rows × 2 columns
@@ -34559,7 +33739,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 65535 | Funktion nicht vorhanden |
 
-<a id="table-t-4byte-text-st-ksu-dop"></a>
 ### T_4BYTE_TEXT_ST_KSU_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34569,7 +33748,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | KSU deaktiviert |
 | 1 | KSU aktiviert |
 
-<a id="table-t-ats-60fd-tv-txt-dop"></a>
 ### T_ATS_60FD_TV_TXT_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34581,7 +33759,6 @@ Dimensions: 4 rows × 2 columns
 | 5000 | 50% |
 | 9000 | 90% |
 
-<a id="table-t-ats-6113-tt-dop"></a>
 ### T_ATS_6113_TT_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34591,7 +33768,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | 0 |
 | 8192 | 1 |
 
-<a id="table-t-bawist-w-msg-text-dop"></a>
 ### T_BAWIST_W_MSG_TEXT_DOP
 
 Dimensions: 73 rows × 2 columns
@@ -34672,7 +33848,6 @@ Dimensions: 73 rows × 2 columns
 | 12722 | GK (gedrosselt kleiner Hub), OPFHEIZ , HOM (Homogen) |
 | 65535 | Ungueltig |
 
-<a id="table-t-ba-ist-dop"></a>
 ### T_BA_IST_DOP
 
 Dimensions: 5 rows × 2 columns
@@ -34685,7 +33860,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Homogen_Schicht |
 | 8 | Notlauf |
 
-<a id="table-t-betriebsart-em-dop"></a>
 ### T_BETRIEBSART_EM_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -34701,7 +33875,6 @@ Dimensions: 8 rows × 2 columns
 | 14 | Fehler |
 | 15 | Signal ungueltig |
 
-<a id="table-t-bmwfanlin1-pwr-clas-ub-texttable-dop"></a>
 ### T_BMWFANLIN1_PWR_CLAS_UB_TEXTTABLE_DOP
 
 Dimensions: 7 rows × 2 columns
@@ -34716,7 +33889,6 @@ Dimensions: 7 rows × 2 columns
 | 32 | 1000 W |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-bmwfanlin1-st-readbyidtstr-ub-texttable-dop"></a>
 ### T_BMWFANLIN1_ST_READBYIDTSTR_UB_TEXTTABLE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34728,7 +33900,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Metadaten n.i.O. |
 | 255 | ungueltiger Wert |
 
-<a id="table-t-bmwesv-b-enacrbylim1-bo-dop"></a>
 ### T_BMWESV_B_ENACRBYLIM1_BO_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34738,7 +33909,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-bmwesv-b-enacrbylim2-bo-dop"></a>
 ### T_BMWESV_B_ENACRBYLIM2_BO_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34748,7 +33918,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-bmwesv-b-enacrbylim3-bo-dop"></a>
 ### T_BMWESV_B_ENACRBYLIM3_BO_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34758,7 +33927,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-bzd-btzust-bk-dop"></a>
 ### T_BZD_BTZUST_BK_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -34770,7 +33938,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Batterie nicht i.O. |
 | 3 | ungueltig |
 
-<a id="table-t-b-1byte-lesen-0-1"></a>
 ### T_B_1BYTE_LESEN_0_1
 
 Dimensions: 2 rows × 2 columns
@@ -34780,7 +33947,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | 0 |
 | 1 | 1 |
 
-<a id="table-t-b-bzdon-bk-dop"></a>
 ### T_B_BZDON_BK_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34790,7 +33956,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | keine BZE3 |
 | 1 | BZE3 |
 
-<a id="table-t-b-bzd-te-bk-dop"></a>
 ### T_B_BZD_TE_BK_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34800,7 +33965,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Batterie i.O. |
 | 1 | Batterie tiefentladen |
 
-<a id="table-t-b-bzd-wrgbat-dop"></a>
 ### T_B_BZD_WRGBAT_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34810,7 +33974,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wechsel zulaessig |
 | 1 | Wechsel unzulaessig |
 
-<a id="table-t-b-eframax-dop"></a>
 ### T_B_EFRAMAX_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34820,7 +33983,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 1 | TRUE |
 
-<a id="table-t-b-frastab-dop"></a>
 ### T_B_FRASTAB_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34830,7 +33992,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 1 | TRUE |
 
-<a id="table-t-b-isgskt-msaakt-dop"></a>
 ### T_B_ISGSKT_MSAAKT_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -34840,7 +34001,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | FALSE |
 | 1 | TRUE |
 
-<a id="table-t-b-molaet-dop"></a>
 ### T_B_MOLAET_DOP
 
 Dimensions: 256 rows × 2 columns
@@ -35104,7 +34264,6 @@ Dimensions: 256 rows × 2 columns
 | 254 | 1 |
 | 255 | 1 |
 
-<a id="table-t-b-msrdkad-dop"></a>
 ### T_B_MSRDKAD_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35114,7 +34273,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Adaption nicht erfolgt |
 | 1 | Adaption erfolgt |
 
-<a id="table-t-b-msrhubad-dop"></a>
 ### T_B_MSRHUBAD_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35124,7 +34282,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Adaption nicht erfolgt |
 | 1 | Adaption erfolgt |
 
-<a id="table-t-b-onabk-ozdeaktiv-dop"></a>
 ### T_B_ONABK_OZDEAKTIV_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35134,7 +34291,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 1 | TRUE |
 
-<a id="table-t-b-phada-job-dop"></a>
 ### T_B_PHADA_JOB_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35144,7 +34300,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | 0 |
 | 1 | 1 |
 
-<a id="table-t-b-phade-job-dop"></a>
 ### T_B_PHADE_JOB_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35154,7 +34309,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | 0 |
 | 1 | 1 |
 
-<a id="table-t-b-qvch2o-bk-dop"></a>
 ### T_B_QVCH2O_BK_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35164,7 +34318,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Wasserverbrauch i.O. |
 | 1 | Wasserverbrauch nicht i.O. |
 
-<a id="table-t-b-sgrhwl-siko-dop"></a>
 ### T_B_SGRHWL_SIKO_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35174,7 +34327,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | FALSE |
 | 1 | TRUE |
 
-<a id="table-t-b-standard-1byte-lesen-0-1"></a>
 ### T_B_STANDARD_1BYTE_LESEN_0_1
 
 Dimensions: 3 rows × 2 columns
@@ -35185,7 +34337,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | 1 |
 | 255 | Undefined |
 
-<a id="table-t-b-teakt-dop"></a>
 ### T_B_TEAKT_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35195,7 +34346,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 1 | TRUE |
 
-<a id="table-t-b-vvtnotl-dop"></a>
 ### T_B_VVTNOTL_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35205,7 +34355,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | 0 |
 | 1 | 1 |
 
-<a id="table-t-cilcn-stdiagtstr-text-dop"></a>
 ### T_CILCN_STDIAGTSTR_TEXT_DOP
 
 Dimensions: 12 rows × 2 columns
@@ -35225,7 +34374,6 @@ Dimensions: 12 rows × 2 columns
 | 192 | Lambda-Imbalance Diagnose ist freigegeben und aktiv |
 | 255 | Zustand nicht definiert |
 
-<a id="table-t-cilcn-sttstr-dop"></a>
 ### T_CILCN_STTSTR_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -35241,7 +34389,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Adaption blockiert, weil Tankentlueftung oder Gemischadaption aktiv |
 | 255 | Adaption ist blockiert (sonstige Freigabebedingung nicht erfuellt) |
 
-<a id="table-t-com-stcommstate-fa-dop"></a>
 ### T_COM_STCOMMSTATE_FA_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -35252,7 +34399,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | COMM_SILENT_COMMUNICATION |
 | 2 | COMM_FULL_COMMUNICATION |
 
-<a id="table-t-com-stcommstate-lin-dop"></a>
 ### T_COM_STCOMMSTATE_LIN_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -35263,7 +34409,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | COMM_SILENT_COMMUNICATION |
 | 2 | COMM_FULL_COMMUNICATION |
 
-<a id="table-t-egsdcmn-flgseg1b1reldparl-dop"></a>
 ### T_EGSDCMN_FLGSEG1B1RELDPARL_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35273,7 +34418,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 128 | TRUE |
 
-<a id="table-t-egsdcmn-flgseg1b2reldparl-dop"></a>
 ### T_EGSDCMN_FLGSEG1B2RELDPARL_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35283,7 +34427,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 128 | TRUE |
 
-<a id="table-t-egsdu-flgs2b1resltrdlyevln-dop"></a>
 ### T_EGSDU_FLGS2B1RESLTRDLYEVLN_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35293,7 +34436,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 2 | TRUE |
 
-<a id="table-t-egsdu-flgs2b1resltrtranevln-dop"></a>
 ### T_EGSDU_FLGS2B1RESLTRTRANEVLN_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35303,7 +34445,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 2 | TRUE |
 
-<a id="table-t-egsdu-flgs2b1resrtldlyevln-dop"></a>
 ### T_EGSDU_FLGS2B1RESRTLDLYEVLN_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35313,7 +34454,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 32 | TRUE |
 
-<a id="table-t-egsdu-flgs2b1resrtltranevln-dop"></a>
 ### T_EGSDU_FLGS2B1RESRTLTRANEVLN_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35323,7 +34463,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 4 | TRUE |
 
-<a id="table-t-egsdu-flgs2b2resltrdlyevln-dop"></a>
 ### T_EGSDU_FLGS2B2RESLTRDLYEVLN_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35333,7 +34472,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 8 | TRUE |
 
-<a id="table-t-egsdu-flgs2b2resltrtranevln-dop"></a>
 ### T_EGSDU_FLGS2B2RESLTRTRANEVLN_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35343,7 +34481,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 4 | TRUE |
 
-<a id="table-t-egsdu-flgs2b2resrtldlyevln-dop"></a>
 ### T_EGSDU_FLGS2B2RESRTLDLYEVLN_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35353,7 +34490,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 8 | TRUE |
 
-<a id="table-t-egsdu-flgs2b2resrtltranevln-dop"></a>
 ### T_EGSDU_FLGS2B2RESRTLTRANEVLN_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -35363,7 +34499,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 32 | TRUE |
 
-<a id="table-t-eol-ram-1-dop"></a>
 ### T_EOL_RAM_1__DOP
 
 Dimensions: 10 rows × 2 columns
@@ -35381,7 +34516,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Funktion durchlaufen und kein Fehler erkannt |
 | 9 | Funktion durchlaufen und Fehler erkannt |
 
-<a id="table-t-epm-stsync-sigdop"></a>
 ### T_EPM_STSYNC_SIGDOP
 
 Dimensions: 5 rows × 2 columns
@@ -35394,7 +34528,6 @@ Dimensions: 5 rows × 2 columns
 | 21 | EPM_DIRSTALE_SYNC |
 | 30 | EPM_FULL_SYNC |
 
-<a id="table-t-fpc-fs-dop"></a>
 ### T_FPC_FS_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -35408,7 +34541,6 @@ Dimensions: 6 rows × 2 columns
 | 9 | Funktion vollstaendig durchlaufen (Zyklusflag/Readiness gesetzt) und Fehler erkannt |
 | 3 | Funktion wartet auf Freigabe |
 
-<a id="table-t-fvvm-zust-tabelle-dop"></a>
 ### T_FVVM_ZUST_TABELLE_DOP
 
 Dimensions: 7 rows × 2 columns
@@ -35423,7 +34555,6 @@ Dimensions: 7 rows × 2 columns
 | 16 | Daten ausgelesen |
 | 255 | Ungültig |
 
-<a id="table-t-gbxpos-numlvrpos-text-dop"></a>
 ### T_GBXPOS_NUMLVRPOS_TEXT_DOP
 
 Dimensions: 19 rows × 2 columns
@@ -35450,7 +34581,6 @@ Dimensions: 19 rows × 2 columns
 | 192 | Rueckwaertsgang |
 | 255 | Ungueltig |
 
-<a id="table-t-ikctl-flgknkdetn-sigdop"></a>
 ### T_IKCTL_FLGKNKDETN_SIGDOP
 
 Dimensions: 2 rows × 2 columns
@@ -35460,7 +34590,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ---- |
 | 1 | TRUE |
 
-<a id="table-t-info-motorausgeher-dop"></a>
 ### T_INFO_MOTORAUSGEHER_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -35476,7 +34605,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Ausgeher während Betrieb (nach MSA- Start) |
 | 7 | Ausgeher nach CoM |
 
-<a id="table-t-inmrst-stcommstate-fa-dop"></a>
 ### T_INMRST_STCOMMSTATE_FA_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -35487,7 +34615,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | COMM_SILENT_COMMUNICATION |
 | 2 | COMM_FULL_COMMUNICATION |
 
-<a id="table-t-inmrst-stcommstate-lin-dop"></a>
 ### T_INMRST_STCOMMSTATE_LIN_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -35498,7 +34625,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | COMM_SILENT_COMMUNICATION |
 | 2 | COMM_FULL_COMMUNICATION |
 
-<a id="table-t-inmrst-sycstpostdrv-dop"></a>
 ### T_INMRST_SYCSTPOSTDRV_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -35515,7 +34641,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | SYC_POSTDRV_MIN_TIME |
 | 8 | SYC_POSTDRV_DONE |
 
-<a id="table-t-inmrst-sycstpredrv-dop"></a>
 ### T_INMRST_SYCSTPREDRV_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -35533,7 +34658,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | SYC_PREDRV_MOM |
 | 9 | SYC_PREDRV_EXIT |
 
-<a id="table-t-isgusm-chipherst-dop"></a>
 ### T_ISGUSM_CHIPHERST_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -35550,7 +34674,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | (Reserve) |
 | 255 | nicht Definiert |
 
-<a id="table-t-isgusm-herst-dop"></a>
 ### T_ISGUSM_HERST_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -35566,7 +34689,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Visteon |
 | 255 | nicht Definiert |
 
-<a id="table-t-isgusm-makenn-dop"></a>
 ### T_ISGUSM_MAKENN_DOP
 
 Dimensions: 33 rows × 2 columns
@@ -35607,7 +34729,6 @@ Dimensions: 33 rows × 2 columns
 | 31 | E8+ (mit BSD II) |
 | 255 | nicht Definiert |
 
-<a id="table-t-lin-stisgtyp-texttable-dop"></a>
 ### T_LIN_STISGTYP_TEXTTABLE_DOP
 
 Dimensions: 5 rows × 2 columns
@@ -35620,7 +34741,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Starter-Generator SGR |
 | 255 | nicht Definiert |
 
-<a id="table-t-pspdia-stfpcenfgnd-sigdop"></a>
 ### T_PSPDIA_STFPCENFGND_SIGDOP
 
 Dimensions: 12 rows × 2 columns
@@ -35640,7 +34760,6 @@ Dimensions: 12 rows × 2 columns
 | 10 | NOCRASHSIGRX |
 | 11 | RESD |
 
-<a id="table-t-state-dmtl-dop"></a>
 ### T_STATE_DMTL_DOP
 
 Dimensions: 21 rows × 2 columns
@@ -35669,7 +34788,6 @@ Dimensions: 21 rows × 2 columns
 | 34 | Funktion beendet: Kein Grobleck erkannt |
 | 255 | Funktion noch nicht gestartet |
 
-<a id="table-t-state-eng-sigdop"></a>
 ### T_STATE_ENG_SIGDOP
 
 Dimensions: 6 rows × 2 columns
@@ -35683,7 +34801,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | COENG_STOPPING - Nachlauf, Drehzahl noch vorhanden oder direkte Abschaltung aus stehendem Motor |
 | 5 | COENG_FINISH - Nachlauf, Motor steht |
 
-<a id="table-t-state-hal-intern-dop"></a>
 ### T_STATE_HAL_INTERN_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -35701,7 +34818,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | HAL_ADAPTION_LERNEN |
 | 9 | HAL_VERIFIKATION_OK |
 
-<a id="table-t-state-ksu-intern-dop"></a>
 ### T_STATE_KSU_INTERN_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -35712,7 +34828,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | HAL_INT_STATUS_NDIFF |
 | 2 | HAL_INT_STATUS_PLAUSFREIGABE_DME |
 
-<a id="table-t-state-pwm-vcv-sigdop"></a>
 ### T_STATE_PWM_VCV_SIGDOP
 
 Dimensions: 7 rows × 2 columns
@@ -35727,7 +34842,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | MFP_MAX |
 | 6 | VCV_LIH |
 
-<a id="table-t-stat-ewg-dop"></a>
 ### T_STAT_EWG_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -35745,7 +34859,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | Standby wegen nicht gueltigem Sensor |
 | 255 | Status nicht Definiert |
 
-<a id="table-t-st-atlsvc-dop"></a>
 ### T_ST_ATLSVC_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -35762,7 +34875,6 @@ Dimensions: 9 rows × 2 columns
 | 8 | Funktion vollstaendig durchlaufen und kein Fehler erkannt |
 | 9 | Funktion vollstaendig durchlaufen und Fehler erkannt |
 
-<a id="table-t-st-atlsvc-pvdk-dop"></a>
 ### T_ST_ATLSVC_PVDK_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -35776,7 +34888,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Turbolader 2 mit Ladedruckfehler |
 | 5 | Gesamtladedruck zu niedrig, Bank nicht identifiziert |
 
-<a id="table-t-st-testpoelsys2-dop"></a>
 ### T_ST_TESTPOELSYS2_DOP
 
 Dimensions: 11 rows × 2 columns
@@ -35795,7 +34906,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Testfunktion 2 laeuft (konstante Drehzahl, Solldruck-Rampen) |
 | 10 | Testfunktion 3 laeuft (Drehzahl-Rampen, konstanter Solloeldruck) |
 
-<a id="table-t-st-testpoelsys-dop"></a>
 ### T_ST_TESTPOELSYS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -35811,7 +34921,6 @@ Dimensions: 8 rows × 2 columns
 | 8 | Funktion vollstaendig durchlaufen und kein Fehler erkannt |
 | 9 | Funktion vollstaendig durchlaufen und Fehler erkannt |
 
-<a id="table-t-sw-5f7e-dop"></a>
 ### T_SW_5F7E_DOP
 
 Dimensions: 1 rows × 2 columns
@@ -35820,7 +34929,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 1 | Verriegelung Kodierbereich |
 
-<a id="table-t-sw-5ff5-dop"></a>
 ### T_SW_5FF5_DOP
 
 Dimensions: 1 rows × 2 columns
@@ -35829,7 +34937,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 4 | Powermanagement Histogramm loeschen. |
 
-<a id="table-t-syc-stmncoord-dop"></a>
 ### T_SYC_STMNCOORD_DOP
 
 Dimensions: 12 rows × 2 columns
@@ -35849,7 +34956,6 @@ Dimensions: 12 rows × 2 columns
 | 549 | FINALIZE |
 | 804 | DRIVE_OPERATION |
 
-<a id="table-t-syc-stpostdrv-dop"></a>
 ### T_SYC_STPOSTDRV_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -35866,7 +34972,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | SYC_POSTDRV_MIN_TIME |
 | 8 | SYC_POSTDRV_DONE |
 
-<a id="table-t-syc-stpredrv-dop"></a>
 ### T_SYC_STPREDRV_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -35884,7 +34989,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | SYC_PREDRV_MOM |
 | 9 | SYC_PREDRV_EXIT |
 
-<a id="table-t-syc-stsubold-dop"></a>
 ### T_SYC_STSUBOLD_DOP
 
 Dimensions: 7 rows × 2 columns
@@ -35899,7 +35003,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | SYC_POSTDRIVE |
 | 6 | SYC_POST_OS_EXIT |
 
-<a id="table-t-syc-stsub-dop"></a>
 ### T_SYC_STSUB_DOP
 
 Dimensions: 7 rows × 2 columns
@@ -35914,7 +35017,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | SYC_POSTDRIVE |
 | 6 | SYC_POST_OS_EXIT |
 
-<a id="table-t-vvlvlftactr-stcpt-dop"></a>
 ### T_VVLVLFTACTR_STCPT_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -35928,7 +35030,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | ERROR_PROCEED |
 | 5 | ERROR_OFF |
 
-<a id="table-zylinderzuordnung-12-m"></a>
 ### ZYLINDERZUORDNUNG_12_M
 
 Dimensions: 7 rows × 3 columns
@@ -35943,7 +35044,6 @@ Dimensions: 7 rows × 3 columns
 | 0x05 | 4 | Zylinder 4 |
 | 0xFF | FF | ungueltig |
 
-<a id="table-zylinderzuordnung-12-s"></a>
 ### ZYLINDERZUORDNUNG_12_S
 
 Dimensions: 7 rows × 3 columns
@@ -35958,7 +35058,6 @@ Dimensions: 7 rows × 3 columns
 | 0x05 | 10 | Zylinder 10 |
 | 0xFF | FF | ungueltig |
 
-<a id="table-zylinderzuordnung-3"></a>
 ### ZYLINDERZUORDNUNG_3
 
 Dimensions: 4 rows × 3 columns
@@ -35970,7 +35069,6 @@ Dimensions: 4 rows × 3 columns
 | 0x02 | 3 | Zylinder 3 |
 | 0xFF | FF | ungueltig |
 
-<a id="table-zylinderzuordnung-4"></a>
 ### ZYLINDERZUORDNUNG_4
 
 Dimensions: 5 rows × 3 columns
@@ -35983,7 +35081,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | 2 | Zylinder 2 |
 | 0xFF | FF | ungueltig |
 
-<a id="table-zylinderzuordnung-6"></a>
 ### ZYLINDERZUORDNUNG_6
 
 Dimensions: 7 rows × 3 columns
@@ -35998,7 +35095,6 @@ Dimensions: 7 rows × 3 columns
 | 0x05 | 4 | Zylinder 4 |
 | 0xFF | FF | ungueltig |
 
-<a id="table-zylinderzuordnung-8-m"></a>
 ### ZYLINDERZUORDNUNG_8_M
 
 Dimensions: 5 rows × 3 columns
@@ -36011,7 +35107,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | 2 | Zylinder 2 |
 | 0xFF | FF | ungueltig |
 
-<a id="table-zylinderzuordnung-8-s"></a>
 ### ZYLINDERZUORDNUNG_8_S
 
 Dimensions: 5 rows × 3 columns
@@ -36024,7 +35119,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | 7 | Zylinder 7 |
 | 0xFF | FF | ungueltig |
 
-<a id="table-auslesemode"></a>
 ### _AUSLESEMODE
 
 Dimensions: 5 rows × 2 columns
@@ -36037,7 +35131,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | FASTA |
 | 0xFF | 0 |
 
-<a id="table-eisygd-fasta"></a>
 ### _EISYGD_FASTA
 
 Dimensions: 6 rows × 5 columns
@@ -36051,7 +35144,6 @@ Dimensions: 6 rows × 5 columns
 | 0x04 | 5000 | 110 | 110 | 30.0 |
 | 0xFF | 0 | 0 | 0 | 0 |
 
-<a id="table-eisygd-inpa"></a>
 ### _EISYGD_INPA
 
 Dimensions: 6 rows × 5 columns
@@ -36065,7 +35157,6 @@ Dimensions: 6 rows × 5 columns
 | 0x04 | 5000 | 110.0 | 110.0 | 30.00 |
 | 0xFF | 0 | 0 | 0 | 0 |
 
-<a id="table-eisygd-ps-fasta"></a>
 ### _EISYGD_PS_FASTA
 
 Dimensions: 6 rows × 5 columns
@@ -36079,7 +35170,6 @@ Dimensions: 6 rows × 5 columns
 | 0x04 | 5000 | 110.0 | 110.0 | 280.00 |
 | 0xFF | 0 | 0 | 0 | 0 |
 
-<a id="table-eisygd-ps-inpa"></a>
 ### _EISYGD_PS_INPA
 
 Dimensions: 6 rows × 5 columns
@@ -36093,7 +35183,6 @@ Dimensions: 6 rows × 5 columns
 | 0x04 | 5000 | 110.0 | 110.0 | 280.00 |
 | 0xFF | 0 | 0 | 0 | 0 |
 
-<a id="table-eisyugd-fasta"></a>
 ### _EISYUGD_FASTA
 
 Dimensions: 6 rows × 6 columns
@@ -36107,7 +35196,6 @@ Dimensions: 6 rows × 6 columns
 | 0x04 | 4000 | 108 | 110 | 9.7 | 1500 |
 | 0xFF | 0 | 0 | 0 | 0 | 0 |
 
-<a id="table-eisyugd-inpa"></a>
 ### _EISYUGD_INPA
 
 Dimensions: 37 rows × 6 columns
@@ -36152,7 +35240,6 @@ Dimensions: 37 rows × 6 columns
 | 0x23 | 5000 | 9,78 | 81 | 113 | 1600 |
 | 0xFF | 0 | 0 | 0 | 0 | 0 |
 
-<a id="table-klann-fasta"></a>
 ### _KLANN_FASTA
 
 Dimensions: 12 rows × 4 columns
@@ -36172,7 +35259,6 @@ Dimensions: 12 rows × 4 columns
 | 0x0A | 1500 | 1.00 | 0 |
 | 0xFF | 0 | 0 | 0 |
 
-<a id="table-klann-inpa"></a>
 ### _KLANN_INPA
 
 Dimensions: 145 rows × 4 columns
@@ -36325,7 +35411,6 @@ Dimensions: 145 rows × 4 columns
 | 0x8F | 3000 | 1.60 | 0 |
 | 0xFF | 0 | 0 | 0 |
 
-<a id="table-krann-fasta"></a>
 ### _KRANN_FASTA
 
 Dimensions: 7 rows × 4 columns
@@ -36340,7 +35425,6 @@ Dimensions: 7 rows × 4 columns
 | 0x05 | 6000 | 80 | 30 |
 | 0xFF | 0 | 0 | 0 |
 
-<a id="table-krann-inpa"></a>
 ### _KRANN_INPA
 
 Dimensions: 145 rows × 4 columns
@@ -36493,7 +35577,6 @@ Dimensions: 145 rows × 4 columns
 | 0x8F | 7000 | 140 | 30 |
 | 0xFF | 0 | 0 | 0 |
 
-<a id="table-motorudscodierung-ruhestrom"></a>
 ### MOTORUDSCODIERUNG_RUHESTROM
 
 Dimensions: 16 rows × 2 columns

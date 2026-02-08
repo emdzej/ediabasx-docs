@@ -46,7 +46,6 @@
 - [STEUERN_STELLGLIED_GETAKTET](#job-steuern-stellglied-getaktet) - Getaktetes Ansteuern der Stellglieder
 - [STATUS_KICKDOWN_SCHALTER](#job-status-kickdown-schalter) - Auslesen des Kickdown-Schalters
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -64,7 +63,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -77,7 +75,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Abbruch der Kommunikation
@@ -86,7 +83,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -107,7 +103,6 @@ _No arguments._
 | ID_ZF_NR | string | Getriebeteilenummer |
 | ID_AIF_VORHANDEN | int | Ist ein AIF vorhanden (0 (nein)/ 1 (ja)) |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -127,7 +122,6 @@ _No arguments._
 | AIF_BEHOERDEN_NR | long | Behoerdennummer |
 | AIF_ZB_NR | long | Zusbaunummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -171,7 +165,6 @@ _No arguments._
 | F_UW2_EINH | string | Umweltbedingung 2 des einzelnen Fehlers  Einheit |
 | F_CODEHEX | binary | 5 Fehlerbyte |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -184,7 +177,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -197,7 +189,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 RAM lesen
@@ -218,7 +209,6 @@ RAM lesen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 ROM lesen
@@ -239,7 +229,6 @@ ROM lesen
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Auslesen der Motordrehzahl
@@ -254,7 +243,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | long | Motordrehzahl als Wert |
 | STAT_MOTORDREHZAHL_EINH | string | Einheit der Motordrehzahl [1/min] |
 
-<a id="job-status-abtriebsdrehzahl"></a>
 ### STATUS_ABTRIEBSDREHZAHL
 
 Auslesen der Abtriebsdrehzahl
@@ -269,7 +257,6 @@ _No arguments._
 | STAT_ABTRIEBSDREHZAHL_WERT | long | Abtriebsdrehzahl als Wert |
 | STAT_ABTRIEBSDREHZAHL_EINH | string | Einheit der Abtriebsdrehzahl [1/min] |
 
-<a id="job-status-lastsignal"></a>
 ### STATUS_LASTSIGNAL
 
 Auslesen des Lastsignals
@@ -284,7 +271,6 @@ _No arguments._
 | STAT_LASTSIGNAL_WERT | long | Lastsignal als Wert |
 | STAT_LASTSIGNAL_EINH | string | Einheit des Lastsignal [ms] |
 
-<a id="job-status-drosselklappe"></a>
 ### STATUS_DROSSELKLAPPE
 
 Auslesen der Drosselklappenstellung (7.11 und hoeher)
@@ -299,7 +285,6 @@ _No arguments._
 | STAT_DROSSELKLAPPE_WERT | long | Drosselklappenimpuls als Wert |
 | STAT_DROSSELKLAPPE_EINH | string | Einheit der Drosselklappenstellung [%] |
 
-<a id="job-status-stegdrehzahl"></a>
 ### STATUS_STEGDREHZAHL
 
 Auslesen der Stegdrehzahl
@@ -314,7 +299,6 @@ _No arguments._
 | STAT_STEGDREHZAHL_WERT | long | Stegdrehzahl als Wert |
 | STAT_STEGDREHZAHL_EINH | string | Einheit der Stegdrehzahl [1/min] |
 
-<a id="job-status-getr-oeltemperatur"></a>
 ### STATUS_GETR_OELTEMPERATUR
 
 Auslesen der Getriebeoeltemperatur (7.11 und hoeher)
@@ -329,7 +313,6 @@ _No arguments._
 | STAT_GETR_OELTEMPERATUR_WERT | long | Getriebeoeltemperatur als Wert |
 | STAT_GETR_OELTEMPERATUR_EINH | string | Einheit der Getriebeoeltemperatur [Grad C] |
 
-<a id="job-status-batteriespannung"></a>
 ### STATUS_BATTERIESPANNUNG
 
 Auslesen der Batteriespannung
@@ -344,7 +327,6 @@ _No arguments._
 | STAT_BATTERIESPANNUNG_WERT | long | Batteriespannung als Wert |
 | STAT_BATTERIESPANNUNG_EINH | string | Einheit der Batteriespannung [Volt] |
 
-<a id="job-status-statusbyte1"></a>
 ### STATUS_STATUSBYTE1
 
 Auslesen des 1. Statusbytes
@@ -365,7 +347,6 @@ _No arguments._
 | STAT_AUSG_HUBMAGNET_PN_SPERRE_EIN | int |  |
 | STAT_AUSG_ABLAUFENDE_HS_RS_EIN | int |  |
 
-<a id="job-status-statusbyte2"></a>
 ### STATUS_STATUSBYTE2
 
 Auslesen des 2. Statusbytes
@@ -386,7 +367,6 @@ _No arguments._
 | STAT_AUSG_PROGRAMM_M_EIN | int |  |
 | STAT_AUSG_PROGRAMM_W_EIN | int |  |
 
-<a id="job-status-statusbyte3"></a>
 ### STATUS_STATUSBYTE3
 
 Auslesen des 3. Statusbytes
@@ -409,7 +389,6 @@ _No arguments._
 | STAT_EING_LEITERBAHN_3_EIN | int |  |
 | STAT_EING_LEITERBAHN_4_EIN | int |  |
 
-<a id="job-status-statusbyte4"></a>
 ### STATUS_STATUSBYTE4
 
 Auslesen des 4. Statusbytes
@@ -425,7 +404,6 @@ _No arguments._
 | STAT_AUSG_STOERANZEIGE_EIN | int |  |
 | STAT_EING_REIZLEITUNG_DIAGNOSE_EIN | int |  |
 
-<a id="job-status-statusbyte5"></a>
 ### STATUS_STATUSBYTE5
 
 Auslesen des 5. Statusbytes
@@ -445,7 +423,6 @@ _No arguments._
 | STAT_RUECKFUEHRUNG_MOTOREINGRIFF_EIN | int |  |
 | STAT_RUECKFUEHRUNG_DRUCKREGLER_EIN | int |  |
 
-<a id="job-status-waehlhebelstellung"></a>
 ### STATUS_WAEHLHEBELSTELLUNG
 
 Auslesen der Waehlhebelstellung
@@ -459,7 +436,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | STAT_WAEHLHEBELSTELLUNG | string | Waehlhebelstellung (D,3,N,2,R,P,4,unplaus.) |
 
-<a id="job-status-gang"></a>
 ### STATUS_GANG
 
 Anzeige des eingelegten Gangs
@@ -473,7 +449,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | STAT_GANG | string | Gang |
 
-<a id="job-steuern-stellglied-getaktet"></a>
 ### STEUERN_STELLGLIED_GETAKTET
 
 Getaktetes Ansteuern der Stellglieder
@@ -493,7 +468,6 @@ Getaktetes Ansteuern der Stellglieder
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | STAT_ANSTEUERUNG | int | Ansteuerergebnis 0: Stellglied kann angesteuert werden 1: PIN-Nummer ist unbekannt 2: Positionshebel ist nicht in N oder P 3: Abtriebsdrehzahl ist zu hoch 4: Relais ist abgefallen, ein Fehler ist vorhanden |
 
-<a id="job-status-kickdown-schalter"></a>
 ### STATUS_KICKDOWN_SCHALTER
 
 Auslesen des Kickdown-Schalters
@@ -519,7 +493,6 @@ _No arguments._
 - [GANGTABELLE](#table-gangtabelle) (7 × 2)
 - [STELLGLIEDER](#table-stellglieder) (14 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 41 rows × 4 columns
@@ -568,7 +541,6 @@ Dimensions: 41 rows × 4 columns
 | 0x9d | Temperatur-Info von CAN | 0x00 | 0x00 |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -590,7 +562,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0c | statischer Fehler |
 | 0x0d | sporadischer Fehler |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 40 rows × 17 columns
@@ -638,7 +609,6 @@ Dimensions: 40 rows × 17 columns
 | 0x9c | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0a | 0x0b | 0x0c | 0x0d |
 | 0x9d | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0a | 0x0b | 0x0c | 0x0d |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 12 rows × 5 columns
@@ -658,7 +628,6 @@ Dimensions: 12 rows × 5 columns
 | 0x0a | Statusbyte 3 | -- | 1.0 | 0.0 |
 | 0xXY | unbekannte Umweltbedingung | -- | 1.0 | 0.0 |
 
-<a id="table-statusamatrix"></a>
 ### STATUSAMATRIX
 
 Dimensions: 7 rows × 5 columns
@@ -673,7 +642,6 @@ Dimensions: 7 rows × 5 columns
 | Getroelt | 1 | 1000 | -55000 | Grad C |
 | Ubatt | 1 | 82 | 0 | Volt |
 
-<a id="table-gangtabelle"></a>
 ### GANGTABELLE
 
 Dimensions: 7 rows × 2 columns
@@ -688,7 +656,6 @@ Dimensions: 7 rows × 2 columns
 | 0xe0 | Gang P/N/1 |
 | xxxx | Gang ? |
 
-<a id="table-stellglieder"></a>
 ### STELLGLIEDER
 
 Dimensions: 14 rows × 2 columns

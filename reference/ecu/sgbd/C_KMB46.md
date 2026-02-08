@@ -42,7 +42,6 @@
 - [C_FA_LOESCHEN](#job-c-fa-loeschen) - Fahrzeugauftrag Löschen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
 - [STATUS_AIF_SIA_DATEN_LESEN](#job-status-aif-sia-daten-lesen) - Anwenderinfofeld Block 3 auslesen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Kombi
@@ -55,7 +54,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -73,7 +71,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -98,7 +95,6 @@ _No arguments._
 | ID_CAN_INDEX | string | CAN-Index |
 | ID_AENDERUNGSINDEX | int | Aenderungsindex |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -111,7 +107,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-aif-gwsz-lesen"></a>
 ### AIF_GWSZ_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen
@@ -127,7 +122,6 @@ _No arguments._
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-gwsz-offset-lesen"></a>
 ### GWSZ_OFFSET_LESEN
 
 OFFSET-Wert des GWSZ aus EEPROM lesen
@@ -141,7 +135,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | GWSZ_OFFSET_WERT | int | absoluter Offset-Wert des GWSZ (0-255) |
 
-<a id="job-gwsz-offset-schreiben"></a>
 ### GWSZ_OFFSET_SCHREIBEN
 
 OFFSET-Wert des GWSZ in EEPROM schreiben
@@ -158,7 +151,6 @@ OFFSET-Wert des GWSZ in EEPROM schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-zeitinspektionsdatum-schreiben"></a>
 ### ZEITINSPEKTIONSDATUM_SCHREIBEN
 
 Beschreiben des Monats- u. Jahres-Bytes im EEPROM
@@ -177,7 +169,6 @@ Beschreiben des Monats- u. Jahres-Bytes im EEPROM
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-zeitinspektionsdatum-lesen"></a>
 ### ZEITINSPEKTIONSDATUM_LESEN
 
 Monats- u. Jahres-Byte des Zeitinspektionsdatums aus EEPROM WortAdr. 1C
@@ -194,7 +185,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-c-zeit-reset"></a>
 ### C_ZEIT_RESET
 
 Ruecksetzen des Zeitinspektionsintervall
@@ -207,7 +197,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-software-reset"></a>
 ### SOFTWARE_RESET
 
 Kombi loest selbststaendig einen Reset aus
@@ -220,7 +209,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -239,7 +227,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -256,7 +243,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-schreiben"></a>
 ### C_S_SCHREIBEN
 
 Codierdaten schreiben
@@ -273,7 +259,6 @@ Codierdaten schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -291,7 +276,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Speicherung der Checksumme
@@ -309,7 +293,6 @@ Berechnung und Speicherung der Checksumme
 | CHECKSUM | binary | berechnete Checksumme |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -324,7 +307,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Anwenderinfofeld Wortadr. 34-3D auslesen
@@ -341,7 +323,6 @@ _No arguments._
 | VN | string | C3 Zifferncode fuer Versionsnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fa-lesen"></a>
 ### C_FA_LESEN
 
 Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
@@ -356,7 +337,6 @@ _No arguments._
 | SPEICHER_STATUS | string | BELEGT bzw. UNBELEGT |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fa-auftrag"></a>
 ### C_FA_AUFTRAG
 
 Fahrzeugauftrag schreiben Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
@@ -373,7 +353,6 @@ Fahrzeugauftrag schreiben Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x10 - 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fa-loeschen"></a>
 ### C_FA_LOESCHEN
 
 Fahrzeugauftrag Löschen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
@@ -386,7 +365,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-aif-sia-daten-lesen"></a>
 ### STATUS_AIF_SIA_DATEN_LESEN
 
 Anwenderinfofeld Block 3 auslesen
@@ -424,7 +402,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 - [SIARESET](#table-siareset) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 9 rows × 2 columns
@@ -441,7 +418,6 @@ Dimensions: 9 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns
@@ -478,7 +454,6 @@ Dimensions: 29 rows × 2 columns
 | 0x28 | DODUCO |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 3 rows × 2 columns

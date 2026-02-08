@@ -43,7 +43,6 @@
 - [SIA_LESEN](#job-sia-lesen) - Default SIA_LESEN job
 - [KALTABFRAGE_SCHREIBEN](#job-kaltabfrage-schreiben) - Default KALTABFRAGE_SCHREIBEN job
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -61,7 +60,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -74,7 +72,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -97,7 +94,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -111,7 +107,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 infospeicherlesen job
@@ -138,7 +133,6 @@ _No arguments._
 | F_ZAHL_BLOCK_9 | int | Anzahl der Fehler im Block 9 |
 | F_ZAHL_BLOCK_10 | int | Anzahl der Fehler im Block 10 |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -164,7 +158,6 @@ _No arguments._
 | F_ZAHL_BLOCK_4 | int | Anzahl der Fehler im Block 4 |
 | F_ZAHL | int | Anzahl der Gesamtfehler der Bloecke 1 bis 4 (schwere Fehler) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -181,7 +174,6 @@ Default FS_LOESCHEN job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Default CODIERUNG_LESEN job
@@ -225,7 +217,6 @@ _No arguments._
 | COD_FERNLICHT_DIMMUNG_TAG | int | 16 bis 255, 255 = 100% |
 | _ANTWORT | binary | Antwort-Telegramm |
 
-<a id="job-codierung-lesen-alles"></a>
 ### CODIERUNG_LESEN_ALLES
 
 Default CODIERUNG_LESEN_ALLES job
@@ -244,7 +235,6 @@ Default CODIERUNG_LESEN_ALLES job
 | BLOCK | int | angeforderte Blocknummer von 0 bis 17 |
 | CODIERDATEN | binary | CODIERDATENFELD |
 
-<a id="job-codierung-block-1-lesen"></a>
 ### CODIERUNG_BLOCK_1_LESEN
 
 Default CODIERUNG_BLOCK_1_LESEN job
@@ -260,7 +250,6 @@ _No arguments._
 | CODIER_INDEX | int | Codierindex |
 | CODIER_VARIANTE | int | Codierdatenvariante |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 STATUS_LESEN job
@@ -395,7 +384,6 @@ _No arguments._
 | STAT_SPANNUNG_AL_DEFEKT_EINH | string |  |
 | _ANTWORT | binary | antworttelegramm |
 
-<a id="job-hersteller-lesen"></a>
 ### HERSTELLER_LESEN
 
 Default ident job
@@ -409,7 +397,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | HERSTELLERDATEN | binary | Herstellerdaten Byte 1 bis 4 (oder 10?) |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 DIAGNOSE_WEITER job
@@ -422,7 +409,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 STEUERN_SELBSTTEST job
@@ -435,7 +421,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 DIAGNOSE_ENDE job
@@ -448,7 +433,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-vorgeben"></a>
 ### STATUS_VORGEBEN
 
 Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
@@ -479,7 +463,6 @@ Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -498,7 +481,6 @@ Auslesen des Speicherinhaltes
 | JOB_STATUS | string |  |
 | DATEN | binary | angeforderter Datenblock (32 Bytes!) |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Schreiben des Speicherinhaltes
@@ -517,7 +499,6 @@ Schreiben des Speicherinhaltes
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-dimmer"></a>
 ### STEUERN_DIMMER
 
 STEUERN_DIMMER job
@@ -534,7 +515,6 @@ STEUERN_DIMMER job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-lwr-poti"></a>
 ### STEUERN_LWR_POTI
 
 STEUERN_LWR_POTI job
@@ -551,7 +531,6 @@ STEUERN_LWR_POTI job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fg-nr-lesen"></a>
 ### FG_NR_LESEN
 
 Default FG_NR_LESEN job
@@ -565,7 +544,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | FG_NR | string | Fahrgestellnummer 7-stellig |
 
-<a id="job-sia-lesen"></a>
 ### SIA_LESEN
 
 Default SIA_LESEN job
@@ -587,7 +565,6 @@ _No arguments._
 | SI_ZEITINSPEKTIONSZAEHLER_WERT | long |  |
 | SI_ZEITINSPEKTIONSZAEHLER_EINH | string | Tage |
 
-<a id="job-kaltabfrage-schreiben"></a>
 ### KALTABFRAGE_SCHREIBEN
 
 Default KALTABFRAGE_SCHREIBEN job
@@ -620,7 +597,6 @@ Default KALTABFRAGE_SCHREIBEN job
 - [STEUERN](#table-steuern) (62 × 3)
 - [JOBRESULT](#table-jobresult) (8 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 68 rows × 2 columns
@@ -696,7 +672,6 @@ Dimensions: 68 rows × 2 columns
 | 0x6E | Reserve Block A |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 32 rows × 2 columns
@@ -736,7 +711,6 @@ Dimensions: 32 rows × 2 columns
 | 0x6E | Reserve Block A |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -771,7 +745,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 62 rows × 3 columns
@@ -841,7 +814,6 @@ Dimensions: 62 rows × 3 columns
 | SLEEPMODE | 8 | 0x40 |
 | XXX | Y | Z |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns

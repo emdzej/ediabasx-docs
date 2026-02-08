@@ -36,7 +36,6 @@
 - [MECHANISCHE_MITTE_STELLEN](#job-mechanische-mitte-stellen) - Stellgied in die mechanische Mitte stellen
 - [SYSTEM_DEAKTIVIEREN](#job-system-deaktivieren) - System dauerhaft deaktivieren (absolute Hochlaufsperre setzen)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -54,7 +53,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -67,7 +65,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -87,7 +84,6 @@ _No arguments._
 | ID_DATUM_JAHR | int | Herstelldatum Jahr |
 | ID_SG_NR | long | Steuergeraetenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -139,7 +135,6 @@ _No arguments._
 | F_UW7_WERT | real | Realwert der Umweltbedingung 7 |
 | F_UW7_EINH | string | Einheit |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -153,7 +148,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | BUSY_ZEIT | unsigned int | Zeit bis zum Ende der Funktionsausfuehrung in Millisekunden |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -166,7 +160,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status Eingaenge AHK
@@ -211,7 +204,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-funktionsausfuehrung"></a>
 ### STATUS_FUNKTIONSAUSFUEHRUNG
 
 Auslesen des Status einer Funktionsausfuehrung
@@ -224,7 +216,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY oder ERROR_ECU_NACK |
 
-<a id="job-aktive-diagnose"></a>
 ### AKTIVE_DIAGNOSE
 
 Aktive Diagnose einschalten
@@ -237,7 +228,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY oder ERROR_ECU_NACK |
 
-<a id="job-k-zahl-speichern"></a>
 ### K_ZAHL_SPEICHERN
 
 Speichern der K-Zahl
@@ -251,7 +241,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY oder ERROR_ECU_NACK |
 | BUSY_ZEIT | unsigned int | Zeit bis zum Ende der Funktionsausfuehrung in Millisekunden |
 
-<a id="job-o-stellung-lenkradw-speichern"></a>
 ### O_STELLUNG_LENKRADW_SPEICHERN
 
 Aktuelle Stellwegistposition als 0-Lenkradwinkel speichern
@@ -265,7 +254,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY oder ERROR_ECU_NACK |
 | BUSY_ZEIT | unsigned int | Zeit bis zum Ende der Funktionsausfuehrung in Millisekunden |
 
-<a id="job-o-stellung-hinterradlenkw-speichern"></a>
 ### O_STELLUNG_HINTERRADLENKW_SPEICHERN
 
 Aktuelle Stellwegistposition als 0-Hinterradlenkwinkel speichern
@@ -279,7 +267,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY oder ERROR_ECU_NACK |
 | BUSY_ZEIT | unsigned int | Zeit bis zum Ende der Funktionsausfuehrung in Millisekunden |
 
-<a id="job-digitale-fkt-schalten"></a>
 ### DIGITALE_FKT_SCHALTEN
 
 Schalten digitaler Funktionen (einzelne Ventile und Fehlerlampe)
@@ -297,7 +284,6 @@ Schalten digitaler Funktionen (einzelne Ventile und Fehlerlampe)
 | JOB_STATUS | string | OKAY oder ERROR_ECU_NACK |
 | BUSY_ZEIT | unsigned int | Zeit bis zum Ende der Funktionsausfuehrung in Millisekunden |
 
-<a id="job-position-anfahren"></a>
 ### POSITION_ANFAHREN
 
 Anfahren einer vorgegebenen Ist-Position
@@ -318,7 +304,6 @@ Anfahren einer vorgegebenen Ist-Position
 | JOB_STATUS | string | OKAY oder ERROR_ECU_NACK |
 | BUSY_ZEIT | unsigned int | Zeit bis zum Ende der Funktionsausfuehrung in Millisekunden |
 
-<a id="job-mechanische-mitte-stellen"></a>
 ### MECHANISCHE_MITTE_STELLEN
 
 Stellgied in die mechanische Mitte stellen
@@ -332,7 +317,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY oder ERROR_ECU_NACK |
 | BUSY_ZEIT | unsigned int | Zeit bis zum Ende der Funktionsausfuehrung in Millisekunden |
 
-<a id="job-system-deaktivieren"></a>
 ### SYSTEM_DEAKTIVIEREN
 
 System dauerhaft deaktivieren (absolute Hochlaufsperre setzen)
@@ -355,7 +339,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (7 × 2)
 - [SOFTWAREZUSTAND](#table-softwarezustand) (17 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 92 rows × 2 columns
@@ -455,7 +438,6 @@ Dimensions: 92 rows × 2 columns
 | 0xE0 | Hydraulisches Sperrventil 2 |
 | 0xF0 | Speicherladeventil |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -470,7 +452,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Letzter Fehler der die Klemmung ausloeste |
 | 0x06 | Fehler aus Fehlerspeicherblock |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -485,7 +466,6 @@ Dimensions: 7 rows × 2 columns
 | 0x06 | Hydraulikdruck |
 | 0x07 | Betriebsspannung |
 
-<a id="table-softwarezustand"></a>
 ### SOFTWAREZUSTAND
 
 Dimensions: 17 rows × 2 columns

@@ -51,7 +51,6 @@
 - [STEUERN_ACTUATORS](#job-steuern-actuators) - Force the blend actuators IO block 0 Job ist wegen Kompatibilitaet zur SGBD IHKAR50 integriert! Job soll nur im Werk Oxford verwendet werden! Fuer neue Anwendungen bitte den Job STEUERN_MOTOREN verwenden!
 - [STEUERN_AIRCON_RECIRC](#job-steuern-aircon-recirc) - Force Air conditioning and recirculation IO block 2 Job ist wegen Kompatibilitaet zur SGBD IHKAR50 integriert! Job soll nur im Werk Oxford verwendet werden! Fuer neue Anwendungen bitte den Job STEUERN_KOMP_UMLUFT verwenden!
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -70,7 +69,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -83,7 +81,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -107,7 +104,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -138,7 +134,6 @@ _No arguments._
 | F_ART6_NR | int | 128 oder 0 |
 | F_ART6_TEXT | string | 'sporadischer Fehler' oder '--' |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen Clears all faults
@@ -152,7 +147,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | HEX-Antwort vom SG ECU responce packet |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher lesen mit Adresse Read ECU memory by address
@@ -172,7 +166,6 @@ Speicher lesen mit Adresse Read ECU memory by address
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | HEX-Antwort vom SG ECU responce packet |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des SG Speichers mit Adresse Write memory to a specified address
@@ -193,7 +186,6 @@ Beschreiben des SG Speichers mit Adresse Write memory to a specified address
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | HEX-Antwort vom SG ECU responce packet |
 
-<a id="job-status-sg"></a>
 ### STATUS_SG
 
 Steuergeraet Mode, LED und LCD auslesen
@@ -215,7 +207,6 @@ _No arguments._
 | STAT_LCD_PWM_EINH | string | Einheit fuer LCD PWM |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-status-sg-mode"></a>
 ### STATUS_SG_MODE
 
 Steuergeraet, Einstellung auslesen
@@ -243,7 +234,6 @@ _No arguments._
 | STAT_HHS_AKTIV | int | 1=aktiv, 0=nicht aktiv |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-status-sg-led-lcd"></a>
 ### STATUS_SG_LED_LCD
 
 Steuergeraet, Status LED und LCD auslesen
@@ -267,7 +257,6 @@ _No arguments._
 | STAT_LCD_PWM_EINH | string | Einheit fuer LCD PWM |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-status-sg-taster"></a>
 ### STATUS_SG_TASTER
 
 Steuergeraet, Status Taster auslesen
@@ -293,7 +282,6 @@ _No arguments._
 | STAT_DTAST_LVU_AKTIV | int | Drucktaster Luftverteilung unten 1=gedrueckt, 0=nicht gedrueckt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-status-systemparameter"></a>
 ### STATUS_SYSTEMPARAMETER
 
 Systemparameter auslesen
@@ -323,7 +311,6 @@ _No arguments._
 | STAT_SW_VERSION | string | Software version |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-steuern-motoren"></a>
 ### STEUERN_MOTOREN
 
 Steuern der Motoren Blocknummer 0 Force the blend actuators IO block 0
@@ -347,7 +334,6 @@ Steuern der Motoren Blocknummer 0 Force the blend actuators IO block 0
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-led-lcd"></a>
 ### STEUERN_LED_LCD
 
 Steuern des Bedienteil LCD
@@ -372,7 +358,6 @@ Steuern des Bedienteil LCD
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-led"></a>
 ### STEUERN_LED
 
 Steuer der Bedienteil LED
@@ -399,7 +384,6 @@ Steuer der Bedienteil LED
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-lcd"></a>
 ### STEUERN_LCD
 
 Steuern des Bedienteil LCD
@@ -422,7 +406,6 @@ Steuern des Bedienteil LCD
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-komp-umluft"></a>
 ### STEUERN_KOMP_UMLUFT
 
 Steuern von Kompressor und Umluft
@@ -444,7 +427,6 @@ Steuern von Kompressor und Umluft
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-eichlauf"></a>
 ### STEUERN_EICHLAUF
 
 Motoren kalibrieren
@@ -458,7 +440,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-sg-reset"></a>
 ### STEUERN_SG_RESET
 
 SG Reset Reset ECU
@@ -472,7 +453,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -489,7 +469,6 @@ _No arguments._
 | BYTE3 | int | 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. Only the last 3 bytes can be written
@@ -510,7 +489,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_ANTWORT | binary | Hex-Antwort von SG Read new teststamp response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -525,7 +503,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-codierung-schreiben"></a>
 ### CODIERUNG_SCHREIBEN
 
 Codierdaten Schreiben fuer R50 IHKA/ATC RD Es muessen immer alle vier Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -547,7 +524,6 @@ Codierdaten Schreiben fuer R50 IHKA/ATC RD Es muessen immer alle vier Argumente 
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten Ping message
@@ -561,7 +537,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden
@@ -575,7 +550,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -596,7 +570,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-calibrate-motors"></a>
 ### CALIBRATE_MOTORS
 
 Send manual calibration of blend and distribution motors message Job ist wegen Kompatibilitaet zur SGBD IHKAR50 integriert! Job soll nur im Werk Oxford verwendet werden! Fuer neue Anwendungen bitte den Job STEUERN_EICHLAUF verwenden!
@@ -610,7 +583,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-system-parameter"></a>
 ### STATUS_SYSTEM_PARAMETER
 
 Read the system parameters Job ist wegen Kompatibilitaet zur SGBD IHKAR50 integriert! Job soll nur im Werk Oxford verwendet werden! Fuer neue Anwendungen bitte den Job STATUS_SYSTEMPARAMETER verwenden!
@@ -643,7 +615,6 @@ _No arguments._
 | STAT_SOFTWARE_VERSION_WERT | string | Software version |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-digital"></a>
 ### STATUS_IO_DIGITAL
 
 Read IO States for block 0 - Push Buttons, LEDs and Set Points Job ist wegen Kompatibilitaet zur SGBD IHKAR50 integriert! Job soll nur im Werk Oxford verwendet werden! Fuer neue Anwendungen bitte die Jobs STATUS_SG_xx verwenden!
@@ -683,7 +654,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-actuators"></a>
 ### STEUERN_ACTUATORS
 
 Force the blend actuators IO block 0 Job ist wegen Kompatibilitaet zur SGBD IHKAR50 integriert! Job soll nur im Werk Oxford verwendet werden! Fuer neue Anwendungen bitte den Job STEUERN_MOTOREN verwenden!
@@ -707,7 +677,6 @@ Force the blend actuators IO block 0 Job ist wegen Kompatibilitaet zur SGBD IHKA
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-aircon-recirc"></a>
 ### STEUERN_AIRCON_RECIRC
 
 Force Air conditioning and recirculation IO block 2 Job ist wegen Kompatibilitaet zur SGBD IHKAR50 integriert! Job soll nur im Werk Oxford verwendet werden! Fuer neue Anwendungen bitte den Job STEUERN_KOMP_UMLUFT verwenden!
@@ -741,7 +710,6 @@ Force Air conditioning and recirculation IO block 2 Job ist wegen Kompatibilitae
 - [FARTTEXTE](#table-farttexte) (8 × 2)
 - [BEDIENTEILBITS](#table-bedienteilbits) (31 × 4)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -762,7 +730,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -842,7 +809,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -871,7 +837,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -896,7 +861,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 12 rows × 2 columns
@@ -916,7 +880,6 @@ Dimensions: 12 rows × 2 columns
 | 0x63 | Energiesparmode aktiv |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -932,7 +895,6 @@ Dimensions: 8 rows × 2 columns
 | 0x80 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-bedienteilbits"></a>
 ### BEDIENTEILBITS
 
 Dimensions: 31 rows × 4 columns

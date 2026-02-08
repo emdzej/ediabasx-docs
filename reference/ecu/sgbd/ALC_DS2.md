@@ -78,7 +78,6 @@
 - [PRUEFSTEMPEL_SCHEINWERFER_SCHREIBEN](#job-pruefstempel-scheinwerfer-schreiben) - Beschreiben des Scheinwerfer-Pruefstempel
 - [PRUEFSTEMPEL_SCHEINWERFER_LESEN](#job-pruefstempel-scheinwerfer-lesen) - Auslesen der Scheinwerfer-Pruefstempel
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -97,7 +96,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -110,7 +108,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -134,7 +131,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -155,7 +151,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -174,7 +169,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -187,7 +181,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -200,7 +193,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob
@@ -215,7 +207,6 @@ _No arguments._
 | ID_COD_INDEX | int | Codier-Index |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -230,7 +221,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob
@@ -248,7 +238,6 @@ Fahrgestellnummer schreiben Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -266,7 +255,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Read codingdata
@@ -284,7 +272,6 @@ Codierdaten lesen Read codingdata
 | CODIER_DATEN | binary | Codierdaten Codingdata |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren Write and check codingdata
@@ -301,7 +288,6 @@ Codierdaten schreiben und verifizieren Write and check codingdata
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -315,7 +301,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -337,7 +322,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 | F_ZAHL | int | Anzahl der Gesamtfehler |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -350,7 +334,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 infospeicherlesen job Liest NUR die Infospeichereintraege des ALC_SG
@@ -374,7 +357,6 @@ _No arguments._
 | F_ZAHL_BLOCK_3 | int | Anzahl der Fehler im Block 3 |
 | F_ZAHL_BLOCK_4 | int | Anzahl der Fehler im Block 4 |
 
-<a id="job-is-lesen-alc-sg"></a>
 ### IS_LESEN_ALC_SG
 
 infospeicherlesen job
@@ -398,7 +380,6 @@ _No arguments._
 | F_ZAHL_BLOCK_3 | int | Anzahl der Fehler im Block 3 |
 | F_ZAHL_BLOCK_4 | int | Anzahl der Fehler im Block 4 |
 
-<a id="job-is-lesen-smc"></a>
 ### IS_LESEN_SMC
 
 infospeicherlesen job
@@ -427,7 +408,6 @@ _No arguments._
 | F_ZAHL_BLOCK_11 | int | Anzahl der Fehler im Block 11 |
 | F_ZAHL_BLOCK_12 | int | Anzahl der Fehler im Block 12 |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Default FS_LOESCHEN job Loescht NUR die Infospeichereintraege des ALC_SG
@@ -440,7 +420,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-is-loeschen-alc-sg"></a>
 ### IS_LOESCHEN_ALC_SG
 
 Default FS_LOESCHEN job
@@ -453,7 +432,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-is-loeschen-smc-l"></a>
 ### IS_LOESCHEN_SMC_L
 
 Default FS_LOESCHEN job
@@ -466,7 +444,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-is-loeschen-smc-r"></a>
 ### IS_LOESCHEN_SMC_R
 
 Default FS_LOESCHEN job
@@ -479,7 +456,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 "Prüfstempel" lesen DS2:  $0E Prüfstempel lesen Modus = Default
@@ -495,7 +471,6 @@ _No arguments._
 | JOB0E_BYT1 | int | number 2 out of 3 valid:  0x00-0xFF |
 | JOB0E_BYT2 | int | number 3 out of 3 valid:  0x00-0xFF |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 "Prüfstempel" schreiben DS2:  $0F Prüfstempel schreiben Modus = Default
@@ -514,7 +489,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-alc-sg-lesen"></a>
 ### STATUS_ALC_SG_LESEN
 
 STATUS_LESEN job
@@ -538,7 +512,6 @@ _No arguments._
 | STAT_SPANNUNG_EINH | string | Einheit fuer alle Analogwerte: Volt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-betr-h-alc"></a>
 ### STATUS_BETR_H_ALC
 
 Status von ALC lesen
@@ -556,7 +529,6 @@ _No arguments._
 | STAT_BETRIEBSZEIT_EINH | string | Einheit fuer Betriebszeit [min] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betr-h-alc-loeschen"></a>
 ### STEUERN_BETR_H_ALC_LOESCHEN
 
 Status von ALC schreiben
@@ -570,7 +542,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-can-signale"></a>
 ### STATUS_CAN_SIGNALE
 
 Status von ALC lesen
@@ -590,7 +561,6 @@ _No arguments._
 | STAT_CONTROL_ALC_WERT | unsigned char |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-can-signale-timeout"></a>
 ### STATUS_CAN_SIGNALE_TIMEOUT
 
 Status von ALC lesen
@@ -621,7 +591,6 @@ _No arguments._
 | STAT_GETRIEBEDATEN_EIN | int |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fgnr-alc-lesen"></a>
 ### FGNR_ALC_LESEN
 
 7Byte Fahrgestellnummer von ALC lesen
@@ -636,7 +605,6 @@ _No arguments._
 | FGNR_ALC | string | Fahrgestellnummer 7-stellig fuer ALC |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fgnr-alc-schreiben"></a>
 ### FGNR_ALC_SCHREIBEN
 
 Status von ALC schreiben
@@ -654,7 +622,6 @@ Status von ALC schreiben
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-block-smc-alc-lesen"></a>
 ### BLOCK_SMC_ALC_LESEN
 
 Block (Codierdaten, Herstellerdanten) lesen Read codingdata
@@ -673,7 +640,6 @@ Block (Codierdaten, Herstellerdanten) lesen Read codingdata
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-block-smc-alc-schreiben"></a>
 ### BLOCK_SMC_ALC_SCHREIBEN
 
 Block (Codierdaten, Herstellerdanten) schreiben Read codingdata
@@ -691,7 +657,6 @@ Block (Codierdaten, Herstellerdanten) schreiben Read codingdata
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-alc-lesen-komplett-lear"></a>
 ### CODIERDATEN_ALC_LESEN_KOMPLETT_LEAR
 
 Auslesen der kompletten Codierdaten vom ALC Modus  : Default
@@ -706,7 +671,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-smc-links-lesen-komplett-lear"></a>
 ### CODIERDATEN_SMC_LINKS_LESEN_KOMPLETT_LEAR
 
 Auslesen der kompletten Codierdaten der SMC links Modus  : Default
@@ -722,7 +686,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-smc-rechts-lesen-komplett-lear"></a>
 ### CODIERDATEN_SMC_RECHTS_LESEN_KOMPLETT_LEAR
 
 Auslesen der kompletten Codierdaten der SMC rechts Modus  : Default
@@ -738,7 +701,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset-alc"></a>
 ### STEUERGERAETE_RESET_ALC
 
 Steuergeraete reset vom ALC-SG ausloesen
@@ -752,7 +714,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-nur-daten-schreiben-lear"></a>
 ### NUR_DATEN_SCHREIBEN_LEAR
 
 Schreiben von Daten aus Datei
@@ -771,7 +732,6 @@ Schreiben von Daten aus Datei
 | CODIERTE_DATEI | string | Datei die codiert wurde |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-smc-lesen"></a>
 ### STATUS_SMC_LESEN
 
 STATUS_LESEN job
@@ -810,7 +770,6 @@ _No arguments._
 | STAT_SPANNUNG_EINH | string | Einheit fuer alle Analogwerte: Volt |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-smc-position-lesen"></a>
 ### STATUS_SMC_POSITION_LESEN
 
 STATUS_LESEN job
@@ -828,7 +787,6 @@ _No arguments._
 | STAT_POS_LWR_SMC_R | long | Winkel fuer LWR SMC_R |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-referenzlauf-smc"></a>
 ### STEUERN_REFERENZLAUF_SMC
 
 Referenzlauf der SMC starten STATUS_SCHREIBEN job
@@ -847,7 +805,6 @@ Referenzlauf der SMC starten STATUS_SCHREIBEN job
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-position-smc"></a>
 ### STEUERN_POSITION_SMC
 
 bestimmte Position der SMC anfahren STATUS_SCHREIBEN job
@@ -869,7 +826,6 @@ bestimmte Position der SMC anfahren STATUS_SCHREIBEN job
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-betr-h-smc"></a>
 ### STATUS_BETR_H_SMC
 
 Status von SMC lesen
@@ -897,7 +853,6 @@ _No arguments._
 | STAT_VERFAHRZEIT_EINH | string | Einheit fuer Achsenverfahrzeit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betr-h-smc-loeschen"></a>
 ### STEUERN_BETR_H_SMC_LOESCHEN
 
 STATUS_SCHREIBEN job
@@ -915,7 +870,6 @@ STATUS_SCHREIBEN job
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-verteilung-winkel-ansteuerung-smc"></a>
 ### STATUS_VERTEILUNG_WINKEL_ANSTEUERUNG_SMC
 
 Status von SMC lesen
@@ -959,7 +913,6 @@ _No arguments._
 | STAT_WINKEL_MINUS_12_14_SMC_R_WERT | unsigned int | SMC_R_WINKEL zwischen -12° und -14° |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-verteilung-winkel-ansteuerung-smc-loeschen"></a>
 ### STEUERN_VERTEILUNG_WINKEL_ANSTEUERUNG_SMC_LOESCHEN
 
 STATUS_SCHREIBEN job
@@ -977,7 +930,6 @@ STATUS_SCHREIBEN job
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-temperaturverteilung-smc"></a>
 ### STATUS_TEMPERATURVERTEILUNG_SMC
 
 Status von SMC lesen
@@ -1011,7 +963,6 @@ _No arguments._
 | STAT_100_PROZENT_ABSCHALTUNG_SMC_R_WERT | unsigned int | SMC_R: 100% werden nicht mehr angefahren |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-temperaturverteilung-smc-loeschen"></a>
 ### STEUERN_TEMPERATURVERTEILUNG_SMC_LOESCHEN
 
 STATUS_SCHREIBEN job
@@ -1029,7 +980,6 @@ STATUS_SCHREIBEN job
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-schrittverluste-smc"></a>
 ### STATUS_SCHRITTVERLUSTE_SMC
 
 Status von SMC lesen
@@ -1055,7 +1005,6 @@ _No arguments._
 | STAT_SCHRITTVERLUSTGRENZE_6_SMC_R_WERT | unsigned int | SMC_R: Schrittverluste in Bereich 6 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schrittverluste-smc-loeschen"></a>
 ### STEUERN_SCHRITTVERLUSTE_SMC_LOESCHEN
 
 STATUS_SCHREIBEN job
@@ -1073,7 +1022,6 @@ STATUS_SCHREIBEN job
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestell-nr-smc-schreiben"></a>
 ### FAHRGESTELL_NR_SMC_SCHREIBEN
 
 Schreiben der VIN in die linke SMC
@@ -1092,7 +1040,6 @@ Schreiben der VIN in die linke SMC
 | JOB_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fg-nr-smc-lesen"></a>
 ### FG_NR_SMC_LESEN
 
 Fahrgestellnummer fuer SMC links und rechts lesen
@@ -1110,7 +1057,6 @@ _No arguments._
 | FG_NR_SMC_RECHTS_KONFIG | int | Konfigbyte Fahrgestellnummer fuer SMC rechts |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-id-smc-lesen"></a>
 ### ID_SMC_LESEN
 
 ID SMC links und rechts lesen
@@ -1132,7 +1078,6 @@ _No arguments._
 | MCV_VERSION_SMC_RECHTS | string | MCV-Version fuer SMC rechts |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-scheinwerferherstellerdaten-schreiben"></a>
 ### SCHEINWERFERHERSTELLERDATEN_SCHREIBEN
 
 Beschreiben der Scheinwerfer-Herstellerdaten
@@ -1151,7 +1096,6 @@ Beschreiben der Scheinwerfer-Herstellerdaten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-scheinwerferherstellerdaten-lesen"></a>
 ### SCHEINWERFERHERSTELLERDATEN_LESEN
 
 Auslesen der Scheinwerfer-Herstellerdaten
@@ -1170,7 +1114,6 @@ Auslesen der Scheinwerfer-Herstellerdaten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-scheinwerfer-schreiben"></a>
 ### PRUEFSTEMPEL_SCHEINWERFER_SCHREIBEN
 
 Beschreiben des Scheinwerfer-Pruefstempel
@@ -1189,7 +1132,6 @@ Beschreiben des Scheinwerfer-Pruefstempel
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-scheinwerfer-lesen"></a>
 ### PRUEFSTEMPEL_SCHEINWERFER_LESEN
 
 Auslesen der Scheinwerfer-Pruefstempel
@@ -1224,7 +1166,6 @@ Auslesen der Scheinwerfer-Pruefstempel
 - [IORTTEXTE](#table-iorttexte) (48 × 2)
 - [STEUERN_SMCS](#table-steuern-smcs) (6 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1245,7 +1186,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 77 rows × 2 columns
@@ -1330,7 +1270,6 @@ Dimensions: 77 rows × 2 columns
 | 0x76 | CEL |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1359,7 +1298,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1384,7 +1322,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1393,7 +1330,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1405,7 +1341,6 @@ Dimensions: 4 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -1426,7 +1361,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | Vergleich Fahrgestellnummer ALC mit SMC rechts unterschiedlich |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -1435,7 +1369,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | default | - | - | - | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -1444,7 +1377,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXY | unbekannte Umweltbedingung | 1 | - | unsigned char | - | 1 | 1 | 0 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 48 rows × 2 columns
@@ -1500,7 +1432,6 @@ Dimensions: 48 rows × 2 columns
 | 0x3F | ALC meldet Fehler an Lichtschaltzentrum |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-steuern-smcs"></a>
 ### STEUERN_SMCS
 
 Dimensions: 6 rows × 3 columns

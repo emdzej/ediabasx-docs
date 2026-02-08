@@ -75,7 +75,6 @@
 - [C_FA_AUFTRAG](#job-c-fa-auftrag) - Fahrzeugauftrag schreiben Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
 - [C_FA_LOESCHEN](#job-c-fa-loeschen) - Fahrzeugauftrag Löschen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -88,7 +87,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -107,7 +105,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -120,7 +117,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -138,7 +134,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -157,7 +152,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -170,7 +164,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -183,7 +176,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -208,7 +200,6 @@ _No arguments._
 | ID_CAN_INDEX | int | CAN-Index |
 | ID_AENDERUNGSINDEX | int | Aenderungsindex |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -229,7 +220,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary | Telegramm an SG |
 | _TEL_ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-gwsz-offset-lesen"></a>
 ### GWSZ_OFFSET_LESEN
 
 OFFSET-Wert des GWSZ aus EEPROM lesen
@@ -243,7 +233,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | GWSZ_OFFSET_WERT | int | absoluter Offset-Wert des GWSZ (0-255) |
 
-<a id="job-gwsz-offset-schreiben"></a>
 ### GWSZ_OFFSET_SCHREIBEN
 
 OFFSET-Wert des GWSZ in EEPROM schreiben
@@ -260,7 +249,6 @@ OFFSET-Wert des GWSZ in EEPROM schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-sia-korrektur-schreiben"></a>
 ### SIA_KORREKTUR_SCHREIBEN
 
 Toggeln der SIA Inspektions- bzw. Oelservices
@@ -273,7 +261,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-zeitinspektion-vorziehen"></a>
 ### ZEITINSPEKTION_VORZIEHEN
 
 Vorziehen der Zeitinspection vor der Zeitgrenze
@@ -313,7 +300,6 @@ Vorziehen der Zeitinspection vor der Zeitgrenze
 | TELEGRAMM_11_SW_RESET | binary | Telegramm an SG: Software-Reset ausfuehren |
 | SG_ANTWORT_11_SW_RESET | binary | Antworttelegramm von SG: Software-Reset ausfuehren |
 
-<a id="job-zeitinspektionsdatum-schreiben"></a>
 ### ZEITINSPEKTIONSDATUM_SCHREIBEN
 
 Beschreiben des Monats- u. Jahres-Bytes im EEPROM
@@ -332,7 +318,6 @@ Beschreiben des Monats- u. Jahres-Bytes im EEPROM
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-zeitinspektionsdatum-lesen"></a>
 ### ZEITINSPEKTIONSDATUM_LESEN
 
 Monats- u. Jahres-Byte des Zeitinspektionsdatums aus EEPROM WortAdr. 1C
@@ -349,7 +334,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicherinhalt aus SG lesen
@@ -382,7 +366,6 @@ _No arguments._
 | F_UW_ANZ | int | immer 0 |
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 
-<a id="job-software-reset"></a>
 ### SOFTWARE_RESET
 
 Kombi loest selbststaendig einen Reset aus
@@ -395,7 +378,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -413,7 +395,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 GWSZ zuruecksetzen, nur moeglich wenn Km-Stand < 255
@@ -426,7 +407,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-status-aif-gwsz-lesen"></a>
 ### STATUS_AIF_GWSZ_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen
@@ -442,7 +422,6 @@ _No arguments._
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-gwsz-minus-offset-lesen"></a>
 ### GWSZ_MINUS_OFFSET_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen und Offset abziehen
@@ -457,7 +436,6 @@ _No arguments._
 | STAT_GWSZ_MINUS_OFFSET_WERT | long | Gesamtwegstreckenzaehler minus Offset |
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 
-<a id="job-status-aif-fg-nr-lesen"></a>
 ### STATUS_AIF_FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -472,7 +450,6 @@ _No arguments._
 | STAT_AIF_FG_NR | string | Fahrgestellnummer |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-aif-sia-daten-lesen"></a>
 ### STATUS_AIF_SIA_DATEN_LESEN
 
 Anwenderinfofeld Block 3 auslesen
@@ -502,7 +479,6 @@ _No arguments._
 | STAT_SERVICE_TEXT | string | "Inspektion", "Oelservice" |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-aif-tankdaten-lesen"></a>
 ### STATUS_AIF_TANKDATEN_LESEN
 
 Tankdaten aus Anwenderinfofeld auslesen
@@ -524,7 +500,6 @@ _No arguments._
 | STAT_TANKINHALT_GEF_EINH | string | Einheit Tankanzeigewert gesamt (gefiltert): "Liter" |
 | STAT_RESERVE | string | Tankreserve erreicht ("EIN" oder "AUS") |
 
-<a id="job-status-aif-aussentemp-lesen"></a>
 ### STATUS_AIF_AUSSENTEMP_LESEN
 
 Tankdaten aus Anwenderinfofeld auslesen
@@ -541,7 +516,6 @@ _No arguments._
 | STAT_AUSSENTEMP_UNGEF_WERT | real | Aussentemperatur in "Grad Celsius" (ungefiltert) |
 | STAT_AUSSENTEMP_UNGEF_EINH | string | Einheit Aussentemperatur: "Grad Celsius" (ungefiltert) |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Codierdaten auslesen
@@ -562,7 +536,6 @@ _No arguments._
 | STAT_AKUSTIKWARNUNG_HANDBREMSE_AKTIV | int | 1, wenn Zundschluesselwarnung codiert ist |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-tacho-endwert-lesen"></a>
 ### TACHO_ENDWERT_LESEN
 
 Auslesen des Tacho-Endausschlags aus dem EEPROM
@@ -577,7 +550,6 @@ _No arguments._
 | TACHO_ENDWERT_CODE | string | gibt den Codierwert zum Tachoendwert als String aus |
 | SG_ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -590,7 +562,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-steuern-anzeige"></a>
 ### STEUERN_ANZEIGE
 
 Anzeigenkomponenten steuern
@@ -609,7 +580,6 @@ Anzeigenkomponenten steuern
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-gong3"></a>
 ### STEUERN_GONG3
 
 Gong3 ansteuern
@@ -623,7 +593,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-piezo"></a>
 ### STEUERN_PIEZO
 
 interner Piezo ansteuern
@@ -637,7 +606,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-leuchte"></a>
 ### STEUERN_LEUCHTE
 
 Leuchten in der Anzeigeeinheit ansteuern Es muessen 6 Argumente uebergeben werden. Die Belegung der Datenbytes ist separat beschrieben.
@@ -660,7 +628,6 @@ Leuchten in der Anzeigeeinheit ansteuern Es muessen 6 Argumente uebergeben werde
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Eingangs- und Ausgangsstati lesen
@@ -691,7 +658,6 @@ _No arguments._
 | STAT_LSS_EIN | int | 1, wenn "TRUE", 0, wenn "FALSE" |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 Spezielle analoge Eingaenge lesen
@@ -720,7 +686,6 @@ _No arguments._
 | STAT_AUSSENTEMP_EINH | string | Einheit [ADC-Wert] |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 RAM-Speicher auslesen
@@ -740,7 +705,6 @@ RAM-Speicher auslesen
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | DATEN | binary | Datenfeld |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 EEPROM-Speicher auslesen
@@ -759,7 +723,6 @@ EEPROM-Speicher auslesen
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | DATEN | binary | Datenfeld |
 
-<a id="job-status-can-motordrehzahl-lesen"></a>
 ### STATUS_CAN_MOTORDREHZAHL_LESEN
 
 Motordrehzahl ueber CAN auslesen
@@ -775,7 +738,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_EINH | string | Einheit Motordrehzahl [U/min] |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-can-kuehlmitteltemp-lesen"></a>
 ### STATUS_CAN_KUEHLMITTELTEMP_LESEN
 
 Kuehlmitteltemperatur ueber CAN auslesen
@@ -791,7 +753,6 @@ _No arguments._
 | STAT_KUEHLMITTELTEMP_EINH | string | Einheit [Grad Celsius] |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-can-getriebeinfo-lesen"></a>
 ### STATUS_CAN_GETRIEBEINFO_LESEN
 
 Getriebeinformationen (nur EGS) ueber CAN auslesen
@@ -813,7 +774,6 @@ _No arguments._
 | STAT_L_GETR_STEUERUNG_TEXT | string | gibt Zustand der Getriebesteuerung an: Getriebenotprogramm ein |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-can-einspritzmenge-lesen"></a>
 ### STATUS_CAN_EINSPRITZMENGE_LESEN
 
 Einspritzmenge (Verbrauch) ueber CAN auslesen
@@ -829,7 +789,6 @@ _No arguments._
 | STAT_EINSPRITZMENGE_EINH | string | Einheit [ul] |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-can-signale-lesen"></a>
 ### STATUS_CAN_SIGNALE_LESEN
 
 weitere CAN-Signale auslesen
@@ -850,7 +809,6 @@ _No arguments._
 | STAT_LAMPE_UEBERTEMPERATUR_EIN | int | 1, wenn "TRUE", 0, wenn "FALSE" |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-toens-io"></a>
 ### STATUS_TOENS_IO
 
 Termischer Oelniveau Sensor Status I/O lesen
@@ -870,7 +828,6 @@ _No arguments._
 | STAT_DREHZAHL_EINH | string | 1/min |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-toens-sg"></a>
 ### STATUS_TOENS_SG
 
 Termischer Oelniveau Sensor Status SG lesen
@@ -915,7 +872,6 @@ _No arguments._
 | STAT_NOSIGNAL_EIN | int | Kein Sensorsignal |
 | ANTWORT | binary | Antworttelegramm |
 
-<a id="job-zcs-lesen"></a>
 ### ZCS_LESEN
 
 Anwenderinfofeld Wortadr. 34-3D auslesen
@@ -932,7 +888,6 @@ _No arguments._
 | VM | string | C3 Zifferncode fuer Versionsmerkmal |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sia-finish"></a>
 ### STATUS_SIA_FINISH
 
 SIA-Daten auslesen zur Fertigungskontrolle
@@ -951,7 +906,6 @@ _No arguments._
 | STAT_BITSTATUS_0x28 | int | Bitstatus oberstes Bit Adresse 0x0F |
 | SIA_SPEICHER_CHECK | string | Gesamtergebnis des Speicherchecks |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -968,7 +922,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-schreiben"></a>
 ### C_S_SCHREIBEN
 
 Codierdaten schreiben
@@ -985,7 +938,6 @@ Codierdaten schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -1003,7 +955,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Speicherung der Checksumme
@@ -1021,7 +972,6 @@ Berechnung und Speicherung der Checksumme
 | CHECKSUM | binary | berechnete Checksumme |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -1036,7 +986,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Anwenderinfofeld Wortadr. 34-3D auslesen
@@ -1053,7 +1002,6 @@ _No arguments._
 | VN | string | C3 Zifferncode fuer Versionsnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zeit-reset"></a>
 ### C_ZEIT_RESET
 
 Ruecksetzen des Zeitinspektionsintervall
@@ -1066,7 +1014,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-c-fa-lesen"></a>
 ### C_FA_LESEN
 
 Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
@@ -1081,7 +1028,6 @@ _No arguments._
 | SPEICHER_STATUS | string | BELEGT bzw. UNBELEGT |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fa-auftrag"></a>
 ### C_FA_AUFTRAG
 
 Fahrzeugauftrag schreiben Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
@@ -1098,7 +1044,6 @@ Fahrzeugauftrag schreiben Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x10 - 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fa-loeschen"></a>
 ### C_FA_LOESCHEN
 
 Fahrzeugauftrag Löschen Gueltiger Adressbereich: 0x10 - 0xDF (416 Bytes) für E46 (Codierindex < 7 und 19 < Codierindex <= 22) Gueltiger Adressbereich: 0xC2 - 0x181 (384 Bytes) für E46 (Codierindex > 22 und 7 <= Codierindex  <= 19)
@@ -1129,7 +1074,6 @@ _No arguments._
 - [TOENS_IO](#table-toens-io) (5 × 4)
 - [TOENS_SG](#table-toens-sg) (5 × 12)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1150,7 +1094,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -1230,7 +1173,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1259,7 +1201,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 4 rows × 2 columns
@@ -1271,7 +1212,6 @@ Dimensions: 4 rows × 2 columns
 | ZEIT_RESET | 0x04 |
 | WEG_RESET_WERK | 0x08 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 24 rows × 2 columns
@@ -1303,7 +1243,6 @@ Dimensions: 24 rows × 2 columns
 | 0xFC | keine CAN ID SMG1 |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -1319,7 +1258,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-getriebetypen"></a>
 ### GETRIEBETYPEN
 
 Dimensions: 5 rows × 2 columns
@@ -1332,7 +1270,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | SMG Motorsport |
 | 0xFF | unbekannte Getriebeart |
 
-<a id="table-ganginfo"></a>
 ### GANGINFO
 
 Dimensions: 9 rows × 2 columns
@@ -1349,7 +1286,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Rueckwaertsgang |
 | 0xFF | unbekannte Getriebeinfo |
 
-<a id="table-waehlhebelinfo"></a>
 ### WAEHLHEBELINFO
 
 Dimensions: 12 rows × 2 columns
@@ -1369,7 +1305,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A | 6 |
 | 0xFF | unbekannte Waehlhebelinfo |
 
-<a id="table-programminfo"></a>
 ### PROGRAMMINFO
 
 Dimensions: 7 rows × 2 columns
@@ -1384,7 +1319,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Anzeige aus |
 | 0xFF | unbekannte Programminfo |
 
-<a id="table-komponenten"></a>
 ### KOMPONENTEN
 
 Dimensions: 7 rows × 2 columns
@@ -1399,7 +1333,6 @@ Dimensions: 7 rows × 2 columns
 | Fehler | 0xFF |
 | unbekannt | 0xEE |
 
-<a id="table-toens-io"></a>
 ### TOENS_IO
 
 Dimensions: 5 rows × 4 columns
@@ -1412,7 +1345,6 @@ Dimensions: 5 rows × 4 columns
 | 0x07 | 0x04A7 | 0x04C6 | 0x04B5 |
 | 0xFF | 0xFFFF | 0xFFFF | 0xFFFF |
 
-<a id="table-toens-sg"></a>
 ### TOENS_SG
 
 Dimensions: 5 rows × 12 columns

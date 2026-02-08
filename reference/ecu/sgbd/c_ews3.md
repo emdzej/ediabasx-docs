@@ -34,7 +34,6 @@
 - [C_AZCS_AUFTRAG](#job-c-azcs-auftrag) - Write the Rover Additional ZCS into customer-data block
 - [KD_POLSTER_LACK_SCHREIBEN](#job-kd-polster-lack-schreiben) - Schreiben der Kundendienstdaten POLSTER und LACK in die EWS3
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -52,7 +51,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer EWS3 automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -65,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EWS3
@@ -89,7 +86,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -103,7 +99,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Stati der EWS
@@ -148,7 +143,6 @@ _No arguments._
 | STAT_VORGABE_ANLASSERRELAIS_AUSFUEHREN | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer aus der EWS
@@ -163,7 +157,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Schreiben der 17-stelligen Fahrgestellnummer (incl. Pruefziffer)
@@ -181,7 +174,6 @@ Schreiben der 17-stelligen Fahrgestellnummer (incl. Pruefziffer)
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Auslesen des Zentralen Codierschluessels aus KD-Daten
@@ -199,7 +191,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-c-zcs-auftrag"></a>
 ### C_ZCS_AUFTRAG
 
 Schreiben des Zentralen Codierschluessels in die KD-Daten
@@ -218,7 +209,6 @@ Schreiben des Zentralen Codierschluessels in die KD-Daten
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -236,7 +226,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -253,7 +242,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-azcs-lesen"></a>
 ### C_AZCS_LESEN
 
 Read out ADDITIONAL ZCS data from Customer-data area
@@ -270,7 +258,6 @@ _No arguments._
 | AVN | string | Additional Zentralcode C3 = 10-chars = 6 chars(unused) + 4  MARKET chars + (no csum) |
 | _TEL_ANTWORT1 | binary |  |
 
-<a id="job-c-azcs-auftrag"></a>
 ### C_AZCS_AUFTRAG
 
 Write the Rover Additional ZCS into customer-data block
@@ -289,7 +276,6 @@ Write the Rover Additional ZCS into customer-data block
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-kd-polster-lack-schreiben"></a>
 ### KD_POLSTER_LACK_SCHREIBEN
 
 Schreiben der Kundendienstdaten POLSTER und LACK in die EWS3
@@ -316,7 +302,6 @@ Schreiben der Kundendienstdaten POLSTER und LACK in die EWS3
 - [JOBRESULT](#table-jobresult) (7 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -331,7 +316,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

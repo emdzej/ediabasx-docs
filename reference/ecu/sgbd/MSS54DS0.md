@@ -243,7 +243,6 @@
 - [STATUS_ADAPTIONSBLOCK_26](#job-status-adaptionsblock-26) - Adaption Auswahlbyte 26
 - [STATUS_ADAPTIONSBLOCK_83](#job-status-adaptionsblock-83) - Adaption Auswahlbyte 83
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -262,7 +261,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-steuern-avanos1-spaet-ventil"></a>
 ### STEUERN_AVANOS1_SPAET_VENTIL
 
 Auslass-VANOS Bank 1 Spaetventil ansteuern
@@ -275,7 +273,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-avanos2-spaet-ventil"></a>
 ### STEUERN_AVANOS2_SPAET_VENTIL
 
 Auslass-VANOS Bank 2 Spaetventil ansteuern
@@ -288,7 +285,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-avanos1-frueh-ventil"></a>
 ### STEUERN_AVANOS1_FRUEH_VENTIL
 
 Auslass-VANOS Bank 1 Fruehventil ansteuern
@@ -301,7 +297,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-avanos2-frueh-ventil"></a>
 ### STEUERN_AVANOS2_FRUEH_VENTIL
 
 Auslass-VANOS Bank 2 Fruehventil ansteuern
@@ -314,7 +309,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-evanos1-spaet-ventil"></a>
 ### STEUERN_EVANOS1_SPAET_VENTIL
 
 Einlass-VANOS Bank 1 Spaetventil ansteuern
@@ -327,7 +321,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-evanos2-spaet-ventil"></a>
 ### STEUERN_EVANOS2_SPAET_VENTIL
 
 Einlass-VANOS Bank 2 Spaetventil ansteuern
@@ -340,7 +333,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-evanos1-frueh-ventil"></a>
 ### STEUERN_EVANOS1_FRUEH_VENTIL
 
 Einlass-VANOS Bank 1 Fruehventil ansteuern
@@ -353,7 +345,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-evanos2-frueh-ventil"></a>
 ### STEUERN_EVANOS2_FRUEH_VENTIL
 
 Einlass-VANOS Bank 2 Fruehventil ansteuern
@@ -366,7 +357,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-lshv2"></a>
 ### STEUERN_LSHV2
 
 Lambdasondenheizung vor Kat Bank 2 ansteuern
@@ -379,7 +369,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-lshn1"></a>
 ### STEUERN_LSHN1
 
 Lambdasondenheizung nach Kat Bank 1 ansteuern
@@ -392,7 +381,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-lshn2"></a>
 ### STEUERN_LSHN2
 
 Lambdasondenheizung nach Kat Bank 2 ansteuern
@@ -405,7 +393,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-lshv1"></a>
 ### STEUERN_LSHV1
 
 Lambdasondenheizung vor Kat Bank 1 ansteuern
@@ -418,7 +405,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-zs8"></a>
 ### STEUERN_ZS8
 
 Zuendspule Zyl. 8 ansteuern
@@ -431,7 +417,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-zs7"></a>
 ### STEUERN_ZS7
 
 Zuendspule Zyl. 7 ansteuern
@@ -444,7 +429,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-zs6"></a>
 ### STEUERN_ZS6
 
 Zuendspule Zyl. 6 ansteuern
@@ -457,7 +441,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-zs5"></a>
 ### STEUERN_ZS5
 
 Zuendspule Zyl. 5 ansteuern
@@ -470,7 +453,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-zs4"></a>
 ### STEUERN_ZS4
 
 Zuendspule Zyl. 4 ansteuern
@@ -483,7 +465,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-zs3"></a>
 ### STEUERN_ZS3
 
 Zuendspule Zyl. 3 ansteuern
@@ -496,7 +477,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-zs2"></a>
 ### STEUERN_ZS2
 
 Zuendspule Zyl. 2 ansteuern
@@ -509,7 +489,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-zs1"></a>
 ### STEUERN_ZS1
 
 Zuendspule Zyl. 1 ansteuern
@@ -522,7 +501,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -538,7 +516,6 @@ _No arguments._
 | BYTE2 | int | 0-255 bzw. 0x00-0xFF |
 | BYTE3 | int | 0-255 bzw. 0x00-0xFF |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -557,7 +534,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-ev8"></a>
 ### STEUERN_EV8
 
 Einspritzventil 8 ansteuern
@@ -570,7 +546,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev7"></a>
 ### STEUERN_EV7
 
 Einspritzventil 7 ansteuern
@@ -583,7 +558,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev6"></a>
 ### STEUERN_EV6
 
 Einspritzventil 6 ansteuern
@@ -596,7 +570,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev5"></a>
 ### STEUERN_EV5
 
 Einspritzventil 5 ansteuern
@@ -609,7 +582,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev4"></a>
 ### STEUERN_EV4
 
 Einspritzventil 4 ansteuern
@@ -622,7 +594,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev3"></a>
 ### STEUERN_EV3
 
 Einspritzventil 3 ansteuern
@@ -635,7 +606,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev2"></a>
 ### STEUERN_EV2
 
 Einspritzventil 2 ansteuern
@@ -648,7 +618,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ev1"></a>
 ### STEUERN_EV1
 
 Einspritzventil 1 ansteuern
@@ -661,7 +630,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-stop-systemcheck-sek-luft"></a>
 ### STOP_SYSTEMCHECK_SEK_LUFT
 
 SLS Funktionstest Stop
@@ -674,7 +642,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-e-luefter"></a>
 ### STEUERN_E_LUEFTER
 
 Elektroluefterrelais ansteuern
@@ -687,7 +654,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-oekv2"></a>
 ### STEUERN_OEKV2
 
 Oelkreisumschaltventil 2 (links) ansteuern
@@ -700,7 +666,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-oekv1"></a>
 ### STEUERN_OEKV1
 
 Oelkreisumschaltventil 1 (rechts) ansteuern
@@ -713,7 +678,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-start"></a>
 ### STEUERN_START
 
 Startrelais ansteuern
@@ -726,7 +690,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ekp"></a>
 ### STEUERN_EKP
 
 Kraftstoffpumpenrelais ansteuern
@@ -739,7 +702,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ekp-aus"></a>
 ### STEUERN_EKP_AUS
 
 Kraftstoffpumpe (Relais) ausschalten
@@ -752,7 +714,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-adapt-geraeuschklappe"></a>
 ### ADAPT_GERAEUSCHKLAPPE
 
 GKS oeffnen und Position adaptieren
@@ -765,7 +726,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-dmtl-heater"></a>
 ### STEUERN_DMTL_HEATER
 
 DMTL Heizung ansteuern
@@ -778,7 +738,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-dmtl-heizung"></a>
 ### STEUERN_DMTL_HEIZUNG
 
 Stellgliedansteuerung DMTL-Heizung
@@ -795,7 +754,6 @@ Stellgliedansteuerung DMTL-Heizung
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-servov"></a>
 ### STEUERN_SERVOV
 
 Servotronikventil ansteuern
@@ -808,7 +766,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-tev"></a>
 ### STEUERN_TEV
 
 Tankentlueftungsventil ansteuern
@@ -821,7 +778,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-akl"></a>
 ### STEUERN_AKL
 
 Abgasklappe ansteuern
@@ -834,7 +790,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-vdsv"></a>
 ### STEUERN_VDSV
 
 VANOS-Druckspeicherventil ansteuern
@@ -847,7 +802,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-slv"></a>
 ### STEUERN_SLV
 
 Sekundaerluftventil ansteuern
@@ -860,7 +814,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ko"></a>
 ### STEUERN_KO
 
 Klimakompressorrelais ansteuern
@@ -873,7 +826,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-slp"></a>
 ### STEUERN_SLP
 
 Sekundaerluftpumpenrelais ansteuern
@@ -886,7 +838,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-edic-reset"></a>
 ### EDIC_RESET
 
 EDIC-Reset
@@ -899,7 +850,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -912,7 +862,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-fs-lesen-text"></a>
 ### FS_LESEN_TEXT
 
 Auslesen des Fehlerspeichers (nur die F.-Namen)
@@ -931,7 +880,6 @@ Auslesen des Fehlerspeichers (nur die F.-Namen)
 | F_ANZ_NR | int | Anzahl der gespeicherten Fehler |
 | F_ORT_TEXT | string | Fehlercode des SG als Text |
 
-<a id="job-isn-lesen"></a>
 ### ISN_LESEN
 
 liefert fertig formatierte ISN fuer MSS50
@@ -945,7 +893,6 @@ _No arguments._
 | ISN_LESEN_WERT | string | ISN als  WERT |
 | JOB_STATUS | string |  |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Beliebige RAM - Zellen auslesen
@@ -965,7 +912,6 @@ Beliebige RAM - Zellen auslesen
 | RAM_LESEN_WERT | binary | nichts |
 | RAM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 Beliebige FLASH - Zellen auslesen
@@ -985,7 +931,6 @@ Beliebige FLASH - Zellen auslesen
 | ROM_LESEN_WERT | binary | nichts |
 | ROM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 Beliebige EEPROM - Zellen auslesen
@@ -1005,7 +950,6 @@ Beliebige EEPROM - Zellen auslesen
 | EEPROM_LESEN_WERT | binary | nichts |
 | EEPROM_LESEN_EINH | string | Einheit HEX |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -1037,7 +981,6 @@ _No arguments._
 | ID_SG_HERSTELLER | int | Parameter fuer MoTest 0=Bosch, 1=Siemens-Fahrzeug |
 | ID_EWS_SS | int | Identifikation EWS-Schnittstelle |
 
-<a id="job-ecu-config"></a>
 ### ECU_CONFIG
 
 Ident-Daten fuer DME
@@ -1051,7 +994,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | EGS_VORHANDEN | int | EGS vorhanden 1=ja ,  0=nein , 0xff=nicht unterstuetzt |
 
-<a id="job-abgas-variante-lesen"></a>
 ### ABGAS_VARIANTE_LESEN
 
 Auslesen der Abgasvariante
@@ -1065,7 +1007,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | ABGAS_VARIANTE_WERT | int | Abgasvariante 0=KAT-V , 1= KAT |
 
-<a id="job-ews3-get-status"></a>
 ### EWS3_GET_STATUS
 
 EWS3 Synchonisierungsstatus abfragen
@@ -1080,7 +1021,6 @@ _No arguments._
 | EWS3_STATUS | string |  |
 | EWS3_STATUS_WERT | int |  |
 
-<a id="job-ews3-initialisieren"></a>
 ### EWS3_INITIALISIEREN
 
 EWS3 initialisieren/abgleichen
@@ -1099,7 +1039,6 @@ EWS3 initialisieren/abgleichen
 | EWS3_STATUS | string |  |
 | EWS3_STATUS_WERT | int |  |
 
-<a id="job-ews3-sync"></a>
 ### EWS3_SYNC
 
 EWS3-Steuergeraet ruecksetzen
@@ -1113,7 +1052,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | EWS3_STATUS | string |  |
 
-<a id="job-adapt-loeschen"></a>
 ### ADAPT_LOESCHEN
 
 alle Adaptionen gleichzeitig loeschen
@@ -1126,7 +1064,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-adapt-selektiv-loeschen"></a>
 ### ADAPT_SELEKTIV_LOESCHEN
 
 Adaptionen bitweise loeschen und Zustaende bitweise setzen
@@ -1143,7 +1080,6 @@ Adaptionen bitweise loeschen und Zustaende bitweise setzen
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-lambdaregler-sperren"></a>
 ### STEUERN_LAMBDAREGLER_SPERREN
 
 LA-Regler ueber Adaptionstelegramm loeschen
@@ -1156,7 +1092,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-lls-testdrehzahl"></a>
 ### STEUERN_LLS_TESTDREHZAHL
 
 feste Leerlaufanhebung fuer VANOS-Test
@@ -1169,7 +1104,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-codier-checksumme"></a>
 ### STATUS_CODIER_CHECKSUMME
 
 Codier - Checksumme abfragen
@@ -1183,7 +1117,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STATUS_CHECKSUMME_WERT | int | Ergebnis |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -1203,7 +1136,6 @@ _No arguments._
 | AIF_ZB_NR | long | Zusbaunummer |
 | AIF_ANZAHL_PROG | int | Anzahl Programmiervorgaenge |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Auslesen des QUICK Fehlerspeichers
@@ -1219,7 +1151,6 @@ _No arguments._
 | F_BSZ_AKT | real | Betriebsstundenzahler aktuell |
 | F_BSZ_ALT | real | Betriebsstundenzaehler beim letzten Loeschen |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -1319,7 +1250,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdump des Fehlersatzes |
 | F_UW_SATZ | int | Anzahl der Umweltsaetze , Steuerung der Anzeige in der Applikation |
 
-<a id="job-fs-selektiv-loeschen"></a>
 ### FS_SELEKTIV_LOESCHEN
 
 Auslesen des Fehlerspeichers
@@ -1350,7 +1280,6 @@ Auslesen des Fehlerspeichers
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -1363,7 +1292,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status Schalteingaenge
@@ -1431,7 +1359,6 @@ _No arguments._
 | STAT_LDR2_EIN | int | Status Lambdaregler Bank 2 |
 | STAT_FGRA_EIN | int | Status Lambdaregler Bank 2 |
 
-<a id="job-steuern-avanos1"></a>
 ### STEUERN_AVANOS1
 
 AVANOS1 ansteuern
@@ -1444,7 +1371,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-evanos1"></a>
 ### STEUERN_EVANOS1
 
 EVANOS1 ansteuern
@@ -1457,7 +1383,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-evanos1-verstellzeit"></a>
 ### STEUERN_EVANOS1_VERSTELLZEIT
 
 Verstellzeitmessung EVANOS1 anstossen
@@ -1474,7 +1399,6 @@ _No arguments._
 | EVAN_VERSTELLZEIT_SPAET | int |  |
 | EVAN_VERSTELLZEIT_SPAET_EINH | string |  |
 
-<a id="job-steuern-avanos1-verstellzeit"></a>
 ### STEUERN_AVANOS1_VERSTELLZEIT
 
 Verstellzeitmessung AVANOS1 anstossen
@@ -1491,7 +1415,6 @@ _No arguments._
 | AVAN_VERSTELLZEIT_SPAET | int |  |
 | AVAN_VERSTELLZEIT_SPAET_EINH | string |  |
 
-<a id="job-steuern-evanos1-dichtheit"></a>
 ### STEUERN_EVANOS1_DICHTHEIT
 
 Dichtheitmessung EVANOS1 anstossen
@@ -1509,7 +1432,6 @@ _No arguments._
 | EVAN_SOLLWERT_EINH | string |  |
 | EVAN_STATUS | string |  |
 
-<a id="job-steuern-avanos1-dichtheit"></a>
 ### STEUERN_AVANOS1_DICHTHEIT
 
 Dichtheitmessung AVANOS1 anstossen
@@ -1527,7 +1449,6 @@ _No arguments._
 | AVAN_SOLLWERT_EINH | string |  |
 | AVAN_STATUS | string |  |
 
-<a id="job-steuern-evanos1-fruehanschlag"></a>
 ### STEUERN_EVANOS1_FRUEHANSCHLAG
 
 Fruehanschlag EVANOS1 anfahren
@@ -1544,7 +1465,6 @@ _No arguments._
 | EVAN_SOLLWERT | int |  |
 | EVAN_SOLLWERT_EINH | string |  |
 
-<a id="job-steuern-evanos1-spaetanschlag"></a>
 ### STEUERN_EVANOS1_SPAETANSCHLAG
 
 Spaetanschlag EVANOS1 anfahren
@@ -1561,7 +1481,6 @@ _No arguments._
 | EVAN_SOLLWERT | int |  |
 | EVAN_SOLLWERT_EINH | string |  |
 
-<a id="job-steuern-avanos1-fruehanschlag"></a>
 ### STEUERN_AVANOS1_FRUEHANSCHLAG
 
 Fruehanschlag AVANOS1 anfahren
@@ -1578,7 +1497,6 @@ _No arguments._
 | AVAN_SOLLWERT | int |  |
 | AVAN_SOLLWERT_EINH | string |  |
 
-<a id="job-steuern-avanos1-spaetanschlag"></a>
 ### STEUERN_AVANOS1_SPAETANSCHLAG
 
 Spaetanschlag AVANOS1 anfahren
@@ -1595,7 +1513,6 @@ _No arguments._
 | AVAN_SOLLWERT | int |  |
 | AVAN_SOLLWERT_EINH | string |  |
 
-<a id="job-steuern-avanos2"></a>
 ### STEUERN_AVANOS2
 
 AVANOS2 ansteuern
@@ -1608,7 +1525,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-evanos2"></a>
 ### STEUERN_EVANOS2
 
 EVANOS2 ansteuern
@@ -1621,7 +1537,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-evanos2-verstellzeit"></a>
 ### STEUERN_EVANOS2_VERSTELLZEIT
 
 Verstellzeitmessung EVANOS2 anstossen
@@ -1638,7 +1553,6 @@ _No arguments._
 | EVAN_VERSTELLZEIT_SPAET | int |  |
 | EVAN_VERSTELLZEIT_SPAET_EINH | string |  |
 
-<a id="job-steuern-avanos2-verstellzeit"></a>
 ### STEUERN_AVANOS2_VERSTELLZEIT
 
 Verstellzeitmessung AVANOS2 anstossen
@@ -1655,7 +1569,6 @@ _No arguments._
 | AVAN_VERSTELLZEIT_SPAET | int |  |
 | AVAN_VERSTELLZEIT_SPAET_EINH | string |  |
 
-<a id="job-steuern-evanos2-dichtheit"></a>
 ### STEUERN_EVANOS2_DICHTHEIT
 
 Dichtheitmessung EVANOS2 anstossen
@@ -1673,7 +1586,6 @@ _No arguments._
 | EVAN_SOLLWERT_EINH | string |  |
 | EVAN_STATUS | string |  |
 
-<a id="job-steuern-avanos2-dichtheit"></a>
 ### STEUERN_AVANOS2_DICHTHEIT
 
 Dichtheitmessung AVANOS2 anstossen
@@ -1691,7 +1603,6 @@ _No arguments._
 | AVAN_SOLLWERT_EINH | string |  |
 | AVAN_STATUS | string |  |
 
-<a id="job-steuern-evanos2-fruehanschlag"></a>
 ### STEUERN_EVANOS2_FRUEHANSCHLAG
 
 Fruehanschlag EVANOS2 anfahren
@@ -1708,7 +1619,6 @@ _No arguments._
 | EVAN_SOLLWERT | int |  |
 | EVAN_SOLLWERT_EINH | string |  |
 
-<a id="job-steuern-evanos2-spaetanschlag"></a>
 ### STEUERN_EVANOS2_SPAETANSCHLAG
 
 Spaetanschlag EVANOS2 anfahren
@@ -1725,7 +1635,6 @@ _No arguments._
 | EVAN_SOLLWERT | int |  |
 | EVAN_SOLLWERT_EINH | string |  |
 
-<a id="job-steuern-avanos2-fruehanschlag"></a>
 ### STEUERN_AVANOS2_FRUEHANSCHLAG
 
 Fruehanschlag AVANOS2 anfahren
@@ -1742,7 +1651,6 @@ _No arguments._
 | AVAN_SOLLWERT | int |  |
 | AVAN_SOLLWERT_EINH | string |  |
 
-<a id="job-steuern-avanos2-spaetanschlag"></a>
 ### STEUERN_AVANOS2_SPAETANSCHLAG
 
 Spaetanschlag AVANOS2 anfahren
@@ -1759,7 +1667,6 @@ _No arguments._
 | AVAN_SOLLWERT | int |  |
 | AVAN_SOLLWERT_EINH | string |  |
 
-<a id="job-steuern-ll-steller"></a>
 ### STEUERN_LL_STELLER
 
 Leerlaufsteller ansteuern (nur Stellglied)
@@ -1772,7 +1679,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-co-einzelabgleich-lesen"></a>
 ### CO_EINZELABGLEICH_LESEN
 
 CO-Abgleich Einzelwert lesen (MSS50 je 1 Wort)
@@ -1790,7 +1696,6 @@ CO-Abgleich Einzelwert lesen (MSS50 je 1 Wort)
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | STATUS_CO_ABGLEICH_WERT | int | Aktuellen Abgleichwert |
 
-<a id="job-co-einzelabgleich-verstellen"></a>
 ### CO_EINZELABGLEICH_VERSTELLEN
 
 CO-Abgleich Einzelwert verstellen im RAM (MSS50 je 1 Wort)
@@ -1808,7 +1713,6 @@ CO-Abgleich Einzelwert verstellen im RAM (MSS50 je 1 Wort)
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-co-einzelabgleich-programmieren"></a>
 ### CO_EINZELABGLEICH_PROGRAMMIEREN
 
 CO-Abgleich Einzelwert programmieren (von RAM ins EEPROM schreiben)
@@ -1825,7 +1729,6 @@ CO-Abgleich Einzelwert programmieren (von RAM ins EEPROM schreiben)
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beendet ALLE Diagnoseaktivitaeten, Neueinstieg sofort moeglich
@@ -1838,7 +1741,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 _No arguments._
@@ -1849,7 +1751,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lese Bytes ueber direkte Adressierung Maximallaenge ist begrenzt
@@ -1869,7 +1770,6 @@ Lese Bytes ueber direkte Adressierung Maximallaenge ist begrenzt
 | JOB_STATUS | string | Status der Kommunikation |
 | DATEN | binary | Inhalte der Speicherzellen 1 bis n |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Schreibe binaere Bytes ueber direkte Adressierung Maximallaenge ist begrenzt
@@ -1893,7 +1793,6 @@ Schreibe binaere Bytes ueber direkte Adressierung Maximallaenge ist begrenzt
 | VERIFY_BYTE | string | 01-O.K., 02-falsch, 03-nicht geloescht etc. |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-io-status-vorgeben"></a>
 ### IO_STATUS_VORGEBEN
 
 direkte Stellgliedansteuerung ueber Pin/Tastv./Periode
@@ -1914,7 +1813,6 @@ direkte Stellgliedansteuerung ueber Pin/Tastv./Periode
 | PIN_NUMMER_RESULT | binary |  |
 | RUECKMELDUNG | string |  |
 
-<a id="job-sys-adr-lesen"></a>
 ### SYS_ADR_LESEN
 
 Dient zum Auslesen systemspezifischer Adressen
@@ -1936,7 +1834,6 @@ _No arguments._
 | ZIF_BACKUP_ADR | binary | Adresse hhmmll |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-hersteller-daten-lesen"></a>
 ### HERSTELLER_DATEN_LESEN
 
 Dient zum Auslesen herstellerspezifischer Adressen
@@ -1961,7 +1858,6 @@ _No arguments._
 | PROGRAMMIERSPANNUNG | binary | Direkt, keine Adresse |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-hersteller-selbsttest"></a>
 ### HERSTELLER_SELBSTTEST
 
 Dient zum Aufruf einer herstellerspezifischen Testroutine (benoetigt spezielles Pruefumfeld - nicht fuer VK/HO)
@@ -1974,7 +1870,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Dient zum Software-Reset, Adaptionen/FS nicht gesichert!
@@ -1987,7 +1882,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-io-status-lesen"></a>
 ### IO_STATUS_LESEN
 
 Direktes Anfordern der IO-Bloecke ueber deren Index
@@ -2005,7 +1899,6 @@ Direktes Anfordern der IO-Bloecke ueber deren Index
 | IO_BYTES | binary | I/O-Byte 1 bis n |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-mcs-aktivieren"></a>
 ### MCS_AKTIVIEREN
 
 MCS-Modus einschalten (derzeit nicht implementiert)
@@ -2018,7 +1911,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-login-request"></a>
 ### LOGIN_REQUEST
 
 Schutzmechanismus SEED_KEY
@@ -2033,7 +1925,6 @@ _No arguments._
 | STAT_LOGIN | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -2048,7 +1939,6 @@ _No arguments._
 | STAT_LOGIN | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-abgleich-login-request"></a>
 ### ABGLEICH_LOGIN_REQUEST
 
 Schutzmechanismus nur fuer Abgleich, direkte Entriegelung
@@ -2062,7 +1952,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_LOGIN | binary | Rueckgabewert Status |
 
-<a id="job-codier-checksum"></a>
 ### CODIER_CHECKSUM
 
 Steuergeraet prueft CRC16 Boot/Daten/Programm Master/Slave
@@ -2076,7 +1965,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation |
 | RUECK_MELDUNG | string | Ergebnis der Checksummenpruefung |
 
-<a id="job-abgleichwerte-schreiben"></a>
 ### ABGLEICHWERTE_SCHREIBEN
 
 Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten im Standardverfahren (ASCII)
@@ -2096,7 +1984,6 @@ Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten im St
 | ABGLEICHWERTE_SCHREIBEN_ABGLEICHDATEN | string | Abgleichdaten zum Steuergeraet |
 | ABGLEICHWERTE_SCHREIBEN_PRUEFZEICHEN | string | das im Job berechnete Pruefzeichen |
 
-<a id="job-abgleichwerte-lesen"></a>
 ### ABGLEICHWERTE_LESEN
 
 Lesen der aktuellen Abgleichwerte im Standardverfahren (ASCII)
@@ -2114,7 +2001,6 @@ Lesen der aktuellen Abgleichwerte im Standardverfahren (ASCII)
 | ABGLEICHWERTE_LESEN_DATEN | string | aus dem Steuergraet ausgelesene Daten im Format z.B."01 A5 FE" |
 | JOB_STATUS | string | OKAY,wenn fehlerfrei ERROR_..., wenn Argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-abgleichflag-schreiben"></a>
 ### ABGLEICHFLAG_SCHREIBEN
 
 Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten
@@ -2131,7 +2017,6 @@ Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_..., wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-abgleichflag-lesen"></a>
 ### ABGLEICHFLAG_LESEN
 
 _No arguments._
@@ -2143,7 +2028,6 @@ _No arguments._
 | ABGLEICHFLAG_LESEN_WERT | string | 0x0000 --> ABGLEICH_IO 0xFFFF --> ABGLEICH_NIO |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_..., wenn Argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-speicher-schreiben-binaer"></a>
 ### SPEICHER_SCHREIBEN_BINAER
 
 Schreibe binaere Bytes ueber direkte Adressierung Maximallaenge ist begrenzt
@@ -2167,7 +2051,6 @@ Schreibe binaere Bytes ueber direkte Adressierung Maximallaenge ist begrenzt
 | VERIFY_BYTE | string | 01-O.K., 02-falsch, 03-nicht geloescht etc. |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-steuern-ti-abgleich-starten"></a>
 ### STEUERN_TI_ABGLEICH_STARTEN
 
 Anstossen der automatischen Einzeldrosselklappenkorrektur (Prueflauf)
@@ -2180,7 +2063,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ti-abgleich-stoppen"></a>
 ### STEUERN_TI_ABGLEICH_STOPPEN
 
 Unterbrechen der automatischen Einzeldrosselklappenkorrektur (Prueflauf)
@@ -2193,7 +2075,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-sg-prueflauf"></a>
 ### SG_PRUEFLAUF
 
 Prueflauftelegramm mit freien Parametern abschicken
@@ -2215,7 +2096,6 @@ Prueflauftelegramm mit freien Parametern abschicken
 | TEST_RESULT | binary |  |
 | RUECKMELDUNG | string |  |
 
-<a id="job-steuern-sg-autosync"></a>
 ### STEUERN_SG_AUTOSYNC
 
 automatische Leerlaufsynchronisation durchfuehren
@@ -2230,7 +2110,6 @@ _No arguments._
 | SYNC_STATUS | string |  |
 | SYNC_MESSAGE | string |  |
 
-<a id="job-steuern-sync-mode"></a>
 ### STEUERN_SYNC_MODE
 
 Synchronisation EWS
@@ -2249,7 +2128,6 @@ Synchronisation EWS
 | STEUERN_SYNC_MODE_STATUS | int | Statusflag |
 | STEUERN_SYNC_MODE_TEXT | string | Statustext |
 
-<a id="job-status-sync-mode"></a>
 ### STATUS_SYNC_MODE
 
 Status EWS auslesen
@@ -2264,7 +2142,6 @@ _No arguments._
 | STATUS_SYNC_MODE_STATUS | int | Statusflag |
 | STATUS_SYNC_MODE_TEXT | string | Statustext |
 
-<a id="job-status-add"></a>
 ### STATUS_ADD
 
 Adaption Additiv Bank 1 (Lambdaadaptionsoffset 1) MW_ADD1
@@ -2281,7 +2158,6 @@ _No arguments._
 | STATUS_ADD_WERT | real | Ergebnis |
 | STATUS_ADD_EINH | string | Einheit |
 
-<a id="job-status-lambda-add-1"></a>
 ### STATUS_LAMBDA_ADD_1
 
 Adaption Additiv Bank 1 (Lambdaadaptionsoffset 1) MW_ADD1
@@ -2296,7 +2172,6 @@ _No arguments._
 | STAT_LAMBDA_ADD_1_WERT | real | Ergebnis |
 | STAT_LAMBDA_ADD_1_EINH | string | Einheit |
 
-<a id="job-status-add-2"></a>
 ### STATUS_ADD_2
 
 Adaption Additiv Bank 2 (Lambdaadaptionsoffset 2) MW_ADD2
@@ -2313,7 +2188,6 @@ _No arguments._
 | STATUS_ADD_2_WERT | real | Ergebnis |
 | STATUS_ADD_2_EINH | string | Einheit |
 
-<a id="job-status-lambda-add-2"></a>
 ### STATUS_LAMBDA_ADD_2
 
 Adaption Additiv Bank 2 (Lambdaadaptionsoffset 2) MW_ADD2
@@ -2328,7 +2202,6 @@ _No arguments._
 | STAT_LAMBDA_ADD_2_WERT | real | Ergebnis |
 | STAT_LAMBDA_ADD_2_EINH | string | Einheit |
 
-<a id="job-status-vanos-nw-lage-einlass-bank-1"></a>
 ### STATUS_VANOS_NW_LAGE_EINLASS_BANK_1
 
 Auslass-VANOS Bank 1 ist MW_AVANOS1_IST
@@ -2343,7 +2216,6 @@ _No arguments._
 | STAT_VANOS_NW_LAGE_EINLASS_BANK_1_WERT | real | Ergebnis |
 | STAT_VANOS_NW_LAGE_EINLASS_BANK_1_EINH | string | Einheit |
 
-<a id="job-status-vanos-nw-lage-einlass-bank-2"></a>
 ### STATUS_VANOS_NW_LAGE_EINLASS_BANK_2
 
 Auslass-VANOS Bank 2 ist MW_AVANOS2_IST
@@ -2358,7 +2230,6 @@ _No arguments._
 | STAT_VANOS_NW_LAGE_EINLASS_BANK_2_WERT | real | Ergebnis |
 | STAT_VANOS_NW_LAGE_EINLASS_BANK_2_EINH | string | Einheit |
 
-<a id="job-status-avanos1-soll"></a>
 ### STATUS_AVANOS1_SOLL
 
 Auslass-VANOS Bank 1 soll MW_AVANOS1_SOLL
@@ -2373,7 +2244,6 @@ _No arguments._
 | STAT_AVANOS1_SOLL_WERT | real | Ergebnis |
 | STAT_AVANOS1_SOLL_EINH | string | Einheit |
 
-<a id="job-status-avanos2-soll"></a>
 ### STATUS_AVANOS2_SOLL
 
 Auslass-VANOS Bank 2 soll MW_AVANOS2_SOLL
@@ -2388,7 +2258,6 @@ _No arguments._
 | STAT_AVANOS2_SOLL_WERT | real | Ergebnis |
 | STAT_AVANOS2_SOLL_EINH | string | Einheit |
 
-<a id="job-status-aqrel"></a>
 ### STATUS_AQREL
 
 relativer Oeffnungsquerschnitt MW_AQREL
@@ -2403,7 +2272,6 @@ _No arguments._
 | STAT_AQREL_WERT | real | Ergebnis |
 | STAT_AQREL_EINH | string | Einheit |
 
-<a id="job-status-analog-gm3"></a>
 ### STATUS_ANALOG_GM3
 
 Strom fuer Servotronikventil 
@@ -2420,7 +2288,6 @@ _No arguments._
 | STAT_SSERV_WERT | real | Ergebnis |
 | STAT_SSERV_EINH | string | Einheit |
 
-<a id="job-status-servo-i-ist"></a>
 ### STATUS_SERVO_I_IST
 
 Strom fuer Servotronikventil 
@@ -2435,7 +2302,6 @@ _No arguments._
 | STAT_SERVO_I_IST_WERT | real | Ergebnis |
 | STAT_SERVO_I_IST_EINH | string | Einheit |
 
-<a id="job-status-servo-i-soll"></a>
 ### STATUS_SERVO_I_SOLL
 
 Strom fuer Servotronikventil 
@@ -2450,7 +2316,6 @@ _No arguments._
 | STAT_SERVO_I_SOLL_WERT | real | Ergebnis |
 | STAT_SERVO_I_SOLL_EINH | string | Einheit |
 
-<a id="job-status-dkp-winkel"></a>
 ### STATUS_DKP_WINKEL
 
 Drosselklappensteller Istwert MW_DKIST
@@ -2465,7 +2330,6 @@ _No arguments._
 | STAT_DKP_WINKEL_WERT | real | Ergebnis |
 | STAT_DKP_WINKEL_EINH | string | Einheit |
 
-<a id="job-status-dkp-winkel-soll"></a>
 ### STATUS_DKP_WINKEL_SOLL
 
 Drosselklappensteller Sollwert MW_DKSOLL
@@ -2480,7 +2344,6 @@ _No arguments._
 | STAT_DKP_WINKEL_SOLL_WERT | real | Ergebnis |
 | STAT_DKP_WINKEL_SOLL_EINH | string | Einheit |
 
-<a id="job-status-evanos1-ist"></a>
 ### STATUS_EVANOS1_IST
 
 Einlass-VANOS Bank 1 ist MW_EVANOS1_IST
@@ -2495,7 +2358,6 @@ _No arguments._
 | STAT_EVANOS1_IST_WERT | real | Ergebnis |
 | STAT_EVANOS1_IST_EINH | string | Einheit |
 
-<a id="job-status-evanos2-ist"></a>
 ### STATUS_EVANOS2_IST
 
 Einlass-VANOS Bank 2 ist MW_EVANOS2_IST
@@ -2510,7 +2372,6 @@ _No arguments._
 | STAT_EVANOS2_IST_WERT | real | Ergebnis |
 | STAT_EVANOS2_IST_EINH | string | Einheit |
 
-<a id="job-status-evanos1-soll"></a>
 ### STATUS_EVANOS1_SOLL
 
 Einlass-VANOS Bank 1 soll MW_EVANOS1_SOLL
@@ -2525,7 +2386,6 @@ _No arguments._
 | STAT_EVANOS1_SOLL_WERT | real | Ergebnis |
 | STAT_EVANOS1_SOLL_EINH | string | Einheit |
 
-<a id="job-status-evanos2-soll"></a>
 ### STATUS_EVANOS2_SOLL
 
 Einlass-VANOS Bank 2 soll MW_EVANOS2_SOLL
@@ -2540,7 +2400,6 @@ _No arguments._
 | STAT_EVANOS2_SOLL_WERT | real | Ergebnis |
 | STAT_EVANOS2_SOLL_EINH | string | Einheit |
 
-<a id="job-status-pwg-poti-winkel"></a>
 ### STATUS_PWG_POTI_WINKEL
 
 Fahrpedalwertgeber Kanal 1 MW_FWG1
@@ -2555,7 +2414,6 @@ _No arguments._
 | STAT_PWG_POTI_WINKEL_WERT | real | Ergebnis |
 | STAT_PWG_POTI_WINKEL_EINH | string | Einheit |
 
-<a id="job-status-pwg-poti-winkel-2"></a>
 ### STATUS_PWG_POTI_WINKEL_2
 
 Fahrpedalwertgeber Kanal 2 MW_FWG2
@@ -2570,7 +2428,6 @@ _No arguments._
 | STAT_PWG_POTI_WINKEL_2_WERT | real | Ergebnis |
 | STAT_PWG_POTI_WINKEL_2_EINH | string | Einheit |
 
-<a id="job-status-lambda-integrator-1"></a>
 ### STATUS_LAMBDA_INTEGRATOR_1
 
 Lambdaregler 1 Regelfaktor MW_LAMBDA1
@@ -2585,7 +2442,6 @@ _No arguments._
 | STAT_LAMBDA_INTEGRATOR_1_WERT | real | Ergebnis |
 | STAT_LAMBDA_INTEGRATOR_1_EINH | string | Einheit |
 
-<a id="job-status-int"></a>
 ### STATUS_INT
 
 Lambdaregler 1 Regelfaktor MW_LAMBDA1
@@ -2602,7 +2458,6 @@ _No arguments._
 | STATUS_INT_EINH | string | Einheit |
 | STAT_INT_EINH | string | Einheit |
 
-<a id="job-status-lambda-integrator-2"></a>
 ### STATUS_LAMBDA_INTEGRATOR_2
 
 Lambdaregler 2 Regelfaktor MW_LAMBDA2
@@ -2617,7 +2472,6 @@ _No arguments._
 | STAT_LAMBDA_INTEGRATOR_2_WERT | real | Ergebnis |
 | STAT_LAMBDA_INTEGRATOR_2_EINH | string | Einheit |
 
-<a id="job-status-int-2"></a>
 ### STATUS_INT_2
 
 Lambdaregler 2 Regelfaktor MW_LAMBDA2
@@ -2634,7 +2488,6 @@ _No arguments._
 | STATUS_INT_2_EINH | string | Einheit |
 | STAT_INT_2_EINH | string | Einheit |
 
-<a id="job-status-lfr-ko"></a>
 ### STATUS_LFR_KO
 
 Leerlaufregleradaption mit Kompressor MW_LFR_KO
@@ -2649,7 +2502,6 @@ _No arguments._
 | STAT_LFR_KO_WERT | real | Ergebnis |
 | STAT_LFR_KO_EINH | string | Einheit |
 
-<a id="job-status-lfr"></a>
 ### STATUS_LFR
 
 Leerlaufregleradaption ohne Kompressor MW_LFR
@@ -2664,7 +2516,6 @@ _No arguments._
 | STAT_LFR_WERT | real | Ergebnis |
 | STAT_LFR_EINH | string | Einheit |
 
-<a id="job-status-ls-nkat-signal-1"></a>
 ### STATUS_LS_NKAT_SIGNAL_1
 
 Lambdasonde 1 nach Kat MW_LSH1
@@ -2679,7 +2530,6 @@ _No arguments._
 | STAT_LS_NKAT_SIGNAL_1_WERT | real | Ergebnis |
 | STAT_LS_NKAT_SIGNAL_1_EINH | string | Einheit |
 
-<a id="job-status-l-sonde-h"></a>
 ### STATUS_L_SONDE_H
 
 Lambdasonde 1 nach Kat MW_LSH1
@@ -2696,7 +2546,6 @@ _No arguments._
 | STATUS_L_SONDE_H_WERT | real | Ergebnis |
 | STATUS_L_SONDE_H_EINH | string | Einheit |
 
-<a id="job-status-ls-nkat-signal-2"></a>
 ### STATUS_LS_NKAT_SIGNAL_2
 
 Lambdasonde 2 nach Kat MW_LSH2
@@ -2711,7 +2560,6 @@ _No arguments._
 | STAT_LS_NKAT_SIGNAL_2_WERT | real | Ergebnis |
 | STAT_LS_NKAT_SIGNAL_2_EINH | string | Einheit |
 
-<a id="job-status-l-sonde-2-h"></a>
 ### STATUS_L_SONDE_2_H
 
 Lambdasonde 2 nach Kat MW_LSH2
@@ -2728,7 +2576,6 @@ _No arguments._
 | STATUS_L_SONDE_2_H_WERT | real | Ergebnis |
 | STATUS_L_SONDE_2_H_EINH | string | Einheit |
 
-<a id="job-status-ls-vkat-signal-1"></a>
 ### STATUS_LS_VKAT_SIGNAL_1
 
 Lambdasonde 1 vor Kat MW_LSV1
@@ -2743,7 +2590,6 @@ _No arguments._
 | STAT_LS_VKAT_SIGNAL_1_WERT | real | Ergebnis |
 | STAT_LS_VKAT_SIGNAL_1_EINH | string | Einheit |
 
-<a id="job-status-l-sonde"></a>
 ### STATUS_L_SONDE
 
 Lambdasonde 1 vor Kat MW_LSV1
@@ -2760,7 +2606,6 @@ _No arguments._
 | STATUS_L_SONDE_WERT | real | Ergebnis |
 | STATUS_L_SONDE_EINH | string | Einheit |
 
-<a id="job-status-ls-vkat-signal-2"></a>
 ### STATUS_LS_VKAT_SIGNAL_2
 
 Lambdasonde 2 vor Kat MW_LSV2
@@ -2775,7 +2620,6 @@ _No arguments._
 | STAT_LS_VKAT_SIGNAL_2_WERT | real | Ergebnis |
 | STAT_LS_VKAT_SIGNAL_2_EINH | string | Einheit |
 
-<a id="job-status-l-sonde-2"></a>
 ### STATUS_L_SONDE_2
 
 Lambdasonde 2 vor Kat MW_LSV2
@@ -2792,7 +2636,6 @@ _No arguments._
 | STATUS_L_SONDE_2_WERT | real | Ergebnis |
 | STATUS_L_SONDE_2_EINH | string | Einheit |
 
-<a id="job-status-pwg-poti-spannung"></a>
 ### STATUS_PWG_POTI_SPANNUNG
 
 Spannung PWG Kanal 1 MW_UPWG1M
@@ -2809,7 +2652,6 @@ _No arguments._
 | STAT_ROHWERT2 | int | Ergebnis |
 | STAT_PWG_POTI_SPANNUNG_EINH | string | Einheit |
 
-<a id="job-status-lmm-masse"></a>
 ### STATUS_LMM_MASSE
 
 Luftmasse MW_ML
@@ -2825,7 +2667,6 @@ _No arguments._
 | STAT_LMM_MASSE_WERT | real | Ergebnis |
 | STAT_LMM_MASSE_EINH | string | Einheit |
 
-<a id="job-status-lmm"></a>
 ### STATUS_LMM
 
 Luftmasse MW_ML
@@ -2840,7 +2681,6 @@ _No arguments._
 | STATUS_LMM_WERT | real | Ergebnis |
 | STATUS_LMM_EINH | string | Einheit |
 
-<a id="job-status-lambda-mul-1"></a>
 ### STATUS_LAMBDA_MUL_1
 
 Adaption Multiplikativ Bank 1 (Lambdaadaptionsfaktor 1) MW_MUL1
@@ -2855,7 +2695,6 @@ _No arguments._
 | STAT_LAMBDA_MUL_1_WERT | real | Ergebnis |
 | STAT_LAMBDA_MUL_1_EINH | string | Einheit |
 
-<a id="job-status-mul"></a>
 ### STATUS_MUL
 
 Adaption Multiplikativ Bank 1 (Lambdaadaptionsfaktor 1) MW_MUL1
@@ -2872,7 +2711,6 @@ _No arguments._
 | STATUS_MUL_WERT | real | Ergebnis |
 | STATUS_MUL_EINH | string | Einheit |
 
-<a id="job-status-lambda-mul-2"></a>
 ### STATUS_LAMBDA_MUL_2
 
 Adaption Multiplikativ Bank 2 (Lambdaadaptionsfaktor 2) MW_MUL2
@@ -2887,7 +2725,6 @@ _No arguments._
 | STAT_LAMBDA_MUL_2_WERT | real | Ergebnis |
 | STAT_LAMBDA_MUL_2_EINH | string | Einheit |
 
-<a id="job-status-mul-2"></a>
 ### STATUS_MUL_2
 
 Adaption Multiplikativ Bank 2 (Lambdaadaptionsfaktor 2) MW_MUL2
@@ -2904,7 +2741,6 @@ _No arguments._
 | STATUS_MUL_2_WERT | real | Ergebnis |
 | STATUS_MUL_2_EINH | string | Einheit |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Drehzahl n MW_N
@@ -2920,7 +2756,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | real | Ergebnis |
 | STAT_MOTORDREHZAHL_EINH | string | Einheit |
 
-<a id="job-status-nmax"></a>
 ### STATUS_NMAX
 
 Maximaldrehzahl n MW_NMAX
@@ -2935,7 +2770,6 @@ _No arguments._
 | STAT_NMAX_WERT | real | Ergebnis |
 | STAT_NMAX_EINH | string | Einheit |
 
-<a id="job-status-n-ll-soll"></a>
 ### STATUS_N_LL_SOLL
 
 Leerlaufregler Solldrehzahl MW_N_LL_SOLL
@@ -2950,7 +2784,6 @@ _No arguments._
 | STAT_N_LL_SOLL_WERT | real | Ergebnis |
 | STAT_N_LL_SOLL_EINH | string | Einheit |
 
-<a id="job-status-pumg-intern"></a>
 ### STATUS_PUMG_INTERN
 
 Umgebungsdruck (intern) MW_PUMG_INTERN
@@ -2965,7 +2798,6 @@ _No arguments._
 | STAT_PUMG_INTERN_WERT | real | Ergebnis |
 | STAT_PUMG_INTERN_EINH | string | Einheit |
 
-<a id="job-status-rf"></a>
 ### STATUS_RF
 
 relative Fuellung MW_RF
@@ -2980,7 +2812,6 @@ _No arguments._
 | STAT_RF_WERT | real | Ergebnis |
 | STAT_RF_EINH | string | Einheit |
 
-<a id="job-status-tabg"></a>
 ### STATUS_TABG
 
 Abgastemperatur MW_TABG
@@ -2995,7 +2826,6 @@ _No arguments._
 | STAT_TABG_WERT | real | Ergebnis |
 | STAT_TABG_EINH | string | Einheit |
 
-<a id="job-status-an-lufttemperatur"></a>
 ### STATUS_AN_LUFTTEMPERATUR
 
 Ansauglufttemperatursensor MW_TANS
@@ -3011,7 +2841,6 @@ _No arguments._
 | STAT_AN_LUFTTEMPERATUR_WERT | real | Ergebnis |
 | STAT_AN_LUFTTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-einspritzzeit"></a>
 ### STATUS_EINSPRITZZEIT
 
 Einspritzzeit Zylinder 1 MW_TI1
@@ -3026,7 +2855,6 @@ _No arguments._
 | STAT_EINSPRITZZEIT_WERT | real | Ergebnis |
 | STAT_EINSPRITZZEIT_EINH | string | Einheit |
 
-<a id="job-status-ti2"></a>
 ### STATUS_TI2
 
 Einspritzzeit Zylinder 2 MW_TI2
@@ -3041,7 +2869,6 @@ _No arguments._
 | STAT_TI2_WERT | real | Ergebnis |
 | STAT_TI2_EINH | string | Einheit |
 
-<a id="job-status-ti3"></a>
 ### STATUS_TI3
 
 Einspritzzeit Zylinder 3 MW_TI3
@@ -3056,7 +2883,6 @@ _No arguments._
 | STAT_TI3_WERT | real | Ergebnis |
 | STAT_TI3_EINH | string | Einheit |
 
-<a id="job-status-ti4"></a>
 ### STATUS_TI4
 
 Einspritzzeit Zylinder 4 MW_TI4
@@ -3071,7 +2897,6 @@ _No arguments._
 | STAT_TI4_WERT | real | Ergebnis |
 | STAT_TI4_EINH | string | Einheit |
 
-<a id="job-status-ti5"></a>
 ### STATUS_TI5
 
 Einspritzzeit Zylinder 5 MW_TI5
@@ -3086,7 +2911,6 @@ _No arguments._
 | STAT_TI5_WERT | real | Ergebnis |
 | STAT_TI5_EINH | string | Einheit |
 
-<a id="job-status-ti6"></a>
 ### STATUS_TI6
 
 Einspritzzeit Zylinder 6 MW_TI6
@@ -3101,7 +2925,6 @@ _No arguments._
 | STAT_TI6_WERT | real | Ergebnis |
 | STAT_TI6_EINH | string | Einheit |
 
-<a id="job-status-ti7"></a>
 ### STATUS_TI7
 
 Einspritzzeit Zylinder 7 MW_TI7
@@ -3116,7 +2939,6 @@ _No arguments._
 | STAT_TI7_WERT | real | Ergebnis |
 | STAT_TI7_EINH | string | Einheit |
 
-<a id="job-status-ti8"></a>
 ### STATUS_TI8
 
 Einspritzzeit Zylinder 8 MW_TI8
@@ -3131,7 +2953,6 @@ _No arguments._
 | STAT_TI8_WERT | real | Ergebnis |
 | STAT_TI8_EINH | string | Einheit |
 
-<a id="job-status-ti-aus-ist"></a>
 ### STATUS_TI_AUS_IST
 
 Ausblendzaehler Einspritzung Ist MW_TI_AUS_IST
@@ -3146,7 +2967,6 @@ _No arguments._
 | STAT_TI_AUS_IST_WERT | real | Ergebnis |
 | STAT_TI_AUS_IST_EINH | string | Einheit |
 
-<a id="job-status-kuehlw-ausl-temperatur"></a>
 ### STATUS_KUEHLW_AUSL_TEMPERATUR
 
 Kuehleraustrittstemperatur MW_TKA
@@ -3161,7 +2981,6 @@ _No arguments._
 | STAT_KUEHLW_AUSL_TEMPERATUR_WERT | real | Ergebnis |
 | STAT_KUEHLW_AUSL_TEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-last"></a>
 ### STATUS_LAST
 
 Lastsignal MW_TL
@@ -3176,7 +2995,6 @@ _No arguments._
 | STAT_LAST_WERT | real | Ergebnis |
 | STAT_LAST_EINH | string | Einheit |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 Motortemperatursensor MW_TMOT
@@ -3192,7 +3010,6 @@ _No arguments._
 | STAT_MOTORTEMPERATUR_WERT | real | Ergebnis |
 | STAT_MOTORTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-tnmax"></a>
 ### STATUS_TNMAX
 
 Gesamtzeit Ueberdrehzahl n MW_TNMAX
@@ -3207,7 +3024,6 @@ _No arguments._
 | STAT_TNMAX_WERT | real | Ergebnis |
 | STAT_TNMAX_EINH | string | Einheit |
 
-<a id="job-status-oel-temperatur"></a>
 ### STATUS_OEL_TEMPERATUR
 
 Oeltemperatur (TOG) MW_TOEL
@@ -3222,7 +3038,6 @@ _No arguments._
 | STAT_OEL_TEMPERATUR_WERT | real | Ergebnis |
 | STAT_OEL_TEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-tumg"></a>
 ### STATUS_TUMG
 
 Umgebungstemperatur MW_TUMG
@@ -3237,7 +3052,6 @@ _No arguments._
 | STAT_TUMG_WERT | real | Ergebnis |
 | STAT_TUMG_EINH | string | Einheit |
 
-<a id="job-status-tv-tev"></a>
 ### STATUS_TV_TEV
 
 Tastverhaeltnis Tankentlueftungsventil MW_TV_TEV
@@ -3252,7 +3066,6 @@ _No arguments._
 | STAT_TV_TEV_WERT | real | Ergebnis |
 | STAT_TV_TEV_EINH | string | Einheit |
 
-<a id="job-status-tz1"></a>
 ### STATUS_TZ1
 
 Zuendwinkel Zylinder 1 MW_TZ1
@@ -3267,7 +3080,6 @@ _No arguments._
 | STAT_TZ1_WERT | real | Ergebnis |
 | STAT_TZ1_EINH | string | Einheit |
 
-<a id="job-status-tz2"></a>
 ### STATUS_TZ2
 
 Zuendwinkel Zylinder 2 MW_TZ2
@@ -3282,7 +3094,6 @@ _No arguments._
 | STAT_TZ2_WERT | real | Ergebnis |
 | STAT_TZ2_EINH | string | Einheit |
 
-<a id="job-status-tz3"></a>
 ### STATUS_TZ3
 
 Zuendwinkel Zylinder 3 MW_TZ3
@@ -3297,7 +3108,6 @@ _No arguments._
 | STAT_TZ3_WERT | real | Ergebnis |
 | STAT_TZ3_EINH | string | Einheit |
 
-<a id="job-status-tz4"></a>
 ### STATUS_TZ4
 
 Zuendwinkel Zylinder 4 MW_TZ4
@@ -3312,7 +3122,6 @@ _No arguments._
 | STAT_TZ4_WERT | real | Ergebnis |
 | STAT_TZ4_EINH | string | Einheit |
 
-<a id="job-status-tz5"></a>
 ### STATUS_TZ5
 
 Zuendwinkel Zylinder 5 MW_TZ5
@@ -3327,7 +3136,6 @@ _No arguments._
 | STAT_TZ5_WERT | real | Ergebnis |
 | STAT_TZ5_EINH | string | Einheit |
 
-<a id="job-status-tz6"></a>
 ### STATUS_TZ6
 
 Zuendwinkel Zylinder 6 MW_TZ6
@@ -3342,7 +3150,6 @@ _No arguments._
 | STAT_TZ6_WERT | real | Ergebnis |
 | STAT_TZ6_EINH | string | Einheit |
 
-<a id="job-status-tz7"></a>
 ### STATUS_TZ7
 
 Zuendwinkel Zylinder 7 MW_TZ7
@@ -3357,7 +3164,6 @@ _No arguments._
 | STAT_TZ7_WERT | real | Ergebnis |
 | STAT_TZ7_EINH | string | Einheit |
 
-<a id="job-status-tz8"></a>
 ### STATUS_TZ8
 
 Zuendwinkel Zylinder 8 MW_TZ8
@@ -3372,7 +3178,6 @@ _No arguments._
 | STAT_TZ8_WERT | real | Ergebnis |
 | STAT_TZ8_EINH | string | Einheit |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Bordnetzspannung Hauptrelais MW_UBHR
@@ -3388,7 +3193,6 @@ _No arguments._
 | STAT_UBATT_WERT | real | Ergebnis |
 | STAT_UBATT_EINH | string | Einheit |
 
-<a id="job-status-uext1"></a>
 ### STATUS_UEXT1
 
 Sensorversorgung 1 (Master) MW_UEXT1
@@ -3403,7 +3207,6 @@ _No arguments._
 | STAT_UEXT1_WERT | real | Ergebnis |
 | STAT_UEXT1_EINH | string | Einheit |
 
-<a id="job-status-uext2"></a>
 ### STATUS_UEXT2
 
 Sensorversorgung 2 (Slave) MW_UEXT2
@@ -3418,7 +3221,6 @@ _No arguments._
 | STAT_UEXT2_WERT | real | Ergebnis |
 | STAT_UEXT2_EINH | string | Einheit |
 
-<a id="job-status-geschwindigkeit"></a>
 ### STATUS_GESCHWINDIGKEIT
 
 Geschwindigkeit v MW_V
@@ -3434,7 +3236,6 @@ _No arguments._
 | STATUS_GESCHWINDIGKEIT_WERT | real | Ergebnis |
 | STAT_GESCHWINDIGKEIT_EINH | string | Einheit |
 
-<a id="job-status-v-can"></a>
 ### STATUS_V_CAN
 
 Fahrzeuggeschwindigkeit v_asc (CAN) MW_V_CAN
@@ -3449,7 +3250,6 @@ _No arguments._
 | STAT_V_CAN_WERT | real | Ergebnis |
 | STAT_V_CAN_EINH | string | Einheit |
 
-<a id="job-status-vmax"></a>
 ### STATUS_VMAX
 
 Maximalgeschwindigkeit v MW_VMAX
@@ -3464,7 +3264,6 @@ _No arguments._
 | STAT_VMAX_WERT | real | Ergebnis |
 | STAT_VMAX_EINH | string | Einheit |
 
-<a id="job-status-geberrad-adaption"></a>
 ### STATUS_GEBERRAD_ADAPTION
 
 Geberradadaption
@@ -3480,7 +3279,6 @@ _No arguments._
 | STAT_GEBERRAD_ADAPTION_WERT | unsigned int | Motortemperatur Wert |
 | STATUS_GEBERRAD_ADAPTION_EINH | string | Einheit inc |
 
-<a id="job-start-systemcheck-sek-luft"></a>
 ### START_SYSTEMCHECK_SEK_LUFT
 
 Funktionsueberpruefung SLS anstossen - erwarte Ergebnis ausserhalb Job
@@ -3494,7 +3292,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | START_SYSTEMCHECK_SEK_LUFT_STATUS | int |  |
 
-<a id="job-lesen-systemcheck-sek-luft"></a>
 ### LESEN_SYSTEMCHECK_SEK_LUFT
 
 Ergebnis Funktionsueberpruefung SLS abrufen
@@ -3509,7 +3306,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_SEK_LUFT_STATUS | int | Status als Wert |
 | LESEN_SYSTEMCHECK_SEK_LUFT_STATUS_WERT | string | Status als Text |
 
-<a id="job-start-systemcheck-tank-leck"></a>
 ### START_SYSTEMCHECK_TANK_LECK
 
 Funktionsueberpruefung DMTL anstossen - erwarte Ergebnis ausserhalb Job
@@ -3523,7 +3319,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | START_SYSTEMCHECK_DMTL_STATUS | int |  |
 
-<a id="job-start-systemcheck-dmtl"></a>
 ### START_SYSTEMCHECK_DMTL
 
 Funktionsueberpruefung DMTL anstossen - erwarte Ergebnis ausserhalb Job
@@ -3537,7 +3332,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | START_SYSTEMCHECK_DMTL_STATUS | int |  |
 
-<a id="job-start-systemcheck-dmtl-ecos"></a>
 ### START_SYSTEMCHECK_DMTL_ECOS
 
 Funktionsueberpruefung DMTL anstossen - erwarte Ergebnis ausserhalb Job
@@ -3551,7 +3345,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STATUS_DMTL_ECOS | int |  |
 
-<a id="job-lesen-systemcheck-tank-leck"></a>
 ### LESEN_SYSTEMCHECK_TANK_LECK
 
 Ergebnis Funktionsueberpruefung DMTL abrufen
@@ -3568,7 +3361,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_TANK_LECK_AKTIV_WERT | real |  |
 | LESEN_SYSTEMCHECK_TANK_LECK_PER_WERT | real |  |
 
-<a id="job-lesen-systemcheck-dmtl"></a>
 ### LESEN_SYSTEMCHECK_DMTL
 
 Ergebnis Funktionsueberpruefung DMTL abrufen
@@ -3585,7 +3377,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_DMTL_AKTIV_WERT | real |  |
 | LESEN_SYSTEMCHECK_DMTL_WERT | real |  |
 
-<a id="job-status-systemcheck-laufunruhe"></a>
 ### STATUS_SYSTEMCHECK_LAUFUNRUHE
 
 Laufunruheabweichung nach physikalischer Zylinderanordnung lesen Laufunruheabweichung wird nicht nach Zuendreihenfolge (1-5-3-6-2-4) ausgegeben
@@ -3605,7 +3396,6 @@ _No arguments._
 | STAT_SYSTEMCHECK_LAUFUNRUHE_ZYL6_WERT | real |  |
 | STAT_SYSTEMCHECK_LAUFUNRUHE_EINH | string | Laufunruheeinheit in % |
 
-<a id="job-lesen-systemcheck-laufunruhe"></a>
 ### LESEN_SYSTEMCHECK_LAUFUNRUHE
 
 Segmentzeitabweichung des Geberrades nach physikalischer Zylinderanordnung lesen Segmentzeitabweichung wird nicht nach Zuendreihenfolge (1-5-3-6-2-4) ausgegeben
@@ -3624,7 +3414,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_LAUFUNRUHE_ZYL5_WERT | int |  |
 | LESEN_SYSTEMCHECK_LAUFUNRUHE_ZYL6_WERT | int |  |
 
-<a id="job-steuern-sls-check"></a>
 ### STEUERN_SLS_CHECK
 
 Funktionsueberpruefung SLS anstossen - erwarte Ergebnis im Job
@@ -3638,7 +3427,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | SLS_STATUS | string |  |
 
-<a id="job-steuern-tev-check"></a>
 ### STEUERN_TEV_CHECK
 
 Funktionsueberpruefung TEV anstossen - erwarte Ergebnis im Job
@@ -3652,7 +3440,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | TEV_STATUS | string |  |
 
-<a id="job-start-systemcheck-tev-func"></a>
 ### START_SYSTEMCHECK_TEV_FUNC
 
 Funktionsueberpruefung TEV anstossen
@@ -3665,7 +3452,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-lesen-systemcheck-tev-func"></a>
 ### LESEN_SYSTEMCHECK_TEV_FUNC
 
 Funktionsueberpruefung TEV auslesen
@@ -3680,7 +3466,6 @@ _No arguments._
 | LESEN_SYSTEMCHECK_TEV_TEXT | string |  |
 | LESEN_SYSTEMCHECK_TEV_WERT | int |  |
 
-<a id="job-status-tank-dichtheit"></a>
 ### STATUS_TANK_DICHTHEIT
 
 Tankleckpruefung mit DMTL anstossen - erwarte Ergebnis im Job
@@ -3697,7 +3482,6 @@ _No arguments._
 | LDP_REFSTROM | real |  |
 | LDP_REFSTROM_EINH | string |  |
 
-<a id="job-steuern-uebergabe"></a>
 ### STEUERN_UEBERGABE
 
 Quittierung der Uebergabedurchsicht durch den Haendler
@@ -3710,7 +3494,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-uebergabe"></a>
 ### STATUS_UEBERGABE
 
 Aktueller Status der Uebergabedurchsicht
@@ -3724,7 +3507,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_UEBERGABE_WERT | int | 0 == nicht durchgefuehrt / 1 == durchgefuehrt |
 
-<a id="job-steuern-ventil-saugstrahlpumpe"></a>
 ### STEUERN_VENTIL_SAUGSTRAHLPUMPE
 
 Oeffnen des Ventils der Saugstrahlpumpe fuer den Bremskraftverstaerker und schliessen nach 2 sec.
@@ -3737,7 +3519,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ventil-kurbelgehaeuseentlueftung"></a>
 ### STEUERN_VENTIL_KURBELGEHAEUSEENTLUEFTUNG
 
 Oeffnen des Ventils der der Kurbelgehaeuseentlueftung und schliessen nach 2 sec.
@@ -3750,7 +3531,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-adaptionsblock-06"></a>
 ### STATUS_ADAPTIONSBLOCK_06
 
 Adaption Auswahlbyte 06
@@ -3813,7 +3593,6 @@ _No arguments._
 | STAT_RF_ADAPT_OFFSET_WERT | real | rf-Adaptionswert |
 | STAT_KG_VERBAUT_WERT | unsigned int | Kurbelgehaeuseentlueftung |
 
-<a id="job-status-adaptionsblock-16"></a>
 ### STATUS_ADAPTIONSBLOCK_16
 
 Adaption Auswahlbyte 16
@@ -3853,7 +3632,6 @@ _No arguments._
 | STAT_A_QUER_R_SEC_WERT | unsigned int | Querbeschleunigungszaehler rechts in s |
 | STAT_LU_ST_WERT | unsigned int | Freigabestatus Aussetzererkennung 0 = aus 1 = Idle 2 = Aussetzererkennung aktiv 4 = Adaption |
 
-<a id="job-status-adaptionsblock-26"></a>
 ### STATUS_ADAPTIONSBLOCK_26
 
 Adaption Auswahlbyte 26
@@ -3920,7 +3698,6 @@ _No arguments._
 | STAT_KSD_OFFSET1_DELTA_MS_WERT | real | Adaptionsoffset zwischen Start und aktuellem Wert Bank 1 in ms |
 | STAT_KSD_OFFSET2_DELTA_MS_WERT | real | Adaptionsoffset zwischen Start und aktuellem Wert Bank 2 in ms |
 
-<a id="job-status-adaptionsblock-83"></a>
 ### STATUS_ADAPTIONSBLOCK_83
 
 Adaption Auswahlbyte 83
@@ -4023,7 +3800,6 @@ _No arguments._
 - [TEVSTATUS](#table-tevstatus) (20 × 3)
 - [SLSSTATUS](#table-slsstatus) (6 × 3)
 
-<a id="table-betriebswtab"></a>
 ### BETRIEBSWTAB
 
 Dimensions: 79 rows × 17 columns
@@ -4110,7 +3886,6 @@ Dimensions: 79 rows × 17 columns
 | mw_tev_time | 12050B13 | 04 | 0 | 0x00 | 68 | 5 | -- | 0.1 | 0 | 0x00 | 0x00 | 6.2f | s |   | TEV Messzeit | TEV Messzeit |
 | mw_vmax | 12050B06 | 04 | 0 | 0x00 | 17 | 5 | -- | 1 | 0 | 0x00 | 0x00 | 6.2f | km/h |   | VMAX | Maximalgeschwindigkeit v |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 51 rows × 4 columns
@@ -4169,7 +3944,6 @@ Dimensions: 51 rows × 4 columns
 | LDR2 | 36 | 0x01 | 0x01 |
 | FGR | 12 | 0x01 | 0x01 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 226 rows × 6 columns
@@ -4403,7 +4177,6 @@ Dimensions: 226 rows × 6 columns
 | 0xE9 | interner Index 85 | 0x00 | 0x01 | 0x02 | 0x03 |
 | 0xXY | unbekannter Fehlerort | 0xFF | 0xFF | 0xFF | 0xFF |
 
-<a id="table-progresult"></a>
 ### PROGRESULT
 
 Dimensions: 16 rows × 2 columns
@@ -4427,7 +4200,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0F | Daten unvollstaendig |
 | 0xXY | Kein vereinbartes Verify-Byte! |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 114 rows × 17 columns
@@ -4549,7 +4321,6 @@ Dimensions: 114 rows × 17 columns
 | 0xE7 | 0x00 | 0x06 | 0x00 | 0x07 | 0x00 | 0xFA | 0x00 | 0x09 | 0x00 | 0x0A | 0x00 | 0x01 | 0x03 | 0x02 | 0x04 | 0x05 |
 | 0xXY | 0x00 | 0x06 | 0x00 | 0x07 | 0x00 | 0x08 | 0x00 | 0x09 | 0x00 | 0x0A | 0x00 | 0x01 | 0x03 | 0x02 | 0x04 | 0x05 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 122 rows × 2 columns
@@ -4679,7 +4450,6 @@ Dimensions: 122 rows × 2 columns
 | 0xFF | Referenzstrom zu gross |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 80 rows × 5 columns
@@ -4767,7 +4537,6 @@ Dimensions: 80 rows × 5 columns
 | 0xFF | Umweltbed. unbekannt | - | 1 | 0 |
 | 0xXY | ---- | ---- | 1 | 0 |
 
-<a id="table-nulleinstexte"></a>
 ### NULLEINSTEXTE
 
 Dimensions: 4 rows × 3 columns
@@ -4779,7 +4548,6 @@ Dimensions: 4 rows × 3 columns
 | AA | AUS | AKTIV |
 | XY | --?-- | --?-- |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -4795,7 +4563,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_SG_NACK |
 | 0x00 | ERROR_SG_UNBEKANNTES_STATUSBYTE |
 
-<a id="table-ioresult"></a>
 ### IORESULT
 
 Dimensions: 6 rows × 2 columns
@@ -4809,7 +4576,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Ansteuerbedingung nicht erfuellt |
 | 0xXY | Kein vereinbartes Verify-Byte! |
 
-<a id="table-codier-cs"></a>
 ### CODIER_CS
 
 Dimensions: 8 rows × 2 columns
@@ -4825,7 +4591,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Daten Slave |
 | 0x07 | (unbenutzt) |
 
-<a id="table-ldpstatus"></a>
 ### LDPSTATUS
 
 Dimensions: 59 rows × 3 columns
@@ -4892,7 +4657,6 @@ Dimensions: 59 rows × 3 columns
 | 0x39 | BRK | 57_ABBRUCH |
 | 0xXY | BRK | STATUS_UNBEKANNT |
 
-<a id="table-tevstatus"></a>
 ### TEVSTATUS
 
 Dimensions: 20 rows × 3 columns
@@ -4920,7 +4684,6 @@ Dimensions: 20 rows × 3 columns
 | 0x12 | RSLT | 18_ERGEBNIS_LL_NICHT_MOEGLICH |
 | 0xXY | BRK | STATUS_UNBEKANNT |
 
-<a id="table-slsstatus"></a>
 ### SLSSTATUS
 
 Dimensions: 6 rows × 3 columns

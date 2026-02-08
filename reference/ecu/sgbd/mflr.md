@@ -24,7 +24,6 @@
 - [IDENT](#job-ident) - Identdaten
 - [STATUS_LESEN](#job-status-lesen) - alle Stati des MFL lesen
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -42,7 +41,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -55,7 +53,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -79,7 +76,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 alle Stati des MFL lesen
@@ -105,7 +101,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (47 × 2)
 - [ROVERPARTNUMPREFIX](#table-roverpartnumprefix) (21 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -123,7 +118,6 @@ Dimensions: 10 rows × 2 columns
 | ?20? | ERROR_FEHLERANZAHL |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns
@@ -178,7 +172,6 @@ Dimensions: 47 rows × 2 columns
 | 0x46 | Gemel |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns

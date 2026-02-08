@@ -67,7 +67,6 @@
 - [_ETST_SVK_SYSSUP_WRITE_VDC1](#job-etst-svk-syssup-write-vdc1) - Schreiben der SVK System Supplier UDS  : $2E   WriteDataByIdentifier UDS  : $4006 Sub-Parameter SVK System Supplier Modus: Default
 - [_ETST_SVK_SYSSUP_WRITE_ONLY_BB_VDC1](#job-etst-svk-syssup-write-only-bb-vdc1) - Schreiben der SVK System Supplier (nur Bootloader) UDS  : $2E   WriteDataByIdentifier UDS  : $4006 Sub-Parameter SVK System Supplier Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -86,7 +85,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -99,7 +97,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -116,7 +113,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -142,7 +138,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -184,7 +179,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -203,7 +197,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -221,7 +214,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -242,7 +234,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -271,7 +262,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -291,7 +281,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -312,7 +301,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -328,7 +316,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -350,7 +337,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -372,7 +358,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -391,7 +376,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -417,7 +401,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -459,7 +442,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -474,7 +456,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -500,7 +481,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -520,7 +500,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -539,7 +518,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -558,7 +536,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -577,7 +554,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -597,7 +573,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -614,7 +589,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -633,7 +607,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -648,7 +621,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -663,7 +635,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -680,7 +651,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -695,7 +665,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -710,7 +679,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -725,7 +693,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -741,7 +708,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -760,7 +726,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -780,7 +745,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -798,7 +762,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -814,7 +777,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-dummy"></a>
 ### _DUMMY
 
 Zur Definition eines beliebigen Jobs Freie Auswahl eines Single Frames interner TEMIC-Job
@@ -856,7 +818,6 @@ Zur Definition eines beliebigen Jobs Freie Auswahl eines Single Frames interner 
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-dummy-long"></a>
 ### _DUMMY_LONG
 
 Zur Definition eines beliebigen Jobs interner TEMIC-Job
@@ -875,7 +836,6 @@ Zur Definition eines beliebigen Jobs interner TEMIC-Job
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-etst-proddate-write"></a>
 ### _ETST_PRODDATE_WRITE
 
 Schreiben des Produktionsdatum UDS  : $2E   WriteDataByIdentifier UDS  : $4002 Sub-Parameter Produktionsdatum Modus: Default
@@ -895,7 +855,6 @@ Schreiben des Produktionsdatum UDS  : $2E   WriteDataByIdentifier UDS  : $4002 S
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-etst-proddate-read"></a>
 ### _ETST_PRODDATE_READ
 
 Lesen des Produktionsdatum UDS  : $22   WriteDataByIdentifier UDS  : $F18B Sub-Parameter Produktionsdatum Modus: Default
@@ -911,7 +870,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-etst-serialnr-write"></a>
 ### _ETST_SERIALNR_WRITE
 
 Schreiben der Seriennummer UDS  : $2E   WriteDataByIdentifier UDS  : $4001 Sub-Parameter Produktionsdatum Modus: Default
@@ -931,7 +889,6 @@ Schreiben der Seriennummer UDS  : $2E   WriteDataByIdentifier UDS  : $4001 Sub-P
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-etst-hwe-write"></a>
 ### _ETST_HWE_WRITE
 
 Schreiben der Hardwareeinheit (Prozessklasse und Version) UDS  : $2E   WriteDataByIdentifier UDS  : $4004 Sub-Parameter HWE Modus: Default
@@ -955,7 +912,6 @@ Schreiben der Hardwareeinheit (Prozessklasse und Version) UDS  : $2E   WriteData
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-etst-fp-write"></a>
 ### _ETST_FP_WRITE
 
 Schreiben des Fingerprint UDS  : $2E   WriteDataByIdentifier UDS  : $4005 Sub-Parameter Fingerprint Modus: Default
@@ -978,7 +934,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-etst-svk-syssup-write"></a>
 ### _ETST_SVK_SYSSUP_WRITE
 
 Schreiben der SVK System Supplier UDS  : $2E   WriteDataByIdentifier UDS  : $4006 Sub-Parameter SVK System Supplier Modus: Default
@@ -1001,7 +956,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-etst-svk-syssup-write-vdc1"></a>
 ### _ETST_SVK_SYSSUP_WRITE_VDC1
 
 Schreiben der SVK System Supplier UDS  : $2E   WriteDataByIdentifier UDS  : $4006 Sub-Parameter SVK System Supplier Modus: Default
@@ -1024,7 +978,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-etst-svk-syssup-write-only-bb-vdc1"></a>
 ### _ETST_SVK_SYSSUP_WRITE_ONLY_BB_VDC1
 
 Schreiben der SVK System Supplier (nur Bootloader) UDS  : $2E   WriteDataByIdentifier UDS  : $4006 Sub-Parameter SVK System Supplier Modus: Default
@@ -1123,7 +1076,6 @@ _No arguments._
 - [RES_0X4102](#table-res-0x4102) (121 × 10)
 - [TAB_EIGDIAG_FEHLER_ID](#table-tab-eigdiag-fehler-id) (104 × 8)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -1197,7 +1149,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 121 rows × 2 columns
@@ -1326,7 +1277,6 @@ Dimensions: 121 rows × 2 columns
 | 0x0000AE | MTA |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -1353,7 +1303,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1378,7 +1327,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -1410,7 +1358,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1483,7 +1430,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1496,7 +1442,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1509,7 +1454,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1522,7 +1466,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -1541,7 +1484,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1567,7 +1509,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1578,7 +1519,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1587,7 +1527,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 4 rows × 3 columns
@@ -1599,7 +1538,6 @@ Dimensions: 4 rows × 3 columns
 | 0x03 | erweiterter Betriebsmode 3 | ARS Ventile deaktiviert |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 366 rows × 3 columns
@@ -1973,7 +1911,6 @@ Dimensions: 366 rows × 3 columns
 | 0xD76F14 | Signal (72.1.2, Vorgabe Dämpfer Anteil passiv): Wert ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1987,7 +1924,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 182 rows × 9 columns
@@ -2177,7 +2113,6 @@ Dimensions: 182 rows × 9 columns
 | 0x6146 | betroffenes SD-Ventil bei Onlinefehler | 0-n | - | 0xFF | TAB_UW_VENTIL | - | - | - |
 | 0x6147 | Spulenwiderstand bei SD-Ventil Onlinefehler | Ohm | - | unsigned int | - | 1 | 1000 | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 29 rows × 3 columns
@@ -2214,7 +2149,6 @@ Dimensions: 29 rows × 3 columns
 | 0x39200A | Sammelfehler | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2226,7 +2160,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 174 rows × 9 columns
@@ -2408,7 +2341,6 @@ Dimensions: 174 rows × 9 columns
 | 0x6137 | betroffenes Ventil bei Onlinefehler | 0-n | - | 0xFF | TAB_UW_VENTIL | - | - | - |
 | 0x6138 | Spulenwiderstand bei Onlinefehler | Ohm | - | unsigned int | - | 1 | 1000 | - |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 25 rows × 16 columns
@@ -2441,7 +2373,6 @@ Dimensions: 25 rows × 16 columns
 | STATUS_VERSION_LLSW | 0x4100 | - | Version Low Level Software | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x4100 |
 | ARS_DATEN_EIGENDIAGNOSE | 0x4102 | - | Abfragen der aktuellen Eigendiagnose Daten VA= Vorderachse  HA= Hinterachse | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x4102 |
 
-<a id="table-arg-0xf101"></a>
 ### ARG_0XF101
 
 Dimensions: 1 rows × 12 columns
@@ -2450,7 +2381,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STATUS_WORT | - | - | int | - | - | - | - | - | - | - | Diagnosemodus des Steuergerätes einschalten :Bit1 = nicht belegt; Bit2 = nicht belegt; Bit3 = Modus Inbetriebnahme; Bit4 = Rampmode active; Bit5 = diag pSynt; Bit6 = diag iSynt; Bit7 = diag sSynt; Bit8 = nicht belegt; Bit9 = FehlerSimMode; Bit10 = nicht belegt; Bit11 = nicht belegt; Bit12 = nicht belegt; Bit13 = nicht belegt; Bit14 = nicht belegt; Bit15 = nicht belegt; Bit16 = nicht belegt; |
 
-<a id="table-arg-0xf102"></a>
 ### ARG_0XF102
 
 Dimensions: 6 rows × 12 columns
@@ -2464,7 +2394,6 @@ Dimensions: 6 rows × 12 columns
 | DIAG_RAMP_HIGHLIMIT_HA | - | - | int | - | - | - | - | - | - | - | Maxwert der Rampe HA abhängig von Diagnosemodus |
 | DIAG_RAMP_RV_FS_STATUS | - | - | int | - | - | - | - | - | - | - | Rampenmodus  Failsafe  oder  Richtungsventil  wählen - 16 bit Schlüssel: Bit 1 = nicht belegt; Bit 2 = nicht belegt; Bit 3 = Modus Failsafe(MI fails); Bit 4 = nicht belegt; Bit 5 =Modus Richtungsventilvorgabe(MI reli); Bit 6 = nicht belegt; Bit 7 = nicht belegt; Bit 8 = nicht belegt; Bit 9 = nicht belegt; Bit 10 = nicht belegt; Bit11 = nicht belegt; Bit 12 = nicht belegt; Bit 13 = nicht belegt; Bit 14 = nicht belegt; Bit 15 = nicht belegt; Bit 16 = nicht belegt; |
 
-<a id="table-res-0x4100"></a>
 ### RES_0X4100
 
 Dimensions: 3 rows × 10 columns
@@ -2475,7 +2404,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_UV_WERT | HEX | - | char | - | - | - | - | - | Unter Version Low Level Software |
 | STAT_PV_WERT | HEX | - | char | - | - | - | - | - | Patch Haupt Version Low Level Software |
 
-<a id="table-tab-uw-readyness-err-detail"></a>
 ### TAB_UW_READYNESS_ERR_DETAIL
 
 Dimensions: 18 rows × 2 columns
@@ -2501,7 +2429,6 @@ Dimensions: 18 rows × 2 columns
 | 0x10 | Fahrzeug steht nicht |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-uw-reason-task-error"></a>
 ### TAB_UW_REASON_TASK_ERROR
 
 Dimensions: 3 rows × 2 columns
@@ -2512,7 +2439,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Taskausfall |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-uw-ventil"></a>
 ### TAB_UW_VENTIL
 
 Dimensions: 6 rows × 2 columns
@@ -2526,7 +2452,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | Saugdrosselventil |
 | 0xFF | ungültiger Wert |
 
-<a id="table-res-0xab66"></a>
 ### RES_0XAB66
 
 Dimensions: 4 rows × 13 columns
@@ -2538,7 +2463,6 @@ Dimensions: 4 rows × 13 columns
 | STAT_OFFSET_VA_WERT | - | - | + | mV | - | unsigned int | - | - | 1 | 1 | 0 | gelernter Offset Wert in mV Vorderachse |
 | STAT_OFFSET_ERROR_VA_NR | - | - | + | 0-n | - | unsigned char | - | TAB_ARS_SENSOREN | - | - | - | Lernfehler Vorderachse |
 
-<a id="table-res-0xab75"></a>
 ### RES_0XAB75
 
 Dimensions: 6 rows × 13 columns
@@ -2552,7 +2476,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_READYNESS_ERROR_DETAIL_NR | - | - | + | 0-n | - | unsigned int | - | TAB_INBE_READYNESS_DETAIL | - | - | - | Detailinformation für die Verfügbarkeit der Eigendiagnose |
 | STAT_FEHLER_ID_WERT | - | - | + | - | - | unsigned int | - | - | - | - | - | Fehler ID Eigendiagnose |
 
-<a id="table-tab-eigdiag-fortschritt"></a>
 ### TAB_EIGDIAG_FORTSCHRITT
 
 Dimensions: 27 rows × 2 columns
@@ -2587,7 +2510,6 @@ Dimensions: 27 rows × 2 columns
 | 0x64 | Eigendiagnose Ende ohne Fehler |
 | 0xff | undefiniert |
 
-<a id="table-tab-eigdiag-ergebnis"></a>
 ### TAB_EIGDIAG_ERGEBNIS
 
 Dimensions: 3 rows × 2 columns
@@ -2598,7 +2520,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Eigendiagnose fertig |
 | 255 | ungültiger Status |
 
-<a id="table-res-0xdb8d"></a>
 ### RES_0XDB8D
 
 Dimensions: 2 rows × 10 columns
@@ -2608,7 +2529,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DREHZAHL_MOTOR_WERT | 1/min | - | unsigned int | - | - | 0.25 | 1 | - | Signal Drehzahl Motor |
 | STAT_FEHLER_DREHZAHL_MOTOR_WERT | - | - | unsigned char | - | - | - | - | - | Qualifier Signal Drehzahl Motor |
 
-<a id="table-res-0xdb52"></a>
 ### RES_0XDB52
 
 Dimensions: 6 rows × 10 columns
@@ -2622,7 +2542,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_DRUCKSENSOR_HA_NR | 0-n | - | unsigned int | - | TAB_ARS_SENSOREN | - | - | - | Zustand des Drucksensor Hinterachse/ Ausgabe als Wert - Tabelle TAB_ARS_SENSOREN |
 | STAT_DRUCKSENSOR_VA_NR | 0-n | - | int | - | TAB_ARS_SENSOREN | - | - | - | Zustand des Drucksensor Vorderachse/ Ausgabe als Wert - Tabelle TAB_ARS_SENSOREN |
 
-<a id="table-res-0xdb54"></a>
 ### RES_0XDB54
 
 Dimensions: 8 rows × 10 columns
@@ -2638,7 +2557,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_PWM_HA_WERT | % | - | unsigned int | - | - | - | 10 | - | Reglerausgang zum Hinterachsventil |
 | STAT_PWM_VA_WERT | % | - | unsigned int | - | - | - | 10 | - | Reglerausgang zum Vorderachsventil |
 
-<a id="table-arg-0xdb72"></a>
 ### ARG_0XDB72
 
 Dimensions: 1 rows × 12 columns
@@ -2647,7 +2565,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STATUS_WORT | 0-n | - | int | - | TAB_DIAG_STATUS | - | - | - | - | - | Einschalten Diagnosemodus des Steuergerätes: Bit0 = nicht belegt; Bit1 = nicht belegt; Bit2 = Modus Inbetriebnahme; Bit3 = Rampenmodus aktiv; Bit4 = diag pSynt; Bit5 = diag iSynt; Bit6 = diag sSynt; Bit7 = Eigendiagnose; Bit8 = nicht belegt; Bit9 = Fehler SimMode; Bit10 = nicht belegt; Bit11 = nicht belegt;  Bit12 = nicht belegt; Bit13 = nicht belegt; Bit14 = nicht belegt; Bit15 = Verbaukennung Radknoten; |
 
-<a id="table-tab-diag-status"></a>
 ### TAB_DIAG_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -2661,7 +2578,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0004 | Inbetriebnahme |
 | 0x0080 | Eigendiagnose |
 
-<a id="table-res-0xdb8e"></a>
 ### RES_0XDB8E
 
 Dimensions: 8 rows × 10 columns
@@ -2677,7 +2593,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_RK_RECHTS_FEHLER_NR | 0-n | - | unsigned int | - | TAB_ARS_VENTILE | - | - | - | Fehler Radknotenversorgung rechts |
 | STAT_RK_RECHTS_STATUS_NR | 0-n | - | unsigned char | - | TAB_STATEMACHINE | - | - | - | Status Radknotenversorgung rechts |
 
-<a id="table-tab-statemachine"></a>
 ### TAB_STATEMACHINE
 
 Dimensions: 5 rows × 2 columns
@@ -2690,7 +2605,6 @@ Dimensions: 5 rows × 2 columns
 | 8 | Fehler |
 | 0xFF | unbekannter Status |
 
-<a id="table-res-0xab67"></a>
 ### RES_0XAB67
 
 Dimensions: 5 rows × 13 columns
@@ -2703,7 +2617,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_RESULT_VL_NR | - | - | + | 0-n | - | unsigned char | - | TAB_RK_VERBAU | - | - | - | Ergebnis der Prüfung VL |
 | STAT_PRUEFUNG_LAEUFT_NR | - | - | + | 0-n | - | unsigned char | - | TAB_PRUEFUNG | - | - | - | Status Prüfung |
 
-<a id="table-tab-rk-verbau"></a>
 ### TAB_RK_VERBAU
 
 Dimensions: 17 rows × 2 columns
@@ -2728,7 +2641,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0f | läuft noch |
 | 0xFF | ungültiger Wert |
 
-<a id="table-res-0xab73"></a>
 ### RES_0XAB73
 
 Dimensions: 11 rows × 13 columns
@@ -2747,7 +2659,6 @@ Dimensions: 11 rows × 13 columns
 | STAT_WARNUNG_LUFT_NR | - | - | + | 0-n | - | unsigned char | - | TAB_INBE_WARNUNG_LUFT | - | - | - | Warnung, falls Luft im System |
 | STAT_READYNESS_ERROR_DETAIL_NR | - | - | + | 0-n | - | unsigned char | - | TAB_INBE_READYNESS_DETAIL | - | - | - | Detailinformation für die Verfügbarkeit der Inbetriebnahme |
 
-<a id="table-tab-inbe-fortschritt"></a>
 ### TAB_INBE_FORTSCHRITT
 
 Dimensions: 8 rows × 2 columns
@@ -2763,7 +2674,6 @@ Dimensions: 8 rows × 2 columns
 | 0x63 | Inbetriebnahme beendet |
 | 0xFF | ungültiger Status |
 
-<a id="table-tab-pruefung"></a>
 ### TAB_PRUEFUNG
 
 Dimensions: 3 rows × 2 columns
@@ -2774,7 +2684,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | läuft |
 | 0xFF | ungültig |
 
-<a id="table-tab-inbe-ergebnis"></a>
 ### TAB_INBE_ERGEBNIS
 
 Dimensions: 4 rows × 2 columns
@@ -2786,7 +2695,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Inbetriebnahme fertig ohne Fehler |
 | 0xFF | ungültiger Status |
 
-<a id="table-tab-inbe-dynamiktest-va"></a>
 ### TAB_INBE_DYNAMIKTEST_VA
 
 Dimensions: 12 rows × 2 columns
@@ -2806,7 +2714,6 @@ Dimensions: 12 rows × 2 columns
 | 0x8000 | Doppelfehler (Dynamiktest Vorderachse und Hinterachse, siehe Fehlerdetails bei Dynamiktest Hinterachse) |
 | 0xFFFF | ungültiger Wert |
 
-<a id="table-tab-inbe-dynamiktest-ha"></a>
 ### TAB_INBE_DYNAMIKTEST_HA
 
 Dimensions: 17 rows × 2 columns
@@ -2831,7 +2738,6 @@ Dimensions: 17 rows × 2 columns
 | 0x4000 | Druckaufbau zu langsam (Dynamiktest Vorderachse und Hinterachse) |
 | 0xFFFF | ungültiger Wert |
 
-<a id="table-tab-inbe-pi-kennlinie"></a>
 ### TAB_INBE_PI_KENNLINIE
 
 Dimensions: 19 rows × 2 columns
@@ -2858,7 +2764,6 @@ Dimensions: 19 rows × 2 columns
 | 0x1A | Sicherheitsdruck überschritten (Druck größer 180 bar bei Strom/Druck Test) |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-inbe-saugdrossel"></a>
 ### TAB_INBE_SAUGDROSSEL
 
 Dimensions: 4 rows × 2 columns
@@ -2870,7 +2775,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Saugdrosselventil i.O. (PI-Test-Saugdrossel) |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-inbe-readyness"></a>
 ### TAB_INBE_READYNESS
 
 Dimensions: 5 rows × 2 columns
@@ -2883,7 +2787,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Abbruch wegen externer Ursachen |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-inbe-warnung-drehzahl"></a>
 ### TAB_INBE_WARNUNG_DREHZAHL
 
 Dimensions: 5 rows × 2 columns
@@ -2896,7 +2799,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Motordrehzahl unter- und überschritten |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-inbe-warnung-luft"></a>
 ### TAB_INBE_WARNUNG_LUFT
 
 Dimensions: 5 rows × 2 columns
@@ -2909,7 +2811,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Luft bei Dynamiktest Vorder- und Hinterachse erkannt |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-inbe-readyness-detail"></a>
 ### TAB_INBE_READYNESS_DETAIL
 
 Dimensions: 18 rows × 2 columns
@@ -2935,7 +2836,6 @@ Dimensions: 18 rows × 2 columns
 | 0x10 | Fahrzeug steht nicht |
 | 0xFF | ungültiger Wert |
 
-<a id="table-res-0xdb5f"></a>
 ### RES_0XDB5F
 
 Dimensions: 8 rows × 10 columns
@@ -2951,7 +2851,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MAX_TOL_ABBRUCH_MOTORDREHZAHL_WERT | 1/min | - | unsigned int | - | - | - | - | - | zulässige Abweichung der Motordrehzahl bis Abbruch der Eigendiagnose |
 | STAT_MAX_TOL_ABBRUCH_PUMPENDREHZAHL_WERT | 1/min | - | unsigned int | - | - | - | - | - | zulässige Abweichung der Pumpendrehzahl bis Abbruch der Eigendiagnose |
 
-<a id="table-res-0xdb53"></a>
 ### RES_0XDB53
 
 Dimensions: 2 rows × 10 columns
@@ -2961,7 +2860,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_OELSTAND_HW_WERT | Volt | - | int | - | - | - | 1000 | - | gelesener Sensor Wert Ölstand |
 | STAT_OELSTAND_SW_NR | 0-n | - | unsigned int | - | TAB_EIN_AUS | - | - | - | Abfrage des Ölstandschalters - Ausgabe als Hex Wert - Tabelle TAB_EIN_AUS |
 
-<a id="table-tab-ein-aus"></a>
 ### TAB_EIN_AUS
 
 Dimensions: 3 rows × 2 columns
@@ -2972,7 +2870,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | EIN |
 | 0xFF | unbekannt |
 
-<a id="table-res-0xdb50"></a>
 ### RES_0XDB50
 
 Dimensions: 3 rows × 10 columns
@@ -2983,7 +2880,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VERSORGUNG_HA_WERT | Volt | - | int | - | - | - | 1000 | - | Versorgungsspannung am Drucksensor Hinterachse |
 | STAT_VERSORGUNG_VA_WERT | Volt | - | int | - | - | - | 1000 | - | Versorgungsspannung am Drucksensor Vorderachse |
 
-<a id="table-res-0xdb8f"></a>
 ### RES_0XDB8F
 
 Dimensions: 13 rows × 10 columns
@@ -3004,7 +2900,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_S11_STAR_LOCKED_NR | 0/1 | - | unsigned int | 0x0002 | - | - | - | - | Star-locked mode |
 | STAT_S12_TRXD_COLLISION_NR | 0/1 | - | unsigned int | 0x0001 | - | - | - | - | TRXD collision |
 
-<a id="table-res-0xdb55"></a>
 ### RES_0XDB55
 
 Dimensions: 12 rows × 10 columns
@@ -3024,7 +2919,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_RICHTUNGSVENTIL_NR | 0-n | - | unsigned int | - | TAB_ARS_VENTILE | - | - | - | Fehlercodes zugeordnet zum Richtungsventil / Ausgabe als Hex Wert - table TAB_ARS_VENTILE |
 | STAT_SAUGDROSSELVENTIL_NR | 0-n | - | unsigned int | - | TAB_ARS_VENTILE | - | - | - | Fehlercodes zugeordnet zum Saugdrosselventil / Ausgabe als Hex Wert - table TAB_ARS_VENTILE |
 
-<a id="table-tab-ars-ventile"></a>
 ### TAB_ARS_VENTILE
 
 Dimensions: 12 rows × 2 columns
@@ -3044,7 +2938,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0200 | Ventilprüfung abgebrochen |
 | 0xFFFF | unbekannter Fehler |
 
-<a id="table-res-0xdb5e"></a>
 ### RES_0XDB5E
 
 Dimensions: 24 rows × 10 columns
@@ -3076,7 +2969,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_FSP_PREDR_ERR_WERT | - | - | unsigned int | - | - | - | - | - | Fehlerstatus des Predrive-Tests |
 | STAT_FSP_PREDR_WARN_WERT | - | - | unsigned int | - | - | - | - | - | Warnstatus des Predrive-Tests |
 
-<a id="table-res-0xdb51"></a>
 ### RES_0XDB51
 
 Dimensions: 3 rows × 10 columns
@@ -3087,7 +2979,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SCHALTPOSITION_SW_WERT | - | - | char | - | - | - | - | - | interpretierter SensorWert Richtungsventil (-1,0,1) |
 | STAT_SCHALTPOSITION_NR | 0-n | - | unsigned int | - | TAB_ARS_SENSOREN | - | - | - | Zustand des Schaltstellungssensor. Siehe Tabelle TAB_ARS_SENSOREN |
 
-<a id="table-tab-ars-sensoren"></a>
 ### TAB_ARS_SENSOREN
 
 Dimensions: 10 rows × 2 columns
@@ -3105,7 +2996,6 @@ Dimensions: 10 rows × 2 columns
 | 0x0080 | Signal unplausibel |
 | 0xFFFF | unbekannter Fehler |
 
-<a id="table-res-0xdb95"></a>
 ### RES_0XDB95
 
 Dimensions: 5 rows × 10 columns
@@ -3118,7 +3008,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_MAX_TOL_MOTORDREHZAHL_WERT | 1/min | - | unsigned int | - | - | - | - | - | Zulässige Abweichung der Motordrehzahl |
 | STAT_MAX_TOL_PUMPENDREHZAHL_WERT | 1/min | - | unsigned int | - | - | - | - | - | Zulässige Abweichung der Pumpendrehzahl |
 
-<a id="table-arg-0xdb73"></a>
 ### ARG_0XDB73
 
 Dimensions: 6 rows × 12 columns
@@ -3132,7 +3021,6 @@ Dimensions: 6 rows × 12 columns
 | DIAG_RAMP_HIGHLIMIT_HA | - | - | int | - | - | - | - | - | - | - | Maxwert der Rampe HA abhängig von Diagnosemodus |
 | DIAG_RAMP_SCHALTVENTILE_STATUS | 0-n | - | int | - | TAB_RAMP_SCHALTVENTILE_STATUS | - | - | - | - | - | Rampenmodus Schaltventile wählen - 16 bit Schlüssel:  Bit 0 = nicht belegt; Bit 1 = nicht belegt; Bit 2 = Modus Failsafeventilvorgabe; Bit 3 = nicht belegt;  Bit 4 = Modus Richtungsventilvorgabe; Bit 5 = nicht belegt Bit 6 = nicht belegt; Bit 7 = nicht belegt; Bit 8 = Modus Saugdrosselventilvorgabe; Bit 9 = nicht belegt;  Bit 10 = nicht belegt; Bit 11 = nicht belegt; Bit 12 = nicht belegt; Bit 13 = nicht belegt;  Bit 14 = nicht belegt; Bit 15 = nicht belegt; |
 
-<a id="table-tab-ramp-ctrl-status"></a>
 ### TAB_RAMP_CTRL_STATUS
 
 Dimensions: 13 rows × 2 columns
@@ -3153,7 +3041,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0060 | VA_HA_zusammen_auf |
 | 0xFFFF | ungueltiger Wert |
 
-<a id="table-tab-ramp-schaltventile-status"></a>
 ### TAB_RAMP_SCHALTVENTILE_STATUS
 
 Dimensions: 9 rows × 2 columns
@@ -3170,7 +3057,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0114 | FS_ein_RV_ein_SD_ein |
 | 0xFFFF | ungueltiger Wert |
 
-<a id="table-res-0xdb5c"></a>
 ### RES_0XDB5C
 
 Dimensions: 64 rows × 10 columns
@@ -3242,7 +3128,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_INB_UW_NPUMPE_MIN_WERT | 1/min | - | unsigned char | - | - | 25 | 1 | - | minimale Pumpendrehzahl (gesamte Inbetriebnahme) |
 | STAT_INB_UW_NPUMPE_MAX_WERT | 1/min | - | unsigned char | - | - | 25 | 1 | - | maximale Pumpendrehzahl (gesamte Inbetriebnahme) |
 
-<a id="table-res-0xdb5d"></a>
 ### RES_0XDB5D
 
 Dimensions: 24 rows × 10 columns
@@ -3274,7 +3159,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_FSP_PREDR_ERR_WERT | - | - | unsigned int | - | - | - | - | - | Fehlerstatus des Predrive-Tests |
 | STAT_FSP_PREDR_WARN_WERT | - | - | unsigned int | - | - | - | - | - | Warnstatus des Predrive-Tests |
 
-<a id="table-res-0xdb96"></a>
 ### RES_0XDB96
 
 Dimensions: 16 rows × 10 columns
@@ -3298,7 +3182,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_14_NR | 0/1 | - | unsigned int | 0x4000 | - | - | - | - | nicht belegt, immer 0 |
 | STAT_15_NR | 0/1 | - | unsigned int | 0x8000 | - | - | - | - | nicht belegt |
 
-<a id="table-res-0x4102"></a>
 ### RES_0X4102
 
 Dimensions: 121 rows × 10 columns
@@ -3427,7 +3310,6 @@ Dimensions: 121 rows × 10 columns
 | STAT_EIGDIAG_P_VA_UE_FSBH66PZT_WERT | bar | - | int | - | - | 1 | 100 | 0 | Umlaufdruck an VA, am Ende von Test fsbH66pzt |
 | STAT_EIGDIAG_P_HA_UE_FSBH66PZT_WERT | bar | - | int | - | - | 1 | 100 | 0 | Umlaufdruck an HA, am Ende von Test fsbH66pzt |
 
-<a id="table-tab-eigdiag-fehler-id"></a>
 ### TAB_EIGDIAG_FEHLER_ID
 
 Dimensions: 104 rows × 8 columns

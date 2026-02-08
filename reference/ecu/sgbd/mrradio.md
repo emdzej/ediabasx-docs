@@ -60,7 +60,6 @@
 - [STATUS_SERIENNUMMER](#job-status-seriennummer) - Lesen der Seriennummer
 - [STEUERN_SELBSTTEST_AKTIVIEREN](#job-steuern-selbsttest-aktivieren) - Steuergeräte Test starten
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -79,7 +78,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -92,7 +90,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Lesen der Teilenummer Byte 4-7
@@ -108,7 +105,6 @@ _No arguments._
 | VARIANTE_IND | string | Name der SGBD, immer MRRADIO |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-teilenummer"></a>
 ### STATUS_TEILENUMMER
 
 Lesen der Teilenummer Byte 4-7 BCD
@@ -123,7 +119,6 @@ _No arguments._
 | STAT_WERT | string | BMW-Teilenummer, BCD |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-hardwarestand"></a>
 ### STATUS_HARDWARESTAND
 
 Lesen Hardwarestand Byte 8 BCD
@@ -139,7 +134,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Hardwarestand Text |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-codierindex"></a>
 ### STATUS_CODIERINDEX
 
 Lesen der Codierbarkeit Byte 9
@@ -155,7 +149,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Wert Codierindex |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-diagnoseindex"></a>
 ### STATUS_DIAGNOSEINDEX
 
 Lesen Diagnoseindex Byte 10 BCD
@@ -170,7 +163,6 @@ _No arguments._
 | STAT_WERT | string | Wert Diagnoseindex |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-busindex"></a>
 ### STATUS_BUSINDEX
 
 Lesen BusIndex Byte 11 BCD
@@ -185,7 +177,6 @@ _No arguments._
 | STAT_WERT | string | Wert Busindex |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-herstellungskalenderwoche"></a>
 ### STATUS_HERSTELLUNGSKALENDERWOCHE
 
 Lesen der Kalenderwoche Byte 12 BCD
@@ -200,7 +191,6 @@ _No arguments._
 | STAT_WERT | string | Wert Kalenderwoche |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-herstellungskalenderjahr"></a>
 ### STATUS_HERSTELLUNGSKALENDERJAHR
 
 Lesen Kalenderjahr Byte 13 BCD
@@ -215,7 +205,6 @@ _No arguments._
 | STAT_WERT | string | Wert Kalenderjahr |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-zulieferer"></a>
 ### STATUS_ZULIEFERER
 
 Lesen Zulieferer Byte 14 BCD
@@ -231,7 +220,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Text Zulieferer |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-softwarestand"></a>
 ### STATUS_SOFTWARESTAND
 
 Lesen Softwarestand Byte 15 BCD
@@ -247,7 +235,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Softwarestand Text |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-aenderungsindex"></a>
 ### STATUS_AENDERUNGSINDEX
 
 Lesen Änderungsindex Byte 16-17 in ASCII
@@ -262,7 +249,6 @@ _No arguments._
 | STAT_WERT | string | Änderungsindex Wert Ascii |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-gal-einstellung"></a>
 ### STATUS_GAL_EINSTELLUNG
 
 Einstellung Geschwindigkeits abhängige Lautstärke lesen
@@ -277,7 +263,6 @@ _No arguments._
 | STAT_WERT | int | Wert als Zahl |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-vf-mindestlautstaerke"></a>
 ### STATUS_VF_MINDESTLAUTSTAERKE
 
 Mindestlautstärke Verkehrsfunk lesen
@@ -292,7 +277,6 @@ _No arguments._
 | STAT_WERT | int | Wert als Zahl |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-gal-signal-einheit"></a>
 ### STATUS_GAL_SIGNAL_EINHEIT
 
 Einheit Geschwindigkeits abhängige Lautstärke
@@ -307,7 +291,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Einheit: km/h oder Hz |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-gal-signal-wert"></a>
 ### STATUS_GAL_SIGNAL_WERT
 
 Wert Geschwindigkeits abhängige Lautstärke
@@ -322,7 +305,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Geschwindigkeits abhängige Lautstärke als String |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-feldstaerke-wert"></a>
 ### STATUS_FELDSTAERKE_WERT
 
 Feldstärke Wert
@@ -337,7 +319,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Feldstärke Wert |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-qualitaet-wert"></a>
 ### STATUS_QUALITAET_WERT
 
 Qualität Wert
@@ -352,7 +333,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Qualität Wert |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lautsprecher-alle"></a>
 ### STEUERN_LAUTSPRECHER_ALLE
 
 alle Lautsprecher Kanäle ansteuern
@@ -367,7 +347,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lautsprecher-vl"></a>
 ### STEUERN_LAUTSPRECHER_VL
 
 Lautsprecher vorn links ansteuern
@@ -382,7 +361,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lautsprecher-vr"></a>
 ### STEUERN_LAUTSPRECHER_VR
 
 Lautsprecher vorn rechts ansteuern
@@ -397,7 +375,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lautsprecher-hr"></a>
 ### STEUERN_LAUTSPRECHER_HR
 
 Lautsprecher hinten rechts ansteuern
@@ -412,7 +389,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lautsprecher-hl"></a>
 ### STEUERN_LAUTSPRECHER_HL
 
 Lautsprecher hinten links ansteuern
@@ -427,7 +403,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lautstarke-erhoehen"></a>
 ### STEUERN_LAUTSTARKE_ERHOEHEN
 
 Lautstärke um 1 Schritt erhöhen
@@ -442,7 +417,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lautstarke-erniedrigen"></a>
 ### STEUERN_LAUTSTARKE_ERNIEDRIGEN
 
 Lautstärke um 1 Schritt verringern
@@ -457,7 +431,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-suchlauf-tastendruck-vor"></a>
 ### STEUERN_SUCHLAUF_TASTENDRUCK_VOR
 
 Tastendruck auf Suchlauftaste > nachbilden
@@ -472,7 +445,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-suchlauf-tastendruck-zurueck"></a>
 ### STEUERN_SUCHLAUF_TASTENDRUCK_ZURUECK
 
 Tastendruck auf Suchlauftaste < nachbilden
@@ -487,7 +459,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-mode-weiterschaltung"></a>
 ### STEUERN_MODE_WEITERSCHALTUNG
 
 Mode weiterschalten (Tuner->Tape->CD)
@@ -502,7 +473,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-frequenz-einstellen"></a>
 ### STEUERN_FREQUENZ_EINSTELLEN
 
 Empfangsfrequenz einstellen
@@ -521,7 +491,6 @@ Empfangsfrequenz einstellen
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-radio-einschalten"></a>
 ### STEUERN_RADIO_EINSCHALTEN
 
 Radio einschalten
@@ -536,7 +505,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-radio-ausschalten"></a>
 ### STEUERN_RADIO_AUSSCHALTEN
 
 Radio ausschalten
@@ -551,7 +519,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-autostore-ausfuehren"></a>
 ### STEUERN_AUTOSTORE_AUSFUEHREN
 
 Autostore ausführen
@@ -566,7 +533,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-laustaerke-einstellen"></a>
 ### STEUERN_LAUSTAERKE_EINSTELLEN
 
 Lautstärke einstellen
@@ -585,7 +551,6 @@ Lautstärke einstellen
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-gal-kurve-verringern"></a>
 ### STEUERN_GAL_KURVE_VERRINGERN
 
 nächste niedrige Geschwindigkeits abhängige Laustärke Kurve wählen
@@ -600,7 +565,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-gal-kurve-erhoehen"></a>
 ### STEUERN_GAL_KURVE_ERHOEHEN
 
 nächste höhere Geschwindigkeits abhängige Lautstärke Kurve wählen
@@ -615,7 +579,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-vf-mindestlautstaerke-verringern"></a>
 ### STEUERN_VF_MINDESTLAUTSTAERKE_VERRINGERN
 
 Verkehrsfunk Mindestlautstärke um einen Schritt verringern
@@ -630,7 +593,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-vf-mindestlautstaerke-erhoehen"></a>
 ### STEUERN_VF_MINDESTLAUTSTAERKE_ERHOEHEN
 
 Verkehrsfunk Mindestlautstärke um einen Schritt erhöhen
@@ -645,7 +607,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-seriennummer"></a>
 ### STATUS_SERIENNUMMER
 
 Lesen der Seriennummer
@@ -660,7 +621,6 @@ _No arguments._
 | STAT_WERT | string | Seriennummer |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-steuern-selbsttest-aktivieren"></a>
 ### STEUERN_SELBSTTEST_AKTIVIEREN
 
 Steuergeräte Test starten
@@ -683,7 +643,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (12 × 2)
 - [LIEFERANTEN](#table-lieferanten) (81 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 12 rows × 2 columns
@@ -703,7 +662,6 @@ Dimensions: 12 rows × 2 columns
 | 0xF1 | FEHLER: NO_RESPONE_FROM_CONTROL_UNIT |
 | 0x00 | FEHLER: UNBEKANNT |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 81 rows × 2 columns

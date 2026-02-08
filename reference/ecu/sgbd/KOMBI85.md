@@ -67,7 +67,6 @@
 - [C_CHECKSUM](#job-c-checksum) - Berechnung und Speicherung der Checksumme
 - [STEUERN_BREMSLICHT](#job-steuern-bremslicht) - Steuern des Bremslichtes ueber Diagnose Nach Ausfuehren des Jobs wird das Bremslicht ueber K-Line im Lichtschaltzentrum angesteuert
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -86,7 +85,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -99,7 +97,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -112,7 +109,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -130,7 +126,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -149,7 +144,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -168,7 +162,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -181,7 +174,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -194,7 +186,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -220,7 +211,6 @@ _No arguments._
 | ID_AENDERUNGSINDEX | int | Aenderungsindex |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-ident-sw"></a>
 ### IDENT_SW
 
 Identdaten Software
@@ -235,7 +225,6 @@ _No arguments._
 | ID_SW_NR_LIEF | string | Softwarenummer (Full software number) |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicherinhalt aus SG lesen
@@ -270,7 +259,6 @@ _No arguments._
 | STAT_ANTWORT_EEPROM | string | Job-Status EEPROM lesen: OKAY, ERROR_.. |
 | STAT_GWSZ_AIRBAG | string | km-Stand beim auftreten des Airbagfehlers |
 
-<a id="job-status-gwsz-offset-lesen"></a>
 ### STATUS_GWSZ_OFFSET_LESEN
 
 OFFSET-Wert des GWSZ aus EEPROM lesen
@@ -285,7 +273,6 @@ _No arguments._
 | STAT_GWSZ_OFFSET_WERT | int | absoluter Offset-Wert des GWSZ (0-255) |
 | STAT_GWSZ_OFFSET_EINH | string | Einheit des Offset- Wertes |
 
-<a id="job-steuern-gwsz-offset-schreiben"></a>
 ### STEUERN_GWSZ_OFFSET_SCHREIBEN
 
 OFFSET-Wert des GWSZ in EEPROM schreiben
@@ -302,7 +289,6 @@ OFFSET-Wert des GWSZ in EEPROM schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-status-kalibrierfaktor-verbrauch-lesen"></a>
 ### STATUS_KALIBRIERFAKTOR_VERBRAUCH_LESEN
 
 Kalibrierfaktor Verbrauch aus EEPROM W-Adr. 1B lesen
@@ -317,7 +303,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | _ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-steuern-kalibrierfaktor-verbrauch-schreiben"></a>
 ### STEUERN_KALIBRIERFAKTOR_VERBRAUCH_SCHREIBEN
 
 Kalibrierfaktor Verbrauch in EEPROM W-Adr. 1B schreiben
@@ -335,7 +320,6 @@ Kalibrierfaktor Verbrauch in EEPROM W-Adr. 1B schreiben
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-sia-korrektur-schreiben"></a>
 ### STEUERN_SIA_KORREKTUR_SCHREIBEN
 
 Toggeln der SIA Inspektions- bzw. Oelservices
@@ -348,7 +332,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-steuern-zeitinspektion-deaktivieren"></a>
 ### STEUERN_ZEITINSPEKTION_DEAKTIVIEREN
 
 Vorziehen der Zeitinspection vor der Zeitgrenze
@@ -388,7 +371,6 @@ Vorziehen der Zeitinspection vor der Zeitgrenze
 | TELEGRAMM_11_SW_RESET | binary | Telegramm an SG: Software-Reset ausfuehren |
 | SG_ANTWORT_11_SW_RESET | binary | Antworttelegramm von SG: Software-Reset ausfuehren |
 
-<a id="job-steuern-zeitinspektionsdatum-schreiben"></a>
 ### STEUERN_ZEITINSPEKTIONSDATUM_SCHREIBEN
 
 Beschreiben des Monats- u. Jahres-Bytes im EEPROM
@@ -407,7 +389,6 @@ Beschreiben des Monats- u. Jahres-Bytes im EEPROM
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-status-zeitinspektionsdatum-lesen"></a>
 ### STATUS_ZEITINSPEKTIONSDATUM_LESEN
 
 Monats- u. Jahres-Byte des Zeitinspektionsdatums aus EEPROM WortAdr. 1C
@@ -424,7 +405,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | _ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-software-reset"></a>
 ### SOFTWARE_RESET
 
 Kombi loest selbststaendig einen Reset aus
@@ -437,7 +417,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-steuern-sia-reset"></a>
 ### STEUERN_SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -455,7 +434,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 GWSZ zuruecksetzen, nur moeglich wenn Km-Stand < 255
@@ -468,7 +446,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-status-aif-gwsz-lesen"></a>
 ### STATUS_AIF_GWSZ_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen
@@ -485,7 +462,6 @@ _No arguments._
 | KM_STATUS | string | Absoluter Kilometerstand grösser oder kleiner als 255 km |
 | _ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-aif-fg-nr-lesen"></a>
 ### STATUS_AIF_FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -500,7 +476,6 @@ _No arguments._
 | STAT_AIF_FG_NR | string | Fahrgestellnummer |
 | _ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-aif-sia-daten-lesen"></a>
 ### STATUS_AIF_SIA_DATEN_LESEN
 
 Anwenderinfofeld Block 3 auslesen
@@ -530,7 +505,6 @@ _No arguments._
 | STAT_SERVICE_TEXT | string | "Inspektion", "Oelservice" |
 | _ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-aif-tankdaten-lesen"></a>
 ### STATUS_AIF_TANKDATEN_LESEN
 
 Tankdaten aus Anwenderinfofeld auslesen
@@ -552,7 +526,6 @@ _No arguments._
 | STAT_TANKINHALT_GEF_EINH | string | Einheit Tankanzeigewert gesamt (gefiltert): "Liter" |
 | STAT_RESERVE | string | Tankreserve erreicht ("EIN" oder "AUS") |
 
-<a id="job-status-aif-aussentemp-lesen"></a>
 ### STATUS_AIF_AUSSENTEMP_LESEN
 
 Tankdaten aus Anwenderinfofeld auslesen
@@ -569,7 +542,6 @@ _No arguments._
 | STAT_AUSSENTEMP_UNGEF_WERT | real | Aussentemperatur in "Grad Celsius" (ungefiltert) |
 | STAT_AUSSENTEMP_UNGEF_EINH | string | Einheit Aussentemperatur: "Grad Celsius" (ungefiltert) |
 
-<a id="job-status-aif-datum-uhrzeit-lesen"></a>
 ### STATUS_AIF_DATUM_UHRZEIT_LESEN
 
 Eingestelltes Datum und Uhrzeit aus Anwenderinfofeld auslesen
@@ -583,7 +555,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | STAT_DATUM_UHRZEIT | string | Datum und Uhrzeit |
 
-<a id="job-status-aif-v-kmt-dz-con-lesen"></a>
 ### STATUS_AIF_V_KMT_DZ_CON_LESEN
 
 Auslesen von Fahrgeschwindigkeit, Kuehlmitteltemperatur, Drehzahl und Verbrauch aus dem Anwenderinfofeld
@@ -604,7 +575,6 @@ _No arguments._
 | STAT_MOMENTANVERBRAUCH_WERT | real | DREHZAHL in "Liter" |
 | STAT_MOMENTANVERBRAUCH_EINH | string | Einheit Verbrauch: "Liter" |
 
-<a id="job-status-tacho-endwert-lesen"></a>
 ### STATUS_TACHO_ENDWERT_LESEN
 
 Auslesen des Tacho-Endausschlags aus dem EEPROM
@@ -620,7 +590,6 @@ _No arguments._
 | STAT_TACHO_ENDWERT_CODE_EINH | string | gibt die Einheit zum Tachoendwert als String aus 197 Winkelgrade = 260 km/h |
 | _ANTWORT | binary | Antworttelegramm vom SG |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -633,7 +602,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-steuern-anzeige"></a>
 ### STEUERN_ANZEIGE
 
 Anzeigenkomponenten steuern
@@ -652,7 +620,6 @@ Anzeigenkomponenten steuern
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-piezo"></a>
 ### STEUERN_PIEZO
 
 interner Piezo ansteuern
@@ -666,7 +633,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-leuchte"></a>
 ### STEUERN_LEUCHTE
 
 Details zur SW-Version mit JOB_IDENT_SW auslesen. Leuchten in der Anzeigeeinheit ansteuern. Zum Aufruf 4 Parameter in Folge mit Semikolon getrennt und ohne Leerzeichen i.d. Form dez (0..255), hex (0x00..0xFF) oder bin (0y00000000..0y11111111) uebergeben. Die Belegung der Datenbytes ist separat beschrieben. 
@@ -687,7 +653,6 @@ Details zur SW-Version mit JOB_IDENT_SW auslesen. Leuchten in der Anzeigeeinheit
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Eingangs- und Ausgangsstati lesen
@@ -718,7 +683,6 @@ _No arguments._
 | STAT_ANTWORT_DIAG | string | Job-Status Diagnose-Index: OKAY, ERROR_.. |
 | STAT_HW_VERSION | string | alter µC (bis HW06)/ neuer µC (ab HW07) |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 Spezielle analoge Eingaenge lesen
@@ -744,7 +708,6 @@ _No arguments._
 | STAT_5V_EINH | string | Einheit [ADC-Wert] |
 | _ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Internen RAM-Speicher auslesen
@@ -763,7 +726,6 @@ Internen RAM-Speicher auslesen
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | DATEN | binary | Datenfeld |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 EEPROM-Speicher auslesen
@@ -782,7 +744,6 @@ EEPROM-Speicher auslesen
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | DATEN | binary | Datenfeld |
 
-<a id="job-status-kombi-verriegelt"></a>
 ### STATUS_KOMBI_VERRIEGELT
 
 _No arguments._
@@ -794,7 +755,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | STAT_VERRIEGELUNG_EIN | int | 1, wenn "TRUE", 0, wenn "FALSE" |
 
-<a id="job-c-fa-lesen"></a>
 ### C_FA_LESEN
 
 Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x100 - 0x1BF (384 Bytes, 192 words)
@@ -809,7 +769,6 @@ _No arguments._
 | SPEICHER_STATUS | string | BELEGT bzw. UNBELEGT |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fa-auftrag"></a>
 ### C_FA_AUFTRAG
 
 Fahrzeugauftrag schreiben Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x100 - 0x1BF (384 Bytes)
@@ -826,7 +785,6 @@ Fahrzeugauftrag schreiben Fahrzeugauftrag lesen Gueltiger Adressbereich: 0x100 -
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -843,7 +801,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-schreiben"></a>
 ### C_S_SCHREIBEN
 
 Codierdaten schreiben
@@ -860,7 +817,6 @@ Codierdaten schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -878,7 +834,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -893,7 +848,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Speicherung der Checksumme
@@ -911,7 +865,6 @@ Berechnung und Speicherung der Checksumme
 | CHECKSUM | binary | berechnete Checksumme |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-bremslicht"></a>
 ### STEUERN_BREMSLICHT
 
 Steuern des Bremslichtes ueber Diagnose Nach Ausfuehren des Jobs wird das Bremslicht ueber K-Line im Lichtschaltzentrum angesteuert
@@ -946,7 +899,6 @@ _No arguments._
 - [OELINFO](#table-oelinfo) (7 × 2)
 - [DIGITALARGUMENT](#table-digitalargument) (17 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -967,7 +919,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -1051,7 +1002,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1080,7 +1030,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1089,7 +1038,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 27 rows × 2 columns
@@ -1124,7 +1072,6 @@ Dimensions: 27 rows × 2 columns
 | 0xFD | keine CAN ID DME3_DDE3 |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1133,7 +1080,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1142,7 +1088,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 4 rows × 2 columns
@@ -1154,7 +1099,6 @@ Dimensions: 4 rows × 2 columns
 | ZEIT_RESET | 0x04 |
 | LITER_RESET | 0x08 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -1170,7 +1114,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-farttexteerweitert-airbag"></a>
 ### FARTTEXTEERWEITERT_AIRBAG
 
 Dimensions: 5 rows × 3 columns
@@ -1183,7 +1126,6 @@ Dimensions: 5 rows × 3 columns
 | xx11xxxx | 0x30 | Airbag-SG sendet waehrend Betrieb 'LED ein' (Maske 11) |
 | xxxxxxxx | 0x00 | -- |
 
-<a id="table-getriebetypen"></a>
 ### GETRIEBETYPEN
 
 Dimensions: 4 rows × 2 columns
@@ -1195,7 +1137,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | SMG Getriebe |
 | 0xFF | unbekannte Getriebeart |
 
-<a id="table-ganginfo"></a>
 ### GANGINFO
 
 Dimensions: 11 rows × 2 columns
@@ -1214,7 +1155,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0A | 6. Gang |
 | 0xFF | unbekannte Getriebeinfo |
 
-<a id="table-programminfo"></a>
 ### PROGRAMMINFO
 
 Dimensions: 7 rows × 2 columns
@@ -1229,7 +1169,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Anzeige aus |
 | 0xFF | unbekannte Programminfo |
 
-<a id="table-komponenten"></a>
 ### KOMPONENTEN
 
 Dimensions: 5 rows × 2 columns
@@ -1242,7 +1181,6 @@ Dimensions: 5 rows × 2 columns
 | KUEHLMITTELTEMPERATUR | 0x0D |
 | unbekannt | 0xFF |
 
-<a id="table-oelinfo"></a>
 ### OELINFO
 
 Dimensions: 7 rows × 2 columns
@@ -1257,7 +1195,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Oelniveau i.O. |
 | 0xFF | unbekannte Oelinfo |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns

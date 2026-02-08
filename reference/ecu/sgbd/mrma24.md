@@ -58,7 +58,6 @@
 - [DIAGNSOE_MODE_AUS](#job-diagnsoe-mode-aus) - Diagnose Mode ausschalten (Motorstart Unterdrückung)
 - [SECURITY_ACCESS](#job-security-access) - SG für erweiterte Diagnose freischalten Security Access (0x27)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -77,7 +76,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -90,7 +88,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-start-kommunikation"></a>
 ### START_KOMMUNIKATION
 
 _No arguments._
@@ -102,7 +99,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-stop-kommunikation"></a>
 ### STOP_KOMMUNIKATION
 
 _No arguments._
@@ -114,7 +110,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-deinit-kline-kommunikation"></a>
 ### STEUERN_DEINIT_KLINE_KOMMUNIKATION
 
 Beendet eine laufende K-Line Kommunikation
@@ -128,7 +123,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | STEUERN_DEINIT_KLINE_KOMMUNIKATION erfolgreich |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher Löschen
@@ -142,7 +136,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler)
@@ -169,7 +162,6 @@ _No arguments._
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hex Code |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler)
@@ -213,7 +205,6 @@ Fehlerspeicher lesen (ein Fehler)
 | _TEL_ANFRAGE | binary | Hex Antwort vom SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten 
@@ -234,7 +225,6 @@ _No arguments._
 | VARIANTE_IND | string | Name der SGBD, immer MRMA24 |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-dka-anfangsposition"></a>
 ### STATUS_DKA_ANFANGSPOSITION
 
 _No arguments._
@@ -250,7 +240,6 @@ _No arguments._
 | STAT_DKA_EINH | string | Dosselklappen Position in Grad |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-dka-endposition"></a>
 ### STATUS_DKA_ENDPOSITION
 
 _No arguments._
@@ -266,7 +255,6 @@ _No arguments._
 | STAT_DKA_EINH | string | Dosselklappen Position in Grad |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Batteriespannung auslesen
@@ -282,7 +270,6 @@ _No arguments._
 | STAT_EINH | string | Einheit Volt |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-temperatur-luft"></a>
 ### STATUS_TEMPERATUR_LUFT
 
 Temperaturfühler Luft auslesen
@@ -300,7 +287,6 @@ _No arguments._
 | STAT_TEMPERATUR_EINH | string | Einheit in Grad C |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-temperatur-motor"></a>
 ### STATUS_TEMPERATUR_MOTOR
 
 Temperaturfühler Motor auslesen
@@ -318,7 +304,6 @@ _No arguments._
 | STAT_TEMPERATUR_EINH | string | Einheit in Grad C |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-lambda-wert"></a>
 ### STATUS_LAMBDA_WERT
 
 Lambda Wert auslesen
@@ -334,7 +319,6 @@ _No arguments._
 | STAT_EINH | string | Einheit mVolt |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-drosselklappe"></a>
 ### STATUS_DROSSELKLAPPE
 
 Drosselklappe auslesen
@@ -350,7 +334,6 @@ _No arguments._
 | STAT_EINH | string | Einheit Grad DK |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-luftdruck"></a>
 ### STATUS_LUFTDRUCK
 
 Luftdruck auslesen
@@ -366,7 +349,6 @@ _No arguments._
 | STAT_EINH | string | Einheit KPa |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-drehzahl"></a>
 ### STATUS_DREHZAHL
 
 Motordrehzahl auslesen
@@ -382,7 +364,6 @@ _No arguments._
 | STAT_EINH | string | Einheit 1/min |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-einspritzzeit"></a>
 ### STATUS_EINSPRITZZEIT
 
 Einsritzzeit auslesen
@@ -398,7 +379,6 @@ _No arguments._
 | STAT_EINH | string | Einheit ms |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-zuendwinkel"></a>
 ### STATUS_ZUENDWINKEL
 
 Zündwinkel auslesen
@@ -414,7 +394,6 @@ _No arguments._
 | STAT_EINH | string | Einheit Grad KW |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-schliesszeit"></a>
 ### STATUS_SCHLIESSZEIT
 
 Zündung Schliesszeit auslesen
@@ -430,7 +409,6 @@ _No arguments._
 | STAT_EINH | string | Einheit ms |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-schliesswinkel"></a>
 ### STATUS_SCHLIESSWINKEL
 
 Zündung Schliesswinkel auslesen
@@ -446,7 +424,6 @@ _No arguments._
 | STAT_EINH | string | Einheit Grad KW |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 _No arguments._
@@ -467,7 +444,6 @@ _No arguments._
 | _TEL_ANTWORT_2 | binary | Hex Antwort vom SG |
 | _TEL_ANTWORT_3 | binary | Hex Antwort vom SG |
 
-<a id="job-motor-variante"></a>
 ### MOTOR_VARIANTE
 
 Motorrad Variante auslesen
@@ -484,7 +460,6 @@ _No arguments._
 | STAT_LEERLAUFREGELUNG_WERT | string | Byte 5, Bit 2 0 .. 1, Nein .. Ja |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-hallsensor-start"></a>
 ### STEUERN_HALLSENSOR_START
 
 StartRoutineByLocalIdentifier, Service 0x31
@@ -498,7 +473,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-hallsensor-stop"></a>
 ### STEUERN_HALLSENSOR_STOP
 
 StopRoutineByLocalIdentifier, Service 0x32
@@ -512,7 +486,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-hallsensor-result"></a>
 ### STEUERN_HALLSENSOR_RESULT
 
 RequestRoutineResultsByLocalIdentifier, Service 0x33
@@ -528,7 +501,6 @@ _No arguments._
 | ERGEBNIS_TEXT | string | Ergbnis Hallsensortest als Text, siehe Tabelle Hallsensor |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-relais-kraftstoffpumpe-ein"></a>
 ### STEUERN_RELAIS_KRAFTSTOFFPUMPE_EIN
 
 Kraftstoffpumpe einschalten
@@ -543,7 +515,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-relais-kraftstoffpumpe-aus"></a>
 ### STEUERN_RELAIS_KRAFTSTOFFPUMPE_AUS
 
 Kraftstoffpumpe ausschalten
@@ -558,7 +529,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-dka-anfangsposition-ein"></a>
 ### STEUERN_DKA_ANFANGSPOSITION_EIN
 
 Drosselklappe Anfangsposition einschalten
@@ -573,7 +543,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-dka-anfangsposition-aus"></a>
 ### STEUERN_DKA_ANFANGSPOSITION_AUS
 
 Drosselklappe Anfangsposition ausschalten
@@ -588,7 +557,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lueftermotor-ein"></a>
 ### STEUERN_LUEFTERMOTOR_EIN
 
 Lüfter einschalten
@@ -603,7 +571,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-lueftermotor-aus"></a>
 ### STEUERN_LUEFTERMOTOR_AUS
 
 Lüfter ausschalten
@@ -618,7 +585,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-dka-endposition-ein"></a>
 ### STEUERN_DKA_ENDPOSITION_EIN
 
 Drosselklappe Endposition einschalten
@@ -633,7 +599,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-dka-endposition-aus"></a>
 ### STEUERN_DKA_ENDPOSITION_AUS
 
 Drosselklappe Endposition ausschalten
@@ -648,7 +613,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-diagnsoe-mode-ein"></a>
 ### DIAGNSOE_MODE_EIN
 
 Diagnose Mode einschalten (Motorstart Unterdrückung)
@@ -662,7 +626,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-diagnsoe-mode-aus"></a>
 ### DIAGNSOE_MODE_AUS
 
 Diagnose Mode ausschalten (Motorstart Unterdrückung)
@@ -676,7 +639,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-security-access"></a>
 ### SECURITY_ACCESS
 
 SG für erweiterte Diagnose freischalten Security Access (0x27)
@@ -708,7 +670,6 @@ _No arguments._
 - [TEMPERATURLUFT](#table-temperaturluft) (256 × 2)
 - [TEMPERATURMOTOR](#table-temperaturmotor) (256 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -729,7 +690,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | FEHLER: MAXIMALE ANZAHL DER VERSUCHE ERREICHT |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 3 rows × 2 columns
@@ -740,7 +700,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | EIN |
 | 0xFF | UNBEKANNT |
 
-<a id="table-digitalargumentaktiv"></a>
 ### DIGITALARGUMENTAKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -751,7 +710,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | AKTIV |
 | 0xFF | UNBEKANNT |
 
-<a id="table-hallsensor"></a>
 ### HALLSENSOR
 
 Dimensions: 4 rows × 3 columns
@@ -763,7 +721,6 @@ Dimensions: 4 rows × 3 columns
 | 0x03 | Hallsignal ist inaktiv in allen anderen Bereichen | Hallsignal is inactive in all other areas |
 | 0xFF | UNBEKANNT | UNBEKANNT |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 16 rows × 2 columns
@@ -787,7 +744,6 @@ Dimensions: 16 rows × 2 columns
 | 0x060400 | Interner Steuergerätefehler |
 | 0xFFFF00 | unbekannter Fehler |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 11 rows × 2 columns
@@ -806,7 +762,6 @@ Dimensions: 11 rows × 2 columns
 | 0x23 | MOMENTAN VORHANDEN |
 | 0xFF | UNBEKANNT |
 
-<a id="table-freadytexte"></a>
 ### FREADYTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -816,7 +771,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Test vollständig |
 | 0x01 | Test unvollständig |
 
-<a id="table-fehlerstatus"></a>
 ### FEHLERSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -829,7 +783,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | MOMENTAN VORHANDEN |
 | 0xFF | UNBEKANNT |
 
-<a id="table-fwarnlampetexte"></a>
 ### FWARNLAMPETEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -839,7 +792,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Aus |
 | 0x01 | Ein |
 
-<a id="table-fortumrech"></a>
 ### FORTUMRECH
 
 Dimensions: 27 rows × 3 columns
@@ -874,7 +826,6 @@ Dimensions: 27 rows × 3 columns
 | 604 | 604 | Interner Steuergerätefehler |
 |  | FF | Keine Fehler gefunden |
 
-<a id="table-temperaturluft"></a>
 ### TEMPERATURLUFT
 
 Dimensions: 256 rows × 2 columns
@@ -1138,7 +1089,6 @@ Dimensions: 256 rows × 2 columns
 | 0xFE | -40,9 |
 | 0xFF | -40,9 |
 
-<a id="table-temperaturmotor"></a>
 ### TEMPERATURMOTOR
 
 Dimensions: 256 rows × 2 columns

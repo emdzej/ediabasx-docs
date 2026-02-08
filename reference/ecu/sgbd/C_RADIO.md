@@ -30,7 +30,6 @@
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -48,7 +47,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer das Radio
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer das Radio
@@ -90,7 +87,6 @@ _No arguments._
 | ID_VF_DIAG | string | auslesen des VF-Status moeglich |
 | ID_AN_AUS_DIAG | string | auslesen ob Radio ein aus moeglich |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 alle Stati des RADIO lesen
@@ -113,7 +109,6 @@ _No arguments._
 | STAT_FELDSTAERKE_WERT | int | FELDSTAERKE des empf. Senders (relativ, 0-15) ! mit "Radio aus" nur Dummyergebnis |
 | STAT_RADIO_EIN | int | 1: Radio ist eingeschaltet 0: Radio ist ausgeschaltet bei ausgeschaltetem Radio ist keine DSP-Diagnose moeglich |
 
-<a id="job-steuern-radio-power"></a>
 ### STEUERN_RADIO_POWER
 
 Ein-/Ausschalten des Radios
@@ -130,7 +125,6 @@ Ein-/Ausschalten des Radios
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -145,7 +139,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -163,7 +156,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -181,7 +173,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -198,7 +189,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -219,7 +209,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (31 × 2)
 - [DIAGINDEX](#table-diagindex) (67 × 7)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -235,7 +224,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 31 rows × 2 columns
@@ -274,7 +262,6 @@ Dimensions: 31 rows × 2 columns
 | 0x30 | NEC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-diagindex"></a>
 ### DIAGINDEX
 
 Dimensions: 67 rows × 7 columns

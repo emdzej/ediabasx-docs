@@ -30,7 +30,6 @@
 - [DIAGNOSE_WEITER](#job-diagnose-weiter) - Diagnose aufrecht erhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -49,7 +48,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer TELUS_IBUS
@@ -62,7 +60,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer das MAYDAY-TELEFON
@@ -84,7 +81,6 @@ _No arguments._
 | ID_LIEF_NR | string | Lieferanten-Nummer |
 | ID_SW_NR | string | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -105,7 +101,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text table FArtTexte ARTTEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -119,7 +114,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 verschiedenen Status IO-Ports
@@ -137,7 +131,6 @@ _No arguments._
 | STAT_PHONE_SENSE | int |  |
 | STAT_IGNITION | int |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -155,7 +148,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -172,7 +164,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrecht erhalten
@@ -185,7 +176,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode beenden
@@ -206,7 +196,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (13 × 2)
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -221,7 +210,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -242,7 +230,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0C | NVM config failure |
 | 0xXY | unknown error |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns

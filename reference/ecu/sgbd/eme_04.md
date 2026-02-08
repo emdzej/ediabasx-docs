@@ -53,7 +53,6 @@
 - [_SPEICHER_LESEN_ASCII](#job-speicher-lesen-ascii) - 0x23 _SPEICHER_LESEN_ASCII Auslesen des Steuergeraete-Speichers Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
 - [_RDBA_RCM](#job-rdba-rcm) - 0x23 ReadDataByAdress: Reset Cause Monitoring Auslesen des Steuergeraete-Speichers Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1 Diagnose Mode: ECUExtendedDiagnosticSession
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -72,7 +71,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -85,7 +83,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -102,7 +99,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -128,7 +124,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -170,7 +165,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -189,7 +183,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -207,7 +200,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -228,7 +220,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -257,7 +248,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -277,7 +267,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -298,7 +287,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -314,7 +302,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -336,7 +323,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -355,7 +341,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -375,7 +360,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -394,7 +378,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -413,7 +396,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -432,7 +414,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -452,7 +433,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -469,7 +449,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -488,7 +467,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -503,7 +481,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -518,7 +495,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -535,7 +511,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -550,7 +525,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -565,7 +539,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -580,7 +553,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -599,7 +571,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -619,7 +590,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -637,7 +607,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -653,7 +622,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen-ascii"></a>
 ### _SPEICHER_LESEN_ASCII
 
 0x23 _SPEICHER_LESEN_ASCII Auslesen des Steuergeraete-Speichers Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1
@@ -676,7 +644,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-rdba-rcm"></a>
 ### _RDBA_RCM
 
 0x23 ReadDataByAdress: Reset Cause Monitoring Auslesen des Steuergeraete-Speichers Aktivierung: Klemme 15 = EIN Activation: LV_IGK = 1 Diagnose Mode: ECUExtendedDiagnosticSession
@@ -870,7 +837,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (26 × 9)
 - [RCMTEXT](#table-rcmtext) (73 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -944,7 +910,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 121 rows × 2 columns
@@ -1073,7 +1038,6 @@ Dimensions: 121 rows × 2 columns
 | 0x0000AE | MTA |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -1100,7 +1064,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1125,7 +1088,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -1157,7 +1119,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1230,7 +1191,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1243,7 +1203,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1256,7 +1215,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1269,7 +1227,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -1288,7 +1245,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1299,7 +1255,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1308,7 +1263,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -1318,7 +1272,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1332,7 +1285,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -1341,7 +1293,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1353,7 +1304,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 276 rows × 3 columns
@@ -1637,7 +1587,6 @@ Dimensions: 276 rows × 3 columns
 | 0xCF8BFF | Dummy-DTC: Netzwerkfehler zum Testen | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-res-0x6301"></a>
 ### RES_0X6301
 
 Dimensions: 9 rows × 10 columns
@@ -1654,7 +1603,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_CONTROL_BOARD_MIN_WERT | °C | high | int | - | - | - | 64 | - | minimale gültige Control-Board-Temperatur-Temperatur -40°C |
 | STAT_CONTROL_BOARD_MAX_WERT | °C | high | int | - | - | - | 64 | - | maximale gültige Control-Board-Temperatur-Temperatur +125°C |
 
-<a id="table-res-0x6306"></a>
 ### RES_0X6306
 
 Dimensions: 4 rows × 10 columns
@@ -1666,7 +1614,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_STROM_AC_EFF_V_WERT | A | - | int | - | - | 1 | 16 | 0 | Effektiver Zuleitungsstrom Phase V |
 | STAT_STROM_AC_EFF_U_WERT | A | - | int | - | - | 1 | 16 | 0 | Effektiver Zuleitungsstrom Phase U |
 
-<a id="table-res-0x6308"></a>
 ### RES_0X6308
 
 Dimensions: 3 rows × 10 columns
@@ -1677,7 +1624,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SPANNUNG_UBAT_WERT | V | - | unsigned int | - | - | 0.015 | - | - | Spannung 12V Bordnetz |
 | STAT_STROM_UBAT_WERT | A | - | unsigned int | - | - | 0.08 | - | -200 | Strom 12V Bordnetz |
 
-<a id="table-res-0x6309"></a>
 ### RES_0X6309
 
 Dimensions: 3 rows × 10 columns
@@ -1688,7 +1634,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ELEKTRISCHE_MASCHINE_IST_MOMENT_WERT | Nm | - | int | - | - | - | 2 | - | Tatsächliches Moment der E-Maschine |
 | STAT_ELEKTRISCHE_MASCHINE_SOLL_MOMENT_WERT | Nm | - | int | - | - | - | 2 | - |  Vorgegebenes Moment der E-Maschine |
 
-<a id="table-res-0x630a"></a>
 ### RES_0X630A
 
 Dimensions: 2 rows × 10 columns
@@ -1698,7 +1643,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DCDC_LADEMODUS_NR | 0-n | - | unsigned char | - | TAB_STAT_DCDC_LADEMODUS_NR | - | - | - | Abfrage des DC/DC-Wandlers nach Betriebsmodus |
 | STAT_LADUNG_HV_BATTERIE_BSW_WERT | % | - | unsigned int | - | - | - | 10 | - | Istwert Ladezustand Batterie |
 
-<a id="table-res-0x630b"></a>
 ### RES_0X630B
 
 Dimensions: 1 rows × 10 columns
@@ -1707,7 +1651,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_EME_ANTRIEBSART_NR | 0-n | - | unsigned char | - | TAB_STAT_EME_ANTRIEBSART_NR | - | - | - | Rückmeldung der aktuell anliegenden Antriebsart. z.B. Rekuperation, Boost etc. |
 
-<a id="table-res-0x6310"></a>
 ### RES_0X6310
 
 Dimensions: 1 rows × 10 columns
@@ -1716,7 +1659,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KL30C_STATUS | 0-n | - | unsigned char | - | TAB_KL30C_STATUS | - | - | - | 0=Crash nicht erkannt, 1=Crash erkannt |
 
-<a id="table-res-0x63de"></a>
 ### RES_0X63DE
 
 Dimensions: 5 rows × 10 columns
@@ -1729,7 +1671,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RLS_VALID_RANGE_SENSOR_LOW_WERT | V | - | unsigned int | - | - | - | 1024 | - | - |
 | STAT_RLS_VALID_RANGE_SENSOR_HIGH_WERT | V | - | unsigned int | - | - | - | 1024 | - | - |
 
-<a id="table-res-0x6314"></a>
 ### RES_0X6314
 
 Dimensions: 3 rows × 10 columns
@@ -1740,7 +1681,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_TEMP_SG_WERT_DCDC_SCHALTER_HV_WERT | °C | - | signed int | - | - | 1 | - | 0 | - |
 | STAT_TEMP_SG_WERT_DCDC_SCHALTER_LV_WERT | °C | - | signed int | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x6316"></a>
 ### RES_0X6316
 
 Dimensions: 2 rows × 10 columns
@@ -1750,7 +1690,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EMK_STROM_DC_WERT | A | - | signed int | - | - | 0.25 | - | 0 | - |
 | STAT_SPANNUNG_DCDC_LV_WERT | V | - | unsigned int | - | - | 0.1 | - | 0 | - |
 
-<a id="table-res-0x6318"></a>
 ### RES_0X6318
 
 Dimensions: 4 rows × 10 columns
@@ -1762,7 +1701,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_EPI_XOFF_WERT | - | - | unsigned int | - | - | 1 | - | 0 | - |
 | STAT_EPI_YOFF_WERT | - | - | unsigned int | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x6320"></a>
 ### RES_0X6320
 
 Dimensions: 17 rows × 10 columns
@@ -1787,7 +1725,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_I_DCDC_LV_WERT | A | - | signed int | - | - | 1 | - | 0 | - |
 | STAT_U_DCDC_LV_WERT | V | - | unsigned int | - | - | 0.1 | - | 0 | - |
 
-<a id="table-res-0x6321"></a>
 ### RES_0X6321
 
 Dimensions: 11 rows × 10 columns
@@ -1806,7 +1743,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_SCHUBPHASE | 0/1 | - | unsigned char | - | - | 1 | - | 0 | - |
 | STAT_ANF_MIN_BUCK | 0/1 | - | unsigned char | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x6322"></a>
 ### RES_0X6322
 
 Dimensions: 13 rows × 10 columns
@@ -1827,7 +1763,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_I0ANF_HVB | 0/1 | - | unsigned char | - | - | 1 | - | 0 | - |
 | STAT_ANF_ENTL_DCDC | 0/1 | - | unsigned char | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x6323"></a>
 ### RES_0X6323
 
 Dimensions: 34 rows × 10 columns
@@ -1869,7 +1804,6 @@ Dimensions: 34 rows × 10 columns
 | STAT_NV_UHVB_SB_23_WERT | s | - | signed long | - | - | 0.1 | - | 0 | - |
 | STAT_NV_UHVB_SB_24_WERT | s | - | signed long | - | - | 0.1 | - | 0 | - |
 
-<a id="table-res-0x6324"></a>
 ### RES_0X6324
 
 Dimensions: 45 rows × 10 columns
@@ -1922,7 +1856,6 @@ Dimensions: 45 rows × 10 columns
 | STAT_NV_KM_TEMP_HVB_MSAEA_DEAKT_WERT | km | - | unsigned int | - | - | 1 | - | 0 | - |
 | STAT_NV_ANZ_TEMP_HVB_MSAEA_AKT_WERT | - | - | unsigned int | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x6325"></a>
 ### RES_0X6325
 
 Dimensions: 23 rows × 10 columns
@@ -1953,7 +1886,6 @@ Dimensions: 23 rows × 10 columns
 | STAT_NV_KM_DEG_EM1_NOTLL_B_WERT | 10 km | - | unsigned int | - | - | 1 | - | 0 | - |
 | STAT_NV_T_DEG_EM1_NOTLL_B_WERT | min | - | unsigned char | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x632d"></a>
 ### RES_0X632D
 
 Dimensions: 2 rows × 10 columns
@@ -1963,7 +1895,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KM_TAUSCH_1_WERT | km | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_KM_TAUSCH_2_WERT | km | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x632e"></a>
 ### RES_0X632E
 
 Dimensions: 4 rows × 10 columns
@@ -1975,7 +1906,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_LADUNGSMENGE_BOOST_WERT | As | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_LADUNGSMENGE_RECUP_WERT | As | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x636e"></a>
 ### RES_0X636E
 
 Dimensions: 8 rows × 10 columns
@@ -1991,7 +1921,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_ZEIT_TEMPERATUR_HVBATTERIE_45C_50C_WERT | min | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_ZEIT_TEMPERATUR_HVBATTERIE_GR_50C_WERT | min | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x636f"></a>
 ### RES_0X636F
 
 Dimensions: 8 rows × 10 columns
@@ -2007,7 +1936,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_TIME_IN_SOC_SINCE_SOP_66_70_WERT | min | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_TIME_IN_SOC_SINCE_SOP_70_100_WERT | min | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x636d"></a>
 ### RES_0X636D
 
 Dimensions: 8 rows × 10 columns
@@ -2023,7 +1951,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_I_HISTO_GRGL_80A_KL_160A_WERT | s | - | unsigned long | - | - | 0.1 | - | 0 | - |
 | STAT_I_HISTO_GRGL_160A_WERT | s | - | unsigned long | - | - | 0.1 | - | 0 | - |
 
-<a id="table-res-0x6336"></a>
 ### RES_0X6336
 
 Dimensions: 7 rows × 10 columns
@@ -2038,7 +1965,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_DAUER_SPANNUNG_ZU_NIEDRIG_WERT | s | - | unsigned long | - | - | 0.01 | - | 0 | - |
 | STAT_DAUER_SPANNUNG_ZU_HOCH_WERT | s | - | unsigned long | - | - | 0.01 | - | 0 | - |
 
-<a id="table-res-0x6351"></a>
 ### RES_0X6351
 
 Dimensions: 5 rows × 10 columns
@@ -2051,7 +1977,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_ENTLADEN_FUER_T1_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_ENTLADEN_FUER_T1_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6352"></a>
 ### RES_0X6352
 
 Dimensions: 5 rows × 10 columns
@@ -2064,7 +1989,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_ENTLADEN_FUER_T2_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_ENTLADEN_FUER_T2_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6353"></a>
 ### RES_0X6353
 
 Dimensions: 5 rows × 10 columns
@@ -2077,7 +2001,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_ENTLADEN_FUER_T3_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_ENTLADEN_FUER_T3_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6354"></a>
 ### RES_0X6354
 
 Dimensions: 5 rows × 10 columns
@@ -2090,7 +2013,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_ENTLADEN_FUER_T4_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_ENTLADEN_FUER_T4_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6355"></a>
 ### RES_0X6355
 
 Dimensions: 5 rows × 10 columns
@@ -2103,7 +2025,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_ENTLADEN_FUER_T5_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_ENTLADEN_FUER_T5_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6356"></a>
 ### RES_0X6356
 
 Dimensions: 5 rows × 10 columns
@@ -2116,7 +2037,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_ENTLADEN_FUER_T6_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_ENTLADEN_FUER_T6_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6357"></a>
 ### RES_0X6357
 
 Dimensions: 5 rows × 10 columns
@@ -2129,7 +2049,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_ENTLADEN_FUER_T7_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_ENTLADEN_FUER_T7_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6358"></a>
 ### RES_0X6358
 
 Dimensions: 5 rows × 10 columns
@@ -2142,7 +2061,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_LADEN_FUER_T1_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_LADEN_FUER_T1_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6359"></a>
 ### RES_0X6359
 
 Dimensions: 5 rows × 10 columns
@@ -2155,7 +2073,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_LADEN_FUER_T2_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_LADEN_FUER_T2_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x635a"></a>
 ### RES_0X635A
 
 Dimensions: 5 rows × 10 columns
@@ -2168,7 +2085,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_LADEN_FUER_T3_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_LADEN_FUER_T3_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x635b"></a>
 ### RES_0X635B
 
 Dimensions: 5 rows × 10 columns
@@ -2181,7 +2097,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_LADEN_FUER_T4_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_LADEN_FUER_T4_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x635c"></a>
 ### RES_0X635C
 
 Dimensions: 5 rows × 10 columns
@@ -2194,7 +2109,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_LADEN_FUER_T5_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_LADEN_FUER_T5_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x635d"></a>
 ### RES_0X635D
 
 Dimensions: 5 rows × 10 columns
@@ -2207,7 +2121,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_LADEN_FUER_T6_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_LADEN_FUER_T6_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x635e"></a>
 ### RES_0X635E
 
 Dimensions: 5 rows × 10 columns
@@ -2220,7 +2133,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RI_LADEN_FUER_T7_UND_SOC_60_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 | STAT_RI_LADEN_FUER_T7_UND_SOC_70_WERT | Ohm | - | unsigned int | - | - | 0.000244140625 | - | 0 | - |
 
-<a id="table-res-0x6370"></a>
 ### RES_0X6370
 
 Dimensions: 14 rows × 10 columns
@@ -2242,7 +2154,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_NV_HVB_SOC_Fahrb_65_80_WERT | - | - | unsigned char | - | - | 1 | - | 0 | - |
 | STAT_NV_HVB_SOC_Fahrb_80_100_WERT | - | - | unsigned char | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63a2"></a>
 ### RES_0X63A2
 
 Dimensions: 4 rows × 10 columns
@@ -2254,7 +2165,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_KALTSTARTTEMP3_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_KALTSTARTTEMP4_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63a4"></a>
 ### RES_0X63A4
 
 Dimensions: 3 rows × 10 columns
@@ -2265,7 +2175,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_NLM_DEAK_MSA_WERT | - | - | unsigned char | - | - | 1 | - | 0 | - |
 | STAT_ANF_NL_EME_WERT | - | - | unsigned char | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63a5"></a>
 ### RES_0X63A5
 
 Dimensions: 40 rows × 10 columns
@@ -2313,7 +2222,6 @@ Dimensions: 40 rows × 10 columns
 | STAT_KM_START_CCM_636_9_WERT | km | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_ABBRUCHBEDINGUNG_9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x636b"></a>
 ### RES_0X636B
 
 Dimensions: 10 rows × 10 columns
@@ -2331,7 +2239,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_SUM_OF_SOC_CHARGE_45_50_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_SUM_OF_SOC_CHARGE_50_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x636c"></a>
 ### RES_0X636C
 
 Dimensions: 10 rows × 10 columns
@@ -2349,7 +2256,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_SUM_OF_SOC_DISCHARGE_45_50_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_SUM_OF_SOC_DISCHARGE_50_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63a6"></a>
 ### RES_0X63A6
 
 Dimensions: 10 rows × 10 columns
@@ -2367,7 +2273,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC1_T1_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC1_T1_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63a7"></a>
 ### RES_0X63A7
 
 Dimensions: 10 rows × 10 columns
@@ -2385,7 +2290,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC2_T1_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC2_T1_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63a8"></a>
 ### RES_0X63A8
 
 Dimensions: 10 rows × 10 columns
@@ -2403,7 +2307,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC3_T1_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC3_T1_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63a9"></a>
 ### RES_0X63A9
 
 Dimensions: 10 rows × 10 columns
@@ -2421,7 +2324,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC4_T1_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC4_T1_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63aa"></a>
 ### RES_0X63AA
 
 Dimensions: 10 rows × 10 columns
@@ -2439,7 +2341,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC5_T1_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC5_T1_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63ab"></a>
 ### RES_0X63AB
 
 Dimensions: 10 rows × 10 columns
@@ -2457,7 +2358,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC6_T1_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC6_T1_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63ac"></a>
 ### RES_0X63AC
 
 Dimensions: 10 rows × 10 columns
@@ -2475,7 +2375,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC7_T1_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC7_T1_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63ad"></a>
 ### RES_0X63AD
 
 Dimensions: 10 rows × 10 columns
@@ -2493,7 +2392,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC1_T2_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC1_T2_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63ae"></a>
 ### RES_0X63AE
 
 Dimensions: 10 rows × 10 columns
@@ -2511,7 +2409,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC2_T2_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC2_T2_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63af"></a>
 ### RES_0X63AF
 
 Dimensions: 10 rows × 10 columns
@@ -2529,7 +2426,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC3_T2_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC3_T2_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b0"></a>
 ### RES_0X63B0
 
 Dimensions: 10 rows × 10 columns
@@ -2547,7 +2443,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC4_T2_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC4_T2_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b1"></a>
 ### RES_0X63B1
 
 Dimensions: 10 rows × 10 columns
@@ -2565,7 +2460,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC5_T2_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC5_T2_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b2"></a>
 ### RES_0X63B2
 
 Dimensions: 10 rows × 10 columns
@@ -2583,7 +2477,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC6_T2_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC6_T2_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b3"></a>
 ### RES_0X63B3
 
 Dimensions: 10 rows × 10 columns
@@ -2601,7 +2494,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC7_T2_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC7_T2_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b4"></a>
 ### RES_0X63B4
 
 Dimensions: 10 rows × 10 columns
@@ -2619,7 +2511,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC1_T3_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC1_T3_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b5"></a>
 ### RES_0X63B5
 
 Dimensions: 10 rows × 10 columns
@@ -2637,7 +2528,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC2_T3_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC2_T3_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b6"></a>
 ### RES_0X63B6
 
 Dimensions: 10 rows × 10 columns
@@ -2655,7 +2545,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC3_T3_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC3_T3_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b7"></a>
 ### RES_0X63B7
 
 Dimensions: 10 rows × 10 columns
@@ -2673,7 +2562,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC4_T3_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC4_T3_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b8"></a>
 ### RES_0X63B8
 
 Dimensions: 10 rows × 10 columns
@@ -2691,7 +2579,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC5_T3_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC5_T3_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63b9"></a>
 ### RES_0X63B9
 
 Dimensions: 10 rows × 10 columns
@@ -2709,7 +2596,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC6_T3_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC6_T3_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63ba"></a>
 ### RES_0X63BA
 
 Dimensions: 10 rows × 10 columns
@@ -2727,7 +2613,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC7_T3_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC7_T3_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63bb"></a>
 ### RES_0X63BB
 
 Dimensions: 10 rows × 10 columns
@@ -2745,7 +2630,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC1_T4_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC1_T4_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63bc"></a>
 ### RES_0X63BC
 
 Dimensions: 10 rows × 10 columns
@@ -2763,7 +2647,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC2_T4_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC2_T4_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63bd"></a>
 ### RES_0X63BD
 
 Dimensions: 10 rows × 10 columns
@@ -2781,7 +2664,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC3_T4_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC3_T4_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63be"></a>
 ### RES_0X63BE
 
 Dimensions: 10 rows × 10 columns
@@ -2799,7 +2681,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC4_T4_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC4_T4_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63bf"></a>
 ### RES_0X63BF
 
 Dimensions: 10 rows × 10 columns
@@ -2817,7 +2698,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC5_T4_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC5_T4_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c0"></a>
 ### RES_0X63C0
 
 Dimensions: 10 rows × 10 columns
@@ -2835,7 +2715,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC6_T4_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC6_T4_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c1"></a>
 ### RES_0X63C1
 
 Dimensions: 10 rows × 10 columns
@@ -2853,7 +2732,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC7_T4_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC7_T4_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c2"></a>
 ### RES_0X63C2
 
 Dimensions: 10 rows × 10 columns
@@ -2871,7 +2749,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC1_T5_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC1_T5_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c3"></a>
 ### RES_0X63C3
 
 Dimensions: 10 rows × 10 columns
@@ -2889,7 +2766,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC2_T5_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC2_T5_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c4"></a>
 ### RES_0X63C4
 
 Dimensions: 10 rows × 10 columns
@@ -2907,7 +2783,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC3_T5_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC3_T5_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c5"></a>
 ### RES_0X63C5
 
 Dimensions: 10 rows × 10 columns
@@ -2925,7 +2800,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC4_T5_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC4_T5_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c6"></a>
 ### RES_0X63C6
 
 Dimensions: 10 rows × 10 columns
@@ -2943,7 +2817,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC5_T5_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC5_T5_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c7"></a>
 ### RES_0X63C7
 
 Dimensions: 10 rows × 10 columns
@@ -2961,7 +2834,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC6_T5_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC6_T5_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c8"></a>
 ### RES_0X63C8
 
 Dimensions: 10 rows × 10 columns
@@ -2979,7 +2851,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC7_T5_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC7_T5_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63c9"></a>
 ### RES_0X63C9
 
 Dimensions: 10 rows × 10 columns
@@ -2997,7 +2868,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC1_T6_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC1_T6_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63ca"></a>
 ### RES_0X63CA
 
 Dimensions: 10 rows × 10 columns
@@ -3015,7 +2885,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC2_T6_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC2_T6_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63cb"></a>
 ### RES_0X63CB
 
 Dimensions: 10 rows × 10 columns
@@ -3033,7 +2902,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC3_T6_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC3_T6_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63cc"></a>
 ### RES_0X63CC
 
 Dimensions: 10 rows × 10 columns
@@ -3051,7 +2919,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC4_T6_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC4_T6_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63cd"></a>
 ### RES_0X63CD
 
 Dimensions: 10 rows × 10 columns
@@ -3069,7 +2936,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC5_T6_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC5_T6_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63ce"></a>
 ### RES_0X63CE
 
 Dimensions: 10 rows × 10 columns
@@ -3087,7 +2953,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC6_T6_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC6_T6_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63cf"></a>
 ### RES_0X63CF
 
 Dimensions: 10 rows × 10 columns
@@ -3105,7 +2970,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC7_T6_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC7_T6_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d0"></a>
 ### RES_0X63D0
 
 Dimensions: 10 rows × 10 columns
@@ -3123,7 +2987,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC1_T7_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC1_T7_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d1"></a>
 ### RES_0X63D1
 
 Dimensions: 10 rows × 10 columns
@@ -3141,7 +3004,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC2_T7_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC2_T7_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d2"></a>
 ### RES_0X63D2
 
 Dimensions: 10 rows × 10 columns
@@ -3159,7 +3021,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC3_T7_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC3_T7_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d3"></a>
 ### RES_0X63D3
 
 Dimensions: 10 rows × 10 columns
@@ -3177,7 +3038,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC4_T7_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC4_T7_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d4"></a>
 ### RES_0X63D4
 
 Dimensions: 10 rows × 10 columns
@@ -3195,7 +3055,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC5_T7_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC5_T7_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d5"></a>
 ### RES_0X63D5
 
 Dimensions: 10 rows × 10 columns
@@ -3213,7 +3072,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC6_T7_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC6_T7_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d6"></a>
 ### RES_0X63D6
 
 Dimensions: 10 rows × 10 columns
@@ -3231,7 +3089,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_HV_BATT_HIST_SOC7_T7_I9_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_HV_BATT_HIST_SOC7_T7_I10_WERT | - | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d8"></a>
 ### RES_0X63D8
 
 Dimensions: 13 rows × 10 columns
@@ -3252,7 +3109,6 @@ Dimensions: 13 rows × 10 columns
 | STAT_NV_MSA_EA_AKTIV_WERT | - | - | unsigned int | - | - | 1 | - | 0 | - |
 | STAT_NV_MSA_AV_AKTIV_WERT | - | - | unsigned int | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63d9"></a>
 ### RES_0X63D9
 
 Dimensions: 4 rows × 10 columns
@@ -3264,7 +3120,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_NV_DCDC_ALS_HIST_BEREICH_2_WERT | s | - | unsigned long | - | - | 0.1 | - | 0 | - |
 | STAT_NV_DCDC_ALS_HIST_BEREICH_3_WERT | s | - | unsigned long | - | - | 0.1 | - | 0 | - |
 
-<a id="table-res-0x63da"></a>
 ### RES_0X63DA
 
 Dimensions: 48 rows × 10 columns
@@ -3320,7 +3175,6 @@ Dimensions: 48 rows × 10 columns
 | STAT_ANF_NL_EME_ZEIT_15_WERT | s | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_ANF_NL_EME_ZEIT_16_WERT | s | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63db"></a>
 ### RES_0X63DB
 
 Dimensions: 48 rows × 10 columns
@@ -3376,7 +3230,6 @@ Dimensions: 48 rows × 10 columns
 | STAT_NLM_DEAK_MSA_ZEIT_15_WERT | s | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_NLM_DEAK_MSA_ZEIT_16_WERT | s | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63dc"></a>
 ### RES_0X63DC
 
 Dimensions: 48 rows × 10 columns
@@ -3432,7 +3285,6 @@ Dimensions: 48 rows × 10 columns
 | STAT_NLM_ERREAKT_ZEIT_15_WERT | s | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_NLM_ERREAKT_ZEIT_16_WERT | s | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x6369"></a>
 ### RES_0X6369
 
 Dimensions: 6 rows × 10 columns
@@ -3446,7 +3298,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_SOC_HV_BATT_DAY_BEFORE_4_MIN_WERT | % | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_SOC_HV_BATT_DAY_BEFORE_5_MIN_WERT | % | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x636a"></a>
 ### RES_0X636A
 
 Dimensions: 6 rows × 10 columns
@@ -3460,7 +3311,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_SOC_HV_BATT_DAY_BEFORE_4_MAX_WERT | % | - | unsigned long | - | - | 1 | - | 0 | - |
 | STAT_SOC_HV_BATT_DAY_BEFORE_5_MAX_WERT | % | - | unsigned long | - | - | 1 | - | 0 | - |
 
-<a id="table-res-0x63dd"></a>
 ### RES_0X63DD
 
 Dimensions: 108 rows × 10 columns
@@ -3576,7 +3426,6 @@ Dimensions: 108 rows × 10 columns
 | STAT_TA_PST_U_MIN_CELL_SME_WERT | V | - | unsigned char | - | - | 0.02 | - | 0 | - |
 | STAT_TA_PST_U_ZK_SME_WERT | V | - | unsigned char | - | - | 4 | - | 0 | - |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 144 rows × 16 columns
@@ -3728,7 +3577,6 @@ Dimensions: 144 rows × 16 columns
 | STEUERN_PHASENUNTERBRECHUNG_STILLSTAND | 0xF511 | - | Phasenunterbrechung im Stillstand | - | - | - | - | - | - | - | - | 0x1A | 31 | - | RES_0xF511 |
 | STEUERN_START_DCDC_CPLD_UPDATE | 0xF512 | - | Start und Status CPLD-Update | - | - | - | - | - | - | - | - | 0x1A | 31 | ARG_0xF512 | RES_0xF512 |
 
-<a id="table-tab-stat-hv-isolation-nr"></a>
 ### TAB_STAT_HV_ISOLATION_NR
 
 Dimensions: 3 rows × 2 columns
@@ -3739,7 +3587,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | nicht ok |
 | 0x02 | Test nicht möglich |
 
-<a id="table-tab-stat-precharge-nr"></a>
 ### TAB_STAT_PRECHARGE_NR
 
 Dimensions: 2 rows × 2 columns
@@ -3749,7 +3596,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Zwischenkreis nicht geladen |
 | 0x01 | Zwischenkreis geladen |
 
-<a id="table-tab-stat-hvil-gesamt-nr"></a>
 ### TAB_STAT_HVIL_GESAMT_NR
 
 Dimensions: 2 rows × 2 columns
@@ -3759,7 +3605,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Interlock nicht unterbrochen |
 | 0x01 | Interlock unterbrochen |
 
-<a id="table-tab-st-diag-dcdc-anf"></a>
 ### TAB_ST_DIAG_DCDC_ANF
 
 Dimensions: 4 rows × 2 columns
@@ -3771,7 +3616,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Anforderung Boost-Modus |
 | 3 | Anforderung Standby-Modus |
 
-<a id="table-tab-st-b-diag-dcdc"></a>
 ### TAB_ST_B_DIAG_DCDC
 
 Dimensions: 5 rows × 12 columns
@@ -3784,7 +3628,6 @@ Dimensions: 5 rows × 12 columns
 | STAT_B_U_DIAG_DCDC_LV_OUT | 0/1 | - | unsigned char | 0x08 | - | - | - | - | - | - | 0: Systemgrenze verwenden |
 | STAT_B_U_DIAG_DCDC_HV_OUT | 0/1 | - | unsigned char | 0x10 | - | - | - | - | - | - | 0: Systemgrenze verwenden |
 
-<a id="table-res-st-diag-dcdc-modus"></a>
 ### RES_ST_DIAG_DCDC_MODUS
 
 Dimensions: 3 rows × 2 columns
@@ -3795,7 +3638,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | SUCCESS |
 | 2 | FAILURE |
 
-<a id="table-res-st-diag-dcdc-grenzen"></a>
 ### RES_ST_DIAG_DCDC_GRENZEN
 
 Dimensions: 2 rows × 2 columns
@@ -3805,7 +3647,6 @@ Dimensions: 2 rows × 2 columns
 | 1 | SUCCESS |
 | 2 | FAILURE |
 
-<a id="table-tab-st-diag-hv-anf"></a>
 ### TAB_ST_DIAG_HV_ANF
 
 Dimensions: 3 rows × 2 columns
@@ -3816,7 +3657,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Hochfahren HV-System angefordert |
 | 2 | Runterfahren HV-System angefordert |
 
-<a id="table-res-st-diag-hvstart"></a>
 ### RES_ST_DIAG_HVSTART
 
 Dimensions: 3 rows × 2 columns
@@ -3827,7 +3667,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | SUCCESS |
 | 2 | FAILURE |
 
-<a id="table-arg-eme-antriebsart"></a>
 ### ARG_EME_ANTRIEBSART
 
 Dimensions: 1 rows × 12 columns
@@ -3836,7 +3675,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ST_EME_ANTRIEBSART | - | - | unsigned char | - | TAB_ST_EME_ANTRIEBSART | 1 | 1 | 0 | 0 | 1 | Ansteuerung EME Antriebsart, keine EM Unterstuetzung |
 
-<a id="table-tab-st-eme-antriebsart"></a>
 ### TAB_ST_EME_ANTRIEBSART
 
 Dimensions: 2 rows × 2 columns
@@ -3846,7 +3684,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Kontrolle an EME-SW |
 | 1 | Keine EM-Unterstuetzung |
 
-<a id="table-tab-st-em-generator"></a>
 ### TAB_ST_EM_GENERATOR
 
 Dimensions: 2 rows × 2 columns
@@ -3856,7 +3693,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Kontrolle an EME-SW |
 | 1 | EM Generatorbetrieb |
 
-<a id="table-tab-st-dme-llr"></a>
 ### TAB_ST_DME_LLR
 
 Dimensions: 2 rows × 2 columns
@@ -3866,7 +3702,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Kontrolle an EME-SW |
 | 1 | LLR auf DME aktivieren |
 
-<a id="table-tab-stat-kl50l-nr"></a>
 ### TAB_STAT_KL50L_NR
 
 Dimensions: 2 rows × 2 columns
@@ -3876,7 +3711,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Aus |
 | 1 | Ein |
 
-<a id="table-tab-stat-dcdc-lademodus-nr"></a>
 ### TAB_STAT_DCDC_LADEMODUS_NR
 
 Dimensions: 4 rows × 2 columns
@@ -3888,7 +3722,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Boost |
 | 3 | geregelt |
 
-<a id="table-tab-stat-eme-antriebsart-nr"></a>
 ### TAB_STAT_EME_ANTRIEBSART_NR
 
 Dimensions: 6 rows × 2 columns
@@ -3902,7 +3735,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Batterie Entladen |
 | 5 | Batterie Laden |
 
-<a id="table-tab-st-rotorlagesensor-anlernen"></a>
 ### TAB_ST_ROTORLAGESENSOR_ANLERNEN
 
 Dimensions: 3 rows × 2 columns
@@ -3913,7 +3745,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Stromkalibrierung |
 | 2 | EPS-Offsetkalibrierung |
 
-<a id="table-res-0x6312"></a>
 ### RES_0X6312
 
 Dimensions: 2 rows × 10 columns
@@ -3923,7 +3754,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_INNENWIDERSTAND_WERT | - | - | unsigned int | - | - | - | - | - | Wert des Innenwiderstandes der HV-Batterie |
 | STAT_INNENWIDERSTAND_EINH | - | - | unsigned char | - | - | - | - | - | Einheit des Innenwiderstandes der HV-Batterie |
 
-<a id="table-tab-kl30c-status"></a>
 ### TAB_KL30C_STATUS
 
 Dimensions: 2 rows × 2 columns
@@ -3933,7 +3763,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Crash nicht erkannt |
 | 1 | Crash erkannt |
 
-<a id="table-tab-rotorlage-sensor-status"></a>
 ### TAB_ROTORLAGE_SENSOR_STATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3944,7 +3773,6 @@ Dimensions: 3 rows × 2 columns
 | 73 | Die Routine Rotorlagesensor Anlernen wurde gestartet und läuft. |
 | 82 | Die Routine Rotorlagesensor Anlernen wurde erfolgreich beendet. |
 
-<a id="table-tab-em-betriebsart"></a>
 ### TAB_EM_BETRIEBSART
 
 Dimensions: 2 rows × 2 columns
@@ -3954,7 +3782,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Momentenvorgabe |
 | 1 | Drehzahlvorgabe |
 
-<a id="table-tab-hv-sys-on-off"></a>
 ### TAB_HV_SYS_ON_OFF
 
 Dimensions: 4 rows × 2 columns
@@ -3966,7 +3793,6 @@ Dimensions: 4 rows × 2 columns
 | 1 | Anforderung HV ein |
 | 2 | Anforderung HV aus |
 
-<a id="table-arg-0x630b"></a>
 ### ARG_0X630B
 
 Dimensions: 1 rows × 12 columns
@@ -3975,7 +3801,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ST_EME_ANTRIEBSART | 0-n | - | unsigned char | - | TAB_ST_EME_ANTRIEBSART | 1 | 1 | - | - | 1 | Ansteuerung EME Antriebsart, keine EM Unterstuetzung |
 
-<a id="table-res-0xf500"></a>
 ### RES_0XF500
 
 Dimensions: 2 rows × 13 columns
@@ -3985,7 +3810,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ROTORLAGESENSOR_STATUS_MODE | - | - | + | 0-n | - | unsigned char | - | TAB_ROTORLAGE_SENSOR_STATUS | 1 | 1 | 0 | Status und Mode |
 | STAT_ROTORLAGESENSOR_WERT | - | - | + | ° | - | int | - | - | 180 | 32768 | 0 | EPS Offset |
 
-<a id="table-arg-0xf500"></a>
 ### ARG_0XF500
 
 Dimensions: 1 rows × 14 columns
@@ -3994,7 +3818,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ST_ROTORLAGESENSOR_ANLERNEN | + | - | 0-n | - | unsigned char | - | TAB_ST_ROTORLAGESENSOR_ANLERNEN | - | - | - | - | - | - |
 
-<a id="table-res-0xf502"></a>
 ### RES_0XF502
 
 Dimensions: 2 rows × 13 columns
@@ -4004,7 +3827,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ST_DIAG_DCDC_MODUS | - | - | + | 0-n | - | unsigned char | - | RES_ST_DIAG_DCDC_MODUS | 1 | 1 | 0 | Result DCDC-Modus |
 | STAT_ST_DIAG_DCDC_GRENZEN | - | - | + | 0-n | - | unsigned char | - | RES_ST_DIAG_DCDC_GRENZEN | 1 | 1 | 0 | Result DCDC-Grenzen |
 
-<a id="table-arg-0xf502"></a>
 ### ARG_0XF502
 
 Dimensions: 7 rows × 14 columns
@@ -4019,7 +3841,6 @@ Dimensions: 7 rows × 14 columns
 | U_DIAG_DCDC_LV_OUT | + | - | V | - | unsigned int | - | - | 10 | 1 | 0 | 0 | 33 | U_LV Systemgrenze für Steuerung |
 | U_DIAG_DCDC_HV_OUT | + | - | V | - | unsigned int | - | - | 10 | 1 | 0 | 0 | 300 | U_LV Systemgrenze für Steuerung |
 
-<a id="table-res-0xf503"></a>
 ### RES_0XF503
 
 Dimensions: 1 rows × 13 columns
@@ -4028,7 +3849,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_HY_SYSTEM_ON_OFF | - | - | + | 0-n | - | unsigned char | - | TAB_HV_SYS_ON_OFF | 1 | 1 | 0 | 0 - keine Anforderung 1 - Anforderung HV ein 2 - Anforderung HV aus |
 
-<a id="table-arg-0xf503"></a>
 ### ARG_0XF503
 
 Dimensions: 1 rows × 14 columns
@@ -4037,7 +3857,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ST_DIAG_HV_ANF | + | - | 0-n | - | unsigned char | - | TAB_ST_DIAG_HV_ANF | - | - | - | - | - | HV-System Hoch- u. Runterfahren |
 
-<a id="table-res-0xf504"></a>
 ### RES_0XF504
 
 Dimensions: 1 rows × 13 columns
@@ -4046,7 +3865,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_EME_PUMPE_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | 0= Ansteueuerung nicht aktiv 1 = Ansteuerung aktiv |
 
-<a id="table-arg-0xf504"></a>
 ### ARG_0XF504
 
 Dimensions: 1 rows × 14 columns
@@ -4055,7 +3873,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DREHZAHL_EME_PUMPE | + | - | % | - | unsigned char | - | - | - | - | - | 0 | 100 | Sollwert für Pumpemansteuerung |
 
-<a id="table-arg-0xf505"></a>
 ### ARG_0XF505
 
 Dimensions: 1 rows × 12 columns
@@ -4064,7 +3881,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ST_DME_LLR | 0-n | - | unsigned char | - | TAB_ST_DME_LLR | 1 | 1 | 0 | 0 | 1 | Leerlaufregler der DME aktivieren |
 
-<a id="table-arg-0xf506"></a>
 ### ARG_0XF506
 
 Dimensions: 1 rows × 12 columns
@@ -4073,7 +3889,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ST_EM_GENERATOR | 0-n | - | unsigned char | - | TAB_ST_EM_GENERATOR | 1 | 1 | 0 | 0 | 1 | HV-System Hoch- u. Runterfahren |
 
-<a id="table-arg-0xf507"></a>
 ### ARG_0XF507
 
 Dimensions: 1 rows × 12 columns
@@ -4082,7 +3897,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | unsigned char | - | - | - | - | - | - | - | wegen Kompatibilität zu ToolSet32 |
 
-<a id="table-arg-0xf508"></a>
 ### ARG_0XF508
 
 Dimensions: 1 rows × 12 columns
@@ -4091,7 +3905,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | unsigned char | - | - | - | - | - | - | - | wegen Kompatibilität zu ToolSet32 |
 
-<a id="table-res-0xf509"></a>
 ### RES_0XF509
 
 Dimensions: 3 rows × 13 columns
@@ -4102,7 +3915,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_SOC_SOLL_UNTEN_WERT | + | + | + | - | - | unsigned char | - | - | - | - | - | 0 = n.i.O. SoC-Soll_Unten ist kleiner als SoC-Min 1 = i.O     SoC-Soll_Unten ist grösser als SoC-Min |
 | STAT_ENTLADEN_HVB_WERT | + | + | + | - | - | unsigned char | - | - | - | - | - | Entladeprozess ist beendet 1 = Das Entladen ist abgeschlossen 0 = Das Entladen ist noch nicht abgeschlossen |
 
-<a id="table-arg-0xf509"></a>
 ### ARG_0XF509
 
 Dimensions: 2 rows × 14 columns
@@ -4112,7 +3924,6 @@ Dimensions: 2 rows × 14 columns
 | ENTLADEMODUS | + | - | - | - | unsigned char | - | - | - | - | - | 0 | 1 | Aufforderung des Testers an die EME den Entlademodus zu setzen:  0 = Keine Aufforderung,  1 = Aufforderung liegt vor |
 | SOC_SOLL_UNTEN | + | - | % | - | unsigned int | - | - | - | - | - | 0 | 100 | Der untere SoC-Sollwert wird gesetzt (Beim Entladeprocess der anzusteuernde SoC-Wert) |
 
-<a id="table-res-0xf50a"></a>
 ### RES_0XF50A
 
 Dimensions: 3 rows × 13 columns
@@ -4123,7 +3934,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_SOC_SOLL_OBEN_WERT | + | + | + | - | - | unsigned char | - | - | - | - | - | 0 = n.i.O. SoC-Soll_Oben ist grösser als SoC-Max 1 = i.O     SoC-Soll_Oben ist grösser als SoC-Max |
 | STAT_LADEN_HVB_WERT | + | + | + | - | - | unsigned char | - | - | - | - | - | Ladeprozess ist beendet 1 = Das Laden ist abgeschlossen 0 = Das Laden ist noch nicht abgeschlossen |
 
-<a id="table-arg-0xf50a"></a>
 ### ARG_0XF50A
 
 Dimensions: 2 rows × 14 columns
@@ -4133,7 +3943,6 @@ Dimensions: 2 rows × 14 columns
 | LADEMODUS | + | - | - | - | unsigned char | - | - | - | - | - | 0 | 1 | Auforderung des Testers an die EME den Lademodus zu setzen 1 Aufforderung vom Tester liegt vor 0 keine Aufforderung vom Tester |
 | SOC_SOLL_OBEN | + | - | % | - | unsigned int | - | - | - | - | - | 0 | 100 | Der obere SoC-Sollwert wird gesetzt (Beim Ladeprocess der anzusteuernde SoC-Wert) |
 
-<a id="table-arg-0xf50b"></a>
 ### ARG_0XF50B
 
 Dimensions: 1 rows × 12 columns
@@ -4142,7 +3951,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | REFERENZKAPAZITAET_HVB | As | - | unsigned int | - | - | - | - | - | 0 | 50000 | Die auf dem Tester ermittelte Referenzkapazität wird auf die EME geschrieben |
 
-<a id="table-arg-0xf50c"></a>
 ### ARG_0XF50C
 
 Dimensions: 3 rows × 14 columns
@@ -4153,7 +3961,6 @@ Dimensions: 3 rows × 14 columns
 | MOMENTENVORGABE | + | - | Nm | - | signed int | - | - | 0,1 | - | 0 | - | - | Momentenvorgabe |
 | DREHZAHLVORGABE | + | - | 1/min | - | unsigned int | - | - | 1 | - | 0 | - | - | Drehzahlvorgabe |
 
-<a id="table-arg-0xf50d"></a>
 ### ARG_0XF50D
 
 Dimensions: 1 rows × 12 columns
@@ -4162,7 +3969,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | unsigned char | - | - | - | - | - | - | - | wegen Kompatibilität zu ToolSet32 |
 
-<a id="table-arg-0xf50e"></a>
 ### ARG_0XF50E
 
 Dimensions: 1 rows × 12 columns
@@ -4171,7 +3977,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | unsigned char | - | - | - | - | - | - | - | wegen Kompatibilität zu ToolSet32 |
 
-<a id="table-arg-0xf510"></a>
 ### ARG_0XF510
 
 Dimensions: 1 rows × 12 columns
@@ -4180,7 +3985,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY | - | - | unsigned char | - | - | - | - | - | - | - | wegen Kompatibilität zu ToolSet32 |
 
-<a id="table-arg-0xf512"></a>
 ### ARG_0XF512
 
 Dimensions: 1 rows × 14 columns
@@ -4189,7 +3993,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FREIGABE | + | - | - | - | signed long | - | - | - | - | - | - | - | Freigabecode |
 
-<a id="table-res-0xf511"></a>
 ### RES_0XF511
 
 Dimensions: 3 rows × 13 columns
@@ -4200,7 +4003,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_PHASE_V_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | 0x02 = Phase Open, 0x03 = Phase OK, 0xFF = Phase Unknown |
 | STAT_PHASE_W_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | 0x02 = Phase Open, 0x03 = Phase OK, 0xFF = Phase Unknown |
 
-<a id="table-res-0xf512"></a>
 ### RES_0XF512
 
 Dimensions: 1 rows × 13 columns
@@ -4209,7 +4011,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DCDC_CPLD_UPDATE_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Status CPLD Update: 0 = INVALID, 1 = VALID |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 26 rows × 9 columns
@@ -4243,7 +4044,6 @@ Dimensions: 26 rows × 9 columns
 | 0x4243 | BMW Layer:Grund für Zwischenkreisentladung-Fehlerreaktion durch BMW-Ebene 2 Signal aus BMW-Ebene 2 | - | - | unsigned char | BMW_ZKEntlgrund_UE2 | - | - | - |
 | 0x4244 | BMW Layer:Grund für Verhinderung Zwischenkreisentladung-Fehlerreaktion durch BMW-Ebene 2 Signal aus BMW-Ebene 2 | - | - | unsigned char | BMW_ZKEntlverhgrund_UE2 | - | - | - |
 
-<a id="table-rcmtext"></a>
 ### RCMTEXT
 
 Dimensions: 73 rows × 2 columns

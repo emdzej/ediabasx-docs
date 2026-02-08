@@ -36,7 +36,6 @@
 - [STARTZAEHLER_LESEN](#job-startzaehler-lesen) - nur mit ADS moeglich
 - [STARTZAEHLER_SPEICHERN](#job-startzaehler-speichern) - nur mit ADS moeglich
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -54,7 +53,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -67,7 +65,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-key-bytes"></a>
 ### KEY_BYTES
 
 _No arguments._
@@ -85,7 +82,6 @@ _No arguments._
 | ANTWORT | binary |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-ident"></a>
 ### IDENT
 
 _No arguments._
@@ -101,7 +97,6 @@ _No arguments._
 | ANTWORT | binary |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -122,7 +117,6 @@ _No arguments._
 | F_ART1_TEXT | string | table FArtTexte |
 | F_HEX_CODE | binary | Fehlerspeicherdaten |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -135,7 +129,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose Ende
@@ -148,7 +141,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-kraftstoffpumpe"></a>
 ### STEUERN_KRAFTSTOFFPUMPE
 
 Ansteuern der Kraftstoffpumpe
@@ -162,7 +154,6 @@ _No arguments._
 | ANTWORT | binary |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-zuheizer"></a>
 ### STEUERN_ZUHEIZER
 
 Ansteuern des Zuheizers Der Ausgang kann ein- bzw. ausgeschaltet werden.
@@ -180,7 +171,6 @@ Ansteuern des Zuheizers Der Ausgang kann ein- bzw. ausgeschaltet werden.
 | ANTWORT | binary |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-status-messwerte"></a>
 ### STATUS_MESSWERTE
 
 Messwerteblock auswerten
@@ -207,7 +197,6 @@ _No arguments._
 | STAT_EINSCHALTSIGNAL_EIN | int | Eingang Pin 3 |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 nur mit ADS moeglich
@@ -228,7 +217,6 @@ nur mit ADS moeglich
 | I | int |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-eeprom-schreiben"></a>
 ### EEPROM_SCHREIBEN
 
 nur mit ADS moeglich
@@ -248,7 +236,6 @@ nur mit ADS moeglich
 | I | int |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-zuheizer-not-aus"></a>
 ### ZUHEIZER_NOT_AUS
 
 nur mit ADS moeglich Zuheizer wird zwangsweise in den AUS-Zustand gebracht
@@ -263,7 +250,6 @@ _No arguments._
 | I | int |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-brenndauer-lesen"></a>
 ### BRENNDAUER_LESEN
 
 nur mit ADS moeglich
@@ -281,7 +267,6 @@ _No arguments._
 | I | int |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-startzaehler-lesen"></a>
 ### STARTZAEHLER_LESEN
 
 nur mit ADS moeglich
@@ -299,7 +284,6 @@ _No arguments._
 | I | int |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-startzaehler-speichern"></a>
 ### STARTZAEHLER_SPEICHERN
 
 nur mit ADS moeglich
@@ -323,7 +307,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (11 × 2)
 - [MWTEXTE](#table-mwtexte) (17 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 15 rows × 2 columns
@@ -346,7 +329,6 @@ Dimensions: 15 rows × 2 columns
 | 0x00000588 | Ansteuerung Fahrzeuggeblaese |
 | 0x00000000 | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 11 rows × 2 columns
@@ -365,7 +347,6 @@ Dimensions: 11 rows × 2 columns
 | 0x25 | Kurzschluss gegen Masse |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-mwtexte"></a>
 ### MWTEXTE
 
 Dimensions: 17 rows × 2 columns

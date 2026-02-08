@@ -55,7 +55,6 @@
 - [STATUS_ANT_QFS](#job-status-ant-qfs) - Auslesen des Status Quality Fieldstrength KWP2000: $30 InputOutputControlByLocalIdentifier $12 inputOutputLocalIdentifier  - status QFS $01 inputOutputControlParameter - reportCurrentState Modus  : Default
 - [SER_NR_DOM_LESEN](#job-ser-nr-dom-lesen) - Seriennummer 14-stellig lesen Neu für Entertainment-Komponenten ab 2003 Modus  : Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -74,7 +73,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -95,7 +93,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -114,7 +111,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer das Radio
@@ -127,7 +123,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -157,7 +152,6 @@ _No arguments._
 | ID_VF_DIAG | string | auslesen des VF-Status moeglich |
 | ID_AN_AUS_DIAG | string | auslesen ob Radio ein aus moeglich |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -178,7 +172,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -191,7 +184,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 alle Stati des RADIO lesen
@@ -218,7 +210,6 @@ _No arguments._
 | STAT_ANTENNENDIVERSITY | int | gibt als Integer-Wert wieder, ob ein Antennen-Diversity vorhanden ist 0: kein Antennen-Diversity 1: Antennen-Diversity vorhanden |
 | STAT_ANTENNENDIVERSITY_TEXT | string | gibt als Text wieder, ob ein Antennen-Diversity vorhanden ist kein Antennen-Diversity Antennen-Diversity vorhanden |
 
-<a id="job-steuern-default-sound"></a>
 ### STEUERN_DEFAULT_SOUND
 
 Balance, Fader und Volume Defaulteinstellung
@@ -231,7 +222,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-lv"></a>
 ### STEUERN_FADER_LV
 
 Ansteuerung des Kanals links vorne
@@ -244,7 +234,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-rv"></a>
 ### STEUERN_FADER_RV
 
 Ansteuerung des Kanals rechts vorne
@@ -257,7 +246,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-rh"></a>
 ### STEUERN_FADER_RH
 
 Ansteuerung des Kanals rechts hinten
@@ -270,7 +258,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-lh"></a>
 ### STEUERN_FADER_LH
 
 Ansteuerung des Kanals links hinten
@@ -283,7 +270,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vol-up"></a>
 ### STEUERN_VOL_UP
 
 Lautstaerkeerhoehung um 11dB/s
@@ -300,7 +286,6 @@ Lautstaerkeerhoehung um 11dB/s
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vol-down"></a>
 ### STEUERN_VOL_DOWN
 
 Lautstaerkenabsenkung um 11dB/s
@@ -317,7 +302,6 @@ Lautstaerkenabsenkung um 11dB/s
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-seek-up"></a>
 ### STEUERN_SEEK_UP
 
 Suchlauf aufwaerts
@@ -330,7 +314,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-seek-down"></a>
 ### STEUERN_SEEK_DOWN
 
 Suchlauf abwaerts
@@ -343,7 +326,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-audio-key"></a>
 ### STEUERN_AUDIO_KEY
 
 Audio-Taste betaetigen
@@ -356,7 +338,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-gal-dek"></a>
 ### STEUERN_GAL_DEK
 
 GAL-WERT dekrementieren
@@ -369,7 +350,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-gal-ink"></a>
 ### STEUERN_GAL_INK
 
 GAL-WERT inkrementieren
@@ -382,7 +362,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vf-dek"></a>
 ### STEUERN_VF_DEK
 
 VF-Mindestlautstaerke dekrementieren
@@ -395,7 +374,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vf-ink"></a>
 ### STEUERN_VF_INK
 
 VF-Mindestlautstaerke inkrementieren
@@ -408,7 +386,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-frequenz"></a>
 ### STEUERN_FREQUENZ
 
 einstellen der Radiofrequenz
@@ -425,7 +402,6 @@ einstellen der Radiofrequenz
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-radio-power"></a>
 ### STEUERN_RADIO_POWER
 
 Ein-/Ausschalten des Radios
@@ -442,7 +418,6 @@ Ein-/Ausschalten des Radios
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Herstelldaten lesen
@@ -456,7 +431,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | SERIEN_NR | string | Seriennummer vom Hersteller |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -469,7 +443,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Ergebnis ist immer OKAY, da nur Dummy |
 
-<a id="job-fg-lesen"></a>
 ### FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -484,7 +457,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierung Radio
@@ -499,7 +471,6 @@ _No arguments._
 | COD_DATEN | string | die 4 Codierbytes |
 | COD_LAENDERVARIANTE | string | Laendervariante des Radios table LandVar LAND_TEXT |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -514,7 +485,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -532,7 +502,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -550,7 +519,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -567,7 +535,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-radio-schalten"></a>
 ### STEUERN_RADIO_SCHALTEN
 
 Ein-/Ausschalten des Radios KWP2000: $30 InputOutputControlByLocalIdentifier $0A inputOutputLocalIdentifier  - switch radio on or off $07 inputOutputControlParameter - ShortTermAdjustment Modus  : Default
@@ -586,7 +553,6 @@ Ein-/Ausschalten des Radios KWP2000: $30 InputOutputControlByLocalIdentifier $0A
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-qfs"></a>
 ### STATUS_ANT_QFS
 
 Auslesen des Status Quality Fieldstrength KWP2000: $30 InputOutputControlByLocalIdentifier $12 inputOutputLocalIdentifier  - status QFS $01 inputOutputControlParameter - reportCurrentState Modus  : Default
@@ -603,7 +569,6 @@ _No arguments._
 | STAT_ANT_PW | int | Antenna Power Supply Bereich: 0 = OFF, 1..15 = ON |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ser-nr-dom-lesen"></a>
 ### SER_NR_DOM_LESEN
 
 Seriennummer 14-stellig lesen Neu für Entertainment-Komponenten ab 2003 Modus  : Default
@@ -635,7 +600,6 @@ _No arguments._
 - [LANDVAR](#table-landvar) (6 × 2)
 - [TSCHALTMODI](#table-tschaltmodi) (13 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -656,7 +620,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -740,7 +703,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -769,7 +731,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -794,7 +755,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -803,7 +763,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -818,7 +777,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Internes CD-Laufwerk: Lesefehler |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -827,7 +785,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -836,7 +793,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -847,7 +803,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-diagindex"></a>
 ### DIAGINDEX
 
 Dimensions: 74 rows × 7 columns
@@ -929,7 +884,6 @@ Dimensions: 74 rows × 7 columns
 | 0x4A | CD53 R50 VDO | CD53_R50_VDO | 1 | 1 | 1 | 1 |
 | 0xFF | unbekannte Radiokennung | unbekannte Radiokennung | 0 | 0 | 0 | 0 |
 
-<a id="table-landvar"></a>
 ### LANDVAR
 
 Dimensions: 6 rows × 2 columns
@@ -943,7 +897,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | KANADA |
 | 0xXY | UNBEKANNT |
 
-<a id="table-tschaltmodi"></a>
 ### TSCHALTMODI
 
 Dimensions: 13 rows × 3 columns

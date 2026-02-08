@@ -45,7 +45,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -64,7 +63,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -77,7 +75,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -94,7 +91,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -120,7 +116,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -162,7 +157,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -181,7 +175,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -199,7 +192,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -220,7 +212,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -249,7 +240,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -269,7 +259,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -290,7 +279,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -306,7 +294,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -328,7 +315,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -354,7 +340,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -396,7 +381,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -411,7 +395,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -431,7 +414,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -450,7 +432,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -469,7 +450,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -484,7 +464,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -500,7 +479,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -519,7 +497,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -539,7 +516,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -557,7 +533,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -624,7 +599,6 @@ _No arguments._
 - [TAB_MR_SIGNALSTATUS](#table-tab-mr-signalstatus) (3 × 2)
 - [TAB_MR_ESA_KALIBRIERUNG](#table-tab-mr-esa-kalibrierung) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -698,7 +672,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 125 rows × 2 columns
@@ -831,7 +804,6 @@ Dimensions: 125 rows × 2 columns
 | 0x0000B2 | ASK |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -858,7 +830,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -883,7 +854,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 25 rows × 3 columns
@@ -916,7 +886,6 @@ Dimensions: 25 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -989,7 +958,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1002,7 +970,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1015,7 +982,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1028,7 +994,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -1047,7 +1012,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1073,7 +1037,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1082,7 +1045,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -1092,7 +1054,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 48 rows × 3 columns
@@ -1148,7 +1109,6 @@ Dimensions: 48 rows × 3 columns
 | 0xD1941C | CAN KOMBI Nachricht Bedienung_Fahrzeug_Motorrad_2010: Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1162,7 +1122,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-dtcbereiche"></a>
 ### DTCBEREICHE
 
 Dimensions: 21 rows × 4 columns
@@ -1191,7 +1150,6 @@ Dimensions: 21 rows × 4 columns
 | KomponentenDTC | 482480 | 4824FF | Die zulässigen Bereiche sind für jedes Steuergerät festgelegt. Es können mehrere gültige Bereiche (Kacheln) definiert werden. |
 | KomponentenDTC | 482E80 | 482F7F | Die zulässigen Bereiche sind für jedes Steuergerät festgelegt. Es können mehrere gültige Bereiche (Kacheln) definiert werden. |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 6 rows × 9 columns
@@ -1205,7 +1163,6 @@ Dimensions: 6 rows × 9 columns
 | 0x2005 | Fehlerstatus LWR | 0-n | Low | 0xFF | TAB_MR_MOTORSTATUS | 1.0 | 1.0 | 0.0 |
 | 0x2006 | Fehlerstatus RWR | 0-n | Low | 0xFF | TAB_MR_MOTORSTATUS | 1.0 | 1.0 | 0.0 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 11 rows × 3 columns
@@ -1224,7 +1181,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4824A1 | DM_Queue_DELETED | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1236,7 +1192,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -1246,7 +1201,6 @@ Dimensions: 2 rows × 9 columns
 | 0x2001 | Motorfehler LWR | 0/1 | Low | 0xFF | TAB_MR_SIGNALSTATUS | 1.0 | 1.0 | 0.0 |
 | 0x2002 | Motorfehler RWR | 0/1 | Low | 0xFF | TAB_MR_SIGNALSTATUS | 1.0 | 1.0 | 0.0 |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 11 rows × 16 columns
@@ -1265,7 +1219,6 @@ Dimensions: 11 rows × 16 columns
 | BATTERIESPANNUNG_MR | 0xE142 | STAT_BATTERIESPANNUNG_WERT | Batteriespannung | V | - | - | unsigned char | - | 1.0 | 10.0 | 0.0 | - | 22 | - | - |
 | KLEMME_56B_SPANNUNG_MR | 0xE146 | STAT_KLEMME_56B_SPANNUNG_WERT | Spannung an Kl56b | V | - | - | unsigned char | - | 1.0 | 10.0 | 0.0 | - | 22 | - | - |
 
-<a id="table-mr-tab-referenz"></a>
 ### MR_TAB_REFERENZ
 
 Dimensions: 4 rows × 2 columns
@@ -1277,7 +1230,6 @@ Dimensions: 4 rows × 2 columns
 | 03 | Referenzlauf LWR |
 | FF | ungueltig |
 
-<a id="table-tab-mr-kurzschlussstatus"></a>
 ### TAB_MR_KURZSCHLUSSSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -1288,7 +1240,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Kurzschluss gegen Masse |
 | 2 | Kurzschluss gegen Vbat |
 
-<a id="table-arg-0xb080"></a>
 ### ARG_0XB080
 
 Dimensions: 1 rows × 14 columns
@@ -1297,7 +1248,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RWR | + | - | 0-n | - | unsigned char | - | TAB_MR_RWR_VERFAHREN | 1.0 | 1.0 | 0.0 | - | - | RWR Verfahren |
 
-<a id="table-arg-0xb081"></a>
 ### ARG_0XB081
 
 Dimensions: 1 rows × 14 columns
@@ -1306,7 +1256,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LWR | + | - | 0-n | - | unsigned char | - | TAB_MR_LWR_VERFAHREN | 1.0 | 1.0 | 0.0 | - | - | LWR Verfahren |
 
-<a id="table-arg-0xb082"></a>
 ### ARG_0XB082
 
 Dimensions: 1 rows × 14 columns
@@ -1315,7 +1264,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | REFERENZ | + | - | 0-n | - | unsigned char | - | TAB_MR_REFERENZ_ASW | 1.0 | 1.0 | 0.0 | - | - | Steuern Referenzlauf |
 
-<a id="table-arg-0xb085"></a>
 ### ARG_0XB085
 
 Dimensions: 2 rows × 14 columns
@@ -1325,7 +1273,6 @@ Dimensions: 2 rows × 14 columns
 | RWR_ABSOLUT_WINKEL | + | - | ° | - | int | - | - | 1000.0 | 25.0 | 0.0 | -15.0 | 15.0 | RWR Einstellen über die Eingabe eines absoluten Winkels zwischen -15° und +15° |
 | RWR_ABSOLUT_GESCHWINDIGKEIT | + | - | A | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 31.0 | Geschwindigkeit, mit der der Winkel verstellt werden soll |
 
-<a id="table-arg-0xb086"></a>
 ### ARG_0XB086
 
 Dimensions: 2 rows × 14 columns
@@ -1335,7 +1282,6 @@ Dimensions: 2 rows × 14 columns
 | LWR_ABSOLUT_WINKEL | + | - | ° | - | int | - | - | 100.0 | 1.0 | 0.0 | 0.0 | 18.0 | Eingabe eines Winkels in ° zwischen 0 und 18 |
 | LWR_ABSOLUT_GESCHWINDIGKEIT | + | - | A | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 7.0 | Geschwindigkeit, mit der der Winkel verstellt werden soll |
 
-<a id="table-res-0xb080"></a>
 ### RES_0XB080
 
 Dimensions: 2 rows × 13 columns
@@ -1345,7 +1291,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_BEWEGUNGSSTATUS | - | - | + | 0-n | - | unsigned char | - | TAB_MR_BEWEGUNGSSTATUS | 1.0 | 1.0 | 0.0 | Bewegungsstatus |
 | STAT_BEWEGUNGSERGEBNIS | - | - | + | 0-n | - | unsigned char | - | TAB_MR_BEWEGUNGSERGEBNIS | 1.0 | 1.0 | 0.0 | Bewegungsergebnis |
 
-<a id="table-res-0xb081"></a>
 ### RES_0XB081
 
 Dimensions: 2 rows × 13 columns
@@ -1355,7 +1300,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_BEWEGUNGSSTATUS | - | - | + | 0-n | - | unsigned char | - | TAB_MR_BEWEGUNGSSTATUS | 1.0 | 1.0 | 0.0 | Bewegungsstatus |
 | STAT_BEWEGUNGSERGEBNIS | - | - | + | 0-n | - | unsigned char | - | TAB_MR_BEWEGUNGSERGEBNIS | 1.0 | 1.0 | 0.0 | Bewegungsergebnis |
 
-<a id="table-res-0xb082"></a>
 ### RES_0XB082
 
 Dimensions: 2 rows × 13 columns
@@ -1365,7 +1309,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_BEWEGUNGSSTATUS | - | - | + | 0-n | - | unsigned char | - | TAB_MR_BEWEGUNGSSTATUS_REF | 1.0 | 1.0 | 0.0 | Bewegungsstatus |
 | STAT_BEWEGUNGSERGEBNIS | - | - | + | 0-n | - | unsigned char | - | TAB_MR_BEWEGUNGSERGEBNIS | 1.0 | 1.0 | 0.0 | Bewegungsergebnis |
 
-<a id="table-res-0xb084"></a>
 ### RES_0XB084
 
 Dimensions: 3 rows × 13 columns
@@ -1376,7 +1319,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_LWR_HSS_ABGLEICH_VORN_WERT | - | - | + | V | - | unsigned int | - | - | 5.0 | 1023.0 | 0.0 | Wert LWR Höhenstands Sensor Kalibrierung vorn |
 | STAT_LWR_HSS_ABGLEICH_HINTEN_WERT | - | - | + | V | - | unsigned int | - | - | 5.0 | 1023.0 | 0.0 | Wert LWR Höhenstands Sensor Kalibrierung hinten |
 
-<a id="table-res-0xb085"></a>
 ### RES_0XB085
 
 Dimensions: 1 rows × 13 columns
@@ -1385,7 +1327,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RWR_ABSOLUT_WINKEL_WERT | - | - | + | ° | - | int | - | - | 25.0 | 1000.0 | 0.0 | RWR Rückgabewert des absoluten Winkels in ° |
 
-<a id="table-res-0xb086"></a>
 ### RES_0XB086
 
 Dimensions: 1 rows × 13 columns
@@ -1394,7 +1335,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LWR_ABSOLUT_WINKEL_WERT | - | - | + | ° | - | int | - | - | 1.0 | 100.0 | 0.0 | LWR eingestellter Winkel in ° zwischen 0 und 18° |
 
-<a id="table-res-0xb087"></a>
 ### RES_0XB087
 
 Dimensions: 1 rows × 13 columns
@@ -1403,7 +1343,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RWR_AKTIVIERUNG_STILLSTAND | - | - | + | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Aktivierungsergebnis 0 in Ordnung 1 fehlgeschlagen |
 
-<a id="table-res-0xe132"></a>
 ### RES_0XE132
 
 Dimensions: 2 rows × 10 columns
@@ -1413,7 +1352,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_LWR_SENSOR_NIVEAU_VORNE_WERT | V | - | unsigned int | - | - | 5.0 | 1023.0 | 0.0 | LWR Sensor Stand vorne |
 | STAT_LWR_SENSOR_NIVEAU_HINTEN_WERT | V | - | unsigned int | - | - | 5.0 | 1023.0 | 0.0 | LWR Sensor Stand hinten |
 
-<a id="table-res-0xe135"></a>
 ### RES_0XE135
 
 Dimensions: 2 rows × 10 columns
@@ -1423,7 +1361,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ACHS_SENSOR_SPANNUNG_WERT | V | - | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Wert der Versorgungsspannung an den Höhenstands-Sensoren |
 | STAT_KL_SENSOR_SPANNUNG_WERT | V | - | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Wert der Versorgungsspannung an dem Referenz-Sensoren für den Rollwinkelausgleich |
 
-<a id="table-tab-mr-rwr-verfahren"></a>
 ### TAB_MR_RWR_VERFAHREN
 
 Dimensions: 5 rows × 2 columns
@@ -1436,7 +1373,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Verfahren schrittweise rechstläufig |
 | 0x04 | Verfahren schrittweise linksläufig |
 
-<a id="table-tab-mr-referenz-asw"></a>
 ### TAB_MR_REFERENZ_ASW
 
 Dimensions: 3 rows × 2 columns
@@ -1447,7 +1383,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Referenzlauf RWR |
 | 0x03 | Referenzlauf LWR |
 
-<a id="table-tab-mr-bewegungsstatus-ref"></a>
 ### TAB_MR_BEWEGUNGSSTATUS_REF
 
 Dimensions: 13 rows × 2 columns
@@ -1468,7 +1403,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | LWR Motor ausgefallenRWR Motor ausgefallen |
 | 0xFF | undefinierter Zustand |
 
-<a id="table-tab-mr-motorstatus"></a>
 ### TAB_MR_MOTORSTATUS
 
 Dimensions: 7 rows × 2 columns
@@ -1483,7 +1417,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | Unterspannung |
 | 6 | Überstrom |
 
-<a id="table-tab-mr-lwr-verfahren"></a>
 ### TAB_MR_LWR_VERFAHREN
 
 Dimensions: 3 rows × 2 columns
@@ -1494,7 +1427,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Verfahren in Position 0 |
 | 0x02 | Verfahren in Postition Min |
 
-<a id="table-tab-mr-bewegungsergebnis"></a>
 ### TAB_MR_BEWEGUNGSERGEBNIS
 
 Dimensions: 5 rows × 2 columns
@@ -1507,7 +1439,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | mechanische Blockierung |
 | 0xFF | anderer Grund |
 
-<a id="table-tab-mr-bewegungsstatus"></a>
 ### TAB_MR_BEWEGUNGSSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -1520,7 +1451,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Motor Prozess abgeschlossen |
 | 0xFF | undefinierter Zustand |
 
-<a id="table-tab-mr-signalstatus"></a>
 ### TAB_MR_SIGNALSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -1531,7 +1461,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Leitungsunterbrechung oder Kurzschluss gegen Masse |
 | 2 | Kurzschluss gegen Vbat |
 
-<a id="table-tab-mr-esa-kalibrierung"></a>
 ### TAB_MR_ESA_KALIBRIERUNG
 
 Dimensions: 6 rows × 2 columns

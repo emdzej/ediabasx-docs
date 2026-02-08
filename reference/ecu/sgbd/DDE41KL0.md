@@ -177,7 +177,6 @@
 - [STATUS_LMM_MASSE](#job-status-lmm-masse) - LMM Luftmasse 2
 - [STATUS_AN_LUFTTEMPERATUR](#job-status-an-lufttemperatur) - LTF2 Lufttemperatur 2
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -196,7 +195,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -209,7 +207,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -241,7 +238,6 @@ _No arguments._
 | ID_SG_HERSTELLER | int | Parameter fuer MoTest 0=Bosch, 1=Siemens-Fahrzeug |
 | ID_EWS_SS | int | Identifikation EWS-Schnittstelle |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -264,7 +260,6 @@ _No arguments._
 | AIF_KM_STAND | long | km-Stand |
 | AIF_ANZAHL_PROG | int | Anzahl Programmiervorgaenge |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -277,7 +272,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-tel-roh"></a>
 ### TEL_ROH
 
 Rohtelegramm ohne Header lesen
@@ -295,7 +289,6 @@ Rohtelegramm ohne Header lesen
 | JOB_STATUS | string |  |
 | RESPONSE | binary | Daten ohne Header |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -310,7 +303,6 @@ _No arguments._
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -427,7 +419,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdump des Fehlersatzes |
 | F_UW_SATZ | int | Anzahl der Umweltsaetze , Steuerung der Anzeige in der Applikation |
 
-<a id="job-fs-shadow-lesen"></a>
 ### FS_SHADOW_LESEN
 
 Auslesen des Fehlerspeichers
@@ -544,7 +535,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdump des Fehlersatzes |
 | F_UW_SATZ | int | Anzahl der Umweltsaetze , Steuerung der Anzeige in der Applikation |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -557,7 +547,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-lesen-status"></a>
 ### FS_LESEN_STATUS
 
 Auslesen des Fehlerspeichers
@@ -571,7 +560,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_CODEHEX | binary | alle Fehlerbyte |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Kennung M_ABGLEICH_FLAG lesen
@@ -585,7 +573,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | PRUEFSTEMPEL_LESEN_WERT | long | "OKAY", wenn fehlerfrei |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Kennung M_ABGLEICH_FLAG lesen
@@ -602,7 +589,6 @@ Kennung M_ABGLEICH_FLAG lesen
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-mw-select-lesen"></a>
 ### MW_SELECT_LESEN
 
 Messwerteblock selectiv lesen
@@ -620,7 +606,6 @@ Messwerteblock selectiv lesen
 | JOB_STATUS | string |  |
 | MW_SELECT_LESEN_WERT | binary | 1 Byte = Status, MW Wert |
 
-<a id="job-mw-select-lesen-norm"></a>
 ### MW_SELECT_LESEN_NORM
 
 Messwerteblock selectiv lesen
@@ -637,7 +622,6 @@ Messwerteblock selectiv lesen
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-mw-select-lesen-norm-einzel"></a>
 ### MW_SELECT_LESEN_NORM_EINZEL
 
 Messwerteblock selectiv lesen
@@ -656,7 +640,6 @@ Messwerteblock selectiv lesen
 | STAT_WERT | real | Ergebnis |
 | STAT_EINH | string | Einheit |
 
-<a id="job-status-sync-mode"></a>
 ### STATUS_SYNC_MODE
 
 _No arguments._
@@ -669,7 +652,6 @@ _No arguments._
 | STATUS_SYNC_MODE_STATUS | int | Statusflag |
 | STATUS_SYNC_MODE_TEXT | string | Statustext |
 
-<a id="job-steuern-sync-mode"></a>
 ### STEUERN_SYNC_MODE
 
 #### Arguments
@@ -686,7 +668,6 @@ _No arguments._
 | STEUERN_SYNC_MODE_STATUS | int | Statusflag |
 | STEUERN_SYNC_MODE_TEXT | string | Statustext |
 
-<a id="job-abgleich-lesen-ll-regelung"></a>
 ### ABGLEICH_LESEN_LL_REGELUNG
 
 LL-Regelung-Abgleich lesen
@@ -701,7 +682,6 @@ _No arguments._
 | ABGLEICH_LESEN_LL_REGELUNG_WERT | real | Aktuellen Abgleichwert |
 | ABGLEICH_LESEN_LL_REGELUNG_STATUS | int | Rueckmeldebyte |
 
-<a id="job-abgleich-verstellen-ll-regelung"></a>
 ### ABGLEICH_VERSTELLEN_LL_REGELUNG
 
 LL_REGELUNG Abgleich verstellen
@@ -719,7 +699,6 @@ LL_REGELUNG Abgleich verstellen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_VERSTELLEN_LL_REGELUNG_STATUS | int | Status |
 
-<a id="job-abgleich-prog-ll-regelung"></a>
 ### ABGLEICH_PROG_LL_REGELUNG
 
 LL_REGELUNG Abgleich programmieren
@@ -733,7 +712,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_PROG_LL_REGELUNG_STATUS | int | Status |
 
-<a id="job-abgleich-lesen-voll-menge"></a>
 ### ABGLEICH_LESEN_VOLL_MENGE
 
 BEGR_MENGEn-Abgleich lesen
@@ -749,7 +727,6 @@ _No arguments._
 | ABGLEICH_LESEN_VOLL_MENGE_WERT | real | Aktuellen Abgleichwert |
 | ABGLEICH_LESEN_VOLL_MENGE_STATUS | int | Rueckmeldebyte |
 
-<a id="job-abgleich-lesen-voll-menge-roh"></a>
 ### ABGLEICH_LESEN_VOLL_MENGE_ROH
 
 Vollastmenge-Abgleich lesen
@@ -764,7 +741,6 @@ _No arguments._
 | ABGLEICH_LESEN_VOLL_MENGE_ROH_WERT | int | Aktuellen Abgleichwert |
 | ABGLEICH_LESEN_VOLL_MENGE_ROH_STATUS | int | Rueckmeldebyte |
 
-<a id="job-abgleich-verstellen-voll-menge-roh"></a>
 ### ABGLEICH_VERSTELLEN_VOLL_MENGE_ROH
 
 Vollastmenge-Abgleich verstellen
@@ -782,7 +758,6 @@ Vollastmenge-Abgleich verstellen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_VERSTELLEN_VOLL_MENGE_ROH_STATUS | int | Status |
 
-<a id="job-abgleich-verstellen-voll-menge"></a>
 ### ABGLEICH_VERSTELLEN_VOLL_MENGE
 
 BEGR_MENGE Abgleich verstellen
@@ -800,7 +775,6 @@ BEGR_MENGE Abgleich verstellen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_VERSTELLEN_VOLL_MENGE_STATUS | int | Status |
 
-<a id="job-abgleich-prog-voll-menge"></a>
 ### ABGLEICH_PROG_VOLL_MENGE
 
 BEGR_MENGE Abgleich programmieren
@@ -814,7 +788,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_PROG_VOLL_MENGE_STATUS | int | Status |
 
-<a id="job-abgleich-lesen-abgleichmenge"></a>
 ### ABGLEICH_LESEN_ABGLEICHMENGE
 
 LADEDRUCK-Abgleich lesen
@@ -876,7 +849,6 @@ _No arguments._
 | ABGLEICH_LESEN_ABGLEICHMENGE_WERT_48 | real | Aktuellen Abgleichwert Nr 48 |
 | ABGLEICH_LESEN_ABGLEICHMENGE_STATUS | int | Rueckmeldebyte |
 
-<a id="job-abgleich-verstellen-abgleichmenge"></a>
 ### ABGLEICH_VERSTELLEN_ABGLEICHMENGE
 
 LADEDRUCK Abgleich verstellen
@@ -942,7 +914,6 @@ LADEDRUCK Abgleich verstellen
 | ABGLEICH_VERSTELLEN_ABGLEICHMENGE_STATUS | int | Status |
 | ABGLEICH_VERSTELLEN_ABGLEICHMENGE_CS | int | Checksumme |
 
-<a id="job-abgleich-prog-abgleichmenge"></a>
 ### ABGLEICH_PROG_ABGLEICHMENGE
 
 LADEDRUCK Abgleich programmieren
@@ -960,7 +931,6 @@ LADEDRUCK Abgleich programmieren
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_PROG_ABGLEICHMENGE_STATUS | int | Status |
 
-<a id="job-hole-ema-feld"></a>
 ### HOLE_EMA_FELD
 
 _No arguments._
@@ -973,7 +943,6 @@ _No arguments._
 | EMA_FAK2 | real | faktor 2 |
 | EMA_WERT3 | real | Wert 3 |
 
-<a id="job-abgleichwerte-lesen"></a>
 ### ABGLEICHWERTE_LESEN
 
 Lesen der Motorabgleichwerte
@@ -991,7 +960,6 @@ Lesen der Motorabgleichwerte
 | ABGLEICHWERTE_LESEN_DATEN | string | aus dem Steuergeraet ausgelesene Daten im Format z.B.: "01 A5 FE" |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_..., wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-abgleichwerte-schreiben"></a>
 ### ABGLEICHWERTE_SCHREIBEN
 
 Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten
@@ -1011,7 +979,6 @@ Beschreiben des internen Speichers mit den motorspezifischen Abgleichdaten
 | ABGLEICHWERTE_SCHREIBEN_ABGLEICHDATEN | string | Abgleichdaten zum Steuergeraet |
 | ABGLEICHWERTE_SCHREIBEN_PRUEFZEICHEN | string | das im Job berechnete Pruefzeichen |
 
-<a id="job-abgleich-lesen-abgleich-flag"></a>
 ### ABGLEICH_LESEN_ABGLEICH_FLAG
 
 Kennung M_ABGLEICH_FLAG lesen
@@ -1026,7 +993,6 @@ _No arguments._
 | ABGLEICH_LESEN_ABGLEICH_FLAG_WERT | int | Aktuellen Abgleichwert |
 | ABGLEICH_LESEN_ABGLEICH_FLAG_STATUS | int | Rueckmeldebyte |
 
-<a id="job-abgleich-verstellen-abgleich-flag"></a>
 ### ABGLEICH_VERSTELLEN_ABGLEICH_FLAG
 
 Kennung M_ABGLEICH_FLAG verstellen, 0 = nicht verbaut, 0xff = verbaut
@@ -1044,7 +1010,6 @@ Kennung M_ABGLEICH_FLAG verstellen, 0 = nicht verbaut, 0xff = verbaut
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_VERSTELLEN_ABGLEICH_FLAG_STATUS | int | Status |
 
-<a id="job-abgleich-prog-abgleich-flag"></a>
 ### ABGLEICH_PROG_ABGLEICH_FLAG
 
 Kennung M_ABGLEICH_FLAG programmieren
@@ -1058,7 +1023,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_PROG_ABGLEICH_FLAG_STATUS | int | Status |
 
-<a id="job-abgleichflag-lesen"></a>
 ### ABGLEICHFLAG_LESEN
 
 Lesen des EEPROM-Speichers ab Adresse 0x0032
@@ -1072,7 +1036,6 @@ _No arguments._
 | ABGLEICHFLAG_LESEN_WERT | string | 0x01 --> ABGLEICH_IO 0xFF --> ABGLEICH_NIO |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_..., wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-abgleich-lesen-mengendrift"></a>
 ### ABGLEICH_LESEN_MENGENDRIFT
 
 Mengendrift-Abgleich lesen
@@ -1088,7 +1051,6 @@ _No arguments._
 | ABGLEICH_LESEN_MENGENDRIFT_MAX_WERT | real | Aktueller MIN - Wert |
 | ABGLEICH_LESEN_MENGENDRIFT_STATUS | int | Rueckmeldebyte |
 
-<a id="job-abgleich-verstellen-mengendrift"></a>
 ### ABGLEICH_VERSTELLEN_MENGENDRIFT
 
 Mengendrift Abgleich verstellen
@@ -1108,7 +1070,6 @@ Mengendrift Abgleich verstellen
 | ABGLEICH_VERSTELLEN_MENGENDRIFT_STATUS | int | Status |
 | ABGLEICH_VERSTELLEN_MENGENDRIFT_CS | int | Checksumme |
 
-<a id="job-abgleich-prog-mengendrift"></a>
 ### ABGLEICH_PROG_MENGENDRIFT
 
 LADEDRUCK Abgleich programmieren
@@ -1126,7 +1087,6 @@ LADEDRUCK Abgleich programmieren
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_PROG_MENGENDRIFT_STATUS | int | Status |
 
-<a id="job-abgleich-kic-verstellen-programmieren"></a>
 ### ABGLEICH_KIC_VERSTELLEN_PROGRAMMIEREN
 
 Uebertragung KIC Ein- oder Ausschalten
@@ -1144,7 +1104,6 @@ Uebertragung KIC Ein- oder Ausschalten
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | ABGLEICH_KIC_VERSTELLEN_PROGRAMMIEREN_STATUS | int | Status |
 
-<a id="job-steuern-agr-steller1"></a>
 ### STEUERN_AGR_STELLER1
 
 ARF - Steller1  ansteuern ,  - - 10%%
@@ -1161,7 +1120,6 @@ ARF - Steller1  ansteuern ,  - - 10%%
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-agr-steller2"></a>
 ### STEUERN_AGR_STELLER2
 
 ARF - Steller2  ansteuern ,  - - 10%%
@@ -1178,7 +1136,6 @@ ARF - Steller2  ansteuern ,  - - 10%%
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-ks-hdpumpe-abschaltung"></a>
 ### STEUERN_KS_HDPUMPE_ABSCHALTUNG
 
 Elektrisches Abschaltventil ansteuern ,  0 oder 1
@@ -1195,7 +1152,6 @@ Elektrisches Abschaltventil ansteuern ,  0 oder 1
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-start-systemcheck-zyl-sel-drehzahl"></a>
 ### START_SYSTEMCHECK_ZYL_SEL_DREHZAHL
 
 Start zylinderselektive Drehzhahlen lesen
@@ -1208,7 +1164,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-start-systemcheck-zyl-sel-mengenkor"></a>
 ### START_SYSTEMCHECK_ZYL_SEL_MENGENKOR
 
 Start zylinderselektive Mengenkorrekturen
@@ -1221,7 +1176,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-stop-systemcheck"></a>
 ### STOP_SYSTEMCHECK
 
 Stop Systemtest
@@ -1234,7 +1188,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-laufunruhe-llr-menge"></a>
 ### STATUS_LAUFUNRUHE_LLR_MENGE
 
 Auslesen selektive Mengenkorrektur
@@ -1256,7 +1209,6 @@ _No arguments._
 | STAT_LAUFUNRUHE_LLR_MENGE_ZYL8_WERT | real |  |
 | STAT_LAUFUNRUHE_LLR_MENGE_EINH | string |  |
 
-<a id="job-status-laufunruhe-drehzahl"></a>
 ### STATUS_LAUFUNRUHE_DREHZAHL
 
 Auslesen selektive Mengenkorrektur
@@ -1278,7 +1230,6 @@ _No arguments._
 | STAT_LAUFUNRUHE_DREHZAHL_ZYL8_WERT | real |  |
 | STAT_LAUFUNRUHE_DREHZAHL_EINH | string |  |
 
-<a id="job-ecu-config"></a>
 ### ECU_CONFIG
 
 Ident-Daten fuer DME
@@ -1292,7 +1243,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | EGS_VORHANDEN | int | EGS vorhanden 1=ja ,  0=nein , 0xff=nicht unterstuetzt |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Indentifikation, AIF, FS_Codes ShadowFS_Codes, ShadowFS_lang
@@ -1306,7 +1256,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | PRUEFCODE | binary | Indentifikation, AIF, FS_Codes ShadowFS_Codes, ShadowFS_lang |
 
-<a id="job-status-anmubt"></a>
 ### STATUS_ANMUBT
 
 UBT Batteriespannung
@@ -1321,7 +1270,6 @@ _No arguments._
 | STAT_ANMUBT_WERT | real | Ergebnis |
 | STAT_ANMUBT_EINH | string | Einheit |
 
-<a id="job-status-anmvdf"></a>
 ### STATUS_ANMVDF
 
 VDF Vorfoerderdruck
@@ -1336,7 +1284,6 @@ _No arguments._
 | STAT_ANMVDF_WERT | real | Ergebnis |
 | STAT_ANMVDF_EINH | string | Einheit |
 
-<a id="job-status-anmwtf"></a>
 ### STATUS_ANMWTF
 
 WTF Wassertemperatur
@@ -1351,7 +1298,6 @@ _No arguments._
 | STAT_ANMWTF_WERT | real | Ergebnis |
 | STAT_ANMWTF_EINH | string | Einheit |
 
-<a id="job-status-dzmnakt"></a>
 ### STATUS_DZMNAKT
 
 N aktuelle Drehzahl aus letzter Periode
@@ -1366,7 +1312,6 @@ _No arguments._
 | STAT_DZMNAKT_WERT | real | Ergebnis |
 | STAT_DZMNAKT_EINH | string | Einheit |
 
-<a id="job-status-ehmfars1"></a>
 ### STATUS_EHMFARS1
 
 Tastverhaeltnis Ansteuerung Abgasrueckfuehrsteller 1
@@ -1381,7 +1326,6 @@ _No arguments._
 | STAT_EHMFARS1_WERT | real | Ergebnis |
 | STAT_EHMFARS1_EINH | string | Einheit |
 
-<a id="job-status-ehmfars2"></a>
 ### STATUS_EHMFARS2
 
 Tastverhaeltnis Ansteuerung Abgasrueckfuehrsteller 2
@@ -1396,7 +1340,6 @@ _No arguments._
 | STAT_EHMFARS2_WERT | real | Ergebnis |
 | STAT_EHMFARS2_EINH | string | Einheit |
 
-<a id="job-status-ehmfkdr"></a>
 ### STATUS_EHMFKDR
 
 Tastverhaeltnis Ansteuerung Raildruckregelventil
@@ -1411,7 +1354,6 @@ _No arguments._
 | STAT_EHMFKDR_WERT | real | Ergebnis |
 | STAT_EHMFKDR_EINH | string | Einheit |
 
-<a id="job-status-zump-rail"></a>
 ### STATUS_ZUMP_RAIL
 
 Raildruck fuer Mengenzumessung
@@ -1426,7 +1368,6 @@ _No arguments._
 | STAT_ZUMP_RAIL_WERT | real | Ergebnis |
 | STAT_ZUMP_RAIL_EINH | string | Einheit |
 
-<a id="job-status-zumpqsoll"></a>
 ### STATUS_ZUMPQSOLL
 
 Raildruck Sollwert
@@ -1441,7 +1382,6 @@ _No arguments._
 | STAT_ZUMPQSOLL_WERT | real | Ergebnis |
 | STAT_ZUMPQSOLL_EINH | string | Einheit |
 
-<a id="job-status-admidv"></a>
 ### STATUS_ADMIDV
 
 IDV Rohwert Istwert Stromregelung Druckregelventil
@@ -1456,7 +1396,6 @@ _No arguments._
 | STAT_ADMIDV_WERT | real | Ergebnis |
 | STAT_ADMIDV_EINH | string | Einheit |
 
-<a id="job-status-admkdf"></a>
 ### STATUS_ADMKDF
 
 KDF Rohwert Raildruck
@@ -1471,7 +1410,6 @@ _No arguments._
 | STAT_ADMKDF_WERT | real | Ergebnis |
 | STAT_ADMKDF_EINH | string | Einheit |
 
-<a id="job-status-admldf1"></a>
 ### STATUS_ADMLDF1
 
 LDF Rohwert Ladedruck
@@ -1486,7 +1424,6 @@ _No arguments._
 | STAT_ADMLDF1_WERT | real | Ergebnis |
 | STAT_ADMLDF1_EINH | string | Einheit |
 
-<a id="job-status-admlmm1"></a>
 ### STATUS_ADMLMM1
 
 LMM1 Rohwert Luftmasse 1
@@ -1501,7 +1438,6 @@ _No arguments._
 | STAT_ADMLMM1_WERT | real | Ergebnis |
 | STAT_ADMLMM1_EINH | string | Einheit |
 
-<a id="job-status-admltf1"></a>
 ### STATUS_ADMLTF1
 
 LTF1 Rohwert Lufttemperatur 1
@@ -1516,7 +1452,6 @@ _No arguments._
 | STAT_ADMLTF1_WERT | real | Ergebnis |
 | STAT_ADMLTF1_EINH | string | Einheit |
 
-<a id="job-status-admubt"></a>
 ### STATUS_ADMUBT
 
 UBT Rohwert Batteriespannung
@@ -1531,7 +1466,6 @@ _No arguments._
 | STAT_ADMUBT_WERT | real | Ergebnis |
 | STAT_ADMUBT_EINH | string | Einheit |
 
-<a id="job-status-admuc1"></a>
 ### STATUS_ADMUC1
 
 UC1 Rohwert Kondensatorspannung 1 fuer Zylinder 1 und 6
@@ -1546,7 +1480,6 @@ _No arguments._
 | STAT_ADMUC1_WERT | real | Ergebnis |
 | STAT_ADMUC1_EINH | string | Einheit |
 
-<a id="job-status-admuc2"></a>
 ### STATUS_ADMUC2
 
 UC2 Rohwert Kondensatorspannung 2 fuer Zylinder 4 und 7
@@ -1561,7 +1494,6 @@ _No arguments._
 | STAT_ADMUC2_WERT | real | Ergebnis |
 | STAT_ADMUC2_EINH | string | Einheit |
 
-<a id="job-status-admug1"></a>
 ### STATUS_ADMUG1
 
 UG1 Rohwert Speisespannung 1 fuer Luftmassenmesser 1, Ladedruckfuehler 1
@@ -1576,7 +1508,6 @@ _No arguments._
 | STAT_ADMUG1_WERT | real | Ergebnis |
 | STAT_ADMUG1_EINH | string | Einheit |
 
-<a id="job-status-admug2"></a>
 ### STATUS_ADMUG2
 
 UG2 Rohwert Speisespannung 2 fuer Raildrucksensor
@@ -1591,7 +1522,6 @@ _No arguments._
 | STAT_ADMUG2_WERT | real | Ergebnis |
 | STAT_ADMUG2_EINH | string | Einheit |
 
-<a id="job-status-anmidv"></a>
 ### STATUS_ANMIDV
 
 IDV Istwert Stromregelung Druckregelventil
@@ -1606,7 +1536,6 @@ _No arguments._
 | STAT_ANMIDV_WERT | real | Ergebnis |
 | STAT_ANMIDV_EINH | string | Einheit |
 
-<a id="job-status-anmkdf"></a>
 ### STATUS_ANMKDF
 
 KDF Raildruck
@@ -1621,7 +1550,6 @@ _No arguments._
 | STAT_ANMKDF_WERT | real | Ergebnis |
 | STAT_ANMKDF_EINH | string | Einheit |
 
-<a id="job-status-anmldf1"></a>
 ### STATUS_ANMLDF1
 
 LDF Ladedruck
@@ -1636,7 +1564,6 @@ _No arguments._
 | STAT_ANMLDF1_WERT | real | Ergebnis |
 | STAT_ANMLDF1_EINH | string | Einheit |
 
-<a id="job-status-anmlmm1"></a>
 ### STATUS_ANMLMM1
 
 LMM1 Luftmasse 1
@@ -1651,7 +1578,6 @@ _No arguments._
 | STAT_ANMLMM1_WERT | real | Ergebnis |
 | STAT_ANMLMM1_EINH | string | Einheit |
 
-<a id="job-status-anmltf1"></a>
 ### STATUS_ANMLTF1
 
 LTF1 Lufttemperatur 1
@@ -1666,7 +1592,6 @@ _No arguments._
 | STAT_ANMLTF1_WERT | real | Ergebnis |
 | STAT_ANMLTF1_EINH | string | Einheit |
 
-<a id="job-status-anmltf2"></a>
 ### STATUS_ANMLTF2
 
 LTF2 Lufttemperatur 2
@@ -1681,7 +1606,6 @@ _No arguments._
 | STAT_ANMLTF2_WERT | real | Ergebnis |
 | STAT_ANMLTF2_EINH | string | Einheit |
 
-<a id="job-status-anmuc1"></a>
 ### STATUS_ANMUC1
 
 UC1 Kondensatorspannung 1 fuer Zylinder 1 und 6
@@ -1696,7 +1620,6 @@ _No arguments._
 | STAT_ANMUC1_WERT | real | Ergebnis |
 | STAT_ANMUC1_EINH | string | Einheit |
 
-<a id="job-status-anmuc2"></a>
 ### STATUS_ANMUC2
 
 UC2 Kondensatorspannung 2 fuer Zylinder 4 und 7
@@ -1711,7 +1634,6 @@ _No arguments._
 | STAT_ANMUC2_WERT | real | Ergebnis |
 | STAT_ANMUC2_EINH | string | Einheit |
 
-<a id="job-status-anmug1"></a>
 ### STATUS_ANMUG1
 
 UG1 Speisespannung 1 fuer Luftmassenmesser 1, Ladedruckfuehler 1
@@ -1726,7 +1648,6 @@ _No arguments._
 | STAT_ANMUG1_WERT | real | Ergebnis |
 | STAT_ANMUG1_EINH | string | Einheit |
 
-<a id="job-status-anmug2"></a>
 ### STATUS_ANMUG2
 
 UG2 Speisespannung 2 fuer Raildrucksensor
@@ -1741,7 +1662,6 @@ _No arguments._
 | STAT_ANMUG2_WERT | real | Ergebnis |
 | STAT_ANMUG2_EINH | string | Einheit |
 
-<a id="job-status-anou-idv"></a>
 ### STATUS_ANOU_IDV
 
 IDV Spannung zur Strommessung Druckregelventil
@@ -1756,7 +1676,6 @@ _No arguments._
 | STAT_ANOU_IDV_WERT | real | Ergebnis |
 | STAT_ANOU_IDV_EINH | string | Einheit |
 
-<a id="job-status-anou-kdf"></a>
 ### STATUS_ANOU_KDF
 
 KDF Spannung Raildruckfuehler
@@ -1771,7 +1690,6 @@ _No arguments._
 | STAT_ANOU_KDF_WERT | real | Ergebnis |
 | STAT_ANOU_KDF_EINH | string | Einheit |
 
-<a id="job-status-anou-ktf"></a>
 ### STATUS_ANOU_KTF
 
 KTF Spannung Kraftstofftemperaturfuehler
@@ -1786,7 +1704,6 @@ _No arguments._
 | STAT_ANOU_KTF_WERT | real | Ergebnis |
 | STAT_ANOU_KTF_EINH | string | Einheit |
 
-<a id="job-status-anou-ldf1"></a>
 ### STATUS_ANOU_LDF1
 
 LDF1 Spannung Ladedruckfuehler
@@ -1801,7 +1718,6 @@ _No arguments._
 | STAT_ANOU_LDF1_WERT | real | Ergebnis |
 | STAT_ANOU_LDF1_EINH | string | Einheit |
 
-<a id="job-status-anou-lmm1"></a>
 ### STATUS_ANOU_LMM1
 
 LMM1 Spannung Luftmassenmesser 1
@@ -1816,7 +1732,6 @@ _No arguments._
 | STAT_ANOU_LMM1_WERT | real | Ergebnis |
 | STAT_ANOU_LMM1_EINH | string | Einheit |
 
-<a id="job-status-anou-ltf1"></a>
 ### STATUS_ANOU_LTF1
 
 LTF1 Spannung Lufttemperaturfuehler 1
@@ -1831,7 +1746,6 @@ _No arguments._
 | STAT_ANOU_LTF1_WERT | real | Ergebnis |
 | STAT_ANOU_LTF1_EINH | string | Einheit |
 
-<a id="job-status-anou-ubt"></a>
 ### STATUS_ANOU_UBT
 
 UBT Spannung Batteriespannung
@@ -1846,7 +1760,6 @@ _No arguments._
 | STAT_ANOU_UBT_WERT | real | Ergebnis |
 | STAT_ANOU_UBT_EINH | string | Einheit |
 
-<a id="job-status-anou-uc1"></a>
 ### STATUS_ANOU_UC1
 
 UC1 Spannung Kondensatorspannung 1 fuer Zylinder 1 und 6
@@ -1861,7 +1774,6 @@ _No arguments._
 | STAT_ANOU_UC1_WERT | real | Ergebnis |
 | STAT_ANOU_UC1_EINH | string | Einheit |
 
-<a id="job-status-anou-uc2"></a>
 ### STATUS_ANOU_UC2
 
 UC2 Spannung Kondensatorspannung 2 fuer Zylinder 4 und 7
@@ -1876,7 +1788,6 @@ _No arguments._
 | STAT_ANOU_UC2_WERT | real | Ergebnis |
 | STAT_ANOU_UC2_EINH | string | Einheit |
 
-<a id="job-status-anou-ug1"></a>
 ### STATUS_ANOU_UG1
 
 UG1 Spannung Speisespannung 1 fuer Luftmassenmesser 1, Ladedruckfuehler 1
@@ -1891,7 +1802,6 @@ _No arguments._
 | STAT_ANOU_UG1_WERT | real | Ergebnis |
 | STAT_ANOU_UG1_EINH | string | Einheit |
 
-<a id="job-status-anou-ug2"></a>
 ### STATUS_ANOU_UG2
 
 UG2 Spannung Speisespannung 2 fuer Raildrucksensor
@@ -1906,7 +1816,6 @@ _No arguments._
 | STAT_ANOU_UG2_WERT | real | Ergebnis |
 | STAT_ANOU_UG2_EINH | string | Einheit |
 
-<a id="job-status-comgtr-opt"></a>
 ### STATUS_COMGTR_OPT
 
 Identifikation Handschalter/Automatik
@@ -1921,7 +1830,6 @@ _No arguments._
 | STAT_COMGTR_OPT_WERT | real | Ergebnis |
 | STAT_COMGTR_OPT_EINH | string | Einheit |
 
-<a id="job-status-dzmzmk1"></a>
 ### STATUS_DZMZMK1
 
 Selektive Mengenkorrektur Zylinder 1
@@ -1936,7 +1844,6 @@ _No arguments._
 | STAT_DZMZMK1_WERT | real | Ergebnis |
 | STAT_DZMZMK1_EINH | string | Einheit |
 
-<a id="job-status-dzmzmk2"></a>
 ### STATUS_DZMZMK2
 
 Selektive Mengenkorrektur Zylinder 2
@@ -1951,7 +1858,6 @@ _No arguments._
 | STAT_DZMZMK2_WERT | real | Ergebnis |
 | STAT_DZMZMK2_EINH | string | Einheit |
 
-<a id="job-status-dzmzmk3"></a>
 ### STATUS_DZMZMK3
 
 Selektive Mengenkorrektur Zylinder 3
@@ -1966,7 +1872,6 @@ _No arguments._
 | STAT_DZMZMK3_WERT | real | Ergebnis |
 | STAT_DZMZMK3_EINH | string | Einheit |
 
-<a id="job-status-dzmzmk4"></a>
 ### STATUS_DZMZMK4
 
 Selektive Mengenkorrektur Zylinder 4
@@ -1981,7 +1886,6 @@ _No arguments._
 | STAT_DZMZMK4_WERT | real | Ergebnis |
 | STAT_DZMZMK4_EINH | string | Einheit |
 
-<a id="job-status-dzmzmk5"></a>
 ### STATUS_DZMZMK5
 
 Selektive Mengenkorrektur Zylinder 5
@@ -1996,7 +1900,6 @@ _No arguments._
 | STAT_DZMZMK5_WERT | real | Ergebnis |
 | STAT_DZMZMK5_EINH | string | Einheit |
 
-<a id="job-status-dzmzmk6"></a>
 ### STATUS_DZMZMK6
 
 Selektive Mengenkorrektur Zylinder 6
@@ -2011,7 +1914,6 @@ _No arguments._
 | STAT_DZMZMK6_WERT | real | Ergebnis |
 | STAT_DZMZMK6_EINH | string | Einheit |
 
-<a id="job-status-dzmzmk7"></a>
 ### STATUS_DZMZMK7
 
 Selektive Mengenkorrektur Zylinder 7
@@ -2026,7 +1928,6 @@ _No arguments._
 | STAT_DZMZMK7_WERT | real | Ergebnis |
 | STAT_DZMZMK7_EINH | string | Einheit |
 
-<a id="job-status-dzmzmk8"></a>
 ### STATUS_DZMZMK8
 
 Selektive Mengenkorrektur Zylinder 8
@@ -2041,7 +1942,6 @@ _No arguments._
 | STAT_DZMZMK8_WERT | real | Ergebnis |
 | STAT_DZMZMK8_EINH | string | Einheit |
 
-<a id="job-status-dzmzn1"></a>
 ### STATUS_DZMZN1
 
 Selektive Drehzahl Zylinder 1
@@ -2056,7 +1956,6 @@ _No arguments._
 | STAT_DZMZN1_WERT | real | Ergebnis |
 | STAT_DZMZN1_EINH | string | Einheit |
 
-<a id="job-status-dzmzn2"></a>
 ### STATUS_DZMZN2
 
 Selektive Drehzahl Zylinder 2
@@ -2071,7 +1970,6 @@ _No arguments._
 | STAT_DZMZN2_WERT | real | Ergebnis |
 | STAT_DZMZN2_EINH | string | Einheit |
 
-<a id="job-status-dzmzn3"></a>
 ### STATUS_DZMZN3
 
 Selektive Drehzahl Zylinder 3
@@ -2086,7 +1984,6 @@ _No arguments._
 | STAT_DZMZN3_WERT | real | Ergebnis |
 | STAT_DZMZN3_EINH | string | Einheit |
 
-<a id="job-status-dzmzn4"></a>
 ### STATUS_DZMZN4
 
 Selektive Drehzahl Zylinder 4
@@ -2101,7 +1998,6 @@ _No arguments._
 | STAT_DZMZN4_WERT | real | Ergebnis |
 | STAT_DZMZN4_EINH | string | Einheit |
 
-<a id="job-status-dzmzn5"></a>
 ### STATUS_DZMZN5
 
 Selektive Drehzahl Zylinder 5
@@ -2116,7 +2012,6 @@ _No arguments._
 | STAT_DZMZN5_WERT | real | Ergebnis |
 | STAT_DZMZN5_EINH | string | Einheit |
 
-<a id="job-status-dzmzn6"></a>
 ### STATUS_DZMZN6
 
 Selektive Drehzahl Zylinder 6
@@ -2131,7 +2026,6 @@ _No arguments._
 | STAT_DZMZN6_WERT | real | Ergebnis |
 | STAT_DZMZN6_EINH | string | Einheit |
 
-<a id="job-status-dzmzn7"></a>
 ### STATUS_DZMZN7
 
 Selektive Drehzahl Zylinder 7
@@ -2146,7 +2040,6 @@ _No arguments._
 | STAT_DZMZN7_WERT | real | Ergebnis |
 | STAT_DZMZN7_EINH | string | Einheit |
 
-<a id="job-status-dzmzn8"></a>
 ### STATUS_DZMZN8
 
 Selektive Drehzahl Zylinder 8
@@ -2161,7 +2054,6 @@ _No arguments._
 | STAT_DZMZN8_WERT | real | Ergebnis |
 | STAT_DZMZN8_EINH | string | Einheit |
 
-<a id="job-status-edmrstcd"></a>
 ### STATUS_EDMRSTCD
 
 Restart Code
@@ -2176,7 +2068,6 @@ _No arguments._
 | STAT_EDMRSTCD_WERT | real | Ergebnis |
 | STAT_EDMRSTCD_EINH | string | Einheit |
 
-<a id="job-status-fbmbstz-ub"></a>
 ### STATUS_FBMBSTZ_UB
 
 UB Betriebsstunden
@@ -2191,7 +2082,6 @@ _No arguments._
 | STAT_FBMBSTZ_UB_WERT | real | Ergebnis |
 | STAT_FBMBSTZ_UB_EINH | string | Einheit |
 
-<a id="job-status-fbmsdial"></a>
 ### STATUS_FBMSDIAL
 
 Anforderung Diagnoselampe aus Fehlerbehandlung (0:Aus,1:Ein,2:Blinken)
@@ -2206,7 +2096,6 @@ _No arguments._
 | STAT_FBMSDIAL_WERT | real | Ergebnis |
 | STAT_FBMSDIAL_EINH | string | Einheit |
 
-<a id="job-status-fbos-00"></a>
 ### STATUS_FBOS_00
 
 Defekte Pfade 1 bis 16
@@ -2221,7 +2110,6 @@ _No arguments._
 | STAT_FBOS_00_WERT | real | Ergebnis |
 | STAT_FBOS_00_EINH | string | Einheit |
 
-<a id="job-status-fbos-02"></a>
 ### STATUS_FBOS_02
 
 Defekte Pfade 17 bis 32
@@ -2236,7 +2124,6 @@ _No arguments._
 | STAT_FBOS_02_WERT | real | Ergebnis |
 | STAT_FBOS_02_EINH | string | Einheit |
 
-<a id="job-status-fbos-04"></a>
 ### STATUS_FBOS_04
 
 Defekte Pfade 33 bis 48
@@ -2251,7 +2138,6 @@ _No arguments._
 | STAT_FBOS_04_WERT | real | Ergebnis |
 | STAT_FBOS_04_EINH | string | Einheit |
 
-<a id="job-status-fgmfgakt"></a>
 ### STATUS_FGMFGAKT
 
 aktuelle Geschwindigkeit
@@ -2266,7 +2152,6 @@ _No arguments._
 | STAT_FGMFGAKT_WERT | real | Ergebnis |
 | STAT_FGMFGAKT_EINH | string | Einheit |
 
-<a id="job-status-ldmadf"></a>
 ### STATUS_LDMADF
 
 aktueller Atmosphaerendruck
@@ -2281,7 +2166,6 @@ _No arguments._
 | STAT_LDMADF_WERT | real | Ergebnis |
 | STAT_LDMADF_EINH | string | Einheit |
 
-<a id="job-status-mrmcase-a"></a>
 ### STATUS_MRMCASE_A
 
 ARD Zustand-Bits der aktiven Ruckeldaempfung
@@ -2296,7 +2180,6 @@ _No arguments._
 | STAT_MRMCASE_A_WERT | real | Ergebnis |
 | STAT_MRMCASE_A_EINH | string | Einheit |
 
-<a id="job-status-mrmcase-l"></a>
 ### STATUS_MRMCASE_L
 
 LLR Zustand-Bits der Leerlaufregelung
@@ -2311,7 +2194,6 @@ _No arguments._
 | STAT_MRMCASE_L_WERT | real | Ergebnis |
 | STAT_MRMCASE_L_EINH | string | Einheit |
 
-<a id="job-status-mrmkm-akt"></a>
 ### STATUS_MRMKM_AKT
 
 aktueller KM-Stand von Kombiinstrument
@@ -2326,7 +2208,6 @@ _No arguments._
 | STAT_MRMKM_AKT_WERT | real | Ergebnis |
 | STAT_MRMKM_AKT_EINH | string | Einheit |
 
-<a id="job-status-mrmllriant"></a>
 ### STATUS_MRMLLRIANT
 
 M_E Menge aus I-Anteil des PI-Leerlaufreglers
@@ -2341,7 +2222,6 @@ _No arguments._
 | STAT_MRMLLRIANT_WERT | real | Ergebnis |
 | STAT_MRMLLRIANT_EINH | string | Einheit |
 
-<a id="job-status-mrmllrpant"></a>
 ### STATUS_MRMLLRPANT
 
 M_E Menge aus P-Anteil des PI-Leerlaufreglers
@@ -2356,7 +2236,6 @@ _No arguments._
 | STAT_MRMLLRPANT_WERT | real | Ergebnis |
 | STAT_MRMLLRPANT_EINH | string | Einheit |
 
-<a id="job-status-mrmm-eakt"></a>
 ### STATUS_MRMM_EAKT
 
 M_E Aktuelle Einspritzmenge (ohne ARD)
@@ -2371,7 +2250,6 @@ _No arguments._
 | STAT_MRMM_EAKT_WERT | real | Ergebnis |
 | STAT_MRMM_EAKT_EINH | string | Einheit |
 
-<a id="job-status-mrmm-eard"></a>
 ### STATUS_MRMM_EARD
 
 M_E Menge ARD - Gesamt vor Begrenzung
@@ -2386,7 +2264,6 @@ _No arguments._
 | STAT_MRMM_EARD_WERT | real | Ergebnis |
 | STAT_MRMM_EARD_EINH | string | Einheit |
 
-<a id="job-status-mrmm-edelb"></a>
 ### STATUS_MRMM_EDELB
 
 M_E begrenzte Abgleichmenge
@@ -2401,7 +2278,6 @@ _No arguments._
 | STAT_MRMM_EDELB_WERT | real | Ergebnis |
 | STAT_MRMM_EDELB_EINH | string | Einheit |
 
-<a id="job-status-mrmm-efahr"></a>
 ### STATUS_MRMM_EFAHR
 
 M_E Fahrmenge nach Laufruheregler
@@ -2416,7 +2292,6 @@ _No arguments._
 | STAT_MRMM_EFAHR_WERT | real | Ergebnis |
 | STAT_MRMM_EFAHR_EINH | string | Einheit |
 
-<a id="job-status-mrmm-ekorr"></a>
 ### STATUS_MRMM_EKORR
 
 M_E Fahrmenge korrigiert mit Vollast- und Mengenabgleich
@@ -2431,7 +2306,6 @@ _No arguments._
 | STAT_MRMM_EKORR_WERT | real | Ergebnis |
 | STAT_MRMM_EKORR_EINH | string | Einheit |
 
-<a id="job-status-mrmm-ellr"></a>
 ### STATUS_MRMM_ELLR
 
 M_E Menge aus Leerlaufregelung
@@ -2446,7 +2320,6 @@ _No arguments._
 | STAT_MRMM_ELLR_WERT | real | Ergebnis |
 | STAT_MRMM_ELLR_EINH | string | Einheit |
 
-<a id="job-status-mrmm-elrr"></a>
 ### STATUS_MRMM_ELRR
 
 M_E Menge aus Laufruheregler
@@ -2461,7 +2334,6 @@ _No arguments._
 | STAT_MRMM_ELRR_WERT | real | Ergebnis |
 | STAT_MRMM_ELRR_EINH | string | Einheit |
 
-<a id="job-status-mrmm-emot"></a>
 ### STATUS_MRMM_EMOT
 
 M_E Einspritzmenge nach ARD
@@ -2476,7 +2348,6 @@ _No arguments._
 | STAT_MRMM_EMOT_WERT | real | Ergebnis |
 | STAT_MRMM_EMOT_EINH | string | Einheit |
 
-<a id="job-status-mrmm-estar"></a>
 ### STATUS_MRMM_ESTAR
 
 M_E resultierender Startmengen-Sollwert
@@ -2491,7 +2362,6 @@ _No arguments._
 | STAT_MRMM_ESTAR_WERT | real | Ergebnis |
 | STAT_MRMM_ESTAR_EINH | string | Einheit |
 
-<a id="job-status-mrmm-ewun"></a>
 ### STATUS_MRMM_EWUN
 
 M_E Fahrerwunschmenge nach externem Mengeneingriff
@@ -2506,7 +2376,6 @@ _No arguments._
 | STAT_MRMM_EWUN_WERT | real | Ergebnis |
 | STAT_MRMM_EWUN_EINH | string | Einheit |
 
-<a id="job-status-mrmn-llbas"></a>
 ### STATUS_MRMN_LLBAS
 
 N Leerlaufsolldrehzahl
@@ -2521,7 +2390,6 @@ _No arguments._
 | STAT_MRMN_LLBAS_WERT | real | Ergebnis |
 | STAT_MRMN_LLBAS_EINH | string | Einheit |
 
-<a id="job-status-mrmn-lldia"></a>
 ### STATUS_MRMN_LLDIA
 
 N Leerlaufsolldrehzahl fuer Diagnose
@@ -2536,7 +2404,6 @@ _No arguments._
 | STAT_MRMN_LLDIA_WERT | real | Ergebnis |
 | STAT_MRMN_LLDIA_EINH | string | Einheit |
 
-<a id="job-status-mrmstatus"></a>
 ### STATUS_MRMSTATUS
 
 Status Motorbetriebsphase
@@ -2551,7 +2418,6 @@ _No arguments._
 | STAT_MRMSTATUS_WERT | real | Ergebnis |
 | STAT_MRMSTATUS_EINH | string | Einheit |
 
-<a id="job-status-mrollrdant"></a>
 ### STATUS_MROLLRDANT
 
 M_E Menge aus Leerlaufregler-DT1-Vorsteuerung
@@ -2566,7 +2432,6 @@ _No arguments._
 | STAT_MROLLRDANT_WERT | real | Ergebnis |
 | STAT_MROLLRDANT_EINH | string | Einheit |
 
-<a id="job-status-mrolrrreg"></a>
 ### STATUS_MROLRRREG
 
 Nsegm Segmentdrehzahl-Regelabweichung fuer Laufruheregler
@@ -2581,7 +2446,6 @@ _No arguments._
 | STAT_MROLRRREG_WERT | real | Ergebnis |
 | STAT_MROLRRREG_EINH | string | Einheit |
 
-<a id="job-status-mrom-ardff"></a>
 ### STATUS_MROM_ARDFF
 
 M_E Menge ARD - Fuehrungsformer
@@ -2596,7 +2460,6 @@ _No arguments._
 | STAT_MROM_ARDFF_WERT | real | Ergebnis |
 | STAT_MROM_ARDFF_EINH | string | Einheit |
 
-<a id="job-status-mrom-ardsr"></a>
 ### STATUS_MROM_ARDSR
 
 M_E Menge ARD - Stoerregler
@@ -2611,7 +2474,6 @@ _No arguments._
 | STAT_MROM_ARDSR_WERT | real | Ergebnis |
 | STAT_MROM_ARDSR_EINH | string | Einheit |
 
-<a id="job-status-zhosync-st"></a>
 ### STATUS_ZHOSYNC_ST
 
 Synchronisationsstatus des Zumesshandlers
@@ -2626,7 +2488,6 @@ _No arguments._
 | STAT_ZHOSYNC_ST_WERT | real | Ergebnis |
 | STAT_ZHOSYNC_ST_EINH | string | Einheit |
 
-<a id="job-status-zumab-he"></a>
 ### STATUS_ZUMAB_HE
 
 Ansteuerbeginn Haupteinspritzung
@@ -2641,7 +2502,6 @@ _No arguments._
 | STAT_ZUMAB_HE_WERT | real | Ergebnis |
 | STAT_ZUMAB_HE_EINH | string | Einheit |
 
-<a id="job-status-zumab-ne"></a>
 ### STATUS_ZUMAB_NE
 
 Ansteuerbeginn Nacheinspritzung
@@ -2656,7 +2516,6 @@ _No arguments._
 | STAT_ZUMAB_NE_WERT | real | Ergebnis |
 | STAT_ZUMAB_NE_EINH | string | Einheit |
 
-<a id="job-status-zumad-ne"></a>
 ### STATUS_ZUMAD_NE
 
 Ansteuerdauer Nacheinspritzung Abgastrakt 1
@@ -2671,7 +2530,6 @@ _No arguments._
 | STAT_ZUMAD_NE_WERT | real | Ergebnis |
 | STAT_ZUMAD_NE_EINH | string | Einheit |
 
-<a id="job-status-zuoab-ve1"></a>
 ### STATUS_ZUOAB_VE1
 
 Ansteuerbeginn Voreinspritzung 1
@@ -2686,7 +2544,6 @@ _No arguments._
 | STAT_ZUOAB_VE1_WERT | real | Ergebnis |
 | STAT_ZUOAB_VE1_EINH | string | Einheit |
 
-<a id="job-status-zuoad-he"></a>
 ### STATUS_ZUOAD_HE
 
 Ansteuerdauer Haupteinspritzung
@@ -2701,7 +2558,6 @@ _No arguments._
 | STAT_ZUOAD_HE_WERT | real | Ergebnis |
 | STAT_ZUOAD_HE_EINH | string | Einheit |
 
-<a id="job-status-zuoad-ve1"></a>
 ### STATUS_ZUOAD_VE1
 
 Ansteuerdauer Voreinspritzung 1
@@ -2716,7 +2572,6 @@ _No arguments._
 | STAT_ZUOAD_VE1_WERT | real | Ergebnis |
 | STAT_ZUOAD_VE1_EINH | string | Einheit |
 
-<a id="job-status-zuome-ve"></a>
 ### STATUS_ZUOME_VE
 
 M_E Menge Voreinspritzung
@@ -2731,7 +2586,6 @@ _No arguments._
 | STAT_ZUOME_VE_WERT | real | Ergebnis |
 | STAT_ZUOME_VE_EINH | string | Einheit |
 
-<a id="job-status-zuomehe"></a>
 ### STATUS_ZUOMEHE
 
 M_E Menge Haupteinspritzung
@@ -2746,7 +2600,6 @@ _No arguments._
 | STAT_ZUOMEHE_WERT | real | Ergebnis |
 | STAT_ZUOMEHE_EINH | string | Einheit |
 
-<a id="job-status-zuomevgw"></a>
 ### STATUS_ZUOMEVGW
 
 GW-Kennfeld Menge Voreinspritzung
@@ -2761,7 +2614,6 @@ _No arguments._
 | STAT_ZUOMEVGW_WERT | real | Ergebnis |
 | STAT_ZUOMEVGW_EINH | string | Einheit |
 
-<a id="job-status-zuove-stat"></a>
 ### STATUS_ZUOVE_STAT
 
 Voreinspritzung - Schalter
@@ -2776,7 +2628,6 @@ _No arguments._
 | STAT_ZUOVE_STAT_WERT | real | Ergebnis |
 | STAT_ZUOVE_STAT_EINH | string | Einheit |
 
-<a id="job-status-an-lufttemperatur2"></a>
 ### STATUS_AN_LUFTTEMPERATUR2
 
 LTF2 Lufttemperatur 2
@@ -2791,7 +2642,6 @@ _No arguments._
 | STAT_AN_LUFTTEMPERATUR2_WERT | real | Ergebnis |
 | STAT_AN_LUFTTEMPERATUR2_EINH | string | Einheit |
 
-<a id="job-status-ladedruck"></a>
 ### STATUS_LADEDRUCK
 
 LDF Ladedruck
@@ -2806,7 +2656,6 @@ _No arguments._
 | STAT_LADEDRUCK_WERT | real | Ergebnis |
 | STAT_LADEDRUCK_EINH | string | Einheit |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 N Drehzahl
@@ -2821,7 +2670,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_WERT | real | Ergebnis |
 | STAT_MOTORDREHZAHL_EINH | string | Einheit |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 WTF Wassertemperatur
@@ -2836,7 +2684,6 @@ _No arguments._
 | STAT_MOTORTEMPERATUR_WERT | real | Ergebnis |
 | STAT_MOTORTEMPERATUR_EINH | string | Einheit |
 
-<a id="job-status-raildruck"></a>
 ### STATUS_RAILDRUCK
 
 KDF Raildruck
@@ -2851,7 +2698,6 @@ _No arguments._
 | STAT_RAILDRUCK_WERT | real | Ergebnis |
 | STAT_RAILDRUCK_EINH | string | Einheit |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 UBT Batteriespannung
@@ -2866,7 +2712,6 @@ _No arguments._
 | STAT_UBATT_WERT | real | Ergebnis |
 | STAT_UBATT_EINH | string | Einheit |
 
-<a id="job-status-vorfoerderdruck"></a>
 ### STATUS_VORFOERDERDRUCK
 
 VDF Vorfoerderdruck
@@ -2881,7 +2726,6 @@ _No arguments._
 | STAT_VORFOERDERDRUCK_WERT | real | Ergebnis |
 | STAT_VORFOERDERDRUCK_EINH | string | Einheit |
 
-<a id="job-status-lmm-masse"></a>
 ### STATUS_LMM_MASSE
 
 LMM Luftmasse 2
@@ -2896,7 +2740,6 @@ _No arguments._
 | STAT_LMM_MASSE_WERT | real | Ergebnis |
 | STAT_LMM_MASSE_EINH | string | Einheit |
 
-<a id="job-status-an-lufttemperatur"></a>
 ### STATUS_AN_LUFTTEMPERATUR
 
 LTF2 Lufttemperatur 2
@@ -2922,7 +2765,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (17 × 5)
 - [JOBRESULT](#table-jobresult) (37 × 2)
 
-<a id="table-betriebswtab"></a>
 ### BETRIEBSWTAB
 
 Dimensions: 107 rows × 17 columns
@@ -3037,7 +2879,6 @@ Dimensions: 107 rows × 17 columns
 | anmUBT | B813F1042C100000 | 06 | 2 | 0x0F65 | 06 | 5 | -- | 0.0236197458 | 0 | 0x00 | 0x00 | 6.2f | V | -- | UBATT | UBT Batteriespannung |
 | anmVDF | B813F1042C100000 | 06 | 2 | 0x1F06 | 06 | 5 | -- | 0.001 | 0 | 0x00 | 0x00 | 6.2f | bar | -- | VORFOERDERDRUCK | VDF Vorfoerderdruck |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 33 rows × 6 columns
@@ -3078,7 +2919,6 @@ Dimensions: 33 rows × 6 columns
 | 0x3595 | Bremslicht- / Bremstestschalter | 0x01 | 0x05 | 0x03 | 0x10 |
 | 0x0000 | unbekannter Fehlerort | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 32 rows × 33 columns
@@ -3118,7 +2958,6 @@ Dimensions: 32 rows × 33 columns
 | 0x3590 | 0x00 | 0x00 | 0x00 | 0x00 | 0xEB | 0xEC | 0x00 | 0xEE | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0xF6 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x1 | 0x00 | 0x2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 |
 | 0x3595 | 0x00 | 0x00 | 0x00 | 0x00 | 0xEB | 0xEC | 0x00 | 0xEE | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0xF6 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x1D |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 64 rows × 2 columns
@@ -3190,7 +3029,6 @@ Dimensions: 64 rows × 2 columns
 | 0xF6 | -- |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 17 rows × 5 columns
@@ -3215,7 +3053,6 @@ Dimensions: 17 rows × 5 columns
 | 0x15 | Versorgungsspannung | V | 0,0967467 | 0,0 |
 | 0x16 | unbekannte Umweltbedingung | ---- | 1 | 0,0 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 37 rows × 2 columns

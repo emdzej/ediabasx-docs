@@ -34,7 +34,6 @@
 - [FLASH_SCHREIBEN](#job-flash-schreiben) - Beliebige Flash Zellen beschreiben
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -52,7 +51,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Videomodul TV-Teil
@@ -65,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Videomodul TV-Teil
@@ -89,7 +86,6 @@ _No arguments._
 | ID_SW_NR | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cs-bilden"></a>
 ### CS_BILDEN
 
 _No arguments._
@@ -102,7 +98,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-daten-eeprom-uebernehmen"></a>
 ### DATEN_EEPROM_UEBERNEHMEN
 
 _No arguments._
@@ -115,7 +110,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-eeprom-kennung-lesen"></a>
 ### EEPROM_KENNUNG_LESEN
 
 _No arguments._
@@ -128,7 +122,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-reset-vm"></a>
 ### RESET_VM
 
 _No arguments._
@@ -141,7 +134,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 _No arguments._
@@ -154,7 +146,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-boot-modus-aktivieren"></a>
 ### BOOT_MODUS_AKTIVIEREN
 
 _No arguments._
@@ -167,7 +158,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_SENDE | binary |  |
 
-<a id="job-blockchecksumme-lesen"></a>
 ### BLOCKCHECKSUMME_LESEN
 
 #### Arguments
@@ -185,7 +175,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | CHKSUMME | string |  |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -202,7 +191,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten lesen
@@ -220,7 +208,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Beliebige Flash Zellen beschreiben
@@ -237,7 +224,6 @@ Beliebige Flash Zellen beschreiben
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -261,7 +247,6 @@ _No arguments._
 - [SEGMENTAUSWAHL](#table-segmentauswahl) (6 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -277,7 +262,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -287,7 +271,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | IBus Dauerhigh Abschaltung |
 | 0x02 | Watchdog ausgeloest |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -309,7 +292,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0D | Kein RGB Telegramm vom Graphikteil |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -320,7 +302,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler aktiv |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-segmentauswahl"></a>
 ### SEGMENTAUSWAHL
 
 Dimensions: 6 rows × 2 columns
@@ -334,7 +315,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0B | internes RAM IDATA |
 | 0xXY | Unbekanntes Segment |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

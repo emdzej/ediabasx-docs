@@ -52,7 +52,6 @@
 - [HOEHE_SPEICHERN](#job-hoehe-speichern) - Hoehe in den leak-Bereich
 - [FS_LESEN](#job-fs-lesen) - Auslesen des Fehlerspeichers
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer <SG> automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -65,7 +64,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information bzgl. SGBD
@@ -83,7 +81,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-identifikation"></a>
 ### IDENTIFIKATION
 
 Ermittlung der SG-Variante
@@ -96,7 +93,6 @@ _No arguments._
 | --- | --- | --- |
 | VARIANT | string | Programmname |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EHC
@@ -126,7 +122,6 @@ _No arguments._
 | ID_BUS2_INDEX | int | Busindex 2 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Fehlerspeicher quick lesen
@@ -143,7 +138,6 @@ _No arguments._
 | FS_DATUM_JAHR | int | Loeschdatum Jahr [0-99] |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -157,7 +151,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-code-lesen"></a>
 ### CODE_LESEN
 
 gibt die Codierinformation als BYTE-STRING aus
@@ -176,7 +169,6 @@ gibt die Codierinformation als BYTE-STRING aus
 | _TEL_ANTWORT | binary |  |
 | _TEL_SEND | binary |  |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 I/O Status lesen
@@ -208,7 +200,6 @@ _No arguments._
 | STAT_SWITCH_HOLD_EIN | int | Hold Taster [High Aktiv] |
 | STAT_VALVE_STAT_VORHANDEN | binary | Ventile ueberhitzt, Kompressor ueberhitzt |
 
-<a id="job-status-setzen"></a>
 ### STATUS_SETZEN
 
 Hardward Zugriff
@@ -231,7 +222,6 @@ Hardward Zugriff
 | _TEL_ANTWORT | binary |  |
 | _TEL_AN_SG | binary |  |
 
-<a id="job-sg-status-lesen"></a>
 ### SG_STATUS_LESEN
 
 Software-Status lesen
@@ -252,7 +242,6 @@ _No arguments._
 | STAT_HANDSTEUERMODUS_EIN | int | Freischaltung fuer I/O Status-Vorgabe [High Aktiv] |
 | STAT_NOPLAUMODUS_EIN | int | fuer Laborauto Tests [High Aktiv] |
 
-<a id="job-sg-status-vorgeben"></a>
 ### SG_STATUS_VORGEBEN
 
 Software Zugriff
@@ -272,7 +261,6 @@ Software Zugriff
 | _TEL_ANTWORT | binary |  |
 | _TEL_AN_SG | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -289,7 +277,6 @@ _No arguments._
 | BYTE3 | int | nach Codierung soll hier ein Teil der Fahrgestell-Nr. stehen |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -310,7 +297,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-loeschen"></a>
 ### SPEICHER_LOESCHEN
 
 EEPROM loeschen bis auf SG-Identifikation
@@ -324,7 +310,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Reset des Steuergeraetes
@@ -338,7 +323,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-shadow-lesen"></a>
 ### FS_SHADOW_LESEN
 
 auslesen des Fehlershadowspeichers
@@ -352,7 +336,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-abgleichwert-lesen"></a>
 ### ABGLEICHWERT_LESEN
 
 Hoehenstand lesen
@@ -376,7 +359,6 @@ _No arguments._
 | EE_H_LEAK_EINH | int | Einheit fuer Hoehenstand zur Grobleckagepruefung [mm] |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-abgleichwert-programmieren"></a>
 ### ABGLEICHWERT_PROGRAMMIEREN
 
 Offset fuer Hoehenstaende eingeben
@@ -410,7 +392,6 @@ Offset fuer Hoehenstaende eingeben
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen des Herstelldaten
@@ -446,7 +427,6 @@ _No arguments._
 | BYTE22 | int | 22. Herstelldatenbyte |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-schreiben"></a>
 ### HERSTELLDATEN_SCHREIBEN
 
 Schreiben der Herstelldaten
@@ -486,7 +466,6 @@ Schreiben der Herstelldaten
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnosemode-erhalten"></a>
 ### DIAGNOSEMODE_ERHALTEN
 
 Zaehler fuer Diagnosemode zuruecksetzen
@@ -500,7 +479,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnosemode-beenden"></a>
 ### DIAGNOSEMODE_BEENDEN
 
 beendet den Diagnosemode vorzeitig
@@ -514,7 +492,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-seed-holen"></a>
 ### SEED_HOLEN
 
 meldet fuer eine Zugriffsebene an
@@ -534,7 +511,6 @@ meldet fuer eine Zugriffsebene an
 | SEED_LSB | int | Seed LSB |
 | SEED_MSB | int | Seed MSB |
 
-<a id="job-key-senden-normal"></a>
 ### KEY_SENDEN_NORMAL
 
 Key an SG senden fuer Zugriffsebene 1
@@ -556,7 +532,6 @@ Key an SG senden fuer Zugriffsebene 1
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-key-senden-expert"></a>
 ### KEY_SENDEN_EXPERT
 
 Key an SG senden fuer Zugriffsebene 2
@@ -578,7 +553,6 @@ Key an SG senden fuer Zugriffsebene 2
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fahrzeug-hoehe-abgleichen"></a>
 ### FAHRZEUG_HOEHE_ABGLEICHEN
 
 automatischer Hoehenabgleich
@@ -609,7 +583,6 @@ automatischer Hoehenabgleich
 | ABWEICHUNG_RECHTS_WERT | int | Abweichung rechts |
 | TEL_ABGLEICH | binary | gesendetes Abgleichtelegramm |
 
-<a id="job-status-vorgeben"></a>
 ### STATUS_VORGEBEN
 
 Ansteuern eines digitalen Ein- Ausgaenge
@@ -626,7 +599,6 @@ Ansteuern eines digitalen Ein- Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-sg-status-setzen"></a>
 ### SG_STATUS_SETZEN
 
 Ansteuern der SGs
@@ -643,7 +615,6 @@ Ansteuern der SGs
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -666,7 +637,6 @@ Auslesen des Speicherinhaltes
 | _TEL_ANTWORT | binary |  |
 | DATEN | binary | angeforderter Datenblock (28 Bytes!) |
 
-<a id="job-aktoren-vorgeben"></a>
 ### AKTOREN_VORGEBEN
 
 Ansteuern der Modi
@@ -691,7 +661,6 @@ Ansteuern der Modi
 | BACK3 | int | Rueckgabewert |
 | BACK4 | int | Rueckgabewert |
 
-<a id="job-hoehe-speichern"></a>
 ### HOEHE_SPEICHERN
 
 Hoehe in den leak-Bereich
@@ -704,7 +673,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -886,7 +854,6 @@ _No arguments._
 - [AKTOREN](#table-aktoren) (22 × 3)
 - [STEUERN_SG](#table-steuern-sg) (9 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -901,7 +868,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_NOT_ACKNOWLEDGE |
 | 0xXY | ERROR_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 31 rows × 2 columns
@@ -940,7 +906,6 @@ Dimensions: 31 rows × 2 columns
 | 0x43 | WABCO |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 20 rows × 2 columns
@@ -968,7 +933,6 @@ Dimensions: 20 rows × 2 columns
 | 0x1E | CAN-Bus |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 20 rows × 15 columns
@@ -996,7 +960,6 @@ Dimensions: 20 rows × 15 columns
 | 0x1E | 0x00 | 0x0B | 0x00 | 0x0C | 0x00 | 0xFF | 0x00 | 0xFF | 0x00 | 0xFF | 0x00 | 0xFF | 0x00 | 0xFF |
 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -1017,7 +980,6 @@ Dimensions: 13 rows × 2 columns
 | 0xFE | allg. Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 20 rows × 6 columns
@@ -1045,7 +1007,6 @@ Dimensions: 20 rows × 6 columns
 | 0x1E | 2 | 1 | 0x01 | 0x10 | 0x00 |
 | 0xXY | 0 | 0 | 0xFF | 0xFF | 0xFF |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 6 rows × 8 columns
@@ -1059,7 +1020,6 @@ Dimensions: 6 rows × 8 columns
 | 0x13 | Batteriespannung | Volt | -- | -- | 1 | 10 | 0 |
 | 0xXY | unbekannte Umweltbedingung | XY | 1 | 1 | 1 | 1 | 0 |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 16 rows × 3 columns
@@ -1083,7 +1043,6 @@ Dimensions: 16 rows × 3 columns
 | 0000 | 0 | 0x00 |
 | XXX | Y | Z |
 
-<a id="table-aktoren"></a>
 ### AKTOREN
 
 Dimensions: 22 rows × 3 columns
@@ -1113,7 +1072,6 @@ Dimensions: 22 rows × 3 columns
 | ALLE_AUS | 4 | 0x00 |
 | XXX | Y | Z |
 
-<a id="table-steuern-sg"></a>
 ### STEUERN_SG
 
 Dimensions: 9 rows × 3 columns

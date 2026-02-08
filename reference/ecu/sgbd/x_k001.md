@@ -42,7 +42,6 @@
 - [HERSTELLDATUM_LESEN_FUNKTIONAL](#job-herstelldatum-lesen-funktional) - Herstelldatum lesen UDS   : $22   ReadDataByIdentifier $F18B ECUManufactoringData
 - [CALID_CVN_LESEN_FUNKTIONAL](#job-calid-cvn-lesen-funktional) - OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -61,7 +60,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -74,7 +72,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-svk-lesen-funktional"></a>
 ### SVK_LESEN_FUNKTIONAL
 
 Informationen zur SoftwareVerbauKennung UDS  : $22   ReadDataByIdentifier $F101 SVK_AKTUELL
@@ -98,7 +95,6 @@ Informationen zur SoftwareVerbauKennung UDS  : $22   ReadDataByIdentifier $F101 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-ident-funktional"></a>
 ### IDENT_FUNKTIONAL
 
 Identdaten UDS   : $22   ReadDataByIdentifier $F150 Sub-Parameter SGBD-Index
@@ -122,7 +118,6 @@ Identdaten UDS   : $22   ReadDataByIdentifier $F150 Sub-Parameter SGBD-Index
 | ID_SGBD_INDEX | long | Index zur Erkennung der SG-Variante |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-seriennummer-lesen-funktional"></a>
 ### SERIENNUMMER_LESEN_FUNKTIONAL
 
 Seriennummer des Steuergeraets UDS   : $22   ReadDataByIdentifier UDS   : $F18C Sub-Parameter ECUSerialNumber
@@ -145,7 +140,6 @@ Seriennummer des Steuergeraets UDS   : $22   ReadDataByIdentifier UDS   : $F18C 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-fg-nr-lesen-funktional"></a>
 ### PROG_FG_NR_LESEN_FUNKTIONAL
 
 Auslesen der Fahrgestellnummer (VIN) ! nur moeglich, wenn SG programmiert ! UDS  : $22   ReadDataByIdentifier UDS  : $F190 VIN Modus: Default
@@ -169,7 +163,6 @@ Auslesen der Fahrgestellnummer (VIN) ! nur moeglich, wenn SG programmiert ! UDS 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen-funktional"></a>
 ### PROG_ZAEHLER_LESEN_FUNKTIONAL
 
 Energy-Saving-Mode auslesen UDS:    $22   ReadDataByIdentifier UDS:    $2502 ProgrammingCounter
@@ -194,7 +187,6 @@ Energy-Saving-Mode auslesen UDS:    $22   ReadDataByIdentifier UDS:    $2502 Pro
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-funktional"></a>
 ### FS_LESEN_FUNKTIONAL
 
 Fehlerspeicher lesen UDS     : $19 ReadDTCInformation UDS     : $02 ReadDTCByStatusMask UDS     : $0C StatusMask (Bit2, Bit3)
@@ -217,7 +209,6 @@ Fehlerspeicher lesen UDS     : $19 ReadDTCInformation UDS     : $02 ReadDTCBySta
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen-funktional"></a>
 ### FS_LOESCHEN_FUNKTIONAL
 
 Fehlerspeicher löschen UDS   : $14 ClearDiagnosticInformation $FF DTCHighByte $FF DTCMiddleByte $FF DTCLowByte
@@ -239,7 +230,6 @@ Fehlerspeicher löschen UDS   : $14 ClearDiagnosticInformation $FF DTCHighByte $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-funktional"></a>
 ### IS_LESEN_FUNKTIONAL
 
 Sekundärer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID $2000 DataIdentifier sekundaerer Fehlerspeicher
@@ -262,7 +252,6 @@ Sekundärer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDa
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen-funktional"></a>
 ### IS_LOESCHEN_FUNKTIONAL
 
 Infospeicher löschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory
@@ -284,7 +273,6 @@ Infospeicher löschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode-funktional"></a>
 ### SLEEP_MODE_FUNKTIONAL
 
 SG in Sleep-Mode versetzen UDS     : $11 ECUReset UDS     : $04 EnableRapidPowerShutDown
@@ -307,7 +295,6 @@ SG in Sleep-Mode versetzen UDS     : $11 ECUReset UDS     : $04 EnableRapidPower
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode-funktional"></a>
 ### ENERGIESPARMODE_FUNKTIONAL
 
 Einstellen des Energiesparmodes UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $0F0C DataIdentifier ControlEnergySavingMode UDS     : $00   Normalmode UDS     : $01   Fertigungsmode UDS     : $02   Transportmode UDS     : $03   Flashmode
@@ -330,7 +317,6 @@ Einstellen des Energiesparmodes UDS     : $31   RoutineControlRequestServiceID U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode-funktional"></a>
 ### STATUS_ENERGIESPARMODE_FUNKTIONAL
 
 Energy-Saving-Mode auslesen UDS:    $22   ReadDataByIdentifier UDS:    $100A DataIdentifier EnergySavingMode
@@ -357,7 +343,6 @@ Energy-Saving-Mode auslesen UDS:    $22   ReadDataByIdentifier UDS:    $100A Dat
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen-funktional"></a>
 ### SENSOREN_IDENT_LESEN_FUNKTIONAL
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -384,7 +369,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-grp2sgadr"></a>
 ### GRP2SGADR
 
 Ermittlung der SG-Adresse aus ZuordnungsTabelle
@@ -402,7 +386,6 @@ Ermittlung der SG-Adresse aus ZuordnungsTabelle
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | SG_ADR | long | Steuergeraeteadresse |
 
-<a id="job-nettodaten-lesen-funktional"></a>
 ### NETTODATEN_LESEN_FUNKTIONAL
 
 Nettodaten der Codierdaten lesen Standard Codierjob UDS: 	$22   ReadDataByCommonIdentifier UDS:    $3000-$3019 Codierdaten-Adressen
@@ -452,7 +435,6 @@ Nettodaten der Codierdaten lesen Standard Codierjob UDS: 	$22   ReadDataByCommon
 | NETTODATEN_BLOCK_3351 | binary | Nettodaten der Codierung Block 3351 aktuell nur von BMSX verwendet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-i-stufe-lesen"></a>
 ### I_STUFE_LESEN
 
 Auslesen der I-Stufe aus BMSX und Kombi UDS:    $22   ReadDataByIdentifier UDS:    $100B DataIdentifier I-Level Byte     |0|1|2|3| 4| 5| 6| 7| | ASCII |    Byte   | IStufe   |K|0|0|1|09|08| 4 00|
@@ -472,7 +454,6 @@ _No arguments._
 | _RESPONSE_BMSX | binary | Hex-Antwort von BMSX |
 | _RESPONSE_KOMBI | binary | Hex-Antwort von KOMBI |
 
-<a id="job-i-stufe-schreiben"></a>
 ### I_STUFE_SCHREIBEN
 
 Schreiben der I-Stufe in BMSX und Kombi UDS:    $2E   ReadDataByIdentifier UDS:    $100B DataIdentifier I-Level Byte     |0|1|2|3| 4| 5| 6| 7| | ASCII |    Byte   | IStufe   |F|0|0|1|09|08| 4 00|
@@ -495,7 +476,6 @@ Schreiben der I-Stufe in BMSX und Kombi UDS:    $2E   ReadDataByIdentifier UDS: 
 | _RESPONSE_BMSX | binary | Hex-Antwort von BMSX |
 | _RESPONSE_KOMBI | binary | Hex-Antwort von KOMBI |
 
-<a id="job-fa-lesen"></a>
 ### FA_LESEN
 
 Liest den Fahrzeugauftrag aus dem Master (DME) bzw. falls keine bzw. neg. Response aus Backup (KOmbi) UDS:    $22   ReadDataByIdentifier UDS:    $3F06 DataIdentifier FA_lesen
@@ -511,7 +491,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an BMSX |
 | _TEL_ANTWORT | binary | Hex-Antwort von BMSX |
 
-<a id="job-herstelldatum-lesen-funktional"></a>
 ### HERSTELLDATUM_LESEN_FUNKTIONAL
 
 Herstelldatum lesen UDS   : $22   ReadDataByIdentifier $F18B ECUManufactoringData
@@ -534,7 +513,6 @@ Herstelldatum lesen UDS   : $22   ReadDataByIdentifier $F18B ECUManufactoringDat
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen-funktional"></a>
 ### CALID_CVN_LESEN_FUNKTIONAL
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -581,7 +559,6 @@ OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByI
 - [GROBNAME](#table-grobname) (21 × 2)
 - [FUNKTIONALEADRESSE](#table-funktionaleadresse) (1 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -665,7 +642,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -814,7 +790,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -857,7 +832,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -882,7 +856,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -916,7 +889,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -989,7 +961,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1002,7 +973,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1017,7 +987,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1030,7 +999,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1044,7 +1012,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1058,7 +1025,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -1067,7 +1033,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -1076,7 +1041,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1088,7 +1052,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -1097,7 +1060,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -1106,7 +1068,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1115,7 +1076,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-grobname"></a>
 ### GROBNAME
 
 Dimensions: 21 rows × 2 columns
@@ -1144,7 +1104,6 @@ Dimensions: 21 rows × 2 columns
 | 0x72 | BCO/BCL |
 | 0xXY | ???? |
 
-<a id="table-funktionaleadresse"></a>
 ### FUNKTIONALEADRESSE
 
 Dimensions: 1 rows × 3 columns

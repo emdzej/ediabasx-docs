@@ -97,7 +97,6 @@
 - [WRITE_SOLLMOMENT](#job-write-sollmoment) - Setzt SG intern eine Sollmomentenvorgabe und den Sollwertqualifier auf 'Sollwert umsetzen' Bedingungen: v_fzg < 20 km/h && VKMein && Kl15 ein
 - [WRITE_VTG_SN](#job-write-vtg-sn) - Schreibt eine 20 stellige Getriebe SN ins EEPROM Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -116,7 +115,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -129,7 +127,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -146,7 +143,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -176,7 +172,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -218,7 +213,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -237,7 +231,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -255,7 +248,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -276,7 +268,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -305,7 +296,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -325,7 +315,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -346,7 +335,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -362,7 +350,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -381,7 +368,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -407,7 +393,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -449,7 +434,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -464,7 +448,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -484,7 +467,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -503,7 +485,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -522,7 +503,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -537,7 +517,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -556,7 +535,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -576,7 +554,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -593,7 +570,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -612,7 +588,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -627,7 +602,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-info"></a>
 ### CBS_INFO
 
 Ausgabe der CBS-Version
@@ -643,7 +617,6 @@ _No arguments._
 | CBS_VERSION_TEXT | string | CBS Version im Klartext |
 | CBS_VERSION_HEX | string | CBS Version als Wert |
 
-<a id="job-cbs-daten-lesen"></a>
 ### CBS_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 5) UDS: $22 ReadDataByIdentifier Modus  : Default
@@ -702,7 +675,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset"></a>
 ### CBS_RESET
 
 CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modus  : Default Musterparametersatz fuer Bremsbelagverschleiss Vorder/Hinterachse br_v,100,1,0,0,0,1,0,0 br_h,100,1,0,0,0,1,0,0 jedoch mit "Strich_Punkt" getrennt (nicht mit Komma!)
@@ -733,7 +705,6 @@ CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modu
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -748,7 +719,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -765,7 +735,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -780,7 +749,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -795,7 +763,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -810,7 +777,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen"></a>
 ### CALID_CVN_LESEN
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -828,7 +794,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -844,7 +809,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -863,7 +827,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -883,7 +846,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -901,7 +863,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -917,7 +878,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-aktuator-motorregler"></a>
 ### STATUS_AKTUATOR_MOTORREGLER
 
 Ein- Ausgangsgrößen Aktuator Motorregler
@@ -950,7 +910,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-atic"></a>
 ### STATUS_ATIC
 
 Fehlerspeicherregister und Initialisierungsregister des ATIC106
@@ -980,7 +939,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-autocodierung"></a>
 ### STATUS_AUTOCODIERUNG
 
 Codierstatus / daten
@@ -1041,7 +999,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-calcvn"></a>
 ### STATUS_CALCVN
 
 Auslesen von Cal-ID und CVN
@@ -1062,7 +1019,6 @@ _No arguments._
 | STAT_CALID_EINH | string | Einheit Cal-ID |
 | STAT_CALID_INFO | string | Info Cal-ID |
 
-<a id="job-status-fahrzeugzustand"></a>
 ### STATUS_FAHRZEUGZUSTAND
 
 Eingangsdaten aus dem Fahrzeugzustandsmanagement
@@ -1089,7 +1045,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-getriebeklasse"></a>
 ### STATUS_GETRIEBEKLASSE
 
 Getriebeklasse, Offset- und Steigungsklassierung Verteilergetriebe Dieser Job kann erst ab 09/2011 bzw. ab einer Software-Version ab 000.020.000 verwendet werden.
@@ -1113,7 +1068,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-integratoren"></a>
 ### STATUS_INTEGRATOREN
 
 HO Getriebe und Lamellen Schädigungs Integratoren
@@ -1148,7 +1102,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-istmoment"></a>
 ### STATUS_ISTMOMENT
 
 Momenten Istwert und Qualifier vom LMV
@@ -1168,7 +1121,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-kalibrierung"></a>
 ### STATUS_KALIBRIERUNG
 
 Kalibrierstatus / daten
@@ -1192,7 +1144,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-klassierung"></a>
 ### STATUS_KLASSIERUNG
 
 Offset / Steigungsklassierung Verteilergetriebe
@@ -1213,7 +1164,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-klemmenspannung"></a>
 ### STATUS_KLEMMENSPANNUNG
 
 Spannungen an den LMV Eingangsklemmen
@@ -1232,7 +1182,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-kupplungsstatus"></a>
 ### STATUS_KUPPLUNGSSTATUS
 
 Service - Qualifier des LMV
@@ -1265,7 +1214,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lt-integratoren"></a>
 ### STATUS_LT_INTEGRATOREN
 
 Lifetime Getriebe und Lamellen Schädigungs Integratoren
@@ -1294,7 +1242,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pruefstand"></a>
 ### STATUS_PRUEFSTAND
 
 Pruefstandsmodus Status / Daten
@@ -1322,7 +1269,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-sollmoment"></a>
 ### STATUS_SOLLMOMENT
 
 Momenten Sollwert und Qualifier
@@ -1345,7 +1291,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-sysinfo-lesen"></a>
 ### STATUS_SYSINFO_LESEN
 
 Liest die Information der in Getriebe befindlichen Softwarekomponenten aus Achtung: STAT_ATIC_ID_* nur direkt nach einem Power-up gültig!
@@ -1429,7 +1374,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-temperaturhistogramm"></a>
 ### STATUS_TEMPERATURHISTOGRAMM
 
 Temperaturverteilung LMV SG / Betriebszeit
@@ -1474,7 +1418,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-verteilergetriebe"></a>
 ### STATUS_VERTEILERGETRIEBE
 
 Verteilergetriebedaten für FASTA Auswertung
@@ -1582,7 +1525,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vtg-sn-lesen"></a>
 ### STATUS_VTG_SN_LESEN
 
 Liest die VTG-SN aus (wird am Getriebe EOL geschrieben)
@@ -1598,7 +1540,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-autocodierung-default"></a>
 ### STEUERN_AUTOCODIERUNG_DEFAULT
 
 Aktivierung eines uncodierten SG mit Default Werten Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein Achtung: Dieser Job kann nur innerhalb von 20 Sekunden nach Kl15ein aktiviert werden!
@@ -1613,7 +1554,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-codierdaten-ruecksetzen"></a>
 ### STEUERN_CODIERDATEN_RUECKSETZEN
 
 Codierdaten im EEPROM loeschen Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1628,7 +1568,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-disable-check-crc-alive"></a>
 ### STEUERN_DISABLE_CHECK_CRC_ALIVE
 
 Schaltet die Botschaftsabsicherung mittels CRC und Alive Counter bis zum nächsten SG Neustart aus Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1643,7 +1582,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-funktionspruefung"></a>
 ### STEUERN_FUNKTIONSPRUEFUNG
 
 Funktionsprüfung der Kupplung mit vorherigem löschen des Kalibrierwinkels Bedingungen: Wenn (vFzg < 3 km/h && VKMaus && KL15ein && gültige Klassierung) oder (vFzg < 3 km/h && VKMein && MKsoll < 10 Nm && gültige Klassierung)
@@ -1670,7 +1608,6 @@ Funktionsprüfung der Kupplung mit vorherigem löschen des Kalibrierwinkels Bedi
 | _REQUEST_5 | binary | Hex-Auftrag an SG |
 | _RESPONSE_5 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-getriebeklasse-ruecksetzen"></a>
 ### STEUERN_GETRIEBEKLASSE_RUECKSETZEN
 
 Setzt die Klassierinformation im EEPROM auf den Initialwert (unklassiert) zurück Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein Dieser Job kann erst ab 09/2011 bzw. ab einer Software-Version ab 000.020.000 verwendet werden.
@@ -1687,7 +1624,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-getriebeklasse-setzen"></a>
 ### STEUERN_GETRIEBEKLASSE_SETZEN
 
 Setzt die Klassierinformation im EEPROM auf die Werte des Arguments Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein Dieser Job kann erst ab 09/2011 bzw. ab einer Software-Version ab 000.020.000 verwendet werden.
@@ -1712,7 +1648,6 @@ Setzt die Klassierinformation im EEPROM auf die Werte des Arguments Bedingungen:
 | _REQUEST_4 | binary | Hex-Auftrag an SG |
 | _RESPONSE_4 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-integratoren-loeschen"></a>
 ### STEUERN_INTEGRATOREN_LOESCHEN
 
 HO Getriebe und Lamellenintegratoren zurücksetzen Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1729,7 +1664,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-kalibrierung-loeschen"></a>
 ### STEUERN_KALIBRIERUNG_LOESCHEN
 
 Kalibrierwinkel im EEPROM loeschen Bedingungen: Wenn (vFzg < 3 km/h && VKMaus && KL15ein) oder (vFzg < 3 km/h && VKMein && MKsoll < 10 Nm)
@@ -1746,7 +1680,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-klassierspeicher-ruecksetzen"></a>
 ### STEUERN_KLASSIERSPEICHER_RUECKSETZEN
 
 Setzt die Klassierinformation im EEPROM auf den Initialwert (unklassiert) zurück Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1763,7 +1696,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-klassierspeicher-setzen"></a>
 ### STEUERN_KLASSIERSPEICHER_SETZEN
 
 Setzt die Klassierinformation im EEPROM auf die Werte des Arguments Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1785,7 +1717,6 @@ Setzt die Klassierinformation im EEPROM auf die Werte des Arguments Bedingungen:
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-kupplung-funktionspruefung"></a>
 ### STEUERN_KUPPLUNG_FUNKTIONSPRUEFUNG
 
 Funktionsprüfung der Kupplung Bedingungen: Wenn (vFzg < 3 km/h && VKMaus && KL15ein && gültige Klassierung) oder (vFzg < 3 km/h && VKMein && MKsoll < 10 Nm && gültige Klassierung)
@@ -1804,7 +1735,6 @@ _No arguments._
 | _REQUEST_3 | binary | Hex-Auftrag an SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-lt-integratoren-loeschen"></a>
 ### STEUERN_LT_INTEGRATOREN_LOESCHEN
 
 Lifetime Getriebe und Lamellenintegratoren zurücksetzen Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1821,7 +1751,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pruefstand"></a>
 ### STEUERN_PRUEFSTAND
 
 Setzt SG intern eine Sollmomentenvorgabe ohne Restbussimulation
@@ -1843,7 +1772,6 @@ Setzt SG intern eine Sollmomentenvorgabe ohne Restbussimulation
 | _REQUEST_1 | binary | Hex-Auftrag an SG |
 | _RESPONSE_1 | binary | Hex-Antwort von SG |
 
-<a id="job-write-getriebe-integratoren"></a>
 ### WRITE_GETRIEBE_INTEGRATOREN
 
 Schreibt die HO Getriebe Integratoren und den Intervall km Stand ins EEPROM Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1869,7 +1797,6 @@ Schreibt die HO Getriebe Integratoren und den Intervall km Stand ins EEPROM Bedi
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-write-lamellen-integratoren"></a>
 ### WRITE_LAMELLEN_INTEGRATOREN
 
 Schreibt die HO Lamellen Integratoren ins EEPROM Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1892,7 +1819,6 @@ Schreibt die HO Lamellen Integratoren ins EEPROM Bedingungen: v_fzg < 3 km/h und
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-write-lt-getriebe-integratoren"></a>
 ### WRITE_LT_GETRIEBE_INTEGRATOREN
 
 Schreibt die LT Getriebe Integratoren ins EEPROM Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1915,7 +1841,6 @@ Schreibt die LT Getriebe Integratoren ins EEPROM Bedingungen: v_fzg < 3 km/h und
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-write-lt-lamellen-integratoren"></a>
 ### WRITE_LT_LAMELLEN_INTEGRATOREN
 
 Schreibt die LT Lamellen Integratoren ins EEPROM Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -1938,7 +1863,6 @@ Schreibt die LT Lamellen Integratoren ins EEPROM Bedingungen: v_fzg < 3 km/h und
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-write-sollmoment"></a>
 ### WRITE_SOLLMOMENT
 
 Setzt SG intern eine Sollmomentenvorgabe und den Sollwertqualifier auf 'Sollwert umsetzen' Bedingungen: v_fzg < 20 km/h && VKMein && Kl15 ein
@@ -1958,7 +1882,6 @@ Setzt SG intern eine Sollmomentenvorgabe und den Sollwertqualifier auf 'Sollwert
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-write-vtg-sn"></a>
 ### WRITE_VTG_SN
 
 Schreibt eine 20 stellige Getriebe SN ins EEPROM Bedingungen: v_fzg < 3 km/h und VKMaus und Kl15ein
@@ -2050,7 +1973,6 @@ Schreibt eine 20 stellige Getriebe SN ins EEPROM Bedingungen: v_fzg < 3 km/h und
 - [TAB_SUB_WD_DISABLED_7A](#table-tab-sub-wd-disabled-7a) (5 × 2)
 - [TAB_WRITE_SOLLMOMENT](#table-tab-write-sollmoment) (240 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -2134,7 +2056,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 134 rows × 2 columns
@@ -2276,7 +2197,6 @@ Dimensions: 134 rows × 2 columns
 | 0x0000BB | BMW - Fahrzeugsimulator |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2319,7 +2239,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2344,7 +2263,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -2378,7 +2296,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -2451,7 +2368,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -2464,7 +2380,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -2477,7 +2392,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -2490,7 +2404,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -2510,7 +2423,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -2536,7 +2448,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2547,7 +2458,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-cbskennung"></a>
 ### CBSKENNUNG
 
 Dimensions: 11 rows × 3 columns
@@ -2566,7 +2476,6 @@ Dimensions: 11 rows × 3 columns
 | 0x0D | NOx_a | NOx-Additiv |
 | 0x64 | Sic_v | Sichtpruefung/Fahrzeug-Check verknuepft |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -2576,7 +2485,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2590,7 +2498,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 21 |
 | F_HLZ_VIEW | ja |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 70 rows × 3 columns
@@ -2668,7 +2575,6 @@ Dimensions: 70 rows × 3 columns
 | 0xCF5493 | Schnittstelle ICM_QL(Geschwindigkeit_Fahrzeug, 55.3.4) Signal ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 41 rows × 9 columns
@@ -2717,7 +2623,6 @@ Dimensions: 41 rows × 9 columns
 | 0x4046 | Minor Version Software | - | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2729,7 +2634,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 61 rows × 3 columns
@@ -2798,7 +2702,6 @@ Dimensions: 61 rows × 3 columns
 | 0xCF5496 | Schnittstelle DME1 (Status Kraftschluss, 40.3.4): Signal ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 35 rows × 9 columns
@@ -2841,7 +2744,6 @@ Dimensions: 35 rows × 9 columns
 | 0x4046 | Minor Version Software | - | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 15 rows × 2 columns
@@ -2864,7 +2766,6 @@ Dimensions: 15 rows × 2 columns
 | 0xF9 | ERROR_EEPROM_ERROR_2 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x2541"></a>
 ### RES_0X2541
 
 Dimensions: 2 rows × 10 columns
@@ -2874,7 +2775,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_CALID_TEXT | TEXT | high | string[16] | - | - | 1.0 | 1.0 | 0.0 | Cal-ID auslesen (hier muss die Cal-ID wie bei Mode $09 (PID $04) ausgegeben werden). |
 | STAT_CVN_WERT | HEX | high | unsigned long | - | - | - | - | - | CVN auslesen (hier muss die CVN wie bei Mode $09 (PID $06) ausgegeben werden) |
 
-<a id="table-res-0x4012"></a>
 ### RES_0X4012
 
 Dimensions: 2 rows × 10 columns
@@ -2884,7 +2784,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_PRUEFSTANDSMODE_WERT | - | high | int | - | - | 1.0 | 1.0 | 0.0 | Aktueller Pruefstandsmodus 0 : Pruefstandsmodus nicht aktiviert 1 : Pruefstandsmodus aktiviert |
 | STAT_PRUEFSTANDSMODE_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Tabelle  TAB_PRUEFSTAND_INFO |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 3 rows × 16 columns
@@ -2895,7 +2794,6 @@ Dimensions: 3 rows × 16 columns
 | STATUS_PRUEFSTAND | 0x4012 | - | Liste der Signale, die den Wertebereich überschritten haben | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x4012 |
 | STEUERN_PRUEFSTAND | 0xF016 | - | Setzt SG intern eine Sollmomentenvorgabe ohne Restbussimulation | - | - | - | - | - | - | - | - | - | 31 | - | - |
 
-<a id="table-tab-4004-1"></a>
 ### TAB_4004_1
 
 Dimensions: 6 rows × 2 columns
@@ -2909,7 +2807,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0600 | Service nicht verfügbar - Fehler |
 | 0x0E00 | Service nicht verfügbar - Standby |
 
-<a id="table-tab-4004-2"></a>
 ### TAB_4004_2
 
 Dimensions: 3 rows × 2 columns
@@ -2920,7 +2817,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0080 | Notlaufregler aktiv |
 | 0xFFFF | unplausibel |
 
-<a id="table-tab-4004-3"></a>
 ### TAB_4004_3
 
 Dimensions: 3 rows × 2 columns
@@ -2931,7 +2827,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0040 | Position LMV Stellglied nicht bekannt |
 | 0xFFFF | unplausibel |
 
-<a id="table-tab-4004-4"></a>
 ### TAB_4004_4
 
 Dimensions: 3 rows × 2 columns
@@ -2942,7 +2837,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0020 | LMV Schutzfunktion aktiv |
 | 0xFFFF | unplausibel |
 
-<a id="table-tab-atic-id"></a>
 ### TAB_ATIC_ID
 
 Dimensions: 3 rows × 2 columns
@@ -2953,7 +2847,6 @@ Dimensions: 3 rows × 2 columns
 | 0x0341 | silicon B1 |
 | 0xFFFF | unbekannt |
 
-<a id="table-tab-fzg-com-state"></a>
 ### TAB_FZG_COM_STATE
 
 Dimensions: 5 rows × 2 columns
@@ -2966,7 +2859,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Signal ungültig |
 | 0xXY | unplausibel |
 
-<a id="table-tab-fzg-energy-state"></a>
 ### TAB_FZG_ENERGY_STATE
 
 Dimensions: 6 rows × 2 columns
@@ -2980,7 +2872,6 @@ Dimensions: 6 rows × 2 columns
 | 15 | Signal ungültig |
 | 0xXY | unplausibel |
 
-<a id="table-tab-fzg-kl-state"></a>
 ### TAB_FZG_KL_STATE
 
 Dimensions: 17 rows × 2 columns
@@ -3005,7 +2896,6 @@ Dimensions: 17 rows × 2 columns
 | 15 | Signal ungültig |
 | 0xXY | unplausibel |
 
-<a id="table-tab-fzg-op-state"></a>
 ### TAB_FZG_OP_STATE
 
 Dimensions: 17 rows × 2 columns
@@ -3030,7 +2920,6 @@ Dimensions: 17 rows × 2 columns
 | 15 | Signal ungültig |
 | 0xXY | unplausibel |
 
-<a id="table-tab-getriebeklasse-gain"></a>
 ### TAB_GETRIEBEKLASSE_GAIN
 
 Dimensions: 4 rows × 2 columns
@@ -3042,7 +2931,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Steigung klassiert ATClight |
 | 0xXY | nicht definiert |
 
-<a id="table-tab-getriebeklasse-gearbox"></a>
 ### TAB_GETRIEBEKLASSE_GEARBOX
 
 Dimensions: 4 rows × 2 columns
@@ -3054,7 +2942,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Getriebeklasse ATClight |
 | 0xXY | nicht definiert |
 
-<a id="table-tab-getriebeklasse-offset"></a>
 ### TAB_GETRIEBEKLASSE_OFFSET
 
 Dimensions: 4 rows × 2 columns
@@ -3066,7 +2953,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Offset klassiert ATClight |
 | 0xXY | nicht definiert |
 
-<a id="table-tab-hwe-id"></a>
 ### TAB_HWE_ID
 
 Dimensions: 16 rows × 2 columns
@@ -3090,7 +2976,6 @@ Dimensions: 16 rows × 2 columns
 | 255 | Fehlerwert (Signal ungültig) |
 | 0xXY | unbekannt |
 
-<a id="table-tab-kalibrierung-info"></a>
 ### TAB_KALIBRIERUNG_INFO
 
 Dimensions: 3 rows × 2 columns
@@ -3101,7 +2986,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | kalibriert |
 | 0xXY | unplausibel |
 
-<a id="table-tab-klassierung-gain"></a>
 ### TAB_KLASSIERUNG_GAIN
 
 Dimensions: 3 rows × 2 columns
@@ -3112,7 +2996,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Steigung klassiert |
 | 0xXY | nicht definiert |
 
-<a id="table-tab-klassierung-offset"></a>
 ### TAB_KLASSIERUNG_OFFSET
 
 Dimensions: 3 rows × 2 columns
@@ -3123,7 +3006,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Offset klassiert |
 | 0xXY | nicht definiert |
 
-<a id="table-tab-lmv-baureihe"></a>
 ### TAB_LMV_BAUREIHE
 
 Dimensions: 21 rows × 2 columns
@@ -3152,7 +3034,6 @@ Dimensions: 21 rows × 2 columns
 | 51 | F34 |
 | 0xFF | unbekannt |
 
-<a id="table-tab-lmv-codierstatus"></a>
 ### TAB_LMV_CODIERSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3163,7 +3044,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Codierung passt zu Fahrzeugdaten, gültig codiert |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-lmv-ecu-qualifier"></a>
 ### TAB_LMV_ECU_QUALIFIER
 
 Dimensions: 17 rows × 2 columns
@@ -3188,7 +3068,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Signal ungültig |
 | 0xXY | unplausibel |
 
-<a id="table-tab-lmv-eeprom-codierung"></a>
 ### TAB_LMV_EEPROM_CODIERUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3199,7 +3078,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | gültige Erstcodierung vorhanden |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-lmv-istmomentqualifier"></a>
 ### TAB_LMV_ISTMOMENTQUALIFIER
 
 Dimensions: 14 rows × 2 columns
@@ -3221,7 +3099,6 @@ Dimensions: 14 rows × 2 columns
 | 15 | Signal ungültig |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-lmv-sollwertqualifier"></a>
 ### TAB_LMV_SOLLWERTQUALIFIER
 
 Dimensions: 9 rows × 2 columns
@@ -3238,7 +3115,6 @@ Dimensions: 9 rows × 2 columns
 | 0xE0 | Sollwert nicht vorhanden, Standby |
 | 0xFF | Sollwert ungültig |
 
-<a id="table-tab-lmv-vehdata-stat"></a>
 ### TAB_LMV_VEHDATA_STAT
 
 Dimensions: 9 rows × 2 columns
@@ -3255,7 +3131,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | 111 - Timeout beim Schreiben bzw. Konsistenz-Check von NVM-Daten |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-lmv-vv-kupplung"></a>
 ### TAB_LMV_VV_KUPPLUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3267,7 +3142,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0002 | eingeschränkte Verfügbarkeit Kupplung Stufe 2, THR_STRS_CLT = 81-100% |
 | 0xFFFF | unplausibel |
 
-<a id="table-tab-lmv-vv-stellglied"></a>
 ### TAB_LMV_VV_STELLGLIED
 
 Dimensions: 5 rows × 2 columns
@@ -3280,7 +3154,6 @@ Dimensions: 5 rows × 2 columns
 | 0x000C | eingeschränkte Verfügbarkeit Stellglied Stufe 3, THR_STRS_MOT = 81-100% |
 | 0xFFFF | unplausibel |
 
-<a id="table-tab-mcu-family"></a>
 ### TAB_MCU_FAMILY
 
 Dimensions: 2 rows × 2 columns
@@ -3290,7 +3163,6 @@ Dimensions: 2 rows × 2 columns
 | 0xD4 | MC9S12XF512 (or family derivate) |
 | 0xXY | unbekannt |
 
-<a id="table-tab-mcu-mask"></a>
 ### TAB_MCU_MASK
 
 Dimensions: 6 rows × 2 columns
@@ -3304,7 +3176,6 @@ Dimensions: 6 rows × 2 columns
 | 0xD4810006 | 2M64J |
 | 0xXY | unbekannt |
 
-<a id="table-tab-pruefstand-autocodierung"></a>
 ### TAB_PRUEFSTAND_AUTOCODIERUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3315,7 +3186,6 @@ Dimensions: 3 rows × 2 columns
 | 0xFF | Fahrzeugtypbotschaft wird verwendet |
 | 0xXY | unplausibel |
 
-<a id="table-tab-pruefstand-info"></a>
 ### TAB_PRUEFSTAND_INFO
 
 Dimensions: 3 rows × 2 columns
@@ -3326,7 +3196,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Pruefstandsmodus aktiviert |
 | 0xXY | unplausibel |
 
-<a id="table-tab-pruefstand-vkm"></a>
 ### TAB_PRUEFSTAND_VKM
 
 Dimensions: 3 rows × 2 columns
@@ -3337,7 +3206,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | VKM Ein |
 | 0xXY | unplausibel |
 
-<a id="table-tab-stat-eeprom"></a>
 ### TAB_STAT_EEPROM
 
 Dimensions: 6 rows × 2 columns
@@ -3351,7 +3219,6 @@ Dimensions: 6 rows × 2 columns
 | 0x80 | EEPROM defekt,  STAT_EEPROM_xy_WERT=Dead/Rdy Sektoren |
 | 0xXY | unbekannt |
 
-<a id="table-tab-sub-nlr-status-10a"></a>
 ### TAB_SUB_NLR_STATUS_10A
 
 Dimensions: 5 rows × 2 columns
@@ -3364,7 +3231,6 @@ Dimensions: 5 rows × 2 columns
 | 0xC000 | Einachsrollen-Prüfstandmodus |
 | 0xffff | nicht definiert |
 
-<a id="table-tab-sub-sm-pwm-19b"></a>
 ### TAB_SUB_SM_PWM_19B
 
 Dimensions: 1 rows × 2 columns
@@ -3373,7 +3239,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xffff | 0xXY |
 
-<a id="table-tab-sub-status-bridge-enable"></a>
 ### TAB_SUB_STATUS_BRIDGE_ENABLE
 
 Dimensions: 9 rows × 2 columns
@@ -3390,7 +3255,6 @@ Dimensions: 9 rows × 2 columns
 | 0xE0 | ATIC=1,BSW=1,FSW=1 |
 | 0xffff | nicht definiert |
 
-<a id="table-tab-sub-status-bsw-n1b"></a>
 ### TAB_SUB_STATUS_BSW_N1B
 
 Dimensions: 7 rows × 2 columns
@@ -3405,7 +3269,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | APPL_STATE_CANCEL_SHUTDOWN |
 | 0xffff | nicht definiert |
 
-<a id="table-tab-sub-status-fsw-n3a"></a>
 ### TAB_SUB_STATUS_FSW_N3A
 
 Dimensions: 16 rows × 2 columns
@@ -3429,7 +3292,6 @@ Dimensions: 16 rows × 2 columns
 | 0x3f | Fehlerwert |
 | 0xffff | unplausibel |
 
-<a id="table-tab-sub-status-systemuptime-n3b"></a>
 ### TAB_SUB_STATUS_SYSTEMUPTIME_N3B
 
 Dimensions: 5 rows × 2 columns
@@ -3442,7 +3304,6 @@ Dimensions: 5 rows × 2 columns
 | 0xC0 | 3-Nachlauf |
 | 0xffff | nicht definiert |
 
-<a id="table-tab-sub-st-veh-con-n1a"></a>
 ### TAB_SUB_ST_VEH_CON_N1A
 
 Dimensions: 17 rows × 2 columns
@@ -3467,7 +3328,6 @@ Dimensions: 17 rows × 2 columns
 | 0xF0 | VSM_STM_STATE_INVALID |
 | 0xffff | nicht definiert |
 
-<a id="table-tab-sub-s-ism-10b"></a>
 ### TAB_SUB_S_ISM_10B
 
 Dimensions: 1 rows × 2 columns
@@ -3476,7 +3336,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xffff | 0xXY |
 
-<a id="table-tab-sub-task-id-7b"></a>
 ### TAB_SUB_TASK_ID_7B
 
 Dimensions: 1 rows × 2 columns
@@ -3485,7 +3344,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xffff | 0xXY |
 
-<a id="table-tab-sub-wd-disabled-7a"></a>
 ### TAB_SUB_WD_DISABLED_7A
 
 Dimensions: 5 rows × 2 columns
@@ -3498,7 +3356,6 @@ Dimensions: 5 rows × 2 columns
 | 0xC0 | Port PJ1=High -- Port PJ2=High |
 | 0xffff | nicht definiert |
 
-<a id="table-tab-write-sollmoment"></a>
 ### TAB_WRITE_SOLLMOMENT
 
 Dimensions: 240 rows × 2 columns

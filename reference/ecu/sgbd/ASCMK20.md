@@ -55,7 +55,6 @@
 - [COD_LESEN](#job-cod-lesen) - Codierdaten lesen MK20E_I
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -73,7 +72,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer ASCMK20
@@ -86,7 +84,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer ASC_MK20
@@ -112,7 +109,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen fuer ASC_MK20
@@ -143,7 +139,6 @@ _No arguments._
 | F_UW3_EINH | string |  |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-lesen-kb90"></a>
 ### FS_LESEN_KB90
 
 Fehlerspeicher lesen fuer ASC_MK20 mit KB90
@@ -160,7 +155,6 @@ _No arguments._
 | F_ZAHL | int | Fehlergesamtzahl |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen fuer ASC_MK20
@@ -175,7 +169,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-init"></a>
 ### FS_INIT
 
 Fehlerspeicher initialisieren NVRAM-Loeschen
@@ -189,7 +182,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Status Eingaenge ASC_MK20
@@ -211,7 +203,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-spannungswerte-lesen"></a>
 ### STATUS_SPANNUNGSWERTE_LESEN
 
 Status SPANNUNGSWERTE DSC_E46, Signalgruppe 01
@@ -234,7 +225,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-dme-dde-1"></a>
 ### STATUS_DME_DDE_1
 
 Status DME_DDE_1 CAN-Botschaft, Signalgruppe 04
@@ -257,7 +247,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-trig-schreiben"></a>
 ### TRIG_SCHREIBEN
 
 TRIGGERSCHWELLEN SCHREIBEN DSC_E46
@@ -281,7 +270,6 @@ TRIGGERSCHWELLEN SCHREIBEN DSC_E46
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern mehrerer digitaler Ausgaenge
@@ -315,7 +303,6 @@ Ansteuern mehrerer digitaler Ausgaenge
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-steuern-analog-asc-lm"></a>
 ### STEUERN_ANALOG_ASC_LM
 
 Ansteuern MD_ASC und MD_LM
@@ -336,7 +323,6 @@ Ansteuern MD_ASC und MD_LM
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-steuern-analog-msr"></a>
 ### STEUERN_ANALOG_MSR
 
 Ansteuern MD_MSR
@@ -356,7 +342,6 @@ Ansteuern MD_MSR
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-pumpenfoerderleistung-vo"></a>
 ### PUMPENFOERDERLEISTUNG_VO
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -369,7 +354,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckabbau-ha"></a>
 ### DRUCKABBAU_HA
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -382,7 +366,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckaufbau-ha"></a>
 ### DRUCKAUFBAU_HA
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -395,7 +378,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-pumpenfoerderleistung-ha"></a>
 ### PUMPENFOERDERLEISTUNG_HA
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -408,7 +390,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-abs-regelsimulation"></a>
 ### ABS_REGELSIMULATION
 
 Ansteuern mehrerer digitaler Ausgaenge
@@ -425,7 +406,6 @@ Ansteuern mehrerer digitaler Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-na-entlueftung-li"></a>
 ### NA_ENTLUEFTUNG_LI
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -438,7 +418,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-na-entlueftung-re"></a>
 ### NA_ENTLUEFTUNG_RE
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -451,7 +430,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 HERSTELL_Daten fuer ASCMK4G
@@ -477,7 +455,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | DATENBYTES | binary | zusammengestoepselte Antwort |
 
-<a id="job-abgleichwerte-lesen"></a>
 ### ABGLEICHWERTE_LESEN
 
 Triggerschwellen der 4 Radsensoren
@@ -497,7 +474,6 @@ _No arguments._
 | _AUFTRAG | binary | anforderungstelegramm |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -512,7 +488,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen-sar"></a>
 ### FS_LESEN_SAR
 
 Fehlerspeicher lesen fuer ASC_MK20
@@ -528,7 +503,6 @@ _No arguments._
 | F_ORT_TEXT | string | Fehlerort als Text oder unbekannter Fehlerort liefert Leerstring, wenn F_ORT_NR = 0 |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-asc-sim-ha6"></a>
 ### ASC_SIM_HA6
 
 Steuern_Digital ansteueren u. halten
@@ -541,7 +515,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-asc-sim-ha8"></a>
 ### ASC_SIM_HA8
 
 Steuern_Digital ansteueren u. halten
@@ -554,7 +527,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-asc-sim-ha9"></a>
 ### ASC_SIM_HA9
 
 Steuern_Digital ansteueren u. halten
@@ -567,7 +539,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-asc-sim-ha10"></a>
 ### ASC_SIM_HA10
 
 Steuern_Digital ansteueren u. halten
@@ -580,7 +551,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckabbau-vl"></a>
 ### DRUCKABBAU_VL
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -593,7 +563,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckabbau-vr"></a>
 ### DRUCKABBAU_VR
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -606,7 +575,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckaufbau-vl"></a>
 ### DRUCKAUFBAU_VL
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -619,7 +587,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-druckhalten"></a>
 ### DRUCKHALTEN
 
 Steuern_Digital ansteueren u. ruecksetzen
@@ -632,7 +599,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Codierdaten lesen MK20E_I
@@ -665,7 +631,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -694,7 +659,6 @@ _No arguments._
 - [SPANNUNGSWERTE](#table-spannungswerte) (16 × 4)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -709,7 +673,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 43 rows × 2 columns
@@ -760,7 +723,6 @@ Dimensions: 43 rows × 2 columns
 | 0x98 | ASC Taster |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 43 rows × 6 columns
@@ -811,7 +773,6 @@ Dimensions: 43 rows × 6 columns
 | 0x98 | 0x03 | 0x00 | 10 | 0x01 | 0x02 |
 | 0xXY | 0x03 | 0x00 | 10 | 0x01 | 0x02 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 4 rows × 3 columns
@@ -823,7 +784,6 @@ Dimensions: 4 rows × 3 columns
 | 0x02 | BLS | - |
 | 0xXY | unbekannte Umweltbedingung | XY |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 14 rows × 3 columns
@@ -845,7 +805,6 @@ Dimensions: 14 rows × 3 columns
 | SV1 | 2 | 0x01 |
 | XYZ | 2 | 0xFF |
 
-<a id="table-raeder"></a>
 ### RAEDER
 
 Dimensions: 4 rows × 2 columns
@@ -857,7 +816,6 @@ Dimensions: 4 rows × 2 columns
 | HL | 0x83 |
 | HR | 0x84 |
 
-<a id="table-triggerschwelle"></a>
 ### TRIGGERSCHWELLE
 
 Dimensions: 16 rows × 3 columns
@@ -881,7 +839,6 @@ Dimensions: 16 rows × 3 columns
 | E | 0x0E | 1450 |
 | F | 0x0F | 1450 |
 
-<a id="table-spannungswerte"></a>
 ### SPANNUNGSWERTE
 
 Dimensions: 16 rows × 4 columns
@@ -905,7 +862,6 @@ Dimensions: 16 rows × 4 columns
 | 0x0E | 16.1-17.9 | 8.6-9.5 | 13.8-15.3 |
 | 0x0F | 17.3-18.8 | 9.2-10.0 | 14.8-16.1 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

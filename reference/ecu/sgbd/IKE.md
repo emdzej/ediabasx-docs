@@ -54,7 +54,6 @@
 - [GWSZ_RESET](#job-gwsz-reset)
 - [PROD_DATUM_LESEN](#job-prod-datum-lesen)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -73,7 +72,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer IKE
@@ -86,7 +84,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -109,7 +106,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferanten-Nummer |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Default pruefstempel_lesen job
@@ -125,7 +121,6 @@ _No arguments._
 | BYTE2 | int |  |
 | BYTE3 | int |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -146,7 +141,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -159,7 +153,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -172,7 +165,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Fortsetzen der Diagnose
@@ -185,7 +177,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -198,7 +189,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-reset-ike"></a>
 ### RESET_IKE
 
 SG Reset ausloesen
@@ -211,7 +201,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -224,7 +213,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -237,7 +225,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicherinhalt aus SG lesen
@@ -268,7 +255,6 @@ _No arguments._
 | F_UW_ANZ | int |  |
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 
-<a id="job-aif-gwsz-lesen"></a>
 ### AIF_GWSZ_LESEN
 
 Gesamtwegstreckenzaehlers aus Anwenderinfofeld auslesen
@@ -284,7 +270,6 @@ _No arguments._
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 | TELEGRAMM | binary |  |
 
-<a id="job-gwsz-minus-offset-lesen"></a>
 ### GWSZ_MINUS_OFFSET_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen und Offset abziehen
@@ -299,7 +284,6 @@ _No arguments._
 | STAT_GWSZ_MINUS_OFFSET_WERT | long | Gesamtwegstreckenzaehler minus Offset |
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 
-<a id="job-aif-fg-nr-lesen"></a>
 ### AIF_FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -314,7 +298,6 @@ _No arguments._
 | AIF_FG_NR | string | Fahrgestellnummer |
 | TELEGRAMM | binary |  |
 
-<a id="job-aif-sia-daten-lesen"></a>
 ### AIF_SIA_DATEN_LESEN
 
 Anwenderinfofeld Block 3 auslesen
@@ -343,7 +326,6 @@ _No arguments._
 | STAT_SERVICE_ART | int | 0 = Inspektion, 1 = Oelservice |
 | TELEGRAMM | binary |  |
 
-<a id="job-aif-zentralcode-lesen"></a>
 ### AIF_ZENTRALCODE_LESEN
 
 Anwenderinfofeld Block 4 auslesen
@@ -361,7 +343,6 @@ _No arguments._
 | STAT_ZENTRALCODE_ANLIEFERCODIERUNG | int | True falls der Zentralcode der Anliefercodierung entspricht |
 | TELEGRAMM | binary |  |
 
-<a id="job-aif-datum-fz-lesen"></a>
 ### AIF_DATUM_FZ_LESEN
 
 Auslesen des Herstelldatums des FZ
@@ -376,7 +357,6 @@ _No arguments._
 | DATUM_FZ | string | Herstelldatum des FZ |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-anzeige"></a>
 ### STEUERN_ANZEIGE
 
 Anzeigenkomponenten steuern
@@ -395,7 +375,6 @@ Anzeigenkomponenten steuern
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-tacho-a"></a>
 ### STEUERN_TACHO_A
 
 TACHO_A steuern
@@ -413,7 +392,6 @@ TACHO_A steuern
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | TELEGRAMM | binary |  |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -433,7 +411,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-steuern-gong"></a>
 ### STEUERN_GONG
 
 Gong1, Gong2 oder Gong3 steuern
@@ -451,7 +428,6 @@ Gong1, Gong2 oder Gong3 steuern
 | JOB_STATUS | string |  |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-gong3"></a>
 ### STEUERN_GONG3
 
 Anzeigenkomponenten steuern
@@ -465,7 +441,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-gong123"></a>
 ### STEUERN_GONG123
 
 Gong1, Gong2 und Gong3 nacheinander fuer 2 sec. ansteuern
@@ -478,7 +453,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-leuchte"></a>
 ### STEUERN_LEUCHTE
 
 Leuchten in der Anzeigeeinheit steuern
@@ -498,7 +472,6 @@ Leuchten in der Anzeigeeinheit steuern
 | JOB_STATUS | string | Status der Kommunikation (z.B ACK) |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Eingangs- und Ausgangsstati lesen
@@ -549,7 +522,6 @@ _No arguments._
 | STAT_LATCHUP_EIN | int | 1, wenn "TRUE", 0, wenn "FALSE" |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 Spezielle Eingaenge lesen
@@ -587,7 +559,6 @@ _No arguments._
 | STAT_TKVA2_EINH | string | Einheit [ms] |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-tankinhalt-lesen"></a>
 ### STATUS_TANKINHALT_LESEN
 
 Tankinhalt lesen
@@ -603,7 +574,6 @@ _No arguments._
 | STAT_TANKINHALT_EINH | string | Einheit Tankinhalt |
 | TELEGRAMM | binary |  |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 #### Arguments
@@ -621,7 +591,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 | DATEN | binary | Datenfeld |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 #### Arguments
@@ -638,7 +607,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 | DATEN | binary | Datenfeld |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 #### Arguments
@@ -655,7 +623,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 | DATEN | binary | Datenfeld |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 _No arguments._
@@ -666,7 +633,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 
-<a id="job-prod-datum-lesen"></a>
 ### PROD_DATUM_LESEN
 
 _No arguments._
@@ -695,7 +661,6 @@ _No arguments._
 - [LEUCHTEN2](#table-leuchten2) (11 × 2)
 - [LEUCHTEN3](#table-leuchten3) (10 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -711,7 +676,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 4 rows × 2 columns
@@ -723,7 +687,6 @@ Dimensions: 4 rows × 2 columns
 | AG_OEL_RESET | 0x03 |
 | ZEIT_RESET | 0x04 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 26 rows × 2 columns
@@ -757,7 +720,6 @@ Dimensions: 26 rows × 2 columns
 | 0x3E | Serielles Telegramm fuer Tacho, DZM, KVA, Tank, Temp. |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -773,7 +735,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -808,7 +769,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-getriebetypen"></a>
 ### GETRIEBETYPEN
 
 Dimensions: 4 rows × 2 columns
@@ -820,7 +780,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | 4-Gang Automatik AGS |
 | 0x03 | 5-Gang Schrittschaltung |
 
-<a id="table-komponenten"></a>
 ### KOMPONENTEN
 
 Dimensions: 11 rows × 2 columns
@@ -839,7 +798,6 @@ Dimensions: 11 rows × 2 columns
 | Fehler | 0xFF |
 | unbekannt | 0xEE |
 
-<a id="table-leuchten1"></a>
 ### LEUCHTEN1
 
 Dimensions: 11 rows × 2 columns
@@ -858,7 +816,6 @@ Dimensions: 11 rows × 2 columns
 | ALLE | 0xFF |
 | unbekannt | 0xEE |
 
-<a id="table-leuchten2"></a>
 ### LEUCHTEN2
 
 Dimensions: 11 rows × 2 columns
@@ -877,7 +834,6 @@ Dimensions: 11 rows × 2 columns
 | ALLE | 0xFF |
 | unbekannt | 0xEE |
 
-<a id="table-leuchten3"></a>
 ### LEUCHTEN3
 
 Dimensions: 10 rows × 2 columns

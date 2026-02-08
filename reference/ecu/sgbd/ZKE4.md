@@ -36,7 +36,6 @@
 - [INFOSPEICHER_LESEN](#job-infospeicher-lesen) - Infospeicher lesen Info-Speicher ist im Aufbau identisch dem Fehlerspeicher Low-Konzept nach Lastenheft Codierung/Diagnose
 - [STEUERN_SIMULTAN](#job-steuern-simultan) - Gleichzeitiges Ansteuern maximal 5 digitaler Signale des GM4 !!! ACHTUNG: ZKE IV antwortet nicht !!! ??? !!!
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -54,7 +53,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Grundmodul IV automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -67,7 +65,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer GM IV
@@ -92,7 +89,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -116,7 +112,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary |  |
 | _TEL_ANTWORT1 | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -135,7 +130,6 @@ Fehlerspeicher loeschen
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -149,7 +143,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -163,7 +156,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -181,7 +173,6 @@ _No arguments._
 | FG_ZIFFERN | string | Ziffern der FG-Nummer, die in den Pruefstempel geschrieben werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -202,7 +193,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -220,7 +210,6 @@ _No arguments._
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status der Digitalsignale des GM IV (Ein-/Ausgaenge)
@@ -333,7 +322,6 @@ _No arguments._
 | STAT_A_DIAGMOD_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Status der Analogsignale des GM IV
@@ -369,7 +357,6 @@ _No arguments._
 | STAT_FBPOS_EINH | string | Einheit: 'Milli-Meter' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern eines digitalen Ein- oder Ausgangs v. GM4
@@ -389,7 +376,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs v. GM4
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierdaten des GM IV (Block 0)
@@ -452,7 +438,6 @@ _No arguments._
 | DATENSICHERUNG_BLOCK_0 | string | Datensicherungsbyte fuer Block 0 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-infospeicher-lesen"></a>
 ### INFOSPEICHER_LESEN
 
 Infospeicher lesen Info-Speicher ist im Aufbau identisch dem Fehlerspeicher Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -476,7 +461,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary |  |
 | _TEL_ANTWORT1 | binary |  |
 
-<a id="job-steuern-simultan"></a>
 ### STEUERN_SIMULTAN
 
 Gleichzeitiges Ansteuern maximal 5 digitaler Signale des GM4 !!! ACHTUNG: ZKE IV antwortet nicht !!! ??? !!!
@@ -510,7 +494,6 @@ Gleichzeitiges Ansteuern maximal 5 digitaler Signale des GM4 !!! ACHTUNG: ZKE IV
 - [IORTTEXTE](#table-iorttexte) (31 × 2)
 - [BITS](#table-bits) (100 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -526,7 +509,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -561,7 +543,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 63 rows × 2 columns
@@ -632,7 +613,6 @@ Dimensions: 63 rows × 2 columns
 | 0x45 | Innenraumschutz, Sicherung oder Leitung |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -642,7 +622,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | sporadischer Fehler |
 | 0x01 | statischer Fehler |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 31 rows × 2 columns
@@ -681,7 +660,6 @@ Dimensions: 31 rows × 2 columns
 | 0xB2 | Clock-Monitor-Reset (GM IV Oszillator defekt oder GM IV Platine verschmutzt/feucht) |
 | 0xXY | unbekannter Info-Ort |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 100 rows × 6 columns

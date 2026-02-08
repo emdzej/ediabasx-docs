@@ -40,7 +40,6 @@
 - [STATUS_LESEN_MESSSTRECKEN](#job-status-lesen-messstrecken) - Streckensignale
 - [STATUS_LESEN_HEIZUNG](#job-status-lesen-heizung) - Signal in dig
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -59,7 +58,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -72,7 +70,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -96,7 +93,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -109,7 +105,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -127,7 +122,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -149,7 +143,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT3 | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Sonder-Konzept (NICHT nach Lastenheft Codierung/Diagnose)
@@ -168,7 +161,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen Bereich: immer 0 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden (DUMMY-Job)
@@ -181,7 +173,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | immer OKAY |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -201,7 +192,6 @@ Lesen des internen Speichers
 | BYTE | binary | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des internen Speichers
@@ -220,7 +210,6 @@ Beschreiben des internen Speichers
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -235,7 +224,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -253,7 +241,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -271,7 +258,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -288,7 +274,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-aic-init"></a>
 ### AIC_INIT
 
 Initialisieren des Regensensors
@@ -304,7 +289,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT3 | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Stati des Regensensors
@@ -325,7 +309,6 @@ _No arguments._
 | STAT_UEBERWISCHZEITPUNKT_2 | int | Bereich: 0 bis 255 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen-verstaerkung"></a>
 ### STATUS_LESEN_VERSTAERKUNG
 
 Status Verstärkung des Regensensors
@@ -350,7 +333,6 @@ _No arguments._
 | stat_i4_einh | string | Digits |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen-licht"></a>
 ### STATUS_LESEN_LICHT
 
 Status Verstärkung des Regensensors
@@ -372,7 +354,6 @@ _No arguments._
 | stat_frolifilt_einh | string | Digits |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen-messstrecken"></a>
 ### STATUS_LESEN_MESSSTRECKEN
 
 Streckensignale
@@ -394,7 +375,6 @@ _No arguments._
 | stat_mess4_einh | string | Digits |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen-heizung"></a>
 ### STATUS_LESEN_HEIZUNG
 
 Signal in dig
@@ -419,7 +399,6 @@ _No arguments._
 - [ROVERPARTNUMPREFIX](#table-roverpartnumprefix) (21 × 2)
 - [FORTTEXTE](#table-forttexte) (17 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -440,7 +419,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 76 rows × 2 columns
@@ -524,7 +502,6 @@ Dimensions: 76 rows × 2 columns
 | 0x75 | BERU Electronics GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -553,7 +530,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 17 rows × 2 columns

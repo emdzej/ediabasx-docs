@@ -45,7 +45,6 @@
 - [STATUS_ETC](#job-status-etc) - ETC connection test Modus  : Default
 - [STEUERN_VOICE_TEST](#job-steuern-voice-test) - starten der Sprach-Ausgabe Modus  : Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -64,7 +63,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -77,7 +75,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -101,7 +98,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -114,7 +110,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -127,7 +122,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete Reset ausloesen
@@ -141,7 +135,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -162,7 +155,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen low-Konzept (lower als Lastenheft Codierung/Diagnose)
@@ -181,7 +173,6 @@ _No arguments._
 | F_HFK | int | immer 1 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Ausloesen des Selbsttest
@@ -195,7 +186,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selbsttest-2"></a>
 ### SELBSTTEST_2
 
 Ausloesen des Selbsttest 2
@@ -209,7 +199,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-power-down"></a>
 ### POWER_DOWN
 
 Ausloesen des Power Down
@@ -228,7 +217,6 @@ Ausloesen des Power Down
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-version-info"></a>
 ### VERSION_INFO
 
 Ident-Daten fuer das JNAV
@@ -243,7 +231,6 @@ _No arguments._
 | ID_SW_NR | string | Navigations-Software-Version |
 | ID_MAP_NR | string | Map-Software-Version |
 
-<a id="job-status-sw-cns-bootloader"></a>
 ### STATUS_SW_CNS_BOOTLOADER
 
 SW Version des CNS2 Bootloaders
@@ -258,7 +245,6 @@ _No arguments._
 | STAT_SW | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sw-navi-ipl"></a>
 ### STATUS_SW_NAVI_IPL
 
 SW Version des NAVI IPLs
@@ -273,7 +259,6 @@ _No arguments._
 | STAT_SW | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sw-navi-bios"></a>
 ### STATUS_SW_NAVI_BIOS
 
 SW Version des NAVI BIOS
@@ -288,7 +273,6 @@ _No arguments._
 | STAT_SW | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sw-apl"></a>
 ### STATUS_SW_APL
 
 SW Version der APL
@@ -303,7 +287,6 @@ _No arguments._
 | STAT_SW | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sw-navi"></a>
 ### STATUS_SW_NAVI
 
 SW Version der Navigation
@@ -318,7 +301,6 @@ _No arguments._
 | STAT_SW | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sw-nk"></a>
 ### STATUS_SW_NK
 
 SW Version des NK
@@ -333,7 +315,6 @@ _No arguments._
 | STAT_SW | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sw-cns"></a>
 ### STATUS_SW_CNS
 
 SW Version des CNS
@@ -348,7 +329,6 @@ _No arguments._
 | STAT_SW | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-sw-vics"></a>
 ### STATUS_SW_VICS
 
 SW Version des VICS Receivers
@@ -363,7 +343,6 @@ _No arguments._
 | STAT_SW | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-gps-connection"></a>
 ### STATUS_GPS_CONNECTION
 
 Verbindungs-Status zw. GPS-Antenne und JNAV-CE Modus  : Default
@@ -378,7 +357,6 @@ _No arguments._
 | STAT_CONNECTION_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-vics-fm-connection"></a>
 ### STATUS_VICS_FM_CONNECTION
 
 Verbindungs-Status zw. internem VICS-Receiver und JNAV-CE und JNAV-CE Modus  : Default
@@ -398,7 +376,6 @@ Verbindungs-Status zw. internem VICS-Receiver und JNAV-CE und JNAV-CE Modus  : D
 | STAT_CONNECTION_STATUS | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-speedpulse"></a>
 ### STATUS_SPEEDPULSE
 
 Geschwindigkeit vom SpeedPulse-Sensor Modus  : Default
@@ -413,7 +390,6 @@ _No arguments._
 | STAT_SPEEDPULSE | int |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-etc"></a>
 ### STATUS_ETC
 
 ETC connection test Modus  : Default
@@ -428,7 +404,6 @@ _No arguments._
 | STAT_ETC | string |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-voice-test"></a>
 ### STEUERN_VOICE_TEST
 
 starten der Sprach-Ausgabe Modus  : Default
@@ -454,7 +429,6 @@ _No arguments._
 - [FDETAILSTRUKTUR](#table-fdetailstruktur) (4 × 2)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (1 × 2)
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -529,7 +503,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -553,7 +526,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -574,7 +546,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -603,7 +574,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 11 rows × 2 columns
@@ -622,7 +592,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0B | Werkstatt-Mode an |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -634,7 +603,6 @@ Dimensions: 4 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns

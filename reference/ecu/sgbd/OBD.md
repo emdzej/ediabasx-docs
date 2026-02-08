@@ -31,7 +31,6 @@
 - [OBD_FAHRZEUGINFO_LESEN_FUNKTIONAL](#job-obd-fahrzeuginfo-lesen-funktional) - Abfrage von Fahrzeuginformationen mit OBD-Service 9
 - [OBD_FS_LESEN_PERMANENT_FUNKTIONAL](#job-obd-fs-lesen-permanent-funktional) - Abfrage des Fehlerspeichers mit OBD-Service 0x0A
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Diagnosekonzeptumschaltung zwischen BMW OBD und BMW D-CAN
@@ -82,7 +79,6 @@ Diagnosekonzeptumschaltung zwischen BMW OBD und BMW D-CAN
 | JOB_MESSAGE | string | Detaillierte Meldung im Fehlerfall sonst '-' |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-obd-status-lesen-funktional"></a>
 ### OBD_STATUS_LESEN_FUNKTIONAL
 
 Abfrage von Messwerten mit OBD-Service 1
@@ -119,7 +115,6 @@ Abfrage von Messwerten mit OBD-Service 1
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobStati WERT |
 
-<a id="job-obd-fs-lesen-detail-funktional"></a>
 ### OBD_FS_LESEN_DETAIL_FUNKTIONAL
 
 Abfrage von Messwerten mit OBD-Service 2
@@ -154,7 +149,6 @@ Abfrage von Messwerten mit OBD-Service 2
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-obd-fs-lesen-confirmed-funktional"></a>
 ### OBD_FS_LESEN_CONFIRMED_FUNKTIONAL
 
 Abfrage des Fehlerspeichers mit OBD-Service 3
@@ -181,7 +175,6 @@ Abfrage des Fehlerspeichers mit OBD-Service 3
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-obd-fs-loeschen-funktional"></a>
 ### OBD_FS_LOESCHEN_FUNKTIONAL
 
 Diagnosedaten zurücksetzen/löschen mit OBD-Service 4
@@ -203,7 +196,6 @@ Diagnosedaten zurücksetzen/löschen mit OBD-Service 4
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-obd-status-monitor-lesen-funktional"></a>
 ### OBD_STATUS_MONITOR_LESEN_FUNKTIONAL
 
 Abfrage der Testergebnisse zu bestimmten OBDMIDs mit OBD-Service 6
@@ -238,7 +230,6 @@ Abfrage der Testergebnisse zu bestimmten OBDMIDs mit OBD-Service 6
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-obd-fs-lesen-pending-funktional"></a>
 ### OBD_FS_LESEN_PENDING_FUNKTIONAL
 
 Abfrage des Fehlerspeichers mit OBD-Service 7
@@ -265,7 +256,6 @@ Abfrage des Fehlerspeichers mit OBD-Service 7
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-obd-fahrzeuginfo-lesen-funktional"></a>
 ### OBD_FAHRZEUGINFO_LESEN_FUNKTIONAL
 
 Abfrage von Fahrzeuginformationen mit OBD-Service 9
@@ -302,7 +292,6 @@ Abfrage von Fahrzeuginformationen mit OBD-Service 9
 | _RESPONSE | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-obd-fs-lesen-permanent-funktional"></a>
 ### OBD_FS_LESEN_PERMANENT_FUNKTIONAL
 
 Abfrage des Fehlerspeichers mit OBD-Service 0x0A
@@ -490,7 +479,6 @@ Abfrage des Fehlerspeichers mit OBD-Service 0x0A
 - [JOBRESULTEXTENDED](#table-jobresultextended) (2 × 2)
 - [JOBSTATI](#table-jobstati) (53 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 3 rows × 2 columns
@@ -501,7 +489,6 @@ Dimensions: 3 rows × 2 columns
 | 0x11 | OBD |
 | 0x11 | OBD_FAST |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -585,7 +572,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-obdservice1-2"></a>
 ### OBDSERVICE1_2
 
 Dimensions: 149 rows × 15 columns
@@ -742,7 +728,6 @@ Dimensions: 149 rows × 15 columns
 | O2S_WR34 | 0x9C | O2 Sensor (Wide Range) | PID9C | - | - | - | - | 17 | - | - | - | - | - | - |
 |  | 0xXX | <undefined> | - | <undefined> | - | - | - | - | - | - | - | - | - | - |
 
-<a id="table-pid01"></a>
 ### PID01
 
 Dimensions: 43 rows × 3 columns
@@ -793,7 +778,6 @@ Dimensions: 43 rows × 3 columns
 | MON_RDY_NO | monitor not complete (NO) |  |
 | MON_RDY_NA | monitor not applicable (N/A) |  |
 
-<a id="table-pid02"></a>
 ### PID02
 
 Dimensions: 1 rows × 2 columns
@@ -802,7 +786,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | DTC that caused required freeze frame data storage | DTCFRZF |
 
-<a id="table-pid03"></a>
 ### PID03
 
 Dimensions: 2 rows × 12 columns
@@ -812,7 +795,6 @@ Dimensions: 2 rows × 12 columns
 | Fuel system 1 status | FUELSYS1 | - | - | 0 | 1 | - | b0-n | FuelSysStat | - | - | - |
 | Fuel system 2 status | FUELSYS2 | - | - | 1 | 1 | - | b0-n | FuelSysStat | - | - | - |
 
-<a id="table-fuelsysstat"></a>
 ### FUELSYSSTAT
 
 Dimensions: 9 rows × 3 columns
@@ -829,7 +811,6 @@ Dimensions: 9 rows × 3 columns
 | 0x40 | OL Drive B2 | Open loop due to driving conditions (Bank 2) |
 | 0x80 | OL Fault B2 | Open loop - due to detected system fault (Bank 2) |
 
-<a id="table-pid06"></a>
 ### PID06
 
 Dimensions: 2 rows × 3 columns
@@ -839,7 +820,6 @@ Dimensions: 2 rows × 3 columns
 | Short Term Fuel Trim - Bank 1 | SHRTFT1 | % |
 | Short Term Fuel Trim - Bank 3 | SHRTFT3 | % |
 
-<a id="table-pid07"></a>
 ### PID07
 
 Dimensions: 2 rows × 3 columns
@@ -849,7 +829,6 @@ Dimensions: 2 rows × 3 columns
 | Long Term Fuel Trim - Bank 1 | LONGFT1 | % |
 | Long Term Fuel Trim - Bank 3 | LONGFT3 | % |
 
-<a id="table-pid08"></a>
 ### PID08
 
 Dimensions: 2 rows × 3 columns
@@ -859,7 +838,6 @@ Dimensions: 2 rows × 3 columns
 | Short Term Fuel Trim - Bank 2 | SHRTFT2 | % |
 | Short Term Fuel Trim - Bank 4 | SHRTFT4 | % |
 
-<a id="table-pid09"></a>
 ### PID09
 
 Dimensions: 2 rows × 3 columns
@@ -869,7 +847,6 @@ Dimensions: 2 rows × 3 columns
 | Long Term Fuel Trim - Bank 2 | LONGFT2 | % |
 | Long Term Fuel Trim - Bank 4 | LONGFT4 | % |
 
-<a id="table-pid0b"></a>
 ### PID0B
 
 Dimensions: 1 rows × 3 columns
@@ -878,7 +855,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | Intake Manifold Absolute Pressure | MAP | kPa |
 
-<a id="table-pid10"></a>
 ### PID10
 
 Dimensions: 1 rows × 3 columns
@@ -887,7 +863,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | Air Flow Rate from Mass Air Flow Sensor | MAF | g/s |
 
-<a id="table-airstat"></a>
 ### AIRSTAT
 
 Dimensions: 8 rows × 3 columns
@@ -903,7 +878,6 @@ Dimensions: 8 rows × 3 columns
 | 0x40 | 0x40 | <undefined> |
 | 0x80 | 0x80 | <undefined> |
 
-<a id="table-o2sloc13"></a>
 ### O2SLOC13
 
 Dimensions: 8 rows × 3 columns
@@ -919,7 +893,6 @@ Dimensions: 8 rows × 3 columns
 | 0x40 | 0x40 | Bank 2 - Sensor 3 present at that location |
 | 0x80 | 0x80 | Bank 2 - Sensor 4 present at that location |
 
-<a id="table-pid14"></a>
 ### PID14
 
 Dimensions: 2 rows × 5 columns
@@ -929,7 +902,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 1 | B1S1 | Oxygen Sensor Output Voltage (B1-S1) | O2S11 | V |
 | Bank 1 - Sensor 1 | B1S1 | Short Term Fuel Trim (B1-S1) | SHRTFT11 | % |
 
-<a id="table-pid15"></a>
 ### PID15
 
 Dimensions: 2 rows × 5 columns
@@ -939,7 +911,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 2 | B1S2 | Oxygen Sensor Output Voltage (B1-S2) | O2S12 | V |
 | Bank 1 - Sensor 2 | B1S2 | Short Term Fuel Trim (B1-S2) | SHRTFT12 | % |
 
-<a id="table-pid16-13"></a>
 ### PID16_13
 
 Dimensions: 2 rows × 5 columns
@@ -949,7 +920,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 3 | B1S3 | Oxygen Sensor Output Voltage (B1-S3) | O2S13 | V |
 | Bank 1 - Sensor 3 | B1S3 | Short Term Fuel Trim (B1-S3) | SHRTFT13 | % |
 
-<a id="table-pid16-1d"></a>
 ### PID16_1D
 
 Dimensions: 2 rows × 5 columns
@@ -959,7 +929,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 1 | B2S1 | Oxygen Sensor Output Voltage (B2-S1) | O2S21 | V |
 | Bank 2 - Sensor 1 | B2S1 | Short Term Fuel Trim (B2-S1) | SHRTFT21 | % |
 
-<a id="table-pid17-13"></a>
 ### PID17_13
 
 Dimensions: 2 rows × 5 columns
@@ -969,7 +938,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 4 | B1S4 | Oxygen Sensor Output Voltage (B1-S4) | O2S14 | V |
 | Bank 1 - Sensor 4 | B1S4 | Short Term Fuel Trim (B1-S4) | SHRTFT14 | % |
 
-<a id="table-pid17-1d"></a>
 ### PID17_1D
 
 Dimensions: 2 rows × 5 columns
@@ -979,7 +947,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 2 | B2S2 | Oxygen Sensor Output Voltage (B2-S2) | O2S22 | V |
 | Bank 2 - Sensor 2 | B2S2 | Short Term Fuel Trim (B2-S2) | SHRTFT22 | % |
 
-<a id="table-pid18-13"></a>
 ### PID18_13
 
 Dimensions: 2 rows × 5 columns
@@ -989,7 +956,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 1 | B2S1 | Oxygen Sensor Output Voltage (B2-S1) | O2S21 | V |
 | Bank 2 - Sensor 1 | B2S1 | Short Term Fuel Trim (B2-S1) | SHRTFT21 | % |
 
-<a id="table-pid18-1d"></a>
 ### PID18_1D
 
 Dimensions: 2 rows × 5 columns
@@ -999,7 +965,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 3 - Sensor 1 | B3S1 | Oxygen Sensor Output Voltage (B3-S1) | O2S31 | V |
 | Bank 3 - Sensor 1 | B3S1 | Short Term Fuel Trim (B3-S1) | SHRTFT31 | % |
 
-<a id="table-pid19-13"></a>
 ### PID19_13
 
 Dimensions: 2 rows × 5 columns
@@ -1009,7 +974,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 2 | B2S2 | Oxygen Sensor Output Voltage (B2-S2) | O2S22 | V |
 | Bank 2 - Sensor 2 | B2S2 | Short Term Fuel Trim (B2-S2) | SHRTFT22 | % |
 
-<a id="table-pid19-1d"></a>
 ### PID19_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1019,7 +983,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 3 - Sensor 2 | B3S2 | Oxygen Sensor Output Voltage (B3-S2) | O2S32 | V |
 | Bank 3 - Sensor 2 | B3S2 | Short Term Fuel Trim (B3-S2) | SHRTFT32 | % |
 
-<a id="table-pid1a-13"></a>
 ### PID1A_13
 
 Dimensions: 2 rows × 5 columns
@@ -1029,7 +992,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 3 | B2S3 | Oxygen Sensor Output Voltage (B2-S3) | O2S23 | V |
 | Bank 2 - Sensor 3 | B2S3 | Short Term Fuel Trim (B2-S3) | SHRTFT23 | % |
 
-<a id="table-pid1a-1d"></a>
 ### PID1A_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1039,7 +1001,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 4 - Sensor 1 | B4S1 | Oxygen Sensor Output Voltage (B4-S1) | O2S41 | V |
 | Bank 4 - Sensor 1 | B4S1 | Short Term Fuel Trim (B4-S1) | SHRTFT41 | % |
 
-<a id="table-pid1b-13"></a>
 ### PID1B_13
 
 Dimensions: 2 rows × 5 columns
@@ -1049,7 +1010,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 4 | B2S4 | Oxygen Sensor Output Voltage (B2-S4) | O2S24 | V |
 | Bank 2 - Sensor 4 | B2S4 | Short Term Fuel Trim (B2-S4) | SHRTFT24 | % |
 
-<a id="table-pid1b-1d"></a>
 ### PID1B_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1059,7 +1019,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 4 - Sensor 2 | B4S2 | Oxygen Sensor Output Voltage (B4-S2) | O2S42 | V |
 | Bank 4 - Sensor 2 | B4S2 | Short Term Fuel Trim (B4-S2) | SHRTFT42 | % |
 
-<a id="table-obdsup"></a>
 ### OBDSUP
 
 Dimensions: 33 rows × 2 columns
@@ -1100,7 +1059,6 @@ Dimensions: 33 rows × 2 columns
 | 0x23 | OBDBr-3 |
 | 0xXX | <undefined> |
 
-<a id="table-o2sloc1d"></a>
 ### O2SLOC1D
 
 Dimensions: 8 rows × 3 columns
@@ -1116,7 +1074,6 @@ Dimensions: 8 rows × 3 columns
 | 0x40 | 0x40 | Bank 4 - Sensor 1 present at that location |
 | 0x80 | 0x80 | Bank 4 - Sensor 2 present at that location |
 
-<a id="table-pid24"></a>
 ### PID24
 
 Dimensions: 2 rows × 5 columns
@@ -1126,7 +1083,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 1 (wide range O2S) | B1S1WR | Equivalence Ratio (lambda) (B1-S1) | LAMBDA11 | - |
 | Bank 1 - Sensor 1 (wide range O2S) | B1S1WR | Oxygen Sensor Voltage (B1-S1) | O2S11 | V |
 
-<a id="table-pid25"></a>
 ### PID25
 
 Dimensions: 2 rows × 5 columns
@@ -1136,7 +1092,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 2 (wide range O2S) | B1S2WR | Equivalence Ratio (lambda) (B1-S2) | LAMBDA12 | - |
 | Bank 1 - Sensor 2 (wide range O2S) | B1S2WR | Oxygen Sensor Voltage (B1-S2) | O2S12 | V |
 
-<a id="table-pid26-13"></a>
 ### PID26_13
 
 Dimensions: 2 rows × 5 columns
@@ -1146,7 +1101,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 3 (wide range O2S) | B1S3WR | Equivalence Ratio (lambda) (B1-S3) | LAMBDA13 | - |
 | Bank 1 - Sensor 3 (wide range O2S) | B1S3WR | Oxygen Sensor Voltage (B1-S3) | O2S13 | V |
 
-<a id="table-pid26-1d"></a>
 ### PID26_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1156,7 +1110,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 1 (wide range O2S) | B2S1WR | Equivalence Ratio (lambda) (B2-S1) | LAMBDA21 | - |
 | Bank 2 - Sensor 1 (wide range O2S) | B2S1WR | Oxygen Sensor Voltage (B2-S1) | O2S21 | V |
 
-<a id="table-pid27-13"></a>
 ### PID27_13
 
 Dimensions: 2 rows × 5 columns
@@ -1166,7 +1119,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 4 (wide range O2S) | B1S4WR | Equivalence Ratio (lambda) (B1-S4) | LAMBDA14 | - |
 | Bank 1 - Sensor 4 (wide range O2S) | B1S4WR | Oxygen Sensor Voltage (B1-S4) | O2S14 | V |
 
-<a id="table-pid27-1d"></a>
 ### PID27_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1176,7 +1128,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 2 (wide range O2S) | B2S2WR | Equivalence Ratio (lambda) (B2-S2) | LAMBDA22 | - |
 | Bank 2 - Sensor 2 (wide range O2S) | B2S2WR | Oxygen Sensor Voltage (B2-S2) | O2S22 | V |
 
-<a id="table-pid28-13"></a>
 ### PID28_13
 
 Dimensions: 2 rows × 5 columns
@@ -1186,7 +1137,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 1 (wide range O2S) | B2S1WR | Equivalence Ratio (lambda) (B2-S1) | LAMBDA21 | - |
 | Bank 2 - Sensor 1 (wide range O2S) | B2S1WR | Oxygen Sensor Voltage (B2-S1) | O2S21 | V |
 
-<a id="table-pid28-1d"></a>
 ### PID28_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1196,7 +1146,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 3 - Sensor 1 (wide range O2S) | B3S1WR | Equivalence Ratio (lambda) (B3-S1) | LAMBDA31 | - |
 | Bank 3 - Sensor 1 (wide range O2S) | B3S1WR | Oxygen Sensor Voltage (B3-S1) | O2S31 | V |
 
-<a id="table-pid29-13"></a>
 ### PID29_13
 
 Dimensions: 2 rows × 5 columns
@@ -1206,7 +1155,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 2 (wide range O2S) | B2S2WR | Equivalence Ratio (lambda) (B2-S2) | LAMBDA22 | - |
 | Bank 2 - Sensor 2 (wide range O2S) | B2S2WR | Oxygen Sensor Voltage (B2-S2) | O2S22 | V |
 
-<a id="table-pid29-1d"></a>
 ### PID29_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1216,7 +1164,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 3 - Sensor 2 (wide range O2S) | B3S2WR | Equivalence Ratio (lambda) (B3-S2) | LAMBDA32 | - |
 | Bank 3 - Sensor 2 (wide range O2S) | B3S2WR | Oxygen Sensor Voltage (B3-S2) | O2S32 | V |
 
-<a id="table-pid2a-13"></a>
 ### PID2A_13
 
 Dimensions: 2 rows × 5 columns
@@ -1226,7 +1173,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 3 (wide range O2S) | B2S3WR | Equivalence Ratio (lambda) (B2-S3) | LAMBDA23 | - |
 | Bank 2 - Sensor 3 (wide range O2S) | B2S3WR | Oxygen Sensor Voltage (B2-S3) | O2S23 | V |
 
-<a id="table-pid2a-1d"></a>
 ### PID2A_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1236,7 +1182,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 4 - Sensor 1 (wide range O2S) | B4S1WR | Equivalence Ratio (lambda) (B4-S1) | LAMBDA41 | - |
 | Bank 4 - Sensor 1 (wide range O2S) | B4S1WR | Oxygen Sensor Voltage (B4-S1) | O2S41 | V |
 
-<a id="table-pid2b-13"></a>
 ### PID2B_13
 
 Dimensions: 2 rows × 5 columns
@@ -1246,7 +1191,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 4 (wide range O2S) | B2S4WR | Equivalence Ratio (lambda) (B2-S4) | LAMBDA24 | - |
 | Bank 2 - Sensor 4 (wide range O2S) | B2S4WR | Oxygen Sensor Voltage (B2-S4) | O2S24 | V |
 
-<a id="table-pid2b-1d"></a>
 ### PID2B_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1256,7 +1200,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 4 - Sensor 2 (wide range O2S) | B4S2WR | Equivalence Ratio (lambda) (B4-S2) | LAMBDA42 | - |
 | Bank 4 - Sensor 2 (wide range O2S) | B4S2WR | Oxygen Sensor Voltage (B4-S2) | O2S42 | V |
 
-<a id="table-pid34"></a>
 ### PID34
 
 Dimensions: 2 rows × 5 columns
@@ -1266,7 +1209,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 1 (wide range O2S) | B1S1WR | Equivalence Ratio (lambda) (B1-S1) | LAMBDA11 | - |
 | Bank 1 - Sensor 1 (wide range O2S) | B1S1WR | Oxygen Sensor Current (B1-S1) | O2S11 | mA |
 
-<a id="table-pid35"></a>
 ### PID35
 
 Dimensions: 2 rows × 5 columns
@@ -1276,7 +1218,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 2 (wide range O2S) | B1S2WR | Equivalence Ratio (lambda) (B1-S2) | LAMBDA12 | - |
 | Bank 1 - Sensor 2 (wide range O2S) | B1S2WR | Oxygen Sensor Current (B1-S2) | O2S12 | mA |
 
-<a id="table-pid36-13"></a>
 ### PID36_13
 
 Dimensions: 2 rows × 5 columns
@@ -1286,7 +1227,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 3 (wide range O2S) | B1S3WR | Equivalence Ratio (lambda) (B1-S3) | LAMBDA13 | - |
 | Bank 1 - Sensor 3 (wide range O2S) | B1S3WR | Oxygen Sensor Current (B1-S3) | O2S13 | mA |
 
-<a id="table-pid36-1d"></a>
 ### PID36_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1296,7 +1236,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 1 (wide range O2S) | B2S1WR | Equivalence Ratio (lambda) (B2-S1) | LAMBDA21 | - |
 | Bank 2 - Sensor 1 (wide range O2S) | B2S1WR | Oxygen Sensor Current (B2-S1) | O2S21 | mA |
 
-<a id="table-pid37-13"></a>
 ### PID37_13
 
 Dimensions: 2 rows × 5 columns
@@ -1306,7 +1245,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 1 - Sensor 4 (wide range O2S) | B1S4WR | Equivalence Ratio (lambda) (B1-S4) | LAMBDA14 | - |
 | Bank 1 - Sensor 4 (wide range O2S) | B1S4WR | Oxygen Sensor Current (B1-S4) | O2S14 | mA |
 
-<a id="table-pid37-1d"></a>
 ### PID37_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1316,7 +1254,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 2 (wide range O2S) | B2S2WR | Equivalence Ratio (lambda) (B2-S2) | LAMBDA22 | - |
 | Bank 2 - Sensor 2 (wide range O2S) | B2S2WR | Oxygen Sensor Current (B2-S2) | O2S22 | mA |
 
-<a id="table-pid38-13"></a>
 ### PID38_13
 
 Dimensions: 2 rows × 5 columns
@@ -1326,7 +1263,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 1 (wide range O2S) | B2S1WR | Equivalence Ratio (lambda) (B2-S1) | LAMBDA21 | - |
 | Bank 2 - Sensor 1 (wide range O2S) | B2S1WR | Oxygen Sensor Current (B2-S1) | O2S21 | mA |
 
-<a id="table-pid38-1d"></a>
 ### PID38_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1336,7 +1272,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 3 - Sensor 1 (wide range O2S) | B3S1WR | Equivalence Ratio (lambda) (B3-S1) | LAMBDA31 | - |
 | Bank 3 - Sensor 1 (wide range O2S) | B3S1WR | Oxygen Sensor Current (B3-S1) | O2S31 | mA |
 
-<a id="table-pid39-13"></a>
 ### PID39_13
 
 Dimensions: 2 rows × 5 columns
@@ -1346,7 +1281,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 2 (wide range O2S) | B2S2WR | Equivalence Ratio (lambda) (B2-S2) | LAMBDA22 | - |
 | Bank 2 - Sensor 2 (wide range O2S) | B2S2WR | Oxygen Sensor Current (B2-S2) | O2S22 | mA |
 
-<a id="table-pid39-1d"></a>
 ### PID39_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1356,7 +1290,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 3 - Sensor 2 (wide range O2S) | B3S2WR | Equivalence Ratio (lambda) (B3-S2) | LAMBDA32 | - |
 | Bank 3 - Sensor 2 (wide range O2S) | B3S2WR | Oxygen Sensor Current (B3-S2) | O2S32 | mA |
 
-<a id="table-pid3a-13"></a>
 ### PID3A_13
 
 Dimensions: 2 rows × 5 columns
@@ -1366,7 +1299,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 3 (wide range O2S) | B2S3WR | Equivalence Ratio (lambda) (B2-S3) | LAMBDA23 | - |
 | Bank 2 - Sensor 3 (wide range O2S) | B2S3WR | Oxygen Sensor Current (B2-S3) | O2S23 | mA |
 
-<a id="table-pid3a-1d"></a>
 ### PID3A_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1376,7 +1308,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 4 - Sensor 1 (wide range O2S) | B4S1WR | Equivalence Ratio (lambda) (B4-S1) | LAMBDA41 | - |
 | Bank 4 - Sensor 1 (wide range O2S) | B4S1WR | Oxygen Sensor Current (B4-S1) | O2S41 | mA |
 
-<a id="table-pid3b-13"></a>
 ### PID3B_13
 
 Dimensions: 2 rows × 5 columns
@@ -1386,7 +1317,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 2 - Sensor 4 (wide range O2S) | B2S4WR | Equivalence Ratio (lambda) (B2-S4) | LAMBDA24 | - |
 | Bank 2 - Sensor 4 (wide range O2S) | B2S4WR | Oxygen Sensor Current (B2-S4) | O2S24 | mA |
 
-<a id="table-pid3b-1d"></a>
 ### PID3B_1D
 
 Dimensions: 2 rows × 5 columns
@@ -1396,7 +1326,6 @@ Dimensions: 2 rows × 5 columns
 | Bank 4 - Sensor 2 (wide range O2S) | B4S2WR | Equivalence Ratio (lambda) (B4-S2) | LAMBDA42 | - |
 | Bank 4 - Sensor 2 (wide range O2S) | B4S2WR | Oxygen Sensor Current (B4-S2) | O2S42 | mA |
 
-<a id="table-pid41"></a>
 ### PID41
 
 Dimensions: 39 rows × 3 columns
@@ -1443,7 +1372,6 @@ Dimensions: 39 rows × 3 columns
 | MON_CMPL_NO | monitor not complete this monitoring cycle (NO) |  |
 | MON_CMPL_NA | monitor not supported (N/A) |  |
 
-<a id="table-pid44"></a>
 ### PID44
 
 Dimensions: 1 rows × 3 columns
@@ -1452,7 +1380,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | Fuel/Air Commanded Equivalence Ratio | LAMBDA | - |
 
-<a id="table-pid55"></a>
 ### PID55
 
 Dimensions: 2 rows × 3 columns
@@ -1462,7 +1389,6 @@ Dimensions: 2 rows × 3 columns
 | Short Term Secondary O2 Sensor Fuel Trim - Bank 1 | STSO2FT1 | % |
 | Short Term Secondary O2 Sensor Fuel Trim - Bank 3 | STSO2FT3 | % |
 
-<a id="table-pid56"></a>
 ### PID56
 
 Dimensions: 2 rows × 3 columns
@@ -1472,7 +1398,6 @@ Dimensions: 2 rows × 3 columns
 | Long Term Secondary O2 Sensor Fuel Trim - Bank 1 | LGSO2FT1 | % |
 | Long Term Secondary O2 Sensor Fuel Trim - Bank 3 | LGSO2FT3 | % |
 
-<a id="table-pid57"></a>
 ### PID57
 
 Dimensions: 2 rows × 3 columns
@@ -1482,7 +1407,6 @@ Dimensions: 2 rows × 3 columns
 | Short Term Secondary O2 Sensor Fuel Trim - Bank 2 | STSO2FT2 | % |
 | Short Term Secondary O2 Sensor Fuel Trim - Bank 4 | STSO2FT4 | % |
 
-<a id="table-pid58"></a>
 ### PID58
 
 Dimensions: 2 rows × 3 columns
@@ -1492,7 +1416,6 @@ Dimensions: 2 rows × 3 columns
 | Long Term Secondary O2 Sensor Fuel Trim - Bank 2 | LGSO2FT2 | % |
 | Long Term Secondary O2 Sensor Fuel Trim - Bank 4 | LGSO2FT4 | % |
 
-<a id="table-ptostat"></a>
 ### PTOSTAT
 
 Dimensions: 2 rows × 3 columns
@@ -1502,7 +1425,6 @@ Dimensions: 2 rows × 3 columns
 | 0x01 | 0x00 | PTO not active (OFF) |
 | 0x01 | 0x01 | PTO active (ON) |
 
-<a id="table-fueltyp"></a>
 ### FUELTYP
 
 Dimensions: 21 rows × 2 columns
@@ -1531,7 +1453,6 @@ Dimensions: 21 rows × 2 columns
 | 0x1C | DSL_NG |
 | 0xXX | <undefined> |
 
-<a id="table-emissup"></a>
 ### EMISSUP
 
 Dimensions: 4 rows × 2 columns
@@ -1543,7 +1464,6 @@ Dimensions: 4 rows × 2 columns
 | 0x10 | EURO C |
 | 0xXX | <undefined> |
 
-<a id="table-pid4f"></a>
 ### PID4F
 
 Dimensions: 4 rows × 12 columns
@@ -1555,7 +1475,6 @@ Dimensions: 4 rows × 12 columns
 | Maximum value for Oxygen Sensor Current | MAX_O2SC | mA | - | 2 | 1 | - | unsigned | - | 1 | 1 | 0 |
 | Maximum value for Intake Manifold Absolute Pressure | MAX_MAP | kPa | - | 3 | 1 | - | unsigned | - | 10 | 1 | 0 |
 
-<a id="table-pid50"></a>
 ### PID50
 
 Dimensions: 1 rows × 12 columns
@@ -1564,7 +1483,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Maximum value for Air Flow Rate from Mass Air Flow Sensor | MAX_MAF | g/s | - | 0 | 1 | - | unsigned | - | 10 | 1 | 0 |
 
-<a id="table-pid64"></a>
 ### PID64
 
 Dimensions: 5 rows × 12 columns
@@ -1577,7 +1495,6 @@ Dimensions: 5 rows × 12 columns
 | Engine Percent Torque At Point 4 | TQ_MAX4 | % | - | 3 | 1 | - | unsigned | - | 1 | 1 | -125 |
 | Engine Percent Torque At Point 5 | TQ_MAX5 | % | - | 4 | 1 | - | unsigned | - | 1 | 1 | -125 |
 
-<a id="table-pid65"></a>
 ### PID65
 
 Dimensions: 4 rows × 12 columns
@@ -1589,7 +1506,6 @@ Dimensions: 4 rows × 12 columns
 | Manual Trans Neutral Gear Status | N/G_STAT | - | 0x04 | 1 | 1 | - | b0-n | NeutGearStat | - | - | - |
 | Glow Plug Lamp Status | GPL_STAT | - | 0x08 | 1 | 1 | - | b0-n | GPLStat | - | - | - |
 
-<a id="table-neutdrvstat"></a>
 ### NEUTDRVSTAT
 
 Dimensions: 2 rows × 3 columns
@@ -1599,7 +1515,6 @@ Dimensions: 2 rows × 3 columns
 | 0x02 | 0x00 | Auto Trans in Park/Neutral |
 | 0x02 | 0x02 | Auto Trans in Forward/Reverse Gear |
 
-<a id="table-neutgearstat"></a>
 ### NEUTGEARSTAT
 
 Dimensions: 2 rows × 3 columns
@@ -1609,7 +1524,6 @@ Dimensions: 2 rows × 3 columns
 | 0x04 | 0x00 | Manual Trans in Neutral and/or clutch depressed |
 | 0x04 | 0x04 | Manual Trans in Gear |
 
-<a id="table-gplstat"></a>
 ### GPLSTAT
 
 Dimensions: 2 rows × 3 columns
@@ -1619,7 +1533,6 @@ Dimensions: 2 rows × 3 columns
 | 0x08 | 0x00 | Glow Plug Lamp Off |
 | 0x08 | 0x08 | Glow Plug Lamp ('Wait to Start') On |
 
-<a id="table-pid66"></a>
 ### PID66
 
 Dimensions: 2 rows × 12 columns
@@ -1629,7 +1542,6 @@ Dimensions: 2 rows × 12 columns
 | Mass Air Flow Sensor A | MAFA | g/s | 0x01 | 1 | 2 | - | unsigned | - | 1 | 32 | 0 |
 | Mass Air Flow Sensor B | MAFB | g/s | 0x02 | 3 | 2 | - | unsigned | - | 1 | 32 | 0 |
 
-<a id="table-pid67"></a>
 ### PID67
 
 Dimensions: 2 rows × 12 columns
@@ -1639,7 +1551,6 @@ Dimensions: 2 rows × 12 columns
 | Engine Coolant Temperature 1 | ECT 1 | °C | 0x01 | 1 | 1 | - | unsigned | - | 1 | 1 | -40 |
 | Engine Coolant Temperature 2 | ECT 2 | °C | 0x02 | 2 | 1 | - | unsigned | - | 1 | 1 | -40 |
 
-<a id="table-pid68"></a>
 ### PID68
 
 Dimensions: 6 rows × 12 columns
@@ -1653,7 +1564,6 @@ Dimensions: 6 rows × 12 columns
 | Intake Air Temperature Bank 2, Sensor 2 | IAT 22 | °C | 0x10 | 5 | 1 | - | unsigned | - | 1 | 1 | -40 |
 | Intake Air Temperature Bank 2, Sensor 3 | IAT 23 | °C | 0x20 | 6 | 1 | - | unsigned | - | 1 | 1 | -40 |
 
-<a id="table-pid69"></a>
 ### PID69
 
 Dimensions: 6 rows × 12 columns
@@ -1667,7 +1577,6 @@ Dimensions: 6 rows × 12 columns
 | Actual EGR B Duty Cycle/Position | EGR_B_ACT | % | 0x10 | 5 | 1 | - | unsigned | - | 100 | 255 | 0 |
 | EGR B Error | EGR_B_ERR | % | 0x20 | 6 | 1 | - | unsigned | - | 100 | 128 | -100 |
 
-<a id="table-pid6a"></a>
 ### PID6A
 
 Dimensions: 4 rows × 12 columns
@@ -1679,7 +1588,6 @@ Dimensions: 4 rows × 12 columns
 | Commanded Intake Air Flow B Control | IAF_B_CMD | % | 0x04 | 3 | 1 | - | unsigned | - | 100 | 255 | 0 |
 | Relative Intake Air Flow B Position | IAF_B_REL | % | 0x08 | 4 | 1 | - | unsigned | - | 100 | 255 | 0 |
 
-<a id="table-pid6b"></a>
 ### PID6B
 
 Dimensions: 8 rows × 12 columns
@@ -1695,7 +1603,6 @@ Dimensions: 8 rows × 12 columns
 | Exhaust Gas Recirculation Temp Sensor B (Bank 2, Sensor 1) Wide Range | EGRTBWR | °C | 0x40 | 3 | 1 | - | unsigned | - | 4 | 1 | -40 |
 | Exhaust Gas Recirculation Temp Sensor D (Bank 2, Sensor 2) Wide Range | EGRTDWR | °C | 0x80 | 4 | 1 | - | unsigned | - | 4 | 1 | -40 |
 
-<a id="table-pid6c"></a>
 ### PID6C
 
 Dimensions: 4 rows × 12 columns
@@ -1707,7 +1614,6 @@ Dimensions: 4 rows × 12 columns
 | Commanded Throttle Actuator B Control | TAC_B_CMD | % | 0x04 | 3 | 1 | - | unsigned | - | 100 | 255 | 0 |
 | Relative Throttle B Position | TP_B_REL | % | 0x08 | 4 | 1 | - | unsigned | - | 100 | 255 | 0 |
 
-<a id="table-pid6d"></a>
 ### PID6D
 
 Dimensions: 6 rows × 12 columns
@@ -1721,7 +1627,6 @@ Dimensions: 6 rows × 12 columns
 | Fuel Rail Pressure B | FRP_B | kPa | 0x10 | 8 | 2 | - | unsigned | - | 10 | 1 | 0 |
 | Fuel Rail Temperature B | FRT_B | °C | 0x20 | 10 | 1 | - | unsigned | - | 1 | 1 | -40 |
 
-<a id="table-pid6e"></a>
 ### PID6E
 
 Dimensions: 4 rows × 12 columns
@@ -1733,7 +1638,6 @@ Dimensions: 4 rows × 12 columns
 | Commanded Injection Control Pressure B | ICP_B_CMD | kPa | 0x04 | 5 | 2 | - | unsigned | - | 10 | 1 | 0 |
 | Injection Control Pressure B | ICP_B | kPa | 0x08 | 7 | 2 | - | unsigned | - | 10 | 1 | 0 |
 
-<a id="table-pid6f"></a>
 ### PID6F
 
 Dimensions: 4 rows × 12 columns
@@ -1745,7 +1649,6 @@ Dimensions: 4 rows × 12 columns
 | Turbocharger Compressor Inlet Pressure Sensor A Wide Range | TCAWR_CINP | kPa | 0x04 | 1 | 1 | - | unsigned | - | 8 | 1 | 0 |
 | Turbocharger Compressor Inlet Pressure Sensor B Wide Range | TCBWR_CINP | kPa | 0x08 | 2 | 1 | - | unsigned | - | 8 | 1 | 0 |
 
-<a id="table-pid70"></a>
 ### PID70
 
 Dimensions: 6 rows × 12 columns
@@ -1759,7 +1662,6 @@ Dimensions: 6 rows × 12 columns
 | Boost Pressure A Control Status | BP_A_CS | - | 0x04 | 9 | 1 | 0x03 | 0-n | BPCntrlStat70 | - | - | - |
 | Boost Pressure B Control Status | BP_B_CS | - | 0x20 | 9 | 1 | 0x0C | 0-n | BPCntrlStat70 | - | - | - |
 
-<a id="table-bpcntrlstat70"></a>
 ### BPCNTRLSTAT70
 
 Dimensions: 4 rows × 2 columns
@@ -1771,7 +1673,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Closed Loop (no fault present) |
 | 0x03 | Fault present (boost data unreliable) |
 
-<a id="table-pid71"></a>
 ### PID71
 
 Dimensions: 6 rows × 12 columns
@@ -1785,7 +1686,6 @@ Dimensions: 6 rows × 12 columns
 | VGT A Control Status | VGT_A_CS | - | 0x04 | 5 | 1 | 0x03 | 0-n | BPCntrlStat71 | - | - | - |
 | VGT B Control Status | VGT_B_CS | - | 0x20 | 5 | 1 | 0x0C | 0-n | BPCntrlStat71 | - | - | - |
 
-<a id="table-bpcntrlstat71"></a>
 ### BPCNTRLSTAT71
 
 Dimensions: 4 rows × 2 columns
@@ -1797,7 +1697,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Closed Loop (no fault present) |
 | 0x03 | Fault present (VGT data unreliable) |
 
-<a id="table-pid72"></a>
 ### PID72
 
 Dimensions: 4 rows × 12 columns
@@ -1809,7 +1708,6 @@ Dimensions: 4 rows × 12 columns
 | Commanded Wastegate B Position | WG_B_CMD | % | 0x04 | 3 | 1 | - | unsigned | - | 100 | 255 | 0 |
 | Wastegate B Position | WG_B_ACT | % | 0x08 | 4 | 1 | - | unsigned | - | 100 | 255 | 0 |
 
-<a id="table-pid73"></a>
 ### PID73
 
 Dimensions: 2 rows × 12 columns
@@ -1819,7 +1717,6 @@ Dimensions: 2 rows × 12 columns
 | Exhaust Pressure Sensor Bank 1 | EP_1 | kPa | 0x01 | 1 | 2 | - | unsigned | - | 1 | 100 | 0 |
 | Exhaust Pressure Sensor Bank 2 | EP_2 | kPa | 0x02 | 3 | 2 | - | unsigned | - | 1 | 100 | 0 |
 
-<a id="table-pid74"></a>
 ### PID74
 
 Dimensions: 2 rows × 12 columns
@@ -1829,7 +1726,6 @@ Dimensions: 2 rows × 12 columns
 | Turbocharger A RPM | TCA_RPM | /min | 0x01 | 1 | 2 | - | unsigned | - | 10 | 1 | 0 |
 | Turbocharger B RPM | TCB_RPM | /min | 0x02 | 3 | 2 | - | unsigned | - | 10 | 1 | 0 |
 
-<a id="table-pid75"></a>
 ### PID75
 
 Dimensions: 4 rows × 12 columns
@@ -1841,7 +1737,6 @@ Dimensions: 4 rows × 12 columns
 | Turbocharger A Turbine Inlet Temperature | TCA_TINT | °C | 0x04 | 3 | 2 | - | unsigned | - | 1 | 10 | -40 |
 | Turbocharger A Turbine Outlet Temperature | TCA_TOUTT | °C | 0x08 | 5 | 2 | - | unsigned | - | 1 | 10 | -40 |
 
-<a id="table-pid76"></a>
 ### PID76
 
 Dimensions: 4 rows × 12 columns
@@ -1853,7 +1748,6 @@ Dimensions: 4 rows × 12 columns
 | Turbocharger B Turbine Inlet Temperature | TCB_TINT | °C | 0x04 | 3 | 2 | - | unsigned | - | 1 | 10 | -40 |
 | Turbocharger B Turbine Outlet Temperature | TCB_TOUTT | °C | 0x08 | 5 | 2 | - | unsigned | - | 1 | 10 | -40 |
 
-<a id="table-pid77"></a>
 ### PID77
 
 Dimensions: 4 rows × 12 columns
@@ -1865,7 +1759,6 @@ Dimensions: 4 rows × 12 columns
 | Charge Air Cooler Temperature Bank 2, Sensor 1 | CACT 21 | °C | 0x04 | 3 | 1 | - | unsigned | - | 1 | 1 | -40 |
 | Charge Air Cooler Temperature Bank 2, Sensor 2 | CACT 22 | °C | 0x08 | 4 | 1 | - | unsigned | - | 1 | 1 | -40 |
 
-<a id="table-pid78"></a>
 ### PID78
 
 Dimensions: 4 rows × 12 columns
@@ -1877,7 +1770,6 @@ Dimensions: 4 rows × 12 columns
 | Exhaust Gas Temperature Bank 1, Sensor 3 | EGT13 | °C | 0x04 | 5 | 2 | - | unsigned | - | 1 | 10 | -40 |
 | Exhaust Gas Temperature Bank 1, Sensor 4 | EGT14 | °C | 0x08 | 7 | 2 | - | unsigned | - | 1 | 10 | -40 |
 
-<a id="table-pid79"></a>
 ### PID79
 
 Dimensions: 4 rows × 12 columns
@@ -1889,7 +1781,6 @@ Dimensions: 4 rows × 12 columns
 | Exhaust Gas Temperature Bank 2, Sensor 3 | EGT23 | °C | 0x04 | 5 | 2 | - | unsigned | - | 1 | 10 | -40 |
 | Exhaust Gas Temperature Bank 2, Sensor 4 | EGT24 | °C | 0x08 | 7 | 2 | - | unsigned | - | 1 | 10 | -40 |
 
-<a id="table-pid7a"></a>
 ### PID7A
 
 Dimensions: 3 rows × 12 columns
@@ -1900,7 +1791,6 @@ Dimensions: 3 rows × 12 columns
 | Diesel Particulate Filter Bank 1 Inlet Pressure | DPF1_INP | kPa | 0x02 | 3 | 2 | - | unsigned | - | 1 | 100 | 0 |
 | Diesel Particulate Filter Bank 1 Outlet Pressure | DPF1_OUTP | kPa | 0x04 | 5 | 2 | - | unsigned | - | 1 | 100 | 0 |
 
-<a id="table-pid7b"></a>
 ### PID7B
 
 Dimensions: 3 rows × 12 columns
@@ -1911,7 +1801,6 @@ Dimensions: 3 rows × 12 columns
 | Diesel Particulate Filter Bank 2 Inlet Pressure | DPF2_INP | kPa | 0x02 | 3 | 2 | - | unsigned | - | 1 | 100 | 0 |
 | Diesel Particulate Filter Bank 2 Outlet Pressure | DPF2_OUTP | kPa | 0x04 | 5 | 2 | - | unsigned | - | 1 | 100 | 0 |
 
-<a id="table-pid7c"></a>
 ### PID7C
 
 Dimensions: 4 rows × 12 columns
@@ -1923,7 +1812,6 @@ Dimensions: 4 rows × 12 columns
 | DPF Bank 2 Inlet Temperature Sensor | DPF2_INT | °C | 0x04 | 5 | 2 | - | unsigned | - | 1 | 10 | -40 |
 | DPF Bank 2 Outlet Temperature Sensor | DPF2_OUTT | °C | 0x08 | 7 | 2 | - | unsigned | - | 1 | 10 | -40 |
 
-<a id="table-nntestat"></a>
 ### NNTESTAT
 
 Dimensions: 8 rows × 3 columns
@@ -1939,7 +1827,6 @@ Dimensions: 8 rows × 3 columns
 | 0x40 | 0x40 | <undefined> |
 | 0x80 | 0x80 | <undefined> |
 
-<a id="table-pntestat"></a>
 ### PNTESTAT
 
 Dimensions: 8 rows × 3 columns
@@ -1955,7 +1842,6 @@ Dimensions: 8 rows × 3 columns
 | 0x40 | 0x40 | <undefined> |
 | 0x80 | 0x80 | <undefined> |
 
-<a id="table-pid7f"></a>
 ### PID7F
 
 Dimensions: 3 rows × 12 columns
@@ -1966,7 +1852,6 @@ Dimensions: 3 rows × 12 columns
 | Total Idle Run Time | IDLE_TIME | min | 0x02 | 5 | 4 | - | unsigned | - | 1 | 60 | 0 |
 | Total Run Time With PTO Active | PTO_TIME | min | 0x04 | 9 | 4 | - | unsigned | - | 1 | 60 | 0 |
 
-<a id="table-pid81"></a>
 ### PID81
 
 Dimensions: 10 rows × 12 columns
@@ -1984,7 +1869,6 @@ Dimensions: 10 rows × 12 columns
 | Total run time with EI-AECD #5 Timer 1 active | AECD5_TIME1 | min | 0x10 | 33 | 4 | - | unsigned | - | 1 | 60 | 0 |
 | Total run time with EI-AECD #5 Timer 2 active | AECD5_TIME2 | min | 0x10 | 37 | 4 | - | unsigned | - | 1 | 60 | 0 |
 
-<a id="table-pid82"></a>
 ### PID82
 
 Dimensions: 10 rows × 12 columns
@@ -2002,7 +1886,6 @@ Dimensions: 10 rows × 12 columns
 | Total run time with EI-AECD #10 Timer 1 active | AECD10_TIME1 | min | 0x10 | 33 | 4 | - | unsigned | - | 1 | 60 | 0 |
 | Total run time with EI-AECD #10 Timer 2 active | AECD10_TIME2 | min | 0x10 | 37 | 4 | - | unsigned | - | 1 | 60 | 0 |
 
-<a id="table-pid83"></a>
 ### PID83
 
 Dimensions: 4 rows × 12 columns
@@ -2014,7 +1897,6 @@ Dimensions: 4 rows × 12 columns
 | NOx Sensor Concentration Bank 2 Sensor 1 | NOX21 | ppm | 0x04 | 5 | 2 | - | unsigned | - | 1 | 1 | 0 |
 | NOx Sensor Concentration Bank 2 Sensor 2 | NOX22 | ppm | 0x08 | 7 | 2 | - | unsigned | - | 1 | 1 | 0 |
 
-<a id="table-pid85"></a>
 ### PID85
 
 Dimensions: 4 rows × 12 columns
@@ -2026,7 +1908,6 @@ Dimensions: 4 rows × 12 columns
 | Reagent Tank Level | REAG_LVL | % | 0x04 | 5 | 1 | - | unsigned | - | 100 | 255 | 0 |
 | Total run time by the engine while NOx warning mode is activated | NWI_TIME | min | 0x08 | 6 | 4 | - | unsigned | - | 1 | 60 | 0 |
 
-<a id="table-pid86"></a>
 ### PID86
 
 Dimensions: 2 rows × 12 columns
@@ -2036,7 +1917,6 @@ Dimensions: 2 rows × 12 columns
 | PM Sensor Mass Concentration Bank 1 Sensor 1 | PM11 | mg/m³ | 0x01 | 1 | 2 | - | unsigned | - | 1 | 80 | 0 |
 | PM Sensor Mass Concentration Bank 2 Sensor 1 | PM21 | mg/m³ | 0x02 | 3 | 2 | - | unsigned | - | 1 | 80 | 0 |
 
-<a id="table-pid87"></a>
 ### PID87
 
 Dimensions: 2 rows × 12 columns
@@ -2046,7 +1926,6 @@ Dimensions: 2 rows × 12 columns
 | Intake Manifold Absolute Pressure A | MAP_A | kPa | 0x01 | 1 | 2 | - | unsigned | - | 1 | 32 | 0 |
 | Intake Manifold Absolute Pressure B | MAP_B | kPa | 0x02 | 3 | 2 | - | unsigned | - | 1 | 32 | 0 |
 
-<a id="table-pid88"></a>
 ### PID88
 
 Dimensions: 10 rows × 12 columns
@@ -2064,7 +1943,6 @@ Dimensions: 10 rows × 12 columns
 | Distance travelled while inducement system active in 30K block (20 - 30,000 km) | SCR_IND_DIST_3N | km | - | 9 | 2 | - | unsigned | - | 1 | 1 | 0 |
 | Distance travelled while inducement system active in 40K block (30 - 40,000 km) | SCR_IND_DIST_4N | km | - | 11 | 2 | - | unsigned | - | 1 | 1 | 0 |
 
-<a id="table-scrinducesystem"></a>
 ### SCRINDUCESYSTEM
 
 Dimensions: 5 rows × 3 columns
@@ -2077,7 +1955,6 @@ Dimensions: 5 rows × 3 columns
 | 0x04 | 0x04 | deviation of reagent consumption |
 | 0x08 | 0x08 | NOx emissions too high |
 
-<a id="table-scrinducesystemhist1-3"></a>
 ### SCRINDUCESYSTEMHIST1_3
 
 Dimensions: 4 rows × 3 columns
@@ -2089,7 +1966,6 @@ Dimensions: 4 rows × 3 columns
 | 0x04 | 0x04 | deviation of reagent consumption |
 | 0x08 | 0x08 | NOx emissions too high |
 
-<a id="table-scrinducesystemhist2-4"></a>
 ### SCRINDUCESYSTEMHIST2_4
 
 Dimensions: 4 rows × 3 columns
@@ -2101,7 +1977,6 @@ Dimensions: 4 rows × 3 columns
 | 0x40 | 0x40 | deviation of reagent consumption |
 | 0x80 | 0x80 | NOx emissions too high |
 
-<a id="table-pid89"></a>
 ### PID89
 
 Dimensions: 10 rows × 12 columns
@@ -2119,7 +1994,6 @@ Dimensions: 10 rows × 12 columns
 | Total run time with EI-AECD #15 Timer 1 active | AECD15_TIME1 | min | 0x10 | 33 | 4 | - | unsigned | - | 1 | 60 | 0 |
 | Total run time with EI-AECD #15 Timer 2 active | AECD15_TIME2 | min | 0x10 | 37 | 4 | - | unsigned | - | 1 | 60 | 0 |
 
-<a id="table-pid8a"></a>
 ### PID8A
 
 Dimensions: 10 rows × 12 columns
@@ -2137,7 +2011,6 @@ Dimensions: 10 rows × 12 columns
 | Total run time with EI-AECD #20 Timer 1 active | AECD20_TIME1 | min | 0x10 | 33 | 4 | - | unsigned | - | 1 | 60 | 0 |
 | Total run time with EI-AECD #20 Timer 2 active | AECD20_TIME2 | min | 0x10 | 37 | 4 | - | unsigned | - | 1 | 60 | 0 |
 
-<a id="table-pid8b"></a>
 ### PID8B
 
 Dimensions: 7 rows × 12 columns
@@ -2152,7 +2025,6 @@ Dimensions: 7 rows × 12 columns
 | Average Time Between DPF Regens | DPF_REGEN_AVGT | min | 0x20 | 3 | 2 | - | unsigned | - | 1 | 1 | 0 |
 | Average Distance Between DPF Regens | DPF_REGEN_AVGD | km | 0x40 | 5 | 2 | - | unsigned | - | 1 | 1 | 0 |
 
-<a id="table-dpfregenstat"></a>
 ### DPFREGENSTAT
 
 Dimensions: 2 rows × 3 columns
@@ -2162,7 +2034,6 @@ Dimensions: 2 rows × 3 columns
 | 0x01 | 0x00 | DPF Regen not in progress |
 | 0x01 | 0x01 | DPF Regen in progress |
 
-<a id="table-dpfregentyp"></a>
 ### DPFREGENTYP
 
 Dimensions: 2 rows × 3 columns
@@ -2172,7 +2043,6 @@ Dimensions: 2 rows × 3 columns
 | 0x02 | 0x00 | Passive DPF Regen |
 | 0x02 | 0x02 | Active DPF Regen |
 
-<a id="table-noxadsregen"></a>
 ### NOXADSREGEN
 
 Dimensions: 2 rows × 3 columns
@@ -2182,7 +2052,6 @@ Dimensions: 2 rows × 3 columns
 | 0x04 | 0x00 | Adsorption in progress (no regen) |
 | 0x04 | 0x04 | Desorption (regen) in progress |
 
-<a id="table-noxadsdesulf"></a>
 ### NOXADSDESULF
 
 Dimensions: 2 rows × 3 columns
@@ -2192,7 +2061,6 @@ Dimensions: 2 rows × 3 columns
 | 0x08 | 0x00 | Desulfurization not in progress |
 | 0x08 | 0x08 | Desulfurization in progress |
 
-<a id="table-pid8c"></a>
 ### PID8C
 
 Dimensions: 8 rows × 12 columns
@@ -2208,7 +2076,6 @@ Dimensions: 8 rows × 12 columns
 | O2 Sensor Lambda Bank 2 Sensor 1 | LAMBDA21 | - | 0x40 | 13 | 2 | - | unsigned | - | 0.000122 | 1 | 0 |
 | O2 Sensor Lambda Bank 2 Sensor 2 | LAMBDA22 | - | 0x80 | 15 | 2 | - | unsigned | - | 0.000122 | 1 | 0 |
 
-<a id="table-pid8f"></a>
 ### PID8F
 
 Dimensions: 6 rows × 12 columns
@@ -2222,7 +2089,6 @@ Dimensions: 6 rows × 12 columns
 | PM Sensor regen status Bank 2 Sensor 1 | PM21_REGEN | - | 0x04 | 4 | 1 | - | b0-n | PMRegenStat | - | - | - |
 | PM Sensor normalized output value Bank 2 Sensor 1 | PM21 | % | 0x08 | 5 | 2 | - | signed | - | 1 | 100 | 0 |
 
-<a id="table-pmactivestat"></a>
 ### PMACTIVESTAT
 
 Dimensions: 2 rows × 3 columns
@@ -2232,7 +2098,6 @@ Dimensions: 2 rows × 3 columns
 | 0x01 | 0x00 | Sensor not actively measuring (NO) |
 | 0x01 | 0x01 | Sensor actively measuring (YES) |
 
-<a id="table-pmregenstat"></a>
 ### PMREGENSTAT
 
 Dimensions: 2 rows × 3 columns
@@ -2242,7 +2107,6 @@ Dimensions: 2 rows × 3 columns
 | 0x02 | 0x00 | Sensor not regenerating (NO) |
 | 0x02 | 0x02 | Sensor regenerating (YES) |
 
-<a id="table-pid90"></a>
 ### PID90
 
 Dimensions: 4 rows × 12 columns
@@ -2254,7 +2118,6 @@ Dimensions: 4 rows × 12 columns
 | Emission system readiness | VOBD_RDY | - | - | 0 | 1 | - | b0-n | VOBDRdy | - | - | - |
 | Number of engine operating hours that the continuous MI was active. (Continuous MI counter) | VOBD_MI_TIME | h | - | 1 | 2 | - | unsigned | - | 1 | 1 | 0 |
 
-<a id="table-midispvobd"></a>
 ### MIDISPVOBD
 
 Dimensions: 4 rows × 2 columns
@@ -2266,7 +2129,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Not available/Not required of this vehicle |
 | 0x02 | <undefined> |
 
-<a id="table-mimode"></a>
 ### MIMODE
 
 Dimensions: 7 rows × 2 columns
@@ -2281,7 +2143,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0F | Not available/Not required for this vehicle |
 | 0xXX | <undefined> |
 
-<a id="table-vobdrdy"></a>
 ### VOBDRDY
 
 Dimensions: 2 rows × 3 columns
@@ -2291,7 +2152,6 @@ Dimensions: 2 rows × 3 columns
 | 0x40 | 0x00 | all vehicle emissions system monitors complete |
 | 0x40 | 0x40 | all vehicle emissions system monitors not complete |
 
-<a id="table-pid91"></a>
 ### PID91
 
 Dimensions: 3 rows × 12 columns
@@ -2302,7 +2162,6 @@ Dimensions: 3 rows × 12 columns
 | Number of engine operating hours that the continuous MI was active. (Continuous MI counter) | OBD_MI_TIME | h | - | 1 | 2 | - | unsigned | - | 1 | 1 | 0 |
 | Highest ECU B1 counter | OBD_B1_TIME | h | - | 3 | 2 | - | unsigned | - | 1 | 1 | 0 |
 
-<a id="table-pid92"></a>
 ### PID92
 
 Dimensions: 8 rows × 12 columns
@@ -2318,7 +2177,6 @@ Dimensions: 8 rows × 12 columns
 | Fuel Injection Timing Control 2 Status | FIT2 | - | 0x40 | 1 | 1 | - | b0-n | FIT2Stat | - | - | - |
 | Idle Fuel Balance/Contribution Control 2 Status | IFB2 | - | 0x80 | 1 | 1 | - | b0-n | IFB2Stat | - | - | - |
 
-<a id="table-fp1stat"></a>
 ### FP1STAT
 
 Dimensions: 2 rows × 3 columns
@@ -2328,7 +2186,6 @@ Dimensions: 2 rows × 3 columns
 | 0x01 | 0x00 | Fuel Pressure 1 not in closed loop control |
 | 0x01 | 0x01 | Fuel Pressure 1 in closed loop control |
 
-<a id="table-fiq1stat"></a>
 ### FIQ1STAT
 
 Dimensions: 2 rows × 3 columns
@@ -2338,7 +2195,6 @@ Dimensions: 2 rows × 3 columns
 | 0x02 | 0x00 | Fuel Injection Quantity 1 not in closed loop control |
 | 0x02 | 0x02 | Fuel Injection Quantity 1 in closed loop control |
 
-<a id="table-fit1stat"></a>
 ### FIT1STAT
 
 Dimensions: 2 rows × 3 columns
@@ -2348,7 +2204,6 @@ Dimensions: 2 rows × 3 columns
 | 0x04 | 0x00 | Fuel Injection Timing 1 not in closed loop control |
 | 0x04 | 0x04 | Fuel Injection Timing 1 in closed loop control |
 
-<a id="table-ifb1stat"></a>
 ### IFB1STAT
 
 Dimensions: 2 rows × 3 columns
@@ -2358,7 +2213,6 @@ Dimensions: 2 rows × 3 columns
 | 0x08 | 0x00 | Idle Fuel Balance/Contribution Control 1 not in closed loop |
 | 0x08 | 0x08 | Idle Fuel Balance/Contribution Control 1 in closed loop |
 
-<a id="table-fp2stat"></a>
 ### FP2STAT
 
 Dimensions: 2 rows × 3 columns
@@ -2368,7 +2222,6 @@ Dimensions: 2 rows × 3 columns
 | 0x10 | 0x00 | Fuel Pressure 2 not in closed loop control |
 | 0x10 | 0x10 | Fuel Pressure 2 in closed loop control |
 
-<a id="table-fiq2stat"></a>
 ### FIQ2STAT
 
 Dimensions: 2 rows × 3 columns
@@ -2378,7 +2231,6 @@ Dimensions: 2 rows × 3 columns
 | 0x20 | 0x00 | Fuel Injection Quantity 2 not in closed loop control |
 | 0x20 | 0x20 | Fuel Injection Quantity 2 in closed loop control |
 
-<a id="table-fit2stat"></a>
 ### FIT2STAT
 
 Dimensions: 2 rows × 3 columns
@@ -2388,7 +2240,6 @@ Dimensions: 2 rows × 3 columns
 | 0x40 | 0x00 | Fuel Injection Timing 2 not in closed loop control |
 | 0x40 | 0x40 | Fuel Injection Timing 2 in closed loop control |
 
-<a id="table-ifb2stat"></a>
 ### IFB2STAT
 
 Dimensions: 2 rows × 3 columns
@@ -2398,7 +2249,6 @@ Dimensions: 2 rows × 3 columns
 | 0x80 | 0x00 | Idle Fuel Balance/Contribution Control 2 not in closed loop |
 | 0x80 | 0x80 | Idle Fuel Balance/Contribution Control 2 in closed loop |
 
-<a id="table-pid93"></a>
 ### PID93
 
 Dimensions: 1 rows × 12 columns
@@ -2407,7 +2257,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Cumulative continuous MI counter | MI_TIME_CUM | h | 0x01 | 1 | 2 | - | unsigned | - | 1 | 1 | 0 |
 
-<a id="table-pid94"></a>
 ### PID94
 
 Dimensions: 9 rows × 12 columns
@@ -2424,7 +2273,6 @@ Dimensions: 9 rows × 12 columns
 | EGR valve counter | EGR_TIME | h | 0x10 | 8 | 2 | - | unsigned | - | 1 | 1 | 0 |
 | Monitoring System Counter | NOX_DTC_TIME | h | 0x20 | 10 | 2 | - | unsigned | - | 1 | 1 | 0 |
 
-<a id="table-noxwarnactstat"></a>
 ### NOXWARNACTSTAT
 
 Dimensions: 2 rows × 3 columns
@@ -2434,7 +2282,6 @@ Dimensions: 2 rows × 3 columns
 | 0x01 | 0x00 | Warning system inactive |
 | 0x01 | 0x01 | Warning system active |
 
-<a id="table-inducl1stat"></a>
 ### INDUCL1STAT
 
 Dimensions: 4 rows × 2 columns
@@ -2446,7 +2293,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Level one inducement active |
 | 0x03 | Level one inducement not supported |
 
-<a id="table-inducl2stat"></a>
 ### INDUCL2STAT
 
 Dimensions: 4 rows × 2 columns
@@ -2458,7 +2304,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Level two inducement active |
 | 0x03 | Level two inducement not supported |
 
-<a id="table-inducl3stat"></a>
 ### INDUCL3STAT
 
 Dimensions: 4 rows × 2 columns
@@ -2470,7 +2315,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Level three inducement active |
 | 0x03 | Level three inducement not supported |
 
-<a id="table-pid98"></a>
 ### PID98
 
 Dimensions: 4 rows × 12 columns
@@ -2482,7 +2326,6 @@ Dimensions: 4 rows × 12 columns
 | Exhaust Gas Temperature Bank 1, Sensor 7 | EGT17 | °C | 0x04 | 5 | 2 | - | unsigned | - | 1 | 10 | -40 |
 | Exhaust Gas Temperature Bank 1, Sensor 8 | EGT18 | °C | 0x08 | 7 | 2 | - | unsigned | - | 1 | 10 | -40 |
 
-<a id="table-pid99"></a>
 ### PID99
 
 Dimensions: 4 rows × 12 columns
@@ -2494,7 +2337,6 @@ Dimensions: 4 rows × 12 columns
 | Exhaust Gas Temperature Bank 2, Sensor 7 | EGT27 | °C | 0x04 | 5 | 2 | - | unsigned | - | 1 | 10 | -40 |
 | Exhaust Gas Temperature Bank 2, Sensor 8 | EGT28 | °C | 0x08 | 7 | 2 | - | unsigned | - | 1 | 10 | -40 |
 
-<a id="table-pid9c"></a>
 ### PID9C
 
 Dimensions: 8 rows × 12 columns
@@ -2510,7 +2352,6 @@ Dimensions: 8 rows × 12 columns
 | O2 Sensor Lambda Bank 2 Sensor 3 | LAMBDA23 | - | 0x40 | 13 | 2 | - | unsigned | - | 0.000122 | 1 | 0 |
 | O2 Sensor Lambda Bank 2 Sensor 4 | LAMBDA24 | - | 0x80 | 15 | 2 | - | unsigned | - | 0.000122 | 1 | 0 |
 
-<a id="table-unitandscalingids"></a>
 ### UNITANDSCALINGIDS
 
 Dimensions: 101 rows × 6 columns
@@ -2619,7 +2460,6 @@ Dimensions: 101 rows × 6 columns
 | 0xFE | Pa | signed | 1 | 4 | 0 |
 | 0xXY | <undefined> | - | - | - | - |
 
-<a id="table-obdmid-name"></a>
 ### OBDMID_NAME
 
 Dimensions: 122 rows × 2 columns
@@ -2749,7 +2589,6 @@ Dimensions: 122 rows × 2 columns
 | 0xFF | Vehicle manufacturer defined OBDMID |
 | 0xXY | <undefined> |
 
-<a id="table-obdservice9"></a>
 ### OBDSERVICE9
 
 Dimensions: 13 rows × 9 columns
@@ -2770,7 +2609,6 @@ Dimensions: 13 rows × 9 columns
 | EVAP | 0x14 | Distance Traveled Since Evap Monitoring Decision | Distance Traveled Since Evap Monitoring Decision | EVAP_DIST | - | unsigned int | 2 | - |
 |  | 0xXY | <undefined> | <undefined> | <undefined> | - | - | - | - |
 
-<a id="table-iptsparklist"></a>
 ### IPTSPARKLIST
 
 Dimensions: 20 rows × 6 columns
@@ -2798,7 +2636,6 @@ Dimensions: 20 rows × 6 columns
 | Secondary O2 Sensor Monitor Completion Counts Bank 2 | SO2SCOMP2 | cnts | 36 | 2 | unsigned int |
 | Secondary O2 Sensor Monitor Conditions Encountered Counts Bank 2 | SO2SCOND2 | cnts | 38 | 2 | unsigned int |
 
-<a id="table-ecunamelist"></a>
 ### ECUNAMELIST
 
 Dimensions: 2 rows × 6 columns
@@ -2808,7 +2645,6 @@ Dimensions: 2 rows × 6 columns
 | ECU | ECU | - | 0 | 4 | string |
 | ECUNAME | ECUNAME | - | 5 | 15 | string |
 
-<a id="table-iptcomprlist"></a>
 ### IPTCOMPRLIST
 
 Dimensions: 18 rows × 6 columns
@@ -2834,7 +2670,6 @@ Dimensions: 18 rows × 6 columns
 | Fuel Monitor Completion Condition Counts | FUELCOMP | cnts | 32 | 2 | unsigned int |
 | Fuel Monitor Conditions Encountered Counts | FUELCOND | cnts | 34 | 2 | unsigned int |
 
-<a id="table-funktionaleadresse"></a>
 ### FUNKTIONALEADRESSE
 
 Dimensions: 1 rows × 3 columns
@@ -2843,7 +2678,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xDF | ALL | alle Steuergeräte |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 2 rows × 2 columns
@@ -2853,7 +2687,6 @@ Dimensions: 2 rows × 2 columns
 | ?F1? | ERROR_EJOBSTATUS |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-jobstati"></a>
 ### JOBSTATI
 
 Dimensions: 53 rows × 2 columns

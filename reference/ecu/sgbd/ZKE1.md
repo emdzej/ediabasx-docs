@@ -40,7 +40,6 @@
 - [STEUERN_EINGANG](#job-steuern-eingang) - Ansteuern eines digitalen Eingangs v. GM1 !!! ACHTUNG: Die ZKE1 antwortet nicht !!!
 - [STEUERN_AUSGANG](#job-steuern-ausgang) - Ansteuern eines digitalen Ausgangs v. GM1 !!! ACHTUNG: Die ZKE1 antwortet nicht !!!
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -58,7 +57,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer ZKE I automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -71,7 +69,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer ZKE I
@@ -89,7 +86,6 @@ _No arguments._
 | ID_PROGSPEICHER | int | Programmspeicher ROM/EPROM (0/1) |
 | ID_AUSSTATTUNG | int | Scheibenwischersteuerung       (Bit 0 = 1) Anpressdruckverstellung        (Bit 1 = 1) Scheibenwischerreinigung       (Bit 2 = 1) Zentralverriegelung            (Bit 3 = 1) Tuerschl.heizung u. Innenlicht (Bit 4 = 1) Fensterheber u. Schiebedach    (Bit 5 = 1) Elektr. Sicherung              (Bit 6 = 1) |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -109,7 +105,6 @@ _No arguments._
 | F_ART1_NR | int | Fehlerart 1 des einzelnen Fehlers als Index |
 | F_ART1_TEXT | string | Fehlerart 1 des einzelnen Fehlers als Text table FArtTexte ARTTEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -122,7 +117,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -135,7 +129,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-status-eingaenge-0"></a>
 ### STATUS_EINGAENGE_0
 
 Status der digitalen Eingaenge des GM I (Gruppe 0)
@@ -156,7 +149,6 @@ _No arguments._
 | STAT_VR_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-eingaenge-1"></a>
 ### STATUS_EINGAENGE_1
 
 Status der digitalen Eingaenge des GM I (Gruppe 1)
@@ -177,7 +169,6 @@ _No arguments._
 | STAT_SW_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-eingaenge-2"></a>
 ### STATUS_EINGAENGE_2
 
 Status der digitalen Eingaenge des GM I (Gruppe 2)
@@ -198,7 +189,6 @@ _No arguments._
 | STAT_NS_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-eingaenge-3"></a>
 ### STATUS_EINGAENGE_3
 
 Status der digitalen Eingaenge des GM I (Gruppe 3)
@@ -218,7 +208,6 @@ _No arguments._
 | STAT_SIR_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-eingaenge-4"></a>
 ### STATUS_EINGAENGE_4
 
 Status der digitalen Eingaenge des GM I (Gruppe 4)
@@ -239,7 +228,6 @@ _No arguments._
 | STAT_DTSH_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-eingaenge-5"></a>
 ### STATUS_EINGAENGE_5
 
 Status der digitalen Eingaenge des GM I (Gruppe 5)
@@ -260,7 +248,6 @@ _No arguments._
 | STAT_FHBHA_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-eingaenge-6"></a>
 ### STATUS_EINGAENGE_6
 
 Status der digitalen Eingaenge des GM I (Gruppe 6)
@@ -282,7 +269,6 @@ _No arguments._
 | STAT_FHBTZ_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-eingaenge-7"></a>
 ### STATUS_EINGAENGE_7
 
 Status der digitalen Eingaenge des GM I (Gruppe 7)
@@ -300,7 +286,6 @@ _No arguments._
 | STAT_SHD_EV_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-eingaenge-8"></a>
 ### STATUS_EINGAENGE_8
 
 Status der digitalen Eingaenge des GM I (Gruppe 8)
@@ -317,7 +302,6 @@ _No arguments._
 | STAT_ADV_MSB_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-ausgaenge-0"></a>
 ### STATUS_AUSGAENGE_0
 
 Status der digitalen Ausgaenge des GM I (Gruppe 0)
@@ -339,7 +323,6 @@ _No arguments._
 | STAT_FHFTZ_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-ausgaenge-1"></a>
 ### STATUS_AUSGAENGE_1
 
 Status der digitalen Ausgaenge des GM I (Gruppe 1)
@@ -361,7 +344,6 @@ _No arguments._
 | STAT_ADVM_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-ausgaenge-2"></a>
 ### STATUS_AUSGAENGE_2
 
 Status der digitalen Ausgaenge des GM I (Gruppe 2)
@@ -381,7 +363,6 @@ _No arguments._
 | STAT_WB_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-eingang"></a>
 ### STEUERN_EINGANG
 
 Ansteuern eines digitalen Eingangs v. GM1 !!! ACHTUNG: Die ZKE1 antwortet nicht !!!
@@ -402,7 +383,6 @@ Ansteuern eines digitalen Eingangs v. GM1 !!! ACHTUNG: Die ZKE1 antwortet nicht 
 | _TEL1_ANTWORT | binary |  |
 | _TEL2_AN_SG | binary |  |
 
-<a id="job-steuern-ausgang"></a>
 ### STEUERN_AUSGANG
 
 Ansteuern eines digitalen Ausgangs v. GM1 !!! ACHTUNG: Die ZKE1 antwortet nicht !!!
@@ -432,7 +412,6 @@ Ansteuern eines digitalen Ausgangs v. GM1 !!! ACHTUNG: Die ZKE1 antwortet nicht 
 - [EINGANG](#table-eingang) (29 × 4)
 - [AUSGANG](#table-ausgang) (17 × 4)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 21 rows × 3 columns
@@ -461,7 +440,6 @@ Dimensions: 21 rows × 3 columns
 | 0x13 | 0x20 | SHD11 FH Fahrs hi Weg/Zeit |
 | 0x14 | 0x20 | SHD12 SHD Weg/Zeit |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -471,7 +449,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Fehler momentan nicht vorhanden |
 | 1 | Fehler momentan vorhanden |
 
-<a id="table-eingang"></a>
 ### EINGANG
 
 Dimensions: 29 rows × 4 columns
@@ -508,7 +485,6 @@ Dimensions: 29 rows × 4 columns
 | FHBTZ | 0xE6 | 0x80 | Schalter FH-BT |
 | XY | 0xXY | 0xXY | nicht definiertes Signal |
 
-<a id="table-ausgang"></a>
 ### AUSGANG
 
 Dimensions: 17 rows × 4 columns

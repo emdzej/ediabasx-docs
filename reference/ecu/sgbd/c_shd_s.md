@@ -28,7 +28,6 @@
 - [PATCH_DATEN_LESEN](#job-patch-daten-lesen) - Auslesen der Patch Daten 
 - [SHD_INITIALISIERUNG_NACH_PATCH](#job-shd-initialisierung-nach-patch) - Initialisierung nach Patch Daten schrieben 
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -46,7 +45,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer GM III
@@ -87,7 +84,6 @@ Ident-Daten fuer GM III
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-testen-shd-patch"></a>
 ### TESTEN_SHD_PATCH
 
 ACHTUNG: nur E38,E39,E39/2 mit SW02,SW03,SW05 Testen der Daten des SHD bzgl. Uebernahme eins SW-Patch
@@ -102,7 +98,6 @@ _No arguments._
 | PATCH_OK | int | 1: Patch = IO / 0: Patch = NIO |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-schreiben-bcs-patch"></a>
 ### SCHREIBEN_BCS_PATCH
 
 ACHTUNG: nur fuer E38,E39, E39/2 SW 02, SW 03  SW 05! Zusaetzlicher Patch wegen Feldproblemen ab 9/97
@@ -115,7 +110,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-patch-info-lesen"></a>
 ### PATCH_INFO_LESEN
 
 Auslesen der Patch Info 
@@ -132,7 +126,6 @@ _No arguments._
 | CHECKSUMME2 | string | Auslesen der Speicherzelle 0xb68A |
 | PATCH_SOURCE | string | zur Bestimmung wer den Patch geschrieben hat (Speicherzelle 0xB65D) |
 
-<a id="job-patch-daten-lesen"></a>
 ### PATCH_DATEN_LESEN
 
 Auslesen der Patch Daten 
@@ -147,7 +140,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-shd-initialisierung-nach-patch"></a>
 ### SHD_INITIALISIERUNG_NACH_PATCH
 
 Initialisierung nach Patch Daten schrieben 
@@ -169,7 +161,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-peripheriemodule"></a>
 ### PERIPHERIEMODULE
 
 Dimensions: 9 rows × 3 columns
@@ -186,7 +177,6 @@ Dimensions: 9 rows × 3 columns
 | 0x09 | SM_SFB | @Sitzmemory@ @Fernbedienung@ @Beifahrersitz@ |
 | 0xXY | XY | ERROR_PM_UNBEKANNT |
 
-<a id="table-peripheriemodule-hd"></a>
 ### PERIPHERIEMODULE_HD
 
 Dimensions: 5 rows × 3 columns
@@ -199,7 +189,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | SHD | @Schiebehebedach@ |
 | 0xXY | XY | ERROR_PM_NICHT_ERLAUBT |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -215,7 +204,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

@@ -44,7 +44,6 @@
 - [ABGLEICH_SCHREIBEN](#job-abgleich-schreiben) - Programmieren der Abgleich-Werte
 - [ABGLEICH_VORGEBEN](#job-abgleich-vorgeben) - Vorgeben der Abgleichwerte
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -63,7 +62,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer Lenkwinkelsensor 5 (CAN) automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -76,7 +74,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Lenkwinkelsensor 5
@@ -100,7 +97,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | int | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -122,7 +118,6 @@ _No arguments._
 | F_ART1_TEXT | string | 1. (einzige) Fehlerart als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -136,7 +131,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose Dummy-Job ohne Diagnosetelegramm (d.h. immer OKAY)
@@ -149,7 +143,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | immer OKAY |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Auslesen der digitalen IO-Stati des Lenkwinkelsensors 5 Der Wertebereich ist bei allen Results gleich: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -165,7 +158,6 @@ _No arguments._
 | STAT_U_BASISSENSOR_AKTIV | int | Statusbit fuer die Versorgungsspannung des Basissensors |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Auslesen der Analogwerte
@@ -183,7 +175,6 @@ _No arguments._
 | STAT_U_KLEMME_87_WERT | long | Spannung an Klemme 87 Bereich: 0 bis 18 [V] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern eines digitalen Ein- oder Ausgangs v. LWS5 ! erlaubte Namen des Arguments 'FUNKTION' ueber Tool XTRACT.exe ! Aufruf 'XTRACT [-F] LWS5.prg'
@@ -203,7 +194,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs v. LWS5 ! erlaubte Namen des Argume
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sg-digital"></a>
 ### STATUS_SG_DIGITAL
 
 Auslesen der digitalen SG-Stati des Lenkwinkelsensors 5 Der Wertebereich ist bei allen Results gleich: Bereich: 0, wenn FALSE / 1, wenn TRUE
@@ -263,7 +253,6 @@ _No arguments._
 | STAT_LWS_ERR_WDG_AKTIV | int | LWS-Fehler: Watchdogreset |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sg-online"></a>
 ### STATUS_SG_ONLINE
 
 Auslesen der analogen Online-Werte des LWS5
@@ -281,7 +270,6 @@ _No arguments._
 | STAT_PRGDLZ_G_WERT | long | Programmdurchlaufzeit Bereich: 0 bis 14000 [Mikro-Sekunden] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sg-virtuell"></a>
 ### STATUS_SG_VIRTUELL
 
 Auslesen der analogen Online-Werte / virtuelle Sensorik
@@ -302,7 +290,6 @@ _No arguments._
 | STAT_ULRWSYN_G_WERT | long | synthetische Lenkradwinkel Bereich: -600 bis +600 [Grad] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-abgleich-lesen"></a>
 ### ABGLEICH_LESEN
 
 Auslesen der Abgleich-Werte
@@ -319,7 +306,6 @@ _No arguments._
 | ABGL_FGSTNR | string | Abgleichwert: Fahrgestellnummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Fahrzeugcodierung des LWS5 auslesen
@@ -339,7 +325,6 @@ Fahrzeugcodierung des LWS5 auslesen
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierung-check"></a>
 ### CODIERUNG_CHECK
 
 Checksumme der Codierung des LWS5 auslesen
@@ -356,7 +341,6 @@ _No arguments._
 | COD_CHECK_LOW | int | Checksumme ueber alle 112 Codierdaten (Low-Byte) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-kl30"></a>
 ### STATUS_KL30
 
 Lesen des Unterspannungszählers
@@ -371,7 +355,6 @@ _No arguments._
 | STAT_KL30_ZAEHLER | int | ausgelesener Unterspannungszähler |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des ROM/RAM bzw. EEPROM-Speichers
@@ -393,7 +376,6 @@ Lesen des ROM/RAM bzw. EEPROM-Speichers
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -411,7 +393,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -432,7 +413,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -450,7 +430,6 @@ _No arguments._
 | BYTE4 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident-e"></a>
 ### IDENT_E
 
 Ident-Daten fuer Lenkwinkelsensor 5
@@ -474,7 +453,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | int | Hex-Antwort von SG |
 
-<a id="job-codierung-schreiben-datei"></a>
 ### CODIERUNG_SCHREIBEN_DATEI
 
 Beschreiben der Codierdaten des LWS5 ueber Datei
@@ -493,7 +471,6 @@ Beschreiben der Codierdaten des LWS5 ueber Datei
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-abgleich-schreiben"></a>
 ### ABGLEICH_SCHREIBEN
 
 Programmieren der Abgleich-Werte
@@ -507,7 +484,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-abgleich-vorgeben"></a>
 ### ABGLEICH_VORGEBEN
 
 Vorgeben der Abgleichwerte
@@ -539,7 +515,6 @@ Vorgeben der Abgleichwerte
 - [STEUERN_DIGITAL](#table-steuern-digital) (9 × 2)
 - [ASCII](#table-ascii) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -555,7 +530,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 33 rows × 2 columns
@@ -596,7 +570,6 @@ Dimensions: 33 rows × 2 columns
 | 0x32 | Pioneer |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 17 rows × 2 columns
@@ -621,7 +594,6 @@ Dimensions: 17 rows × 2 columns
 | 0x10 | Watchdog |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -632,7 +604,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Dimensions: 9 rows × 2 columns
@@ -649,7 +620,6 @@ Dimensions: 9 rows × 2 columns
 | TAST | 0x80 |
 | XY | 0xFF |
 
-<a id="table-ascii"></a>
 ### ASCII
 
 Dimensions: 27 rows × 2 columns

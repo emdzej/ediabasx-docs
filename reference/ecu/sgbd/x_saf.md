@@ -48,7 +48,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -67,7 +66,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -80,7 +78,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -97,7 +94,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -128,7 +124,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -173,7 +168,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -192,7 +186,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -210,7 +203,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -231,7 +223,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -260,7 +251,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -280,7 +270,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -301,7 +290,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -317,7 +305,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -339,7 +326,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -361,7 +347,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -388,7 +373,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -433,7 +417,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -448,7 +431,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -468,7 +450,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -487,7 +468,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -506,7 +486,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -525,7 +504,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -545,7 +523,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -560,7 +537,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -580,7 +556,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -599,7 +574,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -619,7 +593,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -637,7 +610,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -739,7 +711,6 @@ _No arguments._
 - [TAB_0X2004](#table-tab-0x2004) (1 × 17)
 - [UWB_WERT_SENSOR1_ERR](#table-uwb-wert-sensor1-err) (19 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -823,7 +794,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -972,7 +942,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1015,7 +984,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1040,7 +1008,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1074,7 +1041,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1147,7 +1113,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1160,7 +1125,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1175,7 +1139,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1188,7 +1151,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1208,7 +1170,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1251,7 +1212,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-arg-0xb07b-r"></a>
 ### ARG_0XB07B_R
 
 Dimensions: 1 rows × 14 columns
@@ -1260,7 +1220,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SENSOR_KANAL | + | - | 0-n | high | unsigned char | - | TAB_MR_SENSORKANAL | - | - | - | - | - | Sensor Kanal, der kalibriert werden soll |
 
-<a id="table-arg-0xb08c-r"></a>
 ### ARG_0XB08C_R
 
 Dimensions: 1 rows × 14 columns
@@ -1269,7 +1228,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ART_KALIBRIERUNG | + | - | 0-n | - | unsigned char | - | TAB_MR_ART_KALIBRIERUNG_SAF | - | - | - | - | - | Auswahl Kalibrierung Art |
 
-<a id="table-arg-0xb090-r"></a>
 ### ARG_0XB090_R
 
 Dimensions: 2 rows × 14 columns
@@ -1279,7 +1237,6 @@ Dimensions: 2 rows × 14 columns
 | SAF_FEDERVORSPANNUNG | + | - | 0-n | - | unsigned char | - | TAB_FEDERVORSPANNUNG_ARG | - | - | - | - | - | Steuern SAF Federvorspannung: 0x01 == E: Einstellung Einzelfahrer; 0x02 == EB: Einstellung Einzelfahrer + Beladung; 0x03 == SO: Einstellung Soziusbetrieb; 0x04 == CC1: Einstellung Huegel; 0x05 == CC2: Einstellung Berg |
 | SAF_DAEMPFUNG | + | - | 0-n | - | unsigned char | - | TAB_DAEMPFUNG_SAF_ARG | - | - | - | - | - | Steuern SAF Daempfung: 0x01 == C: Einstellung Comfort 0x02 == N: Einstellung Normal 0x03 == S: Einstellung Sport |
 
-<a id="table-arg-0xe114-d"></a>
 ### ARG_0XE114_D
 
 Dimensions: 2 rows × 12 columns
@@ -1289,7 +1246,6 @@ Dimensions: 2 rows × 12 columns
 | RICHTUNG_DC | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Richtung in der die Verstellung relativ in Richtung Federbein vorgenommen werden soll: 0x00 == Feder entspannen 0x01 == Feder spannen |
 | RELATIVWERT | Inkremente | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 6000.0 | Übergabewert Verstellweg relativ in Inkrementen |
 
-<a id="table-arg-0xe137-d"></a>
 ### ARG_0XE137_D
 
 Dimensions: 3 rows × 12 columns
@@ -1300,7 +1256,6 @@ Dimensions: 3 rows × 12 columns
 | PWM | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Einzustellender PWM Wert |
 | FREQ | 0-n | high | unsigned char | - | TAB_MR_SAF_FREQ | 1.0 | 1.0 | 0.0 | - | - | Einzustellende PWM Frequenz |
 
-<a id="table-arg-0xe138-d"></a>
 ### ARG_0XE138_D
 
 Dimensions: 3 rows × 12 columns
@@ -1311,7 +1266,6 @@ Dimensions: 3 rows × 12 columns
 | STROMWERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 2000.0 | Vorgegebener Stromwert |
 | FREQ | 0-n | high | unsigned char | - | TAB_MR_SAF_FREQ | 1.0 | 1.0 | 0.0 | - | - | Einzustellende PWM Frequenz |
 
-<a id="table-arg-0xe228-d"></a>
 ### ARG_0XE228_D
 
 Dimensions: 60 rows × 12 columns
@@ -1379,7 +1333,6 @@ Dimensions: 60 rows × 12 columns
 | ARG_DIAG_IN_RCK_DATA_U32_59_WERT_1 | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Daten für das Race Calibration Kit |
 | ARG_DIAG_IN_RCK_DATA_U32_60_WERT_1 | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Daten für das Race Calibration Kit |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1393,7 +1346,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1407,7 +1359,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 137 rows × 3 columns
@@ -1552,7 +1503,6 @@ Dimensions: 137 rows × 3 columns
 | 0xD754A5 | CAN DME Nachricht Modus_Erweitert_Motorrad_2010: Alive Fehler | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 45 rows × 9 columns
@@ -1605,7 +1555,6 @@ Dimensions: 45 rows × 9 columns
 | 0x1635 | WHEEL_REAR_TOOTH_TIME | s | High | unsigned int | - | 1.0 | 1000000.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -1618,7 +1567,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 24 rows × 3 columns
@@ -1650,7 +1598,6 @@ Dimensions: 24 rows × 3 columns
 | 0xD7544B | CAN DME Nachricht Status_DTC_Motorrad_2010 - Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 84 rows × 9 columns
@@ -1742,7 +1689,6 @@ Dimensions: 84 rows × 9 columns
 | 0x2004 | Sub-Tabelle | 0-n | - | 0xFFFFFFFF | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1751,7 +1697,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x2302-d"></a>
 ### RES_0X2302_D
 
 Dimensions: 6 rows × 10 columns
@@ -1765,7 +1710,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_MITTELSTROM_HINTEN_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Mittelwert Ventilstrom hinten |
 | STAT_MAXIMALSTROM_HINTEN_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Maximalwert Ventilstrom hinten |
 
-<a id="table-res-0x2303-d"></a>
 ### RES_0X2303_D
 
 Dimensions: 6 rows × 10 columns
@@ -1779,7 +1723,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_MITTELFEDERWEG_HINTEN_WERT | mm | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Mittelwert Federweg hinten |
 | STAT_MAXIMALFEDERWEG_HINTEN_WERT | mm | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Maximalwert Federweg hinten |
 
-<a id="table-res-0x2304-d"></a>
 ### RES_0X2304_D
 
 Dimensions: 8 rows × 10 columns
@@ -1795,7 +1738,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_AUSFEDERN_HINTEN_MAX_WERT | m/s | high | signed int | - | - | 1.0 | 1000.0 | 0.0 | Maximale Ausfederungsgeschwindigkeit hinten |
 | STAT_AUSFEDERN_HINTEN_AVG_WERT | m/s | high | signed int | - | - | 1.0 | 1000.0 | 0.0 | Durchschnittliche Ausfederungsgeschwindigkeit hinten |
 
-<a id="table-res-0x2306-d"></a>
 ### RES_0X2306_D
 
 Dimensions: 2 rows × 10 columns
@@ -1805,7 +1747,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ANZAHL_INDIVIDUALISIERUNGEN_FEDERUNG_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Individualisierungen Federung |
 | STAT_ANZAHL_INDIVIDUALISIERUNGEN_DAEMPFUNG_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Individualisierungen Dämpfung |
 
-<a id="table-res-0x2307-d"></a>
 ### RES_0X2307_D
 
 Dimensions: 2 rows × 10 columns
@@ -1815,7 +1756,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ANZAHL_VERSTELLUNGEN_NACH_OBEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl DC-Motor Verstellungen nach oben |
 | STAT_ANZAHL_VERSTELLUNGEN_NACH_UNTEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl DC-Motor Verstellungen nach unten |
 
-<a id="table-res-0x2308-d"></a>
 ### RES_0X2308_D
 
 Dimensions: 3 rows × 10 columns
@@ -1826,7 +1766,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ZAEHLER_2_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Entwicklungszähler 2 |
 | STAT_ZAEHLER_3_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Entwicklungszähler 3 |
 
-<a id="table-res-0x2309-d"></a>
 ### RES_0X2309_D
 
 Dimensions: 14 rows × 10 columns
@@ -1848,7 +1787,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_FASTA_RIDE_LVL_DIFF_COUNT_07_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Abweichung Fahrlage zu Normallage - Wert 7 |
 | STAT_FASTA_RIDE_LVL_DIFF_COUNT_08_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Abweichung Fahrlage zu Normallage - Wert 8 |
 
-<a id="table-res-0x4183-d"></a>
 ### RES_0X4183_D
 
 Dimensions: 3 rows × 10 columns
@@ -1859,7 +1797,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_UNTER_VERSION_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Unter-Version |
 | STAT_PATCH_VERSION_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Patch-Version |
 
-<a id="table-res-0x4184-d"></a>
 ### RES_0X4184_D
 
 Dimensions: 3 rows × 10 columns
@@ -1870,7 +1807,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_UNTER_VERSION_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Unter-Version |
 | STAT_PATCH_VERSION_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Patch-Version |
 
-<a id="table-res-0xb07b-r"></a>
 ### RES_0XB07B_R
 
 Dimensions: 5 rows × 13 columns
@@ -1883,7 +1819,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_KANAL3_WERT | - | - | + | mV | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Offset Kanal 3 |
 | STAT_KANAL4_WERT | - | - | + | mV | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Offset Kanal 4 |
 
-<a id="table-res-0xb08c-r"></a>
 ### RES_0XB08C_R
 
 Dimensions: 6 rows × 13 columns
@@ -1897,7 +1832,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_DC_MOTOR_HINTEN | - | - | + | 0-n | - | unsigned char | - | TAB_MR_SAF_STATUS_DC_MOTOR | 1.0 | 1.0 | 0.0 | Status DC-Motor hinten |
 | STAT_DC_MOTOR_HINTEN_MAX_HALL_COUNTS_WERT | - | - | + | Inkremente | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | bei der Vollkalibrierung ermittelte maximale Anzahl von Hallsensor-Impulsen von Endanschlag bis Endanschlag |
 
-<a id="table-res-0xb090-r"></a>
 ### RES_0XB090_R
 
 Dimensions: 3 rows × 13 columns
@@ -1908,7 +1842,6 @@ Dimensions: 3 rows × 13 columns
 | STAT_SAF_DAEMPFUNG | - | - | + | 0-n | - | unsigned char | - | TAB_DAEMPFUNG_SAF | - | - | - | Status SAF Daempfung: 0x00 == Verstellung: Daempfung wird eingestellt 0x01 == C: Einstellung Comfort 0x02 == N: Einstellung Normal 0x03 == S: Einstellung Sport |
 | STAT_SAF_SG | - | - | + | 0-n | - | unsigned char | - | TAB_SAF_SG | - | - | - | Status SAF Steuergerät |
 
-<a id="table-res-0xe00a-d"></a>
 ### RES_0XE00A_D
 
 Dimensions: 4 rows × 10 columns
@@ -1920,7 +1853,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_LVAL_ACTUAL_SENSOR3_WERT | m/s² | high | signed int | - | - | 0.0098 | 1.0 | 0.0 | Adaptionswert Sensor 3 |
 | STAT_LVAL_ACTUAL_SENSOR4_WERT | m/s² | high | signed int | - | - | 0.0098 | 1.0 | 0.0 | Adaptionswert Sensor 4 |
 
-<a id="table-res-0xe114-d"></a>
 ### RES_0XE114_D
 
 Dimensions: 1 rows × 10 columns
@@ -1929,7 +1861,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DC_MOT_HI_WERT | Inkremente | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Ist-Position DC Motor hinten |
 
-<a id="table-res-0xe116-d"></a>
 ### RES_0XE116_D
 
 Dimensions: 6 rows × 10 columns
@@ -1943,7 +1874,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_SCHALTER5 | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zustand Schalter5: 0 = aus, 1 = ein |
 | STAT_SCHALTER6 | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zustand Schalter6: 0 = aus, 1 = ein |
 
-<a id="table-res-0xe136-d"></a>
 ### RES_0XE136_D
 
 Dimensions: 4 rows × 10 columns
@@ -1955,7 +1885,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SENSOR3_WERT | m/s² | high | signed int | - | - | 0.0098 | 1.0 | 0.0 | Physikalischer Wert Sensor3 |
 | STAT_SENSOR4_WERT | m/s² | high | signed int | - | - | 0.0098 | 1.0 | 0.0 | Physikalischer Wert Sensor4 |
 
-<a id="table-res-0xe137-d"></a>
 ### RES_0XE137_D
 
 Dimensions: 9 rows × 10 columns
@@ -1972,7 +1901,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_LENKUNG_FREQ | 0-n | high | unsigned char | - | TAB_MR_STAT_SAF_FREQ | 1.0 | 1.0 | 0.0 | Aktuelle PWM Frequenz Lenkung |
 | STAT_VENTIL_LENKUNG | 0-n | high | unsigned char | - | TAB_MR_SAF_PROPORTIONALVENTIL | 1.0 | 1.0 | 0.0 | Zustand Ventil Lenkung |
 
-<a id="table-res-0xe138-d"></a>
 ### RES_0XE138_D
 
 Dimensions: 9 rows × 10 columns
@@ -1989,7 +1917,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_STROM_VENTIL_LENKUNG_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Aktueller Stromwert Ventil Lenkung |
 | STAT_LENKUNG_FREQ | 0-n | high | unsigned char | - | TAB_MR_STAT_SAF_FREQ | 1.0 | 1.0 | 0.0 | Aktuelle PWM Frequenz Lenkung |
 
-<a id="table-res-0xe14c-d"></a>
 ### RES_0XE14C_D
 
 Dimensions: 7 rows × 10 columns
@@ -2004,7 +1931,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_DC_MOTOR_HINTEN | 0-n | high | unsigned char | - | TAB_MR_SAF_STATUS_DC_MOTOR | - | - | - | Status DC-Motor hinten |
 | STAT_MAX_HALL_COUNTS_WERT | Inkremente | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | bei der Vollkalibrierung ermittelte maximale Anzahl von Hallsensor-Impulsen von Endanschlag bis Endanschlag |
 
-<a id="table-res-0xe14e-d"></a>
 ### RES_0XE14E_D
 
 Dimensions: 2 rows × 10 columns
@@ -2014,7 +1940,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DC_MOTOR_HINTEN_PWM_WERT | % | high | signed int | - | - | 1.0 | 2.0 | 0.0 | PWM-Wert vorzeichenbehaftet  in %, mit dem der DC-Motor hinten betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 | STAT_DC_MOTOR_HINTEN | 0/1 | high | unsigned char | - | - | 1.0 | 2.0 | 0.0 | Aktueller Status der beiden digitalen Ausgänge für den DC Motor hinten - 0= beide aus, 1= ein Ausgang liefert Spannung |
 
-<a id="table-res-0xe14f-d"></a>
 ### RES_0XE14F_D
 
 Dimensions: 2 rows × 10 columns
@@ -2024,7 +1949,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DC_MOT_HI_TEMP_WERT | °C | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Temperatur des DC-Motors hinten (Temperaturmodell) |
 | STAT_DC_MOT_HI_TEMP | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Uebertemperatur, Federbein hinten 0 == Grenzwert unterschritten, Verstellung Federbein möglich 1 == Grenzwert überschritten, Verstellung Federbein nicht möglich |
 
-<a id="table-res-0xe150-d"></a>
 ### RES_0XE150_D
 
 Dimensions: 4 rows × 10 columns
@@ -2036,7 +1960,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SENSOR3_WERT | mV | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Status Sensor3 |
 | STAT_SENSOR4_WERT | mV | high | signed int | - | - | 1.0 | 1.0 | 0.0 | Status Sensor4 |
 
-<a id="table-res-0xe228-d"></a>
 ### RES_0XE228_D
 
 Dimensions: 60 rows × 10 columns
@@ -2104,7 +2027,6 @@ Dimensions: 60 rows × 10 columns
 | STAT_DIAG_IN_RCK_DATA_U32_59_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Daten für das Race Calibration Kit |
 | STAT_DIAG_IN_RCK_DATA_U32_60_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Daten für das Race Calibration Kit |
 
-<a id="table-res-0xe229-d"></a>
 ### RES_0XE229_D
 
 Dimensions: 4 rows × 10 columns
@@ -2116,7 +2038,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_RCK_OUT_RCK_DATA_U32_3_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Fahrzeugspezifische Daten für Race Calibration Kit |
 | STAT_RCK_OUT_RCK_DATA_U32_4_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Fahrzeugspezifische Daten für Race Calibration Kit |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 39 rows × 16 columns
@@ -2163,7 +2084,6 @@ Dimensions: 39 rows × 16 columns
 | _SAF_VERSION_LLSW | 0x4183 | - | Auslesen LowLevel Software Version | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x4183_D |
 | _SAF_VERSION_HLSW | 0x4184 | - | Auslesen HighLevel Software Version | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x4184_D |
 
-<a id="table-tab-daempfung-saf"></a>
 ### TAB_DAEMPFUNG_SAF
 
 Dimensions: 6 rows × 2 columns
@@ -2177,7 +2097,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | nicht verbaut |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-daempfung-saf-arg"></a>
 ### TAB_DAEMPFUNG_SAF_ARG
 
 Dimensions: 3 rows × 2 columns
@@ -2188,7 +2107,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Normal / Dämpfung 2 |
 | 0x03 | Sport / Dämpfung 3 |
 
-<a id="table-tab-federvorspannung"></a>
 ### TAB_FEDERVORSPANNUNG
 
 Dimensions: 8 rows × 2 columns
@@ -2204,7 +2122,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | nicht verbaut |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-federvorspannung-arg"></a>
 ### TAB_FEDERVORSPANNUNG_ARG
 
 Dimensions: 5 rows × 2 columns
@@ -2217,7 +2134,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | - / Auto |
 | 0x05 | - / - |
 
-<a id="table-tab-fehler-kritisch"></a>
 ### TAB_FEHLER_KRITISCH
 
 Dimensions: 53 rows × 2 columns
@@ -2278,7 +2194,6 @@ Dimensions: 53 rows × 2 columns
 | 0x70 | unbekannter OS-Fehler |
 | 0xFF | manuell auswerten |
 
-<a id="table-tab-iststrom-daempfer-vorne-err"></a>
 ### TAB_ISTSTROM_DAEMPFER_VORNE_ERR
 
 Dimensions: 18 rows × 2 columns
@@ -2304,7 +2219,6 @@ Dimensions: 18 rows × 2 columns
 | 0x8000 | reserviert |
 | 0xFFFF | manuell auswerten |
 
-<a id="table-tab-klemme30-err"></a>
 ### TAB_KLEMME30_ERR
 
 Dimensions: 19 rows × 2 columns
@@ -2331,7 +2245,6 @@ Dimensions: 19 rows × 2 columns
 | 0x8000 | reserviert |
 | 0xFFFF | manuell auswerten |
 
-<a id="table-tab-mr-art-kalibrierung-saf"></a>
 ### TAB_MR_ART_KALIBRIERUNG_SAF
 
 Dimensions: 3 rows × 2 columns
@@ -2342,7 +2255,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Rekalibrierung DC-Motor hinten |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-mr-esa-status-kalibrierung"></a>
 ### TAB_MR_ESA_STATUS_KALIBRIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2354,7 +2266,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Kalibrierung Federbein erfolgreich |
 | 0xFF | ungültig |
 
-<a id="table-tab-mr-fehler-unkritisch"></a>
 ### TAB_MR_FEHLER_UNKRITISCH
 
 Dimensions: 7 rows × 2 columns
@@ -2369,7 +2280,6 @@ Dimensions: 7 rows × 2 columns
 | 0x00000010 | No-Coding-Data |
 | 0xFFFFFFFF | manuell auswerten |
 
-<a id="table-tab-mr-routine-saf"></a>
 ### TAB_MR_ROUTINE_SAF
 
 Dimensions: 5 rows × 2 columns
@@ -2382,7 +2292,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Routine abgebrochen |
 | 0xFF | Ungültig |
 
-<a id="table-tab-mr-saf-freq"></a>
 ### TAB_MR_SAF_FREQ
 
 Dimensions: 5 rows × 2 columns
@@ -2395,7 +2304,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | 1600 Hz |
 | 0x04 | 2000 Hz |
 
-<a id="table-tab-mr-saf-proportionalventil"></a>
 ### TAB_MR_SAF_PROPORTIONALVENTIL
 
 Dimensions: 7 rows × 2 columns
@@ -2410,7 +2318,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Leitungsbruch |
 | 0xFF | ungültig |
 
-<a id="table-tab-mr-saf-status-dc-motor"></a>
 ### TAB_MR_SAF_STATUS_DC_MOTOR
 
 Dimensions: 9 rows × 2 columns
@@ -2427,7 +2334,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Fehler vorhanden |
 | 0xFF | ungültig |
 
-<a id="table-tab-mr-sensorkanal"></a>
 ### TAB_MR_SENSORKANAL
 
 Dimensions: 5 rows × 2 columns
@@ -2440,7 +2346,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | AIN3 |
 | 0x04 | AIN4 |
 
-<a id="table-tab-mr-status-prop-ventile"></a>
 ### TAB_MR_STATUS_PROP_VENTILE
 
 Dimensions: 5 rows × 2 columns
@@ -2453,7 +2358,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | ungueltig |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-mr-stat-saf-freq"></a>
 ### TAB_MR_STAT_SAF_FREQ
 
 Dimensions: 6 rows × 2 columns
@@ -2467,7 +2371,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | 2000 Hz |
 | 0xFF | ungueltig |
 
-<a id="table-tab-mr-ventil-ansteuerung"></a>
 ### TAB_MR_VENTIL_ANSTEUERUNG
 
 Dimensions: 7 rows × 2 columns
@@ -2482,7 +2385,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Daempfung vorne und hinten |
 | 0x06 | Alle Proportionalventile |
 
-<a id="table-tab-number-task-error"></a>
 ### TAB_NUMBER_TASK_ERROR
 
 Dimensions: 3 rows × 2 columns
@@ -2493,7 +2395,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | 2.5 ms Task |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-reason-task-error"></a>
 ### TAB_REASON_TASK_ERROR
 
 Dimensions: 3 rows × 2 columns
@@ -2504,7 +2405,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Taskausfall |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-saf-sg"></a>
 ### TAB_SAF_SG
 
 Dimensions: 4 rows × 2 columns
@@ -2516,7 +2416,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | SAF defekt: Systemfehler vorhanden |
 | 0xFF | undefiniert |
 
-<a id="table-tab-switch-x-error"></a>
 ### TAB_SWITCH_X_ERROR
 
 Dimensions: 19 rows × 2 columns
@@ -2543,7 +2442,6 @@ Dimensions: 19 rows × 2 columns
 | 0x8000 | reserviert |
 | 0xFFFF | manuell auswerten |
 
-<a id="table-tab-wert-sensor-1-kurve"></a>
 ### TAB_WERT_SENSOR_1_KURVE
 
 Dimensions: 3 rows × 2 columns
@@ -2554,7 +2452,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Kurve 2 |
 | 0xFF | Nicht definiert |
 
-<a id="table-tab-wert-sensor-1-typ"></a>
 ### TAB_WERT_SENSOR_1_TYP
 
 Dimensions: 4 rows × 2 columns
@@ -2566,7 +2463,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Höhenstandssensor |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-wert-sensor-1-verssp-err"></a>
 ### TAB_WERT_SENSOR_1_VERSSP_ERR
 
 Dimensions: 18 rows × 2 columns
@@ -2592,7 +2488,6 @@ Dimensions: 18 rows × 2 columns
 | 0x8000 | reserviert |
 | 0xFFFF | manuell auswerten |
 
-<a id="table-tab-0x2001"></a>
 ### TAB_0X2001
 
 Dimensions: 1 rows × 27 columns
@@ -2601,7 +2496,6 @@ Dimensions: 1 rows × 27 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 26 | 0x000D | 0x000E | 0x000F | 0x0010 | 0x0011 | 0x0012 | 0x0013 | 0x0014 | 0x0015 | 0x0016 | 0x0017 | 0x0018 | 0x0019 | 0x001A | 0x001B | 0x001C | 0x001D | 0x001E | 0x001F | 0x0020 | 0x0021 | 0x0022 | 0x0023 | 0x0024 | 0x0025 | 0x0026 |
 
-<a id="table-tab-0x2002"></a>
 ### TAB_0X2002
 
 Dimensions: 1 rows × 9 columns
@@ -2610,7 +2504,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 8 | 0x0027 | 0x0028 | 0x0029 | 0x002A | 0x002B | 0x002C | 0x002D | 0x002E |
 
-<a id="table-tab-0x2003"></a>
 ### TAB_0X2003
 
 Dimensions: 1 rows × 13 columns
@@ -2619,7 +2512,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 12 | 0x0001 | 0x0002 | 0x0003 | 0x0004 | 0x0005 | 0x0006 | 0x0007 | 0x0008 | 0x0009 | 0x000A | 0x000B | 0x000C |
 
-<a id="table-tab-0x2004"></a>
 ### TAB_0X2004
 
 Dimensions: 1 rows × 17 columns
@@ -2628,7 +2520,6 @@ Dimensions: 1 rows × 17 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 16 | 0x002F | 0x0030 | 0x0031 | 0x0032 | 0x0033 | 0x0034 | 0x0035 | 0x0036 | 0x0037 | 0x0038 | 0x0039 | 0x003A | 0x003B | 0x003C | 0x003D | 0x003E |
 
-<a id="table-uwb-wert-sensor1-err"></a>
 ### UWB_WERT_SENSOR1_ERR
 
 Dimensions: 19 rows × 2 columns

@@ -50,7 +50,6 @@
 - [STEUERN_ROE_PERSISTENT_START](#job-steuern-roe-persistent-start) - Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
 - [CPS_LESEN](#job-cps-lesen) - Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +68,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -82,7 +80,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -99,7 +96,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -131,7 +127,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -184,7 +179,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -203,7 +197,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -221,7 +214,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -242,7 +234,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -271,7 +262,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -291,7 +281,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -312,7 +301,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -328,7 +316,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -350,7 +337,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -369,7 +355,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -396,7 +381,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -449,7 +433,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -464,7 +447,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -484,7 +466,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -503,7 +484,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -522,7 +502,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -537,7 +516,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -556,7 +534,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -576,7 +553,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -593,7 +569,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -612,7 +587,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -627,7 +601,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -644,7 +617,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -659,7 +631,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -674,7 +645,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -819,7 +789,6 @@ _No arguments._
 - [TAB_POS_LWR](#table-tab-pos-lwr) (4 × 2)
 - [TAB_WECKEREIGNIS](#table-tab-weckereignis) (7 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -903,7 +872,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 154 rows × 2 columns
@@ -1065,7 +1033,6 @@ Dimensions: 154 rows × 2 columns
 | 0x0000CF | Delta Electronics Inc. |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1108,7 +1075,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1133,7 +1099,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1167,7 +1132,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1240,7 +1204,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1253,7 +1216,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 9 rows × 9 columns
@@ -1270,7 +1232,6 @@ Dimensions: 9 rows × 9 columns
 | 0x1769 | ABS_ZEIT_SUP | 0-n | - | 0xFFFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-tab-zeit-syncmethod"></a>
 ### TAB_ZEIT_SYNCMETHOD
 
 Dimensions: 4 rows × 2 columns
@@ -1282,7 +1243,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | IEEE802.1AS |
 | 0x03 | invalid |
 
-<a id="table-tab-zeit-user-info"></a>
 ### TAB_ZEIT_USER_INFO
 
 Dimensions: 8 rows × 2 columns
@@ -1298,7 +1258,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | invalid |
 | 0x07 | invalid |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1311,7 +1270,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -1333,7 +1291,6 @@ Dimensions: 14 rows × 3 columns
 | 0x61 | ECUSUPSPEC | ECUSupplierSpecificSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1376,7 +1333,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1387,7 +1343,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x3000-r"></a>
 ### ARG_0X3000_R
 
 Dimensions: 24 rows × 14 columns
@@ -1419,7 +1374,6 @@ Dimensions: 24 rows × 14 columns
 | STAT_LED_12_STROM_WERT | + | - | mA | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | 0.0 | 1500.0 | Stromwert LED 12 |
 | STAT_LED_12_PWM_WERT | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Prozent Wert LED 12 |
 
-<a id="table-arg-0xa543-r"></a>
 ### ARG_0XA543_R
 
 Dimensions: 1 rows × 14 columns
@@ -1428,7 +1382,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ELEMENT | + | - | 0-n | high | unsigned char | - | TAB_LED_LEUCHTMITTEL | - | - | - | - | - | Auswahl des LED Leuchtmittel |
 
-<a id="table-arg-0xa545-r"></a>
 ### ARG_0XA545_R
 
 Dimensions: 2 rows × 14 columns
@@ -1438,7 +1391,6 @@ Dimensions: 2 rows × 14 columns
 | POSITION | + | - | ° | high | signed int | - | - | 10.0 | 1.0 | 0.0 | -25.0 | 25.0 | Vorgabe Winkel, Wertebereich -25,0°  25,0 ° |
 | GESCHWINDIGKEIT | + | - | °/s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | 0.0 | 45.0 | Geschwindigkeit LWR Wertebereich 0-45°/s. |
 
-<a id="table-arg-0xa546-r"></a>
 ### ARG_0XA546_R
 
 Dimensions: 2 rows × 14 columns
@@ -1448,7 +1400,6 @@ Dimensions: 2 rows × 14 columns
 | POSITION | + | - | ° | high | signed int | - | - | 10.0 | 1.0 | 0.0 | -25.0 | 25.0 | Vorgabe Winkel, Wertebereich -25,0° bis 25,0 ° |
 | GESCHWINDIGKEIT | + | - | °/s | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | 0.0 | 45.0 | Geschwindigkeit AHL Wertebereich: 0-45°/s |
 
-<a id="table-arg-0xa547-r"></a>
 ### ARG_0XA547_R
 
 Dimensions: 2 rows × 14 columns
@@ -1458,7 +1409,6 @@ Dimensions: 2 rows × 14 columns
 | STAT_PWM_LUEFTER_1 | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Vorgabe PWM für Lüfter in Prozent |
 | STAT_PWM_LUEFTER_2 | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Vorgabe PWM für Lüfter in Prozent |
 
-<a id="table-arg-0xd1fd-d"></a>
 ### ARG_0XD1FD_D
 
 Dimensions: 1 rows × 12 columns
@@ -1467,7 +1417,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Loeschen JA/NEIN |
 
-<a id="table-arg-0xd1fe-d"></a>
 ### ARG_0XD1FE_D
 
 Dimensions: 1 rows × 12 columns
@@ -1476,7 +1425,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Loeschen JA/NEIN |
 
-<a id="table-arg-0xd506-d"></a>
 ### ARG_0XD506_D
 
 Dimensions: 1 rows × 12 columns
@@ -1485,7 +1433,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1... Einlerndaten zurücksetzten 0...keine Aktion |
 
-<a id="table-arg-0xd633-d"></a>
 ### ARG_0XD633_D
 
 Dimensions: 1 rows × 12 columns
@@ -1494,7 +1441,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1...löschen des Statistikzählers 0...keine Aktion |
 
-<a id="table-arg-0xd634-d"></a>
 ### ARG_0XD634_D
 
 Dimensions: 2 rows × 12 columns
@@ -1504,7 +1450,6 @@ Dimensions: 2 rows × 12 columns
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1...löscht Betriebsstundenzähler 0...keine Aktion |
 | LEUCHTMITTEL | 0-n | high | unsigned char | - | TAB_FLE_LEUCHTMITTEL | - | - | - | - | - | Auswahl des FLE Leuchtmittels |
 
-<a id="table-arg-0xd63c-d"></a>
 ### ARG_0XD63C_D
 
 Dimensions: 1 rows × 12 columns
@@ -1513,7 +1458,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1...Zähler löschen |
 
-<a id="table-arg-0xd63d-d"></a>
 ### ARG_0XD63D_D
 
 Dimensions: 1 rows × 12 columns
@@ -1522,7 +1466,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1...Betriebsdauer zurücksetzen |
 
-<a id="table-arg-0xd680-d"></a>
 ### ARG_0XD680_D
 
 Dimensions: 1 rows × 12 columns
@@ -1531,7 +1474,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1...Betriebsdauer zurücksetzen |
 
-<a id="table-arg-0xdf0f-d"></a>
 ### ARG_0XDF0F_D
 
 Dimensions: 1 rows × 12 columns
@@ -1540,7 +1482,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Zähler löschen: 0 = keine Aktion 1 = Start |
 
-<a id="table-arg-0xe2f6-d"></a>
 ### ARG_0XE2F6_D
 
 Dimensions: 2 rows × 12 columns
@@ -1550,7 +1491,6 @@ Dimensions: 2 rows × 12 columns
 | DIG_SEITE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00 = eigene Seite 0x01 = Partner-Seite 0x02 .. = unbenutzt |
 | DATA_BINNING | DATA | high | data[5] | - | - | 1.0 | 1.0 | 0.0 | - | - | Binning-Code eigene Seite |
 
-<a id="table-arg-0xe34c-d"></a>
 ### ARG_0XE34C_D
 
 Dimensions: 1 rows × 12 columns
@@ -1559,7 +1499,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1...Zähler löschen |
 
-<a id="table-arg-0xfd40-d"></a>
 ### ARG_0XFD40_D
 
 Dimensions: 1 rows × 12 columns
@@ -1568,7 +1507,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SCHEINWERFERDATENBLOCK_DATA | DATA | high | data[16] | - | - | 1.0 | 1.0 | 0.0 | - | - | Scheinwerferdatenblock |
 
-<a id="table-arg-0xfd58-d"></a>
 ### ARG_0XFD58_D
 
 Dimensions: 1 rows × 12 columns
@@ -1577,7 +1515,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Werte löschen: 0 = Keine Aktion 1 = Start |
 
-<a id="table-bf-scheinwerferinfo-struct"></a>
 ### BF_SCHEINWERFERINFO_STRUCT
 
 Dimensions: 2 rows × 10 columns
@@ -1587,7 +1524,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCHEINWERFERHERSTELLER | 0-n | high | unsigned char | 0x0F | SCHEINWERFERHERSTELLER | - | - | - | Scheinwerferhersteller Bit 1-4 |
 | STAT_SCHEINWERFERVARIANTE | 0-n | high | unsigned char | 0xF0 | SCHEINWERFERVARIANTE | - | - | - | Scheinwerfervariante Bit 5-8 |
 
-<a id="table-bf-versionsinfo-struct"></a>
 ### BF_VERSIONSINFO_STRUCT
 
 Dimensions: 2 rows × 10 columns
@@ -1597,7 +1533,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCHEINWERFER_VERSIONSNUMMER | 0-n | high | unsigned char | 0x1F | - | - | - | - | Scheinwerferversionsnummer Bit 1-5 |
 | STAT_FAHRZEUG_LENKERVERSION | 0-n | high | unsigned char | 0x20 | LENKERVERSION | - | - | - | Linkslenker oder Rechtslenker des Fahrzeugs Bit 6  |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1611,7 +1546,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fahrzeugvariante"></a>
 ### FAHRZEUGVARIANTE
 
 Dimensions: 31 rows × 2 columns
@@ -1650,7 +1584,6 @@ Dimensions: 31 rows × 2 columns
 | 0x45 | G08 |
 | 0x60 | M13 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1664,7 +1597,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 182 rows × 4 columns
@@ -1854,7 +1786,6 @@ Dimensions: 182 rows × 4 columns
 | 0xD9EC0E | Signal (Steuerung_Helligkeitswert_Licht_Außen): ungültig | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 6 rows × 9 columns
@@ -1868,7 +1799,6 @@ Dimensions: 6 rows × 9 columns
 | 0x401F | Spannung_Gelbsensor | V | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -1881,7 +1811,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 128 rows × 4 columns
@@ -2017,7 +1946,6 @@ Dimensions: 128 rows × 4 columns
 | 0xD9ED0D | Signal (St_Lowb): ungültig | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 6 rows × 9 columns
@@ -2031,7 +1959,6 @@ Dimensions: 6 rows × 9 columns
 | 0x401F | Spannung_Gelbsensor | V | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2040,7 +1967,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-lenkerversion"></a>
 ### LENKERVERSION
 
 Dimensions: 2 rows × 2 columns
@@ -2050,7 +1976,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Linkslenker |
 | 0x20 | Rechtslenker |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -2066,7 +1991,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -2077,7 +2001,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ECUMindestensEinmalVollstaendigProgrammierbar |
 | 2 | ECUNichtMehrProgrammierbar |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -2088,7 +2011,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -2102,7 +2024,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x3000-r"></a>
 ### RES_0X3000_R
 
 Dimensions: 25 rows × 13 columns
@@ -2135,7 +2056,6 @@ Dimensions: 25 rows × 13 columns
 | STAT_LED_12_PWM_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Prozent Wert LED 12 |
 | STAT_AKTIV | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | Prozessstatus: 1...aktiv 0...nicht aktiv |
 
-<a id="table-res-0xa538-r"></a>
 ### RES_0XA538_R
 
 Dimensions: 1 rows × 13 columns
@@ -2144,7 +2064,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_REFERENZLAUF_ERGEBNIS | - | - | + | 0-n | high | unsigned char | - | TAB_AHL_REFERENZLAUF | - | - | - | Ergebnisse TAB_AHL_REFERENZLAUF |
 
-<a id="table-res-0xa541-r"></a>
 ### RES_0XA541_R
 
 Dimensions: 1 rows × 13 columns
@@ -2153,7 +2072,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_REFERENZLAUF_ERGEBNIS | - | - | + | 0-n | high | unsigned char | - | TAB_LWR_REFERENZLAUF | - | - | - | Ergebnisse TAB_LWR_REFERENZLAUF |
 
-<a id="table-res-0xa543-r"></a>
 ### RES_0XA543_R
 
 Dimensions: 2 rows × 13 columns
@@ -2163,7 +2081,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_LEUCHTMITTEL_FLE | - | - | + | 0-n | high | unsigned char | - | TAB_LED_LEUCHTMITTEL | - | - | - | Resulttabelle LED Leuchtmittel |
 | STAT_AKTIV | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 1...aktiv 0...nicht aktiv |
 
-<a id="table-res-0xa545-r"></a>
 ### RES_0XA545_R
 
 Dimensions: 2 rows × 13 columns
@@ -2173,7 +2090,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_POSITION_WERT | - | - | + | ° | high | signed int | - | - | 1.0 | 10.0 | 0.0 | Position LWR in Grad |
 | STAT_LWR_STATUS | - | - | + | 0-n | high | unsigned char | - | TAB_POS_LWR | - | - | - | Job Status |
 
-<a id="table-res-0xa546-r"></a>
 ### RES_0XA546_R
 
 Dimensions: 2 rows × 13 columns
@@ -2183,7 +2099,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_POSITION_WERT | - | - | + | ° | high | signed int | - | - | 1.0 | 10.0 | 0.0 | Position AHL in Grad |
 | STAT_AHL_STATUS | - | - | + | 0-n | high | unsigned char | - | TAB_POS_AHL | - | - | - | Job Status |
 
-<a id="table-res-0xa547-r"></a>
 ### RES_0XA547_R
 
 Dimensions: 2 rows × 13 columns
@@ -2193,7 +2108,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_LUEFTER_1 | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 1...ein 0...aus |
 | STAT_LUEFTER_2 | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 1...ein 0...aus |
 
-<a id="table-res-0xa548-r"></a>
 ### RES_0XA548_R
 
 Dimensions: 18 rows × 13 columns
@@ -2219,7 +2133,6 @@ Dimensions: 18 rows × 13 columns
 | STAT_FUNKTIONSTEST_AHL_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ergebnis Systemtest: 0...mit Fehler beendet 1...ohne Fehler beendet 2...noch nicht beendet |
 | STAT_FUNKTIONSTEST_LWR_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ergebnis Systemtest: 0...mit Fehler beendet 1...ohne Fehler beendet 2...noch nicht beendet |
 
-<a id="table-res-0xa5a7-r"></a>
 ### RES_0XA5A7_R
 
 Dimensions: 1 rows × 13 columns
@@ -2228,7 +2141,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FUNKTIONSTEST_LASER_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ergebnis Systemtest: 0...mit Fehler beendet 1...ohne Fehler beendet 2...noch nicht beendet |
 
-<a id="table-res-0xa801-d"></a>
 ### RES_0XA801_D
 
 Dimensions: 101 rows × 10 columns
@@ -2337,7 +2249,6 @@ Dimensions: 101 rows × 10 columns
 | STAT_SAMPLE_19_NTC_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Temperatur Laser-NTC bei Ausfall |
 | STAT_SAMPLE_19_TIMESTAMP_WERT | Counts | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Zeitstempel Relativzeit der Fehlereintragung des passenden DTCs |
 
-<a id="table-res-0xd1fd-d"></a>
 ### RES_0XD1FD_D
 
 Dimensions: 2 rows × 10 columns
@@ -2347,7 +2258,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_REFERENZLAUF_BEGONNEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der begonnenen Referenzläufe |
 | STAT_REFERENZLAUF_ABGESCHLOSSEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der abgeschlossenen Referenzläufe |
 
-<a id="table-res-0xd1fe-d"></a>
 ### RES_0XD1FE_D
 
 Dimensions: 2 rows × 10 columns
@@ -2357,7 +2267,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_REFERENZLAUF_BEGONNEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der begonnenen Referenzläufe |
 | STAT_REFERENZLAUF_ABGESCHLOSSEN_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der abgeschlossenen Referenzläufe |
 
-<a id="table-res-0xd506-d"></a>
 ### RES_0XD506_D
 
 Dimensions: 12 rows × 10 columns
@@ -2377,7 +2286,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_RESERVED_5_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reserviert für zukünftige Erweiterungen |
 | STAT_RESERVED_6_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reserviert für zukünftige Erweiterungen |
 
-<a id="table-res-0xd529-d"></a>
 ### RES_0XD529_D
 
 Dimensions: 15 rows × 10 columns
@@ -2400,7 +2308,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_VERBAU_SIGNAL_14 | 0-n | high | unsigned char | - | TAB_LEUCHTEN_SENSOR | - | - | - | Verbau: Siehe Tabelle TAB_LEUCHTEN_SENSOR |
 | STAT_VERBAU_SIGNAL_15 | 0-n | high | unsigned char | - | TAB_LEUCHTEN_SENSOR | - | - | - | Verbau: Siehe Tabelle TAB_LEUCHTEN_SENSOR |
 
-<a id="table-res-0xd630-d"></a>
 ### RES_0XD630_D
 
 Dimensions: 20 rows × 10 columns
@@ -2428,7 +2335,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_TEMP_LEUCHTMITTEL_11_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Status berechnete Leuchtmitteltemperatur |
 | STAT_TEMP_LEUCHTMITTEL_12_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Status berechnete Leuchtmitteltemperatur |
 
-<a id="table-res-0xd632-d"></a>
 ### RES_0XD632_D
 
 Dimensions: 48 rows × 10 columns
@@ -2484,7 +2390,6 @@ Dimensions: 48 rows × 10 columns
 | STAT_SENSOR_8_TEMPKLASSE_5_WERT | s | high | unsigned long | - | - | 30.0 | 1.0 | 0.0 | S 8 T5 |
 | STAT_SENSOR_8_TEMPKLASSE_6_WERT | s | high | unsigned long | - | - | 30.0 | 1.0 | 0.0 | S 8 T6 |
 
-<a id="table-res-0xd634-d"></a>
 ### RES_0XD634_D
 
 Dimensions: 15 rows × 10 columns
@@ -2507,7 +2412,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_LUEFTER2_WERT | s | high | unsigned long | - | - | 10.0 | 1.0 | 0.0 | Betriebsdauer Lüfter 2 |
 | STAT_FLE_WERT | s | high | unsigned long | - | - | 10.0 | 1.0 | 0.0 | Betriebsdauer FLE |
 
-<a id="table-res-0xd635-d"></a>
 ### RES_0XD635_D
 
 Dimensions: 2 rows × 10 columns
@@ -2517,7 +2421,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KL_30_ISENSE_WERT | mA | high | unsigned char | - | - | 100.0 | 1.0 | 0.0 | Stromwert Kl 30 |
 | STAT_KL_30_USENSE_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Spannung Kl 30 |
 
-<a id="table-res-0xd636-d"></a>
 ### RES_0XD636_D
 
 Dimensions: 2 rows × 10 columns
@@ -2527,7 +2430,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TIEFTEMPERATUR_AKTIV | 0/1 | high | unsigned char | - | - | - | - | - | 1...aktiv 0...nicht aktiv |
 | STAT_HOCHTEMPERATUR_AKTIV | 0/1 | high | unsigned char | - | - | - | - | - | 1...aktiv 0...nicht aktiv |
 
-<a id="table-res-0xd638-d"></a>
 ### RES_0XD638_D
 
 Dimensions: 24 rows × 10 columns
@@ -2559,7 +2461,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_BINNING_12_WERT | kOhm | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Widerstandwert Binning Kanal 12 |
 | STAT_BINNING_12_KLASSE_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Binning Klasse Kanal 12 |
 
-<a id="table-res-0xd639-d"></a>
 ### RES_0XD639_D
 
 Dimensions: 5 rows × 10 columns
@@ -2572,7 +2473,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_LUEFTER2_DIAG_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ausgabe Status Diagnoseleitung Lüfter 2 |
 | STAT_LUEFTER2_PWM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM Wert |
 
-<a id="table-res-0xd63a-d"></a>
 ### RES_0XD63A_D
 
 Dimensions: 26 rows × 10 columns
@@ -2606,7 +2506,6 @@ Dimensions: 26 rows × 10 columns
 | STAT_LUEFTER1_VERBAU | 0-n | high | unsigned char | - | TAB_FUNKTION_FLE | - | - | - | 0...nicht verbaut 1...verbaut, aktiv 2...verbaut, nicht aktiv |
 | STAT_LUEFTER2_VERBAU | 0-n | high | unsigned char | - | TAB_FUNKTION_FLE | - | - | - | 0...nicht verbaut 1...verbaut, aktiv 2...verbaut, nicht aktiv |
 
-<a id="table-res-0xd63c-d"></a>
 ### RES_0XD63C_D
 
 Dimensions: 2 rows × 10 columns
@@ -2616,7 +2515,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_RESET_1_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Wert Resetzähler 1 |
 | STAT_RESET_2_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Wert Resetzähler 2 |
 
-<a id="table-res-0xd63d-d"></a>
 ### RES_0XD63D_D
 
 Dimensions: 3 rows × 10 columns
@@ -2627,7 +2525,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VERSTELLSTROM_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Lesen der Betriebsdauer des Verstellstrom LWR Motor |
 | STAT_VERSTELLUNGEN_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Anzahl Verstellungen LWR Motor |
 
-<a id="table-res-0xd63e-d"></a>
 ### RES_0XD63E_D
 
 Dimensions: 3 rows × 10 columns
@@ -2638,7 +2535,6 @@ Dimensions: 3 rows × 10 columns
 | - | Bit | high | BITFIELD | - | BF_SCHEINWERFERINFO_STRUCT | - | - | - | Variante |
 | - | Bit | high | BITFIELD | - | BF_VERSIONSINFO_STRUCT | - | - | - | Auslesen der Scheinwerferversionsnummer |
 
-<a id="table-res-0xd662-d"></a>
 ### RES_0XD662_D
 
 Dimensions: 2 rows × 10 columns
@@ -2648,7 +2544,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TIEFTEMPERATUR_AKTIV | 0/1 | high | unsigned char | - | - | - | - | - | 1...aktiv 0...nicht aktiv |
 | STAT_HOCHTEMPERATUR_AKTIV | 0/1 | high | unsigned char | - | - | - | - | - | 1...aktiv 0...nicht aktiv |
 
-<a id="table-res-0xd667-d"></a>
 ### RES_0XD667_D
 
 Dimensions: 24 rows × 10 columns
@@ -2680,7 +2575,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_LED_12_STROM_WERT | mA | high | unsigned char | - | - | 10.0 | 1.0 | 0.0 | Strom Wert LED 12 |
 | STAT_LED_12_PWM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Prozent Wert LED 12 |
 
-<a id="table-res-0xd680-d"></a>
 ### RES_0XD680_D
 
 Dimensions: 3 rows × 10 columns
@@ -2691,7 +2585,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VERSTELLSTROM_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Lesen der Betriebsdauer des Verstellstrom AHL Motor |
 | STAT_VERSTELLUNGEN_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Anzahl Verstellungen LWR Motor |
 
-<a id="table-res-0xdca0-d"></a>
 ### RES_0XDCA0_D
 
 Dimensions: 2 rows × 10 columns
@@ -2701,7 +2594,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SENSOR_VERSORGUNG | 0/1 | high | unsigned char | - | - | - | - | - | 1...aktiviert 0...nicht aktiviert |
 | STAT_ZFL_SENSOR_1_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | ZFL Sensor 1 Wert |
 
-<a id="table-res-0xdf0f-d"></a>
 ### RES_0XDF0F_D
 
 Dimensions: 6 rows × 10 columns
@@ -2715,7 +2607,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_SCHRITTVERLUST_BEREICH_5_WERT | - | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Schrittverluste im Bereich 5 |
 | STAT_SCHRITTVERLUST_BEREICH_6_WERT | - | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Schrittverluste im Bereich 6 |
 
-<a id="table-res-0xe2f6-d"></a>
 ### RES_0XE2F6_D
 
 Dimensions: 14 rows × 10 columns
@@ -2737,7 +2628,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_BINNING11_WERT | HEX | high | unsigned char | - | - | - | - | - | Binning Klasse: 0 = noch nicht programmiert 1 .. 5 = Binning Klasse 7 .. = nicht benutzt |
 | STAT_BINNING12_WERT | HEX | high | unsigned char | - | - | - | - | - | Binning Klasse: 0 = noch nicht programmiert 1 .. 5 = Binning Klasse 7 .. = nicht benutzt |
 
-<a id="table-res-0xfd40-d"></a>
 ### RES_0XFD40_D
 
 Dimensions: 1 rows × 10 columns
@@ -2746,7 +2636,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SCHEINWERFERDATENBLOCK_DATA | DATA | high | data[16] | - | - | 1.0 | 1.0 | 0.0 | Scheinwerferdatenblock |
 
-<a id="table-res-0xfd41-d"></a>
 ### RES_0XFD41_D
 
 Dimensions: 12 rows × 10 columns
@@ -2766,7 +2655,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_FRAZ_STATUS_MESSUNG_INTERN_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Interner Status der Messung |
 | STAT_FRAZ_MESSUNG_AKTIV | 0/1 | high | unsigned char | - | - | - | - | - | 0 = Messung inaktiv, 1 = Messung aktiv |
 
-<a id="table-res-0xfd43-d"></a>
 ### RES_0XFD43_D
 
 Dimensions: 2 rows × 10 columns
@@ -2776,7 +2664,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_NR_IMPLAUSIBEL_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Plausibilitätsprüfung in Block-Nr. 'x' (bzgl. UDS-Block-Id 0x3000 + x) ist negativ (wobei Default 0xFF = 255 gilt). |
 | STAT_GRUND_IMPLAUSIBEL | 0-n | high | unsigned char | - | TAB_GRUND_IMPLAUSIBEL | - | - | - | Grund der negativen Plausibilitätsprüfung (wobei Default 0 gilt) |
 
-<a id="table-res-0xfd44-d"></a>
 ### RES_0XFD44_D
 
 Dimensions: 37 rows × 10 columns
@@ -2821,7 +2708,6 @@ Dimensions: 37 rows × 10 columns
 | STAT_ADC_46_WERT | Digits | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ADC 46: N/A |
 | STAT_A_U_VLSR_WERT | Digits | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ADC 47: LASER-Sensor-Versorgungsspannung VLSR |
 
-<a id="table-res-0xfd47-d"></a>
 ### RES_0XFD47_D
 
 Dimensions: 35 rows × 10 columns
@@ -2864,7 +2750,6 @@ Dimensions: 35 rows × 10 columns
 | STAT_LR_LUEFTER_FEHLER | 0/1 | high | unsigned char | - | - | - | - | - | LR-Status: Lüfter-Fehler |
 | STAT_LR_LEDTREIBER_TEMPWARNUNG | 0/1 | high | unsigned char | - | - | - | - | - | LR-Status: LED Treiber Temperaturwarnung |
 
-<a id="table-res-0xfd48-d"></a>
 ### RES_0XFD48_D
 
 Dimensions: 36 rows × 10 columns
@@ -2908,7 +2793,6 @@ Dimensions: 36 rows × 10 columns
 | STAT_LED_12_MIN_STRANGSPG_WERT | mV | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Minimale Strangspannung gemäß Codierdaten |
 | STAT_LED_12_MAX_STRANGSPG_WERT | mV | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Maximale Strangspannung gemäß Codierdaten |
 
-<a id="table-res-0xfd4a-d"></a>
 ### RES_0XFD4A_D
 
 Dimensions: 41 rows × 10 columns
@@ -2957,7 +2841,6 @@ Dimensions: 41 rows × 10 columns
 | STAT_HWR_VBOOST_OFF_COMP_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register HWR und VBOOST_OFF_COMP |
 | STAT_REVID_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register REVID |
 
-<a id="table-res-0xfd4b-d"></a>
 ### RES_0XFD4B_D
 
 Dimensions: 41 rows × 10 columns
@@ -3006,7 +2889,6 @@ Dimensions: 41 rows × 10 columns
 | STAT_HWR_VBOOST_OFF_COMP_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register HWR und VBOOST_OFF_COMP |
 | STAT_REVID_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register REVID |
 
-<a id="table-res-0xfd4c-d"></a>
 ### RES_0XFD4C_D
 
 Dimensions: 41 rows × 10 columns
@@ -3055,7 +2937,6 @@ Dimensions: 41 rows × 10 columns
 | STAT_HWR_VBOOST_OFF_COMP_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register HWR und VBOOST_OFF_COMP |
 | STAT_REVID_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register REVID |
 
-<a id="table-res-0xfd4d-d"></a>
 ### RES_0XFD4D_D
 
 Dimensions: 41 rows × 10 columns
@@ -3104,7 +2985,6 @@ Dimensions: 41 rows × 10 columns
 | STAT_HWR_VBOOST_OFF_COMP_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register HWR und VBOOST_OFF_COMP |
 | STAT_REVID_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register REVID |
 
-<a id="table-res-0xfd4e-d"></a>
 ### RES_0XFD4E_D
 
 Dimensions: 41 rows × 10 columns
@@ -3153,7 +3033,6 @@ Dimensions: 41 rows × 10 columns
 | STAT_HWR_VBOOST_OFF_COMP_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register HWR und VBOOST_OFF_COMP |
 | STAT_REVID_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register REVID |
 
-<a id="table-res-0xfd4f-d"></a>
 ### RES_0XFD4F_D
 
 Dimensions: 41 rows × 10 columns
@@ -3202,7 +3081,6 @@ Dimensions: 41 rows × 10 columns
 | STAT_HWR_VBOOST_OFF_COMP_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register HWR und VBOOST_OFF_COMP |
 | STAT_REVID_WERT | HEX | high | unsigned char | - | - | - | - | - | Status-Register REVID |
 
-<a id="table-res-0xfd50-d"></a>
 ### RES_0XFD50_D
 
 Dimensions: 10 rows × 10 columns
@@ -3220,7 +3098,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_APSENS_WERT | HEX | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | aPsens |
 | STAT_ALLASTDEVIATION_WERT | HEX | high | unsigned long | - | - | - | - | - | alLastDeviation |
 
-<a id="table-res-0xfd51-d"></a>
 ### RES_0XFD51_D
 
 Dimensions: 10 rows × 10 columns
@@ -3238,7 +3115,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_APSENS_WERT | HEX | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | aPsens |
 | STAT_ALLASTDEVIATION_WERT | HEX | high | unsigned long | - | - | - | - | - | alLastDeviation |
 
-<a id="table-res-0xfd52-d"></a>
 ### RES_0XFD52_D
 
 Dimensions: 30 rows × 10 columns
@@ -3276,7 +3152,6 @@ Dimensions: 30 rows × 10 columns
 | STAT_STATV_RX_SREG_7A_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | StatvRx.aucSReg7A |
 | STAT_STATV_RX_SREG_8A_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | StatvRx.aucSReg8A |
 
-<a id="table-res-0xfd53-d"></a>
 ### RES_0XFD53_D
 
 Dimensions: 30 rows × 10 columns
@@ -3314,7 +3189,6 @@ Dimensions: 30 rows × 10 columns
 | STAT_STATV_RX_SREG_7A_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | StatvRx.aucSReg7A |
 | STAT_STATV_RX_SREG_8A_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | StatvRx.aucSReg8A |
 
-<a id="table-res-0xfd54-d"></a>
 ### RES_0XFD54_D
 
 Dimensions: 17 rows × 10 columns
@@ -3339,7 +3213,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_STAT_RX_REG_02_WERT | HEX | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | StatRx.unReg2.unRaw |
 | STAT_STAT_RX_REG_03_WERT | HEX | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | StatRx.unReg3.unRaw |
 
-<a id="table-res-0xfd55-d"></a>
 ### RES_0XFD55_D
 
 Dimensions: 3 rows × 10 columns
@@ -3350,7 +3223,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_FAN_1_MIN_FREQ_WERT | Hz | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Minimale Frequenz Lüfter 1 gemäß Codierdaten |
 | STAT_FAN_1_MAX_FREQ_WERT | Hz | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Maximale Frequenz Lüfter 1 gemäß Codierdaten |
 
-<a id="table-res-0xfd56-d"></a>
 ### RES_0XFD56_D
 
 Dimensions: 3 rows × 10 columns
@@ -3361,7 +3233,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_FAN_2_MIN_FREQ_WERT | Hz | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Minimale Frequenz Lüfter 2 gemäß Codierdaten |
 | STAT_FAN_2_MAX_FREQ_WERT | Hz | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Maximale Frequenz Lüfter 2 gemäß Codierdaten |
 
-<a id="table-res-0xfd58-d"></a>
 ### RES_0XFD58_D
 
 Dimensions: 24 rows × 10 columns
@@ -3393,7 +3264,6 @@ Dimensions: 24 rows × 10 columns
 | STAT_BLK_COUNTER_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Anzahl der fehlerfreien N-1 Blinkphasenmessungen |
 | STAT_ERR_COUNTER_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Maximal aufgetretener N-1 Fehlerzählerwert |
 
-<a id="table-res-0xfd5a-d"></a>
 ### RES_0XFD5A_D
 
 Dimensions: 4 rows × 10 columns
@@ -3405,7 +3275,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_FRAZ_SYNC_HIGH_TIME_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | High-Zeit der FRAZ_SYNC-Leitung in Sekunden |
 | STAT_ERR_COUNTER_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Aktueller N-1 Fehlerzähler-Wert |
 
-<a id="table-res-0xfd5b-d"></a>
 ### RES_0XFD5B_D
 
 Dimensions: 25 rows × 10 columns
@@ -3438,7 +3307,6 @@ Dimensions: 25 rows × 10 columns
 | STAT_SOLLSTROM_LM12_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Sollstrom für LM12 (aus Codierdaten, anhängig von der Binningklasse) |
 | STAT_REDUZIERUNGSFAKTOR_LM12_WERT | % | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | spannungsbedingter Stromreduzierungsfaktor der LM12-LED |
 
-<a id="table-scheinwerferhersteller"></a>
 ### SCHEINWERFERHERSTELLER
 
 Dimensions: 4 rows × 2 columns
@@ -3450,7 +3318,6 @@ Dimensions: 4 rows × 2 columns
 | 0x04 | ZKW |
 | 0x05 | Valeo |
 
-<a id="table-scheinwerfervariante"></a>
 ### SCHEINWERFERVARIANTE
 
 Dimensions: 12 rows × 2 columns
@@ -3470,7 +3337,6 @@ Dimensions: 12 rows × 2 columns
 | 0xA0 | LED_AHL/ECE |
 | 0xB0 | LED_AHL/SAE |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 66 rows × 16 columns
@@ -3544,7 +3410,6 @@ Dimensions: 66 rows × 16 columns
 | FRAZ_N_MINUS_1_ERWEITERTE_DATEN | 0xFD5A | - | Liest die erweiterten Daten der N-minus-1-Ausfallerkennung des Fahrtrichtungsanzeigers. | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xFD5A_D |
 | _LED_STROMABREGELUNG | 0xFD5B | - | Informationen zur aktuellen spannungsbedingten LED-Stromabregelung | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xFD5B_D |
 
-<a id="table-tab-ahl-referenzlauf"></a>
 ### TAB_AHL_REFERENZLAUF
 
 Dimensions: 5 rows × 2 columns
@@ -3557,7 +3422,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Refernezlauf mit Fehler abgebrochen |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-einlerndaten-nvm-status"></a>
 ### TAB_EINLERNDATEN_NVM_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -3570,7 +3434,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | NVM_REQ_DENIED |
 | 4 | NVM_SHUTDOWNWRITE |
 
-<a id="table-tab-einlerndaten-status"></a>
 ### TAB_EINLERNDATEN_STATUS
 
 Dimensions: 3 rows × 2 columns
@@ -3581,7 +3444,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | links eingelernt |
 | 2 | rechts eingelernt |
 
-<a id="table-tab-fle-leuchtmittel"></a>
 ### TAB_FLE_LEUCHTMITTEL
 
 Dimensions: 12 rows × 2 columns
@@ -3601,7 +3463,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0B | LED 11 |
 | 0x0C | LED 12 |
 
-<a id="table-tab-fraz-messung"></a>
 ### TAB_FRAZ_MESSUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3612,7 +3473,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Messung bereits ausgelesen |
 | 2 | Messung erfolgt, noch nicht ausgelesen |
 
-<a id="table-tab-funktion-fle"></a>
 ### TAB_FUNKTION_FLE
 
 Dimensions: 3 rows × 2 columns
@@ -3623,7 +3483,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | verbaut und aktiv |
 | 0x02 | verbaut und nicht aktiv |
 
-<a id="table-tab-grund-implausibel"></a>
 ### TAB_GRUND_IMPLAUSIBEL
 
 Dimensions: 3 rows × 2 columns
@@ -3634,7 +3493,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Codierdaten unplausibel bzw. ungeeignet |
 | 2 | Codierdaten inkompatibel zu Steuergeräte-Hardware |
 
-<a id="table-tab-led-leuchtmittel"></a>
 ### TAB_LED_LEUCHTMITTEL
 
 Dimensions: 13 rows × 2 columns
@@ -3655,7 +3513,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0C | LED 12 |
 | 0xFF | alle Leuchtmittel |
 
-<a id="table-tab-leuchten-sensor"></a>
 ### TAB_LEUCHTEN_SENSOR
 
 Dimensions: 20 rows × 2 columns
@@ -3683,7 +3540,6 @@ Dimensions: 20 rows × 2 columns
 | 0x12 | Binning 11 |
 | 0x13 | Binning 12 |
 
-<a id="table-tab-leuchtmittel"></a>
 ### TAB_LEUCHTMITTEL
 
 Dimensions: 21 rows × 2 columns
@@ -3712,7 +3568,6 @@ Dimensions: 21 rows × 2 columns
 | 0x13 | Inszenierungslicht 1 |
 | 0x14 | Zusatzfernlicht-Laser 2 |
 
-<a id="table-tab-lr-aktive-lichtfunktion"></a>
 ### TAB_LR_AKTIVE_LICHTFUNKTION
 
 Dimensions: 4 rows × 2 columns
@@ -3724,7 +3579,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | R |
 | 0xFF | keine |
 
-<a id="table-tab-lr-status"></a>
 ### TAB_LR_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3736,7 +3590,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | LR 2 |
 | 3 | LR 3 |
 
-<a id="table-tab-lwr-referenzlauf"></a>
 ### TAB_LWR_REFERENZLAUF
 
 Dimensions: 5 rows × 2 columns
@@ -3749,7 +3602,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Referenzlauf mit Fehler abgebrochen |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-pos-ahl"></a>
 ### TAB_POS_AHL
 
 Dimensions: 4 rows × 2 columns
@@ -3761,7 +3613,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Job erfolgreich abgeschlossen |
 | 0xFF | Fehler |
 
-<a id="table-tab-pos-lwr"></a>
 ### TAB_POS_LWR
 
 Dimensions: 4 rows × 2 columns
@@ -3773,7 +3624,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Job erfolgreich abgeschlossen |
 | 0xFF | Fehler |
 
-<a id="table-tab-weckereignis"></a>
 ### TAB_WECKEREIGNIS
 
 Dimensions: 7 rows × 2 columns

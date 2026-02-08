@@ -59,7 +59,6 @@
 - [STEUERN_GWSZ_OFFSET](#job-steuern-gwsz-offset) - JobHeaderFormat 0xD114 STEUERN_GWSZ_RESET
 - [STEUERN_GWSZ_OFFSET_SETZEN](#job-steuern-gwsz-offset-setzen) - JobHeaderFormat 0xD114 GWSZ_RESET
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -78,7 +77,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -91,7 +89,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -108,7 +105,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -139,7 +135,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -184,7 +179,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -203,7 +197,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -221,7 +214,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -242,7 +234,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -271,7 +262,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -291,7 +281,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -312,7 +301,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -328,7 +316,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -350,7 +337,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -372,7 +358,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -391,7 +376,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-permanent"></a>
 ### FS_LESEN_PERMANENT
 
 permanente Fehler aus Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $15 ReportDTCWithPermanentStatus Modus: Default
@@ -417,7 +401,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -444,7 +427,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -489,7 +471,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -504,7 +485,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -530,7 +510,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -550,7 +529,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -569,7 +547,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -588,7 +565,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -603,7 +579,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -622,7 +597,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -642,7 +616,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -659,7 +632,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -678,7 +650,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -694,7 +665,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -728,7 +698,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -743,7 +712,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -759,7 +727,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -778,7 +745,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -798,7 +764,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -816,7 +781,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -832,7 +796,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-gwsz-anzeige"></a>
 ### STATUS_GWSZ_ANZEIGE
 
 JobHeaderFormat 0xD122 GWSZ_ANZEIGE_WERT
@@ -849,7 +812,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-gwsz-offset"></a>
 ### STEUERN_GWSZ_OFFSET
 
 JobHeaderFormat 0xD114 STEUERN_GWSZ_RESET
@@ -865,7 +827,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-gwsz-offset-setzen"></a>
 ### STEUERN_GWSZ_OFFSET_SETZEN
 
 JobHeaderFormat 0xD114 GWSZ_RESET
@@ -947,7 +908,6 @@ _No arguments._
 - [TAB_MR_LCDDISPLAY_MODUS_ARG](#table-tab-mr-lcddisplay-modus-arg) (10 × 2)
 - [TAB_TESTBILD](#table-tab-testbild) (5 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1031,7 +991,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 140 rows × 2 columns
@@ -1179,7 +1138,6 @@ Dimensions: 140 rows × 2 columns
 | 0x0000C1 | Flextronics |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1222,7 +1180,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1247,7 +1204,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1281,7 +1237,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1354,7 +1309,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1367,7 +1321,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1382,7 +1335,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1395,7 +1347,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1415,7 +1366,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 248 rows × 3 columns
@@ -1671,7 +1621,6 @@ Dimensions: 248 rows × 3 columns
 | 0x7A18 | Beschleunigungssensor hinten rechts | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1680,7 +1629,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 206 rows × 2 columns
@@ -1894,7 +1842,6 @@ Dimensions: 206 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1937,7 +1884,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-arg-0xe079-d"></a>
 ### ARG_0XE079_D
 
 Dimensions: 1 rows × 12 columns
@@ -1946,7 +1892,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DISPLAY_MODUS | 0-n | high | unsigned char | - | TAB_MR_LCDDISPLAY_MODUS_ARG | - | - | - | - | - | Testmodus fuer LCD Segmente |
 
-<a id="table-arg-0xe07a-d"></a>
 ### ARG_0XE07A_D
 
 Dimensions: 1 rows × 12 columns
@@ -1955,7 +1900,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TANKINHALT | Liter | - | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | Fuer interne Funktionslogik zu nutzender Tankinhalt für Tankanzeige |
 
-<a id="table-arg-0xe119-d"></a>
 ### ARG_0XE119_D
 
 Dimensions: 1 rows × 12 columns
@@ -1964,7 +1908,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GWSZ_SCHREIBEN | km | - | long | - | - | 1.0 | 1.0 | 0.0 | 0.0 | - | GWSZ im Kombi auf neuen Wert setzen |
 
-<a id="table-arg-0xe125-d"></a>
 ### ARG_0XE125_D
 
 Dimensions: 1 rows × 12 columns
@@ -1973,7 +1916,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DREHZAHL | 1/min | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der aktuell im Kombi anzuzeigenden Drehzahl |
 
-<a id="table-arg-0xe126-d"></a>
 ### ARG_0XE126_D
 
 Dimensions: 1 rows × 12 columns
@@ -1982,7 +1924,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GESCHWINDIGKEIT | km/h | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Vorgabe der aktuell im Kombi anzuzeigenden Geschwindigkeit |
 
-<a id="table-arg-0xe127-d"></a>
 ### ARG_0XE127_D
 
 Dimensions: 1 rows × 12 columns
@@ -1991,7 +1932,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GANG | 0-n | - | unsigned char | - | TAB_GANG_ARG | 1.0 | 1.0 | 0.0 | 0.0 | 6.0 | Vorgabe des aktuell im Kombi anzuzeigenden Ganges Vorgabewerte gemäß Tabelle TAB_GANG N == Neutral; 1 == 1. Gang; 2 == 2. Gang; 3 == 3. Gang; 4 == 4. Gang; 5 == 5. Gang; 6 == 6. Gang |
 
-<a id="table-arg-0xe129-d"></a>
 ### ARG_0XE129_D
 
 Dimensions: 1 rows × 12 columns
@@ -2000,7 +1940,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | MOTORTEMPERATUR | °C | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | fuer interne Funktionslogik zu nutzende Motortemperatur |
 
-<a id="table-arg-0xe12b-d"></a>
 ### ARG_0XE12B_D
 
 Dimensions: 6 rows × 12 columns
@@ -2014,7 +1953,6 @@ Dimensions: 6 rows × 12 columns
 | KOMBI_MONAT_WERT | - | - | char | - | - | 1.0 | 1.0 | 0.0 | 1.0 | 12.0 | Monat |
 | KOMBI_JAHR_WERT | - | - | int | - | - | 1.0 | 1.0 | 0.0 | - | - | Jahr |
 
-<a id="table-arg-0xe12c-d"></a>
 ### ARG_0XE12C_D
 
 Dimensions: 3 rows × 12 columns
@@ -2025,7 +1963,6 @@ Dimensions: 3 rows × 12 columns
 | SERVICE_MONAT | - | - | char | - | - | 1.0 | 1.0 | 0.0 | - | - | Monat, an dem der nächste Service fällig ist |
 | SERVICE_JAHR | - | - | int | - | - | 1.0 | 1.0 | 0.0 | - | - | Jahr, an dem der nächste Service fällig ist |
 
-<a id="table-arg-0xe12d-d"></a>
 ### ARG_0XE12D_D
 
 Dimensions: 1 rows × 12 columns
@@ -2034,7 +1971,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | RESTWEG | km | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Setzen des Wegstreckenintervalles bis zur nächsten Seviceanzeige |
 
-<a id="table-arg-0xe12e-d"></a>
 ### ARG_0XE12E_D
 
 Dimensions: 2 rows × 12 columns
@@ -2044,7 +1980,6 @@ Dimensions: 2 rows × 12 columns
 | PWM_AUSWAHL_BEL_KOMBI | 0-n | - | unsigned char | - | TAB_AUSWAHL_BEL_KOMBI | 1.0 | 1.0 | 0.0 | - | - | Auswahl der anzusteuernden Beleuchtung: 0x00 Kontrollleuchten (KL); 0x01 Hinterleuchtung fuer das Display (HD); 0x02 Zeigerinstrumente (ZI): Hinterleuchtung fuer Tacho und Drehzahlmesser |
 | PWM_WERT_VORGEBEN | % | - | unsigned char | - | - | 2.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM  für ausgewählte Kombibeleuchtung vorgeben:  0%: Beleuchtung aus; 100%: volle Leuchstaerke |
 
-<a id="table-arg-0xe12f-d"></a>
 ### ARG_0XE12F_D
 
 Dimensions: 2 rows × 12 columns
@@ -2054,7 +1989,6 @@ Dimensions: 2 rows × 12 columns
 | AUSWAHL_KONTROLLLEUCHTE | 0-n | - | unsigned int | - | TAB_KONTROLLEUCHTEN | - | - | - | - | - | Auswahl der anzusteuernden Kontrollleuchte |
 | EIN_AUS | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Ein- und Ausschalten der ausgewählten Kontrollleuchte: 0->aus, 1->ein |
 
-<a id="table-arg-0xf190-d"></a>
 ### ARG_0XF190_D
 
 Dimensions: 1 rows × 12 columns
@@ -2063,7 +1997,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FGNR17 | TEXT | - | string[17] | - | - | 1.0 | 1.0 | 0.0 | - | - | 17-stellige Fahrgestellnummer |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2077,7 +2010,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2091,7 +2023,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 36 rows × 3 columns
@@ -2135,7 +2066,6 @@ Dimensions: 36 rows × 3 columns
 | 0xE11457 | CAN DME Nachricht Modus_Fahrzeug_Motorrad_2010  Alive Fehler | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -2144,7 +2074,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2156,7 +2085,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 15 rows × 3 columns
@@ -2179,7 +2107,6 @@ Dimensions: 15 rows × 3 columns
 | 0xE11443 | SEK_CAN ABS-BCO Nachricht Wegstrecke_Relativ_Motorrad_2010 - Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -2188,7 +2115,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2197,7 +2123,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0xd10d-d"></a>
 ### RES_0XD10D_D
 
 Dimensions: 2 rows × 10 columns
@@ -2207,7 +2132,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ABSOLUT_GWSZ_RAM_WERT | km | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Liefert den absoluten Gesamtwegstreckenzähler aus dem RAM. |
 | STAT_ABSOLUT_GWSZ_EEP_WERT | km | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Liefert den absoluten Gesamtwegstreckenzähler aus dem EEPROM. |
 
-<a id="table-res-0xe079-d"></a>
 ### RES_0XE079_D
 
 Dimensions: 1 rows × 10 columns
@@ -2216,7 +2140,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DISPLAY_MODUS | 0-n | high | unsigned char | - | TAB_MR_LCDDISPLAY_MODUS | - | - | - | Aktiver Displaymodus |
 
-<a id="table-res-0xe07a-d"></a>
 ### RES_0XE07A_D
 
 Dimensions: 3 rows × 10 columns
@@ -2227,7 +2150,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_TANKINHALT_KOMBIINTERN_WERT | Liter | - | unsigned int | - | - | 1.0 | 10.0 | 0.0 | aktuell kombiintern fuer Funktionslogik genutzer Tankinhalt |
 | STAT_TANKANZ_BALKEN_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Tankanzeige: im Kombi angezeigte Balken |
 
-<a id="table-res-0xe119-d"></a>
 ### RES_0XE119_D
 
 Dimensions: 1 rows × 10 columns
@@ -2236,7 +2158,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GWSZ_WERT | km | - | long | - | - | 1.0 | 1.0 | 0.0 | aktueller GWSZ-Wert |
 
-<a id="table-res-0xe120-d"></a>
 ### RES_0XE120_D
 
 Dimensions: 14 rows × 10 columns
@@ -2258,7 +2179,6 @@ Dimensions: 14 rows × 10 columns
 | STAT_TASTE_LI | 0/1 | - | unsigned int | 0x4000 | - | 1.0 | 1.0 | 0.0 | Taster links 1: Taster gedrueckt 0: Taster nicht gedrueckt |
 | STAT_TASTE_FERNLICHT | 0/1 | - | unsigned int | 0x0200 | - | 1.0 | 1.0 | 0.0 | Fernlicht 1: Taster gedrueckt 0: Taster nicht gedrueckt |
 
-<a id="table-res-0xe121-d"></a>
 ### RES_0XE121_D
 
 Dimensions: 2 rows × 10 columns
@@ -2268,7 +2188,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MMC_BEDIENUNG | 0-n | - | unsigned char | 0x02 | TAB_MMC_BED | 1.0 | 1.0 | 0.0 | Betätigungsrichtung des MMC: |
 | STAT_MMC_POSITION_WERT | Schritte | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Position des MMC 0..254 |
 
-<a id="table-res-0xe125-d"></a>
 ### RES_0XE125_D
 
 Dimensions: 1 rows × 10 columns
@@ -2277,7 +2196,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DREHZAHL_WERT | 1/min | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | aktuell im Kombi angezeigte Drehzahl |
 
-<a id="table-res-0xe126-d"></a>
 ### RES_0XE126_D
 
 Dimensions: 1 rows × 10 columns
@@ -2286,7 +2204,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GESCHWINDIGKEIT_WERT | km/h | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | aktuell im Kombi angezeigte Geschwindigkeit |
 
-<a id="table-res-0xe127-d"></a>
 ### RES_0XE127_D
 
 Dimensions: 1 rows × 10 columns
@@ -2295,7 +2212,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GANG | 0-n | - | unsigned char | - | TAB_GANG | 1.0 | 1.0 | 0.0 | aktuell im Kombi angezeigter Gang Anzeige gemäß Tabelle TAB_GANG N == Neutral; 1 == 1. Gang; 2 == 2. Gang; 3 == 3. Gang; 4 == 4. Gang; 5 == 5. Gang; 6 == 6. Gang |
 
-<a id="table-res-0xe129-d"></a>
 ### RES_0XE129_D
 
 Dimensions: 3 rows × 10 columns
@@ -2306,7 +2222,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_MOTORTEMP_KOMBIINTERN_WERT | °C | - | int | - | - | 1.0 | 1.0 | 0.0 | aktuell kombiintern fuer Funktionslogik genutze Motortemperatur |
 | STAT_MOTORTEMP_BALKEN_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Motortemperatur-Anzeige im Kombi angezeigte Balken |
 
-<a id="table-res-0xe12b-d"></a>
 ### RES_0XE12B_D
 
 Dimensions: 6 rows × 10 columns
@@ -2320,7 +2235,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_KOMBI_MONAT_WERT | - | - | char | - | - | 1.0 | 1.0 | 0.0 | Rückgabe des aktuellen Monat |
 | STAT_KOMBI_JAHR_WERT | - | - | int | - | - | 1.0 | 1.0 | 0.0 | Rückgabe des aktuellen Jahr |
 
-<a id="table-res-0xe12c-d"></a>
 ### RES_0XE12C_D
 
 Dimensions: 3 rows × 10 columns
@@ -2331,7 +2245,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SERVICE_MONAT_WERT | - | - | char | - | - | 1.0 | 1.0 | 0.0 | Monat, an dem der nächste Service fällig ist |
 | STAT_SERVICE_JAHR_WERT | - | - | int | - | - | 1.0 | 1.0 | 0.0 | Jahr, an dem der nächste Service fällig ist |
 
-<a id="table-res-0xe12d-d"></a>
 ### RES_0XE12D_D
 
 Dimensions: 1 rows × 10 columns
@@ -2340,7 +2253,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RESTWEG_WERT | km | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | verbleibendes Wegstreckenintervall bis wegabhängiger Service als überfällig angezeigt wird |
 
-<a id="table-res-0xe12e-d"></a>
 ### RES_0XE12E_D
 
 Dimensions: 3 rows × 10 columns
@@ -2351,7 +2263,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PWM_DISPLAY_WERT | % | - | unsigned char | - | - | 1.0 | 2.0 | 0.0 | aktueller PWM-Wert der Hinterleuchtung fuer das Display |
 | STAT_PWM_ZEIGERINSTRUMENTE_WERT | % | - | unsigned char | - | - | 1.0 | 2.0 | 0.0 | aktueller PWM-Wert der Hinterleuchtung fuer Tacho und Drehzahlmesser |
 
-<a id="table-res-0xe12f-d"></a>
 ### RES_0XE12F_D
 
 Dimensions: 15 rows × 10 columns
@@ -2374,7 +2285,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_DWA_ROT | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | DWA (rot) |
 | STAT_MIL | 0/1 | high | unsigned char | - | - | - | - | - | Status MIL Kontrollleuchte |
 
-<a id="table-res-0xf190-d"></a>
 ### RES_0XF190_D
 
 Dimensions: 1 rows × 10 columns
@@ -2383,7 +2293,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FGNR17_TEXT | TEXT | - | string[17] | - | - | 1.0 | 1.0 | 0.0 | 17-Stellige Fahrgestellnummer |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 23 rows × 16 columns
@@ -2414,7 +2323,6 @@ Dimensions: 23 rows × 16 columns
 | BATTERIESPANNUNG_MR | 0xE142 | STAT_BATTERIESPANNUNG_WERT | Batteriespannung | V | - | - | unsigned char | - | 1.0 | 10.0 | 0.0 | - | 22 | - | - |
 | VIN | 0xF190 | - | Fahrgestellnummer | - | - | - | - | - | - | - | - | - | 22;2E | ARG_0xF190_D | RES_0xF190_D |
 
-<a id="table-tab-auswahl-bel-kombi"></a>
 ### TAB_AUSWAHL_BEL_KOMBI
 
 Dimensions: 3 rows × 2 columns
@@ -2425,7 +2333,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | HD |
 | 0x02 | ZI |
 
-<a id="table-tab-auswahl-bel-lin"></a>
 ### TAB_AUSWAHL_BEL_LIN
 
 Dimensions: 3 rows × 2 columns
@@ -2436,7 +2343,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | F_RBT |
 | 0x02 | S_RBT |
 
-<a id="table-tab-gang"></a>
 ### TAB_GANG
 
 Dimensions: 8 rows × 2 columns
@@ -2452,7 +2358,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | 6 |
 | 0xFF | ungültiger Gang |
 
-<a id="table-tab-gang-arg"></a>
 ### TAB_GANG_ARG
 
 Dimensions: 7 rows × 2 columns
@@ -2467,7 +2372,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | 5 |
 | 0x06 | 6 |
 
-<a id="table-tab-kontrolleuchten"></a>
 ### TAB_KONTROLLEUCHTEN
 
 Dimensions: 17 rows × 2 columns
@@ -2492,7 +2396,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | alle Lampen |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-mmc-bed"></a>
 ### TAB_MMC_BED
 
 Dimensions: 4 rows × 2 columns
@@ -2504,7 +2407,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Betätigung nach rechts |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-mr-lcddisplay-modus"></a>
 ### TAB_MR_LCDDISPLAY_MODUS
 
 Dimensions: 11 rows × 2 columns
@@ -2523,7 +2425,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Alle Segmente |
 | 0xFF | Modus unbekannt |
 
-<a id="table-tab-mr-lcddisplay-modus-arg"></a>
 ### TAB_MR_LCDDISPLAY_MODUS_ARG
 
 Dimensions: 10 rows × 2 columns
@@ -2541,7 +2442,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Modus Enduro |
 | 0x09 | Alle Segmente |
 
-<a id="table-tab-testbild"></a>
 ### TAB_TESTBILD
 
 Dimensions: 5 rows × 2 columns

@@ -102,7 +102,6 @@
 - [_SEGMENTDATEN_SPEICHER](#job-segmentdaten-speicher) - 0xD12F SEGMENTDATEN_SPEICHER
 - [_STATUS_READMEMORYBYADDRESS](#job-status-readmemorybyaddress) - JobHeaderFormat free telegram for ReadMemoryByAddress Service Job for developement
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -121,7 +120,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -134,7 +132,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -151,7 +148,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -182,7 +178,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -227,7 +222,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -246,7 +240,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -264,7 +257,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -285,7 +277,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -314,7 +305,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -334,7 +324,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -355,7 +344,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -371,7 +359,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -393,7 +380,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -415,7 +401,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -434,7 +419,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -461,7 +445,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -506,7 +489,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -521,7 +503,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -541,7 +522,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -560,7 +540,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -579,7 +558,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -594,7 +572,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -613,7 +590,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -633,7 +609,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -648,7 +623,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-info"></a>
 ### CBS_INFO
 
 Ausgabe der CBS-Version
@@ -664,7 +638,6 @@ _No arguments._
 | CBS_VERSION_TEXT | string | CBS Version im Klartext |
 | CBS_VERSION_HEX | string | CBS Version als Wert |
 
-<a id="job-cbs-daten-lesen"></a>
 ### CBS_DATEN_LESEN
 
 CBS Daten auslesen (fuer CBS-Version 5) UDS: $22 ReadDataByIdentifier Modus  : Default
@@ -723,7 +696,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cbs-reset"></a>
 ### CBS_RESET
 
 CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modus  : Default Musterparametersatz fuer Bremsbelagverschleiss Vorder/Hinterachse br_v,100,1,0,0,0,1,0,0 br_h,100,1,0,0,0,1,0,0 jedoch mit 'Strich_Punkt' getrennt (nicht mit Komma!)
@@ -754,7 +726,6 @@ CBS Daten Zuruecksetzen (fuer CBS-Version 5) UDS: $2E WriteDataByIdentifier Modu
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -769,7 +740,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -786,7 +756,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -801,7 +770,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -816,7 +784,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -831,7 +798,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -851,7 +817,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -870,7 +835,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -890,7 +854,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -908,7 +871,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -924,7 +886,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-leuchten"></a>
 ### STEUERN_LEUCHTEN
 
 Leuchten im Kombi ansteuern. Für Service- und Testzwecke Service nur in Extended Mode erlaubt JobHeaderFormat 0xD11B STEUERN_LEUCHTEN
@@ -944,7 +905,6 @@ Leuchten im Kombi ansteuern. Für Service- und Testzwecke Service nur in Extende
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-kombi-uhrzeit-datum-stellen"></a>
 ### KOMBI_UHRZEIT_DATUM_STELLEN
 
 Uhrzeit und Datum stellen Für Service- und Testzwecke Daten werden vom PC bzw. Tester uebernommen JobHeaderFormat 0xD113 STEUERN_UHRZEIT_DATUM
@@ -959,7 +919,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-gwsz-anzeige"></a>
 ### STATUS_GWSZ_ANZEIGE
 
 JobHeaderFormat 0xD122 GWSZ_ANZEIGE_WERT
@@ -976,7 +935,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-drehzahlgrenze"></a>
 ### STATUS_DREHZAHLGRENZE
 
 JobHeaderFormat 0xD124 DREHZAHLGRENZE_WERT
@@ -993,7 +951,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-tachogrenze"></a>
 ### STATUS_TACHOGRENZE
 
 JobHeaderFormat 0xD109 TACHOGRENZE_WERT
@@ -1010,7 +967,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fgn-codiert"></a>
 ### _STATUS_FGN_CODIERT
 
 JobHeaderFormat 0x300A FGN_CODIERT Entwicklungsjob
@@ -1027,7 +983,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fgn-rda-kopie"></a>
 ### _STATUS_FGN_RDA_KOPIE
 
 JobHeaderFormat 0x401F FGN_RDA_KOPIE Entwicklungsjob
@@ -1044,7 +999,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-check-control-history"></a>
 ### STATUS_CHECK_CONTROL_HISTORY
 
 Liest den CC Historyspeicher aus dem RAM aus. JobHeaderFormat 0xD10B CHECK_CONTROL_MELDUNG_ID
@@ -1063,7 +1017,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-service-schluesseldaten"></a>
 ### _STATUS_SERVICE_SCHLUESSELDATEN
 
 Dieser Job dient zum blockweisen Auslesen der im CAS gespeicherten Service Schlüsseldaten. JobHeaderFormat 0x1006 STATUS_SERVICE_SCHLUESSELDATEN Entwicklungsjob
@@ -1086,7 +1039,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-readdatabyidentifier"></a>
 ### _STATUS_READDATABYIDENTIFIER
 
 JobHeaderFormat Freies Telegramm fuers ReadDataByIdentifier Service Entwicklungsjob
@@ -1108,7 +1060,6 @@ JobHeaderFormat Freies Telegramm fuers ReadDataByIdentifier Service Entwicklungs
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cbs-service-aktivierung"></a>
 ### STATUS_CBS_SERVICE_AKTIVIERUNG
 
 JobHeaderFormat STATUS_CBS_SERVICE_AKTIVIERUNG
@@ -1130,7 +1081,6 @@ JobHeaderFormat STATUS_CBS_SERVICE_AKTIVIERUNG
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cbs-service-aktivierung"></a>
 ### STEUERN_CBS_SERVICE_AKTIVIERUNG
 
 JobHeaderFormat STEUERN_CBS_SERVICE_AKTIVIERUNG
@@ -1150,7 +1100,6 @@ JobHeaderFormat STEUERN_CBS_SERVICE_AKTIVIERUNG
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ability-to-wake"></a>
 ### STATUS_ABILITY_TO_WAKE
 
 Gibt an ob SG Most Ring wecken darf
@@ -1167,7 +1116,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-average-message-reception-rate"></a>
 ### STATUS_AVERAGE_MESSAGE_RECEPTION_RATE
 
 Liest die mittlere Nachrichtenabnahmerate des SGs während dieses Gerät geflasht wird, also in der ProgramminSession Auslesbar muss der Status jederzeit sein
@@ -1184,7 +1132,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fot-temperatur"></a>
 ### STATUS_FOT_TEMPERATUR
 
 Gibt die FOT Temperatur im SG. an
@@ -1199,7 +1146,6 @@ _No arguments._
 | STAT_FOT_TEMP_FAHRENHEIT | unsigned char | Temperatur am FOT des SG in Fahrenheit: 255 = 0xFF bedeutet "keine Sensoren verbaut" |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-status-most-3db"></a>
 ### STATUS_MOST_3DB
 
 xx Status der 3dB Leistungsabsenkung der MOST FOTs.
@@ -1216,7 +1162,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-version-most-controller"></a>
 ### STATUS_VERSION_MOST_CONTROLLER
 
 Return Version of MOST Controller
@@ -1234,7 +1179,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-versorgungsspannung"></a>
 ### STATUS_VERSORGUNGSSPANNUNG
 
 Betriebsspannung am SG. Darstellung mit Millivolt-Auflösung.
@@ -1251,7 +1195,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-wakeup-status"></a>
 ### STATUS_WAKEUP_STATUS
 
 Gibt an, ob das SG den MOST-Ring geweckt hat oder geweckt wurde.
@@ -1268,7 +1211,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ability-to-wake"></a>
 ### STEUERN_ABILITY_TO_WAKE
 
 Gibt an, ob das SG den MOST-Ring wecken darf.
@@ -1287,7 +1229,6 @@ Gibt an, ob das SG den MOST-Ring wecken darf.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-most-3db"></a>
 ### STEUERN_MOST_3DB
 
 3dB Leistungsabsenkung der MOST FOTs
@@ -1302,7 +1243,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-watchdog-trigger-stop"></a>
 ### STEUERN_WATCHDOG_TRIGGER_STOP
 
 JobHeaderFormat 0xF020 STEUERN_WATCHDOG_TRIGGER_STOP Der Service 0x31 ist nur im Extended (Diagnose) Session erlaubt
@@ -1321,7 +1261,6 @@ JobHeaderFormat 0xF020 STEUERN_WATCHDOG_TRIGGER_STOP Der Service 0x31 ist nur im
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-gwsz-offset"></a>
 ### STEUERN_GWSZ_OFFSET
 
 JobHeaderFormat 0xD114 GWSZ_RESET
@@ -1337,7 +1276,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eeramdaten"></a>
 ### _STATUS_EERAMDATEN
 
 Dieser Job dient ausschliesslich zum Auslesen der Debugdaten JobHeaderFormat 0x23 STATUS_EERAMDATEN Entwicklungsjob
@@ -1360,7 +1298,6 @@ Dieser Job dient ausschliesslich zum Auslesen der Debugdaten JobHeaderFormat 0x2
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dcc-herstelldatenkorrektur"></a>
 ### _STEUERN_DCC_HERSTELLDATENKORREKTUR
 
 JobHeaderFormat Entwicklungsjob, Beachte: SGBD-Verteilung nur gezielt von der EI-42!
@@ -1375,7 +1312,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-leuchten"></a>
 ### STATUS_LEUCHTEN
 
 Status_Leuchten im Kombi abfragen. Für Service- und Testzwecke Service im default Mode erlaubt JobHeaderFormat 0x2520 STATUS_LEUCHTEN
@@ -1395,7 +1331,6 @@ Status_Leuchten im Kombi abfragen. Für Service- und Testzwecke Service im defau
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-eco-mode-austritt"></a>
 ### _STATUS_ECO_MODE_AUSTRITT
 
 JobHeaderFormat STATUS_ECO_MODE_AUSTRITT
@@ -1436,7 +1371,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-det-loeschen"></a>
 ### _DET_LOESCHEN
 
 JobHeaderFormat 0x402C FGN_CODIERT Entwicklungsjob
@@ -1451,7 +1385,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-gss-loeschen"></a>
 ### _GSS_LOESCHEN
 
 JobHeaderFormat 0x402C FGN_CODIERT Entwicklungsjob
@@ -1466,7 +1399,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-gss-error-lesen"></a>
 ### _STATUS_GSS_ERROR_LESEN
 
 Liest die Fehlercodes aus GSS Fehlerspeicher aus. JobHeaderFormat Der Service 0x31 ist nur in Extended (Diagnose) Session erlaubt
@@ -1483,7 +1415,6 @@ _No arguments._
 | _ANZAHL_ERRORS | int | Anzahl der im GSS gespeicherten Fehler -------------------------------------- |
 | _GSS_ERRORS | binary | Error-Daten aus GSS |
 
-<a id="job-status-vcm-backup-istufe-lesen"></a>
 ### STATUS_VCM_BACKUP_ISTUFE_LESEN
 
 Liefert die im EEPROM abgelegte I-Stufe jeweils für Werk, HO und HO-Backup. JobHeaderFormat 0x100B STATUS_ISTUFE
@@ -1504,7 +1435,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vcm-backup-fahrzeugauftrag-lesen"></a>
 ### STATUS_VCM_BACKUP_FAHRZEUGAUFTRAG_LESEN
 
 Der Job dient zum Auslesen des redundant im KOMBI gespeicherten Fahrzeugauftrags. Hinweise: Das FEM/BDC ist das Master-SG für den Fahrzeugauftrag. Es werden nur die uninterpretierten Rohdaten des VCM-Backup aus dem KOMBI EEPROM geliefert JobHeaderFormat 0x3F1C und 0x3F1D FAHRZEUGAUFTRAG
@@ -1527,7 +1457,6 @@ _No arguments._
 | _REQUEST2 | binary | Hex-Auftrag an SG |
 | _RESPONSE2 | binary | Hex-Antwort von SG |
 
-<a id="job-status-bmw-cc-datensaetze-lesen"></a>
 ### STATUS_BMW_CC_DATENSAETZE_LESEN
 
 0xD12D BMW_CC_DATENSAETZE
@@ -1546,7 +1475,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hu-cc-datensaetze-lesen"></a>
 ### STATUS_HU_CC_DATENSAETZE_LESEN
 
 0xA10A HU_CC_DATENSAETZE
@@ -1568,7 +1496,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hu-zeitstaempel-lesen"></a>
 ### STATUS_HU_ZEITSTAEMPEL_LESEN
 
 0xD12C HU_ZEITSTAEMPEL
@@ -1588,7 +1515,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hud-verbau-lesen"></a>
 ### STATUS_HUD_VERBAU_LESEN
 
 Auslesen des HUD Verbaus
@@ -1607,7 +1533,6 @@ _No arguments._
 | _RESPONSE_3003 | binary | Hex-Antwort von SG |
 | _RESPONSE_300B | binary | Hex-Antwort von SG |
 
-<a id="job-segmentdaten-speicher"></a>
 ### SEGMENTDATEN_SPEICHER
 
 0xD12F SEGMENTDATEN_SPEICHER
@@ -1622,7 +1547,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-timer-klimatisierung"></a>
 ### TIMER_KLIMATISIERUNG
 
 JobHeaderFormat 0xD121 TIMER_KLIMATISIERUNG
@@ -1637,7 +1561,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-test-timer-status"></a>
 ### TEST_TIMER_STATUS
 
 Informationen zu Timern aus Kombi auslesen $22   ReadDataByIdentifier $F101 SVK_AKTUELL (Default) $23 ReadMemoryByAdress
@@ -1656,7 +1579,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-startwertespeicher-default"></a>
 ### STEUERN_STARTWERTESPEICHER_DEFAULT
 
 0xD116 HU_CC_DATENSAETZE Vorgabe = Defaultwerte (12kWh, 30kmh, 25s)
@@ -1671,7 +1593,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hw-variante-erw"></a>
 ### _STATUS_HW_VARIANTE_ERW
 
 Den Hersteller, die HW-Variante und den Verbaustand analoger Zeiger im Kombi zu ermitteln Für Service- und Testzwecke Service im default Mode erlaubt JobHeaderFormat Job ist HW-abhängig und gilt nicht für alle HW-Varianten !
@@ -1691,7 +1612,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-tank-max"></a>
 ### _STATUS_TANK_MAX
 
 Auslesen des Tankvolumens
@@ -1707,7 +1627,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE_3005 | binary | Hex-Antwort von SG |
 
-<a id="job-segmentdaten-speicher"></a>
 ### _SEGMENTDATEN_SPEICHER
 
 0xD12F SEGMENTDATEN_SPEICHER
@@ -1722,7 +1641,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-readmemorybyaddress"></a>
 ### _STATUS_READMEMORYBYADDRESS
 
 JobHeaderFormat free telegram for ReadMemoryByAddress Service Job for developement
@@ -1898,7 +1816,6 @@ JobHeaderFormat free telegram for ReadMemoryByAddress Service Job for developeme
 - [TWAKEUPSTATUS](#table-twakeupstatus) (3 × 2)
 - [TABILITYWAKE](#table-tabilitywake) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1982,7 +1899,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -2131,7 +2047,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2174,7 +2089,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2199,7 +2113,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -2233,7 +2146,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -2306,7 +2218,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -2319,7 +2230,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -2334,7 +2244,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -2347,7 +2256,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -2367,7 +2275,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2410,7 +2317,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2421,7 +2327,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-cbskennung"></a>
 ### CBSKENNUNG
 
 Dimensions: 12 rows × 3 columns
@@ -2441,7 +2346,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0D | NOx_a | NOx-Additiv |
 | 0x64 | Sic_v | Sichtpruefung/Fahrzeug-Check verknuepft |
 
-<a id="table-arg-0x4010-d"></a>
 ### ARG_0X4010_D
 
 Dimensions: 1 rows × 12 columns
@@ -2450,7 +2354,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TWSZ | km | high | unsigned long | - | - | 10.0 | 1.0 | 0.0 | - | - | 0x00000000 =  Nur ein Rücksetzen auf 0km möglich. Eine Vorgabe auf einen bestimmten Wert nicht zulässig. |
 
-<a id="table-arg-0x4400-d"></a>
 ### ARG_0X4400_D
 
 Dimensions: 2 rows × 12 columns
@@ -2460,7 +2363,6 @@ Dimensions: 2 rows × 12 columns
 | HW_HAUPTINDEX | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bei grösseren Änderungen soll der HI geändert weden |
 | HW_UNTERINDEX | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bei kleineren Änderungen soll der UI geändert weden |
 
-<a id="table-arg-0x4802"></a>
 ### ARG_0X4802
 
 Dimensions: 1 rows × 12 columns
@@ -2469,7 +2371,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ACTIVATION | - | high | char | - | - | - | - | - | - | - | 0x00 = OFF; 0x01 = ON; |
 
-<a id="table-arg-0x4806"></a>
 ### ARG_0X4806
 
 Dimensions: 3 rows × 12 columns
@@ -2480,7 +2381,6 @@ Dimensions: 3 rows × 12 columns
 | REGISTERLAENGE | - | high | unsigned char | - | - | - | - | - | - | - | 0x00 = 1 Byte; 0x00 = 1 Halfword; 0x02 = 1 Word |
 | REGISTERWERT | - | high | unsigned long | - | - | - | - | - | - | - | Registerwert |
 
-<a id="table-arg-0x4807"></a>
 ### ARG_0X4807
 
 Dimensions: 2 rows × 12 columns
@@ -2490,7 +2390,6 @@ Dimensions: 2 rows × 12 columns
 | REGISTERADRESSE | - | high | unsigned long | - | - | - | - | - | - | - | auzulesende Registeradresse |
 | REGISTERLAENGE | - | high | unsigned char | - | - | - | - | - | - | - | 0x00 = 1 Byte; 0x00 = 1 Halfword; 0x02 = 1 Word |
 
-<a id="table-arg-0x4808"></a>
 ### ARG_0X4808
 
 Dimensions: 1 rows × 12 columns
@@ -2499,7 +2398,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | POSITION | - | high | unsigned int | - | - | - | - | - | - | - | Bildposition in Mikroschritten |
 
-<a id="table-arg-0xa102"></a>
 ### ARG_0XA102
 
 Dimensions: 4 rows × 14 columns
@@ -2511,7 +2409,6 @@ Dimensions: 4 rows × 14 columns
 | GRUEN | + | - | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Byte 2: 0x00- 0xFF (grün) |
 | BLAU | + | - | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Byte 3: 0x00- 0xFF (blau) |
 
-<a id="table-arg-0xa103"></a>
 ### ARG_0XA103
 
 Dimensions: 4 rows × 14 columns
@@ -2523,7 +2420,6 @@ Dimensions: 4 rows × 14 columns
 | RICHTUNG | + | - | 0-n | - | unsigned char | - | TAB_WARPING_RICHTUNG | - | - | - | - | - | 00h : keine Änderung 01h : hoch 02h : runter 03h : links 04h : rechts |
 | DELTA | + | - | - | - | char | - | - | - | - | - | - | - | Wert der Veränderung der Verstellung in Pixel. |
 
-<a id="table-arg-0xa105"></a>
 ### ARG_0XA105
 
 Dimensions: 1 rows × 14 columns
@@ -2532,7 +2428,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION_BLINKER | + | - | 0-n | - | char | - | TAB_KOMBI_BLINKER | - | - | - | - | - | Argumente siehe Tabelle TAB_KOMBI_BLINKER |
 
-<a id="table-arg-0xa106"></a>
 ### ARG_0XA106
 
 Dimensions: 1 rows × 14 columns
@@ -2541,7 +2436,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | WARPLISTE | + | - | 0-n | - | char | - | TAB_WARPLISTE | - | - | - | - | - | Es sind drei Kennlinien möglich: 1. CAF - Codierdaten 2. Werksmesstechnik - Mit einer Kamera vermessene Kennlinie 3. Service - im Service nachjustierte Kennlinie |
 
-<a id="table-arg-0xa107"></a>
 ### ARG_0XA107
 
 Dimensions: 3 rows × 14 columns
@@ -2552,7 +2446,6 @@ Dimensions: 3 rows × 14 columns
 | HOEHE_RICHTUNG | + | - | 0-n | - | unsigned char | - | TAB_HUD_RICHTUNG | 1.0 | 1.0 | 0.0 | - | - | Höhenverstellung:   0x01 = hoch,   0x02 = runter Bildrotation:   0x01 = rechtsdrehend,   0x02 = linksdrehend |
 | SCHRITTZAHL | + | - | - | - | int | - | - | 1.0 | 1.0 | 0.0 | - | - | Angabe der Anzahl der Schritte für die Höhenverstellung bzw. Bildrotation. |
 
-<a id="table-arg-0xd08d-d"></a>
 ### ARG_0XD08D_D
 
 Dimensions: 2 rows × 12 columns
@@ -2562,7 +2455,6 @@ Dimensions: 2 rows × 12 columns
 | KEY | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0x00 = speichern auf aktuellen Schlüssel 0x01 = speichern auf alle Schlüssel |
 | POSITION | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | 0 Anschlag unten 100 Anschlag oben |
 
-<a id="table-arg-0xd08e"></a>
 ### ARG_0XD08E
 
 Dimensions: 2 rows × 12 columns
@@ -2572,7 +2464,6 @@ Dimensions: 2 rows × 12 columns
 | KEY | 0/1 | - | unsigned char | - | - | - | - | - | - | - | 0x00 = speichern auf aktuellen Schlüssel 0x01 = speichern auf alle Schlüssel |
 | POSITION | - | - | char | - | - | - | - | - | -10.0 | 10.0 | -10 Anschlag links 0 mitte +10 Anschlag rechts |
 
-<a id="table-arg-0xd090"></a>
 ### ARG_0XD090
 
 Dimensions: 1 rows × 12 columns
@@ -2581,7 +2472,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTIVIERUNG | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0x00 =HUD deaktivieren 0x01 =HUD aktivieren |
 
-<a id="table-arg-0xd10a"></a>
 ### ARG_0XD10A
 
 Dimensions: 1 rows × 12 columns
@@ -2590,7 +2480,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KM_LEISTUNG | km | - | unsigned char | - | - | - | - | - | 1 | 0xFE | Angenommene, durchschnittliche Jahreskilometerleistung für die CBS-Berechnungen (in 1000 km). |
 
-<a id="table-arg-0xd115"></a>
 ### ARG_0XD115
 
 Dimensions: 1 rows × 12 columns
@@ -2599,7 +2488,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GESCHWINDIGKEIT_ACC | km/h | - | int | - | - | 10 | - | - | 0 | 400 | vorzugebende Geschwindigkeit für ACC-Zeiger in km/h |
 
-<a id="table-arg-0xd116-d"></a>
 ### ARG_0XD116_D
 
 Dimensions: 64 rows × 12 columns
@@ -2671,7 +2559,6 @@ Dimensions: 64 rows × 12 columns
 | SO_COUNTER_7 | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | So Counter  [1s] |
 | SO_SPEED_7 | km/h | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | So Speed  [ 0.1 km/h] |
 
-<a id="table-arg-0xd117"></a>
 ### ARG_0XD117
 
 Dimensions: 1 rows × 12 columns
@@ -2680,7 +2567,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DREHZAHL | 1/min | - | int | - | - | - | - | - | 0 | 10000 | Vorgeben der Drehzahlmesserstellung in 1/min |
 
-<a id="table-arg-0xd11a"></a>
 ### ARG_0XD11A
 
 Dimensions: 1 rows × 12 columns
@@ -2689,7 +2575,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GESCHWINDIGKEIT | km/h | - | int | - | - | 10 | - | - | - | - | Setze Tacho auf beliebige Geschwindigkeit. Eingabe in km/h |
 
-<a id="table-arg-0xd11c"></a>
 ### ARG_0XD11C
 
 Dimensions: 1 rows × 12 columns
@@ -2698,7 +2583,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | VERBRAUCH | - | - | int | - | - | - | - | - | - | - | Vorgabe von Momentanverbrauch in L/100km oder Öltemperatur in Grad Celsius. |
 
-<a id="table-arg-0xd11d"></a>
 ### ARG_0XD11D
 
 Dimensions: 1 rows × 12 columns
@@ -2707,7 +2591,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | POWER_RESERVE | % | - | int | - | - | 10.0 | - | - | 0.0 | 100.0 | Ansteuern des Power-Reserve Zeigers. Eingabe in % |
 
-<a id="table-arg-0xd11e"></a>
 ### ARG_0XD11E
 
 Dimensions: 1 rows × 12 columns
@@ -2716,7 +2599,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TANKINHALT | % | - | int | - | - | - | - | - | 0 | 100 | Tankinhalt in % vorgeben |
 
-<a id="table-arg-0xd125"></a>
 ### ARG_0XD125
 
 Dimensions: 3 rows × 12 columns
@@ -2727,7 +2609,6 @@ Dimensions: 3 rows × 12 columns
 | 10000KM_DSV_L_KM_WERT | l/100km | high | unsigned int | - | - | 100.0 | 1.0 | 0.0 | - | - | 10.000 km Durchschnittsverbrauch in 0,01 [L/100km] |
 | 33KM_DSV_L_KM_WERT | l/100km | high | unsigned int | - | - | 100.0 | 1.0 | 0.0 | - | - | 33 km Durchschnittsverbrauch in 0,01 [L/100km] |
 
-<a id="table-arg-0xd128"></a>
 ### ARG_0XD128
 
 Dimensions: 3 rows × 12 columns
@@ -2738,7 +2619,6 @@ Dimensions: 3 rows × 12 columns
 | 10000KM_DSV_KWH_KM_WERT | kWh/100km | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | 10.000 km Durchschnittsverbrauch in 0,1 [kWh/100km] |
 | 33KM_DSV_KWH_KM_WERT | kWh/100km | high | unsigned int | - | - | 10.0 | 1.0 | 0.0 | - | - | 33 km Durchschnittsverbrauch in 0,1 [kWh/100km] |
 
-<a id="table-arg-0xd12b"></a>
 ### ARG_0XD12B
 
 Dimensions: 12 rows × 12 columns
@@ -2758,7 +2638,6 @@ Dimensions: 12 rows × 12 columns
 | GESCHWINDIGKEIT_6 | km/h | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Geschwindigkeit |
 | ENERGIE_6 | Wh/l | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Durch den REX erzeugte Energie |
 
-<a id="table-arg-0xd12e"></a>
 ### ARG_0XD12E
 
 Dimensions: 6 rows × 12 columns
@@ -2772,7 +2651,6 @@ Dimensions: 6 rows × 12 columns
 | T_BEDIENUNG_DATA | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | - | - | Bedienung_Timer (OP_TIM) ==> Byte 5 (Bit 0,1) Laden_Abfahrt_Zeit_Auswahl (CHGNG_DPRT_T_SLCTN) ==> Byte 5 (Bit 2,3) Klima_Abfahrt_Zeit_Auswahl (AIC_DPRT_T_SLCTN) ==> Byte 5 (Bit 4,5) Status_Timer_Variante (ST_TIM_VAR) ==> Byte 6 (Bit 0,1, 2) |
 | T_BEDIENUNG_AUSWAHL_WOCHENTAG | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bedienung_Timer_Auswahl_Wochentag (OP_TIM_SLCTN_WDAY) |
 
-<a id="table-arg-0xda0c"></a>
 ### ARG_0XDA0C
 
 Dimensions: 2 rows × 12 columns
@@ -2782,7 +2660,6 @@ Dimensions: 2 rows × 12 columns
 | PWM_PORT | - | - | char | - | - | 1.0 | 1.0 | 0.0 | - | - | Angabe des Port, der verwendet werden soll: 0x01 = Hintergrund-LEDs, servicerelevant 0x02 = LED Strom, nur für Entwicklung 0x03 = Displayheizung, nur für Entwicklung |
 | PWM_WERT | - | - | int | - | - | 1.0 | 1.0 | 0.0 | - | - | 1 - 10000 entspricht  0,01% = Lichtleistung max. abgesenkt,  100% = volle Lichtleistung |
 
-<a id="table-arg-0xf120"></a>
 ### ARG_0XF120
 
 Dimensions: 1 rows × 14 columns
@@ -2791,7 +2668,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | INTERFACE | + | - | 0-n | high | unsigned char | - | TAB_INTERFACE | 1.0 | 1.0 | 0.0 | - | - | APIX Interface |
 
-<a id="table-bf-block-01-sterne"></a>
 ### BF_BLOCK_01_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2801,7 +2677,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_01_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_01_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-02-sterne"></a>
 ### BF_BLOCK_02_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2811,7 +2686,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_02_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_02_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-03-sterne"></a>
 ### BF_BLOCK_03_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2821,7 +2695,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_03_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_03_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-04-sterne"></a>
 ### BF_BLOCK_04_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2831,7 +2704,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_04_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_04_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-05-sterne"></a>
 ### BF_BLOCK_05_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2841,7 +2713,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_05_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_05_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-06-sterne"></a>
 ### BF_BLOCK_06_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2851,7 +2722,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_06_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_06_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-07-sterne"></a>
 ### BF_BLOCK_07_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2861,7 +2731,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_07_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_07_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-08-sterne"></a>
 ### BF_BLOCK_08_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2871,7 +2740,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_08_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_08_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-09-sterne"></a>
 ### BF_BLOCK_09_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2881,7 +2749,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_09_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_09_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-block-10-sterne"></a>
 ### BF_BLOCK_10_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2891,7 +2758,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BLOCK_10_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_BLOCK_10_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-bf-bls-verzoegerung"></a>
 ### BF_BLS_VERZOEGERUNG
 
 Dimensions: 1 rows × 10 columns
@@ -2900,7 +2766,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_BLS_VERZOEGERUNG | 0-n | high | unsigned char | 0x03 | TAB_BLS_VERZOEGERUNG | - | - | - | Status_BLS / Verzögerung   xxxx xx11b |
 
-<a id="table-bf-eco-mode-austritt"></a>
 ### BF_ECO_MODE_AUSTRITT
 
 Dimensions: 8 rows × 10 columns
@@ -2916,7 +2781,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_KUP | 0/1 | high | unsigned char | 0x40 | - | - | - | - | KUP |
 | STAT_VZA | 0/1 | high | unsigned char | 0x80 | - | - | - | - | VZA |
 
-<a id="table-bf-sterne"></a>
 ### BF_STERNE
 
 Dimensions: 2 rows × 10 columns
@@ -2926,7 +2790,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_STERNE_BESCHLEUNIGUNG | 0-n | high | unsigned char | 0x05 | TAB_STERNE_BESCHLEUNIGUNG | - | - | - | Sterne für Beschleunigung |
 | STAT_STERNE_BREMSEN | 0-n | high | unsigned char | 0x38 | TAB_STERNE_BREMSEN | - | - | - | Sterne für Bremsen |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -2936,7 +2799,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | Allgemeiner Fertigungs- und Energiesparmode | <Funktionen gemäß der FeTra-Liste eintragen> |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2950,7 +2812,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 344 rows × 3 columns
@@ -3302,7 +3163,6 @@ Dimensions: 344 rows × 3 columns
 | 0xE12CA0 | Schnittstelle ACSM (Status Anzeige Gurtwarnung, 0x3C0): Signal ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 12 rows × 9 columns
@@ -3322,7 +3182,6 @@ Dimensions: 12 rows × 9 columns
 | 0x4070 | APIX-Fehlerzähler | - | - | unsigned int | - | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -3335,7 +3194,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 154 rows × 3 columns
@@ -3497,7 +3355,6 @@ Dimensions: 154 rows × 3 columns
 | 0xE12C4A | Schnittstelle HU (Prognose Routenziel, 0x3C7): Signal ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 17 rows × 9 columns
@@ -3522,7 +3379,6 @@ Dimensions: 17 rows × 9 columns
 | 0xD112 | ATemp | Grad C | - | unsigned int | - | - | 514 | -40 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 9 rows × 2 columns
@@ -3539,7 +3395,6 @@ Dimensions: 9 rows × 2 columns
 | 0x08 | UNGUELTIGE HERSTELLER NUMMER |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x4010-d"></a>
 ### RES_0X4010_D
 
 Dimensions: 1 rows × 10 columns
@@ -3548,7 +3403,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TWSZ_WERT | km | high | unsigned long | - | - | 1.0 | 10.0 | 0.0 | Liefert den angezeigten TWSZ zurück |
 
-<a id="table-res-0x4200"></a>
 ### RES_0X4200
 
 Dimensions: 5 rows × 10 columns
@@ -3561,7 +3415,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_GRW_WERT | km | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Gewonnene Reichweite (GRW) |
 | STAT_GK_WERT | µl | high | unsigned long | - | - | 1.0 | 10.0 | 0.0 | gewonnener Kraftstoff (GK) |
 
-<a id="table-res-0x4201"></a>
 ### RES_0X4201
 
 Dimensions: 7 rows × 10 columns
@@ -3576,7 +3429,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FWP_AKT_WERT | % | high | unsigned int | - | - | 1.0 | 40.0 | 0.0 | FWP akt |
 | STAT_BLS_VERZOEGERUNG | Bit | high | BITFIELD | - | BF_BLS_VERZOEGERUNG | - | - | - | Status_BLS / Verzögerung |
 
-<a id="table-res-0x4202"></a>
 ### RES_0X4202
 
 Dimensions: 5 rows × 10 columns
@@ -3589,7 +3441,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_PI_VERBR_ERH_BESCHL_WERT | % | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | PI Verbrauchserhöhung durch Beschleunigung |
 | STAT_PI_VERBR_ERH_KOMF_WERT | % | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | PI Verbrauchserhöhung durch Komfort |
 
-<a id="table-res-0x4203"></a>
 ### RES_0X4203
 
 Dimensions: 7 rows × 10 columns
@@ -3604,7 +3455,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_MV_REF_MAX_WERT | l/100km | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | Mehrverbrauch Ref Max |
 | STAT_MV_REF_GESAMT_WERT | l/100km | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | Mehrverbrauch Ref Gesamt |
 
-<a id="table-res-0x4204"></a>
 ### RES_0X4204
 
 Dimensions: 2 rows × 10 columns
@@ -3614,7 +3464,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ECO_MODE_AUSTRITT | Bit | high | BITFIELD | - | BF_ECO_MODE_AUSTRITT | - | - | - | ECO- Mode Austritt |
 | STAT_ECO_TIPP_ANZ | 0-n | high | unsigned char | - | TAB_ECO_TIPP_ANZ | - | - | - | ECO Tipp Anzeige |
 
-<a id="table-res-0x4205"></a>
 ### RES_0X4205
 
 Dimensions: 66 rows × 10 columns
@@ -3688,7 +3537,6 @@ Dimensions: 66 rows × 10 columns
 | STAT_ZAEHLER_SEG16_SKAL_X_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler |
 | STAT_FDS_FU_SEG16_SKAL_X_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 00010000 = FU 00001111 = FDS  FDS Attribut: 0  Initialisierung 1  Modus Traction gesetzt 2  Modus Komfort gesetzt 3  Modus Basis gesetzt 4  Modus Sport gesetzt 5  Modus Sport+ gesetzt 6  Modus Race gesetzt 7  Modus ECO gesetzt 8  Modus ECO+ gesetzt 9 - E  Reserve F  Signal ungültig  FU Attribut: 0  Fahrt ohne Fahrtunterbrechung (FU) 1  Fahrt mit Fahrtunterbrechung (FU) |
 
-<a id="table-res-0x4206"></a>
 ### RES_0X4206
 
 Dimensions: 66 rows × 10 columns
@@ -3762,7 +3610,6 @@ Dimensions: 66 rows × 10 columns
 | STAT_ZAEHLER_SEG16_SKAL_Y_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler |
 | STAT_FDS_FU_SEG16_SKAL_Y_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 00010000 = FU 00001111 = FDS  FDS Attribut: 0  Initialisierung 1  Modus Traction gesetzt 2  Modus Komfort gesetzt 3  Modus Basis gesetzt 4  Modus Sport gesetzt 5  Modus Sport+ gesetzt 6  Modus Race gesetzt 7  Modus ECO gesetzt 8  Modus ECO+ gesetzt 9 - E  Reserve F  Signal ungültig  FU Attribut: 0  Fahrt ohne Fahrtunterbrechung (FU) 1  Fahrt mit Fahrtunterbrechung (FU) |
 
-<a id="table-res-0x4207"></a>
 ### RES_0X4207
 
 Dimensions: 66 rows × 10 columns
@@ -3836,7 +3683,6 @@ Dimensions: 66 rows × 10 columns
 | STAT_ZAEHLER_SEG16_SKAL_Z_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler |
 | STAT_FDS_FU_SEG16_SKAL_Z_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 00010000 = FU 00001111 = FDS  FDS Attribut: 0  Initialisierung 1  Modus Traction gesetzt 2  Modus Komfort gesetzt 3  Modus Basis gesetzt 4  Modus Sport gesetzt 5  Modus Sport+ gesetzt 6  Modus Race gesetzt 7  Modus ECO gesetzt 8  Modus ECO+ gesetzt 9 - E  Reserve F  Signal ungültig  FU Attribut: 0  Fahrt ohne Fahrtunterbrechung (FU) 1  Fahrt mit Fahrtunterbrechung (FU) |
 
-<a id="table-res-0x4208"></a>
 ### RES_0X4208
 
 Dimensions: 66 rows × 10 columns
@@ -3910,7 +3756,6 @@ Dimensions: 66 rows × 10 columns
 | STAT_ZAEHLER_SEG16_SKAL_A_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler |
 | STAT_FDS_FU_SEG16_SKAL_A_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 00010000 = FU 00001111 = FDS  FDS Attribut: 0  Initialisierung 1  Modus Traction gesetzt 2  Modus Komfort gesetzt 3  Modus Basis gesetzt 4  Modus Sport gesetzt 5  Modus Sport+ gesetzt 6  Modus Race gesetzt 7  Modus ECO gesetzt 8  Modus ECO+ gesetzt 9 - E  Reserve F  Signal ungültig  FU Attribut: 0  Fahrt ohne Fahrtunterbrechung (FU) 1  Fahrt mit Fahrtunterbrechung (FU) |
 
-<a id="table-res-0x4209"></a>
 ### RES_0X4209
 
 Dimensions: 2 rows × 10 columns
@@ -3920,7 +3765,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DURCHSCHNITT_AKT_BERECH_SEGMENTS_WERT | l/100km | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Durchschnittswert des akt. berechneten Segments in 0,1 |
 | STAT_DURCHSCHNITT_HYBRID_RUECKGEW_AKT_SEGM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Durchschnittswert Hybridrückgewinnung des akt. Segments |
 
-<a id="table-res-0x4230"></a>
 ### RES_0X4230
 
 Dimensions: 11 rows × 10 columns
@@ -3939,7 +3783,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_STUETZSTELLE10_WERT | l/km | high | unsigned int | - | - | - | 100 | - | 10.Stuetzstelle |
 | STAT_STUETZSTELLE11_WERT | l/km | high | unsigned int | - | - | - | 100 | - | 11.Stuetzstelle |
 
-<a id="table-res-0x4231"></a>
 ### RES_0X4231
 
 Dimensions: 11 rows × 10 columns
@@ -3958,7 +3801,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_STUETZSTELLE10_WERT | l/km | high | unsigned int | - | - | - | 100 | - | 10.Stuetzstelle |
 | STAT_STUETZSTELLE11_WERT | l/km | high | unsigned int | - | - | - | 100 | - | 11.Stuetzstelle |
 
-<a id="table-res-0x4232"></a>
 ### RES_0X4232
 
 Dimensions: 8 rows × 10 columns
@@ -3974,7 +3816,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_LERNFAKTOR3_NORMAL_WERT | L/100km | - | int | - | - | - | 100 | - | Lernfaktor3 Normal |
 | STAT_LERNFAKTOR4_NORMAL_WERT | L/100km | - | int | - | - | - | 100 | - | Lernfaktor4 Normal |
 
-<a id="table-res-0x4233"></a>
 ### RES_0X4233
 
 Dimensions: 4 rows × 10 columns
@@ -3986,7 +3827,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_DELTA_RATIO_NORMAL_WERT | L/100km | - | int | - | - | - | 100 | - | Delta_ratio_NORMAL |
 | STAT_VB_INTERPOLIERT_NORMAL_WERT | L/100km | - | int | - | - | - | 100 | - | Verbr_interpoliert_NORMAL |
 
-<a id="table-res-0x4400-d"></a>
 ### RES_0X4400_D
 
 Dimensions: 2 rows × 10 columns
@@ -3996,7 +3836,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HAUPTINDEX_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Bei größeren Änderungen soll der HI geändert werden |
 | STAT_UNTERINDEX_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Bei kleineren Änderungen soll der Unterindex geändert werden |
 
-<a id="table-res-0x4800"></a>
 ### RES_0X4800
 
 Dimensions: 43 rows × 10 columns
@@ -4047,7 +3886,6 @@ Dimensions: 43 rows × 10 columns
 | STAT_HUD_ACTIVATION_WERT | - | - | unsigned int | - | - | - | - | - | - |
 | STAT_HUD_ENVIRONMENTAL_COND_WERT | - | - | unsigned char | - | - | - | - | - | - |
 
-<a id="table-res-0x4801"></a>
 ### RES_0X4801
 
 Dimensions: 16 rows × 10 columns
@@ -4071,7 +3909,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_HUD_GUEST_ROTATION_WERT | - | high | unsigned char | - | - | - | - | - | - |
 | STAT_HUD_GUEST_FUNKTION_WERT | - | high | int | - | - | - | - | - | - |
 
-<a id="table-res-0x4807"></a>
 ### RES_0X4807
 
 Dimensions: 1 rows × 10 columns
@@ -4080,7 +3917,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_REGISTER_WERT | - | high | unsigned long | - | - | - | - | - | ausgelesener Wert des Registers |
 
-<a id="table-res-0x4808"></a>
 ### RES_0X4808
 
 Dimensions: 1 rows × 10 columns
@@ -4089,7 +3925,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_POSITION_WERT | - | high | unsigned int | - | - | - | - | - | Bildposition in Mikroschritten |
 
-<a id="table-res-0xa103"></a>
 ### RES_0XA103
 
 Dimensions: 1 rows × 13 columns
@@ -4098,7 +3933,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_VERSTELLGRENZE_EIN | + | - | - | 0/1 | - | unsigned char | - | - | - | - | - | 0x00 = Verstellgrenze nicht erreicht 0x01 = Verstellgrenze erreicht |
 
-<a id="table-res-0xa106"></a>
 ### RES_0XA106
 
 Dimensions: 1 rows × 13 columns
@@ -4107,7 +3941,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WARPING_NR | + | - | - | 0/1 | - | unsigned char | - | - | - | - | - | 0x00:Liste erfolgreich ausgewaehlt 0xFE:Listenwahl nicht moeglich |
 
-<a id="table-res-0xd08d-d"></a>
 ### RES_0XD08D_D
 
 Dimensions: 2 rows × 10 columns
@@ -4117,7 +3950,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KEY | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Rückgabe des Arguments KEY |
 | STAT_POSITION_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Rückgabe des Arguments Position |
 
-<a id="table-res-0xd08e"></a>
 ### RES_0XD08E
 
 Dimensions: 2 rows × 10 columns
@@ -4127,7 +3959,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KEY | 0/1 | high | unsigned char | - | - | - | - | - | Rückgabe des Arguments KEY |
 | STAT_POSITION_WERT | - | - | char | - | - | - | - | - | Rückgabe des Arguments Position |
 
-<a id="table-res-0xd10a"></a>
 ### RES_0XD10A
 
 Dimensions: 1 rows × 10 columns
@@ -4136,7 +3967,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KM_LEISTUNG_WERT | km | - | unsigned char | - | - | - | - | - | Angenommene, durchschnittliche Jahreskilometerleistung für die CBS-Berechnungen (in 1000 km pro Jahr). |
 
-<a id="table-res-0xd10d"></a>
 ### RES_0XD10D
 
 Dimensions: 2 rows × 10 columns
@@ -4146,7 +3976,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ABSOLUT_GWSZ_RAM_WERT | km | - | long | - | - | - | - | - | Liefert den absoluten Gesamtwegstreckenzähler aus dem RAM. |
 | STAT_ABSOLUT_GWSZ_EEP_WERT | km | - | long | - | - | - | - | - | Liefert den absoluten Gesamtwegstreckenzähler aus dem EEPROM. |
 
-<a id="table-res-0xd111-d"></a>
 ### RES_0XD111_D
 
 Dimensions: 6 rows × 10 columns
@@ -4160,7 +3989,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RANGE_CONSUMPTION_ELECTRIC_WERT | kWh/100km | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | STAT_RANGE_CONSUMPTION_ELECTRIC [kWh/100km], (only for vehicles without STARTWETESPEICHER, 0xFFFF if not used) |
 | STAT_NEBENVERBRAUCHERLEISTUNG_WERT | kW | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | STAT_NEBENVERBRAUCHERLEISTUNG_WERT  [0,01 kW], (only for vehicles without STARTWERTESPEICHER, 0xFFFF if not used) |
 
-<a id="table-res-0xd112"></a>
 ### RES_0XD112
 
 Dimensions: 2 rows × 10 columns
@@ -4170,7 +3998,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_A_TEMP_ANZEIGE_WERT | °C | - | unsigned char | - | - | - | 2 | -40 | Anzeigewert Außentemperatur |
 | STAT_A_TEMP_ROHWERT_WERT | °C | - | unsigned char | - | - | - | 2 | -40 | Rohwert Außentemperatur |
 
-<a id="table-res-0xd113"></a>
 ### RES_0XD113
 
 Dimensions: 7 rows × 10 columns
@@ -4185,7 +4012,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_KOMBI_JAHR_WERT | - | - | int | - | - | - | - | - | Rückgabe des aktuellen Jahr. |
 | STAT_KOMBI_ZEIT_FORMAT | 0-n | - | char | - | TAB_KOMBI_FORMAT_UHRZEIT | - | - | - | Rückgabe des aktuellen Anzeigeformat. |
 
-<a id="table-res-0xd115"></a>
 ### RES_0XD115
 
 Dimensions: 1 rows × 10 columns
@@ -4194,7 +4020,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GESCHWINDIGKEIT_ACC_WERT | km/h | - | int | - | - | - | 10 | - | gesetzte Geschwindigkeit fuer ACC-Zeiger in km/h |
 
-<a id="table-res-0xd116-d"></a>
 ### RES_0XD116_D
 
 Dimensions: 64 rows × 10 columns
@@ -4266,7 +4091,6 @@ Dimensions: 64 rows × 10 columns
 | STAT_SO_COUNTER_7_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | So Counter  [1s] |
 | STAT_SO_SPEED_7_WERT | km/h | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | So Speed  [ 0.1 km/h] |
 
-<a id="table-res-0xd117"></a>
 ### RES_0XD117
 
 Dimensions: 1 rows × 10 columns
@@ -4275,7 +4099,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DREZAHL_WERT | 1/min | - | int | - | - | - | - | - | vorgegebene Drehzahlmesserstellung in 1/min |
 
-<a id="table-res-0xd118"></a>
 ### RES_0XD118
 
 Dimensions: 15 rows × 10 columns
@@ -4298,7 +4121,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_STARTZEIT_ENDE_6_WERT | - | high | unsigned char | - | - | 15.0 | 1.0 | 0.0 | Startzeit Ende [Anzeige in Stunden und Minuten, Auflösung 15 Minuten, 05hex = 01:15Uhr] |
 | STAT_STARTZEIT_ENDE_7_WERT | - | high | unsigned char | - | - | 15.0 | 1.0 | 0.0 | Startzeit Ende [Anzeige in Stunden und Minuten, Auflösung 15 Minuten, 05hex = 01:15Uhr] |
 
-<a id="table-res-0xd11a"></a>
 ### RES_0XD11A
 
 Dimensions: 1 rows × 10 columns
@@ -4307,7 +4129,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_GESCHWINDIGKEIT_WERT | km/h | - | int | - | - | - | 10 | - | gesetzte Geschwindigkeit in km/h |
 
-<a id="table-res-0xd11c"></a>
 ### RES_0XD11C
 
 Dimensions: 1 rows × 10 columns
@@ -4316,7 +4137,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_VERBRAUCH_WERT | - | - | int | - | - | - | - | - | gesetzter Momentanverbrauch in L/100km oder Öltemperatur in Grad Celsius |
 
-<a id="table-res-0xd11d"></a>
 ### RES_0XD11D
 
 Dimensions: 1 rows × 10 columns
@@ -4325,7 +4145,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_POWER_RESERVE_WERT | % | - | int | - | - | - | 10.0 | - | gesetzter Power Reserve Wert in % |
 
-<a id="table-res-0xd11e"></a>
 ### RES_0XD11E
 
 Dimensions: 1 rows × 10 columns
@@ -4334,7 +4153,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TANKINHALT_WERT | % | - | int | - | - | - | - | - | vorgegebener Tankinhalt in % |
 
-<a id="table-res-0xd11f"></a>
 ### RES_0XD11F
 
 Dimensions: 5 rows × 10 columns
@@ -4347,7 +4165,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_GEDAEMPFT_ANZ_WERT | Liter | - | unsigned int | - | - | - | 128 | - | Zahlenwert gedämpfter Summenwert aus Hebelgeber links und rechts in Liter |
 | STAT_TANKPHASE | 0-n | - | char | - | TAB_KOMBI_TANKPHASE | - | - | - | Tankphase:  1= i.O;  2= mind. 1 Hebelgeber n.i.O.; 3= wie 2 und zusaetzlich kein Verbrauchssignal |
 
-<a id="table-res-0xd121"></a>
 ### RES_0XD121
 
 Dimensions: 42 rows × 10 columns
@@ -4397,7 +4214,6 @@ Dimensions: 42 rows × 10 columns
 | STAT_T7_BEDIENUNG_DATA | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | Bedienung_Timer (OP_TIM) ==> Byte 5 (Bit 0,1) Laden_Abfahrt_Zeit_Auswahl (CHGNG_DPRT_T_SLCTN) ==> Byte 5 (Bit 2,3) Klima_Abfahrt_Zeit_Auswahl (AIC_DPRT_T_SLCTN) ==> Byte 5 (Bit 4,5) Status_Timer_Variante (ST_TIM_VAR) ==> Byte 6 (Bit 0,1, 2) |
 | STAT_T7_BEDIENUNG_AUSWAHL_WOCHENTAG_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Bedienung_Timer_Auswahl_Wochentag (OP_TIM_SLCTN_WDAY) |
 
-<a id="table-res-0xd125"></a>
 ### RES_0XD125
 
 Dimensions: 3 rows × 10 columns
@@ -4408,7 +4224,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_10000KM_DSV_L_KM_WERT | l/100km | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | 10.000 km Durchschnittsverbrauch in 0,01 [L/100km] |
 | STAT_33KM_DSV_L_KM_WERT | l/100km | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | 33 km Durchschnittsverbrauch in 0,01 [L/100km] |
 
-<a id="table-res-0xd126"></a>
 ### RES_0XD126
 
 Dimensions: 4 rows × 10 columns
@@ -4420,7 +4235,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BC_MVERB_L_KM_WERT | l/100km | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | Bordcomputer Momentanverbrauch in 0,01 [l/100km] |
 | STAT_BC_RW_L_KM_WERT | km | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Bordcomputer Reichweite in 0,1 [km] |
 
-<a id="table-res-0xd127"></a>
 ### RES_0XD127
 
 Dimensions: 5 rows × 10 columns
@@ -4433,7 +4247,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RBC_DAUER_L_KM_WERT | - | high | string[2] | - | - | 1.0 | 1.0 | 0.0 | Reisebordcomputer Dauer in [hh,mm] |
 | STAT_RBC_STRECKE_L_KM_WERT | km | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Reisebordcomputer Strecke in 1 [km] |
 
-<a id="table-res-0xd128"></a>
 ### RES_0XD128
 
 Dimensions: 3 rows × 10 columns
@@ -4444,7 +4257,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_10000KM_DSV_KWH_KM_WERT | kWh/100km | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | 10.000 km Durchschnittsverbrauch in 0,1 [kWh/100km] |
 | STAT_33KM_DSV_KWH_KM_WERT | kWh/100km | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | 33 km Durchschnittsverbrauch in 0,1 [kWh/100km] |
 
-<a id="table-res-0xd129"></a>
 ### RES_0XD129
 
 Dimensions: 4 rows × 10 columns
@@ -4456,7 +4268,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BC_MVERB_KWH_KM_WERT | kW | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Bordcomputer Momentanverbrauch in 0,1 [KWh/h]=[KW] |
 | STAT_BC_RW_KWH_KM_WERT | km | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Bordcomputer Reichweite in 0,1 [km] |
 
-<a id="table-res-0xd12a"></a>
 ### RES_0XD12A
 
 Dimensions: 5 rows × 10 columns
@@ -4469,7 +4280,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_RBC_DAUER_KWH_KM_WERT | - | high | string[2] | - | - | 1.0 | 1.0 | 0.0 | Reisebordcomputer Dauer in [hh,mm] |
 | STAT_RBC_STRECKE_KWH_KM_WERT | km | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Reisebordcomputer Strecke in 1 [km] |
 
-<a id="table-res-0xd12b"></a>
 ### RES_0XD12B
 
 Dimensions: 12 rows × 10 columns
@@ -4489,7 +4299,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_GESCHWINDIGKEIT_6_WERT | km/h | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Geschwindigkeit |
 | STAT_ENERGIE_6_WERT | Wh/l | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Durch den REX erzeugte Energie |
 
-<a id="table-res-0xd12c-d"></a>
 ### RES_0XD12C_D
 
 Dimensions: 5 rows × 10 columns
@@ -4502,7 +4311,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_MONAT_WERT | mth | high | signed char | - | - | 1.0 | 1.0 | 0.0 | Datum (Monat) zum Zeitpunkt der CC-Abfrage |
 | STAT_JAHR_WERT | y | high | signed char | - | - | 1.0 | 1.0 | 0.0 | Datum (Jahr) zum Zeitpunkt der CC-Abfrage, wobei hier das Offset auf das Jahr 2000 ausgegeben wird |
 
-<a id="table-res-0xd12f-d"></a>
 ### RES_0XD12F_D
 
 Dimensions: 160 rows × 10 columns
@@ -4670,7 +4478,6 @@ Dimensions: 160 rows × 10 columns
 | STAT_BLOCK_10_VERBRAUCHTER_KRAFTSTOFF_DATA | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | Verbrauchter Kraftstoff [0-102,2 L] |
 | - | Bit | high | BITFIELD | - | BF_BLOCK_10_STERNE | - | - | - | Bitfield 1: Sterne für Beschleunigung, Sterne für Bremsen |
 
-<a id="table-res-0xd1d0"></a>
 ### RES_0XD1D0
 
 Dimensions: 5 rows × 10 columns
@@ -4683,7 +4490,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_GRW_WERT | km | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Gewonnene Reichweite (GRW) |
 | STAT_GK_WERT | µl | high | unsigned long | - | - | 1.0 | 10.0 | 0.0 | gewonnener Kraftstoff (GK) |
 
-<a id="table-res-0xd1d1"></a>
 ### RES_0XD1D1
 
 Dimensions: 7 rows × 10 columns
@@ -4698,7 +4504,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_FWP_AKT_WERT | % | high | unsigned int | - | - | 1.0 | 40.0 | 0.0 | FWP akt |
 | STAT_BLS_VERZOEGERUNG | Bit | high | BITFIELD | - | BF_BLS_VERZOEGERUNG | - | - | - | Status_BLS / Verzögerung |
 
-<a id="table-res-0xd1d2"></a>
 ### RES_0XD1D2
 
 Dimensions: 5 rows × 10 columns
@@ -4711,7 +4516,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_PI_VERBR_ERH_BESCHL_WERT | % | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | PI Verbrauchserhöhung durch Beschleunigung |
 | STAT_PI_VERBR_ERH_KOMF_WERT | % | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | PI Verbrauchserhöhung durch Komfort |
 
-<a id="table-res-0xd1d3"></a>
 ### RES_0XD1D3
 
 Dimensions: 7 rows × 10 columns
@@ -4726,7 +4530,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_MV_REF_MAX_WERT | l/100km | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | Mehrverbrauch Ref Max |
 | STAT_MV_REF_GESAMT_WERT | l/100km | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | Mehrverbrauch Ref Gesamt |
 
-<a id="table-res-0xd1d4"></a>
 ### RES_0XD1D4
 
 Dimensions: 2 rows × 10 columns
@@ -4736,7 +4539,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ECO_MODE_AUSTRITT | Bit | high | BITFIELD | - | BF_ECO_MODE_AUSTRITT | - | - | - | ECO- Mode Austritt |
 | STAT_ECO_TIPP_ANZ | 0-n | high | unsigned char | - | TAB_ECO_TIPP_ANZ | - | - | - | ECO Tipp Anzeige |
 
-<a id="table-res-0xd1d5"></a>
 ### RES_0XD1D5
 
 Dimensions: 66 rows × 10 columns
@@ -4810,7 +4612,6 @@ Dimensions: 66 rows × 10 columns
 | STAT_ZAEHLER_SEG16_SKAL_X_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler |
 | STAT_FDS_FU_SEG16_SKAL_X_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 00010000 = FU 00001111 = FDS  FDS Attribut: 0  Initialisierung 1  Modus Traction gesetzt 2  Modus Komfort gesetzt 3  Modus Basis gesetzt 4  Modus Sport gesetzt 5  Modus Sport+ gesetzt 6  Modus Race gesetzt 7  Modus ECO gesetzt 8  Modus ECO+ gesetzt 9 - E  Reserve F  Signal ungültig  FU Attribut: 0  Fahrt ohne Fahrtunterbrechung (FU) 1  Fahrt mit Fahrtunterbrechung (FU) |
 
-<a id="table-res-0xd1d6"></a>
 ### RES_0XD1D6
 
 Dimensions: 66 rows × 10 columns
@@ -4884,7 +4685,6 @@ Dimensions: 66 rows × 10 columns
 | STAT_ZAEHLER_SEG16_SKAL_Y_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler |
 | STAT_FDS_FU_SEG16_SKAL_Y_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 00010000 = FU 00001111 = FDS  FDS Attribut: 0  Initialisierung 1  Modus Traction gesetzt 2  Modus Komfort gesetzt 3  Modus Basis gesetzt 4  Modus Sport gesetzt 5  Modus Sport+ gesetzt 6  Modus Race gesetzt 7  Modus ECO gesetzt 8  Modus ECO+ gesetzt 9 - E  Reserve F  Signal ungültig  FU Attribut: 0  Fahrt ohne Fahrtunterbrechung (FU) 1  Fahrt mit Fahrtunterbrechung (FU) |
 
-<a id="table-res-0xd1d7"></a>
 ### RES_0XD1D7
 
 Dimensions: 66 rows × 10 columns
@@ -4958,7 +4758,6 @@ Dimensions: 66 rows × 10 columns
 | STAT_ZAEHLER_SEG16_SKAL_Z_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler |
 | STAT_FDS_FU_SEG16_SKAL_Z_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 00010000 = FU 00001111 = FDS  FDS Attribut: 0  Initialisierung 1  Modus Traction gesetzt 2  Modus Komfort gesetzt 3  Modus Basis gesetzt 4  Modus Sport gesetzt 5  Modus Sport+ gesetzt 6  Modus Race gesetzt 7  Modus ECO gesetzt 8  Modus ECO+ gesetzt 9 - E  Reserve F  Signal ungültig  FU Attribut: 0  Fahrt ohne Fahrtunterbrechung (FU) 1  Fahrt mit Fahrtunterbrechung (FU) |
 
-<a id="table-res-0xd1d8"></a>
 ### RES_0XD1D8
 
 Dimensions: 66 rows × 10 columns
@@ -5032,7 +4831,6 @@ Dimensions: 66 rows × 10 columns
 | STAT_ZAEHLER_SEG16_SKAL_A_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler |
 | STAT_FDS_FU_SEG16_SKAL_A_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 00010000 = FU 00001111 = FDS  FDS Attribut: 0  Initialisierung 1  Modus Traction gesetzt 2  Modus Komfort gesetzt 3  Modus Basis gesetzt 4  Modus Sport gesetzt 5  Modus Sport+ gesetzt 6  Modus Race gesetzt 7  Modus ECO gesetzt 8  Modus ECO+ gesetzt 9 - E  Reserve F  Signal ungültig  FU Attribut: 0  Fahrt ohne Fahrtunterbrechung (FU) 1  Fahrt mit Fahrtunterbrechung (FU) |
 
-<a id="table-res-0xd1d9"></a>
 ### RES_0XD1D9
 
 Dimensions: 2 rows × 10 columns
@@ -5042,7 +4840,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DURCHSCHNITT_AKT_BERECH_SEGMENTS_WERT | l/100km | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | Durchschnittswert des akt. berechneten Segments in 0,1 |
 | STAT_DURCHSCHNITT_HYBRID_RUECKGEW_AKT_SEGM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Durchschnittswert Hybridrückgewinnung des akt. Segments |
 
-<a id="table-res-0xda0c"></a>
 ### RES_0XDA0C
 
 Dimensions: 1 rows × 10 columns
@@ -5051,7 +4848,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PORT_WERT | - | - | char | - | - | 1.0 | 1.0 | 0.0 | Angabe des ausgewählten Port. |
 
-<a id="table-res-0xda0e"></a>
 ### RES_0XDA0E
 
 Dimensions: 37 rows × 10 columns
@@ -5096,7 +4892,6 @@ Dimensions: 37 rows × 10 columns
 | STAT_HUD_SCHWELLWERT_HELLIGKEIT4_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Schwellwert Helligkeit 4 |
 | STAT_RESERVED_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reserviert |
 
-<a id="table-res-0xda43"></a>
 ### RES_0XDA43
 
 Dimensions: 15 rows × 10 columns
@@ -5119,7 +4914,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_RESERVE3_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reserve 3 |
 | STAT_RESERVE4_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Reserve 4 |
 
-<a id="table-res-0xda44"></a>
 ### RES_0XDA44
 
 Dimensions: 3 rows × 10 columns
@@ -5130,7 +4924,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SW_VERSION_MINOR_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Versionsnummer der HUD SW im Kombi (Minor) |
 | STAT_SW_VERSION_PATCH_WERT | HEX | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Versionsnummer der HUD SW im Kombi (Patch) |
 
-<a id="table-res-0xda46"></a>
 ### RES_0XDA46
 
 Dimensions: 11 rows × 10 columns
@@ -5149,7 +4942,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_SENSOR_MECHANIK_VERSION_NR_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Mechanikversionsnummer |
 | STAT_SENSOR_FLASH_VERSION_NR_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Flashversionsnummer |
 
-<a id="table-res-0xf120"></a>
 ### RES_0XF120
 
 Dimensions: 1 rows × 13 columns
@@ -5158,7 +4950,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_INTERFACE | + | - | - | 0-n | high | unsigned char | - | TAB_INTERFACE | 1.0 | 1.0 | 0.0 | APIX Interface |
 
-<a id="table-res-klemmen"></a>
 ### RES_KLEMMEN
 
 Dimensions: 3 rows × 10 columns
@@ -5169,7 +4960,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_KL_15 | 0/1 | - | unsigned char | 0x02 | - | - | - | - | KLEMME_15: 1=EIN; 0=AUS |
 | STAT_KL_50 | 0/1 | - | unsigned char | 0x04 | - | - | - | - | KLEMME_50: 1=EIN; 0=AUS |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 89 rows × 16 columns
@@ -5266,7 +5056,6 @@ Dimensions: 89 rows × 16 columns
 | CC_MELDUNGSSPEICHER_LOESCHEN | 0xF010 | - | CC-Meldungsspeicher (Historyspeicher) löschen | - | - | - | - | - | - | - | - | - | 31 | - | - |
 | FLASHDATEN_APIX_DOWNLOAD | 0xF120 | - | Laden der Flashdaten aus dem Indigo | - | - | - | - | - | - | - | - | - | 31 | ARG_0xF120 | RES_0xF120 |
 
-<a id="table-tab-bls-verzoegerung"></a>
 ### TAB_BLS_VERZOEGERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -5278,7 +5067,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Bremskreis 2 aktiv |
 | 0x03 | Nicht definiert |
 
-<a id="table-tab-eco-tipp-anz"></a>
 ### TAB_ECO_TIPP_ANZ
 
 Dimensions: 20 rows × 2 columns
@@ -5306,7 +5094,6 @@ Dimensions: 20 rows × 2 columns
 | 0x12 | Fenster schließen wegen Klimaanlage an |
 | 0x3F | Signal ungültig |
 
-<a id="table-tab-hud-bildposition"></a>
 ### TAB_HUD_BILDPOSITION
 
 Dimensions: 3 rows × 2 columns
@@ -5317,7 +5104,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Continuation |
 | 0x03 | Bildrotation |
 
-<a id="table-tab-hud-richtung"></a>
 ### TAB_HUD_RICHTUNG
 
 Dimensions: 2 rows × 2 columns
@@ -5327,7 +5113,6 @@ Dimensions: 2 rows × 2 columns
 | 0x01 | hoch bzw. rechtsdrehend |
 | 0x02 | runter bzw. linksdrehend |
 
-<a id="table-tab-interface"></a>
 ### TAB_INTERFACE
 
 Dimensions: 2 rows × 2 columns
@@ -5337,7 +5122,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Kombi Frontend |
 | 0x01 | Head-Op Display |
 
-<a id="table-tab-kombi-blinker"></a>
 ### TAB_KOMBI_BLINKER
 
 Dimensions: 13 rows × 2 columns
@@ -5358,7 +5142,6 @@ Dimensions: 13 rows × 2 columns
 | 0x42 | Blinker statisch rechts EIN |
 | 0x43 | Blinker statisch links und rechts EIN |
 
-<a id="table-tab-kombi-format-uhrzeit"></a>
 ### TAB_KOMBI_FORMAT_UHRZEIT
 
 Dimensions: 9 rows × 2 columns
@@ -5375,7 +5158,6 @@ Dimensions: 9 rows × 2 columns
 | 0x81 | Datumsformat beibehalten, 12h |
 | 0x88 | keine Vorgabe Uhrzeitformat (beibehlten), allgemein |
 
-<a id="table-tab-kombi-lss"></a>
 ### TAB_KOMBI_LSS
 
 Dimensions: 4 rows × 2 columns
@@ -5387,7 +5169,6 @@ Dimensions: 4 rows × 2 columns
 | 0xC0 | Lenkstock- und Kombitaste gedrückt |
 | 0x00 | nicht gedrückt |
 
-<a id="table-tab-kombi-tankphase"></a>
 ### TAB_KOMBI_TANKPHASE
 
 Dimensions: 3 rows × 2 columns
@@ -5398,7 +5179,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | mind. 1 Hebelgeber n.i.O |
 | 0x03 | mind. 1 Hebelgeber n.i.O und zusätzlich kein Verbrauchssignal |
 
-<a id="table-tab-sterne-beschleunigung"></a>
 ### TAB_STERNE_BESCHLEUNIGUNG
 
 Dimensions: 6 rows × 2 columns
@@ -5412,7 +5192,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | 4 Sterne |
 | 0x05 | 5 Sterne |
 
-<a id="table-tab-sterne-bremsen"></a>
 ### TAB_STERNE_BREMSEN
 
 Dimensions: 6 rows × 2 columns
@@ -5426,7 +5205,6 @@ Dimensions: 6 rows × 2 columns
 | 0x20 | 4 Sterne |
 | 0x28 | 5 Sterne |
 
-<a id="table-tab-tankphase"></a>
 ### TAB_TANKPHASE
 
 Dimensions: 4 rows × 2 columns
@@ -5438,7 +5216,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Tankphase3 |
 | 0x00 | ungueltig |
 
-<a id="table-tab-warping"></a>
 ### TAB_WARPING
 
 Dimensions: 8 rows × 2 columns
@@ -5454,7 +5231,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | BREITE |
 | 0x08 | H_SHIFT |
 
-<a id="table-tab-warping-aktion"></a>
 ### TAB_WARPING_AKTION
 
 Dimensions: 4 rows × 2 columns
@@ -5466,7 +5242,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | VERAENDERN |
 | 0x03 | SPEICHERN |
 
-<a id="table-tab-warping-richtung"></a>
 ### TAB_WARPING_RICHTUNG
 
 Dimensions: 5 rows × 2 columns
@@ -5479,7 +5254,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | LINKS |
 | 0x04 | RECHTS |
 
-<a id="table-tab-warpliste"></a>
 ### TAB_WARPLISTE
 
 Dimensions: 3 rows × 2 columns
@@ -5490,7 +5264,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | Messtechnik |
 | 3 | Service |
 
-<a id="table-tfblockidtexte"></a>
 ### TFBLOCKIDTEXTE
 
 Dimensions: 37 rows × 2 columns
@@ -5535,7 +5308,6 @@ Dimensions: 37 rows × 2 columns
 | 0xE1 | HUDInterface=0xE1 |
 | 0xFD | Sahara=0xFD |
 
-<a id="table-tmostlight"></a>
 ### TMOSTLIGHT
 
 Dimensions: 2 rows × 2 columns
@@ -5545,7 +5317,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Lichtleistung abgesenkt |
 | 1 | Volle Lichtleistung |
 
-<a id="table-twakeupstatus"></a>
 ### TWAKEUPSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -5556,7 +5327,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | SG hat geweckt |
 | 2 | SG wurde geweckt |
 
-<a id="table-tabilitywake"></a>
 ### TABILITYWAKE
 
 Dimensions: 3 rows × 2 columns

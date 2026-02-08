@@ -58,7 +58,6 @@
 - [_STATUS_RESET_URSACHE](#job-status-reset-ursache) - Auslesen der Reset Ursache Es werden 6 Pakete zurückgeliefert  1 Paket: Reset der nicht durch einen PowerUp Reset verursacht wurde. 5 Pakete: Alle zuletzt aufgetretenen Resets Inhalt eines Pakets: - Sammelfehler für Prozessorhardware - Stack Overflow - ROM Fehler - RAM Fehler - PLD Komunikations Fehler - Force Controller Reset - Background-LoopMax Wert - km-Stand - ResetSourceAddress - ResetSource - Program/Datenstand  Beschreibung der Results wird hier nur an Hand des 1.Paket gemacht. Die anderen Pakete sind analog zu betrachten.
 - [_STAY_IN_BOOT](#job-stay-in-boot) - Job bewirkt ein Hängenbleiben im Boot Senden des Jobs 11 01 (Reset) und dann 2 sec lang im 5ms Raster 10 02
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -77,7 +76,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -90,7 +88,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -116,7 +113,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -135,7 +131,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -153,7 +148,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -174,7 +168,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -193,7 +186,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -212,7 +204,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -227,7 +218,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen(einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $06 reportDTCExtendedDataRecordByDTCNumber Modus: Default
@@ -273,7 +263,6 @@ Fehlerspeicher lesen(einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformati
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten auslesen UDS  : $22   ReadDataByIdentifier UDS  : $3F51 Sub-Parameter SGBD-Index UDS  : $3F3C Sub-Parameter SGBD-Index UDS  : $3F36 Sub-Parameter SGBD-Index UDS  : $3F38 Sub-Parameter SGBD-Index UDS  : $3F3A Sub-Parameter SGBD-Index UDS  : $3F30 Sub-Parameter SGBD-Index Modus: Default
@@ -314,7 +303,6 @@ _No arguments._
 | _REQUEST6 | binary | Hex-Auftrag an SG |
 | _RESPONSE6 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -330,7 +318,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus: Default
@@ -354,7 +341,6 @@ _No arguments._
 | _REQUEST02 | binary | Hex-Auftrag an SG |
 | _RESPONSE02 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -375,7 +361,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob Modus   : Default
@@ -408,7 +393,6 @@ _No arguments._
 | _REQUEST04 | binary | Hex-Auftrag an SG |
 | _RESPONSE04 | binary | Hex-Antwort von SG |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 IO-Status und Messwerte fuer TCM $22   SID ReadDataByIdentifier Modus: Default
@@ -453,7 +437,6 @@ _No arguments._
 | _REQUEST08 | binary | Hex-Auftrag an SG |
 | _RESPONSE08 | binary | Hex-Antwort von SG |
 
-<a id="job-status-druckregelventile-lesen"></a>
 ### STATUS_DRUCKREGELVENTILE_LESEN
 
 Status Druckregelventile $22     SID ReadDataByIdentifier $02 $06 DID Messwert Modus: Default
@@ -476,7 +459,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pressure-switch-lesen"></a>
 ### STATUS_PRESSURE_SWITCH_LESEN
 
 Status Druckschalter $22     SID ReadDataByIdentifier $02 $05 DID Messwert Modus: Default
@@ -499,7 +481,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-x-valve"></a>
 ### STATUS_X_VALVE
 
 Status X-Ventil $22     SID ReadDataByIdentifier $02 $07 DID Messwert Modus: Default
@@ -516,7 +497,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-y-valve"></a>
 ### STATUS_Y_VALVE
 
 Status Sollwertposition Y-Ventil $22     SID ReadDataByIdentifier $02 $08 DID Messwert Modus: Default
@@ -533,7 +513,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews-egs-lesen"></a>
 ### STATUS_EWS_EGS_LESEN
 
 Status EWS $22     SID ReadDataByIdentifier $02 $00 DID Messwert Modus: Default
@@ -559,7 +538,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews-egs"></a>
 ### STEUERN_EWS_EGS
 
 Rücksetzen der ISN, wenn Randbedingungen erfüllt Keine Übergabeparameter $2E     SID WriteDataByIdentifier $F2 $00 DID Messwert Modus: Default
@@ -574,7 +552,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews-isn-zaehler-ruecksetzen"></a>
 ### _STEUERN_EWS_ISN_ZAEHLER_RUECKSETZEN
 
 Rücksetzen der Zähler für inhaltlich falsche ISN beider Übertragungspfade Keine Übergabeparameter $2E   SID WriteDataByIdentifier $F201 DID Messwert Modus: Default
@@ -589,7 +566,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-reset-adapts"></a>
 ### STEUERN_RESET_ADAPTS
 
 Rücksetzen aller Adaptionswerte
@@ -608,7 +584,6 @@ Rücksetzen aller Adaptionswerte
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-adapts-lesen"></a>
 ### STATUS_ADAPTS_LESEN
 
 Auslesen der Adaptionswerte
@@ -675,7 +650,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-notlauf-lesen"></a>
 ### STATUS_NOTLAUF_LESEN
 
 Diagnose Job Status_Notlauf
@@ -728,7 +702,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-reset-rbm-ratios"></a>
 ### STEUERN_RESET_RBM_RATIOS
 
 Ruecksetzen aller RBM-Zaehler
@@ -743,7 +716,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rbm-ratios-lesen"></a>
 ### STATUS_RBM_RATIOS_LESEN
 
 Auslesen der Rate Based Monitoring Groessen
@@ -762,7 +734,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cvn-lesen"></a>
 ### STATUS_CVN_LESEN
 
 CVN-Nummer, die Software- und und Datenstand repraesentiert
@@ -778,7 +749,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fom-lesen"></a>
 ### STATUS_FOM_LESEN
 
 Status Diagnose FOMs
@@ -815,7 +785,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-diagnosezaehler-lesen"></a>
 ### STATUS_DIAGNOSEZAEHLER_LESEN
 
 Status der Diagnosezaehler
@@ -956,7 +925,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-empi-drehzahl-aktivierung"></a>
 ### STEUERN_EMPI_DREHZAHL_AKTIVIERUNG
 
 Umschalten der EMPI-Drehzahlvorgabe auf manuellen Betrieb
@@ -975,7 +943,6 @@ Umschalten der EMPI-Drehzahlvorgabe auf manuellen Betrieb
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-empi-drehzahl-prozent"></a>
 ### STEUERN_EMPI_DREHZAHL_PROZENT
 
 Vorgeben der Drehzahl der EMPI in Prozent $2E           SID WriteDataByIdentifier $F2 $13       DID Messwert Modus: Default
@@ -994,7 +961,6 @@ Vorgeben der Drehzahl der EMPI in Prozent $2E           SID WriteDataByIdentifie
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-build-ident-lesen"></a>
 ### _BUILD_IDENT_LESEN
 
 Auslesen der Build Informations Felder Standard Flashjob Modus   : Default
@@ -1018,7 +984,6 @@ _No arguments._
 | _REQUEST03 | binary | Hex-Auftrag an SG |
 | _RESPONSE03 | binary | Hex-Antwort von SG |
 
-<a id="job-status-flashprog-precondition-lesen"></a>
 ### _STATUS_FLASHPROG_PRECONDITION_LESEN
 
 Rückgabe der Vorbedingungen, die beim Flashen ueber WinKFP aktiv waren. Job darf nur unmittelbar nach dem Flashen aufgerufen werden, durch z.B. Klemmenwechsel werden die Preconditions nur wieder zurückgesetzt! WICHTIG: STAT_SPERRE_HOCHVOLT_AKTIV kann nur mittels gleichnamigen Job vom HCP festgestellt werden $22     SID ReadDataByIdentifier $03 $01 DID Messwert Modus: Default
@@ -1041,7 +1006,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-prozessor-lesen-jobs"></a>
 ### _STATUS_PROZESSOR_LESEN_JOBS
 
 Reset-Statistik, Resetursachen, Resetadressen Status der Level 3-Tests, NVM-Status/Checksummen Hoechste erreichte Anzahl von(Running-)Resets zwischen 2 PowerUp-Resets PowerUp-Reset setzt Wert zurueck Wert wird bei Klemme15- und Batteriewechsel nicht zurueckgesetzt $22     SID ReadDataByIdentifier $20 $4B DID Messwert Anzahl der Resets seit der letzten Neuprogrammierung Powerup-Resets(Watchdog) werden nicht erfasst Klemme15- und Batteriewechsel haben auf den Wert keinen Einfluss $22     SID ReadDataByIdentifier $20 $4A DID Messwert Ursache des letzten Resets $22     SID ReadDataByIdentifier $12 $DE DID Messwert Adresse, an der der letzte Resets aufgetreten  ist $22     SID ReadDataByIdentifier $12 $E7 DID Messwert Adresse, an der vom RAM-Test eine Fehler festgestellt wurde $22     SID ReadDataByIdentifier $20 $34 DID Messwert Status der Processorueberwachung FUSI-Level 3 $22     SID ReadDataByIdentifier $20 $39 DID Messwert Status der Checksummen- und Lesepruefung aller NVM-RAM Bereiche $22     SID ReadDataByIdentifier $20 $33 DID Messwert Modus: Default
@@ -1082,7 +1046,6 @@ _No arguments._
 | _REQUEST07 | binary | Hex-Auftrag an SG |
 | _RESPONSE07 | binary | Hex-Antwort von SG |
 
-<a id="job-status-reset-ursache"></a>
 ### _STATUS_RESET_URSACHE
 
 Auslesen der Reset Ursache Es werden 6 Pakete zurückgeliefert  1 Paket: Reset der nicht durch einen PowerUp Reset verursacht wurde. 5 Pakete: Alle zuletzt aufgetretenen Resets Inhalt eines Pakets: - Sammelfehler für Prozessorhardware - Stack Overflow - ROM Fehler - RAM Fehler - PLD Komunikations Fehler - Force Controller Reset - Background-LoopMax Wert - km-Stand - ResetSourceAddress - ResetSource - Program/Datenstand  Beschreibung der Results wird hier nur an Hand des 1.Paket gemacht. Die anderen Pakete sind analog zu betrachten.
@@ -1217,7 +1180,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-stay-in-boot"></a>
 ### _STAY_IN_BOOT
 
 Job bewirkt ein Hängenbleiben im Boot Senden des Jobs 11 01 (Reset) und dann 2 sec lang im 5ms Raster 10 02
@@ -1279,7 +1241,6 @@ _No arguments._
 - [T_T_RESETURSACHE](#table-t-t-resetursache) (14 × 2)
 - [T_NOTACTIVEACTIVE_1BIT](#table-t-notactiveactive-1bit) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -1353,7 +1314,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 118 rows × 2 columns
@@ -1479,7 +1439,6 @@ Dimensions: 118 rows × 2 columns
 | 0x0000AB | Kongsberg Automotive GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -1506,7 +1465,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1531,7 +1489,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -1563,7 +1520,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1636,7 +1592,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1649,7 +1604,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1662,7 +1616,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1675,7 +1628,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -1694,7 +1646,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1703,7 +1654,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1717,7 +1667,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 68 rows × 3 columns
@@ -1793,7 +1742,6 @@ Dimensions: 68 rows × 3 columns
 | 0x01D809 | TCM:  Botschaft vom Steuergerät HIM  (Hybrid-Interface-Modul) über HL-CAN fehlt | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1807,7 +1755,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 53 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -1816,7 +1763,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1828,7 +1774,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-t-egs-ews-authenticated-text"></a>
 ### T_EGS_EWS_AUTHENTICATED_TEXT
 
 Dimensions: 4 rows × 2 columns
@@ -1840,7 +1785,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | EWS- Freigabe abgelehnt (falscher ISN) |
 | 255 | Nicht definierter Wert |
 
-<a id="table-t-isn-can-received-text"></a>
 ### T_ISN_CAN_RECEIVED_TEXT
 
 Dimensions: 2 rows × 2 columns
@@ -1850,7 +1794,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Innerhalb der letzten 10 Sekunden wurde kein gültiges ISN-Telegramm über CAN empfangen. |
 | 1 | Innerhalb der letzten 10 Sekunden wurde ein gültiges ISN-Telegramm über CAN empfangen. |
 
-<a id="table-t-kein-druck-druck-vorhanden-1bit"></a>
 ### T_KEIN_DRUCK_DRUCK_VORHANDEN_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -1860,7 +1803,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | kein Druck |
 | 1 | Druck vorhanden |
 
-<a id="table-t-isn-k-received-text"></a>
 ### T_ISN_K_RECEIVED_TEXT
 
 Dimensions: 2 rows × 2 columns
@@ -1870,7 +1812,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Innerhalb der letzten 10 Sekunden wurde kein gültiges ISN-Telegramm über K-Line empfangen. |
 | 1 | Innerhalb der letzten 10 Sekunden wurde ein gültiges ISN-Telegramm über K-Line empfangen |
 
-<a id="table-t-aus-an-1bit"></a>
 ### T_AUS_AN_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -1880,7 +1821,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | aus |
 | 1 | an |
 
-<a id="table-t-nicht-aktiv-aktiv-1bit"></a>
 ### T_NICHT_AKTIV_AKTIV_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -1890,7 +1830,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nicht aktiv |
 | 1 | aktiv |
 
-<a id="table-t-isn-present-text"></a>
 ### T_ISN_PRESENT_TEXT
 
 Dimensions: 2 rows × 2 columns
@@ -1900,7 +1839,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | ISN noch nicht gelernt |
 | 1 | ISN gelernt und im EEPROM dauerhaft abgelegt |
 
-<a id="table-t-supplierlist-3-8"></a>
 ### T_SUPPLIERLIST_3_8
 
 Dimensions: 140 rows × 2 columns
@@ -2048,7 +1986,6 @@ Dimensions: 140 rows × 2 columns
 | 254 | Nachrüstungs Lieferant |
 | 255 | Unidentifiziert |
 
-<a id="table-hybrid-lief"></a>
 ### HYBRID_LIEF
 
 Dimensions: 5 rows × 2 columns
@@ -2061,7 +1998,6 @@ Dimensions: 5 rows × 2 columns
 | 009C | Cobasys |
 | FFFF | undefinierter Lieferant |
 
-<a id="table-datum-monat"></a>
 ### DATUM_MONAT
 
 Dimensions: 53 rows × 2 columns
@@ -2122,7 +2058,6 @@ Dimensions: 53 rows × 2 columns
 | 0x34 | 0x0C |
 | 0xFF | 0x00 |
 
-<a id="table-t-transmission-range"></a>
 ### T_TRANSMISSION_RANGE
 
 Dimensions: 10 rows × 2 columns
@@ -2140,7 +2075,6 @@ Dimensions: 10 rows × 2 columns
 | 64 |  D  Drive 2 |
 | 128 |  D  Drive 1 |
 
-<a id="table-t-pass-fail-indeterminate"></a>
 ### T_PASS_FAIL_INDETERMINATE
 
 Dimensions: 3 rows × 2 columns
@@ -2151,7 +2085,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Indeterminate |
 | 3 | Pass |
 
-<a id="table-t-processor-fault-reason-code"></a>
 ### T_PROCESSOR_FAULT_REASON_CODE
 
 Dimensions: 34 rows × 2 columns
@@ -2193,7 +2126,6 @@ Dimensions: 34 rows × 2 columns
 | 32 | MAIN ALU Fault |
 | 33 | MAIN Configuration Register Fault |
 
-<a id="table-t-nein-ja-1bit"></a>
 ### T_NEIN_JA_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -2203,7 +2135,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | nein |
 | 1 | ja |
 
-<a id="table-t-true-false"></a>
 ### T_TRUE_FALSE
 
 Dimensions: 2 rows × 2 columns
@@ -2213,7 +2144,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | False |
 | 1 | True |
 
-<a id="table-t-text-parkzustandtcm"></a>
 ### T_TEXT_PARKZUSTANDTCM
 
 Dimensions: 3 rows × 2 columns
@@ -2224,7 +2154,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Park eingelegt |
 | 3 | Ungültig |
 
-<a id="table-t-t-abtriebsrichtung"></a>
 ### T_T_ABTRIEBSRICHTUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2236,7 +2165,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Vorwärts |
 | 3 | Rückwärts |
 
-<a id="table-t-t-resetausfuehren"></a>
 ### T_T_RESETAUSFUEHREN
 
 Dimensions: 2 rows × 2 columns
@@ -2246,7 +2174,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Reset Nicht ausfuehren |
 | 1 | Reset ausfuehren |
 
-<a id="table-t-t-statadaptfuelldruck"></a>
 ### T_T_STATADAPTFUELLDRUCK
 
 Dimensions: 3 rows × 2 columns
@@ -2257,7 +2184,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | Adaptiert |
 | 3 | in Adaption |
 
-<a id="table-t-t-statnotlaufmassnahme"></a>
 ### T_T_STATNOTLAUFMASSNAHME
 
 Dimensions: 2 rows × 2 columns
@@ -2267,7 +2193,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Massnahme nicht aktiv |
 | 1 | Massnahme aktiv |
 
-<a id="table-t-aus-ein-1byte"></a>
 ### T_AUS_EIN_1BYTE
 
 Dimensions: 2 rows × 2 columns
@@ -2277,7 +2202,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | AUS |
 | 1 | EIN |
 
-<a id="table-fortumweltnr"></a>
 ### FORTUMWELTNR
 
 Dimensions: 68 rows × 54 columns
@@ -2353,7 +2277,6 @@ Dimensions: 68 rows × 54 columns
 | 0x01D809 | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 |
 | 0xFFFFFF | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 |
 
-<a id="table-fortumwelttexte"></a>
 ### FORTUMWELTTEXTE
 
 Dimensions: 53 rows × 7 columns
@@ -2414,7 +2337,6 @@ Dimensions: 53 rows × 7 columns
 | 52 | - | 1 | 1 | 0 | Status Druckregelung Solenoid 6 | 1 |
 | 53 | kPa | 1 | 16 | 0 | Angefordeter Druck fuer Druckregelung Solenoid 6 | 2 |
 
-<a id="table-t-textflashprecondition"></a>
 ### T_TEXTFLASHPRECONDITION
 
 Dimensions: 2 rows × 2 columns
@@ -2424,7 +2346,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Keine Sperrung |
 | 1 | Sperre aktiv |
 
-<a id="table-t-t-resetursache"></a>
 ### T_T_RESETURSACHE
 
 Dimensions: 14 rows × 2 columns
@@ -2446,7 +2367,6 @@ Dimensions: 14 rows × 2 columns
 | 12 | CeHWIO_RunRstOCCS |
 | 13 | CeHWIO_RunRstILBC |
 
-<a id="table-t-notactiveactive-1bit"></a>
 ### T_NOTACTIVEACTIVE_1BIT
 
 Dimensions: 2 rows × 2 columns

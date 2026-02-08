@@ -29,7 +29,6 @@
 - [STATUS_PWG_SPANNUNG](#job-status-pwg-spannung) - Auslesen der Spannung am Pedalwertgeber-Poti aus ADC-Kanal 5
 - [STATUS_DIGITAL_LESEN](#job-status-digital-lesen) - Auslesen von digitalen Eingangsstati
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -47,7 +46,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -60,7 +58,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -80,7 +77,6 @@ _No arguments._
 | ID_GETRIEBE_VARIANTE_NR | int | table HW_Tabelle HARDWARENR GETRIEBE |
 | ID_GETRIEBE_VARIANTE_TEXT | string | table GetriebeText GNR GTEXT |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -107,7 +103,6 @@ _No arguments._
 | F_UW3_TEXT | string | Text fuer die Umweltbedingung |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -120,7 +115,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -133,7 +127,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 Auslesen der Motortemperatur aus ADC-Kanal 3
@@ -148,7 +141,6 @@ _No arguments._
 | STAT_MOTORTEMPERATUR_WERT | long | Motortemperatur in Grad C |
 | STAT_MOTORTEMPERATUR_EINH | string | Einheit = Grad C |
 
-<a id="job-status-pwg-spannung"></a>
 ### STATUS_PWG_SPANNUNG
 
 Auslesen der Spannung am Pedalwertgeber-Poti aus ADC-Kanal 5
@@ -163,7 +155,6 @@ _No arguments._
 | STAT_PWG_SPANNUNG_WERT | long | Spannung am Pedalwertgeber-Poti in Volt |
 | STAT_PWG_SPANNUNG_EINH | string | Einheit = Volt |
 
-<a id="job-status-digital-lesen"></a>
 ### STATUS_DIGITAL_LESEN
 
 Auslesen von digitalen Eingangsstati
@@ -188,7 +179,6 @@ _No arguments._
 - [GETRIEBETEXT](#table-getriebetext) (3 × 2)
 - [FORTTEXTE](#table-forttexte) (23 × 3)
 
-<a id="table-hw-tabelle"></a>
 ### HW_TABELLE
 
 Dimensions: 36 rows × 2 columns
@@ -232,7 +222,6 @@ Dimensions: 36 rows × 2 columns
 | 1401404 | 2 |
 | XXXXXXX | 2 |
 
-<a id="table-getriebetext"></a>
 ### GETRIEBETEXT
 
 Dimensions: 3 rows × 2 columns
@@ -243,7 +232,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Automatik |
 | 0x02 | unbekannt |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 23 rows × 3 columns

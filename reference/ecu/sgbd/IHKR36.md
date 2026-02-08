@@ -33,7 +33,6 @@
 - [STEUERN_MOTOR](#job-steuern-motor) - Ansteuern der Schrittmotoren
 - [STEUERN_VENTIL](#job-steuern-ventil) - Ansteuern der Wasserventile
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -51,7 +50,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Kommunikationsparameter fuer IHKR E36
@@ -64,7 +62,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation
@@ -84,7 +81,6 @@ _No arguments._
 | ID_DATUM_JAHR | int | Herstelldatum Jahr |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -108,7 +104,6 @@ _No arguments._
 | K_ZAHL | int |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -133,7 +128,6 @@ _No arguments._
 | F_ART3_TEXT | string |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -146,7 +140,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -159,7 +152,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -178,7 +170,6 @@ Lesen des internen Speichers
 | DATEN | binary | Datenfeld |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status lesen Digital Ein- Ausgaenge 
@@ -206,7 +197,6 @@ _No arguments._
 | STAT_STANDHEIZEN_EIN | int |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Status lesen Analog Ein- Ausgaenge 
@@ -239,7 +229,6 @@ _No arguments._
 | STAT_MOTOR_FRI | long | 0..100 [%] |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern der digitalen Ausgaenge
@@ -261,7 +250,6 @@ Ansteuern der digitalen Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-motor"></a>
 ### STEUERN_MOTOR
 
 Ansteuern der Schrittmotoren
@@ -280,7 +268,6 @@ Ansteuern der Schrittmotoren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-ventil"></a>
 ### STEUERN_VENTIL
 
 Ansteuern der Wasserventile
@@ -304,7 +291,6 @@ Ansteuern der Wasserventile
 
 - [FORTTEXTE](#table-forttexte) (22 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 22 rows × 2 columns

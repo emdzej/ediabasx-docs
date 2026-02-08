@@ -31,7 +31,6 @@
 - [C_FG_AUFTRAG](#job-c-fg-auftrag) - letzten 7 Stellen der Fahrgestellnummer schreiben
 - [C_FG_LESEN](#job-c-fg-lesen) - letzten 7 Stellen der Fahrgestellnummer lesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -49,7 +48,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -62,7 +60,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation
@@ -79,7 +76,6 @@ _No arguments._
 | ID_COD_INDEX | string | Codierindex |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -96,7 +92,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -114,7 +109,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-zcs-auftrag"></a>
 ### C_ZCS_AUFTRAG
 
 Write and verify the Central code
@@ -133,7 +127,6 @@ Write and verify the Central code
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Read the ZCS record
@@ -149,7 +142,6 @@ _No arguments._
 | VN | string | Zentralcode C3 - Versionsmerkmal (10 ASCII nos) Version information |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum1"></a>
 ### C_CHECKSUM1
 
 Berechnung und Speicherung der Checksumme fuer Codierindex 25
@@ -163,7 +155,6 @@ _No arguments._
 | CHECKSUM | binary | berechnete Checksumme |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum2"></a>
 ### C_CHECKSUM2
 
 Berechnung und Speicherung der Checksumme fuer Codierindex 27
@@ -177,7 +168,6 @@ _No arguments._
 | CHECKSUM | binary | berechnete Checksumme |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 letzten 7 Stellen der Fahrgestellnummer schreiben
@@ -194,7 +184,6 @@ letzten 7 Stellen der Fahrgestellnummer schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 letzten 7 Stellen der Fahrgestellnummer lesen
@@ -215,7 +204,6 @@ _No arguments._
 
 - [JOBRESULT](#table-jobresult) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 2 rows × 2 columns

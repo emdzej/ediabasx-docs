@@ -30,7 +30,6 @@
 - [C_PRUEFSTEMPEL_LESEN](#job-c-pruefstempel-lesen) - Auslesen des Pruefstempels
 - [C_PRUEFSTEMPEL_SETZEN](#job-c-pruefstempel-setzen) - Verriegeln des SGs
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -48,7 +47,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer AIRBAG ZAE BAE
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer AIRBAG ZAE BAE
@@ -84,7 +81,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferant |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -97,7 +93,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-c-login"></a>
 ### C_LOGIN
 
 #### Arguments
@@ -113,7 +108,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY, wenn fehlerfrei" |
 | TELEGRAMM | binary | antworttelegramm |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -126,7 +120,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Speicher lesen
@@ -144,7 +137,6 @@ Speicher lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Speicher schreiben und verifizieren
@@ -161,7 +153,6 @@ Speicher schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-pruefstempel-lesen"></a>
 ### C_PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -175,7 +166,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | PRUEFSTEMPEL | binary |  |
 
-<a id="job-c-pruefstempel-setzen"></a>
 ### C_PRUEFSTEMPEL_SETZEN
 
 Verriegeln des SGs
@@ -199,7 +189,6 @@ Verriegeln des SGs
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -215,7 +204,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

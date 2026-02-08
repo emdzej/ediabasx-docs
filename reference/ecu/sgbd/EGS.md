@@ -45,7 +45,6 @@
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Loeschen des Fehlerspeichers
 - [SCHALTE_K2_DS2](#job-schalte-k2-ds2)
 
-<a id="job-edic-reset"></a>
 ### EDIC_RESET
 
 EDIC-Reset
@@ -58,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -71,7 +69,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -89,7 +86,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-uprog-ein"></a>
 ### UPROG_EIN
 
 Programmierspannung einschalten
@@ -104,7 +100,6 @@ _No arguments._
 | STATUS_UPROG_WERT | real | Programmierspannung als Info zurueck |
 | STATUS_UPROG_EINH | string | Einheit V |
 
-<a id="job-uprog-aus"></a>
 ### UPROG_AUS
 
 Programmierspannung ausschalten
@@ -117,7 +112,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-blocklaenge-max"></a>
 ### BLOCKLAENGE_MAX
 
 maximale Blocklaenge
@@ -131,7 +125,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | BLOCKLAENGE_MAX_WERT | int | Blocklaenge fuer Telegramm |
 
-<a id="job-daten-referenz"></a>
 ### DATEN_REFERENZ
 
 Job DATEN-Referenz
@@ -149,7 +142,6 @@ _No arguments._
 | DATEN_REF_DATENSATZ | string | Datensatzkennung |
 | DATEN_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-hw-referenz"></a>
 ### HW_REFERENZ
 
 Job HW-Referenz
@@ -165,7 +157,6 @@ _No arguments._
 | HW_REF_PROJEKT | string | Projektkennzeichnung |
 | HW_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-zif"></a>
 ### ZIF
 
 Job ZIF
@@ -184,7 +175,6 @@ _No arguments._
 | ZIF_BMW_PST | string | BMW Programmstand |
 | ZIF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-zif-backup"></a>
 ### ZIF_BACKUP
 
 Job ZIF_BACKUP
@@ -203,7 +193,6 @@ _No arguments._
 | ZIF_BACKUP_BMW_PST | string | BMW Programmstand |
 | ZIF_BACKUP_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -224,7 +213,6 @@ _No arguments._
 | AIF_ZB_NR | long | Zusbaunummer |
 | AIF_STATUS | int | Bei Status = FF , AIF leer |
 
-<a id="job-flash-lesen"></a>
 ### FLASH_LESEN
 
 Beliebige FLASH - Zellen auslesen
@@ -243,7 +231,6 @@ Beliebige FLASH - Zellen auslesen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | FLASH_LESEN_WERT | binary | nichts |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash  - Zellen loeschen
@@ -263,7 +250,6 @@ Flash  - Zellen loeschen
 | FLASH_LOESCHEN_STATUS | int | nichts |
 | FLASH_LOESCHEN_ANZAHL | int | nichts |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Beliebige Flash Zellen mit 02 beschreiben
@@ -283,7 +269,6 @@ Beliebige Flash Zellen mit 02 beschreiben
 | FLASH_SCHREIBEN_STATUS | int | nichts |
 | FLASH_SCHREIBEN_ANZAHL | int | nichts |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Beliebige EPROM - Zellen auslesen
@@ -303,7 +288,6 @@ Beliebige EPROM - Zellen auslesen
 | FLASH_SCHREIBEN_ENDE_STATUS | int | nichts |
 | FLASH_SCHREIBEN_ENDE_ANZAHL | int | nichts |
 
-<a id="job-datenbereich-loeschen-0e"></a>
 ### DATENBEREICH_LOESCHEN_0E
 
 Beliebige EPROM - Zellen auslesen
@@ -316,7 +300,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -331,7 +314,6 @@ _No arguments._
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -355,7 +337,6 @@ _No arguments._
 | ID_AI_NR | string | Aenderungsindex |
 | ID_PROD_NR | string | Produktionsnummer |
 
-<a id="job-dme-links-vorhanden"></a>
 ### DME_LINKS_VORHANDEN
 
 Linkes Stg vorhanden
@@ -368,7 +349,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -383,7 +363,6 @@ _No arguments._
 | F_ANZ_NR | int | Anzahl der gespeicherten Fehler |
 | F_CODEHEX | binary | 5 Fehlerbyte |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -396,7 +375,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-status-codier-checksumme"></a>
 ### STATUS_CODIER_CHECKSUMME
 
 Codier - Checksumme abfragen
@@ -410,7 +388,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STATUS_CHECKSUMME_WERT | int | Ergebnis |
 
-<a id="job-schalte-protokoll-ds2-nach-k2"></a>
 ### SCHALTE_PROTOKOLL_DS2_NACH_K2
 
 Umschaltung DS2
@@ -423,7 +400,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Loeschen des Fehlerspeichers
@@ -436,7 +412,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-schalte-k2-ds2"></a>
 ### SCHALTE_K2_DS2
 
 _No arguments._
@@ -453,7 +428,6 @@ _No arguments._
 
 - [JOBRESULT](#table-jobresult) (8 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns

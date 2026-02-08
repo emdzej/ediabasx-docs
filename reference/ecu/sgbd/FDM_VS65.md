@@ -82,7 +82,6 @@
 - [STEUERN_WD_RESET](#job-steuern-wd-reset) - Watchdog-Reset auslösen KWP2000: $11 03 Modus  : Default
 - [SMS_READ](#job-sms-read) - Lesen und Interpretieren der SMSn KWP2000: n. r. Die auszuwertende Datei ist "C:\SMS.txt"
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -95,7 +94,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -114,7 +112,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -130,7 +127,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -147,7 +143,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -177,7 +172,6 @@ _No arguments._
 | ID_SG_ADR | long | Steuergeraeteadresse |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -203,7 +197,6 @@ _No arguments._
 | F_WARNUNG_TEXT | string | Warnlampen Flag (Standard-Fehlerart) als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -244,7 +237,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen Je nach dieser Anzahl i (i = 1, 2, ...) existieren i mal folgende Results: (long)   F_UWi_NR   Index   der i. Umweltbedingung (string) F_UWi_TEXT Text    zur i. Umweltbedingung (real)   F_Uwi_WERT Wert    der i. Umweltbedingung (string) F_UWi_EINH Einheit der i. Umweltbedingung |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -258,7 +250,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -275,7 +266,6 @@ _No arguments._
 | BYTE3 | int | Bereich: 0-255 bzw. 0x00-0xFF |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -295,7 +285,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -316,7 +305,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -336,7 +324,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus $04 requestIdentifiedShadowMemoryDTCAndStatus
@@ -363,7 +350,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCommonIdentifier $2001 - $20FF dtcShadowMemoryEntry
@@ -405,7 +391,6 @@ Infospeicher lesen (alle Info-Meldungen / Ort und Art) KWP2000: $22 ReadDataByCo
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen Je nach dieser Anzahl i (i = 1, 2, ...) existieren i mal folgende Results: (long)   F_UWi_NR   Index   der i. Umweltbedingung (string) F_UWi_TEXT Text    zur i. Umweltbedingung (real)   F_Uwi_WERT Wert    der i. Umweltbedingung (string) F_UWi_EINH Einheit der i. Umweltbedingung |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen KWP2000: $31 StartRoutineByLocalIdentifier $06 ClearDTCShadowMemory Modus  : Default
@@ -419,7 +404,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $9B Vehicle Manufacturer Coding Index oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -437,7 +421,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -452,7 +435,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer 7-stellig |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number Modus  : Default
@@ -470,7 +452,6 @@ Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIden
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -489,7 +470,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B Write
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-lesen"></a>
 ### C_AEI_LESEN
 
 Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -504,7 +484,6 @@ _No arguments._
 | COD_AE_INDEX | string | Aenderungsindex max. 2-stellig ASCII inkl. Ziffern 'a', 'b', .., 'y', 'z', 'aa', 'ab', .., 'zy', 'zz' |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-schreiben"></a>
 ### C_AEI_SCHREIBEN
 
 Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -522,7 +501,6 @@ Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   Writ
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-auftrag"></a>
 ### C_AEI_AUFTRAG
 
 Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -541,7 +519,6 @@ Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -560,7 +537,6 @@ Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -578,7 +554,6 @@ Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentif
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -597,7 +572,6 @@ Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteData
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -615,7 +589,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -640,7 +613,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -663,7 +635,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -681,7 +652,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -702,7 +672,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -722,7 +691,6 @@ _No arguments._
 | DATEN_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -740,7 +708,6 @@ _No arguments._
 | FLASH_AUTHENTISIERZEIT | int | Flash Authentisierberechnungszeit in Sekunden |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -756,7 +723,6 @@ _No arguments._
 | FLASH_BLOCKLAENGE_DATEN | int | Flash Datenlaenge |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-zufallszahl-lesen"></a>
 ### AUTHENTISIERUNG_ZUFALLSZAHL_LESEN
 
 Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $07 RequestForAuthentication Modus  : Default
@@ -778,7 +744,6 @@ Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-start"></a>
 ### AUTHENTISIERUNG_START
 
 Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAuthentication Modus  : Default
@@ -797,7 +762,6 @@ Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -813,7 +777,6 @@ _No arguments._
 | FLASH_PROGRAMMIER_STATUS | int | ProgrammierStatus 0 - 255 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-signatur-pruefen"></a>
 ### FLASH_SIGNATUR_PRUEFEN
 
 Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSignature Modus  : Default
@@ -833,7 +796,6 @@ Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSigna
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -847,7 +809,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 ClearMemory Modus  : Default
@@ -867,7 +828,6 @@ Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload Modus  : Default
@@ -887,7 +847,6 @@ Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -908,7 +867,6 @@ Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Defau
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferExit Modus  : Default
@@ -927,7 +885,6 @@ Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -964,7 +921,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D WriteMemoryByAddress Modus   : Default
@@ -995,7 +951,6 @@ Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D Write
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG AIF schreiben |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG AIF schreiben |
 
-<a id="job-steuern-diagnosedaten-loeschen"></a>
 ### STEUERN_DIAGNOSEDATEN_LOESCHEN
 
 Löschen der Diagnosedaten KWP2000: $31 Steuergerätespezifische Routine starten $12 Diagnosedaten loeschen Modus  : Default
@@ -1009,7 +964,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-lesen-diagnosedaten-info"></a>
 ### LESEN_DIAGNOSEDATEN_INFO
 
 Information über Struktur und Anzahl der Diagnosedaten lesen KWP2000: $31 Steuergerätespezifische Routine starten $11 Lesen Diagnosedaten Info Modus  : Default
@@ -1040,7 +994,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-lesen-diagnosedaten"></a>
 ### LESEN_DIAGNOSEDATEN
 
 Lesen der Diagnosedaten KWP2000: $31 SSteuergerätespezifische Routine starten $10 Diagnosedaten lesen Modus  : Default
@@ -1068,7 +1021,6 @@ Lesen der Diagnosedaten KWP2000: $31 SSteuergerätespezifische Routine starten $
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Löschen der Diagnosedaten KWP2000: $22 Steuergerätespezifische Routine starten $98 Status lesen $00 Modus  : Default
@@ -1100,7 +1052,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-stellen-echtzeituhr"></a>
 ### STELLEN_ECHTZEITUHR
 
 Stellen und Starten der Echtzeituhr KWP2000: $2E Steuergerätespezifische Routine starten $00 Stellen Echtzeituhr $02 Modus  : Default
@@ -1123,7 +1074,6 @@ Stellen und Starten der Echtzeituhr KWP2000: $2E Steuergerätespezifische Routin
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-vorgeben"></a>
 ### STATUS_VORGEBEN
 
 Steuergeräte-Status vorgeben KWP2000: $31 $01 Modus  : Default
@@ -1144,7 +1094,6 @@ Steuergeräte-Status vorgeben KWP2000: $31 $01 Modus  : Default
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-lesen-can-status"></a>
 ### LESEN_CAN_STATUS
 
 Lesen des Inhalts einer Nachricht auf einem der CANs KWP2000: $31 $29 Modus  : Default
@@ -1167,7 +1116,6 @@ Lesen des Inhalts einer Nachricht auf einem der CANs KWP2000: $31 $29 Modus  : D
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fehlerspeicher-loeschen-einzeln"></a>
 ### FEHLERSPEICHER_LOESCHEN_EINZELN
 
 Fehlerspeicher löschen einzeln KWP2000: $14 Fehlerspeicher löschen Modus  : Default
@@ -1186,7 +1134,6 @@ Fehlerspeicher löschen einzeln KWP2000: $14 Fehlerspeicher löschen Modus  : De
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-schreiben-pin-nummer"></a>
 ### SCHREIBEN_PIN_NUMMER
 
 Schreiben der PIN ins FDM KWP2000: $2E 00 10 Modus  : Default
@@ -1205,7 +1152,6 @@ Schreiben der PIN ins FDM KWP2000: $2E 00 10 Modus  : Default
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-schreiben-nr-sms-email"></a>
 ### SCHREIBEN_NR_SMS_EMAIL
 
 Schreiben der Nummer des SMS -> E-Mail-Gateways ins FDM KWP2000: $2E 00 11 Modus  : Default
@@ -1224,7 +1170,6 @@ Schreiben der Nummer des SMS -> E-Mail-Gateways ins FDM KWP2000: $2E 00 11 Modus
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-schreiben-nr-service-center"></a>
 ### SCHREIBEN_NR_SERVICE_CENTER
 
 Schreiben der Nummer des Service Centers ins FDM KWP2000: $2E 00 12 Modus  : Default
@@ -1243,7 +1188,6 @@ Schreiben der Nummer des Service Centers ins FDM KWP2000: $2E 00 12 Modus  : Def
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-schreiben-email-adresse"></a>
 ### SCHREIBEN_EMAIL_ADRESSE
 
 Schreiben der E-Mail-Adresse ins FDM KWP2000: $2E 00 13 Modus  : Default
@@ -1262,7 +1206,6 @@ Schreiben der E-Mail-Adresse ins FDM KWP2000: $2E 00 13 Modus  : Default
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-lesen-nr-sms-email"></a>
 ### LESEN_NR_SMS_EMAIL
 
 Lesen der Nummer des SMS->E-Mail-Gateways KWP2000: $22 00 11 Modus  : Default
@@ -1278,7 +1221,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-lesen-nr-service-center"></a>
 ### LESEN_NR_SERVICE_CENTER
 
 Lesen der Nummer des Service Centers KWP2000: $22 00 12 Modus  : Default
@@ -1294,7 +1236,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-lesen-email-adresse"></a>
 ### LESEN_EMAIL_ADRESSE
 
 Lesen der E-Mail-Adresse KWP2000: $22 00 13 Modus  : Default
@@ -1310,7 +1251,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-steuern-sw-reset"></a>
 ### STEUERN_SW_RESET
 
 Software-Reset auslösen KWP2000: $11 02 Modus  : Default
@@ -1325,7 +1265,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-steuern-wd-reset"></a>
 ### STEUERN_WD_RESET
 
 Watchdog-Reset auslösen KWP2000: $11 03 Modus  : Default
@@ -1340,7 +1279,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _TEL_AUFTRAG | binary | Hex-Auftrag ans SG |
 
-<a id="job-sms-read"></a>
 ### SMS_READ
 
 Lesen und Interpretieren der SMSn KWP2000: n. r. Die auszuwertende Datei ist "C:\SMS.txt"
@@ -1625,7 +1563,6 @@ _No arguments._
 - [ID_FF](#table-id-ff) (1 × 2)
 - [WUP_ID](#table-wup-id) (307 × 4)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -1635,7 +1572,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -1738,7 +1674,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -1813,7 +1748,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -1835,7 +1769,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -1859,7 +1792,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -1881,7 +1813,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -1908,7 +1839,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -1926,7 +1856,6 @@ Dimensions: 10 rows × 2 columns
 | 0xC871 | EEPROM – Speicher defekt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1941,7 +1870,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1950,7 +1878,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -1963,7 +1890,6 @@ Dimensions: 5 rows × 2 columns
 | 0xc874 | TAS response invalid |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1978,7 +1904,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1987,7 +1912,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-namen"></a>
 ### SG_NAMEN
 
 Dimensions: 112 rows × 3 columns
@@ -2107,7 +2031,6 @@ Dimensions: 112 rows × 3 columns
 | 0xEC | MOST | Bus-System für Audio- und Kommunikationsumfänge            |
 | 0xFF | unbekannt | unbekanntes Steuergerät                                    |
 
-<a id="table-id-00"></a>
 ### ID_00
 
 Dimensions: 23 rows × 2 columns
@@ -2138,7 +2061,6 @@ Dimensions: 23 rows × 2 columns
 | 0x9398 | S SI-Bus Sysemzeitfehler |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-01"></a>
 ### ID_01
 
 Dimensions: 191 rows × 2 columns
@@ -2337,7 +2259,6 @@ Dimensions: 191 rows × 2 columns
 | 0x9486 | S DC/DC-Wandler MSC defekt |
 | 0x???? | unbekannter Fehlerort |
 
-<a id="table-id-02"></a>
 ### ID_02
 
 Dimensions: 118 rows × 2 columns
@@ -2463,7 +2384,6 @@ Dimensions: 118 rows × 2 columns
 | 0x9517 | S Uisis Reset |
 | 0x???? | unbekannter Fehlerort |
 
-<a id="table-id-03"></a>
 ### ID_03
 
 Dimensions: 106 rows × 2 columns
@@ -2577,7 +2497,6 @@ Dimensions: 106 rows × 2 columns
 | 0x9588 | S EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-04"></a>
 ### ID_04
 
 Dimensions: 105 rows × 2 columns
@@ -2690,7 +2609,6 @@ Dimensions: 105 rows × 2 columns
 | 0x9608 | S EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-05"></a>
 ### ID_05
 
 Dimensions: 84 rows × 2 columns
@@ -2782,7 +2700,6 @@ Dimensions: 84 rows × 2 columns
 | 0x9671 | S EMV-Fehler im Zuend-Ic |
 | 0x???? | unbekannter Fehlerort |
 
-<a id="table-id-06"></a>
 ### ID_06
 
 Dimensions: 84 rows × 2 columns
@@ -2874,7 +2791,6 @@ Dimensions: 84 rows × 2 columns
 | 0x96f1 | S EMV-Fehler im Zuend-Ic |
 | 0x???? | unbekannter Fehlerort |
 
-<a id="table-id-07"></a>
 ### ID_07
 
 Dimensions: 78 rows × 2 columns
@@ -2960,7 +2876,6 @@ Dimensions: 78 rows × 2 columns
 | 0x9779 | S EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-08"></a>
 ### ID_08
 
 Dimensions: 78 rows × 2 columns
@@ -3046,7 +2961,6 @@ Dimensions: 78 rows × 2 columns
 | 0x9811 | S EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-09"></a>
 ### ID_09
 
 Dimensions: 76 rows × 2 columns
@@ -3130,7 +3044,6 @@ Dimensions: 76 rows × 2 columns
 | 0x9870 | S EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-0a"></a>
 ### ID_0A
 
 Dimensions: 87 rows × 2 columns
@@ -3225,7 +3138,6 @@ Dimensions: 87 rows × 2 columns
 | 0x98f8 | S EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-0b"></a>
 ### ID_0B
 
 Dimensions: 1 rows × 2 columns
@@ -3234,7 +3146,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-0c"></a>
 ### ID_0C
 
 Dimensions: 1 rows × 2 columns
@@ -3243,7 +3154,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-0d"></a>
 ### ID_0D
 
 Dimensions: 110 rows × 2 columns
@@ -3361,7 +3271,6 @@ Dimensions: 110 rows × 2 columns
 | 0x9a9a | S EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-0e"></a>
 ### ID_0E
 
 Dimensions: 47 rows × 2 columns
@@ -3416,7 +3325,6 @@ Dimensions: 47 rows × 2 columns
 | 0x9aef | S SI-Bus: FIFO-Ueberlauf OVRNIF |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-0f"></a>
 ### ID_0F
 
 Dimensions: 1 rows × 2 columns
@@ -3425,7 +3333,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-10"></a>
 ### ID_10
 
 Dimensions: 1 rows × 2 columns
@@ -3434,7 +3341,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-11"></a>
 ### ID_11
 
 Dimensions: 1 rows × 2 columns
@@ -3443,7 +3349,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-12"></a>
 ### ID_12
 
 Dimensions: 1182 rows × 2 columns
@@ -4633,7 +4538,6 @@ Dimensions: 1182 rows × 2 columns
 | 0xCD8B | P CD8B  CAN Bus B |
 | 0xFFFF | FFFF unbekannter Fehlerort |
 
-<a id="table-id-13"></a>
 ### ID_13
 
 Dimensions: 863 rows × 2 columns
@@ -5504,7 +5408,6 @@ Dimensions: 863 rows × 2 columns
 | 0xCD8B | P CD8B  CAN Bus B |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-14"></a>
 ### ID_14
 
 Dimensions: 1 rows × 2 columns
@@ -5513,7 +5416,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-15"></a>
 ### ID_15
 
 Dimensions: 1 rows × 2 columns
@@ -5522,7 +5424,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-16"></a>
 ### ID_16
 
 Dimensions: 69 rows × 2 columns
@@ -5599,7 +5500,6 @@ Dimensions: 69 rows × 2 columns
 | 0x1006 | S Fehler f |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-17"></a>
 ### ID_17
 
 Dimensions: 22 rows × 2 columns
@@ -5629,7 +5529,6 @@ Dimensions: 22 rows × 2 columns
 | 0x62A6 | S FLASH-Anforderung (DNMT) bei v oder n ungleich Null |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-18"></a>
 ### ID_18
 
 Dimensions: 75 rows × 2 columns
@@ -5712,7 +5611,6 @@ Dimensions: 75 rows × 2 columns
 | 0xCF07 | P CAN Bus off |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-19"></a>
 ### ID_19
 
 Dimensions: 1 rows × 2 columns
@@ -5721,7 +5619,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-1a"></a>
 ### ID_1A
 
 Dimensions: 1 rows × 2 columns
@@ -5730,7 +5627,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-1b"></a>
 ### ID_1B
 
 Dimensions: 13 rows × 2 columns
@@ -5751,7 +5647,6 @@ Dimensions: 13 rows × 2 columns
 | 0x1006 | S Fehler f |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-1c"></a>
 ### ID_1C
 
 Dimensions: 1 rows × 2 columns
@@ -5760,7 +5655,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-1d"></a>
 ### ID_1D
 
 Dimensions: 1 rows × 2 columns
@@ -5769,7 +5663,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-1e"></a>
 ### ID_1E
 
 Dimensions: 13 rows × 2 columns
@@ -5790,7 +5683,6 @@ Dimensions: 13 rows × 2 columns
 | 0x1006 | S Fehler f |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-1f"></a>
 ### ID_1F
 
 Dimensions: 1 rows × 2 columns
@@ -5799,7 +5691,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-20"></a>
 ### ID_20
 
 Dimensions: 24 rows × 2 columns
@@ -5831,7 +5722,6 @@ Dimensions: 24 rows × 2 columns
 | 0x606A | S Fehler Rad undefiniert |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-21"></a>
 ### ID_21
 
 Dimensions: 18 rows × 2 columns
@@ -5857,7 +5747,6 @@ Dimensions: 18 rows × 2 columns
 | 0xCD39 | P ACC temporär nicht verfügbar wegen DSC Initialisierung oder Unterspannung |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-22"></a>
 ### ID_22
 
 Dimensions: 61 rows × 2 columns
@@ -5926,7 +5815,6 @@ Dimensions: 61 rows × 2 columns
 | 0x9335 | S Telegramm Steuerung ALC Timeout oder ungueltig |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-23"></a>
 ### ID_23
 
 Dimensions: 67 rows × 2 columns
@@ -6001,7 +5889,6 @@ Dimensions: 67 rows × 2 columns
 | 0xD1ED | P CAN Status DSC |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-24"></a>
 ### ID_24
 
 Dimensions: 1 rows × 2 columns
@@ -6010,7 +5897,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-25"></a>
 ### ID_25
 
 Dimensions: 1 rows × 2 columns
@@ -6019,7 +5905,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-26"></a>
 ### ID_26
 
 Dimensions: 1 rows × 2 columns
@@ -6028,7 +5913,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-27"></a>
 ### ID_27
 
 Dimensions: 105 rows × 2 columns
@@ -6141,7 +6025,6 @@ Dimensions: 105 rows × 2 columns
 | 0x9308 | S PGS_Uebertemperatur |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-28"></a>
 ### ID_28
 
 Dimensions: 1 rows × 2 columns
@@ -6150,7 +6033,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-29"></a>
 ### ID_29
 
 Dimensions: 94 rows × 2 columns
@@ -6252,7 +6134,6 @@ Dimensions: 94 rows × 2 columns
 | 0x5F0F | P Drehraten Sensor: temporaerer Fehler |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-2a"></a>
 ### ID_2A
 
 Dimensions: 32 rows × 2 columns
@@ -6292,7 +6173,6 @@ Dimensions: 32 rows × 2 columns
 | 0xd3c2 | P CAN TX |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-2b"></a>
 ### ID_2B
 
 Dimensions: 1 rows × 2 columns
@@ -6301,7 +6181,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-2c"></a>
 ### ID_2C
 
 Dimensions: 1 rows × 2 columns
@@ -6310,7 +6189,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-2d"></a>
 ### ID_2D
 
 Dimensions: 1 rows × 2 columns
@@ -6319,7 +6197,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-2e"></a>
 ### ID_2E
 
 Dimensions: 1 rows × 2 columns
@@ -6328,7 +6205,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-2f"></a>
 ### ID_2F
 
 Dimensions: 1 rows × 2 columns
@@ -6337,7 +6213,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-30"></a>
 ### ID_30
 
 Dimensions: 1 rows × 2 columns
@@ -6346,7 +6221,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-31"></a>
 ### ID_31
 
 Dimensions: 16 rows × 2 columns
@@ -6370,7 +6244,6 @@ Dimensions: 16 rows × 2 columns
 | 0x9310 | S Empfänger hat eine Nachricht nicht abgenommen (Error_NAK). |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-32"></a>
 ### ID_32
 
 Dimensions: 26 rows × 2 columns
@@ -6404,7 +6277,6 @@ Dimensions: 26 rows × 2 columns
 | 0x9310 | S Empfaenger hat eine Nachricht nicht abgenommen (Error_NAK). |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-33"></a>
 ### ID_33
 
 Dimensions: 1 rows × 2 columns
@@ -6413,7 +6285,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-34"></a>
 ### ID_34
 
 Dimensions: 9 rows × 2 columns
@@ -6430,7 +6301,6 @@ Dimensions: 9 rows × 2 columns
 | 0xA5FC | S Ueberlauf Grafik-Queue |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-35"></a>
 ### ID_35
 
 Dimensions: 16 rows × 2 columns
@@ -6454,7 +6324,6 @@ Dimensions: 16 rows × 2 columns
 | 0x931B | S PTT ohne Notifizierung. |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-36"></a>
 ### ID_36
 
 Dimensions: 37 rows × 2 columns
@@ -6499,7 +6368,6 @@ Dimensions: 37 rows × 2 columns
 | 0x9310 | S Trotz Low Level Widerholungen hat ein Empfaenger eine Nachricht nicht angenommen (Error_NAK). |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-37"></a>
 ### ID_37
 
 Dimensions: 21 rows × 2 columns
@@ -6528,7 +6396,6 @@ Dimensions: 21 rows × 2 columns
 | 0x9313 | S Error_SPG: TH hat bei Selbsttest Unterspannung Klemme 30 erkannt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-38"></a>
 ### ID_38
 
 Dimensions: 29 rows × 2 columns
@@ -6565,7 +6432,6 @@ Dimensions: 29 rows × 2 columns
 | 0xD73E | P K-CAN Telegramm Timeout |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-39"></a>
 ### ID_39
 
 Dimensions: 38 rows × 2 columns
@@ -6611,7 +6477,6 @@ Dimensions: 38 rows × 2 columns
 | 0xD747 | P CAN Bus off |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-3a"></a>
 ### ID_3A
 
 Dimensions: 18 rows × 2 columns
@@ -6637,7 +6502,6 @@ Dimensions: 18 rows × 2 columns
 | 0x9313 | S Error_SPG: KHI hat bei Selbsttest Unterspannung Klemme 30 erkannt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-3b"></a>
 ### ID_3B
 
 Dimensions: 21 rows × 2 columns
@@ -6666,7 +6530,6 @@ Dimensions: 21 rows × 2 columns
 | 0xA3EF | S Fehler bei Selbsttest Durchfuehrung (Error_SELFTEST). |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-3c"></a>
 ### ID_3C
 
 Dimensions: 20 rows × 2 columns
@@ -6694,7 +6557,6 @@ Dimensions: 20 rows × 2 columns
 | 0x9310 | S Empfaenger hat eine Nachricht nicht abgenommen (Error_NAK). |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-3d"></a>
 ### ID_3D
 
 Dimensions: 47 rows × 2 columns
@@ -6749,7 +6611,6 @@ Dimensions: 47 rows × 2 columns
 | 0x9401 | Helligkeitsreduzierung aufgrund zu hoher LED Array Temperatur |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-3e"></a>
 ### ID_3E
 
 Dimensions: 1 rows × 2 columns
@@ -6758,7 +6619,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-3f"></a>
 ### ID_3F
 
 Dimensions: 23 rows × 2 columns
@@ -6789,7 +6649,6 @@ Dimensions: 23 rows × 2 columns
 | 0x9317 | S Ein Device hat die Monitoringnachricht nicht abgenommen oder bestätigt. (Error_Monitoring). |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-40"></a>
 ### ID_40
 
 Dimensions: 92 rows × 2 columns
@@ -6889,7 +6748,6 @@ Dimensions: 92 rows × 2 columns
 | 0x990A | S Nachlauf_EWS_Aktiv |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-41"></a>
 ### ID_41
 
 Dimensions: 17 rows × 2 columns
@@ -6914,7 +6772,6 @@ Dimensions: 17 rows × 2 columns
 | 0x9314 | S Deaktivierung US/NG |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-42"></a>
 ### ID_42
 
 Dimensions: 36 rows × 2 columns
@@ -6958,7 +6815,6 @@ Dimensions: 36 rows × 2 columns
 | 0xFFFF | P All Groups |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-43"></a>
 ### ID_43
 
 Dimensions: 29 rows × 2 columns
@@ -6995,7 +6851,6 @@ Dimensions: 29 rows × 2 columns
 | 0xD9C7 | P Controller, Bus off |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-44"></a>
 ### ID_44
 
 Dimensions: 98 rows × 2 columns
@@ -7101,7 +6956,6 @@ Dimensions: 98 rows × 2 columns
 | 0x9322 | S Fehler Checksumme ECU Konfiguration |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-45"></a>
 ### ID_45
 
 Dimensions: 9 rows × 2 columns
@@ -7118,7 +6972,6 @@ Dimensions: 9 rows × 2 columns
 | 0xDA44 | P Can-Low physik.Busfehler DA44 |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-46"></a>
 ### ID_46
 
 Dimensions: 25 rows × 2 columns
@@ -7151,7 +7004,6 @@ Dimensions: 25 rows × 2 columns
 | 0x9314 | S Abschaltung Ueberspannung |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-47"></a>
 ### ID_47
 
 Dimensions: 13 rows × 2 columns
@@ -7172,7 +7024,6 @@ Dimensions: 13 rows × 2 columns
 | 0x9314 | S Watchdog_Reset |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-48"></a>
 ### ID_48
 
 Dimensions: 1 rows × 2 columns
@@ -7181,7 +7032,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-49"></a>
 ### ID_49
 
 Dimensions: 56 rows × 2 columns
@@ -7245,7 +7095,6 @@ Dimensions: 56 rows × 2 columns
 | 0x931A | S Auslösung Notausstieg Frontscheibe |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-4a"></a>
 ### ID_4A
 
 Dimensions: 23 rows × 2 columns
@@ -7276,7 +7125,6 @@ Dimensions: 23 rows × 2 columns
 | 0x934A | S Auslösung Stiller Alarm |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-4b"></a>
 ### ID_4B
 
 Dimensions: 31 rows × 2 columns
@@ -7315,7 +7163,6 @@ Dimensions: 31 rows × 2 columns
 | 0x9323 | S Speicherfehler |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-4c"></a>
 ### ID_4C
 
 Dimensions: 39 rows × 2 columns
@@ -7362,7 +7209,6 @@ Dimensions: 39 rows × 2 columns
 | 0x9B76 | P Spiegelposition Potentiometer horizontal defekt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-4d"></a>
 ### ID_4D
 
 Dimensions: 39 rows × 2 columns
@@ -7409,7 +7255,6 @@ Dimensions: 39 rows × 2 columns
 | 0x9BBA | P Spiegelposition Potentiometer horizontal defekt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-4e"></a>
 ### ID_4E
 
 Dimensions: 39 rows × 2 columns
@@ -7456,7 +7301,6 @@ Dimensions: 39 rows × 2 columns
 | 0x9BFE | P Spiegelposition Potentiometer horizontal defekt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-4f"></a>
 ### ID_4F
 
 Dimensions: 39 rows × 2 columns
@@ -7503,7 +7347,6 @@ Dimensions: 39 rows × 2 columns
 | 0x9C36 | P Spiegelposition Potentiometer horizontal defekt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-50"></a>
 ### ID_50
 
 Dimensions: 14 rows × 2 columns
@@ -7525,7 +7368,6 @@ Dimensions: 14 rows × 2 columns
 | 0x9339 | P Information: Verpolung erkannt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-51"></a>
 ### ID_51
 
 Dimensions: 1 rows × 2 columns
@@ -7534,7 +7376,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-52"></a>
 ### ID_52
 
 Dimensions: 1 rows × 2 columns
@@ -7543,7 +7384,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-53"></a>
 ### ID_53
 
 Dimensions: 1 rows × 2 columns
@@ -7552,7 +7392,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-54"></a>
 ### ID_54
 
 Dimensions: 41 rows × 2 columns
@@ -7601,7 +7440,6 @@ Dimensions: 41 rows × 2 columns
 | 0xA180 | RAM Access Error. |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-55"></a>
 ### ID_55
 
 Dimensions: 1 rows × 2 columns
@@ -7610,7 +7448,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-56"></a>
 ### ID_56
 
 Dimensions: 1 rows × 2 columns
@@ -7619,7 +7456,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-57"></a>
 ### ID_57
 
 Dimensions: 1 rows × 2 columns
@@ -7628,7 +7464,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-58"></a>
 ### ID_58
 
 Dimensions: 1 rows × 2 columns
@@ -7637,7 +7472,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-59"></a>
 ### ID_59
 
 Dimensions: 1 rows × 2 columns
@@ -7646,7 +7480,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-60"></a>
 ### ID_60
 
 Dimensions: 69 rows × 2 columns
@@ -7723,7 +7556,6 @@ Dimensions: 69 rows × 2 columns
 | 0x9310 | S Empfaenger hat eine Nachricht nicht abgenommen (Error_NAK). |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-61"></a>
 ### ID_61
 
 Dimensions: 20 rows × 2 columns
@@ -7751,7 +7583,6 @@ Dimensions: 20 rows × 2 columns
 | 0x9408 | S TelCommander Line Fehler 9408 Fehlereintrag erst ab FBI SW 6.B.0, PU 09/02 |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-62"></a>
 ### ID_62
 
 Dimensions: 32 rows × 2 columns
@@ -7791,7 +7622,6 @@ Dimensions: 32 rows × 2 columns
 | 0x9310 | S Empfaenger hat eine Nachricht nicht abgenommen (Error_NAK). |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-63"></a>
 ### ID_63
 
 Dimensions: 9 rows × 2 columns
@@ -7808,7 +7638,6 @@ Dimensions: 9 rows × 2 columns
 | 0xA05C | S Ueberlauf Grafik-Queue |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-64"></a>
 ### ID_64
 
 Dimensions: 25 rows × 2 columns
@@ -7841,7 +7670,6 @@ Dimensions: 25 rows × 2 columns
 | 0xe207 | P Fehlerort: CAN-Controller, Bus off |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-65"></a>
 ### ID_65
 
 Dimensions: 13 rows × 2 columns
@@ -7862,7 +7690,6 @@ Dimensions: 13 rows × 2 columns
 | 0xE247 | P Controller, Bus off |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-66"></a>
 ### ID_66
 
 Dimensions: 14 rows × 2 columns
@@ -7884,7 +7711,6 @@ Dimensions: 14 rows × 2 columns
 | 0xE287 | P Controller, Bus off |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-67"></a>
 ### ID_67
 
 Dimensions: 8 rows × 2 columns
@@ -7900,7 +7726,6 @@ Dimensions: 8 rows × 2 columns
 | 0x2003 | S Fehler Implausible Effect |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-68"></a>
 ### ID_68
 
 Dimensions: 8 rows × 2 columns
@@ -7916,7 +7741,6 @@ Dimensions: 8 rows × 2 columns
 | 0x2003 | S Fehler Implausible Effect |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-69"></a>
 ### ID_69
 
 Dimensions: 197 rows × 2 columns
@@ -8121,7 +7945,6 @@ Dimensions: 197 rows × 2 columns
 | 0x9FC7 | S Versorgungsspannungsfehler  |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-6a"></a>
 ### ID_6A
 
 Dimensions: 197 rows × 2 columns
@@ -8326,7 +8149,6 @@ Dimensions: 197 rows × 2 columns
 | 0x9FC7 | S Versorgungsspannungsfehler  |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-6b"></a>
 ### ID_6B
 
 Dimensions: 21 rows × 2 columns
@@ -8355,7 +8177,6 @@ Dimensions: 21 rows × 2 columns
 | 0xA2C3 | S Timeout Verriegeln HKK |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-6c"></a>
 ### ID_6C
 
 Dimensions: 1 rows × 2 columns
@@ -8364,7 +8185,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-6d"></a>
 ### ID_6D
 
 Dimensions: 197 rows × 2 columns
@@ -8569,7 +8389,6 @@ Dimensions: 197 rows × 2 columns
 | 0x9FC7 | S Versorgungsspannungsfehler  |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-6e"></a>
 ### ID_6E
 
 Dimensions: 197 rows × 2 columns
@@ -8774,7 +8593,6 @@ Dimensions: 197 rows × 2 columns
 | 0x9FC7 | S Versorgungsspannungsfehler  |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-6f"></a>
 ### ID_6F
 
 Dimensions: 1 rows × 2 columns
@@ -8783,7 +8601,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-70"></a>
 ### ID_70
 
 Dimensions: 72 rows × 2 columns
@@ -8863,7 +8680,6 @@ Dimensions: 72 rows × 2 columns
 | 0x9331 | S Signal vom Regenlichtsensor unplausibel |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-71"></a>
 ### ID_71
 
 Dimensions: 58 rows × 2 columns
@@ -8929,7 +8745,6 @@ Dimensions: 58 rows × 2 columns
 | 0x9406 | S AHM Nebellicht |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-72"></a>
 ### ID_72
 
 Dimensions: 84 rows × 2 columns
@@ -9021,7 +8836,6 @@ Dimensions: 84 rows × 2 columns
 | 0x9318 | PINCHING_DETECTED_FH_BFTH |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-73"></a>
 ### ID_73
 
 Dimensions: 8 rows × 2 columns
@@ -9037,7 +8851,6 @@ Dimensions: 8 rows × 2 columns
 | 0xE5C7 | CAN BUS OFF |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-74"></a>
 ### ID_74
 
 Dimensions: 8 rows × 2 columns
@@ -9053,7 +8866,6 @@ Dimensions: 8 rows × 2 columns
 | 0xE607 | P CAN BUS AUS |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-75"></a>
 ### ID_75
 
 Dimensions: 1 rows × 2 columns
@@ -9062,7 +8874,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-76"></a>
 ### ID_76
 
 Dimensions: 1 rows × 2 columns
@@ -9071,7 +8882,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-77"></a>
 ### ID_77
 
 Dimensions: 1 rows × 2 columns
@@ -9080,7 +8890,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-78"></a>
 ### ID_78
 
 Dimensions: 79 rows × 2 columns
@@ -9167,7 +8976,6 @@ Dimensions: 79 rows × 2 columns
 | 0xE707 | P Controller, Bus Off |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-79"></a>
 ### ID_79
 
 Dimensions: 32 rows × 2 columns
@@ -9207,7 +9015,6 @@ Dimensions: 32 rows × 2 columns
 | 0xE746 | P MUX4-Busfehler |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-7a"></a>
 ### ID_7A
 
 Dimensions: 18 rows × 2 columns
@@ -9233,7 +9040,6 @@ Dimensions: 18 rows × 2 columns
 | 0xE787 | P Kommunikationsfehler |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-7b"></a>
 ### ID_7B
 
 Dimensions: 1 rows × 2 columns
@@ -9242,7 +9048,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-7c"></a>
 ### ID_7C
 
 Dimensions: 1 rows × 2 columns
@@ -9251,7 +9056,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-7d"></a>
 ### ID_7D
 
 Dimensions: 15 rows × 2 columns
@@ -9274,7 +9078,6 @@ Dimensions: 15 rows × 2 columns
 | 0xc874 | S TAS response invaild |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-7e"></a>
 ### ID_7E
 
 Dimensions: 1 rows × 2 columns
@@ -9283,7 +9086,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-7f"></a>
 ### ID_7F
 
 Dimensions: 1 rows × 2 columns
@@ -9292,7 +9094,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-80"></a>
 ### ID_80
 
 Dimensions: 1 rows × 2 columns
@@ -9301,7 +9102,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-81"></a>
 ### ID_81
 
 Dimensions: 1 rows × 2 columns
@@ -9310,7 +9110,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-82"></a>
 ### ID_82
 
 Dimensions: 1 rows × 2 columns
@@ -9319,7 +9118,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-83"></a>
 ### ID_83
 
 Dimensions: 1 rows × 2 columns
@@ -9328,7 +9126,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-84"></a>
 ### ID_84
 
 Dimensions: 1 rows × 2 columns
@@ -9337,7 +9134,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-85"></a>
 ### ID_85
 
 Dimensions: 1 rows × 2 columns
@@ -9346,7 +9142,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-86"></a>
 ### ID_86
 
 Dimensions: 1 rows × 2 columns
@@ -9355,7 +9150,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-87"></a>
 ### ID_87
 
 Dimensions: 1 rows × 2 columns
@@ -9364,7 +9158,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-88"></a>
 ### ID_88
 
 Dimensions: 1 rows × 2 columns
@@ -9373,7 +9166,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-89"></a>
 ### ID_89
 
 Dimensions: 1 rows × 2 columns
@@ -9382,7 +9174,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-8a"></a>
 ### ID_8A
 
 Dimensions: 1 rows × 2 columns
@@ -9391,7 +9182,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-8b"></a>
 ### ID_8B
 
 Dimensions: 1 rows × 2 columns
@@ -9400,7 +9190,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-8c"></a>
 ### ID_8C
 
 Dimensions: 1 rows × 2 columns
@@ -9409,7 +9198,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-8d"></a>
 ### ID_8D
 
 Dimensions: 1 rows × 2 columns
@@ -9418,7 +9206,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-8e"></a>
 ### ID_8E
 
 Dimensions: 1 rows × 2 columns
@@ -9427,7 +9214,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-8f"></a>
 ### ID_8F
 
 Dimensions: 1 rows × 2 columns
@@ -9436,7 +9222,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-90"></a>
 ### ID_90
 
 Dimensions: 1 rows × 2 columns
@@ -9445,7 +9230,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-91"></a>
 ### ID_91
 
 Dimensions: 1 rows × 2 columns
@@ -9454,7 +9238,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-92"></a>
 ### ID_92
 
 Dimensions: 1 rows × 2 columns
@@ -9463,7 +9246,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-93"></a>
 ### ID_93
 
 Dimensions: 1 rows × 2 columns
@@ -9472,7 +9254,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-94"></a>
 ### ID_94
 
 Dimensions: 1 rows × 2 columns
@@ -9481,7 +9262,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-95"></a>
 ### ID_95
 
 Dimensions: 1 rows × 2 columns
@@ -9490,7 +9270,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-96"></a>
 ### ID_96
 
 Dimensions: 1 rows × 2 columns
@@ -9499,7 +9278,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-97"></a>
 ### ID_97
 
 Dimensions: 1 rows × 2 columns
@@ -9508,7 +9286,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-98"></a>
 ### ID_98
 
 Dimensions: 1 rows × 2 columns
@@ -9517,7 +9294,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-99"></a>
 ### ID_99
 
 Dimensions: 1 rows × 2 columns
@@ -9526,7 +9302,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-9a"></a>
 ### ID_9A
 
 Dimensions: 1 rows × 2 columns
@@ -9535,7 +9310,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-9b"></a>
 ### ID_9B
 
 Dimensions: 1 rows × 2 columns
@@ -9544,7 +9318,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-9c"></a>
 ### ID_9C
 
 Dimensions: 1 rows × 2 columns
@@ -9553,7 +9326,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-9d"></a>
 ### ID_9D
 
 Dimensions: 1 rows × 2 columns
@@ -9562,7 +9334,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-9e"></a>
 ### ID_9E
 
 Dimensions: 1 rows × 2 columns
@@ -9571,7 +9342,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-9f"></a>
 ### ID_9F
 
 Dimensions: 1 rows × 2 columns
@@ -9580,7 +9350,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a0"></a>
 ### ID_A0
 
 Dimensions: 1 rows × 2 columns
@@ -9589,7 +9358,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a1"></a>
 ### ID_A1
 
 Dimensions: 129 rows × 2 columns
@@ -9726,7 +9494,6 @@ Dimensions: 129 rows × 2 columns
 | 0x98a7 | EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a2"></a>
 ### ID_A2
 
 Dimensions: 129 rows × 2 columns
@@ -9863,7 +9630,6 @@ Dimensions: 129 rows × 2 columns
 | 0x9927 | EMV-Fehler im Zuend-Ic |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a3"></a>
 ### ID_A3
 
 Dimensions: 1 rows × 2 columns
@@ -9872,7 +9638,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a4"></a>
 ### ID_A4
 
 Dimensions: 1 rows × 2 columns
@@ -9881,7 +9646,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a5"></a>
 ### ID_A5
 
 Dimensions: 1 rows × 2 columns
@@ -9890,7 +9654,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a6"></a>
 ### ID_A6
 
 Dimensions: 1 rows × 2 columns
@@ -9899,7 +9662,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a7"></a>
 ### ID_A7
 
 Dimensions: 1 rows × 2 columns
@@ -9908,7 +9670,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a8"></a>
 ### ID_A8
 
 Dimensions: 1 rows × 2 columns
@@ -9917,7 +9678,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-a9"></a>
 ### ID_A9
 
 Dimensions: 1 rows × 2 columns
@@ -9926,7 +9686,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-aa"></a>
 ### ID_AA
 
 Dimensions: 1 rows × 2 columns
@@ -9935,7 +9694,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ab"></a>
 ### ID_AB
 
 Dimensions: 1 rows × 2 columns
@@ -9944,7 +9702,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ac"></a>
 ### ID_AC
 
 Dimensions: 1 rows × 2 columns
@@ -9953,7 +9710,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ad"></a>
 ### ID_AD
 
 Dimensions: 1 rows × 2 columns
@@ -9962,7 +9718,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ae"></a>
 ### ID_AE
 
 Dimensions: 1 rows × 2 columns
@@ -9971,7 +9726,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-af"></a>
 ### ID_AF
 
 Dimensions: 1 rows × 2 columns
@@ -9980,7 +9734,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b0"></a>
 ### ID_B0
 
 Dimensions: 1 rows × 2 columns
@@ -9989,7 +9742,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b1"></a>
 ### ID_B1
 
 Dimensions: 1 rows × 2 columns
@@ -9998,7 +9750,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b2"></a>
 ### ID_B2
 
 Dimensions: 1 rows × 2 columns
@@ -10007,7 +9758,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b3"></a>
 ### ID_B3
 
 Dimensions: 1 rows × 2 columns
@@ -10016,7 +9766,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b4"></a>
 ### ID_B4
 
 Dimensions: 1 rows × 2 columns
@@ -10025,7 +9774,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b5"></a>
 ### ID_B5
 
 Dimensions: 1 rows × 2 columns
@@ -10034,7 +9782,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b6"></a>
 ### ID_B6
 
 Dimensions: 1 rows × 2 columns
@@ -10043,7 +9790,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b7"></a>
 ### ID_B7
 
 Dimensions: 1 rows × 2 columns
@@ -10052,7 +9798,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b8"></a>
 ### ID_B8
 
 Dimensions: 1 rows × 2 columns
@@ -10061,7 +9806,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-b9"></a>
 ### ID_B9
 
 Dimensions: 1 rows × 2 columns
@@ -10070,7 +9814,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ba"></a>
 ### ID_BA
 
 Dimensions: 1 rows × 2 columns
@@ -10079,7 +9822,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-bb"></a>
 ### ID_BB
 
 Dimensions: 1 rows × 2 columns
@@ -10088,7 +9830,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-bc"></a>
 ### ID_BC
 
 Dimensions: 1 rows × 2 columns
@@ -10097,7 +9838,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-bd"></a>
 ### ID_BD
 
 Dimensions: 1 rows × 2 columns
@@ -10106,7 +9846,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-be"></a>
 ### ID_BE
 
 Dimensions: 1 rows × 2 columns
@@ -10115,7 +9854,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-bf"></a>
 ### ID_BF
 
 Dimensions: 1 rows × 2 columns
@@ -10124,7 +9862,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c0"></a>
 ### ID_C0
 
 Dimensions: 1 rows × 2 columns
@@ -10133,7 +9870,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c1"></a>
 ### ID_C1
 
 Dimensions: 1 rows × 2 columns
@@ -10142,7 +9878,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c2"></a>
 ### ID_C2
 
 Dimensions: 1 rows × 2 columns
@@ -10151,7 +9886,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c3"></a>
 ### ID_C3
 
 Dimensions: 1 rows × 2 columns
@@ -10160,7 +9894,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c4"></a>
 ### ID_C4
 
 Dimensions: 1 rows × 2 columns
@@ -10169,7 +9902,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c5"></a>
 ### ID_C5
 
 Dimensions: 1 rows × 2 columns
@@ -10178,7 +9910,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c6"></a>
 ### ID_C6
 
 Dimensions: 1 rows × 2 columns
@@ -10187,7 +9918,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c7"></a>
 ### ID_C7
 
 Dimensions: 1 rows × 2 columns
@@ -10196,7 +9926,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c8"></a>
 ### ID_C8
 
 Dimensions: 1 rows × 2 columns
@@ -10205,7 +9934,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-c9"></a>
 ### ID_C9
 
 Dimensions: 1 rows × 2 columns
@@ -10214,7 +9942,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ca"></a>
 ### ID_CA
 
 Dimensions: 1 rows × 2 columns
@@ -10223,7 +9950,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-cb"></a>
 ### ID_CB
 
 Dimensions: 1 rows × 2 columns
@@ -10232,7 +9958,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-cc"></a>
 ### ID_CC
 
 Dimensions: 1 rows × 2 columns
@@ -10241,7 +9966,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-cd"></a>
 ### ID_CD
 
 Dimensions: 1 rows × 2 columns
@@ -10250,7 +9974,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ce"></a>
 ### ID_CE
 
 Dimensions: 1 rows × 2 columns
@@ -10259,7 +9982,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-cf"></a>
 ### ID_CF
 
 Dimensions: 1 rows × 2 columns
@@ -10268,7 +9990,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d0"></a>
 ### ID_D0
 
 Dimensions: 1 rows × 2 columns
@@ -10277,7 +9998,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d1"></a>
 ### ID_D1
 
 Dimensions: 1 rows × 2 columns
@@ -10286,7 +10006,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d2"></a>
 ### ID_D2
 
 Dimensions: 1 rows × 2 columns
@@ -10295,7 +10014,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d3"></a>
 ### ID_D3
 
 Dimensions: 1 rows × 2 columns
@@ -10304,7 +10022,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d4"></a>
 ### ID_D4
 
 Dimensions: 1 rows × 2 columns
@@ -10313,7 +10030,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d5"></a>
 ### ID_D5
 
 Dimensions: 1 rows × 2 columns
@@ -10322,7 +10038,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d6"></a>
 ### ID_D6
 
 Dimensions: 1 rows × 2 columns
@@ -10331,7 +10046,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d7"></a>
 ### ID_D7
 
 Dimensions: 1 rows × 2 columns
@@ -10340,7 +10054,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d8"></a>
 ### ID_D8
 
 Dimensions: 1 rows × 2 columns
@@ -10349,7 +10062,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-d9"></a>
 ### ID_D9
 
 Dimensions: 1 rows × 2 columns
@@ -10358,7 +10070,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-da"></a>
 ### ID_DA
 
 Dimensions: 1 rows × 2 columns
@@ -10367,7 +10078,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-db"></a>
 ### ID_DB
 
 Dimensions: 1 rows × 2 columns
@@ -10376,7 +10086,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-dc"></a>
 ### ID_DC
 
 Dimensions: 1 rows × 2 columns
@@ -10385,7 +10094,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-dd"></a>
 ### ID_DD
 
 Dimensions: 1 rows × 2 columns
@@ -10394,7 +10102,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-de"></a>
 ### ID_DE
 
 Dimensions: 1 rows × 2 columns
@@ -10403,7 +10110,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-df"></a>
 ### ID_DF
 
 Dimensions: 1 rows × 2 columns
@@ -10412,7 +10118,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e0"></a>
 ### ID_E0
 
 Dimensions: 1 rows × 2 columns
@@ -10421,7 +10126,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e1"></a>
 ### ID_E1
 
 Dimensions: 1 rows × 2 columns
@@ -10430,7 +10134,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e2"></a>
 ### ID_E2
 
 Dimensions: 1 rows × 2 columns
@@ -10439,7 +10142,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e3"></a>
 ### ID_E3
 
 Dimensions: 1 rows × 2 columns
@@ -10448,7 +10150,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e4"></a>
 ### ID_E4
 
 Dimensions: 1 rows × 2 columns
@@ -10457,7 +10158,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e5"></a>
 ### ID_E5
 
 Dimensions: 1 rows × 2 columns
@@ -10466,7 +10166,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e6"></a>
 ### ID_E6
 
 Dimensions: 1 rows × 2 columns
@@ -10475,7 +10174,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e7"></a>
 ### ID_E7
 
 Dimensions: 1 rows × 2 columns
@@ -10484,7 +10182,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e8"></a>
 ### ID_E8
 
 Dimensions: 1 rows × 2 columns
@@ -10493,7 +10190,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-e9"></a>
 ### ID_E9
 
 Dimensions: 1 rows × 2 columns
@@ -10502,7 +10198,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ea"></a>
 ### ID_EA
 
 Dimensions: 1 rows × 2 columns
@@ -10511,7 +10206,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-eb"></a>
 ### ID_EB
 
 Dimensions: 1 rows × 2 columns
@@ -10520,7 +10214,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ec"></a>
 ### ID_EC
 
 Dimensions: 1 rows × 2 columns
@@ -10529,7 +10222,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ed"></a>
 ### ID_ED
 
 Dimensions: 1 rows × 2 columns
@@ -10538,7 +10230,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ee"></a>
 ### ID_EE
 
 Dimensions: 1 rows × 2 columns
@@ -10547,7 +10238,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ef"></a>
 ### ID_EF
 
 Dimensions: 1 rows × 2 columns
@@ -10556,7 +10246,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f0"></a>
 ### ID_F0
 
 Dimensions: 1 rows × 2 columns
@@ -10565,7 +10254,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f1"></a>
 ### ID_F1
 
 Dimensions: 1 rows × 2 columns
@@ -10574,7 +10262,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f2"></a>
 ### ID_F2
 
 Dimensions: 1 rows × 2 columns
@@ -10583,7 +10270,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f3"></a>
 ### ID_F3
 
 Dimensions: 1 rows × 2 columns
@@ -10592,7 +10278,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f4"></a>
 ### ID_F4
 
 Dimensions: 1 rows × 2 columns
@@ -10601,7 +10286,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f5"></a>
 ### ID_F5
 
 Dimensions: 1 rows × 2 columns
@@ -10610,7 +10294,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f6"></a>
 ### ID_F6
 
 Dimensions: 1 rows × 2 columns
@@ -10619,7 +10302,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f7"></a>
 ### ID_F7
 
 Dimensions: 1 rows × 2 columns
@@ -10628,7 +10310,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f8"></a>
 ### ID_F8
 
 Dimensions: 1 rows × 2 columns
@@ -10637,7 +10318,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-f9"></a>
 ### ID_F9
 
 Dimensions: 1 rows × 2 columns
@@ -10646,7 +10326,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-fa"></a>
 ### ID_FA
 
 Dimensions: 1 rows × 2 columns
@@ -10655,7 +10334,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-fb"></a>
 ### ID_FB
 
 Dimensions: 1 rows × 2 columns
@@ -10664,7 +10342,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-fc"></a>
 ### ID_FC
 
 Dimensions: 1 rows × 2 columns
@@ -10673,7 +10350,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-fd"></a>
 ### ID_FD
 
 Dimensions: 1 rows × 2 columns
@@ -10682,7 +10358,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-fe"></a>
 ### ID_FE
 
 Dimensions: 1 rows × 2 columns
@@ -10691,7 +10366,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-id-ff"></a>
 ### ID_FF
 
 Dimensions: 1 rows × 2 columns
@@ -10700,7 +10374,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-wup-id"></a>
 ### WUP_ID
 
 Dimensions: 307 rows × 4 columns

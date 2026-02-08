@@ -66,7 +66,6 @@
 - [STATUS_CAS_FREQ_TYPE](#job-status-cas-freq-type) - Konfiguration des CAS bzgl. Schlüssel-Initialisierung auslesen. JobHeaderFormat 0xDC79 CAS_FREQ_TYPE
 - [STEUERN_CAS_FREQ_TYPE](#job-steuern-cas-freq-type) - Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS4_SK bzw. EWS4_TRSP_SK nicht mehr änderbar (ERROR_ECU_CONDITIONS_NOT_CORRECT). Werden unzulässige Daten übergeben, so erfolgt ein ERROR_DATA. JobHeaderFormat 0xDC79 CAS_FREQ_TYPE
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -85,7 +84,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -98,7 +96,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -115,7 +112,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -146,7 +142,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -191,7 +186,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -210,7 +204,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -228,7 +221,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -249,7 +241,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -278,7 +269,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -298,7 +288,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -319,7 +308,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -335,7 +323,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -357,7 +344,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -379,7 +365,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -406,7 +391,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -451,7 +435,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -466,7 +449,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -486,7 +468,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -505,7 +486,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -524,7 +504,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -543,7 +522,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -563,7 +541,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -578,7 +555,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -594,7 +570,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -613,7 +588,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -633,7 +607,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -651,7 +624,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -667,7 +639,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews"></a>
 ### STATUS_EWS
 
 Liefert den aktuellen Status der EWS-SecretKeys ISNs und den Status bzgl. KeyID KeyPIN JobHeaderFormat 0xC000 STATUS_EWS
@@ -685,7 +656,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews4-sk"></a>
 ### STATUS_EWS4_SK
 
 Dieser Job dient zum (Gegen-)Lesen der Secretkeys / ISNs (vor einem anschließenden Verriegeln Kommando) JobHeaderFormat 0xC002 STATUS_EWS4_SK_CAS
@@ -704,7 +674,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews4"></a>
 ### STEUERN_EWS4
 
 Dieser Job dient zum Setzen der Secretkeys und zum anschließenden Verriegeln. JobHeaderFormat 0xC001 STEUERN_EWS4_CAS
@@ -724,7 +693,6 @@ Dieser Job dient zum Setzen der Secretkeys und zum anschließenden Verriegeln. J
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-anlieferzustand"></a>
 ### STATUS_CAS_ANLIEFERZUSTAND
 
 Dieser Job liefert den aktuellen Fortschritt des Rücksetzen nach STEUERN_CAS_ANLIEFERZUSTAND. JobHeaderFormat 0xDC7D STATUS_CAS_ANLIEFERZUSTAND
@@ -741,7 +709,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-anlieferzustand"></a>
 ### STEUERN_CAS_ANLIEFERZUSTAND
 
 Versetzt das CAS in den Anlieferzustand (Montage-Modi, Codierung, VIN, Tansponder-Tabelle, EWS4_CLIENT_SK, ...) Falls Rücksetzen unzulässig: ERROR_ECU_CONDITIONS_NOT_CORRECT. Anmerkung: Nach dem Rücksetzen müssen alle im verriegelten Zustand geschützten W JobHeaderFormat 0xAC50 STEUERN_CAS_ANLIEFERZUSTAND
@@ -760,7 +727,6 @@ Versetzt das CAS in den Anlieferzustand (Montage-Modi, Codierung, VIN, Tansponde
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrgestellnummer"></a>
 ### STATUS_FAHRGESTELLNUMMER
 
 Lesen der Fahrgestellnummer JobHeaderFormat 0xF190 FAHRGESTELLNUMMER_LANG
@@ -777,7 +743,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-fahrgestellnummer"></a>
 ### STEUERN_FAHRGESTELLNUMMER
 
 Schreiben der Fahrgestellnummer JobHeaderFormat 0xF190 FAHRGESTELLNUMMER_LANG
@@ -796,7 +761,6 @@ Schreiben der Fahrgestellnummer JobHeaderFormat 0xF190 FAHRGESTELLNUMMER_LANG
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-schluesseldaten"></a>
 ### STATUS_SCHLUESSELDATEN
 
 Den Status eines Schlüssel laut Transpondertabelle ausgeben. Anmerkung: Die Informationen sind unabhängig von einem evtl. gerade vorhandenen Transponder in der Ringspule bzw. einem erkannten ID-Geber. JobHeaderFormat 0xAC5A STATUS_SCHLUESSELDATEN
@@ -823,7 +787,6 @@ Den Status eines Schlüssel laut Transpondertabelle ausgeben. Anmerkung: Die Inf
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluesseldaten"></a>
 ### STEUERN_SCHLUESSELDATEN
 
 Schlüssel-Daten in CAS schreiben (z.B. für Ersatz-Steuergerät oder Nacharbeit). Nur zulässig solange EWS4_TRSP_SK nicht verriegelt. JobHeaderFormat 0xDC80 STEUERN_SCHLUESSELDATEN
@@ -845,7 +808,6 @@ Schlüssel-Daten in CAS schreiben (z.B. für Ersatz-Steuergerät oder Nacharbeit
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-schluessel-trsp"></a>
 ### STATUS_SCHLUESSEL_TRSP
 
 Liefert den Status des momentan in der Ringspule befindlichen Schlüssels. Der Job liefert den Status des zuletzt gefundenen Transponders in der Ringspule. Die Daten sind max. 300 ms alt und entprellt (bei dauerhaft vorhandenem Transponder, keine flackernden Results). Ist der Schlüssel unbekannt und bereits gelocked, so werden nur die immer lesbaren Informationen ausgegeben. JobHeaderFormat 0xDC7E STATUS_SCHLUESSEL_TRSP
@@ -889,7 +851,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluessel-init"></a>
 ### STEUERN_SCHLUESSEL_INIT
 
 Job zum Anstoßen der Schlüssel-Initialisierung. Nur zulässig, solange EWS4_TRSP_SK noch nicht verriegelt. JobHeaderFormat 0xAC52 STEUERN_SCHLUESSEL_INIT
@@ -911,7 +872,6 @@ Job zum Anstoßen der Schlüssel-Initialisierung. Nur zulässig, solange EWS4_TR
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-init-loc-date"></a>
 ### STATUS_CAS_INIT_LOC_DATE
 
 Konfiguration des CAS bzgl. Schlüssel-Initialisierung auslesen. JobHeaderFormat 0xDC7B CAS_INIT_LOC_DATE
@@ -936,7 +896,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-init-loc-date"></a>
 ### STEUERN_CAS_INIT_LOC_DATE
 
 Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS4_SK bzw. EWS4_TRSP_SK nicht mehr änderbar (ERROR_ECU_CONDITIONS_NOT_CORRECT). Werden unzulässige Daten übergeben, so erfolgt ein ERROR_DATA. JobHeaderFormat 0xDC7B CAS_INIT_LOC_DATE
@@ -959,7 +918,6 @@ Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluessel-sperre"></a>
 ### STEUERN_SCHLUESSEL_SPERRE
 
 Job zum Sperren und wieder freigeben von Schlüsseln. Der Job ist nur zulässig, wenn sich gerade ein gültiger Schlüssel an der Transponder-Spule befindet. Der aktuelle Schlüssel an der Transponder-Spule kann nicht gesperrt oder freigegeben werden. JobHeaderFormat 0xDC73 STEUERN_SCHLUESSEL_SPERRE
@@ -979,7 +937,6 @@ Job zum Sperren und wieder freigeben von Schlüsseln. Der Job ist nur zulässig,
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-wup"></a>
 ### STATUS_CAS_WUP
 
 4-Byte FBD-Wakeup-Pattern lesen. JobHeaderFormat 0xDC78 CAS_WUP
@@ -996,7 +953,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-wup"></a>
 ### STEUERN_CAS_WUP
 
 4-Byte FBD-Wakeup-Pattern schreiben. JobHeaderFormat 0xDC78 CAS_WUP
@@ -1015,7 +971,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-freq-type"></a>
 ### STATUS_CAS_FREQ_TYPE
 
 Konfiguration des CAS bzgl. Schlüssel-Initialisierung auslesen. JobHeaderFormat 0xDC79 CAS_FREQ_TYPE
@@ -1034,7 +989,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-freq-type"></a>
 ### STEUERN_CAS_FREQ_TYPE
 
 Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS4_SK bzw. EWS4_TRSP_SK nicht mehr änderbar (ERROR_ECU_CONDITIONS_NOT_CORRECT). Werden unzulässige Daten übergeben, so erfolgt ein ERROR_DATA. JobHeaderFormat 0xDC79 CAS_FREQ_TYPE
@@ -1126,7 +1080,6 @@ Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS
 - [TAB_CAS_TRSP_VERRIEGELUNGSSTATUS](#table-tab-cas-trsp-verriegelungsstatus) (6 × 2)
 - [TAB_TRSP_KEY_DATA_CONSISTENT](#table-tab-trsp-key-data-consistent) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1210,7 +1163,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -1359,7 +1311,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1402,7 +1353,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1427,7 +1377,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1461,7 +1410,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1534,7 +1482,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1547,7 +1494,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1562,7 +1508,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1575,7 +1520,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1595,7 +1539,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1638,7 +1581,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-arg-0x4000-d"></a>
 ### ARG_0X4000_D
 
 Dimensions: 1 rows × 12 columns
@@ -1647,7 +1589,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PWM_DC_DATA | DATA | high | data[20] | - | - | 1.0 | 1.0 | 0.0 | - | - | PWM-DC-Tabelle |
 
-<a id="table-arg-0x4001-d"></a>
 ### ARG_0X4001_D
 
 Dimensions: 1 rows × 12 columns
@@ -1656,7 +1597,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ID_DATA | DATA | high | data[7] | - | - | 1.0 | 1.0 | 0.0 | - | - | SGBM-Id und HW-Version |
 
-<a id="table-arg-0x4002-d"></a>
 ### ARG_0X4002_D
 
 Dimensions: 1 rows × 12 columns
@@ -1665,7 +1605,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HERSTELLDATUM_DATA | DATA | high | data[3] | - | - | 1.0 | 1.0 | 0.0 | - | - | Herstelldatum |
 
-<a id="table-arg-0x4003-d"></a>
 ### ARG_0X4003_D
 
 Dimensions: 1 rows × 12 columns
@@ -1674,7 +1613,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LOCK_DATA | HEX | high | unsigned char | - | - | - | - | - | - | - | Überschreibschutz Huf-Data setzen |
 
-<a id="table-arg-0x4005-d"></a>
 ### ARG_0X4005_D
 
 Dimensions: 1 rows × 12 columns
@@ -1683,7 +1621,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ICT_BYTE | HEX | high | unsigned char | - | - | - | - | - | - | - | ICT Prüfstempel |
 
-<a id="table-arg-0x4006-d"></a>
 ### ARG_0X4006_D
 
 Dimensions: 1 rows × 12 columns
@@ -1692,7 +1629,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ZSB_BYTE_WERT | HEX | high | unsigned char | - | - | - | - | - | - | - | ZSB Prüfbyte |
 
-<a id="table-arg-0xdc54-d"></a>
 ### ARG_0XDC54_D
 
 Dimensions: 4 rows × 12 columns
@@ -1704,7 +1640,6 @@ Dimensions: 4 rows × 12 columns
 | ERSTZULASSUNGSDATUM_MONAT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1.0 | 12.0 | Das Argument enthält den Monat des Erstzulassungsdatums.  Im Werk: dieser Wert = Monat der Schlüssel-Initialisierung. |
 | ERSTZULASSUNGSDATUM_JAHR | - | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | 2000.0 | 9999.0 | Das Argument enthält das Jahr des Erstzulassungsdatums.  Im Werk ist dieser Wert = Jahr der Schlüssel-Initialisierung. Wertebereich 2000 - 9999. |
 
-<a id="table-arg-0xe00e-d"></a>
 ### ARG_0XE00E_D
 
 Dimensions: 1 rows × 12 columns
@@ -1713,7 +1648,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KL15_DIG | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Schaltet KL15 ein bzw. aus: 0 = KL15 aus, 1 = KL15 ein |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1727,7 +1661,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-energiesparmode-dop"></a>
 ### ENERGIESPARMODE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -1739,7 +1672,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Transportmode |
 | 3 | Flashmode |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1753,7 +1685,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | ja |
 
-<a id="table-fehlerklasse-dop"></a>
 ### FEHLERKLASSE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -1765,7 +1696,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Ueberpruefung beim naechsten Halt |
 | 4 | Ueberpruefung sofort erforderlich |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 33 rows × 3 columns
@@ -1806,7 +1736,6 @@ Dimensions: 33 rows × 3 columns
 | 0xD9142A | CAN DME Nachricht Motordaten_2_Motorrad_2010: Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -1816,7 +1745,6 @@ Dimensions: 2 rows × 9 columns
 | 0x4004 | UWB_BATTERIESPANNUNG | V | High | unsigned char | - | 1.0 | 10.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -1829,7 +1757,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 22 rows × 3 columns
@@ -1859,7 +1786,6 @@ Dimensions: 22 rows × 3 columns
 | 0x804033 | Motor Open Load oder Ansteuerung defekt | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -1869,7 +1795,6 @@ Dimensions: 2 rows × 9 columns
 | 0x4004 | UWB_BATTERIESPANNUNG | V | High | unsigned char | - | 1.0 | 10.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1878,7 +1803,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-prog-dep-dop"></a>
 ### PROG_DEP_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -1892,7 +1816,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | incorrectResult error SWE - SWE |
 | 255 | reserved |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -1908,7 +1831,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -1919,7 +1841,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ECUMindestensEinmalVollstaendigProgrammierbar |
 | 2 | ECUNichtMehrProgrammierbar |
 
-<a id="table-rdtci-lev-dop"></a>
 ### RDTCI_LEV_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -1936,7 +1857,6 @@ Dimensions: 9 rows × 2 columns
 | 18 | reportNumberOfEmissionsRelatedOBDDTCByStatusMask |
 | 19 | reportEmissionsRelatedOBDDTCByStatusMask |
 
-<a id="table-res-0x4000-d"></a>
 ### RES_0X4000_D
 
 Dimensions: 1 rows × 10 columns
@@ -1945,7 +1865,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_PWM_DC_DATA | DATA | high | data[20] | - | - | 1.0 | 1.0 | 0.0 | PWM-DC-Tabelle |
 
-<a id="table-res-0x4005-d"></a>
 ### RES_0X4005_D
 
 Dimensions: 1 rows × 10 columns
@@ -1954,7 +1873,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ICT_BYTE_WERT | HEX | high | unsigned char | - | - | - | - | - | ICT Prüfstempel |
 
-<a id="table-res-0x4006-d"></a>
 ### RES_0X4006_D
 
 Dimensions: 1 rows × 10 columns
@@ -1963,7 +1881,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ZSB_BYTE_WERT | HEX | high | unsigned char | - | - | - | - | - | ZSB Prüfbyte |
 
-<a id="table-res-0x4009-d"></a>
 ### RES_0X4009_D
 
 Dimensions: 3 rows × 10 columns
@@ -1974,7 +1891,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_BOLZEN_TREIBER_PWM_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM Wert des Treibers |
 | STAT_BOLZEN_TREIBER_I_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Strom durch den Treiber |
 
-<a id="table-res-0x400c-d"></a>
 ### RES_0X400C_D
 
 Dimensions: 37 rows × 10 columns
@@ -2019,7 +1935,6 @@ Dimensions: 37 rows × 10 columns
 | STAT_HUF_RESERVIERT_3_WERT | HEX | high | unsigned char | - | - | - | - | - | Schlüsseldaten 36 |
 | STAT_KEY_DATA_CONSISTENT | 0/1 | high | unsigned char | - | - | - | - | - | 0 = Schlüsseldaten nicht gültig, 1 = Schlüsseldaten gültig |
 
-<a id="table-res-0xb007-r"></a>
 ### RES_0XB007_R
 
 Dimensions: 1 rows × 13 columns
@@ -2028,7 +1943,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_NOTENTRIEGELUNG | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 0 = Notentriegelung nicht aktiv, 1 = Notentriegelung aktiv |
 
-<a id="table-res-0xdc54-d"></a>
 ### RES_0XDC54_D
 
 Dimensions: 4 rows × 10 columns
@@ -2040,7 +1954,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ERSTZULASSUNGSDATUM_MONAT_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Das Result enthält den Monat des Erstzulassungsdatums.  Im Werk wird dieser Wert auf den Monat der Schlüssel-Initialisierung gesetzt. |
 | STAT_ERSTZULASSUNGSDATUM_JAHR_WERT | - | - | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Das Result enthält den Jahr des Erstzulassungsdatums.  Im Werk wird dieser Wert auf das Jahr der Schlüssel-Initialisierung gesetzt. Wertebereich: 2000-9999. |
 
-<a id="table-res-0xe00e-d"></a>
 ### RES_0XE00E_D
 
 Dimensions: 1 rows × 10 columns
@@ -2049,7 +1962,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KL15_DIG | 0/1 | high | unsigned char | - | - | - | - | - | Ein-/Aus-Status der KL15: 0 = KL15 aus, 1 = KL15 ein |
 
-<a id="table-res-0xe183-d"></a>
 ### RES_0XE183_D
 
 Dimensions: 2 rows × 10 columns
@@ -2059,7 +1971,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KL30_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Spannung an KL30 |
 | STAT_KL15_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Spannung an KL15 |
 
-<a id="table-res-0xe184-d"></a>
 ### RES_0XE184_D
 
 Dimensions: 2 rows × 10 columns
@@ -2069,7 +1980,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCHALTER_SCHLIESSER | 0/1 | high | unsigned char | - | - | - | - | - | Zustand Schalter Schliesser: 0 = offen, 1 = geschlossen |
 | STAT_STAT_WL_DIG | 0/1 | high | unsigned char | - | - | - | - | - | Zustand Weckleitung: 0 = aus, 1 = ein |
 
-<a id="table-res-0xe185-d"></a>
 ### RES_0XE185_D
 
 Dimensions: 3 rows × 10 columns
@@ -2080,7 +1990,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_RKE_TASTE_2 | 0/1 | high | unsigned char | - | - | - | - | - | 0 = Taste nicht betätigt, 1 = Taste betätigt |
 | STAT_FB_BATTERIE | 0-n | high | unsigned char | - | TAB_MR_SLZ_FB_BATT | - | - | - | Status FB Batterie |
 
-<a id="table-res-0xe186-d"></a>
 ### RES_0XE186_D
 
 Dimensions: 3 rows × 10 columns
@@ -2091,7 +2000,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_TD_TREIBER_I_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Strom durch den Tankdeckeltreiber |
 | STAT_TD_SENSE | 0-n | high | unsigned char | - | TAB_MR_SLZ_MESSLEITUNG | - | - | - | Zustand Messleitung |
 
-<a id="table-res-0xe187-d"></a>
 ### RES_0XE187_D
 
 Dimensions: 2 rows × 10 columns
@@ -2101,7 +2009,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KL15_TREIBER | 0/1 | high | unsigned char | - | - | - | - | - | Zustand Treiber: 0 = aus, 1 = ein |
 | STAT_KL15_TREIBER_I_WERT | mA | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Strom durch den Treiber |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 21 rows × 16 columns
@@ -2130,7 +2037,6 @@ Dimensions: 21 rows × 16 columns
 | _SLZ_ANZ_AUTH_VERSUCHE | 0x400B | STAT_ANZ_AUTH_VERSUCHE_WERT | Anzahl Versuche | - | - | high | unsigned char | - | 1.0 | 1.0 | 0.0 | - | 22 | - | - |
 | SCHLUESSEL_TRSP_EXTENDED | 0x400C | - | Erweiterte Schlüsseldaten | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x400C_D |
 
-<a id="table-svk-version-dop"></a>
 ### SVK_VERSION_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -2140,7 +2046,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | reserved |
 | 1 | SVKVersion_01 |
 
-<a id="table-tab-cas-rssi-commands"></a>
 ### TAB_CAS_RSSI_COMMANDS
 
 Dimensions: 3 rows × 2 columns
@@ -2151,7 +2056,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Start RSSI Check |
 | 2 | RSSI Daten abfragen |
 
-<a id="table-tab-mr-bolzen-treiber"></a>
 ### TAB_MR_BOLZEN_TREIBER
 
 Dimensions: 4 rows × 2 columns
@@ -2163,7 +2067,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Verriegeln |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-mr-res-routinestatus-slz"></a>
 ### TAB_MR_RES_ROUTINESTATUS_SLZ
 
 Dimensions: 6 rows × 2 columns
@@ -2177,7 +2080,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Schlüssel fehlerfrei ausgelesen |
 | 0xFF | Routine Status nicht definiert |
 
-<a id="table-tab-mr-slz-bolzen-position"></a>
 ### TAB_MR_SLZ_BOLZEN_POSITION
 
 Dimensions: 7 rows × 2 columns
@@ -2192,7 +2094,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Schalterzustand ungültig |
 | 0xFF | Nicht definiert |
 
-<a id="table-tab-mr-slz-fb-batt"></a>
 ### TAB_MR_SLZ_FB_BATT
 
 Dimensions: 4 rows × 2 columns
@@ -2204,7 +2105,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | gut |
 | 0xFF | unbekannt |
 
-<a id="table-tab-mr-slz-messleitung"></a>
 ### TAB_MR_SLZ_MESSLEITUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2216,7 +2116,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Zustand unbekannt |
 | 0xFF | Zustand ungültig |
 
-<a id="table-tab-steuern-ews4-mode"></a>
 ### TAB_STEUERN_EWS4_MODE
 
 Dimensions: 10 rows × 4 columns
@@ -2234,7 +2133,6 @@ Dimensions: 10 rows × 4 columns
 | 0x11 | UNLOCK_CLEAR_TRSP_SK | Clear Trsp-Sk | 16 |
 | 0xFF | UNKNOWN_MODE | UNKNOWN_MODE | 0 |
 
-<a id="table-tab-cas-keytype"></a>
 ### TAB_CAS_KEYTYPE
 
 Dimensions: 4 rows × 2 columns
@@ -2246,7 +2144,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | Drivers-Key |
 | 5 | ID-Geber |
 
-<a id="table-tab-cas-schluesselsperre"></a>
 ### TAB_CAS_SCHLUESSELSPERRE
 
 Dimensions: 4 rows × 2 columns
@@ -2258,7 +2155,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Schlüssel temporär gesperrt wegen CA-Funktion |
 | 255 | ungültig |
 
-<a id="table-tab-cas-trsp-initstatus"></a>
 ### TAB_CAS_TRSP_INITSTATUS
 
 Dimensions: 28 rows × 2 columns
@@ -2294,7 +2190,6 @@ Dimensions: 28 rows × 2 columns
 | 26 | IS_CFG_WD: Transponder Konfiguration WORD wird geschrieben |
 | 255 | IS_NOT_INIT: Schlüssel ist nicht an diesem SG angelernt |
 
-<a id="table-tab-cas-schluesseldaten-initstatus"></a>
 ### TAB_CAS_SCHLUESSELDATEN_INITSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -2307,7 +2202,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | IS_KEYCFG_WR_TRSP: Schreibe Schlüsseldaten in den Transponder. Detailierten Status sh. STATUS_SCHLUESSEL_TRSP result STAT_INIT_DONE. |
 | 255 | IS_DEFAULT: Default Wert / Anlieferzustand |
 
-<a id="table-tab-cas-schluessel-position"></a>
 ### TAB_CAS_SCHLUESSEL_POSITION
 
 Dimensions: 14 rows × 2 columns
@@ -2329,7 +2223,6 @@ Dimensions: 14 rows × 2 columns
 | 254 | Sonderfunktion SG wach halten |
 | 255 | unbekannt |
 
-<a id="table-tab-cas-trsp-type"></a>
 ### TAB_CAS_TRSP_TYPE
 
 Dimensions: 5 rows × 2 columns
@@ -2342,7 +2235,6 @@ Dimensions: 5 rows × 2 columns
 | 4 | TI CRAID |
 | 255 | unbekannt |
 
-<a id="table-tab-cas-trsp-error"></a>
 ### TAB_CAS_TRSP_ERROR
 
 Dimensions: 63 rows × 2 columns
@@ -2413,7 +2305,6 @@ Dimensions: 63 rows × 2 columns
 | 68 | IERR_INVALID_MLC_CS - Checksumme mechanischer Schließcode ungültig |
 | 255 | Unbekannter Fehlerstatus |
 
-<a id="table-tab-cas-freq"></a>
 ### TAB_CAS_FREQ
 
 Dimensions: 11 rows × 2 columns
@@ -2432,7 +2323,6 @@ Dimensions: 11 rows × 2 columns
 | 15 | Ungültige Frequenz |
 | 255 | Ungültige Frequenz / Kein zweiter Empfänger |
 
-<a id="table-tab-cas-fbd-batteriezustand"></a>
 ### TAB_CAS_FBD_BATTERIEZUSTAND
 
 Dimensions: 10 rows × 2 columns
@@ -2450,7 +2340,6 @@ Dimensions: 10 rows × 2 columns
 | 11 | Batterie gut - Kommunikation ohne Authentisierung |
 | 255 | unbekannt bzw. nicht relevant |
 
-<a id="table-tab-cas-trsp-key-config-supplier"></a>
 ### TAB_CAS_TRSP_KEY_CONFIG_SUPPLIER
 
 Dimensions: 4 rows × 2 columns
@@ -2462,7 +2351,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | kein HitagPro-Schlüssel |
 | 255 | unbekannt/ungültig |
 
-<a id="table-tab-cas-trsp-verriegelungsstatus"></a>
 ### TAB_CAS_TRSP_VERRIEGELUNGSSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -2476,7 +2364,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Kein normaler Anlieferzustand - Komplett unverriegelt |
 | 255 | unbekannter Transpondertyp |
 
-<a id="table-tab-trsp-key-data-consistent"></a>
 ### TAB_TRSP_KEY_DATA_CONSISTENT
 
 Dimensions: 3 rows × 2 columns

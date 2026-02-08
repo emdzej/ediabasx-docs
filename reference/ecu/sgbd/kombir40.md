@@ -54,7 +54,6 @@
 - [GWSZ_OFFSET_SCHREIBEN](#job-gwsz-offset-schreiben) - OFFSET-Wert des GWSZ in EEPROM schreiben
 - [STATUS_CAN_FUNKTION_LESEN](#job-status-can-funktion-lesen) - Zeigt an, ob CAN-Funktionalitaet vorhanden ist
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -67,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -80,7 +78,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -98,7 +95,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -117,7 +113,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -130,7 +125,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -143,7 +137,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -156,7 +149,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -174,7 +166,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -199,7 +190,6 @@ _No arguments._
 | ID_CAN_INDEX | int | CAN-Index |
 | ID_AENDERUNGSINDEX | int | Aenderungsindex |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicherinhalt aus SG lesen
@@ -232,7 +222,6 @@ _No arguments._
 | F_UW_ANZ | int | immer 0 |
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 
-<a id="job-software-reset"></a>
 ### SOFTWARE_RESET
 
 Kombi loest selbststaendig einen Reset aus
@@ -245,7 +234,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -263,7 +251,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 GWSZ zuruecksetzen, nur moeglich wenn Km-Stand < 255
@@ -276,7 +263,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-aif-gwsz-lesen"></a>
 ### AIF_GWSZ_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen
@@ -292,7 +278,6 @@ _No arguments._
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-aif-zentralcode-lesen"></a>
 ### AIF_ZENTRALCODE_LESEN
 
 Anwenderinfofeld Block 4 auslesen
@@ -310,7 +295,6 @@ _No arguments._
 | STAT_ZENTRALCODE_ANLIEFERCODIERUNG | int | True falls der Zentralcode der Anliefercodierung entspricht |
 | TELEGRAMM | binary |  |
 
-<a id="job-aif-fg-nr-lesen"></a>
 ### AIF_FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -325,7 +309,6 @@ _No arguments._
 | AIF_FG_NR | string | Fahrgestellnummer |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-aif-datum-fz-lesen"></a>
 ### AIF_DATUM_FZ_LESEN
 
 Auslesen des Herstelldatums des FZ
@@ -340,7 +323,6 @@ _No arguments._
 | DATUM_FZ | string | Herstelldatum des FZ |
 | TELEGRAMM | binary |  |
 
-<a id="job-prod-datum-lesen"></a>
 ### PROD_DATUM_LESEN
 
 _No arguments._
@@ -354,7 +336,6 @@ _No arguments._
 | MONAT | string |  |
 | JAHR | string |  |
 
-<a id="job-aif-sia-daten-lesen"></a>
 ### AIF_SIA_DATEN_LESEN
 
 Anwenderinfofeld Block 3 auslesen
@@ -383,7 +364,6 @@ _No arguments._
 | STAT_SERVICE_ART | int | 0 = Inspektion, 1 = Oelservice |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-anzeige"></a>
 ### STEUERN_ANZEIGE
 
 Anzeigenkomponenten steuern
@@ -402,7 +382,6 @@ Anzeigenkomponenten steuern
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-gong"></a>
 ### STEUERN_GONG
 
 Gong ansteuern
@@ -420,7 +399,6 @@ Gong ansteuern
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-leuchte"></a>
 ### STEUERN_LEUCHTE
 
 Leuchten in der Anzeigeeinheit ansteuern Es muessen 7 Argumente uebergeben werden. Die Belegung der Datenbytes ist separat beschrieben.
@@ -444,7 +422,6 @@ Leuchten in der Anzeigeeinheit ansteuern Es muessen 7 Argumente uebergeben werde
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 I/O-Port-Ausgaenge steuern
@@ -462,7 +439,6 @@ I/O-Port-Ausgaenge steuern
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | TELEGRAMM | binary | Telegramm an SG |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Eingangs- und Ausgangsstati lesen
@@ -484,7 +460,6 @@ _No arguments._
 | STAT_KOMBITASTE_EIN | int | 1, wenn "TRUE", 0, wenn "FALSE" |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 Spezielle analoge Eingaenge lesen
@@ -506,7 +481,6 @@ _No arguments._
 | STAT_GESCHWINDIGKEIT_EINH | string | Einheit [km/h] |
 | ANTWORT | binary | Antworttelegramm von SG |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 RAM-Speicher auslesen
@@ -526,7 +500,6 @@ RAM-Speicher auslesen
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | DATEN | binary | Datenfeld |
 
-<a id="job-rom-lesen"></a>
 ### ROM_LESEN
 
 ROM-Speicher auslesen
@@ -545,7 +518,6 @@ ROM-Speicher auslesen
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | DATEN | binary | Datenfeld |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 EEPROM-Speicher auslesen
@@ -564,7 +536,6 @@ EEPROM-Speicher auslesen
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | DATEN | binary | Datenfeld |
 
-<a id="job-dpram-lesen"></a>
 ### DPRAM_LESEN
 
 DPRAM-Speicher auslesen
@@ -583,7 +554,6 @@ DPRAM-Speicher auslesen
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | DATEN | binary | Datenfeld |
 
-<a id="job-zcs-lesen"></a>
 ### ZCS_LESEN
 
 Anwenderinfofeld Wortadr. 34-3D auslesen
@@ -600,7 +570,6 @@ _No arguments._
 | VM | string | C3 Zifferncode fuer Versionsmerkmal |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -613,7 +582,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-gwsz-offset-lesen"></a>
 ### GWSZ_OFFSET_LESEN
 
 OFFSET-Wert des GWSZ aus EEPROM lesen
@@ -627,7 +595,6 @@ _No arguments._
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 | GWSZ_OFFSET_WERT | int | absoluter Offset-Wert des GWSZ (0-255) |
 
-<a id="job-gwsz-offset-schreiben"></a>
 ### GWSZ_OFFSET_SCHREIBEN
 
 OFFSET-Wert des GWSZ in EEPROM schreiben
@@ -644,7 +611,6 @@ OFFSET-Wert des GWSZ in EEPROM schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | Job-Status: OKAY, ERROR_.. |
 
-<a id="job-status-can-funktion-lesen"></a>
 ### STATUS_CAN_FUNKTION_LESEN
 
 Zeigt an, ob CAN-Funktionalitaet vorhanden ist
@@ -673,7 +639,6 @@ _No arguments._
 - [PROGRAMMINFO](#table-programminfo) (7 × 2)
 - [KOMPONENTEN](#table-komponenten) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -691,7 +656,6 @@ Dimensions: 10 rows × 2 columns
 | ?20? | ERROR_FEHLERANZAHL |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns
@@ -746,7 +710,6 @@ Dimensions: 47 rows × 2 columns
 | 0x46 | Gemel |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -775,7 +738,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 3 rows × 2 columns
@@ -786,7 +748,6 @@ Dimensions: 3 rows × 2 columns
 | WEG_RESET | 0x02 |
 | ZEIT_RESET | 0x04 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -813,7 +774,6 @@ Dimensions: 19 rows × 2 columns
 | 0xFB | keine CAN ID EGS1 |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -829,7 +789,6 @@ Dimensions: 8 rows × 2 columns
 | 0x08 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-getriebetypen"></a>
 ### GETRIEBETYPEN
 
 Dimensions: 3 rows × 2 columns
@@ -840,7 +799,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Automatikgetriebe (EGS) |
 | 0xFF | unbekannte Getriebeart |
 
-<a id="table-programminfo"></a>
 ### PROGRAMMINFO
 
 Dimensions: 7 rows × 2 columns
@@ -855,7 +813,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Anzeige aus |
 | 0xFF | unbekannte Programminfo |
 
-<a id="table-komponenten"></a>
 ### KOMPONENTEN
 
 Dimensions: 6 rows × 2 columns

@@ -58,7 +58,6 @@
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 - [STATUS_SW_VERSION](#job-status-sw-version) - HELBAKO Software Version
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -77,7 +76,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -90,7 +88,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -107,7 +104,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -139,7 +135,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -184,7 +179,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -203,7 +197,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -221,7 +214,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -242,7 +234,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -271,7 +262,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -291,7 +281,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -312,7 +301,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -328,7 +316,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -350,7 +337,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -372,7 +358,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -391,7 +376,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -418,7 +402,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -463,7 +446,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -478,7 +460,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -498,7 +479,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -517,7 +497,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -536,7 +515,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -551,7 +529,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -570,7 +547,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -590,7 +566,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -606,7 +581,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -640,7 +614,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -655,7 +628,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -670,7 +642,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -687,7 +658,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -702,7 +672,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -717,7 +686,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -732,7 +700,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen"></a>
 ### CALID_CVN_LESEN
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -750,7 +717,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -769,7 +735,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -789,7 +754,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -807,7 +771,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -823,7 +786,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-sw-version"></a>
 ### STATUS_SW_VERSION
 
 HELBAKO Software Version
@@ -906,7 +868,6 @@ _No arguments._
 - [TAB_TAV_STATUS_2](#table-tab-tav-status-2) (5 × 2)
 - [TAB_U_TANKKLAPPENVERRIEGELUNG](#table-tab-u-tankklappenverriegelung) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -990,7 +951,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 149 rows × 2 columns
@@ -1147,7 +1107,6 @@ Dimensions: 149 rows × 2 columns
 | 0x0000CA | SEG Automotive Germany GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1190,7 +1149,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1215,7 +1173,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1249,7 +1206,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1322,7 +1278,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1335,7 +1290,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1350,7 +1304,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1363,7 +1316,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -1385,7 +1337,6 @@ Dimensions: 14 rows × 3 columns
 | 0x61 | ECUSUPSPEC | ECUSupplierSpecificSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 358 rows × 3 columns
@@ -1751,7 +1702,6 @@ Dimensions: 358 rows × 3 columns
 | 0xF070 | Motorrad Scheinwerfer | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1760,7 +1710,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 224 rows × 2 columns
@@ -1992,7 +1941,6 @@ Dimensions: 224 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2035,7 +1983,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2046,7 +1993,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0xa0f0-r"></a>
 ### ARG_0XA0F0_R
 
 Dimensions: 2 rows × 14 columns
@@ -2056,7 +2002,6 @@ Dimensions: 2 rows × 14 columns
 | ZUSTAND | + | - | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00 = NICHT_AKTIV = unbestromt, d. h. TAV geoeffnet; 0x01 = AKTIV = bestromt, d.h. TAV geschlossen; |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Ansteuerzeit für das Aufrechterhalten der Diagnoseansteuerung |
 
-<a id="table-arg-0xa0f1-r"></a>
 ### ARG_0XA0F1_R
 
 Dimensions: 2 rows × 14 columns
@@ -2066,7 +2011,6 @@ Dimensions: 2 rows × 14 columns
 | ZUSTAND | + | - | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x01 = AKTIV = bestromt, d.h. AIV/FTIV geoeffnet; 0x00 = NICHT_AKTIV = unbestromt, d. h. AIV/FTIV geschlossen |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Ansteuerzeit für das Aufrechterhalten der Diagnoseansteuerung |
 
-<a id="table-arg-0xa0f2-r"></a>
 ### ARG_0XA0F2_R
 
 Dimensions: 1 rows × 14 columns
@@ -2075,7 +2019,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BEZUGSSENSOR | + | - | 0-n | high | unsigned char | - | TAB_STEUERN_SENSORABGLEICH | - | - | - | - | - | Steuern / Starten Sensorabgleich Tankdrucksensor zu Drucksensor (R)DME |
 
-<a id="table-arg-0xa0f3-r"></a>
 ### ARG_0XA0F3_R
 
 Dimensions: 2 rows × 14 columns
@@ -2085,7 +2028,6 @@ Dimensions: 2 rows × 14 columns
 | VERSORGUNGSZUSTAND | + | - | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0x00 AUS; 0x01 EIN |
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Zeitdauer Ansteuerung Spannungsversorgung Tankdrucksensor für das Aufrechterhalten des Diagnosezustands, danach Rückkehr in normalen Betriebszustand |
 
-<a id="table-arg-0xa0f4-r"></a>
 ### ARG_0XA0F4_R
 
 Dimensions: 2 rows × 14 columns
@@ -2095,7 +2037,6 @@ Dimensions: 2 rows × 14 columns
 | ZEIT | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Ansteuerzeit für das Aufrechterhalten der Diagnoseansteuerung (max. 20s) |
 | RICHTUNG | + | - | 0-n | high | unsigned char | - | TAB_STEUERN_U_TANKKLAPPENVERRIEGELUNG | - | - | - | - | - | Ansteuerung der Tankklappenverriegelung mit kontinuierlicher Aufrechterhaltung der Bestromung (mit  Haltestrom ) |
 
-<a id="table-arg-0xd2f2-d"></a>
 ### ARG_0XD2F2_D
 
 Dimensions: 2 rows × 12 columns
@@ -2105,7 +2046,6 @@ Dimensions: 2 rows × 12 columns
 | RICHTUNG | 0-n | high | unsigned char | - | TAB_STEUERN_TANKKLAPPENRIEGEL | - | - | - | - | - | Richtung in der die Tankdeckelverriegelung gefahren werden soll; 0x00 = Verriegelung öffnen/geöffnet; 0x01 = Verriegelung schließen/geschlossen |
 | ZEIT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Ansteuerzeit für das Aufrechterhalten des Diagnosezustands, danach Rückkehr in normalen Betriebszustand 0-255 Sekunden |
 
-<a id="table-arg-0xd2ff-d"></a>
 ### ARG_0XD2FF_D
 
 Dimensions: 1 rows × 12 columns
@@ -2114,7 +2054,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | high | unsigned char | - | TAB_RUECK_TAV_SICHER | - | - | - | - | - | 1 = Ruecksetzen; 0 = keine Aktion |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2128,7 +2067,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2142,7 +2080,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | ja |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 82 rows × 4 columns
@@ -2232,7 +2169,6 @@ Dimensions: 82 rows × 4 columns
 | 0xD05414 | Botschaft Querbeschleunigung Schwerpunkt (19Ah): Ausfall | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 24 rows × 9 columns
@@ -2264,7 +2200,6 @@ Dimensions: 24 rows × 9 columns
 | 0xD2FE | AUSSENTEMPERATUR_FZG_TFM | °C | High | signed char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2277,7 +2212,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 33 rows × 4 columns
@@ -2318,7 +2252,6 @@ Dimensions: 33 rows × 4 columns
 | 0x1D0040 | Watchdog-Reset | 0 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 24 rows × 9 columns
@@ -2350,7 +2283,6 @@ Dimensions: 24 rows × 9 columns
 | 0xD2FE | AUSSENTEMPERATUR_FZG_TFM | °C | High | signed char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2359,7 +2291,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x4006-r"></a>
 ### RES_0X4006_R
 
 Dimensions: 1 rows × 13 columns
@@ -2368,7 +2299,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RAM_DATEN_SCHREIBEN | - | - | + | 0-n | high | unsigned char | - | STATUS_RAM_DATEN_SCHREIBEN_TAB | - | - | - | Status RAM_DATEN_SCHREIBEN |
 
-<a id="table-res-0xa0f0-r"></a>
 ### RES_0XA0F0_R
 
 Dimensions: 1 rows × 13 columns
@@ -2377,7 +2307,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TAV_NR | - | - | + | 0-n | high | unsigned char | - | TAB_TAV_STATUS_2 | - | - | - | Status Betriebszustand des TAV |
 
-<a id="table-res-0xa0f1-r"></a>
 ### RES_0XA0F1_R
 
 Dimensions: 1 rows × 13 columns
@@ -2386,7 +2315,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AIV_FTIV_NR | - | - | + | 0-n | high | unsigned char | - | TAB_AIV_FTIV_STATUS | - | - | - | Status Betriebszustand AIV bzw. FTIV |
 
-<a id="table-res-0xa0f2-r"></a>
 ### RES_0XA0F2_R
 
 Dimensions: 1 rows × 13 columns
@@ -2395,7 +2323,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_STATUS_ABGLEICH_NR | - | - | + | 0-n | high | unsigned char | - | TAB_STATUS_SENSORABGLEICH | - | - | - | Rückmeldung Status Sensorabgleich |
 
-<a id="table-res-0xa0f3-r"></a>
 ### RES_0XA0F3_R
 
 Dimensions: 1 rows × 13 columns
@@ -2404,7 +2331,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_VERSORGUNGSZUSTAND | - | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 0x00 AUS; 0x01 EIN |
 
-<a id="table-res-0xa0f4-r"></a>
 ### RES_0XA0F4_R
 
 Dimensions: 1 rows × 13 columns
@@ -2413,7 +2339,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_U_TANKKLAPPENVERRIEGELUNG | - | - | + | 0-n | high | unsigned char | - | TAB_U_TANKKLAPPENVERRIEGELUNG | - | - | - | Status der Bestromung der Tankklappenverriegelung |
 
-<a id="table-res-0xd2f1-d"></a>
 ### RES_0XD2F1_D
 
 Dimensions: 2 rows × 10 columns
@@ -2423,7 +2348,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TAV_NR | 0-n | high | unsigned char | - | TAB_TAV_STATUS | - | - | - | 0x00 = NICHT_AKTIV = unbestromt, d. h. TAV geoeffnet; 0x01 = AKTIV = bestromt, d.h. TAV geschlossen; 0x02 = TAV fehlerhaft; 0x03 = Fahrzeugtyp ohne TAV |
 | STAT_AIV_FTIV_NR | 0-n | high | unsigned char | - | TAB_AIV_FTIV_STATUS | - | - | - | 0x00 = NICHT_AKTIV = unbestromt, d. h. AIV/FTIV geschlossen; 0x01 = AKTIV = bestromt, d.h. AIV/FTIV geoeffnet; 0x02 AIV-FTIV fehlerhaft |
 
-<a id="table-res-0xd2f2-d"></a>
 ### RES_0XD2F2_D
 
 Dimensions: 1 rows × 10 columns
@@ -2432,7 +2356,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TANKKLAPPENRIEGEL_NR | 0-n | high | unsigned char | - | TAB_STATUS_TANKKLAPPENRIEGEL | - | - | - | Status der Tankklappenverriegelung |
 
-<a id="table-res-0xd2f3-d"></a>
 ### RES_0XD2F3_D
 
 Dimensions: 2 rows × 10 columns
@@ -2442,7 +2365,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BETANKUNGSTASTER_NR | 0-n | high | unsigned char | - | TAB_STAT_TASTER | - | - | - | Status des Betankungstasters: 0x00 = nicht gedrückt, 0x01 = gedrückt, 0x02 = Betankungstaster fehlerhaft |
 | STAT_TANKKLAPPENSENSOR_NR | 0-n | high | unsigned char | - | TAB_STAT_TANKKLAPPE | - | - | - | Status des  Tankklappensensors: 0x00 = Tankklappe geöffnet, 0x01 = Tankklappe geschlossen, 0x02 = Tankklappensensor fehlerhaft |
 
-<a id="table-res-0xd2f4-d"></a>
 ### RES_0XD2F4_D
 
 Dimensions: 9 rows × 10 columns
@@ -2459,7 +2381,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_DRUCKSENSOR_SG_INTERN_WERT | hPa | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | aktueller Messwert Drucksensor SG-intern (derzeit im TFM nicht benutzt) |
 | STAT_BETRIEBSSPANNUNG_WERT | V | high | unsigned char | - | - | 1.0 | 10.0 | 0.0 | aktueller Messwert der anliegenden Versorgungsspannung |
 
-<a id="table-res-0xd2f5-d"></a>
 ### RES_0XD2F5_D
 
 Dimensions: 2 rows × 10 columns
@@ -2469,7 +2390,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TANK_INNEN_TEMP_ROH_WERT | °C | high | signed int | - | - | 1.0 | 10.0 | 0.0 | direkter physikalischer Messwert Tankinnentemperatur des pT-Sensors (nur TFM LIN) |
 | STAT_TANK_INNEN_DRUCK_ROH_WERT | hPa | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | direkter physikalischer Messwert absoluter Tankinnendruck des pT-Sensors (nur TFM LIN) |
 
-<a id="table-res-0xd2f8-d"></a>
 ### RES_0XD2F8_D
 
 Dimensions: 2 rows × 10 columns
@@ -2479,7 +2399,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TANKDRUCKSENSOR_HW_VERSION_TEXT | TEXT | high | string[3] | - | - | 1.0 | 1.0 | 0.0 | Hardwareversion Tankdrucksensor; Ausgabe in Format X.Y.Z entspricht Hauptversion.Unterversion.Patchversion kodiert in ASCII (0-9, A-F) |
 | STAT_TANKDRUCKSENSOR_SW_VERSION_TEXT | TEXT | high | string[3] | - | - | 1.0 | 1.0 | 0.0 | Softwareversion Tankdrucksensor; Ausgabe in Format X.Y.Z entspricht Hauptversion.Unterversion.Patchversion kodiert in ASCII (0-9, A-F) |
 
-<a id="table-res-0xd2fa-d"></a>
 ### RES_0XD2FA_D
 
 Dimensions: 4 rows × 10 columns
@@ -2491,7 +2410,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TANK_INNEN_DRUCK_ABSOLUT_WERT | hPa | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | offsetkompensierter absoluter Tankinnendruckmesswert |
 | STAT_TANK_INNEN_TEMP_WERT | °C | high | signed int | - | - | 1.0 | 10.0 | 0.0 | offsetkompensierter Messwert Tankinnentemperatur des pT-Sensors |
 
-<a id="table-res-0xd2fb-d"></a>
 ### RES_0XD2FB_D
 
 Dimensions: 5 rows × 10 columns
@@ -2504,7 +2422,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_T_TANK_MIN_LECKDIAGOSE_WERT | °C | high | signed int | - | - | 1.0 | 10.0 | 0.0 | minimale Temperatur während der Leckdiagnose (T_Tank_min) |
 | STAT_T_TANK_MAX_LECKDIAGOSE_WERT | °C | high | signed int | - | - | 1.0 | 10.0 | 0.0 | maximale Temperatur während der Leckdiagnose (T_Tank_max) |
 
-<a id="table-res-0xd2fc-d"></a>
 ### RES_0XD2FC_D
 
 Dimensions: 2 rows × 10 columns
@@ -2514,7 +2431,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FUELLSTAND_TANK_WERT | l | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | aktueller Tankfüllstand |
 | STAT_ENTNAHME_KRAFTSTOFF_TANK_WERT | l | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | entnommene Kraftstoffmenge seit letzter Tankklappenöffnung |
 
-<a id="table-res-0xe2e0-d"></a>
 ### RES_0XE2E0_D
 
 Dimensions: 2 rows × 10 columns
@@ -2524,7 +2440,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TANK_INNEN_TEMP_ROH_WERT | °C | high | signed int | - | - | 1.0 | 10.0 | 0.0 | direkter physikalischer Messwert Tankinnentemperatur des pT-Sensors (nur TFM SENT) |
 | STAT_TANK_INNEN_DRUCK_ROH_RELATIV_WERT | hPa | high | signed int | - | - | 1.0 | 10.0 | 0.0 | direkter physikalischer Messwert relativer Tankinnendruck des pT-Sensors (nur TFM SENT) |
 
-<a id="table-res-0xe2e1-d"></a>
 ### RES_0XE2E1_D
 
 Dimensions: 2 rows × 10 columns
@@ -2534,7 +2449,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SERIENNUMMER_DATA | DATA | high | data[3] | - | - | 1.0 | 1.0 | 0.0 | Seriennummer pT-Sensor (nur TFM SENT) |
 | STAT_HERSTELLERNUMMER_DATA | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | Herstellernummer pT-Sensor (nur TFM SENT) |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 38 rows × 16 columns
@@ -2580,7 +2494,6 @@ Dimensions: 38 rows × 16 columns
 | TFM_TANKDRUCKSENSOR_RELATIV_DATEN | 0xE2E0 | - | Messwerte Außen liegender pT-Sensor Kraftstofftank | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xE2E0_D |
 | TFM_TANKDRUCKSENSOR_RELATIV_ID | 0xE2E1 | - | Tankdrucksensor Relativ-ID | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xE2E1_D |
 
-<a id="table-status-ram-daten-schreiben-tab"></a>
 ### STATUS_RAM_DATEN_SCHREIBEN_TAB
 
 Dimensions: 4 rows × 2 columns
@@ -2592,7 +2505,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Schreiben läuft |
 | 0x03 | Schreiben noch nicht angestoßen (Routine nicht gestartet) |
 
-<a id="table-tab-aiv-ftiv-status"></a>
 ### TAB_AIV_FTIV_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -2604,7 +2516,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | AIV-FTIV fehlerhaft |
 | 0xFF | ungültig |
 
-<a id="table-tab-rueck-tav-sicher"></a>
 ### TAB_RUECK_TAV_SICHER
 
 Dimensions: 2 rows × 2 columns
@@ -2614,7 +2525,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | keine Aktion |
 | 0x01 | Ruecksetzen abgesicherter Modus Drucktank/TAV |
 
-<a id="table-tab-status-sensorabgleich"></a>
 ### TAB_STATUS_SENSORABGLEICH
 
 Dimensions: 5 rows × 2 columns
@@ -2627,7 +2537,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Abgleich nicht möglich - nicht zulässig |
 | 0xFF | nicht belegt |
 
-<a id="table-tab-status-tankklappenriegel"></a>
 ### TAB_STATUS_TANKKLAPPENRIEGEL
 
 Dimensions: 4 rows × 2 columns
@@ -2639,7 +2548,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Verriegelung fehlerhaft |
 | 0xFF | ungültig |
 
-<a id="table-tab-status-tev"></a>
 ### TAB_STATUS_TEV
 
 Dimensions: 15 rows × 2 columns
@@ -2662,7 +2570,6 @@ Dimensions: 15 rows × 2 columns
 | 0x0F | TEV-Status nicht verfügbar |
 | 0xFF | unbekannt |
 
-<a id="table-tab-stat-tankklappe"></a>
 ### TAB_STAT_TANKKLAPPE
 
 Dimensions: 4 rows × 2 columns
@@ -2674,7 +2581,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Tankklappensensor fehlerhaft |
 | 0xFF | ungültig |
 
-<a id="table-tab-stat-taster"></a>
 ### TAB_STAT_TASTER
 
 Dimensions: 4 rows × 2 columns
@@ -2686,7 +2592,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Taster fehlerhaft |
 | 0xFF | ungültig |
 
-<a id="table-tab-steuern-sensorabgleich"></a>
 ### TAB_STEUERN_SENSORABGLEICH
 
 Dimensions: 2 rows × 2 columns
@@ -2696,7 +2601,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | default ungültig; Vermeidung unbeabsichtigter Abgleich |
 | 0x01 | Steuern - Starten Sensorabgleich Tankdrucksensor zu Drucksensor (R)DME |
 
-<a id="table-tab-steuern-tankklappenriegel"></a>
 ### TAB_STEUERN_TANKKLAPPENRIEGEL
 
 Dimensions: 3 rows × 2 columns
@@ -2707,7 +2611,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Verriegelung schließen |
 | 0xFF | ungültig |
 
-<a id="table-tab-steuern-u-tankklappenverriegelung"></a>
 ### TAB_STEUERN_U_TANKKLAPPENVERRIEGELUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2719,7 +2622,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | AKTIV mit Polarität Entriegeln |
 | 0xFF | ungültig |
 
-<a id="table-tab-tav-status"></a>
 ### TAB_TAV_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -2732,7 +2634,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Fahrzeugtyp ohne TAV |
 | 0xFF | ungültig |
 
-<a id="table-tab-tav-status-2"></a>
 ### TAB_TAV_STATUS_2
 
 Dimensions: 5 rows × 2 columns
@@ -2745,7 +2646,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Fahrzeugtyp ohne TAV |
 | 0xFF | ungültig |
 
-<a id="table-tab-u-tankklappenverriegelung"></a>
 ### TAB_U_TANKKLAPPENVERRIEGELUNG
 
 Dimensions: 4 rows × 2 columns

@@ -24,7 +24,6 @@
 - [STEUERN_PWF_MESSEMODUS_FUNKTIONAL](#job-steuern-pwf-messemodus-funktional) - Einstellen des MESSEMODUS UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $102F DataIdentifier STEUERN_PWF_MESSEMODUS UDS     : $00   MESSEMODUS_NICHT_AKTIV UDS     : $01   MESSEMODUS_AKTIV
 - [STATUS_PWF_MESSEMODUS_FUNKTIONAL](#job-status-pwf-messemodus-funktional) - Messe-Mode auslesen UDS:    $22   ReadDataByIdentifier UDS:    $2532 DataIdentifier STAT_PWF_MESSEMODUS
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -37,7 +36,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-steuern-pwf-messemodus-funktional"></a>
 ### STEUERN_PWF_MESSEMODUS_FUNKTIONAL
 
 Einstellen des MESSEMODUS UDS     : $31   RoutineControlRequestServiceID UDS     : $01   startRoutine UDS     : $102F DataIdentifier STEUERN_PWF_MESSEMODUS UDS     : $00   MESSEMODUS_NICHT_AKTIV UDS     : $01   MESSEMODUS_AKTIV
@@ -79,7 +76,6 @@ Einstellen des MESSEMODUS UDS     : $31   RoutineControlRequestServiceID UDS    
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pwf-messemodus-funktional"></a>
 ### STATUS_PWF_MESSEMODUS_FUNKTIONAL
 
 Messe-Mode auslesen UDS:    $22   ReadDataByIdentifier UDS:    $2532 DataIdentifier STAT_PWF_MESSEMODUS
@@ -112,7 +108,6 @@ Messe-Mode auslesen UDS:    $22   ReadDataByIdentifier UDS:    $2532 DataIdentif
 - [FUNKTIONALEADRESSE](#table-funktionaleadresse) (1 × 3)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (1 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -196,7 +191,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-grobname"></a>
 ### GROBNAME
 
 Dimensions: 116 rows × 2 columns
@@ -320,7 +314,6 @@ Dimensions: 116 rows × 2 columns
 | 0xAB | MMCDSP |
 | 0xXY | ???? |
 
-<a id="table-funktionaleadresse"></a>
 ### FUNKTIONALEADRESSE
 
 Dimensions: 1 rows × 3 columns
@@ -329,7 +322,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xDF | ALL | alle Steuergeräte |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns

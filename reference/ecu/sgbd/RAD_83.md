@@ -70,7 +70,6 @@
 - [STEUERN_SINUSGENERATOR_EIN](#job-steuern-sinusgenerator-ein) - activates the sinus generator:
 - [STEUERN_SINUSGENERATOR_AUS](#job-steuern-sinusgenerator-aus) - stopps the sinus generator
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -89,7 +88,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -102,7 +100,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -123,7 +120,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -142,7 +138,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -155,7 +150,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -185,7 +179,6 @@ _No arguments._
 | ID_VF_DIAG | string | auslesen des VF-Status moeglich |
 | ID_AN_AUS_DIAG | string | auslesen ob Radio ein aus moeglich |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -206,7 +199,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -219,7 +211,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 alle Stati des RADIO lesen
@@ -259,7 +250,6 @@ _No arguments._
 | STAT_USER_PTY | int | responds as integer, if user-PTY switch 0: PTY switch off 1: PTY switch on |
 | STAT_USER_REG | int | responds as integer, if user-REG switch 0: REG switch off 1: REG switch on |
 
-<a id="job-steuern-default-sound"></a>
 ### STEUERN_DEFAULT_SOUND
 
 Balance, Fader und Volume Defaulteinstellung
@@ -272,7 +262,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-lv"></a>
 ### STEUERN_FADER_LV
 
 Ansteuerung des Kanals links vorne
@@ -285,7 +274,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-rv"></a>
 ### STEUERN_FADER_RV
 
 Ansteuerung des Kanals rechts vorne
@@ -298,7 +286,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-rh"></a>
 ### STEUERN_FADER_RH
 
 Ansteuerung des Kanals rechts hinten
@@ -311,7 +298,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-fader-lh"></a>
 ### STEUERN_FADER_LH
 
 Ansteuerung des Kanals links hinten
@@ -324,7 +310,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vol-up"></a>
 ### STEUERN_VOL_UP
 
 Lautstaerkeerhoehung um 11dB/s
@@ -341,7 +326,6 @@ Lautstaerkeerhoehung um 11dB/s
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vol-down"></a>
 ### STEUERN_VOL_DOWN
 
 Lautstaerkenabsenkung um 11dB/s
@@ -358,7 +342,6 @@ Lautstaerkenabsenkung um 11dB/s
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-seek-up"></a>
 ### STEUERN_SEEK_UP
 
 Suchlauf aufwaerts
@@ -371,7 +354,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-seek-down"></a>
 ### STEUERN_SEEK_DOWN
 
 Suchlauf abwaerts
@@ -384,7 +366,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-audio-key"></a>
 ### STEUERN_AUDIO_KEY
 
 Audio-Taste betaetigen
@@ -397,7 +378,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-gal-dek"></a>
 ### STEUERN_GAL_DEK
 
 GAL-WERT dekrementieren
@@ -410,7 +390,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-gal-ink"></a>
 ### STEUERN_GAL_INK
 
 GAL-WERT inkrementieren
@@ -423,7 +402,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vf-dek"></a>
 ### STEUERN_VF_DEK
 
 VF-Mindestlautstaerke dekrementieren
@@ -436,7 +414,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-vf-ink"></a>
 ### STEUERN_VF_INK
 
 VF-Mindestlautstaerke inkrementieren
@@ -449,7 +426,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-steuern-frequenz"></a>
 ### STEUERN_FREQUENZ
 
 einstellen der Radiofrequenz
@@ -466,7 +442,6 @@ einstellen der Radiofrequenz
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-radio-power"></a>
 ### STEUERN_RADIO_POWER
 
 Switch radio ON/OFF
@@ -483,7 +458,6 @@ Switch radio ON/OFF
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Herstelldaten lesen
@@ -497,7 +471,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | SERIEN_NR | string | Seriennummer vom Hersteller |
 
-<a id="job-fg-lesen"></a>
 ### FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -512,7 +485,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-cod-lesen"></a>
 ### COD_LESEN
 
 Auslesen der Codierung Radio
@@ -527,7 +499,6 @@ _No arguments._
 | COD_DATEN | string | die 4 Codierbytes |
 | COD_LAENDERVARIANTE | string | Laendervariante des Radios table LandVar LAND_TEXT |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -542,7 +513,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -560,7 +530,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -578,7 +547,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -595,7 +563,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-radio-schalten"></a>
 ### STEUERN_RADIO_SCHALTEN
 
 Ein-/Ausschalten des Radios KWP2000: $30 InputOutputControlByLocalIdentifier $0A inputOutputLocalIdentifier  - switch radio on or off $07 inputOutputControlParameter - ShortTermAdjustment Modus  : Default
@@ -614,7 +581,6 @@ Ein-/Ausschalten des Radios KWP2000: $30 InputOutputControlByLocalIdentifier $0A
 | JOB_STATUS | string | OKAY, if successful table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-qfs"></a>
 ### STATUS_ANT_QFS
 
 Auslesen des Status Quality Fieldstrength KWP2000: $30 InputOutputControlByLocalIdentifier $12 inputOutputLocalIdentifier  - status QFS $01 inputOutputControlParameter - reportCurrentState Modus  : Default
@@ -631,7 +597,6 @@ _No arguments._
 | STAT_ANT_PW | int | Antenna Power Supply Bereich: 0 = OFF, 1..15 = ON |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ser-nr-dom-lesen"></a>
 ### SER_NR_DOM_LESEN
 
 Seriennummer 14-stellig lesen Neu für Entertainment-Komponenten ab 2003 Modus  : Default
@@ -646,7 +611,6 @@ _No arguments._
 | SER_NR_DOM | string | Seriennummer Gerät 14-stellig |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-rds"></a>
 ### STEUERN_RDS
 
 Einstellen der RDS Optionen
@@ -664,7 +628,6 @@ Einstellen der RDS Optionen
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-folder-and-track-number"></a>
 ### STEUERN_FOLDER_AND_TRACK_NUMBER
 
 Select folder and track of internal drive
@@ -683,7 +646,6 @@ Select folder and track of internal drive
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-track-number"></a>
 ### STEUERN_TRACK_NUMBER
 
 select track of internal drive
@@ -701,7 +663,6 @@ select track of internal drive
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-cd-md-cdc"></a>
 ### STATUS_CD_MD_CDC
 
 responds drive status
@@ -718,7 +679,6 @@ _No arguments._
 | STAT_DISC_IDENT | string | responds as text the disc identifier ! bei Quelle != CD/MD nur Dummyergebnis |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-iboc"></a>
 ### STATUS_IBOC
 
 responds IBOC status
@@ -734,7 +694,6 @@ _No arguments._
 | STAT_ANALOG_DIGITAL_STATE | unsigned char | setting 0 analog__1 digital |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-rds"></a>
 ### STATUS_RDS
 
 responds all RDS state of the radio
@@ -750,7 +709,6 @@ _No arguments._
 | STAT_RDS_VALUE | string | 0 = AF off, TP on 1 = AF off, TP on 2 = AF on, TP off 3 = AF on, TP off |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-next-entsource"></a>
 ### STATUS_NEXT_ENTSOURCE
 
 responds current audio source
@@ -765,7 +723,6 @@ _No arguments._
 | STAT_ENTSOURCE | string | responds the hex-value of the current audio source  |
 | STAT_ENTSOURCE_TEXT | string | responds as text the active source   |
 
-<a id="job-steuern-next-entsource"></a>
 ### STEUERN_NEXT_ENTSOURCE
 
 selection of audio source new for entertainment-devices from 2005 on Modus  : Default
@@ -784,7 +741,6 @@ selection of audio source new for entertainment-devices from 2005 on Modus  : De
 | STAT_ENTSOURCE | string | responds the hex-value of the current audio source  |
 | STAT_ENTSOURCE_TEXT | string | responds as text the active source  |
 
-<a id="job-status-radio-schalten"></a>
 ### STATUS_RADIO_SCHALTEN
 
 ON/OFF status of the radio
@@ -798,7 +754,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if successful table JobResult STATUS_TEXT |
 | STAT_RADIO_EIN | int | 1: Radio on 0: Radio off |
 
-<a id="job-status-frequenz"></a>
 ### STATUS_FREQUENZ
 
 read frequency frequency in KHz 0 - 999999
@@ -811,7 +766,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-volumeaudio"></a>
 ### STEUERN_VOLUMEAUDIO
 
 Volume setting as hex-value from 0x00 to 0x3F
@@ -830,7 +784,6 @@ Volume setting as hex-value from 0x00 to 0x3F
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-audiokanaele"></a>
 ### STEUERN_AUDIOKANAELE
 
 selects the speaker
@@ -848,7 +801,6 @@ selects the speaker
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-dc"></a>
 ### STATUS_ANT_DC
 
 responds the status of antennea diversity
@@ -863,7 +815,6 @@ _No arguments._
 | STAT_ANT_DC | string | responds as text, if antennea diversity is present NOK: no antenna diversity present OK:  antenna diversity present |
 | STAT_ANT_DC_VALUE | int | responds as integer, if antennea diversity is present 1: no antenna diversity present 0: antenna diversity present |
 
-<a id="job-steuern-sinusgenerator-ein"></a>
 ### STEUERN_SINUSGENERATOR_EIN
 
 activates the sinus generator:
@@ -882,7 +833,6 @@ activates the sinus generator:
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-sinusgenerator-aus"></a>
 ### STEUERN_SINUSGENERATOR_AUS
 
 stopps the sinus generator
@@ -918,7 +868,6 @@ _No arguments._
 - [TRDSSTATUS](#table-trdsstatus) (4 × 2)
 - [TAUDIOVOLUME](#table-taudiovolume) (129 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -939,7 +888,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 93 rows × 2 columns
@@ -1040,7 +988,6 @@ Dimensions: 93 rows × 2 columns
 | 0x92 | CRH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1069,7 +1016,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1094,7 +1040,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1103,7 +1048,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -1114,7 +1058,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | nein |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1129,7 +1072,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1144,7 +1086,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -1159,7 +1100,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Internal CD-drive: read-error |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1168,7 +1108,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1177,7 +1116,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1188,7 +1126,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-diagindex"></a>
 ### DIAGINDEX
 
 Dimensions: 83 rows × 7 columns
@@ -1279,7 +1216,6 @@ Dimensions: 83 rows × 7 columns
 | 0x58 | CD53 R50 VDO | CD53_R50_VDO | 1 | 1 | 1 | 1 |
 | 0xFF | unknown kind of radio | unknown kind of radio | 0 | 0 | 0 | 0 |
 
-<a id="table-landvar"></a>
 ### LANDVAR
 
 Dimensions: 6 rows × 2 columns
@@ -1293,7 +1229,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | KANADA |
 | 0xXY | UNBEKANNT |
 
-<a id="table-tschaltmodi"></a>
 ### TSCHALTMODI
 
 Dimensions: 15 rows × 3 columns
@@ -1316,7 +1251,6 @@ Dimensions: 15 rows × 3 columns
 | 1 | 0x0C | Radio ein |
 | Fehler | 0xXY | Nicht definiert |
 
-<a id="table-tquellen"></a>
 ### TQUELLEN
 
 Dimensions: 50 rows × 5 columns
@@ -1374,7 +1308,6 @@ Dimensions: 50 rows × 5 columns
 | 49 | VIDEOTEXT | 0xFF | videotext | 0x0C |
 | 50 | NOT AVAILABLE | 0xFF | NOT AVAILABLE | 0xFF |
 
-<a id="table-trdsstatus"></a>
 ### TRDSSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -1386,7 +1319,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | AF-ein / TP-aus |
 | 3 | AF-ein / TP-ein |
 
-<a id="table-taudiovolume"></a>
 ### TAUDIOVOLUME
 
 Dimensions: 129 rows × 2 columns

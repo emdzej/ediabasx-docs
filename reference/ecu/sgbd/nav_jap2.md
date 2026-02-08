@@ -33,7 +33,6 @@
 - [ENERGIESPAR_MODE](#job-energiespar-mode) - Ausloesen des Fertigungs-, Transport und Werkstatt- Modes
 - [SW_VERSIONEN_LESEN](#job-sw-versionen-lesen) - Ident-Daten fuer das JNAV
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -52,7 +51,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -65,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer das JNAV
@@ -87,7 +84,6 @@ _No arguments._
 | ID_LIEF_NR | string | Lieferanten-Nummer |
 | ID_SW_NR | string | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen low-Konzept (lower als Lastenheft Codierung/Diagnose)
@@ -106,7 +102,6 @@ _No arguments._
 | F_HFK | int | immer 1 |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -120,7 +115,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -134,7 +128,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-system-status-lesen"></a>
 ### SYSTEM_STATUS_LESEN
 
 Systemstatus des Navigationsrechners
@@ -150,7 +143,6 @@ _No arguments._
 | STAT_VICS_AKTIV | int | 0 inaktiver VICS, 1 aktiver VICS |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Ausloesen des Selbsttest
@@ -163,7 +155,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-selbsttest-2"></a>
 ### SELBSTTEST_2
 
 Ausloesen des Selbsttest 2
@@ -176,7 +167,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-system-reset"></a>
 ### SYSTEM_RESET
 
 Ausloesen des Resets
@@ -189,7 +179,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-power-down"></a>
 ### POWER_DOWN
 
 Ausloesen des Power Down
@@ -208,7 +197,6 @@ Ausloesen des Power Down
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-energiespar-mode"></a>
 ### ENERGIESPAR_MODE
 
 Ausloesen des Fertigungs-, Transport und Werkstatt- Modes
@@ -227,7 +215,6 @@ Ausloesen des Fertigungs-, Transport und Werkstatt- Modes
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sw-versionen-lesen"></a>
 ### SW_VERSIONEN_LESEN
 
 Ident-Daten fuer das JNAV
@@ -255,7 +242,6 @@ _No arguments._
 - [JOBRESULT_DS2](#table-jobresult-ds2) (7 × 2)
 - [FORTTEXTE](#table-forttexte) (12 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -265,7 +251,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 86 rows × 2 columns
@@ -359,7 +344,6 @@ Dimensions: 86 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 59 rows × 2 columns
@@ -426,7 +410,6 @@ Dimensions: 59 rows × 2 columns
 | 0x58 | Autoliv |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -448,7 +431,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -472,7 +454,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresult-ds2"></a>
 ### JOBRESULT_DS2
 
 Dimensions: 7 rows × 2 columns
@@ -487,7 +468,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 12 rows × 2 columns

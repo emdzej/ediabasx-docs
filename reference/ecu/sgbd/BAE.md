@@ -38,7 +38,6 @@
 - [VERRIEGELUNG_SCHREIBEN](#job-verriegelung-schreiben) - Verriegelungsbytes setzen
 - [HERSTELLDATUM_LESEN](#job-herstelldatum-lesen) - Herstelldatum des SG lesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +55,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer AIRBAG E38
@@ -69,7 +67,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer AIRBAG E38
@@ -92,7 +89,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferant |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status des AIRBAG lesen
@@ -138,7 +134,6 @@ _No arguments._
 | STAT_NA_F_IO | int | 0 -> Nicht auswertbarer Fehler, Gurtschloss Fahrer |
 | STAT_KAS_F_IO | int | 0 -> Kabelanliegeschluss Gurtschloss Fahrer |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Quicktest High-Konzept nach Lastenheft (mit Abwandlungen)
@@ -152,7 +147,6 @@ _No arguments._
 | JOB_STATUS | string | normalerweise OKAY |
 | F_ANZ | int | Anzahl Fehler |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -189,7 +183,6 @@ _No arguments._
 | F_HFK | int |  |
 | F_UW_ANZ | int |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -202,7 +195,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-sg-login"></a>
 ### SG_LOGIN
 
 #### Arguments
@@ -219,7 +211,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY, wenn fehlerfrei" |
 | TELEGRAMM | binary | antworttelegramm |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -232,7 +223,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher lesen BAE
@@ -253,7 +243,6 @@ Speicher lesen BAE
 | DATEN | binary | Codierdaten |
 | TEST | binary | Antwortdaten |
 
-<a id="job-typ-lesen"></a>
 ### TYP_LESEN
 
 Fahrzeugtyp lesen
@@ -267,7 +256,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | TYP | string | "E31","E32"... |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -280,7 +268,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-ausstattung-schreiben"></a>
 ### AUSSTATTUNG_SCHREIBEN
 
 Ausstattung schreiben
@@ -305,7 +292,6 @@ Ausstattung schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-ausstattung-lesen"></a>
 ### AUSSTATTUNG_LESEN
 
 Ausstattung lesen BAE
@@ -328,7 +314,6 @@ _No arguments._
 | SITZ_ERKENNUNG_VERBAUT | int | 1 --> verbaut |
 | US_VERSION_VERBAUT | int | 1 --> verbaut |
 
-<a id="job-parameter-lesen"></a>
 ### PARAMETER_LESEN
 
 Algorithmus- Parameter BAE auslesen
@@ -342,7 +327,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", sonst Fehler |
 | DATEN | binary | Codierdaten |
 
-<a id="job-verriegelung-lesen"></a>
 ### VERRIEGELUNG_LESEN
 
 Auslesen des Pruefstempels
@@ -358,7 +342,6 @@ _No arguments._
 | BYTE2 | int | kann beliebig verwendet werden |
 | BYTE3 | int | kann beliebig verwendet werden |
 
-<a id="job-verriegelung-schreiben"></a>
 ### VERRIEGELUNG_SCHREIBEN
 
 Verriegelungsbytes setzen
@@ -372,7 +355,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | ERROR_CODE | string | OKAY, FEHLER |
 
-<a id="job-herstelldatum-lesen"></a>
 ### HERSTELLDATUM_LESEN
 
 Herstelldatum des SG lesen
@@ -395,7 +377,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (10 × 2)
 - [LIEFERANTEN](#table-lieferanten) (31 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -411,7 +392,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 48 rows × 2 columns
@@ -467,7 +447,6 @@ Dimensions: 48 rows × 2 columns
 | 0x4D | Fehler Crashtelegramm |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -485,7 +464,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | sporadischer Fehler |
 | 0xFF | nicht belegt |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 31 rows × 2 columns

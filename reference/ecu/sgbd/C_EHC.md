@@ -27,7 +27,6 @@
 - [C_ABGL_AUFTRAG](#job-c-abgl-auftrag) - Codierdaten schreiben und verifizieren
 - [C_ABGL_LESEN](#job-c-abgl-lesen) - Codierdaten lesen
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -45,7 +44,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -58,7 +56,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer LWR
@@ -81,7 +78,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferanten-Text table Lieferanten LIEF_TEXT |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -98,7 +94,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -116,7 +111,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-abgl-auftrag"></a>
 ### C_ABGL_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -133,7 +127,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-abgl-lesen"></a>
 ### C_ABGL_LESEN
 
 Codierdaten lesen
@@ -158,7 +151,6 @@ Codierdaten lesen
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -174,7 +166,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

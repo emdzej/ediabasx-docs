@@ -29,7 +29,6 @@
 - [GET_VOLTAGE](#job-get-voltage) - KL30 oder KL 15 analog einlesen
 - [SIA_RESET](#job-sia-reset) - Ruecksetzen der Service-Intervall-Anzeige
 
-<a id="job-spannung-kl30-abfragen"></a>
 ### SPANNUNG_KL30_ABFRAGEN
 
 Abfragen des Hardwareinterface-Typs (ADS, EDIC usw.) Ermittlung der HW-Board-Kennung bei HW-Interface EDIC oder EDICC Ermittlung des Status der Klemmenspannung gemäß dem erkannten HW-Interface Abfragen der Spannung an Klemme 30 (Versorgungsspannung - UBatt), wenn Status der Klemmenspannung != -1
@@ -46,7 +45,6 @@ _No arguments._
 | SPANNUNG_KL30_STATUS | int | Status des Spannungswertes Spannung_Kl30, der Status ist abhängig vom HW-Interface Wertebereich: -1 = Messwert nicht verfügbar 0 = ungültig ->  Wert Spannung_Kl30 ist nicht plausibel, nur AUS/EIN Überprüfung möglich Der Wert von Spannung_Kl30 darf nicht als Entscheidungskriterium (z.B. bei Unterspannung) für Programmverzweigungen in einer Applikation verwendet werden 1 = gültig -> Wert Spannung_Kl30 ist plausibel |
 | SPANNUNG_KL30_EINH | string | Einheit des Spannungswertes -> z.Z. immer mV |
 
-<a id="job-spannung-kl15-abfragen"></a>
 ### SPANNUNG_KL15_ABFRAGEN
 
 Abfragen des Hardwareinterface-Typs (ADS, EDIC usw.) Ermittlung der HW-Board-Kennung bei HW-Interface EDIC oder EDICC Ermittlung des Status der Klemmenspannung gemäß dem erkannten HW-Interface Abfragen der Spannung an Klemme 15 (Zündung), wenn Status der Klemmenspannung != -1
@@ -63,7 +61,6 @@ _No arguments._
 | SPANNUNG_KL15_STATUS | int | Status des Spannungswertes Spannung_Kl15, der Status ist abhängig vom HW-Interface Wertebereich: -1 = Messwert nicht verfügbar 0 = ungültig ->  Wert Spannung_Kl15 ist nicht plausibel, nur AUS/EIN Überprüfung möglich Der Wert von Spannung_Kl15 darf nicht als Entscheidungskriterium (z.B. bei Unterspannung) für Programmverzweigungen in einer Applikation verwendet werden 1 = gültig -> Wert Spannung_Kl15 ist plausibel |
 | SPANNUNG_KL15_EINH | string | Einheit des Spannungswertes -> z.Z. immer mV |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -82,7 +79,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -95,7 +91,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Stoppen des wiederholten Senden und Empfangen
@@ -104,7 +99,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -117,7 +111,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY |
 
-<a id="job-u-prog"></a>
 ### U_PROG
 
 Einstellung der U_Prog
@@ -134,7 +127,6 @@ Einstellung der U_Prog
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-get-voltage"></a>
 ### GET_VOLTAGE
 
 KL30 oder KL 15 analog einlesen
@@ -153,7 +145,6 @@ KL30 oder KL 15 analog einlesen
 | SPANNUNG_V | int | Spannung in Millivolt |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_PARAMETER |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -184,7 +175,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 - [ANDERE_KL30STAT](#table-andere-kl30stat) (5 × 2)
 - [ANDERE_KL15STAT](#table-andere-kl15stat) (5 × 2)
 
-<a id="table-u-prg"></a>
 ### U_PRG
 
 Dimensions: 10 rows × 2 columns
@@ -202,7 +192,6 @@ Dimensions: 10 rows × 2 columns
 | 33 | 0x09 |
 | 33 | 0x0A |
 
-<a id="table-kl-spg"></a>
 ### KL_SPG
 
 Dimensions: 6 rows × 2 columns
@@ -216,7 +205,6 @@ Dimensions: 6 rows × 2 columns
 | KLR | KLR |
 | CARB | CARB |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 2 rows × 2 columns
@@ -226,7 +214,6 @@ Dimensions: 2 rows × 2 columns
 | OEL_RESET | 0x01 |
 | WEG/ZEIT_RESET | 0x02 |
 
-<a id="table-if-kl30-stat-tab"></a>
 ### IF_KL30_STAT_TAB
 
 Dimensions: 7 rows × 2 columns
@@ -241,7 +228,6 @@ Dimensions: 7 rows × 2 columns
 | OPPS | Andere_Kl30Stat |
 | OBD | Andere_Kl30Stat |
 
-<a id="table-if-kl15-stat-tab"></a>
 ### IF_KL15_STAT_TAB
 
 Dimensions: 7 rows × 2 columns
@@ -256,7 +242,6 @@ Dimensions: 7 rows × 2 columns
 | OPPS | Andere_Kl15Stat |
 | OBD | Andere_Kl15Stat |
 
-<a id="table-edicboardnr-kl30stat"></a>
 ### EDICBOARDNR_KL30STAT
 
 Dimensions: 8 rows × 2 columns
@@ -272,7 +257,6 @@ Dimensions: 8 rows × 2 columns
 | 0130 | 1 |
 | 0131 | 1 |
 
-<a id="table-edicboardnr-kl15stat"></a>
 ### EDICBOARDNR_KL15STAT
 
 Dimensions: 8 rows × 2 columns
@@ -288,7 +272,6 @@ Dimensions: 8 rows × 2 columns
 | 0130 | 1 |
 | 0131 | 1 |
 
-<a id="table-andere-kl30stat"></a>
 ### ANDERE_KL30STAT
 
 Dimensions: 5 rows × 2 columns
@@ -301,7 +284,6 @@ Dimensions: 5 rows × 2 columns
 | OPPS | 0 |
 | OBD | 0 |
 
-<a id="table-andere-kl15stat"></a>
 ### ANDERE_KL15STAT
 
 Dimensions: 5 rows × 2 columns

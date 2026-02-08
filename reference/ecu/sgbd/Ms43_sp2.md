@@ -40,7 +40,6 @@
 - [FUSSHEBELFEHLBEDIENUNG_LOESCHEN](#job-fusshebelfehlbedienung-loeschen) - Eintraege Fusshebelfehlbedienung loeschen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -53,7 +52,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -71,7 +69,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME
@@ -103,7 +100,6 @@ _No arguments._
 | ID_SG_HERSTELLER | int | Parameter fuer MoTest 0=Bosch, 1=Siemens-Fahrzeug |
 | ID_EWS_SS | int | Identifikation EWS-Schnittstelle |
 
-<a id="job-status-max-eingriff"></a>
 ### STATUS_MAX_EINGRIFF
 
 max Momenteneingriff auslesen
@@ -118,7 +114,6 @@ _No arguments._
 | STAT_MAX_EINGRIFF_WERT | real | Ergebnis max Momenteneingriff |
 | STAT_MAX_EINGRIFF_EINH | string | Einheit max Momenteneingriff |
 
-<a id="job-status-max-zeiteingriff"></a>
 ### STATUS_MAX_ZEITEINGRIFF
 
 max Momenteneingriff auslesen
@@ -133,7 +128,6 @@ _No arguments._
 | STAT_MAX_ZEITEINGRIFF_WERT | real | Ergebnis max Zeiteingriff |
 | STAT_MAX_ZEITEINGRIFF_EINH | string | Einheit max Zeiteingriff |
 
-<a id="job-status-anzahl-eingriffe"></a>
 ### STATUS_ANZAHL_EINGRIFFE
 
 Anzahl der Eingriffe auslesen
@@ -147,7 +141,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_ANZAHL_EINGRIFFE_WERT | real | Ergebnis Anzahl der Eingriffe |
 
-<a id="job-status-motordrehzahl-eingriff"></a>
 ### STATUS_MOTORDREHZAHL_EINGRIFF
 
 Motordrehzahl auslesen
@@ -162,7 +155,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_EINGRIFF_WERT | real | Ergebnis Motordrehzahl |
 | STAT_MOTORDREHZAHL_EINGRIFF_EINH | string | Einheit |
 
-<a id="job-status-motortemp-eingriff"></a>
 ### STATUS_MOTORTEMP_EINGRIFF
 
 Motortemperatur auslesen
@@ -177,7 +169,6 @@ _No arguments._
 | STAT_MOTORTEMP_EINGRIFF_WERT | real | Ergebnis Motortemperatur |
 | STAT_MOTORTEMP_EINGRIFF_EINH | string | Einheit |
 
-<a id="job-status-pedalwert-eingriff"></a>
 ### STATUS_PEDALWERT_EINGRIFF
 
 Pedalwert auslesen
@@ -192,7 +183,6 @@ _No arguments._
 | STAT_PEDALWERT_EINGRIFF_WERT | real | Ergebnis Pedalwert |
 | STAT_PEDALWERT_EINGRIFF_EINH | string | Einheit |
 
-<a id="job-status-dk-wert-eingriff"></a>
 ### STATUS_DK_WERT_EINGRIFF
 
 DK-Wert auslesen
@@ -207,7 +197,6 @@ _No arguments._
 | STAT_DK_WERT_EINGRIFF_WERT | real | Ergebnis DK-Winkel |
 | STAT_DK_WERT_EINGRIFF_EINH | string | Einheit |
 
-<a id="job-status-ll-steller-eingriff"></a>
 ### STATUS_LL_STELLER_EINGRIFF
 
 LL-Steller-Wert auslesen
@@ -222,7 +211,6 @@ _No arguments._
 | STAT_LL_STELLER_EINGRIFF_WERT | real | Ergebnis LL-STeller-Wert |
 | STAT_LL_STELLER_EINGRIFF_EINH | string | Einheit |
 
-<a id="job-status-lmm-masse-eingriff"></a>
 ### STATUS_LMM_MASSE_EINGRIFF
 
 LMM-Masse-Wert auslesen
@@ -237,7 +225,6 @@ _No arguments._
 | STAT_LMM_MASSE_EINGRIFF_WERT | real | Ergebnis LMM-Masse-Wert |
 | STAT_LMM_MASSE_EINGRIFF_EINH | string | Einheit |
 
-<a id="job-status-luftdruck-eingriff"></a>
 ### STATUS_LUFTDRUCK_EINGRIFF
 
 Luftdruck auslesen
@@ -252,7 +239,6 @@ _No arguments._
 | STAT_LUFTDRUCK_EINGRIFF_WERT | real | Ergebnis Luftdruck |
 | STAT_LUFTDRUCK_EINGRIFF_EINH | string | Einheit |
 
-<a id="job-status-fusshebelfehlbetaetigung"></a>
 ### STATUS_FUSSHEBELFEHLBETAETIGUNG
 
 Fusshebelfehlbedienung auslesen
@@ -268,7 +254,6 @@ _No arguments._
 | STAT_FUSSHEBELFEHLBETAETIGUNG_KM_MAX_WERT | long | KM_MAX |
 | STAT_FUSSHEBELFEHLBETAETIGUNG_KM_MAX_EINH | string | Einheit |
 
-<a id="job-status-max-ueberdrehzahl"></a>
 ### STATUS_MAX_UEBERDREHZAHL
 
 Ueberdrehzahl auslesen
@@ -283,7 +268,6 @@ _No arguments._
 | STAT_MAX_UEBERDREHZAHL_WERT | real | Ergebnis Ueberdrehzahldrehzahl |
 | STAT_MAX_UEBERDREHZAHL_EINH | string | Einheit Ueberdrehzahl |
 
-<a id="job-status-betrieb-ueberdrehzahl"></a>
 ### STATUS_BETRIEB_UEBERDREHZAHL
 
 Ueberdrehzahl auslesen
@@ -298,7 +282,6 @@ _No arguments._
 | STAT_BETRIEB_UEBERDREHZAHL_WERT | real | Ergebnis Ueberdrehzahldrehzahl |
 | STAT_BETRIEB_UEBERDREHZAHL_EINH | string | Einheit Ueberdrehzahl |
 
-<a id="job-status-zaehler-ueberdrehzahl"></a>
 ### STATUS_ZAEHLER_UEBERDREHZAHL
 
 Ereignisszaehler Ueberdrehzahl auslesen
@@ -312,7 +295,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_ZAEHLER_UEBERDREHZAHL_WERT | real | Ereignisszaehler Ueberdrehzahldrehzahl |
 
-<a id="job-momenten-eingriff-loeschen"></a>
 ### MOMENTEN_EINGRIFF_LOESCHEN
 
 Groessen Momenteneingriffe loeschen
@@ -325,7 +307,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fusshebelfehlbedienung-loeschen"></a>
 ### FUSSHEBELFEHLBEDIENUNG_LOESCHEN
 
 Eintraege Fusshebelfehlbedienung loeschen
@@ -338,7 +319,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -367,7 +347,6 @@ _No arguments._
 - [BETRIEBSWTAB](#table-betriebswtab) (168 × 17)
 - [PARAMETERVARTAB](#table-parametervartab) (6 × 4)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 169 rows × 6 columns
@@ -544,7 +523,6 @@ Dimensions: 169 rows × 6 columns
 | 0xFE | Tankdeckel fehlt | 0x22 | 0x1C | 0x41 | 0x46 |
 | 0xFF | Tankentlueftungsventil klemmt offen | 0x22 | 0x1C | 0x41 | 0x46 |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 168 rows × 17 columns
@@ -720,7 +698,6 @@ Dimensions: 168 rows × 17 columns
 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x6A | 0x01 | 0x1B | 0x04 | 0x19 | 0x02 | 0x1D | 0x05 | 0x82 |
 | 0xFF | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x65 | 0x01 | 0x1B | 0x04 | 0x19 | 0x02 | 0x1D | 0x05 | 0x82 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 136 rows × 2 columns
@@ -864,7 +841,6 @@ Dimensions: 136 rows × 2 columns
 | 0x86 | zu groß |
 | 0x87 | Übertragung-/Parity-Fehler |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 108 rows × 5 columns
@@ -980,7 +956,6 @@ Dimensions: 108 rows × 5 columns
 | 0x6A | V_TPS_1 | V | 0.0195 | 0 |
 | 0x6B | V_TPS_2 | V | 0.0195 | 0 |
 
-<a id="table-fortmatrix"></a>
 ### FORTMATRIX
 
 Dimensions: 6 rows × 33 columns
@@ -994,7 +969,6 @@ Dimensions: 6 rows × 33 columns
 | 0x53 | 0x00 | 0xA0 | 0xA1 | 0xA3 | 0xA2 | 0xA5 | 0x00 | 0x00 | 0xA3 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0xA4 | 0xA5 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x03 | 0x02 | 0x04 | 0xA6 |
 | 0xXY | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1015,7 +989,6 @@ Dimensions: 13 rows × 2 columns
 | 0x06 | FUNCTION BEENDET; DATEN GUELTIG |
 | 0x55 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-betriebswmatrix"></a>
 ### BETRIEBSWMATRIX
 
 Dimensions: 24 rows × 8 columns
@@ -1047,7 +1020,6 @@ Dimensions: 24 rows × 8 columns
 | Anz NWA Flanken H/L ausserhalb Diagfenster | LINRAM | 0xd7fa | -- | 1 | 1 | 0 | HEX |
 | Anz NWA Flanken L/H ausserhalb Diagfenster | LINRAM | 0xd7fc | -- | 1 | 1 | 0 | HEX |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 66 rows × 4 columns
@@ -1121,7 +1093,6 @@ Dimensions: 66 rows × 4 columns
 | STAT_LSH_VHP1 | 5 | 0x01 | 0x01 |
 | STAT_LSH_VHP2 | 5 | 0x02 | 0x02 |
 
-<a id="table-obd-bits"></a>
 ### OBD_BITS
 
 Dimensions: 14 rows × 4 columns
@@ -1143,7 +1114,6 @@ Dimensions: 14 rows × 4 columns
 | STAT_TA_LE_DIA | 3 | 0x04 | 0x04 |
 | STAT_KAT_DIA | 3 | 0x01 | 0x01 |
 
-<a id="table-betriebswtab"></a>
 ### BETRIEBSWTAB
 
 Dimensions: 168 rows × 17 columns
@@ -1319,7 +1289,6 @@ Dimensions: 168 rows × 17 columns
 | SUM_AFL_VLS_SA_DIAG_1 | 12050B99 | 0 | 0 | 0 | 15 | 5 | -- | 1 | 0 | 0 | 0 | 1.0 |  |   | STATUS_DIAGNOSEWERTE_KAT_LS_SEK |  |
 | SUM_AFL_VLS_SA_DIAG_2 | 12050B99 | 0 | 0 | 0 | 17 | 5 | -- | 1 | 0 | 0 | 0 | 1.0 |  |   | STATUS_DIAGNOSEWERTE_KAT_LS_SEK |  |
 
-<a id="table-parametervartab"></a>
 ### PARAMETERVARTAB
 
 Dimensions: 6 rows × 4 columns

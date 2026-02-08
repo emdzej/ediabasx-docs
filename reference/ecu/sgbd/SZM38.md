@@ -46,7 +46,6 @@
 - [CODIERUNG_SCHREIBEN](#job-codierung-schreiben) - Codierdaten schreiben fuer SZM E38
 - [BUGFIX_SITZHEIZUNG](#job-bugfix-sitzheizung) - Identdaten lesen und ggf. Speicher schreiben
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -65,7 +64,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -78,7 +76,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -102,7 +99,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -123,7 +119,6 @@ _No arguments._
 | F_ART1_TEXT | string | 'Fehler momentan nicht vorhanden' oder 'Fehler momentan vorhanden' table FArtTexte ARTTEXT |
 | F_HEX_CODE | binary |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen
@@ -142,7 +137,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 | F_HEX_CODE | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -155,7 +149,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -168,7 +161,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden Beenden von Ansteuerbefehlen
@@ -181,7 +173,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -198,7 +189,6 @@ _No arguments._
 | BYTE3 | int | 0-255 bzw. 0x00-0xFF |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -217,7 +207,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Status lesen
@@ -268,7 +257,6 @@ _No arguments._
 | STAT_KONTROLLBYTE3 | int | Interne Zustaende |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-intern"></a>
 ### STATUS_INTERN
 
 Auslesen der internen Zustaende
@@ -306,7 +294,6 @@ _No arguments._
 | STAT_KONTROLLBYTE3 | int | Interne Zustaende |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes uebergeben.
@@ -325,7 +312,6 @@ Lesen des internen Speichers Als Argumente werden die Adresse, die Anzahl der Da
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des internen Speichers Als Argumente werden die Adresse, und das Datenbyte uebergeben.
@@ -343,7 +329,6 @@ Beschreiben des internen Speichers Als Argumente werden die Adresse, und das Dat
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -373,7 +358,6 @@ _No arguments._
 | ANSPRECHZEIT_PLAUSIBILITAETSABFRAGE | int | Ansprechzeit fuer die Plausibilitaetsabfrage in sek |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-steuern-sitzheizung-stufe"></a>
 ### STEUERN_SITZHEIZUNG_STUFE
 
 Ansteuern der Sitzheizungsstufe fuer links und rechts Stufe 0 : Heizung aus Stufe 1 : Heizung maximale Leistung Stufe 2 : Heizung mittlere Leistung Stufe 3 : Heizung minimale Leistung Es ist moeglich auch ein einzelnes Argument zu schreiben.
@@ -391,7 +375,6 @@ Ansteuern der Sitzheizungsstufe fuer links und rechts Stufe 0 : Heizung aus Stuf
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-sitzheizung"></a>
 ### STEUERN_SITZHEIZUNG
 
 Ansteuern des Sitzheizungsausgangs fuer links und rechts Es ist moeglich auch ein einzelnes Argument zu schreiben.
@@ -409,7 +392,6 @@ Ansteuern des Sitzheizungsausgangs fuer links und rechts Es ist moeglich auch ei
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-aktivsitz"></a>
 ### STEUERN_AKTIVSITZ
 
 Ansteuern des Aktivsitzes fuer links und rechts. Jeder Aufruf schaltet den Aktivsitz um (ein bzw. aus). Es ist moeglich auch ein einzelnes Argument zu schreiben.
@@ -427,7 +409,6 @@ Ansteuern des Aktivsitzes fuer links und rechts. Jeder Aufruf schaltet den Aktiv
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-sonnenrollo-taster"></a>
 ### STEUERN_SONNENROLLO_TASTER
 
 Ansteuern des Sonnenrollo
@@ -444,7 +425,6 @@ Ansteuern des Sonnenrollo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-sonnenrollo-motor"></a>
 ### STEUERN_SONNENROLLO_MOTOR
 
 Ansteuern des Sonnenrollomotors Jeder Aufruf aendert die Richtung der Laufrichtung nach erfolgtem Rolloanschlag ( Oben, Unten ). Nach beendeter Diagnose geht das Rollo nicht in seinen Ausgangszustand zurueck.
@@ -457,7 +437,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-funktionsbeleuchtung"></a>
 ### STEUERN_FUNKTIONSBELEUCHTUNG
 
 Ansteuern des Funktionsbeleuchtung
@@ -474,7 +453,6 @@ Ansteuern des Funktionsbeleuchtung
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-beleuchtung"></a>
 ### STEUERN_BELEUCHTUNG
 
 Ansteuern des Beleuchtung Klemme 58g
@@ -491,7 +469,6 @@ Ansteuern des Beleuchtung Klemme 58g
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-klemmenstatus"></a>
 ### STEUERN_KLEMMENSTATUS
 
 Vorgabe des Klemmenstatus Es muessen immer alle drei Argumente uebergeben werden.
@@ -510,7 +487,6 @@ Vorgabe des Klemmenstatus Es muessen immer alle drei Argumente uebergeben werden
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-ident-schreiben"></a>
 ### IDENT_SCHREIBEN
 
 Identdaten schreiben fuer SZM E38
@@ -527,7 +503,6 @@ Identdaten schreiben fuer SZM E38
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-codierung-schreiben"></a>
 ### CODIERUNG_SCHREIBEN
 
 Codierdaten schreiben fuer SZM E38
@@ -544,7 +519,6 @@ Codierdaten schreiben fuer SZM E38
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-bugfix-sitzheizung"></a>
 ### BUGFIX_SITZHEIZUNG
 
 Identdaten lesen und ggf. Speicher schreiben
@@ -576,7 +550,6 @@ _No arguments._
 - [PLATINENTEMPERATUR](#table-platinentemperatur) (256 × 2)
 - [SPEICHERDATEN](#table-speicherdaten) (55 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -597,7 +570,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -677,7 +649,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -706,7 +677,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -731,7 +701,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 18 rows × 2 columns
@@ -757,7 +726,6 @@ Dimensions: 18 rows × 2 columns
 | 0x10 | ERROR_KLEMME_50 |
 | 0x11 | ERROR_DATEN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 16 rows × 2 columns
@@ -781,7 +749,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | K-Bus Down |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -792,7 +759,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 3 columns
@@ -801,7 +767,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0x01 | 0x00 | 0x01 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 12 rows × 2 columns
@@ -821,7 +786,6 @@ Dimensions: 12 rows × 2 columns
 | 0x19 | Toleranzueberschreitung Aktivsitz rechts |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-sitztemperatur"></a>
 ### SITZTEMPERATUR
 
 Dimensions: 256 rows × 2 columns
@@ -1085,7 +1049,6 @@ Dimensions: 256 rows × 2 columns
 | 0xFE | -50.0 |
 | 0xFF | -50.0 |
 
-<a id="table-platinentemperatur"></a>
 ### PLATINENTEMPERATUR
 
 Dimensions: 256 rows × 2 columns
@@ -1349,7 +1312,6 @@ Dimensions: 256 rows × 2 columns
 | 0xFE | -50.0 |
 | 0xFF | -50.0 |
 
-<a id="table-speicherdaten"></a>
 ### SPEICHERDATEN
 
 Dimensions: 55 rows × 2 columns

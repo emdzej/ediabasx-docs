@@ -37,7 +37,6 @@
 - [DIAGNOSE_WEITER](#job-diagnose-weiter) - Diagnose aufrecht erhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +55,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer BMW-TELEFON
@@ -69,7 +67,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer das BIT
@@ -91,7 +88,6 @@ _No arguments._
 | ID_LIEF_NR | string | Lieferanten-Nummer |
 | ID_SW_NR | string | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -112,7 +108,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (entweder 0 oder 32) |
 | F_ART1_TEXT | string | 1. Fehlerart als Text table FArtTexte ARTTEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -126,7 +121,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen
@@ -144,7 +138,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl der Fehlerarten |
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -162,7 +155,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -183,7 +175,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 verschiedenen Status IO-Ports
@@ -219,7 +210,6 @@ _No arguments._
 | STAT_ENABLE_RESET_TIMER | int |  |
 | STAT_RX1_BIT | int |  |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 verschiedenen SG-Status lesen
@@ -240,7 +230,6 @@ _No arguments._
 | STAT_HANDY_TYP | string | Handy Typ (Nokia oder Siemens) |
 | STAT_INTERNE_SW | string | interne SW z.B. 01.00 |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ports im Bit setzen
@@ -261,7 +250,6 @@ Ports im Bit setzen
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Durchfuehrung des Selbsttests (Ermittlung Checksum SW)
@@ -276,7 +264,6 @@ _No arguments._
 | CHK_1 | int | Checksumme ueber den Adressbereich 0x00000-0x03FFF Sollvorgabe abhaengig vom internen SW-Stand |
 | CHK_2 | int | Checksumme ueber den Adressbereich 0x08000-0x7FEFF Sollvorgabe abhaengig vom internen SW-Stand |
 
-<a id="job-selbsttest-hw"></a>
 ### SELBSTTEST_HW
 
 Durchfuehrung des hardwarespez. Selbsttests (Ports)
@@ -299,7 +286,6 @@ _No arguments._
 | ERROR_MUTE_SET | int | 1 -> Fehler beim Setzen des Ports Mute |
 | ERROR_MUTE_RESET | int | 1 -> Fehler beim Ruecksetzen des Ports Mute |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 versetzen des SGs in den sleepmode ca. 2 Sek. nach senden von ACK geht das SG in dne Power down Aufwecken nur durch einen Reset
@@ -312,7 +298,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-reset"></a>
 ### RESET
 
 Durchfuehrung eines resets ca. 2 Sek. nach senden von ACK erfolgt der Reset
@@ -325,7 +310,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrecht erhalten
@@ -338,7 +322,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode beenden
@@ -359,7 +342,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (14 × 2)
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -373,7 +355,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -395,7 +376,6 @@ Dimensions: 14 rows × 2 columns
 | 0x12 | GSM Pegel |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns

@@ -90,7 +90,6 @@
 - [STATUS_DVD_FIRMWARE](#job-status-dvd-firmware) - version of DVD firmware UDS  : $22   ReadDataByIdentifier UDS  : $D057 DVD FW Version Modus: Default
 - [RESCUE_HW_DATA](#job-rescue-hw-data) - Gerätehardware-Daten wiederherstellen Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -109,7 +108,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -122,7 +120,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -139,7 +136,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -165,7 +161,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -207,7 +202,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -226,7 +220,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -244,7 +237,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -265,7 +257,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -294,7 +285,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -314,7 +304,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -335,7 +324,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -351,7 +339,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -373,7 +360,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -395,7 +381,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -414,7 +399,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -440,7 +424,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -482,7 +465,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -497,7 +479,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -517,7 +498,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -536,7 +516,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -555,7 +534,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -570,7 +548,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -589,7 +566,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -609,7 +585,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -626,7 +601,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -645,7 +619,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -660,7 +633,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-version-most-controller"></a>
 ### STATUS_VERSION_MOST_CONTROLLER
 
 Return Version of MOST Controller
@@ -678,7 +650,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-versorgungsspannung"></a>
 ### STATUS_VERSORGUNGSSPANNUNG
 
 Betriebsspannung am SG. Darstellung mit Millivolt-Auflösung.
@@ -695,7 +666,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-wakeup-status"></a>
 ### STATUS_WAKEUP_STATUS
 
 Gibt an, ob das SG den MOST-Ring geweckt hat oder geweckt wurde.
@@ -712,7 +682,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ability-to-wake"></a>
 ### STATUS_ABILITY_TO_WAKE
 
 Gibt an ob SG Most Ring wecken darf
@@ -729,7 +698,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-average-message-reception-rate"></a>
 ### STATUS_AVERAGE_MESSAGE_RECEPTION_RATE
 
 Liest die mittlere Nachrichtenabnahmerate des SGs während dieses Gerät geflasht wird, also in der ProgramminSession Auslesbar muss der Status jederzeit sein
@@ -746,7 +714,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fot-temperatur"></a>
 ### STATUS_FOT_TEMPERATUR
 
 Temperatur am FOT
@@ -763,7 +730,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-sensor-temp"></a>
 ### STEUERN_SENSOR_TEMP
 
 Simulates the temperature of a definite sensor.
@@ -784,7 +750,6 @@ Simulates the temperature of a definite sensor.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-watchdog-trigger-stop"></a>
 ### STEUERN_WATCHDOG_TRIGGER_STOP
 
 Unterbindet das regelmäßige Rücksetzen des Applikations-Watchdogs nach ARG_TIME_WATCHDOG Sekunden. Wenn ARG_TIME_WATCHDOG nicht angegeben wird, wird der Wert 0 benutzt.
@@ -803,7 +768,6 @@ Unterbindet das regelmäßige Rücksetzen des Applikations-Watchdogs nach ARG_TI
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-sensor-temp"></a>
 ### STATUS_SENSOR_TEMP
 
 Returns the temperature of the desired sensor (no matter if the temperature is currently being simulated or not).
@@ -824,7 +788,6 @@ Returns the temperature of the desired sensor (no matter if the temperature is c
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -839,7 +802,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -856,7 +818,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -871,7 +832,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -886,7 +846,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -901,7 +860,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -917,7 +875,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -936,7 +893,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -956,7 +912,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -974,7 +929,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -990,7 +944,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-debug-dmclient-systime"></a>
 ### DEBUG_DMCLIENT_SYSTIME
 
 Systemzeit UDS  : $22   ReadDataByIdentifier UDS  : $1701 Sub-Parameter Systemzeit Modus: Default
@@ -1006,7 +959,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-wakeup-abstime"></a>
 ### STATUS_WAKEUP_ABSTIME
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $171B Wakeup absolute time Modus: Default
@@ -1022,7 +974,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-debug-dmclient-is-dtcactiveresponse"></a>
 ### STATUS_DEBUG_DMCLIENT_IS_DTCACTIVERESPONSE
 
 Fehlerspeicher lesen (DTC an DM) UDS  : $22   ReadDataByIdentifier UDS  : $1723 DMClient_isDTCActiveResponse Modus: Default
@@ -1039,7 +990,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-debug-dmclient-is-dtclockable"></a>
 ### STATUS_DEBUG_DMCLIENT_IS_DTCLOCKABLE
 
 Fehlerspeicher lesen (DTC an DM) UDS  : $22   ReadDataByIdentifier UDS  : $1724 DMClient_isDTCLockable Modus: Default
@@ -1056,7 +1006,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bootloaderversion"></a>
 ### STATUS_BOOTLOADERVERSION
 
 Nachrichtenabnahmerate bei Flashvorgang UDS  : $22   ReadDataByIdentifier UDS  : $4001 Sub-Parameter Nachrichtenabnahmerate Modus: Default
@@ -1073,7 +1022,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-softwarename"></a>
 ### STATUS_SOFTWARENAME
 
 Build Softwarename UDS  : $22   ReadDataByIdentifier UDS  : $4002 Softwarename Modus: Default
@@ -1089,7 +1037,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cpu-auslastung"></a>
 ### STATUS_CPU_AUSLASTUNG
 
 Nachrichtenabnahmerate bei Flashvorgang UDS  : $22   ReadDataByIdentifier UDS  : $4006 Sub-Parameter CPU-Auslastung Modus: Default
@@ -1106,7 +1053,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-temp-verteilung-fot"></a>
 ### STATUS_TEMP_VERTEILUNG_FOT
 
 FOT Temperaturverteilung UDS  : $22   ReadDataByIdentifier UDS  : $D054 Sub-Parameter FOT Temperaturverteilung Modus: Default
@@ -1123,7 +1069,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-temp-verteilung-dvd-drive"></a>
 ### STATUS_TEMP_VERTEILUNG_DVD_DRIVE
 
 DVD-Drive Temperaturverteilung UDS  : $22   ReadDataByIdentifier UDS  : $D055 Sub-Parameter DVD Temperaturverteilung Modus: Default
@@ -1139,7 +1084,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-active-session"></a>
 ### STATUS_ACTIVE_SESSION
 
 Active Session UDS  : $22   ReadDataByIdentifier UDS  : $F186 Active Session Modus: Default
@@ -1155,7 +1099,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-hw-nr"></a>
 ### STATUS_HW_NR
 
 HW_NR UDS  : $22   ReadDataByIdentifier UDS  : $F192 Sub-Parameter HW-NR Modus: Default
@@ -1171,7 +1114,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-debug-dmclient-triggerdtcentry"></a>
 ### DEBUG_DMCLIENT_TRIGGERDTCENTRY
 
 Debug DMClient UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0304 Debug DMClient UDS   : $??   Parameter  1:NW DTC, 0:Apllication Modus : Default
@@ -1190,7 +1132,6 @@ Debug DMClient UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startR
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-clear-temp-verteilung"></a>
 ### STEUERN_CLEAR_TEMP_VERTEILUNG
 
 temp histogram to be deleted UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $A034 Steuern Clear Tempereturverteiling UDS   : $??   Parameter Modus : Default
@@ -1209,7 +1150,6 @@ temp histogram to be deleted UDS   : $31   RoutineControlRequestServiceID UDS   
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-internal-reset"></a>
 ### STEUERN_INTERNAL_RESET
 
 Internal Reset UDS   : $31   RoutineControlRequestServiceID UDS   : $01   Steuern UDS   : $A023 Steuern internal reset Modus : Default
@@ -1224,7 +1164,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-application"></a>
 ### STATUS_APPLICATION
 
 Reads out applications stati if they are coded and their availability
@@ -1245,7 +1184,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-drive-temperatur"></a>
 ### STATUS_DRIVE_TEMPERATUR
 
 Drive Temperatur UDS  : $22   ReadDataByIdentifier UDS  : $D00B Sub-Parameter Drive Temperatur Modus: Default
@@ -1262,7 +1200,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-vin"></a>
 ### STATUS_VIN
 
 HW_NR UDS  : $22   ReadDataByIdentifier UDS  : $F190 Sub-Parameter VIN Modus: Default
@@ -1278,7 +1215,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-voltages"></a>
 ### STATUS_VOLTAGES
 
 Spannungen am SG. Darstellung mit Millivolt-Auflösung.
@@ -1309,7 +1245,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ir-freq"></a>
 ### STATUS_IR_FREQ
 
 Build Softwarename UDS  : $22   ReadDataByIdentifier UDS  : $D056 IR_FREQ Modus: Default
@@ -1325,7 +1260,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-debug-command"></a>
 ### STEUERN_DEBUG_COMMAND
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $A040 Steuern Debug UDS   : $??   Parameter Modus : Default
@@ -1344,7 +1278,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-firmware-update"></a>
 ### STEUERN_FIRMWARE_UPDATE
 
 Update Firmware UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $A041 Steuern update UDS   : $??   Parameter UDS   : $1234  -  Atmel firmware UDS   : $5678  -  UIC Starter firmware UDS   : $1111  -  INIC firmware Modus : Default
@@ -1363,7 +1296,6 @@ Update Firmware UDS   : $31   RoutineControlRequestServiceID UDS   : $01   start
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-firmware"></a>
 ### STATUS_FIRMWARE
 
 Status der Firmware versionen ATMEL, INIC und UIC Starter auslesen UDS   : $31   RoutineControlRequestServiceID UDS   : $03   Result UDS   : $A041 Status firmware Modus : Default
@@ -1387,7 +1319,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dvd-firmware"></a>
 ### STATUS_DVD_FIRMWARE
 
 version of DVD firmware UDS  : $22   ReadDataByIdentifier UDS  : $D057 DVD FW Version Modus: Default
@@ -1403,7 +1334,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-rescue-hw-data"></a>
 ### RESCUE_HW_DATA
 
 Gerätehardware-Daten wiederherstellen Modus: Default
@@ -1519,7 +1449,6 @@ _No arguments._
 - [TENTSOURCESTATUS](#table-tentsourcestatus) (4 × 2)
 - [TSELBSTTESTROUTINE](#table-tselbsttestroutine) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -1593,7 +1522,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 125 rows × 2 columns
@@ -1726,7 +1654,6 @@ Dimensions: 125 rows × 2 columns
 | 0x0000B2 | ASK |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -1753,7 +1680,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1778,7 +1704,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 25 rows × 3 columns
@@ -1811,7 +1736,6 @@ Dimensions: 25 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1884,7 +1808,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1897,7 +1820,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1910,7 +1832,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1923,7 +1844,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 11 rows × 3 columns
@@ -1942,7 +1862,6 @@ Dimensions: 11 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1968,7 +1887,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1979,7 +1897,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-tfblockidtexte"></a>
 ### TFBLOCKIDTEXTE
 
 Dimensions: 85 rows × 2 columns
@@ -2072,7 +1989,6 @@ Dimensions: 85 rows × 2 columns
 | 0xEE | DataCommunication |
 | 0xFF | Nicht definiert |
 
-<a id="table-twakeupstatus"></a>
 ### TWAKEUPSTATUS
 
 Dimensions: 3 rows × 3 columns
@@ -2083,7 +1999,6 @@ Dimensions: 3 rows × 3 columns
 | 1 | SG will be waked up | on |
 | 2 | SG are waked up | critical |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2092,7 +2007,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -2102,7 +2016,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 40 rows × 3 columns
@@ -2150,7 +2063,6 @@ Dimensions: 40 rows × 3 columns
 | 0xD28BFF | Diagnosemastertest: Dummy Netzwerk-DTC | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2164,7 +2076,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 3 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 8 rows × 9 columns
@@ -2180,7 +2091,6 @@ Dimensions: 8 rows × 9 columns
 | 0x7F02 | NVM Block | text | - | 1 | - | 1 | 1 | 0 |
 | 0x7F03 | Resetgrund | text | - | 2 | - | 1 | 1 | 0 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 46 rows × 3 columns
@@ -2234,7 +2144,6 @@ Dimensions: 46 rows × 3 columns
 | 0x93003C | MOST: Ring unerlaubt geweckt | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2246,7 +2155,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 8 rows × 9 columns
@@ -2262,7 +2170,6 @@ Dimensions: 8 rows × 9 columns
 | 0x7F02 | NVM Block | text | - | 1 | - | 1 | 1 | 0 |
 | 0x7F03 | Resetgrund | text | - | 2 | - | 1 | 1 | 0 |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 31 rows × 16 columns
@@ -2301,7 +2208,6 @@ Dimensions: 31 rows × 16 columns
 | STATUS_VOLTAGES | 0xD025 | - | - | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xD025 |
 | STATUS_COUNTER_REGION_CODE | 0xA04D | - | Auslesen des Werts Änderungszähler DVD Ländercode | - | - | - | - | - | - | - | - | - | 31 | - | RES_0xA04D |
 
-<a id="table-tconnectiontable"></a>
 ### TCONNECTIONTABLE
 
 Dimensions: 132 rows × 2 columns
@@ -2441,7 +2347,6 @@ Dimensions: 132 rows × 2 columns
 | 197 | AuxilaryInput/HeadPhoneAmplifier = 0xC5 |
 | 198 | AuxilaryInput/HeadPhoneAmplifier = 0xC6 |
 
-<a id="table-tconnectionstatus"></a>
 ### TCONNECTIONSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -2453,7 +2358,6 @@ Dimensions: 4 rows × 2 columns
 | 0x07 | Connection doest exist |
 | 0xFF | Unknown |
 
-<a id="table-tapplication"></a>
 ### TAPPLICATION
 
 Dimensions: 4 rows × 2 columns
@@ -2465,7 +2369,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Audio Applikation |
 | 0xFF | Nicht definiert |
 
-<a id="table-tapplicationrunningstatus"></a>
 ### TAPPLICATIONRUNNINGSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -2476,7 +2379,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Applikation gestartet |
 | 0xFF | Nicht definiert |
 
-<a id="table-tapplicationactivationstatus"></a>
 ### TAPPLICATIONACTIVATIONSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -2490,7 +2392,6 @@ Dimensions: 6 rows × 2 columns
 | 0x10 | Teilweise Aktiviert durch SWT |
 | 0xFF | Nicht definiert |
 
-<a id="table-tkeynr"></a>
 ### TKEYNR
 
 Dimensions: 16 rows × 2 columns
@@ -2514,7 +2415,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0F | Schlüssel 15 |
 | 0xFF | Alle Schlüssel |
 
-<a id="table-tauxverbindung"></a>
 ### TAUXVERBINDUNG
 
 Dimensions: 10 rows × 2 columns
@@ -2532,7 +2432,6 @@ Dimensions: 10 rows × 2 columns
 | 0x0700 | Aux In RSE links, rechts und BMW Individual |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-tverbindungfehlerart"></a>
 ### TVERBINDUNGFEHLERART
 
 Dimensions: 4 rows × 2 columns
@@ -2544,7 +2443,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Leitungsunterbrechung |
 | 0xFF | Nicht definiert |
 
-<a id="table-tethernetconnection"></a>
 ### TETHERNETCONNECTION
 
 Dimensions: 4 rows × 2 columns
@@ -2556,7 +2454,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Ethernet Verbindung zum RSE |
 | 0xFF | Nicht definiert |
 
-<a id="table-tethernetactivationstate"></a>
 ### TETHERNETACTIVATIONSTATE
 
 Dimensions: 3 rows × 2 columns
@@ -2567,7 +2464,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktiviert |
 | 0xFF | Nicht definiert |
 
-<a id="table-ttemperaturverteilung"></a>
 ### TTEMPERATURVERTEILUNG
 
 Dimensions: 37 rows × 1 columns
@@ -2612,7 +2508,6 @@ Dimensions: 37 rows × 1 columns
 | 135°C to 140°C |
 | Maximale Temperatur |
 
-<a id="table-res-0xd025"></a>
 ### RES_0XD025
 
 Dimensions: 8 rows × 10 columns
@@ -2628,7 +2523,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_SPG_FPGA_WERT | mV | - | unsigned int | - | - | - | - | - | - |
 | STAT_SPG_SH3_WERT | mV | - | unsigned int | - | - | - | - | - | - |
 
-<a id="table-t-uwb-erweitert"></a>
 ### T_UWB_ERWEITERT
 
 Dimensions: 1 rows × 2 columns
@@ -2637,7 +2531,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFFFFF | Nachrichten Kopf |
 
-<a id="table-res-0xd020"></a>
 ### RES_0XD020
 
 Dimensions: 1 rows × 10 columns
@@ -2646,7 +2539,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LOGISTIC_NR_WERT | - | - | string[7] | - | - | - | - | - | Auslesen der Logistik-Nummer. ACHTUNG: RESULT wird von _WERT auf _TEXT gewandelt! |
 
-<a id="table-arg-0xd020"></a>
 ### ARG_0XD020
 
 Dimensions: 1 rows × 12 columns
@@ -2655,7 +2547,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_LOGISTIC_NR | - | - | string[7] | - | - | - | - | - | - | - | die zu schreibende Logistiknummer |
 
-<a id="table-res-0xd02c"></a>
 ### RES_0XD02C
 
 Dimensions: 2 rows × 10 columns
@@ -2665,7 +2556,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DISC_IDENT_WERT | - | - | string | - | - | - | - | - | Disk Identifier für das beinhaltete Medium. ACHTUNG: RÜCKGABE wird von _WERT zu _TEXT! |
 | STAT_DIGITAL_PLAYBACK_QUALITY_WERT | - | - | unsigned char | - | - | - | - | - | Quality level of the digital playback Range: 0-15 0-1: Media not readable (drive not ok) 2-8: Mutes or distortion which is customer related (drive not ok) 9-14: Media readable, no customer related distortion (drive ok) 15: Media quality 100%, e.g. BLER 0 (drive ok) |
 
-<a id="table-ttaste"></a>
 ### TTASTE
 
 Dimensions: 11 rows × 2 columns
@@ -2684,7 +2574,6 @@ Dimensions: 11 rows × 2 columns
 | 0x13 | MIODE-Taste |
 | 0xFF | Nicht definiert |
 
-<a id="table-arg-0xa006"></a>
 ### ARG_0XA006
 
 Dimensions: 1 rows × 14 columns
@@ -2693,7 +2582,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DRIVE | + | - | - | - | unsigned int | - | - | - | - | - | - | - | gibt an, auf welchem Laufwerk der  Eject ausgeführt werden soll. Default 4 Tabelle TLaufwerk |
 
-<a id="table-arg-0xa037"></a>
 ### ARG_0XA037
 
 Dimensions: 1 rows × 14 columns
@@ -2702,7 +2590,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_TRACK | + | - | - | - | unsigned int | - | - | - | - | - | - | - | Wählt die CD/DVD-Tracknummer die abgespielt werden soll. |
 
-<a id="table-arg-0xa001"></a>
 ### ARG_0XA001
 
 Dimensions: 3 rows × 14 columns
@@ -2713,7 +2600,6 @@ Dimensions: 3 rows × 14 columns
 | ARG_LEVEL | + | - | - | - | char | - | - | - | - | - | -96 | 127 | Bei Headunits:  Hex-Wert, von 0x00 lückenlos bis 0x7F, Nicht unterstützte Werte (Stereo: 0x3F) dürfen nicht zu Fehlermeldungen führen. Sondern die für das Lautsprechersystem nächstmöglich kleinere verfügbare Lautstärke wird eingestellt.    Bei Verstärkern: Integer, -96..0 [dB] |
 | ARG_KANAL | + | - | - | - | unsigned long | - | - | - | - | - | - | - | bezeichnet den Kanal, auf dem ausgegeben werden soll. |
 
-<a id="table-res-0xd003"></a>
 ### RES_0XD003
 
 Dimensions: 1 rows × 10 columns
@@ -2722,7 +2608,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KANAL | 0-n | - | unsigned long | - | TAudioKanal | - | - | - | Kanalnummer |
 
-<a id="table-arg-0xd003"></a>
 ### ARG_0XD003
 
 Dimensions: 1 rows × 12 columns
@@ -2731,7 +2616,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_KANAL | - | - | unsigned long | - | - | - | - | - | - | - | Kanalnummer |
 
-<a id="table-taudiokanal"></a>
 ### TAUDIOKANAL
 
 Dimensions: 26 rows × 2 columns
@@ -2765,7 +2649,6 @@ Dimensions: 26 rows × 2 columns
 | 0x00800000 | Center hinten (Erweiterter Kanal, speziell Hochtöner wenn getrennte Hoch/Mitteltöner) |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-res-0xa022"></a>
 ### RES_0XA022
 
 Dimensions: 2 rows × 13 columns
@@ -2775,7 +2658,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_SELBSTTEST_ROUTINE | - | - | + | 0-n | - | unsigned long | - | TSelbsttestRoutine | - | - | - | Routine(n), die getestet wurde(n). Tabelle  TSelbsttestRoutine |
 | STAT_SELBSTTEST | - | - | + | 0-n | - | unsigned char | - | TTestStatus | - | - | - | Gibt den Status des Tests wieder. |
 
-<a id="table-arg-0xa022"></a>
 ### ARG_0XA022
 
 Dimensions: 1 rows × 14 columns
@@ -2784,7 +2666,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_SELBSTTEST_ROUTINE | + | - | - | - | unsigned long | - | - | - | - | - | - | - | Routinen, die getestet werden sollen. Die Tabelle TSelbsttestRoutine wird in der SGBD von der Entwicklung bzw. vom Zulieferer befüllt und gepflegt. |
 
-<a id="table-arg-0xa007"></a>
 ### ARG_0XA007
 
 Dimensions: 1 rows × 14 columns
@@ -2793,7 +2674,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DRIVE | + | - | - | - | unsigned int | - | - | - | - | - | - | - | gibt an, auf welchem Laufwerk der  Eject ausgeführt werden soll. Default: 4 Tabelle TLaufwerk |
 
-<a id="table-res-0xa04d"></a>
 ### RES_0XA04D
 
 Dimensions: 1 rows × 13 columns
@@ -2802,7 +2682,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_COUNTER_REGION_CODE_WERT | - | - | + | - | - | unsigned char | - | - | - | - | - | Wert Änderugszähler DVD Ländercode |
 
-<a id="table-res-0xd014"></a>
 ### RES_0XD014
 
 Dimensions: 2 rows × 10 columns
@@ -2812,7 +2691,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DEMUTE_SOURCE1 | 0-n | - | unsigned char | - | TSourceDemuteStatus | - | - | - | Gibt den eingestellten Mute-Modus zurück: Für Source1 sind nur die Werte 0-3 gültig. |
 | STAT_DEMUTE_SOURCE2 | 0-n | - | unsigned char | - | TSourceDemuteStatus | - | - | - | Gibt den eingestellten Mute-Modus zurück: Für Source2 sind nur die Werte 4-5 gültig. Bei Headunits wird hier 255 zurückgeliefert. |
 
-<a id="table-arg-0xd014"></a>
 ### ARG_0XD014
 
 Dimensions: 2 rows × 12 columns
@@ -2822,7 +2700,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_DEMUTE | 0-n | - | unsigned char | - | TDemuteStatus | - | - | - | - | - | - |
 | ARG_HEADPHONES | 0-n | - | unsigned char | - | TDemuteSource | - | - | - | - | - | - |
 
-<a id="table-tdemutestatus"></a>
 ### TDEMUTESTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -2833,7 +2710,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Stummschaltung aus |
 | 0xFF | Nicht definiert |
 
-<a id="table-tdemutesource"></a>
 ### TDEMUTESOURCE
 
 Dimensions: 5 rows × 2 columns
@@ -2846,7 +2722,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Beide Kopfhörer |
 | 0xFF | Nicht definiert |
 
-<a id="table-tsourcedemutestatus"></a>
 ### TSOURCEDEMUTESTATUS
 
 Dimensions: 7 rows × 2 columns
@@ -2861,7 +2736,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | RSE Kopfhörer rechts ein |
 | 0xFF | Nicht definiert |
 
-<a id="table-res-0xa01e"></a>
 ### RES_0XA01E
 
 Dimensions: 2 rows × 13 columns
@@ -2871,7 +2745,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_VERBAU_ROUTINE | - | - | + | 0-n | - | unsigned long | - | TVerbauRoutine | - | - | - | Ausgeführte Testroutine(n). |
 | STAT_TEST_VERBAU | - | - | + | 0-n | - | unsigned char | - | TTestStatus | - | - | - | Gibt den Status des Verbautests wieder. Nach dem Herunterfahren oder Neustart des Steuergerätes wird der Status automatisch auf 0 zurückgesetzt. |
 
-<a id="table-arg-0xa01e"></a>
 ### ARG_0XA01E
 
 Dimensions: 1 rows × 14 columns
@@ -2880,7 +2753,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_VERBAU_ROUTINE | + | - | - | - | unsigned long | - | - | - | - | - | - | - | Routinen, die getestet werden sollen. Tabelle TVerbauRoutine |
 
-<a id="table-tverbauroutine"></a>
 ### TVERBAUROUTINE
 
 Dimensions: 24 rows × 2 columns
@@ -2912,7 +2784,6 @@ Dimensions: 24 rows × 2 columns
 | 0x00200000 | Ethernet-Verbindung RSE High zur Combox |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-res-0xd02a"></a>
 ### RES_0XD02A
 
 Dimensions: 8 rows × 10 columns
@@ -2928,7 +2799,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_TIME_FAN_INTERMEDIATE3_WERT | s | - | unsigned long | - | - | - | - | - | Time in seconds the fan is running at an intermediate rotation speed for which the voltage v3 is: 8V < v3 < = 10V |
 | STAT_TIME_FAN_MAX_WERT | s | - | unsigned long | - | - | - | - | - | Time in seconds the fan is running at its maximal rotation speed |
 
-<a id="table-res-0xa03c"></a>
 ### RES_0XA03C
 
 Dimensions: 2 rows × 13 columns
@@ -2938,7 +2808,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_LUEFTER | - | - | + | 0-n | - | unsigned char | - | TLuefterStatus | - | - | - | Status des Lüfters. |
 | STAT_LUEFTER_DREHZAHL_WERT | - | - | + | Hz | - | unsigned int | - | - | - | - | - | Aktuelle Frequenz des Lüfters in Hz. (Wenn nicht abfragbar, wird 0xFFFF zurückgegeben) |
 
-<a id="table-arg-0xa03c"></a>
 ### ARG_0XA03C
 
 Dimensions: 1 rows × 14 columns
@@ -2947,7 +2816,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DURATION | + | - | - | - | unsigned char | - | - | - | - | - | 0 | 30 | legt die Dauer in Sekunden fest, die der Lüfter auf Maximum läuft. |
 
-<a id="table-tluefterstatus"></a>
 ### TLUEFTERSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -2960,7 +2828,6 @@ Dimensions: 5 rows × 2 columns
 | 0xFE | Lüfter läuft mit unbekannter Drehzahl |
 | 0xFF | Nicht definiert |
 
-<a id="table-res-0xa01d"></a>
 ### RES_0XA01D
 
 Dimensions: 83 rows × 13 columns
@@ -3051,7 +2918,6 @@ Dimensions: 83 rows × 13 columns
 | STAT_FEHLER_16_VIDEOSWITCH_EINGANG | - | - | + | 0-n | - | unsigned int | - | TEingangVideoSwitch | - | - | - | Wertet die durch STEUERN_TEST_VIDEOEINGANG ausgeführten Tests aus. Gibt an, welcher Eingang des Videoswitches geroutet wurde. Dieses Result wird mit 65535 belegt, wenn STAT_TEST_VIDEOEINGANG nicht den Wert 3 (Fehler) meldet. |
 | STAT_FEHLER_16_VIDEOSWITCH_AUSGANG | - | - | + | 0-n | - | unsigned int | - | TAusgangVideoSwitch | - | - | - | Wertet die durch STEUERN_TEST_VIDEOEINGANG ausgeführten Tests aus. Gibt an, welcher Ausgang des Videoswitches geroutet wurde. Dieses Result wird mit 255 belegt, wenn STAT_TEST_VIDEOEINGANG nicht den Wert 3 (Fehler) meldet. |
 
-<a id="table-arg-0xa01d"></a>
 ### ARG_0XA01D
 
 Dimensions: 1 rows × 14 columns
@@ -3060,7 +2926,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_QUELLE | + | - | - | - | unsigned long | - | - | - | - | - | 0 | - | Wertet das Signal von einer oder mehreren Quellen aus. Legt die Videoquelle fest, von der aus das Signal auf die Senke geroutet wird: Tabelle TVideoQuelle bzw. TEingangVideoSwitch |
 
-<a id="table-tteststatus"></a>
 ### TTESTSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -3074,7 +2939,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Test unterbrochen |
 | 0xFF | Nicht definiert |
 
-<a id="table-tvideoquelle"></a>
 ### TVIDEOQUELLE
 
 Dimensions: 15 rows × 2 columns
@@ -3097,7 +2961,6 @@ Dimensions: 15 rows × 2 columns
 | 0x00001000 | AUX4 |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-tvideoeingangfehlerart"></a>
 ### TVIDEOEINGANGFEHLERART
 
 Dimensions: 4 rows × 2 columns
@@ -3109,7 +2972,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Verbindung konnte nicht hergestellt werden |
 | 0xFF | Nicht definiert |
 
-<a id="table-tfbaseingang"></a>
 ### TFBASEINGANG
 
 Dimensions: 11 rows × 2 columns
@@ -3128,7 +2990,6 @@ Dimensions: 11 rows × 2 columns
 | 0x00000100 | FBAS-Eingang 9 |
 | 0xFFFFFFFF | nicht definiert |
 
-<a id="table-teingangvideoswitch"></a>
 ### TEINGANGVIDEOSWITCH
 
 Dimensions: 11 rows × 2 columns
@@ -3147,7 +3008,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0100 | Eingang 9 |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-tausgangvideoswitch"></a>
 ### TAUSGANGVIDEOSWITCH
 
 Dimensions: 11 rows × 2 columns
@@ -3166,7 +3026,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0100 | Ausgang 9 |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-res-0xa024"></a>
 ### RES_0XA024
 
 Dimensions: 2 rows × 13 columns
@@ -3176,7 +3035,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_MENU_WERT | - | - | + | - | - | unsigned long | - | - | - | - | - | ID des Menüs. |
 | STAT_MENU_RSE_RIGHT_WERT | - | - | + | - | - | unsigned long | - | - | - | - | - | ID des Menü der zweiten MMI, z.B. RSE rechter Bildschirm. |
 
-<a id="table-arg-0xa024"></a>
 ### ARG_0XA024
 
 Dimensions: 2 rows × 14 columns
@@ -3186,7 +3044,6 @@ Dimensions: 2 rows × 14 columns
 | ARG_MENU | + | - | - | - | unsigned long | - | - | - | - | - | - | - | Einstellen eines MMI Menüs. |
 | ARG_MENU_RSE_RIGHT | + | - | - | - | unsigned long | - | - | - | - | - | - | - | ID des Menüs der zweiten MMI, z.B. RSE rechter Bildschirm. |
 
-<a id="table-res-0xd026"></a>
 ### RES_0XD026
 
 Dimensions: 6 rows × 10 columns
@@ -3200,7 +3057,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_TEMP_HDD_WERT | °C | - | char | - | - | - | - | - | liefert die Temperatur des HDD-Laufwerks. Bereich: -127,&,127 |
 | STAT_TEMP_DVD_WERT | °C | - | char | - | - | - | - | - | liefert die Temperatur des DVD-Laufwerks. Bereich: -127,&,127 |
 
-<a id="table-res-0xd04e"></a>
 ### RES_0XD04E
 
 Dimensions: 3 rows × 10 columns
@@ -3211,7 +3067,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_HW_VARIANTE_LIEFERANT | 0-n | - | unsigned char | - | THwLieferant | - | - | - | gibt den Lieferanten nach Tabelle THwLieferant aus. |
 | STAT_HW_EINHEIT | 0-n | - | unsigned long | - | THwEinheit | - | - | - | liefert eine eindeutige ID der Hardwarevariante. Die Tabelle THwEinheit ist von der Entwicklung in der SGBD zu pflegen. 0xFFFFFFFF bedeutet  nicht definiert |
 
-<a id="table-thwvariante"></a>
 ### THWVARIANTE
 
 Dimensions: 62 rows × 2 columns
@@ -3281,7 +3136,6 @@ Dimensions: 62 rows × 2 columns
 | 0x02040010 | RearSeatEntertainment High mit Funktion Video-in als China/Korea-Variante |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-thwlieferant"></a>
 ### THWLIEFERANT
 
 Dimensions: 7 rows × 2 columns
@@ -3296,7 +3150,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Fuba |
 | 0xFF | Nicht definiert |
 
-<a id="table-thweinheit"></a>
 ### THWEINHEIT
 
 Dimensions: 1 rows × 2 columns
@@ -3305,7 +3158,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFF | Nicht definiert |
 
-<a id="table-res-0xa039"></a>
 ### RES_0XA039
 
 Dimensions: 1 rows × 13 columns
@@ -3314,7 +3166,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LEVEL_WERT | + | - | - | - | - | char | - | - | - | - | - | Bei Headunits:  Hex-Wert, von 0x00 lückenlos bis 0x7F, Nicht unterstützte Werte (Stereo: 0x3F) dürfen nicht zu Fehlermeldungen führen. Sondern die für das Lautsprechersystem nächstmöglich kleinere verfügbare Lautstärke wird eingestellt.   Bei manchen sekundären Lautstärken wie Navi-Out wird die Lautstärke relativ angegeben, z.B: [-11;11]  Bei Verstärkern: Integer, -96..0 [dB] |
 
-<a id="table-arg-0xa039"></a>
 ### ARG_0XA039
 
 Dimensions: 1 rows × 14 columns
@@ -3323,7 +3174,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_AUDIO_SIGNAL | + | - | 0-n | - | unsigned char | - | TAudioSignal | - | - | - | - | - | Gibt an, welche Lautstärke ausgelesen werden soll. Default: 0 |
 
-<a id="table-tinitialisierung"></a>
 ### TINITIALISIERUNG
 
 Dimensions: 3 rows × 2 columns
@@ -3334,7 +3184,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | IO initialisiert |
 | 0xFF | NIO initialisiert |
 
-<a id="table-res-0xa025"></a>
 ### RES_0XA025
 
 Dimensions: 1 rows × 13 columns
@@ -3343,7 +3192,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LANGUAGE | - | - | + | 0-n | - | unsigned char | - | TLanguage | - | - | - | Die derzeit eingestellte MMI Sprache. |
 
-<a id="table-arg-0xa025"></a>
 ### ARG_0XA025
 
 Dimensions: 1 rows × 14 columns
@@ -3352,7 +3200,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_LANGUAGE | + | - | 0-n | - | unsigned char | - | TLanguage | - | - | - | - | - | legt die Sprache fest. |
 
-<a id="table-tlanguage"></a>
 ### TLANGUAGE
 
 Dimensions: 24 rows × 2 columns
@@ -3384,7 +3231,6 @@ Dimensions: 24 rows × 2 columns
 | 0xFE | Kein Sprachpaket aktiv |
 | 0xFF | Nicht definiert |
 
-<a id="table-arg-0xa036"></a>
 ### ARG_0XA036
 
 Dimensions: 2 rows × 14 columns
@@ -3394,7 +3240,6 @@ Dimensions: 2 rows × 14 columns
 | ARG_LEVEL | + | - | - | - | char | - | - | - | - | - | - | - | Bei Headunits:  Hex-Wert, von 0x00 lückenlos bis 0x7F Bei manchen sekundären Lautstärken wie Navi-Out wird die Lautstärke relativ angegeben, z.B: [-11;11]  Bei Verstärkern: Integer, -96..0 [dB] |
 | ARG_AUDIO_SIGNAL | + | - | 0-n | - | unsigned char | - | TAudioSignal | - | - | - | - | - | Gibt an, welche Lautstärke verstellt oder ausgelesen werden soll. Default: 0 |
 
-<a id="table-taudiosignal"></a>
 ### TAUDIOSIGNAL
 
 Dimensions: 11 rows × 2 columns
@@ -3413,7 +3258,6 @@ Dimensions: 11 rows × 2 columns
 | 0x20 | nur für RSE: Entertainment Kopfhörer rechte Seite |
 | 0xFF | Nicht definiert |
 
-<a id="table-tinsertedmedium"></a>
 ### TINSERTEDMEDIUM
 
 Dimensions: 6 rows × 2 columns
@@ -3427,7 +3271,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Flashspeicher Medium ist eingelegt |
 | 0xFF | Nicht definiert |
 
-<a id="table-res-0xd00c"></a>
 ### RES_0XD00C
 
 Dimensions: 22 rows × 10 columns
@@ -3457,7 +3300,6 @@ Dimensions: 22 rows × 10 columns
 | STAT_PRODUCTID_FLASHSPEICHER_WERT | - | - | string | - | - | - | - | - | Gibt die PRODUCTID des Laufwerks aus. ACHTUNG: Result wird dynamisch zu ..._TEXT statt _WERT. |
 | STAT_FIRMWARE_FLASHSPEICHER_WERT | - | - | string | - | - | - | - | - | Gibt die Firmware-Version des Laufwerks aus. ACHTUNG: Result wird dynamisch zu ..._TEXT statt _WERT. |
 
-<a id="table-tlaufwerk"></a>
 ### TLAUFWERK
 
 Dimensions: 19 rows × 2 columns
@@ -3484,7 +3326,6 @@ Dimensions: 19 rows × 2 columns
 | 0x00000064 | DVD, USB und Flash Speicher |
 | 0xFFFFFFFF | Nicht definiert |
 
-<a id="table-arg-0xa01a"></a>
 ### ARG_0XA01A
 
 Dimensions: 3 rows × 14 columns
@@ -3495,7 +3336,6 @@ Dimensions: 3 rows × 14 columns
 | ARG_AUSGANG | + | + | - | - | unsigned int | - | - | - | - | - | - | - | Default: 0 Alle Ausgänge des Steuergerätes müssen einzeln und kombiniert anwählbar sein. |
 | ARG_TIMEOUT | + | - | - | - | unsigned char | - | - | - | - | - | - | - | Wertebereich: 0-30,255 0 schaltet wieder auf Normalbetrieb. 255 schaltet das Signal ohne einen TIMEOUT. Ansonsten legt dies Zahl die Sekunden fest, die das Testbild ausgegeben wird. Default: 255 Wird dieser Parameter nicht angegeben, erfolgt eine Ausgabe, bis: -der Job erneut mit Parameter 0 aufgerufen wird -das Steuergerät neu startet (Aufwachen, Reset, &) |
 
-<a id="table-tsignalart"></a>
 ### TSIGNALART
 
 Dimensions: 9 rows × 2 columns
@@ -3512,7 +3352,6 @@ Dimensions: 9 rows × 2 columns
 | 0x08 | Testbild mit leicht springendem ACNT |
 | 0x09 | Testbild mit stark springendem ACNT |
 
-<a id="table-tvideoausgang"></a>
 ### TVIDEOAUSGANG
 
 Dimensions: 11 rows × 2 columns
@@ -3531,7 +3370,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0100 | Ausgang 9 |
 | 0xFFFF | Nicht definiert |
 
-<a id="table-res-0xa00b"></a>
 ### RES_0XA00B
 
 Dimensions: 2 rows × 13 columns
@@ -3541,7 +3379,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ENTSOURCE | - | - | + | 0-n | - | unsigned char | - | TEntSource | - | - | - | die eingestellte Entertainmentquelle |
 | STAT_DESIRED_ENTSOURCE | - | - | + | 0-n | - | unsigned char | - | TEntSourceStatus | - | - | - | gibt zurück, ob die letzte einzustellende Entertainmentquelle verfügbar war. |
 
-<a id="table-arg-0xa00b"></a>
 ### ARG_0XA00B
 
 Dimensions: 1 rows × 14 columns
@@ -3550,7 +3387,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_ENTSOURCE | + | - | 0-n | - | unsigned char | - | TEntSource | - | - | - | - | - | die auszuwählende Entertainmentquelle |
 
-<a id="table-tentsource"></a>
 ### TENTSOURCE
 
 Dimensions: 27 rows × 2 columns
@@ -3585,7 +3421,6 @@ Dimensions: 27 rows × 2 columns
 | 0x19 | Entertainment server |
 | 0xFF | Entertainmentquelle nicht definiert |
 
-<a id="table-tentsourcestatus"></a>
 ### TENTSOURCESTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3597,7 +3432,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Entertainmentquelle wird gesucht |
 | 0xFF | Nicht definiert |
 
-<a id="table-tselbsttestroutine"></a>
 ### TSELBSTTESTROUTINE
 
 Dimensions: 2 rows × 2 columns

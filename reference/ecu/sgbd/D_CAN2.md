@@ -10,7 +10,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung und Kommunikationsparameter
 - [IDENTIFIKATION](#job-identifikation) - Auslesen des Fahrzeugauftrags aus dem CAS Ermitteln der Baureihe 
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -23,7 +22,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-identifikation"></a>
 ### IDENTIFIKATION
 
 Auslesen des Fahrzeugauftrags aus dem CAS Ermitteln der Baureihe 
@@ -42,7 +40,6 @@ _No arguments._
 
 - [KONZEPT_TABELLE](#table-konzept-tabelle) (4 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns

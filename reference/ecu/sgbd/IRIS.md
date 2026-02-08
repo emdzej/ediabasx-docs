@@ -30,7 +30,6 @@
 - [HERSTELLERDATEN_LESEN](#job-herstellerdaten-lesen)
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -48,7 +47,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer IRIS E39
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer IRIS
@@ -85,7 +82,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -108,7 +104,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hex-Werte des Einzelfehlers |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -122,7 +117,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 _No arguments._
@@ -137,7 +131,6 @@ _No arguments._
 | BYTE_3 | int | Byte 3 des Pruefstempels |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Default pruefstempel_setzen job
@@ -156,7 +149,6 @@ Default pruefstempel_setzen job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -170,7 +162,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | _ANTWORT | binary |  |
 
-<a id="job-herstellerdaten-lesen"></a>
 ### HERSTELLERDATEN_LESEN
 
 _No arguments._
@@ -183,7 +174,6 @@ _No arguments._
 | DATEN | binary |  |
 | _ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -206,7 +196,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (2 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -220,7 +209,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -231,7 +219,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | Keine gueltige Statusrueckmeldung AUDIO |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -241,7 +228,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Fehler momentan nicht vorhanden |
 | 0x01 | Fehler momentan vorhanden |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

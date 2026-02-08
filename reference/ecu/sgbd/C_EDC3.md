@@ -25,7 +25,6 @@
 - [C_S_AUFTRAG](#job-c-s-auftrag) - Codierdaten schreiben und verifizieren
 - [C_S_LESEN](#job-c-s-lesen) - Codierdaten lesen
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -43,7 +42,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -56,7 +54,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -79,7 +76,6 @@ _No arguments._
 | ID_MASKEN_NR | int | Maskennummer |
 | ID_STRUKTUR_NR | int | Strukturdatennummer |
 
-<a id="job-c-s-auftrag"></a>
 ### C_S_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -96,7 +92,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-s-lesen"></a>
 ### C_S_LESEN
 
 Codierdaten lesen

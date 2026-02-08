@@ -80,7 +80,6 @@
 - [SEED_KEY](#job-seed-key) - Obtain security access to the ECU
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode des SG beenden
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -93,7 +92,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information bzgl. SGBD
@@ -111,7 +109,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise General Comment about file |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identification data
@@ -138,7 +135,6 @@ _No arguments._
 | ID_SYSTEM_NAME | int | System Name |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-ident-extended"></a>
 ### IDENT_EXTENDED
 
 Identification data
@@ -157,7 +153,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-vin-lesen"></a>
 ### VIN_LESEN
 
 Identification data
@@ -172,7 +167,6 @@ _No arguments._
 | ID_VIN | string | Vehicle Identification number |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-vin-schreiben"></a>
 ### VIN_SCHREIBEN
 
 Write thge VIN to the ECU
@@ -190,7 +184,6 @@ Write thge VIN to the ECU
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-programming-date-schreiben"></a>
 ### PROGRAMMING_DATE_SCHREIBEN
 
 Write the programming date to the ECU
@@ -210,7 +203,6 @@ Write the programming date to the ECU
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-zcs-lesen"></a>
 ### ZCS_LESEN
 
 Auslesen des Zentralen Codierschluessels aus Flash
@@ -228,7 +220,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-zcs-schreiben"></a>
 ### ZCS_SCHREIBEN
 
 Write the ZCS record
@@ -249,7 +240,6 @@ Write the ZCS record
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-start-diagnostics"></a>
 ### START_DIAGNOSTICS
 
 Begins a diagnostic session
@@ -267,7 +257,6 @@ Begins a diagnostic session
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Reset the ECU
@@ -281,7 +270,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Read faults
@@ -317,7 +305,6 @@ _No arguments._
 | F_ART8_TEXT | string | Fault status text 8 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Clears All Faults
@@ -331,7 +318,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-status-io-digital-04"></a>
 ### STATUS_IO_DIGITAL_04
 
 Read digitals for LID 04 - Equipment configuration
@@ -385,7 +371,6 @@ _No arguments._
 | STAT_US_VERSION_DUP_ENABLED | int | US version enabled |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-status-io-digital-16"></a>
 ### STATUS_IO_DIGITAL_16
 
 Read digitals for LID 16 - ODS Status
@@ -406,7 +391,6 @@ _No arguments._
 | STAT_OC_SENSOR_STATUS4_ACTIVE | int | OC Sensor status4 (SBE2) status 4 active |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-status-analogue-lock-byte"></a>
 ### STATUS_ANALOGUE_LOCK_BYTE
 
 Read lock byte value LID 15
@@ -422,7 +406,6 @@ _No arguments._
 | STAT_LOCK_BYTE_WERT | real | Lock byte value |
 | STAT_LOCK_BYTE_EINH | string | Lock byte units |
 
-<a id="job-lock-byte-schreiben"></a>
 ### LOCK_BYTE_SCHREIBEN
 
 Write lock byte value LID 34
@@ -440,7 +423,6 @@ Write lock byte value LID 34
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-airbag-drv-1-schreiben"></a>
 ### AIRBAG_DRV_1_SCHREIBEN
 
 Write Airbag driver 1
@@ -459,7 +441,6 @@ Write Airbag driver 1
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-pre-drv-schreiben"></a>
 ### BELT_PRE_DRV_SCHREIBEN
 
 Write Belt pretensioner driver
@@ -478,7 +459,6 @@ Write Belt pretensioner driver
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-pre-psngr-schreiben"></a>
 ### BELT_PRE_PSNGR_SCHREIBEN
 
 Write Belt pretensioner passenger
@@ -497,7 +477,6 @@ Write Belt pretensioner passenger
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-airbag-psngr-1-schreiben"></a>
 ### AIRBAG_PSNGR_1_SCHREIBEN
 
 Write Airbag passneger
@@ -516,7 +495,6 @@ Write Airbag passneger
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-sidebag-front-left-schreiben"></a>
 ### SIDEBAG_FRONT_LEFT_SCHREIBEN
 
 Write Sidebag font left seat
@@ -535,7 +513,6 @@ Write Sidebag font left seat
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-sidebag-front-right-schreiben"></a>
 ### SIDEBAG_FRONT_RIGHT_SCHREIBEN
 
 Write Sidebag font right seat
@@ -554,7 +531,6 @@ Write Sidebag font right seat
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-pre-rear-left-schreiben"></a>
 ### BELT_PRE_REAR_LEFT_SCHREIBEN
 
 Write Belt pretensioner rear left
@@ -573,7 +549,6 @@ Write Belt pretensioner rear left
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-pre-rear-right-schreiben"></a>
 ### BELT_PRE_REAR_RIGHT_SCHREIBEN
 
 Write Belt pretensioner rear right
@@ -592,7 +567,6 @@ Write Belt pretensioner rear right
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-its-front-left-schreiben"></a>
 ### ITS_FRONT_LEFT_SCHREIBEN
 
 Write ITS front left
@@ -611,7 +585,6 @@ Write ITS front left
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-its-front-right-schreiben"></a>
 ### ITS_FRONT_RIGHT_SCHREIBEN
 
 Write ITS front right
@@ -630,7 +603,6 @@ Write ITS front right
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-airbag-drv-2-schreiben"></a>
 ### AIRBAG_DRV_2_SCHREIBEN
 
 Write Airbag driver 2
@@ -649,7 +621,6 @@ Write Airbag driver 2
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-airbag-psngr-2-schreiben"></a>
 ### AIRBAG_PSNGR_2_SCHREIBEN
 
 Write Airbag passenger 2
@@ -668,7 +639,6 @@ Write Airbag passenger 2
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-buckle-driver-schreiben"></a>
 ### BELT_BUCKLE_DRIVER_SCHREIBEN
 
 Write Belt Buckle driver
@@ -687,7 +657,6 @@ Write Belt Buckle driver
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-buckle-psngr-schreiben"></a>
 ### BELT_BUCKLE_PSNGR_SCHREIBEN
 
 Write Belt Buckle passenger enabled
@@ -706,7 +675,6 @@ Write Belt Buckle passenger enabled
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-oc-sensor-active-schreiben"></a>
 ### OC_SENSOR_ACTIVE_SCHREIBEN
 
 Write OC Sensor active
@@ -725,7 +693,6 @@ Write OC Sensor active
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-rfis-schreiben"></a>
 ### RFIS_SCHREIBEN
 
 Write Rear facing infant sensor active
@@ -744,7 +711,6 @@ Write Rear facing infant sensor active
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-mrsa-front-schreiben"></a>
 ### MRSA_FRONT_SCHREIBEN
 
 Write MRSA front selected
@@ -763,7 +729,6 @@ Write MRSA front selected
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-mrsa-rear-schreiben"></a>
 ### MRSA_REAR_SCHREIBEN
 
 Write MRSA rear selected
@@ -782,7 +747,6 @@ Write MRSA rear selected
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-rfis-lamp-schreiben"></a>
 ### RFIS_LAMP_SCHREIBEN
 
 Write  Rear facing infant sensor lamp enabled
@@ -801,7 +765,6 @@ Write  Rear facing infant sensor lamp enabled
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-us-version-schreiben"></a>
 ### US_VERSION_SCHREIBEN
 
 Write US version enabled
@@ -820,7 +783,6 @@ Write US version enabled
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-airbag-drv-1-dup-schreiben"></a>
 ### AIRBAG_DRV_1_DUP_SCHREIBEN
 
 Write Airbag driver 1
@@ -839,7 +801,6 @@ Write Airbag driver 1
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-pre-drv-dup-schreiben"></a>
 ### BELT_PRE_DRV_DUP_SCHREIBEN
 
 Write Belt pretensioner driver
@@ -858,7 +819,6 @@ Write Belt pretensioner driver
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-pre-psngr-dup-schreiben"></a>
 ### BELT_PRE_PSNGR_DUP_SCHREIBEN
 
 Write Belt pretensioner passenger
@@ -877,7 +837,6 @@ Write Belt pretensioner passenger
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-airbag-psngr-1-dup-schreiben"></a>
 ### AIRBAG_PSNGR_1_DUP_SCHREIBEN
 
 Write Airbag passneger
@@ -896,7 +855,6 @@ Write Airbag passneger
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-sidebag-front-left-dup-schreiben"></a>
 ### SIDEBAG_FRONT_LEFT_DUP_SCHREIBEN
 
 Write Sidebag font left seat
@@ -915,7 +873,6 @@ Write Sidebag font left seat
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-sidebag-front-right-dup-schreiben"></a>
 ### SIDEBAG_FRONT_RIGHT_DUP_SCHREIBEN
 
 Write Sidebag font right seat
@@ -934,7 +891,6 @@ Write Sidebag font right seat
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-pre-rear-left-dup-schreiben"></a>
 ### BELT_PRE_REAR_LEFT_DUP_SCHREIBEN
 
 Write Belt pretensioner rear left
@@ -953,7 +909,6 @@ Write Belt pretensioner rear left
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-pre-rear-right-dup-schreiben"></a>
 ### BELT_PRE_REAR_RIGHT_DUP_SCHREIBEN
 
 Write Belt pretensioner rear right
@@ -972,7 +927,6 @@ Write Belt pretensioner rear right
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-its-front-left-dup-schreiben"></a>
 ### ITS_FRONT_LEFT_DUP_SCHREIBEN
 
 Write ITS front left
@@ -991,7 +945,6 @@ Write ITS front left
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-its-front-right-dup-schreiben"></a>
 ### ITS_FRONT_RIGHT_DUP_SCHREIBEN
 
 Write ITS front right
@@ -1010,7 +963,6 @@ Write ITS front right
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-airbag-drv-2-dup-schreiben"></a>
 ### AIRBAG_DRV_2_DUP_SCHREIBEN
 
 Write Airbag driver 2
@@ -1029,7 +981,6 @@ Write Airbag driver 2
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-airbag-psngr-2-dup-schreiben"></a>
 ### AIRBAG_PSNGR_2_DUP_SCHREIBEN
 
 Write Airbag passenger 2
@@ -1048,7 +999,6 @@ Write Airbag passenger 2
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-buckle-driver-dup-schreiben"></a>
 ### BELT_BUCKLE_DRIVER_DUP_SCHREIBEN
 
 Write Belt Buckle driver
@@ -1067,7 +1017,6 @@ Write Belt Buckle driver
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-belt-buckle-psngr-dup-schreiben"></a>
 ### BELT_BUCKLE_PSNGR_DUP_SCHREIBEN
 
 Write Belt Buckle passenger enabled
@@ -1086,7 +1035,6 @@ Write Belt Buckle passenger enabled
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-oc-sensor-dup-schreiben"></a>
 ### OC_SENSOR_DUP_SCHREIBEN
 
 Write OC Sensor active
@@ -1105,7 +1053,6 @@ Write OC Sensor active
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-rfis-dup-schreiben"></a>
 ### RFIS_DUP_SCHREIBEN
 
 Write Rear facing infant sensor active
@@ -1124,7 +1071,6 @@ Write Rear facing infant sensor active
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-mrsa-front-dup-schreiben"></a>
 ### MRSA_FRONT_DUP_SCHREIBEN
 
 Write MRSA front selected
@@ -1143,7 +1089,6 @@ Write MRSA front selected
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-mrsa-rear-dup-schreiben"></a>
 ### MRSA_REAR_DUP_SCHREIBEN
 
 Write MRSA rear selected
@@ -1162,7 +1107,6 @@ Write MRSA rear selected
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-rfis-lamp-dup-schreiben"></a>
 ### RFIS_LAMP_DUP_SCHREIBEN
 
 Write  Rear facing infant sensor lamp enabled
@@ -1181,7 +1125,6 @@ Write  Rear facing infant sensor lamp enabled
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-us-version-dup-schreiben"></a>
 ### US_VERSION_DUP_SCHREIBEN
 
 Write US version enabled
@@ -1200,7 +1143,6 @@ Write US version enabled
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Ping message
@@ -1214,7 +1156,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Obtain security access to the ECU
@@ -1233,7 +1174,6 @@ Obtain security access to the ECU
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden
@@ -1260,7 +1200,6 @@ _No arguments._
 - [DIGITALARGUMENT](#table-digitalargument) (12 × 2)
 - [MONTHS](#table-months) (13 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 30 rows × 2 columns
@@ -1298,7 +1237,6 @@ Dimensions: 30 rows × 2 columns
 | 0x92 | ERROR_ECU_RESERVED_BY_DOCUMENT |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns
@@ -1353,7 +1291,6 @@ Dimensions: 47 rows × 2 columns
 | 0x46 | Gemel |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 91 rows × 2 columns
@@ -1452,7 +1389,6 @@ Dimensions: 91 rows × 2 columns
 | 0x9200 | Unfall Telegram memory: Mindestens eine Unfall detected |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -1473,7 +1409,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | Error Present |
 | 0xFF | Unknown Error |
 
-<a id="table-analogue"></a>
 ### ANALOGUE
 
 Dimensions: 2 rows × 4 columns
@@ -1483,7 +1418,6 @@ Dimensions: 2 rows × 4 columns
 | LOCK_BYTE | 1.0 | 0.0 |  |
 | ?? | 0.0 | 0.0 | ?? |
 
-<a id="table-digital"></a>
 ### DIGITAL
 
 Dimensions: 48 rows × 4 columns
@@ -1539,7 +1473,6 @@ Dimensions: 48 rows × 4 columns
 | OC_SENSOR_STATUS4_ACTIVE | 6 | 0x80 | 0x80 |
 | ?? | 0 | 0x00 | 0x00 |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 12 rows × 2 columns
@@ -1559,7 +1492,6 @@ Dimensions: 12 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-months"></a>
 ### MONTHS
 
 Dimensions: 13 rows × 2 columns

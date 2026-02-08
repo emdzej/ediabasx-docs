@@ -109,7 +109,6 @@
 - [STEUERN_IO_CL_WIPPE](#job-steuern-io-cl-wippe) - JobHeaderFormat 0xDC7C STEUERN_IO_CL_WIPPE
 - [STEUERN_IO_HK_WIPPE](#job-steuern-io-hk-wippe) - JobHeaderFormat 0xDC7C STEUERN_IO_HK_WIPPE
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -128,7 +127,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -141,7 +139,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -158,7 +155,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -188,7 +184,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -230,7 +225,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -249,7 +243,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -267,7 +260,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -288,7 +280,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -317,7 +308,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -337,7 +327,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -358,7 +347,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -374,7 +362,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -396,7 +383,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -418,7 +404,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -437,7 +422,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -463,7 +447,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -505,7 +488,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -520,7 +502,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -540,7 +521,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -559,7 +539,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -578,7 +557,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -593,7 +571,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -612,7 +589,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -632,7 +608,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -649,7 +624,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -668,7 +642,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -684,7 +657,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -718,7 +690,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -733,7 +704,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -748,7 +718,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -765,7 +734,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -780,7 +748,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -795,7 +762,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -810,7 +776,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -826,7 +791,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -845,7 +809,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -865,7 +828,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -883,7 +845,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -899,7 +860,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-istufe"></a>
 ### STATUS_ISTUFE
 
 Liefert die im EEPROM abgelegte I-Stufe jeweils für Werk, HO und HO-Backup. JobHeaderFormat 0x100B STATUS_ISTUFE
@@ -920,7 +880,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-kilometerstand"></a>
 ### STATUS_KILOMETERSTAND
 
 Aufruf liefert den angezeigeten Gesamtwegstreckenzähler. Beim CAS den im EEPROM hinterlegten Wert. JobHeaderFormat 0x1700 STATUS_KILOMETERSTAND
@@ -937,7 +896,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-hw-variante"></a>
 ### STATUS_CAS_HW_VARIANTE
 
 Hardware-Variante des CAS lesen. JobHeaderFormat 0xDAB7 CAS_HW_VARIANTE
@@ -958,7 +916,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-klemmen-verhinderer"></a>
 ### STATUS_KLEMMEN_VERHINDERER
 
 Job zum Auslesen der internen Stati der Klemmensteuerungs-Statemachine für folgende Klemmenwechsel: Einschalten der KL15, Ausschalten der KL15, Einschalten der KL50 JobHeaderFormat 0xDABA STATUS_KLEMMEN_VERHINDERER
@@ -979,7 +936,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-elv"></a>
 ### STATUS_ELV
 
 Aktuellen Status der ELV aktiv auslesen. JobHeaderFormat 0xDAC3 STATUS_ELV
@@ -1026,7 +982,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-zv-historie"></a>
 ### STATUS_ZV_HISTORIE
 
 Historienspeicher für Zustandsänderungen und Aktionen des Zentralverriegelungs-Masters. JobHeaderFormat 0xDAC6 ZV_HISTORIE
@@ -1067,7 +1022,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-zv-aktuell"></a>
 ### STATUS_ZV_AKTUELL
 
 Der Job dient zum Auslesen des aktuellen Status des Zentralverriegelungsmasters. JobHeaderFormat 0xDAC7 STATUS_ZV
@@ -1102,7 +1056,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fbd-empfaenger"></a>
 ### STATUS_FBD_EMPFAENGER
 
 Status des LIN-FBD-Empfängers JobHeaderFormat 0xDAC9 FBD_EMPFAENGER
@@ -1129,7 +1082,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrzeugauftrag"></a>
 ### STATUS_FAHRZEUGAUFTRAG
 
 Der Job dient zum Auslesen des redundant im CAS gespeicherten Fahrzeugauftrags. Hinweise:Das ZGW ist das Master-SG für den Fahrzeugauftrag Es werden nur die uninterpretierten Rohdaten aus dem CAS EEPROM geliefert JobHeaderFormat 0xDC55 FAHRZEUGAUFTRAG
@@ -1152,7 +1104,6 @@ _No arguments._
 | _REQUEST2 | binary | Hex-Auftrag an SG |
 | _RESPONSE2 | binary | Hex-Antwort von SG |
 
-<a id="job-status-kl15-abschaltung"></a>
 ### STATUS_KL15_ABSCHALTUNG
 
 Job zum Lesen des Status der Funktion KLEMME15-Abschaltung. JobHeaderFormat 0xDC57 STATUS_KL15_ABSCHALTUNG
@@ -1185,7 +1136,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pm-historie"></a>
 ### STATUS_PM_HISTORIE
 
 Der Job dient zum Auslesen des Powermanagement Historienspeicher des CAS. Der Historienspeicher gibt die Weckquelle, das zeitliche Auftreten (relativer Abstand zwischen 2 Weckereignissen) und die Häufigkeit von Weckereignissen wieder. JobHeaderFormat 0xDC58 STATUS_PM_HISTORIE
@@ -1210,7 +1160,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pm-schlafbereitschaft"></a>
 ### STATUS_PM_SCHLAFBEREITSCHAFT
 
 Der Job dient zum Auslesen der Schlafbereitschaft des CAS und gibt den Status aller möglichen Einschlafverhinderer, d.h. Weckquellen (CAS-intern/extern) aus. JobHeaderFormat 0xDC59 STATUS_PM_SCHLAFBEREITSCHAFT
@@ -1234,7 +1183,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pia-nr"></a>
 ### STEUERN_PIA_NR
 
 PIA-Nummer eines Schlüssels umdefinieren. JobHeaderFormat 0xDC5B STEUERN_PIA_NR
@@ -1254,7 +1202,6 @@ PIA-Nummer eines Schlüssels umdefinieren. JobHeaderFormat 0xDC5B STEUERN_PIA_NR
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-klemmen-historie"></a>
 ### STATUS_KLEMMEN_HISTORIE
 
 Der Job dient zum Auslesen des Klemmen-Historiespeichers des CAS. Der Historienspeicher gibt den eingenommenen Klemmenzustand, das Transitions-Ereignis (d.h. Anforderer bzw. Ursache für einen Klemmenwechsel) sowie den Zeitpunkt des Klemmenwechsels wieder. JobHeaderFormat 0xDC5C STATUS_KLEMMEN_HISTORIE
@@ -1279,7 +1226,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-rdu-rdl-info"></a>
 ### STATUS_RDU_RDL_INFO
 
 Dieser Job dient dazu die Daten aller im Infospeicher des CAS abgespeicherten RDU- und RDL-Anforderungen auszulesen. Hinweise: RDU/RDL-Anforderungen  sowohl erfolgreiche als auch fehlgeschlagene - werden als einzelne Einträge im Infospeicher des CAS abgelegt. JobHeaderFormat 0xDC6B STATUS_RDU_RDL_INFO
@@ -1328,7 +1274,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluessel-sperre"></a>
 ### STEUERN_SCHLUESSEL_SPERRE
 
 Job zum Sperren und wieder freigeben von Schlüsseln. Der Job ist nur zulässig, wenn sich gerade ein gültiger Schlüssel an der Transponder-Spule befindet. Der aktuelle Schlüssel an der Transponder-Spule kann nicht gesperrt oder freigegeben werden. JobHeaderFormat 0xDC73 STEUERN_SCHLUESSEL_SPERRE
@@ -1348,7 +1293,6 @@ Job zum Sperren und wieder freigeben von Schlüsseln. Der Job ist nur zulässig,
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-egs-isn"></a>
 ### STEUERN_EGS_ISN
 
 EGS-ISN im CAS setzen (wird für Getriebe-EWS genutzt) Vorbedingung: DME-SecretKey (EWS4_DME_SK) nicht verriegelt JobHeaderFormat 0xDC76 EGS_ISN
@@ -1367,7 +1311,6 @@ EGS-ISN im CAS setzen (wird für Getriebe-EWS genutzt) Vorbedingung: DME-SecretK
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-egs-isn"></a>
 ### STATUS_EGS_ISN
 
 Verriegelungs-Status für EGS-ISN im CAS lesen (wird für Getriebe-EWS genutzt) JobHeaderFormat 0xDC76 EGS_ISN
@@ -1385,7 +1328,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-wup"></a>
 ### STATUS_CAS_WUP
 
 4-Byte FBD-Wakeup-Pattern lesen. JobHeaderFormat 0xDC78 CAS_WUP
@@ -1406,7 +1348,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-wup"></a>
 ### STEUERN_CAS_WUP
 
 4-Byte FBD-Wakeup-Pattern schreiben. JobHeaderFormat 0xDC78 CAS_WUP
@@ -1425,7 +1366,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-freq-type"></a>
 ### STEUERN_CAS_FREQ_TYPE
 
 Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS4_SK bzw. EWS4_TRSP_SK nicht mehr änderbar (ERROR_ECU_CONDITIONS_NOT_CORRECT). Werden unzulässige Daten übergeben, so erfolgt ein ERROR_DATA. JobHeaderFormat 0xDC79 CAS_FREQ_TYPE
@@ -1445,7 +1385,6 @@ Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-freq-type"></a>
 ### STATUS_CAS_FREQ_TYPE
 
 Konfiguration des CAS bzgl. Schlüssel-Initialisierung auslesen. JobHeaderFormat 0xDC79 CAS_FREQ_TYPE
@@ -1464,7 +1403,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-init-loc-date"></a>
 ### STATUS_CAS_INIT_LOC_DATE
 
 Konfiguration des CAS bzgl. Schlüssel-Initialisierung auslesen. JobHeaderFormat 0xDC7B CAS_INIT_LOC_DATE
@@ -1489,7 +1427,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-init-loc-date"></a>
 ### STEUERN_CAS_INIT_LOC_DATE
 
 Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS4_SK bzw. EWS4_TRSP_SK nicht mehr änderbar (ERROR_ECU_CONDITIONS_NOT_CORRECT). Werden unzulässige Daten übergeben, so erfolgt ein ERROR_DATA. JobHeaderFormat 0xDC7B CAS_INIT_LOC_DATE
@@ -1512,7 +1449,6 @@ Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-anlieferzustand"></a>
 ### STATUS_CAS_ANLIEFERZUSTAND
 
 Dieser Job liefert den aktuellen Fortschritt des Rücksetzen nach STEUERN_CAS_ANLIEFERZUSTAND. JobHeaderFormat 0xDC7D STATUS_CAS_ANLIEFERZUSTAND
@@ -1529,7 +1465,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-schluessel-trsp"></a>
 ### STATUS_SCHLUESSEL_TRSP
 
 Liefert den Status des momentan in der Ringspule befindlichen Schlüssels. Der Job liefert den Status des zuletzt gefundenen Transponders in der Ringspule. Die Daten sind max. 300 ms alt und entprellt (bei dauerhaft vorhandenem Transponder, keine flackernden Results). Ist der Schlüssel unbekannt und bereits gelocked, so werden nur die immer lesbaren Informationen ausgegeben. JobHeaderFormat 0xDC7E STATUS_SCHLUESSEL_TRSP
@@ -1606,7 +1541,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluesseldaten"></a>
 ### STEUERN_SCHLUESSELDATEN
 
 Schlüssel-Daten in CAS schreiben (z.B. für Ersatz-Steuergerät oder Nacharbeit). Nur zulässig solange EWS4_TRSP_SK nicht verriegelt. JobHeaderFormat 0xDC80 STEUERN_SCHLUESSELDATEN
@@ -1628,7 +1562,6 @@ Schlüssel-Daten in CAS schreiben (z.B. für Ersatz-Steuergerät oder Nacharbeit
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-standverbraucher-aktuell"></a>
 ### STATUS_STANDVERBRAUCHER_AKTUELL
 
 Der Job dient zum Auslesen des aktuellen Status, ob aktive KL30B-Nachlaufzeitverlängerungsanforderungen durch Standverbraucher im aktuellen einem Ruhezyklus (Beginn: KL15 aus  Ende: Motorstart) vorliegen. JobHeaderFormat 0xDC81 STATUS_STANDVERBRAUCHER_AKTUELL
@@ -1659,7 +1592,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-standverbraucher-historie"></a>
 ### STATUS_STANDVERBRAUCHER_HISTORIE
 
 Der Job dient zum Auslesen des Historienspeichers für KL30B-Nachlaufzeitverlängerungsanforderungen durch Standverbraucher. JobHeaderFormat 0xDC82 STATUS_STANDVERBRAUCHER_HISTORIE
@@ -1694,7 +1626,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews4-sk"></a>
 ### STATUS_EWS4_SK
 
 Dieser Job dient zum (Gegen-)Lesen der Secretkeys / ISNs (vor einem anschließenden Verriegeln Kommando) JobHeaderFormat 0xC002 STATUS_EWS4_SK_CAS
@@ -1715,7 +1646,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews"></a>
 ### STATUS_EWS
 
 Liefert den aktuellen Status der EWS-SecretKeys ISNs und den Status bzgl. KeyID KeyPIN JobHeaderFormat 0xC000 STATUS_EWS
@@ -1736,7 +1666,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-fahrgestellnummer"></a>
 ### STEUERN_FAHRGESTELLNUMMER
 
 Schreiben der Fahrgestellnummer JobHeaderFormat 0xF190 FAHRGESTELLNUMMER_LANG
@@ -1755,7 +1684,6 @@ Schreiben der Fahrgestellnummer JobHeaderFormat 0xF190 FAHRGESTELLNUMMER_LANG
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrgestellnummer"></a>
 ### STATUS_FAHRGESTELLNUMMER
 
 Lesen der Fahrgestellnummer JobHeaderFormat 0xF190 FAHRGESTELLNUMMER_LANG
@@ -1772,7 +1700,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews4"></a>
 ### STEUERN_EWS4
 
 Dieser Job dient zum Setzen der Secretkeys und zum anschließenden Verriegeln. JobHeaderFormat 0xC001 STEUERN_EWS4_CAS
@@ -1794,7 +1721,6 @@ Dieser Job dient zum Setzen der Secretkeys und zum anschließenden Verriegeln. J
 | _REQUEST2 | binary | Beschreibung:	2. Hex-Auftrag an SG |
 | _RESPONSE2 | binary | Beschreibung:	2. Hex-Antwort von SG |
 
-<a id="job-steuern-klemmen"></a>
 ### STEUERN_KLEMMEN
 
 Ändert den aktuellen Klemmen-Zustand im CAS. Auch Ausschalten des Motors möglich! Nur im Werkstatt- oder Fertigungsmodus. JobHeaderFormat 0x1001 STEUERN_KLEMMEN
@@ -1815,7 +1741,6 @@ Dieser Job dient zum Setzen der Secretkeys und zum anschließenden Verriegeln. J
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-service-schluesseldaten"></a>
 ### STATUS_SERVICE_SCHLUESSELDATEN
 
 Dieser Job dient zum blockweisen Auslesen der im CAS gespeicherten Service Schlüsseldaten. JobHeaderFormat 0x1006 STATUS_SERVICE_SCHLUESSELDATEN
@@ -1836,7 +1761,6 @@ Dieser Job dient zum blockweisen Auslesen der im CAS gespeicherten Service Schl�
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-service-schluesseldaten-update"></a>
 ### STEUERN_SERVICE_SCHLUESSELDATEN_UPDATE
 
 Dieser Job ermöglicht es einem folgende Aktionen anzustossen: Ermitteln der aktuellen Daten aus dem Fahrzeug, Übertragen der Daten in alle aktuell erkannten Schlüssel (inkrementell oder komplett). JobHeaderFormat 0x4005 STEUERN_SERVICE_SCHLUESSELDATEN_UPDATE
@@ -1855,7 +1779,6 @@ Dieser Job ermöglicht es einem folgende Aktionen anzustossen: Ermitteln der akt
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-elv-fehlerspeicher"></a>
 ### STATUS_ELV_FEHLERSPEICHER
 
 JobHeaderFormat 0xAA72 STATUS_ELV_FEHLERSPEICHER Vorbedingungen sind: a) ELV-Fehlerzähler (Escape-Counter) ELV-Master < 7 und b) ELV-Fehlerzähler (Escape-Counter) ELV-SG < 7
@@ -1882,7 +1805,6 @@ _No arguments._
 | STAT_ELV_FEHLERSPEICHER_KILOMETERSTAND2_EINH | string | Das Result enthält den  Kilometerstand bei dem der Fehler zum letzten Mal auftrat. 0-16777214 = Gültiger Kilometerstand 0xFFFFFF = ungültig. |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-cas-anlieferzustand"></a>
 ### STEUERN_CAS_ANLIEFERZUSTAND
 
 Versetzt das CAS in den Anlieferzustand (Montage-Modi, Codierung, VIN, Tansponder-Tabelle, EWS4_CLIENT_SK, ...) Falls Rücksetzen unzulässig: ERROR_ECU_CONDITIONS_NOT_CORRECT. Anmerkung: Nach dem Rücksetzen müssen alle im verriegelten Zustand geschützten W JobHeaderFormat 0xAC50 STEUERN_CAS_ANLIEFERZUSTAND
@@ -1901,7 +1823,6 @@ Versetzt das CAS in den Anlieferzustand (Montage-Modi, Codierung, VIN, Tansponde
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluessel-init"></a>
 ### STEUERN_SCHLUESSEL_INIT
 
 Job zum Anstoßen der Schlüssel-Initialisierung. Nur zulässig, solange EWS4_TRSP_SK noch nicht verriegelt. JobHeaderFormat 0xAC52 STEUERN_SCHLUESSEL_INIT
@@ -1923,7 +1844,6 @@ Job zum Anstoßen der Schlüssel-Initialisierung. Nur zulässig, solange EWS4_TR
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ca-komm-test"></a>
 ### STEUERN_CA_KOMM_TEST
 
 Kommunikation mit bestimmtem Schlüssel über bestimmte Antenne (IRV, IRH, FT, BFT, HA, KRLI, KRRE, SF) JobHeaderFormat 0xAC53 CA_KOMM_TEST
@@ -1945,7 +1865,6 @@ Kommunikation mit bestimmtem Schlüssel über bestimmte Antenne (IRV, IRH, FT, B
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ca-broadcast"></a>
 ### STEUERN_CA_BROADCAST
 
 Broadcast Innenraum: Alle im Innenraum befindlichen bereits bekannten Schlüssel ermitteln (max. 8). Results sind die Schlüssel-Ids und die Schlüssel-Nummern (0-9). Die Results STAT_CA_SCHL_...x werden beginnend mit x=1 bis x=n (bei n gefunden Schlüsseln) aufgefüllt. Die Results STAT_CA_SCHL_...x für x > n werden mit '00 00 00 00' bzw. 15 belegt (kein Schlüssel gefunden). JobHeaderFormat 0xAC54 CA_BROADCAST
@@ -1976,7 +1895,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ca-antennen-test"></a>
 ### STEUERN_CA_ANTENNEN_TEST
 
 CA-Antennen-Test durchführen und Fehler sofort in Fehlerspeicher eintragen. JobHeaderFormat 0xAC55 CA_ANTENNEN_TEST
@@ -1993,7 +1911,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-historienspeicher"></a>
 ### STEUERN_HISTORIENSPEICHER
 
 Dieser Job dient dazu per Diagnose neue Einträge in folgenden Historienspeichern des CAS zu sperren/entsperren: Powermanagement-Historienspeicher, Zentralverriegelungs-Historienspeicher, Klemmen-Historienspeicher, Standverbraucher-Historienspeicher. Kommentar: Der Job dient dazu den Inhalt eines Historienspeichers bei der Fehlersuche zu erhalten und das ungewollte Überschreiben durch neue Einträge zu unterbinden. JobHeaderFormat 0xAC56 STEUERN_HISTORIENSPEICHER
@@ -2015,7 +1932,6 @@ Dieser Job dient dazu per Diagnose neue Einträge in folgenden Historienspeicher
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fbd-telegramm"></a>
 ### STATUS_FBD_TELEGRAMM
 
 Status des letzten Empfangenes Funk-Telegramms (innerhalb der letzten 10 Sekunden). JobHeaderFormat 0xAC59 FBD_TELEGRAMM
@@ -2053,7 +1969,6 @@ Status des letzten Empfangenes Funk-Telegramms (innerhalb der letzten 10 Sekunde
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-schluesseldaten"></a>
 ### STATUS_SCHLUESSELDATEN
 
 Den Status eines Schlüssel laut Transpondertabelle ausgeben. Anmerkung: Die Informationen sind unabhängig von einem evtl. gerade vorhandenen Transponder in der Ringspule bzw. einem erkannten ID-Geber. JobHeaderFormat 0xAC5A STATUS_SCHLUESSELDATEN
@@ -2084,7 +1999,6 @@ Den Status eines Schlüssel laut Transpondertabelle ausgeben. Anmerkung: Die Inf
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-wippe-centerlock"></a>
 ### STATUS_WIPPE_CENTERLOCK
 
 Auslesen Status Centerlock-Wipp-Schalter STATUS_WIPPE_CENTERLOCK 
@@ -2103,7 +2017,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-wippe-heckklappe"></a>
 ### STATUS_WIPPE_HECKKLAPPE
 
 Auslesen Status HECKKLAPPE-Wipp-Schalter STATUS_WIPPE_HECKKLAPPE 
@@ -2122,7 +2035,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io-cl-wippe"></a>
 ### STEUERN_IO_CL_WIPPE
 
 JobHeaderFormat 0xDC7C STEUERN_IO_CL_WIPPE
@@ -2148,7 +2060,6 @@ JobHeaderFormat 0xDC7C STEUERN_IO_CL_WIPPE
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io-hk-wippe"></a>
 ### STEUERN_IO_HK_WIPPE
 
 JobHeaderFormat 0xDC7C STEUERN_IO_HK_WIPPE
@@ -2321,7 +2232,6 @@ JobHeaderFormat 0xDC7C STEUERN_IO_HK_WIPPE
 - [TAB_ZV_URSACHE](#table-tab-zv-ursache) (31 × 2)
 - [TAB_ZV_ZUSTAND](#table-tab-zv-zustand) (9 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -2405,7 +2315,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 134 rows × 2 columns
@@ -2547,7 +2456,6 @@ Dimensions: 134 rows × 2 columns
 | 0x0000BB | BMW - Fahrzeugsimulator |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -2574,7 +2482,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2599,7 +2506,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -2633,7 +2539,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -2706,7 +2611,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -2719,7 +2623,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -2732,7 +2635,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -2745,7 +2647,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -2765,7 +2666,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 203 rows × 3 columns
@@ -2976,7 +2876,6 @@ Dimensions: 203 rows × 3 columns
 | 0x7100 | NFC Leser Innenraum vorne | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -2985,7 +2884,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 162 rows × 2 columns
@@ -3155,7 +3053,6 @@ Dimensions: 162 rows × 2 columns
 | 0x0121 | Hyundai MOBIS |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -3181,7 +3078,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -3192,7 +3088,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0xaa7c"></a>
 ### ARG_0XAA7C
 
 Dimensions: 1 rows × 14 columns
@@ -3201,7 +3096,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ELV_AKTION | + | - | 0-n | - | unsigned char | - | TAB_CAS_ELV_AKTION | - | - | - | - | - | Das Argument enthält die durchzuführende ELV-Aktion. Hinweis: Bei Anstossen eines Herstelldaten-Updates werden nur die im CAS gespeicherten Werte aktualisiert. Das eigentliche Auslesen der Herstelldaten erfolgt über den Standardjob SENSOREN_IDENT. 0 = Entriegeln 1 = Verriegeln 2 = Nur für Entwicklungszwecke: Full-Cycle (Kompletter Zyklus Verriegeln + Entriegeln) 4 = Herstelldaten-Update (=Auslesen der Herstellerdaten aus der ELV und Aktualiserung der gespeicherten Werte im CAS) 5 = Fehlerzähler (Escape-Counter) löschen - ELV-Master + ELV-SG 6 = FullCycle-Merker löschen |
 
-<a id="table-arg-0xac51"></a>
 ### ARG_0XAC51
 
 Dimensions: 1 rows × 14 columns
@@ -3210,7 +3104,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DEAKTIVIERUNGSGESCHWINDIGKEIT | + | - | km/h | - | unsigned char | - | - | - | - | - | 0.0 | 50.0 | Das Argument gibt an bei welcher Geschindigkeit die Funktion KL15-Abschaltung wieder aktiviert werden soll. Hinweise: - Mit Argument = 0 soll die KL-15-Abschaltung sofort wieder aktiviert werden können. - Mit Argument = 1 - 50 wird die KL15-Abschaltung unterdrücken bis nächstes Mal Fahrzeuggeschwindigkeit über xx Kmh. |
 
-<a id="table-arg-0xac57"></a>
 ### ARG_0XAC57
 
 Dimensions: 1 rows × 14 columns
@@ -3219,7 +3112,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ZV_AKTION | + | - | 0-n | - | unsigned char | - | TAB_ZV_AKTION | - | - | - | - | - | Das Argument enthält die auszuführende ZV-Aktion.  Mögliche Argumente sind:  0=keine Aktion 1=Entriegeln 2=Verriegeln 4=Selektiv Entriegeln Fahrertür 5=Selektiv Entriegeln Heckklappe (ab L7) 6=Selektiv Entriegeln Heckscheibe (ab L7) |
 
-<a id="table-arg-0xac5b"></a>
 ### ARG_0XAC5B
 
 Dimensions: 1 rows × 14 columns
@@ -3228,7 +3120,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | + | - | - | - | unsigned char | - | - | - | - | - | - | - | Das (optionale) Argument dient dazu die Transponderspule zu aktivieren oder deaktivieren. 0 = Transponderspule für 10 Sekunden aktivieren (default) 1 = Transponderspule sofort deaktivieren Hinweis: Wird das Argument nicht angegeben, so wird der Defaultwert 0 verwendet. |
 
-<a id="table-arg-0xdab9"></a>
 ### ARG_0XDAB9
 
 Dimensions: 1 rows × 12 columns
@@ -3237,7 +3128,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CAS_MONTAGEMODUS | 0-n | - | unsigned char | - | TAB_CAS_MONTAGEMODUS | - | - | - | - | - | Das Argument ermöglicht die ELV-Sperre, KL50-Sperre oder den Präsentations-Modus zu aktivieren oder alle Sperren zu deaktivieren. Hinweise: - Zuordnung erfolgt über Tabelle TAB_CAS_MONTAGEMODUS. |
 
-<a id="table-arg-0xdac4"></a>
 ### ARG_0XDAC4
 
 Dimensions: 8 rows × 12 columns
@@ -3253,7 +3143,6 @@ Dimensions: 8 rows × 12 columns
 | TAGE_BFTH_ER_SPERRE | 0/1 | - | unsigned char | - | - | - | - | - | - | - | Entriegeln-Leitung TAGE Beifahrerseite hinten entsperrt oder gesperrt. 0 = Sperren; 1= Entsperren |
 | TAGE_BFTH_DATA_SPERRE | 0/1 | - | unsigned char | - | - | - | - | - | - | - | Daten-Leitung TAGE Beifahrerseite hinten entsperrt oder gesperrt. 0 = Sperren; 1= Entsperren |
 
-<a id="table-arg-0xdc54"></a>
 ### ARG_0XDC54
 
 Dimensions: 4 rows × 12 columns
@@ -3265,7 +3154,6 @@ Dimensions: 4 rows × 12 columns
 | ERSTZULASSUNGSDATUM_MONAT | - | - | unsigned char | - | - | - | - | - | 1.0 | 12.0 | Das Argument enthält den Monat des Erstzulassungsdatums.  Im Werk: dieser Wert = Monat der Schlüssel-Initialisierung. |
 | ERSTZULASSUNGSDATUM_JAHR | - | - | unsigned int | - | - | - | - | - | 2000.0 | 9999.0 | Das Argument enthält das Jahr des Erstzulassungsdatums.  Im Werk ist dieser Wert = Jahr der Schlüssel-Initialisierung. Wertebereich 2000 - 9999. |
 
-<a id="table-arg-0xdc60"></a>
 ### ARG_0XDC60
 
 Dimensions: 1 rows × 12 columns
@@ -3274,7 +3162,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HALL_SST | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand des Hallsensors SST A und B. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG |
 
-<a id="table-arg-0xdc61"></a>
 ### ARG_0XDC61
 
 Dimensions: 1 rows × 12 columns
@@ -3283,7 +3170,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHALTER_BREMSL | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand des Bremslichtschalters High-Schaltend und Low-Schaltend. Hinweis: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG |
 
-<a id="table-arg-0xdc62"></a>
 ### ARG_0XDC62
 
 Dimensions: 1 rows × 12 columns
@@ -3292,7 +3178,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EINGANG_A_S_START | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG_PEGEL | - | - | - | - | - | Das Argument enthält den zu vorgebenden Zustand für den Eingang für die Signalisierung des Motorstartendes durch die Motorsteuerung. Hinweise: - Zuordnung gemäß Tabelle TAB_CAS_DIGITAL_EINGANG_PEGEL. |
 
-<a id="table-arg-0xdc63"></a>
 ### ARG_0XDC63
 
 Dimensions: 1 rows × 12 columns
@@ -3301,7 +3186,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHALTER_KUPPL_PN | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand für den Eingang des Kupplungsschalters (Manuelles Getriebe) oder PN-Signal (Automatikgetriebe vom EGS. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-arg-0xdc64"></a>
 ### ARG_0XDC64
 
 Dimensions: 1 rows × 12 columns
@@ -3310,7 +3194,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER_CENTERLOCK | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand für den Eingang Centerlock-Taster. Hinweis: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-arg-0xdc65"></a>
 ### ARG_0XDC65
 
 Dimensions: 1 rows × 12 columns
@@ -3319,7 +3202,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHALTER_MOTORHAUBE | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand für den Eingang Motorhaubenkontakt-Schalter. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-arg-0xdc66"></a>
 ### ARG_0XDC66
 
 Dimensions: 1 rows × 12 columns
@@ -3328,7 +3210,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHALTER_HOTEL | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand für den Eingang HOTEL-Schalter. Hinweise: - Zurodnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG |
 
-<a id="table-arg-0xdc67"></a>
 ### ARG_0XDC67
 
 Dimensions: 1 rows × 12 columns
@@ -3337,7 +3218,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER_MSA | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand für den Eingang Taster der Motor-Start-Automatik. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-arg-0xdc68"></a>
 ### ARG_0XDC68
 
 Dimensions: 1 rows × 12 columns
@@ -3346,7 +3226,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER_SICHERN_HECKKL | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand für den Eingang Taster zum Zentralsichern der Heckklappe. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-arg-0xdc69"></a>
 ### ARG_0XDC69
 
 Dimensions: 1 rows × 12 columns
@@ -3355,7 +3234,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER_HECKKL_INNEN | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Das Argument enthält den vorzugebenden Zustand für den Eingang Taster zum Entriegeln der Heckklappe Innen (TOEHKI). Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-arg-0xdc6a"></a>
 ### ARG_0XDC6A
 
 Dimensions: 1 rows × 12 columns
@@ -3364,7 +3242,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EINGANG_MOST_WUP | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG_PEGEL | - | - | - | - | - | Das Argument enthält den zu vorzugebenden Zustand des Weckeingangs MOST_WUP zum Wecken durch die TCU. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG_PEGEL |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 8 rows × 3 columns
@@ -3380,7 +3257,6 @@ Dimensions: 8 rows × 3 columns
 | 0x06 | Rollenmode | Automatische Deaktivierung der KL15 deaktiviert |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -3394,7 +3270,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 158 rows × 3 columns
@@ -3560,7 +3435,6 @@ Dimensions: 158 rows × 3 columns
 | 0xD91430 | Coach Door Modul (CDM): Funktionsstörung | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 26 rows × 9 columns
@@ -3594,7 +3468,6 @@ Dimensions: 26 rows × 9 columns
 | 0x40FD | Schlüsselposition | 0-n | - | 0xFF | TAB_CAS_UW_SCHLUESSEL_POSITION | - | - | - |
 | 0x40FF | Fehlerart | HEX | - | unsigned char | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -3606,7 +3479,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 41 rows × 3 columns
@@ -3655,7 +3527,6 @@ Dimensions: 41 rows × 3 columns
 | 0x9308ED | EEPROM: Lesefehler NVM_E_READ_ALL_FAILED | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -3664,7 +3535,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0xaa7c"></a>
 ### RES_0XAA7C
 
 Dimensions: 5 rows × 13 columns
@@ -3677,7 +3547,6 @@ Dimensions: 5 rows × 13 columns
 | STAT_FEHLERZAEHLER_ELV_SG_WERT | + | - | - | - | - | unsigned char | - | - | - | - | - | Das Ergebnis liefert den aktuellen Wert des ELV-SG-Escape-Fehlerzählers (Escape-Counter ELV-SG). 0 ... 254 = Wert des Fehlerzählers 255 = Ungültig/Unbekannt |
 | STAT_FULLCYCLE_MERKER | + | - | - | 0-n | - | unsigned char | - | TAB_ELV_FULL_CYCLE_MERKER | - | - | - | Das Ergebnis gibt an, ob der Full-Cycle Merker (Flag) im CAS gesetzt ist oder nicht. 0 = Kein Full-Cycle-Merker gesetzt 1 = Full-Cycle-Merker gesetzt 255 = Ungültig/Unbekannt |
 
-<a id="table-res-0xac57"></a>
 ### RES_0XAC57
 
 Dimensions: 1 rows × 13 columns
@@ -3686,7 +3555,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ZV_STATUS | + | - | - | 0-n | - | unsigned char | - | TAB_ZV_ZUSTAND | - | - | - | Das Ergebnis enthält den aktuell auf den Bus gesendeten Zentralverriegelungsstatus.  Hinweise: - Dieser wird als globaler ZV-Zustand auf den CAN-Bus gesendet (Signal ST_CLSY). - Die Zuordnung erfolgt gemäß Tabelle TAB_ZV_ZUSTAND. |
 
-<a id="table-res-0xac58"></a>
 ### RES_0XAC58
 
 Dimensions: 1 rows × 13 columns
@@ -3695,7 +3563,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FBD_EMPFAENGER_INIT | + | - | - | 0-n | - | unsigned char | - | TAB_CAS_FBD_EMPFAENGER_INIT_STATUS | - | - | - | Ergebnis-Status der Routine. Gibt Aufschluß über evtl. aufgetretene Fehler. Hinweise: - Die Zuordnung erfolgt gemäß Tabelle TAB_CAS_FBD_EMPFAENGER_INIT_STATUS. |
 
-<a id="table-res-0xdab3"></a>
 ### RES_0XDAB3
 
 Dimensions: 16 rows × 10 columns
@@ -3719,7 +3586,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_SPANNUNG_KLEMME_30ELV_WERT | V | - | unsigned int | - | - | - | 1000.0 | - | Das Result enthält den Spannungswert Klemme 30ELV am CAS Ausgang. |
 | STAT_SPANNUNG_INNENTEMPERATUR_WERT | V | - | unsigned int | - | - | - | 1000.0 | - | Das Result enthält den Spannungswert am PTC/NTC im Steuergerät zur Ermittlung der Innentemperatur. |
 
-<a id="table-res-0xdab5"></a>
 ### RES_0XDAB5
 
 Dimensions: 4 rows × 10 columns
@@ -3731,7 +3597,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TAGE_ER_FTH | 0-n | - | unsigned char | - | TAB_CAS_CA_TAGE_ER_LEITUNG | - | - | - | Das Result enthält den Wert für den Status der Entriegeln-Leitung zur TAGE Fahrertüre hinten. Hinweise: - Zuordnung über Tabelle TAB_CAS_CA_TAGE_ER_LEITUNG. |
 | STAT_TAGE_ER_BFTH | 0-n | - | unsigned char | - | TAB_CAS_CA_TAGE_ER_LEITUNG | - | - | - | Das Result enthält den Wert für den Status der Entriegeln-Leitung zur TAGE Beifahrertüre hinten. Hinweise: - Zuordnung über Tabelle TAB_CAS_CA_TAGE_ER_LEITUNG. |
 
-<a id="table-res-0xdab6"></a>
 ### RES_0XDAB6
 
 Dimensions: 1 rows × 13 columns
@@ -3740,7 +3605,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTER_SST_AKTIV | - | - | - | - | - | unsigned char | 0x01 | - | - | - | - | Das Result enthält den aktuellen Zustand des Start-Stopp-Tasters |
 
-<a id="table-res-0xdab9"></a>
 ### RES_0XDAB9
 
 Dimensions: 1 rows × 10 columns
@@ -3749,7 +3613,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CAS_MONTAGEMODUS | 0-n | - | unsigned char | - | TAB_CAS_MONTAGEMODUS | - | - | - | Das Result enthält den Status der CAS Montagesperren ELV-Sperre, KL50-Sperre und Präsentations-Modus. Hinweise: - Zuordnung erfolgt über Tabelle TAB_CAS_MONTAGEMODUS |
 
-<a id="table-res-0xdabb"></a>
 ### RES_0XDABB
 
 Dimensions: 7 rows × 10 columns
@@ -3764,7 +3627,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_BUS_IN_ZEIT_RELATIV_WERT | s | - | unsigned long | - | - | - | - | - | Aktuelle Relative Zeit in Sekunden seit 01.01.2000, Sekunden: 0 - 4,2 Millarden, 4294967295 ungültig |
 | STAT_BUS_IN_ZEIT_TAGE_RELATIV_WERT | Tage | - | unsigned int | - | - | - | - | - | Aktuelle Relative Zeit in Tagen seit 01.01.2000; Tage: 1 entspricht 01.01.2000, 65535 entspricht ungültig. |
 
-<a id="table-res-0xdabc"></a>
 ### RES_0XDABC
 
 Dimensions: 6 rows × 10 columns
@@ -3778,7 +3640,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_BUS_IN_KUPPLUNG | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Wert (über CAN empfangen) für die Kupplung. Hinweise: - Der Wert wird ermittelt aus CAN-Signal ST_SW_CLT_DRV. - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. Nur die Werte 0, 1 und 255 werden zurückgeliefert. |
 | STAT_BUS_IN_DREHZAHL_WERT | 1/min | - | unsigned int | - | - | - | 4.0 | - | Das Result enthält den aktuellen Wert (über CAN empfangen) für die Drehzahl. Hinweise: - Der Wert wird ermittelt aus CAN-Signal AVL_RPM_ENG_CRSH. - Der Wert aus dem Telegramm wird von der SGBD durch 4 geteilt, da das Signal AVL_RPM_ENG_CRSH Viertel-Umdrehungs-genau ist. |
 
-<a id="table-res-0xdabd"></a>
 ### RES_0XDABD
 
 Dimensions: 3 rows × 10 columns
@@ -3789,7 +3650,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_BUS_IN_GESCHW_STATUS | 0-n | - | unsigned char | - | TAB_CAS_GESCHW_STATUS | - | - | - | Das Result enthält den aktuellen Wert (über CAN empfangen) für die Geschwindigkeit als Status Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_GESCHW_STATUS - Der Wert wird ermittelt aus dem Signal DVCO_VEH. |
 | STAT_BUS_IN_BREMSPEDAL | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Wert (über CAN empfangen) für die Stellung des Bremspedals. Hinweise: - CAN-Signal Status_Bremsung_Fahrer (ST_BRG_DV), Auswertung der Bit-Kodierung Betätigung_Bremssystem_Fahrer + Gesamtsignal ungültig muss im CAS erfolgen. - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG |
 
-<a id="table-res-0xdabf"></a>
 ### RES_0XDABF
 
 Dimensions: 4 rows × 10 columns
@@ -3801,7 +3661,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BUS_IN_FH_FTH | 0-n | - | unsigned char | - | TAB_CAS_FH_STATUS | - | - | - | CAN-Signal Status Fensterheber Fahrertür hinten. Hinweise:  - Inhalt aus dem CAN-Signal ST_PO_WRG_DVDR. - Zuordnung erfolgt gemäß Tabelle TAB_CAS_FH_STATUS. |
 | STAT_BUS_IN_FH_BFTH | 0-n | - | unsigned char | - | TAB_CAS_FH_STATUS | - | - | - | CAN-Signal Status Fensterheber Beifahrertür hinten. Hinweise: - Inhalt aus dem CAN-Signal ST_PO_WRG_PSDR. - Zuordnung erfolgt gemäß Tabelle TAB_CAS_FH_STATUS. |
 
-<a id="table-res-0xdac1"></a>
 ### RES_0XDAC1
 
 Dimensions: 6 rows × 10 columns
@@ -3815,7 +3674,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ZV_HECKKLAPPE | 0-n | - | unsigned char | - | TAB_CAS_ZV_STATUS | - | - | - | Das Result enthält den aktuellen Wert (über CAN empfangen) für den Status der ZV der Heckklappe von der JBBF. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_ZV_STATUS - Inhalt aus dem CAN-Signal ST_CLSY_BTL_LCL |
 | STAT_ZV_HECKSCHEIBE | 0-n | - | unsigned char | - | TAB_CAS_ZV_STATUS | - | - | - | Das Result enthält den aktuellen Wert (über CAN empfangen) für den Status der ZV der Heckscheibe von der JBBF. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_ZV_STATUS - Inhalt aus dem CAN-Signal ST_CLSY_RSCR_LCL |
 
-<a id="table-res-0xdac4"></a>
 ### RES_0XDAC4
 
 Dimensions: 8 rows × 10 columns
@@ -3831,7 +3689,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_TAGE_BFTH_ER_SPERRSTATUS | 0-n | - | unsigned char | - | TAB_CAS_TAGE_SPERRSTATUS | - | - | - | (Sperr-)Status der TAGE Entriegeln-Leitung der Beifahrerseite hinten.; 0 = Gesperrt; 1 = Freigegeben; 255 = Ungültig/Unbekannt |
 | STAT_TAGE_BFTH_DATA_SPERRSTATUS | 0-n | - | unsigned char | - | TAB_CAS_TAGE_SPERRSTATUS | - | - | - | (Sperr-)Status der TAGE Daten-Leitung der Beifahrerseite hinten.; 0 = Gesperrt; 1 = Freigegeben; 255 = Ungültig/Unbekannt |
 
-<a id="table-res-0xdaca"></a>
 ### RES_0XDACA
 
 Dimensions: 4 rows × 10 columns
@@ -3843,7 +3700,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TAGE_FTH | 0-n | - | unsigned char | - | TAB_CAS_CA_TAGE_STATUS | - | - | - | Das Result enthält den Status der TAGE Fahrertüre hinten. Hinweise: - Die Zuordnung erfolgt über Tabelle TAB_CAS_CA_TAGE_STATUS |
 | STAT_TAGE_BFTH | 0-n | - | unsigned char | - | TAB_CAS_CA_TAGE_STATUS | - | - | - | Das Result enthält den Status der TAGE Beifahrertüre hinten. Hinweise: - Die Zuordnung erfolgt über Tabelle TAB_CAS_CA_TAGE_STATUS |
 
-<a id="table-res-0xdc54"></a>
 ### RES_0XDC54
 
 Dimensions: 4 rows × 10 columns
@@ -3855,7 +3711,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ERSTZULASSUNGSDATUM_MONAT_WERT | - | - | unsigned char | - | - | - | - | - | Das Result enthält den Monat des Erstzulassungsdatums.  Im Werk wird dieser Wert auf den Monat der Schlüssel-Initialisierung gesetzt. |
 | STAT_ERSTZULASSUNGSDATUM_JAHR_WERT | - | - | unsigned int | - | - | - | - | - | Das Result enthält den Jahr des Erstzulassungsdatums.  Im Werk wird dieser Wert auf das Jahr der Schlüssel-Initialisierung gesetzt. Wertebereich: 2000-9999. |
 
-<a id="table-res-0xdc60"></a>
 ### RES_0XDC60
 
 Dimensions: 2 rows × 10 columns
@@ -3865,7 +3720,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HALL_SSTA_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Hallsensors SST A. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG |
 | STAT_HALL_SSTB_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Hallsensors SST B. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG |
 
-<a id="table-res-0xdc61"></a>
 ### RES_0XDC61
 
 Dimensions: 2 rows × 10 columns
@@ -3875,7 +3729,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCHALTER_BREMSL_HIGH_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Bremslichtschalters High-Schaltend. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. - Bremse gedrückt = betätigt (Wert 1) |
 | STAT_SCHALTER_BREMSL_LOW_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Bremslichtschalters Low-Schaltend. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. - Bremse gedrückt = betätigt (Wert 1) |
 
-<a id="table-res-0xdc62"></a>
 ### RES_0XDC62
 
 Dimensions: 1 rows × 10 columns
@@ -3884,7 +3737,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_EINGANG_A_S_START_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG_PEGEL | - | - | - | Das Result enthält den aktuellen Zustand des Eingangs für die Signalisierung des Motorstartendes durch die Motorsteuerung. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG_PEGEL. |
 
-<a id="table-res-0xdc63"></a>
 ### RES_0XDC63
 
 Dimensions: 1 rows × 10 columns
@@ -3893,7 +3745,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SCHALTER_KUPPL_PN_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Kupplungsschalters (Manuelles Getriebe) oder PN-Signal (Automatikgetriebe) vom EGS. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-res-0xdc64"></a>
 ### RES_0XDC64
 
 Dimensions: 1 rows × 10 columns
@@ -3902,7 +3753,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTER_CENTERLOCK_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Eingangs Centerlock-Taster. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-res-0xdc65"></a>
 ### RES_0XDC65
 
 Dimensions: 1 rows × 10 columns
@@ -3911,7 +3761,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SCHALTER_MOTORHAUBE_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Eingangs Motorhaubenkontakt. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-res-0xdc66"></a>
 ### RES_0XDC66
 
 Dimensions: 1 rows × 10 columns
@@ -3920,7 +3769,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SCHALTER_HOTEL_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Eingangs HOTEL-Schalters. Hinweis: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-res-0xdc67"></a>
 ### RES_0XDC67
 
 Dimensions: 1 rows × 10 columns
@@ -3929,7 +3777,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTER_MSA_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand für den Eingang Taster der Motor-Start-Automatik. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-res-0xdc68"></a>
 ### RES_0XDC68
 
 Dimensions: 1 rows × 10 columns
@@ -3938,7 +3785,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTER_SICHERN_HECKKL_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Eingangs für den Taster zum Zentralsichern der Heckklappe. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-res-0xdc69"></a>
 ### RES_0XDC69
 
 Dimensions: 1 rows × 10 columns
@@ -3947,7 +3793,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTER_HECKKL_INNEN_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Das Result enthält den aktuellen Zustand des Eingangs für den Taster zum Entriegeln der Heckklappe Innen (TOEHKI). Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG. |
 
-<a id="table-res-0xdc6a"></a>
 ### RES_0XDC6A
 
 Dimensions: 1 rows × 10 columns
@@ -3956,7 +3801,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_EINGANG_MOST_WUP_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG_PEGEL | - | - | - | Das Result enthält den aktuellen Zustand des Weckeingangs vom MOST_WUP zum Wecken durch die TCU. Hinweise: - Zuordnung erfolgt gemäß Tabelle TAB_CAS_DIGITAL_EINGANG_PEGEL |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 35 rows × 16 columns
@@ -3999,7 +3843,6 @@ Dimensions: 35 rows × 16 columns
 | TASTER_HECKKL_INNEN | 0xDC69 | - | Dieser Job dient zum Auslesen und Setzen des Zustands des CAS-Eingangs Taster zum Entriegeln der Heckklappe Innen (TOEHKI). Hinweise: - Aufruf des Jobs erfolgt über Standardjob STATUS_LESEN/STEUERN_IO mit Argument TASTER_HECKKL_INNEN - Signalname des digitalen CAS Eingang ist TOEHKI - STEUERN: Aufruf des Jobs erfolgt über Standardjob STEUERN_IO mit Argument TASTER_HECKKL_INNEN und durchzuführender Aktion: RCTECU: Rückgabe der Kontrolle ans Steuergerät (returnControlToECU) RTD: Reset auf Defaultwert (resetToDefault) FCS: Aktuelle Zustand einfrieren (freezeCurrentState) STA: Setzen auf übergebenenen Vorgabewert (shortTermAdjustment) | - | - | - | - | - | - | - | - | - | 22;2F | ARG_0xDC69 | RES_0xDC69 |
 | EINGANG_MOST_WUP | 0xDC6A | - | Dieser Job dient zum Auslesen und Setzen des Zustands des Weckeingangs MOST_WUP zum Wecken durch die TCU. Hinweise: Aufruf des Jobs erfolgt über Standardjob STATUS_LESEN/STEUERN_IO mit Argument EINGANG_MOST_WUP - Signalname des digitalen CAS Eingang ist MOST_WUP - STEUERN: Aufruf des Jobs erfolgt über Standardjob STEUERN_IO mit Argument EINGANG_MOST_WUP und durchzuführender Aktion: RCTECU: Rückgabe der Kontrolle ans Steuergerät (returnControlToECU) RTD: Reset auf Defaultwert (resetToDefault) FCS: Aktuelle Zustand einfrieren (freezeCurrentState) STA: Setzen auf übergebenenen Vorgabewert (shortTermAdjustment) | - | - | - | - | - | - | - | - | - | 2F;22 | ARG_0xDC6A | RES_0xDC6A |
 
-<a id="table-tab-cas-ca-antennen-test"></a>
 ### TAB_CAS_CA_ANTENNEN_TEST
 
 Dimensions: 4 rows × 2 columns
@@ -4011,7 +3854,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | CAS besitzt keine CA-Funktion |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-ca-komm-test"></a>
 ### TAB_CAS_CA_KOMM_TEST
 
 Dimensions: 5 rows × 2 columns
@@ -4024,7 +3866,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Antenne nicht in Ordnung oder nicht gesteckt |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-ca-such-ort"></a>
 ### TAB_CAS_CA_SUCH_ORT
 
 Dimensions: 8 rows × 2 columns
@@ -4040,7 +3881,6 @@ Dimensions: 8 rows × 2 columns
 | 8 | Innenraum Hinten |
 | 255 | ungültig bzw. es hat keine Erregung über LF stattgefunden |
 
-<a id="table-tab-cas-ca-tage-er-leitung"></a>
 ### TAB_CAS_CA_TAGE_ER_LEITUNG
 
 Dimensions: 5 rows × 2 columns
@@ -4053,7 +3893,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Kurzschluss |
 | 255 | Ausserhalb zulässigem Bereich |
 
-<a id="table-tab-cas-ca-tage-status"></a>
 ### TAB_CAS_CA_TAGE_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -4066,7 +3905,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Entriegeln-Sensor betätigt - ER-Kap-Sensor |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-digital-eingang"></a>
 ### TAB_CAS_DIGITAL_EINGANG
 
 Dimensions: 4 rows × 2 columns
@@ -4078,7 +3916,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | nicht verbaut / Status nicht verfügbar |
 | 255 | ungültig / Fehler erkannt |
 
-<a id="table-tab-cas-digital-eingang-pegel"></a>
 ### TAB_CAS_DIGITAL_EINGANG_PEGEL
 
 Dimensions: 3 rows × 2 columns
@@ -4089,7 +3926,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | High-Pegel |
 | 255 | ungültig / Fehler erkannt |
 
-<a id="table-tab-cas-elv-aktion"></a>
 ### TAB_CAS_ELV_AKTION
 
 Dimensions: 6 rows × 2 columns
@@ -4103,7 +3939,6 @@ Dimensions: 6 rows × 2 columns
 | 5 | Fehlerzähler löschen |
 | 6 | FullCycle-Merker löschen |
 
-<a id="table-tab-cas-elv-ausfuehrungsstatus"></a>
 ### TAB_CAS_ELV_AUSFUEHRUNGSSTATUS
 
 Dimensions: 32 rows × 2 columns
@@ -4143,7 +3978,6 @@ Dimensions: 32 rows × 2 columns
 | 113 | ELV-SG: Fehlerhafte Requestbotschaft vom ELV-Master |
 | 255 | Unbekannter Fehler |
 
-<a id="table-tab-cas-elv-interne-fehler"></a>
 ### TAB_CAS_ELV_INTERNE_FEHLER
 
 Dimensions: 22 rows × 2 columns
@@ -4173,7 +4007,6 @@ Dimensions: 22 rows × 2 columns
 | 30 | Sendefehler |
 | 255 | Unbekannter Fehler |
 
-<a id="table-tab-cas-elv-vorh"></a>
 ### TAB_CAS_ELV_VORH
 
 Dimensions: 3 rows × 2 columns
@@ -4184,7 +4017,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | CAS ohne ELV |
 | 255 | unbekannt/ungültig |
 
-<a id="table-tab-cas-elv-vorhanden"></a>
 ### TAB_CAS_ELV_VORHANDEN
 
 Dimensions: 3 rows × 2 columns
@@ -4195,7 +4027,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | CAS/FEM ohne ELV |
 | 255 | Ungültig / Unbekannt |
 
-<a id="table-tab-cas-elv-zustand"></a>
 ### TAB_CAS_ELV_ZUSTAND
 
 Dimensions: 9 rows × 2 columns
@@ -4212,7 +4043,6 @@ Dimensions: 9 rows × 2 columns
 | 254 | Statusabfrage ELV aufgrund aktuellem Fahrzeugzustand nicht zulässig |
 | 255 | Ungültig / Unbekannt |
 
-<a id="table-tab-cas-fbd-aktion"></a>
 ### TAB_CAS_FBD_AKTION
 
 Dimensions: 36 rows × 2 columns
@@ -4256,7 +4086,6 @@ Dimensions: 36 rows × 2 columns
 | 216 | FFB Taste Drucktaste in Drehrad Mitte |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-fbd-batteriezustand"></a>
 ### TAB_CAS_FBD_BATTERIEZUSTAND
 
 Dimensions: 8 rows × 2 columns
@@ -4272,7 +4101,6 @@ Dimensions: 8 rows × 2 columns
 | 11 | Batterie gut - Kommunikation ohne Authentisierung |
 | 255 | unbekannt bzw. nicht relevant |
 
-<a id="table-tab-cas-fbd-datenrate"></a>
 ### TAB_CAS_FBD_DATENRATE
 
 Dimensions: 2 rows × 2 columns
@@ -4282,7 +4110,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Niedrige Datenrate: 5 kBit/s |
 | 1 | Hohe Datenrate: 19.2 kBit/s |
 
-<a id="table-tab-cas-fbd-empfaenger-empfangsmodus"></a>
 ### TAB_CAS_FBD_EMPFAENGER_EMPFANGSMODUS
 
 Dimensions: 4 rows × 2 columns
@@ -4294,7 +4121,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Nur bekannte und Init-Telegramme THS/FFB durchlassen |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-fbd-empfaenger-init-status"></a>
 ### TAB_CAS_FBD_EMPFAENGER_INIT_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -4308,7 +4134,6 @@ Dimensions: 6 rows × 2 columns
 | 5 | WUP Aktualisierung im FBD-Empfänger und der Fond-Fernbedienung fehlgeschlagen |
 | 255 | unbekannter Status |
 
-<a id="table-tab-cas-fbd-empfaenger-typ"></a>
 ### TAB_CAS_FBD_EMPFAENGER_TYP
 
 Dimensions: 3 rows × 2 columns
@@ -4319,7 +4144,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | Diversity |
 | 255 | unbekannt / nicht ermittelbar |
 
-<a id="table-tab-cas-fbd-supplier"></a>
 ### TAB_CAS_FBD_SUPPLIER
 
 Dimensions: 3 rows × 2 columns
@@ -4330,7 +4154,6 @@ Dimensions: 3 rows × 2 columns
 | 32 | HUF |
 | 255 | unbekannter Zulieferer |
 
-<a id="table-tab-cas-fh-status"></a>
 ### TAB_CAS_FH_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -4342,7 +4165,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Offen |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-freq"></a>
 ### TAB_CAS_FREQ
 
 Dimensions: 11 rows × 2 columns
@@ -4361,7 +4183,6 @@ Dimensions: 11 rows × 2 columns
 | 15 | Ungültige Frequenz |
 | 255 | Ungültige Frequenz / Kein zweiter Empfänger |
 
-<a id="table-tab-cas-gang"></a>
 ### TAB_CAS_GANG
 
 Dimensions: 13 rows × 2 columns
@@ -4382,7 +4203,6 @@ Dimensions: 13 rows × 2 columns
 | 13 | 9. Gang |
 | 255 | ungültig |
 
-<a id="table-tab-cas-geschw-status"></a>
 ### TAB_CAS_GESCHW_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -4396,7 +4216,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Fahrzeug steht, Hinterachse auf Rollenprüfstand erkannt |
 | 7 | Signal ungültig |
 
-<a id="table-tab-cas-historienspeicher-sperre"></a>
 ### TAB_CAS_HISTORIENSPEICHER_SPERRE
 
 Dimensions: 4 rows × 2 columns
@@ -4408,7 +4227,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Löschen/Neu initialisieren |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-hw-geschw-status"></a>
 ### TAB_CAS_HW_GESCHW_STATUS
 
 Dimensions: 7 rows × 2 columns
@@ -4423,7 +4241,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | Fahrt V3 |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-keytype"></a>
 ### TAB_CAS_KEYTYPE
 
 Dimensions: 6 rows × 2 columns
@@ -4437,7 +4254,6 @@ Dimensions: 6 rows × 2 columns
 | 5 | ID-Geber |
 | 15 | Zukünftiger Ersatz-Schlüssel / Position nicht belegt |
 
-<a id="table-tab-cas-keyvariant"></a>
 ### TAB_CAS_KEYVARIANT
 
 Dimensions: 8 rows × 2 columns
@@ -4453,7 +4269,6 @@ Dimensions: 8 rows × 2 columns
 | 15 | unbekannt |
 | 255 | Ungültig/Unbekannt |
 
-<a id="table-tab-cas-klemmenstatus"></a>
 ### TAB_CAS_KLEMMENSTATUS
 
 Dimensions: 16 rows × 2 columns
@@ -4477,7 +4292,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Fehler |
 | 15 | Ungültig |
 
-<a id="table-tab-cas-klemmenstatus-arg"></a>
 ### TAB_CAS_KLEMMENSTATUS_ARG
 
 Dimensions: 6 rows × 2 columns
@@ -4491,7 +4305,6 @@ Dimensions: 6 rows × 2 columns
 | 16 | KL30B_EIN_VERK |
 | 255 | ungültig |
 
-<a id="table-tab-cas-klemmenstatus-crc"></a>
 ### TAB_CAS_KLEMMENSTATUS_CRC
 
 Dimensions: 6 rows × 2 columns
@@ -4505,7 +4318,6 @@ Dimensions: 6 rows × 2 columns
 | 67 | KL15_EIN |
 | 255 | ungültig |
 
-<a id="table-tab-cas-klemmen-trigger"></a>
 ### TAB_CAS_KLEMMEN_TRIGGER
 
 Dimensions: 11 rows × 2 columns
@@ -4524,7 +4336,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Waschstrassen-Modus Timeout 30min/15min |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-klemmen-verhinderer"></a>
 ### TAB_CAS_KLEMMEN_VERHINDERER
 
 Dimensions: 17 rows × 2 columns
@@ -4549,7 +4360,6 @@ Dimensions: 17 rows × 2 columns
 | 15 | Keine Startfreigabe durch Klimasteuergerät: Motorfernstart nicht möglich |
 | 255 | Unbekannt/Ungültig |
 
-<a id="table-tab-cas-montagemodus"></a>
 ### TAB_CAS_MONTAGEMODUS
 
 Dimensions: 5 rows × 2 columns
@@ -4562,7 +4372,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Präsentations-Modus |
 | 255 | unbekannter Zustand |
 
-<a id="table-tab-cas-motorstart-freigabe"></a>
 ### TAB_CAS_MOTORSTART_FREIGABE
 
 Dimensions: 4 rows × 2 columns
@@ -4574,7 +4383,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Motorstart zulassen |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-motor-anlassersperre"></a>
 ### TAB_CAS_MOTOR_ANLASSERSPERRE
 
 Dimensions: 4 rows × 2 columns
@@ -4586,7 +4394,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Motorstart zulassen, Motorstop zulassen - Getriebe in P |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-motor-status"></a>
 ### TAB_CAS_MOTOR_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -4598,7 +4405,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Motor läuft |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-pia-nummer"></a>
 ### TAB_CAS_PIA_NUMMER
 
 Dimensions: 6 rows × 2 columns
@@ -4612,7 +4418,6 @@ Dimensions: 6 rows × 2 columns
 | 15 | Keine Personalisierung zugewiesen - unpersonalisiertes Profil |
 | 255 | ungültig |
 
-<a id="table-tab-cas-pm-id"></a>
 ### TAB_CAS_PM_ID
 
 Dimensions: 43 rows × 2 columns
@@ -4663,7 +4468,6 @@ Dimensions: 43 rows × 2 columns
 | 245 | Ungültiger Wert (Bei Initialisierung, falls NVM-Fehler) |
 | 255 | Unbekannte ID |
 
-<a id="table-tab-cas-pm-index"></a>
 ### TAB_CAS_PM_INDEX
 
 Dimensions: 44 rows × 2 columns
@@ -4715,7 +4519,6 @@ Dimensions: 44 rows × 2 columns
 | 42 | 245 |
 | 255 | - |
 
-<a id="table-tab-cas-rdu-rdl-status"></a>
 ### TAB_CAS_RDU_RDL_STATUS
 
 Dimensions: 11 rows × 2 columns
@@ -4734,7 +4537,6 @@ Dimensions: 11 rows × 2 columns
 | 104 | RDL: Abbruch aufgrund von Kodieroption die RDU/RDL verhindert |
 | 255 | unbekannt/ungültig |
 
-<a id="table-tab-cas-schluesselsperre"></a>
 ### TAB_CAS_SCHLUESSELSPERRE
 
 Dimensions: 4 rows × 2 columns
@@ -4746,7 +4548,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Schlüssel temporär gesperrt wegen CA-Funktion |
 | 255 | ungültig |
 
-<a id="table-tab-cas-schluessel-position"></a>
 ### TAB_CAS_SCHLUESSEL_POSITION
 
 Dimensions: 27 rows × 2 columns
@@ -4781,7 +4582,6 @@ Dimensions: 27 rows × 2 columns
 | 254 | Sonderfunktion SG wach halten |
 | 255 | unbekannt |
 
-<a id="table-tab-cas-service-schluesseldaten-block-nr"></a>
 ### TAB_CAS_SERVICE_SCHLUESSELDATEN_BLOCK_NR
 
 Dimensions: 17 rows × 2 columns
@@ -4806,7 +4606,6 @@ Dimensions: 17 rows × 2 columns
 | 16 | CBS-Block 16 |
 | 255 | unbekannt |
 
-<a id="table-tab-cas-service-schluesseldaten-update-modus"></a>
 ### TAB_CAS_SERVICE_SCHLUESSELDATEN_UPDATE_MODUS
 
 Dimensions: 6 rows × 2 columns
@@ -4820,7 +4619,6 @@ Dimensions: 6 rows × 2 columns
 | 14 | Update nur CBS-Umfänge im CAS-Speicher/Keine Übertragung in Schlüssel |
 | 15 | Vollständiges Update im CAS-Speicher / Keine Übertragung in Schlüssel |
 
-<a id="table-tab-cas-standverbraucher"></a>
 ### TAB_CAS_STANDVERBRAUCHER
 
 Dimensions: 3 rows × 2 columns
@@ -4831,7 +4629,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Anforderung zur Nachlaufzeitverlängerung ist erfolgt |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-tage-sperrstatus"></a>
 ### TAB_CAS_TAGE_SPERRSTATUS
 
 Dimensions: 3 rows × 2 columns
@@ -4842,7 +4639,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Freigegeben |
 | 0xFF | Ungültig/Unbekannt |
 
-<a id="table-tab-cas-trsp-error"></a>
 ### TAB_CAS_TRSP_ERROR
 
 Dimensions: 38 rows × 2 columns
@@ -4888,7 +4684,6 @@ Dimensions: 38 rows × 2 columns
 | 39 | Ungueltiger E5-Hashwert |
 | 255 | Unbekannter Fehlerstatus |
 
-<a id="table-tab-cas-trsp-initstatus"></a>
 ### TAB_CAS_TRSP_INITSTATUS
 
 Dimensions: 28 rows × 2 columns
@@ -4924,7 +4719,6 @@ Dimensions: 28 rows × 2 columns
 | 252 | IS_CHECK_KEYCFG: Prüfen der Schlüsselkonfiguration |
 | 255 | IS_CHECK_JOBPAR: Default Wert, Reserviert für Ersatzschlüssel. |
 
-<a id="table-tab-cas-trsp-init-status"></a>
 ### TAB_CAS_TRSP_INIT_STATUS
 
 Dimensions: 28 rows × 2 columns
@@ -4960,7 +4754,6 @@ Dimensions: 28 rows × 2 columns
 | 252 | IS_CHECK_KEYCFG: Prüfen der Schlüsselkonfiguration |
 | 255 | IS_CHECK_JOBPAR: Default Wert oder Ersatzschlüssel. |
 
-<a id="table-tab-cas-trsp-key-auth-default"></a>
 ### TAB_CAS_TRSP_KEY_AUTH_DEFAULT
 
 Dimensions: 4 rows × 2 columns
@@ -4972,7 +4765,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Kein Hitag2-Schlüssel |
 | 255 | unbekannt/ungültig |
 
-<a id="table-tab-cas-trsp-key-config-supplier"></a>
 ### TAB_CAS_TRSP_KEY_CONFIG_SUPPLIER
 
 Dimensions: 4 rows × 2 columns
@@ -4984,7 +4776,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | kein HitagPro-Schlüssel |
 | 255 | unbekannt/ungültig |
 
-<a id="table-tab-cas-trsp-type"></a>
 ### TAB_CAS_TRSP_TYPE
 
 Dimensions: 3 rows × 2 columns
@@ -4995,7 +4786,6 @@ Dimensions: 3 rows × 2 columns
 | 2 | HTPro |
 | 255 | unbekannt |
 
-<a id="table-tab-cas-trsp-verriegelungsstatus"></a>
 ### TAB_CAS_TRSP_VERRIEGELUNGSSTATUS
 
 Dimensions: 6 rows × 2 columns
@@ -5009,7 +4799,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Kein normaler Anlieferzustand - Komplett unverriegelt |
 | 255 | unbekannter Transpondertyp |
 
-<a id="table-tab-cas-uw-abschaltverhinderer-kl15"></a>
 ### TAB_CAS_UW_ABSCHALTVERHINDERER_KL15
 
 Dimensions: 16 rows × 2 columns
@@ -5033,7 +4822,6 @@ Dimensions: 16 rows × 2 columns
 | 254 | Kein Abschaltverhinderer aktiv |
 | 255 | unbekannter Abschaltverhinderer |
 
-<a id="table-tab-cas-uw-abschaltverhinderer-kl30b"></a>
 ### TAB_CAS_UW_ABSCHALTVERHINDERER_KL30B
 
 Dimensions: 24 rows × 2 columns
@@ -5065,7 +4853,6 @@ Dimensions: 24 rows × 2 columns
 | 254 | kein Abschaltverhinderer/Standverbraucher aktiv |
 | 255 | unbekannter Abschaltverhinderer/Standverbraucher |
 
-<a id="table-tab-cas-uw-botschaftsfehler"></a>
 ### TAB_CAS_UW_BOTSCHAFTSFEHLER
 
 Dimensions: 18 rows × 2 columns
@@ -5091,7 +4878,6 @@ Dimensions: 18 rows × 2 columns
 | 31 | Botschaftsausfall |
 | 255 | Ungültig / Unbekannt |
 
-<a id="table-tab-cas-uw-cpu-komponenten"></a>
 ### TAB_CAS_UW_CPU_KOMPONENTEN
 
 Dimensions: 15 rows × 2 columns
@@ -5114,7 +4900,6 @@ Dimensions: 15 rows × 2 columns
 | 201 | ELV-HW-Erkennung unplausibel (HW-Bestückung =  ELV verbaut  und HW-Ausprägung in der SVK =  ELV nicht verbaut ) |
 | 255 | Ungültig / Unbekannt |
 
-<a id="table-tab-cas-uw-dauerbetaetigung-tage"></a>
 ### TAB_CAS_UW_DAUERBETAETIGUNG_TAGE
 
 Dimensions: 4 rows × 2 columns
@@ -5126,7 +4911,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Mehrfachfehler - Dauerbetätigung an mehreren TAGEn über Zugsensor oder Kap-Sensor/Piezo-Sensor erkannt |
 | 255 | Ungültig / Unbekannt |
 
-<a id="table-tab-cas-uw-elv-status"></a>
 ### TAB_CAS_UW_ELV_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -5138,7 +4922,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | ELV Zustand fehlerhaft/unplausibel |
 | 255 | ungueltig/unbekannt |
 
-<a id="table-tab-cas-uw-elv-status-fehler"></a>
 ### TAB_CAS_UW_ELV_STATUS_FEHLER
 
 Dimensions: 5 rows × 2 columns
@@ -5151,7 +4934,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Unterschiedliche Werte in den Signalen ST_ELV und ST_ELV_DIV |
 | 255 | Ungültig / Unbekannt |
 
-<a id="table-tab-cas-uw-hw-eingang"></a>
 ### TAB_CAS_UW_HW_EINGANG
 
 Dimensions: 7 rows × 2 columns
@@ -5166,7 +4948,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | Schalter HOTEL |
 | 255 | unbekannt/ungültig |
 
-<a id="table-tab-cas-uw-schluessel-position"></a>
 ### TAB_CAS_UW_SCHLUESSEL_POSITION
 
 Dimensions: 11 rows × 2 columns
@@ -5185,7 +4966,6 @@ Dimensions: 11 rows × 2 columns
 | 9 | Schluessel 9 |
 | 255 | ungueltig/unbekannt |
 
-<a id="table-tab-cas-uw-status-fahrzeugstillstandserkennung"></a>
 ### TAB_CAS_UW_STATUS_FAHRZEUGSTILLSTANDSERKENNUNG
 
 Dimensions: 3 rows × 2 columns
@@ -5196,7 +4976,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Fahrt |
 | 255 | unbekannt/ungueltig |
 
-<a id="table-tab-cas-uw-status-motorstillstandserkennung"></a>
 ### TAB_CAS_UW_STATUS_MOTORSTILLSTANDSERKENNUNG
 
 Dimensions: 3 rows × 2 columns
@@ -5207,7 +4986,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Motor laeuft |
 | 255 | unbekannt/ungueltig |
 
-<a id="table-tab-cas-uw-verbauort-tage"></a>
 ### TAB_CAS_UW_VERBAUORT_TAGE
 
 Dimensions: 5 rows × 2 columns
@@ -5220,7 +4998,6 @@ Dimensions: 5 rows × 2 columns
 | 8 | Beifahrertür/-seite hinten (BFTH) |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-zv-status"></a>
 ### TAB_CAS_ZV_STATUS
 
 Dimensions: 10 rows × 2 columns
@@ -5238,7 +5015,6 @@ Dimensions: 10 rows × 2 columns
 | 201 | Klappe nicht in Vorraststellung |
 | 255 | Ungültig/Unplausibel/Nicht verbaut |
 
-<a id="table-tab-ca-schluessel-position"></a>
 ### TAB_CA_SCHLUESSEL_POSITION
 
 Dimensions: 21 rows × 2 columns
@@ -5267,7 +5043,6 @@ Dimensions: 21 rows × 2 columns
 | 0x13 | Schlüssel19 |
 | 0xFF | keine Kommunikation möglich oder kein weiterer Schlüssel |
 
-<a id="table-tab-elv-full-cycle-merker"></a>
 ### TAB_ELV_FULL_CYCLE_MERKER
 
 Dimensions: 3 rows × 2 columns
@@ -5278,7 +5053,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Full-Cycle-Merker gesetzt |
 | 0xFF | Ungültig/Unbekannt |
 
-<a id="table-tab-ews5-state"></a>
 ### TAB_EWS5_STATE
 
 Dimensions: 4 rows × 2 columns
@@ -5290,7 +5064,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | CAS im Zustand „EWS5 aktiv“ und  E5_KEY ist im EEPROM abgelegt |
 | 255 | CAS im Zustand „EWS5 nicht aktiv |
 
-<a id="table-tab-steuern-ews4-mode"></a>
 ### TAB_STEUERN_EWS4_MODE
 
 Dimensions: 8 rows × 4 columns
@@ -5306,7 +5079,6 @@ Dimensions: 8 rows × 4 columns
 | 0x11 | WRITE_E5_KEY | Set EWS5-Key | 8 |
 | 0xFF | UNKNOWN_MODE | UNKNOWN_MODE | 0 |
 
-<a id="table-tab-trsp-key-data-consistent"></a>
 ### TAB_TRSP_KEY_DATA_CONSISTENT
 
 Dimensions: 3 rows × 2 columns
@@ -5317,7 +5089,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Schlüsseldaten sind konsistent - Vollständig ausgelesen |
 | 255 | Unbekannt/Ungültig |
 
-<a id="table-tab-zv-aktion"></a>
 ### TAB_ZV_AKTION
 
 Dimensions: 8 rows × 2 columns
@@ -5333,7 +5104,6 @@ Dimensions: 8 rows × 2 columns
 | 100 | Elektrisch öffnen ist aktiv |
 | 255 | ungültig |
 
-<a id="table-tab-zv-ursache"></a>
 ### TAB_ZV_URSACHE
 
 Dimensions: 31 rows × 2 columns
@@ -5372,7 +5142,6 @@ Dimensions: 31 rows × 2 columns
 | 30 | TOEHKA oder TOEHS |
 | FF | undefinierter Zustand |
 
-<a id="table-tab-zv-zustand"></a>
 ### TAB_ZV_ZUSTAND
 
 Dimensions: 9 rows × 2 columns

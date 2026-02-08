@@ -34,7 +34,6 @@
 - [CODIERUNG_LESEN](#job-codierung-lesen) - Fahrzeugcodierung auslesen
 - [EEPROM_LESEN](#job-eeprom-lesen) - Lesen des EEPROM-Speichers
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -52,7 +51,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -65,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -88,7 +85,6 @@ _No arguments._
 | ID_MASKEN_NR | int | Maskennummer |
 | ID_STRUKTUR_NR | int | Strukturdatennummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -107,7 +103,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl der Fehlerarten |
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -120,7 +115,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -133,7 +127,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern der Ventilendstufen
@@ -152,7 +145,6 @@ Ansteuern der Ventilendstufen
 | JOB_STATUS | string | "OKAY" "ERROR_NACK" |
 | _TEL_AN_SG | binary |  |
 
-<a id="job-steuern-vf"></a>
 ### STEUERN_VF
 
 Abspeichern der aktuellen Geschwindigkeit VF
@@ -165,7 +157,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY" "ERROR_NACK" |
 
-<a id="job-status-vf"></a>
 ### STATUS_VF
 
 Auslesen der Raddrehzahl
@@ -181,7 +172,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Auslesen der Statusbytes
@@ -215,7 +205,6 @@ _No arguments._
 | STAT_SHUT_DOWN_AKTIV | int | SYS_STAT_high - SHUT_DOWN |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Analogwerte auslesen
@@ -255,7 +244,6 @@ _No arguments._
 | STAT_U_KL15_EINH | string | Spannung in Volt [V] |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-online"></a>
 ### STATUS_ONLINE
 
 Online-Lesen
@@ -285,7 +273,6 @@ _No arguments._
 | STAT_VENTILSTELLUNG_EINH | string | Einheit der Ventilstellung |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Fahrzeugcodierung auslesen
@@ -304,7 +291,6 @@ Fahrzeugcodierung auslesen
 | CODIERDATEN | binary | Datenbytes 0..15 |
 | _TEL_SENDE | binary |  |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 Lesen des EEPROM-Speichers
@@ -332,7 +318,6 @@ Lesen des EEPROM-Speichers
 - [FORTTEXTE](#table-forttexte) (26 × 2)
 - [STEUERN_DIGITAL](#table-steuern-digital) (11 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 26 rows × 2 columns
@@ -366,7 +351,6 @@ Dimensions: 26 rows × 2 columns
 | 0x84 | Ventilfehler hinten: Unterbrechung einer Ventilleitung Weich |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Dimensions: 11 rows × 2 columns

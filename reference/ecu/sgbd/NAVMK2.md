@@ -39,7 +39,6 @@
 - [SYSTEM_PARAMETER_LESEN](#job-system-parameter-lesen)
 - [SLEEP_MODE](#job-sleep-mode) - Steuergeraet in Sleep-Mode versetzen
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -57,7 +56,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Navigationsrechner
@@ -70,7 +68,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 _No arguments._
@@ -114,7 +111,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Navigationsrechner
@@ -140,7 +136,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen High Konzept nach LH Codierung/Diagnose mit Umweltbeding
@@ -161,7 +156,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm des Steuergeraetes |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Fehlerspeicher lesen High Konzept nach LH Codierung/Diagnose mit Umweltbeding
@@ -182,7 +176,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Antworttelegramm des Steuergeraetes |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -201,7 +194,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der Telegramme anzeigen |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -222,7 +214,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen, welche Software geladen ist
@@ -246,7 +237,6 @@ _No arguments._
 | SPRACHE_3_AKTUELL_TEXT | string | 3. geladene Sprache |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 #### Arguments
@@ -268,7 +258,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-speicher-loeschen"></a>
 ### SPEICHER_LOESCHEN
 
 Sprachen loeschen
@@ -283,7 +272,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -302,7 +290,6 @@ _No arguments._
 | COD_USER_INPUT_WERT | int | Wert des Bytes USER_INPUT, derzeit unbenutzt |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Selbsttest Navigationsrechner
@@ -317,7 +304,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen im Navigationsrechner
@@ -330,7 +316,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-quick-erase"></a>
 ### QUICK_ERASE
 
 Fehlerspeicher loeschen ohne BUSY abzuwarten
@@ -343,7 +328,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. OKAY) |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -356,7 +340,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -369,7 +352,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-system-parameter-lesen"></a>
 ### SYSTEM_PARAMETER_LESEN
 
 _No arguments._
@@ -382,7 +364,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der gesendeten Telegramme |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 Steuergeraet in Sleep-Mode versetzen
@@ -409,7 +390,6 @@ _No arguments._
 - [CODESPRACHEN](#table-codesprachen) (19 × 2)
 - [CODESOFTWARELADENTEXT](#table-codesoftwareladentext) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -425,7 +405,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -443,7 +422,6 @@ Dimensions: 10 rows × 2 columns
 | 0x09 | CD-Fehler |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -454,7 +432,6 @@ Dimensions: 3 rows × 2 columns
 | 0x40 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 30 rows × 2 columns
@@ -492,7 +469,6 @@ Dimensions: 30 rows × 2 columns
 | 0xB6 | Adressfehler, Reset Navigationsrechner |
 | 0xFF | Unbekannter Fehlercode im Shadowspeicher |
 
-<a id="table-laendercodezielland"></a>
 ### LAENDERCODEZIELLAND
 
 Dimensions: 10 rows × 2 columns
@@ -510,7 +486,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Aus/Golf/ZA |
 | 0xFF | unbekanntes Land |
 
-<a id="table-codesprachen"></a>
 ### CODESPRACHEN
 
 Dimensions: 19 rows × 2 columns
@@ -537,7 +512,6 @@ Dimensions: 19 rows × 2 columns
 | 0x88 | englisch UK weiblich |
 | 0xFF | keine Sprache |
 
-<a id="table-codesoftwareladentext"></a>
 ### CODESOFTWARELADENTEXT
 
 Dimensions: 3 rows × 2 columns

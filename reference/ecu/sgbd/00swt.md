@@ -46,7 +46,6 @@
 - [FAHRGESTELLNUMMER_SCHREIBEN](#job-fahrgestellnummer-schreiben) - FGN schreiben im Steuergeraet KWP2000: $31 StartRoutineByLocalIdentifier $E5 SWTSetFZG
 - [DOWNLOAD_POSTACTION](#job-download-postaction) - SW für SWt registrieren KWP2000: $31 StartRoutineByLocalIdentifier $E4 SWTDownloadPostaction
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -65,7 +64,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -78,7 +76,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-swt-parameter-lesen"></a>
 ### SWT_PARAMETER_LESEN
 
 Gibt die SG-spezifischen SWT-Parameter zurück
@@ -92,7 +89,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY |
 | SG_ADRESSE | int | Steuergeräteadresse |
 
-<a id="job-swt-parameter-setzen"></a>
 ### SWT_PARAMETER_SETZEN
 
 Setzt die SG-spezifischen SWT-Parameter
@@ -109,7 +105,6 @@ Setzt die SG-spezifischen SWT-Parameter
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-sw-id-funktional-lesen"></a>
 ### SW_ID_FUNKTIONAL_LESEN
 
 Software ID funktional lesen KWP2000: $31 StartRoutineByLocalIdentifier $F9 SWTGetFunktionsSoftwareID
@@ -127,7 +122,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-software-id-lesen"></a>
 ### SOFTWARE_ID_LESEN
 
 Software ID lesen KWP2000: $31 StartRoutineByLocalIdentifier $F8 SWTGetSoftwareID
@@ -144,7 +138,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-software-signature-lesen"></a>
 ### SOFTWARE_SIGNATURE_LESEN
 
 Software Signature im SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $F7 SWTGetSigSID
@@ -161,7 +154,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Freischaltstatus einer Software lesen KWP2000: $31 StartRoutineByLocalIdentifier $F6 SWTGetStatus
@@ -188,7 +180,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zertifikat-pruefen"></a>
 ### ZERTIFIKAT_PRUEFEN
 
 SigS-& FSCS- Zertifikat prüfen KWP2000:        $31 StartRoutineByLocalIdentifier $F5 SWTCheckCert
@@ -209,7 +200,6 @@ SigS-& FSCS- Zertifikat prüfen KWP2000:        $31 StartRoutineByLocalIdentifie
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zertifikat-laenge-lesen"></a>
 ### ZERTIFIKAT_LAENGE_LESEN
 
 Lesen die Zertifikatlaenge im SG KWP2000: $31 StartRoutineByLocalIdentifier $F4 SWTGetCertLength
@@ -233,7 +223,6 @@ Lesen die Zertifikatlaenge im SG KWP2000: $31 StartRoutineByLocalIdentifier $F4 
 | _TEL_AUFTRAG_LAENGE | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_LAENGE | binary | Hex-Antwort von SG |
 
-<a id="job-zertifikat-lesen"></a>
 ### ZERTIFIKAT_LESEN
 
 Lesen das Zertifikat im SG KWP2000: $31 StartRoutineByLocalIdentifier $F3 SWTGetCert
@@ -257,7 +246,6 @@ Lesen das Zertifikat im SG KWP2000: $31 StartRoutineByLocalIdentifier $F3 SWTGet
 | _TEL_AUFTRAG_ZERT | binary | Hex-Auftrag an SG |
 | _TEL_LETZTE_ANTWORT_ZERT | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-laenge-schreiben"></a>
 ### FREISCHALTCODE_LAENGE_SCHREIBEN
 
 Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLocalIdentifier $F2 SWTSetFSCLength
@@ -280,7 +268,6 @@ Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLo
 | _TEL_AUFTRAG_LAENGE | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_LAENGE | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-schreiben"></a>
 ### FREISCHALTCODE_SCHREIBEN
 
 Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLocalIdentifier $F1 SWTStoreFSC
@@ -301,7 +288,6 @@ Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLo
 | _TEL_AUFTRAG_FSC | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_FSC | binary | Hex-Antwort von SG |
 
-<a id="job-zertifikat-laenge-schreiben"></a>
 ### ZERTIFIKAT_LAENGE_SCHREIBEN
 
 Zertifikat einer Software in das SG einschreiben KWP2000: $31 StartRoutineByLocalIdentifier $F0 SWTSetCertLength
@@ -325,7 +311,6 @@ Zertifikat einer Software in das SG einschreiben KWP2000: $31 StartRoutineByLoca
 | _TEL_AUFTRAG_LAENGE | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_LAENGE | binary | Hex-Antwort von SG |
 
-<a id="job-zertifikat-schreiben"></a>
 ### ZERTIFIKAT_SCHREIBEN
 
 Zertifikat einer Software in das SG einschreiben KWP2000: $31 StartRoutineByLocalIdentifier $EF SWTStoreCert
@@ -346,7 +331,6 @@ Zertifikat einer Software in das SG einschreiben KWP2000: $31 StartRoutineByLoca
 | _TEL_AUFTRAG_ZERT | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_ZERT | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-pruefen"></a>
 ### FREISCHALTCODE_PRUEFEN
 
 Freischaltcode nach dem Einspielen prüfen KWP2000: $31 StartRoutineByLocalIdentifier $EE SWTCheckFSC
@@ -366,7 +350,6 @@ Freischaltcode nach dem Einspielen prüfen KWP2000: $31 StartRoutineByLocalIdent
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-stornieren"></a>
 ### FREISCHALTCODE_STORNIEREN
 
 Freischaltcode als ungültig/storniert kennzeichnen KWP2000: $31 StartRoutineByLocalIdentifier $ED SWTDisableFSC
@@ -386,7 +369,6 @@ Freischaltcode als ungültig/storniert kennzeichnen KWP2000: $31 StartRoutineByL
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-laenge-lesen"></a>
 ### FREISCHALTCODE_LAENGE_LESEN
 
 Freischaltcode laenge lesen KWP2000: $31 StartRoutineByLocalIdentifier $EC SWTGetFSCLength
@@ -409,7 +391,6 @@ Freischaltcode laenge lesen KWP2000: $31 StartRoutineByLocalIdentifier $EC SWTGe
 | _TEL_AUFTRAG_LAENGE | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_LAENGE | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-lesen"></a>
 ### FREISCHALTCODE_LESEN
 
 Freischaltcode lesen KWP2000: $31 StartRoutineByLocalIdentifier $EB SWTGetFSC
@@ -432,7 +413,6 @@ Freischaltcode lesen KWP2000: $31 StartRoutineByLocalIdentifier $EB SWTGetFSC
 | _TEL_AUFTRAG_FSC | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_FSC | binary | Hex-Antwort von SG |
 
-<a id="job-periodische-pruefung"></a>
 ### PERIODISCHE_PRUEFUNG
 
 Zertifikate, FSCs und SWSignaturen regelmässig prüfen KWP2000: $31 StartRoutineByLocalIdentifier $EA SWTPeriodicalChecks
@@ -452,7 +432,6 @@ Zertifikate, FSCs und SWSignaturen regelmässig prüfen KWP2000: $31 StartRoutin
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-finger-print-mechanismus"></a>
 ### FINGER_PRINT_MECHANISMUS
 
 Finger Print Mechanismus KWP2000: $31 StartRoutineByLocalIdentifier $E9 SWTFingerPrintCheck
@@ -468,7 +447,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zeit-lesen"></a>
 ### ZEIT_LESEN
 
 Uhrzeit im Steuergeraet lesen KWP2000: $31 StartRoutineByLocalIdentifier $E8 SWTGetTime
@@ -490,7 +468,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zeit-schreiben"></a>
 ### ZEIT_SCHREIBEN
 
 Uhrzeit im Steuergeraet schreiben KWP2000: $31 StartRoutineByLocalIdentifier $E7 SWTSetTime
@@ -510,7 +487,6 @@ Uhrzeit im Steuergeraet schreiben KWP2000: $31 StartRoutineByLocalIdentifier $E7
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestellnummer-lesen"></a>
 ### FAHRGESTELLNUMMER_LESEN
 
 FGN lesen im Steuergeraet KWP2000: $31 StartRoutineByLocalIdentifier $E6 SWTGetFZG
@@ -527,7 +503,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestellnummer-schreiben"></a>
 ### FAHRGESTELLNUMMER_SCHREIBEN
 
 FGN schreiben im Steuergeraet KWP2000: $31 StartRoutineByLocalIdentifier $E5 SWTSetFZG
@@ -547,7 +522,6 @@ FGN schreiben im Steuergeraet KWP2000: $31 StartRoutineByLocalIdentifier $E5 SWT
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-download-postaction"></a>
 ### DOWNLOAD_POSTACTION
 
 SW für SWt registrieren KWP2000: $31 StartRoutineByLocalIdentifier $E4 SWTDownloadPostaction
@@ -576,7 +550,6 @@ SW für SWt registrieren KWP2000: $31 StartRoutineByLocalIdentifier $E4 SWTDownl
 - [SWTSTATUSTAB](#table-swtstatustab) (6 × 2)
 - [SWTFEHLER_TAB](#table-swtfehler-tab) (47 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -588,7 +561,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -691,7 +663,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-swtstatustab"></a>
 ### SWTSTATUSTAB
 
 Dimensions: 6 rows × 2 columns
@@ -705,7 +676,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | STORNIERT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUS_RESPONSE |
 
-<a id="table-swtfehler-tab"></a>
 ### SWTFEHLER_TAB
 
 Dimensions: 47 rows × 2 columns

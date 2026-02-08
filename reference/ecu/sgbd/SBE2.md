@@ -43,7 +43,6 @@
 - [DIAGNOSE_ERHALTEN](#job-diagnose-erhalten) - Diagnose aufrechterhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -62,7 +61,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer AIRBAG MRS3
@@ -75,7 +73,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer SBE2
@@ -98,7 +95,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferant |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Quicktest auf Fehleranzahl
@@ -112,7 +108,6 @@ _No arguments._
 | JOB_STATUS | string | normalerweise OKAY |
 | F_ANZ | int | Anzahl Fehler |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -131,7 +126,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl Fehlerarten, hier: 0 |
 | F_UW_ANZ | int | Anzahl Umweltbedingungen, hier: 0 |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -144,7 +138,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -163,7 +156,6 @@ Lesen des internen Speichers
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | DATEN | binary | ausgelesene Hex-Daten |
 
-<a id="job-kodierdaten-lesen"></a>
 ### KODIERDATEN_LESEN
 
 Kodierdaten lesen
@@ -182,7 +174,6 @@ Kodierdaten lesen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | DATEN | binary | ausgelesene Hex-Daten |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -198,7 +189,6 @@ _No arguments._
 | BYTE2 | int | Datenbyte 2 |
 | BYTE3 | int | Datenbyte 3 |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -217,7 +207,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Ausloesen des Controller-Reset
@@ -230,7 +219,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-kap-ce"></a>
 ### STATUS_KAP_CE
 
 CE-Kapazitaet (Elektrode-Masse) Antennen
@@ -248,7 +236,6 @@ _No arguments._
 | STAT_KAP_CE_C4 | real | Antenne C4, Kapazitaet in pF |
 | STAT_DSP_DATA_ID | int | intern |
 
-<a id="job-status-phi-ce"></a>
 ### STATUS_PHI_CE
 
 CE-Phasen (Elektrode-Masse) Antennen
@@ -266,7 +253,6 @@ _No arguments._
 | STAT_PHI_CE_C4 | real | Antenne C4, CE-Phase in Grad |
 | STAT_DSP_DATA_ID | int | intern |
 
-<a id="job-status-kap-cge"></a>
 ### STATUS_KAP_CGE
 
 CGE-Kapazitaet (Elektrode-Guard) Antennen
@@ -284,7 +270,6 @@ _No arguments._
 | STAT_KAP_CGE_C4 | real | Antenne C4, Kapazitaet in pF |
 | STAT_DSP_DATA_ID | int | intern |
 
-<a id="job-status-phi-cge"></a>
 ### STATUS_PHI_CGE
 
 CGE-Phasen (Elektrode-Guard) Antennen
@@ -302,7 +287,6 @@ _No arguments._
 | STAT_PHI_CGE_C4 | real | Antenne C4, CGE-Phase in Grad |
 | STAT_DSP_DATA_ID | int | intern |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 IO-Stati ausgeben
@@ -328,7 +312,6 @@ _No arguments._
 | STAT_OCE_INPUT | int | intern, Low(=0) oder High (=1) |
 | STAT_DCA_INPUT | int | intern, Low(=0) oder High (=1) |
 
-<a id="job-status-intern"></a>
 ### STATUS_INTERN
 
 Interne IO-Stati ausgeben
@@ -354,7 +337,6 @@ _No arguments._
 | STAT_VORLAST_LSHAPE | int | Intern |
 | STAT_TEL_PS | int | Intern |
 
-<a id="job-steuern-dsp"></a>
 ### STEUERN_DSP
 
 (Temporaeres) Setzen der DSP-Bytes
@@ -374,7 +356,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-sbe2"></a>
 ### STEUERN_SBE2
 
 (Temporaeres) Setzen der Sitzbelegung
@@ -391,7 +372,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-oce"></a>
 ### STEUERN_OCE
 
 (Temporaeres) Ein-/Ausschalten der OCE-Kommunikation
@@ -408,7 +388,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-herstellerdaten-lesen"></a>
 ### HERSTELLERDATEN_LESEN
 
 Lesen der herstellerspez. Daten
@@ -422,7 +401,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | DATEN | binary | ausgelesene Hex-Daten |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -435,7 +413,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -456,7 +433,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (31 × 2)
 - [FORTTEXTE](#table-forttexte) (38 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -472,7 +448,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 31 rows × 2 columns
@@ -511,7 +486,6 @@ Dimensions: 31 rows × 2 columns
 | 0x30 | NEC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 38 rows × 2 columns

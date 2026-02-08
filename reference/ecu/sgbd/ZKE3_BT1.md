@@ -29,7 +29,6 @@
 - [STATUS_BYTES_BT](#job-status-bytes-bt) - Status aller Signale des Peripheriemoduls BT Signalart: BYTE-weise, d.h. ohne Interpretation
 - [STATUS_FH_BT](#job-status-fh-bt) - Status der FH-Signale der BT
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -48,7 +47,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer GM III
@@ -85,7 +82,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-herstelldaten-lesen"></a>
 ### HERSTELLDATEN_LESEN
 
 Auslesen der Herstelldaten
@@ -103,7 +99,6 @@ _No arguments._
 | BYTE4 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-digital-bt"></a>
 ### STATUS_DIGITAL_BT
 
 Status der Digitalsignale der BT (Ein-/Ausgaenge)
@@ -166,7 +161,6 @@ _No arguments._
 | STAT_A_MELED_AKTIV | int | 0, wenn FALSE / 1, wenn TRUE |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-bt"></a>
 ### STATUS_ANALOG_BT
 
 Status der Analogsignale der BT
@@ -196,7 +190,6 @@ _No arguments._
 | STAT_UFHBTZ_EINH | string | Einheit: 'Volt' |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital-bt"></a>
 ### STEUERN_DIGITAL_BT
 
 Ansteuern eines digitalen Ein- oder Ausgangs der BT
@@ -216,7 +209,6 @@ Ansteuern eines digitalen Ein- oder Ausgangs der BT
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-bytes-bt"></a>
 ### STATUS_BYTES_BT
 
 Status aller Signale des Peripheriemoduls BT Signalart: BYTE-weise, d.h. ohne Interpretation
@@ -231,7 +223,6 @@ _No arguments._
 | STAT_DATEN | binary | 27 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-fh-bt"></a>
 ### STATUS_FH_BT
 
 Status der FH-Signale der BT
@@ -262,7 +253,6 @@ _No arguments._
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 - [BITS_BT](#table-bits-bt) (50 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -283,7 +273,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 69 rows × 2 columns
@@ -360,7 +349,6 @@ Dimensions: 69 rows × 2 columns
 | 0x68 | Atena GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -389,7 +377,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -413,7 +400,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-bits-bt"></a>
 ### BITS_BT
 
 Dimensions: 50 rows × 6 columns

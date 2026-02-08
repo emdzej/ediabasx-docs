@@ -44,7 +44,6 @@
 - [TIZKL15_SCHREIBEN](#job-tizkl15-schreiben) - Timerzeit fuer Meldung nach KL 15 verändern
 - [IS_LESEN](#job-is-lesen) - Fehlerspeicher lesen High-Konzept nach Lastenheft Codierung/Diagnose
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -63,7 +62,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer EWS automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -76,7 +74,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EHC
@@ -100,7 +97,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-quick"></a>
 ### FS_QUICK
 
 Fehlerspeicher lesen
@@ -115,7 +111,6 @@ _No arguments._
 | F_ZAHL | int | Anzahl der aktiven Fehler |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen High-Konzept nach Lastenheft Codierung/Diagnose
@@ -152,7 +147,6 @@ _No arguments._
 | _TEL_ANTWORT0 | binary |  |
 | _TEL_ANTWORT1 | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -166,7 +160,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -179,7 +172,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten des EHC
@@ -249,7 +241,6 @@ _No arguments._
 | COD_VERZOEG_TIME | int |  |
 | COD_MAX_W | int |  |
 
-<a id="job-status-digital-lesen"></a>
 ### STATUS_DIGITAL_LESEN
 
 digitale Statis (Statusbytes) des EHC
@@ -314,7 +305,6 @@ _No arguments._
 | STAT_PORT_A_ABLASS_VENTIL_AKTIV | int |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 analoge Stati des EHC
@@ -337,7 +327,6 @@ _No arguments._
 | STAT_U_BATT_WERT | real | 0 - 25.5 Volt |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-online-lesen"></a>
 ### STATUS_ONLINE_LESEN
 
 Online-Stati des EHC
@@ -391,7 +380,6 @@ _No arguments._
 | STAT_FEHLERSTATUS_2_WERT | int |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-abgleichwerte-lesen"></a>
 ### ABGLEICHWERTE_LESEN
 
 Timer-Stati des EHC
@@ -408,7 +396,6 @@ _No arguments._
 | OFFSET_EINH | string | mm |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fahrzeug-hoehe-abgleichen"></a>
 ### FAHRZEUG_HOEHE_ABGLEICHEN
 
 Timer-Stati des EHC
@@ -438,7 +425,6 @@ Timer-Stati des EHC
 | ABWEICHUNG_RECHTS_WERT | int | Abweichung rechts |
 | TEL_ABGLEICH | binary | gesendetes Abgleichtelegramm |
 
-<a id="job-status-timer-lesen"></a>
 ### STATUS_TIMER_LESEN
 
 Timer-Stati des EHC
@@ -456,7 +442,6 @@ _No arguments._
 | STAT_TIMER_KURVE_EINH | string |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -473,7 +458,6 @@ _No arguments._
 | BYTE3 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -494,7 +478,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-vorgeben"></a>
 ### STATUS_VORGEBEN
 
 Ansteuern eines digitalen Ein- Ausgaenge
@@ -511,7 +494,6 @@ Ansteuern eines digitalen Ein- Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-status-vorgeben-loop"></a>
 ### STEUERN_STATUS_VORGEBEN_LOOP
 
 Ansteuern eines digitalen Ein- Ausgaenge
@@ -529,7 +511,6 @@ Ansteuern eines digitalen Ein- Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-kompressor-steuern"></a>
 ### KOMPRESSOR_STEUERN
 
 Ansteuern des Kompressors
@@ -548,7 +529,6 @@ Ansteuern des Kompressors
 | _TEL_ANTWORT | binary | Antworttelegramm |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -571,7 +551,6 @@ Auslesen des Speicherinhaltes
 | _TEL_ANTWORT | binary |  |
 | DATEN | binary | angeforderter Datenblock (32 Bytes!) |
 
-<a id="job-modus-vorgeben"></a>
 ### MODUS_VORGEBEN
 
 EINSCHALTUNG des TRANSPORT oder MONTAGEMODUS
@@ -593,7 +572,6 @@ EINSCHALTUNG des TRANSPORT oder MONTAGEMODUS
 | _TEL_EPROM_NEU | binary | neuer Inhalt der EPROM-Zellen |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fastfilter-werte-lesen-schreiben"></a>
 ### FASTFILTER_WERTE_LESEN_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -613,7 +591,6 @@ _No arguments._
 | BYTE2 | int | Pruefbyte vom Achsmessstand, Hex55 bei i.O. |
 | STAT_FAST_FILTER_HR_WERT | int | Byte 3 vom Pruefstempel |
 
-<a id="job-tizkl15-schreiben"></a>
 ### TIZKL15_SCHREIBEN
 
 Timerzeit fuer Meldung nach KL 15 verändern
@@ -642,7 +619,6 @@ Timerzeit fuer Meldung nach KL 15 verändern
 | W3 | int |  |
 | W4 | int |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Fehlerspeicher lesen High-Konzept nach Lastenheft Codierung/Diagnose
@@ -690,7 +666,6 @@ _No arguments._
 - [FUMWELTTEXTE](#table-fumwelttexte) (10 × 3)
 - [STEUERN](#table-steuern) (12 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -706,7 +681,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -741,7 +715,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 11 rows × 2 columns
@@ -760,7 +733,6 @@ Dimensions: 11 rows × 2 columns
 | 0x0A | Regelzeit, einseitig |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 15 rows × 2 columns
@@ -783,7 +755,6 @@ Dimensions: 15 rows × 2 columns
 | 0xB1 | Fahrt |
 | 0xFF | -- |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 10 rows × 3 columns
@@ -801,7 +772,6 @@ Dimensions: 10 rows × 3 columns
 | 0x11 | Hoehenstand links | mm |
 | 0xXY | unbekannte Umweltbedingung | XY |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 12 rows × 3 columns

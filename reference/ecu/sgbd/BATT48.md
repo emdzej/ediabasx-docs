@@ -51,7 +51,6 @@
 - [CALID_CVN_LESEN](#job-calid-cvn-lesen) - OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
 - [CPS_LESEN](#job-cps-lesen) - Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -70,7 +69,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -83,7 +81,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -100,7 +97,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -132,7 +128,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -185,7 +180,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -204,7 +198,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -222,7 +215,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -243,7 +235,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -272,7 +263,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -292,7 +282,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -313,7 +302,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -329,7 +317,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -351,7 +338,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -370,7 +356,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $17 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -401,7 +386,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $18 reportDTCSnapshotRecordByDTCNumber UDS  : $19 reportDTCExtendedDataRecordByDTCNumber UDS  : $-- reportSeverityInformationOfDTC (nicht möglich!) Modus: Default
@@ -453,7 +437,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $19 ReadD
 | _RESPONSE_EXTENDED_DATA | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -468,7 +451,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -488,7 +470,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -507,7 +488,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -526,7 +506,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -541,7 +520,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -560,7 +538,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -580,7 +557,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -597,7 +573,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -616,7 +591,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -631,7 +605,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -648,7 +621,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -663,7 +635,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -678,7 +649,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-calid-cvn-lesen"></a>
 ### CALID_CVN_LESEN
 
 OBD Calibration ID, CVN Calibration verification number UDS  : $22   ReadDataByIdentifier UDS  : $2541 CAL-ID Calibration ID and CVN Calibration verification number
@@ -696,7 +666,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -807,7 +776,6 @@ _No arguments._
 - [TAB_0X503F](#table-tab-0x503f) (1 × 7)
 - [ZELLZUSTAND](#table-zellzustand) (16 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -891,7 +859,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 149 rows × 2 columns
@@ -1048,7 +1015,6 @@ Dimensions: 149 rows × 2 columns
 | 0x0000CA | SEG Automotive Germany GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1091,7 +1057,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1116,7 +1081,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1150,7 +1114,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1223,7 +1186,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1236,7 +1198,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 9 rows × 9 columns
@@ -1253,7 +1214,6 @@ Dimensions: 9 rows × 9 columns
 | 0x1769 | ABS_ZEIT_SUP | 0-n | - | 0xFFFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-tab-zeit-syncmethod"></a>
 ### TAB_ZEIT_SYNCMETHOD
 
 Dimensions: 4 rows × 2 columns
@@ -1265,7 +1225,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | IEEE802.1AS |
 | 0x03 | invalid |
 
-<a id="table-tab-zeit-user-info"></a>
 ### TAB_ZEIT_USER_INFO
 
 Dimensions: 8 rows × 2 columns
@@ -1281,7 +1240,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | invalid |
 | 0x07 | invalid |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1294,7 +1252,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -1316,7 +1273,6 @@ Dimensions: 14 rows × 3 columns
 | 0x61 | ECUSUPSPEC | ECUSupplierSpecificSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1359,7 +1315,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1370,7 +1325,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x4001-d"></a>
 ### ARG_0X4001_D
 
 Dimensions: 1 rows × 12 columns
@@ -1379,7 +1333,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PRUEFBYTE | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Prüfbyte |
 
-<a id="table-arg-0x4002-d"></a>
 ### ARG_0X4002_D
 
 Dimensions: 1 rows × 12 columns
@@ -1388,7 +1341,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PRUEFBYTE | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Prüfbyte |
 
-<a id="table-arg-0x4003-d"></a>
 ### ARG_0X4003_D
 
 Dimensions: 1 rows × 12 columns
@@ -1397,7 +1349,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PRUEFBYTE | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Prüfbyte |
 
-<a id="table-arg-0x4004-d"></a>
 ### ARG_0X4004_D
 
 Dimensions: 1 rows × 12 columns
@@ -1406,7 +1357,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PREUFBYTE | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Prüfbyte |
 
-<a id="table-arg-0x4005-d"></a>
 ### ARG_0X4005_D
 
 Dimensions: 1 rows × 12 columns
@@ -1415,7 +1365,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PRUEFBYTE | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Prüfbyte |
 
-<a id="table-arg-0x4006-d"></a>
 ### ARG_0X4006_D
 
 Dimensions: 1 rows × 12 columns
@@ -1424,7 +1373,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PRUEFBYTE | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Prüfbyte |
 
-<a id="table-arg-0x4010-d"></a>
 ### ARG_0X4010_D
 
 Dimensions: 2 rows × 12 columns
@@ -1434,7 +1382,6 @@ Dimensions: 2 rows × 12 columns
 | SERIENNUMMER | DATA | high | data[8] | - | - | 1.0 | 1.0 | 0.0 | - | - | Marquardt Seriennummer |
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Setzen der Parameter |
 
-<a id="table-arg-0x4140-d"></a>
 ### ARG_0X4140_D
 
 Dimensions: 2 rows × 12 columns
@@ -1444,7 +1391,6 @@ Dimensions: 2 rows × 12 columns
 | FAKTOR | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Faktor in 1/10 % |
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Setzen der Parameter |
 
-<a id="table-arg-0x4250-d"></a>
 ### ARG_0X4250_D
 
 Dimensions: 4 rows × 12 columns
@@ -1456,7 +1402,6 @@ Dimensions: 4 rows × 12 columns
 | _T_COOLING_C_WERT | °C | high | unsigned char | - | - | 2.0 | 1.0 | 0.0 | - | - | Parameter: Temperatur der Rücksetzung der Kühlanforderung auf 0% Default: 38 °C |
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Setzen der Parameter |
 
-<a id="table-arg-0x4260-d"></a>
 ### ARG_0X4260_D
 
 Dimensions: 2 rows × 12 columns
@@ -1466,7 +1411,6 @@ Dimensions: 2 rows × 12 columns
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Ausführen des Befehls |
 | _CONTROL_BYTE | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Byte zum Steuern des Diagnosejobs 1 = on --> Ignoriert den Kommunikationsfehler des AFE 0 = off  |
 
-<a id="table-arg-0x4270-d"></a>
 ### ARG_0X4270_D
 
 Dimensions: 2 rows × 12 columns
@@ -1476,7 +1420,6 @@ Dimensions: 2 rows × 12 columns
 | _CONTROL_BYTE | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Byte zum Steuern des Diagnosejobs 1 = Zähler zurücksetzen 0 = keine Aktion |
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Setzen der Parameter |
 
-<a id="table-arg-0x4280-d"></a>
 ### ARG_0X4280_D
 
 Dimensions: 2 rows × 12 columns
@@ -1486,7 +1429,6 @@ Dimensions: 2 rows × 12 columns
 | BALANCING_CONTROL | HEX | high | unsigned long | - | - | - | - | - | - | - | Bitfeld zur Aktivierung der 20 Balancing Kanäle: 0x01: Kanal 1 aktiv 0x02: Kanal 2 aktiv 0x04: Kanal 3 aktiv ... 0x80000: Kanal 20 aktiv |
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Setzen der Parameter |
 
-<a id="table-arg-0x4300-d"></a>
 ### ARG_0X4300_D
 
 Dimensions: 5 rows × 12 columns
@@ -1499,7 +1441,6 @@ Dimensions: 5 rows × 12 columns
 | _PRE_ACTUATION_POWER | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Power for pre-actuation |
 | _ACTUATION_POWER | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Power for actuation pulse (after pre-actuation). |
 
-<a id="table-arg-0x430a-d"></a>
 ### ARG_0X430A_D
 
 Dimensions: 2 rows × 12 columns
@@ -1509,7 +1450,6 @@ Dimensions: 2 rows × 12 columns
 | _CONTROL_BYTE | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Byte zum Steuern des Entwicklerjobs 1 = Zelldefekt zurücksetzen 0 = keine Aktion |
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Setzen der Parameter |
 
-<a id="table-arg-0x430b-d"></a>
 ### ARG_0X430B_D
 
 Dimensions: 2 rows × 12 columns
@@ -1519,7 +1459,6 @@ Dimensions: 2 rows × 12 columns
 | _CONTROL_BYTE | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 1 = enable CAN debug messages 0 = disable CAN debug messages |
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Setzen der Parameter |
 
-<a id="table-arg-0x4310-d"></a>
 ### ARG_0X4310_D
 
 Dimensions: 2 rows × 12 columns
@@ -1529,7 +1468,6 @@ Dimensions: 2 rows × 12 columns
 | FAKTOR | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Faktor für Linkspannungskalibrierung in 1/10% |
 | _PASS_PHRASE | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zum Setzen der Parameter |
 
-<a id="table-arg-0xae20-r"></a>
 ### ARG_0XAE20_R
 
 Dimensions: 2 rows × 14 columns
@@ -1539,7 +1477,6 @@ Dimensions: 2 rows × 14 columns
 | VORGABEMODUS | + | - | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00 = Temporär;  0x01 = Permanent |
 | VORGABEWERT | + | - | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00 = Trennelement offen;  0x01 = Trennelement geschlossen |
 
-<a id="table-arg-0xd6c4-d"></a>
 ### ARG_0XD6C4_D
 
 Dimensions: 1 rows × 12 columns
@@ -1548,7 +1485,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SETZEN_MONTAGE_MODE_48V | 0-n | high | unsigned char | - | ARG_SETZEN_MONTGE_MODE | - | - | - | - | - | SETZEN_MONTAGE_MODE_48V |
 
-<a id="table-arg-0xdab1-d"></a>
 ### ARG_0XDAB1_D
 
 Dimensions: 1 rows × 12 columns
@@ -1557,7 +1493,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BATTERIE_STATUS | 0-n | high | unsigned char | - | TAB_BATT48_REG_STATUS | - | - | - | - | - | Batterie Status |
 
-<a id="table-arg-0xdafa-d"></a>
 ### ARG_0XDAFA_D
 
 Dimensions: 1 rows × 12 columns
@@ -1566,7 +1501,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ERKENNUNG_30C_CRASH | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0: keine Aktion  1: Rücksetzen  |
 
-<a id="table-arg-0xf000-r"></a>
 ### ARG_0XF000_R
 
 Dimensions: 9 rows × 14 columns
@@ -1583,7 +1517,6 @@ Dimensions: 9 rows × 14 columns
 | _NOTABSCHALTUNG_T_RESET | + | - | °C | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 29.0 | 79.0 | Rücksetzbedingung (Temperatur) für Notabschaltung;  Defaultwert 75°C |
 | _NOTABSCHALTUNG_TIMING | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1.0 | 35.0 | Dauer, wie lange Setzbedingung anliegen muss, bis Notabschaltung ausgeführt wird;  Defaultwert 35s |
 
-<a id="table-arg-setzen-montge-mode"></a>
 ### ARG_SETZEN_MONTGE_MODE
 
 Dimensions: 3 rows × 2 columns
@@ -1594,7 +1527,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Setzen |
 | 0xFF | ungültig |
 
-<a id="table-bat48-fehlerstatus-spannung"></a>
 ### BAT48_FEHLERSTATUS_SPANNUNG
 
 Dimensions: 10 rows × 2 columns
@@ -1612,7 +1544,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Notabschaltung Überspannung |
 | 0xFF | ungültig |
 
-<a id="table-bat48-fehlerstatus-strom"></a>
 ### BAT48_FEHLERSTATUS_STROM
 
 Dimensions: 10 rows × 2 columns
@@ -1630,7 +1561,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Notabschaltung Entladeüberstrom |
 | 0xFF | ungültig |
 
-<a id="table-bat-i-err-st"></a>
 ### BAT_I_ERR_ST
 
 Dimensions: 10 rows × 2 columns
@@ -1648,7 +1578,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | emergency shutdown discharge |
 | 0xFF | Invalid |
 
-<a id="table-bat-u-err"></a>
 ### BAT_U_ERR
 
 Dimensions: 10 rows × 2 columns
@@ -1666,7 +1595,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | emergency shutdown high |
 | 0xFF | Invalid |
 
-<a id="table-bat-t-err-st"></a>
 ### BAT_T_ERR_ST
 
 Dimensions: 10 rows × 2 columns
@@ -1684,7 +1612,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | emergency shutdown high temperature |
 | 0xFF | Invalid |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1698,7 +1625,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1712,7 +1638,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | ja |
 
-<a id="table-fehlerstatus-trennschalter"></a>
 ### FEHLERSTATUS_TRENNSCHALTER
 
 Dimensions: 7 rows × 2 columns
@@ -1727,7 +1652,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Plausibilitätsfehler, Relais klemmt geschlossen |
 | 0xFF | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 72 rows × 4 columns
@@ -1807,7 +1731,6 @@ Dimensions: 72 rows × 4 columns
 | 0xC99406 | Batt48: CRC- oder Alive-Fehler (0x3C) | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 83 rows × 9 columns
@@ -1898,7 +1821,6 @@ Dimensions: 83 rows × 9 columns
 | 0x5049 | SOH | % | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -1911,7 +1833,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 2 rows × 4 columns
@@ -1921,7 +1842,6 @@ Dimensions: 2 rows × 4 columns
 | 0x020001 | Batt48: Erster Temperatursensor ausgefallen | 0 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -1930,7 +1850,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1939,7 +1858,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -1957,7 +1875,6 @@ Dimensions: 10 rows × 2 columns
 | 0x43 | HDDUpdateSession |
 | 0xff | ungültig |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -1969,7 +1886,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | ECU nicht mehr programmierbar |
 | 0xff | ungültig |
 
-<a id="table-relais-fehlerzustand"></a>
 ### RELAIS_FEHLERZUSTAND
 
 Dimensions: 8 rows × 2 columns
@@ -1985,7 +1901,6 @@ Dimensions: 8 rows × 2 columns
 | 15 | invalid |
 | 0xFF | Wert ungültig |
 
-<a id="table-relais-oeffnungszustand"></a>
 ### RELAIS_OEFFNUNGSZUSTAND
 
 Dimensions: 7 rows × 2 columns
@@ -2000,7 +1915,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | emergency_disconnect |
 | 15 | invalid |
 
-<a id="table-relais-zustand"></a>
 ### RELAIS_ZUSTAND
 
 Dimensions: 11 rows × 2 columns
@@ -2019,7 +1933,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | CLOSED_BY_DIAG_PER |
 | 0xFF | Invalid |
 
-<a id="table-relay-control-function"></a>
 ### RELAY_CONTROL_FUNCTION
 
 Dimensions: 3 rows × 2 columns
@@ -2030,7 +1943,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Two Step Curve |
 | 2 | Linear Curve |
 
-<a id="table-res-0x2502-d"></a>
 ### RES_0X2502_D
 
 Dimensions: 3 rows × 10 columns
@@ -2041,7 +1953,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PROG_ZAEHLER_STATUS | 0-n | high | unsigned char | - | RDBI_PC_PCS_DOP | - | - | - | ProgrammingCounterStatus |
 | STAT_PROG_ZAEHLER_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ProgrammingCounter |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -2055,7 +1966,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0x4010-d"></a>
 ### RES_0X4010_D
 
 Dimensions: 2 rows × 10 columns
@@ -2065,7 +1975,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SERIENNUMMER_DATA | DATA | high | data[8] | - | - | 1.0 | 1.0 | 0.0 | 8 Byte Seriennummer |
 | STAT_NULL_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Puffervariable, die notwendig ist, da dieselbe DID für Lesen- und Schreiben-Job verwendet wird |
 
-<a id="table-res-0x4140-d"></a>
 ### RES_0X4140_D
 
 Dimensions: 2 rows × 10 columns
@@ -2075,7 +1984,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FAKTOR_WERT | % | high | unsigned long | - | - | 1.0 | 10.0 | 0.0 | Stromkalibrierungsfaktor |
 | STAT_NULL_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Puffervariable, die notwendig ist, da dieselbe DID für Lesen- und Schreiben-Job verwendet wird |
 
-<a id="table-res-0x4250-d"></a>
 ### RES_0X4250_D
 
 Dimensions: 4 rows × 10 columns
@@ -2087,7 +1995,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_T_COOLING_C_WERT | °C | high | unsigned char | - | - | 1.0 | 2.0 | 0.0 | Parameter: Temperatur bei der Kühlanforderung auf 0% zurückgesetzt wird |
 | STAT_DGB_VALUE_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Derzeit unbekannt. Wird nachgetragen |
 
-<a id="table-res-0x4310-d"></a>
 ### RES_0X4310_D
 
 Dimensions: 2 rows × 10 columns
@@ -2097,7 +2004,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_FAKTOR_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Faktor für Linkspannungskalibrierung in 1/10% |
 | STAT_NULL_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Puffervariable, die notwendig ist, da dieselbe DID für Lesen- und Schreiben-Job verwendet wird |
 
-<a id="table-res-0xae20-r"></a>
 ### RES_0XAE20_R
 
 Dimensions: 1 rows × 13 columns
@@ -2106,7 +2012,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TRENNELEMENT | - | - | + | 0-n | high | unsigned char | - | TAB_STAT_TRENNELEMENT_BAT48 | - | - | - | Aktueller Status Trennelement BAT48 |
 
-<a id="table-res-0xd08c-d"></a>
 ### RES_0XD08C_D
 
 Dimensions: 20 rows × 10 columns
@@ -2134,7 +2039,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_SPEICHER_SOH_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | SOH State of Health: Alterungszustand der Batterie 100%: Neuwertig  |
 | STAT_SPEICHER_SOH_QUALITAET_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | SOH Qualitätswert:  0% = ungenau;  100% = sehr genau |
 
-<a id="table-res-0xd4cf-d"></a>
 ### RES_0XD4CF_D
 
 Dimensions: 20 rows × 10 columns
@@ -2162,7 +2066,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_ZELLSPANNUNG_19_WERT | mV | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ZELLSPANNUNG |
 | STAT_ZELLSPANNUNG_20_WERT | mV | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ZELLSPANNUNG |
 
-<a id="table-res-0xd6bf-d"></a>
 ### RES_0XD6BF_D
 
 Dimensions: 6 rows × 10 columns
@@ -2176,7 +2079,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ZELLTEMPERATUR_5_WERT | °C | high | signed char | - | - | 1.0 | 1.0 | 0.0 | Temperatur Zelle  |
 | STAT_ZELLTEMPERATUR_6_WERT | °C | high | signed char | - | - | 1.0 | 1.0 | 0.0 | Temperatur Zelle  |
 
-<a id="table-res-0xd6c4-d"></a>
 ### RES_0XD6C4_D
 
 Dimensions: 1 rows × 10 columns
@@ -2185,7 +2087,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_MONTAGEMODE | 0/1 | high | unsigned char | - | - | - | - | - | 0x00: Inaktiv 0x01: Aktiv |
 
-<a id="table-res-0xd6e9-d"></a>
 ### RES_0XD6E9_D
 
 Dimensions: 3 rows × 10 columns
@@ -2196,7 +2097,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_FEHLER_STROM | 0-n | high | unsigned char | - | BAT48_FEHLERSTATUS_STROM | - | - | - | Batt48 Fehlerstatus Strom |
 | STAT_FEHLER_TEMPERATUR | 0-n | high | unsigned char | - | STAT_FEHLER_TEMPERATUR | - | - | - | Batt48 Fehlerstatus Temperatur |
 
-<a id="table-res-0xda9e-d"></a>
 ### RES_0XDA9E_D
 
 Dimensions: 10 rows × 10 columns
@@ -2214,7 +2114,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_MAXIMAL_ERREICHTE_BATTERIESPANNUNG_UEBER_LEBENSDAUER_WERT | V | high | unsigned char | - | - | 0.25 | 1.0 | 0.0 | Maximale Spannung der Batterie, die über Lebensdauer je erreicht wurde |
 | STAT_MINIMAL_ERREICHTE_BATTERIESPANNUNG_UEBER_LEBENSDAUER_WERT | V | high | unsigned char | - | - | 0.25 | 1.0 | 0.0 | Minimale Spannung der Batterie, die über Lebensdauer je erreicht wurde |
 
-<a id="table-res-0xda9f-d"></a>
 ### RES_0XDA9F_D
 
 Dimensions: 21 rows × 10 columns
@@ -2243,7 +2142,6 @@ Dimensions: 21 rows × 10 columns
 | STAT_ENTLADEPULSDAUER_MITTEL_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Dauer des mittleren Entadepulses bis zum Erreichen der minimalen Entladespannung |
 | STAT_ENTLADEPULSDAUER_LANG_WERT | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Dauer des langen Entadepulses bis zum Erreichen der minimalen Entladespannung |
 
-<a id="table-res-0xdab2-d"></a>
 ### RES_0XDAB2_D
 
 Dimensions: 8 rows × 10 columns
@@ -2259,7 +2157,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_MSA_SCHLECHTESTER_SPANNUNGSEINBRUCH_KM_STAND_WERT | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Kilometerstand beim Motorstart mit schlechtestem Spannungseinbruch (Warmstart) |
 | STAT_MSA_SCHLECHTESTER_SPANNUNGSEINBRUCH_TEMPERATUR_WERT | °C | high | signed char | - | - | 1.0 | 1.0 | 0.0 | Batterietemperatur beim Motorstart mit schlechtestem Spannungseinbruch (Warmstart) |
 
-<a id="table-res-0xdaf9-d"></a>
 ### RES_0XDAF9_D
 
 Dimensions: 6 rows × 10 columns
@@ -2273,7 +2170,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ANZAHL_UMSCHALTEN_TRENNELEMENT_DIAGNOSE_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Diagnose-Umschaltungen ( wie oft das Trennelement via Diagnose umgeschaltet worden ist) |
 | STAT_ANZAH_NOTOEFFNUNGEN_TRENNELEMENT_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Zeigt an, wie häufig die Batterie selbständig das Trennelement geöffnet hat |
 
-<a id="table-res-0xe2ed-d"></a>
 ### RES_0XE2ED_D
 
 Dimensions: 83 rows × 10 columns
@@ -2364,7 +2260,6 @@ Dimensions: 83 rows × 10 columns
 | STAT_SOC_QUALITAET_VOR_9_TAGEN_WERT | % | high | unsigned char | - | - | 0.5 | 1.0 | 0.0 | Qualitätswert des SOC vor 9 Tagen |
 | STAT_SOC_QUALITAET_VOR_10_TAGEN_WERT | % | high | unsigned char | - | - | 0.5 | 1.0 | 0.0 | Qualitätswert des SOC vor 10 Tagen |
 
-<a id="table-res-0xe2ee-d"></a>
 ### RES_0XE2EE_D
 
 Dimensions: 109 rows × 10 columns
@@ -2481,7 +2376,6 @@ Dimensions: 109 rows × 10 columns
 | STAT_DEGRADATION_TRENNELEMENT_UND_TEMPERATUR_4_WERT | Counts | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Häufigkeitszähler: Degradation Trennelement und Temperatur zwischen 90s und 180s |
 | STAT_DEGRADATION_TRENNELEMENT_UND_TEMPERATUR_5_WERT | Counts | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Häufigkeitszähler: Degradation Trennelement und Temperatur länger als 180s |
 
-<a id="table-res-0xe3a5-d"></a>
 ### RES_0XE3A5_D
 
 Dimensions: 5 rows × 10 columns
@@ -2494,7 +2388,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_ANZAHL_BMS_RESET_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zähler für Resets des BMS |
 | STAT_ZEIT_LETZTER_BMS_RESET_WERT | s | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Relativzeit des letzten BMS Reset |
 
-<a id="table-res-0xf000-r"></a>
 ### RES_0XF000_R
 
 Dimensions: 9 rows × 13 columns
@@ -2511,7 +2404,6 @@ Dimensions: 9 rows × 13 columns
 | STAT_NOTABSCHALTUNG_T_RESET_WERT | - | - | + | °C | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Rücksetzbedingung (Temperatur) für Notabschaltung;  Defaultwert 75°C |
 | STAT_NOTABSCHALTUNG_TIMING_WERT | - | - | + | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Dauer, wie lange Setzbedingung anliegen muss, bis Notabschaltung ausgeführt wird;  Defaultwert 35s |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 41 rows × 16 columns
@@ -2560,7 +2452,6 @@ Dimensions: 41 rows × 16 columns
 | _TEMPERATURSCHWELLEN | 0xF000 | - | Schreibt Temperaturschwellen für Öffnungswunsch, Abschaltankündigung und Notabschaltung der Batterie | - | - | - | - | - | - | - | - | - | 31 | ARG_0xF000_R | RES_0xF000_R |
 | ACTIVE_DIAGNOSTIC_SESSION | 0xF186 | STAT_ACTIVE_DIAGNOSTIC_SESSION | activeDiagnosticSession | 0-n | - | High | unsigned char | RDBI_ADS_DOP | - | - | - | - | 22 | - | - |
 
-<a id="table-stat-fehler-temperatur"></a>
 ### STAT_FEHLER_TEMPERATUR
 
 Dimensions: 10 rows × 2 columns
@@ -2578,7 +2469,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Notabschaltung aufgrund Übertemperatur |
 | 0xFF | ungültig |
 
-<a id="table-tab-batt48-reg-status"></a>
 ### TAB_BATT48_REG_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -2590,7 +2480,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Alte Batterie, gelernte Werte rücksetzten |
 | 0xFF | ungültig |
 
-<a id="table-tab-stat-akt-grund-oefng"></a>
 ### TAB_STAT_AKT_GRUND_OEFNG
 
 Dimensions: 4 rows × 2 columns
@@ -2602,7 +2491,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Kommandierung |
 | 0xFF | Ungueltig |
 
-<a id="table-tab-stat-trennelement-bat48"></a>
 ### TAB_STAT_TRENNELEMENT_BAT48
 
 Dimensions: 10 rows × 2 columns
@@ -2620,7 +2508,6 @@ Dimensions: 10 rows × 2 columns
 | 10 | Kommandierung persistent geschlossen per Diagnose (flash-resistent) |
 | 255 | UNGUELTIG |
 
-<a id="table-temperaturzustand"></a>
 ### TEMPERATURZUSTAND
 
 Dimensions: 16 rows × 2 columns
@@ -2644,7 +2531,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Temperatur groesser 100°C |
 | 15 | Invalid |
 
-<a id="table-tab-0x5035"></a>
 ### TAB_0X5035
 
 Dimensions: 1 rows × 21 columns
@@ -2653,7 +2539,6 @@ Dimensions: 1 rows × 21 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 20 | 0x0001 | 0x0002 | 0x0003 | 0x0004 | 0x0005 | 0x0006 | 0x0007 | 0x0008 | 0x0009 | 0x000A | 0x000B | 0x000C | 0x000D | 0x000E | 0x000F | 0x0010 | 0x0011 | 0x0012 | 0x0013 | 0x0014 |
 
-<a id="table-tab-0x503e"></a>
 ### TAB_0X503E
 
 Dimensions: 1 rows × 7 columns
@@ -2662,7 +2547,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x0015 | 0x0016 | 0x0017 | 0x0018 | 0x0019 | 0x001A |
 
-<a id="table-tab-0x503f"></a>
 ### TAB_0X503F
 
 Dimensions: 1 rows × 7 columns
@@ -2671,7 +2555,6 @@ Dimensions: 1 rows × 7 columns
 | --- | --- | --- | --- | --- | --- | --- |
 | 6 | 0x001B | 0x001C | 0x001D | 0x001E | 0x001F | 0x0020 |
 
-<a id="table-zellzustand"></a>
 ### ZELLZUSTAND
 
 Dimensions: 16 rows × 2 columns

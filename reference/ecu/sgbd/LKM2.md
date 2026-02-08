@@ -30,7 +30,6 @@
 - [CODIERUNG_LESEN](#job-codierung-lesen) - Auslesen der Codierdaten (Hier nur Laendervariante)
 - [STATUS_LESEN](#job-status-lesen) - Abfrage der aktuellen Stati
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -48,7 +47,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -81,7 +78,6 @@ _No arguments._
 | ID_DATUM_KW | int | Herstelldatum KW |
 | ID_DATUM_JAHR | int | Herstelldatum Jahr |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -101,7 +97,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen (hier immer 0) |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -114,7 +109,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -127,7 +121,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-steuern-ausgaenge"></a>
 ### STEUERN_AUSGAENGE
 
 Einlesen der Ausgangsinformation
@@ -144,7 +137,6 @@ Einlesen der Ausgangsinformation
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-zaehlerstaende-lesen"></a>
 ### ZAEHLERSTAENDE_LESEN
 
 Auslesen der Zaehlerstaende
@@ -161,7 +153,6 @@ _No arguments._
 | ZAEHLER_AL_EIN | int | Zaehler fuer Abblendlicht-Betaetigungen |
 | ZAEHLER_NSW_EIN | int | Zaehler fuer Nebelscheinwerfer-Betaetigungen |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten (Hier nur Laendervariante)
@@ -176,7 +167,6 @@ _No arguments._
 | LAENDERVARIANTE_TEXT | string | Laendervariante als Klartext (vgl. Tabelle Laender) |
 | LAENDERVARIANTE_BYTE | string | Laendervariante (original Byte) |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Abfrage der aktuellen Stati
@@ -225,7 +215,6 @@ _No arguments._
 - [ANSTEUERN](#table-ansteuern) (18 × 3)
 - [LAENDER](#table-laender) (7 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 24 rows × 4 columns
@@ -257,7 +246,6 @@ Dimensions: 24 rows × 4 columns
 | 0x17 | Bremslichtschalter | 5 | 0x08 |
 | 0x00 | unbekannter Fehlerort | 0 | 0x00 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 2 rows × 2 columns
@@ -267,7 +255,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Fehler momentan nicht vorhanden |
 | 0x01 | Fehler momentan vorhanden |
 
-<a id="table-ansteuern"></a>
 ### ANSTEUERN
 
 Dimensions: 18 rows × 3 columns
@@ -293,7 +280,6 @@ Dimensions: 18 rows × 3 columns
 | ALLES_EIN | 0x7F | 1 |
 | ALLES_AUS | 0x00 | 0 |
 
-<a id="table-laender"></a>
 ### LAENDER
 
 Dimensions: 7 rows × 2 columns

@@ -47,7 +47,6 @@
 - [FS_LOESCHEN](#job-fs-loeschen) - Fehlerspeicher loeschen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -65,7 +64,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Bordmonitor Bedienteil-Teil
@@ -78,7 +76,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Bordmonitor Bedienteil-Teil
@@ -103,7 +100,6 @@ _No arguments._
 | ID_AI_INDEX | string | Aenderungsindex |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen 
@@ -124,7 +120,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingen, hier keine |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-selbsthaltung"></a>
 ### STEUERN_SELBSTHALTUNG
 
 #### Arguments
@@ -141,7 +136,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-monitor-helligkeit"></a>
 ### STEUERN_MONITOR_HELLIGKEIT
 
 #### Arguments
@@ -158,7 +152,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-nf-test"></a>
 ### STEUERN_NF_TEST
 
 #### Arguments
@@ -175,7 +168,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-headroom"></a>
 ### STEUERN_HEADROOM
 
 #### Arguments
@@ -192,7 +184,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-mute"></a>
 ### STEUERN_MUTE
 
 #### Arguments
@@ -209,7 +200,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-power-cassette"></a>
 ### STEUERN_POWER_CASSETTE
 
 #### Arguments
@@ -226,7 +216,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-power-display"></a>
 ### STEUERN_POWER_DISPLAY
 
 #### Arguments
@@ -243,7 +232,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-ntsc-pal"></a>
 ### STEUERN_NTSC_PAL
 
 #### Arguments
@@ -260,7 +248,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-heizung"></a>
 ### STEUERN_HEIZUNG
 
 #### Arguments
@@ -277,7 +264,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-steuern-cassette"></a>
 ### STEUERN_CASSETTE
 
 #### Arguments
@@ -294,7 +280,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-testton-ausgeben"></a>
 ### TESTTON_AUSGEBEN
 
 _No arguments._
@@ -307,7 +292,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-cassettendeck-betriebsstundenzaehler-loeschen"></a>
 ### CASSETTENDECK_BETRIEBSSTUNDENZAEHLER_LOESCHEN
 
 _No arguments._
@@ -320,7 +304,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-lc-anzeige-betriebsstundenzaehler-loeschen"></a>
 ### LC_ANZEIGE_BETRIEBSSTUNDENZAEHLER_LOESCHEN
 
 _No arguments._
@@ -333,7 +316,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Selbsttest Bordmonitor Bedien-Teil
@@ -348,7 +330,6 @@ _No arguments._
 | _TEL_SENDE | binary | Sendetelegramm anzeigen |
 | _TEL_ANTWORT | binary | Antworttelegramm anzeigen |
 
-<a id="job-status-lesen-sg"></a>
 ### Status_lesen_SG
 
 _No arguments._
@@ -369,7 +350,6 @@ _No arguments._
 | MONITORTYP_TEXT | string | s.o. |
 | _TEL_ANTWORT | binary | Antworttelegramm anzeigen |
 
-<a id="job-status-lesen-drehgeber"></a>
 ### STATUS_LESEN_DREHGEBER
 
 Stati lesen am Bordmitor Bedien-Teil
@@ -387,7 +367,6 @@ _No arguments._
 | STAT_VOLUME_DREHGEBER_SCHRITTE | int | -32 bis 31 |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-status-lesen-display"></a>
 ### STATUS_LESEN_DISPLAY
 
 Stati lesen Bordmitor u. Display
@@ -413,7 +392,6 @@ _No arguments._
 | STAT_LAMPENHEIZUNG_WERT | int | nur TN BM, 1=Ein, 0=Aus |
 | _TEL_ANTWORT | binary | Antworttelegramm anzeigen |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -431,7 +409,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der Telegramme anzeigen |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -452,7 +429,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -473,7 +449,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -492,7 +467,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -505,7 +479,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise "OKAY" |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -529,7 +502,6 @@ _No arguments._
 - [CASSETTE](#table-cassette) (14 × 2)
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -547,7 +519,6 @@ Dimensions: 10 rows × 2 columns
 | ?20? | ERROR_FEHLERANZAHL |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -571,7 +542,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 17 rows × 2 columns
@@ -596,7 +566,6 @@ Dimensions: 17 rows × 2 columns
 | 0x17 | Programm Versionsnummer stimmt nicht mit der im EEPROM programmierten ueberein |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -607,7 +576,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-cassette"></a>
 ### CASSETTE
 
 Dimensions: 14 rows × 2 columns
@@ -629,7 +597,6 @@ Dimensions: 14 rows × 2 columns
 | DOLBY_C | 0x5E |
 | DOLBY_AUS | 0x5F |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns

@@ -58,7 +58,6 @@
 - [STEUERN_ENDE_MONTAGEMODUS](#job-steuern-ende-montagemodus) - 0x3102F043 STEUERN_ENDE_MONTAGEMODUS Ende Montage-Modus
 - [STATUS_MONTAGEMODUS](#job-status-montagemodus) - 0x3103F043 STATUS_MONTAGEMODUS Auslesen Montage-Modus
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -77,7 +76,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -90,7 +88,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -107,7 +104,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -137,7 +133,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -179,7 +174,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -198,7 +192,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -216,7 +209,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -237,7 +229,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -266,7 +257,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -286,7 +276,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -307,7 +296,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -323,7 +311,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -345,7 +332,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -364,7 +350,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -390,7 +375,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -432,7 +416,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -447,7 +430,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -467,7 +449,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -486,7 +467,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -505,7 +485,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -520,7 +499,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -539,7 +517,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -559,7 +536,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -576,7 +552,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -595,7 +570,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -610,7 +584,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -625,7 +598,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -642,7 +614,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -657,7 +628,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -672,7 +642,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -687,7 +656,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -706,7 +674,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -726,7 +693,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -744,7 +710,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -760,7 +725,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-montagemodus"></a>
 ### STEUERN_MONTAGEMODUS
 
 0x3101F043 STEUERN_MONTAGEMODUS Ansteuern Montage-Modus.
@@ -775,7 +739,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ende-montagemodus"></a>
 ### STEUERN_ENDE_MONTAGEMODUS
 
 0x3102F043 STEUERN_ENDE_MONTAGEMODUS Ende Montage-Modus
@@ -790,7 +753,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-montagemodus"></a>
 ### STATUS_MONTAGEMODUS
 
 0x3103F043 STATUS_MONTAGEMODUS Auslesen Montage-Modus
@@ -897,7 +859,6 @@ _No arguments._
 - [TAB_AE_FUNKSTAT_MONTAGEMODUS](#table-tab-ae-funkstat-montagemodus) (12 × 2)
 - [TAB_AE_STAT_MONTAGEMODUS](#table-tab-ae-stat-montagemodus) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -981,7 +942,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 136 rows × 2 columns
@@ -1125,7 +1085,6 @@ Dimensions: 136 rows × 2 columns
 | 0x0000BD | U-Shin |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1168,7 +1127,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1193,7 +1151,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1227,7 +1184,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1300,7 +1256,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1313,7 +1268,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1326,7 +1280,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1339,7 +1292,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1359,7 +1311,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1385,7 +1336,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1396,7 +1346,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x5003-d"></a>
 ### ARG_0X5003_D
 
 Dimensions: 3 rows × 12 columns
@@ -1407,7 +1356,6 @@ Dimensions: 3 rows × 12 columns
 | STAT_SCHUETZ_K2_ZAEHLER_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | aktuelle Schaltungen für Schütz K2 |
 | STAT_SCHUETZ_K3_ZAEHLER_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | aktuelle Schaltungen für Schütz K3 |
 
-<a id="table-arg-0x5010-d"></a>
 ### ARG_0X5010_D
 
 Dimensions: 1 rows × 12 columns
@@ -1416,7 +1364,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0= nicht setzen, 1= EOL Werte setzen |
 
-<a id="table-arg-0x6509-d"></a>
 ### ARG_0X6509_D
 
 Dimensions: 2 rows × 12 columns
@@ -1426,7 +1373,6 @@ Dimensions: 2 rows × 12 columns
 | PASSWORT | HEX | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Passwort zur Ausführung des Entwicklerjobs |
 | SERIENNUMMER | HEX | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Seriennummer |
 
-<a id="table-arg-0x6512-d"></a>
 ### ARG_0X6512_D
 
 Dimensions: 2 rows × 12 columns
@@ -1436,7 +1382,6 @@ Dimensions: 2 rows × 12 columns
 | PASSWORT | HEX | high | unsigned long | - | - | - | - | - | - | - | Passwort zur Ausführung des Entwicklerjobs |
 | AKTION | 0-n | high | unsigned char | - | TAB_MB_SENDEN | - | - | - | - | - | 0 (DCAN & CCP) off 1 DCAN on + CCP off 2 (DCAN & CCP) on |
 
-<a id="table-arg-0xad6e-r"></a>
 ### ARG_0XAD6E_R
 
 Dimensions: 1 rows × 14 columns
@@ -1445,7 +1390,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | NR_ZELLE | + | - | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Zelle desen Spannung ermittelt werden soll |
 
-<a id="table-arg-0xdd61-d"></a>
 ### ARG_0XDD61_D
 
 Dimensions: 1 rows × 12 columns
@@ -1454,7 +1398,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FREIGABE | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0 = nicht freigegeben; 1 = freigegeben |
 
-<a id="table-arg-0xdd6f-d"></a>
 ### ARG_0XDD6F_D
 
 Dimensions: 1 rows × 12 columns
@@ -1463,7 +1406,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KUEHLKREISLAUF_VENTIL | 0-n | high | unsigned char | - | TAB_KUEHLERKREISLAUF_VENTIL | 1.0 | 1.0 | 0.0 | - | - | Steuern des Kühlmittel-Ventils: Geschlossen oder offen |
 
-<a id="table-arg-0xdda1-d"></a>
 ### ARG_0XDDA1_D
 
 Dimensions: 2 rows × 12 columns
@@ -1473,7 +1415,6 @@ Dimensions: 2 rows × 12 columns
 | SOLLDREHZAHL_KUEHLMITTELPUMPE | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Ansteuerung der Kühlmittelpumpe in Prozent (0-100%) |
 | ZEITDAUER | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 1000.0 | Vorgabe der Zeitdauer während der die Kühlmittelpumpe aktiv ist |
 
-<a id="table-arg-0xddcc-d"></a>
 ### ARG_0XDDCC_D
 
 Dimensions: 1 rows × 12 columns
@@ -1482,7 +1423,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0= kein Reset; 1= Reset durchführen |
 
-<a id="table-arg-0xddcd-d"></a>
 ### ARG_0XDDCD_D
 
 Dimensions: 1 rows × 12 columns
@@ -1491,7 +1431,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ZUSTAND_EIN | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Aktivieren / Deaktivierung des Sendens von CC-Meldung (0 = Senden nicht aktiv; 1 = Senden aktiv) |
 
-<a id="table-arg-0xdf7b-d"></a>
 ### ARG_0XDF7B_D
 
 Dimensions: 2 rows × 12 columns
@@ -1501,7 +1440,6 @@ Dimensions: 2 rows × 12 columns
 | PASSWORT | HEX | high | unsigned long | - | - | - | - | - | - | - | Passwort zur Ausführung des Servicejobs |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0=nicht ansteuern, 1=ansteuern |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1515,7 +1453,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-entlueftung-kuehlkreis-status"></a>
 ### ENTLUEFTUNG_KUEHLKREIS_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -1527,7 +1464,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Funktion beendet |
 | 0xFF | ungültiger Wert |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1541,7 +1477,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 346 rows × 3 columns
@@ -1895,7 +1830,6 @@ Dimensions: 346 rows × 3 columns
 | 0xCAD455 | Signal (QU_V_VEH_COG, 0x1A1) ungültig, Sender ICM_QL | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 28 rows × 9 columns
@@ -1931,7 +1865,6 @@ Dimensions: 28 rows × 9 columns
 | 0x401A | Klemmen30F | mV | High | signed int | - | 20.0 | 1.0 | 0.0 |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1943,7 +1876,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 49 rows × 3 columns
@@ -2000,7 +1932,6 @@ Dimensions: 49 rows × 3 columns
 | 0xCAD428 | Signal (Zeit_Sekunde_Zaehler_Relativ, 0x328): ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 22 rows × 9 columns
@@ -2030,7 +1961,6 @@ Dimensions: 22 rows × 9 columns
 | 0x401A | Klemmen30F | mV | High | signed int | - | 20.0 | 1.0 | 0.0 |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2039,7 +1969,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x5003-d"></a>
 ### RES_0X5003_D
 
 Dimensions: 3 rows × 10 columns
@@ -2050,7 +1979,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SCHUETZ_K2_ZAEHLER_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | aktuelle Schaltungen für Schütz K2 |
 | STAT_SCHUETZ_K3_ZAEHLER_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | aktuelle Schaltungen für Schütz K3 |
 
-<a id="table-res-0x5005-d"></a>
 ### RES_0X5005_D
 
 Dimensions: 115 rows × 10 columns
@@ -2173,7 +2101,6 @@ Dimensions: 115 rows × 10 columns
 | STAT_TIBALSOCPCKHSTG_RNG09_WERT | min | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Symmetrierungszeit im Pack SOC Bereich von 85% bis 92% |
 | STAT_TIBALSOCPCKHSTG_RNG10_WERT | min | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Symmetrierungszeit im Pack SOC Bereich größer 92% |
 
-<a id="table-res-0x5007-d"></a>
 ### RES_0X5007_D
 
 Dimensions: 16 rows × 10 columns
@@ -2197,7 +2124,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_RATIDCHAHSTG_05_WERT | s | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Zeitdauer quadratischer Entladestrom Quotient im Bereich größer 1.03 |
 | STAT_CNTRIINVLD_WERT | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Zeitzähler bei ungültigem Temperatursignal |
 
-<a id="table-res-0x5008-d"></a>
 ### RES_0X5008_D
 
 Dimensions: 20 rows × 10 columns
@@ -2225,7 +2151,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_CNTPLINTIHSTG_06_WERT | s | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Zeitdauer Plugin Ladezeit im Bereich größer 43200s |
 | STAT_CNTPLINCHRG_WERT | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Anzahl Plugin Laden Events |
 
-<a id="table-res-0x5009-d"></a>
 ### RES_0X5009_D
 
 Dimensions: 15 rows × 10 columns
@@ -2248,7 +2173,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_STPREC_04_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ringspeicher 04 - Status (gültig/ungültig) der Messung der Vorladungsphase der HV-Schuetzansteuerung |
 | STAT_STPREC_05_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ringspeicher 05 - Status (gültig/ungültig) der Messung der Vorladungsphase der HV-Schuetzansteuerung |
 
-<a id="table-res-0x500a-d"></a>
 ### RES_0X500A_D
 
 Dimensions: 80 rows × 10 columns
@@ -2336,7 +2260,6 @@ Dimensions: 80 rows × 10 columns
 | STAT_NRCSCMINBUF_09_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ringspeicher 09 - CSC nummer mit min Innenwiderstand |
 | STAT_NRCSCMINBUF_10_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ringspeicher 10 - CSC nummer mit min Innenwiderstand |
 
-<a id="table-res-0x500b-d"></a>
 ### RES_0X500B_D
 
 Dimensions: 26 rows × 10 columns
@@ -2370,7 +2293,6 @@ Dimensions: 26 rows × 10 columns
 | STAT_TISHDWN_WERT | s | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Zeit des letzten Shutdowns |
 | STAT_CNTRDEEPDCHA_WERT | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Anzahl Tiefentladungen |
 
-<a id="table-res-0x500c-d"></a>
 ### RES_0X500C_D
 
 Dimensions: 159 rows × 10 columns
@@ -2537,7 +2459,6 @@ Dimensions: 159 rows × 10 columns
 | STAT_T_RNG07_SOC_RNG09_SLEEPHSTG_WERT | min | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Bereich Packtemperatur größer 60°C - Zeitdauer in Sleep Phase im Pack SOC Bereich von 80% bis 90% |
 | STAT_T_RNG07_SOC_RNG10_SLEEPHSTG_WERT | min | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Bereich Packtemperatur größer 60°C - Zeitdauer in Sleep Phase im Pack SOC Bereich größer 90% |
 
-<a id="table-res-0x500d-d"></a>
 ### RES_0X500D_D
 
 Dimensions: 12 rows × 10 columns
@@ -2557,7 +2478,6 @@ Dimensions: 12 rows × 10 columns
 | STAT_CNTRSTRTUPCOOLT_WERT | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Anzahl sofortige Kühlung nach Start-Up |
 | STAT_CNTRMAXROWEMGYCOOLT_WERT | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Maximale Anzahl der aufeinanderfolgenden Wachzyklen, in denen eine dringende Kühlung erforderlich war |
 
-<a id="table-res-0x500e-d"></a>
 ### RES_0X500E_D
 
 Dimensions: 129 rows × 10 columns
@@ -2694,7 +2614,6 @@ Dimensions: 129 rows × 10 columns
 | STAT_UCELLMINNRBUF_19_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ringspeicher 19 - Nummer der Zelle mit der minimalen Spannung |
 | STAT_UCELLMINNRBUF_20_WERT | - | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Ringspeicher 20 - Nummer der Zelle mit der minimalen Spannung |
 
-<a id="table-res-0x500f-d"></a>
 ### RES_0X500F_D
 
 Dimensions: 5 rows × 10 columns
@@ -2707,7 +2626,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_PWRHRDCHA_WERT | kWh | - | unsigned long | - | - | 1.0 | 36000.0 | 0.0 | Gesamtenergiedurchsatz (Leistung über Zeit)  bei Entladevorgängen seit BOL |
 | STAT_NRPLINFULLCHRGCYC_WERT | - | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Anzahl erflogreich beendeten Vollladezyklen (PlugInLadevorgänge) |
 
-<a id="table-res-0xad61-r"></a>
 ### RES_0XAD61_R
 
 Dimensions: 2 rows × 13 columns
@@ -2717,7 +2635,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_MESSUNG_ERFOLGREICH | - | - | + | 0-n | high | unsigned char | - | TAB_ISOLATION_ERFOLGREICH | 1.0 | 1.0 | 0.0 | aktueller Zustand Isolationsmessung |
 | STAT_MESSUNG_ISOLATIONSFEHLER | - | - | + | 0-n | high | unsigned char | - | TAB_ISOLATION_ISOLATIONSFEHLER | 1.0 | 1.0 | 0.0 | aktueller Zustand des Isolationsfehlers |
 
-<a id="table-res-0xad66-r"></a>
 ### RES_0XAD66_R
 
 Dimensions: 2 rows × 13 columns
@@ -2727,7 +2644,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_KAPAZITAET_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Kapazitätsschätzwert in % (Wertebereich 0-100%) bezogen auf Nennkapazität |
 | STAT_AKTUELLER_ZUSTAND_NR | - | - | + | 0-n | high | unsigned char | - | TAB_SME_ERMITTLUNG | - | - | - | Rückgabe Ermittlung läuft, erfolgreich oder mit Fehler beendet |
 
-<a id="table-res-0xad69-r"></a>
 ### RES_0XAD69_R
 
 Dimensions: 1 rows × 13 columns
@@ -2736,7 +2652,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_NV_DATEN_SCHREIBEN | - | - | + | 0-n | high | unsigned char | - | TAB_NV_DATEN_SCHREIBEN | - | - | - | Status für Sichern von Daten im NV-RAM (0 = beendet / 1 = noch aktiv) |
 
-<a id="table-res-0xad6e-r"></a>
 ### RES_0XAD6E_R
 
 Dimensions: 1 rows × 13 columns
@@ -2745,7 +2660,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ZELLSPANNUNG_WERT | - | - | + | V | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | aktuell gemessener Spannungswert der Zelle x |
 
-<a id="table-res-0xad7b-r"></a>
 ### RES_0XAD7B_R
 
 Dimensions: 1 rows × 13 columns
@@ -2754,7 +2668,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ROUTINE_STATUS | - | - | + | 0-n | high | unsigned char | - | ENTLUEFTUNG_KUEHLKREIS_STATUS | - | - | - | Status der Routine |
 
-<a id="table-res-0xdd61-d"></a>
 ### RES_0XDD61_D
 
 Dimensions: 1 rows × 10 columns
@@ -2763,7 +2676,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SCHUETZ_FREIGABE | 0-n | high | unsigned char | - | TAB_SCHUETZ_FREIGABE | 1.0 | 1.0 | 0.0 | Liest das Bit zur Freigabe oder Sperrung der Schützschalter |
 
-<a id="table-res-0xdd6a-d"></a>
 ### RES_0XDD6A_D
 
 Dimensions: 6 rows × 10 columns
@@ -2777,7 +2689,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ISOWIDERSTAND_EXT_STD_PLAUS | 0/1 | high | unsigned char | - | - | - | - | - | Gesamtsystem im Betrieb: 0 = Isolationswiderstand nicht plausibel, 1 = Isolationswiderstand plausibel |
 | STAT_ISOWIDERSTAND_INT_PLAUS | 0/1 | high | unsigned char | - | - | - | - | - | Intern: 0 = Isolationswiderstand nicht plausibel, 1 = Isolationswiderstand plausibel; wird nur auf Anfrage per Service-Routine STEUERN_ISOLATION bei offenen Schützen gemessen |
 
-<a id="table-res-0xdd6f-d"></a>
 ### RES_0XDD6F_D
 
 Dimensions: 1 rows × 10 columns
@@ -2786,7 +2697,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_KUEHLKREISLAUF_VENTIL | 0-n | high | unsigned char | - | TAB_KUEHLKREISLAUF_VENTIL_RUECKGABE | - | - | - | Status Kühlmittel-Ventil: Geschlossen oder offen |
 
-<a id="table-res-0xdd7d-d"></a>
 ### RES_0XDD7D_D
 
 Dimensions: 2 rows × 10 columns
@@ -2796,7 +2706,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_LADESTROMGRENZE_WERT | A | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | maximal erlaubter Ladestrom |
 | STAT_ENTLADESTROMGRENZE_WERT | A | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | maximal erlaubter Entladesstrom |
 
-<a id="table-res-0xdd7e-d"></a>
 ### RES_0XDD7E_D
 
 Dimensions: 2 rows × 10 columns
@@ -2806,7 +2715,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_LADESPANNUNGSGRENZE_WERT | V | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | maximal erlaubte Ladespannung |
 | STAT_ENTLADESPANNUNGSGRENZE_WERT | V | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | maximal erlaubte Entladespannung |
 
-<a id="table-res-0xdd91-d"></a>
 ### RES_0XDD91_D
 
 Dimensions: 10 rows × 10 columns
@@ -2824,7 +2732,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_ZEIT_SOC_9_WERT | min | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Dauer in SOC Klasse 9: %80 < SOC <= %90 |
 | STAT_ZEIT_SOC_10_WERT | min | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Dauer in SOC Klasse 10: SOC > %90 |
 
-<a id="table-res-0xdda1-d"></a>
 ### RES_0XDDA1_D
 
 Dimensions: 1 rows × 10 columns
@@ -2833,7 +2740,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SOLLDREHZAHL_KUEHLMITTELPUMPE_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | aktuelle Ansteuerung der Kühlmittelumpe in % |
 
-<a id="table-res-0xddbc-d"></a>
 ### RES_0XDDBC_D
 
 Dimensions: 3 rows × 10 columns
@@ -2844,7 +2750,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_MAXIMALE_ANZEIGE_SOC_WERT | % | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | obere Grenze des Anzeige Soc |
 | STAT_MINIMALE_ANZEIGE_SOC_WERT | % | high | unsigned int | - | - | 1.0 | 10.0 | 0.0 | untere Grenze des Anzeige Soc |
 
-<a id="table-res-0xddbe-d"></a>
 ### RES_0XDDBE_D
 
 Dimensions: 10 rows × 10 columns
@@ -2862,7 +2767,6 @@ Dimensions: 10 rows × 10 columns
 | STAT_MAX_STROM_VORLADUNG_3_WERT | A | high | int | - | - | 1.0 | 100.0 | 0.0 | maximaler Vorladestrom (3 Vorgänge zuvor) |
 | STAT_MAX_STROM_VORLADUNG_4_WERT | A | high | int | - | - | 1.0 | 100.0 | 0.0 | maximaler Vorladestrom (4 Vorgänge zuvor) |
 
-<a id="table-res-0xddbf-d"></a>
 ### RES_0XDDBF_D
 
 Dimensions: 2 rows × 10 columns
@@ -2872,7 +2776,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_UCELL_MIN_WERT | V | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | minimale Einzelzellspannung aller Einzelzellen |
 | STAT_UCELL_MAX_WERT | V | high | unsigned int | - | - | 1.0 | 1000.0 | 0.0 | maximale Einzelzellspannung aller Einzelzellen |
 
-<a id="table-res-0xddc0-d"></a>
 ### RES_0XDDC0_D
 
 Dimensions: 4 rows × 10 columns
@@ -2884,7 +2787,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TMOD_MEAN_WERT | °C | high | int | - | - | 1.0 | 100.0 | 0.0 | durchschnittliche Messtemperatur |
 | STAT_TCORE_MAX_WERT | °C | high | int | - | - | 1.0 | 100.0 | 0.0 | maximale Zellkerntemperatur |
 
-<a id="table-res-0xddc4-d"></a>
 ### RES_0XDDC4_D
 
 Dimensions: 2 rows × 10 columns
@@ -2894,7 +2796,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SOC_WERT | % | high | unsigned int | - | - | 1.0 | 100.0 | 0.0 | SOC der HV-Batterie |
 | STAT_SOC_PLAUSIBILITAET_EIN | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Plausibilität des HV-Batterie SOC (0 = plausibel, 1 = unplausibel) |
 
-<a id="table-res-0xddcb-d"></a>
 ### RES_0XDDCB_D
 
 Dimensions: 2 rows × 10 columns
@@ -2904,7 +2805,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_MIN_SOC_GRENZE_WERT | % | high | int | - | - | 1.0 | 100.0 | 0.0 | aktuell gültige minimale SOC Grenze |
 | STAT_MAX_SOC_GRENZE_WERT | % | high | int | - | - | 1.0 | 100.0 | 0.0 | aktuell gültige maximale SOC Grenze |
 
-<a id="table-res-0xddcc-d"></a>
 ### RES_0XDDCC_D
 
 Dimensions: 3 rows × 10 columns
@@ -2915,7 +2815,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SCHUETZ_K2_RESTZAEHLER_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | aktuell noch mögliche Schaltungen für Schütz K2 |
 | STAT_SCHUETZ_K3_RESTZAEHLER_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | aktuell noch mögliche Schaltungen für Schütz K3 |
 
-<a id="table-res-0xdf65-d"></a>
 ### RES_0XDF65_D
 
 Dimensions: 7 rows × 10 columns
@@ -2930,7 +2829,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_TEMP_SPREIZUNG_SYS_5_WERT | min | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Zeit in Minuten bei Kühlung an Klasse 5: dTmax*0.8 < dT <= dTmax |
 | STAT_TEMP_SPREIZUNG_SYS_6_WERT | min | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Zeit in Minuten bei Kühlung an Klasse 6: dT > dTmax |
 
-<a id="table-res-0xdf71-d"></a>
 ### RES_0XDF71_D
 
 Dimensions: 4 rows × 10 columns
@@ -2942,7 +2840,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_ANZAHL_MODULE_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Module des HV-Speichers |
 | STAT_ANZAHL_TEMPERATURSENSOREN_PRO_MODUL_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Temperatursensoren pro Modul |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 52 rows × 16 columns
@@ -3002,7 +2899,6 @@ Dimensions: 52 rows × 16 columns
 | _SERIENNUMMER | 0x6509 | - | Speicherseriennummer | - | - | - | - | - | - | - | - | - | 2E | ARG_0x6509_D | - |
 | MESSBOTSCHAFTEN | 0x6512 | - | Messbotschaften ein/ausschalten | - | - | - | - | - | - | - | - | - | 2E | ARG_0x6512_D | - |
 
-<a id="table-tab-batttctrlmod"></a>
 ### TAB_BATTTCTRLMOD
 
 Dimensions: 12 rows × 2 columns
@@ -3022,7 +2918,6 @@ Dimensions: 12 rows × 2 columns
 | 1024 | Produktion |
 | 32768 | Fehlermode |
 
-<a id="table-tab-bms-modus"></a>
 ### TAB_BMS_MODUS
 
 Dimensions: 4 rows × 2 columns
@@ -3034,7 +2929,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | laufend |
 | 4 | ausschalten |
 
-<a id="table-tab-cooltswtvlv"></a>
 ### TAB_COOLTSWTVLV
 
 Dimensions: 2 rows × 2 columns
@@ -3044,7 +2938,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Geschlossen |
 | 1 | Offen |
 
-<a id="table-tab-isolation-erfolgreich"></a>
 ### TAB_ISOLATION_ERFOLGREICH
 
 Dimensions: 4 rows × 2 columns
@@ -3056,7 +2949,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Isolationsmessung läuft! |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-isolation-isolationsfehler"></a>
 ### TAB_ISOLATION_ISOLATIONSFEHLER
 
 Dimensions: 4 rows × 2 columns
@@ -3068,7 +2960,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Isolationsfehler liegt vor |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-klemme30f"></a>
 ### TAB_KLEMME30F
 
 Dimensions: 16 rows × 2 columns
@@ -3092,7 +2983,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Fehler |
 | 15 | Signal ungültig |
 
-<a id="table-tab-kuehlerkreislauf-ventil"></a>
 ### TAB_KUEHLERKREISLAUF_VENTIL
 
 Dimensions: 4 rows × 2 columns
@@ -3104,7 +2994,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | geregelt |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-kuehlkreislauf-ventil-rueckgabe"></a>
 ### TAB_KUEHLKREISLAUF_VENTIL_RUECKGABE
 
 Dimensions: 4 rows × 2 columns
@@ -3116,7 +3005,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Fehler |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-ladebetrieb"></a>
 ### TAB_LADEBETRIEB
 
 Dimensions: 3 rows × 2 columns
@@ -3127,7 +3015,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Plug & Charge |
 | 2 | Laden mit Abfahrtszeit und Konditionierung |
 
-<a id="table-tab-mb-senden"></a>
 ### TAB_MB_SENDEN
 
 Dimensions: 3 rows × 2 columns
@@ -3138,7 +3025,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | DCAN on + CCP off |
 | 2 | (DCAN & CCP) on |
 
-<a id="table-tab-nv-daten-schreiben"></a>
 ### TAB_NV_DATEN_SCHREIBEN
 
 Dimensions: 5 rows × 2 columns
@@ -3151,7 +3037,6 @@ Dimensions: 5 rows × 2 columns
 | 0x08 | Funktion vollständig durchlaufen |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-schuetz-freigabe"></a>
 ### TAB_SCHUETZ_FREIGABE
 
 Dimensions: 3 rows × 2 columns
@@ -3162,7 +3047,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | freigegeben |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-schuetz-schalter"></a>
 ### TAB_SCHUETZ_SCHALTER
 
 Dimensions: 4 rows × 2 columns
@@ -3174,7 +3058,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | verschweisste Kontakte |
 | 0x03 | nicht definiert |
 
-<a id="table-tab-sme-ermittlung"></a>
 ### TAB_SME_ERMITTLUNG
 
 Dimensions: 4 rows × 2 columns
@@ -3186,7 +3069,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Ermittlung läuft: Ladungsphase bis SoC max |
 | 0x03 | Ermittlung läuft: Entladungsphase bis mittleren SoC |
 
-<a id="table-tab-status-hvil"></a>
 ### TAB_STATUS_HVIL
 
 Dimensions: 3 rows × 2 columns
@@ -3197,7 +3079,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | ok |
 | 0xFF | nicht definiert |
 
-<a id="table-tab-t15state"></a>
 ### TAB_T15STATE
 
 Dimensions: 2 rows × 2 columns
@@ -3207,7 +3088,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | T15 aus |
 | 0x01 | T15 an |
 
-<a id="table-tab-ae-funkstat-montagemodus"></a>
 ### TAB_AE_FUNKSTAT_MONTAGEMODUS
 
 Dimensions: 12 rows × 2 columns
@@ -3227,7 +3107,6 @@ Dimensions: 12 rows × 2 columns
 | 0xFE | nicht definiert |
 | 0xFF | ungueltiger Wert |
 
-<a id="table-tab-ae-stat-montagemodus"></a>
 ### TAB_AE_STAT_MONTAGEMODUS
 
 Dimensions: 4 rows × 2 columns

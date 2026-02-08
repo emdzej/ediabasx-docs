@@ -32,7 +32,6 @@
 - [ENDE_DK_EINSTELLEN](#job-ende-dk-einstellen) - Initialisierung und reiz_k_line
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Deinitialisierung
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -51,7 +50,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Fakeantwort notwendig wegen ISTA zur Steuerung SG-Baum
@@ -66,7 +64,6 @@ _No arguments._
 | JOB_STATUS2 | string | immer OKAY in ISTA wird damit Steuergerät grün markiert |
 | VARIANTE_IND | string | Name der SGBD |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -80,7 +77,6 @@ _No arguments._
 | HINWEIS | string | folgende Massnahmen |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-init-fs-lesen"></a>
 ### INIT_FS_LESEN
 
 Initialisierung und k_line offen
@@ -95,7 +91,6 @@ _No arguments._
 | HINWEIS | string | folgende Massnahmen |
 | _TEL_ANTWORT | binary | INIT_FS_LESEN erfolgreich |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler)
@@ -122,7 +117,6 @@ _No arguments._
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hex Code |
 | _TEL_ANTWORT | binary | FS_LESEN erfolgreich |
 
-<a id="job-init-fs-loeschen"></a>
 ### INIT_FS_LOESCHEN
 
 Initialisierung und reiz_k_line
@@ -137,7 +131,6 @@ _No arguments._
 | HINWEIS | string | folgende Massnahmen |
 | _TEL_ANTWORT | binary | INIT_FS_LOESCHEN erfolgreich |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -152,7 +145,6 @@ _No arguments._
 | HINWEIS | string | folgende Massnahmen |
 | _TEL_ANTWORT | binary | FS_LOESCHEN erfolgreich |
 
-<a id="job-init-lueftertest"></a>
 ### INIT_LUEFTERTEST
 
 Initialisierung und reiz_k_line
@@ -167,7 +159,6 @@ _No arguments._
 | HINWEIS | string | folgende Massnahmen, gleich zu INIT_FS_LOESCHEN |
 | _TEL_ANTWORT | binary | INIT_LUEFTERTEST erfolgreich |
 
-<a id="job-lueftertest"></a>
 ### LUEFTERTEST
 
 Reizen beenden, Fehlercode lesen
@@ -185,7 +176,6 @@ _No arguments._
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hex Code |
 | _TEL_ANTWORT | binary | LUEFTERTEST erfolgreich |
 
-<a id="job-init-dk-einstellen"></a>
 ### INIT_DK_EINSTELLEN
 
 Initialisierung und reiz_k_line
@@ -200,7 +190,6 @@ _No arguments._
 | HINWEIS | string | folgende Massnahmen |
 | _TEL_ANTWORT | binary | INIT_DK_EINSTELLEN erfolgreich |
 
-<a id="job-ende-dk-einstellen"></a>
 ### ENDE_DK_EINSTELLEN
 
 Initialisierung und reiz_k_line
@@ -215,7 +204,6 @@ _No arguments._
 | HINWEIS | string | folgende Massnahmen |
 | _TEL_ANTWORT | binary | ENDE_DK_EINSTELLEN erfolgreich |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Deinitialisierung
@@ -239,7 +227,6 @@ _No arguments._
 - [IORTTEXTE](#table-iorttexte) (1 × 3)
 - [IDETAILSTRUKTUR](#table-idetailstruktur) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -257,7 +244,6 @@ Dimensions: 10 rows × 2 columns
 | 0xFF | UNBEKANNTER FEHLER |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -271,7 +257,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 16 rows × 3 columns
@@ -295,7 +280,6 @@ Dimensions: 16 rows × 3 columns
 | 0x9999 | Falscher Fehlercode | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -309,7 +293,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -318,7 +301,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns

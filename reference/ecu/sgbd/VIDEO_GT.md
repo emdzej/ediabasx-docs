@@ -42,7 +42,6 @@
 - [READ_CONFIGURATION_DATA](#job-read-configuration-data) - Auslesen der configuration data
 - [SW_DEMAND_FLAG_SETZEN](#job-sw-demand-flag-setzen) - Herstellen des Auslieferzustandes
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -61,7 +60,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -80,7 +78,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Videomodul Graphik-Teil
@@ -93,7 +90,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Videomodul Graphik-Teil
@@ -116,7 +112,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen High Konzept nach LH Codierung/Diagnose mit Umweltbeding
@@ -139,7 +134,6 @@ _No arguments._
 | F_UW_TEXT | string | Ausgabe der Fehlernummer als Text |
 | _TEL_ANTWORT | binary | Ausgabe des Telegramms |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -156,7 +150,6 @@ _No arguments._
 | DATUM_3 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Daten in den Pruefstempel schreiben
@@ -176,7 +169,6 @@ Daten in den Pruefstempel schreiben
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | _TEL_SENDE | binary |  |
 
-<a id="job-software-loading-lesen"></a>
 ### SOFTWARE_LOADING_LESEN
 
 Lesen, welche Software geladen ist
@@ -196,7 +188,6 @@ _No arguments._
 | FEHLERTEXT | string | Meldung, welches Subsystem den Fehler beim Software_laden verursacht hat |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-software-loading-schreiben"></a>
 ### SOFTWARE_LOADING_SCHREIBEN
 
 #### Arguments
@@ -217,7 +208,6 @@ _No arguments._
 | SPRACHAUSWAHL_3 | string | Sprache 3 der Sprachauswahl |
 | _TEL_SENDE | binary |  |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Selbsttest des VM_GT
@@ -230,7 +220,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen im VM_GT
@@ -243,7 +232,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -262,7 +250,6 @@ _No arguments._
 | COD_SPEED_ROUTE_WERT | int | Wert des Bytes ROUTE_MAPS, derzeit unbenutzt |
 | COD_USER_INPUT_WERT | int | Wert des Bytes USER_INPUT, derzeit unbenutzt |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -275,7 +262,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -288,7 +274,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -305,7 +290,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben ohne Verifikation
@@ -322,7 +306,6 @@ Codierdaten schreiben ohne Verifikation
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -340,7 +323,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -355,7 +337,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -373,7 +354,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-write-configuration-data"></a>
 ### WRITE_CONFIGURATION_DATA
 
 Schreiben der configuration data
@@ -396,7 +376,6 @@ Schreiben der configuration data
 | _TEL_SENDE | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-read-configuration-data"></a>
 ### READ_CONFIGURATION_DATA
 
 Auslesen der configuration data
@@ -415,7 +394,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | _TEL_ANZAHL | int | Anzahl der Telegramme anzeigen |
 
-<a id="job-sw-demand-flag-setzen"></a>
 ### SW_DEMAND_FLAG_SETZEN
 
 Herstellen des Auslieferzustandes
@@ -444,7 +422,6 @@ _No arguments._
 - [CODESOFTWARELADENTEXT](#table-codesoftwareladentext) (3 × 2)
 - [ERRORCODETEXT](#table-errorcodetext) (5 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -465,7 +442,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -489,7 +465,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -504,7 +479,6 @@ Dimensions: 7 rows × 2 columns
 | 0x08 | I2 C-Bus Fehler |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -516,7 +490,6 @@ Dimensions: 4 rows × 2 columns
 | 0x40 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 46 rows × 2 columns
@@ -570,7 +543,6 @@ Dimensions: 46 rows × 2 columns
 | 0x83 | I-Bus Sendefehler: Schreiben zum I2C-Treiber misslungen |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-laendercodezielland"></a>
 ### LAENDERCODEZIELLAND
 
 Dimensions: 10 rows × 2 columns
@@ -588,7 +560,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Aus/Golf/ZA |
 | 0xFF | unbekanntes Land |
 
-<a id="table-codesprachen"></a>
 ### CODESPRACHEN
 
 Dimensions: 10 rows × 2 columns
@@ -606,7 +577,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | englisch UK |
 | 0xFF | unbekannte Sprache |
 
-<a id="table-codesoftwareladentext"></a>
 ### CODESOFTWARELADENTEXT
 
 Dimensions: 3 rows × 2 columns
@@ -617,7 +587,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Fehler beim Laden der Software |
 | 0xFF | unbekannte Meldung |
 
-<a id="table-errorcodetext"></a>
 ### ERRORCODETEXT
 
 Dimensions: 5 rows × 2 columns

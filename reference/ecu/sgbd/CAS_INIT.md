@@ -24,7 +24,6 @@
 - [IDENT](#job-ident) - Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
 - [CAS_INIT](#job-cas-init) - Normal->Jungfraeulich ohne Authentication KWP2000: $31 StartRoutineByLocalIdentifier LocalIdentifier $24 Modus  : Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -43,7 +42,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -56,7 +54,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -85,7 +82,6 @@ _No arguments._
 | ID_SW_NR_RES | string | Softwarenummer (reserved - currently unused) |
 | ID_SG_ADR | int | Steuergeraeteadresse |
 
-<a id="job-cas-init"></a>
 ### CAS_INIT
 
 Normal->Jungfraeulich ohne Authentication KWP2000: $31 StartRoutineByLocalIdentifier LocalIdentifier $24 Modus  : Default
@@ -107,7 +103,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (59 × 2)
 - [JOBRESULT](#table-jobresult) (86 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -117,7 +112,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 59 rows × 2 columns
@@ -184,7 +178,6 @@ Dimensions: 59 rows × 2 columns
 | 0x58 | Autoliv |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 86 rows × 2 columns

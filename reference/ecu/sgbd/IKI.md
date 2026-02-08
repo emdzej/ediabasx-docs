@@ -62,7 +62,6 @@
 - [STATUS_SIA_FINISH](#job-status-sia-finish) - SIA-Daten auslesen zur Fertigungskontrolle
 - [C_ZCS_LESEN](#job-c-zcs-lesen) - Anwenderinfofeld Block 4 auslesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -81,7 +80,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -100,7 +98,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer IKI
@@ -113,7 +110,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -138,7 +134,6 @@ _No arguments._
 | ID_CAN_INDEX | int | CAN-Index |
 | ID_AENDERUNGSINDEX | int | Aenderungsindex |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Default pruefstempel_lesen job
@@ -154,7 +149,6 @@ _No arguments._
 | BYTE2 | int |  |
 | BYTE3 | int |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -175,7 +169,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -188,7 +181,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicherinhalt aus SG lesen
@@ -221,7 +213,6 @@ _No arguments._
 | F_UW_ANZ | int |  |
 | F_HEX_CODE | binary | Hexdaten des Fehlers |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -234,7 +225,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Fortsetzen der Diagnose
@@ -247,7 +237,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -260,7 +249,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 SG - Selbsttest ausloesen
@@ -273,7 +261,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-reset-iki"></a>
 ### RESET_IKI
 
 SG Reset ausloesen
@@ -286,7 +273,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation |
 
-<a id="job-sia-reset"></a>
 ### SIA_RESET
 
 Ruecksetzen der Service-Intervall-Anzeige
@@ -305,7 +291,6 @@ Ruecksetzen der Service-Intervall-Anzeige
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY, ERROR_NACK od. ERROR_PARAMETER |
 
-<a id="job-gwsz-reset"></a>
 ### GWSZ_RESET
 
 _No arguments._
@@ -316,7 +301,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 
-<a id="job-aif-gwsz-lesen"></a>
 ### AIF_GWSZ_LESEN
 
 Gesamtwegstreckenzaehlers aus Anwenderinfofeld auslesen
@@ -332,7 +316,6 @@ _No arguments._
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 | TELEGRAMM | binary |  |
 
-<a id="job-gwsz-minus-offset-lesen"></a>
 ### GWSZ_MINUS_OFFSET_LESEN
 
 Gesamtwegstreckenzaehler aus Anwenderinfofeld auslesen und Offset abziehen
@@ -347,7 +330,6 @@ _No arguments._
 | STAT_GWSZ_MINUS_OFFSET_WERT | long | Gesamtwegstreckenzaehler minus Offset |
 | STAT_GWSZ_EINH | string | Einheit des GWSZ [km] |
 
-<a id="job-aif-fg-nr-lesen"></a>
 ### AIF_FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -362,7 +344,6 @@ _No arguments._
 | AIF_FG_NR | string | Fahrgestellnummer |
 | TELEGRAMM | binary |  |
 
-<a id="job-aif-sia-daten-lesen"></a>
 ### AIF_SIA_DATEN_LESEN
 
 Anwenderinfofeld Block 3 auslesen
@@ -392,7 +373,6 @@ _No arguments._
 | STAT_SERVICE_TEXT | string | "Inspektion", "Oelservice" |
 | TELEGRAMM | binary |  |
 
-<a id="job-aif-zentralcode-lesen"></a>
 ### AIF_ZENTRALCODE_LESEN
 
 Anwenderinfofeld Block 4 auslesen
@@ -410,7 +390,6 @@ _No arguments._
 | STAT_ZENTRALCODE_ANLIEFERCODIERUNG | int | True falls der Zentralcode der Anliefercodierung entspricht |
 | TELEGRAMM | binary |  |
 
-<a id="job-aif-datum-fz-lesen"></a>
 ### AIF_DATUM_FZ_LESEN
 
 Auslesen des Herstelldatums des FZ
@@ -425,7 +404,6 @@ _No arguments._
 | DATUM_FZ | string | Herstelldatum des FZ |
 | TELEGRAMM | binary |  |
 
-<a id="job-prod-datum-lesen"></a>
 ### PROD_DATUM_LESEN
 
 _No arguments._
@@ -439,7 +417,6 @@ _No arguments._
 | MONAT | string |  |
 | JAHR | string |  |
 
-<a id="job-steuern-anzeige"></a>
 ### STEUERN_ANZEIGE
 
 Anzeigenkomponenten steuern
@@ -458,7 +435,6 @@ Anzeigenkomponenten steuern
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-tacho-a"></a>
 ### STEUERN_TACHO_A
 
 TACHO_A steuern
@@ -476,7 +452,6 @@ TACHO_A steuern
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-gong"></a>
 ### STEUERN_GONG
 
 Gong1, Gong2 oder Gong3 steuern
@@ -494,7 +469,6 @@ Gong1, Gong2 oder Gong3 steuern
 | JOB_STATUS | string |  |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-gong3"></a>
 ### STEUERN_GONG3
 
 Anzeigenkomponenten steuern
@@ -508,7 +482,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | TELEGRAMM | binary |  |
 
-<a id="job-steuern-gong123"></a>
 ### STEUERN_GONG123
 
 Gong1, Gong2 und Gong3 nacheinander fuer 2 sec. ansteuern
@@ -521,7 +494,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-leuchte"></a>
 ### STEUERN_LEUCHTE
 
 Leuchten in der Anzeigeeinheit steuern
@@ -543,7 +515,6 @@ Leuchten in der Anzeigeeinheit steuern
 | TELEGRAMM | binary |  |
 | ANTWORT | binary |  |
 
-<a id="job-steuern-zusatz-ports"></a>
 ### STEUERN_ZUSATZ_PORTS
 
 Ports steuern
@@ -564,7 +535,6 @@ Ports steuern
 | JOB_STATUS | string | Status der Kommunikation (z.B ACK) |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Eingangs- und Ausgangsstati lesen
@@ -605,7 +575,6 @@ _No arguments._
 | TELEGRAMM_uPA | binary | Antworttelegramm von Status I/O lesen uPA |
 | TELEGRAMM_uPB | binary | Antworttelegramm von Status I/O lesen uPB |
 
-<a id="job-status-analog-lesen"></a>
 ### STATUS_ANALOG_LESEN
 
 Spezielle Eingaenge lesen
@@ -645,7 +614,6 @@ _No arguments._
 | STAT_TKVA2_EINH | string | Einheit [ms] |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-tankinhalt-lesen"></a>
 ### STATUS_TANKINHALT_LESEN
 
 Tankinhalt lesen
@@ -661,7 +629,6 @@ _No arguments._
 | STAT_TANKINHALT_EINH | string | Einheit Tankinhalt |
 | TELEGRAMM | binary |  |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 #### Arguments
@@ -680,7 +647,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 | DATEN | binary | Datenfeld |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 #### Arguments
@@ -697,7 +663,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 | DATEN | binary | Datenfeld |
 
-<a id="job-dpram-lesen"></a>
 ### DPRAM_LESEN
 
 #### Arguments
@@ -714,7 +679,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 | DATEN | binary | Datenfeld |
 
-<a id="job-status-can-motordrehzahl-lesen"></a>
 ### STATUS_CAN_MOTORDREHZAHL_LESEN
 
 _No arguments._
@@ -728,7 +692,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_EINH | string | Einheit [U/min] |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-can-kuehlmitteltemp-lesen"></a>
 ### STATUS_CAN_KUEHLMITTELTEMP_LESEN
 
 _No arguments._
@@ -742,7 +705,6 @@ _No arguments._
 | STAT_KUEHLMITTELTEMP_EINH | string | Einheit [Grad Celsius] |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-can-getriebeinfo-lesen"></a>
 ### STATUS_CAN_GETRIEBEINFO_LESEN
 
 _No arguments._
@@ -762,7 +724,6 @@ _No arguments._
 | STAT_L_GETR_STEUERUNG_TEXT | string | gibt Zustand der Getriebesteuerung an: Getriebenotprogramm ein |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-can-einspritzmenge-lesen"></a>
 ### STATUS_CAN_EINSPRITZMENGE_LESEN
 
 _No arguments._
@@ -776,7 +737,6 @@ _No arguments._
 | STAT_EINSPRITZMENGE_EINH | string | Einheit [ul] |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-can-signale-lesen"></a>
 ### STATUS_CAN_SIGNALE_LESEN
 
 _No arguments._
@@ -802,7 +762,6 @@ _No arguments._
 | STAT_KILOMETERSTAND_EINH | string | [km] |
 | TELEGRAMM | binary |  |
 
-<a id="job-status-sia-finish"></a>
 ### STATUS_SIA_FINISH
 
 SIA-Daten auslesen zur Fertigungskontrolle
@@ -821,7 +780,6 @@ _No arguments._
 | STAT_BITSTATUS_0x15 | int | Bitstatus oberstes Bit Adresse 0x0F |
 | SIA_SPEICHER_CHECK | string | Gesamtergebnis des Speicherchecks |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Anwenderinfofeld Block 4 auslesen
@@ -855,7 +813,6 @@ _No arguments._
 - [KOMPONENTEN](#table-komponenten) (6 × 2)
 - [GONG](#table-gong) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -871,7 +828,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-siareset"></a>
 ### SIARESET
 
 Dimensions: 3 rows × 2 columns
@@ -882,7 +838,6 @@ Dimensions: 3 rows × 2 columns
 | WEG_RESET | 0x02 |
 | ZEIT_RESET | 0x04 |
 
-<a id="table-zusatzports"></a>
 ### ZUSATZPORTS
 
 Dimensions: 5 rows × 2 columns
@@ -895,7 +850,6 @@ Dimensions: 5 rows × 2 columns
 | QUARZ | 0x10 |
 | ALLE_AUS | 0x00 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 39 rows × 2 columns
@@ -942,7 +896,6 @@ Dimensions: 39 rows × 2 columns
 | 0xC6 | Code |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 9 rows × 2 columns
@@ -959,7 +912,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Fehler durch externes Steuergeraet |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -994,7 +946,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-getriebetypen"></a>
 ### GETRIEBETYPEN
 
 Dimensions: 4 rows × 2 columns
@@ -1006,7 +957,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | 4-Gang Automatik (EGS) |
 | 0x03 | 5-Gang Schrittschaltung |
 
-<a id="table-ganginfo"></a>
 ### GANGINFO
 
 Dimensions: 9 rows × 2 columns
@@ -1023,7 +973,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Rueckwaertsgang |
 | 0xFF | unbekannte Getriebeinfo |
 
-<a id="table-waehlhebelinfo"></a>
 ### WAEHLHEBELINFO
 
 Dimensions: 12 rows × 2 columns
@@ -1043,7 +992,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A | 6 |
 | 0xFF | unbekannte Waehlhebelinfo |
 
-<a id="table-programminfo"></a>
 ### PROGRAMMINFO
 
 Dimensions: 7 rows × 2 columns
@@ -1058,7 +1006,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Anzeige aus |
 | 0xFF | unbekannte Programminfo |
 
-<a id="table-komponenten"></a>
 ### KOMPONENTEN
 
 Dimensions: 6 rows × 2 columns
@@ -1072,7 +1019,6 @@ Dimensions: 6 rows × 2 columns
 | VERBRAUCH | 0x0E |
 | Fehler | 0xFF |
 
-<a id="table-gong"></a>
 ### GONG
 
 Dimensions: 4 rows × 2 columns

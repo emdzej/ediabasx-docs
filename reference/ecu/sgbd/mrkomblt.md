@@ -58,7 +58,6 @@
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Beenden der Diagnose
 - [ECU_RESET](#job-ecu-reset)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -77,7 +76,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -90,7 +88,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-sec-access"></a>
 ### SEC_ACCESS
 
 SG für erweiterte Diagnose freischalten Simple Protection Mode Algorithmus
@@ -109,7 +106,6 @@ SG für erweiterte Diagnose freischalten Simple Protection Mode Algorithmus
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Lesen der Teilenummer Byte 4-7
@@ -125,7 +121,6 @@ _No arguments._
 | VARIANTE_IND | string | Name der SGBD, immer MRKOMBLT |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-teilenummer"></a>
 ### STATUS_TEILENUMMER
 
 Lesen der Teilenummer Byte 4-7
@@ -140,7 +135,6 @@ _No arguments._
 | STAT_WERT | string | BMW-Teilenummer |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-hardwarestand"></a>
 ### STATUS_HARDWARESTAND
 
 Lesen des Hardwarestandes Byte 8
@@ -156,7 +150,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Hardwarestand Text |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-codierbarkeit"></a>
 ### STATUS_CODIERBARKEIT
 
 Lesen der Codierbarkeit Byte 9
@@ -172,7 +165,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Wert Codierbarkeit |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-diagnoseindex"></a>
 ### STATUS_DIAGNOSEINDEX
 
 Lesen des Diagnoseindex Byte 10
@@ -187,7 +179,6 @@ _No arguments._
 | STAT_WERT | string | Wert Diagnoseindex |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-busindex"></a>
 ### STATUS_BUSINDEX
 
 Lesen des BusIndex Byte 11
@@ -202,7 +193,6 @@ _No arguments._
 | STAT_WERT | string | Wert Busindex |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-herstellungskalenderwoche"></a>
 ### STATUS_HERSTELLUNGSKALENDERWOCHE
 
 Lesen der Kalenderwoche Byte 12
@@ -217,7 +207,6 @@ _No arguments._
 | STAT_WERT | string | Wert Kalenderwoche |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-herstellungskalenderjahr"></a>
 ### STATUS_HERSTELLUNGSKALENDERJAHR
 
 Lesen des Kalenderjahrs Byte 13
@@ -232,7 +221,6 @@ _No arguments._
 | STAT_WERT | string | Wert Kalenderjahr |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-zulieferer"></a>
 ### STATUS_ZULIEFERER
 
 Lesen des Zulieferers Byte 14
@@ -248,7 +236,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Text Zulieferer |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-softwarestand"></a>
 ### STATUS_SOFTWARESTAND
 
 Lesen des Softwaretandes Byte 15
@@ -264,7 +251,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Softwarestand Text |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-fs-anzahl"></a>
 ### FS_ANZAHL
 
 Fehlerspeicher lesen (alle Fehler) Security Access Level 1 notwendig
@@ -279,7 +265,6 @@ _No arguments._
 | F_ANZAHL | int | Anzahl der Fehler im Speicher |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler)
@@ -313,7 +298,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Hex Antwort vom SG |
 | _TEL_ANTWORT3 | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen-feld"></a>
 ### FS_LESEN_FELD
 
 Fehlerspeicher lesen (ein Fehlerfeld)
@@ -349,7 +333,6 @@ Fehlerspeicher lesen (ein Fehlerfeld)
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hex Code |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher Löschen Security Access Level 2 notwendig
@@ -363,7 +346,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ad-kanal"></a>
 ### STATUS_AD_KANAL
 
 analoge A/D Werte lesen Security Access Level 1 notwendig
@@ -384,7 +366,6 @@ _No arguments._
 | STAT_LCD_TEMP_WERT | unsigned int | A/D Wert Spannung LCD Temperatur |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-drehzahl"></a>
 ### STATUS_DREHZAHL
 
 aktuelle Drehzahl lesen Security Access Level 1 notwendig
@@ -400,7 +381,6 @@ _No arguments._
 | STAT_EINH | string | Einheit 1/min |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-geschwindigkeit"></a>
 ### STATUS_GESCHWINDIGKEIT
 
 aktuelle Geschwindigkeit lesen Security Access Level 1 notwendig
@@ -416,7 +396,6 @@ _No arguments._
 | STAT_EINH | string | Einheit km/h |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-verbrauch"></a>
 ### STATUS_VERBRAUCH
 
 Verbrauch lesen Security Access Level 1 notwendig
@@ -433,7 +412,6 @@ _No arguments._
 | STAT_VERBRAUCH_EINH | string | Einheit Verbrauch |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-digital-ea"></a>
 ### STATUS_DIGITAL_EA
 
 alle digitalen Ein und Ausgänge lesen Security Access Level 1 notwendig
@@ -467,7 +445,6 @@ _No arguments._
 | STAT_PDR_PORT_9 | unsigned char | PDR Port 9 |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-tankinhalt"></a>
 ### STATUS_TANKINHALT
 
 Tankinhalt lesen Security Access Level 1 notwendig
@@ -484,7 +461,6 @@ _No arguments._
 | STAT_ANZEIGE_EINH | string | Einheit Tankinhalt |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-temp-motor"></a>
 ### STATUS_TEMP_MOTOR
 
 angezeigte Kühlmittel Temperatur lesen Security Access Level 1 notwendig
@@ -500,7 +476,6 @@ _No arguments._
 | STAT_EINH | string | Prozent |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-gang"></a>
 ### STATUS_GANG
 
 Anzeige aktueller Gang Security Access Level 1 notwendig
@@ -515,7 +490,6 @@ _No arguments._
 | STAT_WERT | string |  |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-reserveanzeige"></a>
 ### STATUS_RESERVEANZEIGE
 
 Warnung TankAnzeige Security Access Level 1 notwendig
@@ -530,7 +504,6 @@ _No arguments._
 | STAT_WERT | string | EIN - Warnalmape an, AUS - Warnlampe aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-temp-luft"></a>
 ### STATUS_TEMP_LUFT
 
 Lufttemperatur lesen Security Access Level 1 notwendig
@@ -546,7 +519,6 @@ _No arguments._
 | STAT_EINH | string | °F - Fahrenheit, °C - Celsius |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-taster-bordcomputer"></a>
 ### STATUS_TASTER_BORDCOMPUTER
 
 Zustand Taster Bordcomputer auslesen Security Access Level 1 notwendig
@@ -561,7 +533,6 @@ _No arguments._
 | STAT_WERT | string | EIN/AUS |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-batterie"></a>
 ### STATUS_BATTERIE
 
 Batteriespannung, Radio Eingang, Zündung lesen Security Access Level 1 notwendig
@@ -579,7 +550,6 @@ _No arguments._
 | STAT_RADIO_EINGANG | string | Zustand Ein, Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-drehzahlmesser"></a>
 ### STEUERN_DREHZAHLMESSER
 
 Drehzahlmesser ansteuern Security Access Level 1 notwendig
@@ -598,7 +568,6 @@ Drehzahlmesser ansteuern Security Access Level 1 notwendig
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-geschwindigkeit"></a>
 ### STEUERN_GESCHWINDIGKEIT
 
 Geschwindigkeit ansteuern Security Access Level 1 notwendig
@@ -617,7 +586,6 @@ Geschwindigkeit ansteuern Security Access Level 1 notwendig
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-tank-anzeige"></a>
 ### STEUERN_TANK_ANZEIGE
 
 Tankanzeige ansteuern Security Access Level 1 notwendig
@@ -632,7 +600,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-kuehlmittel-anzeige"></a>
 ### STEUERN_KUEHLMITTEL_ANZEIGE
 
 Kühlmittel Anzeige ansteuern Security Access Level 1 notwendig
@@ -647,7 +614,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-gang-anzeige"></a>
 ### STEUERN_GANG_ANZEIGE
 
 Ganganzeige ansteuern Security Access Level 1 notwendig
@@ -662,7 +628,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-selbsttest-aktivieren"></a>
 ### STEUERN_SELBSTTEST_AKTIVIEREN
 
 Selbst-Test starten Security Access Level 1 notwendig
@@ -676,7 +641,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-selbsttest-deaktivieren"></a>
 ### STEUERN_SELBSTTEST_DEAKTIVIEREN
 
 Selbst-Test starten Security Access Level 1 notwendig
@@ -690,7 +654,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -704,7 +667,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-ecu-reset"></a>
 ### ECU_RESET
 
 _No arguments._
@@ -730,7 +692,6 @@ _No arguments._
 - [VERBRAUCH](#table-verbrauch) (4 × 2)
 - [GANG](#table-gang) (10 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 12 rows × 2 columns
@@ -750,7 +711,6 @@ Dimensions: 12 rows × 2 columns
 | 0xFF | FEHLER: AUSFUEHRUNG NICHT MOEGLICH |
 | 0x00 | FEHLER: UNBEKANNT |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -772,7 +732,6 @@ Dimensions: 14 rows × 2 columns
 | 0x10 | Interner Fehler |
 | 0xFF | unbekannt |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -790,7 +749,6 @@ Dimensions: 10 rows × 2 columns
 | 0x22 | Fehler sporadisch |
 | 0x23 | Fehler vorhanden und gespeichert |
 
-<a id="table-fehlerstatus"></a>
 ### FEHLERSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -803,7 +761,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Fehler vorhenden und gespeichert |
 | 0xFF | unbekannt |
 
-<a id="table-fehlercodetest"></a>
 ### FEHLERCODETEST
 
 Dimensions: 3 rows × 2 columns
@@ -814,7 +771,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | TEST UNVOLLSTAENDIG |
 | 0xFF | UNBEKANNT |
 
-<a id="table-warnlampe"></a>
 ### WARNLAMPE
 
 Dimensions: 3 rows × 2 columns
@@ -825,7 +781,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Ein |
 | 0xFF | UNBEKANNT |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 3 rows × 2 columns
@@ -836,7 +791,6 @@ Dimensions: 3 rows × 2 columns
 | 0x56 | Siemens VDO Automotive |
 | 0xFF | Hersteller unbekannt |
 
-<a id="table-verbrauch"></a>
 ### VERBRAUCH
 
 Dimensions: 4 rows × 2 columns
@@ -848,7 +802,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | mpgUS |
 | 0xFF | UNBEKANNT |
 
-<a id="table-gang"></a>
 ### GANG
 
 Dimensions: 10 rows × 2 columns

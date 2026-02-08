@@ -30,7 +30,6 @@
 - [PARALLELE_CODIERUNG_EIN](#job-parallele-codierung-ein) - Setzt das angeschlossene Interface auf bestätigte Kommunikation
 - [OGW_CAN_TEST](#job-ogw-can-test) - JOB für OGW (E65) Funktionstest
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -49,7 +48,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 _No arguments._
@@ -60,7 +58,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Auslesen der Spannungsversorgung
@@ -74,7 +71,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | STAT_UBATT | int |  |
 
-<a id="job-status-zuendung"></a>
 ### STATUS_ZUENDUNG
 
 Auslesen der Klemme 15
@@ -88,7 +84,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY","ERROR_UBATT" |
 | STAT_ZUENDUNG | int |  |
 
-<a id="job-abs-relais"></a>
 ### ABS_RELAIS
 
 Schalten des Relais am ABS-STAND
@@ -105,7 +100,6 @@ Schalten des Relais am ABS-STAND
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY","ERROR_PARAMETER","ERROR_INTERFACE" ERROR_INTERFACE bedeutet, dass ein falsches Interface angeschlossen ist (PICO, EIDBSS=EDIC muss sein) |
 
-<a id="job-interface"></a>
 ### INTERFACE
 
 Rueckgabe des Interfaces
@@ -122,7 +116,6 @@ _No arguments._
 | ANTWORT | binary | Interface Name als Data |
 | JOB_STATUS | string | Status immer OKAY! |
 
-<a id="job-if-reset"></a>
 ### IF_RESET
 
 Interface-Reset Rücksetzen der Kommunikationsparameter
@@ -135,7 +128,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-time-and-date"></a>
 ### TIME_AND_DATE
 
 Zeit- und Datumsangaben
@@ -158,7 +150,6 @@ _No arguments._
 | WOCHENTAG | string | Wochentag als Text |
 | JOB_STATUS | string | Status immer OKAY! |
 
-<a id="job-parallele-codierung-ein"></a>
 ### PARALLELE_CODIERUNG_EIN
 
 Setzt das angeschlossene Interface auf bestätigte Kommunikation
@@ -172,7 +163,6 @@ _No arguments._
 | TYP | string | Interface Name |
 | JOB_STATUS | string | Status immer OKAY! |
 
-<a id="job-ogw-can-test"></a>
 ### OGW_CAN_TEST
 
 JOB für OGW (E65) Funktionstest

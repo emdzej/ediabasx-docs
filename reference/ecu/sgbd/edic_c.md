@@ -28,7 +28,6 @@
 - [AUFNAHME_AUS](#job-aufnahme-aus) - Schlitten abschalten
 - [AUFNAHME_EIN](#job-aufnahme-ein) - Schlitten einschalten
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -46,7 +45,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -59,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Stoppen des wiederholten Senden und Empfangen
@@ -68,7 +65,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Holen des Status der Schlitten
@@ -84,7 +80,6 @@ _No arguments._
 | RECHTER_SCHLITTEN_AKTIV | int | Abfrage des rechten Schlittens |
 | KEIN_SCHLITTEN_AKTIV | int | Keiner der beiden Schlitten |
 
-<a id="job-spannung-sg-ein"></a>
 ### SPANNUNG_SG_EIN
 
 Spannungsversorgung ein
@@ -97,7 +92,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY |
 
-<a id="job-spannung-sg-aus"></a>
 ### SPANNUNG_SG_AUS
 
 Spannungsversorgung aus
@@ -110,7 +104,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY |
 
-<a id="job-aufnahme-aus"></a>
 ### AUFNAHME_AUS
 
 Schlitten abschalten
@@ -123,7 +116,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY |
 
-<a id="job-aufnahme-ein"></a>
 ### AUFNAHME_EIN
 
 Schlitten einschalten

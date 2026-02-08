@@ -107,7 +107,6 @@
 - [NAD_EQUIPPED_DISABLE](#job-nad-equipped-disable) - Disable NAD equipped coding parameter
 - [HW_SELBTEST_STATUS_LESEN](#job-hw-selbtest-status-lesen) - Read results of the HW selftest
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -126,7 +125,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -139,7 +137,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -163,7 +160,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -176,7 +172,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -195,7 +190,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -213,7 +207,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -232,7 +225,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -245,7 +237,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -258,7 +249,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -276,7 +266,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -291,7 +280,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob
@@ -309,7 +297,6 @@ Fahrgestellnummer schreiben Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-ident-schreiben"></a>
 ### IDENT_SCHREIBEN
 
 Identdaten schreiben
@@ -334,7 +321,6 @@ Identdaten schreiben
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-io-ports-schreiben-und-testen"></a>
 ### IO_PORTS_SCHREIBEN_UND_TESTEN
 
 Set/test verschiedener I/O Ports
@@ -355,7 +341,6 @@ Set/test verschiedener I/O Ports
 | STAT_SOS_LED_EIN | int | 1=active, 0=not active |
 | STAT_MUTE_EIN | int | 1=active, 0=not active |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Status von IO-Ports lesen
@@ -371,7 +356,6 @@ _No arguments._
 | STAT_B_CALL_EIN | int | b-call line from button 1=open, 0=closed(button pressed) |
 | STAT_BLUETOOTH_EIN | int | status of bluetooth 1=enable, 0=disable |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Durchfuehrung des spez. Selbsttests
@@ -384,7 +368,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -405,7 +388,6 @@ _No arguments._
 | F_ART1_TEXT | string | table FArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -426,7 +408,6 @@ _No arguments._
 | F_ART1_TEXT | string | table IArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-reset-mode"></a>
 ### RESET_MODE
 
 Durchfuehrung eines resets ca. 2 Sek. nach senden von ACK erfolgt der Reset
@@ -439,7 +420,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben ohne Verifikation
@@ -456,7 +436,6 @@ Codierdaten schreiben ohne Verifikation
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -473,7 +452,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -491,7 +469,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-tcu-type-lesen"></a>
 ### TCU_TYPE_LESEN
 
 Lesen der 1-byte TCU ID
@@ -507,7 +484,6 @@ _No arguments._
 | TCU_TYPE_TEXT | string | Text, welche Variante verbaut ist |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-fahrgestellnummer-vin-lesen"></a>
 ### FAHRGESTELLNUMMER_VIN_LESEN
 
 Lesen der 7-byte Fahrgestellnummer aus den Codierdaten
@@ -522,7 +498,6 @@ _No arguments._
 | VIN_TEXT | string | 7 byte Vehicle Identification Number in I-bus TCU |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-ecall-bcall-button-test"></a>
 ### ECALL_BCALL_BUTTON_TEST
 
 Test Ecall, Bcall buttons
@@ -537,7 +512,6 @@ _No arguments._
 | TEST_STATUS | int | 1-byte 0x00 fail (DTCS logged) 0x01 pass (No DTCS logged) |
 | RESULT | string | status |
 
-<a id="job-status-gps"></a>
 ### STATUS_GPS
 
 Status des GPS wird ausgegeben KWP2000: $21 ReadDataByLocalIdentifier $02 recordLocalIdentifier Modus  : Default
@@ -553,7 +527,6 @@ _No arguments._
 | STAT_GPS_TEXT | string | GPS-Status als Textausgabe |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sim-reader-lesen"></a>
 ### STATUS_SIM_READER_LESEN
 
 Read status of TCU built-in and attached SIM card readers
@@ -568,7 +541,6 @@ _No arguments._
 | STAT_TELEM_READER | int | 1 = telematic SIM card reader accessible |
 | STAT_EXT_READER | int | 1 = external SIM card reader accessible |
 
-<a id="job-bt-pairing-start"></a>
 ### BT_PAIRING_START
 
 Initiate Bluetooth Pairing
@@ -581,7 +553,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-bt-pairing-result-lesen"></a>
 ### BT_PAIRING_RESULT_LESEN
 
 Lesen von Bluetooth Pairing Ergebnis
@@ -596,7 +567,6 @@ _No arguments._
 | PAIRING_RESULT | int | table PairingResult SB |
 | PAIRING_STATUS | string | OKAY, wenn fehlerfrei table PairingResult STATUS_TEXT |
 
-<a id="job-bt-fix-passkey-schreiben"></a>
 ### BT_FIX_PASSKEY_SCHREIBEN
 
 Write Bluetooth fix passkey
@@ -613,7 +583,6 @@ Write Bluetooth fix passkey
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-bt-fix-passkey-lesen"></a>
 ### BT_FIX_PASSKEY_LESEN
 
 Read Bluetooth fix passkey
@@ -627,7 +596,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | BT_FIX_PASSKEY | string | 1 - 16 byte Bluetooth Fix Passkey |
 
-<a id="job-bt-device-address-lesen"></a>
 ### BT_DEVICE_ADDRESS_LESEN
 
 Read Bluetooth address
@@ -641,7 +609,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | BT_ADDRESS | binary | 6 byte Bluetooth Adresse von TCU |
 
-<a id="job-bt-user-friendly-name-schreiben"></a>
 ### BT_USER_FRIENDLY_NAME_SCHREIBEN
 
 Set Bluetooth user-friendly name
@@ -658,7 +625,6 @@ Set Bluetooth user-friendly name
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-bt-user-friendly-name-lesen"></a>
 ### BT_USER_FRIENDLY_NAME_LESEN
 
 Read Bluetooth user-friendly name
@@ -672,7 +638,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | BT_USER_FRIENDLY_NAME | string | 1 - 18 byte Bluetooth User-Friendly Name |
 
-<a id="job-fg-als-bt-user-friendly-name-schreiben"></a>
 ### FG_ALS_BT_USER_FRIENDLY_NAME_SCHREIBEN
 
 Write "BMW" + last 5 digits of FG as BT User-Friendly name Based on standard Codierjob C_FG_SCHREIBEN
@@ -690,7 +655,6 @@ Write "BMW" + last 5 digits of FG as BT User-Friendly name Based on standard Cod
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-bt-paired-devices-lesen"></a>
 ### BT_PAIRED_DEVICES_LESEN
 
 Read Bluetooth paired devices
@@ -704,7 +668,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | NUM_PAIRED_DEVICES | int | OKAY, wenn fehlerfrei |
 
-<a id="job-bt-paired-devices-list-lesen"></a>
 ### BT_PAIRED_DEVICES_LIST_LESEN
 
 Lesen von Liste mit Bluetooth Paired Devices
@@ -718,7 +681,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | BT_PAIRED_DEVICES_LIST | binary | 1-5 Blutetooth 6-byte paired devices addresses |
 
-<a id="job-bt-paired-devices-list-loeschen"></a>
 ### BT_PAIRED_DEVICES_LIST_LOESCHEN
 
 Delete list with Bluetooth paired devices
@@ -731,7 +693,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-bt-paired-devices-loeschen"></a>
 ### BT_PAIRED_DEVICES_LOESCHEN
 
 Delete list with Bluetooth paired devices
@@ -744,7 +705,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-bt-discoverable-mode"></a>
 ### BT_DISCOVERABLE_MODE
 
 Bring Bluetooth Server into discoverable mode
@@ -757,7 +717,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-bt-enable"></a>
 ### BT_ENABLE
 
 Enable Bluetooth operation
@@ -770,7 +729,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-bt-disable"></a>
 ### BT_DISABLE
 
 Disable Bluetooth operation
@@ -783,7 +741,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-bt-operationmode-lesen"></a>
 ### BT_OPERATIONMODE_LESEN
 
 read if BT operation is enabled or disabled
@@ -797,7 +754,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | BLUETOOTH_FLAG | int | 1-byte BT flag: 0x00 - disabled, 0x01 - enabled |
 
-<a id="job-dsp-acoustic-profile-lesen"></a>
 ### DSP_ACOUSTIC_PROFILE_LESEN
 
 GAL: read DSP acoustic profile (1-16)
@@ -811,7 +767,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | DSP_ACOUSTIC_PROFILE | int | 1-byte DSP acoustic profile (1-16) |
 
-<a id="job-gal-kmh-per-stage-schreiben"></a>
 ### GAL_KMH_PER_STAGE_SCHREIBEN
 
 GAL: set km/h per amplification stage (10 - 60)
@@ -828,7 +783,6 @@ GAL: set km/h per amplification stage (10 - 60)
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-gal-kmh-per-stage-lesen"></a>
 ### GAL_KMH_PER_STAGE_LESEN
 
 GAL: read km/h per amplification stage (10 - 60)
@@ -842,7 +796,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | GAL_KMH_PER_STAGE | int | 1-byte km/h value per amplification stage for speed-dependent loudness |
 
-<a id="job-ecall-enable"></a>
 ### ECALL_ENABLE
 
 Enable ecall
@@ -855,7 +808,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-ecall-disable"></a>
 ### ECALL_DISABLE
 
 Disable E-call
@@ -868,7 +820,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-ecall-status-lesen"></a>
 ### ECALL_STATUS_LESEN
 
 read if E-call is enabled or disabled
@@ -882,7 +833,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | E_CALL_FLAG | int | 1-byte E-call flag: 0x00 - disabled, 0x01 - enabled |
 
-<a id="job-telematics-status-lesen"></a>
 ### TELEMATICS_STATUS_LESEN
 
 read if telematics operation is enabled or disabled
@@ -896,7 +846,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | TELEMATICS_FLAG | int | 1-byte telematics flag: 0x00 - disabled, 0x01 - enabled |
 
-<a id="job-non-telematics-e-call-status-lesen"></a>
 ### NON_TELEMATICS_E_CALL_STATUS_LESEN
 
 read if non-telematic E-call (call 911/112) is enabled or disabled
@@ -910,7 +859,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | NON_TELEMATIC_E_CALL_FLAG | int | 1-byte non-telematic E-call flag: 0x00 - disabled, 0x01 - enabled |
 
-<a id="job-us-cust-calls-enable"></a>
 ### US_CUST_CALLS_ENABLE
 
 Enable customer calls over NAD with GMIN
@@ -923,7 +871,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-cust-calls-disable"></a>
 ### US_CUST_CALLS_DISABLE
 
 Disable customer calls over NAD with GMIN
@@ -936,7 +883,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-cust-calls-lesen"></a>
 ### US_CUST_CALLS_LESEN
 
 Read if customer calls over NAD using telematic GMIN are enabled or disabled
@@ -950,7 +896,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CALLS_WITH_GMIN_FLAG | int | 1-byte calls with GMIN flag: 0x00 - disabled, 0x01 - enabled |
 
-<a id="job-backup-emergency-no-schreiben"></a>
 ### BACKUP_EMERGENCY_NO_SCHREIBEN
 
 Set emergency number (e.g. 112/911) for non-telematic E-calls
@@ -967,7 +912,6 @@ Set emergency number (e.g. 112/911) for non-telematic E-calls
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-backup-emergency-no-lesen"></a>
 ### BACKUP_EMERGENCY_NO_LESEN
 
 Read backup emergency number used for non-telematic E-calls (e.g.112/911)
@@ -981,7 +925,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | BACKUP_EMERGENCY_NUMBER | string | 20-byte phone number (ASCII, left-justified, unused bytes 0x00) |
 
-<a id="job-us-call-service-center-status-lesen"></a>
 ### US_CALL_SERVICE_CENTER_STATUS_LESEN
 
 read if call service center (e.g. Verizon)is enabled or disabled
@@ -995,7 +938,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CALL_SERVICE_CENTER_FLAG | int | 1-byte temporary storage of cutomer PIN flag: 0x00 - disabled, 0x01 - enabled |
 
-<a id="job-us-call-service-center-number-schreiben"></a>
 ### US_CALL_SERVICE_CENTER_NUMBER_SCHREIBEN
 
 Set phone number of call service number (Verizon)
@@ -1012,7 +954,6 @@ Set phone number of call service number (Verizon)
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-call-service-center-number-lesen"></a>
 ### US_CALL_SERVICE_CENTER_NUMBER_LESEN
 
 Read phone number of call service center (Verizon)
@@ -1026,7 +967,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | US_CALL_SERVICE_CENTER_NUMBER | string | 20-byte phone number (ASCII, left-justified, unused bytes 0x00) |
 
-<a id="job-us-min-schreiben"></a>
 ### US_MIN_SCHREIBEN
 
 Set MIN in Ericsson CM-42 NAD for US telenatics
@@ -1043,7 +983,6 @@ Set MIN in Ericsson CM-42 NAD for US telenatics
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-fg-schreiben-as-us-min"></a>
 ### FG_SCHREIBEN_AS_US_MIN
 
 Write last 5 digits of FG in GMIN Based on standard Codierjob C_FG_SCHREIBEN
@@ -1061,7 +1000,6 @@ Write last 5 digits of FG in GMIN Based on standard Codierjob C_FG_SCHREIBEN
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-us-cdma-directory-schreiben"></a>
 ### US_CDMA_DIRECTORY_SCHREIBEN
 
 Set US CM-42 CDMA Directory 00000 00000 - 99999 99999
@@ -1078,7 +1016,6 @@ Set US CM-42 CDMA Directory 00000 00000 - 99999 99999
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-cdma-directory-lesen"></a>
 ### US_CDMA_DIRECTORY_LESEN
 
 CDMA Directory 00000 00000 00000 - 99999 99999 99999 -> 0x31..0x31 - 0x39..0x39
@@ -1092,7 +1029,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CDMA_DIR | string | 1 - 15 digit CDMA Directory |
 
-<a id="job-us-sid-nid-schreiben"></a>
 ### US_SID_NID_SCHREIBEN
 
 Set US CM-42 System ID and Network ID
@@ -1111,7 +1047,6 @@ Set US CM-42 System ID and Network ID
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-sid-nid-lesen"></a>
 ### US_SID_NID_LESEN
 
 Read US CM-42 Home SID/NID list
@@ -1128,7 +1063,6 @@ _No arguments._
 | NID | string | Network ID |
 | INDEX | string | Index |
 
-<a id="job-us-cdma-primary-ch-a-schreiben"></a>
 ### US_CDMA_PRIMARY_CH_A_SCHREIBEN
 
 Set US CM-42 CDMA Primary Channel A
@@ -1145,7 +1079,6 @@ Set US CM-42 CDMA Primary Channel A
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-cdma-primary-ch-a-lesen"></a>
 ### US_CDMA_PRIMARY_CH_A_LESEN
 
 Read US CM-42 CDMA Primary Channel (1-311, 689-694, 1013-1023 as ASCII bytes)
@@ -1159,7 +1092,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CDMA_PA | string | 1 - 4-byte CDMA Primary Channel A |
 
-<a id="job-us-cdma-secondary-ch-a-schreiben"></a>
 ### US_CDMA_SECONDARY_CH_A_SCHREIBEN
 
 Set US CM-42 CDMA Secondary Channel A
@@ -1176,7 +1108,6 @@ Set US CM-42 CDMA Secondary Channel A
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-cdma-secondary-ch-a-lesen"></a>
 ### US_CDMA_SECONDARY_CH_A_LESEN
 
 Read US CM-42 CDMA Secondary Channel A  (1-311, 689-694, 1013-1023 as ASCII bytes)
@@ -1190,7 +1121,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CDMA_SA | string | 1 - 4-byte CDMA Secondary Channel A |
 
-<a id="job-us-cdma-primary-ch-b-schreiben"></a>
 ### US_CDMA_PRIMARY_CH_B_SCHREIBEN
 
 Set US CM-42 CDMA Primary Channel B
@@ -1207,7 +1137,6 @@ Set US CM-42 CDMA Primary Channel B
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-cdma-primary-ch-b-lesen"></a>
 ### US_CDMA_PRIMARY_CH_B_LESEN
 
 Read US CM-42 CDMA Primary Channel B  (365-644, 739-777 as ASCII bytes)
@@ -1221,7 +1150,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CDMA_PB | string | 1 - 4-byte CDMA Primary Channel B |
 
-<a id="job-us-cdma-secondary-ch-b-schreiben"></a>
 ### US_CDMA_SECONDARY_CH_B_SCHREIBEN
 
 Set US CM-42 CDMA Secondary Channel B
@@ -1238,7 +1166,6 @@ Set US CM-42 CDMA Secondary Channel B
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-cdma-secondary-ch-b-lesen"></a>
 ### US_CDMA_SECONDARY_CH_B_LESEN
 
 Read US CM-42 CDMA Secondary Channel B (365-644, 739-777 as ASCII bytes)
@@ -1252,7 +1179,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CDMA_SB | string | 1 - 4-byte CDMA Secondary Channel B |
 
-<a id="job-us-home-only-enable"></a>
 ### US_HOME_ONLY_ENABLE
 
 Enable Home Only
@@ -1265,7 +1191,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-home-only-disable"></a>
 ### US_HOME_ONLY_DISABLE
 
 Disable Home Only
@@ -1278,7 +1203,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-home-only-lesen"></a>
 ### US_HOME_ONLY_LESEN
 
 read status of home only
@@ -1292,7 +1216,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | HOME_ONLY_FLAG | int | 1-byte 0x00 disabled, 0x01 - enabled |
 
-<a id="job-us-a-b-side-schreiben"></a>
 ### US_A_B_SIDE_SCHREIBEN
 
 Set Home Only Status (0-3)
@@ -1309,7 +1232,6 @@ Set Home Only Status (0-3)
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 MTS/FETRAWE Mode (00 Exit) (01 Manufacturing) (02 Service) (03 Production)
@@ -1328,7 +1250,6 @@ MTS/FETRAWE Mode (00 Exit) (01 Manufacturing) (02 Service) (03 Production)
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-esn-min-lesen"></a>
 ### US_ESN_MIN_LESEN
 
 Read MIN in Ericsson CM-42 NAD for US telematics
@@ -1343,7 +1264,6 @@ _No arguments._
 | US_MIN | string | 10-byte US-MIN in ASCII |
 | US_ESN | string | 12-digits ESN |
 
-<a id="job-imei-lesen"></a>
 ### IMEI_LESEN
 
 Read IMEI
@@ -1357,7 +1277,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | IMEI | string | 15 byte |
 
-<a id="job-us-k633-enable"></a>
 ### US_K633_ENABLE
 
 Enable Bluetooth portable support for US (K633)
@@ -1370,7 +1289,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-us-k633-lesen"></a>
 ### US_K633_LESEN
 
 Read status of US Bluetooth portable support (K633)
@@ -1384,7 +1302,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | US_K633_FLAG | int | 1-byte 0x00 disabled, 0x01 - enabled |
 
-<a id="job-us-k633-disable"></a>
 ### US_K633_DISABLE
 
 Disable Bluetooth portable support for US (K633)
@@ -1397,7 +1314,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-nad-equipped-enable"></a>
 ### NAD_EQUIPPED_ENABLE
 
 Enable NAD equipped coding parameter
@@ -1410,7 +1326,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-nad-equipped-lesen"></a>
 ### NAD_EQUIPPED_LESEN
 
 Read status of the NAD equipped coding parameter
@@ -1424,7 +1339,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | NAD_EQUIPPED_FLAG | int | 1-byte 0x00 disabled, 0x01 - enabled |
 
-<a id="job-nad-equipped-disable"></a>
 ### NAD_EQUIPPED_DISABLE
 
 Disable NAD equipped coding parameter
@@ -1437,7 +1351,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-hw-selbtest-status-lesen"></a>
 ### HW_SELBTEST_STATUS_LESEN
 
 Read results of the HW selftest
@@ -1469,7 +1382,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (13 × 2)
 - [LIEFERANTEN](#table-lieferanten) (67 × 2)
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -1493,7 +1405,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-pairingresult"></a>
 ### PAIRINGRESULT
 
 Dimensions: 3 rows × 2 columns
@@ -1504,7 +1415,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | FAILURE |
 | 0x02 | WAITING |
 
-<a id="table-tcutype-status"></a>
 ### TCUTYPE_STATUS
 
 Dimensions: 3 rows × 2 columns
@@ -1515,7 +1425,6 @@ Dimensions: 3 rows × 2 columns
 | 0x06 | I-bus US |
 | 0xXY | unbekannte TCU |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 22 rows × 2 columns
@@ -1545,7 +1454,6 @@ Dimensions: 22 rows × 2 columns
 | 0x97 | BT Cradle Stuck Button |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1556,7 +1464,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -1578,7 +1485,6 @@ Dimensions: 14 rows × 2 columns
 | 0x1D | Prefit SIM Network Error |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1589,7 +1495,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1601,7 +1506,6 @@ Dimensions: 4 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1610,7 +1514,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-tgpsstatus"></a>
 ### TGPSSTATUS
 
 Dimensions: 14 rows × 2 columns
@@ -1632,7 +1535,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0C | 3D Positionierung |
 | 0xXY | nicht definiert |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1661,7 +1563,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1682,7 +1583,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns

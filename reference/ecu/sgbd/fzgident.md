@@ -29,7 +29,6 @@
 - [GRUNDMERKMALE_LESEN](#job-grundmerkmale-lesen)
 - [GM_LESEN_TYPSCHLUESSEL](#job-gm-lesen-typschluessel)
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -42,7 +41,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -61,7 +59,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -77,7 +74,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -94,7 +90,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-strings-lesen"></a>
 ### STRINGS_LESEN
 
 #### Arguments
@@ -114,7 +109,6 @@ Wählt ein Diagnoseprotokoll aus
 | FEHLERTEXT | string | "", wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-strings-lesen-typschluessel"></a>
 ### STRINGS_LESEN_TYPSCHLUESSEL
 
 #### Arguments
@@ -133,7 +127,6 @@ Wählt ein Diagnoseprotokoll aus
 | FEHLERTEXT | string | "", wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-erste-br-ermitteln"></a>
 ### ERSTE_BR_ERMITTELN
 
 #### Arguments
@@ -150,7 +143,6 @@ Wählt ein Diagnoseprotokoll aus
 | FEHLERTEXT | string | "", wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-grundmerkmale-lesen"></a>
 ### GRUNDMERKMALE_LESEN
 
 #### Arguments
@@ -179,7 +171,6 @@ Wählt ein Diagnoseprotokoll aus
 | FEHLERTEXT | string | "", wenn fehlerfrei |
 | JOB_STATUS | string |  |
 
-<a id="job-gm-lesen-typschluessel"></a>
 ### GM_LESEN_TYPSCHLUESSEL
 
 #### Arguments
@@ -222,7 +213,6 @@ Wählt ein Diagnoseprotokoll aus
 - [TYP_TEXTE](#table-typ-texte) (2305 × 7)
 - [GM_TEXTE](#table-gm-texte) (2256 × 14)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -232,7 +222,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -335,7 +324,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 116 rows × 2 columns
@@ -459,7 +447,6 @@ Dimensions: 116 rows × 2 columns
 | 0xA9 | Thyssen Krupp Presta |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -481,7 +468,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -506,7 +492,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -515,7 +500,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-br-texte"></a>
 ### BR_TEXTE
 
 Dimensions: 47 rows × 2 columns
@@ -570,7 +554,6 @@ Dimensions: 47 rows × 2 columns
 | RR4 | RR4 |
 | UNBEK | UNBEK |
 
-<a id="table-typ-texte"></a>
 ### TYP_TEXTE
 
 Dimensions: 2305 rows × 7 columns
@@ -2883,7 +2866,6 @@ Dimensions: 2305 rows × 7 columns
 | WR33 | WR33 | E93 | 328i_N51_CABRIO | USA_LL | X | X |
 | UNBEK | UNBEK | UNBEK | UNBEK | UNBEK | - | - |
 
-<a id="table-gm-texte"></a>
 ### GM_TEXTE
 
 Dimensions: 2256 rows × 14 columns

@@ -30,7 +30,6 @@
 - [DIAGNOSE_FORTSETZEN](#job-diagnose-fortsetzen) - Diagnose mit EWS aufrecht erhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer EWS automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -43,7 +42,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -61,7 +59,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EWS
@@ -85,7 +82,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-zcs-gm-lesen"></a>
 ### ZCS_GM_LESEN
 
 _No arguments._
@@ -100,7 +96,6 @@ _No arguments._
 | MO_TXT | string | Modell |
 | LA_TXT | string | Laenderausfuehrung mit Typschluessel |
 
-<a id="job-prod-datum-lesen"></a>
 ### PROD_DATUM_LESEN
 
 _No arguments._
@@ -117,7 +112,6 @@ _No arguments._
 | JAHR_TXT | string |  |
 | JAHR_DEC | int |  |
 
-<a id="job-fgnr-lesen"></a>
 ### FGNR_LESEN
 
 Auslesen der Fahrgestellnummer aus der EWS
@@ -132,7 +126,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-aif-zcs-lesen"></a>
 ### AIF_ZCS_LESEN
 
 Auslesen des Zentralen Codierschluessels aus KD-Daten
@@ -150,7 +143,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-kd-daten-lesen"></a>
 ### KD_DATEN_LESEN
 
 Auslesen der Kundendienstdaten aus der EWS
@@ -172,7 +164,6 @@ Auslesen der Kundendienstdaten aus der EWS
 | _TEL_AUFTRAG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-fortsetzen"></a>
 ### DIAGNOSE_FORTSETZEN
 
 Diagnose mit EWS aufrecht erhalten
@@ -186,7 +177,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -208,7 +198,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (24 × 2)
 - [ZCS_TEXTE](#table-zcs-texte) (861 × 7)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 7 rows × 2 columns
@@ -223,7 +212,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFF | ERROR_SG_NACK |
 | 0x00 | ERROR_SG_UNBEKANNTES_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 24 rows × 2 columns
@@ -255,7 +243,6 @@ Dimensions: 24 rows × 2 columns
 | 0x23 | Motorola |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-zcs-texte"></a>
 ### ZCS_TEXTE
 
 Dimensions: 861 rows × 7 columns

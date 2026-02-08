@@ -31,7 +31,6 @@
 - [SELBSTTEST](#job-selbsttest) - Durchfuehrung des Selbsttests (Ermittlung Checksum SW)
 - [RESET](#job-reset) - Durchfuehrung eines resets ca. 2 Sek. nach senden von ACK erfolgt der Reset
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer das JBIT
@@ -85,7 +82,6 @@ _No arguments._
 | ID_LIEF_NR | string | Lieferanten-Nummer |
 | ID_SW_NR | string | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -101,7 +97,6 @@ _No arguments._
 | F_TEXT | string | Fehlertext |
 | F_COUNTER | int | Fehlerhaeufigkeit des jeweiligen Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -115,7 +110,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -133,7 +127,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -154,7 +147,6 @@ Beschreiben des Pruefstempels
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 verschiedenen Status IO-Ports
@@ -177,7 +169,6 @@ _No arguments._
 | STAT_EBX_TEMP | int | eject-box temperature allows phone battery charing: no (0) or yes (1) |
 | STAT_DSP_TEL_ON | int | TEL_ON signal for DSP: off (0) or on (1) |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ports im JBIT setzen
@@ -200,7 +191,6 @@ Ports im JBIT setzen
 | _TEL_AN_SG | binary |  |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Durchfuehrung des Selbsttests (Ermittlung Checksum SW)
@@ -218,7 +208,6 @@ _No arguments._
 | EEPROM_CHECK | int | OK = 00h, Not OK = 01h |
 | COMM_WITH_PHONE_CHECK | int | communication with mobile phone check OK = 00h , Not OK = 01h |
 
-<a id="job-reset"></a>
 ### RESET
 
 Durchfuehrung eines resets ca. 2 Sek. nach senden von ACK erfolgt der Reset
@@ -240,7 +229,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (4 × 2)
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 86 rows × 2 columns
@@ -334,7 +322,6 @@ Dimensions: 86 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-jobresult-ds2"></a>
 ### JOBRESULT_DS2
 
 Dimensions: 6 rows × 2 columns
@@ -348,7 +335,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -360,7 +346,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | I-Bus Telegram Checksummen Fehler |
 | 0x03 | Temperature ausserhalb des Bereichs für Akku-Ladung |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns

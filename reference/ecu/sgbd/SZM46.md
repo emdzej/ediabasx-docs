@@ -31,7 +31,6 @@
 - [STATUS_IO](#job-status-io) - Status lesen
 - [STEUERN_IO](#job-steuern-io) - Status vorgeben
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -87,7 +84,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -108,7 +104,6 @@ _No arguments._
 | F_ART1_TEXT | string | table FArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -121,7 +116,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -142,7 +136,6 @@ _No arguments._
 | F_ART1_TEXT | string | table IArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -155,7 +148,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -176,7 +168,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -191,7 +182,6 @@ _No arguments._
 | CODE | string | 17 Codierbytes in Hex |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Status lesen
@@ -230,7 +220,6 @@ _No arguments._
 | STAT_SITZHEIZUNG_RECHTS_STUFE | int | Sitzheizungsstufe rechts |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Status vorgeben
@@ -264,7 +253,6 @@ Status vorgeben
 - [FORTTEXTE](#table-forttexte) (12 × 2)
 - [IORTTEXTE](#table-iorttexte) (9 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -285,7 +273,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 69 rows × 2 columns
@@ -362,7 +349,6 @@ Dimensions: 69 rows × 2 columns
 | 0x68 | Atena GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -391,7 +377,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -415,7 +400,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-iostatus"></a>
 ### IOSTATUS
 
 Dimensions: 16 rows × 2 columns
@@ -439,7 +423,6 @@ Dimensions: 16 rows × 2 columns
 | 0x16 | Surround_sound_LED |
 | 0x17 | Surround_sound_output |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -450,7 +433,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0x?? | unbekannte Fehlerart |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -461,7 +443,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0x?? | unbekannte Fehlerart |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 12 rows × 2 columns
@@ -481,7 +462,6 @@ Dimensions: 12 rows × 2 columns
 | 0x00B | Sonnenrollo Motor, Kurzschluss |
 | 0x??? | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 9 rows × 2 columns

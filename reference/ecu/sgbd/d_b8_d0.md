@@ -10,7 +10,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung / Kommunikationsparameter fuer ACC automatischer Aufruf beim ersten Zugriff auf die SGBD
 - [IDENTIFIKATION](#job-identifikation) - Ermittlung der SG Variante Zur Gruppe gehoerende Varianten:
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer ACC automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -23,7 +22,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-identifikation"></a>
 ### IDENTIFIKATION
 
 Ermittlung der SG Variante Zur Gruppe gehoerende Varianten:

@@ -36,7 +36,6 @@
 - [DREHSINN_SENSOREN_LESEN](#job-drehsinn-sensoren-lesen) - DIAGNOSE_ENDE job
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - DIAGNOSE_ENDE job
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Default ident job
@@ -91,7 +88,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -131,7 +127,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hex-Daten des Fehlers |
 | _INFOSPEICHER | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -144,7 +139,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Default IS_LESEN job
@@ -184,7 +178,6 @@ _No arguments._
 | ZAEHLER_MOTOR_RECHTS_FEHLER | int | Byte5, Bit2 und 3 |
 | ZAEHLER_MOTOR_LINKS_FEHLER | int | Byte5, Bit4 und 5 |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Default CODIERDATEN_LESEN job
@@ -202,7 +195,6 @@ Default CODIERDATEN_LESEN job
 | JOB_STATUS | string |  |
 | DATENFELD | binary | Inhalt Codierdatenblock |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Default SPEICHER_LESEN job
@@ -224,7 +216,6 @@ Default SPEICHER_LESEN job
 | JOB_STATUS | string |  |
 | DATENFELD | binary | Inhalt Speicherblock |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 STATUS_LESEN job
@@ -249,7 +240,6 @@ _No arguments._
 | STAT_REGELUNGSSTOP_MOTORFEHLER_AKTIV | int | Wert Statusbyte 2, Bit 4 |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-sensor-lesen"></a>
 ### STATUS_SENSOR_LESEN
 
 STATUS_SENSOR_LESEN job
@@ -266,7 +256,6 @@ _No arguments._
 | STAT_SENSOR_HINTEN_WERT | int | Status Sensor hinten |
 | STAT_SENSOR_HINTEN_EINH | string | [Volt] |
 
-<a id="job-steuern-antriebe"></a>
 ### STEUERN_ANTRIEBE
 
 STEUERN_ANTRIEBE job
@@ -284,7 +273,6 @@ STEUERN_ANTRIEBE job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-hersteller-lesen"></a>
 ### HERSTELLER_LESEN
 
 Default hersteller_lesen job
@@ -298,7 +286,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | HERSTELLERDATEN | binary | Daten des Herstellerfeldes |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Default pruefstempel_lesen job
@@ -314,7 +301,6 @@ _No arguments._
 | BYTE2 | int |  |
 | BYTE3 | int |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Default pruefstempel_setzen job
@@ -333,7 +319,6 @@ Default pruefstempel_setzen job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-drehsinn-sensoren-lesen"></a>
 ### DREHSINN_SENSOREN_LESEN
 
 DIAGNOSE_ENDE job
@@ -348,7 +333,6 @@ _No arguments._
 | COD_DREHSINN_SENSOR_VORN_POSITIV | int |  |
 | COD_DREHSINN_SENSOR_HINTEN_POSITIV | int |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 DIAGNOSE_ENDE job
@@ -370,7 +354,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 - [JOBRESULT](#table-jobresult) (8 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 6 rows × 2 columns
@@ -384,7 +367,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | Antrieb Scheinwerfer rechts |
 | 0xFF | unbekannter Fehlercode |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 26 rows × 2 columns
@@ -418,7 +400,6 @@ Dimensions: 26 rows × 2 columns
 | 0x54 | Temperatur prealarm |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -453,7 +434,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns

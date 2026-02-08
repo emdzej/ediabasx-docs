@@ -58,7 +58,6 @@
 - [STEUERN_GEBLAESE](#job-steuern-geblaese) - Ansteuern des Geblaeses
 - [STEUERN_AUSGAENGE](#job-steuern-ausgaenge) - Ansteuern der Ausgaenge
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -76,7 +75,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Kommunikationsparameter
@@ -89,7 +87,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation fuer IHKA
@@ -113,7 +110,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -144,7 +140,6 @@ _No arguments._
 | F_ART6_TEXT | string |  |
 | FEHLERTELEGRAMM | binary | Antworttelegramm ohne Header und Checksumme |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -157,7 +152,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-testbit"></a>
 ### DIAGNOSE_TESTBIT
 
 Ansteuern des Diagnosetest-Bits
@@ -174,7 +168,6 @@ Ansteuern des Diagnosetest-Bits
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -187,7 +180,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -200,7 +192,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Power-Down-Mode versetzen
@@ -213,7 +204,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -230,7 +220,6 @@ _No arguments._
 | BYTE3 | int | kann beliebig verwendet werden |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -249,7 +238,6 @@ Beschreiben des Pruefstempels
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -283,7 +271,6 @@ _No arguments._
 | ALLGEMEIN_2 | string | 'Fuss-Fond-Kurve variabel' ( nicht wenn in .._1 ) '' |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-codierung-schreiben"></a>
 ### CODIERUNG_SCHREIBEN
 
 Codierdaten Schreiben fuer IHKA
@@ -303,7 +290,6 @@ Codierdaten Schreiben fuer IHKA
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-status-analogeingaenge"></a>
 ### STATUS_ANALOGEINGAENGE
 
 Status lesen
@@ -363,7 +349,6 @@ _No arguments._
 | STAT_TKUEHLERWASSER_EINH | string |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-reglergroessen"></a>
 ### STATUS_REGLERGROESSEN
 
 Status lesen
@@ -411,7 +396,6 @@ _No arguments._
 | STAT_DREHZAHL_EINH | string |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-bedienteil"></a>
 ### STATUS_BEDIENTEIL
 
 Status lesen
@@ -444,7 +428,6 @@ _No arguments._
 | STAT_FUNKTION_AUTO_RE_EIN | int |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-ausgaenge"></a>
 ### STATUS_AUSGAENGE
 
 Status lesen
@@ -480,7 +463,6 @@ _No arguments._
 | STAT_SCHI_SOLLPOS_RE_EINH | string |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-motor-klappenposition"></a>
 ### STATUS_MOTOR_KLAPPENPOSITION
 
 Status lesen
@@ -514,7 +496,6 @@ _No arguments._
 | STAT_FRISCHLUFT_EINH | string |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Status lesen
@@ -544,7 +525,6 @@ _No arguments._
 | STAT_MONITOR_WASSERVENTIL_RE_EIN | int |  |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -563,7 +543,6 @@ Lesen des internen Speichers
 | DATEN | binary |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-ram-schreiben"></a>
 ### RAM_SCHREIBEN
 
 Beschreiben des internen Speichers
@@ -582,7 +561,6 @@ Beschreiben des internen Speichers
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-eeprom-schreiben"></a>
 ### EEPROM_SCHREIBEN
 
 Beschreiben des internen Speichers
@@ -601,7 +579,6 @@ Beschreiben des internen Speichers
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-eichlauf-starten"></a>
 ### EICHLAUF_STARTEN
 
 Anstossen der internen Eichlaufroutine
@@ -614,7 +591,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-display-test"></a>
 ### DISPLAY_TEST
 
 Einschalten eines Testmusters in den Displays Es muss der Displaytest immer ausgeschalten werden
@@ -633,7 +609,6 @@ Einschalten eines Testmusters in den Displays Es muss der Displaytest immer ausg
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-relais-heckscheibe"></a>
 ### STEUERN_RELAIS_HECKSCHEIBE
 
 Ansteuern des Heckscheibenrelais
@@ -650,7 +625,6 @@ Ansteuern des Heckscheibenrelais
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-relais-frontscheibe"></a>
 ### STEUERN_RELAIS_FRONTSCHEIBE
 
 Ansteuern des Frontscheibenrelais
@@ -667,7 +641,6 @@ Ansteuern des Frontscheibenrelais
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-relais-zusatzluefter"></a>
 ### STEUERN_RELAIS_ZUSATZLUEFTER
 
 Ansteuern des Zusatzluefterrelais
@@ -684,7 +657,6 @@ Ansteuern des Zusatzluefterrelais
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-heizspannung-auc"></a>
 ### STEUERN_HEIZSPANNUNG_AUC
 
 Ansteuern der AUC-Sensor-Heizspannung
@@ -701,7 +673,6 @@ Ansteuern der AUC-Sensor-Heizspannung
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-zusatzwasserpumpe"></a>
 ### STEUERN_ZUSATZWASSERPUMPE
 
 Ansteuern der Zusatzwasserpumpe
@@ -718,7 +689,6 @@ Ansteuern der Zusatzwasserpumpe
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-dme-ac"></a>
 ### STEUERN_DME_AC
 
 Ansteuern des DME-AC-Signals
@@ -735,7 +705,6 @@ Ansteuern des DME-AC-Signals
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-dme-ko"></a>
 ### STEUERN_DME_KO
 
 Ansteuern des DME-KO-Signals
@@ -752,7 +721,6 @@ Ansteuern des DME-KO-Signals
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-klimakompressor"></a>
 ### STEUERN_KLIMAKOMPRESSOR
 
 Ansteuern des Klimakompressors
@@ -769,7 +737,6 @@ Ansteuern des Klimakompressors
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-sperrventil"></a>
 ### STEUERN_SPERRVENTIL
 
 Ansteuern des Sperrventils
@@ -786,7 +753,6 @@ Ansteuern des Sperrventils
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-standheizung"></a>
 ### STEUERN_STANDHEIZUNG
 
 Ansteuern der Standheizung
@@ -803,7 +769,6 @@ Ansteuern der Standheizung
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-motor-klappenposition"></a>
 ### STEUERN_MOTOR_KLAPPENPOSITION
 
 Ansteuern der Schrittmotoren
@@ -829,7 +794,6 @@ Ansteuern der Schrittmotoren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-wasserventil"></a>
 ### STEUERN_WASSERVENTIL
 
 Ansteuern des linken und rechten Wasserventils
@@ -847,7 +811,6 @@ Ansteuern des linken und rechten Wasserventils
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-geblaese"></a>
 ### STEUERN_GEBLAESE
 
 Ansteuern des Geblaeses
@@ -864,7 +827,6 @@ Ansteuern des Geblaeses
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-ausgaenge"></a>
 ### STEUERN_AUSGAENGE
 
 Ansteuern der Ausgaenge
@@ -889,7 +851,6 @@ Ansteuern der Ausgaenge
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 - [FORTTEXTE](#table-forttexte) (68 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -905,7 +866,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -940,7 +900,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 68 rows × 2 columns

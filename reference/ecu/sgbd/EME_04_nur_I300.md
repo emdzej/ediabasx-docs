@@ -40,7 +40,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -59,7 +58,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -72,7 +70,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -89,7 +86,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -115,7 +111,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -157,7 +152,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -176,7 +170,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -194,7 +187,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -215,7 +207,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -244,7 +235,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -264,7 +254,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -280,7 +269,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -299,7 +287,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -319,7 +306,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -338,7 +324,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -357,7 +342,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -372,7 +356,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -391,7 +374,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -411,7 +393,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -429,7 +410,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -486,7 +466,6 @@ _No arguments._
 - [T_PASSED_FAILED](#table-t-passed-failed) (2 × 2)
 - [T_MISMATCH](#table-t-mismatch) (2 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 64 rows × 2 columns
@@ -558,7 +537,6 @@ Dimensions: 64 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 108 rows × 2 columns
@@ -674,7 +652,6 @@ Dimensions: 108 rows × 2 columns
 | 0x0000A1 | Cobasys |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -700,7 +677,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -725,7 +701,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -757,7 +732,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -830,7 +804,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -843,7 +816,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -856,7 +828,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -869,7 +840,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 9 rows × 3 columns
@@ -886,7 +856,6 @@ Dimensions: 9 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -895,7 +864,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -905,7 +873,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -919,7 +886,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -928,7 +894,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -939,7 +904,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | nein |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 2 rows × 16 columns
@@ -949,7 +913,6 @@ Dimensions: 2 rows × 16 columns
 | STEUERN_TEMPERATUREN_LESEN | 0x6301 | - | Temperaturen lesen vom E-Motor DCB (Endstufen) Control Board | - | GETINVERTERTEMPERATURES | - | - | - | - | - | - | 0x1A | 22 | - | RES_0x6301 |
 | STEUERN_EPSOFFSET_LESEN | 0x6300 | STAT_EPSOFF_WERT | EPS Offset -180,00° .. +180,00° | ° | GETEPSOFFSET | high | int | EPSOFF | - | 100 | - | 0x1A | 22 | - | - |
 
-<a id="table-res-0x6301"></a>
 ### RES_0X6301
 
 Dimensions: 9 rows × 10 columns
@@ -966,7 +929,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_CONTROL_BOARD_MIN_WERT | °C | high | int | - | CTRLBRD_VALID_RANGE_MIN | - | 64 | - | minimale gültige Control-Board-Temperatur-Temperatur -40°C |
 | STAT_CONTROL_BOARD_MAX_WERT | °C | high | int | - | CTRLBRD_VALID_RANGE_MAX | - | 64 | - | maximale gültige Control-Board-Temperatur-Temperatur +125°C |
 
-<a id="table-t-gateway-functionality"></a>
 ### T_GATEWAY_FUNCTIONALITY
 
 Dimensions: 2 rows × 2 columns
@@ -976,7 +938,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-software-valid"></a>
 ### T_SOFTWARE_VALID
 
 Dimensions: 2 rows × 2 columns
@@ -986,7 +947,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-offon-1bit"></a>
 ### T_OFFON_1BIT
 
 Dimensions: 2 rows × 2 columns
@@ -996,7 +956,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | off |
 | 1 | on |
 
-<a id="table-t-direction"></a>
 ### T_DIRECTION
 
 Dimensions: 4 rows × 2 columns
@@ -1008,7 +967,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Reverse |
 | 3 | Fault |
 
-<a id="table-t-testfailedsincelastclear"></a>
 ### T_TESTFAILEDSINCELASTCLEAR
 
 Dimensions: 2 rows × 2 columns
@@ -1018,7 +976,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-confirmeddtc"></a>
 ### T_CONFIRMEDDTC
 
 Dimensions: 2 rows × 2 columns
@@ -1028,7 +985,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 254 rows × 3 columns
@@ -1290,7 +1246,6 @@ Dimensions: 254 rows × 3 columns
 | 0xCF8BFF | Netzwerkfehler zum Testen | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-t-test-status"></a>
 ### T_TEST_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -1302,7 +1257,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Reserved |
 | 3 | Passed |
 
-<a id="table-t-testnotcompletedsincelastclear"></a>
 ### T_TESTNOTCOMPLETEDSINCELASTCLEAR
 
 Dimensions: 2 rows × 2 columns
@@ -1312,7 +1266,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-running-mode"></a>
 ### T_RUNNING_MODE
 
 Dimensions: 2 rows × 2 columns
@@ -1322,7 +1275,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | Running in Application |
 | 1 | Running in Boot |
 
-<a id="table-t-erase-verification"></a>
 ### T_ERASE_VERIFICATION
 
 Dimensions: 8 rows × 2 columns
@@ -1338,7 +1290,6 @@ Dimensions: 8 rows × 2 columns
 | 6 | Reserved for future usage |
 | 255 | Reserved |
 
-<a id="table-t-programmable"></a>
 ### T_PROGRAMMABLE
 
 Dimensions: 2 rows × 2 columns
@@ -1348,7 +1299,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-not-proofed-failure"></a>
 ### T_NOT_PROOFED_FAILURE
 
 Dimensions: 2 rows × 2 columns
@@ -1358,7 +1308,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | not proofed |
 | 1 | failure |
 
-<a id="table-t-true-false"></a>
 ### T_TRUE_FALSE
 
 Dimensions: 2 rows × 2 columns
@@ -1368,7 +1317,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | False |
 | 1 | True |
 
-<a id="table-t-testfailed"></a>
 ### T_TESTFAILED
 
 Dimensions: 2 rows × 2 columns
@@ -1378,7 +1326,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | false |
 | 1 | true |
 
-<a id="table-t-dtc-format-identifier-1byte"></a>
 ### T_DTC_FORMAT_IDENTIFIER_1BYTE
 
 Dimensions: 3 rows × 2 columns
@@ -1389,7 +1336,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ISO14229-1 DTC Format |
 | 2 | SAEJ1939-73 DTC Format |
 
-<a id="table-t-localtable"></a>
 ### T_LOCALTABLE
 
 Dimensions: 1 rows × 2 columns
@@ -1398,7 +1344,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 16777215 | All Groups |
 
-<a id="table-t-passed-failed"></a>
 ### T_PASSED_FAILED
 
 Dimensions: 2 rows × 2 columns
@@ -1408,7 +1353,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | passed |
 | 1 | failed |
 
-<a id="table-t-mismatch"></a>
 ### T_MISMATCH
 
 Dimensions: 2 rows × 2 columns

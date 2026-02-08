@@ -33,7 +33,6 @@
 - [STEUERN_ZEITINFO_SENDEN](#job-steuern-zeitinfo-senden) - Fordert RCC auf, die Zeitinfo auf dem I/K-Bus auszugeben
 - [SOFT_RESET](#job-soft-reset) - Loest selbststaendig einen Reset aus
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -46,7 +45,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -70,7 +68,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -83,7 +80,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -101,7 +97,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 Daten aus dem EEPROM auslesen
@@ -120,7 +115,6 @@ Daten aus dem EEPROM auslesen
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | DATEN | binary | Datenfeld |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 RAM-Daten auslesen
@@ -139,7 +133,6 @@ RAM-Daten auslesen
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | DATEN | binary | Datenfeld |
 
-<a id="job-status-feldstaerke-lesen"></a>
 ### STATUS_FELDSTAERKE_LESEN
 
 gibt die aktuelle Feldstaerke des empfangenen Funkuhrsignals an
@@ -153,7 +146,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | STATUS_FELDSTAERKE | int | gibt die Staerke des empfangenen Funkuhrsignals in einer Skala von 0 bis 15 an |
 
-<a id="job-status-zeitstempel-lesen"></a>
 ### STATUS_ZEITSTEMPEL_LESEN
 
 gibt die Empfangshistorie wieder
@@ -175,7 +167,6 @@ gibt die Empfangshistorie wieder
 | ZEITSTEMPEL_TAG | int | Tagangabe des Zeitstempels |
 | ZEITSTEMPEL_MONAT | int | Monatsangabe des Zeitstempels |
 
-<a id="job-status-testinfo-lesen"></a>
 ### STATUS_TESTINFO_LESEN
 
 Lieferantentestinformation auslesen
@@ -189,7 +180,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 | STATUS_LIEFERANTENTESTINFO | int | gibt die Lieferantentestinformation aus |
 
-<a id="job-steuern-antennenverstaerker-ein"></a>
 ### STEUERN_ANTENNENVERSTAERKER_EIN
 
 Einschalten des Antennenverstaerkers
@@ -202,7 +192,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-steuern-antennenverstaerker-aus"></a>
 ### STEUERN_ANTENNENVERSTAERKER_AUS
 
 Ausschalten des Antennenverstaerkers
@@ -215,7 +204,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation: OKAY, ERROR_ECU_NACK... |
 
-<a id="job-steuern-zeitinfo-senden"></a>
 ### STEUERN_ZEITINFO_SENDEN
 
 Fordert RCC auf, die Zeitinfo auf dem I/K-Bus auszugeben
@@ -228,7 +216,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B.: ACK) |
 
-<a id="job-soft-reset"></a>
 ### SOFT_RESET
 
 Loest selbststaendig einen Reset aus
@@ -248,7 +235,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (47 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -264,7 +250,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns

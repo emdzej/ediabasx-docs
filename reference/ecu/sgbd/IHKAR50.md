@@ -42,7 +42,6 @@
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode des SG beenden
 - [ENERGIESPARMODE](#job-energiesparmode) - Einstellen des Energiesparmodes
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -55,7 +54,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -74,7 +72,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identification data
@@ -99,7 +96,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Read faults
@@ -138,7 +134,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read detailed fault memory response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Clears All Faults
@@ -152,7 +147,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet table JobResult STATUS_TEXT |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Read ECU Memory by Address Speicher lesen mit adresse
@@ -172,7 +166,6 @@ Read ECU Memory by Address Speicher lesen mit adresse
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Write memory to a specified address Speicher schreiben mit adresse
@@ -194,7 +187,6 @@ Write memory to a specified address Speicher schreiben mit adresse
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | R1 | int | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-system-parameter"></a>
 ### STATUS_SYSTEM_PARAMETER
 
 Read the system parameters
@@ -234,7 +226,6 @@ _No arguments._
 | STAT_SOFTWARE_INDEX_EINH | string |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-read-manufacturer-data"></a>
 ### READ_MANUFACTURER_DATA
 
 Read both blocks of manufacturer data
@@ -256,7 +247,6 @@ _No arguments._
 | BLOCK_1_TEST_BYTE | int | Manufacturer test byte |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-self-test"></a>
 ### STEUERN_SELF_TEST
 
 Enter Self test mode
@@ -270,7 +260,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Reset ECU
@@ -284,7 +273,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-actuators"></a>
 ### STEUERN_ACTUATORS
 
 Force the blend actuators IO block 0
@@ -308,7 +296,6 @@ Force the blend actuators IO block 0
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-lcd-led"></a>
 ### STEUERN_LCD_LED
 
 Force the LEDs and LCDs IO block 1
@@ -334,7 +321,6 @@ Force the LEDs and LCDs IO block 1
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-aircon-recirc"></a>
 ### STEUERN_AIRCON_RECIRC
 
 Force Air conditioning and recirculation IO block 2
@@ -356,7 +342,6 @@ Force Air conditioning and recirculation IO block 2
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-digital"></a>
 ### STATUS_IO_DIGITAL
 
 Read IO States for block 0 - Push Buttons, LEDs and Set Points
@@ -401,7 +386,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-io-analogue"></a>
 ### STATUS_IO_ANALOGUE
 
 Read IO States for block 0 - Push Buttons, LEDs and Set Points
@@ -421,7 +405,6 @@ _No arguments._
 | STAT_LCD_DUTY_CYCLE_EINH | string |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-calibrate-motors"></a>
 ### CALIBRATE_MOTORS
 
 Send manual calibration of blend and distribution motors message
@@ -435,7 +418,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -452,7 +434,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. Only the last 3 bytes can be written
@@ -475,7 +456,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_ANTWORT3 | binary | Hex-Antwort von SG Read new teststamp response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Ping message
@@ -489,7 +469,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden
@@ -503,7 +482,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -540,7 +518,6 @@ Einstellen des Energiesparmodes
 - [FUMWELTMATRIX](#table-fumweltmatrix) (12 × 7)
 - [FUMWELTTEXTE](#table-fumwelttexte) (14 × 5)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -561,7 +538,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 59 rows × 2 columns
@@ -628,7 +604,6 @@ Dimensions: 59 rows × 2 columns
 | 0x58 | Autoliv |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -657,7 +632,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -681,7 +655,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-analogue"></a>
 ### ANALOGUE
 
 Dimensions: 17 rows × 4 columns
@@ -706,7 +679,6 @@ Dimensions: 17 rows × 4 columns
 | SOFTWARE_INDEX | 0.0 | 0.0 |  |
 | ?? | 0.0 | 0.0 | ?? |
 
-<a id="table-digital"></a>
 ### DIGITAL
 
 Dimensions: 32 rows × 4 columns
@@ -746,7 +718,6 @@ Dimensions: 32 rows × 4 columns
 | HRW_HFS_BUTTON | 12 | 0x08 | 0x08 |
 | ?? | 0 | 0x00 | 0x00 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 12 rows × 2 columns
@@ -766,7 +737,6 @@ Dimensions: 12 rows × 2 columns
 | 0xFE | Energiesparmode aktiviert |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -784,7 +754,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | Flag = 1 |
 | 0xFF | unbekannter Status |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 12 rows × 13 columns
@@ -804,7 +773,6 @@ Dimensions: 12 rows × 13 columns
 | 0xFE | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0x05 | 0xFF | 0x07 |
 | 0x00 | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF | 0xFF |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 12 rows × 7 columns
@@ -824,7 +792,6 @@ Dimensions: 12 rows × 7 columns
 | 0xFE | 4 | 1 | 0x01 | 0x02 | 0x08 | 0x09 |
 | 0x00 | 0 | 0 | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 14 rows × 5 columns

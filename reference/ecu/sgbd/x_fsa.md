@@ -46,7 +46,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -65,7 +64,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -78,7 +76,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -95,7 +92,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -126,7 +122,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -171,7 +166,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -190,7 +184,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -208,7 +201,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -229,7 +221,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -258,7 +249,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -278,7 +268,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -299,7 +288,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -315,7 +303,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -337,7 +324,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -359,7 +345,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -386,7 +371,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -431,7 +415,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -446,7 +429,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -466,7 +448,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -485,7 +466,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -504,7 +484,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -519,7 +498,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -535,7 +513,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -554,7 +531,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -574,7 +550,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -592,7 +567,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -727,7 +701,6 @@ _No arguments._
 - [WSV_INTERNAL_WIN_STOP_REASON](#table-wsv-internal-win-stop-reason) (14 × 2)
 - [WSV_UPDATE_STATUS_WCM](#table-wsv-update-status-wcm) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -811,7 +784,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 140 rows × 2 columns
@@ -959,7 +931,6 @@ Dimensions: 140 rows × 2 columns
 | 0x0000C1 | Flextronics |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1002,7 +973,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1027,7 +997,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1061,7 +1030,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1134,7 +1102,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1147,7 +1114,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1162,7 +1128,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1175,7 +1140,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1195,7 +1159,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1238,7 +1201,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-arg-0xb06a-r"></a>
 ### ARG_0XB06A_R
 
 Dimensions: 2 rows × 14 columns
@@ -1248,7 +1210,6 @@ Dimensions: 2 rows × 14 columns
 | SOLLPOSITION_WERT | + | + | Schritte | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Sollposition Windschild; Wenn gilt Sollposition ist größer als Position Oberer Anschlag, dann wird die Sollposition gleich oberer Anschlag gesetzt. Wenn gilt Sollposition ist kleiner als Position unterer Anschlag, dann wird die Sollposition gleich unterer Anschlag gesetzt |
 | PWM_MOTOR_WERT | + | + | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Tastverhältnis Windschild Motor Ansteuerung |
 
-<a id="table-arg-0xb06b-r"></a>
 ### ARG_0XB06B_R
 
 Dimensions: 1 rows × 14 columns
@@ -1257,7 +1218,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUTOMATIKLAUF_SPERRE_EIN | + | - | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 1 = Automatiklaufsperre ein 2 = Automatiklaufsperre aus |
 
-<a id="table-arg-0xe010-d"></a>
 ### ARG_0XE010_D
 
 Dimensions: 1 rows × 12 columns
@@ -1266,7 +1226,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HUPE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Horn; 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe0a3-d"></a>
 ### ARG_0XE0A3_D
 
 Dimensions: 1 rows × 12 columns
@@ -1275,7 +1234,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | HUPE_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Hupe Eingang 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe100-d"></a>
 ### ARG_0XE100_D
 
 Dimensions: 2 rows × 12 columns
@@ -1285,7 +1243,6 @@ Dimensions: 2 rows × 12 columns
 | ZUSATZSCHEINWERFER_1_NSL_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem der Zusatzscheinwerfer 1 betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 | ZUSATZSCHEINWERFER_2_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem der Zusatzscheinwerfer 2 betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-arg-0xe101-d"></a>
 ### ARG_0XE101_D
 
 Dimensions: 2 rows × 12 columns
@@ -1295,7 +1252,6 @@ Dimensions: 2 rows × 12 columns
 | ZSW_ANSTEUERUNG_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Zusatzscheinwerfer Funktion Eingang; 1==>ein 0==>aus |
 | ABBLENDLICHT_ZSW_EINGANG | 0-n | - | unsigned char | - | TAB_MR_ABBLENDLICHT_ARG | 1.0 | 1.0 | 0.0 | - | - | Eingang Abblendlicht Zusatzscheinwerfer Funktion |
 
-<a id="table-arg-0xe103-d"></a>
 ### ARG_0XE103_D
 
 Dimensions: 1 rows × 12 columns
@@ -1304,7 +1260,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | WINDSCHILD_EINGANG | 0-n | - | unsigned char | - | TAB_MR_WINDSCHILD_EINGANG_ARG | 1.0 | 1.0 | 0.0 | - | - | Windschild Eingang |
 
-<a id="table-arg-0xe104-d"></a>
 ### ARG_0XE104_D
 
 Dimensions: 1 rows × 12 columns
@@ -1313,7 +1268,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ABBLEND_FERNLICHT_PWM_WERT_1 | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem das Abblend- bzw. Fernlicht betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-arg-0xe105-d"></a>
 ### ARG_0XE105_D
 
 Dimensions: 2 rows × 12 columns
@@ -1323,7 +1277,6 @@ Dimensions: 2 rows × 12 columns
 | WINDSCHILD_VERFAHREN | 0-n | - | unsigned char | - | TAB_MR_WINDSCHILD_ARG | 1.0 | 1.0 | 0.0 | -12.8 | 12.7 | Windschild ansteuern |
 | PWM_MOTOR_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Tastverhältnis Windschild Motor Ansteuerung |
 
-<a id="table-arg-0xe107-d"></a>
 ### ARG_0XE107_D
 
 Dimensions: 2 rows × 12 columns
@@ -1333,7 +1286,6 @@ Dimensions: 2 rows × 12 columns
 | SITZHEIZUNG_FAHRER_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem die Sitzheizung Fahrer betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 | SITZHEIZUNG_SOZIUS_BEH_RELAIS_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem die Sitzheizung Beifahrer betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet Behörde: nur 0% oder 100% zulässig |
 
-<a id="table-arg-0xe108-d"></a>
 ### ARG_0XE108_D
 
 Dimensions: 2 rows × 12 columns
@@ -1343,7 +1295,6 @@ Dimensions: 2 rows × 12 columns
 | SITZHEIZUNG_FAHRER_EINGANG_MR | 0-n | - | unsigned char | - | TAB_MR_SITZHEIZUNG_FAHRER_EINGANG_FKT_ARG | 1.0 | 1.0 | 0.0 | - | - | Sitzheizung Fahrer Eingang |
 | SITZHEIZUNG_SOZIA__EINGANG_MR | 0-n | - | unsigned char | - | TAB_MR_SITZHEIZUNG_BEIFAHRER_EINGANG_FKT_ARG | 1.0 | 1.0 | 0.0 | - | - | Sitzheizung Beifahrer Eingang |
 
-<a id="table-arg-0xe10a-d"></a>
 ### ARG_0XE10A_D
 
 Dimensions: 1 rows × 12 columns
@@ -1352,7 +1303,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FERNLICHT_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Fernlicht Eingang 1=EIN, 0=AUS |
 
-<a id="table-arg-0xe10c-d"></a>
 ### ARG_0XE10C_D
 
 Dimensions: 2 rows × 12 columns
@@ -1362,7 +1312,6 @@ Dimensions: 2 rows × 12 columns
 | BREMSSCHALTER_HAND_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bremsschalter Hand Eingang 1 ==> betätigt 0 ==> nicht betätigt |
 | BREMSSCHALTER_FUSS_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Bremsschalter Fuß Eingang 1 ==> betätigt 0 ==> nicht betätigt |
 
-<a id="table-arg-0xe10d-d"></a>
 ### ARG_0XE10D_D
 
 Dimensions: 1 rows × 12 columns
@@ -1371,7 +1320,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BREMSLICHT_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | PWM-Wert in %, mit dem das Bremslicht KL_54 betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-arg-0xfd01-d"></a>
 ### ARG_0XFD01_D
 
 Dimensions: 86 rows × 12 columns
@@ -1465,7 +1413,6 @@ Dimensions: 86 rows × 12 columns
 | STAT_CFG_KL50ONDTCDEBOUNCE_WERT | ms | high | unsigned char | - | - | 0.01 | 1.0 | 0.0 | 0.0 | 25400.0 | Debouncing period for entering faults in the memory followin Terminal 50  on . |
 | STAT_BITFIELD_18_WERT | HEX | high | unsigned char | - | - | - | - | - | - | - | 0x01 cfg_WinAutoRunLocked |
 
-<a id="table-arg-0xfd02-d"></a>
 ### ARG_0XFD02_D
 
 Dimensions: 24 rows × 12 columns
@@ -1497,7 +1444,6 @@ Dimensions: 24 rows × 12 columns
 | STAT_WIN_CALIB_CURRENT_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | average current consumption of windhsield monitored in latest calibration run. |
 | STAT_WIN_CALIB_TIME_WERT | ms | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | time needed for performing latest calibration run. |
 
-<a id="table-arg-0xfd06-d"></a>
 ### ARG_0XFD06_D
 
 Dimensions: 20 rows × 12 columns
@@ -1525,7 +1471,6 @@ Dimensions: 20 rows × 12 columns
 | STAT_MANUFACTURING_DATA_19_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | End Of Line  Manufacutering data |
 | STAT_MANUFACTURING_DATA_20_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | End Of Line  Manufacutering data |
 
-<a id="table-arg-0xfd0b-d"></a>
 ### ARG_0XFD0B_D
 
 Dimensions: 1 rows × 12 columns
@@ -1534,7 +1479,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WIN_DENORM_REQUEST_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1.0 | 1.0 | Windshield Denorm Request value |
 
-<a id="table-arg-0xfd10-d"></a>
 ### ARG_0XFD10_D
 
 Dimensions: 1 rows × 12 columns
@@ -1543,7 +1487,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SET_DATA_TRUE | 0/1 | high | unsigned char | - | - | - | - | - | - | - | Set data true argument. Only data 1 is allowed |
 
-<a id="table-arg-0xfd20-d"></a>
 ### ARG_0XFD20_D
 
 Dimensions: 1 rows × 12 columns
@@ -1552,7 +1495,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DATA_1_WERT | HEX | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | 0x01   spare                   0x02   spare                   0x04   CANStrobe               0x08   PowerRST                0x10   Horn                    0x20   WindshieldMotorDirect2  0x40   WindshieldMotorDirect1  0x80   WindshieldHallSupply |
 
-<a id="table-arg-0xfd21-d"></a>
 ### ARG_0XFD21_D
 
 Dimensions: 8 rows × 12 columns
@@ -1568,7 +1510,6 @@ Dimensions: 8 rows × 12 columns
 | SEAT_HEATER_PILLION_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | Seat Heater driver duty |
 | PWM_CLOCK_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | - | - | PWM Duty |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -1578,7 +1519,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-diag-windshield-movement"></a>
 ### DIAG_WINDSHIELD_MOVEMENT
 
 Dimensions: 3 rows × 2 columns
@@ -1589,7 +1529,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | DOWN |
 | 2 | UP |
 
-<a id="table-energiesparmode-dop"></a>
 ### ENERGIESPARMODE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -1601,7 +1540,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Transportmode |
 | 3 | Flashmode |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1615,7 +1553,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-fehlerklasse-dop"></a>
 ### FEHLERKLASSE_DOP
 
 Dimensions: 4 rows × 2 columns
@@ -1627,7 +1564,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Ueberpruefung beim naechsten Halt |
 | 4 | Ueberpruefung sofort erforderlich |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 75 rows × 3 columns
@@ -1710,7 +1646,6 @@ Dimensions: 75 rows × 3 columns
 | 0xCC9485 | CAN BCA Nachricht Steuerung_Sonderfunktion_Motorrad_2010: Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 5 rows × 9 columns
@@ -1723,7 +1658,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1606 | WINDSHIELD_ACTUAL_MOVEMENT_RANGE | Stufe | High | unsigned int | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1735,7 +1669,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 17 rows × 3 columns
@@ -1760,7 +1693,6 @@ Dimensions: 17 rows × 3 columns
 | 0xCC943B | SEK_CAN BCO Nachricht Status_Grund_Funktion_Motorrad_2010 - Zeitüberschreitung | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 3 rows × 9 columns
@@ -1771,7 +1703,6 @@ Dimensions: 3 rows × 9 columns
 | 0x1604 | KL15 STATUS | 0/1 | High | 0x01 | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1780,7 +1711,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-prog-dep-dop"></a>
 ### PROG_DEP_DOP
 
 Dimensions: 6 rows × 2 columns
@@ -1794,7 +1724,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | incorrectResult error SWE - SWE |
 | 255 | reserved |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 8 rows × 2 columns
@@ -1810,7 +1739,6 @@ Dimensions: 8 rows × 2 columns
 | 65 | codingSession |
 | 66 | SWTSession |
 
-<a id="table-rdbi-pc-pcs-dop"></a>
 ### RDBI_PC_PCS_DOP
 
 Dimensions: 3 rows × 2 columns
@@ -1821,7 +1749,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | ECUMindestensEinmalVollstaendigProgrammierbar |
 | 2 | ECUNichtMehrProgrammierbar |
 
-<a id="table-rdtci-lev-dop"></a>
 ### RDTCI_LEV_DOP
 
 Dimensions: 9 rows × 2 columns
@@ -1838,7 +1765,6 @@ Dimensions: 9 rows × 2 columns
 | 18 | reportNumberOfEmissionsRelatedOBDDTCByStatusMask |
 | 19 | reportEmissionsRelatedOBDDTCByStatusMask |
 
-<a id="table-res-0x1602-d"></a>
 ### RES_0X1602_D
 
 Dimensions: 3 rows × 10 columns
@@ -1849,7 +1775,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_PRG_VERSION_MINOR_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PRG Software version  minor |
 | STAT_PRG_VERSION_PATCH_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PRG Software version Patch |
 
-<a id="table-res-0xb068-r"></a>
 ### RES_0XB068_R
 
 Dimensions: 2 rows × 13 columns
@@ -1859,7 +1784,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_TASTER_NAVIFACH_EIN | + | - | + | 0-n | - | unsigned char | - | TAB_MR_TASTER_NAVIFACH | - | - | - | Status Taster Navifach; 0 ==> nicht betätigt 1==> betätigt; 255 = nicht definiert |
 | STAT_KALIBRIERUNG_WINDSCHILD | - | - | + | 0-n | - | unsigned char | - | TAB_MR_KALIBRIERUNG_WINDSCHILD | 1.0 | 1.0 | 0.0 | Status Kalibrierung Windschild |
 
-<a id="table-res-0xb06a-r"></a>
 ### RES_0XB06A_R
 
 Dimensions: 9 rows × 13 columns
@@ -1876,7 +1800,6 @@ Dimensions: 9 rows × 13 columns
 | STAT_VERFAHRSTROM_WERT | + | + | + | A | - | char | - | - | 0.1 | 1.0 | 0.0 | Verfahrstrom Winschild |
 | STAT_PWM_MOTOR_WERT | + | + | + | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Tastverhältnis Windschild Motor Ansteuerung |
 
-<a id="table-res-0xb06b-r"></a>
 ### RES_0XB06B_R
 
 Dimensions: 1 rows × 13 columns
@@ -1885,7 +1808,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUTOMATIKLAUF_SPERRE | + | - | + | 0/1 | high | unsigned char | - | - | - | - | - | 1 = Automatiklaufsperre ein 0 =  Automatiklaufsperre aus |
 
-<a id="table-res-0xe010-d"></a>
 ### RES_0XE010_D
 
 Dimensions: 1 rows × 10 columns
@@ -1894,7 +1816,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_HUPE_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Horn; 1=EIN, 0=AUS |
 
-<a id="table-res-0xe0a3-d"></a>
 ### RES_0XE0A3_D
 
 Dimensions: 1 rows × 10 columns
@@ -1903,7 +1824,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_HUPE_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Hupe Eingang 1=EIN, 0=AUS |
 
-<a id="table-res-0xe100-d"></a>
 ### RES_0XE100_D
 
 Dimensions: 2 rows × 10 columns
@@ -1913,7 +1833,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ZUSATZSCHEINWERFER_1_NSL_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem der Zusatzscheinwerfer 1 betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 | STAT_ZUSATZSCHEINWERFER_2_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem der Zusatzscheinwerfer 2 betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-res-0xe101-d"></a>
 ### RES_0XE101_D
 
 Dimensions: 2 rows × 10 columns
@@ -1923,7 +1842,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ZSW_ANSTEUERUNG_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Zusatzscheinwerfer Funktion Eingang; 1==>ein 0==>aus |
 | STAT_ABBLENDLICHT_ZSW_EINGANG | 0-n | - | unsigned char | - | TAB_MR_ABBLENDLICHT | 1.0 | 1.0 | 0.0 | Eingang Abblendlicht Zusatzscheinwerfer Funktion |
 
-<a id="table-res-0xe103-d"></a>
 ### RES_0XE103_D
 
 Dimensions: 2 rows × 10 columns
@@ -1933,7 +1851,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_WINDSCHILD_EINGANG_AUF_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Windschild Eingang auf 1 ==> aktiv 0 ==> nicht aktiv |
 | STAT_WINDSCHILD_EINGANG_AB_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Windschild Eingang ab 1 ==> aktiv 0 ==> nicht aktiv |
 
-<a id="table-res-0xe104-d"></a>
 ### RES_0XE104_D
 
 Dimensions: 1 rows × 10 columns
@@ -1942,7 +1859,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ABBLEND_FERNLICHT_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem das Abblend- bzw. Fernlicht betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 
-<a id="table-res-0xe105-d"></a>
 ### RES_0XE105_D
 
 Dimensions: 8 rows × 10 columns
@@ -1958,7 +1874,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_VERFAHRSTROM_WERT | A | - | char | - | - | 0.1 | 1.0 | 0.0 | Verfahrstrom Windschild |
 | STAT_PWM_MOTOR_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Tastverhältnis Windschild Motor Ansteuerung |
 
-<a id="table-res-0xe107-d"></a>
 ### RES_0XE107_D
 
 Dimensions: 3 rows × 10 columns
@@ -1969,7 +1884,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_SITZHEIZUNG_SOZIUS_BEH_RELAIS_PWM_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem die Sitzheizung Beifahrer betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet Behörde: nur 0% oder 100% zulässig |
 | STAT_STROM_SITZHEIZUNG_SOZIUS | 0-n | - | unsigned char | - | TAB_MR_STROM_SITZHEIZUNG_SOZIUS | 1.0 | 1.0 | 0.0 | Ergebnis gibt an in welchem Bereich der Laststrom während der Einphase ist. |
 
-<a id="table-res-0xe108-d"></a>
 ### RES_0XE108_D
 
 Dimensions: 2 rows × 10 columns
@@ -1979,7 +1893,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SITZHEIZUNG_FAHRER_EINGANG_MR | 0-n | - | unsigned char | - | TAB_MR_SITZHEIZUNG_FAHRER_EINGANG_FKT | 1.0 | 1.0 | 0.0 | Sitzheizung Fahrer Eingang |
 | STAT_SITZHEIZUNG_SOZIA__EINGANG_MR | 0-n | - | unsigned char | - | TAB_MR_SITZHEIZUNG_BEIFAHRER_EINGANG_FKT | 1.0 | 1.0 | 0.0 | Sitzheizung Beifahrer Eingang |
 
-<a id="table-res-0xe10a-d"></a>
 ### RES_0XE10A_D
 
 Dimensions: 1 rows × 10 columns
@@ -1988,7 +1901,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FERNLICHT_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Fernlicht Eingang 1=EIN, 0=AUS |
 
-<a id="table-res-0xe10b-d"></a>
 ### RES_0XE10B_D
 
 Dimensions: 2 rows × 10 columns
@@ -1998,7 +1910,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCHALTER_SITZHEIZUNG_STUFE_1_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Schalter Sitzheizung Stufe 1; 0 ==> nicht betätigt 1==> betätigt |
 | STAT_SCHALTER_SITZHEIZUNG_STUFE_2_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Schalter Sitzheizung Stufe 2; 0 ==> nicht betätigt 1==> betätigt |
 
-<a id="table-res-0xe10c-d"></a>
 ### RES_0XE10C_D
 
 Dimensions: 2 rows × 10 columns
@@ -2008,7 +1919,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BREMSSCHALTER_HAND_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Bremsschalter Hand Eingang 1 ==> betätigt 0 ==> nicht betätigt |
 | STAT_BREMSSCHALTER_FUSS_EINGANG_EIN | 0/1 | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Bremsschalter Fuß Eingang 1 ==> betätigt 0 ==> nicht betätigt |
 
-<a id="table-res-0xe10d-d"></a>
 ### RES_0XE10D_D
 
 Dimensions: 2 rows × 10 columns
@@ -2018,7 +1928,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_BREMSLICHT_WERT | % | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM-Wert in %, mit dem das Bremslicht KL_54 betrieben wird -> 0% bis 100% -> Wobei 0%  aus  bedeutet |
 | STAT_STROM_BREMSLICHT | 0-n | - | unsigned char | - | TAB_MR_STROM_STATUS_HIGHSIDE | 1.0 | 1.0 | 0.0 | Status Strom Bremslicht Topcase |
 
-<a id="table-res-0xf001-r"></a>
 ### RES_0XF001_R
 
 Dimensions: 11 rows × 13 columns
@@ -2037,7 +1946,6 @@ Dimensions: 11 rows × 13 columns
 | STAT_AVERAGE_VOLTAGE__WERT | - | - | + | V | high | unsigned int | - | - | 985.0 | 48081.0 | 0.0 | Indicates average voltage during the windshield initialization. |
 | STAT_FRICTION_DEVIATION_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Indicates deviation of average friction calculated during windshield initialization with respect to average friction calculated in the calibration run. |
 
-<a id="table-res-0xfd01-d"></a>
 ### RES_0XFD01_D
 
 Dimensions: 86 rows × 10 columns
@@ -2131,7 +2039,6 @@ Dimensions: 86 rows × 10 columns
 | STAT_CFG_KL50ONDTCDEBOUNCE_WERT | ms | high | unsigned char | - | - | 100.0 | 1.0 | 0.0 | Debouncing period for entering faults in the memory followin Terminal 50  on . |
 | STAT_CANTIMEOUT_OC_STB_STG_XCPACT10_WERT | HEX | high | unsigned char | - | - | - | - | - | 0x01 cfg_WinAutoRunLocked 0x02 cfg_WindHallSensorIntOff |
 
-<a id="table-res-0xfd02-d"></a>
 ### RES_0XFD02_D
 
 Dimensions: 45 rows × 10 columns
@@ -2184,7 +2091,6 @@ Dimensions: 45 rows × 10 columns
 | STAT_WASFRICTION3_WERT | Nm | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Friction[3] |
 | STAT_WASFRICTION4_WERT | Nm | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Friction[4] |
 
-<a id="table-res-0xfd03-d"></a>
 ### RES_0XFD03_D
 
 Dimensions: 26 rows × 10 columns
@@ -2218,7 +2124,6 @@ Dimensions: 26 rows × 10 columns
 | STAT_SEAT_HEAT_PILLION_DIAG_1_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Seat Heating Pillion diag feedeback from E switch. 0x01    OC_Diag 0x02    SC_Diag 0x04    OT_Diag 0x08    OS_Diag 0x10    OLOFF_Diag 0x20    OLON_Diag 0x40    OV_Diag 0x80    UV_Diag |
 | STAT_SEAT_HEAT_PILLION_DIAG_2_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Seat Heating Pillion diag feedeback from E switch. 0x01    POR_Diag 0x02    NM_Diag 0x04    SOA0_Diag 0x08    SOA1_Diag 0x10    SOA2_Diag 0x20    SOA3_Diag 0x40    SOA4_Diag |
 
-<a id="table-res-0xfd04-d"></a>
 ### RES_0XFD04_D
 
 Dimensions: 9 rows × 10 columns
@@ -2235,7 +2140,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_SEAT_HEATER_PILLION_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Seat Heater driver duty |
 | STAT_PWM_CLOCK_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM Duty |
 
-<a id="table-res-0xfd05-d"></a>
 ### RES_0XFD05_D
 
 Dimensions: 3 rows × 10 columns
@@ -2246,7 +2150,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_LEAR_SW_VERSION_MINOR_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Lear Software Version minor |
 | STAT_LEAR_SW_VERSION_PATCH_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Lear Software Version Patch |
 
-<a id="table-res-0xfd06-d"></a>
 ### RES_0XFD06_D
 
 Dimensions: 20 rows × 10 columns
@@ -2274,7 +2177,6 @@ Dimensions: 20 rows × 10 columns
 | STAT_MANUFACTURING_DATA_19_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | End Of Line  Manufacutering data |
 | STAT_MANUFACTURING_DATA_20_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | End Of Line  Manufacutering data |
 
-<a id="table-res-0xfd07-d"></a>
 ### RES_0XFD07_D
 
 Dimensions: 2 rows × 10 columns
@@ -2284,7 +2186,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_AVERAGE_CPU_LOAD_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Average CPU load |
 | STAT_MAX_CPU_LOAD_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Maximum CPU load |
 
-<a id="table-res-0xfd08-d"></a>
 ### RES_0XFD08_D
 
 Dimensions: 133 rows × 10 columns
@@ -2425,7 +2326,6 @@ Dimensions: 133 rows × 10 columns
 | STAT_LOADFAILUREFLAGS02_WERT | HEX | high | unsigned char | - | - | - | - | - | 0x01 AdditionalLight2Failure_OC 0x02 AdditionalLight2Failure_STG 0x04 AdditionalLight2Failure_STB 0x08  0x10  0x20  0x40  0x80 |
 | STAT_RESERVED_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Not used |
 
-<a id="table-res-0xfd09-d"></a>
 ### RES_0XFD09_D
 
 Dimensions: 6 rows × 10 columns
@@ -2439,7 +2339,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_WIN_MOTOR_STOP_REASON_3 | 0-n | high | unsigned char | - | WIN_MOTOR_STOP_REASON_LOG | - | - | - | Windshield Motor stop reason Log entry 3 |
 | STAT_WIN_MOTOR_STOP_REASON_4 | 0-n | high | unsigned char | - | WIN_MOTOR_STOP_REASON_LOG | - | - | - | Windshield Motor stop reason Log entry 0 |
 
-<a id="table-res-0xfd0a-d"></a>
 ### RES_0XFD0A_D
 
 Dimensions: 42 rows × 10 columns
@@ -2489,7 +2388,6 @@ Dimensions: 42 rows × 10 columns
 | STAT_MOVEMENT_DIRECTION_4 | 0/1 | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Direction of movement when the pinch situation was detected. |
 | STAT_AMB_TEMP_4_WERT | °C | high | unsigned char | - | - | 0.5 | 1.0 | -40.0 |  outside temperature when the antipinch was triggered. The value stored is the value received via CAN from BCO. |
 
-<a id="table-res-0xfd0c-d"></a>
 ### RES_0XFD0C_D
 
 Dimensions: 42 rows × 10 columns
@@ -2539,7 +2437,6 @@ Dimensions: 42 rows × 10 columns
 | STAT_MOTOR_CURRENT_4_WERT | A | high | unsigned char | - | - | 0.1 | 1.0 | 0.0 |  current consumption of the windhsield when the denorming/norming occured. |
 | STAT_DENORM_AMB_TEMP_4_WERT | °C | high | unsigned char | - | - | 0.5 | 1.0 | -40.0 | outside temperature when the denorming/norming occured. The value stored is the value received via CAN from BCO. |
 
-<a id="table-res-0xfd0d-d"></a>
 ### RES_0XFD0D_D
 
 Dimensions: 11 rows × 10 columns
@@ -2558,7 +2455,6 @@ Dimensions: 11 rows × 10 columns
 | STAT_COUNTER_TEMP_WARNING_WERT | count | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | number of temperature problems (90% of maximum allowed temperature.) in motor reported by the motor temperature model since last calibration run. |
 | STAT_COUNTER_MAX_TEMP_WERT | count | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 |  number of temperature problems (100% of maximum allowed temperature.) in motor reported by the motor temperature model since last calibration run. |
 
-<a id="table-res-0xfd0f-d"></a>
 ### RES_0XFD0F_D
 
 Dimensions: 2 rows × 10 columns
@@ -2568,7 +2464,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_WIN_INITIALISE_COUNTER_WERT | Stufe | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Windshield Initialisation Counter |
 | STAT_WIN_INIT_KILOMETER_WERT | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 |  kilometer reading in latest initialization run |
 
-<a id="table-res-0xfd20-d"></a>
 ### RES_0XFD20_D
 
 Dimensions: 1 rows × 10 columns
@@ -2577,7 +2472,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DATA_1_WERT | HEX | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0x01   spare                   0x02   spare                   0x04   CANStrobe               0x08   PowerRST                0x10   Horn                    0x20   WindshieldMotorDirect2  0x40   WindshieldMotorDirect1  0x80   WindshieldHallSupply |
 
-<a id="table-res-0xfd21-d"></a>
 ### RES_0XFD21_D
 
 Dimensions: 8 rows × 10 columns
@@ -2593,7 +2487,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_SEAT_HEATER_PILLION_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Seat Heater driver duty |
 | STAT_PWM_CLOCK_DUTY_WERT | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | PWM Duty |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 40 rows × 16 columns
@@ -2641,7 +2534,6 @@ Dimensions: 40 rows × 16 columns
 | DIGITAL_OUTPUT_CONTROL | 0xFD20 | - | Control of Digital Output | - | - | - | - | - | - | - | - | - | 2F | ARG_0xFD20_D | RES_0xFD20_D |
 | PWM_OUTPUT_CONTROL | 0xFD21 | - | PWM duty ouyput control | - | - | - | - | - | - | - | - | - | 2F | ARG_0xFD21_D | RES_0xFD21_D |
 
-<a id="table-stat-diag-win-status"></a>
 ### STAT_DIAG_WIN_STATUS
 
 Dimensions: 13 rows × 2 columns
@@ -2662,7 +2554,6 @@ Dimensions: 13 rows × 2 columns
 | 11 | Too few pulses |
 | 255 | Pending |
 
-<a id="table-stat-win-init-status"></a>
 ### STAT_WIN_INIT_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -2675,7 +2566,6 @@ Dimensions: 5 rows × 2 columns
 | 4 | Initialisation aborted |
 | 255 | Invalid Status |
 
-<a id="table-svk-version-dop"></a>
 ### SVK_VERSION_DOP
 
 Dimensions: 2 rows × 2 columns
@@ -2685,7 +2575,6 @@ Dimensions: 2 rows × 2 columns
 | 0 | reserved |
 | 1 | SVKVersion_01 |
 
-<a id="table-tab-denorm-reason"></a>
 ### TAB_DENORM_REASON
 
 Dimensions: 13 rows × 2 columns
@@ -2706,7 +2595,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | DENORMUSER |
 | 0x0C | ERRMOTOR |
 
-<a id="table-tab-log-index"></a>
 ### TAB_LOG_INDEX
 
 Dimensions: 6 rows × 2 columns
@@ -2720,7 +2608,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | fifth |
 | 0xFF | No Logger Entry |
 
-<a id="table-tab-mr-abblendlicht"></a>
 ### TAB_MR_ABBLENDLICHT
 
 Dimensions: 5 rows × 2 columns
@@ -2733,7 +2620,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Signal ungueltig |
 | 0xFF | undefiniert |
 
-<a id="table-tab-mr-abblendlicht-arg"></a>
 ### TAB_MR_ABBLENDLICHT_ARG
 
 Dimensions: 3 rows × 2 columns
@@ -2744,7 +2630,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Abblendlicht Aus |
 | 2 | Abblendlicht Ein |
 
-<a id="table-tab-mr-kalibrierung-windschild"></a>
 ### TAB_MR_KALIBRIERUNG_WINDSCHILD
 
 Dimensions: 7 rows × 2 columns
@@ -2759,7 +2644,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Fehler Kalibrierung weil Anzahl der Pulse nok |
 | 0xFF | undefinierter Zustand |
 
-<a id="table-tab-mr-sitzheizung-beifahrer-eingang-fkt"></a>
 ### TAB_MR_SITZHEIZUNG_BEIFAHRER_EINGANG_FKT
 
 Dimensions: 4 rows × 2 columns
@@ -2771,7 +2655,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Heizung Stufe 2 |
 | 0xff | Stufe unbekannt |
 
-<a id="table-tab-mr-sitzheizung-beifahrer-eingang-fkt-arg"></a>
 ### TAB_MR_SITZHEIZUNG_BEIFAHRER_EINGANG_FKT_ARG
 
 Dimensions: 3 rows × 2 columns
@@ -2782,7 +2665,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Heizung Stufe 1 |
 | 0x02 | Heizung Stufe 2 |
 
-<a id="table-tab-mr-sitzheizung-fahrer-eingang-fkt"></a>
 ### TAB_MR_SITZHEIZUNG_FAHRER_EINGANG_FKT
 
 Dimensions: 9 rows × 2 columns
@@ -2799,7 +2681,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Signal ungueltig |
 | 0xFF | unbekannte Stufe |
 
-<a id="table-tab-mr-sitzheizung-fahrer-eingang-fkt-arg"></a>
 ### TAB_MR_SITZHEIZUNG_FAHRER_EINGANG_FKT_ARG
 
 Dimensions: 7 rows × 2 columns
@@ -2814,7 +2695,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | Heizung Stufe 5 |
 | 0x06 | Heizung Stufe 6 |
 
-<a id="table-tab-mr-strom-sitzheizung-sozius"></a>
 ### TAB_MR_STROM_SITZHEIZUNG_SOZIUS
 
 Dimensions: 5 rows × 2 columns
@@ -2827,7 +2707,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Kurzschluss |
 | 0xff | ungueltig |
 
-<a id="table-tab-mr-strom-status-highside"></a>
 ### TAB_MR_STROM_STATUS_HIGHSIDE
 
 Dimensions: 4 rows × 2 columns
@@ -2839,7 +2718,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Strom zu groß bzw. Kurzschluss |
 | 0xff | ungueltig |
 
-<a id="table-tab-mr-taster-navifach"></a>
 ### TAB_MR_TASTER_NAVIFACH
 
 Dimensions: 3 rows × 2 columns
@@ -2850,7 +2728,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | betätigt |
 | 0xFF | nicht codiert |
 
-<a id="table-tab-mr-windschild"></a>
 ### TAB_MR_WINDSCHILD
 
 Dimensions: 6 rows × 2 columns
@@ -2864,7 +2741,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Windschild ab Taster Navifach wird ignoriert |
 | 0xff | ungültig |
 
-<a id="table-tab-mr-windschild-arg"></a>
 ### TAB_MR_WINDSCHILD_ARG
 
 Dimensions: 5 rows × 2 columns
@@ -2877,7 +2753,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | Windschild auf Taster Navifach wird ignoriert |
 | 4 | Windschild ab Taster Navifach wird ignoriert |
 
-<a id="table-tab-mr-windschild-eingang"></a>
 ### TAB_MR_WINDSCHILD_EINGANG
 
 Dimensions: 4 rows × 2 columns
@@ -2889,7 +2764,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Eingang Windschild ab |
 | 0xFF | ungültig |
 
-<a id="table-tab-mr-windschild-eingang-arg"></a>
 ### TAB_MR_WINDSCHILD_EINGANG_ARG
 
 Dimensions: 3 rows × 2 columns
@@ -2900,7 +2774,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Eingang Windschild auf |
 | 2 | Eingang Windschild ab |
 
-<a id="table-tab-mr-windschild-sollposition"></a>
 ### TAB_MR_WINDSCHILD_SOLLPOSITION
 
 Dimensions: 7 rows × 2 columns
@@ -2915,7 +2788,6 @@ Dimensions: 7 rows × 2 columns
 | 5 | Fehler |
 | 0xFF | ungültig |
 
-<a id="table-tab-omm-status"></a>
 ### TAB_OMM_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -2928,7 +2800,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | SW_LIMP_HOME |
 | 4 | SLEEP |
 
-<a id="table-tab-win-hallsensor1-ol"></a>
 ### TAB_WIN_HALLSENSOR1_OL
 
 Dimensions: 3 rows × 2 columns
@@ -2939,7 +2810,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | PRESENT |
 | 255 | UNKNOWN |
 
-<a id="table-tab-win-hallsensor1-time"></a>
 ### TAB_WIN_HALLSENSOR1_TIME
 
 Dimensions: 3 rows × 2 columns
@@ -2950,7 +2820,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | OUT |
 | 255 | UNKNOWN |
 
-<a id="table-tab-win-hall-sensor-vccstatus"></a>
 ### TAB_WIN_HALL_SENSOR_VCCSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -2962,7 +2831,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | SC_BAT |
 | 3 | UNKNOWN |
 
-<a id="table-tab-win-motor-direction1-status"></a>
 ### TAB_WIN_MOTOR_DIRECTION1_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -2975,7 +2843,6 @@ Dimensions: 5 rows × 2 columns
 | 3 | SC_BAT_OFF |
 | 4 | UNKNOWN |
 
-<a id="table-tab-win-motor-last-error"></a>
 ### TAB_WIN_MOTOR_LAST_ERROR
 
 Dimensions: 10 rows × 2 columns
@@ -2993,7 +2860,6 @@ Dimensions: 10 rows × 2 columns
 | 8 | STB_DC1 |
 | 9 | STB_DC2 |
 
-<a id="table-tab-win-status-motor-stop"></a>
 ### TAB_WIN_STATUS_MOTOR_STOP
 
 Dimensions: 35 rows × 2 columns
@@ -3036,7 +2902,6 @@ Dimensions: 35 rows × 2 columns
 | 0x21 | MOTOR_STB_DC1 |
 | 0x22 | MOTOR_STB_DC2 |
 
-<a id="table-windshield-movement"></a>
 ### WINDSHIELD_MOVEMENT
 
 Dimensions: 3 rows × 2 columns
@@ -3047,7 +2912,6 @@ Dimensions: 3 rows × 2 columns
 | 1 | Windshield Down |
 | 2 | Windshield Up |
 
-<a id="table-win-motor-stop-reason-log"></a>
 ### WIN_MOTOR_STOP_REASON_LOG
 
 Dimensions: 35 rows × 2 columns
@@ -3090,7 +2954,6 @@ Dimensions: 35 rows × 2 columns
 | 33 | MOTOR_STB_DC1 |
 | 34 | MOTOR_STB_DC2 |
 
-<a id="table-win-wtp-status"></a>
 ### WIN_WTP_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -3102,7 +2965,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | WARNING |
 | 3 | MAX |
 
-<a id="table-wsv-dcmotor-current-consumption"></a>
 ### WSV_DCMOTOR_CURRENT_CONSUMPTION
 
 Dimensions: 5 rows × 2 columns
@@ -3115,7 +2977,6 @@ Dimensions: 5 rows × 2 columns
 | 0x3 | OVERCURRENT_TOOMUCHCONSUMPTION |
 | 0x4 | SHORTCIRCUIT_LONGPEAKOFCONSUMPTION |
 
-<a id="table-wsv-internal-win-stop-reason"></a>
 ### WSV_INTERNAL_WIN_STOP_REASON
 
 Dimensions: 14 rows × 2 columns
@@ -3137,7 +2998,6 @@ Dimensions: 14 rows × 2 columns
 | 0xC | MOTOR_STB_OFF |
 | 0xD | HALLSENSOR_INTERRUPTION_OFF |
 
-<a id="table-wsv-update-status-wcm"></a>
 ### WSV_UPDATE_STATUS_WCM
 
 Dimensions: 3 rows × 2 columns

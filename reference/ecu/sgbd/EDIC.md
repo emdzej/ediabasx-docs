@@ -56,7 +56,6 @@
 - [EDIC_RESET](#job-edic-reset) - EDIC-Reset
 - [EDIC_VERSION](#job-edic-version) - EDIC-Version auslesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -75,7 +74,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -88,7 +86,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 if done |
 
-<a id="job-edic-spannung-kl30"></a>
 ### EDIC_SPANNUNG_KL30
 
 Messung Klemme30
@@ -103,7 +100,6 @@ _No arguments._
 | KL30_WERT | real | Spannungswert KL30 in mVolt |
 | KL30_EINH | string | Einheit von KL30_WERT (V) |
 
-<a id="job-edic-spannung-kl15"></a>
 ### EDIC_SPANNUNG_KL15
 
 Default Messung Klemme15 job
@@ -118,7 +114,6 @@ _No arguments._
 | KL15_WERT | real | Spannung an KL15 in V |
 | KL15_EINH | string | Einheit KL15 (V) |
 
-<a id="job-edic-get-port-0"></a>
 ### EDIC_GET_PORT_0
 
 Messung Spannung Analogeingang 0
@@ -133,7 +128,6 @@ _No arguments._
 | EDIC_GET_PORT_0_WERT | real | Wert des Eingangs in mV |
 | EDIC_GET_PORT_0_EINH | string | Einheit der Spannung (V) |
 
-<a id="job-edic-get-port-1"></a>
 ### EDIC_GET_PORT_1
 
 Messung Spannung Analogeingang 1
@@ -148,7 +142,6 @@ _No arguments._
 | EDIC_GET_PORT_1_WERT | real | Wert des Eingangs in mV |
 | EDIC_GET_PORT_1_EINH | string | Einheit der Spannung (V) |
 
-<a id="job-edic-get-port-2"></a>
 ### EDIC_GET_PORT_2
 
 Messung Spannung Analogeingang 2
@@ -163,7 +156,6 @@ _No arguments._
 | EDIC_GET_PORT_2_WERT | real | Wert des Eingangs in mV |
 | EDIC_GET_PORT_2_EINH | string | Einheit der Spannung (V) |
 
-<a id="job-edic-get-port-3"></a>
 ### EDIC_GET_PORT_3
 
 Messung Spannung Analogeingang 3
@@ -178,7 +170,6 @@ _No arguments._
 | EDIC_GET_PORT_3_WERT | real | Wert des Eingangs in mV |
 | EDIC_GET_PORT_3_EINH | string | Einheit der Spannung (V) |
 
-<a id="job-edic-get-port-4"></a>
 ### EDIC_GET_PORT_4
 
 Messung Spannung Analogeingang 4
@@ -193,7 +184,6 @@ _No arguments._
 | EDIC_GET_PORT_4_WERT | real | Wert des Eingangs in mV |
 | EDIC_GET_PORT_4_EINH | string | Einheit der Spannung (V) |
 
-<a id="job-edic-get-port-5"></a>
 ### EDIC_GET_PORT_5
 
 Messung Spannung Analogeingang 5
@@ -208,7 +198,6 @@ _No arguments._
 | EDIC_GET_PORT_5_WERT | real | Wert des Eingangs in mV |
 | EDIC_GET_PORT_5_EINH | string | Einheit der Spannung (V) |
 
-<a id="job-edic-get-port-6"></a>
 ### EDIC_GET_PORT_6
 
 Messung Spannung Analogeingang 6
@@ -223,7 +212,6 @@ _No arguments._
 | EDIC_GET_PORT_6_WERT | real | Wert des Eingangs in mV |
 | EDIC_GET_PORT_6_EINH | string | Einheit der Spannung (V) |
 
-<a id="job-edic-get-port-7"></a>
 ### EDIC_GET_PORT_7
 
 Messung Spannung Analogeingang 7
@@ -238,7 +226,6 @@ _No arguments._
 | EDIC_GET_PORT_7_WERT | real | Wert des Eingangs in mV |
 | EDIC_GET_PORT_7_EINH | string | Einheit der Spannung (V) |
 
-<a id="job-edic-set-u-prog"></a>
 ### EDIC_SET_U_PROG
 
 Default set uprog job
@@ -255,7 +242,6 @@ Default set uprog job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-edic-jumper-einlesen"></a>
 ### EDIC_JUMPER_EINLESEN
 
 Default jumper einlesen job
@@ -269,7 +255,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | JUMPERS | string | Jumperstellungen |
 
-<a id="job-edic-sia-reset"></a>
 ### EDIC_SIA_RESET
 
 Default sia-reset job
@@ -286,7 +271,6 @@ Default sia-reset job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-edic-sia-ein"></a>
 ### EDIC_SIA_EIN
 
 Default sia-reset job
@@ -299,7 +283,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-edic-sia-aus"></a>
 ### EDIC_SIA_AUS
 
 Default sia-reset job
@@ -312,7 +295,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-edic-set-port-0-ein"></a>
 ### EDIC_SET_PORT_0_EIN
 
 Set Port 0 Ein
@@ -325,7 +307,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-0-aus"></a>
 ### EDIC_SET_PORT_0_AUS
 
 Set Port 0 Aus
@@ -338,7 +319,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-1-ein"></a>
 ### EDIC_SET_PORT_1_EIN
 
 Set Port 1 Ein
@@ -351,7 +331,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-1-aus"></a>
 ### EDIC_SET_PORT_1_AUS
 
 Set Port 1 Aus
@@ -364,7 +343,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-2-ein"></a>
 ### EDIC_SET_PORT_2_EIN
 
 Set Port 2 Ein
@@ -377,7 +355,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-2-aus"></a>
 ### EDIC_SET_PORT_2_AUS
 
 Set Port 2 Aus
@@ -390,7 +367,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-3-ein"></a>
 ### EDIC_SET_PORT_3_EIN
 
 Set Port 3 Ein
@@ -403,7 +379,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-3-aus"></a>
 ### EDIC_SET_PORT_3_AUS
 
 Set Port 3 Aus
@@ -416,7 +391,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-4-ein"></a>
 ### EDIC_SET_PORT_4_EIN
 
 Set Port 4 Ein
@@ -429,7 +403,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-4-aus"></a>
 ### EDIC_SET_PORT_4_AUS
 
 Set Port 4 Aus
@@ -442,7 +415,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-5-ein"></a>
 ### EDIC_SET_PORT_5_EIN
 
 Set Port 5 Ein
@@ -455,7 +427,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-5-aus"></a>
 ### EDIC_SET_PORT_5_AUS
 
 Set Port 5 Aus
@@ -468,7 +439,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-6-ein"></a>
 ### EDIC_SET_PORT_6_EIN
 
 Set Port 5 Ein
@@ -481,7 +451,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-6-aus"></a>
 ### EDIC_SET_PORT_6_AUS
 
 Set Port 5 Aus
@@ -494,7 +463,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-7-ein"></a>
 ### EDIC_SET_PORT_7_EIN
 
 Set Port 7 Ein
@@ -507,7 +475,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-set-port-7-aus"></a>
 ### EDIC_SET_PORT_7_AUS
 
 Set Port 7 Aus
@@ -520,7 +487,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Jobstatus |
 
-<a id="job-edic-leitungstest"></a>
 ### EDIC_LEITUNGSTEST
 
 Testschleife
@@ -534,7 +500,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | CHECK | string | Ergebnis des Leitungstests: Leitungen OKAY |
 
-<a id="job-edic-reset"></a>
 ### EDIC_RESET
 
 EDIC-Reset
@@ -547,7 +512,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-edic-version"></a>
 ### EDIC_VERSION
 
 EDIC-Version auslesen

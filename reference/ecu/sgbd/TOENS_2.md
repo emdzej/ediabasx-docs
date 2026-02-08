@@ -38,7 +38,6 @@
 - [STATUS_SG](#job-status-sg) - SG-Status lesen
 - [STEUERN_WARNLAMPE](#job-steuern-warnlampe) - Ansteuern der Warnlampe
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +55,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -69,7 +67,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten fuer TOENS
@@ -92,7 +89,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferanten-Nummer |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-ident-schreiben"></a>
 ### IDENT_SCHREIBEN
 
 Identdaten schreiben fuer TOENS
@@ -109,7 +105,6 @@ Identdaten schreiben fuer TOENS
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -132,7 +127,6 @@ _No arguments._
 | F_ART2_TEXT | string |  |
 | F_HEX_CODE | binary |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen
@@ -151,7 +145,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 | F_HEX_CODE | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -164,7 +157,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -183,7 +175,6 @@ Lesen des internen Speichers
 | DATEN | binary |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des Speichers
@@ -202,7 +193,6 @@ Beschreiben des Speichers
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -218,7 +208,6 @@ _No arguments._
 | CODEBLOCK_1 | binary |  |
 | CODEBLOCK_2 | binary |  |
 
-<a id="job-codierung-schreiben"></a>
 ### CODIERUNG_SCHREIBEN
 
 Schreiben der Codierdaten
@@ -235,7 +224,6 @@ Schreiben der Codierdaten
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -252,7 +240,6 @@ _No arguments._
 | BYTE3 | int | kann beliebig verwendet werden |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels
@@ -271,7 +258,6 @@ Beschreiben des Pruefstempels
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -284,7 +270,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -297,7 +282,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Status lesen
@@ -321,7 +305,6 @@ _No arguments._
 | STAT_DREHZAHL_EINH | string | 1/min |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-status-sg"></a>
 ### STATUS_SG
 
 SG-Status lesen
@@ -380,7 +363,6 @@ _No arguments._
 | STAT_D_AMHEIZ_EIN | int | Mittelwert Oeltemp. verfuegbar |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-steuern-warnlampe"></a>
 ### STEUERN_WARNLAMPE
 
 Ansteuern der Warnlampe
@@ -407,7 +389,6 @@ Ansteuern der Warnlampe
 - [FARTTEXTE](#table-farttexte) (7 × 2)
 - [IORTTEXTE](#table-iorttexte) (3 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -423,7 +404,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 38 rows × 2 columns
@@ -469,7 +449,6 @@ Dimensions: 38 rows × 2 columns
 | 0x37 | Dunlop |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -482,7 +461,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Klemme 30 |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -497,7 +475,6 @@ Dimensions: 7 rows × 2 columns
 | 0x13 | unplausibler Wert |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 3 rows × 2 columns

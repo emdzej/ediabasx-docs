@@ -30,7 +30,6 @@
 - [DIAGNOSE_WEITER](#job-diagnose-weiter) - Diagnose aufrechterhalten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -48,7 +47,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer DSP-Booster E38
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DSP
@@ -84,7 +81,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | ID_LIEF_TEXT | string | Lieferantenname |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose mit Aenderung
@@ -104,7 +100,6 @@ _No arguments._
 | F_ART1_NR | int | Index der 1. Fehlerart (derzeit immer 0) |
 | F_ART1_TEXT | string | derzeit immer "offen" |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -117,7 +112,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-status-io-lines"></a>
 ### STATUS_IO_LINES
 
 Auslesen einiger interner Statusleitungen
@@ -134,7 +128,6 @@ _No arguments._
 | STAT_TEMP1 | int | 1-> Subwooferleistung reduziert, sonst 0 |
 | STAT_TEMP2 | int | 1-> Verstaerker wegen zu hoher Temperatur abgeschaltet |
 
-<a id="job-lautsprecher-test-start"></a>
 ### LAUTSPRECHER_TEST_START
 
 startet die zyklische Ansteuerung aller 4 Kanaele mit verschiedenen Frequenzen
@@ -147,7 +140,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-lautsprecher-test-ende"></a>
 ### LAUTSPRECHER_TEST_ENDE
 
 beendet die zyklische Ansteuerung aller 4 Kanaele
@@ -160,7 +152,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise OKAY |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 Diagnose aufrechterhalten
@@ -173,7 +164,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -194,7 +184,6 @@ _No arguments._
 - [LIEFERANTEN](#table-lieferanten) (27 × 2)
 - [FORTTEXTE](#table-forttexte) (5 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -210,7 +199,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -245,7 +233,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 5 rows × 2 columns

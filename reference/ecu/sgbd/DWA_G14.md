@@ -79,7 +79,6 @@
 - [STEUERN_DWA_DEAKTIVIERUNG_IRS_NG_LOESCHEN](#job-steuern-dwa-deaktivierung-irs-ng-loeschen) - JobHeaderFormat 0xAA81 DWA_IRS_NG_DEAKTIVIERUNGSSPEICHER_LOESCHEN
 - [STEUERN_DWA_PANIKSPEICHER_LOESCHEN](#job-steuern-dwa-panikspeicher-loeschen) - JobHeaderFormat 0xAA82 DWA_PANIKSPEICHER_LOESCHEN
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -98,7 +97,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -111,7 +109,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -128,7 +125,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -160,7 +156,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -205,7 +200,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -224,7 +218,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -242,7 +235,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -263,7 +255,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -292,7 +283,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -312,7 +302,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -333,7 +322,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -349,7 +337,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -371,7 +358,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -390,7 +376,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $17 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -421,7 +406,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $18 reportDTCSnapshotRecordByDTCNumber UDS  : $19 reportDTCExtendedDataRecordByDTCNumber UDS  : $-- reportSeverityInformationOfDTC (nicht möglich!) Modus: Default
@@ -467,7 +451,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $19 ReadD
 | _RESPONSE_EXTENDED_DATA | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -482,7 +465,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -502,7 +484,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -521,7 +502,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -540,7 +520,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -555,7 +534,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -574,7 +552,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -594,7 +571,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -611,7 +587,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -630,7 +605,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -646,7 +620,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -680,7 +653,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -695,7 +667,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events $02 eventWindowTime - infinite (LH Diagnosemaster V11 oder höher, Umsetzung nach LH V6 - V10 wird jedoch toleriert)
@@ -712,7 +683,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -727,7 +697,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -742,7 +711,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -762,7 +730,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-sleep"></a>
 ### _STATUS_DWA_SLEEP
 
 JobHeaderFormat 0x4651 DIAG_DID_4651_SLEEP
@@ -778,7 +745,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-muw-error-memory"></a>
 ### _STATUS_DWA_MUW_ERROR_MEMORY
 
 JobHeaderFormat 0xDCC0 DIAG_DID_DCC0_DWA_MUW_DTCS
@@ -943,7 +909,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-reset-anzahl-lesen"></a>
 ### _STATUS_DWA_RESET_ANZAHL_LESEN
 
 Abfrage Resets DWA JobHeaderFormat 0x4638 DIAG_DID_4638_READ_RESET_NUM_DWA
@@ -963,7 +928,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-testresults"></a>
 ### _STATUS_DWA_TESTRESULTS
 
 JobHeaderFormat 0x463B DIAG_DID_DCC2_READ_TEST_RESULTS
@@ -988,7 +952,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-squares-sn"></a>
 ### _STATUS_DWA_SQUARES_SN
 
 JobHeaderFormat 0x463D DIAG_DID_463D_READ_SQUARES_SN
@@ -1003,7 +966,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-order-num"></a>
 ### _STATUS_DWA_ORDER_NUM
 
 JobHeaderFormat 0x4641 DIAG_DID_4641_READ_ORDER_NUM
@@ -1021,7 +983,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-muw-reset-anzahl"></a>
 ### _STATUS_DWA_MUW_RESET_ANZAHL
 
 JobHeaderFormat 0x464A DIAG_DID_464A_READ_DWA_MUW_RST_NUM
@@ -1051,7 +1012,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-ict-test-results"></a>
 ### _STATUS_DWA_ICT_TEST_RESULTS
 
 JobHeaderFormat 0x4651 DIAG_DID_4651_ICT_TEST_RESULTS
@@ -1070,7 +1030,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-deaktivierung-irs-ng"></a>
 ### STATUS_DWA_DEAKTIVIERUNG_IRS_NG
 
 JobHeaderFormat 0xDCB4 DWA_DEAKTIVIERUNG_IRS_NG
@@ -1093,7 +1052,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-alarmspeicher"></a>
 ### STATUS_DWA_ALARMSPEICHER
 
 JobHeaderFormat 0xDCBE DWA_ALARMSPEICHER
@@ -1161,7 +1119,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-dwa-panikspeicher"></a>
 ### STATUS_DWA_PANIKSPEICHER
 
 JobHeaderFormat 0xDD15 DWA_PANIKSPEICHER
@@ -1184,7 +1141,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-reset-anzahl-loeschen"></a>
 ### _STEUERN_DWA_RESET_ANZAHL_LOESCHEN
 
 JobHeaderFormat 0x4639 DIAG_DID_4639_DWA_RESET_NUM_LOESCHEN
@@ -1199,7 +1155,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-testresults"></a>
 ### _STEUERN_DWA_TESTRESULTS
 
 JobHeaderFormat 0x463C DIAG_DID_463C_WRITE_TEST_RESULTS - these results are written in production
@@ -1222,7 +1177,6 @@ JobHeaderFormat 0x463C DIAG_DID_463C_WRITE_TEST_RESULTS - these results are writ
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-dateofem"></a>
 ### _STEUERN_DWA_DATEOFEM
 
 JobHeaderFormat 0x4640 DIAG_DID_4640_WRITE_DATEOFEM, writes the date on 5 digits: yymdd
@@ -1245,7 +1199,6 @@ JobHeaderFormat 0x4640 DIAG_DID_4640_WRITE_DATEOFEM, writes the date on 5 digits
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-order-num"></a>
 ### _STEUERN_DWA_ORDER_NUM
 
 JobHeaderFormat 0x4642 DIAG_DID_4642_WRITE_ORDER_NUM Change the SERIAL NUMBER of the square the PCB is installed in. It is saved in NVRAM
@@ -1266,7 +1219,6 @@ JobHeaderFormat 0x4642 DIAG_DID_4642_WRITE_ORDER_NUM Change the SERIAL NUMBER of
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-seriennummer"></a>
 ### _STEUERN_DWA_SERIENNUMMER
 
 JobHeaderFormat 0x4645 DIAG_DID_4645_WRITE_SERIAL_NUMBER Change the SERIAL NUMBER of the CANSINE in NVRAM. The serial number shall then be read with job 'seriennummer_lesen' The S.N. is composed of 10 bytes: - the last two digits of year (2 bytes) - e.g. 0x01 0x02 for the year 2012 - two digits for month id (2 bytes) - e.g. 0x00 0x01 for Jan 0x01 0x02 for Dec - two digits for the day (2 bytes) - e.g. 0x03 0x00 for the day 30 - the progressive decimal number (4 bytes) ---> step of 1000, from '0' to '9' ---> step of 0100, from '0' to '9' ---> step of 0010, from '0' to '9' ---> step of 0001, from '0' to '9' Enter each byte separated by semicolon with hex notation (0xNN) example: 0x00 0x08 0x01 0x01 0x02 0x07 0x00 0x00 0x00 0x01 (in the example, semicolons are not shown because of conflicts with the SGBD sintax)
@@ -1294,7 +1246,6 @@ JobHeaderFormat 0x4645 DIAG_DID_4645_WRITE_SERIAL_NUMBER Change the SERIAL NUMBE
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-ckm-reset"></a>
 ### _STEUERN_DWA_CKM_RESET
 
 JobHeaderFormat 0x4646 DIAG_DID_4646_RESET_CKM
@@ -1309,7 +1260,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-muw-error-memory-reset"></a>
 ### _STEUERN_DWA_MUW_ERROR_MEMORY_RESET
 
 JobHeaderFormat 0x4649 DIAG_DID_4649_RESET_DWA_MUW_DTCS
@@ -1334,7 +1284,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-muw-reset-anzahl-loeschen"></a>
 ### _STEUERN_DWA_MUW_RESET_ANZAHL_LOESCHEN
 
 JobHeaderFormat 0x464B DIAG_DID_464B_RESET_DWA_MUW_RST_NUM
@@ -1354,7 +1303,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-svk-history"></a>
 ### _STEUERN_DWA_SVK_HISTORY
 
 JobHeaderFormat 0x464D DIAG_DID_464D_WRITE_DWA_SVK_HISTORY
@@ -1377,7 +1325,6 @@ JobHeaderFormat 0x464D DIAG_DID_464D_WRITE_DWA_SVK_HISTORY
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-sounds"></a>
 ### _STEUERN_DWA_SOUNDS
 
 JobHeaderFormat 0x464E DIAG_DID_464E_SET_DWA_SOUNDS, activates/deactivates USA/ECE & buzzers
@@ -1397,7 +1344,6 @@ JobHeaderFormat 0x464E DIAG_DID_464E_SET_DWA_SOUNDS, activates/deactivates USA/E
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-secondary-st-inhibit"></a>
 ### _STEUERN_DWA_SECONDARY_ST_INHIBIT
 
 JobHeaderFormat 0x464F DIAG_DID_464F_SET_SECONDARY_ST_INHIBIT, activates/deactivates piezo secondary ST
@@ -1416,7 +1362,6 @@ JobHeaderFormat 0x464F DIAG_DID_464F_SET_SECONDARY_ST_INHIBIT, activates/deactiv
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-ext-bat"></a>
 ### _STEUERN_DWA_EXT_BAT
 
 JobHeaderFormat 0x4650 DIAG_DID_4650_SET_EXT_BAT, activates/deactivates the Vbat input
@@ -1435,7 +1380,6 @@ JobHeaderFormat 0x4650 DIAG_DID_4650_SET_EXT_BAT, activates/deactivates the Vbat
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-trigger-dtc-store"></a>
 ### _STEUERN_DWA_TRIGGER_DTC_STORE
 
 JobHeaderFormat 0x4652 DIAG_DID_4652_TRIGGER_DTC_STORE, triggers the storing of DTC's in nvram
@@ -1450,7 +1394,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-alarmspeicher-loeschen"></a>
 ### STEUERN_DWA_ALARMSPEICHER_LOESCHEN
 
 JobHeaderFormat 0xAA7D DWA_ALARMSPEICHER_LOESCHEN
@@ -1465,7 +1408,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-deaktivierung-irs-ng-loeschen"></a>
 ### STEUERN_DWA_DEAKTIVIERUNG_IRS_NG_LOESCHEN
 
 JobHeaderFormat 0xAA81 DWA_IRS_NG_DEAKTIVIERUNGSSPEICHER_LOESCHEN
@@ -1480,7 +1422,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-dwa-panikspeicher-loeschen"></a>
 ### STEUERN_DWA_PANIKSPEICHER_LOESCHEN
 
 JobHeaderFormat 0xAA82 DWA_PANIKSPEICHER_LOESCHEN
@@ -1579,7 +1520,6 @@ _No arguments._
 - [TAB_SUPPLIERINFO_FIELD](#table-tab-supplierinfo-field) (64 × 2)
 - [TAB_ZV_ST_CLSY](#table-tab-zv-st-clsy) (9 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1663,7 +1603,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 141 rows × 2 columns
@@ -1812,7 +1751,6 @@ Dimensions: 141 rows × 2 columns
 | 0x0000C2 | LG Chem |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1855,7 +1793,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1880,7 +1817,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1914,7 +1850,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1987,7 +1922,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -2000,7 +1934,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -2015,7 +1948,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -2028,7 +1960,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -2048,7 +1979,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 323 rows × 3 columns
@@ -2379,7 +2309,6 @@ Dimensions: 323 rows × 3 columns
 | 0x7B00 | ISC - Inertial Sensor Cluster | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -2388,7 +2317,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 224 rows × 2 columns
@@ -2620,7 +2548,6 @@ Dimensions: 224 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -2663,7 +2590,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -2674,7 +2600,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0xaa76-r"></a>
 ### ARG_0XAA76_R
 
 Dimensions: 1 rows × 14 columns
@@ -2683,7 +2608,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AUSWAHL | + | - | 0-n | - | signed char | - | TAB_DWA_SELBSTTEST | 1.0 | 1.0 | 0.0 | - | - | optionales Argument; 0: Abbruch; 1: Selbsttest komplettes DWA-System; 2: Selbsttest Innenraumschutz; 3 Selbsttest Neigungsgeber; DEFAULT: 1 |
 
-<a id="table-arg-0xaa79-r"></a>
 ### ARG_0XAA79_R
 
 Dimensions: 1 rows × 14 columns
@@ -2692,7 +2616,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | + | - | 0/1 | - | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | 0 oder kein Argument: DWA entschärfen; 1: DWA schärfen |
 
-<a id="table-arg-0xdca8-d"></a>
 ### ARG_0XDCA8_D
 
 Dimensions: 2 rows × 12 columns
@@ -2702,7 +2625,6 @@ Dimensions: 2 rows × 12 columns
 | AKTION | 0-n | - | signed int | - | TAB_DWA_LED_ARG | - | - | - | - | - | Ansteuerung der DWA-LED 0: Aus  1: Dauer-Ein  2: Blinken  3: Blitzen |
 | ZEIT | ms | - | signed int | - | - | 1.0 | 1.0 | 0.0 | - | - | Angabe der Zeit in ms |
 
-<a id="table-arg-0xdcb5-d"></a>
 ### ARG_0XDCB5_D
 
 Dimensions: 1 rows × 12 columns
@@ -2711,7 +2633,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0-n | - | signed int | - | TAB_DWA_SCHNELLTEST | 1.0 | 1.0 | 0.0 | - | - | 0: Vorgang abbrechen; 1: Schnelltest leise 2: Schnelltest normal |
 
-<a id="table-arg-0xdcba-d"></a>
 ### ARG_0XDCBA_D
 
 Dimensions: 1 rows × 12 columns
@@ -2720,7 +2641,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00 = kein Reset ausführen 0x01 = Reset ausführen |
 
-<a id="table-arg-0xdcbb-d"></a>
 ### ARG_0XDCBB_D
 
 Dimensions: 1 rows × 12 columns
@@ -2729,7 +2649,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00 = kein Reset ausführen 0x01 = Reset ausführen |
 
-<a id="table-arg-0xdd16-d"></a>
 ### ARG_0XDD16_D
 
 Dimensions: 1 rows × 12 columns
@@ -2738,7 +2657,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | OBD_UEBERWACHUNG | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0 = OBD-Überwachung nicht aktiv 1 = OBD-Überwachung aktiv |
 
-<a id="table-arg-0xdd4b-d"></a>
 ### ARG_0XDD4B_D
 
 Dimensions: 1 rows × 12 columns
@@ -2747,7 +2665,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | high | unsigned char | - | - | - | - | - | - | - | 0x00 = kein Reset ausführen 0x01 = Reset ausführen |
 
-<a id="table-bf-22-f152-supplierinfo"></a>
 ### BF_22_F152_SUPPLIERINFO
 
 Dimensions: 2 rows × 10 columns
@@ -2757,7 +2674,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HWMODEL | 0-n | high | unsigned char | 0xC0 | HW_MODEL | - | - | - | hardware model |
 | STAT_SUPPLIERINFOFIELD | 0-n | high | unsigned char | 0x3F | TAB_SUPPLIERINFO_FIELD | - | - | - | supplierInfo |
 
-<a id="table-bf-standheizung"></a>
 ### BF_STANDHEIZUNG
 
 Dimensions: 1 rows × 10 columns
@@ -2766,7 +2682,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STANDHEIZUNG | 0-n | high | unsigned char | 0x03 | TAB_STAT_STANDHEIZUNG | - | - | - | Standheizung |
 
-<a id="table-bf-standlueften-geblaese"></a>
 ### BF_STANDLUEFTEN_GEBLAESE
 
 Dimensions: 2 rows × 10 columns
@@ -2776,7 +2691,6 @@ Dimensions: 2 rows × 10 columns
 | STANDLUEFTEN | 0-n | high | unsigned char | 0x0C | TAB_STAT_STANDLUEFTEN | - | - | - | Standlüften |
 | GEBLAESE | 0-n | high | unsigned char | 0xC0 | TAB_STAT_GEBLAESE | - | - | - | Gebläse |
 
-<a id="table-bf-stat-door-contacts"></a>
 ### BF_STAT_DOOR_CONTACTS
 
 Dimensions: 7 rows × 10 columns
@@ -2791,7 +2705,6 @@ Dimensions: 7 rows × 10 columns
 | BONNET_CONTACT | 0/1 | high | unsigned char | 0x20 | - | - | - | - | Motorhaubenkontakt |
 | REAR_WINDOW_CONTACT | 0/1 | high | unsigned char | 0x40 | - | - | - | - | Heckscheibenkontakt |
 
-<a id="table-bf-window-moving-acts"></a>
 ### BF_WINDOW_MOVING_ACTS
 
 Dimensions: 4 rows × 10 columns
@@ -2803,7 +2716,6 @@ Dimensions: 4 rows × 10 columns
 | WINDOW_FATH | 0/1 | high | unsigned char | 0x04 | - | - | - | - | Fenster FATH |
 | WINDOW_BFTH | 0/1 | high | unsigned char | 0x08 | - | - | - | - | Fenster_BFTH |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2817,7 +2729,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2831,7 +2742,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 43 rows × 4 columns
@@ -2882,7 +2792,6 @@ Dimensions: 43 rows × 4 columns
 | 0xDD140D | Botschaft (0xF0, Status Zentralverriegelung): Ausfall, Signal ungültig | 1 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -2892,7 +2801,6 @@ Dimensions: 2 rows × 9 columns
 | 0x1750 | F_UW_BN | - | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-hw-model"></a>
 ### HW_MODEL
 
 Dimensions: 5 rows × 2 columns
@@ -2905,7 +2813,6 @@ Dimensions: 5 rows × 2 columns
 | 0xC0 | D-Muster |
 | 0xFF | Wert ungültig |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2918,7 +2825,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 2 rows × 4 columns
@@ -2928,7 +2834,6 @@ Dimensions: 2 rows × 4 columns
 | 0x804C52 | DWA: Deaktivierung des Innenraumschutzes und Neigungsgeber | 0 | - |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -2937,7 +2842,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2946,7 +2850,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-rdbi-ads-dop"></a>
 ### RDBI_ADS_DOP
 
 Dimensions: 10 rows × 2 columns
@@ -2964,7 +2867,6 @@ Dimensions: 10 rows × 2 columns
 | 0x43 | HDDUpdateSession |
 | 0xff | ungültig |
 
-<a id="table-res-0x2504-d"></a>
 ### RES_0X2504_D
 
 Dimensions: 6 rows × 10 columns
@@ -2978,7 +2880,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_RESET_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | ResetTime Die Zeitangabe bezieht sich auf den Übergang von der ApplicationExtendedSesssion in die ProgrammingSession bzw. bei Übergang von der ProgrammingSession in die DefaultSession. Es ist der Maximalwert auszugeben. Nach Ablauf der ResetTime ist das Steuergerät durch Diagnose ansprechbar. |
 | STAT_TRANSFER_DATA_TIME_WERT | s | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | TransferDataTime Die Angabe hat sich zu beziehen auf einen TransferData mit maximaler Blocklänge auf die Zeitspanne vom vollständigen Empfang der Daten im Steuergerät über das ggf. erforderliche Dekomprimieren und dem vollständigen Speichern im nichtflüchtigen Speicher bis einschließlich dem Senden der positiven Response. |
 
-<a id="table-res-0xaa76-r"></a>
 ### RES_0XAA76_R
 
 Dimensions: 1 rows × 13 columns
@@ -2987,7 +2888,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DWA_SELBSTTEST_NR | - | - | + | 0-n | - | signed char | - | TAB_DWA_SELBSTTEST_ERG | 1.0 | 1.0 | 0.0 | 0: Selbsttest NIO  1: Selbsstest IO 2: Selbsttest läuft |
 
-<a id="table-res-0xaa7e-r"></a>
 ### RES_0XAA7E_R
 
 Dimensions: 6 rows × 13 columns
@@ -3001,7 +2901,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_MUW_HR_SEBSTTEST_NR | - | - | + | 0-n | - | signed char | - | TAB_MUW_KOMM_FEHLER | 1.0 | 1.0 | 0.0 | Ergebnis Selbsttest MUW hinten rechts |
 | STAT_MUW_HI_SEBSTTEST_NR | - | - | + | 0-n | - | signed char | - | TAB_MUW_KOMM_FEHLER | 1.0 | 1.0 | 0.0 | Ergebnis Selbsttest MUW hinten zentral |
 
-<a id="table-res-0xaa7f-r"></a>
 ### RES_0XAA7F_R
 
 Dimensions: 6 rows × 13 columns
@@ -3015,7 +2914,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_MUW_HI_NR | - | - | + | 0-n | - | signed char | - | TAB_MUW_FUNKTIONSTEST | 1.0 | 1.0 | 0.0 | Status MUW hinten zentral  0: MUW würde nicht auslösen  1: MUW würde auslösen 2: MUW fehlerhaft |
 | STAT_MUW_FUNKTIONSTEST_NR | - | - | + | 0-n | - | signed char | - | TAB_MUW_FUNKTIONSTEST_2 | 1.0 | 1.0 | 0.0 | Aktueller Status des Jobs |
 
-<a id="table-res-0xdca2-d"></a>
 ### RES_0XDCA2_D
 
 Dimensions: 7 rows × 10 columns
@@ -3030,7 +2928,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_SIRENE_AKUSTIK_NR | 0-n | - | signed char | - | TAB_DWA_SINE_INTERN | 1.0 | 1.0 | 0.0 | Status Sirenenschaltkreis (Akustik) |
 | STAT_TILT_NR | 0-n | - | signed char | - | TAB_DWA_SINE_INTERN | 1.0 | 1.0 | 0.0 | Status Neigungsgeber |
 
-<a id="table-res-0xdca8-d"></a>
 ### RES_0XDCA8_D
 
 Dimensions: 1 rows × 10 columns
@@ -3039,7 +2936,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DWA_LED_NR | 0-n | - | signed char | - | TAB_DWA_LED | 1.0 | 1.0 | 0.0 | 0: Aus 1: Dauer-Ein 2: Blinken 3: Blitzen |
 
-<a id="table-res-0xdca9-d"></a>
 ### RES_0XDCA9_D
 
 Dimensions: 3 rows × 10 columns
@@ -3050,7 +2946,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_NEIGUNG_Y_ACHSE_WERT | ° | - | signed int | - | - | 1.0 | 10.0 | 0.0 | Neigungswinkel Y-Achse in Grad |
 | STAT_NEIGUNG_Z_ACHSE_WERT | ° | - | signed int | - | - | 1.0 | 10.0 | 0.0 | Neigungswinkel Z-Achse in Grad |
 
-<a id="table-res-0xdcb0-d"></a>
 ### RES_0XDCB0_D
 
 Dimensions: 21 rows × 10 columns
@@ -3079,7 +2974,6 @@ Dimensions: 21 rows × 10 columns
 | STAT_DWA_ALARM_USIS_ABDECKUNG_EIN | 0/1 | high | unsigned char | - | - | - | - | - | Durch Abdecken des USIS Gitters wurde der Alarm ausgelöst. 0 = Keine Auslösung durch Abdeckung, 1 = Auslösung durch Abdeckung |
 | STAT_DWA_ALARM_OBD_KOMMUNIKATION_EIN | 0/1 | high | unsigned char | - | - | - | - | - | OBD-Kommunikation wurde Alarm auslösen: 0 = Keine Auslösung durch OBD, 1 = OBD hat Alarm ausgelöst |
 
-<a id="table-res-0xdcb7-d"></a>
 ### RES_0XDCB7_D
 
 Dimensions: 5 rows × 10 columns
@@ -3092,7 +2986,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_MUW_HR_TEMP_WERT | °C | - | signed int | - | - | 1.0 | 10.0 | 0.0 | Temperatur MUW hinten rechts |
 | STAT_MUW_HI_TEMP_WERT | °C | - | signed int | - | - | 1.0 | 10.0 | 0.0 | Temperatur MUW hinten zentral |
 
-<a id="table-res-0xdcb8-d"></a>
 ### RES_0XDCB8_D
 
 Dimensions: 15 rows × 10 columns
@@ -3115,7 +3008,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_MUW_HR_ALARMZAEHLER_WERT | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Alarme des MUW's hinten rechts |
 | STAT_MUW_HI_ALARMZAEHLER_WERT | - | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Anzahl der Alarme des MUW's hinten zentral |
 
-<a id="table-res-0xdcb9-d"></a>
 ### RES_0XDCB9_D
 
 Dimensions: 5 rows × 10 columns
@@ -3128,7 +3020,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_MUW_HR_NOISE_LEVEL_WERT | mV | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Grundrauschen von MUW hinten rechts |
 | STAT_MUW_HI_NOISE_LEVEL_WERT | mV | - | signed int | - | - | 1.0 | 1.0 | 0.0 | Grundrauschen von MUW hinten zentral |
 
-<a id="table-res-0xdcba-d"></a>
 ### RES_0XDCBA_D
 
 Dimensions: 105 rows × 10 columns
@@ -3241,7 +3132,6 @@ Dimensions: 105 rows × 10 columns
 | STAT_MUW_HI_ALARM_WAKEUP_LEVEL_10_WERT | V | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Alarm-WakeUp-Spannungswert am MUW hinten zentral bei Alarm 10 |
 | STAT_MUW_HI_TEMP_LEVEL_10_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Temperatur am MUW hinten zentral bei Alarm 10 |
 
-<a id="table-res-0xdcbb-d"></a>
 ### RES_0XDCBB_D
 
 Dimensions: 105 rows × 10 columns
@@ -3354,7 +3244,6 @@ Dimensions: 105 rows × 10 columns
 | STAT_MUW_HI_ALARM_LEVEL_10_WERT | V | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Alarm-Spannungswert am MUW hinten zentral bei Alarm 10 |
 | STAT_MUW_HI_TEMP_LEVEL_10_WERT | °C | high | unsigned char | - | - | 1.0 | 1.0 | -40.0 | Temperatur am MUW hinten zentral bei Alarm 10 |
 
-<a id="table-res-0xdcbc-d"></a>
 ### RES_0XDCBC_D
 
 Dimensions: 5 rows × 10 columns
@@ -3367,7 +3256,6 @@ Dimensions: 5 rows × 10 columns
 | STAT_MUW_HR_SPANNUNG_WERT | V | - | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Spannung des Sensors hinten rechts |
 | STAT_MUW_HI_SPANNUNG_WERT | V | - | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Spannung des Sensors hinten zentral |
 
-<a id="table-res-0xdcdd-d"></a>
 ### RES_0XDCDD_D
 
 Dimensions: 9 rows × 10 columns
@@ -3384,7 +3272,6 @@ Dimensions: 9 rows × 10 columns
 | STAT_ZV_NR | 0-n | - | unsigned char | - | TAB_ZV_ST_CLSY | 1.0 | 1.0 | 0.0 | Status Zentralverriegelung |
 | STAT_RESERVE_WERT | HEX | - | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Reserve (noch nicht belegt) |
 
-<a id="table-res-0xdd16-d"></a>
 ### RES_0XDD16_D
 
 Dimensions: 1 rows × 10 columns
@@ -3393,7 +3280,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_OBD_UEBERWACHUNG | 0/1 | high | unsigned char | - | - | - | - | - | 0 = OBD-Überwachung nicht aktiv 1 = OBD-Überwachung aktiv |
 
-<a id="table-res-0xdd4b-d"></a>
 ### RES_0XDD4B_D
 
 Dimensions: 18 rows × 10 columns
@@ -3419,7 +3305,6 @@ Dimensions: 18 rows × 10 columns
 | STAT_PANIK_ALL_ALARM_ANZAHL_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Summe aller ausgelösten Alarme des Panik-Alarms |
 | STAT_AUTARK_ALL_ALARM_ANZAHL_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Summe aller ausgelösten Alarme des autarken-Alarms |
 
-<a id="table-res-0xf152-d"></a>
 ### RES_0XF152_D
 
 Dimensions: 2 rows × 10 columns
@@ -3429,7 +3314,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_HW_MODIFICATION_INDEX_WERT | HEX | high | unsigned char | - | - | - | - | - | Index of hardware modification:  FF: Not supported index |
 | - | Bit | high | BITFIELD | - | BF_22_F152_SUPPLIERINFO | - | - | - | Tab Supplierinfo |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 28 rows × 16 columns
@@ -3465,7 +3349,6 @@ Dimensions: 28 rows × 16 columns
 | READHWMODIFICATIONINDEX | 0xF152 | - | Dieser Service kommt nur zum Einsatz, wenn es eine geringfügige Hardwareänderung an dem Steuergerät gegeben hat, die nicht zu einer Änderung der Sachnummer bzw. der Hardware SGBM-IDs geführt hat. Eine solche Änderung ist von außen nicht diagnostizierbar, daher wurde dieser Dienst dafür eingeführt. | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xF152_D |
 | ACTIVE_DIAGNOSTIC_SESSION | 0xF186 | STAT_ACTIVE_DIAGNOSTIC_SESSION | activeDiagnosticSession | 0-n | - | High | unsigned char | RDBI_ADS_DOP | - | - | - | - | 22 | - | - |
 
-<a id="table-tab-dwa-alarmspeicher-carbio"></a>
 ### TAB_DWA_ALARMSPEICHER_CARBIO
 
 Dimensions: 34 rows × 2 columns
@@ -3507,7 +3390,6 @@ Dimensions: 34 rows × 2 columns
 | 0xE0 | Alarm CANSINE2: Tilt Sensor Z- |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-dwa-intern-2"></a>
 ### TAB_DWA_INTERN_2
 
 Dimensions: 23 rows × 2 columns
@@ -3538,7 +3420,6 @@ Dimensions: 23 rows × 2 columns
 | 0xFF | unbekannter Status |
 | 0xFFFF | Wert ungültig |
 
-<a id="table-tab-dwa-klappenkontakt"></a>
 ### TAB_DWA_KLAPPENKONTAKT
 
 Dimensions: 4 rows × 2 columns
@@ -3550,7 +3431,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | unplausibel |
 | 0x03 | ungültig |
 
-<a id="table-tab-dwa-led"></a>
 ### TAB_DWA_LED
 
 Dimensions: 5 rows × 2 columns
@@ -3563,7 +3443,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Blitzen |
 | 0xFF | unbekannter Zustand |
 
-<a id="table-tab-dwa-led-arg"></a>
 ### TAB_DWA_LED_ARG
 
 Dimensions: 5 rows × 2 columns
@@ -3576,7 +3455,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0003 | Blitzen |
 | 0xFFFF | unbekannter Zustand |
 
-<a id="table-tab-dwa-schnelltest"></a>
 ### TAB_DWA_SCHNELLTEST
 
 Dimensions: 3 rows × 2 columns
@@ -3587,7 +3465,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Schnelltest leise |
 | 0x02 | Schnelltest normal |
 
-<a id="table-tab-dwa-selbsttest"></a>
 ### TAB_DWA_SELBSTTEST
 
 Dimensions: 4 rows × 2 columns
@@ -3599,7 +3476,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Selbsttest Innenraumschutz |
 | 0x03 | Selbsttest Neigungssgeber |
 
-<a id="table-tab-dwa-selbsttest-erg"></a>
 ### TAB_DWA_SELBSTTEST_ERG
 
 Dimensions: 3 rows × 2 columns
@@ -3610,7 +3486,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Selbsttest IO |
 | 0x02 | Selbsttest läuft |
 
-<a id="table-tab-dwa-sine-intern"></a>
 ### TAB_DWA_SINE_INTERN
 
 Dimensions: 5 rows × 2 columns
@@ -3623,7 +3498,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | ungültig |
 | 0x04 | nicht unterstüzt |
 
-<a id="table-tab-muw-funktionstest"></a>
 ### TAB_MUW_FUNKTIONSTEST
 
 Dimensions: 4 rows × 2 columns
@@ -3635,7 +3509,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | MUW fehlerhaft |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-muw-funktionstest-2"></a>
 ### TAB_MUW_FUNKTIONSTEST_2
 
 Dimensions: 4 rows × 2 columns
@@ -3647,7 +3520,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Funktionstest konnte nicht gestartet werden |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-muw-intern"></a>
 ### TAB_MUW_INTERN
 
 Dimensions: 5 rows × 2 columns
@@ -3660,7 +3532,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-muw-komm-fehler"></a>
 ### TAB_MUW_KOMM_FEHLER
 
 Dimensions: 7 rows × 2 columns
@@ -3675,7 +3546,6 @@ Dimensions: 7 rows × 2 columns
 | 0xFE | Sensor nicht konfiguriert |
 | 0xFF | unbekannter Status |
 
-<a id="table-tab-muw-selbsttest"></a>
 ### TAB_MUW_SELBSTTEST
 
 Dimensions: 5 rows × 2 columns
@@ -3688,7 +3558,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Selbsttest mir Fehlern abgeschlossen |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-sine-batt-level"></a>
 ### TAB_SINE_BATT_LEVEL
 
 Dimensions: 4 rows × 2 columns
@@ -3700,7 +3569,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Batterie neu |
 | 0xFF | Ungültiges Signal |
 
-<a id="table-tab-stat-geblaese"></a>
 ### TAB_STAT_GEBLAESE
 
 Dimensions: 4 rows × 2 columns
@@ -3712,7 +3580,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-op-cabrio-dach"></a>
 ### TAB_STAT_OP_CABRIO_DACH
 
 Dimensions: 6 rows × 2 columns
@@ -3726,7 +3593,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Beladeposition verlassen |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-pos-verdeck"></a>
 ### TAB_STAT_POS_VERDECK
 
 Dimensions: 11 rows × 2 columns
@@ -3745,7 +3611,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | Beladehilfe in Zwischenposition |
 | 0xFF | - |
 
-<a id="table-tab-stat-standheizung"></a>
 ### TAB_STAT_STANDHEIZUNG
 
 Dimensions: 5 rows × 2 columns
@@ -3758,7 +3623,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-stat-standlueften"></a>
 ### TAB_STAT_STANDLUEFTEN
 
 Dimensions: 5 rows × 2 columns
@@ -3771,7 +3635,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Signal ungültig |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-supplierinfo-field"></a>
 ### TAB_SUPPLIERINFO_FIELD
 
 Dimensions: 64 rows × 2 columns
@@ -3843,7 +3706,6 @@ Dimensions: 64 rows × 2 columns
 | 0x3E | Wert 62 |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-zv-st-clsy"></a>
 ### TAB_ZV_ST_CLSY
 
 Dimensions: 9 rows × 2 columns

@@ -135,7 +135,6 @@
 - [STATUS_LAMBDA_MUL_1](#job-status-lambda-mul-1) - Gemischadaption multipl. 1 Read adaption mixture multiplicative bank 1
 - [STATUS_DIGITAL_OBDII](#job-status-digital-obdii) - Status Schalteingaenge Read OBD2 Readiness flags
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -148,7 +147,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -166,7 +164,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise General comment about file |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-start-diagnostic-session"></a>
 ### START_DIAGNOSTIC_SESSION
 
 Begins a diagnostic session
@@ -185,7 +182,6 @@ Begins a diagnostic session
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Obtain security access to the ECU Schutzmechanismus SEED_KEY
@@ -204,7 +200,6 @@ Obtain security access to the ECU Schutzmechanismus SEED_KEY
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Send key response |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EMS2000
@@ -237,7 +232,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-ident-extended"></a>
 ### IDENT_EXTENDED
 
 Read additional ECU Ident information
@@ -261,7 +255,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Tester present message
@@ -275,7 +268,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden Stop the diagnostic session
@@ -289,7 +281,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Reset the ECU
@@ -304,7 +295,6 @@ _No arguments._
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-stat-freezeframe"></a>
 ### STAT_FREEZEFRAME
 
 Read the freeze frame data
@@ -360,7 +350,6 @@ Read the freeze frame data
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Read all faults
@@ -420,7 +409,6 @@ _No arguments._
 | _TEL_ANTWORT3 | binary | Hex-Antwort von SG Read freezeframe response |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Clears All Faults
@@ -435,7 +423,6 @@ _No arguments._
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-read-memory"></a>
 ### READ_MEMORY
 
 Read ECU Memory by Address Speicher lesen mit Adresse
@@ -456,7 +443,6 @@ Read ECU Memory by Address Speicher lesen mit Adresse
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-write-memory"></a>
 ### WRITE_MEMORY
 
 Write data to a specified memory address Speicher schreiben mit Adresse
@@ -478,7 +464,6 @@ Write data to a specified memory address Speicher schreiben mit Adresse
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-access-timing-parameters"></a>
 ### ACCESS_TIMING_PARAMETERS
 
 Read the comms timing parameters Kommunikationsparameter lesen
@@ -497,7 +482,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-change-timing-parameters"></a>
 ### CHANGE_TIMING_PARAMETERS
 
 Set timing parameters for standard or programming mode Diagnosetimeout aendern
@@ -516,7 +500,6 @@ Set timing parameters for standard or programming mode Diagnosetimeout aendern
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-code-loeschen"></a>
 ### CODE_LOESCHEN
 
 Erase the software code and calibration data within flash Das kalibrabrierung daten und software schluessel in flash loeshen
@@ -531,7 +514,6 @@ _No arguments._
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-data-loeschen"></a>
 ### DATA_LOESCHEN
 
 Erase the calibration data within flash Das kalibrabrierung daten in flash loeshen
@@ -546,7 +528,6 @@ _No arguments._
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-check-reprog-depending"></a>
 ### CHECK_REPROG_DEPENDING
 
 Calculate the checksum and check the coherence system
@@ -560,7 +541,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-report-reprog-status"></a>
 ### REPORT_REPROG_STATUS
 
 Get the status of reprogramming after a mistake Programmieren status nach fehler auslesen
@@ -575,7 +555,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-learn-imob-seed"></a>
 ### LEARN_IMOB_SEED
 
 The ECM learns the immobolisation seed
@@ -590,7 +569,6 @@ _No arguments._
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-resync-imob-seed"></a>
 ### RESYNC_IMOB_SEED
 
 The ECM resynchronises the immobolisation seed
@@ -605,7 +583,6 @@ _No arguments._
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 Stop the power latch phase
@@ -620,7 +597,6 @@ _No arguments._
 | JUNK | unsigned char | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-start-man-test"></a>
 ### START_MAN_TEST
 
 Start the end of line test Hersteller test
@@ -634,7 +610,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-start-cat-test"></a>
 ### START_CAT_TEST
 
 Start catalyst test Katalysator test
@@ -648,7 +623,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-gib-self-test"></a>
 ### GIB_SELF_TEST
 
 Run the Gearbox Interface Box self test routine Getriebe Interface test
@@ -662,7 +636,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-ldp-test"></a>
 ### LDP_TEST
 
 Run the Leak Detection Pump test Leckdiagnosepumpen test
@@ -676,7 +649,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-execute-ram-routine"></a>
 ### EXECUTE_RAM_ROUTINE
 
 Start a routine which is stored within RAM (MTOS)
@@ -691,7 +663,6 @@ _No arguments._
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-switch-to-boot"></a>
 ### SWITCH_TO_BOOT
 
 Allow activation of the boot software mode Needed for programming
@@ -706,7 +677,6 @@ _No arguments._
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-swnr-schreiben"></a>
 ### SWNR_SCHREIBEN
 
 Write the Software number
@@ -727,7 +697,6 @@ Write the Software number
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read Software number response |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-tune-nr-schreiben"></a>
 ### TUNE_NR_SCHREIBEN
 
 Write the tune part number
@@ -748,7 +717,6 @@ Write the tune part number
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read tune response |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Request download
@@ -768,7 +736,6 @@ Request download
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Transfer data to the ECU
@@ -788,7 +755,6 @@ Transfer data to the ECU
 | _TEL_ANTWORTB | binary | Hex-Antwort von SG ECU response packet - last response Only received if first ECU response was "response pending" |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Exit data transfer
@@ -802,7 +768,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Read the AIF record
@@ -824,7 +789,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Write the AIF record
@@ -852,7 +816,6 @@ Write the AIF record
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read AIF response |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer aus dem Anwenderinfofeld Read the VIN from the current AIF record
@@ -867,7 +830,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Schreiben der 17-stelligen Fahrgestellnummer in dem Anwenderinfofeld Write the VIN into the AIF record
@@ -889,7 +851,6 @@ Schreiben der 17-stelligen Fahrgestellnummer in dem Anwenderinfofeld Write the V
 | _TEL_ANTWORT3 | binary | Hex-Antwort von SG Read new AIF response |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Read the ZCS record
@@ -906,7 +867,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-zcs-auftrag"></a>
 ### C_ZCS_AUFTRAG
 
 Write and verify the Central code
@@ -929,7 +889,6 @@ Write and verify the Central code
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read ZCS response |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-azcs-lesen"></a>
 ### C_AZCS_LESEN
 
 Read the auxiliary ZCS record
@@ -946,7 +905,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-azcs-auftrag"></a>
 ### C_AZCS_AUFTRAG
 
 Write and verify the Auxiliary Central code
@@ -969,7 +927,6 @@ Write and verify the Auxiliary Central code
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read AZCS response |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -988,7 +945,6 @@ Codierdaten lesen
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren Write and verify coding data
@@ -1009,7 +965,6 @@ Codierdaten schreiben und verifizieren Write and verify coding data
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read coding data response |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Speicherung der Checksumme
@@ -1028,7 +983,6 @@ Berechnung und Speicherung der Checksumme
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-steuern-actuator"></a>
 ### STEUERN_ACTUATOR
 
 Actuator test
@@ -1049,7 +1003,6 @@ Actuator test
 | CURRENT_STATUS | int | Control state 0=Activating done, 255=Activating in progress |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-application-correction"></a>
 ### STEUERN_APPLICATION_CORRECTION
 
 Application correction. Non volatile adjustment
@@ -1076,7 +1029,6 @@ Application correction. Non volatile adjustment
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-adaptive-values"></a>
 ### STEUERN_ADAPTIVE_VALUES
 
 Reset adaptive values
@@ -1095,7 +1047,6 @@ Reset adaptive values
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet table JobResult STATUS_TEXT |
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-status-ana-can-asc1"></a>
 ### STATUS_ANA_CAN_ASC1
 
 Read Analogue Input and Output States for LID 01 Read Anti Slip Control 1 analogue information
@@ -1115,7 +1066,6 @@ _No arguments._
 | STAT_CAN_TQI_MSR_WERT | real | Torque increase |
 | STAT_CAN_TQI_MSR_EINH | string |  |
 
-<a id="job-status-ana-wheel-speed"></a>
 ### STATUS_ANA_WHEEL_SPEED
 
 Read Analogue Input and Output States for LID 02 Read Anti Slip Control 2 analogue information (wheel speeds)
@@ -1137,7 +1087,6 @@ _No arguments._
 | STAT_CAN_VRD_RH_ASC_WERT | real | Right rear wheel speed |
 | STAT_CAN_VRD_RH_ASC_EINH | string |  |
 
-<a id="job-status-ana-can-asc4"></a>
 ### STATUS_ANA_CAN_ASC4
 
 Read Analogue Input and Output States for LID 04 Read Anti Slip Control 4 analogue information
@@ -1157,7 +1106,6 @@ _No arguments._
 | STAT_CAN_TQI_TW_MSR_WERT | real | Absolute torque at wheels increase request |
 | STAT_CAN_TQI_TW_MSR_EINH | string |  |
 
-<a id="job-status-ana-can-dme1"></a>
 ### STATUS_ANA_CAN_DME1
 
 Read Analogue Input and Output States for LID 05 Read Digital Motor Electronics 1 analogue information
@@ -1181,7 +1129,6 @@ _No arguments._
 | STAT_CAN_TQI_LOSS_WERT | real | Friction moment |
 | STAT_CAN_TQI_LOSS_EINH | string |  |
 
-<a id="job-status-ana-can-dme2"></a>
 ### STATUS_ANA_CAN_DME2
 
 Read Analogue Input and Output States for LID 06 Read Digital Motor Electronics 2 analogue information
@@ -1205,7 +1152,6 @@ _No arguments._
 | STAT_CAN_CRU_SET_LAMP_WERT | real | Cruise control set lamp |
 | STAT_CAN_CRU_SET_LAMP_EINH | string |  |
 
-<a id="job-status-ana-fuel-cons"></a>
 ### STATUS_ANA_FUEL_CONS
 
 Read Analogue Input and Output States for LID 07 Read Digital Motor Electronics 4 analogue information - Fuel Consumption
@@ -1221,7 +1167,6 @@ _No arguments._
 | STAT_TI_SUM_FCO_WERT | real | Fuel consumption |
 | STAT_TI_SUM_FCO_EINH | string |  |
 
-<a id="job-status-ana-can-dme5"></a>
 ### STATUS_ANA_CAN_DME5
 
 Read Analogue Input and Output States for LID 08 Read Digital Motor Electronics 5 analogue information
@@ -1251,7 +1196,6 @@ _No arguments._
 | STAT_CAN_MAP_WERT | real | Manifold gauge pressure |
 | STAT_CAN_MAP_EINH | string |  |
 
-<a id="job-status-ana-wheel-torque"></a>
 ### STATUS_ANA_WHEEL_TORQUE
 
 Read Analogue Input and Output States for LID 09 Read Digital Motor Electronics 6 analogue information (wheel torques)
@@ -1273,7 +1217,6 @@ _No arguments._
 | STAT_CAN_TW_TQI_REQ_TRA_WERT | real | Torque requested at wheels |
 | STAT_CAN_TW_TQI_REQ_TRA_EINH | string |  |
 
-<a id="job-status-ana-can-dme-zz"></a>
 ### STATUS_ANA_CAN_DME_ZZ
 
 Read Analogue Input and Output States for LID 0A Read Market and Engine information
@@ -1291,7 +1234,6 @@ _No arguments._
 | STAT_ENGINE_CONF_WERT | real | Engine information |
 | STAT_ENGINE_CONF_EINH | string |  |
 
-<a id="job-status-ana-can-egs1"></a>
 ### STATUS_ANA_CAN_EGS1
 
 Read Analogue Input and Output States for LID 0B Read Electonic Gear Selector 1 analogue information
@@ -1313,7 +1255,6 @@ _No arguments._
 | STAT_CAN_GR_MOD_WERT | real | Gear shift mode |
 | STAT_CAN_GR_MOD_EINH | string |  |
 
-<a id="job-status-ana-cvt1"></a>
 ### STATUS_ANA_CVT1
 
 Read Analogue Input and Output States for LID 0C Read Constant Velocity Transmission 1 analogue information
@@ -1345,7 +1286,6 @@ _No arguments._
 | STAT_CAN_GIB_SW_NR_WERT | real | Software number |
 | STAT_CAN_GIB_SW_NR_EINH | string |  |
 
-<a id="job-status-ana-can-instr2"></a>
 ### STATUS_ANA_CAN_INSTR2
 
 Read Analogue Input and Output States for LID 0D Read Instruments 2 analogue information
@@ -1363,7 +1303,6 @@ _No arguments._
 | STAT_CAN_FTL_WERT | real | Fuel tank level |
 | STAT_CAN_FTL_EINH | string |  |
 
-<a id="job-status-ana-ac-evap"></a>
 ### STATUS_ANA_AC_EVAP
 
 Read Analogue Input and Output States for LID 0F Read Instruments 2 analogue information - Air Conditioner Evaporator temperature
@@ -1379,7 +1318,6 @@ _No arguments._
 | STAT_CAN_AC_TEMP_WERT | real | A/C Evaporator temperature |
 | STAT_CAN_AC_TEMP_EINH | string |  |
 
-<a id="job-status-ana-engine2"></a>
 ### STATUS_ANA_ENGINE2
 
 Read Analogue Input and Output States for LID 11 Read Engine 2 analogue information
@@ -1397,7 +1335,6 @@ _No arguments._
 | STAT_ALTER_WERT | real | Alternator load |
 | STAT_ALTER_EINH | string |  |
 
-<a id="job-status-ana-engine3"></a>
 ### STATUS_ANA_ENGINE3
 
 Read Analogue Input and Output States for LID 12 Read Engine 3 analogue information
@@ -1441,7 +1378,6 @@ _No arguments._
 | STAT_VBR_BAS_WERT | real | Raw battery voltage after key |
 | STAT_VBR_BAS_EINH | string |  |
 
-<a id="job-status-ana-engine4"></a>
 ### STATUS_ANA_ENGINE4
 
 Read Analogue Input and Output States for LID 13 Read Engine 4 analogue information
@@ -1489,7 +1425,6 @@ _No arguments._
 | STAT_VB_KEY_WERT | real | Battery voltage after key |
 | STAT_VB_KEY_EINH | string |  |
 
-<a id="job-status-ana-engine5"></a>
 ### STATUS_ANA_ENGINE5
 
 Read Analogue Input and Output States for LID 14 Read Engine 5 analogue information
@@ -1525,7 +1460,6 @@ _No arguments._
 | STAT_IGA_SP_WERT | real | Ignition angle set point |
 | STAT_IGA_SP_EINH | string |  |
 
-<a id="job-status-ana-o2-heater"></a>
 ### STATUS_ANA_O2_HEATER
 
 Read Analogue Input and Output States for LID 15 Read Engine 6 analogue infomation - oxygen sensor heaters
@@ -1543,7 +1477,6 @@ _No arguments._
 | STAT_LSHPWM_DOWN_WERT | real | Downstream oxygen sensor heater |
 | STAT_LSHPWM_DOWN_EINH | string |  |
 
-<a id="job-status-ana-engine7"></a>
 ### STATUS_ANA_ENGINE7
 
 Read Analogue Input and Output States for LID 16 Read Engine 7 analogue information
@@ -1581,7 +1514,6 @@ _No arguments._
 | STAT_TPS_LIH_WERT | real | Limp home throttle position |
 | STAT_TPS_LIH_EINH | string |  |
 
-<a id="job-status-ana-fuel-trim"></a>
 ### STATUS_ANA_FUEL_TRIM
 
 Read Analogue Input and Output States for LID 17 Read Engine 8 analogue information - fuel trim
@@ -1607,7 +1539,6 @@ _No arguments._
 | STAT_TI_AD_FAC_MMV_REL_0_WERT | real | Rel. long term multiplicative fuel trim |
 | STAT_TI_AD_FAC_MMV_REL_0_EINH | string |  |
 
-<a id="job-status-ana-engine9"></a>
 ### STATUS_ANA_ENGINE9
 
 Read Analogue Input and Output States for LID 18 Read Engine 9 analogue information
@@ -1637,7 +1568,6 @@ _No arguments._
 | STAT_LOAD_CLC_WERT | real | Calculated load |
 | STAT_LOAD_CLC_EINH | string |  |
 
-<a id="job-status-ana-inj-time"></a>
 ### STATUS_ANA_INJ_TIME
 
 Read Analogue Input and Output States for LID 19 Read Engine 10 analogue information - injection times
@@ -1655,7 +1585,6 @@ _No arguments._
 | STAT_TI_V_000_WERT | real | Computed injection time |
 | STAT_TI_V_000_EINH | string |  |
 
-<a id="job-status-ana-ews"></a>
 ### STATUS_ANA_EWS
 
 Read Analogue Input and Output States for LID 20 Read Immobiliser information
@@ -1675,7 +1604,6 @@ _No arguments._
 | STAT_CTR_SDR_3_IMOB_WERT | real | Key on counter |
 | STAT_CTR_SDR_3_IMOB_EINH | string |  |
 
-<a id="job-status-ana-man-test"></a>
 ### STATUS_ANA_MAN_TEST
 
 Read Analogue Input and Output States for LID 21 Read Manufacturing Test information
@@ -1747,7 +1675,6 @@ _No arguments._
 | STAT_ER_MMV_EOL_003_WERT | real | Engine roughness value for cylinder 4 |
 | STAT_ER_MMV_EOL_003_EINH | string |  |
 
-<a id="job-status-ana-cvt2"></a>
 ### STATUS_ANA_CVT2
 
 Read Analogue Input and Output States for LID 23 Read Constant Velocity Transmission 2 analogue information
@@ -1769,7 +1696,6 @@ _No arguments._
 | STAT_CVT_DFT_TOT_DIST_WERT | real | Distance travelled in default mode |
 | STAT_CVT_DFT_TOT_DIST_EINH | string |  |
 
-<a id="job-status-io-can-asc1"></a>
 ### STATUS_IO_CAN_ASC1
 
 Read Digital Input States for LID 01 Read Anti Slip Control 1 digital information
@@ -1789,7 +1715,6 @@ _No arguments._
 | STAT_LV_CAN_TQ_STATE_ACTIVE | int | ABS/ASC override activity status |
 | STAT_LV_VS_CAN_ERR_DET_ACTIVE | int | Vehicle speed error status |
 
-<a id="job-status-io-driving-stability"></a>
 ### STATUS_IO_DRIVING_STABILITY
 
 Read Digital Input States for LID 03 Read Driving Stability control status
@@ -1804,7 +1729,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | STAT_LV_DSC_ACT_ACTIVE | int | Driving stability control status |
 
-<a id="job-status-io-can-asc4"></a>
 ### STATUS_IO_CAN_ASC4
 
 Read Digital Input States for LID 04 Read Anti Slip Control 4 digital information
@@ -1820,7 +1744,6 @@ _No arguments._
 | STAT_LV_TW_MSR_REQ_ACTIVE | int | MSR torque increase request active |
 | STAT_LV_TW_ASR_REQ_ACTIVE | int | ASC torque decrease request active |
 
-<a id="job-status-io-can-dme1"></a>
 ### STATUS_IO_CAN_DME1
 
 Read Digital Input States for LID 05 Read Digital Motor Electronics 1 digital information
@@ -1838,7 +1761,6 @@ _No arguments._
 | STAT_LV_TCS_ACK_ACTIVE | int | ASC plausibility status |
 | STAT_LV_ACCOUT_RELAY_ACTIVE | int | Air con compressor status |
 
-<a id="job-status-io-can-dme4"></a>
 ### STATUS_IO_CAN_DME4
 
 Read Digital Input States for LID 07 Read Digital Motor Electronics 4 digital information
@@ -1855,7 +1777,6 @@ _No arguments._
 | STAT_LV_CRU_ON_LAMP_ON | int | Cruise available lamp status |
 | STAT_LV_WAL_1_ON | int | Engine warning lamp |
 
-<a id="job-status-io-wheel-torque"></a>
 ### STATUS_IO_WHEEL_TORQUE
 
 Read Digital Input States for LID 09 Read Digital Motor Electronics 6 digital information - torque
@@ -1871,7 +1792,6 @@ _No arguments._
 | STAT_LV_CAN_TW_FLT_ACTIVE | int | Torque intervention failure |
 | STAT_LV_CAN_TW_ACK_ACTIVE | int | Torque at wheels request acknowledgement |
 
-<a id="job-status-io-shifting"></a>
 ### STATUS_IO_SHIFTING
 
 Read Digital Input States for LID 0B Read State of Gear Shifting
@@ -1886,7 +1806,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | STAT_LV_CAN_GS_ACTIVE | int | Shifting active |
 
-<a id="job-status-io-cvt1"></a>
 ### STATUS_IO_CVT1
 
 Read Digital Input States for LID 0C Read Constant Vehicle Transmission 1 digital information
@@ -1914,7 +1833,6 @@ _No arguments._
 | STAT_LV_GIB_CKS_ERR_DET_ON | int | EE checksum fault in GIB |
 | STAT_LV_GIB_CTL_ERR_DET_ON | int | Control impossible |
 
-<a id="job-status-io-instr3"></a>
 ### STATUS_IO_INSTR3
 
 Read Digital Input States for LID 0E Read Instruments 3 digital information
@@ -1931,7 +1849,6 @@ _No arguments._
 | STAT_LV_ACCIN_ON | int | Air con compressor state request |
 | STAT_LV_ACIN_ON | int | Air con request |
 
-<a id="job-status-io-engine1"></a>
 ### STATUS_IO_ENGINE1
 
 Read Digital Input States for LID 10 Read Engine 1 digital information
@@ -1995,7 +1912,6 @@ _No arguments._
 | STAT_LV_MSR_AUTH_ACTIVE | int | MSR request authorised |
 | STAT_LV_CLUTCH_LOCKED_ACTIVE | int | Clutch locked |
 
-<a id="job-status-io-engine2"></a>
 ### STATUS_IO_ENGINE2
 
 Read Digital Input States for LID 11 Read Engine 2 digital information
@@ -2029,7 +1945,6 @@ _No arguments._
 | STAT_LV_ASR_ACT_ACTIVE | int | Torque reduction flag |
 | STAT_LV_TPS_AD_REQ_ACTIVE | int | Throttle adaption successful |
 
-<a id="job-status-io-ews"></a>
 ### STATUS_IO_EWS
 
 Read Digital Input States for LID 20 Read Immobiliser digital information
@@ -2051,7 +1966,6 @@ _No arguments._
 | STAT_LV_ANS_ERR_COM_IMOB_ACTIVE | int | Communication error |
 | STAT_LV_ANS_NOT_IMOB_ACTIVE | int | No correct answer before end of comm time |
 
-<a id="job-status-io-man-test"></a>
 ### STATUS_IO_MAN_TEST
 
 Read Digital Input States for LID 21 Read Manufacturing Test digital information
@@ -2071,7 +1985,6 @@ _No arguments._
 | STAT_LV_ERR_PRES_LS_DOWN_EOL_ACTIVE | int | Downstream O2 sensor condition flag |
 | STAT_LV_END_TLDP_DIAG_EOL_ACTIVE | int | LDP test flag |
 
-<a id="job-status-io-cruise"></a>
 ### STATUS_IO_CRUISE
 
 Read Digital Input States for LID 22 Read Cruise digital information
@@ -2131,7 +2044,6 @@ _No arguments._
 | STAT_LV_VS_RATIO_DFT_5_ACTIVE | int | Cruise suspension byte 5 - vehicle speed below 70% of stored speed |
 | STAT_LV_CRU_SWI_ON_OFF_5_ACTIVE | int | Cruise suspension byte 5 - O/I switch pressed |
 
-<a id="job-status-io-oil-test-ok"></a>
 ### STATUS_IO_OIL_TEST_OK
 
 Read Digital Input States for LID 23 Read whether it is OK to measure the oil level
@@ -2146,7 +2058,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | STAT_LV_OIL_LEVEL_TEST_OK_ACTIVE | int | Gearbox oil temperature is OK to measure oil level |
 
-<a id="job-status-io-ready-code"></a>
 ### STATUS_IO_READY_CODE
 
 Read Digital Input States for LID 24 Read Readiness code digital information
@@ -2172,7 +2083,6 @@ _No arguments._
 | STAT_LV_READY_LS_DOWN_1_ACTIVE | int | Readiness flag of DOWN O2 sensor |
 | STAT_LV_READY_CAT_1_ACTIVE | int | Readiness flag of catalyst |
 
-<a id="job-status-motordrehzahl"></a>
 ### STATUS_MOTORDREHZAHL
 
 Motordrehzahl Read the engine speed
@@ -2189,7 +2099,6 @@ _No arguments._
 | STAT_MOTORDREHZAHL_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-ll-solldrehzahl"></a>
 ### STATUS_LL_SOLLDREHZAHL
 
 Solldrehzahl Leerlaufregler auslesen Read the target idle speed
@@ -2205,7 +2114,6 @@ _No arguments._
 | STAT_LL_SOLLDREHZAHL_EINH | string | Einheit Solldrehzahl |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-zuendwinkel"></a>
 ### STATUS_ZUENDWINKEL
 
 Zuendwinkel Zyl1 Read the spark advance angle
@@ -2221,7 +2129,6 @@ _No arguments._
 | STAT_ZUENDWINKEL_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-lmm-masse"></a>
 ### STATUS_LMM_MASSE
 
 Luftmasse Read the air mass
@@ -2237,7 +2144,6 @@ _No arguments._
 | STAT_LMM_MASSE_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-einspritzzeit"></a>
 ### STATUS_EINSPRITZZEIT
 
 Einspritzzeit EV1 Read the injection duration
@@ -2253,7 +2159,6 @@ _No arguments._
 | STAT_EINSPRITZZEIT_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-last"></a>
 ### STATUS_LAST
 
 Lastsignal auslesen Read the calculated load value
@@ -2269,7 +2174,6 @@ _No arguments._
 | STAT_LAST_EINH | string | Einheit Lastsignal WRGL |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-dkp-winkel"></a>
 ### STATUS_DKP_WINKEL
 
 DK-Winkel Read the throttle angle
@@ -2285,7 +2189,6 @@ _No arguments._
 | STAT_DKP_WINKEL_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-systemcheck-laufunruhe"></a>
 ### STATUS_SYSTEMCHECK_LAUFUNRUHE
 
 Laufunruhe lesen Read the engine roughness for each cylinder
@@ -2303,7 +2206,6 @@ _No arguments._
 | STAT_SYSTEMCHECK_LAUFUNRUHE_ZYL4_WERT | real | Engine roughness cylinder 4 Rundlaufwert Zylinder 4 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-ls-vkat-heizung-tv-1"></a>
 ### STATUS_LS_VKAT_HEIZUNG_TV_1
 
 norm. Heizleist. L-Sonde vKat1 Read the upstream oxygen sensor heater
@@ -2319,7 +2221,6 @@ _No arguments._
 | STAT_LS_VKAT_HEIZUNG_TV_1_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-ls-nkat-heizung-tv-1"></a>
 ### STATUS_LS_NKAT_HEIZUNG_TV_1
 
 norm. Heizleist. L-Sonde hKat1 Read the downstream oxygen sensor heater
@@ -2335,7 +2236,6 @@ _No arguments._
 | STAT_LS_NKAT_HEIZUNG_TV_1_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-ls-vkat-signal-1"></a>
 ### STATUS_LS_VKAT_SIGNAL_1
 
 Lambdasondenspannung v Kat Read the voltage of the upstream oxygen sensor
@@ -2351,7 +2251,6 @@ _No arguments._
 | STAT_LS_VKAT_SIGNAL_1_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-ls-nkat-signal-1"></a>
 ### STATUS_LS_NKAT_SIGNAL_1
 
 Lambdasondenspannung n Kat Read the voltage of the downstream oxygen sensor
@@ -2367,7 +2266,6 @@ _No arguments._
 | STAT_LS_NKAT_SIGNAL_1_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-lambda-integrator-1"></a>
 ### STATUS_LAMBDA_INTEGRATOR_1
 
 Lambdaregler1 Read the fuel control bank 1
@@ -2383,7 +2281,6 @@ _No arguments._
 | STAT_LAMBDA_INTEGRATOR_1_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-te-tastverhaeltnis"></a>
 ### STATUS_TE_TASTVERHAELTNIS
 
 Tastverhaeltnis TEV Read solenoid valve, tank ventillation (purge cannister)
@@ -2399,7 +2296,6 @@ _No arguments._
 | STAT_TE_TASTVERHAELTNIS_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-mdk-poti-spannung"></a>
 ### STATUS_MDK_POTI_SPANNUNG
 
 Potentiometer Motordrosselklappe auslesen Read the throttle potentiometer signals
@@ -2416,7 +2312,6 @@ _No arguments._
 | STAT_MDK_POTI_SPANNUNG_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-pwg-poti-spannung"></a>
 ### STATUS_PWG_POTI_SPANNUNG
 
 Fahrerwunsch Read the pedal sensor signals
@@ -2433,7 +2328,6 @@ _No arguments._
 | STAT_PWG_POTI_SPANNUNG_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-pwg-winkel"></a>
 ### STATUS_PWG_WINKEL
 
 PWG-Winkel auslesen Read the pedal sensor angle
@@ -2449,7 +2343,6 @@ _No arguments._
 | STAT_PWG_WINKEL_EINH | string | Einheit PWG-Winkel |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-an-lufttemperatur"></a>
 ### STATUS_AN_LUFTTEMPERATUR
 
 Ansauglufttemperatur Read the air intake temperature
@@ -2466,7 +2359,6 @@ _No arguments._
 | STAT_AN_LUFTTEMPERATUR_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-motortemperatur"></a>
 ### STATUS_MOTORTEMPERATUR
 
 Motortemperatur Read the engine coolant temperature
@@ -2483,7 +2375,6 @@ _No arguments._
 | STAT_MOTORTEMPERATUR_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-kuehlw-ausl-temperatur"></a>
 ### STATUS_KUEHLW_AUSL_TEMPERATUR
 
 Temperatur Kuehleraustritt Read the radiator outlet coolant temperature
@@ -2499,7 +2390,6 @@ _No arguments._
 | STAT_KUEHLW_AUSL_TEMPERATUR_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Ubatt Read the battery voltage after relay
@@ -2516,7 +2406,6 @@ _No arguments._
 | STAT_UBATT_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-geberrad-adaption"></a>
 ### STATUS_GEBERRAD_ADAPTION
 
 Geberradadaption Read the crank sensor adaption (engine is synchonized switch)
@@ -2533,7 +2422,6 @@ _No arguments._
 | STATUS_GEBERRAD_ADAPTION_EINH | string | Einheit inc |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Status Schalteingaenge Read switches and I/O states
@@ -2563,7 +2451,6 @@ _No arguments._
 | _TEL_ANTWORT4 | binary | Hex-Antwort von SG Read fuel pump response |
 | _TEL_ANTWORT5 | binary | Hex-Antwort von SG Read configuration response |
 
-<a id="job-status-lambda-add-1"></a>
 ### STATUS_LAMBDA_ADD_1
 
 Gemischadaption additiv 1 Read adaption mixture additive bank 1
@@ -2579,7 +2466,6 @@ _No arguments._
 | STAT_LAMBDA_ADD_1_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-lambda-mul-1"></a>
 ### STATUS_LAMBDA_MUL_1
 
 Gemischadaption multipl. 1 Read adaption mixture multiplicative bank 1
@@ -2595,7 +2481,6 @@ _No arguments._
 | STAT_LAMBDA_MUL_1_EINH | string | Einheit |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-digital-obdii"></a>
 ### STATUS_DIGITAL_OBDII
 
 Status Schalteingaenge Read OBD2 Readiness flags
@@ -2636,7 +2521,6 @@ _No arguments._
 - [APPLIC_CORRECTION](#table-applic-correction) (4 × 3)
 - [ADAPTIVE_VALUES](#table-adaptive-values) (11 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 22 rows × 2 columns
@@ -2666,7 +2550,6 @@ Dimensions: 22 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 45 rows × 2 columns
@@ -2719,7 +2602,6 @@ Dimensions: 45 rows × 2 columns
 | 0x44 | ISAD Electronic Systems |
 | 0xFF | Unknown manufacturer |
 
-<a id="table-freezeframe"></a>
 ### FREEZEFRAME
 
 Dimensions: 22 rows × 10 columns
@@ -2749,7 +2631,6 @@ Dimensions: 22 rows × 10 columns
 | VS | 1.0 | 0.0 | km/h | 0x18 | 39 | 1 | 0xFF | 0 | Vehicle Speed |
 | Unknown item | 0.0 | 0.0 |  | 0x00 | 0 | 0 | 0xFF | 0 |  |
 
-<a id="table-digital"></a>
 ### DIGITAL
 
 Dimensions: 180 rows × 4 columns
@@ -2937,7 +2818,6 @@ Dimensions: 180 rows × 4 columns
 | LV_READY_CAT_1 | 9 | 0x10 | 0x10 |
 | ?? | FF | 0x00 | 0xFF |
 
-<a id="table-analog"></a>
 ### ANALOG
 
 Dimensions: 146 rows × 4 columns
@@ -3091,7 +2971,6 @@ Dimensions: 146 rows × 4 columns
 | N_SP_ADD_KWP_LTA | 1.0 | 0.0 |  |
 | Unknown item | 0.0 | 0 |  |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 142 rows × 2 columns
@@ -3241,7 +3120,6 @@ Dimensions: 142 rows × 2 columns
 | 0x1683 | CAN bus - bus off mode |
 | 0xFFFF | Unknown Error |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 140 rows × 7 columns
@@ -3389,7 +3267,6 @@ Dimensions: 140 rows × 7 columns
 | 0x1683 | 4 | 1 | 0x17 | 0x0D | 0x04 | 0x16 |
 | 0x00 | 0 | 0 | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -3407,7 +3284,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | warning lamp state |
 | 0xFF | unknown status |
 
-<a id="table-actuator-test"></a>
 ### ACTUATOR_TEST
 
 Dimensions: 19 rows × 3 columns
@@ -3434,7 +3310,6 @@ Dimensions: 19 rows × 3 columns
 | DISABLE_ACTS | 0x3F | Disable all actuators |
 |  | 0xFF |  |
 
-<a id="table-applic-correction"></a>
 ### APPLIC_CORRECTION
 
 Dimensions: 4 rows × 3 columns
@@ -3446,7 +3321,6 @@ Dimensions: 4 rows × 3 columns
 | IDLE_DUR_CORR | 0x92 | Idle speed durable correction |
 |  | 0xFF |  |
 
-<a id="table-adaptive-values"></a>
 ### ADAPTIVE_VALUES
 
 Dimensions: 11 rows × 3 columns

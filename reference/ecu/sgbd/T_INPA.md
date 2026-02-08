@@ -24,7 +24,6 @@
 - [INPA_SONDERSCRIPT_ZUORDNUNG](#job-inpa-sonderscript-zuordnung) - Verantwortlich für diesen job: Rüdiger Gall, TI-544 Sonder-INPA-Scripte pro Baureihe auslesen. Es wird keine Kommunnikation mit dem Steuergerät aufgebaut Es wird nur die table InpaScriptZuordnung00 ausgelesen Die ausgelesenen Spalten über die Baureihe werden ab INPA 6.3.0, 64BIT in die Konfigurationsdatei INPASCR.INI, INPASCRAUT.INI, ... geschrieben Beim Start von INPALOAD.EXE werden die Inhalte in der Scriptauswahl angezeigt.
 - [INPA_SCRIPT_ZUORDNUNG](#job-inpa-script-zuordnung) - Verantwortlich für diesen Job: Rüdiger Gall, TI-544 INPA-Scripte pro Baureihe auslesen. Es wird keine Kommunnikation mit dem Steuergerät aufgebaut Es wird nur die table InpaScriptZuordnung01 ausgelesen Die ausgelesenen Spalten über die Baureihe werden ab INPA 6.5.1, 64-BIT in die Konfigurationsdatei INPASCR.INI, INPASCRAUT.INI, ... geschrieben Beim Start von INPALOAD.EXE werden die Inhalte zum angeschlossenem Fahrzeug in der Scriptauswahl angezeigt.
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -37,7 +36,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -56,7 +54,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-inpa-sonderscript-zuordnung"></a>
 ### INPA_SONDERSCRIPT_ZUORDNUNG
 
 Verantwortlich für diesen job: Rüdiger Gall, TI-544 Sonder-INPA-Scripte pro Baureihe auslesen. Es wird keine Kommunnikation mit dem Steuergerät aufgebaut Es wird nur die table InpaScriptZuordnung00 ausgelesen Die ausgelesenen Spalten über die Baureihe werden ab INPA 6.3.0, 64BIT in die Konfigurationsdatei INPASCR.INI, INPASCRAUT.INI, ... geschrieben Beim Start von INPALOAD.EXE werden die Inhalte in der Scriptauswahl angezeigt.
@@ -78,7 +75,6 @@ Verantwortlich für diesen job: Rüdiger Gall, TI-544 Sonder-INPA-Scripte pro Ba
 | INPA_ABKUERZUNG | string | Abkürzung des Steuergerätes für die automatische INPA-Scriptauswahlerstellung table InpaScriptZuordnung00 BAUREIHE INPA_SCRIPT INPA_ABKUERZUNG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-inpa-script-zuordnung"></a>
 ### INPA_SCRIPT_ZUORDNUNG
 
 Verantwortlich für diesen Job: Rüdiger Gall, TI-544 INPA-Scripte pro Baureihe auslesen. Es wird keine Kommunnikation mit dem Steuergerät aufgebaut Es wird nur die table InpaScriptZuordnung01 ausgelesen Die ausgelesenen Spalten über die Baureihe werden ab INPA 6.5.1, 64-BIT in die Konfigurationsdatei INPASCR.INI, INPASCRAUT.INI, ... geschrieben Beim Start von INPALOAD.EXE werden die Inhalte zum angeschlossenem Fahrzeug in der Scriptauswahl angezeigt.
@@ -112,7 +108,6 @@ Verantwortlich für diesen Job: Rüdiger Gall, TI-544 INPA-Scripte pro Baureihe 
 - [INPASCRIPTZUORDNUNG00](#table-inpascriptzuordnung00) (15 × 6)
 - [INPASCRIPTZUORDNUNG01](#table-inpascriptzuordnung01) (362 × 13)
 
-<a id="table-inpascriptzuordnung00"></a>
 ### INPASCRIPTZUORDNUNG00
 
 Dimensions: 15 rows × 6 columns
@@ -135,7 +130,6 @@ Dimensions: 15 rows × 6 columns
 | F96 | 1,2,3,4 | FAHRWERK | RDC_2018 |  |  |
 | ??? |  |  |  |  |  |
 
-<a id="table-inpascriptzuordnung01"></a>
 ### INPASCRIPTZUORDNUNG01
 
 Dimensions: 362 rows × 13 columns

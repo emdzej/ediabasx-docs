@@ -49,7 +49,6 @@
 - [C_FG_AUFTRAG](#job-c-fg-auftrag) - Schreiben der Fahrgestellnummer Write the VIN
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnosemode des SG beenden Stop the diagnostic session
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -62,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -81,7 +79,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer EHPS
@@ -108,7 +105,6 @@ _No arguments._
 | ID_AIF_VORHANDEN | int | Ist ein AIF vorhanden (0 (nein)/ 1 (ja)) Is AIF data available 0=no 1=yes |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-ident-extended"></a>
 ### IDENT_EXTENDED
 
 Read additional ECU Ident information
@@ -131,7 +127,6 @@ _No arguments._
 | _TEL_ANTWORT3 | binary | Hex-Antwort von SG Read Siemens SW Version NR response |
 | _TEL_ANTWORT4 | binary | Hex-Antwort von SG Read Siemens Programming date response |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Tester present message
@@ -145,7 +140,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-start-diagnostic-session"></a>
 ### START_DIAGNOSTIC_SESSION
 
 Begins a diagnostic session
@@ -164,7 +158,6 @@ Begins a diagnostic session
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Reset the ECU
@@ -178,7 +171,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Read internal and external faults
@@ -210,7 +202,6 @@ _No arguments._
 | F_ART6_TEXT | string | 6. (einzige) Fehlerart als Text Fault string 6 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Clears All Faults
@@ -224,7 +215,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-status-fs-lesen"></a>
 ### STATUS_FS_LESEN
 
 Read number of faults and earliest faults through snapshot
@@ -257,7 +247,6 @@ _No arguments._
 | F_ART6_NR | int | 6. (einzige) Fehlerart Fault status 6 |
 | F_ART6_TEXT | string | 6. (einzige) Fehlerart als Text Fault string 6 |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Read Digital inputs/outputs
@@ -276,7 +265,6 @@ _No arguments._
 | STAT_SPEED_CONTROL_ENABLED | int | 1 wenn activ / 0 wenn aus 1=enabled, 0=disabled |
 | STAT_DIAGNOSTIC_CONTROL_MODE_ON | int | 1 wenn activ / 0 wenn aus 1=on, 0=off |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Read Analogue Input / Outputs
@@ -316,7 +304,6 @@ _No arguments._
 | STAT_EMF_COEF_WERT | real | 0 -> 797 rpm/V |
 | STAT_EMF_COEF_EINH | string |  |
 
-<a id="job-steuern-pwm"></a>
 ### STEUERN_PWM
 
 Force the Pulse Width Modulation from 0 to 100%
@@ -337,7 +324,6 @@ Force the Pulse Width Modulation from 0 to 100%
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-steuern-pwm-reset"></a>
 ### STEUERN_PWM_RESET
 
 Return PWM output control to the application software
@@ -351,7 +337,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-read-memory"></a>
 ### READ_MEMORY
 
 Read ECU Memory by Address Speicher auslesen
@@ -372,7 +357,6 @@ Read ECU Memory by Address Speicher auslesen
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-read-siemens-serial-nr"></a>
 ### READ_SIEMENS_SERIAL_NR
 
 Read the Siemens serial number
@@ -387,7 +371,6 @@ _No arguments._
 | SERIAL_NR | string | Siemens serial number |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-read-zf-hw-nr"></a>
 ### READ_ZF_HW_NR
 
 Read the ZF ECU Hardware number
@@ -402,7 +385,6 @@ _No arguments._
 | ZF_HW_NR | string | ZF ECU Hardware number |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-write-memory"></a>
 ### WRITE_MEMORY
 
 Write memory to a specified address Speicher schreiben
@@ -423,7 +405,6 @@ Write memory to a specified address Speicher schreiben
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-write-zf-hw-nr"></a>
 ### WRITE_ZF_HW_NR
 
 Write the ZF ECU Hardware Number
@@ -442,7 +423,6 @@ Write the ZF ECU Hardware Number
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Obtain security access to the ECU Schutzmechanismus SEED_KEY
@@ -463,7 +443,6 @@ Obtain security access to the ECU Schutzmechanismus SEED_KEY
 | _TEL_SENDE2 | binary | Sendetelegramm anzeigen Send key telegram to ECU - send key |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Send key response |
 
-<a id="job-check-reprog-depending"></a>
 ### CHECK_REPROG_DEPENDING
 
 Calculate the checksum and check the coherence system
@@ -477,7 +456,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-report-reprog-status"></a>
 ### REPORT_REPROG_STATUS
 
 Get the status of reprogramming after a mistake
@@ -492,7 +470,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 | REPROG_STATUS | unsigned int | Reprogramming status Bit0: checksum of ECU EEPROM software - if error then TRUE Bit1: ECU EEPROM software does not fit to ROM software - if error then TRUE Bit2: always FALSE Bit3: always FALSE Bit4: always FALSE Bit5: always FALSE Bit6: always FALSE Bit7: always FALSE |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Request download
@@ -506,7 +483,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Transfer data to the ECU Data is transfered in blocks of 62 bytes (maximum 128 x 62 == 7936 bytes)
@@ -525,7 +501,6 @@ Transfer data to the ECU Data is transfered in blocks of 62 bytes (maximum 128 x
 | _TEL_SENDE | binary | Sendetelegramm anzeigen Telegram sent to ECU |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Exit data transfer
@@ -539,7 +514,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation - OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-prog-datum-schreiben"></a>
 ### PROG_DATUM_SCHREIBEN
 
 Schreiben der Programm datum Write the programming date
@@ -561,7 +535,6 @@ Schreiben der Programm datum Write the programming date
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG Write program date response |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read program date response |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer Read the VIN
@@ -576,7 +549,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer VIN |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response packet |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Schreiben der Fahrgestellnummer Write the VIN
@@ -596,7 +568,6 @@ Schreiben der Fahrgestellnummer Write the VIN
 | _TEL_ANTWORT1 | binary | Hex-Antwort von SG Write VIN response |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG Read VIN response |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden Stop the diagnostic session
@@ -621,7 +592,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (8 × 2)
 - [FARTTEXTE](#table-farttexte) (10 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 22 rows × 2 columns
@@ -651,7 +621,6 @@ Dimensions: 22 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 56 rows × 2 columns
@@ -715,7 +684,6 @@ Dimensions: 56 rows × 2 columns
 | 0x55 | BHTC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-digital"></a>
 ### DIGITAL
 
 Dimensions: 6 rows × 4 columns
@@ -729,7 +697,6 @@ Dimensions: 6 rows × 4 columns
 | DIAGNOSTIC_CONTROL_MODE_ON | 13 | 0x10 | 0x10 |
 | ?? | 0 | 0x00 | 0xFF |
 
-<a id="table-analog"></a>
 ### ANALOG
 
 Dimensions: 14 rows × 4 columns
@@ -751,7 +718,6 @@ Dimensions: 14 rows × 4 columns
 | EMF_COEF | 3.125 | 0.0 | min-1/V |
 | Ungültige Ziffer | 0.0 | 0 |  |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -767,7 +733,6 @@ Dimensions: 8 rows × 2 columns
 | 0x5507 | Ungültige Motorspannung |
 | 0xFFFF | Ungültiger Fehler |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 10 rows × 2 columns

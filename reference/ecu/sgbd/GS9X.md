@@ -29,7 +29,6 @@
 - [STATUS_STATUSBYTE3](#job-status-statusbyte3) - Auslesen des 3. Statusbytes
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Beenden der Diagnose
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -47,7 +46,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -60,7 +58,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ende"></a>
 ### ENDE
 
 Abbruch der Kommunikation
@@ -69,7 +66,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -90,7 +86,6 @@ _No arguments._
 | ID_ZF_NR | string | Getriebeteilenummer |
 | ID_AIF_VORHANDEN | int | Ist ein AIF vorhanden (0 (nein)/ 1 (ja)) |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -130,7 +125,6 @@ _No arguments._
 | F_UW2_TEXT | string | Text fuer die Umweltbedingung |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -143,7 +137,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-status-lastsignal-dkg"></a>
 ### STATUS_LASTSIGNAL_DKG
 
 Auslesen des Lastsignals DKG
@@ -160,7 +153,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | TELEGRAMM_ANT | binary | Antworttelegramm |
 
-<a id="job-status-statusbyte3"></a>
 ### STATUS_STATUSBYTE3
 
 Auslesen des 3. Statusbytes
@@ -183,7 +175,6 @@ _No arguments._
 | STAT_EING_LEITERBAHN_3_EIN | int |  |
 | STAT_EING_LEITERBAHN_4_EIN | int |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -206,7 +197,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (14 × 2)
 - [FUMWELTTEXTE](#table-fumwelttexte) (15 × 2)
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 38 rows × 17 columns
@@ -252,7 +242,6 @@ Dimensions: 38 rows × 17 columns
 | 0x9d | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0a | 0x0b | 0x0c | 0x0d |
 | 0x9e | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0a | 0x0b | 0x0c | 0x0d |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 38 rows × 8 columns
@@ -298,7 +287,6 @@ Dimensions: 38 rows × 8 columns
 | 0x9d | 0x02 | 0x0a | 1000 | 55000 | 0x05 | 32000 | 0 |
 | 0x9e | 0x02 | 0x07 | 32000 | 0 | 0x06 | 32000 | 0 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 38 rows × 2 columns
@@ -344,7 +332,6 @@ Dimensions: 38 rows × 2 columns
 | 0x9d | CAN-Signal T-MOT |
 | 0x9e | CAN-Signal N-MOT |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -366,7 +353,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0c | statischer Fehler |
 | 0x0d | sporadischer Fehler |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 15 rows × 2 columns

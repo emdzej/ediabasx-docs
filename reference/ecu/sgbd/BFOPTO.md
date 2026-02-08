@@ -54,7 +54,6 @@
 - [STEUERN_MODUL_INITIALISIEREN](#job-steuern-modul-initialisieren) - Optotestermodul aktivieren/Moduladresse bereitstellen KWP2000: $31 SG spezifische Daten lesen $E0 Modul aktivieren
 - [STATUS_MODUL_RESET](#job-status-modul-reset) - Optotesterservices allgemein (JOB_NUMMER+JOB_DATEN) KWP2000: $31 SG spezifische Daten lesen $E1 Steuergeraete Status lesen Modus  : Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -67,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -86,7 +84,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -99,7 +96,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-steuern-kommunikations-mode"></a>
 ### STEUERN_KOMMUNIKATIONS_MODE
 
 OPPS in Kommunikationsmodus setzen
@@ -113,7 +109,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-steuern-most-messmode"></a>
 ### STEUERN_MOST_MESSMODE
 
 Einstellen Messmodus MOST
@@ -127,7 +122,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-steuern-kommunikationsparameter"></a>
 ### STEUERN_KOMMUNIKATIONSPARAMETER
 
 Einstellen der Kommunikationsparameter für BMW fast
@@ -141,7 +135,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-ads4most-mode"></a>
 ### STEUERN_ADS4MOST_MODE
 
 Kommandos nach STEUERN_ADS4MOST_MODE an ADS4MOST Treiber
@@ -155,7 +148,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-steuern-byteflight-mode"></a>
 ### STEUERN_BYTEFLIGHT_MODE
 
 Kommandos nach STEUERN_BYTEFLIGHT_MODE an BYTEFLIGHT
@@ -169,7 +161,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-steuern-set-modus"></a>
 ### STEUERN_SET_MODUS
 
 Master oder Slave, Clockmaster
@@ -188,7 +179,6 @@ Master oder Slave, Clockmaster
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-steuern-force-wakeup"></a>
 ### STEUERN_FORCE_WAKEUP
 
 #### Arguments
@@ -204,7 +194,6 @@ Master oder Slave, Clockmaster
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-status-ident"></a>
 ### STATUS_IDENT
 
 OPPS Identdaten
@@ -223,7 +212,6 @@ _No arguments._
 | STAT_FIRMWARE_VERSION_EINH | string |  |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-status-selbsttest"></a>
 ### STATUS_SELBSTTEST
 
 Ausführen System-Check
@@ -239,7 +227,6 @@ _No arguments._
 | STAT_SELBSTTEST_EINH | string | ohne Einheit |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-steuern-opps-reset"></a>
 ### STEUERN_OPPS_RESET
 
 Durchführen Reset OPPS
@@ -253,7 +240,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-status-spannung-most"></a>
 ### STATUS_SPANNUNG_MOST
 
 Spannungsüberwachung
@@ -269,7 +255,6 @@ _No arguments._
 | STAT_SPANNUNG_MOST_EINH | string | Keine Einheit (Boolscher Wert) |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-status-sendeleistung-messung"></a>
 ### STATUS_SENDELEISTUNG_MESSUNG
 
 Messung der Sendeleistung
@@ -285,7 +270,6 @@ _No arguments._
 | STAT_LICHTLEISTUNG_EINH | string | Einheit in dbm |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-status-measureopticalpower"></a>
 ### STATUS_MEASUREOPTICALPOWER
 
 Messung der Sendeleistung
@@ -301,7 +285,6 @@ _No arguments._
 | STAT_MEASUREOPTICALPOWER_EINH | string | Einheit in dbm |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-status-getopticalpower"></a>
 ### STATUS_GETOPTICALPOWER
 
 Messung der Sendeleistung
@@ -317,7 +300,6 @@ _No arguments._
 | STAT_GETOPTICALPOWER_EINH | string | Einheit in dbm |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-status-temperatur"></a>
 ### STATUS_TEMPERATUR
 
 _No arguments._
@@ -331,7 +313,6 @@ _No arguments._
 | STAT_TEMPERATUR_EINH | string | Einheit in °C |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-steuern-sendeleistung"></a>
 ### STEUERN_SENDELEISTUNG
 
 #### Arguments
@@ -347,7 +328,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-steuern-kalibrierung-most"></a>
 ### STEUERN_KALIBRIERUNG_MOST
 
 #### Arguments
@@ -366,7 +346,6 @@ _No arguments._
 | STAT_RUECKMELDUNG_EINH | string | Keine Einheit |
 | _TEL_ANTWORT | binary | Antwort des IFRAWMODE Befehls |
 
-<a id="job-status-potentiometer-offset-abgleich"></a>
 ### STATUS_POTENTIOMETER_OFFSET_ABGLEICH
 
 Digitaler Offset Abgleich im Sende- und Empfangstrakt Immer vor Opto-Abgleich durchführen Faser: max. 3dB Dämpfung darf verwendet werden
@@ -381,7 +360,6 @@ _No arguments._
 | STAT_POTENTIOMETER_OFFSET_ABGLEICH | int | 1 OK 0 Nicht OK |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-optischer-abgleich"></a>
 ### STEUERN_OPTISCHER_ABGLEICH
 
 Abgleich des Sendetrakts mit Referenzempfaenger
@@ -401,7 +379,6 @@ Abgleich des Sendetrakts mit Referenzempfaenger
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-spannungsversorgung-uisis"></a>
 ### STEUERN_SPANNUNGSVERSORGUNG_UISIS
 
 UISIS, Spannungsversorgung der Satelliten zu/abschalten
@@ -419,7 +396,6 @@ UISIS, Spannungsversorgung der Satelliten zu/abschalten
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-spannung-opps-byteflight"></a>
 ### STATUS_SPANNUNG_OPPS_BYTEFLIGHT
 
 Spannungswerte
@@ -438,7 +414,6 @@ _No arguments._
 | STAT_UISIS_MASSE_REFERENZ_WERT | real | Kanal3, Masse-Seite des Lastwiderstands |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-leitungstest-opps-byteflight"></a>
 ### STATUS_LEITUNGSTEST_OPPS_BYTEFLIGHT
 
 Leitungstest auf Kurzschluss
@@ -454,7 +429,6 @@ _No arguments._
 | STAT_LEITUNGSTEST_BYTEFLIGHT_ADAPTER | int | 1 In Ordnung 2 UISIS Leitung offen oder Kabel nicht gesteckt 3 Masse Leitung offen 4 Kurzschluss zwischen UISIS und Masseleitung |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-gateway-parameter"></a>
 ### STEUERN_GATEWAY_PARAMETER
 
 Sende/Empfangsparameter einstellen  
@@ -473,7 +447,6 @@ Sende/Empfangsparameter einstellen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-sendeleistung-a-w-dbm"></a>
 ### STEUERN_SENDELEISTUNG_A_W_DBM
 
 Sendeleistung fuer Kommunikation mit Satellit einstellen
@@ -493,7 +466,6 @@ Sendeleistung fuer Kommunikation mit Satellit einstellen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-start-kommunikation"></a>
 ### STEUERN_START_KOMMUNIKATION
 
 Start Kommunikation mit Satellit  
@@ -511,7 +483,6 @@ Start Kommunikation mit Satellit
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-nachrichten-senden-empfangen"></a>
 ### STEUERN_NACHRICHTEN_SENDEN_EMPFANGEN
 
 Kommunikation Sende/Empfangstest  
@@ -534,7 +505,6 @@ Kommunikation Sende/Empfangstest
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-sleep-mode"></a>
 ### STEUERN_SLEEP_MODE
 
 SG in Schlafmodus setzen  
@@ -548,7 +518,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-empfangspeak-leistung"></a>
 ### STEUERN_EMPFANGSPEAK_LEISTUNG
 
 Empfangspeakleistung messen
@@ -570,7 +539,6 @@ Empfangspeakleistung messen
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-empfangspeak-leistung"></a>
 ### STATUS_EMPFANGSPEAK_LEISTUNG
 
 Empfangspeakleistung messen
@@ -588,7 +556,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-modul-initialisieren"></a>
 ### STEUERN_MODUL_INITIALISIEREN
 
 Optotestermodul aktivieren/Moduladresse bereitstellen KWP2000: $31 SG spezifische Daten lesen $E0 Modul aktivieren
@@ -602,7 +569,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-modul-reset"></a>
 ### STATUS_MODUL_RESET
 
 Optotesterservices allgemein (JOB_NUMMER+JOB_DATEN) KWP2000: $31 SG spezifische Daten lesen $E1 Steuergeraete Status lesen Modus  : Default
@@ -629,7 +595,6 @@ _No arguments._
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (1 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -639,7 +604,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -742,7 +706,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 69 rows × 2 columns
@@ -819,7 +782,6 @@ Dimensions: 69 rows × 2 columns
 | 0x68 | Atena GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -841,7 +803,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -865,7 +826,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns

@@ -37,7 +37,6 @@
 - [STATUS_GYRO_VOLTAGE](#job-status-gyro-voltage) - Die GYRO-Spannung wird ausgegeben KWP2000: $21 ReadDataByLocalIdentifier $04 recordLocalIdentifier Modus  : Default
 - [STEUERN_SELBSTTEST_NAVI](#job-steuern-selbsttest-navi) - Die Navi führt einen Selbsttest durch KWP2000: $31 StartRoutineByLocalId $04 routineLocalIdentifier Modus  : Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -50,7 +49,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +67,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -99,7 +96,6 @@ _No arguments._
 | ID_SG_ADR | long | Steuergeraeteadresse |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -125,7 +121,6 @@ _No arguments._
 | F_WARNUNG_TEXT | string | Warnlampen Flag (Standard-Fehlerart) als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -166,7 +161,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen Je nach dieser Anzahl i (i = 1, 2, ...) existieren i mal folgende Results: (long)   F_UWi_NR   Index   der i. Umweltbedingung (string) F_UWi_TEXT Text    zur i. Umweltbedingung (real)   F_Uwi_WERT Wert    der i. Umweltbedingung (string) F_UWi_EINH Einheit der i. Umweltbedingung |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -180,7 +174,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -201,7 +194,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -221,7 +213,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers KWP2000: $85 ControlDTCSetting Modus  : Default
@@ -242,7 +233,6 @@ Sperren bzw. Freigeben des Fehlerspeichers KWP2000: $85 ControlDTCSetting Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: 1A 86 used Modus   : Default
@@ -260,7 +250,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-gps-antenne"></a>
 ### STATUS_GPS_ANTENNE
 
 Status der GPS-Antenne wird ausgegeben KWP2000: $21 ReadDataByLocalIdentifier $01 recordLocalIdentifier Modus  : Default
@@ -275,7 +264,6 @@ _No arguments._
 | STAT_GPS_ANTENNE | string | Statustext der GPS-Antenne Werte aus table TGpsAntennenStatus |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-gps-antenna"></a>
 ### STATUS_GPS_ANTENNA
 
 Status der GPS-Antenne wird ausgegeben KWP2000: $21 ReadDataByLocalIdentifier $01 recordLocalIdentifier Modus  : Default
@@ -291,7 +279,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-gps"></a>
 ### STATUS_GPS
 
 Status des GPS wird ausgegeben KWP2000: $21 ReadDataByLocalIdentifier $02 recordLocalIdentifier Modus  : Default
@@ -307,7 +294,6 @@ _No arguments._
 | STAT_GPS_TEXT | string | GPS-Status als Textausgabe |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-gps-position"></a>
 ### STATUS_GPS_POSITION
 
 3D GPS Position wird ausgegeben KWP2000: $21 ReadDataByLocalIdentifier $03 recordLocalIdentifier Modus  : Default
@@ -325,7 +311,6 @@ _No arguments._
 | STAT_GPS_POSITION_HOEHE_WERT | string | Es wird die aktuelle GPS Position Hoehe zurückgeliefert |
 | STAT_GPS_POSITION_TEXT | string | GPS POSITION Status Es wird ein Text zu fehlerhaften Datenwerten angezeigt |
 
-<a id="job-status-gps-sw-version"></a>
 ### STATUS_GPS_SW_VERSION
 
 Lesen der GPS Software Version Nummer KWP2000: $21 ReadDataByLocalIdentifier $05 recordLocalIdentifier Modus  : Default
@@ -340,7 +325,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-gyro-voltage"></a>
 ### STATUS_GYRO_VOLTAGE
 
 Die GYRO-Spannung wird ausgegeben KWP2000: $21 ReadDataByLocalIdentifier $04 recordLocalIdentifier Modus  : Default
@@ -357,7 +341,6 @@ _No arguments._
 | STAT_GYRO_VOLTAGE_EINH | string | GYRO-Spannung Einheit: V |
 | STAT_GYRO_TEXT | string | GYRO Status Es wird ein Text zu fehlerhaften Datenwerten angezeigt |
 
-<a id="job-steuern-selbsttest-navi"></a>
 ### STEUERN_SELBSTTEST_NAVI
 
 Die Navi führt einen Selbsttest durch KWP2000: $31 StartRoutineByLocalId $04 routineLocalIdentifier Modus  : Default
@@ -389,7 +372,6 @@ _No arguments._
 - [TGPSANTENNENSTATUS2](#table-tgpsantennenstatus2) (5 × 3)
 - [TGPSSTATUS](#table-tgpsstatus) (13 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -399,7 +381,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -502,7 +483,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 77 rows × 2 columns
@@ -587,7 +567,6 @@ Dimensions: 77 rows × 2 columns
 | 0x76 | CEL |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -609,7 +588,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -634,7 +612,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 7 rows × 2 columns
@@ -649,7 +626,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | ERROR_INVALID_RESULT |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -662,7 +638,6 @@ Dimensions: 5 rows × 2 columns
 | 0xA3EB | 0xA3EB: Gyro defekt |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -674,7 +649,6 @@ Dimensions: 4 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 5 rows × 5 columns
@@ -687,7 +661,6 @@ Dimensions: 5 rows × 5 columns
 | 0xA3EB | 0x01 | 0x02 | -- | -- |
 | default | 0xFF | 0xFF | -- | -- |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 3 rows × 9 columns
@@ -698,7 +671,6 @@ Dimensions: 3 rows × 9 columns
 | 0x02 | Dummy Value | 1 | H | s int | -- | 1 | 1 | 0 |
 | 0xXY | unbekannte Umweltbedingung | 1 | - | u int | - | 1 | 1 | 0 |
 
-<a id="table-tgpsantennenstatus"></a>
 ### TGPSANTENNENSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -711,7 +683,6 @@ Dimensions: 5 rows × 2 columns
 | 0xFF | Fehler GPS-Antenne |
 | 0xXY | nicht definiert |
 
-<a id="table-tgpsantennenstatus2"></a>
 ### TGPSANTENNENSTATUS2
 
 Dimensions: 5 rows × 3 columns
@@ -724,7 +695,6 @@ Dimensions: 5 rows × 3 columns
 | 0xFF | 0xFF | Fehler GPS-Antenne |
 | 0xXY | 0xFF | nicht definiert |
 
-<a id="table-tgpsstatus"></a>
 ### TGPSSTATUS
 
 Dimensions: 13 rows × 2 columns

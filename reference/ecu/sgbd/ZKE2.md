@@ -39,7 +39,6 @@
 - [CODIERUNG_LESEN](#job-codierung-lesen) - Codierdaten
 - [STEUERN_DIGITAL](#job-steuern-digital) - Ansteuern der Ausgaenge
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -57,7 +56,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -70,7 +68,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -86,7 +83,6 @@ _No arguments._
 | ID_SW_NR | string | Softwarenummer |
 | ID_PP_NR | string | Pruefplannummer |
 
-<a id="job-fehlerzaehler-lesen"></a>
 ### FEHLERZAEHLER_LESEN
 
 Auslesen des Fehlerzaehlers
@@ -100,7 +96,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY od. ERROR_SG_NACK od. ERROR_SG_UNBEKANNTES_STATUSBYTE |
 | F_ZAHL | int | Anzahl der Fehler |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -122,7 +117,6 @@ _No arguments._
 | F_ART2_TEXT | string | Text fuer Fehlerart 2 |
 | F_HFK | int | Haeufigkeit des Einzelfehler |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -135,7 +129,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY od. ERROR_SG_NACK od. ERROR_SG_UNBEKANNTES_STATUSBYTE |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Abbruch der Diagnose-Kommunikation
@@ -148,7 +141,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY od. ERROR_SG_NACK od. ERROR_SG_UNBEKANNTES_STATUSBYTE |
 
-<a id="job-status-gruppe-0-lesen"></a>
 ### STATUS_GRUPPE_0_LESEN
 
 Auslesen des Statusfelds Gruppe 0
@@ -190,7 +182,6 @@ _No arguments._
 | STAT_ERHK_AKTIV | int | Status von ERHK, 0 oder 1 |
 | STAT_TBH_AKTIV | int | Status von TBH, 0 oder 1 |
 
-<a id="job-status-gruppe-1-lesen"></a>
 ### STATUS_GRUPPE_1_LESEN
 
 Auslesen des Statusfelds Gruppe 1
@@ -229,7 +220,6 @@ _No arguments._
 | STAT_FSZBT_ZU | int | Status von FSTBT, 0 oder 1 |
 | STAT_FSABT_AUF | int | Status von FSABT, 0 oder 1 |
 
-<a id="job-status-gruppe-2-lesen"></a>
 ### STATUS_GRUPPE_2_LESEN
 
 Auslesen des Statusfelds Gruppe 2
@@ -272,7 +262,6 @@ _No arguments._
 | STAT_RMSBH_AKTIV | int | Status von RMSBH, 0 oder 1 |
 | STAT_RMSHK_AKTIV | int | Status von RMSHK, 0 oder 1 |
 
-<a id="job-status-gruppe-3-lesen"></a>
 ### STATUS_GRUPPE_3_LESEN
 
 Auslesen des Statusfelds Gruppe 3
@@ -304,7 +293,6 @@ _No arguments._
 | STAT_SFHZFH_ZU | int | Status von SFHZFH, 0 oder 1 |
 | STAT_SFHTFH_AKTIV | int | Status von SFHTFH, 0 oder 1 |
 
-<a id="job-status-gruppe-4-lesen"></a>
 ### STATUS_GRUPPE_4_LESEN
 
 Auslesen des Statusfelds Gruppe 4
@@ -334,7 +322,6 @@ _No arguments._
 | STAT_SSSSBH_AKTIV | int | Status von SSSSBH, 0 oder 1 |
 | STAT_TGIBH_AKTIV | int | Status von TGIBH, 0 oder 1 |
 
-<a id="job-status-gruppe-5-lesen"></a>
 ### STATUS_GRUPPE_5_LESEN
 
 Auslesen des Statusfelds Gruppe 5
@@ -370,7 +357,6 @@ _No arguments._
 | STAT_SFHABT_AUF | int | Status von SFHABT, 0 oder 1 |
 | STAT_SFHZBT_ZU | int | Status von SFHZBT, 0 oder 1 |
 
-<a id="job-status-gruppe-6-lesen"></a>
 ### STATUS_GRUPPE_6_LESEN
 
 Auslesen des Statusfelds Gruppe 6
@@ -397,7 +383,6 @@ _No arguments._
 | STAT_TSBNBT_AKTIV | int | Status von TSBNBT, 0 oder 1 |
 | STAT_TSCBT_AKTIV | int | Status von TSCBT, 0 oder 1 |
 
-<a id="job-status-gruppe-7-lesen"></a>
 ### STATUS_GRUPPE_7_LESEN
 
 Auslesen des Statusfelds Gruppe 7
@@ -412,7 +397,6 @@ _No arguments._
 | STAT_STDCON_AKTIV | int | Status von STDCON, 0 oder 1 |
 | STAT_SLP_AKTIV | int | Status von SLP, 0 oder 1 |
 
-<a id="job-status-gruppe-8-lesen"></a>
 ### STATUS_GRUPPE_8_LESEN
 
 Auslesen des Statusfelds Gruppe 8
@@ -429,7 +413,6 @@ _No arguments._
 | STAT_FHPFH_WERT | int | Status von FHPFH, E 32: 0 bis 178 |
 | STAT_FHPBH_WERT | int | Status von FHPBH, E 32: 0 bis 178 |
 
-<a id="job-status-gruppe-9-lesen"></a>
 ### STATUS_GRUPPE_9_LESEN
 
 Auslesen des Statusfelds Gruppe 9
@@ -446,7 +429,6 @@ _No arguments._
 | STAT_SSS_WERT | int | Status von SSS, 0 bis 255 |
 | STAT_V_WERT | int | Status von V, 0 bis 6 |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Codierdaten
@@ -481,7 +463,6 @@ _No arguments._
 | DATUM_KW | int | Liefert: 1 bis 52 |
 | DATUM_JAHR | int | Liefert 1980 bis 2079 |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern der Ausgaenge
@@ -510,7 +491,6 @@ Ansteuern der Ausgaenge
 - [STEUERPARAMETER](#table-steuerparameter) (161 × 2)
 - [LAENDER](#table-laender) (6 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 70 rows × 2 columns
@@ -588,7 +568,6 @@ Dimensions: 70 rows × 2 columns
 | 0x40 | zu hoher Strom an RM1 WI1, WI2, WI3, WP, SIR, VA, ERHK |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 5 rows × 2 columns
@@ -601,7 +580,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | ungueltiger Arbeitsbereich |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-steuerparameter"></a>
 ### STEUERPARAMETER
 
 Dimensions: 161 rows × 2 columns
@@ -770,7 +748,6 @@ Dimensions: 161 rows × 2 columns
 | 0xF0 | SLP |
 | 0xFF | ERROR_UNBEKANNTER_PARAMETER |
 
-<a id="table-laender"></a>
 ### LAENDER
 
 Dimensions: 6 rows × 2 columns

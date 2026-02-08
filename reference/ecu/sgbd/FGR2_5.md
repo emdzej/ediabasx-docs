@@ -46,7 +46,6 @@
 - [STEUERN_KUPPLUNG_AKTIV](#job-steuern-kupplung-aktiv) - Ausgang Kupplung aktiv schalten
 - [STEUERN_KUPPLUNG_PASSIV](#job-steuern-kupplung-passiv) - Ausgang Kupplung passiv schalten
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -64,7 +63,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer FGR2_5
@@ -77,7 +75,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer FGR2_5
@@ -100,7 +97,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferant |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Quicktest High-Konzept nach Lastenheft (mit Abwandlungen)
@@ -114,7 +110,6 @@ _No arguments._
 | JOB_STATUS | string | normalerweise OKAY |
 | F_ANZ | int | Anzahl Fehler |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -127,7 +122,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -146,7 +140,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl der Fehlerarten, hier immer 0 |
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen, hier immer 0 |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -159,7 +152,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-diagnose-erhalten"></a>
 ### DIAGNOSE_ERHALTEN
 
 Diagnose aufrechterhalten
@@ -172,7 +164,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-hardwaretest"></a>
 ### HARDWARETEST
 
 Hardwaretest GRII
@@ -186,7 +177,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | HARDWARE_OK | string | "OKAY", wenn Hardware in Ordnung |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Speicher lesen GRII
@@ -206,7 +196,6 @@ Speicher lesen GRII
 | JOB_STATUS | string | OKAY, FEHLER |
 | DATEN | binary | Codierdaten |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Codierdaten lesen GRII
@@ -238,7 +227,6 @@ _No arguments._
 | V_DIFF_WA | int | Differenzgeschw. bei Uebergang Konstantfahrt |
 | DATEN | binary | Ergebnistelegramm |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Statusfeld lesen GRII
@@ -273,7 +261,6 @@ _No arguments._
 | STAT_KUPPL_AKTIV | int | Stellgliegkupplung 0, wenn FALSE / 1, wenn TRUE |
 | DATEN | binary | Ergebnistelegramm |
 
-<a id="job-status-fgrmot-plus"></a>
 ### STATUS_FGRMOT_PLUS
 
 Ausgangsspannung Motorendstufe Plus
@@ -288,7 +275,6 @@ _No arguments._
 | FGRMOT_PLUS_WERT | long | Ausgangsspannung in V |
 | FGRMOT_PLUS_EINH | string | Einheit V |
 
-<a id="job-status-fgrpot-plus"></a>
 ### STATUS_FGRPOT_PLUS
 
 Referenzspannung Stellglied PLUS
@@ -303,7 +289,6 @@ _No arguments._
 | FGRPOT_PLUS_WERT | long | Ausgangsspannung in V |
 | FGRPOT_PLUS_EINH | string | Einheit V |
 
-<a id="job-status-fgrmot-minus"></a>
 ### STATUS_FGRMOT_MINUS
 
 Ausgangsspannung Motorendstufe Minus
@@ -318,7 +303,6 @@ _No arguments._
 | FGRMOT_MINUS_WERT | long | Ausgangsspannung in V |
 | FGRMOT_MINUS_EINH | string | Einheit V |
 
-<a id="job-status-ku-plus"></a>
 ### STATUS_KU_PLUS
 
 Ausgangsspannung Kupplungsendstufe PLUS
@@ -333,7 +317,6 @@ _No arguments._
 | KU_PLUS_WERT | long | Ausgangsspannung in V |
 | KU_PLUS_EINH | string | Einheit V |
 
-<a id="job-status-spannung"></a>
 ### STATUS_SPANNUNG
 
 Versorgungsspannung
@@ -348,7 +331,6 @@ _No arguments._
 | SPANNUNG_WERT | long | Versorgungsspannung in V |
 | SPANNUNG_EINH | string | Einheit V |
 
-<a id="job-status-leitung-mfl"></a>
 ### STATUS_LEITUNG_MFL
 
 Status Datenleitung MFL
@@ -362,7 +344,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, FEHLER |
 | STAT_SV | string | "okay" oder "gestoert" |
 
-<a id="job-status-inkremente"></a>
 ### STATUS_INKREMENTE
 
 Statusfeld INKREMENTE lesen bei GRII
@@ -378,7 +359,6 @@ _No arguments._
 | SPANNUNG_WERT | long | Versorgungsspannung in V |
 | SPANNUNG_EINH | string | Einheit V |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -396,7 +376,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -415,7 +394,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-steuern-fgrmot-plus-aktiv"></a>
 ### STEUERN_FGRMOT_PLUS_AKTIV
 
 Ausgang Motorendstufe Plus aktivieren
@@ -432,7 +410,6 @@ Ausgang Motorendstufe Plus aktivieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-fgrmot-minus-aktiv"></a>
 ### STEUERN_FGRMOT_MINUS_AKTIV
 
 Ausgang Motorendstufe Minus aktivieren
@@ -445,7 +422,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-fgrmot-passiv"></a>
 ### STEUERN_FGRMOT_PASSIV
 
 Ausgang Motorendstufe passiv schalten
@@ -458,7 +434,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-kupplung-aktiv"></a>
 ### STEUERN_KUPPLUNG_AKTIV
 
 Ausgang Kupplung aktiv schalten
@@ -471,7 +446,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-kupplung-passiv"></a>
 ### STEUERN_KUPPLUNG_PASSIV
 
 Ausgang Kupplung passiv schalten
@@ -493,7 +467,6 @@ _No arguments._
 - [MAINSWITCH](#table-mainswitch) (6 × 2)
 - [LIEFERANTEN](#table-lieferanten) (31 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -509,7 +482,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 12 rows × 2 columns
@@ -529,7 +501,6 @@ Dimensions: 12 rows × 2 columns
 | 0x21 | Fehler Togglebit |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-mainswitch"></a>
 ### MAINSWITCH
 
 Dimensions: 6 rows × 2 columns
@@ -543,7 +514,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0A | Softwaremainswitch ueber MFL, LED bei eingeschaltetem MS aktiv |
 | 0xFF | nicht gueltige Codierung |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 31 rows × 2 columns

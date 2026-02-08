@@ -32,7 +32,6 @@
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 - [IDENT](#job-ident) - Ident und AIF zusammen lesen
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -45,7 +44,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -63,7 +61,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-c-zcs-d-lesen"></a>
 ### C_ZCS_D_LESEN
 
 Auslesen des Zentralen Codierschluessels aus KD-Daten
@@ -79,7 +76,6 @@ _No arguments._
 | SA | string | Zentralcode C2 - Sonderausstattung |
 | VN | string | Zentralcode C3 - Versionsmerkmal |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Auslesen des Zentralen Codierschluessels aus Flash
@@ -96,7 +92,6 @@ _No arguments._
 | VN | string | Zentralcode C3 - Versionsmerkmal (10 ASCII nos + 1 ASCII c/sum) |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zcs-d-auftrag"></a>
 ### C_ZCS_D_AUFTRAG
 
 Schreiben des Zentralen Codierschluessels in die KD-Daten
@@ -115,7 +110,6 @@ Schreiben des Zentralen Codierschluessels in die KD-Daten
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-zcs-auftrag"></a>
 ### C_ZCS_AUFTRAG
 
 Schreiben des Zentralen Codierschluessels in die KD-Daten
@@ -135,7 +129,6 @@ Schreiben des Zentralen Codierschluessels in die KD-Daten
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-start-diagnostic-session"></a>
 ### START_DIAGNOSTIC_SESSION
 
 Status
@@ -149,7 +142,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | START_DIAGNOSTIC_SESSION_MODE | int | nichts |
 
-<a id="job-security-access"></a>
 ### SECURITY_ACCESS
 
 Schutzmechanismus SEED_KEY
@@ -164,7 +156,6 @@ _No arguments._
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -177,7 +168,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Ident und AIF zusammen lesen
@@ -192,7 +182,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | AIF_ANZAHL_PROG | int | Anzahl Programmiervorgaenge |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -209,7 +198,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident und AIF zusammen lesen
@@ -239,7 +227,6 @@ _No arguments._
 
 - [JOBRESULT](#table-jobresult) (37 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 37 rows × 2 columns

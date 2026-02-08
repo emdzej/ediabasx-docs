@@ -55,7 +55,6 @@
 - [DIAG_SESSION_LESEN](#job-diag-session-lesen) - Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
 - [FLASH_TP_LESEN](#job-flash-tp-lesen) - Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -74,7 +73,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -87,7 +85,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -104,7 +101,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -136,7 +132,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -181,7 +176,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -200,7 +194,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -218,7 +211,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -239,7 +231,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -268,7 +259,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -288,7 +278,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -309,7 +298,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -325,7 +313,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -347,7 +334,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -366,7 +352,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -393,7 +378,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -438,7 +422,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -453,7 +436,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -473,7 +455,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -492,7 +473,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -511,7 +491,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -526,7 +505,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -545,7 +523,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -565,7 +542,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -582,7 +558,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -601,7 +576,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -617,7 +591,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -651,7 +624,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -666,7 +638,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -681,7 +652,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -698,7 +668,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -713,7 +682,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -728,7 +696,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -743,7 +710,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -762,7 +728,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -843,7 +808,6 @@ _No arguments._
 - [TAB_SUBBUS_SG](#table-tab-subbus-sg) (14 × 2)
 - [TAB_TONFOLGE](#table-tab-tonfolge) (21 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -927,7 +891,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 142 rows × 2 columns
@@ -1077,7 +1040,6 @@ Dimensions: 142 rows × 2 columns
 | 0x0000C3 | Panasonic |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1120,7 +1082,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1145,7 +1106,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1179,7 +1139,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1252,7 +1211,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1265,7 +1223,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1280,7 +1237,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1293,7 +1249,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1313,7 +1268,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 323 rows × 3 columns
@@ -1644,7 +1598,6 @@ Dimensions: 323 rows × 3 columns
 | 0x7B00 | ISC - Inertial Sensor Cluster | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1653,7 +1606,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 224 rows × 2 columns
@@ -1885,7 +1837,6 @@ Dimensions: 224 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1928,7 +1879,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1939,7 +1889,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0xa178-r"></a>
 ### ARG_0XA178_R
 
 Dimensions: 3 rows × 14 columns
@@ -1950,7 +1899,6 @@ Dimensions: 3 rows × 14 columns
 | AKTION | + | - | 0-n | - | char | - | TAB_FH_VERFAHREN | 1.0 | 1.0 | 0.0 | - | - | 0: Keine Aktion  1: Öffnen  2: Schliessen  3: Maut öffnen  4: Maut schliessen |
 | ZEIT | + | - | ms | - | int | - | - | 1.0 | 1.0 | 0.0 | - | - | Angabe der Ansteuerzeit in 100ms-Schritten bei Aktion 1 und 2; Bei Aktionen 3 und 4 (Maut) ist nur eine 0 oder 1 zulässig |
 
-<a id="table-arg-0xdd14-d"></a>
 ### ARG_0XDD14_D
 
 Dimensions: 1 rows × 12 columns
@@ -1959,7 +1907,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | char | - | - | 1.0 | 1.0 | 0.0 | - | - | Gibt die Ansteuerung vom Trennrelais an: 0 = AUS 1 = EIN |
 
-<a id="table-arg-0xdd17-d"></a>
 ### ARG_0XDD17_D
 
 Dimensions: 1 rows × 12 columns
@@ -1968,7 +1915,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TONFOLGE | 0-n | - | char | - | TAB_TONFOLGE | 1.0 | 1.0 | 0.0 | - | - | Gibt an, welche Tonfolge ausgegeben werden soll: 0 = Überfallalarm1 1 = Überfallalarm2 2 = Überfallalarm3 3 = Tonfolge ECE 4 = Tonfolge Yelp 5 = Tonfolge Wail 6 = Tonfolge HiLo 7 = Tonfolge Airhorn 8 = Tonfolge Peak |
 
-<a id="table-arg-0xdd1d-d"></a>
 ### ARG_0XDD1D_D
 
 Dimensions: 1 rows × 12 columns
@@ -1977,7 +1923,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CODIERUNG_IDX | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | - | - | Codierblock, der auf dem HCAN versendet werden soll |
 
-<a id="table-arg-0xdd1f-d"></a>
 ### ARG_0XDD1F_D
 
 Dimensions: 1 rows × 12 columns
@@ -1986,7 +1931,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ANZEIGEFARBE | 0-n | - | char | - | TAB_ANZEIGEFARBE | 1.0 | 1.0 | 0.0 | - | - | Steuert die Beschleunigungsanzeige in den verschiedenen Farben an: 0 = Ansteuerung aus 1 = Ansteuerung Grün 2 = Ansteuerung Rot |
 
-<a id="table-arg-0xdd20-d"></a>
 ### ARG_0XDD20_D
 
 Dimensions: 2 rows × 12 columns
@@ -1996,7 +1940,6 @@ Dimensions: 2 rows × 12 columns
 | HEIZFELD | 0-n | - | char | - | TAB_HEIZFELDER | 1.0 | 1.0 | 0.0 | - | - | Gibt das anzusteuernde Heizfeld an. 0 = ALLE 1 = Heizfeld Front links 2 = Heizfeld Front rechts 3 = Heizfeld Seite links 4 = Heizfeld Seite rechts |
 | ZEIT | s | - | char | - | - | 1.0 | 1.0 | 0.0 | - | - | Angabe der Zeit der Ansteuerung in Sekunden: 0 = Ansteuerung AUS 1 - 120 Sekunden Automatisches Beenden der Ansteuerung nach 120 Sekunden. |
 
-<a id="table-arg-0xdd2a-d"></a>
 ### ARG_0XDD2A_D
 
 Dimensions: 1 rows × 12 columns
@@ -2005,7 +1948,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | - | - | int | - | - | 1.0 | 1.0 | 0.0 | - | - | 0x55: Ringspeicher löschen und aktivieren für nächste Auslösung; andere Werte: keine Aktion |
 
-<a id="table-arg-0xdd2b-d"></a>
 ### ARG_0XDD2B_D
 
 Dimensions: 1 rows × 12 columns
@@ -2014,7 +1956,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KILOMETER | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Kilometerstand |
 
-<a id="table-arg-0xdd2c-d"></a>
 ### ARG_0XDD2C_D
 
 Dimensions: 6 rows × 12 columns
@@ -2028,7 +1969,6 @@ Dimensions: 6 rows × 12 columns
 | BLITZLEUCHTE_SPIEGEL | 0/1 | - | char | - | - | - | - | - | - | - | Gibt die Ansteuerung der Blitzleuchte Spiegel an: 0 = AUS 1 = EIN |
 | BLITZLEUCHTE_FRONT_WEISS | 0/1 | - | char | - | - | - | - | - | - | - | Gibt die Ansteuerung der Blitzleuchte Front (weiss) an: 0 = AUS 1 = EIN |
 
-<a id="table-arg-0xdd48-d"></a>
 ### ARG_0XDD48_D
 
 Dimensions: 1 rows × 12 columns
@@ -2037,7 +1977,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KONFIGURATION_IDX | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Konfiguration des IFS-Steuergeräts |
 
-<a id="table-arg-0xdd49-d"></a>
 ### ARG_0XDD49_D
 
 Dimensions: 1 rows × 12 columns
@@ -2046,7 +1985,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KONFIGURATION_IDX | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | - | - | Konfiguration des IFS-Steuergeräts |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2060,7 +1998,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2074,7 +2011,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 6 |
 | F_HLZ_VIEW | - |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 97 rows × 4 columns
@@ -2179,7 +2115,6 @@ Dimensions: 97 rows × 4 columns
 | 0xDB4C09 | Steuergerät SEC, local CAN: Control Module Bus Off | 1 | dto. |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 5 rows × 9 columns
@@ -2192,7 +2127,6 @@ Dimensions: 5 rows × 9 columns
 | 0x4001 | SUBBUS_SG | 0-n | High | 0xFF | TAB_SUBBUS_SG | - | - | - |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -2205,7 +2139,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 4 columns
@@ -2214,7 +2147,6 @@ Dimensions: 1 rows × 4 columns
 | --- | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 | - |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -2223,7 +2155,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2232,7 +2163,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0xdd10-d"></a>
 ### RES_0XDD10_D
 
 Dimensions: 2 rows × 10 columns
@@ -2242,7 +2172,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_DRUCK_LUFTFLASCHE_WERT | bar | - | int | - | - | 1.0 | 1.0 | 0.0 | Gibt den gemessenen Druck der Luftflasche in bar aus. |
 | STAT_MIN_DRUCK_LUFTFLASCHE_WERT | bar | - | int | - | - | 1.0 | 1.0 | 0.0 | Gibt den um die Außentemperatur korrigierten minimalen Druck der Luftflasche in bar aus. Fällt der Druck unter diesen Wert, wird ein Fehler erkannt. |
 
-<a id="table-res-0xdd12-d"></a>
 ### RES_0XDD12_D
 
 Dimensions: 3 rows × 10 columns
@@ -2253,7 +2182,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_STROM_BATTERIE_2_WERT | A | - | unsigned char | - | - | 1.0 | 10.0 | 0.0 | Gibt den Strom der 2. Batterie auf 0,1 Ampere genau aus. Wert aus SG wird durch 10 dividiert. 345 wird 34,5 A. |
 | STAT_TEMP_BATTERIE_2_WERT | °C | - | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Gibt die Temperatur der 2. Batterie auf 5°C genau aus. |
 
-<a id="table-res-0xdd14-d"></a>
 ### RES_0XDD14_D
 
 Dimensions: 1 rows × 10 columns
@@ -2262,7 +2190,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TRENNRELAIS_EIN | 0/1 | - | char | - | - | 1.0 | 1.0 | 0.0 | Gibt den Status vom Trennrelais aus. 0 = AUS 1 = EIN |
 
-<a id="table-res-0xdd17-d"></a>
 ### RES_0XDD17_D
 
 Dimensions: 1 rows × 10 columns
@@ -2271,7 +2198,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TONFOLGE_NR | 0-n | - | char | - | TAB_TONFOLGE | 1.0 | 1.0 | 0.0 | Gibt die ausgegebene Tonfolge aus. |
 
-<a id="table-res-0xdd1a-d"></a>
 ### RES_0XDD1A_D
 
 Dimensions: 4 rows × 10 columns
@@ -2283,7 +2209,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BUS_IN_FHFAH_NR | 0-n | - | char | - | TAB_FH_VERFAHREN | 1.0 | 1.0 | 0.0 | Taster Fensterheber Fahrerseite hinten. |
 | STAT_BUS_IN_FHBFH_NR | 0-n | - | char | - | TAB_FH_VERFAHREN | 1.0 | 1.0 | 0.0 | Taster Fensterheber Beifahrerseite hinten. |
 
-<a id="table-res-0xdd1c-d"></a>
 ### RES_0XDD1C_D
 
 Dimensions: 6 rows × 10 columns
@@ -2297,7 +2222,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_NOTAUSSTIEG_AW1_NR | 0-n | - | char | - | TAB_STATUS_NOTAUSSTIEG | 1.0 | 1.0 | 0.0 | Funktionstatus Notausstieg Auswerfer 1 |
 | STAT_NOTAUSSTIEG_AW2_NR | 0-n | - | char | - | TAB_STATUS_NOTAUSSTIEG | 1.0 | 1.0 | 0.0 | Funktionstatus Notausstieg Auswerfer 2 |
 
-<a id="table-res-0xdd1f-d"></a>
 ### RES_0XDD1F_D
 
 Dimensions: 1 rows × 10 columns
@@ -2306,7 +2230,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ANZEIGEFARBE_NR | 0-n | - | char | - | TAB_ANZEIGEFARBE | 1.0 | 1.0 | 0.0 | Gibt den Status (Farbe) der Beschleunigungsanzeige aus. 0 = Ansteuerung aus 1 = Ansteuerung Grün 2 = Ansteuerung Rot |
 
-<a id="table-res-0xdd20-d"></a>
 ### RES_0XDD20_D
 
 Dimensions: 4 rows × 10 columns
@@ -2318,7 +2241,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_HEIZFELD_SEITE_LINKS_EIN | 0/1 | - | char | - | - | 1.0 | 1.0 | 0.0 | Gibt den Status vom Heizfeld für Seitenscheibe links aus. 0 = AUS 1 = EIN |
 | STAT_HEIZFELD_SEITE_RECHTS_EIN | 0/1 | - | char | - | - | 1.0 | 1.0 | 0.0 | Gibt den Status vom Heizfeld für Seitenscheibe rechts aus. 0 = AUS 1 = EIN |
 
-<a id="table-res-0xdd21-d"></a>
 ### RES_0XDD21_D
 
 Dimensions: 3 rows × 10 columns
@@ -2329,7 +2251,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_UNIT_WIRE_UNTEN_LINKS_WERT | °C | - | int | - | - | 1.0 | 1.0 | 0.0 | Gibt den Temperaturwert vom Temperaturmessdraht in Grad Celsius von 180°C bis 240°C auf +-10°C aus. |
 | STAT_UNIT_WIRE_UNTEN_RECHTS_WERT | °C | - | int | - | - | 1.0 | 1.0 | 0.0 | Gibt den Temperaturwert vom Temperaturmessdraht in Grad Celsius von 180°C bis 240°C auf +-10°C aus. |
 
-<a id="table-res-0xdd2a-d"></a>
 ### RES_0XDD2A_D
 
 Dimensions: 60 rows × 10 columns
@@ -2397,7 +2318,6 @@ Dimensions: 60 rows × 10 columns
 | STAT_UNIT_WIRE_UNTEN_RECHTS_19_WERT | °C | - | int | - | - | 1.0 | 1.0 | 0.0 | Unit Wire unten rechts Temperaturwert 19 |
 | STAT_UNIT_WIRE_UNTEN_RECHTS_20_WERT | °C | - | int | - | - | 1.0 | 1.0 | 0.0 | Unit Wire unten rechts Temperaturwert 20 |
 
-<a id="table-res-0xdd2b-d"></a>
 ### RES_0XDD2B_D
 
 Dimensions: 1 rows × 10 columns
@@ -2406,7 +2326,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_WARTUNG_KILOMETER_WERT | km | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Kilometer für Wartung |
 
-<a id="table-res-0xdd2c-d"></a>
 ### RES_0XDD2C_D
 
 Dimensions: 6 rows × 10 columns
@@ -2420,7 +2339,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_BLITZLEUCHTE_SPIEGEL | 0/1 | - | char | - | - | - | - | - | Gibt den Status von der Blitzleuchte Spiegel aus: 0 = AUS 1 = EIN |
 | STAT_BLITZLEUCHTE_FRONT_WEISS | 0/1 | - | char | - | - | - | - | - | Gibt den Status von der Blitzleuchte Front (weiss) aus: 0 = AUS 1 = EIN |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 21 rows × 16 columns
@@ -2449,7 +2367,6 @@ Dimensions: 21 rows × 16 columns
 | KONFIGURATIONSMODUS_IFS | 0xDD48 | - | Versetzen des HCAN-Steuergeräts IFS in den Konfigurationsmodus | - | - | - | - | - | - | - | - | - | 2E | ARG_0xDD48_D | - |
 | KONFIGURATION_IFS_WIEDERHERSTELLEN | 0xDD49 | - | Konfigurationsdaten des HCAN-Steuergerät IFS aus dem SEC1 wiederherstellen | - | - | - | - | - | - | - | - | - | 2E | ARG_0xDD49_D | - |
 
-<a id="table-tab-anzeigefarbe"></a>
 ### TAB_ANZEIGEFARBE
 
 Dimensions: 3 rows × 2 columns
@@ -2460,7 +2377,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | GRÜN |
 | 0x02 | ROT |
 
-<a id="table-tab-blitzleuchte"></a>
 ### TAB_BLITZLEUCHTE
 
 Dimensions: 7 rows × 2 columns
@@ -2475,7 +2391,6 @@ Dimensions: 7 rows × 2 columns
 | 6 | Blitzleuchte Front weiß |
 | 0xFF | Wert ungültig |
 
-<a id="table-tab-fh-auswahl"></a>
 ### TAB_FH_AUSWAHL
 
 Dimensions: 9 rows × 2 columns
@@ -2492,7 +2407,6 @@ Dimensions: 9 rows × 2 columns
 | 0x40 | Alle |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-fh-verfahren"></a>
 ### TAB_FH_VERFAHREN
 
 Dimensions: 6 rows × 2 columns
@@ -2506,7 +2420,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | Maut schliessen |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-heizfelder"></a>
 ### TAB_HEIZFELDER
 
 Dimensions: 5 rows × 2 columns
@@ -2519,7 +2432,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Heizfeld Seite links |
 | 0x04 | Heizfeld Seite rechts |
 
-<a id="table-tab-status-notausstieg"></a>
 ### TAB_STATUS_NOTAUSSTIEG
 
 Dimensions: 5 rows × 2 columns
@@ -2532,7 +2444,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Unterbrechung |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-status-reizgassensoren"></a>
 ### TAB_STATUS_REIZGASSENSOREN
 
 Dimensions: 12 rows × 2 columns
@@ -2552,7 +2463,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0B | Timeout, Unterbrechung |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-subbus-sg"></a>
 ### TAB_SUBBUS_SG
 
 Dimensions: 14 rows × 2 columns
@@ -2574,7 +2484,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0F | APIX APIX-Switch |
 | 0xFF | ungültig |
 
-<a id="table-tab-tonfolge"></a>
 ### TAB_TONFOLGE
 
 Dimensions: 21 rows × 2 columns

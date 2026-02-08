@@ -34,7 +34,6 @@
 - [FS_LOESCHEN](#job-fs-loeschen) - Fehlerspeicher loeschen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -53,7 +52,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -72,7 +70,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job Bordmonitor Bedienteil-Teil
@@ -85,7 +82,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer Bordmonitor Bedienteil-Teil
@@ -110,7 +106,6 @@ _No arguments._
 | ID_AI_INDEX | string | Aenderungsindex |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen 
@@ -129,7 +124,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingen, hier keine |
 | _TEL_ANTWORT | binary | Telegramm anzeigen |
 
-<a id="job-checksumme-abfragen"></a>
 ### Checksumme_abfragen
 
 _No arguments._
@@ -141,7 +135,6 @@ _No arguments._
 | JOB_STATUS | string | normalerweise OKAY |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern mehrerer digitaler Ausgaenge
@@ -164,7 +157,6 @@ Ansteuern mehrerer digitaler Ausgaenge
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-sonderjob"></a>
 ### Sonderjob
 
 _No arguments._
@@ -177,7 +169,6 @@ _No arguments._
 | _TEL_SENDE | binary |  |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-selbsttest"></a>
 ### SELBSTTEST
 
 Selbsttest Bordmonitor Bedien-Teils
@@ -190,7 +181,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise "OKAY" |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Stati lesen am Bordmitor Bedien-Teil
@@ -221,7 +211,6 @@ _No arguments._
 | STAT_HEADROOMREGELUNG_KASSETTE | int | pulsweitenmodeliertes Signal, 0-255 keine Einheit |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### Pruefstempel_lesen
 
 Auslesen des Pruefstempels
@@ -238,7 +227,6 @@ _No arguments._
 | DATUM_3 | int | kann beliebig verwendet werden |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### Pruefstempel_schreiben
 
 Daten in den Pruefstempel schreiben
@@ -258,7 +246,6 @@ Daten in den Pruefstempel schreiben
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | _TEL_SENDE | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -271,7 +258,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | normalerweise "OKAY" |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -295,7 +281,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 - [STEUERN](#table-steuern) (8 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -316,7 +301,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -340,7 +324,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 56 rows × 2 columns
@@ -404,7 +387,6 @@ Dimensions: 56 rows × 2 columns
 | 0x55 | BHTC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -425,7 +407,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0C | 25 Stunden Notabschaltung |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -436,7 +417,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 8 rows × 3 columns

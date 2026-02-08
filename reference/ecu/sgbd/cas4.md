@@ -180,7 +180,6 @@
 - [_STEUERN_RESET_DET](#job-steuern-reset-det) - Ruecksetzen der Eintraege im Debugmodul "Development Error Tracer (DET)" UDS  : $31       Routine Control $xxF806   Routine Id $F806 Modus: Default
 - [_DEVELOPMENT_JOB](#job-development-job) - Frei programmierbare Diagnosebotschaft, die ohne Vorfilterung auf dem CAN gesendet wird. Wird benoetigt fuer Diagnose Tests. Auch > 64 Byte Daten Adressierung unterstuetzt. Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -199,7 +198,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -212,7 +210,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -229,7 +226,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -255,7 +251,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -297,7 +292,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -316,7 +310,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -334,7 +327,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -355,7 +347,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -382,7 +373,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -402,7 +392,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -423,7 +412,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -439,7 +427,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -461,7 +448,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -483,7 +469,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -502,7 +487,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -528,7 +512,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -570,7 +553,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -585,7 +567,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-block-lesen"></a>
 ### STATUS_BLOCK_LESEN
 
 Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataIdentifier $03 ClearDynamicallyDefinedDataIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $2C DynamicallyDefineDataIdentifier $01 DefineByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  UDS  : $22 ReadDataByIdentifier $F300-$F3FF DynamicallyDefinedDataIdentifier  $2C$02 DefineByMemoryAddress wird nicht unterstützt 'Composite data blocks' werden nur komplett unterstützt
@@ -611,7 +592,6 @@ Lesen eines dynamisch definierten Datenblockes UDS  : $2C DynamicallyDefineDataI
 | _REQUEST_3 | binary | Hex-Antwort von SG |
 | _RESPONSE_3 | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -631,7 +611,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -650,7 +629,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -669,7 +647,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -684,7 +661,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -703,7 +679,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -723,7 +698,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -740,7 +714,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -759,7 +732,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -775,7 +747,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -808,7 +779,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -823,7 +793,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime)
@@ -838,7 +807,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $04 report activated events
@@ -855,7 +823,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime)
@@ -870,7 +837,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime)
@@ -885,7 +851,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime)
@@ -900,7 +865,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -916,7 +880,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -935,7 +898,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -955,7 +917,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -973,7 +934,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -989,7 +949,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-init-kennung"></a>
 ### _STATUS_CAS_INIT_KENNUNG
 
 Jobbeschreibung:	Der Job dient zum Auslesen des CAS Zustands (Verriegelt/Entriegelt) bezüglich des Schlüsselanlernens Vorbedingungen:		keine Diagnose-Service:	UDS $22 DID $4001 Gültigkeit:			Ab F001-08-09-300 Kommentare:			JobHeaderFormat.Nicht in der Diagnose-Datenbank erfasst!
@@ -1005,7 +964,6 @@ _No arguments._
 | _REQUEST | binary | Beschreibung:		Hex-Auftrag an SG |
 | _RESPONSE | binary | Beschreibung:		Hex-Antwort von SG |
 
-<a id="job-status-analog"></a>
 ### STATUS_ANALOG
 
 Job zum Auslesen Analoger Spannungs-Werte am Steuergerät. JobHeaderFormat Aus Kompatibilitaetsgruenden nur fuer I300 Softwarestand verwenden! 0xF3A0 _STATUS_U_KL15N30B (KL15N, KL30B_1, KL30B_2, KL15WUP) 0xF3A1 _STATUS_U_KL15_KL50 (KL15_1, KL15_2, KL15_3, KL15_50, KL50, KL50MSA) 0xF3A2 _STATUS_U_POWERSUPPLY (TEMP, LF_DIAG, LF_STROM) 0xF3A3 _STATUS_U_ELV (KL30_ELV, KL31_ELV) 0xF3A4 _STATUS_U_HALL_TAGE (HALL_VERS13, HALL_VERS24)
@@ -1056,7 +1014,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pm-historie"></a>
 ### STATUS_PM_HISTORIE
 
 Der Job dient zum Auslesen des Powermanagement Historienspeicher des CAS. Der Historienspeicher gibt die Weckquelle, das zeitliche Auftreten (relativer Abstand zwischen 2 Weckereignissen) und die Häufigkeit von Weckereignissen wieder. JobHeaderFormat STATUS_PM_HISTORIE Diagnose-Service:	UDS $22 DID $4103
@@ -1081,7 +1038,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-pm-schlafbereitschaft"></a>
 ### STATUS_PM_SCHLAFBEREITSCHAFT
 
 Der Job dient zum Auslesen der Schlafbereitschaft des CAS und gibt den Status aller möglichen Einschlafverhinderer, d.h. Weckquellen (CAS-intern/extern) aus. JobHeaderFormat STATUS_PM_SCHLAFBEREITSCHAFT Diagnose-Service:	UDS $22 DID $4104
@@ -1106,7 +1062,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-startcyc-cnt"></a>
 ### _STATUS_STARTCYC_CNT
 
 Jobbeschreibung:	Der Job dient zum Auslesen des Startzykluszählers. Hinweis: Der Startzykluszähler zählt die Anzahl der erfolgreichen Motorstarts. Vorbedingungen:		keine Diagnose-Service:	UDS Diagnose-Service:	UDS $22 DID $4205 Gültigkeit:			Ab F001-08-09-300 Kommentare:			JobHeaderFormat.Nicht in der Diagnose-Datenbank erfasst!
@@ -1123,7 +1078,6 @@ _No arguments._
 | _REQUEST | binary | Beschreibung:	Hex-Auftrag an SG |
 | _RESPONSE | binary | Beschreibung:	Hex-Antwort von SG |
 
-<a id="job-steuern-cas-init-kennung"></a>
 ### _STEUERN_CAS_INIT_KENNUNG
 
 Jobbeschreibung:	Der Job dient zum Verriegeln bzw. Entriegeln des CAS für das Schlüsselanlernen Vorbedingungen:		keine Diagnose-Service:	UDS $2E DID $4001 Gültigkeit:			Ab F001-08-09-300 Kommentare:			JobHeaderFormat.Nicht in der Diagnose-Datenbank erfasst!
@@ -1142,7 +1096,6 @@ Jobbeschreibung:	Der Job dient zum Verriegeln bzw. Entriegeln des CAS für das S
 | _REQUEST | binary | Beschreibung: 		Hex-Auftrag an SG |
 | _RESPONSE | binary | Beschreibung:		Hex-Antwort von SG |
 
-<a id="job-steuern-startcyc-cnt"></a>
 ### _STEUERN_STARTCYC_CNT
 
 Jobbeschreibung:	Der Job dient zum Schreiben des Startzykluszählers. Hinweis: Der Startzykluszähler zählt die Anzahl der erfolgreichen Motorstarts. Vorbedingungen:		keine Diagnose-Service:	UDS Diagnose-Service:	UDS $2E DID $4205 Gültigkeit:			Ab F001-08-09-300 Kommentare:			JobHeaderFormat.Nicht in der Diagnose-Datenbank erfasst!
@@ -1161,7 +1114,6 @@ Jobbeschreibung:	Der Job dient zum Schreiben des Startzykluszählers. Hinweis: D
 | _REQUEST | binary | Beschreibung:		Hex-Auftrag an SG |
 | _RESPONSE | binary | Beschreibung:		Hex-Antwort von SG |
 
-<a id="job-status-cas-anlieferzustand"></a>
 ### STATUS_CAS_ANLIEFERZUSTAND
 
 Dieser Job liefert den aktuellen Fortschritt des Rücksetzen nach STEUERN_CAS_ANLIEFERZUSTAND. JobHeaderFormat STATUS_CAS_ANLIEFERZUSTAND Diagnose-Service:	UDS $22 DID $4003
@@ -1178,7 +1130,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-freq-type"></a>
 ### STATUS_CAS_FREQ_TYPE
 
 Konfiguration des CAS bzgl. Schlüssel-Initialisierung auslesen. JobHeaderFormat STATUS_CAS_FREQ_TYPE Diagnose-Service:	UDS $22 DID $4202
@@ -1197,7 +1148,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-init-loc-date"></a>
 ### STATUS_CAS_INIT_LOC_DATE
 
 Konfiguration des CAS bzgl. Schlüssel-Initialisierung auslesen. JobHeaderFormat STATUS_CAS_INIT_LOC_DATE Diagnose-Service:	UDS $22 DID $4203
@@ -1222,7 +1172,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-wup"></a>
 ### STATUS_CAS_WUP
 
 4-Byte FBD-Wakeup-Pattern lesen. JobHeaderFormat STATUS_CAS_WUP Diagnose-Service:	UDS $22 DID $4204
@@ -1239,7 +1188,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 Job zum Auslesen digitaler Stati JobHeaderFormat 0xF3A5 _STATUS_DIG_INPUT_START_STOP (A_S_START, BLS_MSA) 0xF3A6 _STATUS_DIG_INPUT_HALL (HALL_SSTA, HALL_SSTB) 0xF3A8 _STATUS_DIG_INPUT_SCHALTER (CLT, MHK, HOTEL, MSA, TOEHKL) 0xF3A9 _STATUS_DIG_INPUT_BREMSE_KUPPL (BLTS, PN_KUPPL)
@@ -1275,7 +1223,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-egs-isn"></a>
 ### STATUS_EGS_ISN
 
 Verriegelungs-Status für EGS-ISN im CAS lesen (wird für Getriebe-EWS genutzt) JobHeaderFormat STATUS_EGS_ISN Diagnose-Service:	UDS $22 DID $4300
@@ -1293,7 +1240,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews"></a>
 ### STATUS_EWS
 
 Liefert den aktuellen Status der EWS-SecretKeys ISNs und den Status bzgl. KeyID KeyPIN JobHeaderFormat STATUS_EWS_CAS Diagnose-Service:	UDS $22 DID $C000
@@ -1314,7 +1260,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-ews4-sk"></a>
 ### STATUS_EWS4_SK
 
 Dieser Job dient zum (Gegen-)Lesen der Secretkeys / ISNs (vor einem anschließenden Verriegeln Kommando) JobHeaderFormat STATUS_EWS4_SK_CAS Diagnose-Service:	UDS $22 DID $C002
@@ -1333,7 +1278,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrgestellnummer"></a>
 ### STATUS_FAHRGESTELLNUMMER
 
 Lesen der Fahrgestellnummer JobHeaderFormat STATUS_FAHRGESTELLNUMMER Diagnose-Service:	UDS $22 DID $F190
@@ -1350,7 +1294,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-schluessel-trsp"></a>
 ### STATUS_SCHLUESSEL_TRSP
 
 Liefert den Status des momentan in der Ringspule befindlichen Schlüssels. Der Job liefert den Status des zuletzt gefundenen Transponders in der Ringspule. Die Daten sind max. 300 ms alt und entprellt (bei dauerhaft vorhandenem Transponder, keine flackernden Results). Ist der Schlüssel unbekannt und bereits gelocked, so werden nur die immer lesbaren Informationen ausgegeben. JobHeaderFormat STATUS_SCHLUESSEL_TRSP Diagnose-Service:	UDS $22 DID $4200
@@ -1421,7 +1364,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-schluesseldaten"></a>
 ### STATUS_SCHLUESSELDATEN
 
 Jobbeschreibung:	Dieser Job dient dazu den Status eines Schlüssel laut Transpondertabelle auszulesen. Anmerkung: Die Informationen sind unabhängig von einem evtl. gerade vorhandenen Transponder in der Ringspule bzw. einem erkannten ID-Geber. Vorbedingungen:		keine Diagnose-Service:	UDS Diagnose-Service:	UDS $22 DID $4210 Gültigkeit:			Ab F001-08-09-300 Kommentare:			Im JobHeaderFormat in der Diagnose-Datenbank angelegt
@@ -1454,7 +1396,6 @@ Jobbeschreibung:	Dieser Job dient dazu den Status eines Schlüssel laut Transpon
 | _REQUEST | binary | Beschreibung:		Hex-Auftrag an SG |
 | _RESPONSE | binary | Beschreibung:		Hex-Antwort von SG |
 
-<a id="job-status-cas-hw-geschwindigkeit"></a>
 ### STATUS_CAS_HW_GESCHWINDIGKEIT
 
 Auslesen der vom CAS (über separate HW-Leitung vom DSC) erkannte Geschwindigkeit. JobHeaderFormat CAS_HW_GESCHWINDIGKEIT Diagnose-Service:	UDS $22 DID $DC51
@@ -1471,7 +1412,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-hw-variante"></a>
 ### STATUS_CAS_HW_VARIANTE
 
 Hardware-Variante des CAS lesen. JobHeaderFormat CAS_HW_VARIANTE Diagnose-Service:	UDS $22 DID $DAB7
@@ -1492,7 +1432,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-istufe"></a>
 ### STATUS_ISTUFE
 
 Liefert die im EEPROM abgelegte I-Stufe jeweils für Werk, HO und HO-Backup. JobHeaderFormat STATUS_ISTUFE Diagnose-Service:	UDS $22 DID $100B
@@ -1510,7 +1449,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-kilometerstand"></a>
 ### STATUS_KILOMETERSTAND
 
 Aufruf liefert den angezeigeten Gesamtwegstreckenzähler. Beim CAS den im EEPROM hinterlegten Wert. JobHeaderFormat STATUS_KILOMETERSTAND Diagnose-Service:	UDS $22 DID $1700
@@ -1527,7 +1465,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-anlieferzustand"></a>
 ### STEUERN_CAS_ANLIEFERZUSTAND
 
 Versetzt das CAS in den Anlieferzustand (Montage-Modi, Codierung, VIN, Tansponder-Tabelle, EWS4_CLIENT_SK, ...) Falls Rücksetzen unzulässig: ERROR_ECU_CONDITIONS_NOT_CORRECT. Anmerkung: Nach dem Rücksetzen müssen alle im verriegelten Zustand geschützten W JobHeaderFormat STEUERN_CAS_ANLIEFERZUSTAND Diagnose-Service:	UDS $3101 DID $AC50($4003)
@@ -1546,7 +1483,6 @@ Versetzt das CAS in den Anlieferzustand (Montage-Modi, Codierung, VIN, Tansponde
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-freq-type"></a>
 ### STEUERN_CAS_FREQ_TYPE
 
 Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS4_SK bzw. EWS4_TRSP_SK nicht mehr änderbar (ERROR_ECU_CONDITIONS_NOT_CORRECT). Werden unzulässige Daten übergeben, so erfolgt ein ERROR_DATA. JobHeaderFormat STEUERN_CAS_FREQ_TYPE Diagnose-Service:	UDS $2E DID $4202
@@ -1566,7 +1502,6 @@ Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-init-loc-date"></a>
 ### STEUERN_CAS_INIT_LOC_DATE
 
 Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS4_SK bzw. EWS4_TRSP_SK nicht mehr änderbar (ERROR_ECU_CONDITIONS_NOT_CORRECT). Werden unzulässige Daten übergeben, so erfolgt ein ERROR_DATA. JobHeaderFormat STEUERN_CAS_INIT_LOC_DATE Diagnose-Service:	UDS $2E DID $4203
@@ -1589,7 +1524,6 @@ Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-wup"></a>
 ### STEUERN_CAS_WUP
 
 4-Byte FBD-Wakeup-Pattern schreiben. JobHeaderFormat STEUERN_CAS_WUP Diagnose-Service:	UDS $2E DID $4204
@@ -1608,7 +1542,6 @@ Konfigurationd des CAS setzen. Die Konfiguration ist nach dem Verriegeln des EWS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-egs-isn"></a>
 ### STEUERN_EGS_ISN
 
 EGS-ISN im CAS setzen (wird für Getriebe-EWS genutzt) JobHeaderFormat STEUERN_EGS_ISN Diagnose-Service:	UDS $2E DID $4300
@@ -1627,7 +1560,6 @@ EGS-ISN im CAS setzen (wird für Getriebe-EWS genutzt) JobHeaderFormat STEUERN_E
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews4"></a>
 ### STEUERN_EWS4
 
 Dieser Job dient zum Setzen der Secretkeys und zum anschließenden Verriegeln. JobHeaderFormat STEUERN_EWS4_CAS Diagnose-Service:	UDS $2E DID $C001
@@ -1649,7 +1581,6 @@ Dieser Job dient zum Setzen der Secretkeys und zum anschließenden Verriegeln. J
 | _REQUEST2 | binary | Beschreibung:	2. Hex-Auftrag an SG |
 | _RESPONSE2 | binary | Beschreibung:	2. Hex-Antwort von SG |
 
-<a id="job-steuern-fahrgestellnummer"></a>
 ### STEUERN_FAHRGESTELLNUMMER
 
 Schreiben der Fahrgestellnummer JobHeaderFormat STEUERN_FAHRGESTELLNUMMER Diagnose-Service:	UDS $2E DID $F190
@@ -1668,7 +1599,6 @@ Schreiben der Fahrgestellnummer JobHeaderFormat STEUERN_FAHRGESTELLNUMMER Diagno
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluessel-init"></a>
 ### STEUERN_SCHLUESSEL_INIT
 
 Job zum Anstoßen der Schlüssel-Initialisierung. Nur zulässig, solange EWS4_TRSP_SK noch nicht verriegelt. JobHeaderFormat STEUERN_SCHLUESSEL_INIT Diagnose-Service:	UDS $3101 RID $AC52($4005)
@@ -1690,7 +1620,6 @@ Job zum Anstoßen der Schlüssel-Initialisierung. Nur zulässig, solange EWS4_TR
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluesseldaten"></a>
 ### STEUERN_SCHLUESSELDATEN
 
 Schlüssel-Daten in CAS schreiben (z.B. für Ersatz-Steuergerät oder Nacharbeit). Nur zulässig solange EWS4_TRSP_SK nicht verriegelt. JobHeaderFormat STEUERN_SCHLUESSELDATEN Diagnose-Service:	UDS $2E DID $4210
@@ -1712,7 +1641,6 @@ Schlüssel-Daten in CAS schreiben (z.B. für Ersatz-Steuergerät oder Nacharbeit
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-pia-nr"></a>
 ### STEUERN_PIA_NR
 
 PIA-Nummer eines Schlüssels umdefinieren. JobHeaderFormat STEUERN_PIA_NR Diagnose-Service:	UDS $22 DID $DC5B
@@ -1732,7 +1660,6 @@ PIA-Nummer eines Schlüssels umdefinieren. JobHeaderFormat STEUERN_PIA_NR Diagno
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-service-schluesseldaten-update"></a>
 ### STEUERN_SERVICE_SCHLUESSELDATEN_UPDATE
 
 Dieser Job ermöglicht es einem folgende Aktionen anzustossen: Ermitteln der aktuellen Daten aus dem Fahrzeug, Übertragen der Daten in alle aktuell erkannten Schlüssel (inkrementell oder komplett). JobHeaderFormat STEUERN_SERVICE_SCHLUESSELDATEN_UPDATE Diagnose-Service:	UDS $3101 DID $4005
@@ -1751,7 +1678,6 @@ Dieser Job ermöglicht es einem folgende Aktionen anzustossen: Ermitteln der akt
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-service-schluesseldaten-lesen"></a>
 ### STATUS_SERVICE_SCHLUESSELDATEN_LESEN
 
 Dieser Job erlaubt es die Service-Schlüsseldaten blockweise aus dem CAS auszulesen. JobHeaderFormat STATUS_SERVICE_SCHLUESSELDATEN Diagnose-Service:	UDS $3101 DID $1006
@@ -1772,7 +1698,6 @@ Dieser Job erlaubt es die Service-Schlüsseldaten blockweise aus dem CAS auszule
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### _DIAGNOSE_MODE
 
 UDS  : $10   DiagnosticSessionControl Mode einstellbar ueber das Argument
@@ -1791,7 +1716,6 @@ UDS  : $10   DiagnosticSessionControl Mode einstellbar ueber das Argument
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ident-istufe"></a>
 ### _STATUS_IDENT_ISTUFE
 
 Lesen Identifikation I-Stufe UDS  : $22   ReadDataByIdentifier $100B Modus: Default
@@ -1806,7 +1730,6 @@ _No arguments._
 | STAT_IDENT_ISTUFE_WERT | binary | 24 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-kilometerstand"></a>
 ### _STATUS_KILOMETERSTAND
 
 Lesen aktueller Kilometerstand UDS  : $22   ReadDataByIdentifier $1700 Modus: Default
@@ -1821,7 +1744,6 @@ _No arguments._
 | STAT_KILOMETERSTAND_WERT | binary | 3 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-abs-time"></a>
 ### _STATUS_ABS_TIME
 
 Lesen aktuelle absolute Zeit UDS  : $22   ReadDataByIdentifier $1701 Modus: Default
@@ -1836,7 +1758,6 @@ _No arguments._
 | STAT_ABS_TIME_WERT | binary | 4 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-darh-dtc"></a>
 ### _STATUS_DARH_DTC
 
 Lesen Anzahl der abgelegten Fehler UDS  : $22   ReadDataByIdentifier $1704 Modus: Default
@@ -1851,7 +1772,6 @@ _No arguments._
 | STAT_DARH_DTC_WERT | binary | 7 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sc-version"></a>
 ### _STATUS_SC_VERSION
 
 Lesen Standard Core Version UDS  : $22   ReadDataByIdentifier $1720 Modus: Default
@@ -1866,7 +1786,6 @@ _No arguments._
 | STAT_SC_VERSION_WERT | binary | 4 Byte Byte 1: Major Version Byte 2: Minor Version Byte 3: Patch version Byte 4: reserviert |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-sc-package-id"></a>
 ### _STATUS_SC_PACKAGE_ID
 
 Lesen Standard Core Package Id UDS  : $22   ReadDataByIdentifier $1726 Modus: Default
@@ -1881,7 +1800,6 @@ _No arguments._
 | STAT_SC_PACK_ID_WERT | binary | 136 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-mem-seg-table"></a>
 ### _STATUS_MEM_SEG_TABLE
 
 Lesen Memory segmentation table UDS  : $22   ReadDataByIdentifier $2501 Modus: Default
@@ -1896,7 +1814,6 @@ _No arguments._
 | STAT_MEM_SEG_TABLE_WERT | binary | 13 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-prog-counter"></a>
 ### _STATUS_PROG_COUNTER
 
 Lesen Programming counter Status UDS  : $22   ReadDataByIdentifier $2502 Modus: Default
@@ -1911,7 +1828,6 @@ _No arguments._
 | STAT_PROG_CTR_WERT | binary | 4 Byte Byte 1: reserviert Byte 2: ECU Programming State Byte 3: Programming Counter HiByte Byte 4: Programming Counter LoByte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-prog-counter-max"></a>
 ### _STATUS_PROG_COUNTER_MAX
 
 Lesen Maximalwert des Programming Counters UDS  : $22   ReadDataByIdentifier $2503 Modus: Default
@@ -1926,7 +1842,6 @@ _No arguments._
 | STAT_PROG_CTR_MAX_WERT | binary | 2 Byte Byte 1: MaxValue HiByte des Programming Counters Byte 2: MaxValue LoByte des Programming Counters |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-flash-tim-para"></a>
 ### _STATUS_FLASH_TIM_PARA
 
 Lesen Flash Timing Parameter UDS  : $22   ReadDataByIdentifier $2504 Modus: Default
@@ -1941,7 +1856,6 @@ _No arguments._
 | STAT_FLASH_TIM_PARA_WERT | binary | 15 Byte Byte 0-1:  Erase Memory Time Byte 2-3:  Check Memory Time Byte 4-5:  Bootloader Install Time Byte 6-7:  Authentification Time Byte 8-9:  Reset Time Byte 10:   Neues Datenobjekt 1 Byte 11:   Neues Datenobjekt 2 Byte 12:   Neues Datenobjekt 3 Byte 13:   Neues Datenobjekt 4 Byte 14:   Neues Datenobjekt 5 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-max-block-length"></a>
 ### _STATUS_MAX_BLOCK_LENGTH
 
 Lesen maximale Blocklaenge UDS  : $22   ReadDataByIdentifier $2505 Modus: Default
@@ -1956,7 +1870,6 @@ _No arguments._
 | STAT_FLASH_BLOCK_LENGTH_WERT | binary | 3 Byte Byte 1:  Adress Format Id (0x20) Byte 2-3:  Flash Block Length |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrzeugauftrag-teil-1"></a>
 ### _STATUS_FAHRZEUGAUFTRAG_TEIL_1
 
 aktuelle 160 Byte Fahrzeugauftrag Teil1 UDS  : $22   ReadDataByIdentifier $3F1C Modus: Default
@@ -1971,7 +1884,6 @@ _No arguments._
 | DATA | binary | 160 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-fahrzeugauftrag-teil-2"></a>
 ### _STATUS_FAHRZEUGAUFTRAG_TEIL_2
 
 aktuelle 160 Byte Fahrzeugauftrag Teil2 UDS  : $22   ReadDataByIdentifier $3F1C Modus: Default
@@ -1986,7 +1898,6 @@ _No arguments._
 | DATA | binary | 160 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas-var-konfig"></a>
 ### _STATUS_CAS_VAR_KONFIG
 
 aktueller Status "CAS, Varianten Konfiguration" UDS  : $22   ReadDataByIdentifier $4000 Modus: Default
@@ -2001,7 +1912,6 @@ _No arguments._
 | DATA | binary | 8 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-trsp-mech-code"></a>
 ### _STATUS_TRSP_MECH_CODE
 
 aktueller Status "Transponder MechCode" UDS  : $22   ReadDataByIdentifier $4201 Modus: Default
@@ -2016,7 +1926,6 @@ _No arguments._
 | DATA | binary | 5 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-trsp-fahrzyklus"></a>
 ### _STATUS_TRSP_FAHRZYKLUS
 
 aktueller Status "Transponder Programmierdaten" UDS  : $22   ReadDataByIdentifier $4205 Modus: Default
@@ -2031,7 +1940,6 @@ _No arguments._
 | DATA | binary | 4 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-fbd-empfangsdaten"></a>
 ### _STATUS_FBD_EMPFANGSDATEN
 
 aktuelle 18 Byte des FBD Empfangs UDS  : $22   ReadDataByIdentifier $4600 Modus: Default
@@ -2046,7 +1954,6 @@ _No arguments._
 | STAT_FBD_EMPFANG_WERT | binary | 18 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-act-diag-session"></a>
 ### _STATUS_ACT_DIAG_SESSION
 
 Lesen active diagnose session UDS  : $22   ReadDataByIdentifier $F186 Modus: Default
@@ -2061,7 +1968,6 @@ _No arguments._
 | STAT_ACT_DIA_SESS_WERT | binary | 2 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-supplier-number"></a>
 ### _STATUS_SUPPLIER_NUMBER
 
 Lesen ECU serial number UDS  : $22   ReadDataByIdentifier $F18A Modus: Default
@@ -2076,7 +1982,6 @@ _No arguments._
 | DATA | binary | 3 Byte ECU Supplier Byte 0 ECU Supplier Byte 1 ECU Supplier Byte 2 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ecu-manufacturing-data"></a>
 ### _STATUS_ECU_MANUFACTURING_DATA
 
 Lesen ECU serial number UDS  : $22   ReadDataByIdentifier $F18B Modus: Default
@@ -2091,7 +1996,6 @@ _No arguments._
 | DATA | binary | 3 Byte ECU Herstelldatum Tag 1..31 ECU Herstelldatum Monat 1..12 ECU Herstelldatum Jahr Offset zum Jahr 2000 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ecu-serial-number"></a>
 ### _STATUS_ECU_SERIAL_NUMBER
 
 Lesen ECU serial number UDS  : $22   ReadDataByIdentifier $F18C Modus: Default
@@ -2106,7 +2010,6 @@ _No arguments._
 | DATA | binary | 9 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-cas4-auslieferungsstand"></a>
 ### _STATUS_CAS4_AUSLIEFERUNGSSTAND
 
 CAS4 Auslieferungsstand UDS  : $22   ReadDataByIdentifier $F300 Modus: Default Fuer CT Qualitaetssicherung benoetigt hierueber erfolgt die Identifikation des SW Stand der ECU
@@ -2121,7 +2024,6 @@ _No arguments._
 | DATA | binary | 3 Byte Jahr KW Index Index wird verwendet fuer mehrere Auslieferungen innerhalb einer KW |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-compilation-date-time"></a>
 ### _STATUS_COMPILATION_DATE_TIME
 
 aktuelle 21 Byte Ascii UDS  : $22   ReadDataByIdentifier $F317 Modus: Default Datum ist in ASCII hinterlegt, das Format ist von der Systemdatum und -zeit Variablen eines Windows PC abhaengig
@@ -2136,7 +2038,6 @@ _No arguments._
 | STAT_COMP_TIMESTAMP | binary | 21 Byte Hinter "Datum" und "Zeit" wird jeweils ein 0x00 gesetzt z. B.: May 05 2006[0x00]13:45:00[0x00] |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-links-aussen-handle"></a>
 ### _STATUS_ANT_LINKS_AUSSEN_HANDLE
 
 aktueller Status "Antenne Links aussen Handle" UDS  : $22   ReadDataByIdentifier $F320 Modus: Default
@@ -2151,7 +2052,6 @@ _No arguments._
 | DATA | binary | 33 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-rechts-aussen-handle"></a>
 ### _STATUS_ANT_RECHTS_AUSSEN_HANDLE
 
 aktueller Status "Antenne Rechts aussen Handle" UDS  : $22   ReadDataByIdentifier $F321 Modus: Default
@@ -2166,7 +2066,6 @@ _No arguments._
 | DATA | binary | 33 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-kofferr-aussen-handle"></a>
 ### _STATUS_ANT_KOFFERR_AUSSEN_HANDLE
 
 aktueller Status "Antenne Kofferraum aussen Handle" UDS  : $22   ReadDataByIdentifier $F322 Modus: Default
@@ -2181,7 +2080,6 @@ _No arguments._
 | DATA | binary | 33 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-vorne-innen-handle"></a>
 ### _STATUS_ANT_VORNE_INNEN_HANDLE
 
 aktueller Status "Antenne vorne innen Handle" UDS  : $22   ReadDataByIdentifier $F323 Modus: Default
@@ -2196,7 +2094,6 @@ _No arguments._
 | DATA | binary | 33 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-mitte-innen-handle"></a>
 ### _STATUS_ANT_MITTE_INNEN_HANDLE
 
 aktueller Status "Antenne vorne innen Handle" UDS  : $22   ReadDataByIdentifier $F324 Modus: Default
@@ -2211,7 +2108,6 @@ _No arguments._
 | DATA | binary | 33 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-hutablage-handle"></a>
 ### _STATUS_ANT_HUTABLAGE_HANDLE
 
 aktueller Status "Antenne Hutablage Handle" UDS  : $22   ReadDataByIdentifier $F325 Modus: Default
@@ -2226,7 +2122,6 @@ _No arguments._
 | DATA | binary | 33 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-kofferr-innen-links-handle"></a>
 ### _STATUS_ANT_KOFFERR_INNEN_LINKS_HANDLE
 
 aktueller Status "Antenne Kofferraum innen links Handle" UDS  : $22   ReadDataByIdentifier $F326 Modus: Default
@@ -2241,7 +2136,6 @@ _No arguments._
 | DATA | binary | 33 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-kofferr-innen-rechts-handle"></a>
 ### _STATUS_ANT_KOFFERR_INNEN_RECHTS_HANDLE
 
 aktueller Status "Antenne Kofferraum innen rechts Handle" UDS  : $22   ReadDataByIdentifier $F327 Modus: Default
@@ -2256,7 +2150,6 @@ _No arguments._
 | DATA | binary | 33 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-comfort-go-ant-konfig"></a>
 ### _STATUS_COMFORT_GO_ANT_KONFIG
 
 aktueller Status "Comfort Go Antennen Konfiguration" UDS  : $22   ReadDataByIdentifier $F330 Modus: Default 
@@ -2271,7 +2164,6 @@ _No arguments._
 | DATA | binary | 3 Byte Byte 0: Comfort Go Configbyte Auswahl der Antennen (bitcodiert, Antenne 0 = Bit0), die verwendet werden sollen Byte 1: Communication Retries Maximale Anzahl der Kommunikationsversuche Byte 2: Reserved |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-tage-id"></a>
 ### _STATUS_TAGE_ID
 
 aktueller Status "Status TAGE Identifier" UDS  : $22   ReadDataByIdentifier $F331 Modus: Default BMW Teilenummer (6Byte String) fuer jede Tuer
@@ -2286,7 +2178,6 @@ _No arguments._
 | DATA | binary | 24 Byte Byte  0 -  5 TAGE ID Fahrertuer Byte  6 - 11 TAGE ID Beifahrertuer Byte 12 - 17 TAGE ID Fahrertuer hinten Byte 18 - 23 TAGE ID Beifahrertuer hinten |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-antennen"></a>
 ### _STATUS_ANTENNEN
 
 aktueller Status "Status Antennen" UDS  : $22   ReadDataByIdentifier $F340 Modus: Default Liefert die Stati der bis zu 8 Antennen und einen globalen Status
@@ -2301,7 +2192,6 @@ _No arguments._
 | DATA | binary | 18 Byte Byte  0 -  1:	Status Antenne 0 Byte  2 -  3:	Status Antenne 1 Byte  4 -  5:	Status Antenne 2 Byte  6 -  7:	Status Antenne 3 Byte  8 -  9:	Status Antenne 4 Byte 10 - 11:	Status Antenne 5 Byte 12 - 13:	Status Antenne 6 Byte 14 - 15:	Status Antenne 7 Byte 16 - 17: Status global Status 0x0000 -> No Error 0x0001 -> Antenna Short to Battey 0x0002 -> Antenna Short to Ground 0x0004 -> Antenna Open Load 0x0008 -> reserved 0x0010 -> F0 Out of Range 0x0020 -> Q Out of Range 0x0040 -> Supply Voltage LF Driver Low 0x0080 -> Supply Voltage LF Driver High 0x0100 -> ISR Overrun Flag 0x0200 -> reserved 0x0400 -> Selected Current Out of Range 0x0800 -> reserved 0x1000 -> reserved 0x2000 -> reserved 0x4000 -> reserved 0x8000 -> reserved |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-tage"></a>
 ### _STATUS_TAGE
 
 aktueller Status "Status Tueraussengriffelektronik" UDS  : $22   ReadDataByIdentifier $F341 Modus: Default
@@ -2316,7 +2206,6 @@ _No arguments._
 | DATA | binary | 4 Byte Byte 0		Status TAGE Fahrertuer Byte 1		Status TAGE Beifahrertuer Byte 2		Status TAGE Fahrertuer hinten Byte 3		Status TAGE Beifahrertuer hinten Status TAGE fuer jede Tuer: 0 Kein Status (keine Betätigung) 1 Zugsensor Betätigt 2 Sichern Sensor Betätigt 3 Entriegeln Sensor Betätigt (Status wird 5 s gehalten oder bis anderer Befehl kommt) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ca-telegramm"></a>
 ### _STATUS_CA_TELEGRAMM
 
 aktueller Status "Status CA Telegramm" UDS  : $22   ReadDataByIdentifier $F342 Modus: Default
@@ -2331,7 +2220,6 @@ _No arguments._
 | DATA | binary | 14 Byte Byte 0 Schluesselnummer 0...9 Schlüssel-Index in Schlüssel-Tabelle "15" = ungültiger / unbekannter Schlüssel  Byte 1..4 Schluessel ID  Byte 5 Personalisierungsnummer 0...3 Pers-Nr "15" = ungültiger / unbekannter Schlüssel  Byte 6 FBD Feldstaerke Empfangsstärke Signal Schlüssel an FBD-Empfänger 0...255 Empfangsstärke  Byte 7 FBD Feldstaerke Schluessel Empfangsstärke Signal FBD-Empfänger an Schlüssel 0...255 Empfangsstärke  Byte 8 LF Feldstaerke Schluessel Empfangsstärke LF-Signal 125 kHz Fahrzeug an Schlüssel 0...255 Empfangsstärke  Byte 9 CA Aktion Aktion bzw. Ursache 1 Entriegeln 2 Verriegeln 3 Kofferraum öffnen 4 Motor starten / Innenraum-Suche Byte 10 Suchort Empfangsort / Suchort 1 IRV (Innenraum vorn) 2 IRH (Innenraum hinten) 3 FT (Fahrertür/-seite) 4 BFT (Beifahrertür/-seite) 5 HA (Hut-Ablage) 6 KRLI (Kofferraum links) 7 KRRE (Kofferraum rechts) 8 SF (Stoßfänger)  Byte 11 Gueltigkeit Gütigkeitsstatus 0 ungültig 1 gültig  Byte 12..13 Batterie-Spannung des sendenden Schluessels |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-stroeme"></a>
 ### _STATUS_ANT_STROEME
 
 aktueller Status "Status Antennenstroeme" UDS  : $22   ReadDataByIdentifier $F343 Modus: Default Bei der zuletzt ausgefuehrten CA Aktion gemessener Antennenstrom fuer alle Antennen
@@ -2346,7 +2234,6 @@ _No arguments._
 | DATA | binary | 16 Byte Byte 0..1	Antennenstrom (mA) Antenne0 Byte 2..3	Antennenstrom (mA) Antenne1 Byte 4..5	Antennenstrom (mA) Antenne2 Byte 6..7	Antennenstrom (mA) Antenne3 Byte 8..9	Antennenstrom (mA) Antenne4 Byte 10..11	Antennenstrom (mA) Antenne5 Byte 12..13	Antennenstrom (mA) Antenne6 Byte 14..15	Antennenstrom (mA) Antenne7 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-schluessel-info"></a>
 ### _STATUS_SCHLUESSEL_INFO
 
 aktueller Status "Status Schluesselinfo" UDS  : $22   ReadDataByIdentifier $F344 Modus: Default
@@ -2361,7 +2248,6 @@ _No arguments._
 | DATA | binary | 9 Byte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ca-handler"></a>
 ### _STATUS_CA_HANDLER
 
 aktueller Status "Status CA Handler" UDS  : $22   ReadDataByIdentifier $F345 Modus: Default Interner CAH-Statusspeicher, nur zu Entwicklungszwecken
@@ -2376,7 +2262,6 @@ _No arguments._
 | DATA | binary | 12 Byte Byte 0..3	Number of Keysearch Calls Byte 4..7 Authentication Time Byte 8..9 Max Tasktime Byte 10   CA Handler Statusbyte 1 Byte 11   CA Handler Statusbyte 2 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-res-freq"></a>
 ### _STATUS_RES_FREQ
 
 aktueller Status "Status Resonanz Frequenz" UDS  : $22   ReadDataByIdentifier $F346 Modus: Default Lesen der geschaetzten Resonanzfrequenzen
@@ -2391,7 +2276,6 @@ _No arguments._
 | DATA | binary | 8 Byte Byte 0	aussen links Byte 1	aussen rechts Byte 2	aussen Kofferraum Byte 3	innen vorne Byte 4	innen mitte Byte 5	innen hinten Byte 6	innen Kofferraum links Byte 7	innen Kofferraum rechts |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-ant-guete"></a>
 ### _STATUS_ANT_GUETE
 
 aktueller Status "Status Guete Antenne" UDS  : $22   ReadDataByIdentifier $F347 Modus: Default Lesen der geschaetzten Gueten
@@ -2406,7 +2290,6 @@ _No arguments._
 | DATA | binary | 8 Byte Byte 0	aussen links Byte 1	aussen rechts Byte 2	aussen Kofferraum Byte 3	innen vorne Byte 4	innen mitte Byte 5	innen hinten Byte 6	innen Kofferraum links Byte 7	innen Kofferraum rechts |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lf-treiber"></a>
 ### _STATUS_LF_TREIBER
 
 aktueller Status "Status LF Treiber" UDS  : $22   ReadDataByIdentifier $F348 Modus: Default Verhalten des LF-Treibers und des CAH
@@ -2421,7 +2304,6 @@ _No arguments._
 | DATA | binary | 4 Byte Byte 0    Anzahl der max. Kommunikationsversuche Byte 1..2 LF-Sendestrom fuer Diagnosefunktionen Byte 3    CA Handler Statusflags Byte 2 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-u-kl15n30b"></a>
 ### _STATUS_U_KL15N30B
 
 aktueller Status analoge Spannungswerte Funktionsgruppe 15N30B UDS  : $22   ReadDataByIdentifier $F3A0 Modus: Default
@@ -2436,7 +2318,6 @@ _No arguments._
 | DATA | binary | Byte 0-1 AI_15N Byte 2-3 AI_30B_1 Byte 4-5 AI_30B_2 Byte 6-7 AI_15WUP |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-u-kl15-kl50"></a>
 ### _STATUS_U_KL15_KL50
 
 aktueller Status analoge Spannungswerte Funktionsgruppe KL15 UDS  : $22   ReadDataByIdentifier $F3A1 Modus: Default
@@ -2451,7 +2332,6 @@ _No arguments._
 | DATA | binary | Byte 0-1 AI_15_1 Byte 2-3 AI_15_2 Byte 4-5 AI_15_3 Byte 6-7 AI_15_50 Byte 8-9 AI_50L Byte 10-11 AI_50L_RS |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-u-powersupply"></a>
 ### _STATUS_U_POWERSUPPLY
 
 aktueller Status analoge Spannungswerte Funktionsgruppe Powersupply UDS  : $22   ReadDataByIdentifier $F3A2 Modus: Default
@@ -2466,7 +2346,6 @@ _No arguments._
 | DATA | binary | Byte 0-1 AI_30E Byte 2-3 AI_30L Byte 4-5 AI_TEMP Byte 6-7 AI_LF_DIAG Byte 8-9 AI_LF_STROM |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-u-elv"></a>
 ### _STATUS_U_ELV
 
 aktueller Status analoge Spannungswerte ELV Funktionsgruppe Powersupply UDS  : $22   ReadDataByIdentifier $F3A3 Modus: Default
@@ -2481,7 +2360,6 @@ _No arguments._
 | DATA | binary | Byte 0-1 AI_30 ELV Byte 2-3 AI_31 ELV |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-u-hall-tage"></a>
 ### _STATUS_U_HALL_TAGE
 
 aktueller Status analoge Spannungswerte Hallsensoren und Tueraussengriffe Funktionsgruppe Powersupply UDS  : $22   ReadDataByIdentifier $F3A4 Modus: Default
@@ -2496,7 +2374,6 @@ _No arguments._
 | DATA | binary | Byte 0 AI_TAGE_ER_BFT Byte 1 AI_TAGE_ER_BFTH Byte 2 AI_TAGE_ER_FT Byte 3 AI_TAGE_ER_FTH Byte 4-5 AI_VCC_HALL13 Byte 6-7 AI_VCC_HALL24 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dig-input-start-stop"></a>
 ### _STATUS_DIG_INPUT_START_STOP
 
 aktueller Status digitale Eingaenge Funktionsgruppen 15N30B und 15WUP UDS  : $22   ReadDataByIdentifier $F3A5 Modus: Default
@@ -2511,7 +2388,6 @@ _No arguments._
 | DATA | binary | 3 Byte Byte 0: Bit0 DI_A_S_START Bit1 DI_BLS_MSA Bit2 Reserve Bit3 Reserve Bit4 DI_A_S_START Co Bit1 DI_BLS_MSA Co Bit2 Reserve Bit3 Reserve Byte 1: Bit0..Bit3 DI_DFASIM Bit4..Bit7 Reserve Byte 2: Bit0..Bit3 DI_DFASIM Co Bit4..Bit7 Reserve |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dig-input-hall"></a>
 ### _STATUS_DIG_INPUT_HALL
 
 aktueller Status digitale Eingaenge Funktionsgruppen HALL UDS  : $22   ReadDataByIdentifier $F3A6 Modus: Default
@@ -2526,7 +2402,6 @@ _No arguments._
 | DATA | binary | 1 Byte Bit0 DI_HALL1_SSTA Bit1 DI_HALL2_SSTB |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dig-input-schalter"></a>
 ### _STATUS_DIG_INPUT_SCHALTER
 
 aktueller Status digitale Eingaenge Funktionsgruppen Schalter UDS  : $22   ReadDataByIdentifier $F3A8 Modus: Default
@@ -2541,7 +2416,6 @@ _No arguments._
 | DATA | binary | 1 Byte Bit0 DI_WU_CLT Bit1 DI_WU_HOTEL Bit2 DI_WU_MHK Bit3 DI_WU_MOST_WUP Bit4 DI_WU_MSA Bit5 DI_WU_TOEHKI Bit6 Reserve Bit7 Reserve |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dig-input-bremse-kuppl"></a>
 ### _STATUS_DIG_INPUT_BREMSE_KUPPL
 
 aktueller Status digitale Eingaenge Funktionsgruppen Bremse und Kupplung UDS  : $22   ReadDataByIdentifier $F3A9 Modus: Default
@@ -2556,7 +2430,6 @@ _No arguments._
 | DATA | binary | 1 Byte Bit0 DI_BLTS Bit1 DI_PN_KUPPL Bit2 Reserve Bit3 Reserve Bit4 DI_BLTS_Co Bit5 DI_PN_KUPPL_Co Bit6 Reserve Bit7 Reserve |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-dig-input-klemmen"></a>
 ### _STATUS_DIG_INPUT_KLEMMEN
 
 aktueller Status digitale Eingaenge Funktionsgruppen 15N30B und 15WUP UDS  : $22   ReadDataByIdentifier $F3AB Modus: Default
@@ -2571,7 +2444,6 @@ _No arguments._
 | DATA | binary | 1 Byte Bit0 DI_15N_30B_1_STAT Bit1 DI_30B_2_STAT Bit2 DI_WU_15WUP_RS |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sa-request-seed"></a>
 ### _SA_REQUEST_SEED
 
 Anfordern des SEED Codes von der ECU Es muessen immer alle 5 Argumente im angegebenen Wertebereich uebergeben werden. UDS  : $27   SecurityAccess SID $01   Sub Identifier "Request Seed" User-ID Byte[0] User-ID Byte[1] User-ID Byte[2] User-ID Byte[3] Modus: Default
@@ -2593,7 +2465,6 @@ Anfordern des SEED Codes von der ECU Es muessen immer alle 5 Argumente im angege
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sa-send-key"></a>
 ### _SA_SEND_KEY
 
 Senden des Key Wertes an die ECU Es muessen immer alle Argumente im jeweils gueltigen Wertebereich uebergeben werden. UDS  : $27   SecurityAccess SID $02   Sub Identifier "Request Seed" $03   FixCode[68 Byte Array] Modus: Default
@@ -2611,7 +2482,6 @@ Senden des Key Wertes an die ECU Es muessen immer alle Argumente im jeweils guel
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ident-istufe"></a>
 ### _STEUERN_IDENT_ISTUFE
 
 Beschreiben der I-Stufe Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $100B Modus: Default
@@ -2629,7 +2499,6 @@ Beschreiben der I-Stufe Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   Wr
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-fahrzeugauftrag-teil-1"></a>
 ### _STEUERN_FAHRZEUGAUFTRAG_TEIL_1
 
 Beschreiben der Fahrzeugauftrag Teil1 Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $3F1C Modus: Default
@@ -2647,7 +2516,6 @@ Beschreiben der Fahrzeugauftrag Teil1 Eingabe der Daten als Hexwert von 00..FF U
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-fahrzeugauftrag-teil-2"></a>
 ### _STEUERN_FAHRZEUGAUFTRAG_TEIL_2
 
 Beschreiben der Fahrzeugauftrag Teil2 Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $3F1D Modus: Default
@@ -2665,7 +2533,6 @@ Beschreiben der Fahrzeugauftrag Teil2 Eingabe der Daten als Hexwert von 00..FF U
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-cas-var-konfig"></a>
 ### _STEUERN_CAS_VAR_KONFIG
 
 Beschreiben der CAS Varianten Konfiguration Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $4000 CAS_VAR_KONFIG Modus: Default
@@ -2683,7 +2550,6 @@ Beschreiben der CAS Varianten Konfiguration Eingabe der Daten als Hexwert von 00
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-trsp-mech-code"></a>
 ### _STEUERN_TRSP_MECH_CODE
 
 Beschreiben des Transponder MechCode Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $4201 Modus: Default
@@ -2701,7 +2567,6 @@ Beschreiben des Transponder MechCode Eingabe der Daten als Hexwert von 00..FF UD
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-trsp-fahrzyklus"></a>
 ### _STEUERN_TRSP_FAHRZYKLUS
 
 Beschreiben des Transponder Fahrzykluszaehler Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $4205 Modus: Default
@@ -2719,7 +2584,6 @@ Beschreiben des Transponder Fahrzykluszaehler Eingabe der Daten als Hexwert von 
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ews4-seckey"></a>
 ### _STEUERN_EWS4_SECKEY
 
 Schreiben des EWS4 Secret Key 17 Byte Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $C001 Modus: Default
@@ -2737,7 +2601,6 @@ Schreiben des EWS4 Secret Key 17 Byte Eingabe der Daten als Hexwert von 00..FF U
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-svk-supplier"></a>
 ### _STEUERN_SVK_SUPPLIER
 
 Schreiben der BMW Logistik Daten Zulieferer Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F102 Modus: Default
@@ -2755,7 +2618,6 @@ Schreiben der BMW Logistik Daten Zulieferer Eingabe der Daten als Hexwert von 00
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-svk-werk"></a>
 ### _STEUERN_SVK_WERK
 
 Schreiben der BMW Logistik Daten Werk Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F103 Modus: Default
@@ -2773,7 +2635,6 @@ Schreiben der BMW Logistik Daten Werk Eingabe der Daten als Hexwert von 00..FF U
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-links-aussen-handle"></a>
 ### _STEUERN_ANT_LINKS_AUSSEN_HANDLE
 
 Beschreiben des Antenne links Handle Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F320 Data Modus: Default
@@ -2791,7 +2652,6 @@ Beschreiben des Antenne links Handle Eingabe der Daten als Hexwert von 00..FF UD
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-rechts-aussen-handle"></a>
 ### _STEUERN_ANT_RECHTS_AUSSEN_HANDLE
 
 Beschreiben des Antenne rechts aussen Handle Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F321 Data Modus: Default
@@ -2809,7 +2669,6 @@ Beschreiben des Antenne rechts aussen Handle Eingabe der Daten als Hexwert von 0
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-kofferr-aussen-handle"></a>
 ### _STEUERN_ANT_KOFFERR_AUSSEN_HANDLE
 
 Beschreiben des Antenne Kofferraum aussen Handle Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F322 Data Modus: Default
@@ -2827,7 +2686,6 @@ Beschreiben des Antenne Kofferraum aussen Handle Eingabe der Daten als Hexwert v
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-vorne-innen-handle"></a>
 ### _STEUERN_ANT_VORNE_INNEN_HANDLE
 
 Beschreiben des Antenne vorne innen Handle Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F323 Data Modus: Default
@@ -2845,7 +2703,6 @@ Beschreiben des Antenne vorne innen Handle Eingabe der Daten als Hexwert von 00.
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-mitte-innen-handle"></a>
 ### _STEUERN_ANT_MITTE_INNEN_HANDLE
 
 Beschreiben des Antenne mitte innen Handle Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F324 Data Modus: Default
@@ -2863,7 +2720,6 @@ Beschreiben des Antenne mitte innen Handle Eingabe der Daten als Hexwert von 00.
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-hutablage-handle"></a>
 ### _STEUERN_ANT_HUTABLAGE_HANDLE
 
 Beschreiben des Antenne Hutablage Handle Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F325 Data Modus: Default
@@ -2881,7 +2737,6 @@ Beschreiben des Antenne Hutablage Handle Eingabe der Daten als Hexwert von 00..F
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-kofferr-innen-links-handle"></a>
 ### _STEUERN_ANT_KOFFERR_INNEN_LINKS_HANDLE
 
 Beschreiben des Antenne Kofferraum innen links Handle Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F326 Data Modus: Default
@@ -2899,7 +2754,6 @@ Beschreiben des Antenne Kofferraum innen links Handle Eingabe der Daten als Hexw
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-kofferr-innen-rechts-handle"></a>
 ### _STEUERN_ANT_KOFFERR_INNEN_RECHTS_HANDLE
 
 Beschreiben des Antenne Kofferraum innen rechts Handle Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F327 Data Modus: Default
@@ -2917,7 +2771,6 @@ Beschreiben des Antenne Kofferraum innen rechts Handle Eingabe der Daten als Hex
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-comfort-go-ant-konfig"></a>
 ### _STEUERN_COMFORT_GO_ANT_KONFIG
 
 Beschreiben der Comfort go Antennen Konfig Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F330 Data Modus: Default
@@ -2935,7 +2788,6 @@ Beschreiben der Comfort go Antennen Konfig Eingabe der Daten als Hexwert von 00.
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-tage-id"></a>
 ### _STEUERN_TAGE_ID
 
 Beschreiben der Tueraussengriffelektronik Id Eingabe der Daten als Hexwert von 00..FF UDS  : $2E   WriteDataByIdentifier $F331 Data Modus: Default
@@ -2953,7 +2805,6 @@ Beschreiben der Tueraussengriffelektronik Id Eingabe der Daten als Hexwert von 0
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-treiberstufe-kl15-30"></a>
 ### _STEUERN_TREIBERSTUFE_KL15_30
 
 Ansteuerung der Klemme 15/30 Ausgangspins UDS  : $2F     I/O Control By Local Id $0201   Data Id
@@ -2973,7 +2824,6 @@ Ansteuerung der Klemme 15/30 Ausgangspins UDS  : $2F     I/O Control By Local Id
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-treiberstufe-kl15-50"></a>
 ### _STEUERN_TREIBERSTUFE_KL15_50
 
 Ansteuerung der Klemme 15/50 Ausgangspins UDS  : $2F     I/O Control By Local Id $0202   Data Id
@@ -2993,7 +2843,6 @@ Ansteuerung der Klemme 15/50 Ausgangspins UDS  : $2F     I/O Control By Local Id
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-bimag"></a>
 ### _STEUERN_BIMAG
 
 Ansteuerung der BiMAG UDS  : $2F     I/O Control By Local Id $0203   Data Id
@@ -3013,7 +2862,6 @@ Ansteuerung der BiMAG UDS  : $2F     I/O Control By Local Id $0203   Data Id
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-elv"></a>
 ### _STEUERN_ELV
 
 Ansteuerung ELV UDS  : $2F     I/O Control By Local Id $0204   Data Id
@@ -3033,7 +2881,6 @@ Ansteuerung ELV UDS  : $2F     I/O Control By Local Id $0204   Data Id
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-hall"></a>
 ### _STEUERN_HALL
 
 Ansteuerung HALL Sensoren UDS  : $2F     I/O Control By Local Id $0205   Data Id
@@ -3053,7 +2900,6 @@ Ansteuerung HALL Sensoren UDS  : $2F     I/O Control By Local Id $0205   Data Id
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-led-lf"></a>
 ### _STEUERN_LED_LF
 
 Ansteuerung LED und LF UDS  : $2F     I/O Control By Local Id $0206   Data Id
@@ -3073,7 +2919,6 @@ Ansteuerung LED und LF UDS  : $2F     I/O Control By Local Id $0206   Data Id
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ant-status-reset"></a>
 ### _STEUERN_ANT_STATUS_RESET
 
 Antennenstatus ruecksetzen UDS  : $31       Routine Control $xxF801   Routine Id $F801 Modus: Default
@@ -3092,7 +2937,6 @@ Antennenstatus ruecksetzen UDS  : $31       Routine Control $xxF801   Routine Id
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-schluessel-suche"></a>
 ### _STEUERN_SCHLUESSEL_SUCHE
 
 Schluesselsuche, CA Handler versendet LF Telegramm UDS  : $31       Routine Control $xxF802   Routine Id $F802 Modus: Default
@@ -3115,7 +2959,6 @@ Schluesselsuche, CA Handler versendet LF Telegramm UDS  : $31       Routine Cont
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-lf-hw-test"></a>
 ### _STEUERN_LF_HW_TEST
 
 LF Hardware Selbsttest UDS  : $31       Routine Control $xxF803   Routine Id $F803 Modus: Default
@@ -3134,7 +2977,6 @@ LF Hardware Selbsttest UDS  : $31       Routine Control $xxF803   Routine Id $F8
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-lf-test-telegramm"></a>
 ### _STEUERN_LF_TEST_TELEGRAMM
 
 Versendet LF Telegramm mit der im Parameter angegebenen Anzahl Bytes UDS  : $31       Routine Control $xxF804   Routine Id $F804 Modus: Default
@@ -3154,7 +2996,6 @@ Versendet LF Telegramm mit der im Parameter angegebenen Anzahl Bytes UDS  : $31 
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-reset-det"></a>
 ### _STEUERN_RESET_DET
 
 Ruecksetzen der Eintraege im Debugmodul "Development Error Tracer (DET)" UDS  : $31       Routine Control $xxF806   Routine Id $F806 Modus: Default
@@ -3169,7 +3010,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Anfrage vom Tester |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-development-job"></a>
 ### _DEVELOPMENT_JOB
 
 Frei programmierbare Diagnosebotschaft, die ohne Vorfilterung auf dem CAN gesendet wird. Wird benoetigt fuer Diagnose Tests. Auch > 64 Byte Daten Adressierung unterstuetzt. Modus: Default
@@ -3271,7 +3111,6 @@ Frei programmierbare Diagnosebotschaft, die ohne Vorfilterung auf dem CAN gesend
 - [ARG_0XDC6A](#table-arg-0xdc6a) (1 × 12)
 - [TAB_CAS_DIGITAL_EINGANG](#table-tab-cas-digital-eingang) (4 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 64 rows × 2 columns
@@ -3343,7 +3182,6 @@ Dimensions: 64 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 97 rows × 2 columns
@@ -3448,7 +3286,6 @@ Dimensions: 97 rows × 2 columns
 | 0x000096 | Continental Automotive |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -3474,7 +3311,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -3499,7 +3335,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 20 rows × 3 columns
@@ -3527,7 +3362,6 @@ Dimensions: 20 rows × 3 columns
 | 0xA2 | FCFN | Freischaltcode Funktion |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -3600,7 +3434,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -3613,7 +3446,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 4 rows × 9 columns
@@ -3625,7 +3457,6 @@ Dimensions: 4 rows × 9 columns
 | 0x1702 | SAE_CODE | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -3638,7 +3469,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 9 rows × 3 columns
@@ -3655,7 +3485,6 @@ Dimensions: 9 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 45 rows × 3 columns
@@ -3708,7 +3537,6 @@ Dimensions: 45 rows × 3 columns
 | 0x2A00 | RSE-Fernbedienung | - |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -3717,7 +3545,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 73 rows × 2 columns
@@ -3798,7 +3625,6 @@ Dimensions: 73 rows × 2 columns
 | 0x0050 | Grupo Antolin Ingenieria, S.A. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -3824,7 +3650,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -3835,7 +3660,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -3844,7 +3668,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -3854,7 +3677,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 56 rows × 3 columns
@@ -3918,7 +3740,6 @@ Dimensions: 56 rows × 3 columns
 | 0x930871 | Treiber KL15N: Kurzschluss Batteriespannung | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 5 rows × 2 columns
@@ -3931,7 +3752,6 @@ Dimensions: 5 rows × 2 columns
 | F_SEVERITY | nein |
 | F_UWB_SATZ | 2 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -3940,7 +3760,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x40FF | Fehlerart | HEX | - | unsigned char | - | - | - | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 8 rows × 3 columns
@@ -3956,7 +3775,6 @@ Dimensions: 8 rows × 3 columns
 | 0x402010 | NVM E wrong config id | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -3967,7 +3785,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | nein |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 33 rows × 16 columns
@@ -4008,7 +3825,6 @@ Dimensions: 33 rows × 16 columns
 | SCHALTER_HOTEL | 0xDC66 | - | Hotelschalter am CAS. | - | - | - | - | - | - | - | - | - | 22;2F | ARG_0xDC66 | RES_0xDC66 |
 | EINGANG_MOST_WUP | 0xDC6A | - | Status Leitung MOST_WUP von TCU an CAS. 1 Spannung liegt an, 0 Ausgang abgeschaltet, 255 Signal ungültig / Fehler. | - | - | - | - | - | - | - | - | - | 22;2F | ARG_0xDC6A | RES_0xDC6A |
 
-<a id="table-tab-steuern-ews4-mode"></a>
 ### TAB_STEUERN_EWS4_MODE
 
 Dimensions: 8 rows × 4 columns
@@ -4024,7 +3840,6 @@ Dimensions: 8 rows × 4 columns
 | 0x07 | UNLOCK_TRSP_SK | UnLock Trsp-Sk | 16 |
 | 0xFF | UNKNOWN_MODE | UNKNOWN_MODE | 0 |
 
-<a id="table-res-0xdab6"></a>
 ### RES_0XDAB6
 
 Dimensions: 1 rows × 13 columns
@@ -4033,7 +3848,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASTER_SST_AKTIV |  |  |  |  |  | unsigned char | 0x01 |  |  |  |  | Das Result enthält den aktuellen Zustand des Start-Stopp-Tasters |
 
-<a id="table-tab-weckquelle"></a>
 ### TAB_WECKQUELLE
 
 Dimensions: 30 rows × 2 columns
@@ -4071,7 +3885,6 @@ Dimensions: 30 rows × 2 columns
 | 28 | Kurzschluss KL30B (bei Busruhe) |
 | 29 | Unterspannung (Zeitstempel sichern, kein WakeUp) |
 
-<a id="table-res-0xdc54"></a>
 ### RES_0XDC54
 
 Dimensions: 1 rows × 10 columns
@@ -4080,7 +3893,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_HAENDLER_NUMMER_WERT | - | - | string[5] | - | - | - | - | - | Händlernummer (5-stellige Nummer). Im Werk wird dieser Wert auf 00000 |
 
-<a id="table-arg-0xdc54"></a>
 ### ARG_0XDC54
 
 Dimensions: 7 rows × 12 columns
@@ -4095,7 +3907,6 @@ Dimensions: 7 rows × 12 columns
 | STAT_ERSTZULASSUNGSDATUM_MONAT_WERT | - | - | unsigned char | - | - | - | - | - | - | - | Monat des Erstzulassungsdatums.  Im werk wird dieser Wert auf den Monat der Schlüssel-Initialisierung gesetzt. |
 | STAT_ERSTZULASSUNGSDATUM_JAHR_WERT | - | - | unsigned int | - | - | - | - | - | - | - | Jahr des Erstzulassungsdatums. .  Im werk wird dieser Wert auf den Jahr der Schlüssel-Initialisierung gesetzt. |
 
-<a id="table-res-0xdac1"></a>
 ### RES_0XDAC1
 
 Dimensions: 6 rows × 10 columns
@@ -4109,7 +3920,6 @@ Dimensions: 6 rows × 10 columns
 | STATUS_ZV_HECKKLAPPE | 0-n | - | unsigned char | - | TAB_CAS_ZV_STATUS | - | - | - | Status Zentralverriegelung Heckklappe. |
 | STATUS_ZV_HECKSCHEIBE | 0-n | - | unsigned char | - | TAB_CAS_ZV_STATUS | - | - | - | Status Zentralverriegelung Heckscheibe. |
 
-<a id="table-tab-cas-zv-status"></a>
 ### TAB_CAS_ZV_STATUS
 
 Dimensions: 7 rows × 2 columns
@@ -4124,7 +3934,6 @@ Dimensions: 7 rows × 2 columns
 | 130 | Klappe in Vorrast |
 | 255 | ungültig |
 
-<a id="table-res-0xdab9"></a>
 ### RES_0XDAB9
 
 Dimensions: 1 rows × 10 columns
@@ -4133,7 +3942,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CAS_MONTAGEMODUS | 0-n | - | unsigned char | - | TAB_CAS_MONTAGEMODUS | - | - | - | Die ELV-Sperre (ELV-Montagemodus) verhindert die Ansteuerung (Verriegeln/Entriegeln) der ELV während des Montage-Prozesses. Die ELV-Diagnosen (z.B. Status-Abfragen, ELV-Ident) sind zulässig. Die KL50-Sperre verhindert das Ansteuern des Anlassers während des Montage-Prozesses. Definierte Montagemodi: 0 Alle Montagemodi sind deaktiviert (ELV- und KL50-Ansteuerung wird durchgeführ), 1 Nur KL50-Montagemodus aktiv (kein Anlasser), 2 ELV- und KL50 Montage-Modus sind aktiv (keine ELV-Ansteuerung, kein Anlasser) |
 
-<a id="table-arg-0xdab9"></a>
 ### ARG_0XDAB9
 
 Dimensions: 1 rows × 12 columns
@@ -4142,7 +3950,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CAS_MONTAGEMODUS | 0-n | - | unsigned char | - | TAB_CAS_MONTAGEMODUS | - | - | - | - | - | Die ELV-Sperre (ELV-Montagemodus) verhindert die Ansteuerung (Verriegeln/Entriegeln) der ELV während des Montage-Prozesses. Die ELV-Diagnosen (z.B. Status-Abfragen, ELV-Ident) sind zulässig. Die KL50-Sperre verhindert das Ansteuern des Anlassers während des Montage-Prozesses. Definierte Montagemodi: 0 Alle Montagemodi sind deaktiviert (ELV- und KL50-Ansteuerung wird durchgeführ), 1 Nur KL50-Montagemodus aktiv (kein Anlasser), 2 ELV- und KL50 Montage-Modus sind aktiv (keine ELV-Ansteuerung, kein Anlasser) |
 
-<a id="table-tab-cas-montagemodus"></a>
 ### TAB_CAS_MONTAGEMODUS
 
 Dimensions: 4 rows × 2 columns
@@ -4154,7 +3961,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | ELV_KL50-Montagemodus - Anlassersperre und keine Ansteuerung ELV |
 | 255 | unbekannter Zustand |
 
-<a id="table-res-0xdc68"></a>
 ### RES_0XDC68
 
 Dimensions: 2 rows × 10 columns
@@ -4164,7 +3970,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TASTER_SICHERN_HECKKL_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Taster Sichern an der HKL, Eingang am CAS. 1 Taster gedrückt, 0 Taster nicht gedrückt, 255 Signal ungültig / unplausibel |
 | STAT_TASTER_SICHERN_HECKKL_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Taster Sichern an der HKL, Eingang am CAS. 1 Taster gedrückt, 0 Taster nicht gedrückt, 255 Signal ungültig / unplausibel |
 
-<a id="table-arg-0xdc68"></a>
 ### ARG_0XDC68
 
 Dimensions: 1 rows × 12 columns
@@ -4173,7 +3978,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER_SICHERN_HECKKL | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Taster Sichern an der HKL, Eingang am CAS. 1 Taster gedrückt, 0 Taster nicht gedrückt. |
 
-<a id="table-res-0xdc63"></a>
 ### RES_0XDC63
 
 Dimensions: 2 rows × 10 columns
@@ -4183,7 +3987,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCHALTER_KUPPL_PN_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Kupplungsschalter oder PN-Signal vom EGS, 1 Taster gerückt, 0 Taster nicht gedrückt, 255 Signal ungültig / unplausibel |
 | STAT_SCHALTER_KUPPL_PN_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Kupplungsschalter oder PN-Signal vom EGS, 1 Taster gerückt, 0 Taster nicht gedrückt, 255 Signal ungültig / unplausibel |
 
-<a id="table-arg-0xdc63"></a>
 ### ARG_0XDC63
 
 Dimensions: 1 rows × 12 columns
@@ -4192,7 +3995,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHALTER_KUPPL_PN | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Kupplungsschalter oder PN-Signal vom EGS, 1 Taster gerückt, 0 Taster nicht gedrückt. |
 
-<a id="table-res-0xdc65"></a>
 ### RES_0XDC65
 
 Dimensions: 2 rows × 10 columns
@@ -4202,7 +4004,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCHALTER_MOTORHAUBE_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Motorhauben-Kontakt, 1 aktiv (offen), 0 nicht aktiv (geschlossen), 2 Fahrzeug besitzt keinen Motorhaubenkontakt, 255 Signal ungültig / unplausibel |
 | STAT_SCHALTER_MOTORHAUBE_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Motorhauben-Kontakt, 1 aktiv (offen), 0 nicht aktiv (geschlossen), 2 Fahrzeug besitzt keinen Motorhaubenkontakt, 255 Signal ungültig / unplausibel |
 
-<a id="table-arg-0xdc65"></a>
 ### ARG_0XDC65
 
 Dimensions: 1 rows × 12 columns
@@ -4211,7 +4012,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHALTER_MOTORHAUBE | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Status Motorhauben-Kontakt vorgrbrn, 1 aktiv (offen), 0 nicht aktiv (geschlossen). |
 
-<a id="table-res-0xdc62"></a>
 ### RES_0XDC62
 
 Dimensions: 2 rows × 10 columns
@@ -4221,7 +4021,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EINGANG_A_S_START_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Eingang Start-Ende-Leitung von DME/DDE, 1 Spannung liegt an, 0 Spannung liegt nicht an, 2 nicht vorhanden, 255 ungültig/Fehler. |
 | STAT_EINGANG_A_S_START_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Eingang Start-Ende-Leitung von DME/DDE, 1 Spannung liegt an, 0 Spannung liegt nicht an, 2 nicht vorhanden, 255 ungültig/Fehler. |
 
-<a id="table-arg-0xdc62"></a>
 ### ARG_0XDC62
 
 Dimensions: 1 rows × 12 columns
@@ -4230,7 +4029,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EINGANG_A_S_START | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Eingang Start-Ende-Leitung von DME/DDE, 1 Spannung liegt an, 0 Spannung liegt nicht an. |
 
-<a id="table-res-0xdabc"></a>
 ### RES_0XDABC
 
 Dimensions: 6 rows × 10 columns
@@ -4244,7 +4042,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_BUS_IN_KUPPLUNG | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Auslesen der vom BUS empfangenen Stati. Wird eine Botschaft innerhalb der erwarteten Zeit nicht empfangen (timeout), so wird der Status ungültig/kein Signal zurückgegeben. CAN-Signal Kupplung von DME1. 0 Kupplung nicht betätigt; 1 Kupplung betätigt; 255 ungültig / kein Signal / nicht verbaut |
 | STAT_BUS_IN_DREHZAHL_WERT | U/min | - | unsigned int | - | - | - | 4 | - | Auslesen der vom BUS empfangenen Stati. Wird eine Botschaft innerhalb der erwarteten Zeit nicht empfangen (timeout), so wird der Status ungültig/kein Signal zurückgegeben. CAN-Signal Drehzahl von DME1. Aktuelle Drehzahl; -1 ungültige Drehzahl |
 
-<a id="table-tab-cas-gang"></a>
 ### TAB_CAS_GANG
 
 Dimensions: 12 rows × 2 columns
@@ -4264,7 +4061,6 @@ Dimensions: 12 rows × 2 columns
 | 12 | 8. Gang |
 | 255 | ungültig |
 
-<a id="table-tab-cas-motor-status"></a>
 ### TAB_CAS_MOTOR_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -4276,7 +4072,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Motor läuft |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-motorstart-freigabe"></a>
 ### TAB_CAS_MOTORSTART_FREIGABE
 
 Dimensions: 4 rows × 2 columns
@@ -4288,7 +4083,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Motorstart zulassen |
 | 255 | ungültig/unbekannt |
 
-<a id="table-tab-cas-motor-anlassersperre"></a>
 ### TAB_CAS_MOTOR_ANLASSERSPERRE
 
 Dimensions: 4 rows × 2 columns
@@ -4300,7 +4094,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Motorstart zulassen, Motorstop zulassen - Getriebe in P |
 | 255 | ungültig/unbekannt |
 
-<a id="table-arg-0xac51"></a>
 ### ARG_0XAC51
 
 Dimensions: 1 rows × 12 columns
@@ -4309,7 +4102,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DEAKTIVIERUNGSGESCHWINDIGKEIT | km/h | - | unsigned char | - | - | - | - | - | - | - | Gibt an bei welcher Geschindigkeit die Funktion KL15-Abschaltung wieder aktiviert (default) werden soll: 0 -> KL15-Abschaltung wieder aktivieren xx -> KL15-Abschaltung unterdrücken bis nächstes Mal über xx Kmh (xx = min. 1 Km/h bis max 50 Km/h) Mit Argument = 0 soll die KL-15-Abschaltung sofort wieder aktiviert werden können. |
 
-<a id="table-res-0xdab5"></a>
 ### RES_0XDAB5
 
 Dimensions: 4 rows × 10 columns
@@ -4321,7 +4113,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_STROM_TAGE_ER_FTH_WERT | A | - | unsigned int | - | - | - | 1000 | - | Strom der Entriegeln-Leitung zur TAGE Fahrertüre hinten. Mittelwert über je 100 ms. |
 | STAT_STROM_TAGE_ER_BFTH_WERT | A | - | unsigned int | - | - | - | 1000 | - | Strom der Entriegeln-Leitung zur TAGE Beiahrertüre hinten. Mittelwert über je 100 ms. |
 
-<a id="table-res-0xdc67"></a>
 ### RES_0XDC67
 
 Dimensions: 2 rows × 10 columns
@@ -4331,7 +4122,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TASTER_MSA_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Status MSA-Taster am CAS. 1 Taster gedrückt, 0 Taster nicht gedrückt, 2 Fahrzeug besitzt keinen Taster, 255 Signal ungültig / unplausibel |
 | STAT_TASTER_MSA_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Status MSA-Taster am CAS. 1 Taster gedrückt, 0 Taster nicht gedrückt, 2 Fahrzeug besitzt keinen Taster, 255 Signal ungültig / unplausibel |
 
-<a id="table-arg-0xdc67"></a>
 ### ARG_0XDC67
 
 Dimensions: 1 rows × 12 columns
@@ -4340,7 +4130,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER_MSA | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Status MSA-Taster am CAS. 1 Taster gedrückt, 0 Taster nicht gedrückt. |
 
-<a id="table-res-0xdabb"></a>
 ### RES_0XDABB
 
 Dimensions: 7 rows × 10 columns
@@ -4355,7 +4144,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_BUS_IN_ZEIT_RELATIV_WERT | - | - | unsigned long | - | - | - | - | - | Aktuelles Relative Zeit in Sekunden seit 01.01.2000, Sekuden: 0 - 4,2 Millarden |
 | STAT_BUS_IN_ZEIT_TAGE_RELATIV_WERT | - | - | unsigned int | - | - | - | - | - | Aktuelles Relative gesehene Tage seit 01.01.2000; Tage: 1 entspricht 01.01.2000 |
 
-<a id="table-tab-cas-klemmenstatus"></a>
 ### TAB_CAS_KLEMMENSTATUS
 
 Dimensions: 16 rows × 2 columns
@@ -4379,7 +4167,6 @@ Dimensions: 16 rows × 2 columns
 | 14 | Fehler |
 | 15 | Ungültig |
 
-<a id="table-res-0xdc64"></a>
 ### RES_0XDC64
 
 Dimensions: 2 rows × 10 columns
@@ -4389,7 +4176,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TASTER_CENTERLOCK_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | HW Taster Centerlock, 1 Taster gerückt, 0 Taster nicht gedrückt, 255 Signal ungültig / unplausibel |
 | STAT_TASTER_CENTERLOCK_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | HW Taster Centerlock, 1 Taster gerückt, 0 Taster nicht gedrückt, 255 Signal ungültig / unplausibel |
 
-<a id="table-arg-0xdc64"></a>
 ### ARG_0XDC64
 
 Dimensions: 1 rows × 12 columns
@@ -4398,7 +4184,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER_CENTERLOCK | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Status Taster Centerlock vorgeben, 1 Taster gedrückt, 0 Taster nicht gedrückt. |
 
-<a id="table-tab-cas-pia-nummer"></a>
 ### TAB_CAS_PIA_NUMMER
 
 Dimensions: 5 rows × 2 columns
@@ -4411,7 +4196,6 @@ Dimensions: 5 rows × 2 columns
 | 10 | Gast |
 | 15 | ungültig |
 
-<a id="table-res-0xdc60"></a>
 ### RES_0XDC60
 
 Dimensions: 4 rows × 10 columns
@@ -4423,7 +4207,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_HALL_SSTA_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Status des SST Hall-Sensors A (entprellt), 0 nicht aktiv, 1 aktiv |
 | STAT_HALL_SSTB_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Status des SST Hall-Sensors B (entprellt), 0 nicht aktiv, 1 aktiv |
 
-<a id="table-arg-0xdc60"></a>
 ### ARG_0XDC60
 
 Dimensions: 2 rows × 12 columns
@@ -4433,7 +4216,6 @@ Dimensions: 2 rows × 12 columns
 | HALL_SSTA | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Vorgeben des Status von Hallsensor A. 0 nicht aktiv, 1 aktiv. |
 | HALL_SSTB | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Vorgeben des Status von Hallsensor B. 0 nicht aktiv, 1 aktiv. |
 
-<a id="table-res-0xdabf"></a>
 ### RES_0XDABF
 
 Dimensions: 4 rows × 10 columns
@@ -4445,7 +4227,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_BUS_IN_FH_FTH | 0-n | - | unsigned char | - | TAB_CAS_FH_STATUS | - | - | - | CAN-Signal Status Fensterheber fahrertür hinten, 0 Geschlossen; 1 Zwischenstellung; 2 Offen; 255 Signal ungültig / unplausibel |
 | STAT_BUS_IN_FH_BFTH | 0-n | - | unsigned char | - | TAB_CAS_FH_STATUS | - | - | - | CAN-Signal Status Fensterheber Beifahrertür hinten, 0 Geschlossen; 1 Zwischenstellung; 2 Offen; 255 Signal ungültig / unplausibel |
 
-<a id="table-tab-cas-fh-status"></a>
 ### TAB_CAS_FH_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -4457,7 +4238,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Offen |
 | 255 | ungültig/unbekannt |
 
-<a id="table-res-0xdabd"></a>
 ### RES_0XDABD
 
 Dimensions: 3 rows × 10 columns
@@ -4468,7 +4248,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_BUS_IN_GESCHW_STATUS | 0-n | - | unsigned char | - | TAB_CAS_GESCHW_STATUS | - | - | - | Auslesen der vom BUS empfangenen Stati. Wird eine Botschaft innerhalb der erwarteten Zeit nicht empfangen (timeout), so wird der Status ungültig/kein Signal zurückgegeben. CAN-Signal Geschwindigkeit-Status vom DSC. 0 Fahrzeug steht; 1 Fahrzeug fährt vorwärts; 2 Fahrzeug fährt rückwärts; 3 Fahrzeug fährt; 4 Fahrzeug steht Hinterachse auf Rollenprüfstand; 7 ungültig / kein Signal |
 | STAT_BUS_IN_BREMSPEDAL | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Auslesen der vom BUS empfangenen Stati. Wird eine Botschaft innerhalb der erwarteten Zeit nicht empfangen (timeout), so wird der Status ungültig/kein Signal zurückgegeben. CAN-Signal Status Bremspedal vom DSC. 0 Nicht betätigt; 1 Betätigt; 255 Signal ungültig / unplausibel (Hinweis: CAN-Signal Status_Bremsung_Fahrer, Auswertung der Bit-Kodierung Betätigung_Bremssystem_Fahrer + Gesamtsignal ungültig muss im CAS erfolgen). |
 
-<a id="table-tab-cas-geschw-status"></a>
 ### TAB_CAS_GESCHW_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -4482,7 +4261,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Fahrzeug steht, Hinterachse auf Rollenprüfstand erkannt |
 | 7 | Signal ungültig |
 
-<a id="table-res-0xdaca"></a>
 ### RES_0XDACA
 
 Dimensions: 4 rows × 10 columns
@@ -4494,7 +4272,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_TAGE_FTH | 0-n | - | unsigned char | - | - | - | - | - | Status TAGE Fahrertüre hinten, 0 Kein Status (keine Betätigung), 1 Zugsensor Betätigt (Hall); 2 Sichern Sensor Betätigt (Piezo UND VR-Kap-Sensor); 3 Entriegeln Sensor Betätigt (ER-Kap-Sensor) |
 | STAT_TAGE_BFTH | 0-n | - | unsigned char | - | - | - | - | - | Status TAGE Beifahrertüre hinten, 0 Kein Status (keine Betätigung), 1 Zugsensor Betätigt (Hall); 2 Sichern Sensor Betätigt (Piezo UND VR-Kap-Sensor); 3 Entriegeln Sensor Betätigt (ER-Kap-Sensor) |
 
-<a id="table-res-0xdab0"></a>
 ### RES_0XDAB0
 
 Dimensions: 2 rows × 10 columns
@@ -4504,7 +4281,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SPANNUNG_HALL_VERS13_WERT | V | - | unsigned int | - | - | - | 1000 | - | Spannung Hall-Sensor-Versorgung (Peak) Sensoren 1 und 3 |
 | STAT_SPANNUNG_HALL_VERS24_WERT | V | - | unsigned int | - | - | - | 1000 | - | Spannung Hall-Sensor-Versorgung (Peak) Sensoren 2 und 4 |
 
-<a id="table-res-0xdc69"></a>
 ### RES_0XDC69
 
 Dimensions: 2 rows × 10 columns
@@ -4514,7 +4290,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_TASTER_HECKKL_INNEN_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Heckklappentaster innen, Eingang am CAS. 1 Taster gerückt, 0 Taster nicht gedrückt, 2 Fahrzeug besitzt keinen Taster, 255 Signal ungültig / unplausibel. |
 | STAT_TASTER_HECKKL_INNEN_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Heckklappentaster innen, Eingang am CAS. 1 Taster gerückt, 0 Taster nicht gedrückt, 2 Fahrzeug besitzt keinen Taster, 255 Signal ungültig / unplausibel. |
 
-<a id="table-arg-0xdc69"></a>
 ### ARG_0XDC69
 
 Dimensions: 1 rows × 12 columns
@@ -4523,7 +4298,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASTER_HECKKL_INNEN | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Heckklappentaster innen, Eingang am CAS. 1 Taster gerückt, 0 Taster nicht gedrückt. |
 
-<a id="table-res-0xdc61"></a>
 ### RES_0XDC61
 
 Dimensions: 4 rows × 10 columns
@@ -4535,7 +4309,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_SCHALTER_BREMSL_HIGH_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | HW Taster Bremslichtschalter, 1 Taster gerückt, 0 Taster nicht gedrückt, 2 Taster nicht vorhanden (kein Automatik-Getriebe), 255 Signal ungültig / unplausibel |
 | STAT_SCHALTER_BREMSL_LOW_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | HW Taster Bremslichtschalter (Test-Schalter), 1 Taster gerückt, 0 Taster nicht gedrückt, 2 Taster nicht vorhanden (kein Automatik-Getriebe), 255 Signal ungültig / unplausibel |
 
-<a id="table-arg-0xdc61"></a>
 ### ARG_0XDC61
 
 Dimensions: 2 rows × 12 columns
@@ -4545,7 +4318,6 @@ Dimensions: 2 rows × 12 columns
 | SCHALTER_BREMSL_HIGH | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Status des High-schaltenden Bremslichtschalters vorgeben. 1 Taster gerückt, 0 Taster nicht gedrückt. |
 | SCHALTER_BREMSL_LOW | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Status des Low-schaltenden Bremslichtschalters vorgeben. 1 Taster gerückt, 0 Taster nicht gedrückt. |
 
-<a id="table-res-0xac57"></a>
 ### RES_0XAC57
 
 Dimensions: 1 rows × 13 columns
@@ -4554,7 +4326,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_ZV_STATUS | + | + | + | 0-n | - | unsigned char | - | TAB_ZV_ZUSTAND | - | - | - | Aktuell gesendeter ZV-Status: 0 Unbekannter Status, 1 mindestens eine Tür entriegelt, 2 mindestens eine Tür verriegelt, 4 interner Status ist gesichert, 15 ungültig (Kombinationen siehe Tabelle TAB_ZV_ZUSTAND). |
 
-<a id="table-arg-0xac57"></a>
 ### ARG_0XAC57
 
 Dimensions: 1 rows × 12 columns
@@ -4563,7 +4334,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ZV_AKTION | 0-n | - | unsigned char | - | TAB_ZV_AKTION | - | - | - | - | - | Das Argument enthält die auszuführende ZV-Aktion. Mögliche Argumente sind: 0=keine Aktion, 1=Entriegeln, 2=Verriegeln, 3=Sichern, 4=Selektiv entriegeln, 5=logisch entriegeln. |
 
-<a id="table-tab-zv-aktion"></a>
 ### TAB_ZV_AKTION
 
 Dimensions: 8 rows × 2 columns
@@ -4579,7 +4349,6 @@ Dimensions: 8 rows × 2 columns
 | 100 | Elektrisch öffnen ist aktiv |
 | 255 | ungültig |
 
-<a id="table-tab-zv-zustand"></a>
 ### TAB_ZV_ZUSTAND
 
 Dimensions: 9 rows × 2 columns
@@ -4596,7 +4365,6 @@ Dimensions: 9 rows × 2 columns
 | 7 | teilweise gesichert - Zwischenzustand oder Fehlerzustand |
 | 15 | ungültig |
 
-<a id="table-res-0xdab3"></a>
 ### RES_0XDAB3
 
 Dimensions: 16 rows × 10 columns
@@ -4620,7 +4388,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_SPANNUNG_KLEMME_30ELV_WERT | V | - | unsigned int | - | - | - | 1000 | - | Spannungswert am CAS-Steuergerät an Klemme 30_ELV Ausgang am CAS |
 | STAT_SPANNUNG_INNENTEMPERATUR_WERT | V | - | unsigned int | - | - | - | 1000 | - | Spannung am PTC/NTC im Steuergerät zur Ermittlung der Innentemperatur |
 
-<a id="table-res-0xdc66"></a>
 ### RES_0XDC66
 
 Dimensions: 2 rows × 10 columns
@@ -4630,7 +4397,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_SCHALTER_HOTEL_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Hotelschalter, 1 Hotelfunktion aktiv, 0 Hotelfunktion nicht aktiv, 2 Fahrzeug besitzt keinen Hotelschalter, 255 Signal ungültig / unplausibel |
 | STAT_SCHALTER_HOTEL_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Hotelschalter, 1 Hotelfunktion aktiv, 0 Hotelfunktion nicht aktiv, 2 Fahrzeug besitzt keinen Hotelschalter, 255 Signal ungültig / unplausibel |
 
-<a id="table-arg-0xdc66"></a>
 ### ARG_0XDC66
 
 Dimensions: 1 rows × 12 columns
@@ -4639,7 +4405,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SCHALTER_HOTEL | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Hotelschalter, 1 Hotelfunktion aktiv, 0 Hotelfunktion nicht aktiv. |
 
-<a id="table-res-0xdc6a"></a>
 ### RES_0XDC6A
 
 Dimensions: 2 rows × 10 columns
@@ -4649,7 +4414,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_EINGANG_MOST_WUP_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Status Leitung MOST_WUP von TCU an CAS. 1 Spannung liegt an, 0 Ausgang abgeschaltet, 255 Signal ungültig / Fehler. |
 | STAT_EINGANG_MOST_WUP_AKTIV | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | Status Leitung MOST_WUP von TCU an CAS. 1 Spannung liegt an, 0 Ausgang abgeschaltet, 255 Signal ungültig / Fehler. |
 
-<a id="table-arg-0xdc6a"></a>
 ### ARG_0XDC6A
 
 Dimensions: 1 rows × 12 columns
@@ -4658,7 +4422,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | EINGANG_MOST_WUP | 0-n | - | unsigned char | - | TAB_CAS_DIGITAL_EINGANG | - | - | - | - | - | Status Leitung MOST_WUP von TCU an CAS. 1 Spannung liegt an, 0 Ausgang abgeschaltet. |
 
-<a id="table-tab-cas-digital-eingang"></a>
 ### TAB_CAS_DIGITAL_EINGANG
 
 Dimensions: 4 rows × 2 columns

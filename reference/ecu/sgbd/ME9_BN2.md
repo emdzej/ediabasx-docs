@@ -29,7 +29,6 @@
 - [SPEICHER_LESEN](#job-speicher-lesen) - Auslesen des Steuergeraete-Speichers Modus: Default Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes
 - [SPEICHER_SCHREIBEN](#job-speicher-schreiben) - Auslesen des Steuergeraete-Speichers Modus: Default Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes und Daten als String (durch Komma getrennt)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -47,7 +46,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | ob deutsch/english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -60,7 +58,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten für DME auslesen
@@ -94,7 +91,6 @@ _No arguments._
 | TEL_ANTWORT | binary | Hex-Antwort von SG |
 | RESP_CODE | string | Fehlercode bei NEG_RESPONSE |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -108,7 +104,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-standard"></a>
 ### FS_LESEN_STANDARD
 
 Fehlerspeicher lesen (alle Fehler / nur Ort und Art)
@@ -133,7 +128,6 @@ _No arguments._
 | F_WARNUNG_TEXT | string | Warnlampen Flag (Standard-Fehlerart) als Text |
 | TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ews-startwert"></a>
 ### EWS_STARTWERT
 
 EWS-Startwertinitialisierung
@@ -152,7 +146,6 @@ EWS-Startwertinitialisierung
 | EWS_STATUS | string | Rückgabestatus bei der Startwertinitialisierung |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ews-empfang"></a>
 ### EWS_EMPFANG
 
 EWS-Empfangsstatus auslesen
@@ -168,7 +161,6 @@ _No arguments._
 | EWS_STATUS_VALUE | int | Rückgabestatus bei der Startwertinitialisierung |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Modus: Default Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes
@@ -189,7 +181,6 @@ Auslesen des Steuergeraete-Speichers Modus: Default Als Argumente werden ueberge
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Auslesen des Steuergeraete-Speichers Modus: Default Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes und Daten als String (durch Komma getrennt)
@@ -230,7 +221,6 @@ Auslesen des Steuergeraete-Speichers Modus: Default Als Argumente werden ueberge
 - [EWSSTART](#table-ewsstart) (5 × 2)
 - [EWSEMPFANGSSTATUS](#table-ewsempfangsstatus) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 29 rows × 2 columns
@@ -267,7 +257,6 @@ Dimensions: 29 rows × 2 columns
 | 0x80 | ERROR_ECU_SERVICE_NOT_SUPPORTED_IN_ACTIVE_DIAGNOSTIC_MODE |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 2 rows × 2 columns
@@ -277,7 +266,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | ERROR_... |
 | 0xFF | ERROR_NOT_DEFINED |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 40 rows × 2 columns
@@ -325,7 +313,6 @@ Dimensions: 40 rows × 2 columns
 | 0x39 | ITT |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-bus-typen"></a>
 ### BUS_TYPEN
 
 Dimensions: 7 rows × 2 columns
@@ -340,7 +327,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | MOST-Bus |
 | 0xFF | unbekannter Bus |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 8 rows × 3 columns
@@ -356,7 +342,6 @@ Dimensions: 8 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-farttexte-kurz"></a>
 ### FARTTEXTE_KURZ
 
 Dimensions: 14 rows × 2 columns
@@ -378,7 +363,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | MIL ein |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 101 rows × 2 columns
@@ -487,7 +471,6 @@ Dimensions: 101 rows × 2 columns
 | 0xFD | MIL blink                   |
 | 0xFE | Fehler sporadisch           |
 
-<a id="table-ftyptexte"></a>
 ### FTYPTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -502,7 +485,6 @@ Dimensions: 7 rows × 2 columns
 | 0x25 | Regelung EIN mit Einschränkung                     |
 | 0xFF | ??                          |
 
-<a id="table-forttextehigh"></a>
 ### FORTTEXTEHIGH
 
 Dimensions: 32 rows × 6 columns
@@ -542,7 +524,6 @@ Dimensions: 32 rows × 6 columns
 | 0xC4 | CDKLDE - Ladedrucksteuerventil Endstufe | 0x0A | 0x12 | 0x14 | 0x0B |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 175 rows × 6 columns
@@ -725,7 +706,6 @@ Dimensions: 175 rows × 6 columns
 | 0xEF | CDKKRTP2 - Klopfregelung Testimpuls Bank2 | 0x0A | 0x1A | 0x77 | 0x81 |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fartmatrixhigh"></a>
 ### FARTMATRIXHIGH
 
 Dimensions: 33 rows × 49 columns
@@ -766,7 +746,6 @@ Dimensions: 33 rows × 49 columns
 | 0xC4 | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 | 0xXY | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 165 rows × 49 columns
@@ -939,7 +918,6 @@ Dimensions: 165 rows × 49 columns
 | 0xED | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 | 0xXY | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 104 rows × 6 columns
@@ -1051,7 +1029,6 @@ Dimensions: 104 rows × 6 columns
 | 0x8C | Zeit nach Start (tnse_u)             | s | 25.6 | 0 | 0 |
 | 0xXY | unbekannte Umweltbedingung           | -- | 1 | 0 | 0 |
 
-<a id="table-ewsstart"></a>
 ### EWSSTART
 
 Dimensions: 5 rows × 2 columns
@@ -1064,7 +1041,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Startwert nicht plausibel |
 | 0xXY | Fehlerhafter Status  |
 
-<a id="table-ewsempfangsstatus"></a>
 ### EWSEMPFANGSSTATUS
 
 Dimensions: 6 rows × 2 columns

@@ -45,7 +45,6 @@
 - [C_ZCS_LESEN](#job-c-zcs-lesen) - Auslesen des Zentralen Codierschluessels aus Flash
 - [C_ZCS_AUFTRAG](#job-c-zcs-auftrag) - Schreiben des Zentralen Codierschluessels in die KD-Daten
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -58,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information bzgl. SGBD
@@ -76,7 +74,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise General Comment about file |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identification data
@@ -103,7 +100,6 @@ _No arguments._
 | ID_SYSTEM_NAME | int | System Name |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-ident-extended"></a>
 ### IDENT_EXTENDED
 
 Identification data
@@ -118,7 +114,6 @@ _No arguments._
 | ID_TEMIC_SERIAL_NR | string | Temic ecu serial number |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-start-diagnostics"></a>
 ### START_DIAGNOSTICS
 
 Begins a diagnostic session
@@ -139,7 +134,6 @@ Begins a diagnostic session
 | _TEL_ANTWORT3 | binary | Hex-Antwort von SG ECU response as a hex string |
 | _TEL_ANTWORT4 | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Reset the ECU
@@ -153,7 +147,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Read faults
@@ -189,7 +182,6 @@ _No arguments._
 | F_ART8_TEXT | string | Fault status text 8 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Clears All Faults
@@ -203,7 +195,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-equipment-config-lesen"></a>
 ### EQUIPMENT_CONFIG_LESEN
 
 Read digitals for LID 04 - Equipment configuration
@@ -259,7 +250,6 @@ _No arguments._
 | US_VERSION_DUP_ENABLED | int | US version enabled |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-status-buckle-switch"></a>
 ### STATUS_BUCKLE_SWITCH
 
 Read digitals for LID 16 - Buckle Switch Status
@@ -277,7 +267,6 @@ _No arguments._
 | STAT_PASSENGER_BUCKLE_DEFECT | int | Drivers buckle switch closed |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-lock-byte-lesen"></a>
 ### LOCK_BYTE_LESEN
 
 Read lock byte value LID 15
@@ -292,7 +281,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 | LOCK_BYTE | int | Lock byte value |
 
-<a id="job-lock-byte-schreiben"></a>
 ### LOCK_BYTE_SCHREIBEN
 
 Write lock byte value LID 34
@@ -310,7 +298,6 @@ Write lock byte value LID 34
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-crash-loeschen"></a>
 ### CRASH_LOESCHEN
 
 _No arguments._
@@ -322,7 +309,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-crash-lesen"></a>
 ### CRASH_LESEN
 
 #### Arguments
@@ -339,7 +325,6 @@ _No arguments._
 | DATEN | binary | 15 bytes Crash Data |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-parameter-lesen"></a>
 ### PARAMETER_LESEN
 
 #### Arguments
@@ -356,7 +341,6 @@ _No arguments._
 | DATEN | binary | Spezifizierte Parameterdaten |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Ping message
@@ -370,7 +354,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden
@@ -384,7 +367,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG ECU response as a hex string |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -399,7 +381,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben der red. Datenablage mit der FG-Nummer
@@ -418,7 +399,6 @@ Beschreiben der red. Datenablage mit der FG-Nummer
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -437,7 +417,6 @@ Codierdaten lesen
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -455,7 +434,6 @@ Codierdaten schreiben und verifizieren
 | _TEL_ANTWORT | binary |  |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-codingdate-read"></a>
 ### C_CODINGDATE_READ
 
 Read out date that ECU was Configured
@@ -470,7 +448,6 @@ _No arguments._
 | CODINGDATE | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-codingdate-write"></a>
 ### C_CODINGDATE_WRITE
 
 Beschreiben der red. Datenablage mit der FG-Nummer
@@ -488,7 +465,6 @@ Beschreiben der red. Datenablage mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Auslesen des Zentralen Codierschluessels aus Flash
@@ -506,7 +482,6 @@ _No arguments._
 | _TEL_ANTWORT1 | binary |  |
 | _TEL_ANTWORT2 | binary |  |
 
-<a id="job-c-zcs-auftrag"></a>
 ### C_ZCS_AUFTRAG
 
 Schreiben des Zentralen Codierschluessels in die KD-Daten
@@ -542,7 +517,6 @@ Schreiben des Zentralen Codierschluessels in die KD-Daten
 - [DIGITALARGUMENT](#table-digitalargument) (12 × 2)
 - [MONTHS](#table-months) (13 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 30 rows × 2 columns
@@ -580,7 +554,6 @@ Dimensions: 30 rows × 2 columns
 | 0x92 | ERROR_ECU_RESERVED_BY_DOCUMENT |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns
@@ -635,7 +608,6 @@ Dimensions: 47 rows × 2 columns
 | 0x46 | Gemel |
 | 0xFF | Unknown manufacturer |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 118 rows × 2 columns
@@ -761,7 +733,6 @@ Dimensions: 118 rows × 2 columns
 | 0x9200 | Crash telegram memory : at least one crash telegram stored |
 | 0xXY | Unknown error location |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -782,7 +753,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | Error Present |
 | 0xFF | Unknown Error |
 
-<a id="table-analogue"></a>
 ### ANALOGUE
 
 Dimensions: 2 rows × 4 columns
@@ -792,7 +762,6 @@ Dimensions: 2 rows × 4 columns
 | LOCK_BYTE | 1.0 | 0.0 |  |
 | ?? | 0.0 | 0.0 | ?? |
 
-<a id="table-digital"></a>
 ### DIGITAL
 
 Dimensions: 47 rows × 4 columns
@@ -847,7 +816,6 @@ Dimensions: 47 rows × 4 columns
 | STAT_PASSENGER_BUCKLE_DEFECT | 6 | 0x08 | 0x08 |
 | ?? | 0 | 0x00 | 0x00 |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 12 rows × 2 columns
@@ -867,7 +835,6 @@ Dimensions: 12 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-months"></a>
 ### MONTHS
 
 Dimensions: 13 rows × 2 columns

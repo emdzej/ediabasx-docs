@@ -119,7 +119,6 @@
 - [_STEUERN_TEST_FUNKTIONAL_TLC](#job-steuern-test-funktional-tlc) - activates extended TLC-Check at FAS KWP2000: $31 StartRoutineByLocalIdentifier .        $26 extended TLC-Check
 - [_UNIVERSAL_JOB](#job-universal-job) - transmits an individual diagnostic request to the ECU
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -138,7 +137,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -151,7 +149,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -167,7 +164,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -184,7 +180,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -217,7 +212,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus Modus  : Default
@@ -244,7 +238,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus: Default
@@ -286,7 +279,6 @@ Fehlerspeicher lesen (ein Fehler / alle Details) KWP2000: $17 ReadStatusOfDiagno
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
@@ -305,7 +297,6 @@ Fehlerspeicher loeschen KWP2000: $14 ClearDiagnosticInformation Modus  : Default
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels KWP2000: $22 ReadDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -323,7 +314,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. KWP2000: $2E WriteDataByCommonIdentifier $1000 TestStamp Modus  : Default
@@ -344,7 +334,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-normaler-datenverkehr"></a>
 ### NORMALER_DATENVERKEHR
 
 Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMessageTransmission KWP2000: $29 EnableNormalMessageTransmission Modus  : Default
@@ -365,7 +354,6 @@ Sperren bzw. Freigeben des normalen Datenverkehrs KWP2000: $28 DisableNormalMess
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Default
@@ -385,7 +373,6 @@ Diagnosemode des SG aufrecht erhalten KWP2000: $3E TesterPresent Modus  : Defaul
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnosemode des SG beenden KWP2000: $20 StopDiagnosticSession Modus  : Default
@@ -400,7 +387,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus  : einstellbar mit diesem Job  Wenn MODE = "ECUPM" ( ECUProgrammingMode ) muss nach dem Job die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -421,7 +407,6 @@ SG in bestimmten Diagnosemode bringen KWP2000: $10 StartDiagnosticSession Modus 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $0E Time controlled PowerDown oder b)       $05 PowerDown $00 all ECU Modus  : Default
@@ -440,7 +425,6 @@ SG in Sleep-Mode versetzen KWP2000: $31 StartRoutineByLocalIdentifier a)       $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C ControlEnergySavingMode Modus  : Default
@@ -461,7 +445,6 @@ Einstellen des Energiesparmodes KWP2000: $31 StartRoutineByLocalIdentifier $0C C
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse und Anzahl der Datenbytes KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -483,7 +466,6 @@ Auslesen des Steuergeraete-Speichers Als Argumente werden uebergeben: Speicherse
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speichersegment, Start-Adresse, Anzahl der Datenbytes und Datenbytes (Datenbytes durch Komma getrennt) KWP2000: $3D WriteMemoryByAddress Modus  : Default
@@ -505,7 +487,6 @@ Beschreiben des Steuergeraete-Speichers Als Argumente werden uebergeben: Speiche
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-pruefcode-lesen"></a>
 ### PRUEFCODE_LESEN
 
 Standard Pruefcode lesen fuer Kundendienst KWP2000: $1A ReadECUIdentification KWP2000: $18 ReadDiagnosticTroubleCodesByStatus KWP2000: $17 ReadStatusOfDiagnosticTroubleCodes Modus  : Default
@@ -519,7 +500,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | PRUEFCODE | binary | Pruefcode Daten |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $9B Vehicle Manufacturer Coding Index oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -537,7 +517,6 @@ _No arguments._
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -553,7 +532,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number Modus  : Default
@@ -572,7 +550,6 @@ Fahrgestellnummer schreiben Standard Codierjob KWP2000: $3B WriteDataByLocalIden
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B WriteDataByLocalIdentifier $90 Vehicle Identification Number KWP2000: $1A ReadECUIdentification $90 Vehicle Identification Number Modus  : Default
@@ -593,7 +570,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob KWP2000: $3B Write
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-lesen"></a>
 ### C_AEI_LESEN
 
 Aenderungsindex der Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -609,7 +585,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-schreiben"></a>
 ### C_AEI_SCHREIBEN
 
 Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -628,7 +603,6 @@ Aenderungsindex der Codierdaten schreiben Standard Codierjob KWP2000: $2E   Writ
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-aei-auftrag"></a>
 ### C_AEI_AUFTRAG
 
 Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3FFF ChangeIndexOfCodingData KWP2000: $22   ReadDataByCommonIdentifier $3FFF ChangeIndexOfCodingData Modus  : Default
@@ -649,7 +623,6 @@ Aenderungsindex der Codierdaten schreiben und ruecklesen Standard Codierjob KWP2
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -669,7 +642,6 @@ Codierdaten lesen Standard Codierjob KWP2000: $22   ReadDataByCommonIdentifier $
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-schreiben"></a>
 ### C_C_SCHREIBEN
 
 Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -688,7 +660,6 @@ Codierdaten schreiben Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteDataByCommonIdentifier $3000 - $3EFF CodingDataSet KWP2000: $22   ReadDataByCommonIdentifier $3000 - $3EFF CodingDataSet Modus  : Default
@@ -709,7 +680,6 @@ Codierdaten schreiben und ruecklesen Standard Codierjob KWP2000: $2E   WriteData
 | _TEL_AUFTRAG2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT2 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Hersteller Seriennummer lesen KWP2000: $1A ReadECUIdentification $89 SystemSupplierECUSerialNumber oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -727,7 +697,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-lesen"></a>
 ### ZIF_LESEN
 
 Auslesen des Zulieferinfofeldes KWP2000: $22   ReadDataByCommonIdentifier $2503 ProgrammReferenz und KWP2000: $1A   ReadECUIdentification $91   VehicleManufacturerECUHardware*Number oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -752,7 +721,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_3 | binary | Hex-Antwort von SG |
 
-<a id="job-zif-backup-lesen"></a>
 ### ZIF_BACKUP_LESEN
 
 Auslesen des Backups des Zulieferinfofeldes ProgrammReferenzBackup         PRGREFB vehicleManufECUHW*NumberBackup VMECUH*NB KWP2000: $22   ReadDataByCommonIdentifier $2500 PRBHW*B oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -775,7 +743,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-physikalische-hw-nr-lesen"></a>
 ### PHYSIKALISCHE_HW_NR_LESEN
 
 Auslesen der physikalischen Hardwarenummer KWP2000: $1A ReadECUIdentification $87 physicalECUHardwareNumber (PECUHN) oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -793,7 +760,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-hardware-referenz-lesen"></a>
 ### HARDWARE_REFERENZ_LESEN
 
 Auslesen der Hardware Referenz KWP2000: $22   ReadDataByCommonIdentifier $2502 HWREF oder alternativ KWP2000: $1A ReadECUIdentification $80 ECUIdentificationDataTable Modus  : Default
@@ -814,7 +780,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-daten-referenz-lesen"></a>
 ### DATEN_REFERENZ_LESEN
 
 Auslesen der Daten Referenz KWP2000: $22   ReadDataByCommonIdentifier $2504 DREF Modus  : Default
@@ -835,7 +800,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-zeiten-lesen"></a>
 ### FLASH_ZEITEN_LESEN
 
 Auslesen der Flash Loeschzeit, Signaturtestzeit, Authentisierberechnungszeit und Resetzeit KWP2000: $22   ReadDataByCommonIdentifier $2501 Zeiten Modus  : Default
@@ -854,7 +818,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-blocklaenge-lesen"></a>
 ### FLASH_BLOCKLAENGE_LESEN
 
 Auslesen des maximalen Blocklaenge beim Flashen KWP2000: $22   ReadDataByCommonIdentifier $2506 MaximaleBlockLaenge Modus  : Default
@@ -871,7 +834,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-zufallszahl-lesen"></a>
 ### AUTHENTISIERUNG_ZUFALLSZAHL_LESEN
 
 Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $07 RequestForAuthentication Modus  : Default
@@ -893,7 +855,6 @@ Authentisierung Zufallszahl des SG lesen KWP2000: $31 StartRoutineByLocalIdentif
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-authentisierung-start"></a>
 ### AUTHENTISIERUNG_START
 
 Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAuthentication Modus  : Default
@@ -912,7 +873,6 @@ Authentisierung pruefen KWP2000: $31 StartRoutineByLocalIdentifier $08 ReleaseAu
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-programmier-status-lesen"></a>
 ### FLASH_PROGRAMMIER_STATUS_LESEN
 
 Programmierstatus des SG lesen KWP2000: $31 StartRoutineByLocalIdentifier $0A CheckProgrammingStatus Modus  : Default
@@ -929,7 +889,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-signatur-pruefen"></a>
 ### FLASH_SIGNATUR_PRUEFEN
 
 Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSignature Modus  : Default
@@ -949,7 +908,6 @@ Flash Signatur pruefen KWP2000: $31 StartRoutineByLocalIdentifier $09 CheckSigna
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete reset ausloesen KWP2000: $11 ECUReset $01 PowerOn Modus  : Default  Nach dem Job muss die Steuergeraete-Resetzeit abgewartet werden. Danach ist das Steuergeraet wieder diagnosefaehig  siehe Job FLASH_ZEITEN_LESEN Result FLASH_RESETZEIT
@@ -964,7 +922,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 ClearMemory Modus  : Default
@@ -984,7 +941,6 @@ Flash loeschen Standard Flashjob KWP2000: $31 StartRoutineByLocalIdentifier $02 
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload Modus  : Default
@@ -1004,7 +960,6 @@ Vorbereitung fuer Flash schreiben Standard Flashjob KWP2000: $34 RequestDownload
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Default
@@ -1025,7 +980,6 @@ Flash Daten schreiben Standard Flashjob KWP2000: $36 TransferData Modus  : Defau
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferExit Modus  : Default
@@ -1044,7 +998,6 @@ Flashprogrammierung abschliessen Standard Flashjob KWP2000: $37 RequestTransferE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMemoryByAddress Modus   : Default
@@ -1081,7 +1034,6 @@ Auslesen des Anwender Informations Feldes Standard Flashjob KWP 2000: $23 ReadMe
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D WriteMemoryByAddress Modus   : Default
@@ -1112,7 +1064,6 @@ Schreiben des Anwender Informations Feldes Standard Flashjob KWP 2000: $3D Write
 | _TEL_AUFTRAG_2 | binary | Hex-Auftrag an SG AIF schreiben |
 | _TEL_ANTWORT_2 | binary | Hex-Antwort von SG AIF schreiben |
 
-<a id="job-read-uif-data-table"></a>
 ### _READ_UIF_DATA_TABLE
 
 reads the user info field KWP2000: $1A ReadECUIdentification .        $86 CurrentUIFDataTable
@@ -1131,7 +1082,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-sys-name"></a>
 ### _READ_SYS_NAME
 
 reads the system name KWP2000: $1A ReadECUIdentification .        $97 SystemName
@@ -1147,7 +1097,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-vmecuhwvnm"></a>
 ### _READ_VMECUHWVNM
 
 reads the VehicleManufacturerECUHWVersionNumber KWP2000: $1A ReadECUIdentification .        $9A HW Index
@@ -1163,7 +1112,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-vm-diag-index"></a>
 ### _READ_VM_DIAG_INDEX
 
 read diagnostic index KWP2000: $1A ReadECUIdentification .        $9C VMDiagnosticIndex
@@ -1179,7 +1127,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-date-ecu-manufacturing"></a>
 ### _READ_DATE_ECU_MANUFACTURING
 
 read date of ECU manufacturing KWP2000: $1A ReadECUIdentification .        $9D DateOfECUManufacturing
@@ -1195,7 +1142,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-sys-supp-index"></a>
 ### _READ_SYS_SUPP_INDEX
 
 read system supplier index KWP2000: $1A ReadECUIdentification .        $9E SupplierIndex
@@ -1212,7 +1158,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-vm-ecu-swlayer-vnr"></a>
 ### _READ_VM_ECU_SWLAYER_VNR
 
 read MCV-nr, SW-nr, SC-nr KWP2000: $1A ReadECUIdentification .        $9F VMECUSoftwareLayerVersionNumber
@@ -1231,7 +1176,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-date-last-coding"></a>
 ### READ_DATE_LAST_CODING
 
 read date of the last coding KWP2000: $21 ReadDataByLocalIdentifier .        $08 date of the last coding
@@ -1247,7 +1191,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-kamera-versorgung"></a>
 ### STATUS_KAMERA_VERSORGUNG
 
 reports the status of the camera supply KWP2000: $21 ReadDataByLocalIdentifier .        $22 status of camera supply
@@ -1270,7 +1213,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-fpn"></a>
 ### STATUS_FPN
 
 reports status of the fixes pattern noise evaluation KWP2000: $21 ReadDataByLocalIdentifier .        $24 status of fixes pattern noise evaluation
@@ -1287,7 +1229,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-kamera-eeprom"></a>
 ### STATUS_KAMERA_EEPROM
 
 reports communication status with the camera eeprom KWP2000: $21 ReadDataByLocalIdentifier .        $26 status of camera eeprom communication
@@ -1304,7 +1245,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-kameraseriennummer"></a>
 ### STATUS_KAMERASERIENNUMMER
 
 reads camera serial number from eeprom KWP2000: $21 ReadDataByLocalIdentifier .        $28 camera serial number
@@ -1320,7 +1260,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | Antwort von SG |
 
-<a id="job-status-bordnetz-spannung"></a>
 ### STATUS_BORDNETZ_SPANNUNG
 
 reports status of the voltage of the vehicle electrical system KWP2000: $21 ReadDataByLocalIdentifier .        $30 status of vehicle electrical system
@@ -1339,7 +1278,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-temperatur"></a>
 ### STATUS_TEMPERATUR
 
 reports status of the ECU temperature KWP2000: $21 ReadDataByLocalIdentifier .        $31 status of ecu temperature
@@ -1356,7 +1294,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-weckleitung"></a>
 ### STATUS_WECKLEITUNG
 
 reports status of wake line KWP2000: $21 ReadDataByLocalIdentifier .        $32 status of wake line
@@ -1373,7 +1310,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-ecu-spannungen"></a>
 ### STATUS_ECU_SPANNUNGEN
 
 reports status of the voltages of the ECU power supply units KWP2000: $21 ReadDataByLocalIdentifier .        $33 status of power supply units
@@ -1400,7 +1336,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-ppc"></a>
 ### STATUS_PPC
 
 reports status of the power PC KWP2000: $21 ReadDataByLocalIdentifier .        $34 status of power pc
@@ -1417,7 +1352,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-aktuator"></a>
 ### STATUS_AKTUATOR
 
 reports status of the vibration actuators current consumption KWP2000: $21 ReadDataByLocalIdentifier .        $35 status of vibration actuator
@@ -1436,7 +1370,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-fetrawe-mode"></a>
 ### STATUS_FETRAWE_MODE
 
 reports status of the FeTraWe-Mode KWP2000: $22 ReadDataByCommonIdentifier .        $10 read fetrawe mode .        $0A
@@ -1452,7 +1385,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-eeprom-block"></a>
 ### _READ_EEPROM_BLOCK
 
 reports status of the FeTraWe-Mode KWP2000: $22 ReadDataByCommonIdentifier
@@ -1472,7 +1404,6 @@ reports status of the FeTraWe-Mode KWP2000: $22 ReadDataByCommonIdentifier
 | _TEL_ANTWORT | binary | ECU response |
 | _TEL_AUFTRAG | binary | request to ECU |
 
-<a id="job-set-eeprom-state-of-delivery"></a>
 ### _SET_EEPROM_STATE_OF_DELIVERY
 
 write and read the  EEPROM state of delivery KWP2000: $2E WriteDataByCommonIdentifier .        $22 ReadDataByCommonIdentifier
@@ -1485,7 +1416,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, if error-free table JobResult STATUS_TEXT |
 
-<a id="job-steuern-ppc"></a>
 ### STEUERN_PPC
 
 de/activation of ppc KWP2000: $30 InputOutputControlByLocalIdentifier .        $95 activate .        $96 deactivate
@@ -1504,7 +1434,6 @@ de/activation of ppc KWP2000: $30 InputOutputControlByLocalIdentifier .        $
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-steuern-aktuator-pwm"></a>
 ### STEUERN_AKTUATOR_PWM
 
 activation of actuator with certain duty cycle and time period KWP2000: $30 InputOutputControlByLocalIdentifier .        $90 pwm-output for actuator
@@ -1524,7 +1453,6 @@ activation of actuator with certain duty cycle and time period KWP2000: $30 Inpu
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-steuern-check-control"></a>
 ### STEUERN_CHECK_CONTROL
 
 activates display of check-contol message KWP2000: $30 InputOutputControlByLocalIdentifier .        $93 activate display of check-control message
@@ -1539,7 +1467,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-steuern-aktuator"></a>
 ### STEUERN_AKTUATOR
 
 motor activation when linear regulator mouted in steering wheel de/activate voltage when warning KWP2000: $30 InputOutputControlByLocalIdentifier .        $94 de/activate voltage when warning
@@ -1558,7 +1485,6 @@ motor activation when linear regulator mouted in steering wheel de/activate volt
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-write-date-last-coding"></a>
 ### WRITE_DATE_LAST_CODING
 
 write date of the last coding KWP2000: $3B WriteDataByLocalIdentifier .        $08 write date of the last coding
@@ -1580,7 +1506,6 @@ write date of the last coding KWP2000: $3B WriteDataByLocalIdentifier .        $
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-set-camintrinsic"></a>
 ### _SET_CAMINTRINSIC
 
 setting of intrinsic camera parameters and camera serial number KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1612,7 +1537,6 @@ setting of intrinsic camera parameters and camera serial number KWP2000: $3D Wri
 | _TEL_ANTWORT_4 | binary | ECU response |
 | _TEL_AUFTRAG_4 | binary | request to ECU |
 
-<a id="job-set-camcalibration"></a>
 ### _SET_CAMCALIBRATION
 
 setting of calibration results and camera VIN KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1643,7 +1567,6 @@ setting of calibration results and camera VIN KWP2000: $3D WriteMemoryByAddress 
 | _TEL_ANTWORT_4 | binary | ECU response |
 | _TEL_AUFTRAG_4 | binary | request to ECU |
 
-<a id="job-set-vehiclegeometry"></a>
 ### _SET_VEHICLEGEOMETRY
 
 setting of extrinsic camera parameters , the coding valid bit and ECU VIN KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1679,7 +1602,6 @@ setting of extrinsic camera parameters , the coding valid bit and ECU VIN KWP200
 | _TEL_ANTWORT_6 | binary | ECU response |
 | _TEL_AUFTRAG_6 | binary | request to ECU |
 
-<a id="job-copy-cameramirror"></a>
 ### _COPY_CAMERAMIRROR
 
 copy of camera parameters to ECU KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1713,7 +1635,6 @@ _No arguments._
 | _TEL_ANTWORT_9 | binary | request to ECU |
 | _TEL_AUFTRAG_9 | binary | request to ECU |
 
-<a id="job-set-dbgmsg"></a>
 ### _SET_DBGMSG
 
 de/activates debug messages KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1733,7 +1654,6 @@ de/activates debug messages KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadM
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-memory-write-float"></a>
 ### _MEMORY_WRITE_FLOAT
 
 writes a real value to EEPROM KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1753,7 +1673,6 @@ writes a real value to EEPROM KWP2000: $3D WriteMemoryByAddress KWP2000: $23 Rea
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-memory-write-long"></a>
 ### _MEMORY_WRITE_LONG
 
 writes a long value to EEPROM KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1773,7 +1692,6 @@ writes a long value to EEPROM KWP2000: $3D WriteMemoryByAddress KWP2000: $23 Rea
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-set-speed-table"></a>
 ### _SET_SPEED_TABLE
 
 coding values for pwm settings of vibration KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1795,7 +1713,6 @@ coding values for pwm settings of vibration KWP2000: $3D WriteMemoryByAddress KW
 | _TEL_AUFTRAG_2 | binary | request to ECU |
 | _TEL_ANTWORT_2 | binary | ECU response |
 
-<a id="job-fpnr-counter-clear"></a>
 ### _FPNR_COUNTER_CLEAR
 
 sets the FPNR counter to 0xFF KWP2000: $3D WriteMemoryByAddress KWP2000: $23 ReadMemoryByAddress
@@ -1813,7 +1730,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | request to ECU |
 | _TEL_ANTWORT_2 | binary | ECU response |
 
-<a id="job-fpnr-counter-read"></a>
 ### _FPNR_COUNTER_READ
 
 reads the FPNR counter KWP2000: $23 ReadMemoryByAddress
@@ -1829,7 +1745,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-c-checksumme"></a>
 ### C_CHECKSUMME
 
 Checksumme generieren und in BINAER_BUFFER schreiben Optionaler Codierjob
@@ -1847,7 +1762,6 @@ Checksumme generieren und in BINAER_BUFFER schreiben Optionaler Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | OUT_BUFFER | binary | Als Result wird der gefuellte Binaerbuffer zurueckgegeben Der Binaerbuffer hat den Aufbau von BINAER_BUFFER |
 
-<a id="job-steuern-kalibrierung-links"></a>
 ### STEUERN_KALIBRIERUNG_LINKS
 
 TAC (target auto calibration), if target is in left position (driver's view) KWP2000: $31 StartRoutineByLocalIdentifier .        $20 StartCalibrationLeft
@@ -1874,7 +1788,6 @@ TAC (target auto calibration), if target is in left position (driver's view) KWP
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-steuern-kalibrierung-rechts"></a>
 ### STEUERN_KALIBRIERUNG_RECHTS
 
 TAC (target auto calibration), if target is in right position (driver's view) KWP2000: $31 StartRoutineByLocalIdentifier .        $21 StartCalibrationRight
@@ -1901,7 +1814,6 @@ TAC (target auto calibration), if target is in right position (driver's view) KW
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-steuern-kalibrierung-ho"></a>
 ### STEUERN_KALIBRIERUNG_HO
 
 start SPC (service point calibration) KWP2000: $31 StartRoutineByLocalIdentifier .        $22 StartCalibrationInService
@@ -1916,7 +1828,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-steuern-stop-kalibrierung-ho"></a>
 ### STEUERN_STOP_KALIBRIERUNG_HO
 
 stop SPC (service point calibration) KWP2000: $31 StartRoutineByLocalIdentifier .        $23 StopCalibrationInService
@@ -1931,7 +1842,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-kalibriermodus-ho"></a>
 ### STATUS_KALIBRIERMODUS_HO
 
 status of SPC (service point calibration) KWP2000: $31 StartRoutineByLocalIdentifier .        $24 StatusCalibrationInService
@@ -1948,7 +1858,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-get-camintrinsic"></a>
 ### _GET_CAMINTRINSIC
 
 reads intrinsic camera parameters and camera serial number KWP2000: $23 ReadMemoryByAddress
@@ -1971,7 +1880,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | request to ECU |
 | _TEL_ANTWORT_2 | binary | ECU response |
 
-<a id="job-get-camcalibration"></a>
 ### _GET_CAMCALIBRATION
 
 reads calibration results and camera VIN KWP2000: $23 ReadMemoryByAddress
@@ -1993,7 +1901,6 @@ _No arguments._
 | _TEL_AUFTRAG_2 | binary | request to ECU |
 | _TEL_ANTWORT_2 | binary | ECU response |
 
-<a id="job-get-vehiclegeometry"></a>
 ### _GET_VEHICLEGEOMETRY
 
 reads extrinsic camera parameters , the coding valid bit and ECU VIN KWP2000: $23 ReadMemoryByAddress
@@ -2018,7 +1925,6 @@ _No arguments._
 | _TEL_AUFTRAG_3 | binary | request to ECU |
 | _TEL_ANTWORT_3 | binary | ECU response |
 
-<a id="job-memory-read-float"></a>
 ### _MEMORY_READ_FLOAT
 
 reads a real value from EEPROM KWP2000: $23 ReadMemoryByAddress
@@ -2038,7 +1944,6 @@ reads a real value from EEPROM KWP2000: $23 ReadMemoryByAddress
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-memory-read-long"></a>
 ### _MEMORY_READ_LONG
 
 reads a long value from EEPROM KWP2000: $23 ReadMemoryByAddress
@@ -2058,7 +1963,6 @@ reads a long value from EEPROM KWP2000: $23 ReadMemoryByAddress
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-status-lvds"></a>
 ### STATUS_LVDS
 
 reports status of the LVDS data stream KWP2000: $21 ReadDataByLocalIdentifier .        $23 status of LVDS data stream
@@ -2075,7 +1979,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-read-vnr"></a>
 ### _READ_VNR
 
 read original and current SW versionnumbers KWP2000: $21 ReadDataByLocalIdentifier .        $36 versionnumbers
@@ -2098,7 +2001,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-steuern-test-funktional-tlc"></a>
 ### _STEUERN_TEST_FUNKTIONAL_TLC
 
 activates extended TLC-Check at FAS KWP2000: $31 StartRoutineByLocalIdentifier .        $26 extended TLC-Check
@@ -2119,7 +2021,6 @@ activates extended TLC-Check at FAS KWP2000: $31 StartRoutineByLocalIdentifier .
 | _TEL_AUFTRAG | binary | request to ECU |
 | _TEL_ANTWORT | binary | ECU response |
 
-<a id="job-universal-job"></a>
 ### _UNIVERSAL_JOB
 
 transmits an individual diagnostic request to the ECU
@@ -2196,7 +2097,6 @@ transmits an individual diagnostic request to the ECU
 - [STAT_CAL_DESCRIPTION](#table-stat-cal-description) (6 × 2)
 - [VNR_DESCRIPTION](#table-vnr-description) (9 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -2209,7 +2109,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -2312,7 +2211,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 97 rows × 2 columns
@@ -2417,7 +2315,6 @@ Dimensions: 97 rows × 2 columns
 | 0x96 | Continental Automotive |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -2439,7 +2336,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -2464,7 +2360,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns
@@ -2476,7 +2371,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | Asymetrisch |
 | 0xFF | Keine |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -2498,7 +2392,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -2513,7 +2406,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -2540,7 +2432,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-speichersegment"></a>
 ### SPEICHERSEGMENT
 
 Dimensions: 12 rows × 3 columns
@@ -2560,7 +2451,6 @@ Dimensions: 12 rows × 3 columns
 | 0x0B | RAMIL | RAM, internal (long MOV / Register) |
 | 0xFF | ??? | unbekanntes Speichersegment |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2569,7 +2459,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-sg-diagnosekonzept"></a>
 ### SG_DIAGNOSEKONZEPT
 
 Dimensions: 4 rows × 2 columns
@@ -2581,7 +2470,6 @@ Dimensions: 4 rows × 2 columns
 | - | KWP2000 |
 | - | DS2 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 33 rows × 2 columns
@@ -2622,7 +2510,6 @@ Dimensions: 33 rows × 2 columns
 | 0xA92D | Energiesparmode aktiv |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -2637,7 +2524,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | ja |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 30 rows × 5 columns
@@ -2675,7 +2561,6 @@ Dimensions: 30 rows × 5 columns
 | 0xE047 | 0x01 | 0x0A | - | - |
 | 0xFFFF | 0x01 | 0x0A | - | - |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 9 columns
@@ -2685,7 +2570,6 @@ Dimensions: 2 rows × 9 columns
 | 0x01 | Bordspannung | VOLT | - | unsigned char | - | 1 | 10 | 0 |
 | 0x0A | Botschaftenfehler | 0-n | - | 0xFF | ERRORTYPE | 1 | 1 | 0 |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -2694,7 +2578,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -2703,7 +2586,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-errortype"></a>
 ### ERRORTYPE
 
 Dimensions: 5 rows × 2 columns
@@ -2716,7 +2598,6 @@ Dimensions: 5 rows × 2 columns
 | 0x08 | Application |
 | xy | unplausibler Wert |
 
-<a id="table-limit-description"></a>
 ### LIMIT_DESCRIPTION
 
 Dimensions: 5 rows × 2 columns
@@ -2729,7 +2610,6 @@ Dimensions: 5 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-camconn-description"></a>
 ### CAMCONN_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2741,7 +2621,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-lvds-description"></a>
 ### LVDS_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2753,7 +2632,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-fpn-description"></a>
 ### FPN_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2765,7 +2643,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-eeprom-comm-description"></a>
 ### EEPROM_COMM_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2777,7 +2654,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-video-data-description"></a>
 ### VIDEO_DATA_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2789,7 +2665,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-wake-line-description"></a>
 ### WAKE_LINE_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2801,7 +2676,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-mem-consistent-description"></a>
 ### MEM_CONSISTENT_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2813,7 +2687,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-ppc-description"></a>
 ### PPC_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2825,7 +2698,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-fetrawe-mode-description"></a>
 ### FETRAWE_MODE_DESCRIPTION
 
 Dimensions: 4 rows × 2 columns
@@ -2837,7 +2709,6 @@ Dimensions: 4 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-eeprom-block-3000"></a>
 ### EEPROM_BLOCK_3000
 
 Dimensions: 32 rows × 2 columns
@@ -2877,7 +2748,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | FF |
 | 0x1F | FF |
 
-<a id="table-eeprom-block-3001"></a>
 ### EEPROM_BLOCK_3001
 
 Dimensions: 32 rows × 2 columns
@@ -2917,7 +2787,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | 05 |
 | 0x1F | 19 |
 
-<a id="table-eeprom-block-3002"></a>
 ### EEPROM_BLOCK_3002
 
 Dimensions: 17 rows × 2 columns
@@ -2942,7 +2811,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | FF |
 | 0x10 | FF |
 
-<a id="table-eeprom-block-3203"></a>
 ### EEPROM_BLOCK_3203
 
 Dimensions: 11 rows × 2 columns
@@ -2961,7 +2829,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | FF |
 | 0x0A | FF |
 
-<a id="table-eeprom-block-3400"></a>
 ### EEPROM_BLOCK_3400
 
 Dimensions: 5 rows × 2 columns
@@ -2974,7 +2841,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | 00 |
 | 0x04 | 00 |
 
-<a id="table-eeprom-block-3500"></a>
 ### EEPROM_BLOCK_3500
 
 Dimensions: 128 rows × 2 columns
@@ -3110,7 +2976,6 @@ Dimensions: 128 rows × 2 columns
 | 0x7E | FF |
 | 0x7F | FF |
 
-<a id="table-eeprom-block-3501"></a>
 ### EEPROM_BLOCK_3501
 
 Dimensions: 16 rows × 2 columns
@@ -3134,7 +2999,6 @@ Dimensions: 16 rows × 2 columns
 | 0x0E | 00 |
 | 0x0F | 00 |
 
-<a id="table-eeprom-block-3600"></a>
 ### EEPROM_BLOCK_3600
 
 Dimensions: 3 rows × 2 columns
@@ -3145,7 +3009,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | 01 |
 | 0x02 | FF |
 
-<a id="table-eeprom-block-3601"></a>
 ### EEPROM_BLOCK_3601
 
 Dimensions: 4 rows × 2 columns
@@ -3157,7 +3020,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | FF |
 | 0x03 | FF |
 
-<a id="table-eeprom-block-3700"></a>
 ### EEPROM_BLOCK_3700
 
 Dimensions: 5 rows × 2 columns
@@ -3170,7 +3032,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | FF |
 | 0x04 | FF |
 
-<a id="table-eeprom-block-3701"></a>
 ### EEPROM_BLOCK_3701
 
 Dimensions: 4 rows × 2 columns
@@ -3182,7 +3043,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | 00 |
 | 0x03 | 00 |
 
-<a id="table-eeprom-block-3800"></a>
 ### EEPROM_BLOCK_3800
 
 Dimensions: 32 rows × 2 columns
@@ -3222,7 +3082,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | FF |
 | 0x1F | FF |
 
-<a id="table-eeprom-block-3802"></a>
 ### EEPROM_BLOCK_3802
 
 Dimensions: 4 rows × 2 columns
@@ -3234,7 +3093,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | FF |
 | 0x03 | FF |
 
-<a id="table-eeprom-block-3b02"></a>
 ### EEPROM_BLOCK_3B02
 
 Dimensions: 96 rows × 2 columns
@@ -3338,7 +3196,6 @@ Dimensions: 96 rows × 2 columns
 | 0x5E | FF |
 | 0x5F | FF |
 
-<a id="table-eeprom-block-3b03"></a>
 ### EEPROM_BLOCK_3B03
 
 Dimensions: 25 rows × 2 columns
@@ -3371,7 +3228,6 @@ Dimensions: 25 rows × 2 columns
 | 0x17 | 00 |
 | 0x18 | 00 |
 
-<a id="table-eeprom-block-3b04"></a>
 ### EEPROM_BLOCK_3B04
 
 Dimensions: 7 rows × 2 columns
@@ -3386,7 +3242,6 @@ Dimensions: 7 rows × 2 columns
 | 0x05 | FF |
 | 0x06 | FF |
 
-<a id="table-eeprom-block-3b06"></a>
 ### EEPROM_BLOCK_3B06
 
 Dimensions: 32 rows × 2 columns
@@ -3426,7 +3281,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | FF |
 | 0x1F | FF |
 
-<a id="table-eeprom-block-3b07"></a>
 ### EEPROM_BLOCK_3B07
 
 Dimensions: 32 rows × 2 columns
@@ -3466,7 +3320,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | FF |
 | 0x1F | FF |
 
-<a id="table-eeprom-block-3b08"></a>
 ### EEPROM_BLOCK_3B08
 
 Dimensions: 32 rows × 2 columns
@@ -3506,7 +3359,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | FF |
 | 0x1F | FF |
 
-<a id="table-eeprom-block-3b09"></a>
 ### EEPROM_BLOCK_3B09
 
 Dimensions: 32 rows × 2 columns
@@ -3546,7 +3398,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | FF |
 | 0x1F | FF |
 
-<a id="table-eeprom-block-3b0a"></a>
 ### EEPROM_BLOCK_3B0A
 
 Dimensions: 32 rows × 2 columns
@@ -3586,7 +3437,6 @@ Dimensions: 32 rows × 2 columns
 | 0x1E | FF |
 | 0x1F | FF |
 
-<a id="table-calibration-description"></a>
 ### CALIBRATION_DESCRIPTION
 
 Dimensions: 56 rows × 2 columns
@@ -3650,7 +3500,6 @@ Dimensions: 56 rows × 2 columns
 | 0xE6 | uC_COMMUNICATION_FAILURE |
 | xy | unplausibler Wert |
 
-<a id="table-stat-cal-description"></a>
 ### STAT_CAL_DESCRIPTION
 
 Dimensions: 6 rows × 2 columns
@@ -3664,7 +3513,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ungültig |
 | xy | unplausibler Wert |
 
-<a id="table-vnr-description"></a>
 ### VNR_DESCRIPTION
 
 Dimensions: 9 rows × 2 columns

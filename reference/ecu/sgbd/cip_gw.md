@@ -24,7 +24,6 @@
 - [MOST_CAN_GATEWAY_ENABLE](#job-most-can-gateway-enable) - Restart der Kommunikation über das Gateway KWP2000: $32 StopRoutineByLocalIdentifier $0F disableMCGW Modus  : Default
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung und Kommunikationsparameter
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -43,7 +42,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-most-can-gateway-disable"></a>
 ### MOST_CAN_GATEWAY_DISABLE
 
 Stoppen der Kommunikation über das Gateway KWP2000: $31 StartRoutineByLocalIdentifier $0F disableMCGW Modus  : Default
@@ -62,7 +60,6 @@ Stoppen der Kommunikation über das Gateway KWP2000: $31 StartRoutineByLocalIden
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-most-can-gateway-enable"></a>
 ### MOST_CAN_GATEWAY_ENABLE
 
 Restart der Kommunikation über das Gateway KWP2000: $32 StopRoutineByLocalIdentifier $0F disableMCGW Modus  : Default
@@ -81,7 +78,6 @@ Restart der Kommunikation über das Gateway KWP2000: $32 StopRoutineByLocalIdent
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -107,7 +103,6 @@ _No arguments._
 - [PROGRAMMIERSTATUS](#table-programmierstatus) (19 × 2)
 - [AUTHENTISIERUNG](#table-authentisierung) (4 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -119,7 +114,6 @@ Dimensions: 4 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -222,7 +216,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 72 rows × 2 columns
@@ -302,7 +295,6 @@ Dimensions: 72 rows × 2 columns
 | 0x71 | NSI B.V |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -327,7 +319,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 14 rows × 3 columns
@@ -349,7 +340,6 @@ Dimensions: 14 rows × 3 columns
 | 0xFE | SSS_E | SystemSupplierSpecific (E) |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-baudrate"></a>
 ### BAUDRATE
 
 Dimensions: 7 rows × 3 columns
@@ -364,7 +354,6 @@ Dimensions: 7 rows × 3 columns
 | 0x06 | SB | Specific Baudrate |
 | 0xXY | -- | unbekannte Baudrate |
 
-<a id="table-programmierstatus"></a>
 ### PROGRAMMIERSTATUS
 
 Dimensions: 19 rows × 2 columns
@@ -391,7 +380,6 @@ Dimensions: 19 rows × 2 columns
 | 0x80 | Reserviert fuer Zulieferer |
 | 0xXY | unbekannter Programmierstatus |
 
-<a id="table-authentisierung"></a>
 ### AUTHENTISIERUNG
 
 Dimensions: 4 rows × 2 columns

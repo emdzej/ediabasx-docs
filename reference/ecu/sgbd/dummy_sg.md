@@ -24,7 +24,6 @@
 - [IDENT](#job-ident) - Dummy-Ident-Daten
 - [DUMMY_1](#job-dummy-1) - Dummy-Job 1
 
-<a id="job-info"></a>
 ### INFO
 
 Info fuer Anwender
@@ -42,7 +41,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer Dummy SG automatischer Aufruf beim ersten Zugriff auf SGBD
@@ -55,7 +53,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Dummy-Ident-Daten
@@ -79,7 +76,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-dummy-1"></a>
 ### DUMMY_1
 
 Dummy-Job 1
@@ -103,7 +99,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (8 × 2)
 - [LIEFERANTEN](#table-lieferanten) (24 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -119,7 +114,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_SG_NACK |
 | 0x00 | ERROR_SG_UNBEKANNTES_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 24 rows × 2 columns

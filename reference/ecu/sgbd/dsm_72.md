@@ -41,7 +41,6 @@
 - [IDENT](#job-ident) - Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $3F30 Sub-Parameter SGBD-Index Modus: Default
 - [AIF_LESEN](#job-aif-lesen) - Auslesen des Anwender Informations Feldes Standard Flashjob Modus   : Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -60,7 +59,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -73,7 +71,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -99,7 +96,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -118,7 +114,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -136,7 +131,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -157,7 +151,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -179,7 +172,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -201,7 +193,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -220,7 +211,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -239,7 +229,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -254,7 +243,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-check-ecu-lives"></a>
 ### _CHECK_ECU_LIVES
 
 Sends a telegramm and checks for an answer
@@ -269,7 +257,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-tel-roh"></a>
 ### _TEL_ROH
 
 Ausführen eines Telegramms nur mit Übergabe der Daten ignoriert Leerzeichen Format 001122 ....
@@ -288,7 +275,6 @@ Ausführen eines Telegramms nur mit Übergabe der Daten ignoriert Leerzeichen Fo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Auftrag an SG |
 
-<a id="job-status-dsm-parkposition"></a>
 ### STATUS_DSM_PARKPOSITION
 
 StatusDSMParkPositiondaten UDS  : $22   ReadDataByIdentifier UDS  : $3F31 Sub-Parameter SGBD-Index Modus: Default
@@ -307,7 +293,6 @@ _No arguments._
 | _REQUEST1 | binary | Hex-Auftrag an SG |
 | _RESPONSE1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-dsm-notpfad"></a>
 ### STATUS_DSM_NOTPFAD
 
 StausDSMNotpfaddaten UDS  : $22   ReadDataByIdentifier UDS  : $3F33 Sub-Parameter SGBD-Index Modus: Default
@@ -326,7 +311,6 @@ _No arguments._
 | _REQUEST1 | binary | Hex-Auftrag an SG |
 | _RESPONSE1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-dsm"></a>
 ### STATUS_DSM
 
 StausDSMdaten UDS  : $22   ReadDataByIdentifier UDS  : $3F35 Sub-Parameter SGBD-Index Modus: Default
@@ -352,7 +336,6 @@ _No arguments._
 | _REQUEST1 | binary | Hex-Auftrag an SG |
 | _RESPONSE1 | binary | Hex-Antwort von SG |
 
-<a id="job-status-dsm-fasta"></a>
 ### STATUS_DSM_FASTA
 
 StausDSMFasta UDS  : $22   ReadDataByIdentifier UDS  : $3F37 Sub-Parameter SGBD-Index Modus: Default
@@ -393,7 +376,6 @@ _No arguments._
 | _REQUEST2 | binary | Hex-Auftrag an SG |
 | _RESPONSE2 | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -409,7 +391,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $06 reportDTCExtendedDataRecordByDTCNumber Modus: Default
@@ -452,7 +433,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $3F30 Sub-Parameter SGBD-Index Modus: Default
@@ -493,7 +473,6 @@ _No arguments._
 | _REQUEST6 | binary | Hex-Auftrag an SG |
 | _RESPONSE6 | binary | Hex-Antwort von SG |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender Informations Feldes Standard Flashjob Modus   : Default
@@ -559,7 +538,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (53 × 3)
 - [FORTUMWELTNR](#table-fortumweltnr) (52 × 6)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 64 rows × 2 columns
@@ -631,7 +609,6 @@ Dimensions: 64 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 111 rows × 2 columns
@@ -750,7 +727,6 @@ Dimensions: 111 rows × 2 columns
 | 0x0000A4 | ADC Automotive Distance Control Systems GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -776,7 +752,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -801,7 +776,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -833,7 +807,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -906,7 +879,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -919,7 +891,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -932,7 +903,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -945,7 +915,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 9 rows × 3 columns
@@ -962,7 +931,6 @@ Dimensions: 9 rows × 3 columns
 | 0x4F | ECUDEVELOP | ECUDevelopmentSession |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -971,7 +939,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -981,7 +948,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -995,7 +961,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -1004,7 +969,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1016,7 +980,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 4 rows × 16 columns
@@ -1028,7 +991,6 @@ Dimensions: 4 rows × 16 columns
 | LADENDSMRUECKFALLSYSTEM | 0x2012 | - | Load whole P in emergency concept | - | - | - | - | - | - | - | - | 0x95 | 31 | - | - |
 | ANLERNEN | 0x2019 | - | Learning of drive positions | - | - | - | - | - | - | - | - | 0x95 | 31 | - | - |
 
-<a id="table-arg-0x1000"></a>
 ### ARG_0X1000
 
 Dimensions: 1 rows × 12 columns
@@ -1037,7 +999,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERGERAETEMODUS | - | - | char | - | TAB_MODUS | - | - | - | 0 | 2 | - |
 
-<a id="table-tab-position"></a>
 ### TAB_POSITION
 
 Dimensions: 9 rows × 2 columns
@@ -1054,7 +1015,6 @@ Dimensions: 9 rows × 2 columns
 | 0x13 | D slow |
 | 0x23 | 3° before D |
 
-<a id="table-res-0x1000"></a>
 ### RES_0X1000
 
 Dimensions: 1 rows × 10 columns
@@ -1063,7 +1023,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_DSM_MODUS_NR | 0-n | - | char | - | TAB_MODUS | - | - | - | - |
 
-<a id="table-tab-modus"></a>
 ### TAB_MODUS
 
 Dimensions: 2 rows × 2 columns
@@ -1073,7 +1032,6 @@ Dimensions: 2 rows × 2 columns
 | 0x02 | Testmodus |
 | 0x01 | Slavemode |
 
-<a id="table-arg-0x2011"></a>
 ### ARG_0X2011
 
 Dimensions: 1 rows × 14 columns
@@ -1082,7 +1040,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | POSITION | + | - | - | - | char | - | TAB_POSITION | - | - | - | 0 | 100 | - |
 
-<a id="table-hybrid-lief"></a>
 ### HYBRID_LIEF
 
 Dimensions: 6 rows × 2 columns
@@ -1096,7 +1053,6 @@ Dimensions: 6 rows × 2 columns
 | 0008 | Siemens |
 | FFFF | undefinierter Lieferant |
 
-<a id="table-datum-monat"></a>
 ### DATUM_MONAT
 
 Dimensions: 53 rows × 2 columns
@@ -1157,7 +1113,6 @@ Dimensions: 53 rows × 2 columns
 | 0x34 | 0x0C |
 | 0xFF | 0x00 |
 
-<a id="table-position-soll-nr"></a>
 ### POSITION_SOLL_NR
 
 Dimensions: 6 rows × 2 columns
@@ -1171,7 +1126,6 @@ Dimensions: 6 rows × 2 columns
 | 0x08 | HCP fordert Position P |
 | 0x0f | HCP hat sendet keine oder ungültige Parkposition (Signal not available) |
 
-<a id="table-position-ist-nr"></a>
 ### POSITION_IST_NR
 
 Dimensions: 8 rows × 2 columns
@@ -1187,7 +1141,6 @@ Dimensions: 8 rows × 2 columns
 | 0x0d | DSM zwischen Position P und R |
 | 0x0f | DSM kann Position nicht ermitteln (Signal not available) |
 
-<a id="table-servicequalifier-nr"></a>
 ### SERVICEQUALIFIER_NR
 
 Dimensions: 9 rows × 2 columns
@@ -1204,7 +1157,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0d | Init |
 | 0x0f | SNA (Signal not available) |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 53 rows × 3 columns
@@ -1265,7 +1217,6 @@ Dimensions: 53 rows × 3 columns
 | 0xEE6C10 | Schnittstelle DME (VehSpdAvgNDrvnV, 0x3E9): Signal ungültig | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fortumweltnr"></a>
 ### FORTUMWELTNR
 
 Dimensions: 52 rows × 6 columns

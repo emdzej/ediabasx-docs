@@ -14,7 +14,6 @@ No jobs found.
 - [JOBRESULT](#table-jobresult) (68 × 2)
 - [GRUPPENDATEIIDENTIFIKATION](#table-gruppendateiidentifikation) (62 × 4)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 68 rows × 2 columns
@@ -90,7 +89,6 @@ Dimensions: 68 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-gruppendateiidentifikation"></a>
 ### GRUPPENDATEIIDENTIFIKATION
 
 Dimensions: 62 rows × 4 columns

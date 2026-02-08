@@ -27,7 +27,6 @@
 - [RAM_LESEN](#job-ram-lesen) - Beliebige RAM - Zellen auslesen
 - [DATA_ID_LESEN](#job-data-id-lesen) - Data-ID des SG auslesen
 
-<a id="job-initialisierung"></a>
 ### initialisierung
 
 Default Init-Job
@@ -40,7 +39,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn job erfolgreich 0 wenn job nicht erfolgreich |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer DME (ReadEcuIdentification)
@@ -69,7 +67,6 @@ Ident-Daten fuer DME (ReadEcuIdentification)
 | ID_PROD_NR | string | Produktionsnummer |
 | RESP_CODE | string | Produktionsnummer |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Auslesen des QUICK Fehlerspeichers
@@ -90,7 +87,6 @@ Auslesen des QUICK Fehlerspeichers
 | F_KMST_ALT | real | Betriebsstundenzahler aktuell |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher auslesen
@@ -237,7 +233,6 @@ Fehlerspeicher auslesen
 | F_HEX_CODE | binary | Hexdump des Fehlers |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-kurz-lesen"></a>
 ### FS_KURZ_LESEN
 
 Fehlerspeicher auslesen
@@ -265,7 +260,6 @@ Fehlerspeicher auslesen
 | F_HFK | int | Haeufigkeit des einzelnen Fehlers |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 _No arguments._
@@ -277,7 +271,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-hex-lesen"></a>
 ### FS_HEX_LESEN
 
 Fehlerspeicher auslesen als Hex Dump
@@ -301,7 +294,6 @@ Fehlerspeicher auslesen als Hex Dump
 | FS_ZEILE4 | string | letzten 10 Byte aus FS |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-vvt-ansteuer"></a>
 ### VVT_ANSTEUER
 
 Lernen der VVT-Anschläge
@@ -320,7 +312,6 @@ Lernen der VVT-Anschläge
 | JOB_STATUS | string | "POS_RESPONSE", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-vvt-system"></a>
 ### VVT_SYSTEM
 
 Status Lernen VVT-Anschläge
@@ -341,7 +332,6 @@ Status Lernen VVT-Anschläge
 | JOB_STATUS | string | "POS_RESPONSE", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-vvt-ende"></a>
 ### VVT_ENDE
 
 Ende von Lernen der VVT-Anschläge
@@ -361,7 +351,6 @@ Ende von Lernen der VVT-Anschläge
 | RESULT_TEXT | string | gibt den EndeCode der Diagnose zurück |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Löschen des Fehlerspeichers
@@ -379,7 +368,6 @@ Löschen des Fehlerspeichers
 | JOB_STATUS | string | Status der Kommunikation |
 | RESP_CODE | string | ResponseCode bei NEG_RESPONSE |
 
-<a id="job-winds2-fs-lesen"></a>
 ### WINDS2_FS_LESEN
 
 Fehlerspeicher auslesen
@@ -442,7 +430,6 @@ Fehlerspeicher auslesen
 | F_HFK | int | Haeufigkeit des einzelnen Fehlers |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -462,7 +449,6 @@ Schutzmechanismus SEED_KEY
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 | Z_ZAHL | int | Zufallszahl |
 
-<a id="job-ews-startwert"></a>
 ### EWS_STARTWERT
 
 EWS-Startwertinitialisierung
@@ -482,7 +468,6 @@ EWS-Startwertinitialisierung
 | EWS_STATUS | string | Rückgabestatus bei der Startwertinitialisierung |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ews-empfang"></a>
 ### EWS_EMPFANG
 
 EWS-Empfangsstatus auslesen
@@ -502,7 +487,6 @@ EWS-Empfangsstatus auslesen
 | EWS_STATUS_VALUE | int | Rückgabestatus bei der Startwertinitialisierung |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-wechselcode-sync-dme"></a>
 ### WECHSELCODE_SYNC_DME
 
 EWS zurücksetzen
@@ -515,7 +499,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "ACKNOWLEDGE", wenn fehlerfrei |
 
-<a id="job-stop-comm"></a>
 ### STOP_COMM
 
 Ende von Comm
@@ -529,7 +512,6 @@ _No arguments._
 | JOB_STATUS | string | "POS_RESPONSE", wenn fehlerfrei |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-ram-lesen"></a>
 ### RAM_LESEN
 
 Beliebige RAM - Zellen auslesen
@@ -551,7 +533,6 @@ Beliebige RAM - Zellen auslesen
 | RAM_LESEN_EINH | string | Einheit HEX |
 | RESP_CODE | string | Code bei NEG_RESPONSE |
 
-<a id="job-data-id-lesen"></a>
 ### DATA_ID_LESEN
 
 Data-ID des SG auslesen
@@ -592,7 +573,6 @@ Data-ID des SG auslesen
 - [EWSSTART](#table-ewsstart) (5 × 2)
 - [EWSEMPFANGSSTATUS](#table-ewsempfangsstatus) (6 × 2)
 
-<a id="table-forttextehigh"></a>
 ### FORTTEXTEHIGH
 
 Dimensions: 46 rows × 6 columns
@@ -646,7 +626,6 @@ Dimensions: 46 rows × 6 columns
 | 0xC5 | CDKUVSE - Endstufe Umluftventil Turbo | 0x0A | 0x12 | 0x14 | 0x0B |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 181 rows × 6 columns
@@ -835,7 +814,6 @@ Dimensions: 181 rows × 6 columns
 | 0xFA | Zuordnung Nockenwelle zur Kurbelwelle | 0x0A | 0x12 | 0x1A | 0x00 |
 | 0xXY | unbekannter Fehlerort | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fartmatrixhigh"></a>
 ### FARTMATRIXHIGH
 
 Dimensions: 47 rows × 49 columns
@@ -890,7 +868,6 @@ Dimensions: 47 rows × 49 columns
 | 0xC5 | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 | 0xXY | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 170 rows × 49 columns
@@ -1068,7 +1045,6 @@ Dimensions: 170 rows × 49 columns
 | 0xFA | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 | 0xXY | 0x00 | 0xF1 | 0x00 | 0xF2 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x03 | 0x00 | 0x04 | 0x00 | 0xF9 | 0x00 | 0xFA | 0x00 | 0xFB | 0x00 | 0xFC | 0x00 | 0xFD | 0x00 | 0xFE | 0x00 | 0x00 | 0x00 | 0x00 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 101 rows × 2 columns
@@ -1177,7 +1153,6 @@ Dimensions: 101 rows × 2 columns
 | 0xFD | MIL blink                   |
 | 0xFE | Fehler sporadisch           |
 
-<a id="table-ftyptexte"></a>
 ### FTYPTEXTE
 
 Dimensions: 7 rows × 2 columns
@@ -1192,7 +1167,6 @@ Dimensions: 7 rows × 2 columns
 | 0x25 | Regelung EIN mit Einschränkung                     |
 | 0xFF | ??                          |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 104 rows × 6 columns
@@ -1304,7 +1278,6 @@ Dimensions: 104 rows × 6 columns
 | 0x8C | Zeit nach Start (tnse_u)             | s | 25.6 | 0 | 0 |
 | 0xXY | unbekannte Umweltbedingung           | -- | 1 | 0 | 0 |
 
-<a id="table-fehlercodes"></a>
 ### FEHLERCODES
 
 Dimensions: 30 rows × 2 columns
@@ -1342,7 +1315,6 @@ Dimensions: 30 rows × 2 columns
 | 0x80 | serviceNotSupportedInActiveDiagnosticMode    |
 | 0xXY | unbekannter Rückgabewert (ResponseCode)      |
 
-<a id="table-betriebswtab"></a>
 ### BETRIEBSWTAB
 
 Dimensions: 156 rows × 15 columns
@@ -1506,7 +1478,6 @@ Dimensions: 156 rows × 15 columns
 | UHSH2 | ADC Lambdasondenheizsp. h Kat2 | B812F103305F01 | 7 | 5 | 0 | 0 | -- | 0.0048828 | 0 | 3.2 | V |  |  |  |
 | ENDE | unbekannte Variable |  | 1 | 1 | 0 | 0 | -- | 1 | 0 | 1.0 |   |  |  |  |
 
-<a id="table-winds2var"></a>
 ### WINDS2VAR
 
 Dimensions: 129 rows × 2 columns
@@ -1643,7 +1614,6 @@ Dimensions: 129 rows × 2 columns
 | 0xCC | B_KATRDY |
 | 0xXY | ENDE |
 
-<a id="table-stagepointer"></a>
 ### STAGEPOINTER
 
 Dimensions: 20 rows × 2 columns
@@ -1671,7 +1641,6 @@ Dimensions: 20 rows × 2 columns
 | 0x12 | Wartezustand TANS-Monitor nach Fehlererkennung Feinbleck aus Auswertung |
 | 0xXY | Stagepointer wird noch nicht ausgegeben |
 
-<a id="table-tevstatus"></a>
 ### TEVSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -1684,7 +1653,6 @@ Dimensions: 5 rows × 2 columns
 | 0x06 | Systemtest TEV ist beendet |
 | 0xXY | Status Systemtest TEV kann nicht ausgegeben werden |
 
-<a id="table-vvtstatus"></a>
 ### VVTSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -1696,7 +1664,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | es sind Fehler aufgetreten |
 | 0xXY | Fehlerhafter Status  |
 
-<a id="table-vvtstatusbg2"></a>
 ### VVTSTATUSBG2
 
 Dimensions: 8 rows × 2 columns
@@ -1712,7 +1679,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | Abbruch wegen Ubatt-Fehler |
 | 0xXY | Fehlerhafter Status  |
 
-<a id="table-vvtstatusbg2-2"></a>
 ### VVTSTATUSBG2_2
 
 Dimensions: 5 rows × 2 columns
@@ -1725,7 +1691,6 @@ Dimensions: 5 rows × 2 columns
 | 0x06 | Anschläge gelernt |
 | 0xXY | Fehlerhafter Status  |
 
-<a id="table-ewsstart"></a>
 ### EWSSTART
 
 Dimensions: 5 rows × 2 columns
@@ -1738,7 +1703,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Startwert nicht plausibel |
 | 0xXY | Fehlerhafter Status  |
 
-<a id="table-ewsempfangsstatus"></a>
 ### EWSEMPFANGSSTATUS
 
 Dimensions: 6 rows × 2 columns

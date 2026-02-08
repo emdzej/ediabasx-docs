@@ -55,7 +55,6 @@
 - [PROG_ZAEHLER_LESEN](#job-prog-zaehler-lesen) - Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
 - [PROG_MAX_LESEN](#job-prog-max-lesen) - Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -74,7 +73,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -87,7 +85,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -104,7 +101,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -135,7 +131,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -180,7 +175,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -199,7 +193,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -217,7 +210,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -238,7 +230,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -267,7 +258,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -287,7 +277,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -308,7 +297,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -324,7 +312,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -346,7 +333,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -368,7 +354,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -387,7 +372,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-permanent"></a>
 ### FS_LESEN_PERMANENT
 
 permanente Fehler aus Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $15 ReportDTCWithPermanentStatus Modus: Default
@@ -413,7 +397,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -433,7 +416,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -452,7 +434,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -471,7 +452,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -490,7 +470,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -510,7 +489,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-betriebsmode"></a>
 ### STATUS_BETRIEBSMODE
 
 Aktueller Betriebsmode SG muss sich im Energiersparmode befinden UDS  : $22   ReadDataByIdentifier UDS  : $100E Sub-Parameter Betriebsmode Modus: Default
@@ -527,7 +505,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-betriebsmode"></a>
 ### STEUERN_BETRIEBSMODE
 
 Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $1003 DataIdentifier Betriebsmode UDS  : $0?   Betriebsmode Modus: Default
@@ -546,7 +523,6 @@ Betriebsmode setzen SG muss sich im Energiersparmode befinden UDS  : $31   Routi
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -562,7 +538,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -596,7 +571,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -611,7 +585,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -626,7 +599,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -643,7 +615,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -658,7 +629,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -673,7 +643,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -688,7 +657,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -707,7 +675,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -727,7 +694,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-zaehler-lesen"></a>
 ### PROG_ZAEHLER_LESEN
 
 Programmierzaehler lesen UDS  : $22   ReadDataByIdentifier UDS  : $2502 ProgrammingCounter Modus: Default
@@ -745,7 +711,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-prog-max-lesen"></a>
 ### PROG_MAX_LESEN
 
 Anzahl der maximal möglichen Programmiervorgänge auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2503 ProgrammingCounter Modus: Default
@@ -848,7 +813,6 @@ _No arguments._
 - [TAB_ZUSTAND_TANKINHALTSBERECHNUNG_AKTIVTANK](#table-tab-zustand-tankinhaltsberechnung-aktivtank) (6 × 2)
 - [TAB_ZUSTAND_TRANSFERPUMPE](#table-tab-zustand-transferpumpe) (5 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -932,7 +896,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 140 rows × 2 columns
@@ -1080,7 +1043,6 @@ Dimensions: 140 rows × 2 columns
 | 0x0000C1 | Flextronics |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1123,7 +1085,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1148,7 +1109,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1182,7 +1142,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1255,7 +1214,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1268,7 +1226,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 7 rows × 9 columns
@@ -1283,7 +1240,6 @@ Dimensions: 7 rows × 9 columns
 | 0x1751 | PWF_Teilnetz | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1296,7 +1252,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1316,7 +1271,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 246 rows × 3 columns
@@ -1570,7 +1524,6 @@ Dimensions: 246 rows × 3 columns
 | 0x7A18 | Beschleunigungssensor hinten rechts | 1 |
 | 0xFFFF | unbekannter Verbauort | - |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1579,7 +1532,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-lieferantenlin"></a>
 ### LIEFERANTENLIN
 
 Dimensions: 206 rows × 2 columns
@@ -1793,7 +1745,6 @@ Dimensions: 206 rows × 2 columns
 | 0x013D | OTTO Engineering, Inc. |
 | 0xFFFF | unbekannter Hersteller |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1804,7 +1755,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x5e02-d"></a>
 ### ARG_0X5E02_D
 
 Dimensions: 1 rows × 12 columns
@@ -1813,7 +1763,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ZEITDAUER_UEBERTEMPERATUR_DOSIERVENTIL | s | high | int | - | - | 1.0 | 1.0 | 0.0 | - | - | AVS: Zeitdauer Übertemperatur am Dosierventil (UDC_tiUDosVlvOvht): UDC_ tiUDosVlvOvh |
 
-<a id="table-arg-0x5e03-d"></a>
 ### ARG_0X5E03_D
 
 Dimensions: 1 rows × 12 columns
@@ -1822,7 +1771,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | NEUER_BFP_LERNWERT | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | - | - | Zum Schreiben wird der Job 2e 5e03 mit 2 Datenbytes mit einem Verhältnis von 100:1mm^3 übergeben. -- 0x0fa0 -- 4000 dez -- 40mm^3.  Bitte beachten, das erst das LowByte und dann das HighByte übergeben wird! |
 
-<a id="table-arg-0x5e04-d"></a>
 ### ARG_0X5E04_D
 
 Dimensions: 1 rows × 12 columns
@@ -1831,7 +1779,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERT | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 2 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5e05-d"></a>
 ### ARG_0X5E05_D
 
 Dimensions: 1 rows × 12 columns
@@ -1840,7 +1787,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERT | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 2 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5e06-d"></a>
 ### ARG_0X5E06_D
 
 Dimensions: 1 rows × 12 columns
@@ -1849,7 +1795,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERT | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 2 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5e07-d"></a>
 ### ARG_0X5E07_D
 
 Dimensions: 1 rows × 12 columns
@@ -1858,7 +1803,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERT | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 1 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5e08-d"></a>
 ### ARG_0X5E08_D
 
 Dimensions: 1 rows × 12 columns
@@ -1867,7 +1811,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERT | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 1 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5e09-d"></a>
 ### ARG_0X5E09_D
 
 Dimensions: 1 rows × 12 columns
@@ -1876,7 +1819,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERT | DATA | high | data[4] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 4 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5e0a-d"></a>
 ### ARG_0X5E0A_D
 
 Dimensions: 1 rows × 12 columns
@@ -1885,7 +1827,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERT | DATA | high | data[2] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 2 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5e1b-d"></a>
 ### ARG_0X5E1B_D
 
 Dimensions: 1 rows × 12 columns
@@ -1894,7 +1835,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KAVITAETSPRUEFUNG_HEIZERSTROMLERNWERT | HEX | high | int | - | - | - | - | - | - | - | AVS: Kavitätsprüfung - Lernwert des Heizerstroms (UHC_iCavChk) |
 
-<a id="table-arg-0x5e1c-d"></a>
 ### ARG_0X5E1C_D
 
 Dimensions: 1 rows × 12 columns
@@ -1903,7 +1843,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUELLSTAND_PASSIVTANK | HEX | high | int | - | - | - | - | - | - | - | AVS: Aktueller Füllstand im Passiv-Tank (UDC_UPasTnkLvl) |
 
-<a id="table-arg-0x5e20-d"></a>
 ### ARG_0X5E20_D
 
 Dimensions: 1 rows × 12 columns
@@ -1912,7 +1851,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LANGZEITERFASSUNG_DOSIERMENGE | g | high | long | - | - | 1000.0 | 1.0 | 0.0 | - | - | AVS: Langzeiterfassung der Dosiermenge (UDC_DosQnt) |
 
-<a id="table-arg-0x5e21-d"></a>
 ### ARG_0X5E21_D
 
 Dimensions: 1 rows × 12 columns
@@ -1921,7 +1859,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FUELLSTAND_AKTIVTANK | 0-n | high | unsigned char | - | TAB_FUELLSTAND_AKTIVTANK | - | - | - | - | - | AVS: Aktueller Tankfüllstand (UDC_UTnkLvl) |
 
-<a id="table-arg-0x5e22-d"></a>
 ### ARG_0X5E22_D
 
 Dimensions: 1 rows × 12 columns
@@ -1930,7 +1867,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERTE | DATA | high | data[12] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 12 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5e23-d"></a>
 ### ARG_0X5E23_D
 
 Dimensions: 1 rows × 12 columns
@@ -1939,7 +1875,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_UEBERGABEWERTE | DATA | high | data[1] | - | - | 1.0 | 1.0 | 0.0 | - | - | Der Job benötigt 1 byte Dummy Daten damit dieser startet. Der Inhalt ist prinzipiell egal, es wird aber empfohlen 0 zu senden. |
 
-<a id="table-arg-0x5f3e-d"></a>
 ### ARG_0X5F3E_D
 
 Dimensions: 1 rows × 12 columns
@@ -1948,7 +1883,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 4.0 | 4.0 | Dummy Wert wird vom SCR SG mit 0x04 erwartet |
 
-<a id="table-arg-0x5f48-d"></a>
 ### ARG_0X5F48_D
 
 Dimensions: 1 rows × 12 columns
@@ -1957,7 +1891,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 4.0 | 4.0 | Dummy Wert wird vom SCR SG mit 0x04 erwartet |
 
-<a id="table-arg-0x5f4b-d"></a>
 ### ARG_0X5F4B_D
 
 Dimensions: 1 rows × 12 columns
@@ -1966,7 +1899,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DUMMY_WERT | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 4.0 | 4.0 | Dummy Wert wird vom SCR SG mit 0x04 erwartet |
 
-<a id="table-arg-0x6030-d"></a>
 ### ARG_0X6030_D
 
 Dimensions: 1 rows × 12 columns
@@ -1975,7 +1907,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_RUECKFOEDERPUMPE | HEX | high | int | - | - | - | - | - | - | - | Test der Rückförderpumpe, Festlegen der Pulsbreite in ms |
 
-<a id="table-arg-0x6031-d"></a>
 ### ARG_0X6031_D
 
 Dimensions: 1 rows × 12 columns
@@ -1984,7 +1915,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_FOEDERPUMPE | HEX | high | int | - | - | - | - | - | - | - | Test der Förderpumpe |
 
-<a id="table-arg-0x6032-d"></a>
 ### ARG_0X6032_D
 
 Dimensions: 1 rows × 12 columns
@@ -1993,7 +1923,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_UMPUMPE | HEX | high | int | - | - | - | - | - | - | - | Test zum Steuern der Umpumpe |
 
-<a id="table-arg-0x6033-d"></a>
 ### ARG_0X6033_D
 
 Dimensions: 1 rows × 12 columns
@@ -2002,7 +1931,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_DOSIERVENTIL | HEX | high | int | - | - | - | - | - | - | - | Test zum Steuern des Dosierventils, Vorgabe in % |
 
-<a id="table-arg-0x6035-d"></a>
 ### ARG_0X6035_D
 
 Dimensions: 1 rows × 12 columns
@@ -2011,7 +1939,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_DOSIERLEITUNGSHEIZUNG | HEX | high | int | - | - | - | - | - | - | - | Test zum Steuern der Dosierleitungsheizung |
 
-<a id="table-arg-0x6036-d"></a>
 ### ARG_0X6036_D
 
 Dimensions: 1 rows × 12 columns
@@ -2020,7 +1947,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STEUERN_AKTIVTANKHEIZUNG | HEX | high | int | - | - | - | - | - | - | - | Test zum Steuern der Aktivtankheizung |
 
-<a id="table-arg-0xae64-r"></a>
 ### ARG_0XAE64_R
 
 Dimensions: 2 rows × 14 columns
@@ -2030,7 +1956,6 @@ Dimensions: 2 rows × 14 columns
 | DOSIERMASSE | + | - | g | high | unsigned int | - | - | 100.0 | 1.0 | 0.0 | 0.0 | 30.0 | Dosiermasse in g (Min 0g Max 30g) |
 | MASSENSTROM | + | - | mg/s | high | int | - | - | 10.0 | 1.0 | 0.0 | - | - | Massenstrom in mg/s |
 
-<a id="table-arg-0xae68-r"></a>
 ### ARG_0XAE68_R
 
 Dimensions: 1 rows × 14 columns
@@ -2039,7 +1964,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BITMASKE_PARAMETER | + | - | 0-n | high | unsigned char | - | AR_TESTAUSWAHL | - | - | - | - | - | Übergabeparameter für Inbetriebnahme Routine. |
 
-<a id="table-ar-testauswahl"></a>
 ### AR_TESTAUSWAHL
 
 Dimensions: 9 rows × 2 columns
@@ -2056,7 +1980,6 @@ Dimensions: 9 rows × 2 columns
 | 0x17 | Tests Erstbefuellung, Trockentaktung, Druckaufbau, Entleerung |
 | 0x3F | komplette Sequenz |
 
-<a id="table-bf-req-init-tests"></a>
 ### BF_REQ_INIT_TESTS
 
 Dimensions: 6 rows × 10 columns
@@ -2070,7 +1993,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_REQ_ENTLEERUNG | 0/1 | high | unsigned char | 0x10 | - | - | - | - | Teilschritt Entleerung angefordert. |
 | STAT_REQ_UMPUMPE | 0/1 | high | unsigned char | 0x20 | - | - | - | - | Teilschritt Umpumpe angefordert. |
 
-<a id="table-bf-scr-init"></a>
 ### BF_SCR_INIT
 
 Dimensions: 6 rows × 10 columns
@@ -2084,7 +2006,6 @@ Dimensions: 6 rows × 10 columns
 | STAT_ENTLEERUNG | 0/1 | high | unsigned char | 0x10 | - | - | - | - | Entleerungstest. |
 | STAT_UMPUMPE | 0/1 | high | unsigned char | 0x20 | - | - | - | - | Test Umpumpeinheit |
 
-<a id="table-bf-scr-status"></a>
 ### BF_SCR_STATUS
 
 Dimensions: 16 rows × 10 columns
@@ -2108,7 +2029,6 @@ Dimensions: 16 rows × 10 columns
 | STAT_ABBRUCH_DRUCKAUFBAU | 0/1 | high | unsigned int | 0x4000 | - | - | - | - | Test ist aufgrund fehlerhaftes Druckaufbau abgebrochen. |
 | STAT_BIT15 | 0/1 | high | unsigned int | 0x8000 | - | - | - | - | - |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -2122,7 +2042,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -2136,7 +2055,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | ja |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 255 rows × 3 columns
@@ -2399,7 +2317,6 @@ Dimensions: 255 rows × 3 columns
 | 0xCBEC03 | Signalfehler Klemme 15 (DFC_T15Sig) | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 105 rows × 9 columns
@@ -2512,7 +2429,6 @@ Dimensions: 105 rows × 9 columns
 | 0x6136 | STAT_HEIZUNG_TANK_WERT | - | High | unsigned int | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2524,7 +2440,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -2533,7 +2448,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 105 rows × 9 columns
@@ -2646,7 +2560,6 @@ Dimensions: 105 rows × 9 columns
 | 0x6136 | STAT_HEIZUNG_TANK_WERT | - | High | unsigned int | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | unbekannte Umweltbedingung | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2655,7 +2568,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-res-0x4006-r"></a>
 ### RES_0X4006_R
 
 Dimensions: 1 rows × 13 columns
@@ -2664,7 +2576,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_RAM_DATEN_SCHREIBEN | - | - | + | 0-n | high | unsigned char | - | STATUS_RAM_DATEN_SCHREIBEN_TAB | - | - | - | Status RAM_DATEN_SCHREIBEN |
 
-<a id="table-res-0x5e20-d"></a>
 ### RES_0X5E20_D
 
 Dimensions: 1 rows × 10 columns
@@ -2673,7 +2584,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_LANGZEITERFASSUNG_DOSIERMENGE_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | Langzeiterfassung der Dosiermenge (Avs_IdUDC_DosQnt) Extern Service Funktionen S.1013 |
 
-<a id="table-res-0x5e21-d"></a>
 ### RES_0X5E21_D
 
 Dimensions: 1 rows × 10 columns
@@ -2682,7 +2592,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_FUELLSTAND_AKTIVTANK_WERT | - | high | unsigned int | - | - | 1.0 | 1.0 | 0.0 | Aktueller Tankfuellstand Avs_IdUDC_UTnkLvl. Extern ServiceFunktionen S1095 |
 
-<a id="table-res-0x5e6c-d"></a>
 ### RES_0X5E6C_D
 
 Dimensions: 1 rows × 10 columns
@@ -2691,7 +2600,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_AUFTAUSTATUS_DOSIERLEITUNG | 0/1 | high | unsigned char | - | - | - | - | - | Auftaustatus Dosierleitung; UHC_flgPLDfrstChk_s Mit UHC_flgPLDfrstChk == TRUE/1 wird die Dosierfreigabe signalisiert. |
 
-<a id="table-res-0x5f4b-d"></a>
 ### RES_0X5F4B_D
 
 Dimensions: 1 rows × 10 columns
@@ -2700,7 +2608,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_EEP_LANGZEITERFASSUNG_DOSIERMENGE_WERT | - | high | unsigned long | - | - | 1.0 | 1.0 | 0.0 | SCR: Langzeiterfassung der Dosiermenge (EEP_UDC_DOSQNT_UDC_MRDCAGDOSQNT) |
 
-<a id="table-res-0xae60-r"></a>
 ### RES_0XAE60_R
 
 Dimensions: 2 rows × 13 columns
@@ -2710,7 +2617,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Results SCR Entleerungstest. |
 
-<a id="table-res-0xae61-r"></a>
 ### RES_0XAE61_R
 
 Dimensions: 2 rows × 13 columns
@@ -2720,7 +2626,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Results Test SCR Rückförderpumpe. |
 
-<a id="table-res-0xae62-r"></a>
 ### RES_0XAE62_R
 
 Dimensions: 2 rows × 13 columns
@@ -2730,7 +2635,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Results Test SCR Leckageerkennung. |
 
-<a id="table-res-0xae63-r"></a>
 ### RES_0XAE63_R
 
 Dimensions: 2 rows × 13 columns
@@ -2740,7 +2644,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Results Test Druckaufbau. |
 
-<a id="table-res-0xae64-r"></a>
 ### RES_0XAE64_R
 
 Dimensions: 2 rows × 13 columns
@@ -2750,7 +2653,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Results Dosiermengentest. |
 
-<a id="table-res-0xae65-r"></a>
 ### RES_0XAE65_R
 
 Dimensions: 2 rows × 13 columns
@@ -2760,7 +2662,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Results SCR Dosiermengentest statisch. |
 
-<a id="table-res-0xae66-r"></a>
 ### RES_0XAE66_R
 
 Dimensions: 2 rows × 13 columns
@@ -2770,7 +2671,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Results SCR Dosiermengentest dynamisch. |
 
-<a id="table-res-0xae67-r"></a>
 ### RES_0XAE67_R
 
 Dimensions: 2 rows × 13 columns
@@ -2780,7 +2680,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Results SCR Spraytest. |
 
-<a id="table-res-0xae68-r"></a>
 ### RES_0XAE68_R
 
 Dimensions: 3 rows × 13 columns
@@ -2791,7 +2690,6 @@ Dimensions: 3 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_INIT | - | - | - | Status Inbetriebnahmesquenz. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_REQ_INIT_TESTS | - | - | - | angeforderte Teilschritte |
 
-<a id="table-res-0xae69-r"></a>
 ### RES_0XAE69_R
 
 Dimensions: 2 rows × 13 columns
@@ -2801,7 +2699,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Result SCR Erstbefüllung. |
 
-<a id="table-res-0xae6a-r"></a>
 ### RES_0XAE6A_R
 
 Dimensions: 2 rows × 13 columns
@@ -2811,7 +2708,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Result SCR Trockentaktung Dosierventil. |
 
-<a id="table-res-0xae6b-r"></a>
 ### RES_0XAE6B_R
 
 Dimensions: 2 rows × 13 columns
@@ -2821,7 +2717,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_ZUSTAND_ROUTINE | - | - | + | 0-n | high | unsigned char | - | TAB_STATE_ROUTINE | - | - | - | Zustand der Routine. |
 | - | - | - | + | Bit | high | BITFIELD | - | BF_SCR_STATUS | - | - | - | Result SCR Funktionsprüfung Umpumpe. |
 
-<a id="table-res-0xf043-r"></a>
 ### RES_0XF043_R
 
 Dimensions: 2 rows × 13 columns
@@ -2831,7 +2726,6 @@ Dimensions: 2 rows × 13 columns
 | STAT_FS_MONTAGEMODUS_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | FUNKTIONSSTATUS MONTAGEMODUS |
 | STAT_ST_MONTAGE_MODUS_WERT | - | - | + | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Status Montage-Modus aktiv/inaktiv |
 
-<a id="table-sdf"></a>
 ### SDF
 
 Dimensions: 2 rows × 2 columns
@@ -2841,7 +2735,6 @@ Dimensions: 2 rows × 2 columns
 | 01 | 1 |
 | 00 | 0 |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 131 rows × 16 columns
@@ -2980,7 +2873,6 @@ Dimensions: 131 rows × 16 columns
 | MONTAGEMODUS | 0xF043 | - | Ansteuern Montage-Modus | - | - | - | - | - | - | - | - | - | 31 | - | RES_0xF043_R |
 | RESET_EEPROM | 0xF050 | - | Mit diesem Diagnosejob kann das EEPROM zurückgesetzt werden. Es wird ein Merker gesetzt, der die EEPROMBlöcke auf die Erstinitialisierungswerte zurücksetzt. Der FactoryData Block bleibt dabei erhalten. Wird der Job in einem Serien-SG aufgerufen (BasUtil_stECUMode ist 1), wird die negative Response  RequestOutOfRange  zurückgegeben. | - | - | - | - | - | - | - | - | - | 31 | - | - |
 
-<a id="table-status-ram-daten-schreiben-tab"></a>
 ### STATUS_RAM_DATEN_SCHREIBEN_TAB
 
 Dimensions: 4 rows × 2 columns
@@ -2992,7 +2884,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Schreiben läuft |
 | 0x03 | Schreiben noch nicht angestoßen (Routine nicht gestartet) |
 
-<a id="table-tab-fuellstand-aktivtank"></a>
 ### TAB_FUELLSTAND_AKTIVTANK
 
 Dimensions: 6 rows × 2 columns
@@ -3006,7 +2897,6 @@ Dimensions: 6 rows × 2 columns
 | 4 | Full |
 | 7 | Notvalid |
 
-<a id="table-tab-state-routine"></a>
 ### TAB_STATE_ROUTINE
 
 Dimensions: 6 rows × 2 columns
@@ -3020,7 +2910,6 @@ Dimensions: 6 rows × 2 columns
 | 8 | Funktion vollständig durchlaufen und kein Fehler erkannt |
 | 9 | Funktion vollständig durchlaufen und Fehler erkannt. |
 
-<a id="table-tab-unterzustand-scr-statemachine"></a>
 ### TAB_UNTERZUSTAND_SCR_STATEMACHINE
 
 Dimensions: 16 rows × 2 columns
@@ -3044,7 +2933,6 @@ Dimensions: 16 rows × 2 columns
 | 0x14 | PURGE_PRESSURECHECK |
 | 0x16 | PURGE_FILL |
 
-<a id="table-tab-zustand-c1-heizer-zustandsautomat"></a>
 ### TAB_ZUSTAND_C1_HEIZER_ZUSTANDSAUTOMAT
 
 Dimensions: 5 rows × 2 columns
@@ -3057,7 +2945,6 @@ Dimensions: 5 rows × 2 columns
 | 0x00 | UHC_DELAY |
 | 0x05 | UHC_HEATING |
 
-<a id="table-tab-zustand-c2-heizer-zustandsautomat"></a>
 ### TAB_ZUSTAND_C2_HEIZER_ZUSTANDSAUTOMAT
 
 Dimensions: 4 rows × 2 columns
@@ -3069,7 +2956,6 @@ Dimensions: 4 rows × 2 columns
 | 0x00 | UHC_DELAY |
 | 0x05 | UHC_HEATING |
 
-<a id="table-tab-zustand-c3-heizer-zustandsautomat"></a>
 ### TAB_ZUSTAND_C3_HEIZER_ZUSTANDSAUTOMAT
 
 Dimensions: 5 rows × 2 columns
@@ -3082,7 +2968,6 @@ Dimensions: 5 rows × 2 columns
 | 0x05 | UHC_HEATING |
 | 0x08 | UHC_HEATING_NOTALLWD |
 
-<a id="table-tab-zustand-scr-statemachine"></a>
 ### TAB_ZUSTAND_SCR_STATEMACHINE
 
 Dimensions: 9 rows × 2 columns
@@ -3099,7 +2984,6 @@ Dimensions: 9 rows × 2 columns
 | 0x08 | PURGE |
 | 0x09 | DIAG |
 
-<a id="table-tab-zustand-tankinhaltsberechnung-aktivtank"></a>
 ### TAB_ZUSTAND_TANKINHALTSBERECHNUNG_AKTIVTANK
 
 Dimensions: 6 rows × 2 columns
@@ -3113,7 +2997,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | UDC_REFLDET |
 | 0x05 | UDC_SUBS |
 
-<a id="table-tab-zustand-transferpumpe"></a>
 ### TAB_ZUSTAND_TRANSFERPUMPE
 
 Dimensions: 5 rows × 2 columns

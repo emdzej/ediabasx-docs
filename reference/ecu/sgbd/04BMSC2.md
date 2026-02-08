@@ -54,7 +54,6 @@
 - [PARK_POS_LL_STEPPER](#job-park-pos-ll-stepper) - Status
 - [SONDEN_SPANNUNG_LESEN](#job-sonden-spannung-lesen) - Auslesen der Sondenspannung aus Messwerteblock 1
 
-<a id="job-initialisierung"></a>
 ### Initialisierung
 
 Dieser Job wird vom EDIABAS automatisch beim ersten Zugriff auf eine SGBD aufgerufen. Bei weiteren Zugriffen auf dieselbe SGBD wird dieser Job nicht mehr aufgerufen. Ausnahme: nach einem EDIABAS-Fehler wird dieser Auftrag erneut aufgerufen In der INITIALISIERUNG werden alle Funktionen aufgerufen, die nur einmal, vor der Kommunikation mit dem SG notwendig sind, z.B. -  Verbindung zum Interface aufbauen -  Setzen des Wiederholungszaehlers -  Setzen der Kommunikationsparameter 
@@ -67,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | DONE ist ein obligatorisches Ergebnis, das von EDIABAS ausgewertet wird. Es duerfen nur folgende Werte zugewiesen werden: =  0 : Fehler bei der Initialisierung <> 0 : Initialisierung erfolgreich durchgefuehrt Fehlerbehandlung: DONE=0: Fehler 100, INITIALIZATION ERROR Auftrag nicht gefunden in SGBD: Fehler  90, NO INITIALIZATION JOB |
 
-<a id="job-neu-reizen"></a>
 ### NEU_REIZEN
 
 Dieser Job wird immer dann aufgerufen, wenn das SG resettet wurde, die Steuergeraetekommunikation aber weitergefuehrt werden soll ohne dass das EDIC einen Timeout-Fehler meldet. Der Job bewirkt, dass das EDIC die Kommunikation abbricht und wieder neu aufsetzt (wie im JOB Initi- alisierung.
@@ -80,7 +78,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-ende"></a>
 ### Ende
 
 Dieser Job wird vom EDIABAS automatisch bei einem Wechsel der SGBD aufgerufen. Job dient der Beendigung der KWP2000 Kommunikation
@@ -89,7 +86,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -107,7 +103,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-blocklaenge-max"></a>
 ### BLOCKLAENGE_MAX
 
 maximale Blocklaenge
@@ -121,7 +116,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | BLOCKLAENGE_MAX_WERT | int | Blocklaenge fuer Telegramm |
 
-<a id="job-daten-referenz"></a>
 ### DATEN_REFERENZ
 
 Job DATEN-Referenz
@@ -139,7 +133,6 @@ _No arguments._
 | DATEN_REF_DATENSATZ | string | Datensatzkennung |
 | DATEN_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-hw-referenz"></a>
 ### HW_REFERENZ
 
 Job HW-Referenz
@@ -155,7 +148,6 @@ _No arguments._
 | HW_REF_PROJEKT | string | Projektkennzeichnung |
 | HW_REF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-zif"></a>
 ### ZIF
 
 Job Zulieferer Infofeld lesen
@@ -174,7 +166,6 @@ _No arguments._
 | ZIF_BMW_PST | string | BMW Programmstand |
 | ZIF_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-zif-backup"></a>
 ### ZIF_BACKUP
 
 Job ZIF_BACKUP
@@ -193,7 +184,6 @@ _No arguments._
 | ZIF_BACKUP_BMW_PST | string | BMW Programmstand |
 | ZIF_BACKUP_STATUS | int | Dateninhalt bei FF noch nicht beschrieben |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -223,7 +213,6 @@ Auslesen des Anwender-Info-Feldes
 | AIF_PROG_NR | string | Programmstandsnummer |
 | AIF_ANZ_FREI | int | Anzahl noch vorhandener (freier) AIF-Eintraege |
 
-<a id="job-aif-schreiben"></a>
 ### AIF_SCHREIBEN
 
 Schreiben des Anwender-Info-Feldes nach einer Programmierung
@@ -252,7 +241,6 @@ Schreiben des Anwender-Info-Feldes nach einer Programmierung
 | AIF_SCHREIBEN_ANZAHL | int | Anzahl der geschriebenen Bytes = 46 bei AIF_SCHREIBEN_STATUS == 1 < 46 bei AIF_SCHREIBEN_STATUS == 2 |
 | JOB_STATUS | string |  |
 
-<a id="job-start-programming-session"></a>
 ### START_PROGRAMMING_SESSION
 
 Status
@@ -269,7 +257,6 @@ Status
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-start-diagnostic-session"></a>
 ### START_DIAGNOSTIC_SESSION
 
 Status
@@ -286,7 +273,6 @@ Status
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-stop-diagnostic-session"></a>
 ### STOP_DIAGNOSTIC_SESSION
 
 Status
@@ -299,7 +285,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status
@@ -314,7 +299,6 @@ _No arguments._
 | SG_STATUS | int | nichts |
 | SG_STATUS_STRING | binary | nichts |
 
-<a id="job-flash-loeschen"></a>
 ### FLASH_LOESCHEN
 
 Flash  - Zellen loeschen
@@ -334,7 +318,6 @@ Flash  - Zellen loeschen
 | FLASH_LOESCHEN_ANZAHL | long | Anzahl der geloeschten Bytes |
 | FLASH_LOESCHEN_STATUS | int | nichts |
 
-<a id="job-flash-schreiben-adresse"></a>
 ### FLASH_SCHREIBEN_ADRESSE
 
 Vorbereitung fuer Flash schreiben (RequestDownload)
@@ -351,7 +334,6 @@ Vorbereitung fuer Flash schreiben (RequestDownload)
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-flash-schreiben"></a>
 ### FLASH_SCHREIBEN
 
 Beliebige Flash Zellen beschreiben
@@ -371,7 +353,6 @@ Beliebige Flash Zellen beschreiben
 | FLASH_SCHREIBEN_ANZAHL | int | Anzahl der programmierten Bytes |
 | FLASH_SCHREIBEN_STATUS | int | Statusbyte fuer Prog o.k./nicht o.k. |
 
-<a id="job-flash-lesen"></a>
 ### FLASH_LESEN
 
 Job Flash lesen
@@ -390,7 +371,6 @@ Job Flash lesen
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | FLASH_LESEN_INHALT | binary |  |
 
-<a id="job-flash-schreiben-ende"></a>
 ### FLASH_SCHREIBEN_ENDE
 
 Programmiersitzung schliessen
@@ -403,7 +383,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-seed-key"></a>
 ### SEED_KEY
 
 Schutzmechanismus SEED_KEY
@@ -421,7 +400,6 @@ Schutzmechanismus SEED_KEY
 | JOB_STATUS | string |  |
 | STAT_SEED_KEY | binary | Rueckgabewert Status |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Liest Identifikationsdaten aus dem Steuergeraet aus
@@ -450,7 +428,6 @@ _No arguments._
 | ID_SW_NR_BSV | string | Softwarenummer (boot software version) |
 | ID_SW_NR_DSV | string | Softwarenummer (data software version) |
 
-<a id="job-status-codier-checksumme"></a>
 ### STATUS_CODIER_CHECKSUMME
 
 Codier - Checksumme abfragen
@@ -467,7 +444,6 @@ _No arguments._
 | STAT_PROG_SEG | int | Pruefergebnis fuer Betriebssoftware |
 | STAT_DAT_SEG | int | Pruefergebnis fuer Datensegment |
 
-<a id="job-power-down-mode"></a>
 ### POWER_DOWN_MODE
 
 Nachlaufzyklus initiieren nichtfluechtige Daten werden ins EEPROM geschrieben
@@ -480,7 +456,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-uprog-lesen"></a>
 ### UPROG_LESEN
 
 Programmierspannung auslesen
@@ -495,7 +470,6 @@ _No arguments._
 | STATUS_UPROG_WERT | real | Programmierspannung als Info zurueck |
 | STATUS_UPROG_EINH | string | Einheit V |
 
-<a id="job-loesch-dauer-lesen"></a>
 ### LOESCH_DAUER_LESEN
 
 Loeschdauer aus SG auslesen
@@ -509,7 +483,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 | LOESCH_DAUER | int | Loeschdauer in Sekunden |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -522,7 +495,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTroubleCodesByStatus
@@ -544,7 +516,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) KWP2000: $18 ReadDiagnosticTrou
 | F_ORT_NR | int | Index fuer Fehlerort |
 | F_ORT_TEXT | string | Fehlerort als Text table FOrtTexte ORTTEXT |
 
-<a id="job-ecu-reset"></a>
 ### ECU_RESET
 
 PowerOn-Reset per Software
@@ -557,7 +528,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-ecu-reset-status"></a>
 ### ECU_RESET_STATUS
 
 Abfrage der letzten Reset-Ursache
@@ -572,7 +542,6 @@ _No arguments._
 | RESET_STATUS_REG | int | Inhalt des Reset-Status-Registers |
 | RESET_STATUS_RES | int | Reset-Status-2 reserved |
 
-<a id="job-adaption-lesen-setzen"></a>
 ### ADAPTION_LESEN_SETZEN
 
 Status
@@ -594,7 +563,6 @@ Status
 | R_CS3_STATUS | int | Ergebnis CS3 Status bei setzen und lesen |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-io-status-vorgeben"></a>
 ### IO_STATUS_VORGEBEN
 
 Status
@@ -616,7 +584,6 @@ Status
 | R_CS1_IO_STATUS | int | result IO_STATUS Auswahlbyte1 |
 | R_CS2_IO_STATUS | int | result IO_STATUS Auswahlbyte2 |
 
-<a id="job-park-pos-ll-stepper"></a>
 ### PARK_POS_LL_STEPPER
 
 Status
@@ -629,7 +596,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | "OKAY", wenn fehlerfrei |
 
-<a id="job-sonden-spannung-lesen"></a>
 ### SONDEN_SPANNUNG_LESEN
 
 Auslesen der Sondenspannung aus Messwerteblock 1
@@ -651,7 +617,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (43 × 2)
 - [FORTTEXTE](#table-forttexte) (26 × 2)
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 47 rows × 2 columns
@@ -706,7 +671,6 @@ Dimensions: 47 rows × 2 columns
 | 0x46 | Gemel |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 43 rows × 2 columns
@@ -757,7 +721,6 @@ Dimensions: 43 rows × 2 columns
 | ?60? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 26 rows × 2 columns

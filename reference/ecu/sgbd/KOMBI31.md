@@ -30,7 +30,6 @@
 - [STEUERN_SELBSTTEST](#job-steuern-selbsttest) - Anstoss des KOMBI-Selbsttests
 - [STATUS_EMPFANGSPUFFER_LESEN](#job-status-empfangspuffer-lesen) - Auslesen des Empfangspuffers Adresse 0x00 bis 0x0B
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -48,7 +47,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -80,7 +77,6 @@ _No arguments._
 | ID_DATUM_KW | string | Herstelldatum KW |
 | ID_DATUM_JAHR | string | Herstelldatum Jahr |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -98,7 +94,6 @@ _No arguments._
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 | F_HFK | int | Haeufigkeit eines Fehlers |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -111,7 +106,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -124,7 +118,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY |
 
-<a id="job-fg-nr-lesen"></a>
 ### FG_NR_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -138,7 +131,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | FG_NR | string | Fahrgestellnummer |
 
-<a id="job-selbst-test"></a>
 ### SELBST_TEST
 
 Anstoss des KOMBI-Selbsttests
@@ -151,7 +143,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Anstoss des KOMBI-Selbsttests
@@ -164,7 +155,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-status-empfangspuffer-lesen"></a>
 ### STATUS_EMPFANGSPUFFER_LESEN
 
 Auslesen des Empfangspuffers Adresse 0x00 bis 0x0B
@@ -211,7 +201,6 @@ _No arguments._
 
 - [FORTTEXTE](#table-forttexte) (4 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 4 rows × 2 columns

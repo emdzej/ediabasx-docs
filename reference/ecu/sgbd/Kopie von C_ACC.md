@@ -31,7 +31,6 @@
 - [C_C_AUFTRAG](#job-c-c-auftrag) - Codierdaten schreiben und verifizieren
 - [C_CHECKSUM](#job-c-checksum) - Berechnung und Rueckgabe der Checksumme
 
-<a id="job-info"></a>
 ### INFO
 
 Information bzgl. SGBD
@@ -49,7 +48,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch / english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer ACC automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -62,7 +60,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-start-modus"></a>
 ### START_MODUS
 
 Starten eines Diagnose-Modus fuer ACC
@@ -81,7 +78,6 @@ Starten eines Diagnose-Modus fuer ACC
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-stop-modus"></a>
 ### STOP_MODUS
 
 Stop des aktuellen Diagnose-Modus fuer ACC
@@ -95,7 +91,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ident-lesen"></a>
 ### IDENT_LESEN
 
 Ident-Daten fuer ACC Modus: Default
@@ -121,7 +116,6 @@ _No arguments._
 | ID_SERIEN_NR | string | Seriennummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-software-reset"></a>
 ### SOFTWARE_RESET
 
 Ausloesen eines SW_Resets
@@ -135,7 +129,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen des Pruefstempels und Interpretation als FG-Nummer
@@ -150,7 +143,6 @@ _No arguments._
 | FG_NR | string | Fahrgestellnummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Beschreiben des Pruefstempels mit der FG-Nummer
@@ -168,7 +160,6 @@ Beschreiben des Pruefstempels mit der FG-Nummer
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -186,7 +177,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -203,7 +193,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Rueckgabe der Checksumme
@@ -230,7 +219,6 @@ Berechnung und Rueckgabe der Checksumme
 - [JOBRESULT](#table-jobresult) (34 × 2)
 - [LIEFERANTEN](#table-lieferanten) (33 × 2)
 
-<a id="table-diagmodus"></a>
 ### DIAGMODUS
 
 Dimensions: 5 rows × 3 columns
@@ -243,7 +231,6 @@ Dimensions: 5 rows × 3 columns
 | 0x86 | E | Entwicklung |
 | 0xXY | -- | unbekannter Diagnose-Modus |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 34 rows × 2 columns
@@ -285,7 +272,6 @@ Dimensions: 34 rows × 2 columns
 | 0xFF | ERROR_ECU_RESERVED_BY_DOCUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 33 rows × 2 columns

@@ -33,7 +33,6 @@
 - [C_CHECKSUM](#job-c-checksum) - Berechnung und Speicherung der Checksumme
 - [C_ZCS_LESEN](#job-c-zcs-lesen) - Anwenderinfofeld Wortadr. 34-3D auslesen
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -52,7 +51,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -65,7 +63,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identifikation
@@ -85,7 +82,6 @@ _No arguments._
 | ID_DATUM_JAHR | string | Herstelldatum Jahr |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -98,7 +94,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-sg-reset"></a>
 ### SG_RESET
 
 Beenden der Diagnose
@@ -111,7 +106,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Auslesen der Fahrgestellnummer
@@ -125,7 +119,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | FG_NR | string | Fahrgestellnummer |
 
-<a id="job-c-fg-lesen-2"></a>
 ### C_FG_LESEN_2
 
 Auslesen der Fahrgestellnummer
@@ -139,7 +132,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | FG_NR | string | zweite Fahrgestellnummer aus Kombi nur CI 27 |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Schreiben der 7-stelligen Fahrgestellnummer
@@ -156,7 +148,6 @@ Schreiben der 7-stelligen Fahrgestellnummer
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-fg-auftrag-2"></a>
 ### C_FG_AUFTRAG_2
 
 Schreiben der 7-stelligen Fahrgestellnummer
@@ -173,7 +164,6 @@ Schreiben der 7-stelligen Fahrgestellnummer
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -190,7 +180,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten schreiben und verifizieren
@@ -208,7 +197,6 @@ Codierdaten schreiben und verifizieren
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-checksum"></a>
 ### C_CHECKSUM
 
 Berechnung und Speicherung der Checksumme
@@ -226,7 +214,6 @@ Berechnung und Speicherung der Checksumme
 | CHECKSUM | binary | berechnete Checksumme |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-zcs-lesen"></a>
 ### C_ZCS_LESEN
 
 Anwenderinfofeld Wortadr. 34-3D auslesen
@@ -250,7 +237,6 @@ _No arguments._
 - [JOBRESULT](#table-jobresult) (11 × 2)
 - [LIEFERANTEN](#table-lieferanten) (29 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 11 rows × 2 columns
@@ -269,7 +255,6 @@ Dimensions: 11 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 29 rows × 2 columns

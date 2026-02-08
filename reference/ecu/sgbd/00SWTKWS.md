@@ -28,7 +28,6 @@
 - [FREISCHALTCODE_SCHREIBEN](#job-freischaltcode-schreiben) - Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLocalIdentifier $1F SweepingTechnologies $F1 SWTStoreFSC
 - [FREISCHALTCODE_PRUEFEN](#job-freischaltcode-pruefen) - Freischaltcode nach dem Einspielen prüfen KWP2000: $31 StartRoutineByLocalIdentifier $1F SweepingTechnologies $EE SWTCheckFSC
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -47,7 +46,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -60,7 +58,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-swt-parameter-lesen"></a>
 ### SWT_PARAMETER_LESEN
 
 Gibt die SG-spezifischen SWT-Parameter zurück
@@ -74,7 +71,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY |
 | SG_ADRESSE | int | Steuergeräteadresse |
 
-<a id="job-swt-parameter-setzen"></a>
 ### SWT_PARAMETER_SETZEN
 
 Setzt die SG-spezifischen SWT-Parameter
@@ -91,7 +87,6 @@ Setzt die SG-spezifischen SWT-Parameter
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Freischaltstatus einer Software lesen KWP2000: $31 StartRoutineByLocalIdentifier $1F SweepingTechnologies $F6 SWTGetStatus
@@ -119,7 +114,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 | _DATEN | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-laenge-schreiben"></a>
 ### FREISCHALTCODE_LAENGE_SCHREIBEN
 
 Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLocalIdentifier $1F SweepingTechnologies $F2 SWTSetFSCLength
@@ -142,7 +136,6 @@ Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLo
 | _TEL_AUFTRAG_LAENGE | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_LAENGE | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-schreiben"></a>
 ### FREISCHALTCODE_SCHREIBEN
 
 Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLocalIdentifier $1F SweepingTechnologies $F1 SWTStoreFSC
@@ -163,7 +156,6 @@ Freischaltcode einer Software in dem SG einbrechen KWP2000: $31 StartRoutineByLo
 | _TEL_AUFTRAG_FSC | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_FSC | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-pruefen"></a>
 ### FREISCHALTCODE_PRUEFEN
 
 Freischaltcode nach dem Einspielen prüfen KWP2000: $31 StartRoutineByLocalIdentifier $1F SweepingTechnologies $EE SWTCheckFSC
@@ -192,7 +184,6 @@ Freischaltcode nach dem Einspielen prüfen KWP2000: $31 StartRoutineByLocalIdent
 - [SWTSTATUSTAB](#table-swtstatustab) (6 × 2)
 - [SWTFEHLER_TAB](#table-swtfehler-tab) (54 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -205,7 +196,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -308,7 +298,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-swtstatustab"></a>
 ### SWTSTATUSTAB
 
 Dimensions: 6 rows × 2 columns
@@ -322,7 +311,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | STORNIERT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUS_RESPONSE |
 
-<a id="table-swtfehler-tab"></a>
 ### SWTFEHLER_TAB
 
 Dimensions: 54 rows × 2 columns

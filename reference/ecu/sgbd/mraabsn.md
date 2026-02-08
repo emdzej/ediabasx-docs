@@ -43,7 +43,6 @@
 - [STEUERN_REGELVENTIL_AH](#job-steuern-regelventil-ah) - Auslassventil hinten ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Ergebnis siehe Job STATUS_ANSTEUERUNG
 - [DIAGNOSE_AUFRECHT](#job-diagnose-aufrecht) - Diagnose Mode des Steuergerätes aufrecht erhalten TesterPresent (0x3E)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -62,7 +61,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -75,7 +73,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-start-kommunikation"></a>
 ### START_KOMMUNIKATION
 
 _No arguments._
@@ -87,7 +84,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-stop-kommunikation"></a>
 ### STOP_KOMMUNIKATION
 
 _No arguments._
@@ -99,7 +95,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-reinit-kline-icom"></a>
 ### STEUERN_REINIT_KLINE_ICOM
 
 KLine-Kommunikation abbauen
@@ -113,7 +108,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher Löschen
@@ -127,7 +121,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler)
@@ -154,7 +147,6 @@ _No arguments._
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hex Code |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-ident"></a>
 ### IDENT
 
 _No arguments._
@@ -177,7 +169,6 @@ _No arguments._
 | ID_BUS_TYPE | string | CAN Bus Typ |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-sg-identifikation-ecu-lesen"></a>
 ### SG_IDENTIFIKATION_ECU_LESEN
 
 _No arguments._
@@ -190,7 +181,6 @@ _No arguments._
 | ID_SOFTWARE_NUMMER | string | Steuergeräte Software Revision |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-radgeschwindigkeit"></a>
 ### STATUS_RADGESCHWINDIGKEIT
 
 _No arguments._
@@ -206,7 +196,6 @@ _No arguments._
 | STAT_RAD_GESCHW_HINTEN_EINH | string | Einheit RadGeschwindigkeit hinten in km/h |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ubatt"></a>
 ### STATUS_UBATT
 
 Batteriespannung auslesen
@@ -222,7 +211,6 @@ _No arguments._
 | STAT_EINH | string | Einheit Volt |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-digital"></a>
 ### STATUS_DIGITAL
 
 _No arguments._
@@ -249,7 +237,6 @@ _No arguments._
 | STEUERSIGNAL_AUSLASSVENTIL_HINTEN | string | ABS-Auslassventil hinten Steuersignal: Ein, Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-statictest-download"></a>
 ### STEUERN_STATICTEST_DOWNLOAD
 
 Download Modul Static Test zum Steuergerät senden
@@ -265,7 +252,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-dlm14311-download"></a>
 ### STEUERN_DLM14311_DOWNLOAD
 
 Download Modul DLM14311 zum Steuergerät senden
@@ -281,7 +267,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-static-test-start"></a>
 ### STEUERN_STATIC_TEST_START
 
 Statischen Test starten vorher Job STEUERN_STATICTEST_DOWNLOAD notwendig Dauer ca. 6,5 Sekunden Ergebnis siehe Job STATUS_ANSTEUERUNG
@@ -297,7 +282,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ansteuerung"></a>
 ### STATUS_ANSTEUERUNG
 
 Anforderung der Ergebnisse der Ansteuerung 0x33 RequestRoutineResultsbyLocalIdentifier
@@ -313,7 +297,6 @@ _No arguments._
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-pumpenmotor"></a>
 ### STEUERN_PUMPENMOTOR
 
 Pumpenmotor eine definierte Zeit ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Ergebnis siehe Job STATUS_ANSTEUERUNG
@@ -333,7 +316,6 @@ Pumpenmotor eine definierte Zeit ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD 
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-warnlampe"></a>
 ### STEUERN_WARNLAMPE
 
 Warnlampe eine definierte Zeit ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Ergebnis siehe Job STATUS_ANSTEUERUNG
@@ -353,7 +335,6 @@ Warnlampe eine definierte Zeit ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD no
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-regelventil-ev"></a>
 ### STEUERN_REGELVENTIL_EV
 
 Einlassventil vorn ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Ergebnis siehe Job STATUS_ANSTEUERUNG
@@ -373,7 +354,6 @@ Einlassventil vorn ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Erge
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-regelventil-av"></a>
 ### STEUERN_REGELVENTIL_AV
 
 Auslassventil vorn ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Ergebnis siehe Job STATUS_ANSTEUERUNG
@@ -393,7 +373,6 @@ Auslassventil vorn ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Erge
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-regelventil-eh"></a>
 ### STEUERN_REGELVENTIL_EH
 
 Einlassventil hinten ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Ergebnis siehe Job STATUS_ANSTEUERUNG
@@ -413,7 +392,6 @@ Einlassventil hinten ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Er
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-regelventil-ah"></a>
 ### STEUERN_REGELVENTIL_AH
 
 Auslassventil hinten ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Ergebnis siehe Job STATUS_ANSTEUERUNG
@@ -433,7 +411,6 @@ Auslassventil hinten ansteuern vorher Job STEUERN_DLM14311_DOWNLOAD notwendig Er
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnose Mode des Steuergerätes aufrecht erhalten TesterPresent (0x3E)
@@ -461,7 +438,6 @@ _No arguments._
 - [RESPONSECODE](#table-responsecode) (7 × 2)
 - [LIEFERANTEN](#table-lieferanten) (81 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -482,7 +458,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | FEHLER: MAXIMALE ANZAHL DER VERSUCHE ERREICHT |
 | 0xFF | FEHLER: UNBEKANNT |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 3 rows × 2 columns
@@ -493,7 +468,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | EIN |
 | 0xFF | UNBEKANNT |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 46 rows × 3 columns
@@ -547,7 +521,6 @@ Dimensions: 46 rows × 3 columns
 | 0x4058F2 | 58F2 | Über-/ Unterspannungsfehler im Fahrbetrieb |
 | 0xFFFFFF | FFFF | unbekannter Fehler |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 9 rows × 2 columns
@@ -564,7 +537,6 @@ Dimensions: 9 rows × 2 columns
 | 0x21 | GESPEICHERT |
 | 0x23 | AKTUELL VORHANDEN |
 
-<a id="table-fehlercodetest"></a>
 ### FEHLERCODETEST
 
 Dimensions: 3 rows × 2 columns
@@ -575,7 +547,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | TEST UNVOLLSTAENDIG |
 | 0xFF | UNBEKANNT |
 
-<a id="table-fehlerstatus"></a>
 ### FEHLERSTATUS
 
 Dimensions: 4 rows × 2 columns
@@ -587,7 +558,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | AKTUELL |
 | 0xFF | STATUS: UNBEKANNT |
 
-<a id="table-warnlampe"></a>
 ### WARNLAMPE
 
 Dimensions: 3 rows × 2 columns
@@ -598,7 +568,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Ein |
 | 0xFF | UNBEKANNT |
 
-<a id="table-responsecode"></a>
 ### RESPONSECODE
 
 Dimensions: 7 rows × 2 columns
@@ -613,7 +582,6 @@ Dimensions: 7 rows × 2 columns
 | 0x78 | 0x78: ANFORDERUNG NOCH NICHT BEENDET |
 | 0xFF | UNBEKANNT |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 81 rows × 2 columns

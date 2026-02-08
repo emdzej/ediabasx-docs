@@ -37,7 +37,6 @@
 - [FS_LESEN](#job-fs-lesen) - Fehlerspeicher lesen
 - [FS_LOESCHEN](#job-fs-loeschen) - Fehlerspeicher loeschen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -50,7 +49,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +67,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Fahrersitz (E46) identifizieren KWP2000: $A5 unpackDS2ServiceRequest Id   Modus  : all
@@ -94,7 +91,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -108,7 +104,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sg-status-lesen"></a>
 ### SG_STATUS_LESEN
 
 auslesen der Systemstati aus dem Steuergeraet
@@ -129,7 +124,6 @@ _No arguments._
 | KLEMME_15_AKTIV | int |  |
 | KLEMME_R_AKTIV | int |  |
 
-<a id="job-fernbedienung-positionen-lesen"></a>
 ### FERNBEDIENUNG_POSITIONEN_LESEN
 
 4 zur Fernbedienung zugeordnete Positionen aus EEPROM auslesen
@@ -158,7 +152,6 @@ _No arguments._
 | FB_POS_3_LEHNENNEIGUNG_WERT | long | gespeicherte Lehnenneigungsposition 3 |
 | FB_POS_4_LEHNENNEIGUNG_WERT | long | gespeicherte Lehnenneigungsposition 4 |
 
-<a id="job-positionen-lesen"></a>
 ### POSITIONEN_LESEN
 
 3 Speicher- und aktuelle Position aus EEPROM auslesen
@@ -187,7 +180,6 @@ _No arguments._
 | POS_3_LEHNENNEIGUNG_WERT | long | gespeicherte Lehnenneigungsposition 3 |
 | POS_AKTUELL_LEHNENNEIGUNG_WERT | long | gespeicherte aktuelle Lehnenneigungsposition |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -208,7 +200,6 @@ Lesen des internen Speichers
 | DATENFELD | binary | Ergebnisfeld mit 1 bis 16 Bytes |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Beschreiben des internen Speichers
@@ -227,7 +218,6 @@ Beschreiben des internen Speichers
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Ansteuern eines digitalen Einganges
@@ -244,7 +234,6 @@ Ansteuern eines digitalen Einganges
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Daten der Individualisierung lesen
@@ -267,7 +256,6 @@ _No arguments._
 | ARV | int | Bit0: Abrufvariante 1: Sitz verf„hrt erst nach ”ffnen der T�r 0: sofort nach Empfang des FB-Telegramms |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-codierdaten-schreiben"></a>
 ### CODIERDATEN_SCHREIBEN
 
 Daten der Individualisierung schreiben
@@ -285,7 +273,6 @@ Daten der Individualisierung schreiben
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-variante-lesen"></a>
 ### VARIANTE_LESEN
 
 SG-Variante aus Zelle 0x0124 auslesen
@@ -300,7 +287,6 @@ _No arguments._
 | SG_VARIANTE | string | Variante im Klartext |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-status-1-lesen"></a>
 ### STATUS_1_LESEN
 
 Stati des SM46_C
@@ -346,7 +332,6 @@ _No arguments._
 | STAT_SCHALTER_KOPFSTUETZE | int | 0=aus,1=auf,2=ab |
 | STAT_MEMORYSCHALTER | int | bitcodiert, Werte zwischen 0 und 15! bit 0=MEM-Taste bit 1=Taste 1 bit 2=Taste 2 bit 3=Taste 3 |
 
-<a id="job-status-2-lesen"></a>
 ### STATUS_2_LESEN
 
 Stati des SM46
@@ -367,7 +352,6 @@ _No arguments._
 | STAT_SPANNUNG_KL30_WERT | real | Batterie-Spannung am SG |
 | STAT_SPANNUNGEN_EINH | string | Einheit der Spannung |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -390,7 +374,6 @@ _No arguments._
 | F_HEX_CODE | binary | Hexdaten des Fehlers (2 Bytes) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -418,7 +401,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (14 × 2)
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 23 rows × 2 columns
@@ -449,7 +431,6 @@ Dimensions: 23 rows × 2 columns
 | 0x15 | Sitzbedienschalter, Kurzschluss nach Masse |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-farttextesm"></a>
 ### FARTTEXTESM
 
 Dimensions: 3 rows × 2 columns
@@ -460,7 +441,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | statischer Fehler |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -469,7 +449,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 20 rows × 4 columns
@@ -497,7 +476,6 @@ Dimensions: 20 rows × 4 columns
 | EH_ZUR | 0x04 | 0x02 | 0x00 |
 | XXX | Y | Z | Z |
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -507,7 +485,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -610,7 +587,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -685,7 +661,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -707,7 +682,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns

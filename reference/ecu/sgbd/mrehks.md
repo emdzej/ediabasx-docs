@@ -64,7 +64,6 @@
 - [STEUERN_RELAIS](#job-steuern-relais) - EHKS Relais ansteuern
 - [STEUERN_SELBSTTEST](#job-steuern-selbsttest) - Selbsttest EHKS starten
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -83,7 +82,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -96,7 +94,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Modus  : Default
@@ -112,7 +109,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-teilenummer"></a>
 ### STATUS_TEILENUMMER
 
 Teilenummer lesen Byte 4-7, BCD
@@ -127,7 +123,6 @@ _No arguments._
 | STAT_WERT | string | BMW-Teilenummer |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-hardwarestand"></a>
 ### STATUS_HARDWARESTAND
 
 Hardwarestand lesen Byte 8, BCD
@@ -143,7 +138,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Hardwarestand Text |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-codierindex"></a>
 ### STATUS_CODIERINDEX
 
 Codierindex lesen Byte 9
@@ -158,7 +152,6 @@ _No arguments._
 | STAT_WERT | string | Wert Codierindex als Hex |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-diagnoseindex"></a>
 ### STATUS_DIAGNOSEINDEX
 
 Diagnoseindex lesen Byte 10
@@ -173,7 +166,6 @@ _No arguments._
 | STAT_WERT | string | Wert Diagnoseindex |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-busindex"></a>
 ### STATUS_BUSINDEX
 
 BusIndex lesen Byte 11
@@ -188,7 +180,6 @@ _No arguments._
 | STAT_WERT | string | Wert Busindex |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-herstellungskalenderwoche"></a>
 ### STATUS_HERSTELLUNGSKALENDERWOCHE
 
 Kalenderwoche lesen Byte 12
@@ -203,7 +194,6 @@ _No arguments._
 | STAT_WERT | string | Wert Kalenderwoche |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-herstellungskalenderjahr"></a>
 ### STATUS_HERSTELLUNGSKALENDERJAHR
 
 Kalenderjahr lesen Byte 13
@@ -218,7 +208,6 @@ _No arguments._
 | STAT_WERT | string | Wert Kalenderjahr |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-zulieferer"></a>
 ### STATUS_ZULIEFERER
 
 Zulieferer lesen Byte 14
@@ -234,7 +223,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Text Zulieferer |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-status-softwarestand"></a>
 ### STATUS_SOFTWARESTAND
 
 Softwarestand lesen Byte 15
@@ -250,7 +238,6 @@ _No arguments._
 | STAT_WERT_TEXT | string | Softwarestand Text |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS TEXT |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Rücksetzen des Steuergerätes in den normalen Betrieb
@@ -264,7 +251,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-seriennummer"></a>
 ### STATUS_SERIENNUMMER
 
 Seriennummer lesen
@@ -279,7 +265,6 @@ _No arguments._
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 | STAT_WERT | int | Seriennummer |
 
-<a id="job-status-dauer-motorlauf"></a>
 ### STATUS_DAUER_MOTORLAUF
 
 maximale Einschaltdauer Motor Byte 5-6 lesen
@@ -295,7 +280,6 @@ _No arguments._
 | DAUER_MOTORLAUF_EINH | string |  |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ehks-taster-entprellzeit"></a>
 ### STATUS_EHKS_TASTER_ENTPRELLZEIT
 
 Entprellzeit EHKS-Taster Byte 7 lesen
@@ -311,7 +295,6 @@ _No arguments._
 | EHKS_TASTER_ENTPRELLZEIT_EINH | string | Wert in Millisekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-endpositionsschalter-entprellzeit"></a>
 ### STATUS_ENDPOSITIONSSCHALTER_ENTPRELLZEIT
 
 Entprellzeit Endpositionsschalter Byte 8 lesen
@@ -327,7 +310,6 @@ _No arguments._
 | ENDPOSITIONSSCHALTER_ENTPRELLZEIT_EINH | string | Wert in Millisekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-seitenstuetze-entprellzeit"></a>
 ### STATUS_SEITENSTUETZE_ENTPRELLZEIT
 
 Entprellzeit Seitenstütze Byte 9
@@ -343,7 +325,6 @@ _No arguments._
 | SEITENSTUETZE_ENTPRELLZEIT_EINH | string | Wert in Millisekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-bremslicht-entprellzeit"></a>
 ### STATUS_BREMSLICHT_ENTPRELLZEIT
 
 Entprellzeit Bremslicht Byte 10
@@ -359,7 +340,6 @@ _No arguments._
 | BREMSLICHT_ENTRELLZEIT_EINH | string | Wert in Millisekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-leerlauf-signal-entrellzeit"></a>
 ### STATUS_LEERLAUF_SIGNAL_ENTRELLZEIT
 
 Entprellzeit Leerlaufsignal Byte 11
@@ -375,7 +355,6 @@ _No arguments._
 | LEERLAUF_ENTPRELLZEIT_EINH | string | Wert in Millisekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-klemme15-entrpellzeit"></a>
 ### STATUS_KLEMME15_ENTRPELLZEIT
 
 Klemme 15 Entprellzeit Byte 12
@@ -391,7 +370,6 @@ _No arguments._
 | KLEMME15_ENTPRELLZEIT_EINH | string | Wert in Millisekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-klemme30-entprellzeit"></a>
 ### STATUS_KLEMME30_ENTPRELLZEIT
 
 Klemme 30 Entprellzeit Byte 13
@@ -407,7 +385,6 @@ _No arguments._
 | KLEMME30_ENTPRELLZEIT_EINH | string | Wert in Millisekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-betaetigung-min-pause"></a>
 ### STATUS_BETAETIGUNG_MIN_PAUSE
 
 Minimale Pause zwischen 2 Aktivierungen Byte 16-17
@@ -423,7 +400,6 @@ _No arguments._
 | PAUSE_AKTIVIERUNG_EINH | string | Wert in Sekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-systemueberlast-dauer"></a>
 ### STATUS_SYSTEMUEBERLAST_DAUER
 
 Dauer der Systemüberlast lesen Byte 18-19
@@ -439,7 +415,6 @@ _No arguments._
 | DAUER_SYSTEMUEBERLAST_EINH | string | Wert in Sekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ueberlast-min-pause"></a>
 ### STATUS_UEBERLAST_MIN_PAUSE
 
 Minimale Pause nach Systemüberlast Byte 20-21
@@ -455,7 +430,6 @@ _No arguments._
 | PAUSE_UEBERLAST_EINH | string | Wert in Sekunden |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-reset-durch-kl15-ein"></a>
 ### STATUS_RESET_DURCH_KL15_EIN
 
 System Reset wenn die Zündung eingeschaltet wird lesen (Ja/Nein) Byte 22
@@ -471,7 +445,6 @@ _No arguments._
 | RESET_DURCH_KL15_EIN_TEXT | string | Werte: EIN/AUS |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-led-frequenz"></a>
 ### STATUS_LED_FREQUENZ
 
 Lesen der Led Frequenz bei Betrieb und Überlast (4 oder 2 Hz) Byte 23
@@ -487,7 +460,6 @@ _No arguments._
 | LED_FREQUENZ_TEXT | string |  |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-klemme30"></a>
 ### STATUS_KLEMME30
 
 Batteriespannung lesen Byte 4-5
@@ -503,7 +475,6 @@ _No arguments._
 | STAT_KL30_EINH | string | Einheit Volt |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-klemme15"></a>
 ### STATUS_KLEMME15
 
 Spannung Klemme 15 (Zündung) lesen Byte 8-9
@@ -519,7 +490,6 @@ _No arguments._
 | STAT_KL15_EINH | string | Einheit Volt |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-schalter-endposition"></a>
 ### STATUS_SCHALTER_ENDPOSITION
 
 Status Schalter Endposition lesen Byte 16
@@ -535,7 +505,6 @@ _No arguments._
 | STAT_ENDPOSITION_SCHALTER_TEXT | string | Ein/Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-ehks-taster"></a>
 ### STATUS_EHKS_TASTER
 
 Status EHKS-Taster lesen Byte 17
@@ -551,7 +520,6 @@ _No arguments._
 | STAT_EHKS_TASTER_TEXT | string | Ein/Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-bremslichtsignal"></a>
 ### STATUS_BREMSLICHTSIGNAL
 
 Status Bremslichtsignal lesen Byte 18
@@ -567,7 +535,6 @@ _No arguments._
 | STAT_BREMSLICHTSIGNAL_TEXT | string | Ein/Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-geschwindigkeit"></a>
 ### STATUS_GESCHWINDIGKEIT
 
 Geschwindigkeit lesen Byte 19
@@ -583,7 +550,6 @@ _No arguments._
 | STAT_GESCHWINDIGKEIT_EINH | string |  |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-seitenstuetzschalter"></a>
 ### STATUS_SEITENSTUETZSCHALTER
 
 Schalter Seitenstütze lesen Byte 20
@@ -599,7 +565,6 @@ _No arguments._
 | STAT_SEITENSTUETZENSCHALTER_TEXT | string | Ein/Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-leerlauf-signal"></a>
 ### STATUS_LEERLAUF_SIGNAL
 
 Leerlaufsignal lesen Byte 21
@@ -615,7 +580,6 @@ _No arguments._
 | STAT_LEERLAUFSIGNAL_TEXT | string | Ein/Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-warnlampe"></a>
 ### STATUS_WARNLAMPE
 
 Status EHKS-Kontrollleuchte lesen Byte 22
@@ -631,7 +595,6 @@ _No arguments._
 | STAT_WARNLAMPE_TEXT | string | Ein/Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-status-relais"></a>
 ### STATUS_RELAIS
 
 Status EHKS-Relais lesen Byte 23
@@ -647,7 +610,6 @@ _No arguments._
 | STAT_RELAIS_TEXT | string | Ein/Aus |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-anzahl"></a>
 ### FS_ANZAHL
 
 Fehlerspeicher lesen (alle Fehler) Security Access Level 1 notwendig
@@ -662,7 +624,6 @@ _No arguments._
 | F_ANZAHL | int | Anzahl der Fehler im Speicher |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler)
@@ -690,7 +651,6 @@ _No arguments._
 | _TEL_ANTWORT2 | binary | Hex Antwort vom SG |
 | _TEL_ANTWORT3 | binary | Hex Antwort vom SG |
 
-<a id="job-fs-lesen-feld"></a>
 ### FS_LESEN_FELD
 
 Fehlerspeicher lesen (ein Fehlerfeld)
@@ -720,7 +680,6 @@ Fehlerspeicher lesen (ein Fehlerfeld)
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hex Code |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher Löschen
@@ -734,7 +693,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-led"></a>
 ### STEUERN_LED
 
 Led ansteuern
@@ -753,7 +711,6 @@ Led ansteuern
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-relais"></a>
 ### STEUERN_RELAIS
 
 EHKS Relais ansteuern
@@ -772,7 +729,6 @@ EHKS Relais ansteuern
 | _TEL_ANFRAGE | binary | Hex Anfrage zum SG |
 | _TEL_ANTWORT | binary | Hex Antwort vom SG |
 
-<a id="job-steuern-selbsttest"></a>
 ### STEUERN_SELBSTTEST
 
 Selbsttest EHKS starten
@@ -798,7 +754,6 @@ _No arguments._
 - [FEHLERSTATUS](#table-fehlerstatus) (5 × 2)
 - [LIEFERANTEN](#table-lieferanten) (81 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 11 rows × 2 columns
@@ -817,7 +772,6 @@ Dimensions: 11 rows × 2 columns
 | 0xFF | FEHLER: FUNKTION NICHT DEFINIERT |
 | 0x00 | FEHLER: UNBEKANNT |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 12 rows × 2 columns
@@ -837,7 +791,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0B | Unterspannung |
 | 0xFF | UNBEKANNT |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -858,7 +811,6 @@ Dimensions: 13 rows × 2 columns
 | 0x22 | Fehler sporadisch |
 | 0x23 | Fehler vorhanden und sporadisch |
 
-<a id="table-fehlerstatus"></a>
 ### FEHLERSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -871,7 +823,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Fehler vorhanden und sporadisch |
 | 0xFF | Status: unbekannt |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 81 rows × 2 columns

@@ -22,7 +22,6 @@
 - [INFO](#job-info) - Information SGBD
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung und Kommunikationsparameter
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -41,7 +40,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -60,7 +58,6 @@ _No arguments._
 
 - [SAECODETEXTE](#table-saecodetexte) (4 × 3)
 
-<a id="table-saecodetexte"></a>
 ### SAECODETEXTE
 
 Dimensions: 4 rows × 3 columns

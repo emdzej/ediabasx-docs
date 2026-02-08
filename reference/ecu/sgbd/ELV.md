@@ -34,7 +34,6 @@
 - [SLEEP_MODE](#job-sleep-mode) - SG in Sleep-Mode versetzen
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -53,7 +52,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung / Kommunikationsparameter fuer ELV automatischer Aufruf beim ersten Zugriff auf die SGBD
@@ -66,7 +64,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten der Elektrischen Lenkungsverriegelung ELV auslesen
@@ -92,7 +89,6 @@ _No arguments._
 | ID_SERIEN_NR | string | Seriennummer |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose Sonderfall: Loeschdatum (KW/Jahr) integriert !
@@ -116,7 +112,6 @@ _No arguments._
 | F_LOESCHDATUM_JAHR | int | Loeschdatum des Fehlerspeichers (Jahr) |
 | _TEL_ANTWORT | binary | Hex-Antwort(en) von SG |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen Sonderfall: Loeschdatum (KW/Jahr) integriert !
@@ -130,7 +125,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen Info-Speicher ist im Aufbau analog zum Fehlerspeicher Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -152,7 +146,6 @@ _No arguments._
 | F_ART1_TEXT | string | 1. (einzige) Infoart als Text table IArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers der ELV Als Argumente werden die Anzahl und die Adresse der Datenbytes uebergeben.
@@ -171,7 +164,6 @@ Lesen des internen Speichers der ELV Als Argumente werden die Anzahl und die Adr
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Status der ELV auslesen
@@ -246,7 +238,6 @@ _No arguments._
 | STAT_ALOG_I_EINH | string | Einheit der gemessenen A/D-Werte der Hallsensorstroeme Analog-Werte |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-stat-vorg-gesch"></a>
 ### STEUERN_STAT_VORG_GESCH
 
 Status auf geschaerft setzen
@@ -260,7 +251,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-stat-vorg-ni-gesch"></a>
 ### STEUERN_STAT_VORG_NI_GESCH
 
 Status auf nicht geschaerft setzen
@@ -274,7 +264,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Ansteuern der ELV ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! Aufruf 'XTRACT [-F] ELV.prg'
@@ -294,7 +283,6 @@ Ansteuern der ELV ! erlaubte Namen des Arguments 'ORT' ueber Tool XTRACT.exe ! A
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-codierdaten-lesen"></a>
 ### CODIERDATEN_LESEN
 
 Auslesen der Codierdaten der ELV
@@ -312,7 +300,6 @@ _No arguments._
 | CODE_CODIERUNG | string | Codierung Codierdaten Bereich: AAh = EEPROM, <>AAh = ROM |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -326,7 +313,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -357,7 +343,6 @@ _No arguments._
 - [KBUSTEXTE](#table-kbustexte) (8 × 2)
 - [BITS](#table-bits) (48 × 4)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -373,7 +358,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 33 rows × 2 columns
@@ -414,7 +398,6 @@ Dimensions: 33 rows × 2 columns
 | 0x32 | Pioneer |
 | 0xXY | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -457,7 +440,6 @@ Dimensions: 35 rows × 2 columns
 | 0x48 | Geschwindigkeitssignal unplausibel |
 | 0xFF | unbekannter Fehler |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -468,7 +450,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | aktiver Fehler               |
 | 0xFF | unbekannte Fehlerart         |
 
-<a id="table-codetexte"></a>
 ### CODETEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -480,7 +461,6 @@ Dimensions: 4 rows × 2 columns
 | 0x10 | ROM            |
 | 0xAA | EEPROM         |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -496,7 +476,6 @@ Dimensions: 8 rows × 2 columns
 | 0x88 | KLR- oder KL15- Abfall nicht ueber K-Bus bestaetigt |
 | 0xXY | unbekannter Info-Ort |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -507,7 +486,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | aktiver Fehler               |
 | 0xFF | unbekannte Fehlerart         |
 
-<a id="table-sttexte-ebene0"></a>
 ### STTEXTE_EBENE0
 
 Dimensions: 13 rows × 2 columns
@@ -528,7 +506,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | VERRIEGELN_FERTIG |
 | 0xFF | unbekannter Zustand |
 
-<a id="table-sttexte-ebene1"></a>
 ### STTEXTE_EBENE1
 
 Dimensions: 33 rows × 2 columns
@@ -569,7 +546,6 @@ Dimensions: 33 rows × 2 columns
 | 0xB0 | - |
 | 0xFF | unbekannter Zustand |
 
-<a id="table-halltexte"></a>
 ### HALLTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -581,7 +557,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Stoerung                        |
 | 0xXY | unbekannter Hallsensor-Status   |
 
-<a id="table-kbustexte"></a>
 ### KBUSTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -597,7 +572,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | nein                                    |
 | 0xXY | unbekannter K-Bus Status                |
 
-<a id="table-bits"></a>
 ### BITS
 
 Dimensions: 48 rows × 4 columns

@@ -25,7 +25,6 @@
 - [CORRECT_T2_DATA](#job-correct-t2-data) - Korrigieren der Abgleichdaten des Hintergrundtuners bei einigen Seriennummern KWP2000: $21 readDataByLocalIdentifier $FB recordLocalIdentifier Modus  : Default
 - [CHECK_T2_DATA](#job-check-t2-data) - überprüfen der Abgleichdaten des Hintergrundtuners KWP2000: $21 readDataByLocalIdentifier $FB recordLocalIdentifier Modus  : Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -38,7 +37,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -57,7 +55,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten KWP2000: $1A ReadECUIdentification Modus  : Default
@@ -87,7 +84,6 @@ _No arguments._
 | ID_SG_ADR | long | Steuergeraeteadresse |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-correct-t2-data"></a>
 ### CORRECT_T2_DATA
 
 Korrigieren der Abgleichdaten des Hintergrundtuners bei einigen Seriennummern KWP2000: $21 readDataByLocalIdentifier $FB recordLocalIdentifier Modus  : Default
@@ -103,7 +99,6 @@ _No arguments._
 | JOB_STATUS | string | "OKAY, data changed" wenn fehlerfrei "OKAY, no change" bei keiner Änderung "OKAY, not in DB" wenn Seriennummer nicht in Datenbank ist |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-check-t2-data"></a>
 ### CHECK_T2_DATA
 
 überprüfen der Abgleichdaten des Hintergrundtuners KWP2000: $21 readDataByLocalIdentifier $FB recordLocalIdentifier Modus  : Default
@@ -131,7 +126,6 @@ _No arguments._
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 - [TTUNER2DATA](#table-ttuner2data) (662 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -141,7 +135,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -244,7 +237,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -319,7 +311,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -341,7 +332,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler wuerde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns
@@ -365,7 +355,6 @@ Dimensions: 16 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-ttuner2data"></a>
 ### TTUNER2DATA
 
 Dimensions: 662 rows × 2 columns

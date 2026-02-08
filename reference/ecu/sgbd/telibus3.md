@@ -87,7 +87,6 @@
 - [IMEI_LESEN](#job-imei-lesen) - Read IMEI
 - [ICC_ID_LESEN](#job-icc-id-lesen) - Read ICC ID
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -100,7 +99,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -119,7 +117,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -143,7 +140,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -164,7 +160,6 @@ _No arguments._
 | F_ART1_TEXT | string | table FArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -177,7 +172,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -195,7 +189,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -214,7 +207,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen Low-Konzept nach Lastenheft Codierung/Diagnose
@@ -235,7 +227,6 @@ _No arguments._
 | F_ART1_TEXT | string | table IArtTexte ARTTEXT |
 | F_HEX_CODE | binary | Fehlerdaten pro Fehler als Hexcode |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Steuergeraete Reset ausloesen
@@ -249,7 +240,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes
@@ -270,7 +260,6 @@ Einstellen des Energiesparmodes
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -289,7 +278,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -302,7 +290,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -315,7 +302,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -330,7 +316,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -348,7 +333,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-hw-selftest"></a>
 ### HW_SELFTEST
 
 Start hardware selftest
@@ -362,7 +346,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-hw-selftest-status"></a>
 ### HW_SELFTEST_STATUS
 
 Status of hardware selftest
@@ -378,7 +361,6 @@ _No arguments._
 | RESULT_BYTE2 | char |  |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-tcu-type-lesen"></a>
 ### TCU_TYPE_LESEN
 
 Read the hardware type ID of the TCU
@@ -394,7 +376,6 @@ _No arguments._
 | TCU_TYPE_TEXT | string | TCU Type |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-esn-min-lesen"></a>
 ### US_ESN_MIN_LESEN
 
 Read ESN, MDN and MIN from the TCU US NAD
@@ -413,7 +394,6 @@ _No arguments._
 | _MDN_ANTWORT | binary | Hex-Antwort von SG |
 | _MIN_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ecall-bcall-button-test"></a>
 ### ECALL_BCALL_BUTTON_TEST
 
 Test E-Call and B-Call button
@@ -429,7 +409,6 @@ _No arguments._
 | RESULT | string | status |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ecall-component-test"></a>
 ### ECALL_COMPONENT_TEST
 
 Test microphone and antenna
@@ -445,7 +424,6 @@ _No arguments._
 | RESULT | string | status |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-bt-antenna-test"></a>
 ### BT_ANTENNA_TEST
 
 bt_antenna_test
@@ -461,7 +439,6 @@ _No arguments._
 | BT_ANTENNA_FLAG | int | Bluetooth Antenna Flag 0x00: Passed 0x01: Failed |
 | BT_ANTENNA_FLAG_TEXT | string | Bluetooth Antenna Flag als Textausgabe |
 
-<a id="job-bt-user-friendly-name-lesen"></a>
 ### BT_USER_FRIENDLY_NAME_LESEN
 
 Read Bluetooth user friendly name
@@ -476,7 +453,6 @@ _No arguments._
 | BT_USER_FRIENDLY_NAME | string | Bluetooth user friendly name |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-bt-user-friendly-name-schreiben"></a>
 ### BT_USER_FRIENDLY_NAME_SCHREIBEN
 
 Write Bluetooth user friendly name
@@ -494,7 +470,6 @@ Write Bluetooth user friendly name
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-bt-paired-devices-loeschen"></a>
 ### BT_PAIRED_DEVICES_LOESCHEN
 
 Delete list with Bluetooth paired devices
@@ -508,7 +483,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-nam-select"></a>
 ### US_NAM_SELECT
 
 Switch between NAM1 and NAM2 (Number Assignment Module) Note: New NAM becomes active after ending Diagnostic Mode
@@ -526,7 +500,6 @@ Switch between NAM1 and NAM2 (Number Assignment Module) Note: New NAM becomes ac
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-nam-status"></a>
 ### US_NAM_STATUS
 
 Read active NAM (Number Assignment Module)
@@ -541,7 +514,6 @@ _No arguments._
 | NAM | int | 0x01 = NAM1 0x02 = NAM2 |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-sid-nid-lesen"></a>
 ### US_SID_NID_LESEN
 
 Read US Home System ID and Network ID list
@@ -559,7 +531,6 @@ _No arguments._
 | INDEX | string | Index |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-sid-nid-schreiben"></a>
 ### US_SID_NID_SCHREIBEN
 
 Set US Home System ID and Network ID Requires US_NAD_SCANNING_STOP to be executed before writing
@@ -579,7 +550,6 @@ Set US Home System ID and Network ID Requires US_NAD_SCANNING_STOP to be execute
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-reset-mode"></a>
 ### RESET_MODE
 
 Force software reset of the TCU control unit Reset occurs approx. 2 seconds after sending
@@ -593,7 +563,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-bt-pairable-mode"></a>
 ### BT_PAIRABLE_MODE
 
 Bring Bluetooth server into pairable (and discoverable) mode
@@ -607,7 +576,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-home-only-a-b-side"></a>
 ### US_HOME_ONLY_A_B_SIDE
 
 Read or set home only and A/B side scanning Requires US_NAD_SCANNING_STOP to be executed before writing
@@ -627,7 +595,6 @@ Read or set home only and A/B side scanning Requires US_NAD_SCANNING_STOP to be 
 | STATUS_TEXT | string | Status als Textausgabe |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-customer-calls"></a>
 ### US_CUSTOMER_CALLS
 
 Read or set customer calls over NAD
@@ -646,7 +613,6 @@ Read or set customer calls over NAD
 | STATUS | char | Status of customer calls over NAD (-> INPUT parameter) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-nad-information"></a>
 ### NAD_INFORMATION
 
 Read information about the current NAD Status
@@ -672,7 +638,6 @@ _No arguments._
 | PRL | string | Preferred Roaming List PRL |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-nad-scanning-start"></a>
 ### US_NAD_SCANNING_START
 
 Start scanning of the US CDMA/AMPS NAD Ignition cycle will also re-start NAD scanning
@@ -688,7 +653,6 @@ _No arguments._
 | RESULT_TEXT | string | Result als Textausgabe |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-nad-scanning-stop"></a>
 ### US_NAD_SCANNING_STOP
 
 Stop scanning of the US CDMA/AMPS NAD Job needs to be sent before writing NAD parameters Stopping NAD scanning takes up to 5 seconds
@@ -704,7 +668,6 @@ _No arguments._
 | RESULT_TEXT | string | Result als Textausgabe |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestellnummer-vin-lesen"></a>
 ### FAHRGESTELLNUMMER_VIN_LESEN
 
 Read 7 digit Vehicle Identification Number from TCU coding data
@@ -720,7 +683,6 @@ _No arguments._
 | VIN_TEXT | string | Vehicle Identification Number |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestellnummer-vin-schreiben"></a>
 ### FAHRGESTELLNUMMER_VIN_SCHREIBEN
 
 Write 7 digit Vehicle Identification Number into TCU coding data
@@ -738,7 +700,6 @@ Write 7 digit Vehicle Identification Number into TCU coding data
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-nad-equipped"></a>
 ### NAD_EQUIPPED
 
 Read or set NAD equipped
@@ -757,7 +718,6 @@ Read or set NAD equipped
 | STATUS | char | Status of NAD equipped (see INPUT parameter) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-cdma-channels"></a>
 ### US_CDMA_CHANNELS
 
 Read or set primary/secondary CDMA channel A/B Requires US_NAD_SCANNING_STOP to be executed before writing
@@ -778,7 +738,6 @@ Read or set primary/secondary CDMA channel A/B Requires US_NAD_SCANNING_STOP to 
 | CHANNEL | string | Value of requested CDMA channel |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-amps-paging-channel"></a>
 ### US_AMPS_PAGING_CHANNEL
 
 Read or set AMPS paging channel Requires US_NAD_SCANNING_STOP to be executed before writing
@@ -797,7 +756,6 @@ Read or set AMPS paging channel Requires US_NAD_SCANNING_STOP to be executed bef
 | CHANNEL | string | Value of AMPS paging channel |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-amps-sid-lesen"></a>
 ### US_AMPS_SID_LESEN
 
 Read US CM-42 AMPS Home System ID    0 - 16387
@@ -811,7 +769,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | CM42_AMPS_SID | string | 1 - 5-byte AMPS Home SID (0 - 16387 -> 0x30 - 0x31 0x36 0x33 0x38 0x37) |
 
-<a id="job-us-amps-sid-schreiben"></a>
 ### US_AMPS_SID_SCHREIBEN
 
 Set US CM-42 AMPS Home System ID  0 - 16387 Requires US_NAD_SCANNING_STOP to be executed before writing
@@ -828,7 +785,6 @@ Set US CM-42 AMPS Home System ID  0 - 16387 Requires US_NAD_SCANNING_STOP to be 
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-bt-fix-passkey-lesen"></a>
 ### BT_FIX_PASSKEY_LESEN
 
 Read Bluetooth fix passkey
@@ -842,7 +798,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | BT_FIX_PASSKEY | string | 1 - 16 byte Bluetooth Fix Passkey |
 
-<a id="job-bt-fix-passkey-schreiben"></a>
 ### BT_FIX_PASSKEY_SCHREIBEN
 
 Write Bluetooth fix passkey
@@ -859,7 +814,6 @@ Write Bluetooth fix passkey
 | --- | --- | --- |
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 
-<a id="job-gps-date-time"></a>
 ### GPS_DATE_TIME
 
 Read date and time of the external (NAVI) or internal GPS
@@ -875,7 +829,6 @@ _No arguments._
 | GPS_TIME | string | Current GPS time (hh:mm:ss) |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-gps"></a>
 ### STATUS_GPS
 
 Status of the internal GPS module
@@ -891,7 +844,6 @@ _No arguments._
 | STAT_GPS_TEXT | string | GPS status als Textausgabe |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Read I/O port status
@@ -907,7 +859,6 @@ _No arguments._
 | STAT_B_CALL_EIN | int | b-call line from button 1=open, 0=closed (button pressed) |
 | STAT_BLUETOOTH_EIN | int | status of bluetooth 1=enable, 0=disable |
 
-<a id="job-status-io-schreiben"></a>
 ### STATUS_IO_SCHREIBEN
 
 Set and read I/O port status
@@ -928,7 +879,6 @@ Set and read I/O port status
 | STAT_SOS_LED_EIN | int | 1=active, 0=not active |
 | STAT_MUTE_EIN | int | 1=active, 0=not active |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -945,7 +895,6 @@ Codierdaten schreiben und verifizieren
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -963,7 +912,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-fg-als-bt-user-friendly-name-schreiben"></a>
 ### FG_ALS_BT_USER_FRIENDLY_NAME_SCHREIBEN
 
 Write "BMW" + last 5 digits of FG as BT User-Friendly name Based on standard Codierjob C_FG_SCHREIBEN
@@ -981,7 +929,6 @@ Write "BMW" + last 5 digits of FG as BT User-Friendly name Based on standard Cod
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-bt-operationmode-lesen"></a>
 ### BT_OPERATIONMODE_LESEN
 
 read if BT operation is enabled or disabled
@@ -995,7 +942,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | BLUETOOTH_FLAG | int | 1-byte BT flag: 0x00 - disabled, 0x01 - enabled |
 
-<a id="job-bt-disable"></a>
 ### BT_DISABLE
 
 Unset Bluetooth Masterbit
@@ -1009,7 +955,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-bt-enable"></a>
 ### BT_ENABLE
 
 Set Bluetooth Masterbit
@@ -1023,7 +968,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ecall-status-lesen"></a>
 ### ECALL_STATUS_LESEN
 
 read if E-call is enabled or disabled
@@ -1037,7 +981,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, ERROR_.. |
 | E_CALL_FLAG | int | 1-byte E-call flag: 0x00 - disabled, 0x01 - enabled |
 
-<a id="job-ecall-disable"></a>
 ### ECALL_DISABLE
 
 Unset E-Call Masterbit
@@ -1051,7 +994,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-ecall-enable"></a>
 ### ECALL_ENABLE
 
 Set E-Call Masterbit
@@ -1065,7 +1007,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-bt-paired-devices-lesen"></a>
 ### BT_PAIRED_DEVICES_LESEN
 
 Read Bluetooth paired devices
@@ -1081,7 +1022,6 @@ _No arguments._
 | BT_PAIRED_DEVICES_LIST | binary | Bluetooth 6-byte paired devices addresses |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-call-service-center-number-lesen"></a>
 ### US_CALL_SERVICE_CENTER_NUMBER_LESEN
 
 Read phone number of call service center
@@ -1095,7 +1035,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, if no error occurs |
 | US_CALL_SERVICE_CENTER_NUMBER | string | Service center number |
 
-<a id="job-us-call-service-center-number-schreiben"></a>
 ### US_CALL_SERVICE_CENTER_NUMBER_SCHREIBEN
 
 Set phone number of call service center
@@ -1112,7 +1051,6 @@ Set phone number of call service center
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, if no error occurs |
 
-<a id="job-us-min-lesen"></a>
 ### US_MIN_LESEN
 
 Read MIN (Mobile Identification Number)
@@ -1127,7 +1065,6 @@ _No arguments._
 | US_MIN | string | Mobile Identification Number |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-min-schreiben"></a>
 ### US_MIN_SCHREIBEN
 
 Set MIN (Mobile Identification Number) Requires US_NAD_SCANNING_STOP to be executed before writing
@@ -1145,7 +1082,6 @@ Set MIN (Mobile Identification Number) Requires US_NAD_SCANNING_STOP to be execu
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-mdn-lesen"></a>
 ### US_MDN_LESEN
 
 Read MDN (CDMA Mobile Directory Number)
@@ -1160,7 +1096,6 @@ _No arguments._
 | US_MDN | string | CDMA Mobile Directory Number |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-us-mdn-schreiben"></a>
 ### US_MDN_SCHREIBEN
 
 Set MDN (CDMA Mobile Directory Number) Requires US_NAD_SCANNING_STOP to be executed before writing
@@ -1178,7 +1113,6 @@ Set MDN (CDMA Mobile Directory Number) Requires US_NAD_SCANNING_STOP to be execu
 | JOB_STATUS | string | OKAY, if no error occurs |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-imei-lesen"></a>
 ### IMEI_LESEN
 
 Read IMEI
@@ -1192,7 +1126,6 @@ _No arguments._
 | JOB_STATUS | string | Status der Kommunikation (z.B. ACK) |
 | IMEI | string | 15 byte |
 
-<a id="job-icc-id-lesen"></a>
 ### ICC_ID_LESEN
 
 Read ICC ID
@@ -1235,7 +1168,6 @@ _No arguments._
 - [RESULTTEXTE](#table-resulttexte) (3 × 2)
 - [HOMEONLYABSIDETEXTE](#table-homeonlyabsidetexte) (5 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -1256,7 +1188,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 86 rows × 2 columns
@@ -1350,7 +1281,6 @@ Dimensions: 86 rows × 2 columns
 | 0x85 | AKsys GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -1379,7 +1309,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1404,7 +1333,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1413,7 +1341,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -1424,7 +1351,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | nein |
 
-<a id="table-hdetailstruktur"></a>
 ### HDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1439,7 +1365,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 7 rows × 2 columns
@@ -1454,7 +1379,6 @@ Dimensions: 7 rows × 2 columns
 | F_LZ | nein |
 | F_UWB_ERW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 23 rows × 2 columns
@@ -1485,7 +1409,6 @@ Dimensions: 23 rows × 2 columns
 | 0x0A3 | Bluetooth antenna not connected |
 | 0xXY | Undefined |
 
-<a id="table-horttexte"></a>
 ### HORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -1494,7 +1417,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | unbekannter Fehlerort |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 11 rows × 2 columns
@@ -1513,7 +1435,6 @@ Dimensions: 11 rows × 2 columns
 | 0x01D | Prefit SIM denied in the network |
 | 0xXY | Undefined |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1524,7 +1445,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Currently available |
 | 0xXY | Undefined |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1535,7 +1455,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Currently available |
 | 0xXY | Undefined |
 
-<a id="table-bluetoothantennastatustexte"></a>
 ### BLUETOOTHANTENNASTATUSTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1546,7 +1465,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Failed |
 | 0xXY | Undefined |
 
-<a id="table-gpsstatustexte"></a>
 ### GPSSTATUSTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -1568,7 +1486,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0C | 3D positioning |
 | 0xXY | Undefined |
 
-<a id="table-nadstatustexte"></a>
 ### NADSTATUSTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1579,7 +1496,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Registered |
 | 0xXY | Undefined |
 
-<a id="table-pairingresulttexte"></a>
 ### PAIRINGRESULTTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -1591,7 +1507,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Waiting |
 | 0xXY | Undefined |
 
-<a id="table-tcutypetexte"></a>
 ### TCUTYPETEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -1603,7 +1518,6 @@ Dimensions: 4 rows × 2 columns
 | 0x05 | TCU 1.5 Malapert I-Bus ECE Superthin |
 | 0xXY | Undefined |
 
-<a id="table-voicereclangtexte"></a>
 ### VOICERECLANGTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -1619,7 +1533,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | No language, flash programming failed |
 | 0xXY | Undefined |
 
-<a id="table-voicerecprogstatustexte"></a>
 ### VOICERECPROGSTATUSTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -1631,7 +1544,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Flash programming failed |
 | 0xXY | Undefined |
 
-<a id="table-roamingstatustexte"></a>
 ### ROAMINGSTATUSTEXTE
 
 Dimensions: 4 rows × 2 columns
@@ -1643,7 +1555,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Roaming off network |
 | 0xXY | Unknown or not detectable |
 
-<a id="table-prlstatustexte"></a>
 ### PRLSTATUSTEXTE
 
 Dimensions: 10 rows × 2 columns
@@ -1661,7 +1572,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | PRL disabled |
 | 0xXY | Undefined |
 
-<a id="table-resulttexte"></a>
 ### RESULTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -1672,7 +1582,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Error |
 | 0xXY | Undefined |
 
-<a id="table-homeonlyabsidetexte"></a>
 ### HOMEONLYABSIDETEXTE
 
 Dimensions: 5 rows × 2 columns

@@ -41,7 +41,6 @@
 - [STATUS_GEARS_LESEN](#job-status-gears-lesen)
 - [STEUERN_STELLGLIED](#job-steuern-stellglied) - Ansteuern der Stellglieder
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -59,7 +58,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer AGS
@@ -72,7 +70,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-start-modus"></a>
 ### START_MODUS
 
 Starten eines Diagnose-Modus fuer ECU
@@ -91,7 +88,6 @@ Starten eines Diagnose-Modus fuer ECU
 | _TEL_AN_SG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-stop-modus"></a>
 ### STOP_MODUS
 
 Stop des aktuellen Diagnose-Modus fuer ECU
@@ -105,7 +101,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-tester-present"></a>
 ### TESTER_PRESENT
 
 _No arguments._
@@ -119,7 +114,6 @@ _No arguments._
 | _RESPONSE_DATA | binary |  |
 | ATCU_PRESENT | int |  |
 
-<a id="job-security-access"></a>
 ### SECURITY_ACCESS
 
 _No arguments._
@@ -136,7 +130,6 @@ _No arguments._
 | _RESPONSE_DATA1 | binary |  |
 | _RESPONSE_DATA2 | binary |  |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer AGS
@@ -161,7 +154,6 @@ _No arguments._
 | ID_SW_NR | string | Softwarenummer |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-aif-lesen"></a>
 ### AIF_LESEN
 
 Auslesen des Anwender-Info-Feldes
@@ -182,7 +174,6 @@ _No arguments._
 | AIF_KM_STAND | long | km-Stand |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers High-Konzept nach Lastenheft Codierung/Diagnose komplizierte Umweltbedingungen: analog, digital, diskret
@@ -211,7 +202,6 @@ _No arguments._
 | F_VORHANDEN | int | Fehler momentan vorhanden (Fehlerart) |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen fuer AGS
@@ -226,7 +216,6 @@ _No arguments._
 | TELEGRAMM_ANF | binary | Anforderungstelegramm |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-codier-cs-pruefen"></a>
 ### CODIER_CS_PRUEFEN
 
 Ueberpruefen der Codier-Checksumme fuer AGS
@@ -242,7 +231,6 @@ _No arguments._
 | CS_DATEN | string | Datenbereich |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-central-code-pruefen"></a>
 ### CENTRAL_CODE_PRUEFEN
 
 Ueberpruefen der Codier-Checksumme fuer AGS
@@ -257,7 +245,6 @@ _No arguments._
 | CENTRAL_CODING_KEY | binary | Antworttelegramm |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-temp-lesen"></a>
 ### STATUS_TEMP_LESEN
 
 Status der Temperatur-Eingaenge
@@ -277,7 +264,6 @@ _No arguments._
 | STAT_UBAT_EINH | string | UBat |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-speed-lesen"></a>
 ### STATUS_SPEED_LESEN
 
 Status der speed-Eingaenge
@@ -299,7 +285,6 @@ _No arguments._
 | STAT_RADDREHZAHL_EINH | string |  |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-torque-lesen"></a>
 ### STATUS_TORQUE_LESEN
 
 _No arguments._
@@ -315,7 +300,6 @@ _No arguments._
 | STAT_TORQUE_OR_EINH | string |  |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-pressure-lesen"></a>
 ### STATUS_PRESSURE_LESEN
 
 _No arguments._
@@ -333,7 +317,6 @@ _No arguments._
 | STAT_2T4ORB_EINH | string |  |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-throttle-lesen"></a>
 ### STATUS_THROTTLE_LESEN
 
 _No arguments._
@@ -347,7 +330,6 @@ _No arguments._
 | STAT_DKG_EINH | string | DKG/WDK_BL |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-digital-in-lesen"></a>
 ### STATUS_DIGITAL_IN_LESEN
 
 _No arguments._
@@ -372,7 +354,6 @@ _No arguments._
 | STAT_SH_INT_FAULT_EIN | int | 0 oder 1 |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-digital-out-lesen"></a>
 ### STATUS_DIGITAL_OUT_LESEN
 
 _No arguments._
@@ -390,7 +371,6 @@ _No arguments._
 | STAT_24B_TIM_SOL | int | 0 oder 1 |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-status-gears-lesen"></a>
 ### STATUS_GEARS_LESEN
 
 _No arguments._
@@ -408,7 +388,6 @@ _No arguments._
 | STAT_SCHALTUNGSART_AKTUELL_NR | int |  |
 | _TEL_ANTWORT | binary | Antworttelegramm |
 
-<a id="job-steuern-stellglied"></a>
 ### STEUERN_STELLGLIED
 
 Ansteuern der Stellglieder
@@ -437,7 +416,6 @@ Ansteuern der Stellglieder
 - [FARTTEXTE](#table-farttexte) (11 × 2)
 - [STELLGLIEDER](#table-stellglieder) (9 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 63 rows × 2 columns
@@ -508,7 +486,6 @@ Dimensions: 63 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 33 rows × 2 columns
@@ -549,7 +526,6 @@ Dimensions: 33 rows × 2 columns
 | 0x1825 | Shift-Verriegelung SGU |
 | 0xFFFF | Unbekannter Fehler |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 14 columns
@@ -558,7 +534,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x01 | 0xFE | 0x01 | 0x02 | 0x04 | 0x08 | 0x00 | 0x10 | 0x00 | 0x20 | 0x00 | 0x40 | 0x00 | 0x80 |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 11 rows × 2 columns
@@ -577,7 +552,6 @@ Dimensions: 11 rows × 2 columns
 | 0xFE | Symptom kein Fehler |
 | 0xFF | Unbekannte Fehlerart |
 
-<a id="table-stellglieder"></a>
 ### STELLGLIEDER
 
 Dimensions: 9 rows × 2 columns

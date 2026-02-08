@@ -31,7 +31,6 @@
 - [ASC_SIM_HA](#job-asc-sim-ha) - Steuern_Digital ansteueren u. halten
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -49,7 +48,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer ABS_ASC_MK4
@@ -62,7 +60,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer ABS_ASC_MK4
@@ -78,7 +75,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen fuer ABS_ASC_MK4
@@ -97,7 +93,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen fuer ABS_ASC_MK4
@@ -112,7 +107,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 Status Eingaenge ABS_ASC_MK4
@@ -141,7 +135,6 @@ _No arguments._
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-steuern-digital"></a>
 ### STEUERN_DIGITAL
 
 Ansteuern mehrerer digitaler Ausgaenge
@@ -173,7 +166,6 @@ Ansteuern mehrerer digitaler Ausgaenge
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-steuern-analog"></a>
 ### STEUERN_ANALOG
 
 Ansteuern Drosselklappe
@@ -193,7 +185,6 @@ Ansteuern Drosselklappe
 | _AUFTRAG1 | binary | Anforderungstelegramm |
 | _ANTWORT1 | binary | Antworttelegramm |
 
-<a id="job-asc"></a>
 ### ASC
 
 Steuern_Digital Drehzahlabsenkung
@@ -206,7 +197,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-asc-sim-ha"></a>
 ### ASC_SIM_HA
 
 Steuern_Digital ansteueren u. halten
@@ -219,7 +209,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -242,7 +231,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (53 × 2)
 - [STEUERN](#table-steuern) (14 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 9 rows × 2 columns
@@ -259,7 +247,6 @@ Dimensions: 9 rows × 2 columns
 | 0x0A | ERROR_ECU_NACK |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 53 rows × 2 columns
@@ -320,7 +307,6 @@ Dimensions: 53 rows × 2 columns
 | 0xFF | NV-RAM |
 | 0xXY | unbekannter Fehlerort |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 14 rows × 3 columns

@@ -25,7 +25,6 @@
 - [SER_NR_DOM_LESEN](#job-ser-nr-dom-lesen) - Seriennummer 14-stellig lesen Neu für Entertainment-Komponenten ab 2003 Modus  : Default
 - [CODE_LESEN](#job-code-lesen) - Seriennummer 14-stellig lesen und Gerätetyp ermitteln Neu für Entertainment-Komponenten ab 2003 Modus  : Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -38,7 +37,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -57,7 +55,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -76,7 +73,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ser-nr-dom-lesen"></a>
 ### SER_NR_DOM_LESEN
 
 Seriennummer 14-stellig lesen Neu für Entertainment-Komponenten ab 2003 Modus  : Default
@@ -91,7 +87,6 @@ _No arguments._
 | SER_NR_DOM | string | Seriennummer Gerät 14-stellig |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-code-lesen"></a>
 ### CODE_LESEN
 
 Seriennummer 14-stellig lesen und Gerätetyp ermitteln Neu für Entertainment-Komponenten ab 2003 Modus  : Default
@@ -115,7 +110,6 @@ _No arguments._
 - [ROVERPARTNUMPREFIX](#table-roverpartnumprefix) (21 × 2)
 - [DIGITALARGUMENT](#table-digitalargument) (16 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -136,7 +130,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -211,7 +204,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -240,7 +232,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 16 rows × 2 columns

@@ -25,7 +25,6 @@
 - [GRUPPENDATEI_ERZEUGE_LISTE_AUS_DATEN](#job-gruppendatei-erzeuge-liste-aus-daten) - Gruppendatei-Daten nach Gruppendatei-Liste Im letzten Satz steht der JOB_STATUS Im den vorigen Saetzen steht eine GRUPPENDATEI Wird das Argument SINGLERESULTFLAG ubergeben wird nur ein Ergebnissatz erzeugt Die Gruppendateien werden dann durch ',' getrennt
 - [GRUPPENDATEI_ERZEUGE_DATEN_AUS_LISTE](#job-gruppendatei-erzeuge-daten-aus-liste) - Gruppendatei-Liste nach Gruppendatei-Daten
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -44,7 +43,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -57,7 +55,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-gruppendatei-liste"></a>
 ### GRUPPENDATEI_LISTE
 
 Ausgabe der gesamten Gruppendatei-Liste Im letzten Satz steht der JOB_STATUS Im den vorigen Saetzen steht eine GRUPPENDATEI
@@ -74,7 +71,6 @@ _No arguments._
 | ANZAHL | int | Anzahl Gruppendateien |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-gruppendatei-erzeuge-liste-aus-daten"></a>
 ### GRUPPENDATEI_ERZEUGE_LISTE_AUS_DATEN
 
 Gruppendatei-Daten nach Gruppendatei-Liste Im letzten Satz steht der JOB_STATUS Im den vorigen Saetzen steht eine GRUPPENDATEI Wird das Argument SINGLERESULTFLAG ubergeben wird nur ein Ergebnissatz erzeugt Die Gruppendateien werden dann durch ',' getrennt
@@ -94,7 +90,6 @@ Gruppendatei-Daten nach Gruppendatei-Liste Im letzten Satz steht der JOB_STATUS 
 | FEHLERTEXT | string | "", wenn fehlerfrei |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-gruppendatei-erzeuge-daten-aus-liste"></a>
 ### GRUPPENDATEI_ERZEUGE_DATEN_AUS_LISTE
 
 Gruppendatei-Liste nach Gruppendatei-Daten
@@ -123,7 +118,6 @@ Gruppendatei-Liste nach Gruppendatei-Daten
 - [GRUPPENLISTEVERSION1](#table-gruppenlisteversion1) (203 × 2)
 - [JOBRESULT](#table-jobresult) (3 × 2)
 
-<a id="table-gruppenlisteversion1"></a>
 ### GRUPPENLISTEVERSION1
 
 Dimensions: 203 rows × 2 columns
@@ -334,7 +328,6 @@ Dimensions: 203 rows × 2 columns
 | d_ffp | 0xC9 |
 | d_0074 | 0xCA |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 3 rows × 2 columns

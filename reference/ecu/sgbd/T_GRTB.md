@@ -22,7 +22,6 @@
 - [INITIALISIERUNG](#job-initialisierung) - Initialisierung und Kommunikationsparameter
 - [INFO](#job-info) - Information SGBD
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -35,7 +34,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -64,7 +62,6 @@ _No arguments._
 - [ZUORDNUNGSTABELLEHYBRID](#table-zuordnungstabellehybrid) (9 × 6)
 - [ZUORDNUNGSTABELLEMOTORRADUDS](#table-zuordnungstabellemotorraduds) (13 × 4)
 
-<a id="table-zuordnungstabelle"></a>
 ### ZUORDNUNGSTABELLE
 
 Dimensions: 592 rows × 5 columns
@@ -664,7 +661,6 @@ Dimensions: 592 rows × 5 columns
 | AE ---- 0A20 | STVR85 | D_STVR2 | E85 | Satellit Tür vorne rechts |
 | ?? ---- ???? |  |  | E?? |  |
 
-<a id="table-zuordnungstabellemotorrad"></a>
 ### ZUORDNUNGSTABELLEMOTORRAD
 
 Dimensions: 29 rows × 4 columns
@@ -701,7 +697,6 @@ Dimensions: 29 rows × 4 columns
 | 73 ---- 6600 | MRRBT | D_MRRBT | Motorrad Radiobedienteil |
 | ?? ---- ???? |  |  |  |
 
-<a id="table-zuordnungstabelleuds"></a>
 ### ZUORDNUNGSTABELLEUDS
 
 Dimensions: 132 rows × 6 columns
@@ -841,7 +836,6 @@ Dimensions: 132 rows × 6 columns
 | A8 0F1130 | RK_HR | G_RK_HR | F01 | Radknoten hinten rechts | BMW EF-63 Hagl |
 | ?? ?????? |  |  | F?? |  |  |
 
-<a id="table-zuordnungstabellehybrid"></a>
 ### ZUORDNUNGSTABELLEHYBRID
 
 Dimensions: 9 rows × 6 columns
@@ -858,7 +852,6 @@ Dimensions: 9 rows × 6 columns
 | 9A 8010 | BPCM72 | H_BPCM | E72 | Battery Pack Control Module | BMW HT-A-2 Jung |
 | ?? ???? |  |  | E72 |  |  |
 
-<a id="table-zuordnungstabellemotorraduds"></a>
 ### ZUORDNUNGSTABELLEMOTORRADUDS
 
 Dimensions: 13 rows × 4 columns

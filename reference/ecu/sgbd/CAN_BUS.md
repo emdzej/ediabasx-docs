@@ -28,7 +28,6 @@
 - [IS_LESEN](#job-is-lesen) - CAN-Fehler mit funktionaler Adressierung auslesen
 - [BUS_BEWERTEN](#job-bus-bewerten) - CAN-Fehler auslesen und fehlerhaften Bus erkennen
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -41,7 +40,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -60,7 +58,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-diagnoseprotokoll-lesen"></a>
 ### DIAGNOSEPROTOKOLL_LESEN
 
 Gibt die möglichen Diagnoseprotokolle für eine Auswahl an den Aufrufer zurück
@@ -76,7 +73,6 @@ _No arguments._
 | DIAG_PROT_ANZAHL | int | Anzahl der Diagnoseprotokolle |
 | DIAG_PROT_NR1 | string | Alle möglichen Diagnose-Protokolle Falls mehrere Protokolle möglich sind werden die entsprechenden Results DIAG_PROT_NRx dynamisch erzeugt |
 
-<a id="job-diagnoseprotokoll-setzen"></a>
 ### DIAGNOSEPROTOKOLL_SETZEN
 
 Wählt ein Diagnoseprotokoll aus
@@ -93,7 +89,6 @@ Wählt ein Diagnoseprotokoll aus
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -106,7 +101,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 CAN-Fehler mit funktionaler Adressierung auslesen
@@ -125,7 +119,6 @@ _No arguments._
 | F_SYMPTOM_TEXT | string | Erzeugte Tabelle im EDSE ist falsch, da Tabelle als Include table FArtTexte wird nicht verwendet nur Hinweis für DES -> Fehlerart in Infospeicher auslesen |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 CAN-Fehler mit funktionaler Adressierung auslesen
@@ -144,7 +137,6 @@ _No arguments._
 | F_VORHANDEN_TEXT | string | Fehler vorhanden (Standard-Fehlerart) als Text table FArtTexte ARTTEXT |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-bus-bewerten"></a>
 ### BUS_BEWERTEN
 
 CAN-Fehler auslesen und fehlerhaften Bus erkennen
@@ -207,7 +199,6 @@ CAN-Fehler auslesen und fehlerhaften Bus erkennen
 - [STGR_NAMEN](#table-stgr-namen) (68 × 3)
 - [JOBRESULTEXTENDED](#table-jobresultextended) (1 × 2)
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 2 rows × 2 columns
@@ -217,7 +208,6 @@ Dimensions: 2 rows × 2 columns
 | 0x0F | BMW-FAST |
 | 0x0C | KWP2000 |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 95 rows × 2 columns
@@ -320,7 +310,6 @@ Dimensions: 95 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 118 rows × 2 columns
@@ -446,7 +435,6 @@ Dimensions: 118 rows × 2 columns
 | 0xAB | Kongsberg Automotive GmbH |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -468,7 +456,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -493,7 +480,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 14 rows × 2 columns
@@ -515,7 +501,6 @@ Dimensions: 14 rows × 2 columns
 | 0x31 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 2 columns
@@ -524,7 +509,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xFFFF | Kommunikationsfehler |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 544 rows × 2 columns
@@ -1076,7 +1060,6 @@ Dimensions: 544 rows × 2 columns
 | 0xE904 | E904 cas/cas_rr: CAS: K-CAN PERIPHERIE Leitungsfehler |
 | 0xE907 | E907 cas/cas_rr: CAS: K-CAN PERIPHERIE Kommunikationsfehler |
 
-<a id="table-fcmatrix"></a>
 ### FCMATRIX
 
 Dimensions: 547 rows × 72 columns
@@ -1631,7 +1614,6 @@ Dimensions: 547 rows × 72 columns
 | 545 | 0xFFFD | 0x45 | RLS | leer | 0x0000 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 546 | 0xFFFE | 0x49 | SECUR1 | leer | 0x0000 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-<a id="table-lowbat"></a>
 ### LOWBAT
 
 Dimensions: 8 rows × 2 columns
@@ -1647,7 +1629,6 @@ Dimensions: 8 rows × 2 columns
 | 0x9B8A | TMB |
 | 0xA15D | PM |
 
-<a id="table-stgr-namen"></a>
 ### STGR_NAMEN
 
 Dimensions: 68 rows × 3 columns
@@ -1723,7 +1704,6 @@ Dimensions: 68 rows × 3 columns
 | 0xFE | K-CAN P | Bus-System Peripherie für Karosserieumfänge             |
 | 0xFF | unbekannt | unbekanntes Steuergerät                               |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns

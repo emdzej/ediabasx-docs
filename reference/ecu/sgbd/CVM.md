@@ -37,7 +37,6 @@
 - [SPEICHER_LESEN](#job-speicher-lesen) - Auslesen des Speicherinhaltes
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Beenden der Diagnose
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -55,7 +54,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung
@@ -68,7 +66,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn i.O. |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Auslesen der Identifikationsdaten
@@ -87,7 +84,6 @@ _No arguments._
 | ID_DATUM_KW | int | Herstelldatum KW |
 | ID_DATUM_JAHR | int | Herstelldatum Jahr |
 
-<a id="job-bmw-nr-lesen"></a>
 ### BMW_NR_LESEN
 
 Auslesen der BMW-Teilenummer
@@ -102,7 +98,6 @@ _No arguments._
 | BMW_NR | string | BMW-Teilenummer |
 | _ANTWORT | binary | Antworttelegramm |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Auslesen des Fehlerspeichers
@@ -126,7 +121,6 @@ _No arguments._
 | TEL_0 | binary | Antworttelegramm 0 |
 | TEL_1 | binary | Antworttelegramme auf Speicherlesen |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Loeschen des Fehlerspeichers
@@ -139,7 +133,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-crash-ausloesen"></a>
 ### CRASH_AUSLOESEN
 
 Ausloesung des UERSS durch Crash-Telegramm
@@ -153,7 +146,6 @@ _No arguments._
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 | STATUS_ANTWORT | string | Liefert: ANSTEUERUNG_ERFOLGT, ANSTEUERUNG_UNMOEGLICH |
 
-<a id="job-motor-fahren"></a>
 ### MOTOR_FAHREN
 
 Ansteuerung der Verdeckmotoren
@@ -170,7 +162,6 @@ Ansteuerung der Verdeckmotoren
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-tipp-funktion"></a>
 ### TIPP_FUNKTION
 
 Ansteuerung des Verdeckzyklus ueber Tippfunktion
@@ -187,7 +178,6 @@ Ansteuerung des Verdeckzyklus ueber Tippfunktion
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-ausgaenge-schalten"></a>
 ### AUSGAENGE_SCHALTEN
 
 Ansteuerung des Verdeckzyklus ueber Tippfunktion
@@ -204,7 +194,6 @@ Ansteuerung des Verdeckzyklus ueber Tippfunktion
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-referenzlauf-einschalten"></a>
 ### REFERENZLAUF_EINSCHALTEN
 
 Ausloesung des Recferenzlaufes
@@ -217,7 +206,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Ausloesung des Recferenzlaufes
@@ -269,7 +257,6 @@ _No arguments._
 | STAT_GESAMTSTROM_EINH | string | Liefert: "A" |
 | _ANTWORT | binary | Liefert: Antworttelegramm 1 |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierung des SG
@@ -290,7 +277,6 @@ _No arguments._
 | COD_EICHLAUF_BEI_8_BETAETIGUNG_KLAPPE_AKTIV | int | Liefert: 0 oder 1 |
 | _ANTWORT | binary | Liefert: Antworttelegramm 1 |
 
-<a id="job-sg-selbsttest"></a>
 ### SG_SELBSTTEST
 
 Ausfuehren des SG-Selbsttests
@@ -303,7 +289,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | Liefert: OKAY od. ERROR_NACK |
 
-<a id="job-zaehlerstaende-lesen"></a>
 ### ZAEHLERSTAENDE_LESEN
 
 Auslesen der Zaehlerstaende
@@ -328,7 +313,6 @@ _No arguments._
 | ZAEHLER_POWER_UP_WERT | int | Liefert: 0 bis 255 |
 | ZAEHLER_RESET_PROZESSOR_WERT | int | Liefert: 0 bis 255 |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -353,7 +337,6 @@ Auslesen des Speicherinhaltes
 | _ANTWORT | binary | Antworttelegramm |
 | _SENDEN | binary | Sendetelegramm |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Beenden der Diagnose
@@ -373,7 +356,6 @@ _No arguments._
 - [FORTTEXTE](#table-forttexte) (36 × 3)
 - [STEUERN](#table-steuern) (18 × 3)
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 36 rows × 3 columns
@@ -417,7 +399,6 @@ Dimensions: 36 rows × 3 columns
 | 0x55 | 0x11 | Fehler Ueberrollsensor |
 | 0xFF | 0xFF | unbekannter Fehlerort |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 18 rows × 3 columns

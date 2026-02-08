@@ -45,7 +45,6 @@
 - [STEUERGERAETE_RESET](#job-steuergeraete-reset) - Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
 - [CPS_LESEN](#job-cps-lesen) - Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -58,7 +57,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -77,7 +75,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -94,7 +91,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -120,7 +116,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -162,7 +157,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -181,7 +175,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -199,7 +192,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -220,7 +212,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -246,7 +237,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -266,7 +256,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -287,7 +276,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -303,7 +291,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
@@ -325,7 +312,6 @@ Vorgeben eines Status UDS  : $2F InputOutputControlByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -347,7 +333,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -366,7 +351,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -392,7 +376,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -434,7 +417,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -449,7 +431,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -469,7 +450,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -488,7 +468,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -508,7 +487,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-anzahl-lesen"></a>
 ### SENSOREN_ANZAHL_LESEN
 
 Anzahl der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers Modus: Default
@@ -524,7 +502,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sensoren-ident-lesen"></a>
 ### SENSOREN_IDENT_LESEN
 
 Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIdentifier UDS  : $1600 Identifier NumberofSubbusMembers UDS  : $16xx SubbusMemberSerialNumber Modus: Default
@@ -548,7 +525,6 @@ Identifikation der intelligenten Subbussensoren lesen UDS  : $22   ReadDataByIde
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -563,7 +539,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-cps-lesen"></a>
 ### CPS_LESEN
 
 Codierpruefstempel lesen UDS  : $22   ReadDataByIdentifier UDS  : $37FE DataIdentifier Codierpruefstempel Modus: Default
@@ -659,7 +634,6 @@ _No arguments._
 - [RES_0XF01B](#table-res-0xf01b) (1 × 13)
 - [RES_0X4100](#table-res-0x4100) (1 × 13)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 64 rows × 2 columns
@@ -731,7 +705,6 @@ Dimensions: 64 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 86 rows × 2 columns
@@ -825,7 +798,6 @@ Dimensions: 86 rows × 2 columns
 | 0x000085 | AKsys GmbH |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -851,7 +823,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -876,7 +847,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 19 rows × 3 columns
@@ -903,7 +873,6 @@ Dimensions: 19 rows × 3 columns
 | 0xA4 | JAJO | Java-Jobs |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -976,7 +945,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -989,7 +957,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 4 rows × 9 columns
@@ -1001,7 +968,6 @@ Dimensions: 4 rows × 9 columns
 | 0x1702 | SAE_CODE | 0-n | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1014,7 +980,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-verbauorttabelle"></a>
 ### VERBAUORTTABELLE
 
 Dimensions: 14 rows × 2 columns
@@ -1036,7 +1001,6 @@ Dimensions: 14 rows × 2 columns
 | 0x0B00 | Nightvision Kamera |
 | 0xFFFF | unbekannter Verbauort |
 
-<a id="table-partnrtabelle"></a>
 ### PARTNRTABELLE
 
 Dimensions: 1 rows × 3 columns
@@ -1045,7 +1009,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | -- | -- | unbekannte Teilenummer |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1071,7 +1034,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -1080,7 +1042,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 2 rows × 3 columns
@@ -1090,7 +1051,6 @@ Dimensions: 2 rows × 3 columns
 | 0x00 | kein Betriebsmode gesetzt | kein Betriebsmode |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 82 rows × 3 columns
@@ -1180,7 +1140,6 @@ Dimensions: 82 rows × 3 columns
 | 0x800BA3 | Memory Error, SV_r | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -1192,7 +1151,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | ja |
 | F_SEVERITY | ja |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 1 rows × 9 columns
@@ -1201,7 +1159,6 @@ Dimensions: 1 rows × 9 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | BATERIE_SPANNUNG | V | - | unsigned int | - | - | - | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 13 rows × 3 columns
@@ -1222,7 +1179,6 @@ Dimensions: 13 rows × 3 columns
 | 0x800bb3 | DEM_EVENT_DSP_PICTURE_FREEZE | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 3 rows × 2 columns
@@ -1233,7 +1189,6 @@ Dimensions: 3 rows × 2 columns
 | SAE_CODE | nein |
 | F_HLZ | ja |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 136 rows × 16 columns
@@ -1377,7 +1332,6 @@ Dimensions: 136 rows × 16 columns
 | BMW_SERVICE_CAMERA_LEARN | 0xF01C | - | Perform Learning of new unbranded cameras. Intended to be run in BMW service.  Note: This routine needs to be run when an ECU has previosuly had a fully learnt set of cameras present, and a new camera has been introduced.  Automatic learning occurs when the ECU has no cached camera serial numbers (i.e. in BMW manufacturing), or if a camera is introduced that it already branded. | - | - | - | - | - | - | - | - | - | 31 | - | - |
 | ECU_VARIANT | 0x4100 | - | - | - | - | - | - | - | - | - | - | - | 22 | - | RES_0x4100 |
 
-<a id="table-arg-0xd3b3"></a>
 ### ARG_0XD3B3
 
 Dimensions: 5 rows × 12 columns
@@ -1390,7 +1344,6 @@ Dimensions: 5 rows × 12 columns
 | VERDREHUNGY | Grad | - | int | - | - | - | - | - | - | - | Abweichung der Winkelverdrehung bis auf 10-tel Grad (z.B. 2,3 °) |
 | VERDREHUNGZ | Grad | - | int | - | - | - | - | - | - | - | Abweichung der Winkelverdrehung bis auf 10-tel Grad (z.B. 2,3 °) |
 
-<a id="table-res-0xd37f"></a>
 ### RES_0XD37F
 
 Dimensions: 3 rows × 10 columns
@@ -1401,7 +1354,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VORHANDEN_SIDEVIEW_KAM | 0/1 | - | int | - | - | - | - | - | SideView-Kameras: 0=nicht vorhanden, 1=vorhanden |
 | STAT_VORHANDEN_REARVIEW_KAM | 0/1 | - | int | - | - | - | - | - | Rückfahrkamera: 0=nicht vorhanden, 1=vorhanden |
 
-<a id="table-res-0xd378"></a>
 ### RES_0XD378
 
 Dimensions: 3 rows × 10 columns
@@ -1412,7 +1364,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VERDREHUNGY_KAM_TV_R_WERT | Grad | - | int | - | - | - | - | - | Abweichung der Winkelverdrehung bis auf 10-tel Grad (z.B. 2,3 °) |
 | STAT_VERDREHUNGZ_KAM_TV_R_WERT | Grad | - | int | - | - | - | - | - | Abweichung der Winkelverdrehung bis auf 10-tel Grad (z.B. 2,3 °) |
 
-<a id="table-res-0xd39c"></a>
 ### RES_0XD39C
 
 Dimensions: 2 rows × 10 columns
@@ -1422,7 +1373,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KALIBRIERUNG_TV_L_MONTAGE | 0/1 | - | int | - | - | - | - | - | Status der Kalibrierung TopViewCam links: 0 = abgeschlossen oder nicht angefordert, 1 = Kalibrierung läuft |
 | STAT_KALIBRIERUNG_TV_R_MONTAGE | 0/1 | - | int | - | - | - | - | - | Status der Kalibrierung TopViewCam rechts: 0 = abgeschlossen oder nicht angefordert, 1 = Kalibrierung läuft |
 
-<a id="table-res-0xd381"></a>
 ### RES_0XD381
 
 Dimensions: 2 rows × 10 columns
@@ -1432,7 +1382,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_KALIBRIERUNG_TV_L_INIT | 0-n | - | int | - | TAB_0xD381_1 | - | - | - | 0 (0x00) = nicht initialisiert, 1 (0x01) =  Initialisierung in Ordnung, 255 (0xFF) = Initialisierung nicht in Ordnung |
 | STAT_KALIBRIERUNG_TV_R_INIT | 0-n | - | int | - | TAB_0xD381_2 | - | - | - | 0 (0x00) = nicht initialisiert, 1 (0x01) =  Initialisierung in Ordnung, 255 (0xFF) = Initialisierung nicht in Ordnung |
 
-<a id="table-res-0xd37b"></a>
 ### RES_0XD37B
 
 Dimensions: 3 rows × 10 columns
@@ -1443,7 +1392,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ABWEICHUNGY_KAM_TV_R_WERT | Pixel | - | int | - | - | - | - | - | Abweichung von der y-Achse in Pixel |
 | STAT_ABWEICHUNGZ_KAM_TV_R_WERT | Pixel | - | int | - | - | - | - | - | Abweichung von der z-Achse in Pixel |
 
-<a id="table-res-0xd3b6"></a>
 ### RES_0XD3B6
 
 Dimensions: 3 rows × 10 columns
@@ -1454,7 +1402,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VERDREHUNGY_KAM_RV_WERT | Grad | - | int | - | - | - | - | - | Abweichung der Winkelverdrehung bis auf 10-tel Grad (z.B. 2,3 °) |
 | STAT_VERDREHUNGZ_KAM_RV_WERT | Grad | - | int | - | - | - | - | - | Abweichung der Winkelverdrehung bis auf 10-tel Grad (z.B. 2,3 °) |
 
-<a id="table-arg-0xd3b2"></a>
 ### ARG_0XD3B2
 
 Dimensions: 5 rows × 12 columns
@@ -1467,7 +1414,6 @@ Dimensions: 5 rows × 12 columns
 | ABWEICHUNGY | Pixel | - | int | - | - | - | - | - | - | - | Abweichung von der y-Achse in Pixel |
 | ABWEICHUNGZ | Pixel | - | int | - | - | - | - | - | - | - | Abweichung von der z-Achse in Pixel |
 
-<a id="table-res-0xd37c"></a>
 ### RES_0XD37C
 
 Dimensions: 3 rows × 10 columns
@@ -1478,7 +1424,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_START_KALIB_KAM_TV_R | 0/1 | - | int | - | - | - | - | - | 0 = nicht gestartet, Kalibrierung nicht angefordert; 1 = gestartet |
 | STAT_START_KALIB_KAM_RV | 0/1 | - | int | - | - | - | - | - | 0 = nicht gestartet, Kalibrierung nicht angefordert; 1 = gestartet |
 
-<a id="table-arg-0xd37c"></a>
 ### ARG_0XD37C
 
 Dimensions: 1 rows × 12 columns
@@ -1487,7 +1432,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KAMERA | 0-n | - | int | - | - | - | - | - | - | - | Gibt an, welche Kamera kalibriert werden soll: 0 = TV_L, 1= TV_L, 2 = RV |
 
-<a id="table-res-0xd3b5"></a>
 ### RES_0XD3B5
 
 Dimensions: 3 rows × 10 columns
@@ -1498,7 +1442,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ABWEICHUNGY_KAM_RV_WERT | Pixel | - | int | - | - | - | - | - | Abweichung von der y-Achse in Pixel |
 | STAT_ABWEICHUNGZ_KAM_RV_WERT | Pixel | - | int | - | - | - | - | - | Abweichung von der z-Achse in Pixel |
 
-<a id="table-arg-0xd3a0"></a>
 ### ARG_0XD3A0
 
 Dimensions: 1 rows × 12 columns
@@ -1507,7 +1450,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AKTION | 0/1 | - | int | - | - | - | - | - | - | - | Steuert die Heizung an der Rückfahrkamera an: 0 = AUS, 1 = EIN |
 
-<a id="table-res-0xd379"></a>
 ### RES_0XD379
 
 Dimensions: 3 rows × 10 columns
@@ -1518,7 +1460,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_VERDREHUNGY_KAM_TV_L_WERT | Grad | - | int | - | - | - | - | - | Abweichung der Winkelverdrehung bis auf 10-tel Grad (z.B. 2,3 °) |
 | STAT_VERDREHUNGZ_KAM_TV_L_WERT | Grad | - | int | - | - | - | - | - | Abweichung der Winkelverdrehung bis auf 10-tel Grad (z.B. 2,3 °) |
 
-<a id="table-res-0xd380"></a>
 ### RES_0XD380
 
 Dimensions: 4 rows × 10 columns
@@ -1530,7 +1471,6 @@ Dimensions: 4 rows × 10 columns
 | STAT_STROM_KAM_TV_L_WERT | mA | - | int | - | - | - | - | - | Gibt die Stromaufnahme der Kameras in mA aus. |
 | STAT_STROM_KAM_TV_R_WERT | mA | - | int | - | - | - | - | - | Gibt die Stromaufnahme der Kameras in mA aus. |
 
-<a id="table-res-0xd37a"></a>
 ### RES_0XD37A
 
 Dimensions: 3 rows × 10 columns
@@ -1541,7 +1481,6 @@ Dimensions: 3 rows × 10 columns
 | STAT_ABWEICHUNGY_KAM_TV_L_WERT | Pixel | - | int | - | - | - | - | - | Abweichung von der y-Achse in Pixel |
 | STAT_ABWEICHUNGZ_KAM_TV_L_WERT | Pixel | - | int | - | - | - | - | - | Abweichung von der z-Achse in Pixel |
 
-<a id="table-arg-0xd3b4"></a>
 ### ARG_0XD3B4
 
 Dimensions: 3 rows × 12 columns
@@ -1552,7 +1491,6 @@ Dimensions: 3 rows × 12 columns
 | TESTBILD | 0-n | - | int | - | - | - | - | - | - | - | 0 = Realbild, 1  = Testbild (blauer Hintergund, weißen Schrift für KAM), 2 = Schwarzes Testbild, 3 = Weißes Testbild |
 | TIMEOUT | Sekunden | - | int | - | - | - | - | - | - | - | Ausgabezeit für das Testbild in Sekunden fest. Default: 10, Bereich: 1-30, 0 = Normalbetrieb, 255 ohne Timeout. |
 
-<a id="table-arg-0xd38e"></a>
 ### ARG_0XD38E
 
 Dimensions: 1 rows × 12 columns
@@ -1561,7 +1499,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KAMERA | 0-n | - | int | - | - | - | - | - | - | - | 0 = TV_L, 1 = TV_R, 2 = RV |
 
-<a id="table-arg-0xa01a"></a>
 ### ARG_0XA01A
 
 Dimensions: 3 rows × 12 columns
@@ -1572,7 +1509,6 @@ Dimensions: 3 rows × 12 columns
 | ARG_AUSGANG | - | - | int | - | - | - | - | - | - | - | Gibt den anzusteuernden Ausgang an: 0 = Alle Ausgänge, 1 = Ausgang Nr.1, 2 = Ausgang Nr.2, usw. |
 | ARG_TIMEOUT | Sekunden | - | int | - | - | - | - | - | - | - | Wertebereich: 0-30,255 0 schaltet wieder auf Normalbetrieb. 255 schaltet das Signal ohne einen TIMEOUT. Ansonsten legt dies Zahl die Sekunden fest, die das Testbild ausgegeben wird. Default: 255 Wird dieser Parameter nicht angegeben, erfolgt eine Ausgabe, bis - der Job erneut mit Parameter 0 aufgerufen wird - das Steuergerät neu startet (Aufwachen, Reset, &) |
 
-<a id="table-res-0xa01b"></a>
 ### RES_0XA01B
 
 Dimensions: 17 rows × 10 columns
@@ -1597,7 +1533,6 @@ Dimensions: 17 rows × 10 columns
 | STAT_FEHLER_7_AUSGANG | 0-n | - | int | - | - | - | - | - | Dieses Result wird mit 255 belegt, wenn STAT_TEST_VIDEOAUSGANG nicht den Wert 3 (Fehler) meldet. Wert Test: 0 Alle Ausgänge, 1 Ausgang Nr.1, 2 Ausgang Nr.2, 4 & Gibt wieder, als Integer, auf welchem Ausgang der X. Fehler gefunden wurde. In den Kommentaren des Jobs muss eine ein-deutige Zuweisung des Ausgangs möglich sein.  Beispiele:  -Videoswitch: Ausgang1 (PINs X,Y) |
 | STAT_FEHLER_7_FEHLERART_AUSGANG | 0-n | - | int | - | - | - | - | - | Dieses Result wird mit 255 belegt, wenn STAT_TEST_VIDEOAUSGANG nicht den Wert 3 (Fehler) meldet. Wert Text: 0 Kurzschluss nach Plus, 1 Kurzschluss nach Masse, 2 Leitungsunterbrechung, & & 255 Nicht definiert. Gibt wieder, als Integer, welcher Art der X. Fehler war. |
 
-<a id="table-arg-0xa01b"></a>
 ### ARG_0XA01B
 
 Dimensions: 1 rows × 12 columns
@@ -1606,7 +1541,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_AUSGANG | 0-n | - | int | - | - | - | - | - | - | - | Wert Test: 0 Alle Ausgänge, 1 Ausgang Nr.1, 2 Ausgang Nr.2, 4 & In den Kommentaren des Jobs muss eine eindeutige Zuweisung des Ausgangs möglich sein. Alle Ausgänge des Steuer-gerätes müssen einzeln und kombiniert testbar sein. |
 
-<a id="table-res-0x410f"></a>
 ### RES_0X410F
 
 Dimensions: 1 rows × 10 columns
@@ -1615,7 +1549,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_SV_LEFT_CAMERA_STATUS_WERT |  |  | int |  |  |  |  |  | Camera status (via LIN) |
 
-<a id="table-res-0x4115"></a>
 ### RES_0X4115
 
 Dimensions: 1 rows × 10 columns
@@ -1624,7 +1557,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_REAR_CAMERA_ID_WERT | - | - | - | - | - | - | - | - | Camera CMOS module ID (via LIN) |
 
-<a id="table-res-0x410d"></a>
 ### RES_0X410D
 
 Dimensions: 1 rows × 10 columns
@@ -1633,7 +1565,6 @@ Dimensions: 1 rows × 10 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TV_LEFT_CAMERA_STATUS_WERT | - | - | int | - | - | - | - | - | Camera status (via LIN) |
 
-<a id="table-arg-0xf000"></a>
 ### ARG_0XF000
 
 Dimensions: 2 rows × 12 columns
@@ -1643,7 +1574,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_CAMERA_ID | - | - | unsigned char | - | - | - | - | - | - | - | Camera ID: 0x01 = TVL 0x02 = TVR 0x04 = SVL 0x08 = SVR 0x10 = RV Multiple cameras can be read at once by simply adding the required camera Ids e.g. For TVL and TVR = 0x01 + 0x02 = 0x03 or for all cameras 0x1F |
 | ARG_REGISTER | - | - | unsigned char | - | - | - | - | - | - | - | Register Nr: 0x00 to 0xFF |
 
-<a id="table-arg-0xf001"></a>
 ### ARG_0XF001
 
 Dimensions: 3 rows × 12 columns
@@ -1654,7 +1584,6 @@ Dimensions: 3 rows × 12 columns
 | ARG_REGISTER | - | - | unsigned char | - | - | - | - | - | - | - | Register Nr: 0x00 .. 0xFF |
 | ARG_DATA | - | - | unsigned char | - | - | - | - | - | - | - | Data : 0x00 .. 0xFF |
 
-<a id="table-arg-0xf002"></a>
 ### ARG_0XF002
 
 Dimensions: 3 rows × 12 columns
@@ -1665,7 +1594,6 @@ Dimensions: 3 rows × 12 columns
 | ARG_ADDRESS | - | - | unsigned int | - | - | - | - | - | - | - | Address-LSB, addressr-MSB |
 | ARG_SIZE | - | - | unsigned char | - | - | - | - | - | - | - | Size: Bit 2 to Bit 5; Bit 0,1,6,7 reserved  0x04 =1 Byte 0x08 =2 Bytes 0x0C =3 Bytes 0x10 =4 Bytes 0x14 =5 Bytes 0x18 =6 Bytes 0x1C =7 Bytes 0x20 =8 Bytes |
 
-<a id="table-arg-0xf003"></a>
 ### ARG_0XF003
 
 Dimensions: 4 rows × 12 columns
@@ -1677,7 +1605,6 @@ Dimensions: 4 rows × 12 columns
 | ARG_SIZE_TYPE | - | - | unsigned char | - | - | - | - | - | - | - | Type & Size: bit 0 : 0 = EEPROM; 1 = Reserved bit 1 .. 5 : Size ( Max 8 bytes) bit 6..7 : Reserved |
 | ARG_DATA | - | - | data[8] | - | - | - | - | - | - | - | Always 8 bytes. Please fill the unused ones with 00 |
 
-<a id="table-arg-0xf004"></a>
 ### ARG_0XF004
 
 Dimensions: 2 rows × 12 columns
@@ -1687,7 +1614,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_CAMERA_ID | - | - | unsigned char | - | - | - | - | - | - | - | Camera ID: 0x01 = TVL 0x02 = TVR 0x04 = SVL 0x08 = SVR 0x10 = RV Multiple cameras can be read at once by simply adding the required camera Ids e.g. For TVL and TVR = 0x01 + 0x02 = 0x03 or for all cameras 0x1F |
 | ARG_DATA | - | - | data[8] | - | - | - | - | - | - | - | Data : 8 bytes |
 
-<a id="table-arg-0xf005"></a>
 ### ARG_0XF005
 
 Dimensions: 3 rows × 12 columns
@@ -1698,7 +1624,6 @@ Dimensions: 3 rows × 12 columns
 | ARG_PATTERN | - | - | unsigned char | - | - | - | - | - | - | - | Patterns: 0 = Colour bar (only one supported for cameras) 1 = RGB (10-bit stored in 16-bits per colour). 2 = Checkerboard (small) 3 = Checkerboard (large) 4 = Single pixel on (X, Y parameter). 5 = Single pixel off  (X, Y parameter). 6 = Alignment cross pattern. |
 | ARG_DATA | - | - | data[6] | - | - | - | - | - | - | - | Data:  <16-bit R><16-bit G><16-bit B> or <16-bit X><16-bit Y><16-bit n/a> |
 
-<a id="table-arg-0xf006"></a>
 ### ARG_0XF006
 
 Dimensions: 1 rows × 12 columns
@@ -1707,7 +1632,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_MODE | - | - | unsigned char | - | - | - | - | - | 0 | 1 | Mode: 0 = off, 1 = on. |
 
-<a id="table-arg-0xf00b"></a>
 ### ARG_0XF00B
 
 Dimensions: 1 rows × 12 columns
@@ -1716,7 +1640,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_OVERLAY | - | - | char | - | - | - | - | - | - | - | 0 = Overlay on 1 = Overlay off |
 
-<a id="table-arg-0xf00a"></a>
 ### ARG_0XF00A
 
 Dimensions: 1 rows × 12 columns
@@ -1725,7 +1648,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_OVERLAY | - | - | char | - | - | - | - | - | - | - | 0 = Overlay on 1 = Overlay off |
 
-<a id="table-arg-0xf00c"></a>
 ### ARG_0XF00C
 
 Dimensions: 2 rows × 12 columns
@@ -1735,7 +1657,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_CAMERA_ID | - | - | char | - | - | - | - | - | - | - | Camera IDs (only one permitted): 0x01 = TVL 0x02 = TVR 0x10 = RV |
 | ARG_CALIB_ACTIVE | - | - | char | - | - | - | - | - | - | - | Calib-acitve is a boolean that instructs the system to perform a calibrate (0x01) and turn the display off on completion. If set to 0x00 then the video mode is left on, so the capture status can be seen, and when cancelled will return the capture status via grid-locked. |
 
-<a id="table-arg-0xf00d"></a>
 ### ARG_0XF00D
 
 Dimensions: 1 rows × 12 columns
@@ -1744,7 +1665,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | unsigned int | - | - | - | - | - | - | - | byte 1 is data values, byte 2 is a mask: 0x01 = DSP 3V3 and 1V4 0x02 = AVCC 0x04 = DSP Reset  |
 
-<a id="table-arg-0xf00e"></a>
 ### ARG_0XF00E
 
 Dimensions: 1 rows × 12 columns
@@ -1753,7 +1673,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | unsigned long | - | - | - | - | - | - | - | data followed by mask/ Data Byte 1: Host 0x01 = TS20 0x02 = TS21 0x04 = TS22 0x08 = Host LED (active high) Data Byte 2: DSP 0x01 = TS17 0x02 = TS18 0x04 = TS19 0x08 = TS1 DSP LED D4 (active low) 0x10 = TS2 DSP LED D6 (active low) Mask Byte 3: Host (as above) Mask Byte 4: DSP (as above) |
 
-<a id="table-arg-0xf00f"></a>
 ### ARG_0XF00F
 
 Dimensions: 1 rows × 12 columns
@@ -1762,7 +1681,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | unsigned int | - | - | - | - | - | - | - | data followed by mask. Data Byte 1: 0x01 = Left MUX 0x02 = Right MUX Mask Byte 2: (as above) |
 
-<a id="table-arg-0xf010"></a>
 ### ARG_0XF010
 
 Dimensions: 1 rows × 12 columns
@@ -1771,7 +1689,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | unsigned int | - | - | - | - | - | - | - | data followed by mask. Data Byte 1: 0x01 = DSP IIC Clock 0x02 = DSP IIC Data Mask Byte 2: (as above) |
 
-<a id="table-arg-0xf011"></a>
 ### ARG_0XF011
 
 Dimensions: 1 rows × 12 columns
@@ -1780,7 +1697,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | unsigned int | - | - | - | - | - | - | - | data followed by mask. Data Byte 1: 0x01 = FLASH A19 0x02 = FLASH A20 Mask Byte 2: (as above) |
 
-<a id="table-arg-0xf012"></a>
 ### ARG_0XF012
 
 Dimensions: 1 rows × 12 columns
@@ -1789,7 +1705,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | unsigned int | - | - | - | - | - | - | - | data followed by mask. Data Byte 1: 0x01 = Camera 1 (J7 RV) 0x02 = Camera 2 (J3 TVL) 0x04 = Camera 3 (J4 SVL) 0x08 = Camera 4 (J5 TVR) 0x10 = Camera 5 (J6 SVR) Mask Byte 2: (as above) |
 
-<a id="table-arg-0xf013"></a>
 ### ARG_0XF013
 
 Dimensions: 5 rows × 12 columns
@@ -1802,7 +1717,6 @@ Dimensions: 5 rows × 12 columns
 | ARG_MASK2 | - | - | char | - | - | - | - | - | - | - | Mask Byte 5: (as above) |
 | ARG_MASK3 | - | - | char | - | - | - | - | - | - | - | Mask Byte 6: (as above) |
 
-<a id="table-arg-0xf014"></a>
 ### ARG_0XF014
 
 Dimensions: 1 rows × 12 columns
@@ -1811,7 +1725,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | char | - | - | - | - | - | - | - | data followed by mask. Data Byte 1: 0x01 = /STB 0x02 = /EN Mask Byte 1: (as above) |
 
-<a id="table-arg-0xf016"></a>
 ### ARG_0XF016
 
 Dimensions: 1 rows × 12 columns
@@ -1820,7 +1733,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | char | - | - | - | - | - | - | - | Data Byte 1: 0x01 = Enable |
 
-<a id="table-arg-0xf017"></a>
 ### ARG_0XF017
 
 Dimensions: 2 rows × 12 columns
@@ -1830,7 +1742,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_PATTERN | - | - | char | - | - | - | - | - | - | - | Data Byte 1: Pattern # (TBD) |
 | ARG_CAMERA | - | - | char | - | - | - | - | - | - | - | Data Byte 2: 0x01 = Camera 1 (J7 RV) 0x02 = Camera 2 (J3 TVL) 0x04 = Camera 3 (J4 SVL) 0x08 = Camera 4 (J5 TVR) 0x10 = Camera 5 (J6 SVR) |
 
-<a id="table-arg-0xf018"></a>
 ### ARG_0XF018
 
 Dimensions: 1 rows × 12 columns
@@ -1839,7 +1750,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | char | - | - | - | - | - | - | - | 0 = Off 1 = On |
 
-<a id="table-arg-0xf019"></a>
 ### ARG_0XF019
 
 Dimensions: 1 rows × 12 columns
@@ -1848,7 +1758,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | char | - | - | - | - | - | - | - | 0 = Off 1 = On |
 
-<a id="table-arg-0xf01a"></a>
 ### ARG_0XF01A
 
 Dimensions: 2 rows × 12 columns
@@ -1858,7 +1767,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_CAMERA_ID | - | - | char | - | - | - | - | - | - | - | Camera IDs (only one permitted): 0x01 = TVL 0x02 = TVR 0x10 = RV |
 | ARG_CALIB_ACTIVE | - | - | char | - | - | - | - | - | - | - | Calib-acitve is a boolean that instructs the system to perform a calibrate (0x01) and turn the display off on completion. If set to 0x00 then the video mode is left on, so the capture status can be seen, and when cancelled will return the capture status via grid-locked. |
 
-<a id="table-arg-0xf01b"></a>
 ### ARG_0XF01B
 
 Dimensions: 2 rows × 12 columns
@@ -1868,7 +1776,6 @@ Dimensions: 2 rows × 12 columns
 | ARG_CAMERA_ID | - | - | char | - | - | - | - | - | - | - | Camera IDs (only one permitted): 0x01 = TVL 0x02 = TVR 0x10 = RV |
 | ARG_CALIB_ACTIVE | - | - | char | - | - | - | - | - | - | - | Calib-acitve is a boolean that instructs the system to perform a calibrate (0x01) and turn the display off on completion. If set to 0x00 then the video mode is left on, so the capture status can be seen, and when cancelled will return the capture status via grid-locked. |
 
-<a id="table-arg-0x4100"></a>
 ### ARG_0X4100
 
 Dimensions: 5 rows × 12 columns
@@ -1881,7 +1788,6 @@ Dimensions: 5 rows × 12 columns
 |  | - | - | - |  |  |  |  |  |  |  |  |
 |  | - | - | - |  |  |  |  |  |  |  |  |
 
-<a id="table-arg-0xf015"></a>
 ### ARG_0XF015
 
 Dimensions: 1 rows × 12 columns
@@ -1890,7 +1796,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_DATA | - | - | char | - | - | - | - | - | - | - | data followed by mask. Data Byte 1: 0x01 = /STB 0x02 = /EN Mask Byte 1: (as above) |
 
-<a id="table-res-0xf000"></a>
 ### RES_0XF000
 
 Dimensions: 1 rows × 13 columns
@@ -1899,7 +1804,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_READ_CAMERA_REGISTER_WERT | - | - | + | - | - | data[15] | - | - | - | - | - | Rsp: [TVL] <register>, <value>,  [TVR] <register>, <value>,  [SVL] <register>, <value>, [SVR] <register>, <value>,  [RV] <register>, <value> |
 
-<a id="table-res-0xf002"></a>
 ### RES_0XF002
 
 Dimensions: 1 rows × 13 columns
@@ -1908,7 +1812,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_READ_CAMERA_DATA(EEPROM)_WERT | - | - | + | - | - | data[9] | - | - | - | - | - | Rsp: <cameria-id><data …> <cameria-id><data …> ...  ((1+Len) * NumCams) |
 
-<a id="table-res-0xf00c"></a>
 ### RES_0XF00C
 
 Dimensions: 1 rows × 13 columns
@@ -1917,7 +1820,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CALIBRATION__FOR_BMW_ASSEMBLY_WERT | - | - | + | - | - | data[11] | - | - | - | - | - | Rsp: <camera-id>, <initial err LSB>, <intial err MSB>, <final error LSB>, <final error MSB>, <calib-active>, <success>, <grid-locked>, <_padding>, <camera-updated-ok>, <calib-complete> |
 
-<a id="table-res-0xf01a"></a>
 ### RES_0XF01A
 
 Dimensions: 1 rows × 13 columns
@@ -1926,7 +1828,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CEL_CAMERA_CALIBRATION_JIG_SETUP_WERT | - | - | + | - | - | data[11] | - | - | - | - | - | Rsp: <camera-id>, <initial err LSB>, <intial err MSB>, <final error LSB>, <final error MSB>, <calib-active>, <success>, <grid-locked>, <_padding>, <camera-updated-ok>, <calib-complete> |
 
-<a id="table-res-0xf01b"></a>
 ### RES_0XF01B
 
 Dimensions: 1 rows × 13 columns
@@ -1935,7 +1836,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_CEL_CAMERA_CALIBRATION_WERT | - | - | + | - | - | data[11] | - | - | - | - | - | Rsp: <camera-id>, <initial err LSB>, <intial err MSB>, <final error LSB>, <final error MSB>, <calib-active>, <success>, <grid-locked>, <_padding>, <camera-updated-ok>, <calib-complete> |
 
-<a id="table-res-0x4100"></a>
 ### RES_0X4100
 
 Dimensions: 1 rows × 13 columns

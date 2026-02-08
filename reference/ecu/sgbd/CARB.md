@@ -32,7 +32,6 @@
 - [_ReqRawMode](#job-reqrawmode) - Tel von Oben!
 - [DiagnosticEnd](#job-diagnosticend)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -50,7 +49,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Dieser Job wird vom EDIABAS automatisch beim erstem Zugriff auf eine SGBD aufgerufen. Bei weitern Zugriffen auf die selbe SGBD wird dieser Job nicht mehr aufgerufen. In der INITIALISIERUNG werden alle Funktionen aufgerufen, die nur einmal, vor der Kommunikation mit einem SG notwendig sind.
@@ -63,7 +61,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 0:n.i.O. 1:i.O Default Automatic Required Result |
 
-<a id="job-set-parameter"></a>
 ### SET_PARAMETER
 
 Setzen der Carb Parameter im EIDBSS
@@ -81,7 +78,6 @@ Setzen der Carb Parameter im EIDBSS
 | JOB_STATUS | string |  |
 | STATUS | int | Gibt fuer jeden Ergenissatz den Ergebnis- und Fehlerstatus zurueck Folgende Werte sind definiert: CARB_ERROR = -1 => Fehler beim JOB-Aufruf (Parameter) CARB_IGNORE_NONE = 0 => Alle Results dieses Satzes sind gueltig CARB_IGNORE_TELEGRAM = 1 => Ergebnis TELEGRAM nicht belegt CARB_IGNORE_RESULT = 2 => Nur das Ergebnis TELEGRAM ist gueltig CARB_IGNORE_BOTH = 3 => Kein Ergebnis wurde belegt |
 
-<a id="job-start-bus-communication"></a>
 ### Start_Bus_Communication
 
 Auslesen der Identifikationsdaten
@@ -99,7 +95,6 @@ _No arguments._
 | RESULTDATA | string | Value of the Result |
 | RESULTSOURCE | string | Source of the Result |
 
-<a id="job-mode1-reqcurrentpowertraindiagnosticdata"></a>
 ### _MODE1_ReqCurrentPowertrainDiagnosticData
 
 MODE 1
@@ -124,7 +119,6 @@ MODE 1
 | RESULTDATA | string | Value of the Result |
 | RESULTSOURCE | string | Source of the Result |
 
-<a id="job-mode2-reqpowertrainfreezeframedata"></a>
 ### _MODE2_ReqPowertrainFreezeFrameData
 
 MODE 2
@@ -148,7 +142,6 @@ MODE 2
 | RESULTDATA | string | Value of the Result |
 | RESULTSOURCE | string | Source of the Result |
 
-<a id="job-mode3-reqemissionreleatedpowertraindtc"></a>
 ### _MODE3_ReqEmissionReleatedPowertrainDTC
 
 MODE 3
@@ -170,7 +163,6 @@ MODE 3
 | RESULTDATA | string | Value of the Result |
 | RESULTSOURCE | string | Source of the Result |
 
-<a id="job-mode4-clearresetemissionreleateddiagnosticinformation"></a>
 ### _MODE4_ClearResetEmissionReleatedDiagnosticInformation
 
 MODE 4
@@ -192,7 +184,6 @@ MODE 4
 | RESULTDATA | string | Value of the Result |
 | RESULTSOURCE | string | Source of the Result |
 
-<a id="job-mode5-reqoxygensensormonitoringtestresults"></a>
 ### _MODE5_ReqOxygenSensorMonitoringTestResults
 
 MODE 5
@@ -216,7 +207,6 @@ MODE 5
 | RESULTDATA | string | Value of the Result |
 | RESULTSOURCE | string | Source of the Result |
 
-<a id="job-modex-transparentmode"></a>
 ### _MODEX_TransparentMode
 
 so muss das EDIC die Checksumme berechnen!
@@ -245,7 +235,6 @@ so muss das EDIC die Checksumme berechnen!
 | RESULTDATA | string | Value of the Result |
 | RESULTSOURCE | string | Source of the Result |
 
-<a id="job-reqrawmode"></a>
 ### _ReqRawMode
 
 Tel von Oben!
@@ -266,7 +255,6 @@ Tel von Oben!
 | RESULTDATA | string | Value of the Result |
 | RESULTSOURCE | string | Source of the Result |
 
-<a id="job-diagnosticend"></a>
 ### DiagnosticEnd
 
 _No arguments._
@@ -286,7 +274,6 @@ _No arguments._
 - [MODES](#table-modes) (7 × 2)
 - [CARBSOURCE](#table-carbsource) (257 × 2)
 
-<a id="table-errorcode"></a>
 ### ERRORCODE
 
 Dimensions: 273 rows × 2 columns
@@ -567,7 +554,6 @@ Dimensions: 273 rows × 2 columns
 | 1XXX | P1xxx: Manufacturer Specific DTC |
 | XXXX | Pxxxx: Unknown DTC |
 
-<a id="table-modes"></a>
 ### MODES
 
 Dimensions: 7 rows × 2 columns
@@ -582,7 +568,6 @@ Dimensions: 7 rows × 2 columns
 | MODE6 | 6 |
 | MODE7 | 7 |
 
-<a id="table-carbsource"></a>
 ### CARBSOURCE
 
 Dimensions: 257 rows × 2 columns

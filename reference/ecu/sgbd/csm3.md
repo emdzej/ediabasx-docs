@@ -77,7 +77,6 @@
 - [_STEUERN_KEY_GEN](#job-steuern-key-gen) - Der Job startet Generierung aller Schlüssel nacheinander wenn: - alle Schlüssel gelöscht sind. - sicherheitskritische Daten nicht gelockt sind. alternativ: Der Job startet Generierung eines Schlüssels bzw. eines Schlüsselpaars, wichtig für spätere Generierung eines weiteren Schlüssels. Der generierte Schlüssel und sein Status wird per STATUS_CRYPT_KEY gelesen.
 - [_STEUERN_KEY_DELETE](#job-steuern-key-delete) - Job Löschen aller SecretKeys und Aufhebung der EEPROM-Datensperre => EELock = 0. Alternativ wird der Vorgang durch ein Kommunikationsobjekt vom BE gestartet, mit Zufallsnummer ( session Key) vom CSM - in RAM.  Die Signatur wird aus folgendem 24Byte Datenblock berechnet: [0] - Befehl = 1 [1..15] - UID, 15Byte [16..23] - Session Key - dieser Key wird durch den Job _STATUS_CRYPT_KEY(K15) als Zufallszahl generiert. Falls die Daten bereits entsperrt sind, werden die SecretKeys ohne Signaturprüfung gelöscht. Für die Signaturprüfung wird einer von 10 BMW Signaturschlüsseln benutzt.
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -96,7 +95,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -109,7 +107,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten UDS  : $22   ReadDataByIdentifier UDS  : $F150 Sub-Parameter SGBD-Index Modus: Default
@@ -126,7 +123,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $02 ReadDTCByStatusMask UDS  : $0C StatusMask (Bit2, Bit3) Modus: Default
@@ -156,7 +152,6 @@ Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $19 ReadDTCInformation U
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-lesen-detail"></a>
 ### FS_LESEN_DETAIL
 
 Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformation UDS  : $04 reportDTCSnapshotRecordByDTCNumber UDS  : $06 reportDTCExtendedDataRecordByDTCNumber UDS  : $09 reportSeverityInformationOfDTC Modus: Default
@@ -198,7 +193,6 @@ Fehlerspeicher lesen (einzelner Fehler / Ort und Art) UDS  : $19 ReadDTCInformat
 | _RESPONSE_SEVERITY | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHighByte UDS  : $FF DTCMiddleByte UDS  : $FF DTCLowByte Modus: Default
@@ -217,7 +211,6 @@ Fehlerspeicher loeschen UDS  : $14 ClearDiagnosticInformation UDS  : $FF DTCHigh
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels UDS  : $22   ReadDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -235,7 +228,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden. UDS  : $2E   WriteDataByIdentifier UDS  : $1000 TestStamp Modus: Default
@@ -256,7 +248,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-svk-lesen"></a>
 ### SVK_LESEN
 
 Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier UDS  : $F1xx Sub-Parameter fuer SVK UDS  : $F101 SVK_AKTUELL (Default) Modus: Default
@@ -285,7 +276,6 @@ Informationen zur Steuergeraete-Verbau-Kennung UDS  : $22   ReadDataByIdentifier
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
@@ -305,7 +295,6 @@ Lesen eines oder mehrerer Stati UDS  : $22 ReadDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern"></a>
 ### STEUERN
 
 Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
@@ -326,7 +315,6 @@ Vorgeben eines Status UDS  : $2E WriteDataByIdentifier
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-seriennummer-lesen"></a>
 ### SERIENNUMMER_LESEN
 
 Seriennummer des Steuergeraets UDS  : $22   ReadDataByIdentifier UDS  : $F18C Sub-Parameter ECUSerialNumber Modus: Default
@@ -342,7 +330,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-routine"></a>
 ### STEUERN_ROUTINE
 
 Vorgeben eines Status UDS  : $31 RoutineControl
@@ -364,7 +351,6 @@ Vorgeben eines Status UDS  : $31 RoutineControl
 | _REQUEST | binary | Hex-Antwort von SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-fs-sperren"></a>
 ### FS_SPERREN
 
 Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $?? Sperren ($02) / Freigabe ($01) Modus: Default
@@ -383,7 +369,6 @@ Sperren bzw. Freigeben des Fehlerspeichers UDS  : $85 ControlDTCSetting UDS  : $
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Sekundaerer Fehlerspeicher lesen (alle Fehler / Ort und Art) UDS  : $22   ReadDataByIdentifierRequestServiceID UDS  : $2000 DataIdentifier sekundaerer Fehlerspeicher Modus: Default
@@ -409,7 +394,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-is-lesen-detail"></a>
 ### IS_LESEN_DETAIL
 
 sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadDataByIdentifier UDS  : $20 dataIdentifier UDS  : $00 alle Info-Meldungen anschließend UDS  : $20 dataIdentifier UDS  : $nn Details zur Info-Meldung an der Position n Modus: Default
@@ -451,7 +435,6 @@ sekundären Fehlerspeicher lesen (Info-Meldungen / Ort und Art) UDS  : $22 ReadD
 | _RESPONSE_200X | binary | Hex-Antwort von SG |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 
-<a id="job-is-loeschen"></a>
 ### IS_LOESCHEN
 
 Infospeicher loeschen UDS  : $31   RoutineControl UDS  : $01   startRoutine UDS  : $0F06 ClearSecondaryDTCMemory Modus: Default
@@ -466,7 +449,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-herstellinfo-lesen"></a>
 ### HERSTELLINFO_LESEN
 
 Lieferant und Herstelldatum lesen UDS  : $22   ReadDataByIdentifier UDS  : $F18A SystemSupplierIdentifier UDS  : $F18B ECUManufactoringData Modus: Default
@@ -486,7 +468,6 @@ _No arguments._
 | _REQUEST_2 | binary | Hex-Auftrag an SG |
 | _RESPONSE_2 | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppressPosRspMsgIndication Modus: Default
@@ -505,7 +486,6 @@ Diagnosemode des SG aufrecht erhalten UDS  : $3E TesterPresent UDS  : $?0 suppre
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-mode"></a>
 ### DIAGNOSE_MODE
 
 SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: einstellbar mit diesem Job
@@ -524,7 +504,6 @@ SG in bestimmten Diagnosemode bringen UDS  : $10 StartDiagnosticSession Modus: e
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen UDS  : $11 ECUReset UDS  : $04 EnableRapidPowerShutDown Modus: Default
@@ -539,7 +518,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-energiesparmode"></a>
 ### ENERGIESPARMODE
 
 Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS   : $01   startRoutine UDS   : $0F0C DataIdentifier ControlEnergySavingMode UDS   : $??   Mode Modus : Default
@@ -558,7 +536,6 @@ Einstellen des Energiesparmodes UDS   : $31   RoutineControlRequestServiceID UDS
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-energiesparmode"></a>
 ### STATUS_ENERGIESPARMODE
 
 Energy-Saving-Mode auslesen UDS  : $22   ReadDataByIdentifier UDS  : $100A DataIdentifier EnergySavingMode Modus: Default
@@ -578,7 +555,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuergeraete-reset"></a>
 ### STEUERGERAETE_RESET
 
 Harter Reset des Steuergeraets UDS  : $11 EcuReset UDS  : $01 HardReset Modus: Default
@@ -593,7 +569,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-stop"></a>
 ### STEUERN_ROE_STOP
 
 Temporaeres Deaktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $00 Stop $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -608,7 +583,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-roe-report"></a>
 ### STATUS_ROE_REPORT
 
 Abfrage Status der Aktivierung der aktiven Fehlermeldung UDS: $86 ResponseOnEvent $04 report activated events [$02 eventWindowTime - infinite (nur 35up)] 35up: LH Diagnosemaster V11 oder höher pre35up: LH Diagnosemaster V6 - V9
@@ -625,7 +599,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-start"></a>
 ### STEUERN_ROE_START
 
 Temporaeres Aktivieren der aktiven Fehlermeldung UDS   : $86 ResponseOnEvent $05 Start $02 (EventWindowTime) gültig für LH Diagnosemaster V9 oder früher. (pre 35up)
@@ -640,7 +613,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-stop"></a>
 ### STEUERN_ROE_PERSISTENT_STOP
 
 Persistentes Deaktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $40 Stop persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -655,7 +627,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-roe-persistent-start"></a>
 ### STEUERN_ROE_PERSISTENT_START
 
 Persistentes Aktivieren der aktiven Fehlermeldung an den Diagnosemaster ueber TAS UDS   : $86 ResponseOnEvent $45 Start persistent $02 (EventWindowTime) gültig für LH Diagnosemaster V6 - V12 (Stand 2013)
@@ -670,7 +641,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-diag-session-lesen"></a>
 ### DIAG_SESSION_LESEN
 
 Aktive Diagnose-Session auslesen UDS  : $22   ReadDataByIdentifier UDS  : $F186 ActiveDiagnosticSession Modus: Default
@@ -689,7 +659,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-flash-tp-lesen"></a>
 ### FLASH_TP_LESEN
 
 Flash Timing Parameter auslesen UDS  : $22   ReadDataByIdentifier UDS  : $2504 FlashTimingParameter Modus: Default
@@ -709,7 +678,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-virt-key"></a>
 ### _STATUS_VIRT_KEY
 
 Der Job liefert Status des virtuellen Schlüssels. Das Passwort kann man nur bei nicht gesperrtem Zugriff auslesen.
@@ -729,7 +697,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-secu-sw"></a>
 ### _STATUS_SECU_SW
 
 Software status.
@@ -769,7 +736,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-nad"></a>
 ### _STATUS_NAD
 
 Der Job liefert den Status der Verbindung zum BMW-Backend und die IMEI-Nummer
@@ -787,7 +753,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-temperatur"></a>
 ### _STATUS_TEMPERATUR
 
 Der Job liefert alle verfuegbaren Temperaturwerte
@@ -804,7 +769,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-simkarte"></a>
 ### _STATUS_SIMKARTE
 
 Der Job liefert den Status der Telefon SIM-Karte
@@ -826,7 +790,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-interner-spannungen"></a>
 ### _STATUS_INTERNER_SPANNUNGEN
 
 Der Job liefert die verwendeten Versorgungsspannungen (Batteriespannung, Versorgungsspannung AC, SC, AE, etc)
@@ -859,7 +822,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-cpu-last"></a>
 ### _STATUS_CPU_LAST
 
 Der Job liefert die Status der Mikrocontroller
@@ -884,7 +846,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-nfc-innenleser"></a>
 ### _STATUS_NFC_INNENLESER
 
 Der Job liefert die Kenngroessen eines NFC-Device
@@ -901,7 +862,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-naeherungssensor"></a>
 ### _STATUS_NAEHERUNGSSENSOR
 
 Der Job liefert das Messverfahren, den Schwellwert, den Messwert des Naeherungssensor und ob durch Naeherungssensor geweckt wurde
@@ -920,7 +880,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-bluetooth-verbindung"></a>
 ### _STATUS_BLUETOOTH_VERBINDUNG
 
 Der Job liefert die aktivierten Bluetooth-Profile
@@ -941,7 +900,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-usb"></a>
 ### _STATUS_USB
 
 Der Job liefert die aktivierten Bluetooth-Profile
@@ -957,7 +915,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-helligkeitssensor"></a>
 ### _STATUS_HELLIGKEITSSENSOR
 
 Der Job liefert  die  aktuelle  Beleuchtungsstaerke  und  die  relative Beleuchtungsstaerke des Helligkeitssensors
@@ -974,7 +931,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-kalibrierung-antenne-nfc"></a>
 ### _STATUS_KALIBRIERUNG_ANTENNE_NFC
 
 Der Job liefert den Status der Kaliebrierung der Antenne von NFC auf der AE
@@ -990,7 +946,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-led-helligkeit-ae"></a>
 ### _STATUS_LED_HELLIGKEIT_AE
 
 Der Job liefert die absolute und die relative Helligkeit der LEDs auf der AE in Prozent
@@ -1011,7 +966,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-virt-key"></a>
 ### _STEUERN_VIRT_KEY
 
 Schreiben eines unverschlüsselten virtuellen Schlüssels ins CSM. Bei EELock=1 ist Schreiben des virtuellen Schlüssels nur über das CAO-Objekt möglich.
@@ -1033,7 +987,6 @@ Schreiben eines unverschlüsselten virtuellen Schlüssels ins CSM. Bei EELock=1 
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-ee-lock"></a>
 ### _STEUERN_EE_LOCK
 
 Sperrung der sicherheitskritischen Daten => EELock = 1.
@@ -1053,7 +1006,6 @@ Sperrung der sicherheitskritischen Daten => EELock = 1.
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-write-virt-key"></a>
 ### _STEUERN_WRITE_VIRT_KEY
 
 Schreiben eines im CAO-Objekt verschlüsselten virtuellen Schlüssels ins CSM. Es handelt sich um einen Parallelweg zum GSM-Modem fürs CAO-Objekt.
@@ -1073,7 +1025,6 @@ Schreiben eines im CAO-Objekt verschlüsselten virtuellen Schlüssels ins CSM. E
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-naeherungssensor"></a>
 ### _STEUERN_NAEHERUNGSSENSOR
 
 Vorgabe des Messverfahren und des Schwellwert des Naeherungssensor
@@ -1093,7 +1044,6 @@ Vorgabe des Messverfahren und des Schwellwert des Naeherungssensor
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-bluetooth-verbindung-unpairen"></a>
 ### _STEUERN_BLUETOOTH_VERBINDUNG_UNPAIREN
 
 die Bluetooth-Verbindung im AC zurücksetzen Anmerkung: Es erfolgt ein automatisches Pairing der Bluetooth-Verbindung
@@ -1108,7 +1058,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-watchdog-test"></a>
 ### _STEUERN_WATCHDOG_TEST
 
 Testet den Watchdog indem er ausgeloest wird
@@ -1123,7 +1072,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-vorgabe-relative-umgebungshelligkeit"></a>
 ### _STEUERN_VORGABE_RELATIVE_UMGEBUNGSHELLIGKEIT
 
 Vorgabe der relativen Umgebungshelligkeit des Helligkeitssensors auf der AE für eine angegebene Zeit
@@ -1143,7 +1091,6 @@ Vorgabe der relativen Umgebungshelligkeit des Helligkeitssensors auf der AE für
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-max-umgebungs-helligkeit"></a>
 ### _STEUERN_MAX_UMGEBUNGS_HELLIGKEIT
 
 Schreiben der max. Umgebungshelligkeit -> 100% relative Umgebungshelligkeit
@@ -1162,7 +1109,6 @@ Schreiben der max. Umgebungshelligkeit -> 100% relative Umgebungshelligkeit
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-kalibrierung-antenne-nfc"></a>
 ### _STEUERN_KALIBRIERUNG_ANTENNE_NFC
 
 Startet die Kaliebrierung der Antenne von NFC auf der AE
@@ -1177,7 +1123,6 @@ _No arguments._
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-status-crypt-key"></a>
 ### _STATUS_CRYPT_KEY
 
 Der Job dient zum Auslesen der gerade generierten Schlüssel. Normalerwiese wird nach STEUERN_KEY_GEN ausgeführt.  Parameter: Kx - Key selection  Subfunktion 1: Start Subfunktion 3: Result lesen
@@ -1205,7 +1150,6 @@ Der Job dient zum Auslesen der gerade generierten Schlüssel. Normalerwiese wird
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-key-gen"></a>
 ### _STEUERN_KEY_GEN
 
 Der Job startet Generierung aller Schlüssel nacheinander wenn: - alle Schlüssel gelöscht sind. - sicherheitskritische Daten nicht gelockt sind. alternativ: Der Job startet Generierung eines Schlüssels bzw. eines Schlüsselpaars, wichtig für spätere Generierung eines weiteren Schlüssels. Der generierte Schlüssel und sein Status wird per STATUS_CRYPT_KEY gelesen.
@@ -1225,7 +1169,6 @@ Der Job startet Generierung aller Schlüssel nacheinander wenn: - alle Schlüsse
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-key-delete"></a>
 ### _STEUERN_KEY_DELETE
 
 Job Löschen aller SecretKeys und Aufhebung der EEPROM-Datensperre => EELock = 0. Alternativ wird der Vorgang durch ein Kommunikationsobjekt vom BE gestartet, mit Zufallsnummer ( session Key) vom CSM - in RAM.  Die Signatur wird aus folgendem 24Byte Datenblock berechnet: [0] - Befehl = 1 [1..15] - UID, 15Byte [16..23] - Session Key - dieser Key wird durch den Job _STATUS_CRYPT_KEY(K15) als Zufallszahl generiert. Falls die Daten bereits entsperrt sind, werden die SecretKeys ohne Signaturprüfung gelöscht. Für die Signaturprüfung wird einer von 10 BMW Signaturschlüsseln benutzt.
@@ -1315,7 +1258,6 @@ Job Löschen aller SecretKeys und Aufhebung der EEPROM-Datensperre => EELock = 0
 - [TASU_STEUERN_STATUS](#table-tasu-steuern-status) (3 × 2)
 - [VK_KEY_STATUS_TABELLE](#table-vk-key-status-tabelle) (5 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 76 rows × 2 columns
@@ -1399,7 +1341,6 @@ Dimensions: 76 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 136 rows × 2 columns
@@ -1543,7 +1484,6 @@ Dimensions: 136 rows × 2 columns
 | 0x0000BD | U-Shin |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 35 rows × 2 columns
@@ -1586,7 +1526,6 @@ Dimensions: 35 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -1611,7 +1550,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 26 rows × 3 columns
@@ -1645,7 +1583,6 @@ Dimensions: 26 rows × 3 columns
 | 0x0D | SWFK | BEGU: Detaillierung auf SWE-Ebene |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -1718,7 +1655,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -1731,7 +1667,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -1744,7 +1679,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -1757,7 +1691,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-diagmode"></a>
 ### DIAGMODE
 
 Dimensions: 12 rows × 3 columns
@@ -1777,7 +1710,6 @@ Dimensions: 12 rows × 3 columns
 | 0x5F | ECUGDM | ECUGarageDiagnoseMode |
 | 0xXY | -- | unbekannter Diagnose-Mode |
 
-<a id="table-iarttexte"></a>
 ### IARTTEXTE
 
 Dimensions: 18 rows × 2 columns
@@ -1803,7 +1735,6 @@ Dimensions: 18 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-uds-tab-roe-aktiv"></a>
 ### UDS_TAB_ROE_AKTIV
 
 Dimensions: 3 rows × 2 columns
@@ -1814,7 +1745,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Aktive Fehlermeldung aktiviert |
 | 0xFF | Status der aktiven Fehlermeldung nicht feststellbar |
 
-<a id="table-arg-0x1032-r"></a>
 ### ARG_0X1032_R
 
 Dimensions: 1 rows × 14 columns
@@ -1823,7 +1753,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASU_STATE | + | - | 0-n | high | unsigned char | - | TASU_STEUERN_STATUS | - | - | - | - | - | Steuerung der TAS-Nutzung |
 
-<a id="table-arg-0x1033-r"></a>
 ### ARG_0X1033_R
 
 Dimensions: 1 rows × 14 columns
@@ -1832,7 +1761,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TASU_REQUEST | + | - | 0-n | high | unsigned char | - | TASU_REQUEST_TAB | - | - | - | - | - | auszuführendes Kommando |
 
-<a id="table-arg-0xa095-r"></a>
 ### ARG_0XA095_R
 
 Dimensions: 7 rows × 14 columns
@@ -1847,7 +1775,6 @@ Dimensions: 7 rows × 14 columns
 | RED_LED_LICHTLEISTUNG | + | - | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 100.0 | Legt die Leistung in % fest mit der die LEDs angesteuert werden. MIN = 0 MAX = 100 |
 | ARG_TIME | + | - | s | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 1.0 | 255.0 | Dauer der Ansteuerung in Sekunden. 255 entspricht dabei keiner zeitlichen Begrenzung. |
 
-<a id="table-arg-0xa096-r"></a>
 ### ARG_0XA096_R
 
 Dimensions: 1 rows × 14 columns
@@ -1856,7 +1783,6 @@ Dimensions: 1 rows × 14 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_TEST_ROUTINE | + | - | 0-n | high | unsigned char | - | TAB_CSM_HW_TEST | - | - | - | - | - | Gibt an welche Hardware getestet werden soll. |
 
-<a id="table-arg-0xd0db-d"></a>
 ### ARG_0XD0DB_D
 
 Dimensions: 1 rows × 12 columns
@@ -1865,7 +1791,6 @@ Dimensions: 1 rows × 12 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ARG_CONTROLLER | - | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | 0.0 | 3.0 | Auswahl des Controllers 0 = alle 1 = Außeneinheit 2 = Android Controller 3 = NAD |
 
-<a id="table-bf-anglernt"></a>
 ### BF_ANGLERNT
 
 Dimensions: 7 rows × 10 columns
@@ -1880,7 +1805,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_ANGELERNT_CARD4 | 0/1 | high | unsigned char | 0x20 | - | - | - | - | Status Karte 4 angelernt. 0 = nicht angelernt 1 = angelernt |
 | STAT_ANGELERNT_CARD5 | 0/1 | high | unsigned char | 0x40 | - | - | - | - | Status Karte 5 angelernt. 0 = nicht angelernt 1 = angelernt |
 
-<a id="table-bf-csm-hw"></a>
 ### BF_CSM_HW
 
 Dimensions: 8 rows × 10 columns
@@ -1896,7 +1820,6 @@ Dimensions: 8 rows × 10 columns
 | STAT_BT_CONNECTION | 0/1 | high | unsigned char | 0x40 | - | - | - | - | Testet die Bluetooth Verbindung |
 | STAT_CAN_CONNECTION | 0/1 | high | unsigned char | 0x80 | - | - | - | - | Testet die CAN Verbindung |
 
-<a id="table-bf-nad-status"></a>
 ### BF_NAD_STATUS
 
 Dimensions: 2 rows × 10 columns
@@ -1906,7 +1829,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_NAD_BETRIEBSZUSTAND | 0/1 | high | unsigned char | 0x01 | - | - | - | - | Status Betriebszustand NAD 0 = sleep 1 = in Betrieb |
 | STAT_NAD_ONLINE | 0/1 | high | unsigned char | 0x02 | - | - | - | - | Status Onlineverbindung NAD 0 = inaktiv 1 = aktiv |
 
-<a id="table-bf-systembereitschaft"></a>
 ### BF_SYSTEMBEREITSCHAFT
 
 Dimensions: 7 rows × 10 columns
@@ -1921,7 +1843,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_SHUTDOWN_BEREIT | 0/1 | high | unsigned char | 0x20 | - | - | - | - | Shutdown-Bereitschaft 0 = inaktiv 1 = aktiv |
 | STAT_SC_KOMMUNIKATION | 0/1 | high | unsigned char | 0x40 | - | - | - | - | Kommunikation Securety Controler 0 = inaktiv 1 = aktiv |
 
-<a id="table-bf-zsg-ews"></a>
 ### BF_ZSG_EWS
 
 Dimensions: 2 rows × 10 columns
@@ -1931,7 +1852,6 @@ Dimensions: 2 rows × 10 columns
 | STAT_ZSG_EWS_ERROR | 0-n | high | unsigned char | 0xF0 | TAB_EWS_FEHLER | - | - | - | Fehlercode vom ZSG ZSG_EWS_ERROR bbbb - - - - = 0 - kein Fehler = 1 - Sequenz-Fehler (Kommunikation-Fehler) = 2 - Authentisierungs-Fehler = 3 - Request-Fehler = 14 - allgemeiner = 15 - reserviert |
 | STAT_ZSG_EWS_STATUS | 0-n | high | unsigned char | 0x01 | TAB_EWS_STATUS | - | - | - | ZSG_EWS_STATUS 0 - EWS im ZSG ist nicht freigegeben 1 - EWS im ZSG ist freigegeben |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -1945,7 +1865,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -1959,7 +1878,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | nein |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 24 rows × 3 columns
@@ -1991,7 +1909,6 @@ Dimensions: 24 rows × 3 columns
 | 0xD59405 | Botschaft (Daten Antriebsstrang 2, 0x3F9): Ausfall oder Signal ungültig | 1 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 5 rows × 9 columns
@@ -2004,7 +1921,6 @@ Dimensions: 5 rows × 9 columns
 | 0x6003 | SIM Status | 0-n | High | 0xFF | TAB_SIM_STATUS | - | - | - |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -2016,7 +1932,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 14 rows × 3 columns
@@ -2038,7 +1953,6 @@ Dimensions: 14 rows × 3 columns
 | 0x322200 | NFC Transceiver Communication Fehler | 0 |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-iumwelttexte"></a>
 ### IUMWELTTEXTE
 
 Dimensions: 26 rows × 9 columns
@@ -2072,7 +1986,6 @@ Dimensions: 26 rows × 9 columns
 | 0x630A | Fehler 10 AE | - | High | unsigned char | - | 1.0 | 1.0 | 0.0 |
 | 0xXYXY | UWB_UNKNOWN | - | - | - | - | - | - | - |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -2081,7 +1994,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-key-del-tabelle"></a>
 ### KEY_DEL_TABELLE
 
 Dimensions: 8 rows × 2 columns
@@ -2097,7 +2009,6 @@ Dimensions: 8 rows × 2 columns
 | 0x06 | 0x06 - Fehlerhafte Parameter oder ungültige Signatur |
 | 0xFF | 0xFF - Ungültig |
 
-<a id="table-key-status-tabelle"></a>
 ### KEY_STATUS_TABELLE
 
 Dimensions: 4 rows × 2 columns
@@ -2109,7 +2020,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | Gültig |
 | 255 | Anlieferzustand (Flash gelöscht) |
 
-<a id="table-res-0x1032-r"></a>
 ### RES_0X1032_R
 
 Dimensions: 1 rows × 13 columns
@@ -2118,7 +2028,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | STAT_TASU_STATE | - | - | + | 0-n | high | unsigned char | - | TASU_STEUERN_STATUS | - | - | - | Steuerung der TAS-Nutzung |
 
-<a id="table-res-0xa095-r"></a>
 ### RES_0XA095_R
 
 Dimensions: 6 rows × 13 columns
@@ -2132,7 +2041,6 @@ Dimensions: 6 rows × 13 columns
 | STAT_RED_LED | - | - | + | 0-n | high | unsigned char | - | TAB_CSM_LED_STATUS | - | - | - | LED die angesteuert wurde. Siehe Tabelle TBA_CSM_LED |
 | STAT_RED_LED_LICHTLEISTUNG_WERT | - | - | + | % | high | unsigned char | - | - | 1.0 | 1.0 | 0.0 | Leistung in % mit der die LED angesteuert wurde. MIN = 0 MAX = 100 |
 
-<a id="table-res-0xa096-r"></a>
 ### RES_0XA096_R
 
 Dimensions: 2 rows × 13 columns
@@ -2142,7 +2050,6 @@ Dimensions: 2 rows × 13 columns
 | - | - | - | + | Bit | high | BITFIELD | - | BF_CSM_HW | - | - | - | Bitfield für Hardware Status |
 | STAT_CSM_HW_TEST | - | - | + | 0-n | high | unsigned char | - | TAB_TESTSTATUS | - | - | - | Status des Hardware-Tests. |
 
-<a id="table-res-0xd0d9-d"></a>
 ### RES_0XD0D9_D
 
 Dimensions: 6 rows × 10 columns
@@ -2156,7 +2063,6 @@ Dimensions: 6 rows × 10 columns
 | - | Bit | high | BITFIELD | - | BF_NAD_STATUS | - | - | - | Bitfield für NAD Status |
 | STAT_NAD_SIGNAL_WERT | dBm | high | char | - | - | 1.0 | 1.0 | 0.0 | Status Signalstärke Onlineverbindung NAB in dBm |
 
-<a id="table-res-0xd0dc-d"></a>
 ### RES_0XD0DC_D
 
 Dimensions: 7 rows × 10 columns
@@ -2171,7 +2077,6 @@ Dimensions: 7 rows × 10 columns
 | STAT_ICC_ID_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | ICC-ID |
 | STAT_IMEI_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | IMEI |
 
-<a id="table-res-0xd1ff-d"></a>
 ### RES_0XD1FF_D
 
 Dimensions: 15 rows × 10 columns
@@ -2194,7 +2099,6 @@ Dimensions: 15 rows × 10 columns
 | STAT_NAD_APPLIKATION_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Applikation NAD |
 | STAT_AC_PLATFORM_TEXT | TEXT | high | string | - | - | 1.0 | 1.0 | 0.0 | Android Contoler Plattform |
 
-<a id="table-sg-funktionen"></a>
 ### SG_FUNKTIONEN
 
 Dimensions: 8 rows × 16 columns
@@ -2210,7 +2114,6 @@ Dimensions: 8 rows × 16 columns
 | CSM_SIM | 0xD0DC | - | Mit dem Diagnosejob wird der Status der Telefon SIM-Karte im CSM ausgelesen. | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xD0DC_D |
 | SW_VERSION_CSM | 0xD1FF | - | Liest die SW Versionen des CSM aus. | - | - | - | - | - | - | - | - | - | 22 | - | RES_0xD1FF_D |
 
-<a id="table-tab-ad-card"></a>
 ### TAB_AD_CARD
 
 Dimensions: 6 rows × 2 columns
@@ -2224,7 +2127,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | 0x04 - AD Karte wird vom Administrator blockiert |
 | 0xFF | 0xFF - Ungültig |
 
-<a id="table-tab-crypt-key-state"></a>
 ### TAB_CRYPT_KEY_STATE
 
 Dimensions: 4 rows × 2 columns
@@ -2236,7 +2138,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | 0x02 - gültig |
 | 0xFF | 0xFF - Anlieferzustand (Flash gelöscht) |
 
-<a id="table-tab-crypt-key-state-alle"></a>
 ### TAB_CRYPT_KEY_STATE_ALLE
 
 Dimensions: 6 rows × 2 columns
@@ -2250,7 +2151,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | 0x04 = Schlüssel generiert aber nicht lesbar |
 | 0xFF | 0xFF = Anlieferzustand (Flash gelöscht) |
 
-<a id="table-tab-csm-hw-test"></a>
 ### TAB_CSM_HW_TEST
 
 Dimensions: 9 rows × 2 columns
@@ -2267,7 +2167,6 @@ Dimensions: 9 rows × 2 columns
 | 0x80 | CAN Verbindung |
 | 0xFF | Alle |
 
-<a id="table-tab-csm-led-status"></a>
 ### TAB_CSM_LED_STATUS
 
 Dimensions: 6 rows × 2 columns
@@ -2281,7 +2180,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | LED blitzend |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-ee-lock-state"></a>
 ### TAB_EE_LOCK_STATE
 
 Dimensions: 3 rows × 2 columns
@@ -2292,7 +2190,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | 0x02 = EEPROM und Schlüsselgenerierung gesperrt |
 | 0xFF | 0xFF = Ungültig |
 
-<a id="table-tab-ews-fehler"></a>
 ### TAB_EWS_FEHLER
 
 Dimensions: 6 rows × 2 columns
@@ -2306,7 +2203,6 @@ Dimensions: 6 rows × 2 columns
 | 0x0E | 0x0E = Allgemeiner Fehler |
 | 0x0F | 0x0F = Reserviert |
 
-<a id="table-tab-ews-status"></a>
 ### TAB_EWS_STATUS
 
 Dimensions: 2 rows × 2 columns
@@ -2316,7 +2212,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | 0x00 = EWS im ZSG ist nicht freigegeben |
 | 0x01 | 0x01 = EWS im ZSG ist freigegeben |
 
-<a id="table-tab-key-gen-ergebnis"></a>
 ### TAB_KEY_GEN_ERGEBNIS
 
 Dimensions: 9 rows × 2 columns
@@ -2333,7 +2228,6 @@ Dimensions: 9 rows × 2 columns
 | 0xFE | 0xFE = Generierung gesperrt ( EELock=1) |
 | 0xFF | 0xFF = Signal ungültig |
 
-<a id="table-tab-key-selection"></a>
 ### TAB_KEY_SELECTION
 
 Dimensions: 19 rows × 2 columns
@@ -2360,7 +2254,6 @@ Dimensions: 19 rows × 2 columns
 | 0x11 | 0x11 = EncCSMpub & EncCSMpriv |
 | 0xFF | 0xFF = Ungültig |
 
-<a id="table-tab-laetzte-aktion"></a>
 ### TAB_LAETZTE_AKTION
 
 Dimensions: 7 rows × 2 columns
@@ -2375,7 +2268,6 @@ Dimensions: 7 rows × 2 columns
 | 0x0F | 0x0F - Keine Anforderung (10sec nach der letzen Aktion) |
 | 0xFF | 0xFF - Ungültig |
 
-<a id="table-tab-lifecycle-mode"></a>
 ### TAB_LIFECYCLE_MODE
 
 Dimensions: 4 rows × 2 columns
@@ -2387,7 +2279,6 @@ Dimensions: 4 rows × 2 columns
 | 0x02 | Mode Coding |
 | 0xFF | Mode Invalid |
 
-<a id="table-tab-seclib-errcode"></a>
 ### TAB_SECLIB_ERRCODE
 
 Dimensions: 11 rows × 2 columns
@@ -2406,7 +2297,6 @@ Dimensions: 11 rows × 2 columns
 | 0x09 | 0x09 - ungültiger Session Key |
 | 0xFF | 0xFF - Beschädigte EEPROM Daten oder CSM Schlüssel |
 
-<a id="table-tab-seclib-lastfunc"></a>
 ### TAB_SECLIB_LASTFUNC
 
 Dimensions: 10 rows × 2 columns
@@ -2424,7 +2314,6 @@ Dimensions: 10 rows × 2 columns
 | 0x08 | 0x08 - SecLib_hashData |
 | 0xFF | 0xFF - Ungültig |
 
-<a id="table-tab-sim-fehlerart"></a>
 ### TAB_SIM_FEHLERART
 
 Dimensions: 3 rows × 2 columns
@@ -2435,7 +2324,6 @@ Dimensions: 3 rows × 2 columns
 | 0x02 | SIM nicht vorhanden |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-sim-status"></a>
 ### TAB_SIM_STATUS
 
 Dimensions: 4 rows × 2 columns
@@ -2447,7 +2335,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | SIM nicht freigeschaltet |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-status-klemme"></a>
 ### TAB_STATUS_KLEMME
 
 Dimensions: 17 rows × 2 columns
@@ -2472,7 +2359,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Signal ungültig |
 | 0xFF | Ungültiger Wert |
 
-<a id="table-tab-stat-buchung"></a>
 ### TAB_STAT_BUCHUNG
 
 Dimensions: 5 rows × 2 columns
@@ -2485,7 +2371,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | gesperrt |
 | 0xFF | ungültiger Wert |
 
-<a id="table-tab-tag-status"></a>
 ### TAB_TAG_STATUS
 
 Dimensions: 5 rows × 2 columns
@@ -2498,7 +2383,6 @@ Dimensions: 5 rows × 2 columns
 | 0x06 | 0x06 - RFID TAG ist falsch konfiguriert (Plain Modus) |
 | 0xFF | 0xFF - Ungültig |
 
-<a id="table-tab-teststatus"></a>
 ### TAB_TESTSTATUS
 
 Dimensions: 5 rows × 2 columns
@@ -2511,7 +2395,6 @@ Dimensions: 5 rows × 2 columns
 | 0x03 | Test beendet mit Fehlern |
 | 0xFF | Nicht definiert |
 
-<a id="table-tasu-request-tab"></a>
 ### TASU_REQUEST_TAB
 
 Dimensions: 2 rows × 2 columns
@@ -2521,7 +2404,6 @@ Dimensions: 2 rows × 2 columns
 | 0x00 | Auffinden des VCM: funktionale Anfrage  Identifikation VCM , Service 22, DID 3F19 |
 | 0x01 | Anfrage CSM3 ans VCM SG: I-Stufe lesen: Service 22,  DID 100B |
 
-<a id="table-tasu-steuern-status"></a>
 ### TASU_STEUERN_STATUS
 
 Dimensions: 3 rows × 2 columns
@@ -2532,7 +2414,6 @@ Dimensions: 3 rows × 2 columns
 | 0x01 | Auftraege an den TAS temporaer bis zum naechsten Aufstart blockiert |
 | 0x02 | Auftraege an den TAS persistent ueber den Aufstart hinaus blockiert |
 
-<a id="table-vk-key-status-tabelle"></a>
 ### VK_KEY_STATUS_TABELLE
 
 Dimensions: 5 rows × 2 columns

@@ -30,7 +30,6 @@
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 - [SPEICHER_LESEN](#job-speicher-lesen) - Lesen des internen Speichers
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -48,7 +47,6 @@ _No arguments._
 | COMMENT | string | wichtige Hinweise |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -61,7 +59,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten fuer MUSTER
@@ -84,7 +81,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferanten-Nummer |
 | ID_SW_NR | int | Softwarenummer |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -98,7 +94,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 | CODE | string |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -141,7 +136,6 @@ _No arguments._
 | F_UW4_EINH | string |  |
 | F_HEX_CODE | binary |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 Infospeicher lesen
@@ -159,7 +153,6 @@ _No arguments._
 | F_ART_ANZ | int | Anzahl der Fehlerarten |
 | F_UW_ANZ | int | Anzahl der Umweltbedingungen |
 
-<a id="job-fs-quick-lesen"></a>
 ### FS_QUICK_LESEN
 
 Fehlerspeicher quick lesen
@@ -175,7 +168,6 @@ _No arguments._
 | F_BSZ_AKT | real | Betriebsstundenzaehler aktuell |
 | F_BSZ_ALT | real | Betriebsstundenzaehler bei letztem FS loeschen |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -188,7 +180,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -201,7 +192,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers
@@ -226,7 +216,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (9 × 2)
 - [FUMWELTTEXTE](#table-fumwelttexte) (13 × 3)
 
-<a id="table-jobresultkwp2000"></a>
 ### JOBRESULTKWP2000
 
 Dimensions: 32 rows × 2 columns
@@ -266,7 +255,6 @@ Dimensions: 32 rows × 2 columns
 | 0XFF | ERROR_ECU_RESERVED_BY_DOCUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 8 rows × 2 columns
@@ -282,7 +270,6 @@ Dimensions: 8 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 30 rows × 2 columns
@@ -320,7 +307,6 @@ Dimensions: 30 rows × 2 columns
 | 0x29 | DENSO |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -341,7 +327,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0C | Fehler 12 |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 9 rows × 2 columns
@@ -358,7 +343,6 @@ Dimensions: 9 rows × 2 columns
 | 0x07 | Fehler momentan vorhanden |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 13 rows × 3 columns

@@ -40,7 +40,6 @@
 - [STARTZAEHLER_SPEICHERN](#job-startzaehler-speichern)
 - [STEUERN_HEIZGERAET_ENTRIEGELN](#job-steuern-heizgeraet-entriegeln) - Stoerverriegelung aufheben
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -53,7 +52,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -72,7 +70,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -96,7 +93,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Fehlerspeicher loeschen
@@ -109,7 +105,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -122,7 +117,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -135,7 +129,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 Fehlerspeicher lesen
@@ -175,7 +168,6 @@ _No arguments._
 | F_HEX_CODE | binary | Fehlerspeicherdaten |
 | PRUEFCODE | binary | Pruefcode fuer MK-40 |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -193,7 +185,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-eeprom-lesen"></a>
 ### EEPROM_LESEN
 
 Lesen des EEPROM Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes uebergeben.
@@ -212,7 +203,6 @@ Lesen des EEPROM Speichers Als Argumente werden die Adresse, die Anzahl der Date
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-eeprom-schreiben"></a>
 ### EEPROM_SCHREIBEN
 
 Beschreiben des EEPROM Speichers Als Argumente werden die Adresse, und das Datenbyte uebergeben.
@@ -230,7 +220,6 @@ Beschreiben des EEPROM Speichers Als Argumente werden die Adresse, und das Daten
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes uebergeben.
@@ -249,7 +238,6 @@ Lesen des Speichers Als Argumente werden die Adresse, die Anzahl der Datenbytes 
 | DATEN | binary | ausgelesene Daten |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Auslesen der Codierdaten
@@ -267,7 +255,6 @@ _No arguments._
 | EINSCHALTEN_UEBER_KBUS | string | 'ja' 'nein' 'unbekannter Code' Einschalten des Zuheizers ueber K-Bus oder ueber Eingang Pin 1 |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-codierung-schreiben"></a>
 ### CODIERUNG_SCHREIBEN
 
 Codierdaten Schreiben Es muss immer ein Argument uebergeben werden.
@@ -284,7 +271,6 @@ Codierdaten Schreiben Es muss immer ein Argument uebergeben werden.
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-status-io"></a>
 ### STATUS_IO
 
 Status lesen
@@ -320,7 +306,6 @@ _No arguments._
 | STAT_UEBERHITZUNG_EIN | int | Ueberhitzung ist erkannt |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-steuern-kraftstoffpumpe"></a>
 ### STEUERN_KRAFTSTOFFPUMPE
 
 Ansteuern der Kraftstoffpumpe
@@ -337,7 +322,6 @@ Ansteuern der Kraftstoffpumpe
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-zuheizer"></a>
 ### STEUERN_ZUHEIZER
 
 Ansteuern des Zuheizers Der Zuheizer kann ein- bzw. ausgeschaltet werden.
@@ -354,7 +338,6 @@ Ansteuern des Zuheizers Der Zuheizer kann ein- bzw. ausgeschaltet werden.
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich |
 
-<a id="job-brenndauer-lesen"></a>
 ### BRENNDAUER_LESEN
 
 _No arguments._
@@ -368,7 +351,6 @@ _No arguments._
 | BRENNDAUER | real | Brenndauer gesamt |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-startzaehler-lesen"></a>
 ### STARTZAEHLER_LESEN
 
 _No arguments._
@@ -382,7 +364,6 @@ _No arguments._
 | STARTZAEHLER_DIFFERENZ | int | Differenz Startzaehler und Kopie des Startzaehlers |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-startzaehler-speichern"></a>
 ### STARTZAEHLER_SPEICHERN
 
 _No arguments._
@@ -394,7 +375,6 @@ _No arguments._
 | STARTZAEHLER | int | Anzahl erfolgreicher Starts |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-steuern-heizgeraet-entriegeln"></a>
 ### STEUERN_HEIZGERAET_ENTRIEGELN
 
 Stoerverriegelung aufheben
@@ -423,7 +403,6 @@ _No arguments._
 - [ZUSTANDTEXTE](#table-zustandtexte) (71 × 4)
 - [WASSERTEMPERATUR](#table-wassertemperatur) (256 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 10 rows × 2 columns
@@ -441,7 +420,6 @@ Dimensions: 10 rows × 2 columns
 | ?20? | ERROR_FEHLERANZAHL |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 56 rows × 2 columns
@@ -505,7 +483,6 @@ Dimensions: 56 rows × 2 columns
 | 0x55 | BHTC |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -534,7 +511,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 4 rows × 2 columns
@@ -546,7 +522,6 @@ Dimensions: 4 rows × 2 columns
 | 0x03 | ERROR_BYTE |
 | 0x?? | ERROR_ZUHEIZER |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 17 rows × 2 columns
@@ -571,7 +546,6 @@ Dimensions: 17 rows × 2 columns
 | 0x0F | Aussentemperatur nicht verfuegbar |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 8 rows × 2 columns
@@ -587,7 +561,6 @@ Dimensions: 8 rows × 2 columns
 | 0x80 | sporadischer Fehler |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-fartmatrix"></a>
 ### FARTMATRIX
 
 Dimensions: 1 rows × 13 columns
@@ -596,7 +569,6 @@ Dimensions: 1 rows × 13 columns
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x01 | 0x00 | 0x01 | 0x00 | 0x02 | 0x00 | 0x04 | 0x00 | 0x08 | 0x00 | 0x40 | 0x00 | 0x80 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 2 rows × 3 columns
@@ -606,7 +578,6 @@ Dimensions: 2 rows × 3 columns
 | 0x01 | Betriebszustand | 0-n |
 | 0x02 | Kuehlmitteltemperatur | Grad Celsius |
 
-<a id="table-fumweltmatrix"></a>
 ### FUMWELTMATRIX
 
 Dimensions: 1 rows × 5 columns
@@ -615,7 +586,6 @@ Dimensions: 1 rows × 5 columns
 | --- | --- | --- | --- | --- |
 | 0x01 | 0x02 | 0x01 | 0x01 | 0x02 |
 
-<a id="table-zustandtexte"></a>
 ### ZUSTANDTEXTE
 
 Dimensions: 71 rows × 4 columns
@@ -694,7 +664,6 @@ Dimensions: 71 rows × 4 columns
 | 0x30 | 0x77 | WPE | Wasserpumpe EIN |
 | 0x?? | 0x?? | ??? | unbekannter Zustand |
 
-<a id="table-wassertemperatur"></a>
 ### WASSERTEMPERATUR
 
 Dimensions: 256 rows × 3 columns

@@ -73,7 +73,6 @@
 - [SetCanAcceptanceFilter](#job-setcanacceptancefilter)
 - [GetCanMessage](#job-getcanmessage)
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -92,7 +91,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Default init job
@@ -105,7 +103,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int |  |
 
-<a id="job-ifvers"></a>
 ### ifvers
 
 #define GETVERSION       11
@@ -118,7 +115,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | long |  |
 
-<a id="job-iftype"></a>
 ### iftype
 
 #define GETTYPE          18
@@ -131,7 +127,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-ifreset"></a>
 ### ifreset
 
 #define RESET            1
@@ -140,7 +135,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-ifboot"></a>
 ### ifboot
 
 #define WARMSTART        2
@@ -149,7 +143,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-get-battery-voltage"></a>
 ### get_battery_voltage
 
 #define POWERSUPPLY      3
@@ -162,7 +155,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | long |  |
 
-<a id="job-get-ignition-voltage"></a>
 ### get_ignition_voltage
 
 #define IGNITION         4
@@ -175,7 +167,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | long |  |
 
-<a id="job-set-protocol"></a>
 ### set_protocol
 
 #define SETPARAMETER     5
@@ -194,7 +185,6 @@ _No arguments._
 | PROTOCOL | int |  |
 | PROTOCOL_TEXT | string |  |
 
-<a id="job-set-ds1"></a>
 ### set_ds1
 
 #define SETPARAMETER     5
@@ -222,7 +212,6 @@ _No arguments._
 | BYTE_TIME | int |  |
 | CHECKSUMME | int |  |
 
-<a id="job-set-ds2"></a>
 ### set_ds2
 
 #define SETPARAMETER     5
@@ -250,7 +239,6 @@ _No arguments._
 | BYTE_TIME | int |  |
 | CHECKSUMME | int |  |
 
-<a id="job-set-bmw-fast"></a>
 ### set_bmw_fast
 
 #define SETPARAMETER     5
@@ -280,7 +268,6 @@ _No arguments._
 | NEG78_TIME | long |  |
 | CHECKSUMME | long |  |
 
-<a id="job-set-kwp2000star"></a>
 ### set_kwp2000star
 
 #define SETPARAMETER     5
@@ -318,7 +305,6 @@ _No arguments._
 | TESTER_PRESENT_TELEGRAM | binary |  |
 | CHECKSUMME | long |  |
 
-<a id="job-set-kwp2000"></a>
 ### set_kwp2000
 
 #define SETPARAMETER     5
@@ -360,7 +346,6 @@ _No arguments._
 | START_COMM_TELEGRAM | binary |  |
 | CHECKSUMME | long |  |
 
-<a id="job-set-kwp2000can"></a>
 ### set_kwp2000can
 
 #define SETPARAMETER     5
@@ -414,7 +399,6 @@ _No arguments._
 | TESTER_PRESENT_TELEGRAM | binary |  |
 | TESTER_PRESENT_WAIT_FOR_RESPONSE | long |  |
 
-<a id="job-sendtelegram"></a>
 ### sendtelegram
 
 #define SENDRECEIVETELEGRAM 6
@@ -431,7 +415,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-send"></a>
 ### send
 
 #define SENDTELEGRAM 23
@@ -444,7 +427,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-receive"></a>
 ### receive
 
 #define RECEIVETELEGRAM 24
@@ -458,7 +440,6 @@ _No arguments._
 | OUT_LONG | long |  |
 | OUT | binary |  |
 
-<a id="job-recv-keybytes"></a>
 ### recv_keybytes
 
 #define REQUEST_KEYBYTES 7
@@ -471,7 +452,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-ifsetport"></a>
 ### ifsetport
 
 #define SETPORT          8
@@ -485,7 +465,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-ifgetport"></a>
 ### ifgetport
 
 #define GETPORT          9
@@ -502,7 +481,6 @@ _No results._
 | --- | --- | --- |
 | OUT | long |  |
 
-<a id="job-ifloopt"></a>
 ### ifloopt
 
 #define LOOPTEST         10
@@ -515,7 +493,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | long |  |
 
-<a id="job-send-frequent"></a>
 ### send_frequent
 
 #define SENDFREQ         12
@@ -528,7 +505,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-recv-frequent"></a>
 ### recv_frequent
 
 #define REQUFREQ         13
@@ -541,7 +517,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-stop-frequent"></a>
 ### stop_frequent
 
 #define STOPFREQ         14
@@ -550,7 +525,6 @@ _No arguments._
 
 _No results._
 
-<a id="job-set-program-voltage"></a>
 ### set_program_voltage
 
 #define SETUPROG         16
@@ -563,7 +537,6 @@ _No results._
 
 _No results._
 
-<a id="job-ifsireset"></a>
 ### ifsireset
 
 #define SIRESET          17
@@ -576,7 +549,6 @@ _No results._
 
 _No results._
 
-<a id="job-ifrequeststate"></a>
 ### ifrequeststate
 
 #define KLEMMENSTATUS    19
@@ -589,7 +561,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-set-answer-length"></a>
 ### set_answer_length
 
 #define AWLEN            20
@@ -607,7 +578,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-setconfigstring"></a>
 ### setconfigstring
 
 #define SETCONFIGSTRING  21
@@ -625,7 +595,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-getconfigstring"></a>
 ### getconfigstring
 
 #define GETCONFIGSTRING  22
@@ -642,7 +611,6 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-ifrawmode"></a>
 ### ifrawmode
 
 #### Arguments
@@ -657,42 +625,36 @@ _No arguments._
 | --- | --- | --- |
 | OUT | binary |  |
 
-<a id="job-sg-simulator-param-ds1"></a>
 ### SG_SIMULATOR_PARAM_DS1
 
 _No arguments._
 
 _No results._
 
-<a id="job-sg-simulator-param-ds2"></a>
 ### SG_SIMULATOR_PARAM_DS2
 
 _No arguments._
 
 _No results._
 
-<a id="job-sg-simulator-param-bmw-fast"></a>
 ### SG_SIMULATOR_PARAM_BMW_FAST
 
 _No arguments._
 
 _No results._
 
-<a id="job-sg-simulator-param-kwp2000star"></a>
 ### SG_SIMULATOR_PARAM_KWP2000star
 
 _No arguments._
 
 _No results._
 
-<a id="job-sg-simulator-param-kwp2000"></a>
 ### SG_SIMULATOR_PARAM_KWP2000
 
 _No arguments._
 
 _No results._
 
-<a id="job-sg-simulator-ds1"></a>
 ### SG_SIMULATOR_DS1
 
 Steuergeraete-Simulation
@@ -705,7 +667,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-sg-simulator-ds2"></a>
 ### SG_SIMULATOR_DS2
 
 Steuergeraete-Simulation
@@ -718,7 +679,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-sg-simulator-bmw-fast"></a>
 ### SG_SIMULATOR_BMW_FAST
 
 Steuergeraete-Simulation
@@ -731,7 +691,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-sg-simulator-kwp2000star"></a>
 ### SG_SIMULATOR_KWP2000star
 
 Steuergeraete-Simulation
@@ -744,7 +703,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-sg-simulator-kwp2000"></a>
 ### SG_SIMULATOR_KWP2000
 
 Steuergeraete-Simulation
@@ -757,7 +715,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-sg-monitor-ds1"></a>
 ### SG_MONITOR_DS1
 
 Steuergeraete-Monitor
@@ -771,7 +728,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_DATA | binary | Hex-Telegramm |
 
-<a id="job-sg-monitor-ds2"></a>
 ### SG_MONITOR_DS2
 
 Steuergeraete-Monitor
@@ -785,7 +741,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_DATA | binary | Hex-Telegramm |
 
-<a id="job-sg-monitor-bmw-fast"></a>
 ### SG_MONITOR_BMW_FAST
 
 Steuergeraete-Monitor
@@ -799,7 +754,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_DATA | binary | Hex-Telegramm |
 
-<a id="job-sg-monitor-kwp2000star"></a>
 ### SG_MONITOR_KWP2000star
 
 Steuergeraete-Monitor
@@ -813,7 +767,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_DATA | binary | Hex-Telegramm |
 
-<a id="job-sg-monitor-kwp2000"></a>
 ### SG_MONITOR_KWP2000
 
 Steuergeraete-Monitor
@@ -827,7 +780,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TEL_DATA | binary | Hex-Telegramm |
 
-<a id="job-getfirmwareversion"></a>
 ### GetFirmwareVersion
 
 _No arguments._
@@ -841,7 +793,6 @@ _No arguments._
 | OUT | binary |  |
 | JOB_STATUS | string |  |
 
-<a id="job-getautomaticmode"></a>
 ### GetAutomaticMode
 
 _No arguments._
@@ -856,7 +807,6 @@ _No arguments._
 | OUT | binary |  |
 | JOB_STATUS | string |  |
 
-<a id="job-setautomaticmode"></a>
 ### SetAutomaticMode
 
 #### Arguments
@@ -874,7 +824,6 @@ _No arguments._
 | OUT | binary |  |
 | JOB_STATUS | string |  |
 
-<a id="job-sendcanmessage"></a>
 ### SendCanMessage
 
 #### Arguments
@@ -900,7 +849,6 @@ _No arguments._
 | OUT | binary |  |
 | JOB_STATUS | string |  |
 
-<a id="job-setcanacceptancefilter"></a>
 ### SetCanAcceptanceFilter
 
 #### Arguments
@@ -918,7 +866,6 @@ _No arguments._
 | OUT | binary |  |
 | JOB_STATUS | string |  |
 
-<a id="job-getcanmessage"></a>
 ### GetCanMessage
 
 _No arguments._
@@ -940,7 +887,6 @@ _No arguments._
 - [AUTOMATICMODE](#table-automaticmode) (6 × 2)
 - [DEFAULTCOMMUNICATION](#table-defaultcommunication) (4 × 2)
 
-<a id="table-automaticmode"></a>
 ### AUTOMATICMODE
 
 Dimensions: 6 rows × 2 columns
@@ -954,7 +900,6 @@ Dimensions: 6 rows × 2 columns
 | no | 0 |
 | 0 | 0 |
 
-<a id="table-defaultcommunication"></a>
 ### DEFAULTCOMMUNICATION
 
 Dimensions: 4 rows × 2 columns

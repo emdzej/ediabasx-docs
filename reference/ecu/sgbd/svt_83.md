@@ -47,7 +47,6 @@
 - [STATUS_CPCBO](#job-status-cpcbo) - Meßwert der Stromplausibilisierung vor Wandlerbestromung
 - [C_CHECKSUMME](#job-c-checksumme) - Checksumme generieren und in BINAER_BUFFER schreiben Optionaler Codierjob
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -66,7 +65,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -79,7 +77,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -103,7 +100,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Auslesen des Pruefstempels
@@ -121,7 +117,6 @@ _No arguments._
 | FG_ZIFFERN | string | die letzten vier Stellen der Fahrgestellnummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich von 0-255 bzw. 0x00-0xFF uebergeben werden.
@@ -140,7 +135,6 @@ Beschreiben des Pruefstempels Es muessen immer alle drei Argumente im Bereich vo
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_ARGUMENT, wenn Argumente nicht uebergeben oder ausser Bereich |
 
-<a id="job-sleep-mode"></a>
 ### SLEEP_MODE
 
 SG in Sleep-Mode versetzen
@@ -159,7 +153,6 @@ SG in Sleep-Mode versetzen
 | _TEL_AUFTRAG | binary | Hex-Auftrag von SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-diagnose-aufrecht"></a>
 ### DIAGNOSE_AUFRECHT
 
 Diagnosemode aufrechterhalten
@@ -172,7 +165,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -185,7 +177,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei |
 
-<a id="job-c-ci-lesen"></a>
 ### C_CI_LESEN
 
 Codierindex lesen Standard Codierjob
@@ -200,7 +191,6 @@ _No arguments._
 | ID_COD_INDEX | int | Codier-Index |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-lesen"></a>
 ### C_FG_LESEN
 
 Fahrgestellnummer lesen Standard Codierjob
@@ -215,7 +205,6 @@ _No arguments._
 | FG_NR | string | die letzten vier Stellen der Fahrgestellnummer |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-schreiben"></a>
 ### C_FG_SCHREIBEN
 
 Fahrgestellnummer schreiben Standard Codierjob
@@ -233,7 +222,6 @@ Fahrgestellnummer schreiben Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-c-fg-auftrag"></a>
 ### C_FG_AUFTRAG
 
 Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
@@ -251,7 +239,6 @@ Fahrgestellnummer schreiben und ruecklesen Standard Codierjob
 | JOB_STATUS | string | OKAY, wenn fehlerfrei table JobResult STATUS_TEXT |
 | _TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Lesen des internen Speichers der SVT Als Argumente werden die Anzahl und die Adresse der Datenbytes uebergeben.
@@ -271,7 +258,6 @@ Lesen des internen Speichers der SVT Als Argumente werden die Anzahl und die Adr
 | TELEGRAMM | binary | das Anfragetelegramm |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-status-io-lesen"></a>
 ### STATUS_IO_LESEN
 
 es werden die Eingangs- und Ausgangsstati aus dem Steuergeraet gelesen Die Auflistung der Statusbits erfolgt von LSB nach MSB
@@ -308,7 +294,6 @@ _No arguments._
 | _TEL_ANTWORT | binary |  |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-steuern-wandlerstrom"></a>
 ### STEUERN_WANDLERSTROM
 
 Default ident job
@@ -329,7 +314,6 @@ Default ident job
 | _TEL_AUFTRAG | binary | Anfragetelegrammdaten |
 | _TEL_ANTWORT | binary | Antworttelegrammdaten |
 
-<a id="job-reset"></a>
 ### RESET
 
 Steuergeraet in RESET-Zustand versetzen
@@ -342,7 +326,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -357,7 +340,6 @@ _No arguments._
 | F_ZAHL | int |  |
 | TEL | binary |  |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 modifizierter Default-Job
@@ -370,7 +352,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -408,7 +389,6 @@ _No arguments._
 | HELP | int |  |
 | TEL | binary |  |
 
-<a id="job-ident-erweitert"></a>
 ### IDENT_ERWEITERT
 
 Identdaten lesen
@@ -434,7 +414,6 @@ _No arguments._
 | ID_AI | int | Änderungsindex |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Schreibzugriff auf einzelne RAM-Zellen Als Argumente wird die Adresse der zu aendernden Zelle sowie deren Soll-Inhalt uebergeben.
@@ -452,7 +431,6 @@ Schreibzugriff auf einzelne RAM-Zellen Als Argumente wird die Adresse der zu aen
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, wenn fehlerfrei ERROR_argumentname, wenn argument nicht uebergeben oder ausser Bereich table JobResult STATUS_TEXT |
 
-<a id="job-status-seriennummer"></a>
 ### STATUS_SERIENNUMMER
 
 Seriennummer des Moduls
@@ -466,7 +444,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | STAT_SERIENNUMMER | string | Seriennummer als String |
 
-<a id="job-status-ad-werte"></a>
 ### STATUS_AD_WERTE
 
 Register der AD-Umsetzer auslesen
@@ -484,7 +461,6 @@ _No arguments._
 | STAT_AD_U_SHUNT_WERT | int | Kanal der Spannungsmessung am Shunt |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-c-lesen"></a>
 ### C_C_LESEN
 
 Codierdaten lesen
@@ -502,7 +478,6 @@ Codierdaten lesen
 | CODIER_DATEN | binary | Codierdaten |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-c-c-auftrag"></a>
 ### C_C_AUFTRAG
 
 Codierdaten schreiben und verifizieren
@@ -521,7 +496,6 @@ Codierdaten schreiben und verifizieren
 | TELEGRAMM | binary |  |
 | JOB_STATUS | string | OKAY, ERROR_.. |
 
-<a id="job-status-cpcbo"></a>
 ### STATUS_CPCBO
 
 Meßwert der Stromplausibilisierung vor Wandlerbestromung
@@ -537,7 +511,6 @@ _No arguments._
 | STAT_CPCBO_EINH | string | Einheit des Stromes ist mA |
 | _TEL_ANTWORT | binary |  |
 
-<a id="job-c-checksumme"></a>
 ### C_CHECKSUMME
 
 Checksumme generieren und in BINAER_BUFFER schreiben Optionaler Codierjob
@@ -569,7 +542,6 @@ Checksumme generieren und in BINAER_BUFFER schreiben Optionaler Codierjob
 - [FARTOFFSET](#table-fartoffset) (12 × 2)
 - [FUMWELTTEXTE](#table-fumwelttexte) (5 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -590,7 +562,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 67 rows × 2 columns
@@ -665,7 +636,6 @@ Dimensions: 67 rows × 2 columns
 | 0x66 | Thyssen Krupp Automotive Mechatronics |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -694,7 +664,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 13 rows × 2 columns
@@ -715,7 +684,6 @@ Dimensions: 13 rows × 2 columns
 | 0x0B | Codierdaten |
 | 0xXY | unbekannter Fehlecode |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 59 rows × 2 columns
@@ -782,7 +750,6 @@ Dimensions: 59 rows × 2 columns
 | 0xFF | nicht belegt |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-fartbit"></a>
 ### FARTBIT
 
 Dimensions: 6 rows × 2 columns
@@ -796,7 +763,6 @@ Dimensions: 6 rows × 2 columns
 | 0x10 | 1 |
 | 0x20 | 0 |
 
-<a id="table-fartoffset"></a>
 ### FARTOFFSET
 
 Dimensions: 12 rows × 2 columns
@@ -816,7 +782,6 @@ Dimensions: 12 rows × 2 columns
 | 0x0A | 0x80 |
 | 0x0B | 0x90 |
 
-<a id="table-fumwelttexte"></a>
 ### FUMWELTTEXTE
 
 Dimensions: 5 rows × 3 columns

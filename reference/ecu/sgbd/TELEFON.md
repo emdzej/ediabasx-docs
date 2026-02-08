@@ -25,7 +25,6 @@
 - [STATUS_LESEN](#job-status-lesen) - verschiedenen Teststati
 - [DIAGNOSE_ENDE](#job-diagnose-ende) - Diagnose beenden
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -44,7 +43,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Init-Job fuer BMW-TELEFON
@@ -57,7 +55,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1 wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Ident-Daten fuer BMW-TELEFON
@@ -81,7 +78,6 @@ _No arguments._
 | ID_LIEF_TEXT | string | Lieferantenname |
 | ID_GERAETE_NAME | string | Telefontyp |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 verschiedenen Teststati
@@ -98,7 +94,6 @@ _No arguments._
 | LTG_SE_UNIT_IO | int | 1 -> Verbindung zum SE-Geraet in Ordnung |
 | KARTENLESER_IO | int | 1 -> Kartenlesertest Eject-Box in Ordnung |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 Diagnose beenden
@@ -120,7 +115,6 @@ _No arguments._
 - [TELEFONTYP](#table-telefontyp) (6 × 2)
 - [TELEFONTYP_2](#table-telefontyp-2) (6 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 6 rows × 2 columns
@@ -134,7 +128,6 @@ Dimensions: 6 rows × 2 columns
 | 0xFF | ERROR_ECU_NACK |
 | 0x00 | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 27 rows × 2 columns
@@ -169,7 +162,6 @@ Dimensions: 27 rows × 2 columns
 | 0x26 | MotoMeter |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-telefontyp"></a>
 ### TELEFONTYP
 
 Dimensions: 6 rows × 2 columns
@@ -183,7 +175,6 @@ Dimensions: 6 rows × 2 columns
 | 0x05 | AMPS Phase V |
 | 0xFF | unknown |
 
-<a id="table-telefontyp-2"></a>
 ### TELEFONTYP_2
 
 Dimensions: 6 rows × 2 columns

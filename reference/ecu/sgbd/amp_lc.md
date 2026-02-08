@@ -25,7 +25,6 @@
 - [STEUERN_AUDIOKANAELE_HIFI_LC_KWP](#job-steuern-audiokanaele-hifi-lc-kwp) - Schaltet die Kanalsteuerung im Hifi Low Cost Verstärker. dazu werden Sinusgenerator und Rad-On Steuerung des Radios benutzt.
 - [STEUERN_AUDIOKANAELE_HIFI_LC_RAD2](#job-steuern-audiokanaele-hifi-lc-rad2) - Schaltet die Kanalsteuerung im Hifi Low Cost Verstärker. dazu werden Sinusgenerator und Rad-On Steuerung des Radios benutzt.
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -44,7 +43,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -57,7 +55,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-steuern-audiokanaele-hifi-lc-uds"></a>
 ### STEUERN_AUDIOKANAELE_HIFI_LC_UDS
 
 Schaltet die Kanalsteuerung im Hifi Low Cost Verstärker. dazu werden Sinusgenerator und Rad-On Steuerung des Radios benutzt.
@@ -81,7 +78,6 @@ Schaltet die Kanalsteuerung im Hifi Low Cost Verstärker. dazu werden Sinusgener
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-audiokanaele-hifi-lc-kwp"></a>
 ### STEUERN_AUDIOKANAELE_HIFI_LC_KWP
 
 Schaltet die Kanalsteuerung im Hifi Low Cost Verstärker. dazu werden Sinusgenerator und Rad-On Steuerung des Radios benutzt.
@@ -105,7 +101,6 @@ Schaltet die Kanalsteuerung im Hifi Low Cost Verstärker. dazu werden Sinusgener
 | _REQUEST | binary | Hex-Auftrag an SG |
 | _RESPONSE | binary | Hex-Antwort von SG |
 
-<a id="job-steuern-audiokanaele-hifi-lc-rad2"></a>
 ### STEUERN_AUDIOKANAELE_HIFI_LC_RAD2
 
 Schaltet die Kanalsteuerung im Hifi Low Cost Verstärker. dazu werden Sinusgenerator und Rad-On Steuerung des Radios benutzt.
@@ -152,7 +147,6 @@ Schaltet die Kanalsteuerung im Hifi Low Cost Verstärker. dazu werden Sinusgener
 - [TAB_AMP_LC_PAUSES](#table-tab-amp-lc-pauses) (4 × 2)
 - [TAB_AMP_LC_MAIN_TABLE](#table-tab-amp-lc-main-table) (10 × 5)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 66 rows × 2 columns
@@ -226,7 +220,6 @@ Dimensions: 66 rows × 2 columns
 | ?F0? | ERROR_ARGUMENT |
 | 0xXY | ERROR_ECU_UNKNOWN_NEGATIVE_RESPONSE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 121 rows × 2 columns
@@ -355,7 +348,6 @@ Dimensions: 121 rows × 2 columns
 | 0x0000AE | MTA |
 | 0xFFFFFF | unbekannter Hersteller |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 19 rows × 2 columns
@@ -382,7 +374,6 @@ Dimensions: 19 rows × 2 columns
 | 0x81 | Fehler würde das Aufleuchten einer Warnlampe verursachen |
 | 0xFF | unbekannte Fehlerart |
 
-<a id="table-digitalargument"></a>
 ### DIGITALARGUMENT
 
 Dimensions: 17 rows × 2 columns
@@ -407,7 +398,6 @@ Dimensions: 17 rows × 2 columns
 | 1 | 1 |
 | 0 | 0 |
 
-<a id="table-prozessklassen"></a>
 ### PROZESSKLASSEN
 
 Dimensions: 24 rows × 3 columns
@@ -439,7 +429,6 @@ Dimensions: 24 rows × 3 columns
 | 0xC1 | SWIP | Index Software-Update Package |
 | 0xFF | - | ungueltig |
 
-<a id="table-svk-id"></a>
 ### SVK_ID
 
 Dimensions: 65 rows × 2 columns
@@ -512,7 +501,6 @@ Dimensions: 65 rows × 2 columns
 | 0x40 | SVK_BACKUP_61 |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-dtcextendeddatarecordnumber"></a>
 ### DTCEXTENDEDDATARECORDNUMBER
 
 Dimensions: 5 rows × 3 columns
@@ -525,7 +513,6 @@ Dimensions: 5 rows × 3 columns
 | 0x03 | HLZ | 1 |
 | 0xFF | RECORD_UNKNOWN | 0 |
 
-<a id="table-dtcsnapshotidentifier"></a>
 ### DTCSNAPSHOTIDENTIFIER
 
 Dimensions: 5 rows × 9 columns
@@ -538,7 +525,6 @@ Dimensions: 5 rows × 9 columns
 | 0x1731 | Fehlerklasse_DTC | - | - | u char | - | 1 | 1 | 0.000000 |
 | 0xFFFF | IDENTIFIER_UNKNOWN | - | - | 0xFFFFFF | - | 1 | 1 | 0.000000 |
 
-<a id="table-fehlerklasse"></a>
 ### FEHLERKLASSE
 
 Dimensions: 5 rows × 2 columns
@@ -551,7 +537,6 @@ Dimensions: 5 rows × 2 columns
 | 0x04 | Ueberpruefung sofort erforderlich ! |
 | 0xFF | unbekannte Fehlerklasse |
 
-<a id="table-jobresultextended"></a>
 ### JOBRESULTEXTENDED
 
 Dimensions: 1 rows × 2 columns
@@ -560,7 +545,6 @@ Dimensions: 1 rows × 2 columns
 | --- | --- |
 | 0xXY | ERROR_UNKNOWN |
 
-<a id="table-betriebsmode"></a>
 ### BETRIEBSMODE
 
 Dimensions: 6 rows × 3 columns
@@ -574,7 +558,6 @@ Dimensions: 6 rows × 3 columns
 | 0x04 | Rollenmode | - |
 | 0xFF | ungültiger Betriebsmode | ungültig |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -583,7 +566,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-fdetailstruktur"></a>
 ### FDETAILSTRUKTUR
 
 Dimensions: 6 rows × 2 columns
@@ -597,7 +579,6 @@ Dimensions: 6 rows × 2 columns
 | F_UWB_SATZ | 2 |
 | F_HLZ_VIEW | - |
 
-<a id="table-iorttexte"></a>
 ### IORTTEXTE
 
 Dimensions: 1 rows × 3 columns
@@ -606,7 +587,6 @@ Dimensions: 1 rows × 3 columns
 | --- | --- | --- |
 | 0xFFFFFF | unbekannter Fehlerort | 0 |
 
-<a id="table-idetailstruktur"></a>
 ### IDETAILSTRUKTUR
 
 Dimensions: 4 rows × 2 columns
@@ -618,7 +598,6 @@ Dimensions: 4 rows × 2 columns
 | F_HLZ | nein |
 | F_SEVERITY | nein |
 
-<a id="table-tab-amp-lc-freq"></a>
 ### TAB_AMP_LC_FREQ
 
 Dimensions: 4 rows × 2 columns
@@ -630,7 +609,6 @@ Dimensions: 4 rows × 2 columns
 | 3 | 16000 |
 | 0xFF | Nicht definiert |
 
-<a id="table-tab-amp-lc-pauses"></a>
 ### TAB_AMP_LC_PAUSES
 
 Dimensions: 4 rows × 2 columns
@@ -642,7 +620,6 @@ Dimensions: 4 rows × 2 columns
 | 2 | 50 |
 | 0xFF | Nicht definiert |
 
-<a id="table-tab-amp-lc-main-table"></a>
 ### TAB_AMP_LC_MAIN_TABLE
 
 Dimensions: 10 rows × 5 columns

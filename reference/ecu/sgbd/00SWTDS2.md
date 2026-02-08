@@ -39,7 +39,6 @@
 - [FAHRGESTELLNUMMER_LESEN](#job-fahrgestellnummer-lesen) - FGN lesen im Steuergeraet DS2: 	   $1F SweepingTechnologies $E6 SWTGetFZG
 - [FAHRGESTELLNUMMER_SCHREIBEN](#job-fahrgestellnummer-schreiben) - FGN schreiben im Steuergeraet DS2: 	   $1F SweepingTechnologies $E5 SWTSetFZG
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -58,7 +57,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter
@@ -71,7 +69,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-swt-parameter-lesen"></a>
 ### SWT_PARAMETER_LESEN
 
 Gibt die SG-spezifischen SWT-Parameter zurück
@@ -85,7 +82,6 @@ _No arguments._
 | JOB_STATUS | string | OKAY |
 | SG_ADRESSE | int | Steuergeräteadresse |
 
-<a id="job-swt-parameter-setzen"></a>
 ### SWT_PARAMETER_SETZEN
 
 Setzt die SG-spezifischen SWT-Parameter
@@ -102,7 +98,6 @@ Setzt die SG-spezifischen SWT-Parameter
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY |
 
-<a id="job-software-id-lesen"></a>
 ### SOFTWARE_ID_LESEN
 
 Software ID lesen DS2:     $1F SweepingTechnologies $F8 SWTGetSoftwareID
@@ -119,7 +114,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-software-signature-lesen"></a>
 ### SOFTWARE_SIGNATURE_LESEN
 
 Software Signature im SG lesen DS2:     $1F SweepingTechnologies $F7 SWTGetSigSID
@@ -136,7 +130,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 Freischaltstatus einer Software lesen DS2: 	   $1F SweepingTechnologies $F6 SWTGetStatus
@@ -163,7 +156,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-laenge-schreiben"></a>
 ### FREISCHALTCODE_LAENGE_SCHREIBEN
 
 Freischaltcode einer Software in dem SG einbrechen DS2:     $1F SweepingTechnologies $F2 SWTSetFSCLength
@@ -186,7 +178,6 @@ Freischaltcode einer Software in dem SG einbrechen DS2:     $1F SweepingTechnolo
 | _TEL_AUFTRAG_LAENGE | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_LAENGE | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-schreiben"></a>
 ### FREISCHALTCODE_SCHREIBEN
 
 Freischaltcode einer Software in dem SG einbrechen DS2:	   $1F SweepingTechnologies $F1 SWTStoreFSC
@@ -207,7 +198,6 @@ Freischaltcode einer Software in dem SG einbrechen DS2:	   $1F SweepingTechnolog
 | _TEL_AUFTRAG_FSC | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_FSC | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-pruefen"></a>
 ### FREISCHALTCODE_PRUEFEN
 
 Freischaltcode nach dem Einspielen prüfen DS2:     $1F SweepingTechnologies $EE SWTCheckFSC
@@ -227,7 +217,6 @@ Freischaltcode nach dem Einspielen prüfen DS2:     $1F SweepingTechnologies $EE
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-stornieren"></a>
 ### FREISCHALTCODE_STORNIEREN
 
 Freischaltcode als ungültig/storniert kennzeichnen DS2:     $1F SweepingTechnologies $ED SWTDisableFSC
@@ -247,7 +236,6 @@ Freischaltcode als ungültig/storniert kennzeichnen DS2:     $1F SweepingTechnol
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-laenge-lesen"></a>
 ### FREISCHALTCODE_LAENGE_LESEN
 
 Freischaltcode laenge lesen DS2:     $1F SweepingTechnologies $EC SWTGetFSCLength
@@ -270,7 +258,6 @@ Freischaltcode laenge lesen DS2:     $1F SweepingTechnologies $EC SWTGetFSCLengt
 | _TEL_AUFTRAG_LAENGE | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_LAENGE | binary | Hex-Antwort von SG |
 
-<a id="job-freischaltcode-lesen"></a>
 ### FREISCHALTCODE_LESEN
 
 Freischaltcode lesen DS2: 	   $1F SweepingTechnologies $EB SWTGetFSC
@@ -293,7 +280,6 @@ Freischaltcode lesen DS2: 	   $1F SweepingTechnologies $EB SWTGetFSC
 | _TEL_AUFTRAG_FSC | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT_FSC | binary | Hex-Antwort von SG |
 
-<a id="job-periodische-pruefung"></a>
 ### PERIODISCHE_PRUEFUNG
 
 Zertifikate, FSCs und SWSignaturen regelmässig prüfen DS2: 	   $1F SweepingTechnologies $EA SWTPeriodicalChecks
@@ -313,7 +299,6 @@ Zertifikate, FSCs und SWSignaturen regelmässig prüfen DS2: 	   $1F SweepingTec
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-finger-print-mechanismus"></a>
 ### FINGER_PRINT_MECHANISMUS
 
 Finger Print Mechanismus DS2: 	   $1F SweepingTechnologies $E9 SWTFingerPrintCheck
@@ -329,7 +314,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zeit-lesen"></a>
 ### ZEIT_LESEN
 
 Uhrzeit im Steuergeraet lesen DS2: 	   $1F SweepingTechnologies $E8 SWTGetTime
@@ -351,7 +335,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-zeit-schreiben"></a>
 ### ZEIT_SCHREIBEN
 
 Uhrzeit im Steuergeraet schreiben DS2: 	   $1F SweepingTechnologies $E7 SWTSetTime
@@ -371,7 +354,6 @@ Uhrzeit im Steuergeraet schreiben DS2: 	   $1F SweepingTechnologies $E7 SWTSetTi
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestellnummer-lesen"></a>
 ### FAHRGESTELLNUMMER_LESEN
 
 FGN lesen im Steuergeraet DS2: 	   $1F SweepingTechnologies $E6 SWTGetFZG
@@ -388,7 +370,6 @@ _No arguments._
 | _TEL_AUFTRAG | binary | Hex-Auftrag an SG |
 | _TEL_ANTWORT | binary | Hex-Antwort von SG |
 
-<a id="job-fahrgestellnummer-schreiben"></a>
 ### FAHRGESTELLNUMMER_SCHREIBEN
 
 FGN schreiben im Steuergeraet DS2: 	   $1F SweepingTechnologies $E5 SWTSetFZG
@@ -419,7 +400,6 @@ FGN schreiben im Steuergeraet DS2: 	   $1F SweepingTechnologies $E5 SWTSetFZG
 - [SWTSTATUSTAB](#table-swtstatustab) (6 × 2)
 - [SWTFEHLER_TAB](#table-swtfehler-tab) (54 × 2)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -440,7 +420,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 100 rows × 2 columns
@@ -548,7 +527,6 @@ Dimensions: 100 rows × 2 columns
 | 0x99 | Johnson Controls |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -577,7 +555,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-konzept-tabelle"></a>
 ### KONZEPT_TABELLE
 
 Dimensions: 5 rows × 2 columns
@@ -590,7 +567,6 @@ Dimensions: 5 rows × 2 columns
 | 0x0C | KWP2000 |
 | 0x06 | DS2 |
 
-<a id="table-swtstatustab"></a>
 ### SWTSTATUSTAB
 
 Dimensions: 6 rows × 2 columns
@@ -604,7 +580,6 @@ Dimensions: 6 rows × 2 columns
 | 0x04 | STORNIERT |
 | 0xXY | ERROR_ECU_UNKNOWN_STATUS_RESPONSE |
 
-<a id="table-swtfehler-tab"></a>
 ### SWTFEHLER_TAB
 
 Dimensions: 54 rows × 2 columns

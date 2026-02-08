@@ -50,7 +50,6 @@
 - [PRUEFSTEMPEL_SCHREIBEN](#job-pruefstempel-schreiben) - Default pruefstempel_setzen job
 - [POWER_DOWN](#job-power-down) - Default POWER_DOWN
 
-<a id="job-info"></a>
 ### INFO
 
 Information SGBD
@@ -69,7 +68,6 @@ _No arguments._
 | PACKAGE | string | Include-Paket-Nummer |
 | SPRACHE | string | deutsch, english |
 
-<a id="job-initialisierung"></a>
 ### INITIALISIERUNG
 
 Initialisierung und Kommunikationsparameter DS2
@@ -82,7 +80,6 @@ _No arguments._
 | --- | --- | --- |
 | DONE | int | 1, wenn Okay |
 
-<a id="job-ident"></a>
 ### IDENT
 
 Identdaten
@@ -106,7 +103,6 @@ _No arguments._
 | ID_SW_NR | int | Softwarenummer |
 | TELEGRAMM | binary | Antworttelegramm |
 
-<a id="job-fs-zaehler"></a>
 ### FS_ZAEHLER
 
 Default fs_zaehler job
@@ -120,7 +116,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | F_ZAHL | int | Anzahl gespeicherter Fehler |
 
-<a id="job-fs-lesen"></a>
 ### FS_LESEN
 
 fs_lesen job
@@ -154,7 +149,6 @@ fs_lesen job
 | F_ZAHL_BLOCK_8 | int | Anzahl der Fehler im Block 8 |
 | F_ZAHL | int | Anzahl der Gesamtfehler der Bloecke 1 bis 3 (schwere Fehler) |
 
-<a id="job-fs-loeschen"></a>
 ### FS_LOESCHEN
 
 Default FS_LOESCHEN job
@@ -167,7 +161,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-is-lesen"></a>
 ### IS_LESEN
 
 is_lesen job
@@ -193,7 +186,6 @@ _No arguments._
 | F_ZAHL_BLOCK_7 | int | Anzahl der Fehler im Block 7 |
 | F_ZAHL_BLOCK_8 | int | Anzahl der Fehler im Block 8 |
 
-<a id="job-codierung-lesen"></a>
 ### CODIERUNG_LESEN
 
 Default CODIERUNG_LESEN job
@@ -249,7 +241,6 @@ _No arguments._
 | _ANTWORT | binary | Antwort-Telegramm |
 | COD_LWR_AUTOMATISCH_CODIERT | int | 0 oder 1 |
 
-<a id="job-codierung-lesen-alles"></a>
 ### CODIERUNG_LESEN_ALLES
 
 Default CODIERUNG_LESEN_ALLES job
@@ -268,7 +259,6 @@ Default CODIERUNG_LESEN_ALLES job
 | BLOCK | int | angeforderte Blocknummer von 0 bis 16 |
 | CODIERDATEN | binary | CODIERDATENFELD |
 
-<a id="job-codierung-block-1-lesen"></a>
 ### CODIERUNG_BLOCK_1_LESEN
 
 Default CODIERUNG_BLOCK_1_LESEN job
@@ -284,7 +274,6 @@ _No arguments._
 | CODIER_INDEX | int | Codierindex |
 | CODIER_VARIANTE | int | Codierdatenvariante |
 
-<a id="job-status-lesen"></a>
 ### STATUS_LESEN
 
 STATUS_LESEN job
@@ -403,7 +392,6 @@ _No arguments._
 | STAT_TEST_SCHALTER_WBL_EIN | int |  |
 | _ANTWORT | binary | antworttelegramm |
 
-<a id="job-hersteller-lesen"></a>
 ### HERSTELLER_LESEN
 
 Default ident job
@@ -424,7 +412,6 @@ _No arguments._
 | GEH_INDEXNUMMER | int |  |
 | HERSTELLERDATEN_STRING | string | Herstellerdaten Byte 1 bis 10 |
 
-<a id="job-diagnose-weiter"></a>
 ### DIAGNOSE_WEITER
 
 DIAGNOSE_WEITER job
@@ -437,7 +424,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-diagnose-ende"></a>
 ### DIAGNOSE_ENDE
 
 DIAGNOSE_ENDE job
@@ -450,7 +436,6 @@ _No arguments._
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-io"></a>
 ### STEUERN_IO
 
 Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
@@ -481,7 +466,6 @@ Ansteuern mehrerer (maximal 15) digitalen Ein- Ausgaenge
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-speicher-lesen"></a>
 ### SPEICHER_LESEN
 
 Auslesen des Speicherinhaltes
@@ -500,7 +484,6 @@ Auslesen des Speicherinhaltes
 | JOB_STATUS | string |  |
 | DATEN | binary | angeforderter Datenblock (32 Bytes!) |
 
-<a id="job-speicher-schreiben"></a>
 ### SPEICHER_SCHREIBEN
 
 Schreiben des Speicherinhaltes
@@ -519,7 +502,6 @@ Schreiben des Speicherinhaltes
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-steuern-dimmer"></a>
 ### STEUERN_DIMMER
 
 STEUERN_DIMMER job
@@ -536,7 +518,6 @@ STEUERN_DIMMER job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-lwr-poti"></a>
 ### STEUERN_LWR_POTI
 
 STEUERN_LWR_POTI job
@@ -553,7 +534,6 @@ STEUERN_LWR_POTI job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-schalterspannung-fl-lh"></a>
 ### STEUERN_SCHALTERSPANNUNG_FL_LH
 
 STEUERN_SCHALTERSPANNUNG_FL_LH job
@@ -570,7 +550,6 @@ STEUERN_SCHALTERSPANNUNG_FL_LH job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-schalterspannung-blinker"></a>
 ### STEUERN_SCHALTERSPANNUNG_BLINKER
 
 STEUERN_SCHALTERSPANNUNG_BLINKER job
@@ -587,7 +566,6 @@ STEUERN_SCHALTERSPANNUNG_BLINKER job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-fotozelle"></a>
 ### STEUERN_FOTOZELLE
 
 STEUERN_FOTOZELLE job
@@ -604,7 +582,6 @@ STEUERN_FOTOZELLE job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-steuern-beladungssensor-vorn"></a>
 ### STEUERN_BELADUNGSSENSOR_VORN
 
 STEUERN_BELADUNGSSENSOR_VORN job
@@ -621,7 +598,6 @@ STEUERN_BELADUNGSSENSOR_VORN job
 | --- | --- | --- |
 | JOB_STATUS | string | OKAY, FEHLER |
 
-<a id="job-fg-nr-lesen"></a>
 ### FG_NR_LESEN
 
 Default FG_NR_LESEN job
@@ -635,7 +611,6 @@ _No arguments._
 | JOB_STATUS | string |  |
 | FG_NR | string | Fahrgestellnummer 7-stellig |
 
-<a id="job-sia-lesen"></a>
 ### SIA_LESEN
 
 Default SIA_LESEN job
@@ -660,7 +635,6 @@ _No arguments._
 | SI_ZEITINSPEKTIONSZAEHLER_WERT | long |  |
 | SI_ZEITINSPEKTIONSZAEHLER_EINH | string | Tage |
 
-<a id="job-betriebsstundenzaehler-lesen"></a>
 ### BETRIEBSSTUNDENZAEHLER_LESEN
 
 Default BETRIEBSSTUNDENZAEHLER_LESEN job
@@ -686,7 +660,6 @@ _No arguments._
 | BETRIEBSZEIT_EINH | string | Stunden [h] |
 | ANZAHL_BETAETIGUNGEN_BLS_WERT | long | Anzahl Betaetigungen des Bremslichtschalters, wird in 100er Einheiten gespeichert! |
 
-<a id="job-betriebsstundenzaehler-loeschen"></a>
 ### BETRIEBSSTUNDENZAEHLER_LOESCHEN
 
 Default BETRIEBSSTUNDENZAEHLER_LOESCHEN job
@@ -703,7 +676,6 @@ Default BETRIEBSSTUNDENZAEHLER_LOESCHEN job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-pruefstempel-lesen"></a>
 ### PRUEFSTEMPEL_LESEN
 
 Default pruefstempel_lesen job
@@ -719,7 +691,6 @@ _No arguments._
 | BYTE2 | int |  |
 | BYTE3 | int |  |
 
-<a id="job-pruefstempel-schreiben"></a>
 ### PRUEFSTEMPEL_SCHREIBEN
 
 Default pruefstempel_setzen job
@@ -738,7 +709,6 @@ Default pruefstempel_setzen job
 | --- | --- | --- |
 | JOB_STATUS | string |  |
 
-<a id="job-power-down"></a>
 ### POWER_DOWN
 
 Default POWER_DOWN
@@ -762,7 +732,6 @@ _No arguments._
 - [FARTTEXTE](#table-farttexte) (3 × 2)
 - [STEUERN](#table-steuern) (43 × 3)
 
-<a id="table-jobresult"></a>
 ### JOBRESULT
 
 Dimensions: 13 rows × 2 columns
@@ -783,7 +752,6 @@ Dimensions: 13 rows × 2 columns
 | ?72? | ERROR_VERIFY |
 | 0x?? | ERROR_ECU_UNKNOWN_STATUSBYTE |
 
-<a id="table-lieferanten"></a>
 ### LIEFERANTEN
 
 Dimensions: 63 rows × 2 columns
@@ -854,7 +822,6 @@ Dimensions: 63 rows × 2 columns
 | 0x62 | AB-Elektronik |
 | 0xFF | unbekannter Hersteller |
 
-<a id="table-roverpartnumprefix"></a>
 ### ROVERPARTNUMPREFIX
 
 Dimensions: 21 rows × 2 columns
@@ -883,7 +850,6 @@ Dimensions: 21 rows × 2 columns
 | 0xB3 | YIE |
 | 0xXY | ??? |
 
-<a id="table-forttexte"></a>
 ### FORTTEXTE
 
 Dimensions: 65 rows × 2 columns
@@ -956,7 +922,6 @@ Dimensions: 65 rows × 2 columns
 | 0x51 | Reserve Block 8 |
 | 0xFF | unbekannter Fehlerort |
 
-<a id="table-farttexte"></a>
 ### FARTTEXTE
 
 Dimensions: 3 rows × 2 columns
@@ -967,7 +932,6 @@ Dimensions: 3 rows × 2 columns
 | 0x20 | Fehler momentan vorhanden |
 | 0xXY | unbekannte Fehlerart |
 
-<a id="table-steuern"></a>
 ### STEUERN
 
 Dimensions: 43 rows × 3 columns
