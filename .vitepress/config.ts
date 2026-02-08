@@ -3,7 +3,8 @@ export default {
   description: "Cross platform, eXtended Ediabas implementation",
   base: "/ediabasx-docs/",
   markdown: {
-    html: false,
+    html: true,
+    attrs: { disable: true },
   },
   themeConfig: {
     nav: [
