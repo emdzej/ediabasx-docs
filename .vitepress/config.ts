@@ -1,7 +1,7 @@
 export default {
-  title: "Ediabas",
-  description: "BMW diagnostic protocol implementation in TypeScript",
-  base: "/ediabas-docs/",  
+  title: "EdiabasX",
+  description: "Cross platform, eXtended Ediabas implementation",
+  base: "/",  
   markdown: {
     html: false,
   },
@@ -9,6 +9,7 @@ export default {
     nav: [
       { text: "Guide", link: "/guide/getting-started" },
       { text: "Reference", link: "/reference/cli" },
+      { text: "SGBD Reference", link: "/ecu/summary" },
       { text: "GitHub", link: "https://github.com/emdzej/ediabas" },
     ],
     sidebar: {
@@ -29,16 +30,20 @@ export default {
           text: "Reference",
           items: [
             { text: "CLI", link: "/reference/cli" },
-            { text: "Interpreter", link: "/reference/interpreter" },
+            { text: "BEST/1/2 Interpreter", link: "/reference/interpreter" },
             { text: "Opcode Quick Ref", link: "/reference/opcode-quick-ref" },
             { text: "Opcodes", link: "/reference/opcodes" },
           ],
         },
       ],
-      "/reference/ecu/": [
+      "/ecu/": [
         {
-          text: "ECU Reference",
-          items: [{ text: "ECU Index", link: "/reference/ecu/index" }],
+          text: "SGBD Reference",
+          items: [
+            { text: "About", link: "/ecu/about" },
+            { text: "Summary", link: "/ecu/summary" },
+            { text: "ECU Index", link: "/ecu/index" }
+          ],
         },
       ],
     },

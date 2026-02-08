@@ -2,18 +2,18 @@
 layout: home
 
 hero:
-  name: "Ediabas"
-  text: "Open-source BMW diagnostic protocol implementation"
+  name: "EdiabasX"
+  text: "Cross platform, eXtended Ediabas implementation"
   actions:
     - theme: brand
       text: Get Started
       link: /guide/getting-started
     - theme: alt
-      text: Opcode comparison
-      link: /opcode-comparison
+      text: Reference Documentation
+      link: /reference/cli
     - theme: alt
       text: View on GitHub
-      link: https://github.com/emdzej/ediabas
+      link: https://github.com/emdzej/ediabasx
 
 features:
   - icon: "🔌"
