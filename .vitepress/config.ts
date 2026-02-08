@@ -10,7 +10,7 @@ export default {
     nav: [
       { text: "Guide", link: "/guide/getting-started" },
       { text: "Reference", link: "/reference/cli" },
-      { text: "SGBD Reference", link: "/ecu/summary" },
+      { text: "SGBD Reference", link: "https://emdzej.github.io/ediabasx-docs-sgbd" },
       { text: "GitHub", link: "https://github.com/emdzej/ediabasx" },
     ],
     sidebar: {
@@ -36,17 +36,7 @@ export default {
             { text: "Opcodes", link: "/reference/opcodes" },
           ],
         },
-      ],
-      "/ecu/": [
-        {
-          text: "SGBD Reference",
-          items: [
-            { text: "About", link: "/ecu/about" },
-            { text: "Summary", link: "/ecu/summary" },
-            { text: "ECU Index", link: "/ecu/index" }
-          ],
-        },
-      ],
+      ],      
     },
   },
 };
