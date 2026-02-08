@@ -13,6 +13,19 @@ ediabas interfaces --json
 ediabas interfaces --table
 ```
 
+### `ediabas gateway`
+Start the JSON-RPC gateway server and expose an interface.
+
+```bash
+ediabas gateway --interface serial --serial-port /dev/ttyUSB0 --serial-baud 9600
+ediabas gateway --interface enet --enet-host 192.168.0.1
+```
+
+Options:
+- `--host <host>` (default: 127.0.0.1)
+- `--port <port>` (default: 6801)
+- plus all interface options below
+
 ### `ediabas parse <file>`
 Parse a PRG/GRP file.
 
@@ -37,14 +50,6 @@ ediabas jobs d_motor.prg
 ediabas jobs d_motor.prg --table
 ```
 
-### `ediabas tables <file>`
-List tables with row/column counts.
-
-```bash
-ediabas tables d_motor.prg
-ediabas tables d_motor.prg --json
-```
-
 ### `ediabas table <file> <name>`
 Show a specific table (human, JSON, or CSV).
 
@@ -54,12 +59,12 @@ ediabas table d_motor.prg TABNAME --json
 ediabas table d_motor.prg TABNAME --csv
 ```
 
-### `ediabas disasm <file> [job]`
-Disassemble BEST/1 bytecode.
+### `ediabas tables <file>`
+List tables with row/column counts.
 
 ```bash
-ediabas disasm d_motor.prg
-ediabas disasm d_motor.prg INFO
+ediabas tables d_motor.prg
+ediabas tables d_motor.prg --json
 ```
 
 ### `ediabas explore <file>`
@@ -67,6 +72,28 @@ Interactive TUI for exploring PRG/GRP files.
 
 ```bash
 ediabas explore d_motor.prg
+```
+
+### `ediabas simulator`
+Start the interactive simulator (TUI + JSON-RPC server).
+
+```bash
+ediabas simulator --host 127.0.0.1 --port 6802
+ediabas simulator --mode hex --line-ending lf
+```
+
+Options:
+- `--host <host>` (default: 127.0.0.1)
+- `--port <port>` (default: 6802)
+- `--mode <text|hex>` (default: text)
+- `--line-ending <crlf|lf|raw>` (default: crlf)
+
+### `ediabas disasm <file> [job]`
+Disassemble bytecode into readable assembly.
+
+```bash
+ediabas disasm d_motor.prg
+ediabas disasm d_motor.prg INFO
 ```
 
 ### `ediabas run <file> [job] [params...]`
@@ -97,32 +124,16 @@ Common options:
 - `--results <names>` — comma-separated results filter
 - `--info` — show job info instead of executing
 
-### `ediabas simulator`
-Start the interactive simulator (TUI + JSON-RPC server).
+### `ediabas docs <source-dir> <output-dir>`
+Generate Markdown documentation for PRG/GRP files.
 
 ```bash
-ediabas simulator --host 127.0.0.1 --port 6802
-ediabas simulator --mode hex --line-ending lf
+ediabas docs ./sgbd ./docs/ecu
+ediabas docs ./sgbd ./docs/ecu --subdir sgbd
 ```
 
 Options:
-- `--host <host>` (default: 127.0.0.1)
-- `--port <port>` (default: 6802)
-- `--mode <text|hex>` (default: text)
-- `--line-ending <crlf|lf|raw>` (default: crlf)
-
-### `ediabas gateway`
-Start the JSON-RPC gateway server and expose an interface.
-
-```bash
-ediabas gateway --interface serial --serial-port /dev/ttyUSB0 --serial-baud 9600
-ediabas gateway --interface enet --enet-host 192.168.0.1
-```
-
-Options:
-- `--host <host>` (default: 127.0.0.1)
-- `--port <port>` (default: 6801)
-- plus all interface options below
+- `--subdir <name>` (default: sgbd)
 
 ## Interface Options
 These options apply to `run` and `gateway`.

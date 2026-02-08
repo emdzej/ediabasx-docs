@@ -8,8 +8,7 @@ export default {
   themeConfig: {
     nav: [
       { text: "Guide", link: "/guide/getting-started" },
-      { text: "Reference", link: "/reference/architecture" },
-      { text: "Reports", link: "/reports/" },
+      { text: "Reference", link: "/reference/cli" },
       { text: "GitHub", link: "https://github.com/emdzej/ediabas" },
     ],
     sidebar: {
@@ -29,13 +28,19 @@ export default {
         {
           text: "Reference",
           items: [
-            { text: "Architecture", link: "/reference/architecture" },
-            { text: "Packages", link: "/reference/packages" },
             { text: "CLI", link: "/reference/cli" },
-            { text: "Development", link: "/reference/development" },
+            { text: "Interpreter", link: "/reference/interpreter" },
+            { text: "Opcode Quick Ref", link: "/reference/opcode-quick-ref" },
+            { text: "Opcodes", link: "/reference/opcodes" },
           ],
         },
-      ],      
+      ],
+      "/reference/ecu/": [
+        {
+          text: "ECU Reference",
+          items: [{ text: "ECU Index", link: "/reference/ecu/index" }],
+        },
+      ],
     },
   },
 };

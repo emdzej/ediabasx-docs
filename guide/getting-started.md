@@ -46,6 +46,12 @@ pnpm cli -- info path/to/file.prg
 pnpm cli -- jobs path/to/file.prg
 ```
 
+Generate ECU Markdown documentation:
+
+```bash
+pnpm cli -- docs path/to/sgbd ./docs/ecu
+```
+
 Run a job in simulation mode:
 
 ```bash

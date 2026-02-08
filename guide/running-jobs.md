@@ -13,7 +13,7 @@ ediabas jobs path/to/file.prg
 Basic syntax:
 
 ```bash
-ediabas run <file> <job> [args]
+ediabas run <file> <job> [params...]
 ```
 
 Example (simulation):

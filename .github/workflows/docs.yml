@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "docs/**"
+      - "**/*.md"
+      - ".vitepress/**"
       - "package.json"
       - "pnpm-lock.yaml"
       - ".github/workflows/docs.yml"
