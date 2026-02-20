@@ -38,6 +38,15 @@ export default {
             { text: "VM Decompilation Analysis", link: "/reference/vm-decompilation-analysis" },
           ],
         },
+        {
+          text: "Interface Drivers",
+          items: [
+            { text: "Overview", link: "/reference/interfaces/README" },
+            { text: "XEnet32 (Ethernet)", link: "/reference/interfaces/xenet32-analysis" },
+            { text: "XStd32 (Serial)", link: "/reference/interfaces/xstd32-analysis" },
+            { text: "XNul32 (Null)", link: "/reference/interfaces/xnul32-analysis" },
+          ],
+        },
       ],      
     },
   },
