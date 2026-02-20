@@ -45,6 +45,7 @@ export default {
             { text: "XEnet32 (Ethernet)", link: "/reference/interfaces/xenet32-analysis" },
             { text: "XStd32 (Serial Wrapper)", link: "/reference/interfaces/xstd32-analysis" },
             { text: "OBD32 (K-Line/KWP)", link: "/reference/interfaces/obd32-analysis" },
+            { text: "OBD32 Protocols", link: "/reference/interfaces/obd32-protocols" },
             { text: "XNul32 (Null)", link: "/reference/interfaces/xnul32-analysis" },
           ],
         },
