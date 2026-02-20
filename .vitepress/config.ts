@@ -34,6 +34,7 @@ export default {
             { text: "BEST/1/2 Interpreter", link: "/reference/interpreter" },
             { text: "Opcode Quick Ref", link: "/reference/opcode-quick-ref" },
             { text: "Opcodes", link: "/reference/opcodes" },
+            { text: "Opcodes Pseudocode (RE)", link: "/reference/opcodes-pseudocode" },
           ],
         },
       ],      
