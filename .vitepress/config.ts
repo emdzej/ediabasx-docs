@@ -35,6 +35,7 @@ export default {
             { text: "Opcode Quick Ref", link: "/reference/opcode-quick-ref" },
             { text: "Opcodes", link: "/reference/opcodes" },
             { text: "Opcodes Pseudocode (RE)", link: "/reference/opcodes-pseudocode" },
+            { text: "VM Decompilation Analysis", link: "/reference/vm-decompilation-analysis" },
           ],
         },
       ],      
